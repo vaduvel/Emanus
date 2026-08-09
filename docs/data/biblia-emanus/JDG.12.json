@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/JDG12.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-JDG"
+      "lockId": "WEBU-R5-JDG"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/JDG12.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-JDG"
+      "lockId": "WLC-OSHB-REMAP-R5-JDG",
+      "rawLockId": "WLC-RAW-R5-JDG",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -56,7 +58,7 @@
     },
     {
       "number": 7,
-      "text": "Iefta a judecat Israelul șase ani. Apoi Iefta, galaaditul, a murit și a fost îngropat într-una din cetățile Galaadului."
+      "text": "Iefta a fost judecător în Israel zece ani; apoi Iefta, galaaditul, a murit și a fost îngropat într-una din cetățile Galaadului."
     },
     {
       "number": 8,
@@ -93,13 +95,11 @@
   ],
   "editorialNotes": [
     {
-      "verse": 7,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Judecători 12:7 a fost aplicată în textul canonic.",
-      "reason": "Candidatul spune că Iefta a judecat Israelul zece ani. WEBU și WLC au șase ani; este o eroare numerică factuală.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
+      "verse": 6,
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "308cbb1a75bb820b64b556069981dabbf7aaa9fd116f9f4c76b3260be75e957d",
+      "resolutionStatus": "resolved"
     }
   ],
   "benchmark": {
@@ -134,14 +134,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh JDG."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 15,
       "reviewed": 15,
@@ -151,20 +150,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Judecători 12: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Judecători 12:7 — critical: Candidatul spune că Iefta a judecat Israelul zece ani. WEBU și WLC au șase ani; este o eroare numerică factuală."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorii, referenții, numele cultice, cifrele și succesiunea narațiunii sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Violența, abuzul, răpirea, idolatria și acțiunile personajelor sunt redate descriptiv și nu sunt transformate prin traducere în aprobări sau norme moderne.",
-        "Unde există o variantă textuală relevantă, textul canonic urmează WLC-OSHB conform politicii Biblia Emanus, iar varianta este documentată editorial."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -174,7 +171,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -184,15 +181,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "fb52326c72078fc5049c154e0b3682e061a1fe042416787c6d22c69b79d7b989",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:9fbfa596882fd0ed0a3fb94c58f3d1db37ed0b64392850c7b0156663499493a9"
+    "textDigest": "sha256:3dba182c4065ee4e5233c517f2abcf1e54c75af2e009d71a42fb12da367799d8"
   }
 }

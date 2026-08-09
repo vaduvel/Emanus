@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/JDG20.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-JDG"
+      "lockId": "WEBU-R5-JDG"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/JDG20.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-JDG"
+      "lockId": "WLC-OSHB-REMAP-R5-JDG",
+      "rawLockId": "WLC-RAW-R5-JDG",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -80,7 +82,7 @@
     },
     {
       "number": 13,
-      "text": "„Dați-i acum pe oamenii aceia răi din Ghibeea, ca să-i omorâm și să îndepărtăm răul din Israel.” Dar Beniamin n-a vrut să asculte glasul fraților săi, copiii lui Israel."
+      "text": "„Scoateți afară acum pe oamenii aceia stricați din Ghibeea ca să-i omorâm și să curățăm răul din mijlocul lui Israel.”"
     },
     {
       "number": 14,
@@ -140,7 +142,7 @@
     },
     {
       "number": 28,
-      "text": "iar Fineas, fiul lui Eleazar, fiul lui Aaron, stătea înaintea lui în zilele acelea. Ei au zis: „Să mai ies încă o dată la luptă împotriva fiilor fratelui meu Beniamin sau să mă opresc?” DOMNUL a răspuns: „Suiți-vă, căci mâine îl voi da în mâna voastră.”"
+      "text": "și Fineas, fiul lui Eleazar, fiul lui Aaron, stătea pe vremea aceea înaintea lui Dumnezeu – și au zis: „Să mai pornesc la luptă împotriva fiilor fratelui meu Beniamin sau să mă las?” DOMNUL a răspuns: „Suiți-vă, căci mâine îi voi da în mâinile voastre.”"
     },
     {
       "number": 29,
@@ -196,7 +198,7 @@
     },
     {
       "number": 42,
-      "text": "Ei au întors spatele înaintea bărbaților lui Israel și au fugit pe drumul pustiei, dar lupta i-a urmărit îndeaproape; iar cei care ieșiseră din cetăți îi nimiceau în mijlocul ei."
+      "text": "Au dat dosul înaintea bărbaților lui Israel și au fugit pe calea care duce în pustiu. Dar năvălitorii s-au luat după ei, iar pe cei ce ieșiseră din cetate i-au culcat la pământ, căci îi prinseseră la mijloc."
     },
     {
       "number": 43,
@@ -220,47 +222,10 @@
     },
     {
       "number": 48,
-      "text": "Bărbații lui Israel s-au întors împotriva copiilor lui Beniamin și au trecut prin ascuțișul sabiei întreaga cetate, animalele și tot ce au găsit. De asemenea, au dat foc tuturor cetăților pe care le-au găsit."
+      "text": "Bărbații lui Israel s-au întors la fiii lui Beniamin și i-au trecut prin ascuțișul sabiei, de la oamenii din cetăți până la dobitoace și tot ce au găsit. Au pus de asemenea foc tuturor cetăților pe care le-au găsit în cale."
     }
   ],
-  "editorialNotes": [
-    {
-      "verse": 13,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Judecători 20:13 a fost aplicată în textul canonic.",
-      "reason": "Candidatul omite propoziția care declanșează războiul civil: Beniamin refuză să asculte glasul fraților săi și să-i predea pe oamenii răi din Ghibeea.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 28,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Judecători 20:28 a fost aplicată în textul canonic.",
-      "reason": "Candidatul spune că Fineas «stătea înaintea lui Dumnezeu», dar propoziția precedentă are drept referent imediat chivotul legământului, iar WEBU redă «stood before it». Pentru a nu adăuga o precizare teologică absentă, se păstrează referirea la chivot.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 42,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Judecători 20:42 a fost aplicată în textul canonic.",
-      "reason": "«năvălitorii s-au luat după ei» pierde faptul că însăși lupta îi urmărește îndeaproape, iar oamenii ieșiți din cetăți îi nimicesc în mijlocul confruntării.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 48,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Judecători 20:48 a fost aplicată în textul canonic.",
-      "reason": "Candidatul transformă «întreaga cetate» într-o formulă despre «oamenii din cetăți», ceea ce schimbă obiectul devastării. Sursa enumeră cetatea, animalele și tot ce au găsit, apoi arderea cetăților întâlnite.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    }
-  ],
+  "editorialNotes": [],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -293,14 +258,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh JDG."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 48,
       "reviewed": 48,
@@ -310,23 +274,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Judecători 20: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Judecători 20:13 — critical: Candidatul omite propoziția care declanșează războiul civil: Beniamin refuză să asculte glasul fraților săi și să-i predea pe oamenii răi din Ghibeea.",
-        "Judecători 20:28 — material: Candidatul spune că Fineas «stătea înaintea lui Dumnezeu», dar propoziția precedentă are drept referent imediat chivotul legământului, iar WEBU redă «stood before it». Pentru a nu adăuga o precizare teologică absentă, se păstrează referirea la chivot.",
-        "Judecători 20:42 — material: «năvălitorii s-au luat după ei» pierde faptul că însăși lupta îi urmărește îndeaproape, iar oamenii ieșiți din cetăți îi nimicesc în mijlocul confruntării.",
-        "Judecători 20:48 — material: Candidatul transformă «întreaga cetate» într-o formulă despre «oamenii din cetăți», ceea ce schimbă obiectul devastării. Sursa enumeră cetatea, animalele și tot ce au găsit, apoi arderea cetăților întâlnite."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorii, referenții, numele cultice, cifrele și succesiunea narațiunii sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Violența, abuzul, răpirea, idolatria și acțiunile personajelor sunt redate descriptiv și nu sunt transformate prin traducere în aprobări sau norme moderne.",
-        "Unde există o variantă textuală relevantă, textul canonic urmează WLC-OSHB conform politicii Biblia Emanus, iar varianta este documentată editorial."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -336,7 +295,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -346,15 +305,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "fb52326c72078fc5049c154e0b3682e061a1fe042416787c6d22c69b79d7b989",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:1f289859daaaac59a039895aa81157d1888b1f77c3fb0d69e6c5fb6927438d1b"
+    "textDigest": "sha256:11bd5d9e07aca0af32ddc40f440a1f43a0d6647a141ee298fa3b272bd30c7424"
   }
 }

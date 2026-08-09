@@ -80,16 +80,16 @@ type Nevoie = { eticheta: string; cuvinte: string[] }
 
 const NEVOI: Nevoie[] = [
   { eticheta: "Mi-a murit cineva", cuvinte: ["a murit", "jelit", "mormant", "ingropat", "plans dupa", "doliu"] },
-  { eticheta: "Boală şi spital", cuvinte: ["bolnav", "boala", "s-a imbolnavit", "neputinta trupului"] },
+  { eticheta: "Boală și spital", cuvinte: ["bolnav", "boala", "s-a imbolnavit", "neputinta trupului"] },
   { eticheta: "S-a rupt casa mea", cuvinte: ["nevasta", "barbatul ei", "casnicie", "despartit", "s-a dus de langa"] },
-  { eticheta: "Bani şi datorii", cuvinte: ["foamete", "argint", "grau", "saracie", "nu mai aveau ce manca"] },
+  { eticheta: "Bani și datorii", cuvinte: ["foamete", "argint", "grau", "saracie", "nu mai aveau ce manca"] },
   { eticheta: "Sunt departe de ai mei", cuvinte: ["strain", "instrainat", "tara straina", "departe de casa", "pribeag"] },
   { eticheta: "Beau. Nu mă pot opri", cuvinte: ["vin", "beat", "s-a imbatat", "patima"] },
-  { eticheta: "Pofta care mă ţine", cuvinte: ["pofta", "curvie", "a poftit", "desfranare", "culca-te cu mine"] },
+  { eticheta: "Pofta care mă ține", cuvinte: ["pofta", "curvie", "a poftit", "desfranare", "culca-te cu mine"] },
   { eticheta: "Nu pot să iert în familie", cuvinte: ["fratii lui", "ura", "il urau", "iertare", "a iertat", "razbunare"] },
-  { eticheta: "Mi-e ruşine de ce am făcut", cuvinte: ["rusine", "s-a ascuns", "vinovat", "pacatul meu"] },
+  { eticheta: "Mi-e rușine de ce am făcut", cuvinte: ["rusine", "s-a ascuns", "vinovat", "pacatul meu"] },
   { eticheta: "Mi-e frică de moarte", cuvinte: ["frica", "nu te teme", "moartea", "mor"] },
-  { eticheta: "Mă rog şi nu simt nimic", cuvinte: ["s-a rugat", "a strigat catre Domnul", "tacere", "nu a raspuns"] },
+  { eticheta: "Mă rog și nu simt nimic", cuvinte: ["s-a rugat", "a strigat catre Domnul", "tacere", "nu a raspuns"] },
   { eticheta: "De ce a îngăduit Dumnezeu", cuvinte: ["de ce", "ai avut in gand sa-mi faceti rau", "incercare", "a ingaduit"] },
   { eticheta: "Am umblat cu descântece", cuvinte: ["idoli", "ghicire", "vraji", "dumnezei straini"] },
   { eticheta: "Copilul meu s-a depărtat", cuvinte: ["fiul meu", "copilul", "s-a dus de la", "tatal lui plangea"] },
@@ -117,8 +117,8 @@ function Nevoi() {
   const gasite = useMemo(() => (aleasa ? cauta(aleasa) : []), [aleasa])
 
   return <section className="bneeds">
-    <h2 className="bneeds__title">Când te doare, citeşte</h2>
-    <p className="bneeds__intro">Spune ce te apasă acum. Îţi arătăm locurile din Scriptură unde se vorbeşte despre asta — nu versete rupte, ci întâmplări întregi, cu explicaţie.</p>
+    <h2 className="bneeds__title">Când te doare, citește</h2>
+    <p className="bneeds__intro">Spune ce te apasă acum. Îți arătăm locurile din Scriptură unde se vorbește despre asta — nu versete rupte, ci întâmplări întregi, cu explicație.</p>
 
     <div className="bneeds__list">
       {NEVOI.map((n) => <button
@@ -199,7 +199,7 @@ export function Bible() {
       <BookOpen size={22} strokeWidth={1.7} aria-hidden />
       <h1>Biblia explicată</h1>
     </header>
-    <p className="bible__intro">Textul întreg, aşa cum este scris, şi lângă el explicaţia verset cu verset. Nu ca să treci peste Scriptură, ci ca să nu rămâi în faţa ei fără să înţelegi.</p>
+    <p className="bible__intro">Textul întreg, așa cum este scris, și lângă el explicația verset cu verset. Nu ca să treci peste Scriptură, ci ca să nu rămâi în fața ei fără să înțelegi.</p>
 
     {last && <button type="button" className="tile bible__resume" onClick={() => navigate(`/biblia/${last.bookId}/${last.chapter}`)}>
       <span className="today__kicker">Unde ai rămas</span>
@@ -222,7 +222,7 @@ export function Bible() {
 
     {PUBLICATION_BIBLE_BOOKS.map((b) => <Book key={b.id} book={b} query={query} />)}
 
-    <p className="muted bible__note">Traducerea este indicată separat pentru fiecare carte. Explicaţiile sunt scrise pentru Emanus.</p>
+    <p className="muted bible__note">Traducerea este indicată separat pentru fiecare carte. Explicațiile sunt scrise pentru Emanus.</p>
   </section>
 }
 
@@ -318,7 +318,7 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
       <p className="today__kicker">{book.name} {found.number}</p>
       <h1>{found.title}</h1>
       <p className="bchead__sum">{found.summary}</p>
-      {SHOW_EDITORIAL && found.status !== "published" && <p className="bchead__flag">Scris, dar necitit încă de un om. Dacă vezi ceva greşit, spune-ne.</p>}
+      {SHOW_EDITORIAL && found.status !== "published" && <p className="bchead__flag">Scris, dar necitit încă de un om. Dacă vezi ceva greșit, spune-ne.</p>}
     </header>
 
     <details className="bctx">

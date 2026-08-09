@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/HOS11.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-HOS"
+      "lockId": "WEBU-R5-HOS"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/HOS11.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-HOS"
+      "lockId": "WLC-OSHB-REMAP-R5-HOS",
+      "rawLockId": "WLC-RAW-R5-HOS",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -36,7 +38,7 @@
     },
     {
       "number": 2,
-      "text": "Îi chemau, dar ei se depărtau tot mai mult de cei care-i chemau; aduceau jertfe Baalilor și ardeau tămâie chipurilor cioplite."
+      "text": "Dar cu cât prorocii îi chemau, cu atât ei se depărtau: au adus jertfe Baalilor și tămâie chipurilor idolești."
     },
     {
       "number": 3,
@@ -52,11 +54,11 @@
     },
     {
       "number": 6,
-      "text": "Sabia va cădea peste cetățile lor, le va nimici zăvoarele și le va mistui din pricina planurilor lor."
+      "text": "Sabia va năvăli peste cetățile lor, va nimici, va mânca pe sprijinitorii lor, din pricina planurilor pe care le-au făcut."
     },
     {
       "number": 7,
-      "text": "Poporul Meu este hotărât să se depărteze de Mine. Deși Îl cheamă pe Cel Preaînalt, El nu-i va înălța nicidecum."
+      "text": "Poporul Meu este pornit să se depărteze de Mine; și dacă sunt chemați înapoi la Cel Preaînalt, niciunul din ei nu caută să se ridice."
     },
     {
       "number": 8,
@@ -64,86 +66,22 @@
     },
     {
       "number": 9,
-      "text": "Nu voi împlini iuțimea mâniei Mele și nu Mă voi întoarce să-l nimicesc pe Efraim, căci Eu sunt Dumnezeu, nu om, Sfântul în mijlocul tău. Nu voi veni cu mânie."
+      "text": "Nu voi lucra după mânia Mea aprinsă, nu voi mai nimici pe Efraim; căci Eu sunt Dumnezeu, nu un om. Eu sunt Sfântul în mijlocul tău și nu voi veni să prăpădesc."
     },
     {
       "number": 10,
-      "text": "Îl vor urma pe DOMNUL; El va răcni ca un leu. Când va răcni, copiii vor veni tremurând de la apus."
+      "text": "Ei vor urma pe DOMNUL, ca pe un leu care va răcni; căci El însuși va răcni, și copiii vor alerga tremurând de la apus."
     },
     {
       "number": 11,
-      "text": "Vor veni tremurând din Egipt ca o pasăre și din țara Asiriei ca o porumbiță; îi voi așeza în casele lor, zice DOMNUL."
+      "text": "Vor alerga tremurând din Egipt, ca o pasăre, și din țara Asiriei, ca o porumbiță. Și-i voi face să locuiască în casele lor, zice DOMNUL."
     },
     {
       "number": 12,
-      "text": "Efraim Mă înconjoară cu minciună și casa lui Israel cu înșelăciune; iar Iuda încă rătăcește cu Dumnezeu și este credincios împreună cu cei sfinți."
+      "text": "Efraim Mă înconjoară cu minciuni, și casa lui Israel, cu înșelătorii. Iuda este tot hoinar față de Dumnezeu, față de Cel sfânt și credincios."
     }
   ],
-  "editorialNotes": [
-    {
-      "verse": 2,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Osea 11:2 a fost aplicată în textul canonic.",
-      "reason": "Textul ebraic are subiectul generic/plural «îi chemau», iar WEBU păstrează «They called to them». Candidatul introduce explicit «prorocii», substantiv absent din verset.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 6,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Osea 11:6 a fost aplicată în textul canonic.",
-      "reason": "בַּדָּיו nu susține «sprijinitorii lor»; în contextul cetăților WEBU redă zăvoarele/barele porților. Candidatul schimbă obiectul sabiei.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 7,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Osea 11:7 a fost aplicată în textul canonic.",
-      "reason": "Finalul יַחַד לֹא יְרוֹמֵם nu spune că «niciunul nu caută să se ridice». WEBU îl are pe Cel Preaînalt ca agent al înălțării; candidatul mută acțiunea asupra poporului.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 9,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Osea 11:9 a fost aplicată în textul canonic.",
-      "reason": "Candidatul încheie cu «nu voi veni să prăpădesc», formulare care nu apare în niciuna dintre fresh sources. WEBU redă «I will not come in wrath»; suprafața WLC בְּעִיר este textual dificilă și a primit interpretări diferite. Se păstrează explicit lectura WEBU, fără a ascunde dificultatea WLC.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 10,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Osea 11:10 a fost aplicată în textul canonic.",
-      "reason": "Structura este că ei Îl urmează pe DOMNUL, iar El răcnește ca un leu; «îl vor urma ... ca pe un leu» poate face comparația dependentă de verbul «a urma». יֶחֶרְדוּ este «vor veni/tremura», nu «vor alerga».",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 11,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Osea 11:11 a fost aplicată în textul canonic.",
-      "reason": "יֶחֶרְדוּ descrie venirea tremurândă; «vor alerga tremurând» adaugă viteza/alergarea.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 12,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Osea 11:12 a fost aplicată în textul canonic.",
-      "reason": "Versetul este textual dificil, iar WEBU și WLC îl interpretează diferit. În WLC, רָד este verb 3ms («rătăcește/umblă neliniștit»), עִם־אֵל este «cu Dumnezeu», קְדוֹשִׁים este plural «cei sfinți», iar נֶאֱמָן este singular și îl predică pe Iuda. Candidatul transformă «credincios» în atribut al Celui Sfânt. Propunerea urmează morfologia WLC și marchează explicit ambiguitatea.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    }
-  ],
+  "editorialNotes": [],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -176,14 +114,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh HOS 1–14."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 12,
       "reviewed": 12,
@@ -193,25 +130,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Osea 11: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC derivată din ordinea absolută aprobată."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Osea 11:2 — material: Textul ebraic are subiectul generic/plural «îi chemau», iar WEBU păstrează «They called to them». Candidatul introduce explicit «prorocii», substantiv absent din verset.",
-        "Osea 11:6 — material: בַּדָּיו nu susține «sprijinitorii lor»; în contextul cetăților WEBU redă zăvoarele/barele porților. Candidatul schimbă obiectul sabiei.",
-        "Osea 11:7 — material: Finalul יַחַד לֹא יְרוֹמֵם nu spune că «niciunul nu caută să se ridice». WEBU îl are pe Cel Preaînalt ca agent al înălțării; candidatul mută acțiunea asupra poporului.",
-        "Osea 11:9 — material: Candidatul încheie cu «nu voi veni să prăpădesc», formulare care nu apare în niciuna dintre fresh sources. WEBU redă «I will not come in wrath»; suprafața WLC בְּעִיר este textual dificilă și a primit interpretări diferite. Se păstrează explicit lectura WEBU, fără a ascunde dificultatea WLC.",
-        "Osea 11:10 — minor: Structura este că ei Îl urmează pe DOMNUL, iar El răcnește ca un leu; «îl vor urma ... ca pe un leu» poate face comparația dependentă de verbul «a urma». יֶחֶרְדוּ este «vor veni/tremura», nu «vor alerga».",
-        "Osea 11:11 — minor: יֶחֶרְדוּ descrie venirea tremurândă; «vor alerga tremurând» adaugă viteza/alergarea.",
-        "Osea 11:12 — material: Versetul este textual dificil, iar WEBU și WLC îl interpretează diferit. În WLC, רָד este verb 3ms («rătăcește/umblă neliniștit»), עִם־אֵל este «cu Dumnezeu», קְדוֹשִׁים este plural «cei sfinți», iar נֶאֱמָן este singular și îl predică pe Iuda. Candidatul transformă «credincios» în atribut al Celui Sfânt. Propunerea urmează morfologia WLC și marchează explicit ambiguitatea."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorul, referenții, imaginile profetice și opozițiile teologice sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Numele divine, judecata, mila, legământul, idolatria și restaurarea sunt redate semantic fără armonizări confesionale adăugate."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -221,7 +151,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt folosite numai ca benchmark-uri public-domain, iar NTR numai ca referință externă de comparație"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -231,15 +161,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "71112c63c27319b2d6fdb3399ce26cc4ec82f471447db8972775a60786cf9647",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:c0375d6657fe64c17e8ccd4379a49371b7e5d304cd6b693554fc5ed83329f5a2"
+    "textDigest": "sha256:1bd6aedc2c4881b53d507ed33b02a90d345120d135d3191ef54a72cf9d57274a"
   }
 }

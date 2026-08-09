@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/JON03.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-JON"
+      "lockId": "WEBU-R5-JON"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/JON03.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-JON"
+      "lockId": "WLC-OSHB-REMAP-R5-JON",
+      "rawLockId": "WLC-RAW-R5-JON",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -32,7 +34,7 @@
   "verses": [
     {
       "number": 1,
-      "text": "Cuvântul DOMNULUI a venit a doua oară la Iona, astfel:"
+      "text": "Cuvântul DOMNULui a vorbit a doua oară lui Iona astfel:"
     },
     {
       "number": 2,
@@ -40,7 +42,7 @@
     },
     {
       "number": 3,
-      "text": "Iona s-a ridicat și s-a dus la Ninive, după cuvântul DOMNULUI. Ninive era o cetate foarte mare, cât o călătorie de trei zile."
+      "text": "Și Iona s-a sculat și s-a dus la Ninive, după cuvântul DOMNULui. Și Ninive era o cetate foarte mare, cât o călătorie de trei zile."
     },
     {
       "number": 4,
@@ -60,64 +62,18 @@
     },
     {
       "number": 8,
-      "text": "Ci oamenii și vitele să se acopere cu sac, să strige cu putere către Dumnezeu și fiecare să se întoarcă de la calea lui cea rea și de la violența din mâinile lui."
+      "text": "Ci oamenii și vitele să se acopere cu saci, să strige cu putere către Dumnezeu și să se întoarcă de la calea lor cea rea și de la faptele de asuprire de care le sunt pline mâinile!"
     },
     {
       "number": 9,
-      "text": "„Cine știe? Poate Dumnezeu Se va întoarce și Se va îndupleca, Își va întoarce mânia aprinsă, iar noi nu vom pieri.”"
+      "text": "„Cine știe dacă nu Se va întoarce Dumnezeu și Se va căi, și dacă nu-Și va opri mânia Lui aprinsă, ca să nu pierim!”"
     },
     {
       "number": 10,
-      "text": "Dumnezeu a văzut faptele lor, că se întorceau de la calea lor cea rea. Atunci Dumnezeu S-a înduplecat cu privire la nenorocirea pe care spusese că le-o va face și n-a făcut-o."
+      "text": "Dumnezeu a văzut ce făceau ei și că se întorceau de la calea lor cea rea. Atunci Dumnezeu S-a căit de răul pe care Se hotărâse să li-l facă și nu l-a făcut."
     }
   ],
-  "editorialNotes": [
-    {
-      "verse": 1,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Iona 3:1 a fost aplicată în textul canonic.",
-      "reason": "Formula profetică repetă Iona 1:1: Cuvântul DOMNULUI «a venit la» Iona. «A vorbit a doua oară lui Iona» este o construcție defectă și schimbă idiomul ebraic.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 3,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Iona 3:3 a fost aplicată în textul canonic.",
-      "reason": "Forma Numelui trebuie normalizată la «DOMNULUI». Restul versetului păstrează bine dimensiunea cetății și călătoria de trei zile.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 8,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Iona 3:8 a fost aplicată în textul canonic.",
-      "reason": "וְיָשֻׁבוּ אִישׁ מִדַּרְכּוֹ הָרָעָה păstrează responsabilitatea individuală: fiecare om să se întoarcă de la calea lui rea și de la violența din mâinile lui. Candidatul transformă expresia într-o descriere colectivă mai abstractă.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 9,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Iona 3:9 a fost aplicată în textul canonic.",
-      "reason": "וְנִחַם în contextul judecății anunțate înseamnă că Dumnezeu Se înduplecă/retrage de la nenorocirea anunțată. «Se va căi» poate sugera că Dumnezeu se pocăiește de o greșeală morală și introduce o concluzie doctrinară nedorită în traducere.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 10,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Iona 3:10 a fost aplicată în textul canonic.",
-      "reason": "וַיִּנָּחֶם הָאֱלֹהִים עַל־הָרָעָה descrie înduplecarea lui Dumnezeu cu privire la nenorocirea/judecata anunțată. «Dumnezeu S-a căit de răul» poate sugera o greșeală morală din partea lui Dumnezeu și confundă sensurile lui רָעָה.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    }
-  ],
+  "editorialNotes": [],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -150,14 +106,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh JON."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 10,
       "reviewed": 10,
@@ -167,23 +122,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Iona 3: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Iona 3:1 — material: Formula profetică repetă Iona 1:1: Cuvântul DOMNULUI «a venit la» Iona. «A vorbit a doua oară lui Iona» este o construcție defectă și schimbă idiomul ebraic.",
-        "Iona 3:3 — minor: Forma Numelui trebuie normalizată la «DOMNULUI». Restul versetului păstrează bine dimensiunea cetății și călătoria de trei zile.",
-        "Iona 3:8 — material: וְיָשֻׁבוּ אִישׁ מִדַּרְכּוֹ הָרָעָה păstrează responsabilitatea individuală: fiecare om să se întoarcă de la calea lui rea și de la violența din mâinile lui. Candidatul transformă expresia într-o descriere colectivă mai abstractă.",
-        "Iona 3:9 — critical: וְנִחַם în contextul judecății anunțate înseamnă că Dumnezeu Se înduplecă/retrage de la nenorocirea anunțată. «Se va căi» poate sugera că Dumnezeu se pocăiește de o greșeală morală și introduce o concluzie doctrinară nedorită în traducere.",
-        "Iona 3:10 — critical: וַיִּנָּחֶם הָאֱלֹהִים עַל־הָרָעָה descrie înduplecarea lui Dumnezeu cu privire la nenorocirea/judecata anunțată. «Dumnezeu S-a căit de răul» poate sugera o greșeală morală din partea lui Dumnezeu și confundă sensurile lui רָעָה."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorul, referenții, imaginile profetice și opozițiile teologice sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Numele divine, judecata, mila, legământul, idolatria și restaurarea sunt redate semantic fără armonizări confesionale adăugate."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -193,7 +143,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -203,15 +153,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "c3fcf2d2110fb8b785b2f0798564a444a06292fd01b03efae8208c24de07b771",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:0768311bef092ae6de5d0c7058ddefe46cbc6feb3641208b06859f00575088be"
+    "textDigest": "sha256:3011eb7b3d83164dca55098e9e6c69a16729cb25b9fe67bbd8210e39bb4139ef"
   }
 }

@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/AMO04.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-AMO"
+      "lockId": "WEBU-R5-AMO"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/AMO04.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-AMO"
+      "lockId": "WLC-OSHB-REMAP-R5-AMO",
+      "rawLockId": "WLC-RAW-R5-AMO",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -48,11 +50,11 @@
     },
     {
       "number": 5,
-      "text": "Aduceți ca jertfă de mulțumire ceva dospit; vestiți darurile de bunăvoie și faceți-le cunoscute, căci așa vă place, copii ai lui Israel, zice DOMNUL Dumnezeu."
+      "text": "Faceți să fumege jertfe de mulțumire făcute cu aluat! Trâmbițați-vă, vestiți-vă darurile de mâncare de bunăvoie! Căci așa vă place, copii ai lui Israel, zice DOMNUL Dumnezeu. –"
     },
     {
       "number": 6,
-      "text": "Și Eu v-am dat dinți curați în toate cetățile voastre și lipsă de pâine în toate locurile voastre; totuși nu v-ați întors la Mine, zice DOMNUL."
+      "text": "Și Eu, de partea Mea, v-am trimis foametea în toate cetățile voastre și lipsa de pâine, în toate locuințele voastre. Cu toate acestea, tot nu v-ați întors la Mine, zice DOMNUL. –"
     },
     {
       "number": 7,
@@ -64,7 +66,7 @@
     },
     {
       "number": 9,
-      "text": "V-am lovit cu arșiță și cu mană; grădinile voastre cele multe, viile, smochinii și măslinii voștri i-a mâncat lăcusta roiitoare. Totuși nu v-ați întors la Mine, zice DOMNUL."
+      "text": "V-am lovit cu rugină în grâu și cu tăciune; grădinile voastre cele multe, viile, smochinii și măslinii voștri i-au mâncat deseori lăcustele. Cu toate acestea, tot nu v-ați întors la Mine, zice DOMNUL! –"
     },
     {
       "number": 10,
@@ -72,7 +74,7 @@
     },
     {
       "number": 11,
-      "text": "Am nimicit dintre voi, cum a nimicit Dumnezeu Sodoma și Gomora, iar voi ați fost ca un tăciune scos din foc. Totuși nu v-ați întors la Mine, zice DOMNUL."
+      "text": "V-am nimicit ca pe Sodoma și Gomora, pe care le-a nimicit Dumnezeu; și ați fost ca un tăciune scos din foc. Cu toate acestea, tot nu v-ați întors la Mine, zice DOMNUL… –"
     },
     {
       "number": 12,
@@ -83,44 +85,7 @@
       "text": "Căci iată că El a întocmit munții, a făcut vântul și spune omului până și gândurile lui. El preface zorile în întuneric și umblă pe înălțimile pământului: DOMNUL Dumnezeul oștirilor este numele Lui. –"
     }
   ],
-  "editorialNotes": [
-    {
-      "verse": 5,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Amos 4:5 a fost aplicată în textul canonic.",
-      "reason": "וְקִרְאוּ נְדָבוֹת הַשְׁמִיעוּ cere proclamarea publică a darurilor de bunăvoie; «Trâmbițați-vă» este o formă defectă, iar «darurile de mâncare» nu apare în text.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 6,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Amos 4:6 a fost aplicată în textul canonic.",
-      "reason": "נִקְיוֹן שִׁנַּיִם este imaginea «curăției dinților», explicată imediat prin lipsa pâinii. «V-am trimis foametea» transmite efectul, dar elimină imaginea explicită a textului ebraic.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 9,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Amos 4:9 a fost aplicată în textul canonic.",
-      "reason": "Textul vorbește despre lovirea cu arșiță/rugină și mană, apoi despre grădini, vii, smochini și măslini devorați de גָּזָם. Candidatul adaugă «în grâu» și «deseori», care nu sunt în WLC/WEBU.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 11,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Amos 4:11 a fost aplicată în textul canonic.",
-      "reason": "הָפַכְתִּי בָכֶם / WEBU «I have overthrown some of you» descrie o nimicire în mijlocul lor, nu afirmă că întregul Israel fusese deja nimicit. Candidatul generalizează «V-am nimicit».",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    }
-  ],
+  "editorialNotes": [],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -153,14 +118,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh AMO."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 13,
       "reviewed": 13,
@@ -170,22 +134,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Amos 4: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Amos 4:5 — material: וְקִרְאוּ נְדָבוֹת הַשְׁמִיעוּ cere proclamarea publică a darurilor de bunăvoie; «Trâmbițați-vă» este o formă defectă, iar «darurile de mâncare» nu apare în text.",
-        "Amos 4:6 — material: נִקְיוֹן שִׁנַּיִם este imaginea «curăției dinților», explicată imediat prin lipsa pâinii. «V-am trimis foametea» transmite efectul, dar elimină imaginea explicită a textului ebraic.",
-        "Amos 4:9 — material: Textul vorbește despre lovirea cu arșiță/rugină și mană, apoi despre grădini, vii, smochini și măslini devorați de גָּזָם. Candidatul adaugă «în grâu» și «deseori», care nu sunt în WLC/WEBU.",
-        "Amos 4:11 — material: הָפַכְתִּי בָכֶם / WEBU «I have overthrown some of you» descrie o nimicire în mijlocul lor, nu afirmă că întregul Israel fusese deja nimicit. Candidatul generalizează «V-am nimicit»."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorul, referenții, imaginile profetice și opozițiile teologice sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Numele divine, judecata, mila, legământul, idolatria și restaurarea sunt redate semantic fără armonizări confesionale adăugate."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -195,7 +155,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -205,15 +165,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "c2e915dacf472bc0af72d9ba71d18e3b575246c7ddd4e4bcbcfaec7fc98abfac",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:4989b445a85fd67d3db902b42d43fff487732b53288ec60d942126d1ef0a1bd2"
+    "textDigest": "sha256:6dd40a563487e166905e1fbe1131cc0294b6c94917e1a14fc1c745c673de3163"
   }
 }

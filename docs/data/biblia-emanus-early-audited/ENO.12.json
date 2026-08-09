@@ -1,0 +1,81 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "ENO",
+  "bookName": "1 Enoh",
+  "chapter": 12,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://bible.ertale.com/ethiopiancanon/enoch/12/",
+    "pageSha256": "330ce0706adb5881521391f5464a8e046004c19a1cc9108df9e091ff09b4b4c7",
+    "underlyingEdition": "R. H. Charles, The Book of Enoch, 1912/1917",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "structured mirror of public-domain Charles translation",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "sourceTextDigest": "db475df0570c72b1453a970b1dab9320941b3b164bd7a2694f2516d8f86d5c16",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Înainte ca aceste lucruri Enoh să fie ascunse, și nimeni dintre copiii oamenilor nu știa unde era ascuns, unde locuia și ce se întîmplase cu el."
+    },
+    {
+      "number": 2,
+      "text": "le lui aveau de-a face cu Veghetorii, iar zilele lui erau cu cei sfinți."
+    },
+    {
+      "number": 3,
+      "text": "Eu, Enoh, am binecuvântat pe Domnul Maiestății și pe Împăratul Vechilor, și iată că străjerii m-au chemat scribul Enoch și mi-au zis:"
+    },
+    {
+      "number": 4,
+      "text": "Enoch, tu, logofătul dreptății, du-te, vestește Veghetorilor cerului care au părăsit cerul cel înalt, Locul cel sfânt etern, și s-au pângărit cu femei, și au făcut cum fac copiii pământului, și și-au luat soții."
+    },
+    {
+      "number": 5,
+      "text": "Voi ați făcut o mare nimicire pe pământ; nu avea nici pace, nici iertare de păcat; , în măsura în care ei găsesc plăcerea în copiii lor,"
+    },
+    {
+      "number": 6,
+      "text": "Uciderea celor iubiți ai lor va vedea, și peste nimicirea copiilor lor vor plânge, și vor face cereri pentru eternitate, dar milă și pace nu veți ajunge. „”"
+    }
+  ],
+  "audit": {
+    "sourceUnits": 6,
+    "translatedUnits": 6,
+    "firstPassIssueCount": 0,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 6,
+    "semanticMinimumScore": 0.746212,
+    "blockingIssueCount": 0,
+    "textDigest": "68f1b1ef0f0b226f344470f8ec02cd3b678c1890103af7085ed7e960e224ab02",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

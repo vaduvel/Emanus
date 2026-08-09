@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/AMO02.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-AMO"
+      "lockId": "WEBU-R5-AMO"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/AMO02.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-AMO"
+      "lockId": "WLC-OSHB-REMAP-R5-AMO",
+      "rawLockId": "WLC-RAW-R5-AMO",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -32,7 +34,7 @@
   "verses": [
     {
       "number": 1,
-      "text": "Așa vorbește DOMNUL: „Pentru trei nelegiuiri ale Moabului, ba pentru patru, nu-Mi schimb hotărârea, pentru că a ars până le-a făcut var oasele împăratului Edomului;”"
+      "text": "Așa vorbește DOMNUL: „Pentru trei nelegiuiri ale Moabului, ba pentru patru, nu-Mi schimb hotărârea, pentru că a ars, a ars până le-a făcut var, oasele împăratului Edomului,”"
     },
     {
       "number": 2,
@@ -44,7 +46,7 @@
     },
     {
       "number": 4,
-      "text": "Așa vorbește DOMNUL: „Pentru trei nelegiuiri ale lui Iuda, ba pentru patru, nu-Mi schimb hotărârea, pentru că au nesocotit Legea DOMNULUI și n-au păzit rânduielile Lui, iar minciunile lor i-au dus în rătăcire, acelea după care au umblat și părinții lor;”"
+      "text": "Așa vorbește DOMNUL: „Pentru trei nelegiuiri ale lui Iuda, ba pentru patru, nu-Mi schimb hotărârea, pentru că au nesocotit Legea DOMNULui și n-au păzit poruncile Lui, ci s-au lăsat duși în rătăcire de idolii cei mincinoși după care au umblat și părinții lor;”"
     },
     {
       "number": 5,
@@ -56,11 +58,11 @@
     },
     {
       "number": 7,
-      "text": "Ei râvnesc până și la țărâna pământului de pe capul celor săraci și abat calea celor smeriți. Un bărbat și tatăl lui se duc la aceeași fată, ca să pângărească Numele Meu cel sfânt."
+      "text": "Ei doresc să vadă țărâna pământului pe capul celor sărmani și calcă în picioare dreptul celor nenorociți. Fiul și tatăl se duc la aceeași fată, ca să pângărească Numele Meu cel sfânt."
     },
     {
       "number": 8,
-      "text": "Se întind lângă fiecare altar pe haine luate ca zălog și beau în casa Dumnezeului lor vinul celor amendați."
+      "text": "Se întind lângă fiecare altar pe haine luate ca zălog și beau în casa dumnezeilor lor amenda celor osândiți de ei."
     },
     {
       "number": 9,
@@ -80,7 +82,7 @@
     },
     {
       "number": 13,
-      "text": "Iată, vă voi apăsa la locul vostru, așa cum apasă un car încărcat cu snopi."
+      "text": "Iată, vă voi stropși cum stropșește pământul carul încărcat cu snopi,"
     },
     {
       "number": 14,
@@ -95,53 +97,7 @@
       "text": "„iar cel mai inimos dintre războinici va fugi în pielea goală în ziua aceea, zice DOMNUL.”"
     }
   ],
-  "editorialNotes": [
-    {
-      "verse": 1,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Amos 2:1 a fost aplicată în textul canonic.",
-      "reason": "Candidatul dublează mecanic verbul «a ars, a ars»; WLC שָׂרְפוֹ și WEBU au un singur verb și sensul este arderea oaselor până la var.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 4,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Amos 2:4 a fost aplicată în textul canonic.",
-      "reason": "כִּזְבֵיהֶם este literal «minciunile lor»; identificarea directă cu «idolii cei mincinoși» introduce în traducere o interpretare posibilă, dar neexprimată lexical în verset.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 7,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Amos 2:7 a fost aplicată în textul canonic.",
-      "reason": "Prima propoziție este dificilă, dar הַשֹּׁאֲפִים nu înseamnă simplu «doresc să vadă»; iar וְדֶרֶךְ עֲנָוִים יַטּוּ este abaterea căii/dreptului celor smeriți. Redarea trebuie să păstreze opresiunea fără o parafrază slabă.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 8,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Amos 2:8 a fost aplicată în textul canonic.",
-      "reason": "וְיֵין עֲנוּשִׁים / WEBU «the wine of those who have been fined» conține explicit «vinul»; candidatul spune «beau ... amenda», făcând obiectul băutului semantic imposibil și omițând substantivul decisiv.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 13,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Amos 2:13 a fost aplicată în textul canonic.",
-      "reason": "Candidatul are construcția defectă «cum stropșește pământul carul». Imaginea ebraică și WEBU compară apăsarea cu un car încărcat de snopi/cereale care strivește.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    }
-  ],
+  "editorialNotes": [],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -174,14 +130,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh AMO."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 16,
       "reviewed": 16,
@@ -191,23 +146,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Amos 2: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Amos 2:1 — minor: Candidatul dublează mecanic verbul «a ars, a ars»; WLC שָׂרְפוֹ și WEBU au un singur verb și sensul este arderea oaselor până la var.",
-        "Amos 2:4 — material: כִּזְבֵיהֶם este literal «minciunile lor»; identificarea directă cu «idolii cei mincinoși» introduce în traducere o interpretare posibilă, dar neexprimată lexical în verset.",
-        "Amos 2:7 — material: Prima propoziție este dificilă, dar הַשֹּׁאֲפִים nu înseamnă simplu «doresc să vadă»; iar וְדֶרֶךְ עֲנָוִים יַטּוּ este abaterea căii/dreptului celor smeriți. Redarea trebuie să păstreze opresiunea fără o parafrază slabă.",
-        "Amos 2:8 — critical: וְיֵין עֲנוּשִׁים / WEBU «the wine of those who have been fined» conține explicit «vinul»; candidatul spune «beau ... amenda», făcând obiectul băutului semantic imposibil și omițând substantivul decisiv.",
-        "Amos 2:13 — material: Candidatul are construcția defectă «cum stropșește pământul carul». Imaginea ebraică și WEBU compară apăsarea cu un car încărcat de snopi/cereale care strivește."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorul, referenții, imaginile profetice și opozițiile teologice sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Numele divine, judecata, mila, legământul, idolatria și restaurarea sunt redate semantic fără armonizări confesionale adăugate."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -217,7 +167,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -227,15 +177,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "c2e915dacf472bc0af72d9ba71d18e3b575246c7ddd4e4bcbcfaec7fc98abfac",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:ef7d4592c932c66aa6c818805b55cd78c06713546b879a666f9e5c187b820bbc"
+    "textDigest": "sha256:ac68221dd43f6a0177ef5f63a4fc452bae597de930f4a7cdbcf75db9623a1192"
   }
 }

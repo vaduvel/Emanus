@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/ZEC07.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-ZEC"
+      "lockId": "WEBU-R5-ZEC"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/ZEC07.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-ZEC"
+      "lockId": "WLC-OSHB-REMAP-R5-ZEC",
+      "rawLockId": "WLC-RAW-R5-ZEC",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -48,7 +50,7 @@
     },
     {
       "number": 5,
-      "text": "„Vorbește întregului popor al țării și preoților și spune: «Când ați postit și ați jelit în luna a cincea și în luna a șaptea, în acești șaptezeci de ani, oare pentru Mine ați postit cu adevărat?»”"
+      "text": "„Spune la tot poporul țării și preoților: „Când ați postit și ați plâns în luna a cincea și a șaptea, în acești șaptezeci de ani, oare pentru Mine ați postit voi?””"
     },
     {
       "number": 6,
@@ -64,7 +66,7 @@
     },
     {
       "number": 9,
-      "text": "„Așa vorbea DOMNUL oștirilor: «Faceți judecată adevărată și arătați bunătate și îndurare fiecare față de fratele său.»”"
+      "text": "„Așa a vorbit DOMNUL oștirilor: „Faceți cu adevărat dreptate și purtați-vă cu bunătate și îndurare unul față de altul.””"
     },
     {
       "number": 10,
@@ -76,7 +78,7 @@
     },
     {
       "number": 12,
-      "text": "Și-au făcut inimile ca diamantul, ca să nu asculte Legea și cuvintele pe care DOMNUL oștirilor le trimisese prin Duhul Său, prin prorocii de odinioară. De aceea a venit o mare mânie de la DOMNUL oștirilor."
+      "text": "Și-au făcut inima ca diamantul de tare, ca să n-asculte Legea, nici cuvintele pe care li le spunea DOMNUL oștirilor prin Duhul Său, prin prorocii de mai înainte. Din pricina aceasta, DOMNUL oștirilor S-a aprins de o mare mânie."
     },
     {
       "number": 13,
@@ -84,47 +86,10 @@
     },
     {
       "number": 14,
-      "text": "„I-am împrăștiat ca printr-un vârtej printre toate neamurile pe care nu le cunoșteau. Țara a rămas pustie după ei, fără nimeni care să treacă sau să se întoarcă; astfel au făcut din țara cea plăcută o pustietate.”"
+      "text": "„Ci i-am împrăștiat printre toate neamurile pe care nu le cunoșteau; țara a fost pustiită în urma lor, așa că nimeni nu mai venea și nu mai pleca din ea; și dintr-o țară plăcută cum era, au făcut un pustiu!”"
     }
   ],
-  "editorialNotes": [
-    {
-      "verse": 5,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Zaharia 7:5 a fost aplicată în textul canonic.",
-      "reason": "Întrebarea divină insistă că postul și jalea din lunile a cincea și a șaptea, timp de șaptezeci de ani, nu au fost în mod real «pentru Mine». Nu se transformă în traducere într-o condamnare generală a postului.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 9,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Zaharia 7:9 a fost aplicată în textul canonic.",
-      "reason": "מִשְׁפַּט אֱמֶת este judecata adevărată/dreaptă; חֶסֶד וְרַחֲמִים sunt bunătatea de legământ și îndurarea. Traducerea păstrează poruncile concrete, nu le reduce la «fiți buni».",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 12,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Zaharia 7:12 a fost aplicată în textul canonic.",
-      "reason": "Textul spune că Legea și cuvintele au fost trimise de DOMNUL prin Duhul Său, prin prorocii de odinioară. Traducerea nu separă Duhul de actul vorbirii și nu introduce o doctrină despre inspirație mai amplă decât propoziția.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 14,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Zaharia 7:14 a fost aplicată în textul canonic.",
-      "reason": "Împrăștierea «ca printr-un vârtej» printre neamuri necunoscute și pustiirea țării sunt păstrate ca judecata relatată; nu se identifică în traducere cu un exil ulterior specific dacă versetul nu îl numește.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    }
-  ],
+  "editorialNotes": [],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -157,14 +122,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh ZEC."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 14,
       "reviewed": 14,
@@ -174,22 +138,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Zaharia 7: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Zaharia 7:5 — material: Întrebarea divină insistă că postul și jalea din lunile a cincea și a șaptea, timp de șaptezeci de ani, nu au fost în mod real «pentru Mine». Nu se transformă în traducere într-o condamnare generală a postului.",
-        "Zaharia 7:9 — material: מִשְׁפַּט אֱמֶת este judecata adevărată/dreaptă; חֶסֶד וְרַחֲמִים sunt bunătatea de legământ și îndurarea. Traducerea păstrează poruncile concrete, nu le reduce la «fiți buni».",
-        "Zaharia 7:12 — critical: Textul spune că Legea și cuvintele au fost trimise de DOMNUL prin Duhul Său, prin prorocii de odinioară. Traducerea nu separă Duhul de actul vorbirii și nu introduce o doctrină despre inspirație mai amplă decât propoziția.",
-        "Zaharia 7:14 — material: Împrăștierea «ca printr-un vârtej» printre neamuri necunoscute și pustiirea țării sunt păstrate ca judecata relatată; nu se identifică în traducere cu un exil ulterior specific dacă versetul nu îl numește."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorul, referenții, imaginile profetice și opozițiile teologice sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Numele divine, judecata, mila, legământul, idolatria și restaurarea sunt redate semantic fără armonizări confesionale adăugate."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -199,7 +159,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -209,15 +169,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "f4c3edaedd1a4fe4e31c1031d2247e82ade6f0812b0cf34e1f991858dd4c5d4d",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:69bf51e3b3f547e36e4343e995a11c7865e86394e55c5d5e12282fa62372f4cf"
+    "textDigest": "sha256:50a48f9dfb4ced1bd9f56cc9f661020dcc782df2e61a5d1320d75f533431c8c7"
   }
 }

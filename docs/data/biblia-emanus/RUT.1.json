@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/RUT01.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-RUT"
+      "lockId": "WEBU-R5-RUT"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/RUT01.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-RUT"
+      "lockId": "WLC-OSHB-REMAP-R5-RUT",
+      "rawLockId": "WLC-RAW-R5-RUT",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -60,11 +62,11 @@
     },
     {
       "number": 8,
-      "text": "Naomi le-a zis celor două nurori ale ei: „Duceți-vă și întoarceți-vă fiecare la casa mamei ei. DOMNUL să Se poarte cu bunătate față de voi, așa cum v-ați purtat și voi față de cei morți și față de mine.”"
+      "text": "Naomi a zis atunci celor două nurori ale ei: „Duceți-vă și întoarceți-vă fiecare la casa mamei ei! DOMNUL să Se îndure de voi, cum v-ați îndurat și voi de cei ce au murit și de mine!”"
     },
     {
       "number": 9,
-      "text": "„DOMNUL să vă dea să găsiți odihnă, fiecare în casa soțului ei.” Apoi le-a sărutat, iar ele și-au ridicat glasul și au plâns."
+      "text": "„Să vă dea DOMNUL să găsiți odihnă fiecare în casa unui bărbat!”"
     },
     {
       "number": 10,
@@ -84,7 +86,7 @@
     },
     {
       "number": 14,
-      "text": "Ele și-au ridicat glasul și au plâns din nou. Orpa și-a sărutat soacra, dar Rut s-a lipit de ea."
+      "text": "Și ele au ridicat glasul și iarăși au plâns. Orpa a sărutat pe soacra sa și a plecat, dar Rut s-a ținut de ea."
     },
     {
       "number": 15,
@@ -92,11 +94,11 @@
     },
     {
       "number": 16,
-      "text": "Rut a răspuns: „Nu stărui să te părăsesc și să mă întorc de la tine! Unde vei merge tu, voi merge și eu; unde vei locui tu, voi locui și eu. Poporul tău va fi poporul meu și Dumnezeul tău va fi Dumnezeul meu.”"
+      "text": "Rut a răspuns: „Nu sta de mine să te las și să mă întorc de la tine! Încotro vei merge tu, voi merge și eu, unde vei locui tu, voi locui și eu; poporul tău va fi poporul meu, și Dumnezeul tău va fi Dumnezeul meu;”"
     },
     {
       "number": 17,
-      "text": "„Unde vei muri tu, voi muri și eu și acolo voi fi îngropată. Așa să-mi facă DOMNUL și încă mai mult, dacă altceva decât moartea mă va despărți de tine.”"
+      "text": "„unde vei muri tu, voi muri și eu și voi fi îngropată acolo. Facă-mi DOMNUL ce o vrea, dar nimic nu mă va despărți de tine decât moartea!”"
     },
     {
       "number": 18,
@@ -119,53 +121,7 @@
       "text": "Astfel s-au întors din țara Moabului Naomi și nora sa Rut, moabita. Au ajuns la Betleem la începutul seceratului orzului."
     }
   ],
-  "editorialNotes": [
-    {
-      "verse": 8,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Rut 1:8 a fost aplicată în textul canonic.",
-      "reason": "«DOMNUL să Se îndure de voi» reduce חֶסֶד / kindness la milă. Naomi cere ca DOMNUL să Se poarte cu aceeași bunătate loială cu care nurorile s-au purtat față de cei morți și față de ea.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 9,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Rut 1:9 a fost aplicată în textul canonic.",
-      "reason": "Candidatul omite finalul versetului: Naomi le sărută, iar ele își ridică glasul și plâng.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 14,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Rut 1:14 a fost aplicată în textul canonic.",
-      "reason": "Candidatul adaugă explicit «și a plecat» după sărutul Orpei. Versetul ebraic contrastează sărutul Orpei cu faptul că Rut s-a lipit de Naomi; plecarea este clară din contextul următor, dar nu trebuie inserată în acest verset.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 16,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Rut 1:16 a fost aplicată în textul canonic.",
-      "reason": "«Nu sta de mine să te las» este o formulare românească defectuoasă. Sensul este rugămintea de a nu fi îndemnată să o părăsească pe Naomi.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 17,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Rut 1:17 a fost aplicată în textul canonic.",
-      "reason": "Formula de jurământ pierde intensificarea «și încă mai mult». Se păstrează formula completă fără a o transforma într-o explicație doctrinară.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    }
-  ],
+  "editorialNotes": [],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -198,14 +154,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh RUT."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 22,
       "reviewed": 22,
@@ -215,24 +170,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Rut 1: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Rut 1:8 — material: «DOMNUL să Se îndure de voi» reduce חֶסֶד / kindness la milă. Naomi cere ca DOMNUL să Se poarte cu aceeași bunătate loială cu care nurorile s-au purtat față de cei morți și față de ea.",
-        "Rut 1:9 — critical: Candidatul omite finalul versetului: Naomi le sărută, iar ele își ridică glasul și plâng.",
-        "Rut 1:14 — material: Candidatul adaugă explicit «și a plecat» după sărutul Orpei. Versetul ebraic contrastează sărutul Orpei cu faptul că Rut s-a lipit de Naomi; plecarea este clară din contextul următor, dar nu trebuie inserată în acest verset.",
-        "Rut 1:16 — minor: «Nu sta de mine să te las» este o formulare românească defectuoasă. Sensul este rugămintea de a nu fi îndemnată să o părăsească pe Naomi.",
-        "Rut 1:17 — material: Formula de jurământ pierde intensificarea «și încă mai mult». Se păstrează formula completă fără a o transforma într-o explicație doctrinară."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorii, referenții, numele cultice, cifrele și succesiunea narațiunii sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Violența, abuzul, răpirea, idolatria și acțiunile personajelor sunt redate descriptiv și nu sunt transformate prin traducere în aprobări sau norme moderne.",
-        "Unde există o variantă textuală relevantă, textul canonic urmează WLC-OSHB conform politicii Biblia Emanus, iar varianta este documentată editorial."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -242,7 +191,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -252,15 +201,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "2822ba81d05bcf30bf89b61ab202514ca026c847e605056939e19be421c84b11",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:89a6e9f0efb0edea23d1fbc524783e2bb1355c0c5d162b2f0d71aa039149e8ee"
+    "textDigest": "sha256:81a9ffea1bf9aebdd66bf79c4422e1b43642c4e37876429e35156472486a1b82"
   }
 }

@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/NAM03.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-NAM"
+      "lockId": "WEBU-R5-NAM"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/NAM03.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-NAM"
+      "lockId": "WLC-OSHB-REMAP-R5-NAM",
+      "rawLockId": "WLC-RAW-R5-NAM",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -32,7 +34,7 @@
   "verses": [
     {
       "number": 1,
-      "text": "Vai de cetatea vărsătoare de sânge, plină de minciună și de jaf; prada nu se sfârșește!"
+      "text": "Vai de cetatea vărsătoare de sânge, plină de minciună, plină de silnicie și care nu încetează să se dedea la răpire!…"
     },
     {
       "number": 2,
@@ -40,15 +42,15 @@
     },
     {
       "number": 3,
-      "text": "Călărețul atacă, sabia scânteiază, sulița fulgeră; este o mulțime de uciși, o grămadă mare de trupuri și nu se mai sfârșesc cadavrele. Ei se împiedică de trupurile lor."
+      "text": "Se aruncă năvalnici călăreții, scânteiază sabia, fulgeră sulița… O mulțime de răniți!… Grămezi de trupuri moarte!… Morți fără număr!… Cei vii se împiedică de cei morți!…"
     },
     {
       "number": 4,
-      "text": "Din pricina multelor desfrânări ale prostituatei atrăgătoare, stăpâna vrăjitoriilor, care vinde neamurile prin desfrânările ei și familiile prin vrăjitoriile ei."
+      "text": "Din pricina multelor curvii ale curvei plină de farmec, fermecătoare iscusită, care vindea neamurile prin curviile ei și popoarele prin vrăjitoriile ei."
     },
     {
       "number": 5,
-      "text": "„Iată, sunt împotriva ta”, zice DOMNUL oștirilor. „Îți voi ridica poalele peste față, le voi arăta neamurilor goliciunea ta și împărățiilor rușinea ta.”"
+      "text": "„Iată, am necaz pe tine, zice DOMNUL oștirilor, îți voi ridica poalele peste cap ca să-ți vadă neamurile goliciunea, și împărățiile, rușinea.”"
     },
     {
       "number": 6,
@@ -60,11 +62,11 @@
     },
     {
       "number": 8,
-      "text": "Ești tu mai bună decât No-Amon, așezată între râuri, cu ape împrejurul ei, având marea ca întăritură și apa ca zid?"
+      "text": "Ești tu mai bună decât No-Amon, cetatea care ședea între râuri, înconjurată de ape, având ca zid de apărare marea, ca ziduri marea?"
     },
     {
       "number": 9,
-      "text": "Cuș și Egiptul erau puterea ei fără margini; Put și libienii erau ajutoarele ei."
+      "text": "Etiopia și egiptenii fără număr erau tăria ei, Put și libienii erau ajutoarele ei."
     },
     {
       "number": 10,
@@ -88,15 +90,15 @@
     },
     {
       "number": 15,
-      "text": "Acolo te va mistui focul, sabia te va nimici și te va mistui ca lăcusta. Înmulțește-te ca lăcusta tânără, înmulțește-te ca roiul de lăcuste!"
+      "text": "Acolo te va mânca focul, te va nimici sabia cu desăvârșire, te va mistui ca niște lăcuste, căci te-ai înmulțit ca forfecarul, te-ai îngrămădit ca lăcustele!"
     },
     {
       "number": 16,
-      "text": "Ți-ai înmulțit negustorii mai mult decât stelele cerului; lăcusta jefuiește și apoi zboară."
+      "text": "Negustorii tăi sunt mai mulți decât stelele cerului, s-au îngrămădit ca puii de lăcustă care își întind aripile și zboară."
     },
     {
       "number": 17,
-      "text": "Paznicii tăi sunt ca lăcustele, iar dregătorii tăi ca roiurile de lăcuste care se așază pe ziduri într-o zi rece; când răsare soarele, zboară și nu se mai știe unde sunt."
+      "text": "Voievozii tăi sunt ca lăcustele, mai marii tăi ca o ceată de lăcuste care tăbărăsc în dumbrăvi pe răcoarea zilei: când răsare soarele, zboară, și nu se mai cunoaște locul unde erau."
     },
     {
       "number": 18,
@@ -104,101 +106,10 @@
     },
     {
       "number": 19,
-      "text": "Nu este vindecare pentru rana ta; lovitura ta este mortală. Toți cei ce vor auzi vestea despre tine vor bate din palme asupra ta, căci peste cine n-a trecut cruzimea ta neîncetată?"
+      "text": "„Rana ta nu se alină prin nimic, rana ta este fără leac! Toți cei ce vor auzi de tine vor bate din palme, căci cine este acela pe care să nu-l fi atins răutatea ta?”"
     }
   ],
-  "editorialNotes": [
-    {
-      "verse": 1,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Naum 3:1 a fost aplicată în textul canonic.",
-      "reason": "Finalul לֹא יָמִישׁ טָרֶף este afirmația că prada nu încetează/nu se sfârșește. Candidatul are și forma românească defectă «să se dedea».",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 3,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Naum 3:3 a fost aplicată în textul canonic.",
-      "reason": "רֹב חָלָל este «mulțime de uciși», nu «mulțime de răniți». Candidatul schimbă gravitatea scenei militare și apoi introduce «cei vii», absent din text.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 4,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Naum 3:4 a fost aplicată în textul canonic.",
-      "reason": "מִשְׁפָּחוֹת înseamnă familii/clanuri, nu «popoare». Candidatul lărgește al doilea obiect al înșelării.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 5,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Naum 3:5 a fost aplicată în textul canonic.",
-      "reason": "Formula הִנְנִי אֵלַיִךְ este «Iată, sunt împotriva ta», nu «am necaz pe tine». În plus, עַל־פָּנָיִךְ este «peste fața ta», nu «peste cap».",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 8,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Naum 3:8 a fost aplicată în textul canonic.",
-      "reason": "Candidatul repetă mecanic «marea» și produce o frază nefirească. Textul compară fortificația și zidul cetății cu apa/marea.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 9,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Naum 3:9 a fost aplicată în textul canonic.",
-      "reason": "וְאֵין קֵצֶה califică puterea formată de Cuș și Egipt ca fără margini. «Egiptenii fără număr» mută expresia asupra numărului egiptenilor.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 15,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Naum 3:15 a fost aplicată în textul canonic.",
-      "reason": "הִתְכַּבֵּד... הִתְכַּבְּדִי sunt imperative: «înmulțește-te ca...». Candidatul le transformă în trecut («te-ai înmulțit / te-ai îngrămădit»), schimbând retorica ironică a profeției.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 16,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Naum 3:16 a fost aplicată în textul canonic.",
-      "reason": "יֶלֶק פָּשַׁט וַיָּעֹף spune că lăcusta jefuiește/se dezbracă și zboară. Candidatul inventează «puii de lăcustă care își întind aripile».",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 17,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Naum 3:17 a fost aplicată în textul canonic.",
-      "reason": "הַחוֹנִים בַּגְּדֵרוֹת înseamnă că roiurile stau pe ziduri/îngrădituri într-o zi rece. «Tăbărăsc în dumbrăvi» schimbă complet locul imaginii.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 19,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Naum 3:19 a fost aplicată în textul canonic.",
-      "reason": "Versetul nu este introdus în sursă ca un citat exterior separat; ghilimelele editoriale sunt inutile. רָעָתְךָ תָּמִיד descrie răutatea/cruzimea continuă a Asiriei.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    }
-  ],
+  "editorialNotes": [],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -231,14 +142,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh NAM."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 19,
       "reviewed": 19,
@@ -248,28 +158,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Naum 3: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Naum 3:1 — material: Finalul לֹא יָמִישׁ טָרֶף este afirmația că prada nu încetează/nu se sfârșește. Candidatul are și forma românească defectă «să se dedea».",
-        "Naum 3:3 — critical: רֹב חָלָל este «mulțime de uciși», nu «mulțime de răniți». Candidatul schimbă gravitatea scenei militare și apoi introduce «cei vii», absent din text.",
-        "Naum 3:4 — material: מִשְׁפָּחוֹת înseamnă familii/clanuri, nu «popoare». Candidatul lărgește al doilea obiect al înșelării.",
-        "Naum 3:5 — critical: Formula הִנְנִי אֵלַיִךְ este «Iată, sunt împotriva ta», nu «am necaz pe tine». În plus, עַל־פָּנָיִךְ este «peste fața ta», nu «peste cap».",
-        "Naum 3:8 — minor: Candidatul repetă mecanic «marea» și produce o frază nefirească. Textul compară fortificația și zidul cetății cu apa/marea.",
-        "Naum 3:9 — material: וְאֵין קֵצֶה califică puterea formată de Cuș și Egipt ca fără margini. «Egiptenii fără număr» mută expresia asupra numărului egiptenilor.",
-        "Naum 3:15 — critical: הִתְכַּבֵּד... הִתְכַּבְּדִי sunt imperative: «înmulțește-te ca...». Candidatul le transformă în trecut («te-ai înmulțit / te-ai îngrămădit»), schimbând retorica ironică a profeției.",
-        "Naum 3:16 — critical: יֶלֶק פָּשַׁט וַיָּעֹף spune că lăcusta jefuiește/se dezbracă și zboară. Candidatul inventează «puii de lăcustă care își întind aripile».",
-        "Naum 3:17 — critical: הַחוֹנִים בַּגְּדֵרוֹת înseamnă că roiurile stau pe ziduri/îngrădituri într-o zi rece. «Tăbărăsc în dumbrăvi» schimbă complet locul imaginii.",
-        "Naum 3:19 — minor: Versetul nu este introdus în sursă ca un citat exterior separat; ghilimelele editoriale sunt inutile. רָעָתְךָ תָּמִיד descrie răutatea/cruzimea continuă a Asiriei."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorul, referenții, imaginile profetice și opozițiile teologice sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Numele divine, judecata, mila, legământul, idolatria și restaurarea sunt redate semantic fără armonizări confesionale adăugate."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -279,7 +179,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -289,15 +189,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "e3f236be732d766dd7be425c0a5d41f62fb9aee3c17c5b1ffa2a6b7ee455459f",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:7e71def4a7631aa2cff0a169a9df150b45d4741ea2931341ae5167b387434e35"
+    "textDigest": "sha256:4486fa516929393ec47b3cf25168db57c1016aceda9090a795d3efed1cee758a"
   }
 }

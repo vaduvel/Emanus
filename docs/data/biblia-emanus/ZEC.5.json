@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/ZEC05.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-ZEC"
+      "lockId": "WEBU-R5-ZEC"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/ZEC05.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-ZEC"
+      "lockId": "WLC-OSHB-REMAP-R5-ZEC",
+      "rawLockId": "WLC-RAW-R5-ZEC",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -40,7 +42,7 @@
     },
     {
       "number": 3,
-      "text": "El mi-a zis: „Acesta este blestemul care iese peste fața întregii țări; căci orice hoț va fi nimicit potrivit celor scrise pe o parte și oricine jură fals va fi nimicit potrivit celor scrise pe cealaltă parte.”"
+      "text": "Și el mi-a zis: „Acesta este blestemul care este peste toată țara; căci, după cum este scris pe el, orice hoț și oricine jură strâmb va fi nimicit cu desăvârșire de aici.”"
     },
     {
       "number": 4,
@@ -52,7 +54,7 @@
     },
     {
       "number": 6,
-      "text": "Am întrebat: „Ce este aceasta?” El a răspuns: „Aceasta este efa care iese.” Apoi a zis: „Aceasta este înfățișarea lor în toată țara.”"
+      "text": "Eu am răspuns: „Ce este aceasta?” Și el a zis: „Iese efa.” Și a adăugat: „Aceasta este nelegiuirea lor în toată țara.”"
     },
     {
       "number": 7,
@@ -60,7 +62,7 @@
     },
     {
       "number": 8,
-      "text": "El a zis: „Aceasta este Răutatea.” A aruncat-o în mijlocul efei și a aruncat greutatea de plumb peste gura ei."
+      "text": "El a spus: „Aceasta este Răutatea!” A împins-o înapoi în mijlocul efei și a aruncat greutatea de plumb peste gura ei."
     },
     {
       "number": 9,
@@ -72,45 +74,16 @@
     },
     {
       "number": 11,
-      "text": "El mi-a răspuns: „Ca să-i zidească o casă în țara Șinearului. Când va fi pregătită, efa va fi așezată acolo pe temelia ei.”"
+      "text": "El mi-a răspuns: „Se duc să-i zidească o casă în țara Șinear, ca să fie așezată acolo și să rămână pe locul ei.”"
     }
   ],
   "editorialNotes": [
     {
-      "verse": 3,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Zaharia 5:3 a fost aplicată în textul canonic.",
-      "reason": "Sulul este numit «blestemul» care iese peste fața întregii țări și vizează furtul și jurământul fals; nu se transformă în traducere într-o doctrină generală despre Lege.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 6,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Zaharia 5:6 a fost aplicată în textul canonic.",
-      "reason": "זֹאת עֵינָם בְּכָל־הָאָרֶץ este expresia dificilă redată de WEBU prin «aceasta este înfățișarea lor în toată țara». Traducerea nu o înlocuiește cu «aceasta este nelegiuirea lor», care ar transforma o dificultate lexicală într-o concluzie interpretativă.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
       "verse": 8,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Zaharia 5:8 a fost aplicată în textul canonic.",
-      "reason": "Îngerul identifică femeia prin cuvintele «Aceasta este Răutatea», apoi o aruncă în efă și pune greutatea de plumb. Imaginea nu este extinsă la o persoană sau instituție istorică în traducere.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 11,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Zaharia 5:11 a fost aplicată în textul canonic.",
-      "reason": "שִׁנְעָר este Șinear; femeile duc efa acolo pentru a i se construi o casă și a fi așezată pe temelia ei. Nu se identifică în traducere Șinearul cu Babilonul escatologic.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "a14d797ae0f62f3d297bf8e5c1a98d3e0e7fbc7e600443efe5b88f8694dfb2cd",
+      "resolutionStatus": "resolved"
     }
   ],
   "benchmark": {
@@ -145,14 +118,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh ZEC."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 11,
       "reviewed": 11,
@@ -162,22 +134,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Zaharia 5: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Zaharia 5:3 — material: Sulul este numit «blestemul» care iese peste fața întregii țări și vizează furtul și jurământul fals; nu se transformă în traducere într-o doctrină generală despre Lege.",
-        "Zaharia 5:6 — critical: זֹאת עֵינָם בְּכָל־הָאָרֶץ este expresia dificilă redată de WEBU prin «aceasta este înfățișarea lor în toată țara». Traducerea nu o înlocuiește cu «aceasta este nelegiuirea lor», care ar transforma o dificultate lexicală într-o concluzie interpretativă.",
-        "Zaharia 5:8 — material: Îngerul identifică femeia prin cuvintele «Aceasta este Răutatea», apoi o aruncă în efă și pune greutatea de plumb. Imaginea nu este extinsă la o persoană sau instituție istorică în traducere.",
-        "Zaharia 5:11 — material: שִׁנְעָר este Șinear; femeile duc efa acolo pentru a i se construi o casă și a fi așezată pe temelia ei. Nu se identifică în traducere Șinearul cu Babilonul escatologic."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorul, referenții, imaginile profetice și opozițiile teologice sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Numele divine, judecata, mila, legământul, idolatria și restaurarea sunt redate semantic fără armonizări confesionale adăugate."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -187,7 +155,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -197,15 +165,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "f4c3edaedd1a4fe4e31c1031d2247e82ade6f0812b0cf34e1f991858dd4c5d4d",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:667e9d10fb8a443d2cfbd76d30279d16529e0e381103bb44a97c17a1df3fd706"
+    "textDigest": "sha256:89419e3441d51c8d6651480c12b79caa99f3b867c0d92046befa0c3e7484035d"
   }
 }

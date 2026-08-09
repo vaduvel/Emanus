@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/AMO03.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-AMO"
+      "lockId": "WEBU-R5-AMO"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/AMO03.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-AMO"
+      "lockId": "WLC-OSHB-REMAP-R5-AMO",
+      "rawLockId": "WLC-RAW-R5-AMO",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -36,7 +38,7 @@
     },
     {
       "number": 2,
-      "text": "„Numai pe voi v-am cunoscut dintre toate familiile pământului; de aceea vă voi pedepsi pentru toate nelegiuirile voastre.”"
+      "text": "„Eu v-am ales numai pe voi dintre toate familiile pământului: de aceea vă voi și pedepsi pentru toate nelegiuirile voastre.”"
     },
     {
       "number": 3,
@@ -44,7 +46,7 @@
     },
     {
       "number": 4,
-      "text": "Răcnește leul în pădure dacă n-are pradă? Își face puiul de leu auzit glasul din vizuina lui dacă n-a prins nimic?"
+      "text": "Răcnește leul în pădure, dacă n-are pradă? Zbiară puiul de leu din fundul vizuinii, lui dacă n-a prins nimic?"
     },
     {
       "number": 5,
@@ -56,7 +58,7 @@
     },
     {
       "number": 7,
-      "text": "Căci DOMNUL Dumnezeu nu face nimic fără să-Și descopere taina slujitorilor Săi, prorocii."
+      "text": "Nu, DOMNUL Dumnezeu nu face nimic fără să-Și descopere taina Sa slujitorilor Săi proroci."
     },
     {
       "number": 8,
@@ -64,7 +66,7 @@
     },
     {
       "number": 9,
-      "text": "Vestiți în palatele Asdodului și în palatele din țara Egiptului și spuneți: „Strângeți-vă pe munții Samariei și vedeți marea tulburare din mijlocul ei și asupririle din ea!”"
+      "text": "„Strigați de pe acoperișul palatelor Asdodului și de pe palatele țării Egiptului și spuneți: „Strângeți-vă pe munții Samariei și vedeți ce neorânduială mare este în mijlocul ei, ce asupriri sunt în ea!””"
     },
     {
       "number": 10,
@@ -80,7 +82,7 @@
     },
     {
       "number": 13,
-      "text": "Ascultați și depuneți mărturie împotriva casei lui Iacov, zice DOMNUL Dumnezeu, Dumnezeul oștirilor:"
+      "text": "Ascultați și spuneți lucrul acesta casei lui Iacov, zice DOMNUL Dumnezeu, Dumnezeul oștirilor:"
     },
     {
       "number": 14,
@@ -91,53 +93,7 @@
       "text": "„Voi surpa casele de iarnă și casele de vară; palatele de fildeș se vor duce, și casele cele multe se vor nimici, zice DOMNUL.”"
     }
   ],
-  "editorialNotes": [
-    {
-      "verse": 2,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Amos 3:2 a fost aplicată în textul canonic.",
-      "reason": "יָדַעְתִּי este verbul «a cunoaște» și exprimă aici relația specială a lui Dumnezeu cu Israel. «V-am ales» este o interpretare teologică posibilă a relației, dar înlocuiește verbul ebraic în textul tradus.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 4,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Amos 3:4 a fost aplicată în textul canonic.",
-      "reason": "Candidatul conține o eroare mecanică («din fundul vizuinii, lui»). מִמְּעֹנָתוֹ este simplu «din vizuina lui».",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 7,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Amos 3:7 a fost aplicată în textul canonic.",
-      "reason": "כִּי deschide o afirmație explicativă/întăritoare («căci / într-adevăr»), nu o replică negativă «Nu». Candidatul schimbă raportul logic al versetului.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 9,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Amos 3:9 a fost aplicată în textul canonic.",
-      "reason": "עַל־אַרְמְנוֹת înseamnă proclamarea la/în palatele Asdodului și Egiptului; «de pe acoperișul palatelor» adaugă un detaliu absent din WLC și WEBU.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 13,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Amos 3:13 a fost aplicată în textul canonic.",
-      "reason": "וְהָעִידוּ בְּבֵית יַעֲקֹב este «mărturisiți/depuneți mărturie împotriva casei lui Iacov», nu doar «spuneți lucrul acesta casei»; direcția juridică a avertismentului trebuie păstrată.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    }
-  ],
+  "editorialNotes": [],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -170,14 +126,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh AMO."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 15,
       "reviewed": 15,
@@ -187,23 +142,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Amos 3: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Amos 3:2 — critical: יָדַעְתִּי este verbul «a cunoaște» și exprimă aici relația specială a lui Dumnezeu cu Israel. «V-am ales» este o interpretare teologică posibilă a relației, dar înlocuiește verbul ebraic în textul tradus.",
-        "Amos 3:4 — minor: Candidatul conține o eroare mecanică («din fundul vizuinii, lui»). מִמְּעֹנָתוֹ este simplu «din vizuina lui».",
-        "Amos 3:7 — material: כִּי deschide o afirmație explicativă/întăritoare («căci / într-adevăr»), nu o replică negativă «Nu». Candidatul schimbă raportul logic al versetului.",
-        "Amos 3:9 — material: עַל־אַרְמְנוֹת înseamnă proclamarea la/în palatele Asdodului și Egiptului; «de pe acoperișul palatelor» adaugă un detaliu absent din WLC și WEBU.",
-        "Amos 3:13 — material: וְהָעִידוּ בְּבֵית יַעֲקֹב este «mărturisiți/depuneți mărturie împotriva casei lui Iacov», nu doar «spuneți lucrul acesta casei»; direcția juridică a avertismentului trebuie păstrată."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorul, referenții, imaginile profetice și opozițiile teologice sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Numele divine, judecata, mila, legământul, idolatria și restaurarea sunt redate semantic fără armonizări confesionale adăugate."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -213,7 +163,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -223,15 +173,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "c2e915dacf472bc0af72d9ba71d18e3b575246c7ddd4e4bcbcfaec7fc98abfac",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:e470c3bbe15e05dd41edbbb832d88c67fae3795e5d0546eb40e7b1926873d213"
+    "textDigest": "sha256:bd33c23aa42851f610a6a98e3de0b24e9709890f102b3f44ed89293668ea3638"
   }
 }

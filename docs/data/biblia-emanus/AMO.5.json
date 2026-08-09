@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/AMO05.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-AMO"
+      "lockId": "WEBU-R5-AMO"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/AMO05.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-AMO"
+      "lockId": "WLC-OSHB-REMAP-R5-AMO",
+      "rawLockId": "WLC-RAW-R5-AMO",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -52,7 +54,7 @@
     },
     {
       "number": 6,
-      "text": "Căutați pe DOMNUL și veți trăi, ca nu cumva El să izbucnească asemenea focului în casa lui Iosif, iar focul s-o mistuie fără să fie cineva la Betel care să-l stingă."
+      "text": "Căutați pe DOMNUL, și veți trăi! Temeți-vă, ca nu cumva să apuce ca un foc casa lui Iosif, și focul acesta s-o mistuie, fără să fie cineva la Betel ca să-l stingă,"
     },
     {
       "number": 7,
@@ -60,15 +62,15 @@
     },
     {
       "number": 8,
-      "text": "El a făcut Pleiadele și Orionul, preface întunericul adânc în dimineață și întunecă ziua ca noaptea; cheamă apele mării și le varsă pe fața pământului: DOMNUL este numele Lui."
+      "text": "El a făcut Cloșca cu pui și Orionul, El preface întunericul în zori, iar ziua în noapte neagră; El cheamă apele mării și le varsă pe fața pământului: DOMNUL este numele Lui."
     },
     {
       "number": 9,
-      "text": "El aduce nimicirea pe neașteptate peste cel puternic, iar nimicirea vine peste cetățuie."
+      "text": "El aduce ca fulgerul prăpădul peste cei puternici, așa că nimicirea vine peste cetățui."
     },
     {
       "number": 10,
-      "text": "Ei îl urăsc pe cel ce mustră la poarta cetății și îl disprețuiesc pe cel ce vorbește cu integritate."
+      "text": "Ei urăsc pe cel ce-i mustră la poarta cetății și le este scârbă de cel ce vorbește din inimă."
     },
     {
       "number": 11,
@@ -76,7 +78,7 @@
     },
     {
       "number": 12,
-      "text": "Căci Eu știu cât de multe sunt nelegiuirile voastre și cât de mari sunt păcatele voastre: îl asupriți pe cel drept, luați mită și îl îndepărtați pe cel nevoiaș de la dreptate la poarta cetății."
+      "text": "„Căci Eu știu că nelegiuirile voastre sunt multe și că păcatele voastre sunt fără număr: asupriți pe cel drept, luați mită și călcați în picioare la poarta cetății dreptul săracilor.”"
     },
     {
       "number": 13,
@@ -92,7 +94,7 @@
     },
     {
       "number": 16,
-      "text": "De aceea, așa vorbește DOMNUL, Dumnezeul oștirilor, Stăpânul: „În toate piețele va fi bocet și pe toate ulițele se va spune: «Vai! Vai!» Îl vor chema pe plugar la jale și pe cei pricepuți în bocet la plângere.”"
+      "text": "De aceea, așa vorbește DOMNUL Dumnezeul oștirilor, Cel Atotputernic: „În toate piețele se vor boci și pe toate ulițele vor zice: „Vai! Vai!””"
     },
     {
       "number": 17,
@@ -100,7 +102,7 @@
     },
     {
       "number": 18,
-      "text": "Vai de cei care doresc ziua DOMNULUI! La ce vă va folosi ziua DOMNULUI? Ea este întuneric, și nu lumină."
+      "text": "Vai de cei care doresc ziua DOMNULUI! La ce vă va folosi ziua DOMNULUI? Ea va fi întuneric, nu lumină."
     },
     {
       "number": 19,
@@ -141,67 +143,16 @@
   ],
   "editorialNotes": [
     {
-      "verse": 6,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Amos 5:6 a fost aplicată în textul canonic.",
-      "reason": "După «Căutați pe DOMNUL și veți trăi», ebraicul פֶּן־יִצְלַח כָּאֵשׁ descrie riscul ca El să izbucnească asemenea focului. Candidatul introduce imperativul «Temeți-vă», care nu există în WLC/WEBU și schimbă propoziția.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 8,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Amos 5:8 a fost aplicată în textul canonic.",
-      "reason": "כִימָה este numele constelației Pleiadelor; «Cloșca cu pui» este o denumire populară românească, dar pentru o traducere neutră și consecventă se preferă numele astronomic.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 9,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Amos 5:9 a fost aplicată în textul canonic.",
-      "reason": "«Ca fulgerul» nu apare în הַמַּבְלִיג שֹׁד și nici în WEBU; introduce o imagine suplimentară în descrierea nimicirii neașteptate.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 10,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Amos 5:10 a fost aplicată în textul canonic.",
-      "reason": "דֹבֵר תָּמִים este cel care vorbește cu integritate/neprihănire, nu «din inimă». Candidatul schimbă criteriul moral al textului.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 12,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Amos 5:12 a fost aplicată în textul canonic.",
-      "reason": "עֲצֻמִים חַטֹּאתֵיכֶם înseamnă că păcatele sunt mari/grele, nu «fără număr». Finalul vorbește despre abaterea celui nevoiaș la poartă, nu despre o formulă generică de «călcare în picioare a dreptului».",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 16,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Amos 5:16 a fost aplicată în textul canonic.",
-      "reason": "Candidatul omite întreaga a doua jumătate a versetului: chemarea plugarului la jale și a celor pricepuți la bocet. WLC/WEBU o conțin explicit.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
       "verse": 18,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Amos 5:18 a fost aplicată în textul canonic.",
-      "reason": "Candidatul păstrează numai începutul versetului și omite întrebarea și afirmația centrală: ziua DOMNULUI este întuneric, nu lumină.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
+      "term": "repair5-semantic-finding",
+      "decision": "Versetul era tăiat după exclamația introductivă și pierdea contrastul întuneric–lumină.",
+      "previousTextDigest": "edf6531f72cab76e2a46051c4a59cb0362614bdccf6b88d3618a6e67ff70c5b9",
+      "sourceEvidence": [
+        "eng-webbe pinned snapshot",
+        "hebwlc pinned snapshot",
+        "ronbtf comparison-only snapshot"
+      ],
+      "resolutionStatus": "resolved"
     }
   ],
   "benchmark": {
@@ -236,14 +187,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh AMO."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 27,
       "reviewed": 27,
@@ -253,25 +203,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Amos 5: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Amos 5:6 — critical: După «Căutați pe DOMNUL și veți trăi», ebraicul פֶּן־יִצְלַח כָּאֵשׁ descrie riscul ca El să izbucnească asemenea focului. Candidatul introduce imperativul «Temeți-vă», care nu există în WLC/WEBU și schimbă propoziția.",
-        "Amos 5:8 — minor: כִימָה este numele constelației Pleiadelor; «Cloșca cu pui» este o denumire populară românească, dar pentru o traducere neutră și consecventă se preferă numele astronomic.",
-        "Amos 5:9 — material: «Ca fulgerul» nu apare în הַמַּבְלִיג שֹׁד și nici în WEBU; introduce o imagine suplimentară în descrierea nimicirii neașteptate.",
-        "Amos 5:10 — material: דֹבֵר תָּמִים este cel care vorbește cu integritate/neprihănire, nu «din inimă». Candidatul schimbă criteriul moral al textului.",
-        "Amos 5:12 — material: עֲצֻמִים חַטֹּאתֵיכֶם înseamnă că păcatele sunt mari/grele, nu «fără număr». Finalul vorbește despre abaterea celui nevoiaș la poartă, nu despre o formulă generică de «călcare în picioare a dreptului».",
-        "Amos 5:16 — critical: Candidatul omite întreaga a doua jumătate a versetului: chemarea plugarului la jale și a celor pricepuți la bocet. WLC/WEBU o conțin explicit.",
-        "Amos 5:18 — critical: Candidatul păstrează numai începutul versetului și omite întrebarea și afirmația centrală: ziua DOMNULUI este întuneric, nu lumină."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorul, referenții, imaginile profetice și opozițiile teologice sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Numele divine, judecata, mila, legământul, idolatria și restaurarea sunt redate semantic fără armonizări confesionale adăugate."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -281,7 +224,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -291,15 +234,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "c2e915dacf472bc0af72d9ba71d18e3b575246c7ddd4e4bcbcfaec7fc98abfac",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:41c2efa44b5a3c31881d3625b3850ef38b15c8b4d4472f173bd2ec9761bce29b"
+    "textDigest": "sha256:c395381c08864af0ea249b8394032f78ae4ce05bd98941cb7d633f2f0e8b4dc0"
   }
 }

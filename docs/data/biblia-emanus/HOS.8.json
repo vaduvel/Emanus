@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/HOS08.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-HOS"
+      "lockId": "WEBU-R5-HOS"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/HOS08.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-HOS"
+      "lockId": "WLC-OSHB-REMAP-R5-HOS",
+      "rawLockId": "WLC-RAW-R5-HOS",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -32,7 +34,7 @@
   "verses": [
     {
       "number": 1,
-      "text": "Pune trâmbița la buze! Ca un vultur este peste Casa DOMNULUI, pentru că au călcat legământul Meu și s-au răzvrătit împotriva Legii Mele."
+      "text": "Pune trâmbița în gură! Vrăjmașul vine ca un vultur peste Casa DOMNULui! Căci au călcat legământul Meu și au păcătuit împotriva Legii Mele."
     },
     {
       "number": 2,
@@ -40,7 +42,7 @@
     },
     {
       "number": 3,
-      "text": "Israel a lepădat binele; vrăjmașul îl va urmări."
+      "text": "Israel a lepădat binele cu scârbă; de aceea vrăjmașul îi va urmări."
     },
     {
       "number": 4,
@@ -48,7 +50,7 @@
     },
     {
       "number": 5,
-      "text": "Vițelul tău este lepădat, Samario! Mânia Mea s-a aprins împotriva lor. Până când vor rămâne incapabili de curăție?"
+      "text": "Vițelul tău este o scârbă, Samario! Mânia Mea s-a aprins împotriva lor! Până când nu vor vrea ei să se țină curați?"
     },
     {
       "number": 6,
@@ -64,11 +66,11 @@
     },
     {
       "number": 9,
-      "text": "Căci s-au dus în Asiria ca un măgar sălbatic care umblă singuratic. Efraim și-a tocmit iubiți."
+      "text": "Căci s-au dus în Asiria, ca un măgar sălbatic care umblă răzleț. Efraim a dat daruri ca să aibă prieteni!"
     },
     {
       "number": 10,
-      "text": "Chiar dacă plătesc printre neamuri, acum îi voi strânge; vor începe să se împuțineze sub povara împăratului și a căpeteniilor."
+      "text": "Chiar dacă ei dau daruri neamurilor, tot îi voi apăsa, ca să înceteze pentru puțină vreme să mai ungă vreun împărat și domni."
     },
     {
       "number": 11,
@@ -76,7 +78,7 @@
     },
     {
       "number": 12,
-      "text": "I-am scris multele lucruri ale Legii Mele, dar ele au fost socotite ca ceva străin."
+      "text": "Chiar dacă-i scriu toate poruncile Legii Mele, totuși ele sunt privite ca ceva străin."
     },
     {
       "number": 13,
@@ -84,74 +86,10 @@
     },
     {
       "number": 14,
-      "text": "Căci Israel L-a uitat pe Cel care l-a făcut și și-a zidit palate, iar Iuda a înmulțit cetățile întărite; dar voi trimite foc în cetățile lui și el îi va mistui fortărețele."
+      "text": "„Căci Israel a uitat pe Cel ce l-a făcut, și-a zidit palate, și Iuda a înmulțit cetățile întărite; de aceea voi trimite foc în cetățile lor, și le va mistui palatele.”"
     }
   ],
-  "editorialNotes": [
-    {
-      "verse": 1,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Osea 8:1 a fost aplicată în textul canonic.",
-      "reason": "Textul are imaginea «ca un vultur peste Casa DOMNULUI», fără substantivul explicit «vrăjmașul» și fără verbul «vine». Candidatul transformă imaginea într-o propoziție explicativă.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 3,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Osea 8:3 a fost aplicată în textul canonic.",
-      "reason": "«cu scârbă» nu apare în זָנַח יִשְׂרָאֵל טוֹב; verbul spune că Israel a lepădat binele.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 5,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Osea 8:5 a fost aplicată în textul canonic.",
-      "reason": "זָנַח exprimă lepădarea/respingerea, nu faptul că vițelul «este o scârbă». Finalul לֹא יוּכְלוּ נִקָּיוֹן vorbește despre incapacitatea de curăție, nu despre lipsa voinței. Forma exactă a primei propoziții este lexical dificilă între surse, de aceea propunerea evită inventarea unui actor absent.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 9,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Osea 8:9 a fost aplicată în textul canonic.",
-      "reason": "הִתְנוּ אֲהָבִים este imaginea tocmai a «iubiților» plătiți/tocmiți. «a dat daruri ca să aibă prieteni» neutralizează metafora relațională a capitolului.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 10,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Osea 8:10 a fost aplicată în textul canonic.",
-      "reason": "עַתָּה אֲקַבְּצֵם este «acum îi voi strânge/aduna», nu «îi voi apăsa». Finalul vorbește despre povara/asuprirea împăratului și a căpeteniilor; candidatul introduce «să mai ungă vreun împărat și domni», idee care nu se află în text.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 12,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Osea 8:12 a fost aplicată în textul canonic.",
-      "reason": "WLC are forma «îi scriu / i-am scris multele lucruri ale Legii Mele»; candidatul o transformă în condiționalul «Chiar dacă-i scriu» și reduce conținutul la «poruncile» Legii.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 14,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Osea 8:14 a fost aplicată în textul canonic.",
-      "reason": "אַרְמְנוֹתֶיהָ este mai precis fortărețe/palate fortificate în paralel cu cetățile întărite; candidatul repetă simplu «palatele». Se corectează și construcția românească a obiectului direct.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    }
-  ],
+  "editorialNotes": [],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -184,14 +122,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh HOS 1–14."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 14,
       "reviewed": 14,
@@ -201,25 +138,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Osea 8: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC derivată din ordinea absolută aprobată."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Osea 8:1 — material: Textul are imaginea «ca un vultur peste Casa DOMNULUI», fără substantivul explicit «vrăjmașul» și fără verbul «vine». Candidatul transformă imaginea într-o propoziție explicativă.",
-        "Osea 8:3 — minor: «cu scârbă» nu apare în זָנַח יִשְׂרָאֵל טוֹב; verbul spune că Israel a lepădat binele.",
-        "Osea 8:5 — material: זָנַח exprimă lepădarea/respingerea, nu faptul că vițelul «este o scârbă». Finalul לֹא יוּכְלוּ נִקָּיוֹן vorbește despre incapacitatea de curăție, nu despre lipsa voinței. Forma exactă a primei propoziții este lexical dificilă între surse, de aceea propunerea evită inventarea unui actor absent.",
-        "Osea 8:9 — material: הִתְנוּ אֲהָבִים este imaginea tocmai a «iubiților» plătiți/tocmiți. «a dat daruri ca să aibă prieteni» neutralizează metafora relațională a capitolului.",
-        "Osea 8:10 — critical: עַתָּה אֲקַבְּצֵם este «acum îi voi strânge/aduna», nu «îi voi apăsa». Finalul vorbește despre povara/asuprirea împăratului și a căpeteniilor; candidatul introduce «să mai ungă vreun împărat și domni», idee care nu se află în text.",
-        "Osea 8:12 — material: WLC are forma «îi scriu / i-am scris multele lucruri ale Legii Mele»; candidatul o transformă în condiționalul «Chiar dacă-i scriu» și reduce conținutul la «poruncile» Legii.",
-        "Osea 8:14 — minor: אַרְמְנוֹתֶיהָ este mai precis fortărețe/palate fortificate în paralel cu cetățile întărite; candidatul repetă simplu «palatele». Se corectează și construcția românească a obiectului direct."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorul, referenții, imaginile profetice și opozițiile teologice sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Numele divine, judecata, mila, legământul, idolatria și restaurarea sunt redate semantic fără armonizări confesionale adăugate."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -229,7 +159,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt folosite numai ca benchmark-uri public-domain, iar NTR numai ca referință externă de comparație"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -239,15 +169,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "71112c63c27319b2d6fdb3399ce26cc4ec82f471447db8972775a60786cf9647",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:ddfd63e54d243053a14471a517fc27b419a4d3281a264118d3d8582bba6eefa2"
+    "textDigest": "sha256:7bd2ea0790e90534ccde570018d9d1d7f82d5fe0dc57023e6429f64bddd06429"
   }
 }

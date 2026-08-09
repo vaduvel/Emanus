@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/ZEC06.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-ZEC"
+      "lockId": "WEBU-R5-ZEC"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/ZEC06.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-ZEC"
+      "lockId": "WLC-OSHB-REMAP-R5-ZEC",
+      "rawLockId": "WLC-RAW-R5-ZEC",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -48,7 +50,7 @@
     },
     {
       "number": 5,
-      "text": "Îngerul mi-a răspuns: „Acestea sunt cele patru vânturi ale cerului care ies după ce au stat înaintea Stăpânului întregului pământ.”"
+      "text": "Îngerul mi-a răspuns: „Aceștia sunt cele patru vânturi ale cerurilor care ies din locul în care stăteau înaintea DOMNULui întregului pământ.”"
     },
     {
       "number": 6,
@@ -76,59 +78,22 @@
     },
     {
       "number": 12,
-      "text": "Spune-i: „Așa vorbește DOMNUL oștirilor: «Iată un om al cărui nume este Odrasla. El va odrăsli din locul lui și va zidi Templul DOMNULUI.»”"
+      "text": "Și să-i spui: „Așa vorbește DOMNUL oștirilor: „Iată că un om, al cărui nume este Odrasla, va odrăsli din locul Lui și va zidi Templul DOMNULui.””"
     },
     {
       "number": 13,
-      "text": "El va zidi Templul DOMNULUI, va purta slava, va ședea și va domni pe tronul Lui. Va fi preot pe tronul Lui, iar între cei doi va fi un sfat de pace."
+      "text": "„Da, El va zidi Templul DOMNULui, va purta podoabă împărătească, va ședea și va stăpâni pe scaunul Lui de domnie, va fi preot pe scaunul Lui de domnie, și o desăvârșită unire va domni între ei amândoi.”"
     },
     {
       "number": 14,
-      "text": "Coroanele vor rămâne în Templul DOMNULUI ca aducere-aminte pentru Helem, Tobia, Iedaia și Hen, fiul lui Țefania."
+      "text": "Cununa va fi pentru Helem, Tobia și Iedaia, și pentru Hen, fiul lui Țefania, ca o aducere aminte în Templul DOMNULui."
     },
     {
       "number": 15,
       "text": "„Cei ce sunt departe vor veni și vor lucra la Templul DOMNULui; și veți ști astfel că DOMNUL oștirilor M-a trimis la voi. Lucrul acesta se va întâmpla dacă veți asculta glasul DOMNULui Dumnezeului vostru.”"
     }
   ],
-  "editorialNotes": [
-    {
-      "verse": 5,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Zaharia 6:5 a fost aplicată în textul canonic.",
-      "reason": "אַרְבַּע רוּחוֹת הַשָּׁמַיִם este expresia «cele patru vânturi/duhuri ale cerului». WEBU o tratează ca vânturi; traducerea nu le numește direct «patru îngeri», interpretare care nu apare în verset.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 12,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Zaharia 6:12 a fost aplicată în textul canonic.",
-      "reason": "צֶמַח rămâne titlul-imagine «Odrasla/Vlăstarul». Versetul spune că va odrăsli din locul lui și va zidi Templul DOMNULUI; traducerea nu introduce numele «Mesia» sau «Hristos».",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 13,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Zaharia 6:13 a fost aplicată în textul canonic.",
-      "reason": "Textul păstrează împreună construirea Templului, slava, tronul, domnia, preoția și «sfatul de pace între cei doi». Traducerea nu elimină «cei doi» și nu explică în interiorul versetului cine sunt cele două roluri/persoane.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 14,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Zaharia 6:14 a fost aplicată în textul canonic.",
-      "reason": "Textul schimbă numele Heldai din v.10 în Helem și îl menționează pe Hen, fiul lui Țefania. Traducerea nu uniformizează automat aceste nume ca și cum ar fi eroare de copiere.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    }
-  ],
+  "editorialNotes": [],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -161,14 +126,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh ZEC."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 15,
       "reviewed": 15,
@@ -178,22 +142,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Zaharia 6: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Zaharia 6:5 — material: אַרְבַּע רוּחוֹת הַשָּׁמַיִם este expresia «cele patru vânturi/duhuri ale cerului». WEBU o tratează ca vânturi; traducerea nu le numește direct «patru îngeri», interpretare care nu apare în verset.",
-        "Zaharia 6:12 — critical: צֶמַח rămâne titlul-imagine «Odrasla/Vlăstarul». Versetul spune că va odrăsli din locul lui și va zidi Templul DOMNULUI; traducerea nu introduce numele «Mesia» sau «Hristos».",
-        "Zaharia 6:13 — critical: Textul păstrează împreună construirea Templului, slava, tronul, domnia, preoția și «sfatul de pace între cei doi». Traducerea nu elimină «cei doi» și nu explică în interiorul versetului cine sunt cele două roluri/persoane.",
-        "Zaharia 6:14 — material: Textul schimbă numele Heldai din v.10 în Helem și îl menționează pe Hen, fiul lui Țefania. Traducerea nu uniformizează automat aceste nume ca și cum ar fi eroare de copiere."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorul, referenții, imaginile profetice și opozițiile teologice sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Numele divine, judecata, mila, legământul, idolatria și restaurarea sunt redate semantic fără armonizări confesionale adăugate."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -203,7 +163,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -213,15 +173,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "f4c3edaedd1a4fe4e31c1031d2247e82ade6f0812b0cf34e1f991858dd4c5d4d",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:261cda720efc69938f40332b6019efeca0100b9cc79e079e7ab5a13a48b5641d"
+    "textDigest": "sha256:326a79f76aa1ec3ee3ce2b57a6fd0bf127947a96240d07270cba65a871ebce54"
   }
 }

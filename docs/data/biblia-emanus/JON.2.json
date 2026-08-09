@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/JON02.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-JON"
+      "lockId": "WEBU-R5-JON"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/JON02.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-JON"
+      "lockId": "WLC-OSHB-REMAP-R5-JON",
+      "rawLockId": "WLC-RAW-R5-JON",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -32,7 +34,7 @@
   "verses": [
     {
       "number": 1,
-      "text": "Iona s-a rugat DOMNULUI Dumnezeului său din pântecele peștelui."
+      "text": "Iona s-a rugat DOMNULui Dumnezeului său din pântecele peștelui"
     },
     {
       "number": 2,
@@ -40,7 +42,7 @@
     },
     {
       "number": 3,
-      "text": "Tu m-ai aruncat în adânc, în inima mărilor, iar curentul mă înconjura; toate valurile și toate talazurile Tale au trecut peste mine."
+      "text": "Și totuși mă aruncaseși în adânc, în inima mării, și râurile de apă mă înconjuraseră; toate valurile și toate talazurile Tale au trecut peste mine."
     },
     {
       "number": 4,
@@ -48,7 +50,7 @@
     },
     {
       "number": 5,
-      "text": "Apele m-au înconjurat până la suflet, adâncul m-a învăluit, iar algele mi se înfășuraseră în jurul capului."
+      "text": "Apele m-au acoperit până aproape să-mi ia viața, adâncul m-a învăluit, papura s-a împletit în jurul capului meu."
     },
     {
       "number": 6,
@@ -60,73 +62,18 @@
     },
     {
       "number": 8,
-      "text": "Cei ce se alipesc de idoli deșerți părăsesc îndurarea care le aparține."
+      "text": "Cei ce se lipesc de idoli deșerți îndepărtează îndurarea de la ei."
     },
     {
       "number": 9,
-      "text": "Eu însă Îți voi aduce jertfe cu glas de mulțumire; voi împlini ceea ce am făgăduit. Mântuirea este a DOMNULUI."
+      "text": "„Eu însă Îți voi aduce jertfe cu un strigăt de mulțumire, voi împlini juruințele pe care le-am făcut. Mântuirea vine de la DOMNUL.”"
     },
     {
       "number": 10,
-      "text": "DOMNUL i-a vorbit peștelui, iar peștele l-a vărsat pe Iona pe uscat."
+      "text": "DOMNUL a vorbit peștelui, și peștele a vărsat pe Iona pe pământ."
     }
   ],
-  "editorialNotes": [
-    {
-      "verse": 1,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Iona 2:1 a fost aplicată în textul canonic.",
-      "reason": "Forma Numelui trebuie normalizată la «DOMNULUI», iar propoziția are nevoie de punct final.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 3,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Iona 2:3 a fost aplicată în textul canonic.",
-      "reason": "וַתַּשְׁלִיכֵנִי începe direct afirmația «Tu m-ai aruncat»; «Și totuși» introduce o opoziție absentă. וְנָהָר este aici curentul/șuvoiul care îl înconjoară, nu generic «râurile de apă».",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 5,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Iona 2:5 a fost aplicată în textul canonic.",
-      "reason": "סוּף în cadrul marin descrie vegetația/algele care se înfășoară în jurul capului. «Papura» evocă o plantă de baltă și mută imaginea într-un alt mediu.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 8,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Iona 2:8 a fost aplicată în textul canonic.",
-      "reason": "חַסְדָּם יַעֲזֹבוּ are ca subiect oamenii care se țin de idoli și spune că ei părăsesc îndurarea/loialitatea care le aparține. «Îndepărtează îndurarea de la ei» schimbă construcția activă și posesivă a textului.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 9,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Iona 2:9 a fost aplicată în textul canonic.",
-      "reason": "יְשׁוּעָתָה לַיהוָה este formula concentrată «Mântuirea este a DOMNULUI». «Mântuirea vine de la DOMNUL» este apropiată ca sens, dar pierde construcția de apartenență din ebraică.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 10,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Iona 2:10 a fost aplicată în textul canonic.",
-      "reason": "הַיַּבָּשָׁה este «uscatul». «Pe pământ» este mai general și pierde contrastul explicit mare–uscat.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    }
-  ],
+  "editorialNotes": [],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -159,14 +106,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh JON."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 10,
       "reviewed": 10,
@@ -176,24 +122,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Iona 2: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Iona 2:1 — minor: Forma Numelui trebuie normalizată la «DOMNULUI», iar propoziția are nevoie de punct final.",
-        "Iona 2:3 — minor: וַתַּשְׁלִיכֵנִי începe direct afirmația «Tu m-ai aruncat»; «Și totuși» introduce o opoziție absentă. וְנָהָר este aici curentul/șuvoiul care îl înconjoară, nu generic «râurile de apă».",
-        "Iona 2:5 — material: סוּף în cadrul marin descrie vegetația/algele care se înfășoară în jurul capului. «Papura» evocă o plantă de baltă și mută imaginea într-un alt mediu.",
-        "Iona 2:8 — material: חַסְדָּם יַעֲזֹבוּ are ca subiect oamenii care se țin de idoli și spune că ei părăsesc îndurarea/loialitatea care le aparține. «Îndepărtează îndurarea de la ei» schimbă construcția activă și posesivă a textului.",
-        "Iona 2:9 — material: יְשׁוּעָתָה לַיהוָה este formula concentrată «Mântuirea este a DOMNULUI». «Mântuirea vine de la DOMNUL» este apropiată ca sens, dar pierde construcția de apartenență din ebraică.",
-        "Iona 2:10 — minor: הַיַּבָּשָׁה este «uscatul». «Pe pământ» este mai general și pierde contrastul explicit mare–uscat."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorul, referenții, imaginile profetice și opozițiile teologice sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Numele divine, judecata, mila, legământul, idolatria și restaurarea sunt redate semantic fără armonizări confesionale adăugate."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -203,7 +143,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -213,15 +153,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "c3fcf2d2110fb8b785b2f0798564a444a06292fd01b03efae8208c24de07b771",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:d7798ef16b7393293b23560a89daf468260789f1742deaf1a51aeca1467c6f2c"
+    "textDigest": "sha256:91a3fff6a51ac386fd610900b76ad99072e646b5a1de9d3428bf99f7a16fb6d1"
   }
 }

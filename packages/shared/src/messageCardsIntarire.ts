@@ -1,0 +1,388 @@
+// Întregirea stărilor care stăteau subțiri (docs/41 §3, „la urmă completările”).
+//
+// Cel mai mare gol nu era o durere, ci `recunoscator`: patru carduri din zece.
+// Omul care vine să mulțumească primește de patru ori același lucru și înțelege
+// că aplicația știe să vorbească numai despre nenorocire. Nu așa arată credința.
+//
+// REGULA (docs/00-DIRECTIE §7, D-005): fiecare `body` este parafraza unui verset
+// REAL, iar `verseRef` apare pe card, la vedere.
+//
+// Toate trimiterile de aici sunt NOI față de celelalte patru fișiere — rostul
+// lor este să rupă senzația de repetare, nu să umple o socoteală.
+//
+// `verseText` este fraza-cheie, nu versetul întreg (docs/39).
+// DE COLAȚIONAT: versetele nu au trecut încă prin citirea de om (docs/41 §6.6).
+import type { MessageCard } from "./messageCards.js"
+
+/** Vreau să mulțumesc. */
+export const CARDS_MULTUMIRE: MessageCard[] = [
+  {
+    id: "msg_indurarea_tine_in_veci",
+    title: "Astăzi, din Scriptură, pentru tine:",
+    body: "Lăudați pe Domnul, căci este bun și îndurarea Lui ține în veci.",
+    verseRef: "Psalmul 107:1",
+    verseText: "Lăudați pe Domnul, căci este bun, căci îndurarea Lui ține în veci!",
+    axis: "character",
+    needs: ["recunoscator"],
+    background: "pergament-cald",
+  },
+  {
+    id: "msg_dimineata_bunatatea",
+    title: "Astăzi, din Scriptură, pentru tine:",
+    body: "Dimineața să vestești bunătatea Lui, iar noaptea, credincioșia Lui.",
+    verseRef: "Psalmul 92:1-2",
+    verseText: "Frumos este să lăudăm pe Domnul, să vestim dimineața bunătatea Ta și noaptea credincioșia Ta.",
+    axis: "character",
+    needs: ["recunoscator"],
+    background: "pergament-cald",
+  },
+  {
+    id: "msg_unul_s_a_intors",
+    title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
+    body: "Zece au fost vindecați. Unul s-a întors să mulțumească. Fii acela.",
+    verseRef: "Luca 17:15",
+    verseText: "Unul din ei, când s-a văzut vindecat, s-a întors, slăvind pe Dumnezeu cu glas tare.",
+    axis: "character",
+    needs: ["recunoscator"],
+    background: "pergament",
+  },
+  {
+    id: "msg_cum_voi_rasplati",
+    title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
+    body: "Nu ai cu ce să-I răsplătești. Poți doar să ridici paharul mântuirii.",
+    verseRef: "Psalmul 116:12-13",
+    verseText: "Cum voi răsplăti Domnului toate binefacerile Lui față de mine?",
+    axis: "character",
+    needs: ["recunoscator"],
+    background: "pergament",
+  },
+  {
+    id: "msg_intrati_cu_laude",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Intră pe porțile Mele cu laude. Ușa nu ți-e închisă.",
+    verseRef: "Psalmul 100:4",
+    verseText: "Intrați cu laude pe porțile Lui, intrați cu cântări în curțile Lui!",
+    axis: "living_faith",
+    needs: ["recunoscator"],
+    background: "pergament-cald",
+  },
+  {
+    id: "msg_mari_lucruri_pentru_noi",
+    title: "Astăzi, din Scriptură, pentru tine:",
+    body: "Domnul a făcut lucruri mari pentru tine. Ai voie să te bucuri de ele.",
+    verseRef: "Psalmul 126:3",
+    verseText: "Da, Domnul a făcut mari lucruri pentru noi și de aceea suntem plini de bucurie.",
+    axis: "character",
+    needs: ["recunoscator"],
+    background: "pergament-cald",
+  },
+  {
+    id: "msg_multumiti_totdeauna",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Mulțumește totdeauna Tatălui, pentru toate lucrurile.",
+    verseRef: "Efeseni 5:20",
+    verseText: "Mulțumiți totdeauna lui Dumnezeu Tatăl pentru toate lucrurile.",
+    axis: "character",
+    needs: ["recunoscator"],
+    background: "pergament",
+  },
+  {
+    id: "msg_fiti_recunoscatori",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Pacea Mea să stăpânească în inima ta. Și fii recunoscător.",
+    verseRef: "Coloseni 3:15",
+    verseText: "Pacea lui Hristos, la care ați fost chemați... să stăpânească în inimile voastre. Și fiți recunoscători.",
+    axis: "emotional_peace",
+    needs: ["recunoscator"],
+    background: "pergament",
+  },
+]
+
+/** Sunt obosit, nu mai pot. */
+export const CARDS_OBOSEALA: MessageCard[] = [
+  {
+    id: "msg_voi_merge_eu_insumi",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Voi merge Eu Însumi cu tine și îți voi da odihnă.",
+    verseRef: "Exodul 33:14",
+    verseText: "Voi merge Eu Însumi cu tine și îți voi da odihnă.",
+    axis: "emotional_peace",
+    needs: ["obosit", "singur"],
+    background: "pergament-cald",
+  },
+  {
+    id: "msg_pasuni_verzi",
+    title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
+    body: "Păstorul te culcă în pășuni verzi. Odihna nu e lene, e păstoriți.",
+    verseRef: "Psalmul 23:2-3",
+    verseText: "El mă paște în pășuni verzi și mă duce la ape de odihnă; Îmi înviorează sufletul.",
+    axis: "emotional_peace",
+    needs: ["obosit"],
+    background: "pergament",
+  },
+  {
+    id: "msg_paine_ca_in_somn",
+    title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
+    body: "Degeaba te scoli de dimineață și te culci târziu. El dă și în somn.",
+    verseRef: "Psalmul 127:2",
+    verseText: "Degeaba vă sculați de dimineață și vă culcați târziu... căci preaiubiților Lui El le dă pâine ca în somn.",
+    axis: "emotional_peace",
+    needs: ["obosit", "bani"],
+    background: "pergament",
+  },
+  {
+    id: "msg_sa_nu_obosim",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Nu obosi în facerea binelui. La vremea potrivită vei secera.",
+    verseRef: "Galateni 6:9",
+    verseText: "Să nu obosim în facerea binelui, căci, la vremea potrivită, vom secera, dacă nu vom cădea de oboseală.",
+    axis: "character",
+    needs: ["obosit", "in_asteptare"],
+    background: "pergament",
+  },
+  {
+    id: "msg_veniti_la_o_parte",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Vino singur la o parte și odihnește-te puțin. Eu ți-am spus asta.",
+    verseRef: "Marcu 6:31",
+    verseText: "Veniți singuri la o parte, într-un loc pustiu, și odihniți-vă puțin.",
+    axis: "living_faith",
+    needs: ["obosit"],
+    background: "pergament-cald",
+  },
+  {
+    id: "msg_scoala_te_si_mananca",
+    title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
+    body: "Ilie a cerut să moară. Dumnezeu l-a lăsat să doarmă și i-a dat de mâncare.",
+    verseRef: "1 Împărați 19:7",
+    verseText: "Scoală-te și mănâncă, fiindcă drumul pe care-l ai de făcut este prea lung pentru tine.",
+    axis: "emotional_peace",
+    needs: ["obosit"],
+    background: "pergament-umbra",
+  },
+]
+
+/** Mi-e frică de ce vine. */
+export const CARDS_TEAMA: MessageCard[] = [
+  {
+    id: "msg_de_cine_sa_ma_tem",
+    title: "Astăzi, din Scriptură, pentru tine:",
+    body: "Domnul este lumina și mântuirea mea: de cine să mă tem?",
+    verseRef: "Psalmul 27:1",
+    verseText: "Domnul este lumina și mântuirea mea: de cine să mă tem?",
+    axis: "emotional_peace",
+    needs: ["speriat"],
+    background: "pergament",
+  },
+  {
+    id: "msg_ori_de_cate_ori_ma_tem",
+    title: "Astăzi, din Scriptură, pentru tine:",
+    body: "Nu scrie «nu mă tem». Scrie: «când mă tem, mă încred în Tine».",
+    verseRef: "Psalmul 56:3",
+    verseText: "Ori de câte ori mă tem, eu mă încred în Tine.",
+    axis: "emotional_peace",
+    needs: ["speriat"],
+    background: "pergament",
+  },
+  {
+    id: "msg_nu_duh_de_frica",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Nu ți-am dat un duh de frică, ci de putere, de dragoste și de chibzuință.",
+    verseRef: "2 Timotei 1:7",
+    verseText: "Căci Dumnezeu nu ne-a dat un duh de frică, ci de putere, de dragoste și de chibzuință.",
+    axis: "identity",
+    needs: ["speriat"],
+    background: "pergament",
+  },
+  {
+    id: "msg_dragostea_izgoneste_frica",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Dragostea desăvârșită izgonește frica. Nu te temi de Cel ce te iubește.",
+    verseRef: "1 Ioan 4:18",
+    verseText: "În dragoste nu este frică, ci dragostea desăvârșită izgonește frica.",
+    axis: "identity",
+    needs: ["speriat", "vinovat"],
+    background: "pergament-cald",
+  },
+  {
+    id: "msg_chiar_de_s_ar_zgudui",
+    title: "Astăzi, din Scriptură, pentru tine:",
+    body: "Chiar dacă s-ar zgudui pământul, tot nu ne temem.",
+    verseRef: "Psalmul 46:2",
+    verseText: "De aceea nu ne temem, chiar dacă s-ar zgudui pământul.",
+    axis: "emotional_peace",
+    needs: ["speriat"],
+    background: "pergament",
+  },
+  {
+    id: "msg_o_liniste_mare",
+    title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
+    body: "Am mustrat vântul și s-a făcut o liniște mare. Eram în corabie cu ei.",
+    verseRef: "Marcu 4:39",
+    verseText: "El S-a sculat, a certat vântul și a zis mării: „Taci! Fără gură!” Și s-a făcut o liniște mare.",
+    axis: "emotional_peace",
+    needs: ["speriat", "boala"],
+    background: "pergament",
+  },
+]
+
+/** Sunt singur. */
+export const CARDS_SINGURATATE: MessageCard[] = [
+  {
+    id: "msg_va_merge_inaintea_ta",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Merg înaintea ta și nu te voi părăsi. Nu te teme și nu te înspăimânta.",
+    verseRef: "Deuteronomul 31:8",
+    verseText: "Domnul Însuși va merge înaintea ta, El Însuși va fi cu tine, nu te va părăsi și nu te va lăsa.",
+    axis: "identity",
+    needs: ["singur", "speriat"],
+    background: "pergament",
+  },
+  {
+    id: "msg_in_toate_zilele",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Sunt cu tine în toate zilele, până la sfârșitul veacului.",
+    verseRef: "Matei 28:20",
+    verseText: "Și iată că Eu sunt cu voi în toate zilele, până la sfârșitul veacului.",
+    axis: "identity",
+    needs: ["singur", "departe"],
+    background: "pergament-cald",
+  },
+  {
+    id: "msg_poate_o_femeie_sa_uite",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "O mamă și-ar putea uita pruncul. Eu nu te pot uita pe tine.",
+    verseRef: "Isaia 49:15",
+    verseText: "Poate o femeie să uite copilul pe care-l alăptează...? Dar chiar dacă l-ar uita, totuși Eu nu te voi uita.",
+    axis: "identity",
+    needs: ["singur", "copil_departat"],
+    background: "pergament-cald",
+  },
+  {
+    id: "msg_nu_sunt_singur",
+    title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
+    body: "Toți M-au lăsat singur. Și totuși nu eram singur: Tatăl era cu Mine.",
+    verseRef: "Ioan 16:32",
+    verseText: "Pe Mine Mă veți lăsa singur; dar nu sunt singur, căci Tatăl este cu Mine.",
+    axis: "identity",
+    needs: ["singur", "casa_rupta"],
+    background: "pergament-umbra",
+  },
+  {
+    id: "msg_domnul_a_stat_langa_mine",
+    title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
+    body: "Toți l-au părăsit pe Pavel. Domnul a stat lângă el și l-a întărit.",
+    verseRef: "2 Timotei 4:16-17",
+    verseText: "Toți m-au părăsit... Însă Domnul a stat lângă mine și m-a întărit.",
+    axis: "identity",
+    needs: ["singur"],
+    background: "pergament-umbra",
+  },
+  {
+    id: "msg_caci_sunt_singur",
+    title: "Astăzi, din Scriptură, pentru tine:",
+    body: "Ai voie să te rogi așa: «sunt singur și nenorocit». Stă scris în psalmi.",
+    verseRef: "Psalmul 25:16",
+    verseText: "Îndură-Te de mine, Doamne, căci sunt singur și nenorocit.",
+    axis: "emotional_peace",
+    needs: ["singur", "rugaciune_fara_raspuns"],
+    background: "pergament-umbra",
+  },
+]
+
+/** Mi-e rușine de ce am făcut. */
+export const CARDS_RUSINE: MessageCard[] = [
+  {
+    id: "msg_nu_ti_se_umple_fata",
+    title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
+    body: "Ridică privirea spre El. Fața ta nu se va umple de rușine.",
+    verseRef: "Psalmul 34:5",
+    verseText: "Când îți întorci privirile spre El, te luminezi de bucurie și nu ți se umple fața de rușine.",
+    axis: "freedom",
+    needs: ["vinovat"],
+    background: "pergament-cald",
+  },
+  {
+    id: "msg_in_locul_ocarii",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "În locul ocării tale îți dau îndoită cinste.",
+    verseRef: "Isaia 61:7",
+    verseText: "În locul ocării voastre veți avea îndoită cinste.",
+    axis: "freedom",
+    needs: ["vinovat"],
+    background: "pergament-cald",
+  },
+  {
+    id: "msg_nu_va_fi_dat_de_rusine",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Oricine crede în Mine nu va fi dat de rușine. Oricine înseamnă și tu.",
+    verseRef: "Romani 10:11",
+    verseText: "Oricine crede în El nu va fi dat de rușine.",
+    axis: "identity",
+    needs: ["vinovat"],
+    background: "pergament",
+  },
+  {
+    id: "msg_nici_eu_nu_te_osandesc",
+    title: "Ce îți spune Dumnezeu astăzi, din Cuvântul Său:",
+    body: "Nici Eu nu te osândesc. Du-te și de acum încolo să nu mai păcătuiești.",
+    verseRef: "Ioan 8:11",
+    verseText: "Nici Eu nu te osândesc. Du-te și să nu mai păcătuiești.",
+    axis: "freedom",
+    needs: ["vinovat", "pofta"],
+    background: "pergament-umbra",
+  },
+]
+
+/** Aștept ceva și întârzie / nu știu încotro. */
+export const CARDS_ASTEPTARE: MessageCard[] = [
+  {
+    id: "msg_bine_este_sa_astepti",
+    title: "Astăzi, din Scriptură, pentru tine:",
+    body: "Bine este să aștepți în tăcere ajutorul Domnului.",
+    verseRef: "Plângerile lui Ieremia 3:26",
+    verseText: "Bine este să aștepți în tăcere ajutorul Domnului.",
+    axis: "living_faith",
+    needs: ["in_asteptare", "rugaciune_fara_raspuns"],
+    background: "pergament",
+  },
+  {
+    id: "msg_asteptam_cu_rabdare",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Dacă nădăjduiești ce nu vezi, atunci aștepți cu răbdare.",
+    verseRef: "Romani 8:25",
+    verseText: "Pe când, dacă nădăjduim ce nu vedem, așteptăm cu răbdare.",
+    axis: "living_faith",
+    needs: ["in_asteptare"],
+    background: "pergament",
+  },
+  {
+    id: "msg_domnul_intareste_pasii",
+    title: "Dumnezeu ți-a spus deja:",
+    body: "Eu întăresc pașii omului și Îmi place calea lui.",
+    verseRef: "Psalmul 37:23",
+    verseText: "Domnul întărește pașii omului când Îi place calea lui.",
+    axis: "living_faith",
+    needs: ["fara_directie"],
+    background: "pergament",
+  },
+  {
+    id: "msg_arata_mi_caile_tale",
+    title: "Astăzi, din Scriptură, pentru tine:",
+    body: "Ai voie să ceri limpede: arată-mi căile Tale și învață-mă cărările Tale.",
+    verseRef: "Psalmul 25:4",
+    verseText: "Arată-mi, Doamne, căile Tale și învață-mă cărările Tale.",
+    axis: "living_faith",
+    needs: ["fara_directie", "rugaciune_fara_raspuns"],
+    background: "pergament",
+  },
+]
+
+export const MESSAGE_CARDS_INTARIRE: MessageCard[] = [
+  ...CARDS_MULTUMIRE,
+  ...CARDS_OBOSEALA,
+  ...CARDS_TEAMA,
+  ...CARDS_SINGURATATE,
+  ...CARDS_RUSINE,
+  ...CARDS_ASTEPTARE,
+]

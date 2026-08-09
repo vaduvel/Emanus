@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react"
-import { ArrowRight, BellRing, BookOpen, HandHeart, Library as LibraryIcon, Sunrise } from "lucide-react"
+import { ArrowRight, BellRing, BookOpen, Flame, HandHeart, Library as LibraryIcon, ScrollText, Sunrise } from "lucide-react"
 import type { Lesson } from "@emanus/shared"
 import {
   addPrayer,
@@ -49,6 +49,9 @@ export function Today() {
   const [prayerText, setPrayerText] = useState("")
   const [prayerSaved, setPrayerSaved] = useState(false)
   const [askReminder, setAskReminder] = useState(() => shouldOfferReminder())
+
+  /* După ora 18 propunem întâi candela, nu pergamentul. Nu e o măsurătoare, e ora. */
+  const evening = useMemo(() => new Date().getHours() >= 18, [])
 
   const complete = dayPlan?.kind === "path_complete"
   useEffect(() => {
@@ -162,6 +165,44 @@ export function Today() {
           <cite>{verse.ref}</cite>
         </blockquote>
       )}
+
+      {/*
+        Cele trei daruri de zi (docs/27). Nu au tab propriu și nu concurează cu
+        singurul lucru de azi: stau ca ofertă, nu ca sarcină. Aici NU se afișează
+        niciodată la ce zi a ajuns omul și nici câte a făcut (docs/20 §1).
+        Mana de azi e pentru azi (Exod 16): cine lipsește nu are zile restante.
+      */}
+      <div className="tile today__extra">
+        <p className="today__kicker">
+          {evening ? <Flame size={15} aria-hidden /> : <ScrollText size={15} aria-hidden />} Dacă
+          vrei și un dar de azi
+        </p>
+        <div className="today__chips">
+          {evening ? (
+            <>
+              <button type="button" onClick={() => navigate("/candela")}>
+                Aprinde candela
+              </button>
+              <button type="button" onClick={() => navigate("/devotional")}>
+                Devoționalul de azi
+              </button>
+            </>
+          ) : (
+            <>
+              <button type="button" onClick={() => navigate("/pergament")}>
+                Desfă pergamentul
+              </button>
+              <button type="button" onClick={() => navigate("/devotional")}>
+                Devoționalul de azi
+              </button>
+            </>
+          )}
+          <button type="button" onClick={() => navigate("/mesaj")}>
+            Un verset pentru cineva
+          </button>
+        </div>
+        <p className="muted">Dacă lipsești o zi, nu se acumulează nimic de recuperat.</p>
+      </div>
 
       {/*
         Prima rugăciune. O singură invitație, după a doua lecție.

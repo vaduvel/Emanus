@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/HOS01.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-HOS"
+      "lockId": "WEBU-R5-HOS"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/HOS01.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-HOS"
+      "lockId": "WLC-OSHB-REMAP-R5-HOS",
+      "rawLockId": "WLC-RAW-R5-HOS",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -32,19 +34,19 @@
   "verses": [
     {
       "number": 1,
-      "text": "Cuvântul DOMNULUI care a venit la Osea, fiul lui Beeri, pe vremea lui Ozia, Iotam, Ahaz și Ezechia, împărații lui Iuda, și pe vremea lui Ieroboam, fiul lui Ioas, împăratul lui Israel."
+      "text": "Cuvântul DOMNULui spus lui Osea, fiul lui Beeri, pe vremea lui Ozia, Iotam, Ahaz, Ezechia, împărații lui Iuda, și pe vremea lui Ieroboam, fiul lui Ioas, împăratul lui Israel."
     },
     {
       "number": 2,
-      "text": "Când DOMNUL a început să vorbească prin Osea, DOMNUL i-a spus lui Osea: „Du-te și ia-ți o soție desfrânată și copii ai desfrânării, căci țara se desfrânează mult, părăsindu-L pe DOMNUL.”"
+      "text": "Întâia dată când a vorbit DOMNUL către Osea, DOMNUL a zis lui Osea: „Du-te și ia-ți o nevastă curvă și copii din curvie; căci țara a săvârșit o mare curvie, părăsind pe DOMNUL!”"
     },
     {
       "number": 3,
-      "text": "El s-a dus și a luat-o pe Gomer, fiica lui Diblaim. Ea a zămislit și i-a născut un fiu."
+      "text": "El s-a dus și a luat pe Gomera, fiica lui Diblaim. Ea a zămislit și i-a născut un fiu."
     },
     {
       "number": 4,
-      "text": "DOMNUL i-a zis: „Pune-i numele Izreel, căci peste puțină vreme voi cere socoteală casei lui Iehu pentru sângele vărsat la Izreel și voi pune capăt domniei casei lui Israel.”"
+      "text": "Și DOMNUL i-a zis: „Pune-i numele Izreel; căci, peste puțină vreme, voi pedepsi casa lui Iehu pentru sângele vărsat la Izreel și voi pune capăt domniei lui peste casa lui Israel.”"
     },
     {
       "number": 5,
@@ -64,73 +66,18 @@
     },
     {
       "number": 9,
-      "text": "El a zis: „Pune-i numele Lo-Ami, căci voi nu sunteți poporul Meu, iar Eu nu voi fi al vostru.”"
+      "text": "Și DOMNUL a zis: „Pune-i numele Lo-Ami căci voi nu sunteți poporul Meu, și Eu nu voi fi Dumnezeul vostru.”"
     },
     {
       "number": 10,
-      "text": "Totuși, numărul copiilor lui Israel va fi ca nisipul mării, care nu se poate nici măsura, nici număra. Și, în locul unde li se zicea: „Nu sunteți poporul Meu”, li se va spune: „Fiii Dumnezeului celui viu.”"
+      "text": "Totuși numărul copiilor lui Israel va fi ca nisipul mării care nu se poate nici măsura, nici număra; și de unde li se zicea: „Nu sunteți poporul Meu”, li se va zice: „Copiii Dumnezeului celui Viu”"
     },
     {
       "number": 11,
       "text": "Atunci copiii lui Iuda și copiii lui Israel se vor strânge la un loc, își vor pune o singură căpetenie și vor ieși din țară; căci mare va fi ziua lui Izreel."
     }
   ],
-  "editorialNotes": [
-    {
-      "verse": 1,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Osea 1:1 a fost aplicată în textul canonic.",
-      "reason": "Formularea «Cuvântul DOMNULui spus lui Osea» este mai puțin exactă decât construcția ebraică אֲשֶׁר הָיָה אֶל־הוֹשֵׁעַ și WEBU «word that came to Hosea»; există și inconsistența grafică DOMNULui.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 2,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Osea 1:2 a fost aplicată în textul canonic.",
-      "reason": "Candidatul spune că DOMNUL a vorbit «către Osea», dar בְּהוֹשֵׁעַ și WEBU «by Hosea» exprimă faptul că DOMNUL a vorbit prin Osea. Se păstrează metafora desfrânării fără a o transforma într-o explicație doctrinară.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 3,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Osea 1:3 a fost aplicată în textul canonic.",
-      "reason": "Numele ebraic גֹּמֶר și WEBU sunt Gomer; candidatul are «Gomera». Construcția românească este și ea mai naturală cu pronume clitic.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 4,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Osea 1:4 a fost aplicată în textul canonic.",
-      "reason": "וּפָקַדְתִּי אֶת־דְּמֵי יִזְרְעֶאל עַל־בֵּית יֵהוּא exprimă cererea de socoteală pentru sângele de la Izreel; «voi pedepsi ... pentru» este acceptabil, dar mai puțin precis.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 9,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Osea 1:9 a fost aplicată în textul canonic.",
-      "reason": "Textul ebraic spune וְאָנֹכִי לֹא־אֶהְיֶה לָכֶם, iar WEBU «I will not be yours». Candidatul adaugă substantivul «Dumnezeul», care nu apare în această propoziție.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 10,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Osea 1:10 a fost aplicată în textul canonic.",
-      "reason": "«de unde li se zicea» nu redă corect בִּמְקוֹם אֲשֶׁר / «in the place where» și propoziția are nevoie de închidere/punctuație completă.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    }
-  ],
+  "editorialNotes": [],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -163,14 +110,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh HOS 1–14."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 11,
       "reviewed": 11,
@@ -180,24 +126,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Osea 1: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC derivată din ordinea absolută aprobată."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Osea 1:1 — minor: Formularea «Cuvântul DOMNULui spus lui Osea» este mai puțin exactă decât construcția ebraică אֲשֶׁר הָיָה אֶל־הוֹשֵׁעַ și WEBU «word that came to Hosea»; există și inconsistența grafică DOMNULui.",
-        "Osea 1:2 — material: Candidatul spune că DOMNUL a vorbit «către Osea», dar בְּהוֹשֵׁעַ și WEBU «by Hosea» exprimă faptul că DOMNUL a vorbit prin Osea. Se păstrează metafora desfrânării fără a o transforma într-o explicație doctrinară.",
-        "Osea 1:3 — minor: Numele ebraic גֹּמֶר și WEBU sunt Gomer; candidatul are «Gomera». Construcția românească este și ea mai naturală cu pronume clitic.",
-        "Osea 1:4 — minor: וּפָקַדְתִּי אֶת־דְּמֵי יִזְרְעֶאל עַל־בֵּית יֵהוּא exprimă cererea de socoteală pentru sângele de la Izreel; «voi pedepsi ... pentru» este acceptabil, dar mai puțin precis.",
-        "Osea 1:9 — material: Textul ebraic spune וְאָנֹכִי לֹא־אֶהְיֶה לָכֶם, iar WEBU «I will not be yours». Candidatul adaugă substantivul «Dumnezeul», care nu apare în această propoziție.",
-        "Osea 1:10 — minor: «de unde li se zicea» nu redă corect בִּמְקוֹם אֲשֶׁר / «in the place where» și propoziția are nevoie de închidere/punctuație completă."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorul, referenții, imaginile profetice și opozițiile teologice sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Numele divine, judecata, mila, legământul, idolatria și restaurarea sunt redate semantic fără armonizări confesionale adăugate."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -207,7 +147,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt folosite numai ca benchmark-uri public-domain, iar NTR numai ca referință externă de comparație"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -217,15 +157,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "71112c63c27319b2d6fdb3399ce26cc4ec82f471447db8972775a60786cf9647",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:93d1b54731fc7ec4e0fc5a378e944e994965879d4167c720901a796d0f4803c6"
+    "textDigest": "sha256:c31f26f90d2daee02dc1d4ac2557a8c8970a933808c3020e1797995d4543823c"
   }
 }

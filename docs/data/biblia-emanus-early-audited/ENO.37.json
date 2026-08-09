@@ -1,0 +1,77 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "ENO",
+  "bookName": "1 Enoh",
+  "chapter": 37,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://bible.ertale.com/ethiopiancanon/enoch/37/",
+    "pageSha256": "ee40c4a022e4726dd398d24ed9c1b30ab648729af98cb51282ed3e8a59c7ddeb",
+    "underlyingEdition": "R. H. Charles, The Book of Enoch, 1912/1917",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "structured mirror of public-domain Charles translation",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "sourceTextDigest": "8118cf3a11d72d84449de43da4a68f17a2b5fb945276a225d3cdc238c2581c3f",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "A doua viziune pe care a văzut-o, viziunea înțelepciunii – pe care a văzut-o Enoh, fiul lui Iared, fiul lui Mahalalel, fiul lui Cainan, fiul lui Enos, fiul lui Set, fiul lui Adam."
+    },
+    {
+      "number": 2,
+      "text": "Și acesta este începutul cuvintelor înțelepciunii pe care mi le-am ridicat ca să vorbesc și să le spun celor ce locuiesc pe pământ: Ascultați, oameni din vechime, și vedeți, voi care veniți după, cuvintele Celui Sfânt pe care le voi vorbi înaintea Domnului Duhurilor."
+    },
+    {
+      "number": 3,
+      "text": "Ar fi mai bine să le vestim oamenilor din vechime, dar chiar și celor care vin după noi nu vom opri începutul înțelepciunii."
+    },
+    {
+      "number": 4,
+      "text": "Până în ziua de azi, o astfel de înțelepciune nu a fost niciodată dată de Domnul Spiritelor, cum am primit după înțelegerea mea, după buna plăcere a Domnului Spiritelor, prin care mi-a fost dată soarta viețiie."
+    },
+    {
+      "number": 5,
+      "text": "Mi-au foste trei parabole, iar eu mi-am ridicat glasul le-am povestit celor care locuiesc pe pământ."
+    }
+  ],
+  "audit": {
+    "sourceUnits": 5,
+    "translatedUnits": 5,
+    "firstPassIssueCount": 0,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 5,
+    "semanticMinimumScore": 0.803184,
+    "blockingIssueCount": 0,
+    "textDigest": "b0d112d1c38acc71808d8022dc2c10e140fefd5eb0ea16840a00dd649e222c64",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "DID",
+  "bookName": "Didascalia etiopiană",
+  "chapter": 42,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://github.com/JWJeffery/PrayerAppNew/blob/4e5e39f4fb98f3d2b9556ba3eaf23ce4d2891486/data/bible/ET/didaskaliaET.json#chapter-42",
+    "pageSha256": "d827b0f41c5ee8818db2a55f631d30d980963fa4832acbf10cb05d6595c73b5d",
+    "underlyingEdition": "J. M. Harden, The Ethiopic Didascalia, 1920",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "commit-pinned clean transcription of public-domain Harden 1920; ERTale OCR retained only as an independently hashed secondary witness",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "cleanTranscription": {
+      "repository": "https://github.com/JWJeffery/PrayerAppNew",
+      "commit": "4e5e39f4fb98f3d2b9556ba3eaf23ce4d2891486",
+      "path": "data/bible/ET/didaskaliaET.json",
+      "sha256": "d827b0f41c5ee8818db2a55f631d30d980963fa4832acbf10cb05d6595c73b5d",
+      "chapter": 42
+    },
+    "rawOcrWitness": {
+      "url": "https://bible.ertale.com/ethiopiancanon/didascalia/42/",
+      "sha256": "536968c47c4a520ad8c36ec3bbe8d1b1d68f67fd66aed3c3c55da07e11a8a8ad"
+    },
+    "sourceTextDigest": "5208a24122b923e8a7345cb756ed27449b495ff3c86c421164758ecff88f4900",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Catehumenii care au fost botezați vor spune această rugăciune: O, Dumnezeule Atotputernic, Tatăl Domnului și Mântuitorului nostru Isus Hristos, Fiul Unul-Născut, care un trup neîntinat și acceptă o inimă blândă și un spirit smerit și o cunoaștere a înpciunii care nu are decădere, fă ca Duhul Tău Sfânt să locuiască în noi prin bunăvoința Ta și puterea puterii Tale prin Isus Hristos, prin care Tu să fii slava și putereaă pentru El."
+    }
+  ],
+  "audit": {
+    "sourceUnits": 1,
+    "translatedUnits": 1,
+    "firstPassIssueCount": 0,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 1,
+    "semanticMinimumScore": 0.913966,
+    "blockingIssueCount": 0,
+    "textDigest": "83035eccf98eba59ab9fecefc35710946026b490a4e0e5cf0eaab53818f0e665",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

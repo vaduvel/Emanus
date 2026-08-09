@@ -1,0 +1,69 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "ENO",
+  "bookName": "1 Enoh",
+  "chapter": 19,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://bible.ertale.com/ethiopiancanon/enoch/19/",
+    "pageSha256": "600429a844ddb34c659271d619541a5a833354102ea5e0511155f5696dd4a898",
+    "underlyingEdition": "R. H. Charles, The Book of Enoch, 1912/1917",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "structured mirror of public-domain Charles translation",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "sourceTextDigest": "179ef9b5d439f4afdd77b5adc251e2b99da87d035de831dd469292f7abb7a6a5",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Și Uriel mi-a spus: Aici vor sta îngerii care s-au legat de femei, iar spiritele lor, asumându- multe forme diferite, pângăresc omenirea îi vor conduce pe căi greșite la jertfirea demonilor ca dumnezei, (aici vor sta) până în ziua marii judecăți în care vor fi judecați până când li se va pune capăt."
+    },
+    {
+      "number": 2,
+      "text": "Și femeile îngerilor rătăciți vor deveni sirene."
+    },
+    {
+      "number": 3,
+      "text": "Numai Eu, Enoh, am văzut vedenia, marginile tuturor lucrurilor; și nimeni nu va vedea cum am văzut eu."
+    }
+  ],
+  "audit": {
+    "sourceUnits": 3,
+    "translatedUnits": 3,
+    "firstPassIssueCount": 0,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 3,
+    "semanticMinimumScore": 0.768655,
+    "blockingIssueCount": 0,
+    "textDigest": "fbf9f9a0b97995f7da66381b0de3c7436d5a40aecad3eabf5779a55a74410887",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

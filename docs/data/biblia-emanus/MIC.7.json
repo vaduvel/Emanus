@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/MIC07.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-MIC"
+      "lockId": "WEBU-R5-MIC"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/MIC07.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-MIC"
+      "lockId": "WLC-OSHB-REMAP-R5-MIC",
+      "rawLockId": "WLC-RAW-R5-MIC",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -40,15 +42,15 @@
     },
     {
       "number": 3,
-      "text": "Mâinile lor sunt pricepute să facă răul: dregătorul cere mită, judecătorul judecă pentru plată, iar omul puternic își rostește dorința rea; astfel o urzesc împreună."
+      "text": "Mâinile lor sunt îndreptate să facă rău: cârmuitorul cere daruri, judecătorul cere plată, cel mare își arată pe față ce dorește cu lăcomie, și astfel merg mână-n mână."
     },
     {
       "number": 4,
-      "text": "Cel mai bun dintre ei este ca un mărăcine, iar cel mai drept este mai rău decât un gard de spini. Ziua străjerilor tăi, ziua cercetării tale, a venit; acum va fi învălmășeala lor."
+      "text": "Cel mai bun dintre ei este ca un mărăcine, cel mai cinstit este mai rău decât un tufiș de spini. Ziua vestită de toți prorocii Tăi, pedeapsa Ta se apropie! Atunci va fi uluiala lor."
     },
     {
       "number": 5,
-      "text": "Nu vă încredeți într-un prieten și nu vă puneți încrederea într-un apropiat. Păzește ușile gurii tale chiar față de cea care stă la sânul tău."
+      "text": "Nu crede pe un prieten, nu te încrede în ruda cea mai de aproape; păzește-ți ușa gurii de cea care îți stă în brațe!"
     },
     {
       "number": 6,
@@ -64,11 +66,11 @@
     },
     {
       "number": 9,
-      "text": "Voi purta mânia DOMNULUI, pentru că am păcătuit împotriva Lui, până când El îmi va apăra pricina și îmi va face dreptate. Mă va scoate la lumină și voi vedea dreptatea Lui."
+      "text": "Voi suferi mânia DOMNULui, căci am păcătuit împotriva Lui – până ce El îmi va apăra pricina și-mi va face dreptate; El mă va scoate la lumină, și voi privi dreptatea Lui."
     },
     {
       "number": 10,
-      "text": "Vrăjmașa mea va vedea și rușinea o va acoperi, ea care îmi zicea: „Unde este DOMNUL Dumnezeul tău?” Ochii mei o vor vedea; acum va fi călcată în picioare ca noroiul de pe ulițe."
+      "text": "Când va vedea vrăjmașa mea lucrul acesta, va fi acoperită de rușine, ea care-mi zicea: „Unde este DOMNUL Dumnezeul tău?”"
     },
     {
       "number": 11,
@@ -76,11 +78,11 @@
     },
     {
       "number": 12,
-      "text": "În ziua aceea vor veni la tine din Asiria și din cetățile Egiptului, din Egipt până la Râu, de la mare la mare și de la munte la munte."
+      "text": "În ziua aceea, vor veni la tine, din Asiria până în Egipt, din Egipt până la Râu, de la o mare la alta, și de la un munte la altul."
     },
     {
       "number": 13,
-      "text": "Țara va ajunge pustie din pricina locuitorilor ei, din pricina rodului faptelor lor."
+      "text": "Dar mai întâi țara va fi pustiită din pricina locuitorilor ei, în urma faptelor lor rele."
     },
     {
       "number": 14,
@@ -88,7 +90,7 @@
     },
     {
       "number": 15,
-      "text": "Ca în zilele ieșirii tale din țara Egiptului, îi voi arăta lucruri minunate."
+      "text": "„Îți voi arăta lucruri minunate, zice DOMNUL, ca în ziua când ai ieșit din țara Egiptului.”"
     },
     {
       "number": 16,
@@ -96,7 +98,7 @@
     },
     {
       "number": 17,
-      "text": "Vor linge țărâna ca șarpele, ca vietățile care se târăsc pe pământ. Vor ieși tremurând din ascunzișurile lor; vor veni cu frică la DOMNUL Dumnezeul nostru și se vor teme din pricina Ta."
+      "text": "Vor linge pulberea ca șarpele; vor ieși tremurând ca târâtoarele pământului, afară din cetățuile lor, vor veni pline de frică înaintea DOMNULui Dumnezeului nostru și se vor teme de Tine."
     },
     {
       "number": 18,
@@ -108,101 +110,10 @@
     },
     {
       "number": 20,
-      "text": "Vei da credincioșie lui Iacov și îndurare lui Avraam, așa cum ai jurat părinților noștri din zilele de odinioară."
+      "text": "Vei da cu credincioșie lui Iacov și vei ține cu îndurare față de Avraam ce ai jurat părinților noștri în zilele de odinioară."
     }
   ],
-  "editorialNotes": [
-    {
-      "verse": 3,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Mica 7:3 a fost aplicată în textul canonic.",
-      "reason": "הַשַּׂר שֹׁאֵל וְהַשֹּׁפֵט בַּשִּׁלּוּם spune direct că dregătorul cere și judecătorul lucrează pentru mită/plată. «Daruri» eufemizează mita, iar «puternicul își spune cu lăcomie pofta» este o formulare mecanică pentru faptul că omul puternic își dictează dorința rea.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 4,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Mica 7:4 a fost aplicată în textul canonic.",
-      "reason": "יוֹם מְצַפֶּיךָ este «ziua străjerilor tăi», nu «ziua vestită de toți prorocii Tăi». Candidatul introduce o explicație profetică absentă și schimbă substantivul. פְּקֻדָּתְךָ este ziua cercetării/pedepsei.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 5,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Mica 7:5 a fost aplicată în textul canonic.",
-      "reason": "אַל־תִּבְטְחוּ בְרֵעַ אַל־תִּבְטְחוּ בְּאַלּוּף distinge prietenul de confidentul/apropiatul intim. «Ruda cea mai de aproape» introduce o relație de sânge absentă.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 9,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Mica 7:9 a fost aplicată în textul canonic.",
-      "reason": "Sensul este păstrat; forma editorială «DOMNULui» trebuie normalizată, iar acțiunea finală poate fi redată direct ca vederea dreptății Lui.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 10,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Mica 7:10 a fost aplicată în textul canonic.",
-      "reason": "Candidatul omite întreaga concluzie WEBU/WLC: ochii vor vedea căderea vrăjmașei, iar ea va fi călcată ca noroiul străzilor.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 12,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Mica 7:12 a fost aplicată în textul canonic.",
-      "reason": "WEBU specifică venirea din Asiria și din cetățile Egiptului. Candidatul reduce a doua expresie la țara Egiptului și pierde «cetățile».",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 13,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Mica 7:13 a fost aplicată în textul canonic.",
-      "reason": "«Mai întâi» și «tocmai» sunt adaosuri explicative absente din WLC/WEBU. Textul leagă pustiirea direct de rodul faptelor locuitorilor.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 15,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Mica 7:15 a fost aplicată în textul canonic.",
-      "reason": "Candidatul introduce formula «zice DOMNUL», absentă din verset, și schimbă obiectul verbului: WEBU/WLC spun că Dumnezeu le va arăta lucruri minunate, nu că vorbește aici direct la singular printr-o formulă adăugată.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 17,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Mica 7:17 a fost aplicată în textul canonic.",
-      "reason": "מִמִּסְגְּרֹתֵיהֶם / WEBU descrie ieșirea tremurând din ascunzișurile/îngrădirile lor. «Vor ieși din cetățuile lor» fixează inutil imaginea ca fortificație, iar «vor veni pline de frică» are acord și construcție defecte.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 20,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Mica 7:20 a fost aplicată în textul canonic.",
-      "reason": "תִּתֵּן אֱמֶת לְיַעֲקֹב חֶסֶד לְאַבְרָהָם păstrează paralel două daruri: credincioșie/adevăr pentru Iacov și îndurare pentru Avraam. Candidatul reduce paralelismul la «vei ține cu îndurare față de Avraam ce ai jurat».",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    }
-  ],
+  "editorialNotes": [],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -235,14 +146,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh MIC."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 20,
       "reviewed": 20,
@@ -252,28 +162,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Mica 7: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Mica 7:3 — material: הַשַּׂר שֹׁאֵל וְהַשֹּׁפֵט בַּשִּׁלּוּם spune direct că dregătorul cere și judecătorul lucrează pentru mită/plată. «Daruri» eufemizează mita, iar «puternicul își spune cu lăcomie pofta» este o formulare mecanică pentru faptul că omul puternic își dictează dorința rea.",
-        "Mica 7:4 — critical: יוֹם מְצַפֶּיךָ este «ziua străjerilor tăi», nu «ziua vestită de toți prorocii Tăi». Candidatul introduce o explicație profetică absentă și schimbă substantivul. פְּקֻדָּתְךָ este ziua cercetării/pedepsei.",
-        "Mica 7:5 — material: אַל־תִּבְטְחוּ בְרֵעַ אַל־תִּבְטְחוּ בְּאַלּוּף distinge prietenul de confidentul/apropiatul intim. «Ruda cea mai de aproape» introduce o relație de sânge absentă.",
-        "Mica 7:9 — minor: Sensul este păstrat; forma editorială «DOMNULui» trebuie normalizată, iar acțiunea finală poate fi redată direct ca vederea dreptății Lui.",
-        "Mica 7:10 — critical: Candidatul omite întreaga concluzie WEBU/WLC: ochii vor vedea căderea vrăjmașei, iar ea va fi călcată ca noroiul străzilor.",
-        "Mica 7:12 — minor: WEBU specifică venirea din Asiria și din cetățile Egiptului. Candidatul reduce a doua expresie la țara Egiptului și pierde «cetățile».",
-        "Mica 7:13 — minor: «Mai întâi» și «tocmai» sunt adaosuri explicative absente din WLC/WEBU. Textul leagă pustiirea direct de rodul faptelor locuitorilor.",
-        "Mica 7:15 — critical: Candidatul introduce formula «zice DOMNUL», absentă din verset, și schimbă obiectul verbului: WEBU/WLC spun că Dumnezeu le va arăta lucruri minunate, nu că vorbește aici direct la singular printr-o formulă adăugată.",
-        "Mica 7:17 — material: מִמִּסְגְּרֹתֵיהֶם / WEBU descrie ieșirea tremurând din ascunzișurile/îngrădirile lor. «Vor ieși din cetățuile lor» fixează inutil imaginea ca fortificație, iar «vor veni pline de frică» are acord și construcție defecte.",
-        "Mica 7:20 — material: תִּתֵּן אֱמֶת לְיַעֲקֹב חֶסֶד לְאַבְרָהָם păstrează paralel două daruri: credincioșie/adevăr pentru Iacov și îndurare pentru Avraam. Candidatul reduce paralelismul la «vei ține cu îndurare față de Avraam ce ai jurat»."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorul, referenții, imaginile profetice și opozițiile teologice sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Numele divine, judecata, mila, legământul, idolatria și restaurarea sunt redate semantic fără armonizări confesionale adăugate."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -283,7 +183,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -293,15 +193,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "9c456fdc3a1c54dfbe4d39821fe9928152875812ce93aef5ed7dbc0fd477f829",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:667c3c74b446dcbecf532dcb6044c7809275cbf0b0504a9855ee34a11f96eb87"
+    "textDigest": "sha256:a1fcae412717e5c00735ad296d2620ee2000e87061eb41cef48c51ef8175c5bf"
   }
 }

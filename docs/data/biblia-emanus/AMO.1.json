@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/AMO01.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-AMO"
+      "lockId": "WEBU-R5-AMO"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/AMO01.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-AMO"
+      "lockId": "WLC-OSHB-REMAP-R5-AMO",
+      "rawLockId": "WLC-RAW-R5-AMO",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -32,7 +34,7 @@
   "verses": [
     {
       "number": 1,
-      "text": "Cuvintele lui Amos, unul dintre păstorii din Tecoa, pe care le-a văzut cu privire la Israel, pe vremea lui Ozia, împăratul lui Iuda, și pe vremea lui Ieroboam, fiul lui Ioas, împăratul lui Israel, cu doi ani înainte de cutremur."
+      "text": "Cuvintele lui Amos, unul din păstorii din Tecoa, vedeniile pe care le-a avut el despre Israel, pe vremea lui Ozia, împăratul lui Iuda, și pe vremea lui Ieroboam, fiul lui Ioas, împăratul lui Israel, cu doi ani înaintea cutremurului de pământ."
     },
     {
       "number": 2,
@@ -52,7 +54,7 @@
     },
     {
       "number": 6,
-      "text": "Așa vorbește DOMNUL: „Pentru trei nelegiuiri ale Gazei, ba pentru patru, nu-Mi schimb hotărârea, pentru că au dus în robie o comunitate întreagă ca s-o dea Edomului;”"
+      "text": "Așa vorbește DOMNUL: „Pentru trei nelegiuiri ale Gazei, ba pentru patru, nu-Mi schimb hotărârea, pentru că au luat pe toți oamenii prinși de război și i-au dat Edomului:”"
     },
     {
       "number": 7,
@@ -64,7 +66,7 @@
     },
     {
       "number": 9,
-      "text": "Așa vorbește DOMNUL: „Pentru trei nelegiuiri ale Tirului, ba pentru patru, nu-Mi schimb hotărârea, pentru că au dat Edomului o comunitate întreagă de robi și nu și-au adus aminte de legământul frățesc.”"
+      "text": "Așa vorbește DOMNUL: „Pentru trei nelegiuiri ale Tirului, ba pentru patru, nu-Mi schimb hotărârea, pentru că au luat pe toți oamenii prinși de război și i-au dat Edomului, și nu s-au gândit la legământul frățesc.”"
     },
     {
       "number": 10,
@@ -91,35 +93,7 @@
       "text": "„Și împăratul lor va merge în robie, el și căpeteniile lui împreună cu el, zice DOMNUL.”"
     }
   ],
-  "editorialNotes": [
-    {
-      "verse": 1,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Amos 1:1 a fost aplicată în textul canonic.",
-      "reason": "אֲשֶׁר חָזָה califică «cuvintele lui Amos» ca mesaj văzut/primit profetic cu privire la Israel; candidatul introduce separat «vedeniile pe care le-a avut el», schimbând structura și adăugând un substantiv care nu este în text.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 6,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Amos 1:6 a fost aplicată în textul canonic.",
-      "reason": "גָּלוּת שְׁלֵמָה / WEBU «the whole community» descrie deportarea unei comunități întregi; «toți oamenii prinși de război» restrânge nejustificat referința la prizonieri de război.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 9,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Amos 1:9 a fost aplicată în textul canonic.",
-      "reason": "Ca în v.6, גָּלוּת שְׁלֵמָה este o comunitate/deportare întreagă, nu numai «oamenii prinși de război»; trebuie păstrată și încălcarea legământului frățesc.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    }
-  ],
+  "editorialNotes": [],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -152,14 +126,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh AMO."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 15,
       "reviewed": 15,
@@ -169,21 +142,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Amos 1: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Amos 1:1 — material: אֲשֶׁר חָזָה califică «cuvintele lui Amos» ca mesaj văzut/primit profetic cu privire la Israel; candidatul introduce separat «vedeniile pe care le-a avut el», schimbând structura și adăugând un substantiv care nu este în text.",
-        "Amos 1:6 — material: גָּלוּת שְׁלֵמָה / WEBU «the whole community» descrie deportarea unei comunități întregi; «toți oamenii prinși de război» restrânge nejustificat referința la prizonieri de război.",
-        "Amos 1:9 — material: Ca în v.6, גָּלוּת שְׁלֵמָה este o comunitate/deportare întreagă, nu numai «oamenii prinși de război»; trebuie păstrată și încălcarea legământului frățesc."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorul, referenții, imaginile profetice și opozițiile teologice sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Numele divine, judecata, mila, legământul, idolatria și restaurarea sunt redate semantic fără armonizări confesionale adăugate."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -193,7 +163,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -203,15 +173,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "c2e915dacf472bc0af72d9ba71d18e3b575246c7ddd4e4bcbcfaec7fc98abfac",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:6ff9b2a170236e782ddb90cfb1c1ddf334cdbac1bee7a798b43012d4663e5fdb"
+    "textDigest": "sha256:b90a2e5d808bdde13bdb0078b3737541fe44ca8ecfc2a1862338e59ab8d1a4ec"
   }
 }

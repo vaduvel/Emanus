@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/JOL01.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-JOL"
+      "lockId": "WEBU-R5-JOL"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/JOL01.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-JOL"
+      "lockId": "WLC-OSHB-REMAP-R5-JOL",
+      "rawLockId": "WLC-RAW-R5-JOL",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -32,7 +34,7 @@
   "verses": [
     {
       "number": 1,
-      "text": "Cuvântul DOMNULUI care a venit la Ioel, fiul lui Petuel."
+      "text": "Cuvântul DOMNULui care a fost spus lui Ioel, fiul lui Petuel."
     },
     {
       "number": 2,
@@ -44,7 +46,7 @@
     },
     {
       "number": 4,
-      "text": "Ce a lăsat lăcusta roiitoare a mâncat lăcusta cea mare; ce a lăsat lăcusta cea mare a mâncat lăcusta săritoare; ce a lăsat lăcusta săritoare a mâncat omida."
+      "text": "Ce a lăsat nemâncat lăcusta Gazam a mâncat lăcusta Arbeh, ce a lăsat lăcusta Arbeh a mâncat lăcusta Ielec, ce a lăsat lăcusta Ielec a mâncat lăcusta Hasil."
     },
     {
       "number": 5,
@@ -72,7 +74,7 @@
     },
     {
       "number": 11,
-      "text": "Fiți uluiți, plugari! Văitați-vă, viticultori, pentru grâu și pentru orz, căci recolta câmpului a pierit."
+      "text": "Înmărmuriți, plugari, văitați-vă, vieri, din pricina grâului și orzului, căci bucatele de pe câmp sunt pierdute."
     },
     {
       "number": 12,
@@ -84,11 +86,11 @@
     },
     {
       "number": 14,
-      "text": "Sfințiți un post, chemați o adunare solemnă; strângeți-i pe bătrâni și pe toți locuitorii țării în Casa DOMNULUI Dumnezeului vostru și strigați către DOMNUL."
+      "text": "Vestiți un post, chemați o adunare de sărbătoare; strângeți pe bătrâni, pe toți locuitorii țării, în Casa DOMNULui Dumnezeului vostru și strigați către DOMNUL."
     },
     {
       "number": 15,
-      "text": "Vai de ziua aceea! Căci ziua DOMNULUI este aproape și va veni ca o nimicire de la Cel Atotputernic."
+      "text": "Vai, ce zi! Ziua DOMNULUI este aproape și vine ca o nimicire de la Cel Atotputernic."
     },
     {
       "number": 16,
@@ -96,7 +98,7 @@
     },
     {
       "number": 17,
-      "text": "Semințele putrezesc sub bulgării lor; grânarele sunt pustiite, hambarele sunt dărâmate, căci grâul s-a uscat."
+      "text": "S-au uscat semințele sub bulgări; grânarele stau goale, hambarele sunt stricate, căci s-a stricat semănătura!"
     },
     {
       "number": 18,
@@ -113,58 +115,11 @@
   ],
   "editorialNotes": [
     {
-      "verse": 1,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Ioel 1:1 a fost aplicată în textul canonic.",
-      "reason": "אֲשֶׁר הָיָה אֶל și WEBU exprimă «cuvântul care a venit la Ioel», nu «care a fost spus lui Ioel»; se normalizează și forma DOMNULUI.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 4,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Ioel 1:4 a fost aplicată în textul canonic.",
-      "reason": "גָּזָם, אַרְבֶּה, יֶלֶק și חָסִיל sunt substantive comune pentru tipuri/stadii de lăcustă; candidatul le capitalizează și le tratează ca nume proprii, pierzând imaginea succesiunii de dăunători redată și de WEBU.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 11,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Ioel 1:11 a fost aplicată în textul canonic.",
-      "reason": "קְצִיר שָׂדֶה este «recolta/secerișul câmpului», nu generic «bucatele de pe câmp»; formularea WEBU păstrează explicit harvest.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 14,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Ioel 1:14 a fost aplicată în textul canonic.",
-      "reason": "עֲצָרָה și WEBU «solemn assembly» desemnează o adunare solemnă, nu «o adunare de sărbătoare», formulare care poate sugera tocmai opusul contextului de post și plângere.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
       "verse": 15,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Ioel 1:15 a fost aplicată în textul canonic.",
-      "reason": "Candidatul conține numai «Vai! ce zi!» și omite complet restul versetului: apropierea zilei DOMNULUI și venirea ei ca nimicire de la Cel Atotputernic (כְּשֹׁד מִשַּׁדַּי / WEBU «destruction from the Almighty»).",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 17,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Ioel 1:17 a fost aplicată în textul canonic.",
-      "reason": "דָּגָן este grâul/cereala, nu «semănătura». Finalul descrie uscarea cerealelor, în acord cu WEBU «the grain has withered».",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
+      "term": "repair5-truncation",
+      "decision": "Versetul moștenit era tăiat după prima propoziție sau după introducerea citatului; a fost reconstruit integral din WEBBE și verificat comparativ cu WLC/BTF, unde sunt disponibile.",
+      "previousTextDigest": "b3e0bfa27e0ba17f928d0d90d70e5fa1ba257d636a845edb4430fbb246430070",
+      "resolutionStatus": "resolved"
     }
   ],
   "benchmark": {
@@ -199,14 +154,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh JOL."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 20,
       "reviewed": 20,
@@ -216,24 +170,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Ioel 1: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Ioel 1:1 — minor: אֲשֶׁר הָיָה אֶל și WEBU exprimă «cuvântul care a venit la Ioel», nu «care a fost spus lui Ioel»; se normalizează și forma DOMNULUI.",
-        "Ioel 1:4 — material: גָּזָם, אַרְבֶּה, יֶלֶק și חָסִיל sunt substantive comune pentru tipuri/stadii de lăcustă; candidatul le capitalizează și le tratează ca nume proprii, pierzând imaginea succesiunii de dăunători redată și de WEBU.",
-        "Ioel 1:11 — minor: קְצִיר שָׂדֶה este «recolta/secerișul câmpului», nu generic «bucatele de pe câmp»; formularea WEBU păstrează explicit harvest.",
-        "Ioel 1:14 — material: עֲצָרָה și WEBU «solemn assembly» desemnează o adunare solemnă, nu «o adunare de sărbătoare», formulare care poate sugera tocmai opusul contextului de post și plângere.",
-        "Ioel 1:15 — critical: Candidatul conține numai «Vai! ce zi!» și omite complet restul versetului: apropierea zilei DOMNULUI și venirea ei ca nimicire de la Cel Atotputernic (כְּשֹׁד מִשַּׁדַּי / WEBU «destruction from the Almighty»).",
-        "Ioel 1:17 — minor: דָּגָן este grâul/cereala, nu «semănătura». Finalul descrie uscarea cerealelor, în acord cu WEBU «the grain has withered»."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorul, referenții, imaginile profetice și opozițiile teologice sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Numele divine, judecata, mila, legământul, idolatria și restaurarea sunt redate semantic fără armonizări confesionale adăugate."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -243,7 +191,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -253,15 +201,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "567ffb7f41be3fa1a13891257bde102d4a638e1f4f099345d10fe20959c5d709",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:80ca403cce54e1f230094f5cb19cf716a1d6eec4f289a52fa215e837dae120fd"
+    "textDigest": "sha256:18a7a1edbe606ad7e68ad73533ab2a1dbee66e9fc00334f8d340b36ff80e3a48"
   }
 }

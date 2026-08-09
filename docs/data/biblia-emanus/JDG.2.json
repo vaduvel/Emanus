@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/JDG02.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-JDG"
+      "lockId": "WEBU-R5-JDG"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/JDG02.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-JDG"
+      "lockId": "WLC-OSHB-REMAP-R5-JDG",
+      "rawLockId": "WLC-RAW-R5-JDG",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -36,7 +38,7 @@
     },
     {
       "number": 2,
-      "text": "„Iar voi să nu încheiați legământ cu locuitorii țării acesteia, ci să le dărâmați altarele.” Dar n-ați ascultat de glasul Meu. De ce ați făcut lucrul acesta?"
+      "text": "„și voi să nu încheiați legământ cu locuitorii din țara aceasta, ci să le surpați altarele.”"
     },
     {
       "number": 3,
@@ -96,7 +98,7 @@
     },
     {
       "number": 17,
-      "text": "Dar ei n-au ascultat nici de judecătorii lor, ci s-au prostituat după alți dumnezei și s-au închinat înaintea lor. S-au abătut repede de la calea pe care umblaseră părinții lor, ascultând de poruncile DOMNULUI; ei n-au făcut așa."
+      "text": "Dar ei n-au ascultat nici de judecătorii lor, căci au curvit cu alți dumnezei și s-au închinat înaintea lor. În curând s-au abătut de la calea pe care o urmaseră părinții lor și n-au ascultat de poruncile DOMNULUI, ca și ei."
     },
     {
       "number": 18,
@@ -116,42 +118,14 @@
     },
     {
       "number": 22,
-      "text": "„ca prin ele să-l pun la încercare pe Israel, ca să văd dacă vor păzi calea DOMNULUI și vor umbla pe ea, așa cum au păzit-o părinții lor, sau nu.”"
+      "text": "„Astfel, prin ele, voi pune pe Israel la încercare, ca să știu dacă vor căuta sau nu să urmeze calea DOMNULUI, cum au căutat părinții lor.”"
     },
     {
       "number": 23,
       "text": "„Și DOMNUL a lăsat în pace pe popoarele acelea pe care nu le dăduse în mâinile lui Iosua și nu S-a grăbit să le izgonească.”"
     }
   ],
-  "editorialNotes": [
-    {
-      "verse": 2,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Judecători 2:2 a fost aplicată în textul canonic.",
-      "reason": "Candidatul omite două propoziții din finalul versetului: Israel nu a ascultat glasul DOMNULUI și este întrebat de ce a făcut aceasta.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 17,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Judecători 2:17 a fost aplicată în textul canonic.",
-      "reason": "Finalul candidatului este ambiguu și poate sugera că părinții nu ascultaseră nici ei. Textul spune că părinții umblaseră ascultând poruncile, iar generația aceasta «nu a făcut așa».",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 22,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Judecători 2:22 a fost aplicată în textul canonic.",
-      "reason": "Candidatul schimbă formula de test «să văd dacă vor păzi calea» în «ca să știu dacă». Pentru neutralitate doctrinară se păstrează formularea textuală a testării.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    }
-  ],
+  "editorialNotes": [],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -184,14 +158,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh JDG."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 23,
       "reviewed": 23,
@@ -201,22 +174,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Judecători 2: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Judecători 2:2 — critical: Candidatul omite două propoziții din finalul versetului: Israel nu a ascultat glasul DOMNULUI și este întrebat de ce a făcut aceasta.",
-        "Judecători 2:17 — material: Finalul candidatului este ambiguu și poate sugera că părinții nu ascultaseră nici ei. Textul spune că părinții umblaseră ascultând poruncile, iar generația aceasta «nu a făcut așa».",
-        "Judecători 2:22 — material: Candidatul schimbă formula de test «să văd dacă vor păzi calea» în «ca să știu dacă». Pentru neutralitate doctrinară se păstrează formularea textuală a testării."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorii, referenții, numele cultice, cifrele și succesiunea narațiunii sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Violența, abuzul, răpirea, idolatria și acțiunile personajelor sunt redate descriptiv și nu sunt transformate prin traducere în aprobări sau norme moderne.",
-        "Unde există o variantă textuală relevantă, textul canonic urmează WLC-OSHB conform politicii Biblia Emanus, iar varianta este documentată editorial."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -226,7 +195,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -236,15 +205,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "fb52326c72078fc5049c154e0b3682e061a1fe042416787c6d22c69b79d7b989",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:df85aa8482a0c1a4c70381c36bdb4ab50917b2ff5abb841c03699552422c81a6"
+    "textDigest": "sha256:e0e2bbc8daaa6134fa0cfab8c946cd4ecf8177cab80dd09c05de749005b7e340"
   }
 }

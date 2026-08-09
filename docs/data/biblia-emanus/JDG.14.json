@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/JDG14.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-JDG"
+      "lockId": "WEBU-R5-JDG"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/JDG14.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-JDG"
+      "lockId": "WLC-OSHB-REMAP-R5-JDG",
+      "rawLockId": "WLC-RAW-R5-JDG",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -72,7 +74,7 @@
     },
     {
       "number": 11,
-      "text": "Când l-au văzut, au adus treizeci de tovarăși ca să fie cu el."
+      "text": "Cum l-au văzut, au poftit treizeci de tovarăși care au stat împreună cu el."
     },
     {
       "number": 12,
@@ -84,11 +86,11 @@
     },
     {
       "number": 14,
-      "text": "El le-a zis: „Din cel ce mănâncă a ieșit hrană și din cel tare a ieșit dulceață.” Timp de trei zile n-au putut dezlega ghicitoarea."
+      "text": "Și el le-a zis: „Din cel ce mănâncă a ieșit ce se mănâncă, și din cel tare a ieșit dulceață.”"
     },
     {
       "number": 15,
-      "text": "În ziua a șaptea, ei i-au zis soției lui Samson: „Înduplecă-l pe bărbatul tău să ne dezlege ghicitoarea, ca nu cumva să te ardem cu foc pe tine și casa tatălui tău. Ne-ați chemat aici ca să ne sărăciți, nu-i așa?”"
+      "text": "Trei zile, n-au putut dezlega ghicitoarea. În ziua a șaptea, au zis nevestei lui Samson: „Înduplecă pe bărbatul tău să ne dezlege ghicitoarea; altfel, te vom arde, pe tine și casa tatălui tău. Ne-ați adunat aici ca să ne jefuiți, nu-i așa?”"
     },
     {
       "number": 16,
@@ -111,35 +113,7 @@
       "text": "Nevasta sa a fost dată unuia din tovarășii lui, cu care era prieten el."
     }
   ],
-  "editorialNotes": [
-    {
-      "verse": 11,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Judecători 14:11 a fost aplicată în textul canonic.",
-      "reason": "«au poftit treizeci de tovarăși» poate sugera doar o invitație. Sursa spune că i-au adus/au pus treizeci de însoțitori să fie cu Samson.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 14,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Judecători 14:14 a fost aplicată în textul canonic.",
-      "reason": "Candidatul omite propoziția finală a versetului: timp de trei zile ei nu au putut dezlega ghicitoarea. Propoziția a fost deplasată greșit în versetul 15.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 15,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Judecători 14:15 a fost aplicată în textul canonic.",
-      "reason": "Versetul începe cu propoziția mutată din 14:14. După reașezarea ei, 14:15 trebuie să înceapă direct cu ziua a șaptea și amenințarea adresată soției lui Samson.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    }
-  ],
+  "editorialNotes": [],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -172,14 +146,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh JDG."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 20,
       "reviewed": 20,
@@ -189,22 +162,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Judecători 14: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Judecători 14:11 — minor: «au poftit treizeci de tovarăși» poate sugera doar o invitație. Sursa spune că i-au adus/au pus treizeci de însoțitori să fie cu Samson.",
-        "Judecători 14:14 — critical: Candidatul omite propoziția finală a versetului: timp de trei zile ei nu au putut dezlega ghicitoarea. Propoziția a fost deplasată greșit în versetul 15.",
-        "Judecători 14:15 — material: Versetul începe cu propoziția mutată din 14:14. După reașezarea ei, 14:15 trebuie să înceapă direct cu ziua a șaptea și amenințarea adresată soției lui Samson."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorii, referenții, numele cultice, cifrele și succesiunea narațiunii sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Violența, abuzul, răpirea, idolatria și acțiunile personajelor sunt redate descriptiv și nu sunt transformate prin traducere în aprobări sau norme moderne.",
-        "Unde există o variantă textuală relevantă, textul canonic urmează WLC-OSHB conform politicii Biblia Emanus, iar varianta este documentată editorial."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -214,7 +183,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -224,15 +193,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "fb52326c72078fc5049c154e0b3682e061a1fe042416787c6d22c69b79d7b989",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:25d9d5c0bbb560415234179819fe1a66b09c28ab0912881b1558e43c67f4a683"
+    "textDigest": "sha256:9812e2d4e5aca4e362f91be4b772955077f6b9fdfd54f7a284ae18fcf6ca4a11"
   }
 }

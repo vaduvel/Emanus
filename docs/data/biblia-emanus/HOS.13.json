@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/HOS13.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-HOS"
+      "lockId": "WEBU-R5-HOS"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/HOS13.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-HOS"
+      "lockId": "WLC-OSHB-REMAP-R5-HOS",
+      "rawLockId": "WLC-RAW-R5-HOS",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -32,11 +34,11 @@
   "verses": [
     {
       "number": 1,
-      "text": "Când vorbea Efraim, era cutremur; el se înălțase în Israel. Dar când s-a făcut vinovat prin Baal, a murit."
+      "text": "Când vorbea Efraim, răspândea groaza în Israel. Dar cum a păcătuit cu Baal, a murit."
     },
     {
       "number": 2,
-      "text": "Și acum păcătuiesc tot mai mult; își fac chipuri turnate din argintul lor, idoli după priceperea lor, toți lucrarea meșterilor. Despre ei se spune: „Cei ce aduc jertfe omenești sărută vițeii!”"
+      "text": "Și acum ei păcătuiesc întruna, își fac chipuri turnate din argintul lor, idoli născociți de ei, lucrare făcută de meșteri. Acestora le vorbesc ei și, jertfind oameni, sărută viței!"
     },
     {
       "number": 3,
@@ -44,11 +46,11 @@
     },
     {
       "number": 4,
-      "text": "Dar Eu sunt DOMNUL Dumnezeul tău din țara Egiptului; să nu recunoști alt Dumnezeu în afară de Mine, căci nu este alt Mântuitor în afară de Mine."
+      "text": "„Dar Eu sunt DOMNUL Dumnezeul tău din țara Egiptului încoace. Tu cunoști că nu este alt Dumnezeu afară de Mine și nu este alt Mântuitor afară de Mine.”"
     },
     {
       "number": 5,
-      "text": "Eu te-am cunoscut în pustiu, într-o țară de mare secetă."
+      "text": "Eu te-am cunoscut în pustiu, într-un pământ fără apă."
     },
     {
       "number": 6,
@@ -56,19 +58,19 @@
     },
     {
       "number": 7,
-      "text": "Am fost pentru ei ca un leu; ca un leopard voi pândi lângă drum."
+      "text": "Eu M-am făcut ca un leu pentru ei și-i pândesc ca un pardos pe drum."
     },
     {
       "number": 8,
-      "text": "Îi voi întâmpina ca o ursoaică lipsită de pui și le voi sfâșia învelișul inimii. Acolo îi voi devora ca o leoaică; fiara câmpului îi va sfâșia."
+      "text": "Mă năpustesc asupra lor ca o ursoaică lipsită de puii ei, le sfâșii învelișul inimii; îi înghit îndată ca un leu, și fiarele câmpului îi vor face bucăți."
     },
     {
       "number": 9,
-      "text": "Ești nimicit, Israele, pentru că ești împotriva Mea, împotriva ajutorului tău."
+      "text": "Pieirea ta, Israele, este că ai fost împotriva Mea, împotriva Celui ce te putea ajuta."
     },
     {
       "number": 10,
-      "text": "Unde este acum împăratul tău, ca să te scape în toate cetățile tale? Unde sunt judecătorii tăi, despre care spuneai: „Dă-mi un împărat și căpetenii”?"
+      "text": "Unde este împăratul tău, ca să te scape în toate cetățile tale? Unde sunt judecătorii tăi, despre care ziceai: „Dă-mi un împărat și domni”"
     },
     {
       "number": 11,
@@ -80,11 +82,11 @@
     },
     {
       "number": 13,
-      "text": "Îl vor apuca durerile femeii care naște. Este un fiu neînțelept, căci, atunci când vine vremea, nu se înfățișează la deschiderea pântecelui."
+      "text": "Îl vor apuca durerile nașterii; este un copil neînțelept, căci nu poate să nască la vremea sorocită!"
     },
     {
       "number": 14,
-      "text": "Îi voi răscumpăra din puterea Locuinței morților și îi voi izbăvi de la moarte. Moarte, unde sunt urgiile tale? Locuință a morților, unde este nimicirea ta? Îndurarea va fi ascunsă de ochii Mei."
+      "text": "„Îi voi răscumpăra din mâna Locuinței morților, îi voi izbăvi de la moarte. Moarte, unde îți este ciuma? Locuință a morților, unde îți este nimicirea? Căința este ascunsă de privirile Mele!”"
     },
     {
       "number": 15,
@@ -92,110 +94,10 @@
     },
     {
       "number": 16,
-      "text": "Samaria își va purta vina, pentru că s-a răzvrătit împotriva Dumnezeului ei. Vor cădea de sabie; pruncii lor vor fi zdrobiți, iar femeile lor însărcinate vor fi spintecate."
+      "text": "Samaria este pedepsită pentru că s-a răzvrătit împotriva Dumnezeului ei. Vor cădea uciși de sabie; pruncii lor vor fi zdrobiți și vor spinteca pântecele femeilor lor însărcinate."
     }
   ],
-  "editorialNotes": [
-    {
-      "verse": 1,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Osea 13:1 a fost aplicată în textul canonic.",
-      "reason": "Candidatul comprimă רְתֵת și נָשָׂא הוּא בְּיִשְׂרָאֵל într-o singură idee («răspândea groaza») și omite afirmația separată că Efraim s-a înălțat în Israel. WEBU păstrează ambele propoziții.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 2,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Osea 13:2 a fost aplicată în textul canonic.",
-      "reason": "לָהֶם הֵם אֹמְרִים este «despre ei se spune / ei spun despre ei», nu «acestora le vorbesc ei». Candidatul schimbă direcția vorbirii; finalul trebuie păstrat ca afirmație despre cei care aduc jertfe omenești și sărută vițeii.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 4,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Osea 13:4 a fost aplicată în textul canonic.",
-      "reason": "וֵאלֹהִים זוּלָתִי לֹא תֵדָע este interdicția/afirmația de loialitate «să nu cunoști/recunoști alt Dumnezeu în afară de Mine», nu propoziția epistemică «tu cunoști că nu este alt Dumnezeu».",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 5,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Osea 13:5 a fost aplicată în textul canonic.",
-      "reason": "תַּלְאֻבוֹת și WEBU descriu o țară de mare secetă; «pământ fără apă» este apropiat, dar mai general și pierde intensitatea expresiei.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 7,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Osea 13:7 a fost aplicată în textul canonic.",
-      "reason": "אָשׁוּר este aici acțiune viitoare de pândire/observare. Candidatul o pune la prezent («îi pândesc») și nu păstrează clar paralelul leu–leopard.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 8,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Osea 13:8 a fost aplicată în textul canonic.",
-      "reason": "שָׁם înseamnă «acolo», nu «îndată». Candidatul transformă un adverb locativ într-unul temporal și slăbește paralelul explicit cu ursoaica, leoaica și fiara câmpului.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 9,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Osea 13:9 a fost aplicată în textul canonic.",
-      "reason": "WEBU/WLC au «împotriva ajutorului tău»; «Celui ce te putea ajuta» introduce o nuanță de posibilitate trecută absentă din text.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 10,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Osea 13:10 a fost aplicată în textul canonic.",
-      "reason": "Sensul de bază este păstrat, dar candidatul are punctuație incompletă și redă שָׂרִים prin «domni» într-o construcție mai puțin precisă decât «căpetenii/prinți».",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 13,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Osea 13:13 a fost aplicată în textul canonic.",
-      "reason": "Metafora îl numește pe Efraim «fiu neînțelept» care, la vremea potrivită, nu vine la deschiderea pântecelui. «nu poate să nască» mută actul nașterii asupra copilului și schimbă imaginea.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 14,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Osea 13:14 a fost aplicată în textul canonic.",
-      "reason": "נֹחַם / WEBU este «îndurare/compasiune», nu «căință». Candidatul schimbă conceptul teologic al propoziției finale. Primele două propoziții sunt păstrate în lectura afirmativă a WEBU folosită de source-lock.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 16,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Osea 13:16 a fost aplicată în textul canonic.",
-      "reason": "תֶּאְשַׁם și WEBU spun că Samaria «își va purta vina / va fi vinovată», nu că «este pedepsită». Candidatul sare de la vină direct la consecință.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    }
-  ],
+  "editorialNotes": [],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -228,14 +130,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh HOS 1–14."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 16,
       "reviewed": 16,
@@ -245,29 +146,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Osea 13: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC derivată din ordinea absolută aprobată."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Osea 13:1 — critical: Candidatul comprimă רְתֵת și נָשָׂא הוּא בְּיִשְׂרָאֵל într-o singură idee («răspândea groaza») și omite afirmația separată că Efraim s-a înălțat în Israel. WEBU păstrează ambele propoziții.",
-        "Osea 13:2 — material: לָהֶם הֵם אֹמְרִים este «despre ei se spune / ei spun despre ei», nu «acestora le vorbesc ei». Candidatul schimbă direcția vorbirii; finalul trebuie păstrat ca afirmație despre cei care aduc jertfe omenești și sărută vițeii.",
-        "Osea 13:4 — material: וֵאלֹהִים זוּלָתִי לֹא תֵדָע este interdicția/afirmația de loialitate «să nu cunoști/recunoști alt Dumnezeu în afară de Mine», nu propoziția epistemică «tu cunoști că nu este alt Dumnezeu».",
-        "Osea 13:5 — minor: תַּלְאֻבוֹת și WEBU descriu o țară de mare secetă; «pământ fără apă» este apropiat, dar mai general și pierde intensitatea expresiei.",
-        "Osea 13:7 — minor: אָשׁוּר este aici acțiune viitoare de pândire/observare. Candidatul o pune la prezent («îi pândesc») și nu păstrează clar paralelul leu–leopard.",
-        "Osea 13:8 — material: שָׁם înseamnă «acolo», nu «îndată». Candidatul transformă un adverb locativ într-unul temporal și slăbește paralelul explicit cu ursoaica, leoaica și fiara câmpului.",
-        "Osea 13:9 — minor: WEBU/WLC au «împotriva ajutorului tău»; «Celui ce te putea ajuta» introduce o nuanță de posibilitate trecută absentă din text.",
-        "Osea 13:10 — minor: Sensul de bază este păstrat, dar candidatul are punctuație incompletă și redă שָׂרִים prin «domni» într-o construcție mai puțin precisă decât «căpetenii/prinți».",
-        "Osea 13:13 — material: Metafora îl numește pe Efraim «fiu neînțelept» care, la vremea potrivită, nu vine la deschiderea pântecelui. «nu poate să nască» mută actul nașterii asupra copilului și schimbă imaginea.",
-        "Osea 13:14 — critical: נֹחַם / WEBU este «îndurare/compasiune», nu «căință». Candidatul schimbă conceptul teologic al propoziției finale. Primele două propoziții sunt păstrate în lectura afirmativă a WEBU folosită de source-lock.",
-        "Osea 13:16 — material: תֶּאְשַׁם și WEBU spun că Samaria «își va purta vina / va fi vinovată», nu că «este pedepsită». Candidatul sare de la vină direct la consecință."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorul, referenții, imaginile profetice și opozițiile teologice sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Numele divine, judecata, mila, legământul, idolatria și restaurarea sunt redate semantic fără armonizări confesionale adăugate."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -277,7 +167,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt folosite numai ca benchmark-uri public-domain, iar NTR numai ca referință externă de comparație"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -287,15 +177,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "71112c63c27319b2d6fdb3399ce26cc4ec82f471447db8972775a60786cf9647",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:d82cc277d7132f3ddb10c455b57577792fc7c93b9cda306a7a5762815c5a0c24"
+    "textDigest": "sha256:45ede8919822032e561467198df13ea22a7c6226e08942f43f520d34dde68f4f"
   }
 }

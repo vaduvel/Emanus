@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/AMO09.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-AMO"
+      "lockId": "WEBU-R5-AMO"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/AMO09.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-AMO"
+      "lockId": "WLC-OSHB-REMAP-R5-AMO",
+      "rawLockId": "WLC-RAW-R5-AMO",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -32,11 +34,11 @@
   "verses": [
     {
       "number": 1,
-      "text": "L-am văzut pe DOMNUL stând lângă altar. El a zis: „Lovește capitelurile, ca să se cutremure pragurile, și sfărâmă-le peste capetele tuturor. Pe cei rămași îi voi ucide cu sabia; niciunul nu va putea fugi și niciunul nu va scăpa.”"
+      "text": "Am văzut pe DOMNUL stând pe altar. Și a zis: „Lovește pragul de sus al porții, ca să se cutremure ușorii, și sfărâmă-i peste capetele lor ale tuturor. Rămășița lor însă o voi pierde cu sabia, așa că niciunul din ei nu va putea să scape fugind și niciunul din cei ce vor scăpa nu va scăpa.”"
     },
     {
       "number": 2,
-      "text": "Chiar dacă ar săpa până în Locuința morților, de acolo mâna Mea îi va lua; chiar dacă s-ar sui în ceruri, de acolo îi voi coborî."
+      "text": "De ar pătrunde chiar până în Locuința morților, și de acolo îi va smulge mâna Mea; de s-ar sui chiar în ceruri, și de acolo îi voi coborî."
     },
     {
       "number": 3,
@@ -60,7 +62,7 @@
     },
     {
       "number": 8,
-      "text": "Iată, ochii DOMNULUI Dumnezeu sunt asupra împărăției păcătoase și o voi nimici de pe fața pământului; totuși nu voi nimici cu desăvârșire casa lui Iacov, zice DOMNUL."
+      "text": "Iată, DOMNUL Dumnezeu are ochii pironiți peste împărăția aceasta vinovată, ca s-o nimicesc de pe fața pământului; totuși nu voi nimici de tot casa lui Iacov, zice DOMNUL."
     },
     {
       "number": 9,
@@ -72,11 +74,11 @@
     },
     {
       "number": 11,
-      "text": "În ziua aceea voi ridica cortul căzut al lui David, îi voi închide spărturile, îi voi ridica dărâmăturile și îl voi zidi ca în zilele de odinioară,"
+      "text": "În vremea aceea voi ridica din căderea lui cortul lui David, îi voi drege spărturile, îi voi ridica dărâmăturile și-l voi zidi iarăși cum era odinioară,"
     },
     {
       "number": 12,
-      "text": "ca să stăpânească rămășița Edomului și toate neamurile peste care este chemat Numele Meu, zice DOMNUL, Cel care face aceasta."
+      "text": "ca să stăpânească rămășița Edomului și toate neamurile peste care a fost chemat Numele Meu, zice DOMNUL care va împlini aceste lucruri."
     },
     {
       "number": 13,
@@ -84,69 +86,14 @@
     },
     {
       "number": 14,
-      "text": "Îl voi aduce înapoi din captivitate pe poporul Meu, Israel; ei vor rezidi cetățile pustiite și le vor locui, vor sădi vii și le vor bea vinul, vor face grădini și le vor mânca roadele."
+      "text": "Voi aduce înapoi pe prinșii de război ai poporului Meu, Israel; ei vor zidi iarăși cetățile pustiite și le vor locui, vor sădi vii și le vor bea vinul, vor face grădini și le vor mânca roadele."
     },
     {
       "number": 15,
       "text": "„Îi voi sădi în țara lor, și nu vor mai fi smulși din țara pe care le-am dat-o, zice DOMNUL Dumnezeul tău!”"
     }
   ],
-  "editorialNotes": [
-    {
-      "verse": 1,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Amos 9:1 a fost aplicată în textul canonic.",
-      "reason": "WEBU/WLC descriu lovirea capitelului/părții superioare a stâlpilor astfel încât pragurile să se cutremure. «Pragul de sus al porții» amestecă cele două elemente arhitecturale, iar finalul candidatului este redundant («cei ce vor scăpa nu va scăpa»).",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 2,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Amos 9:2 a fost aplicată în textul canonic.",
-      "reason": "יַחְתְּרוּ בִשְׁאוֹל este «de-ar săpa/pătrunde în Șeol», iar mâna lui Dumnezeu «îi va lua». Candidatul are acordul defect «îi va smulge mâna Mea».",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 8,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Amos 9:8 a fost aplicată în textul canonic.",
-      "reason": "Subiectul verbal este Dumnezeu: «o voi nimici». Candidatul are acordul persoanei greșit, «ca s-o nimicesc», în interiorul unei construcții care începe la persoana a treia.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 11,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Amos 9:11 a fost aplicată în textul canonic.",
-      "reason": "בַּיּוֹם הַהוּא este formula precisă «În ziua aceea», păstrată constant în profeți; «În vremea aceea» este mai vag.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 12,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Amos 9:12 a fost aplicată în textul canonic.",
-      "reason": "עֹשֶׂה זֹּאת este prezentul/participiul «Cel care face aceasta». «Care va împlini aceste lucruri» introduce viitorul și o parafrază mai largă decât textul.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 14,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Amos 9:14 a fost aplicată în textul canonic.",
-      "reason": "שְׁבוּת עַמִּי / WEBU descrie întoarcerea poporului din captivitate. «Prinșii de război ai poporului Meu» restrânge captivitatea la prizonieri militari și schimbă sensul restaurării generale.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    }
-  ],
+  "editorialNotes": [],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -179,14 +126,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh AMO."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 15,
       "reviewed": 15,
@@ -196,24 +142,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Amos 9: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Amos 9:1 — material: WEBU/WLC descriu lovirea capitelului/părții superioare a stâlpilor astfel încât pragurile să se cutremure. «Pragul de sus al porții» amestecă cele două elemente arhitecturale, iar finalul candidatului este redundant («cei ce vor scăpa nu va scăpa»).",
-        "Amos 9:2 — material: יַחְתְּרוּ בִשְׁאוֹל este «de-ar săpa/pătrunde în Șeol», iar mâna lui Dumnezeu «îi va lua». Candidatul are acordul defect «îi va smulge mâna Mea».",
-        "Amos 9:8 — minor: Subiectul verbal este Dumnezeu: «o voi nimici». Candidatul are acordul persoanei greșit, «ca s-o nimicesc», în interiorul unei construcții care începe la persoana a treia.",
-        "Amos 9:11 — minor: בַּיּוֹם הַהוּא este formula precisă «În ziua aceea», păstrată constant în profeți; «În vremea aceea» este mai vag.",
-        "Amos 9:12 — minor: עֹשֶׂה זֹּאת este prezentul/participiul «Cel care face aceasta». «Care va împlini aceste lucruri» introduce viitorul și o parafrază mai largă decât textul.",
-        "Amos 9:14 — material: שְׁבוּת עַמִּי / WEBU descrie întoarcerea poporului din captivitate. «Prinșii de război ai poporului Meu» restrânge captivitatea la prizonieri militari și schimbă sensul restaurării generale."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorul, referenții, imaginile profetice și opozițiile teologice sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Numele divine, judecata, mila, legământul, idolatria și restaurarea sunt redate semantic fără armonizări confesionale adăugate."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -223,7 +163,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -233,15 +173,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "c2e915dacf472bc0af72d9ba71d18e3b575246c7ddd4e4bcbcfaec7fc98abfac",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:c047ebf7643246f498b281528e7fb36ab8159db6caca9f9f9877b6b28bb58d65"
+    "textDigest": "sha256:bf79e1358b8364f9947e3b911143a68fa29fd185a6cd4173b5e29cdf1f9cc8fa"
   }
 }

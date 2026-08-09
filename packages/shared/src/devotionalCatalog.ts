@@ -1,0 +1,63 @@
+// Catalogul devoționalului: adună lunile scrise într-un singur șir (docs/27 §2.4).
+//
+// De ce există fișierul ăsta: conținutul unui an nu încape într-un fișier care să
+// mai poată fi citit de om. Fiecare lună trăiește în fișierul ei
+// (`devotional-luna-0X.ts`), iar aici doar se înlănțuie, în ordine.
+//
+// Regula rămâne cea din D-004: nu se publică zile fără verset-ancoră. Aplicația
+// nu promite 365 de zile, ci atâtea câte sunt scrise — `devotionalDaysAvailable()`
+// spune adevărul, nu o cifră de marketing. De la luna 12 încoace, adevărul ăsta
+// e 365.
+import { DEVOTIONAL_DAYS, type DevotionalDay } from "./devotional.js"
+import { DEVOTIONAL_DAYS_LUNA_2 } from "./devotional-luna-02.js"
+import { DEVOTIONAL_DAYS_LUNA_3 } from "./devotional-luna-03.js"
+import { DEVOTIONAL_DAYS_LUNA_4 } from "./devotional-luna-04.js"
+import { DEVOTIONAL_DAYS_LUNA_5 } from "./devotional-luna-05.js"
+import { DEVOTIONAL_DAYS_LUNA_6 } from "./devotional-luna-06.js"
+import { DEVOTIONAL_DAYS_LUNA_7 } from "./devotional-luna-07.js"
+import { DEVOTIONAL_DAYS_LUNA_8 } from "./devotional-luna-08.js"
+import { DEVOTIONAL_DAYS_LUNA_9 } from "./devotional-luna-09.js"
+import { DEVOTIONAL_DAYS_LUNA_10 } from "./devotional-luna-10.js"
+import { DEVOTIONAL_DAYS_LUNA_11 } from "./devotional-luna-11.js"
+import { DEVOTIONAL_DAYS_LUNA_12 } from "./devotional-luna-12.js"
+
+/** Toate zilele scrise până acum, sortate după numărul zilei. */
+export const DEVOTIONAL_DAYS_ALL: DevotionalDay[] = [
+  ...DEVOTIONAL_DAYS,
+  ...DEVOTIONAL_DAYS_LUNA_2,
+  ...DEVOTIONAL_DAYS_LUNA_3,
+  ...DEVOTIONAL_DAYS_LUNA_4,
+  ...DEVOTIONAL_DAYS_LUNA_5,
+  ...DEVOTIONAL_DAYS_LUNA_6,
+  ...DEVOTIONAL_DAYS_LUNA_7,
+  ...DEVOTIONAL_DAYS_LUNA_8,
+  ...DEVOTIONAL_DAYS_LUNA_9,
+  ...DEVOTIONAL_DAYS_LUNA_10,
+  ...DEVOTIONAL_DAYS_LUNA_11,
+  ...DEVOTIONAL_DAYS_LUNA_12,
+].sort((a, b) => a.dayNumber - b.dayNumber)
+
+export function devotionalDay(dayNumber: number): DevotionalDay | null {
+  return DEVOTIONAL_DAYS_ALL.find((d) => d.dayNumber === dayNumber) ?? null
+}
+
+/** Câte zile de conținut există efectiv. */
+export function devotionalDaysAvailable(): number {
+  return DEVOTIONAL_DAYS_ALL.length
+}
+
+/**
+ * Verificare de siguranță, folosită în teste: nicio zi dublată și nicio gaură
+ * în numerotare. O gaură ar bloca pe cineva la mijlocul anului.
+ */
+export function devotionalCatalogIssues(): string[] {
+  const issues: string[] = []
+  const seen = new Set<number>()
+  DEVOTIONAL_DAYS_ALL.forEach((day, i) => {
+    if (seen.has(day.dayNumber)) issues.push(`ziua ${day.dayNumber} apare de două ori`)
+    seen.add(day.dayNumber)
+    if (day.dayNumber !== i + 1) issues.push(`ziua ${day.dayNumber} nu e pe poziția ${i + 1}`)
+    if (!day.verseRef.trim() || !day.verseText.trim()) issues.push(`ziua ${day.dayNumber} nu are verset-ancoră`)
+  })
+  return issues
+}

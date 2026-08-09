@@ -1,0 +1,72 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "DID",
+  "bookName": "Didascalia etiopiană",
+  "chapter": 40,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://github.com/JWJeffery/PrayerAppNew/blob/4e5e39f4fb98f3d2b9556ba3eaf23ce4d2891486/data/bible/ET/didaskaliaET.json#chapter-40",
+    "pageSha256": "d827b0f41c5ee8818db2a55f631d30d980963fa4832acbf10cb05d6595c73b5d",
+    "underlyingEdition": "J. M. Harden, The Ethiopic Didascalia, 1920",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "commit-pinned clean transcription of public-domain Harden 1920; ERTale OCR retained only as an independently hashed secondary witness",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "cleanTranscription": {
+      "repository": "https://github.com/JWJeffery/PrayerAppNew",
+      "commit": "4e5e39f4fb98f3d2b9556ba3eaf23ce4d2891486",
+      "path": "data/bible/ET/didaskaliaET.json",
+      "sha256": "d827b0f41c5ee8818db2a55f631d30d980963fa4832acbf10cb05d6595c73b5d",
+      "chapter": 40
+    },
+    "rawOcrWitness": {
+      "url": "https://bible.ertale.com/ethiopiancanon/didascalia/40/",
+      "sha256": "83519dffda3ac8db3fe87fa648f1e6b774c19b107ca4d54fb3d79bb74dc3e5b8"
+    },
+    "sourceTextDigest": "f2e65a79a3b4ec77cff329936a40d69a7618abd37337031c7549702324709b62",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Eu cred în Iisus Hristos, Atotputernicul, Tatăl lui Tine, Fiul nostru singurul născut, Isus Hristos, Îți mulțumesc pentru că tu ai trimis pe Fiul Tău doar-begot, și El a salvat toată lumea, și El aude pe toți cei care-L imploră, și proclamă cu privire la Împărăția cerurilor, și iertarea păcatelor, și învierea morților. Te slăvesc pe Tine, și Îți mulțumesc, și Îți mulțumesc că Tu ai îndurat cu răbdare suferințele morții pe cruce pentru toți; Cine ne-a dat botezul, care este noua naștere. Te slăvesc pe tine, Dumnezeule, Dumnezeu singur, în numele lui Iisus Hristos, și Sfântul Duh, pe care Tu l-ai făcut să trăiască prin judecata Ta dreaptă, dar în mila Ta, Tu nu l-ai lepădat de toate minunile, ci l-ai trimis pe Adam, și l-ai pus în grădina, și când a călcat porunca Ta, tu l-ai pus în slujba Lui, dar tu nu l-ai trimis pe Fiul tău, în cele din urmă, ca să-L pedepsească pe Hristos și să-L pedepsească pe Cristos, care ei să-L aibă, pe Cristos, pe El, care ei să-L îndură cu putere pe Cristos, și să-L. După aceea, să boteze în Numele Tatălui, al Fiului și al Sfântului Duh, și să ungă cu untdelemnul lui Balsam, și să spună:"
+    }
+  ],
+  "audit": {
+    "sourceUnits": 1,
+    "translatedUnits": 1,
+    "firstPassIssueCount": 1,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 1,
+    "semanticMinimumScore": 0.886448,
+    "blockingIssueCount": 0,
+    "textDigest": "78675a9337bc293cb0b545612fc79368911891e72b70100b27e70c1529bb89d2",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

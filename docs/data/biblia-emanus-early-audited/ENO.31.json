@@ -1,0 +1,69 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "ENO",
+  "bookName": "1 Enoh",
+  "chapter": 31,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://bible.ertale.com/ethiopiancanon/enoch/31/",
+    "pageSha256": "2fadbc90125463266af35f024d7a0d70bf48c4f2741a4ba9bda555e92e5a1c29",
+    "underlyingEdition": "R. H. Charles, The Book of Enoch, 1912/1917",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "structured mirror of public-domain Charles translation",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "sourceTextDigest": "7fb41277c7e55ca4b7b19a3e133e999d701a4a540c118edfdb09d92e93e9e320",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Și am văzut munți, printre ei erau plantații de copaci, din ele ieșeau nectar, care se sarara galbanum."
+    },
+    {
+      "number": 2,
+      "text": "dincolo de am văzut un alt munte la răsărit de marginile pământului, pe care erau aloe-copaci, și copacii erau plini de stacte, fiind ca migdalii."
+    },
+    {
+      "number": 3,
+      "text": "Și când cineva a ars-o, a mirosit mai dulce decât orice miros parfumat."
+    }
+  ],
+  "audit": {
+    "sourceUnits": 3,
+    "translatedUnits": 3,
+    "firstPassIssueCount": 0,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 3,
+    "semanticMinimumScore": 0.82818,
+    "blockingIssueCount": 0,
+    "textDigest": "df7f3d20a3ac21c7884607edeb4a6d32f4e569d7d4866c6aff250d061f170002",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

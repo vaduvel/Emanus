@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/HAG01.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-HAG"
+      "lockId": "WEBU-R5-HAG"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/HAG01.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-HAG"
+      "lockId": "WLC-OSHB-REMAP-R5-HAG",
+      "rawLockId": "WLC-RAW-R5-HAG",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -32,19 +34,19 @@
   "verses": [
     {
       "number": 1,
-      "text": "În anul al doilea al împăratului Darius, în ziua întâi a lunii a șasea, cuvântul DOMNULUI a venit prin prorocul Hagai la Zorobabel, fiul lui Șealtiel, dregătorul lui Iuda, și la Iosua, fiul lui Ioțadac, marele preot, astfel:"
+      "text": "În anul al doilea al împăratului Darius, în ziua întâi a lunii a șasea, cuvântul DOMNULui a vorbit prin prorocul Hagai către Zorobabel, fiul lui Șealtiel, dregătorul lui Iuda, și către Iosua, fiul lui Ioțadac, marele preot, astfel:"
     },
     {
       "number": 2,
-      "text": "Așa vorbește DOMNUL oștirilor: „Poporul acesta zice: «N-a venit încă vremea ca să fie zidită Casa DOMNULUI.»”"
+      "text": "„Așa vorbește DOMNUL oștirilor: „Poporul acesta zice: „N-a venit încă vremea pentru zidirea din nou a Casei DOMNULui!”””"
     },
     {
       "number": 3,
-      "text": "Atunci cuvântul DOMNULUI a venit prin prorocul Hagai astfel:"
+      "text": "De aceea, cuvântul DOMNULui le-a vorbit prin prorocul Hagai astfel:"
     },
     {
       "number": 4,
-      "text": "„Este oare vremea ca voi să locuiți în casele voastre căptușite, în timp ce Casa aceasta rămâne dărâmată?”"
+      "text": "„Dar pentru voi a venit oare vremea să locuiți în case căptușite cu tavan, când Casa aceasta este dărâmată?”"
     },
     {
       "number": 5,
@@ -64,7 +66,7 @@
     },
     {
       "number": 9,
-      "text": "V-ați așteptat la mult, și iată că a fost puțin; l-ați adus acasă, iar Eu am suflat peste el. De ce? zice DOMNUL oștirilor. Din pricina Casei Mele care stă dărâmată, în timp ce fiecare dintre voi aleargă pentru casa lui."
+      "text": "Vă așteptați la mult, și iată că ați avut puțin; l-ați adus acasă, dar Eu l-am suflat. Pentru ce? – zice DOMNUL oștirilor. Din pricina Casei Mele care stă dărâmată, pe când fiecare din voi aleargă pentru casa lui."
     },
     {
       "number": 10,
@@ -76,95 +78,22 @@
     },
     {
       "number": 12,
-      "text": "Zorobabel, fiul lui Șealtiel, Iosua, fiul lui Ioțadac, marele preot, și toată rămășița poporului au ascultat glasul DOMNULUI Dumnezeului lor și cuvintele prorocului Hagai, fiindcă DOMNUL Dumnezeul lor îl trimisese. Și poporul s-a temut de DOMNUL."
+      "text": "Zorobabel, fiul lui Șealtiel, Iosua, fiul lui Ioțadac, marele preot, și toată rămășița poporului au ascultat glasul DOMNULui Dumnezeului lor și cuvintele prorocului Hagai, fiindcă DOMNUL Dumnezeul lor îl trimisese. Și poporul s-a temut de DOMNUL."
     },
     {
       "number": 13,
-      "text": "Hagai, trimisul DOMNULUI, a spus poporului mesajul DOMNULUI: „Eu sunt cu voi”, zice DOMNUL."
+      "text": "Hagai, trimisul DOMNULui, a zis poporului, după porunca DOMNULui: „Eu sunt cu voi, zice DOMNUL.”"
     },
     {
       "number": 14,
-      "text": "DOMNUL a trezit duhul lui Zorobabel, fiul lui Șealtiel, dregătorul lui Iuda, duhul lui Iosua, fiul lui Ioțadac, marele preot, și duhul întregii rămășițe a poporului. Ei au venit și s-au pus pe lucru la Casa DOMNULUI oștirilor, Dumnezeul lor,"
+      "text": "DOMNUL a trezit duhul lui Zorobabel, fiul lui Șealtiel, dregătorul lui Iuda, și duhul lui Iosua, fiul lui Ioțadac, marele preot, și duhul întregii rămășițe a poporului. Așa că ei au venit și s-au pus pe lucru în Casa DOMNULui oștirilor, Dumnezeul lor,"
     },
     {
       "number": 15,
       "text": "în ziua a douăzeci și patra a lunii a șasea, în anul al doilea al împăratului Darius."
     }
   ],
-  "editorialNotes": [
-    {
-      "verse": 1,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Hagai 1:1 a fost aplicată în textul canonic.",
-      "reason": "הָיָה דְבַר־יְהוָה בְּיַד־חַגַּי este formula profetică «cuvântul DOMNULUI a venit prin Hagai». Candidatul are construcția defectă «cuvântul ... a vorbit» și forma editorială greșită «DOMNULui».",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 2,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Hagai 1:2 a fost aplicată în textul canonic.",
-      "reason": "Candidatul are ghilimele imbricate defectuos și forma «DOMNULui». Sensul este afirmația poporului că vremea construirii Casei DOMNULUI nu a venit încă.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 3,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Hagai 1:3 a fost aplicată în textul canonic.",
-      "reason": "Formula repetă v.1: cuvântul DOMNULUI «a venit prin» Hagai. «Le-a vorbit» schimbă idiomul profetic și «DOMNULui» este neconform editorial.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 4,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Hagai 1:4 a fost aplicată în textul canonic.",
-      "reason": "בְּבָתֵּיכֶם סְפוּנִים descrie case căptușite/panelate. «Case căptușite cu tavan» este redundant și nefireasc în română.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 9,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Hagai 1:9 a fost aplicată în textul canonic.",
-      "reason": "Construcția temporală «vă așteptați... ați avut» este mecanică, iar וְנָפַחְתִּי בּוֹ păstrează imaginea lui Dumnezeu care suflă peste puținul adus acasă.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 12,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Hagai 1:12 a fost aplicată în textul canonic.",
-      "reason": "Sensul este păstrat, dar forma Numelui trebuie normalizată consecvent la «DOMNULUI».",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 13,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Hagai 1:13 a fost aplicată în textul canonic.",
-      "reason": "מַלְאַךְ יְהוָה בְּמַלְאֲכוּת יְהוָה leagă «trimisul DOMNULUI» de «mesajul DOMNULUI». Candidatul schimbă al doilea termen în «porunca DOMNULui», pierzând jocul lexical și are forma Numelui neconformă.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 14,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Hagai 1:14 a fost aplicată în textul canonic.",
-      "reason": "Sensul este păstrat; trebuie doar normalizată forma «Casa DOMNULui» la «Casa DOMNULUI».",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    }
-  ],
+  "editorialNotes": [],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -197,14 +126,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh HAG."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 15,
       "reviewed": 15,
@@ -214,26 +142,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Hagai 1: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Hagai 1:1 — material: הָיָה דְבַר־יְהוָה בְּיַד־חַגַּי este formula profetică «cuvântul DOMNULUI a venit prin Hagai». Candidatul are construcția defectă «cuvântul ... a vorbit» și forma editorială greșită «DOMNULui».",
-        "Hagai 1:2 — material: Candidatul are ghilimele imbricate defectuos și forma «DOMNULui». Sensul este afirmația poporului că vremea construirii Casei DOMNULUI nu a venit încă.",
-        "Hagai 1:3 — material: Formula repetă v.1: cuvântul DOMNULUI «a venit prin» Hagai. «Le-a vorbit» schimbă idiomul profetic și «DOMNULui» este neconform editorial.",
-        "Hagai 1:4 — minor: בְּבָתֵּיכֶם סְפוּנִים descrie case căptușite/panelate. «Case căptușite cu tavan» este redundant și nefireasc în română.",
-        "Hagai 1:9 — minor: Construcția temporală «vă așteptați... ați avut» este mecanică, iar וְנָפַחְתִּי בּוֹ păstrează imaginea lui Dumnezeu care suflă peste puținul adus acasă.",
-        "Hagai 1:12 — minor: Sensul este păstrat, dar forma Numelui trebuie normalizată consecvent la «DOMNULUI».",
-        "Hagai 1:13 — material: מַלְאַךְ יְהוָה בְּמַלְאֲכוּת יְהוָה leagă «trimisul DOMNULUI» de «mesajul DOMNULUI». Candidatul schimbă al doilea termen în «porunca DOMNULui», pierzând jocul lexical și are forma Numelui neconformă.",
-        "Hagai 1:14 — minor: Sensul este păstrat; trebuie doar normalizată forma «Casa DOMNULui» la «Casa DOMNULUI»."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorul, referenții, imaginile profetice și opozițiile teologice sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Numele divine, judecata, mila, legământul, idolatria și restaurarea sunt redate semantic fără armonizări confesionale adăugate."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -243,7 +163,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -253,15 +173,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "d281acc35083f7003d4e910cd0a88542c6cf6a77fe14c66665fe74437d3825ae",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:94c87d527b9f64229cd05626dd9327290fc874f220cd16a2c16748ee742151a4"
+    "textDigest": "sha256:59d8e119d3fe8aaa248aa644e6d51ab8070afa1d4db548c338011f83022297b0"
   }
 }

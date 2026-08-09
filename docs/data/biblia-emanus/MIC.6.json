@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/MIC06.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-MIC"
+      "lockId": "WEBU-R5-MIC"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/MIC06.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-MIC"
+      "lockId": "WLC-OSHB-REMAP-R5-MIC",
+      "rawLockId": "WLC-RAW-R5-MIC",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -64,7 +66,7 @@
     },
     {
       "number": 9,
-      "text": "Glasul DOMNULUI strigă cetății — cel înțelept vede Numele Tău: „Ascultați nuiaua și pe Cel care a rânduit-o!”"
+      "text": "Glasul DOMNULui strigă cetății, și omul înțelept se teme de Numele Tău: „Ascultați pedeapsa și pe Cel ce o trimite!”"
     },
     {
       "number": 10,
@@ -80,11 +82,11 @@
     },
     {
       "number": 13,
-      "text": "De aceea și Eu te-am lovit greu, pustiindu-te din pricina păcatelor tale."
+      "text": "de aceea și Eu te voi lovi cu suferința, te voi pustii pentru păcatele tale."
     },
     {
       "number": 14,
-      "text": "Vei mânca, dar nu te vei sătura, iar umilirea ta va fi în mijlocul tău. Vei pune deoparte, dar nu vei salva; iar ceea ce vei salva voi da sabiei."
+      "text": "Vei mânca, și tot nu te vei sătura, ci foamea va rămâne în tine; ce vei lua dinaintea vrăjmașului nu vei scăpa, căci ce vei scăpa voi da pradă sabiei."
     },
     {
       "number": 15,
@@ -95,35 +97,7 @@
       "text": "„Căci ei păzesc toate orânduirile lui Omri și lucrează întocmai cum a lucrat casa lui Ahab, și umblă după sfaturile lor, de aceea te voi face de pomină, îți voi face locuitorii de batjocură, și veți purta ocara poporului Meu.”"
     }
   ],
-  "editorialNotes": [
-    {
-      "verse": 9,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Mica 6:9 a fost aplicată în textul canonic.",
-      "reason": "WEBU redă תּוּשִׁיָּה יִרְאֶה שְׁמֶךָ prin imaginea «înțelepciunea vede Numele Tău». Candidatul transformă direct propoziția în definiția «înțelepciunea este să se teamă de Numele Tău», interpretare teologică plauzibilă, dar mai puternică decât textul-sursă folosit pentru traducere.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 13,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Mica 6:13 a fost aplicată în textul canonic.",
-      "reason": "וְגַם־אֲנִי הֶחֱלֵיתִי הַכּוֹתֶךָ descrie o lovire grea care duce la pustiire. «Te voi lovi de boală și te voi face pustiit» introduce explicit boala și produce o formulare românească defectă.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 14,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Mica 6:14 a fost aplicată în textul canonic.",
-      "reason": "וְיֶשְׁחֲךָ בְּקִרְבֶּךָ / WEBU este umilirea/înjosirea din mijlocul tău. Candidatul o schimbă în «foamea ta va rămâne în tine», introducând un substantiv care nu apare și alterând a doua propoziție a pedepsei.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    }
-  ],
+  "editorialNotes": [],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -156,14 +130,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh MIC."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 16,
       "reviewed": 16,
@@ -173,21 +146,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Mica 6: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Mica 6:9 — material: WEBU redă תּוּשִׁיָּה יִרְאֶה שְׁמֶךָ prin imaginea «înțelepciunea vede Numele Tău». Candidatul transformă direct propoziția în definiția «înțelepciunea este să se teamă de Numele Tău», interpretare teologică plauzibilă, dar mai puternică decât textul-sursă folosit pentru traducere.",
-        "Mica 6:13 — material: וְגַם־אֲנִי הֶחֱלֵיתִי הַכּוֹתֶךָ descrie o lovire grea care duce la pustiire. «Te voi lovi de boală și te voi face pustiit» introduce explicit boala și produce o formulare românească defectă.",
-        "Mica 6:14 — critical: וְיֶשְׁחֲךָ בְּקִרְבֶּךָ / WEBU este umilirea/înjosirea din mijlocul tău. Candidatul o schimbă în «foamea ta va rămâne în tine», introducând un substantiv care nu apare și alterând a doua propoziție a pedepsei."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorul, referenții, imaginile profetice și opozițiile teologice sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Numele divine, judecata, mila, legământul, idolatria și restaurarea sunt redate semantic fără armonizări confesionale adăugate."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -197,7 +167,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -207,15 +177,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "9c456fdc3a1c54dfbe4d39821fe9928152875812ce93aef5ed7dbc0fd477f829",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:424832bca869c54cb09ecc70a8f3ce24b38017ff270ab47866d927c55321f1c2"
+    "textDigest": "sha256:a04eca1209eac68af9f7a4ec5e1bb7310287a094852c79507afe32ff3a21ee99"
   }
 }

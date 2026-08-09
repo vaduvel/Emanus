@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/JON01.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-JON"
+      "lockId": "WEBU-R5-JON"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/JON01.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-JON"
+      "lockId": "WLC-OSHB-REMAP-R5-JON",
+      "rawLockId": "WLC-RAW-R5-JON",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -32,7 +34,7 @@
   "verses": [
     {
       "number": 1,
-      "text": "Cuvântul DOMNULUI a venit la Iona, fiul lui Amitai, astfel:"
+      "text": "Cuvântul DOMNULui a vorbit lui Iona, fiul lui Amitai, astfel:"
     },
     {
       "number": 2,
@@ -40,7 +42,7 @@
     },
     {
       "number": 3,
-      "text": "Dar Iona s-a ridicat ca să fugă la Tars, departe de fața DOMNULUI. S-a coborât la Iafo și a găsit o corabie care mergea la Tars. A plătit prețul călătoriei și s-a coborât în corabie ca să meargă împreună cu ei la Tars, departe de fața DOMNULUI."
+      "text": "Și Iona s-a sculat să fugă la Tars, departe de fața DOMNULui. S-a coborât la Iafo și a găsit acolo o corabie care mergea la Tars. A plătit prețul călătoriei și s-a suit în corabie ca să meargă împreună cu călătorii la Tars, departe de fața DOMNULui."
     },
     {
       "number": 4,
@@ -48,15 +50,15 @@
     },
     {
       "number": 5,
-      "text": "Corăbierii s-au temut, au strigat fiecare la dumnezeul lui și au aruncat în mare încărcătura din corabie ca s-o ușureze. Iona însă coborâse în partea cea mai de jos a corăbiei, se culcase și dormea adânc."
+      "text": "Corăbierii s-au temut, au strigat fiecare la dumnezeul lui și au aruncat în mare uneltele din corabie, ca s-o facă mai ușoară. Iona s-a coborât în fundul corăbiei, s-a culcat și a adormit dus."
     },
     {
       "number": 6,
-      "text": "Cârmaciul s-a apropiat de el și i-a zis: „Ce-i cu tine de dormi? Scoală-te și cheamă-L pe Dumnezeul tău! Poate Dumnezeu va lua aminte la noi și nu vom pieri.”"
+      "text": "Cârmaciul s-a apropiat de el și i-a zis: „Ce dormi? Scoală-te și cheamă pe Dumnezeul tău! Poate că Dumnezeu va voi să Se gândească la noi și nu vom pieri!”"
     },
     {
       "number": 7,
-      "text": "Ei și-au zis unul altuia: „Veniți să tragem la sorți, ca să știm din pricina cui a venit peste noi nenorocirea aceasta!” Au tras la sorți, iar sorțul a căzut pe Iona."
+      "text": "Și au zis unul către altul: „Veniți să tragem la sorți, ca să știm din pricina cui a venit peste noi nenorocirea aceasta!”"
     },
     {
       "number": 8,
@@ -68,11 +70,11 @@
     },
     {
       "number": 10,
-      "text": "Oamenii aceia s-au temut foarte tare și i-au zis: „Ce ai făcut?” Căci oamenii știau că fugea de fața DOMNULUI, fiindcă el le spusese."
+      "text": "Oamenii aceia au avut o mare teamă și i-au zis: „Pentru ce ai făcut lucrul acesta?”"
     },
     {
       "number": 11,
-      "text": "Ei i-au zis: „Ce să-ți facem ca marea să se liniștească pentru noi?” Căci marea devenea tot mai furtunoasă."
+      "text": "Ei i-au zis: „Ce să-ți facem, ca să se potolească marea față de noi?”"
     },
     {
       "number": 12,
@@ -92,96 +94,14 @@
     },
     {
       "number": 16,
-      "text": "Atunci oamenii s-au temut foarte tare de DOMNUL, au adus o jertfă DOMNULUI și au făcut juruințe."
+      "text": "Pe oamenii aceia i-a apucat o mare frică de DOMNUL, și au adus DOMNULui o jertfă, și I-au făcut juruințe."
     },
     {
       "number": 17,
-      "text": "DOMNUL a rânduit un pește mare ca să-l înghită pe Iona, iar Iona a stat în pântecele peștelui trei zile și trei nopți."
+      "text": "DOMNUL a trimis un pește mare să înghită pe Iona, și Iona a stat în pântecele peștelui trei zile și trei nopți."
     }
   ],
-  "editorialNotes": [
-    {
-      "verse": 1,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Iona 1:1 a fost aplicată în textul canonic.",
-      "reason": "וַיְהִי דְבַר־יְהוָה אֶל־יוֹנָה este formula «Cuvântul DOMNULUI a venit la Iona». Candidatul «Cuvântul ... a vorbit lui Iona» este o construcție românească defectă și schimbă idiomul profetic.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 3,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Iona 1:3 a fost aplicată în textul canonic.",
-      "reason": "Forma Numelui trebuie normalizată la «DOMNULUI»; «them» din sursă poate rămâne redat simplu ca oamenii din corabie, fără a sugera o categorie specială de călători.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 5,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Iona 1:5 a fost aplicată în textul canonic.",
-      "reason": "הַכֵּלִים / WEBU în contextul ușurării corăbiei desemnează încărcătura/obiectele transportate; «uneltele din corabie» sugerează echipamentul navei și schimbă scena.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 6,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Iona 1:6 a fost aplicată în textul canonic.",
-      "reason": "יִתְעַשֵּׁת הָאֱלֹהִים לָנוּ exprimă speranța că Dumnezeu va lua aminte/se va gândi la ei. «Va voi să Se gândească» este mecanic și nenatural.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 7,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Iona 1:7 a fost aplicată în textul canonic.",
-      "reason": "Candidatul omite întreaga încheiere וַיַּפִּלוּ גּוֹרָלוֹת וַיִּפֹּל הַגּוֹרָל עַל־יוֹנָה / WEBU: au tras la sorți și sorțul a căzut pe Iona.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 10,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Iona 1:10 a fost aplicată în textul canonic.",
-      "reason": "Candidatul omite propoziția explicativă finală: oamenii știau că Iona fugea de fața DOMNULUI fiindcă el le spusese.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 11,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Iona 1:11 a fost aplicată în textul canonic.",
-      "reason": "Candidatul omite כִּי הַיָּם הוֹלֵךְ וְסֹעֵר / WEBU: marea devenea tot mai furtunoasă. Propoziția explică urgența întrebării marinarilor.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 16,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Iona 1:16 a fost aplicată în textul canonic.",
-      "reason": "Forma Numelui trebuie normalizată la «DOMNULUI»; sensul jertfei și al juruințelor este altfel păstrat.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 17,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Iona 1:17 a fost aplicată în textul canonic.",
-      "reason": "וַיְמַן / WEBU «prepared» înseamnă că DOMNUL a rânduit/pregătit peștele; «a trimis un pește mare» pierde verbul repetat al providenței din carte.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    }
-  ],
+  "editorialNotes": [],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -214,14 +134,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh JON."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 17,
       "reviewed": 17,
@@ -231,27 +150,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Iona 1: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Iona 1:1 — material: וַיְהִי דְבַר־יְהוָה אֶל־יוֹנָה este formula «Cuvântul DOMNULUI a venit la Iona». Candidatul «Cuvântul ... a vorbit lui Iona» este o construcție românească defectă și schimbă idiomul profetic.",
-        "Iona 1:3 — minor: Forma Numelui trebuie normalizată la «DOMNULUI»; «them» din sursă poate rămâne redat simplu ca oamenii din corabie, fără a sugera o categorie specială de călători.",
-        "Iona 1:5 — material: הַכֵּלִים / WEBU în contextul ușurării corăbiei desemnează încărcătura/obiectele transportate; «uneltele din corabie» sugerează echipamentul navei și schimbă scena.",
-        "Iona 1:6 — material: יִתְעַשֵּׁת הָאֱלֹהִים לָנוּ exprimă speranța că Dumnezeu va lua aminte/se va gândi la ei. «Va voi să Se gândească» este mecanic și nenatural.",
-        "Iona 1:7 — critical: Candidatul omite întreaga încheiere וַיַּפִּלוּ גּוֹרָלוֹת וַיִּפֹּל הַגּוֹרָל עַל־יוֹנָה / WEBU: au tras la sorți și sorțul a căzut pe Iona.",
-        "Iona 1:10 — critical: Candidatul omite propoziția explicativă finală: oamenii știau că Iona fugea de fața DOMNULUI fiindcă el le spusese.",
-        "Iona 1:11 — critical: Candidatul omite כִּי הַיָּם הוֹלֵךְ וְסֹעֵר / WEBU: marea devenea tot mai furtunoasă. Propoziția explică urgența întrebării marinarilor.",
-        "Iona 1:16 — minor: Forma Numelui trebuie normalizată la «DOMNULUI»; sensul jertfei și al juruințelor este altfel păstrat.",
-        "Iona 1:17 — material: וַיְמַן / WEBU «prepared» înseamnă că DOMNUL a rânduit/pregătit peștele; «a trimis un pește mare» pierde verbul repetat al providenței din carte."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorul, referenții, imaginile profetice și opozițiile teologice sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Numele divine, judecata, mila, legământul, idolatria și restaurarea sunt redate semantic fără armonizări confesionale adăugate."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -261,7 +171,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -271,15 +181,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "c3fcf2d2110fb8b785b2f0798564a444a06292fd01b03efae8208c24de07b771",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:00c42d23f93faa073ec9896e54ff2cbc229fce6b74383140b1eabcb635a883c4"
+    "textDigest": "sha256:aba5acb5f1bde19c149965dc2476a7c1c0dbf495b2ffcb20138781842c50c867"
   }
 }

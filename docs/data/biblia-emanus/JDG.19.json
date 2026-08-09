@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/JDG19.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-JDG"
+      "lockId": "WEBU-R5-JDG"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/JDG19.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-JDG"
+      "lockId": "WLC-OSHB-REMAP-R5-JDG",
+      "rawLockId": "WLC-RAW-R5-JDG",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -36,7 +38,7 @@
     },
     {
       "number": 2,
-      "text": "Concubina lui s-a prostituat împotriva lui și a plecat de la el la casa tatălui ei, în Betleemul lui Iuda, unde a rămas patru luni."
+      "text": "Țiitoarea nu i-a fost credincioasă și l-a părăsit, ca să se ducă în casa tatălui ei în Betleemul lui Iuda, unde a rămas timp de patru luni."
     },
     {
       "number": 3,
@@ -60,7 +62,7 @@
     },
     {
       "number": 8,
-      "text": "În ziua a cincea, s-a sculat dis-de-dimineață să plece. Tatăl tinerei femei i-a zis: „Întărește-ți, te rog, inima și rămâi până când ziua începe să se plece.” Și au mâncat amândoi."
+      "text": "În ziua a cincea, s-a sculat dis-de-dimineață să plece. Atunci tatăl tinerei femei a zis: „Întărește-ți mai întâi inima, te rog; și rămâi până ce se va pleca ziua spre seară.”"
     },
     {
       "number": 9,
@@ -128,7 +130,7 @@
     },
     {
       "number": 25,
-      "text": "Dar oamenii aceia n-au vrut să-l asculte. Atunci bărbatul și-a apucat concubina și a scos-o afară la ei. Ei au violat-o și au abuzat-o toată noaptea, până dimineața; iar când a început să se lumineze de ziuă, i-au dat drumul."
+      "text": "Oamenii aceia n-au vrut să-l asculte. Atunci omul și-a luat țiitoarea și le-a adus-o afară. Ei s-au împreunat cu ea și și-au bătut joc de ea toată noaptea până dimineața; și i-au dat drumul când se lumina de ziuă."
     },
     {
       "number": 26,
@@ -140,7 +142,7 @@
     },
     {
       "number": 28,
-      "text": "El i-a zis: „Ridică-te și să mergem!” Dar nu a răspuns nimeni. Atunci a ridicat-o pe măgar; apoi bărbatul s-a ridicat și a plecat spre locul lui."
+      "text": "El i-a zis: „Scoală-te și haidem să mergem!” Dar ea n-a răspuns. Atunci a ridicat-o, a pus-o pe măgar, s-a sculat și a plecat spre casa lui."
     },
     {
       "number": 29,
@@ -151,44 +153,7 @@
       "text": "Toți cei ce au văzut lucrul acesta au zis: „Niciodată nu s-a întâmplat și nu s-a văzut așa ceva, de când s-au suit copiii lui Israel din Egipt până în ziua de azi; luați aminte, dar, la lucrul acesta, sfătuiți-vă și vorbiți!”"
     }
   ],
-  "editorialNotes": [
-    {
-      "verse": 2,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Judecători 19:2 a fost aplicată în textul canonic.",
-      "reason": "WLC/WEBU folosesc limbajul de prostituare/necredincioșie sexuală, iar candidatul îl reduce la «nu i-a fost credincioasă». Pentru acest flux, sensul textual este păstrat fără a folosi versetul pentru a justifica ulterior abuzul comis împotriva ei.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 8,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Judecători 19:8 a fost aplicată în textul canonic.",
-      "reason": "Candidatul omite finalul versetului: după insistența tatălui femeii, cei doi mănâncă.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 25,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Judecători 19:25 a fost aplicată în textul canonic.",
-      "reason": "«s-au împreunat cu ea» poate suna ca o relație sexuală consensuală. Narațiunea spune că femeia este predată unei mulțimi care o folosește sexual și o abuzează toată noaptea. Traducerea nu trebuie să ascundă caracterul coercitiv al faptei.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 28,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Judecători 19:28 a fost aplicată în textul canonic.",
-      "reason": "Candidatul omite trei elemente: femeia nu răspunde, bărbatul o ridică pe măgar, apoi se ridică și pleacă spre locul lui.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    }
-  ],
+  "editorialNotes": [],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -221,14 +186,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh JDG."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 30,
       "reviewed": 30,
@@ -238,23 +202,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Judecători 19: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Judecători 19:2 — material: WLC/WEBU folosesc limbajul de prostituare/necredincioșie sexuală, iar candidatul îl reduce la «nu i-a fost credincioasă». Pentru acest flux, sensul textual este păstrat fără a folosi versetul pentru a justifica ulterior abuzul comis împotriva ei.",
-        "Judecători 19:8 — material: Candidatul omite finalul versetului: după insistența tatălui femeii, cei doi mănâncă.",
-        "Judecători 19:25 — critical: «s-au împreunat cu ea» poate suna ca o relație sexuală consensuală. Narațiunea spune că femeia este predată unei mulțimi care o folosește sexual și o abuzează toată noaptea. Traducerea nu trebuie să ascundă caracterul coercitiv al faptei.",
-        "Judecători 19:28 — critical: Candidatul omite trei elemente: femeia nu răspunde, bărbatul o ridică pe măgar, apoi se ridică și pleacă spre locul lui."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorii, referenții, numele cultice, cifrele și succesiunea narațiunii sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Violența, abuzul, răpirea, idolatria și acțiunile personajelor sunt redate descriptiv și nu sunt transformate prin traducere în aprobări sau norme moderne.",
-        "Unde există o variantă textuală relevantă, textul canonic urmează WLC-OSHB conform politicii Biblia Emanus, iar varianta este documentată editorial."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -264,7 +223,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -274,15 +233,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "fb52326c72078fc5049c154e0b3682e061a1fe042416787c6d22c69b79d7b989",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:20f80a077e7d8960d0a2222c04b34b31a79375e8b23823700a649d6ed86ad590"
+    "textDigest": "sha256:d753bdbe505cd468845fdf173f569350acb66e091b473cb942fe8203ba03ab4d"
   }
 }

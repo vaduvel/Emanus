@@ -1,0 +1,69 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "ENO",
+  "bookName": "1 Enoh",
+  "chapter": 30,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://bible.ertale.com/ethiopiancanon/enoch/30/",
+    "pageSha256": "f1ddc49bc85230e5cafbc2f09a96c86fdfc41e32c194cfdf64489e7d67b851f3",
+    "underlyingEdition": "R. H. Charles, The Book of Enoch, 1912/1917",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "structured mirror of public-domain Charles translation",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "sourceTextDigest": "38026c5690c25191395245a6f7bd7f976881298df0da87b18704ab7000cac87f",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "dincolo de acestea, m-am dus de departe spre răsărit și am văzut un alt loc, o vale (plină) de apă."
+    },
+    {
+      "number": 2,
+      "text": "Și acolo era un copac, culoarea copacilor parfumați, cum ar fi masticul."
+    },
+    {
+      "number": 3,
+      "text": "Și pe laturile acestor văi am văzut scorțișoară parfumată și dincolo de acestea am mers spre est."
+    }
+  ],
+  "audit": {
+    "sourceUnits": 3,
+    "translatedUnits": 3,
+    "firstPassIssueCount": 0,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 3,
+    "semanticMinimumScore": 0.736257,
+    "blockingIssueCount": 0,
+    "textDigest": "5244a34abf605eba305de562011a8d4f109c616152a8ed447f346c6816f063f4",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

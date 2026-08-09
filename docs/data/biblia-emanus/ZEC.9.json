@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/ZEC09.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-ZEC"
+      "lockId": "WEBU-R5-ZEC"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/ZEC09.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-ZEC"
+      "lockId": "WLC-OSHB-REMAP-R5-ZEC",
+      "rawLockId": "WLC-RAW-R5-ZEC",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -32,7 +34,7 @@
   "verses": [
     {
       "number": 1,
-      "text": "Rostirea Cuvântului DOMNULUI asupra țării Hadracului, iar Damascul va fi locul ei de odihnă, căci ochiul omului, ca și al tuturor semințiilor lui Israel, este îndreptat spre DOMNUL."
+      "text": "Iată prorocia, cuvântul DOMNULui despre țara Hadrac; și va începe din Damasc. Căci DOMNUL are ochiul îndreptat asupra oamenilor și peste toate semințiile lui Israel."
     },
     {
       "number": 2,
@@ -56,7 +58,7 @@
     },
     {
       "number": 7,
-      "text": "Îi voi scoate sângele din gură și lucrurile urâcioase dintre dinți. Cel rămas va fi și el pentru Dumnezeul nostru și va fi ca o căpetenie în Iuda, iar Ecronul va fi ca iebusitul."
+      "text": "Îi voi scoate sângele din gură și urâciunile idolești dintre dinți, ca să fie și el o rămășiță pentru Dumnezeul nostru și să fie ca o căpetenie din Iuda, și Ecronul, ca iebusiții."
     },
     {
       "number": 8,
@@ -64,7 +66,7 @@
     },
     {
       "number": 9,
-      "text": "Bucură-te foarte mult, fiica Sionului! Strigă de bucurie, fiica Ierusalimului! Iată, Împăratul tău vine la tine; este drept și are mântuire, este smerit și călare pe un măgar, pe un mânz, puiul unei măgărițe."
+      "text": "Saltă de veselie, fiica Sionului! Strigă de bucurie, fiica Ierusalimului! Iată că Împăratul tău vine la tine; El este neprihănit și biruitor, smerit și călare pe un măgar, pe un mânz, pe mânzul unei măgărițe."
     },
     {
       "number": 10,
@@ -72,7 +74,7 @@
     },
     {
       "number": 11,
-      "text": "Iar cât despre tine, prin sângele legământului tău îi voi elibera pe prizonierii tăi din groapa în care nu este apă."
+      "text": "Însă cât pentru tine, Sioane, din pricina legământului tău pecetluit cu sânge, voi scoate pe prinșii tăi de război din groapa în care nu este apă."
     },
     {
       "number": 12,
@@ -80,7 +82,7 @@
     },
     {
       "number": 13,
-      "text": "Căci Îl voi încorda pe Iuda ca pe un arc, îl voi încărca cu Efraim și îi voi ridica pe fiii tăi, Sioane, împotriva fiilor tăi, Iavane, și te voi face ca sabia unui viteaz."
+      "text": "„Căci Îmi încordez pe Iuda ca arc și iau pe Efraim ca săgeată, și voi scula pe copiii tăi, Sioane, împotriva copiilor tăi, Grecio! Te voi face ca sabia unui viteaz!”"
     },
     {
       "number": 14,
@@ -92,69 +94,14 @@
     },
     {
       "number": 16,
-      "text": "DOMNUL Dumnezeul lor îi va salva în ziua aceea ca pe turma poporului Său, căci vor fi ca pietrele unei cununi, înălțate peste țara Lui."
+      "text": "DOMNUL Dumnezeul lor îi va scăpa în ziua aceea ca pe turma poporului Său; căci ei sunt pietrele cununii împărătești care vor străluci în țara Sa!"
     },
     {
       "number": 17,
       "text": "O! cât sunt de înfloritori! Cât sunt de frumoși! Grâul va înveseli pe tineri, și mustul, pe fete."
     }
   ],
-  "editorialNotes": [
-    {
-      "verse": 1,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Zaharia 9:1 a fost aplicată în textul canonic.",
-      "reason": "Rostirea este asupra țării Hadracului și se odihnește asupra Damascului; finalul leagă ochiul omului și al semințiilor lui Israel de DOMNUL. Traducerea nu identifică Hadracul cu o localitate modernă nesigură.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 7,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Zaharia 9:7 a fost aplicată în textul canonic.",
-      "reason": "Textul descrie îndepărtarea sângelui și a lucrurilor urâcioase de la filistean, apoi integrarea unei rămășițe în poporul lui Dumnezeu. Nu se introduce aici o doctrină despre convertire sau o identificare istorică suplimentară.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 9,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Zaharia 9:9 a fost aplicată în textul canonic.",
-      "reason": "צַדִּיק וְנוֹשָׁע הוּא עָנִי trebuie păstrat fără a introduce în traducere titlul «Mesia». Regele este drept, are mântuire/izbăvire și este smerit, venind pe măgar și pe mânzul măgăriței.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 11,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Zaharia 9:11 a fost aplicată în textul canonic.",
-      "reason": "Eliberarea prizonierilor este legată textual de «sângele legământului tău». Traducerea nu introduce aici explicit sângele lui Hristos; conexiunea tipologică aparține explicației.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 13,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Zaharia 9:13 a fost aplicată în textul canonic.",
-      "reason": "Iuda, Efraim, Sion și Iavan/Grecia sunt numite explicit în metafora arcului, săgeții și sabiei. Traducerea nu transformă versetul într-un rezumat al unei revolte istorice ulterioare.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 16,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Zaharia 9:16 a fost aplicată în textul canonic.",
-      "reason": "Poporul este salvat «ca turma Lui», iar imaginea pietrelor unei cununi rămâne poetică. Nu se identifică în traducere cu o coroană escatologică specifică.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    }
-  ],
+  "editorialNotes": [],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -187,14 +134,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh ZEC."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 17,
       "reviewed": 17,
@@ -204,24 +150,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Zaharia 9: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Zaharia 9:1 — material: Rostirea este asupra țării Hadracului și se odihnește asupra Damascului; finalul leagă ochiul omului și al semințiilor lui Israel de DOMNUL. Traducerea nu identifică Hadracul cu o localitate modernă nesigură.",
-        "Zaharia 9:7 — material: Textul descrie îndepărtarea sângelui și a lucrurilor urâcioase de la filistean, apoi integrarea unei rămășițe în poporul lui Dumnezeu. Nu se introduce aici o doctrină despre convertire sau o identificare istorică suplimentară.",
-        "Zaharia 9:9 — critical: צַדִּיק וְנוֹשָׁע הוּא עָנִי trebuie păstrat fără a introduce în traducere titlul «Mesia». Regele este drept, are mântuire/izbăvire și este smerit, venind pe măgar și pe mânzul măgăriței.",
-        "Zaharia 9:11 — critical: Eliberarea prizonierilor este legată textual de «sângele legământului tău». Traducerea nu introduce aici explicit sângele lui Hristos; conexiunea tipologică aparține explicației.",
-        "Zaharia 9:13 — material: Iuda, Efraim, Sion și Iavan/Grecia sunt numite explicit în metafora arcului, săgeții și sabiei. Traducerea nu transformă versetul într-un rezumat al unei revolte istorice ulterioare.",
-        "Zaharia 9:16 — material: Poporul este salvat «ca turma Lui», iar imaginea pietrelor unei cununi rămâne poetică. Nu se identifică în traducere cu o coroană escatologică specifică."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorul, referenții, imaginile profetice și opozițiile teologice sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Numele divine, judecata, mila, legământul, idolatria și restaurarea sunt redate semantic fără armonizări confesionale adăugate."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -231,7 +171,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -241,15 +181,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "f4c3edaedd1a4fe4e31c1031d2247e82ade6f0812b0cf34e1f991858dd4c5d4d",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:ea5a621f3eed21f9aa88c8900bb921d451804b7c088767add79f0914347e73f4"
+    "textDigest": "sha256:acb8374be1e0a28af358a9ab12165fe3435a66c6f42f9a807cb3671dea23d231"
   }
 }

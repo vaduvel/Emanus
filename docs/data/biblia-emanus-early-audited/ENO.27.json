@@ -1,0 +1,77 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "ENO",
+  "bookName": "1 Enoh",
+  "chapter": 27,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://bible.ertale.com/ethiopiancanon/enoch/27/",
+    "pageSha256": "ddeb62db16027884b030cd7745d55d62ce1fc4265a7b2dd9941b31c928829002",
+    "underlyingEdition": "R. H. Charles, The Book of Enoch, 1912/1917",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "structured mirror of public-domain Charles translation",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "sourceTextDigest": "d03075cb233afcb356f007f8369e99d5f9af931f62822acd6ce33c29882b6109",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Atunci eu am spus: „Pentru ce obiect este acest pământ binecuvântat, care este plin în întregime de copaci, și această vale blestemată între? ”"
+    },
+    {
+      "number": 2,
+      "text": "Uriel, unul dintre sfinții îngeri care erau cu mine, a răspuns: ,, Această vale blestemată este pentru cei ce sînt blestemați pentru totdeauna; iată că toți cei blestemați vor fi adunați împreună, cari rostesc cu buzele lor cuvinte necuvincioase împotriva Domnului, și slava Lui vor vorbi lucruri grele. Aici vor fi adunați, și aici va fi locul lor de judecată."
+    },
+    {
+      "number": 3,
+      "text": "În zilele din urmă va fi asupra lor spectacolul judecă drepte în prezența celor drepți pentru totdeauna: aici cei milostivi îl vor binecuvânta pe Domnul gloriei, Regele Veșnic."
+    },
+    {
+      "number": 4,
+      "text": "În zilele judecății asupra celor dintâi, ei Îl vor binecuvânta pentru milostivenia pe care le-a dat-o."
+    },
+    {
+      "number": 5,
+      "text": "Atunci l-am binecuvântat pe Domnul Gloriei și I-am arătat slava și L-am lăudat cu glorie."
+    }
+  ],
+  "audit": {
+    "sourceUnits": 5,
+    "translatedUnits": 5,
+    "firstPassIssueCount": 0,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 5,
+    "semanticMinimumScore": 0.847042,
+    "blockingIssueCount": 0,
+    "textDigest": "c025bb4747e2068d69d21e0603cb4d474eec5ee19ff0c07c360a22a9fbab4fa9",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

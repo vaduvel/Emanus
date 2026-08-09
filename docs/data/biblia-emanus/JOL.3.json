@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/JOL03.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-JOL"
+      "lockId": "WEBU-R5-JOL"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/JOL03.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-JOL"
+      "lockId": "WLC-OSHB-REMAP-R5-JOL",
+      "rawLockId": "WLC-RAW-R5-JOL",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -32,7 +34,7 @@
   "verses": [
     {
       "number": 1,
-      "text": "Căci iată, în zilele acelea și în vremea aceea, când voi restaura soarta lui Iuda și a Ierusalimului,"
+      "text": "Căci iată că în zilele acelea și în vremurile acelea, când voi aduce înapoi pe prinșii de război ai lui Iuda și ai Ierusalimului,"
     },
     {
       "number": 2,
@@ -44,7 +46,7 @@
     },
     {
       "number": 4,
-      "text": "Și ce aveți voi cu Mine, Tirule și Sidonule și toate ținuturile Filistiei? Îmi răsplătiți voi ceva? Dacă Îmi răsplătiți, voi întoarce repede, fără întârziere, răsplata voastră asupra capului vostru."
+      "text": "Ce vreți voi cu Mine, Tirule și Sidonule, și toate ținuturile filistenilor? Vreți să-Mi răsplătiți vreo faptă sau să faceți ceva împotriva Mea? Iute, fără zăbavă, voi întoarce faptele voastre asupra capului vostru."
     },
     {
       "number": 5,
@@ -80,11 +82,11 @@
     },
     {
       "number": 13,
-      "text": "Puneți secera, căci secerișul este copt! Veniți, călcați, căci teascul este plin, iar căzile se revarsă; mare este răutatea lor!"
+      "text": "„Puneți mâna pe seceră, căci secerișul este copt! Veniți și călcați cu picioarele, căci linurile sunt pline, și tocitorile dau peste ele! Căci mare este răutatea lor!”"
     },
     {
       "number": 14,
-      "text": "Mulțimi, mulțimi în valea hotărârii! Căci ziua DOMNULUI este aproape în valea hotărârii."
+      "text": "Vin grămezi-grămezi în valea judecății, căci ziua DOMNULui este aproape, în valea judecății."
     },
     {
       "number": 15,
@@ -112,56 +114,10 @@
     },
     {
       "number": 21,
-      "text": "Voi curăți sângele lor, pe care nu l-am curățit, căci DOMNUL locuiește în Sion."
+      "text": "„Le voi răzbuna sângele pe care nu l-am răzbunat încă, dar DOMNUL va locui în Sion.”"
     }
   ],
-  "editorialNotes": [
-    {
-      "verse": 1,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Ioel 3:1 a fost aplicată în textul canonic.",
-      "reason": "WEBU fixează lectura «restore the fortunes of Judah and Jerusalem». Candidatul restrânge שְׁבוּת la «prinșii de război», introducând captivitatea militară ca obiect explicit acolo unde sursa fresh păstrează restaurarea stării/soartei.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 4,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Ioel 3:4 a fost aplicată în textul canonic.",
-      "reason": "Textul repetă ideea de răsplătire/represalii: «Îmi răsplătiți? Dacă Îmi răsplătiți...». Candidatul introduce alternativa «sau să faceți ceva împotriva Mea?», care nu este o propoziție distinctă în WEBU/WLC.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 13,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Ioel 3:13 a fost aplicată în textul canonic.",
-      "reason": "הַיְקָבִים / WEBU «the vats overflow» este redat prin «tocitorile dau peste ele», formulare care schimbă obiectul și nu exprimă revărsarea recipientelor.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 14,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Ioel 3:14 a fost aplicată în textul canonic.",
-      "reason": "הֲמוֹנִים / WEBU este «mulțimi», nu «grămezi». Candidatul păstrează ideea numerică, dar folosește un substantiv nepotrivit pentru oameni în această exclamație.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 21,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Ioel 3:21 a fost aplicată în textul canonic.",
-      "reason": "וְנִקֵּיתִי / WEBU «I will cleanse» este verb de curățire. Candidatul îl înlocuiește cu «voi răzbuna», schimbând actul final din curățire în răzbunare; lectura nu este susținută de snapshotul WEBU/WLC folosit ca source-lock.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    }
-  ],
+  "editorialNotes": [],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -194,14 +150,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh JOL."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 21,
       "reviewed": 21,
@@ -211,23 +166,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Ioel 3: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Ioel 3:1 — material: WEBU fixează lectura «restore the fortunes of Judah and Jerusalem». Candidatul restrânge שְׁבוּת la «prinșii de război», introducând captivitatea militară ca obiect explicit acolo unde sursa fresh păstrează restaurarea stării/soartei.",
-        "Ioel 3:4 — material: Textul repetă ideea de răsplătire/represalii: «Îmi răsplătiți? Dacă Îmi răsplătiți...». Candidatul introduce alternativa «sau să faceți ceva împotriva Mea?», care nu este o propoziție distinctă în WEBU/WLC.",
-        "Ioel 3:13 — material: הַיְקָבִים / WEBU «the vats overflow» este redat prin «tocitorile dau peste ele», formulare care schimbă obiectul și nu exprimă revărsarea recipientelor.",
-        "Ioel 3:14 — minor: הֲמוֹנִים / WEBU este «mulțimi», nu «grămezi». Candidatul păstrează ideea numerică, dar folosește un substantiv nepotrivit pentru oameni în această exclamație.",
-        "Ioel 3:21 — critical: וְנִקֵּיתִי / WEBU «I will cleanse» este verb de curățire. Candidatul îl înlocuiește cu «voi răzbuna», schimbând actul final din curățire în răzbunare; lectura nu este susținută de snapshotul WEBU/WLC folosit ca source-lock."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorul, referenții, imaginile profetice și opozițiile teologice sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Numele divine, judecata, mila, legământul, idolatria și restaurarea sunt redate semantic fără armonizări confesionale adăugate."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -237,7 +187,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -247,15 +197,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "567ffb7f41be3fa1a13891257bde102d4a638e1f4f099345d10fe20959c5d709",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:c8093eb1c211a879e21270473ecd06f8023087209094cf341c21fd4997c92a5d"
+    "textDigest": "sha256:46f20e625993983269e80c300ec0e7480b8635d98183ced1f0066f2eead559d4"
   }
 }

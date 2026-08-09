@@ -1,0 +1,81 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "ENO",
+  "bookName": "1 Enoh",
+  "chapter": 86,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://bible.ertale.com/ethiopiancanon/enoch/86/",
+    "pageSha256": "87b209bc42b2ec1522a7d5942c10eacb9b311649bbd217dc639a7ed823e1e25e",
+    "underlyingEdition": "R. H. Charles, The Book of Enoch, 1912/1917",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "structured mirror of public-domain Charles translation",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "sourceTextDigest": "4cf5a831602583a2181bf8aa43e877f04328df9a8bd98645b33daeb7157bc6c3",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Și iarăși am văzut cu ochii mei cum dormeam, și am văzut cerul de sus, și iată că o stea a căzut din cer, și s'a sculat, a mîncat și a păscut printre boii aceia."
+    },
+    {
+      "number": 2,
+      "text": "după aceea am văzut boii cei mari și negri și iată și-au schimbat tarabele și pășunile și vitele și au început să trăiască unul cu altul."
+    },
+    {
+      "number": 3,
+      "text": "Și din nou am văzut în viziune și m-am uitat spre cer, și iată că am văzut multe stele coborându-se și aruncându-se din cer la acea stea întâi, și au devenit tauri printre acele vite și pășune cu ele."
+    },
+    {
+      "number": 4,
+      "text": "M'am uitat la ei, și i-am văzut, și iată că toți își scoteau mădularele, ca niște cai, și au început să acopere vacile boilor, și toți au rămas însărcinate, fără elefanți, cămile și măgari."
+    },
+    {
+      "number": 5,
+      "text": "Și toți boii s-au temut de ei s-au înspăimântat de ei au început să mu cu dinții să mănânce să se împunge cu coarnele lor."
+    },
+    {
+      "number": 6,
+      "text": "Și au început să mănânce boii aceia; iată că toți copiii pământului au început să tremure să tremure înaintea lor să fugă de ei."
+    }
+  ],
+  "audit": {
+    "sourceUnits": 6,
+    "translatedUnits": 6,
+    "firstPassIssueCount": 0,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 6,
+    "semanticMinimumScore": 0.75243,
+    "blockingIssueCount": 0,
+    "textDigest": "5593ec85f412f5eb6f1859fff7fd4c769b092ea89f2be52886a22f714a0d4543",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

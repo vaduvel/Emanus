@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/JDG01.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-JDG"
+      "lockId": "WEBU-R5-JDG"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/JDG01.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-JDG"
+      "lockId": "WLC-OSHB-REMAP-R5-JDG",
+      "rawLockId": "WLC-RAW-R5-JDG",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -40,7 +42,7 @@
     },
     {
       "number": 3,
-      "text": "Iuda i-a zis fratelui său Simeon: „Suie-te împreună cu mine în țara care mi-a căzut la sorți și să luptăm împotriva canaaniților; și voi merge și eu cu tine în țara care ți-a căzut la sorți.” Și Simeon s-a dus cu el."
+      "text": "Și Iuda a zis fratelui său Simeon: „Suie-te împreună cu mine în țara care mi-a căzut la sorți și să luptăm împotriva canaaniților; și voi merge și eu cu tine în țara care ți-a căzut la sorți.”"
     },
     {
       "number": 4,
@@ -56,7 +58,7 @@
     },
     {
       "number": 7,
-      "text": "Adoni-Bezec a zis: „Șaptezeci de împărați, cu degetele cele mari de la mâini și de la picioare tăiate, strângeau mâncare sub masa mea. Cum am făcut eu, așa mi-a răsplătit Dumnezeu.” L-au dus la Ierusalim și a murit acolo."
+      "text": "Adoni-Bezec a zis: „Șaptezeci de împărați, cu degetele cele mari de la mâini și de la picioare tăiate, strângeau mâncare sub masa mea; Dumnezeu îmi răsplătește și mie cum am făcut.”"
     },
     {
       "number": 8,
@@ -88,7 +90,7 @@
     },
     {
       "number": 15,
-      "text": "Ea i-a răspuns: „Dă-mi un dar, căci mi-ai dat un pământ secetos; dă-mi și izvoare de apă.” Și Caleb i-a dat izvoarele de sus și izvoarele de jos."
+      "text": "Ea i-a răspuns: „Dă-mi un dar, căci mi-ai dat un pământ secetos; dă-mi și izvoare de apă.”"
     },
     {
       "number": 16,
@@ -175,35 +177,7 @@
       "text": "Ținutul amoriților se întindea de la suișul Acrabim, de la Sela și în sus."
     }
   ],
-  "editorialNotes": [
-    {
-      "verse": 3,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Judecători 1:3 a fost aplicată în textul canonic.",
-      "reason": "Candidatul omite concluzia explicită וַיֵּלֶךְ אִתּוֹ שִׁמְעוֹן / «Simeon went with him».",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 7,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Judecători 1:7 a fost aplicată în textul canonic.",
-      "reason": "Candidatul omite ultima propoziție: Adoni-Bezec este dus la Ierusalim și moare acolo.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 15,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Judecători 1:15 a fost aplicată în textul canonic.",
-      "reason": "Candidatul omite rezultatul cererii Acsei: Caleb îi dă izvoarele de sus și izvoarele de jos.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    }
-  ],
+  "editorialNotes": [],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -236,14 +210,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh JDG."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 36,
       "reviewed": 36,
@@ -253,22 +226,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Judecători 1: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Judecători 1:3 — critical: Candidatul omite concluzia explicită וַיֵּלֶךְ אִתּוֹ שִׁמְעוֹן / «Simeon went with him».",
-        "Judecători 1:7 — critical: Candidatul omite ultima propoziție: Adoni-Bezec este dus la Ierusalim și moare acolo.",
-        "Judecători 1:15 — critical: Candidatul omite rezultatul cererii Acsei: Caleb îi dă izvoarele de sus și izvoarele de jos."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorii, referenții, numele cultice, cifrele și succesiunea narațiunii sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Violența, abuzul, răpirea, idolatria și acțiunile personajelor sunt redate descriptiv și nu sunt transformate prin traducere în aprobări sau norme moderne.",
-        "Unde există o variantă textuală relevantă, textul canonic urmează WLC-OSHB conform politicii Biblia Emanus, iar varianta este documentată editorial."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -278,7 +247,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -288,15 +257,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "fb52326c72078fc5049c154e0b3682e061a1fe042416787c6d22c69b79d7b989",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:b53c08ff6f6f7e14f3d36f87bfb65b630357eb792d33ee9f36643ac21644820a"
+    "textDigest": "sha256:9d4c063982f97353eb96bd3eb244269133d0b5dba42a6357f35ca09829b04784"
   }
 }

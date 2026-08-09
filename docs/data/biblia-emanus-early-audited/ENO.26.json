@@ -1,0 +1,81 @@
+{
+  "translation": "BE-EARLY-DRAFT",
+  "bookId": "ENO",
+  "bookName": "1 Enoh",
+  "chapter": 26,
+  "collection": "early-jewish-and-christian-writings",
+  "status": "published",
+  "public": true,
+  "runtimeEnabled": true,
+  "publicationLicense": "CC BY 4.0 for new Romanian translation",
+  "source": {
+    "pageUrl": "https://bible.ertale.com/ethiopiancanon/enoch/26/",
+    "pageSha256": "30198953c44a33ac98e8a79e7b84a1d93d1d9b454e52d9d3321867b8df2ae99e",
+    "underlyingEdition": "R. H. Charles, The Book of Enoch, 1912/1917",
+    "underlyingLicense": "Public Domain",
+    "transcriptionRole": "structured mirror of public-domain Charles translation",
+    "publicationLicense": "CC BY 4.0 for new Romanian translation",
+    "documentedNumberingGaps": [],
+    "supplementalSources": [],
+    "sourceTextDigest": "e621ba6048a14765474c994adfcfc2f0bd02c39b44d532982ea583cba31c3e0f",
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "CC BY 4.0",
+      "role": "first-pass candidate only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "M-am dus de acolo până în mijlocul pământului am văzut un loc binecuvântat în care erau copaci cu ramuri care rămâneau înfloreau."
+    },
+    {
+      "number": 2,
+      "text": "acolo am văzut un munte sfânt, iar sub munte la est era un pârâu și acesta curgea spre sud."
+    },
+    {
+      "number": 3,
+      "text": "Și am văzut spre răsărit un alt munte mai înalt decât acesta, între ele o prăpastie adâncă îngustă; în el curgea un pârâu pe sub munte."
+    },
+    {
+      "number": 4,
+      "text": "Iar la vest de el era un alt munte, mai jos decât cel dintâi și de înălțime mică, și o râpă adâncă și uscată între ele; și o altă râpă adâncă și uscată era la extremitățile celor trei."
+    },
+    {
+      "number": 5,
+      "text": "toate prăpăstiile erau adânci și înguste, (fiind formate) din stâncă tare, iar copacii nu erau planta pe ele."
+    },
+    {
+      "number": 6,
+      "text": "Și m-am mirat de stânci, și m-am mirat de râpă, da, m-am mirat foarte mult."
+    }
+  ],
+  "audit": {
+    "sourceUnits": 6,
+    "translatedUnits": 6,
+    "firstPassIssueCount": 0,
+    "publicationBlocked": false,
+    "requiredNextGate": "multilingual-semantic-and-editorial-review",
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 6,
+    "semanticMinimumScore": 0.792795,
+    "blockingIssueCount": 0,
+    "textDigest": "e2bc1ab7ab2803a64cf9654ca864d4319c339612c52cade77fa09b5c58ae6cdd",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  }
+}

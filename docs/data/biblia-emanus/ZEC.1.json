@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/ZEC01.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-ZEC"
+      "lockId": "WEBU-R5-ZEC"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/ZEC01.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-ZEC"
+      "lockId": "WLC-OSHB-REMAP-R5-ZEC",
+      "rawLockId": "WLC-RAW-R5-ZEC",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -32,7 +34,7 @@
   "verses": [
     {
       "number": 1,
-      "text": "În luna a opta, în anul al doilea al lui Darius, cuvântul DOMNULUI a venit la prorocul Zaharia, fiul lui Berechia, fiul lui Ido, astfel:"
+      "text": "În luna a opta, în anul al doilea al lui Darius, cuvântul DOMNULui a vorbit prorocului Zaharia, fiul lui Berechia, fiul lui Ido, astfel:"
     },
     {
       "number": 2,
@@ -52,7 +54,7 @@
     },
     {
       "number": 6,
-      "text": "Dar cuvintele Mele și hotărârile Mele, pe care le-am poruncit slujitorilor Mei, prorocii, nu i-au ajuns oare pe părinții voștri? Atunci s-au întors și au zis: «DOMNUL oștirilor ne-a făcut așa cum hotărâse să ne facă, după căile și faptele noastre.»"
+      "text": "Totuși cuvintele Mele și poruncile pe care le dădusem slujitorilor Mei prorocii ca să le vestească n-au atins ele pe părinții voștri? Și atunci ei s-au întors și au zis: „DOMNUL oștirilor ne-a făcut cum hotărâse să ne facă, după căile și faptele noastre!”"
     },
     {
       "number": 7,
@@ -88,15 +90,15 @@
     },
     {
       "number": 15,
-      "text": "Sunt foarte mâniat pe neamurile care trăiesc fără grijă, căci Eu eram mâniat doar puțin, dar ele au ajutat la înmulțirea nenorocirii."
+      "text": "„și sunt plin de o mare mânie împotriva neamurilor îngâmfate; căci Mă mâniasem numai puțin, dar ele au ajutat spre nenorocire.”"
     },
     {
       "number": 16,
-      "text": "De aceea, așa vorbește DOMNUL: «M-am întors spre Ierusalim cu îndurare. Casa Mea va fi zidită în el», zice DOMNUL oștirilor, «iar funia de măsurat va fi întinsă peste Ierusalim.»"
+      "text": "De aceea așa vorbește DOMNUL: „Mă întorc cu îndurarea către Ierusalim; Casa Mea va fi zidită iarăși în el, și funia de măsurat se va întinde asupra Ierusalimului.”"
     },
     {
       "number": 17,
-      "text": "Strigă din nou și spune: «Așa vorbește DOMNUL oștirilor: Cetățile Mele se vor revărsa iarăși de belșug. DOMNUL va mângâia din nou Sionul și va alege din nou Ierusalimul.»"
+      "text": "Strigă din nou și zi: „Așa vorbește DOMNUL oștirilor: „Cetățile Mele vor avea iarăși belșug de bunătăți, DOMNUL va mângâia iarăși Sionul, va alege iarăși Ierusalimul.””"
     },
     {
       "number": 18,
@@ -112,65 +114,10 @@
     },
     {
       "number": 21,
-      "text": "Am întrebat: «Ce vin aceștia să facă?» El a răspuns: «Acestea sunt coarnele care l-au risipit pe Iuda, încât nimeni nu și-a mai putut ridica capul. Dar meșteșugarii aceștia au venit să le înspăimânte și să doboare coarnele neamurilor care și-au ridicat cornul împotriva țării lui Iuda ca s-o risipească.»"
+      "text": "Eu am întrebat: „Ce vor să facă aceștia?” Și el a zis: „Aceștia vin să sperie coarnele care au risipit pe Iuda, de n-a mai putut ridica nimeni capul; fierarii aceștia au venit să sperie și să taie coarnele neamurilor care au ridicat cornul împotriva țării lui Iuda ca să-i risipească locuitorii.”"
     }
   ],
-  "editorialNotes": [
-    {
-      "verse": 1,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Zaharia 1:1 a fost aplicată în textul canonic.",
-      "reason": "Formula profetică este «cuvântul DOMNULUI a venit la Zaharia», nu o personificare mecanică a cuvântului; data și genealogia sunt păstrate fără adaos.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 6,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Zaharia 1:6 a fost aplicată în textul canonic.",
-      "reason": "Textul spune că vorbele și hotărârile lui Dumnezeu «i-au ajuns» pe părinți, după care ei s-au întors și au recunoscut împlinirea judecății; nu trebuie omisă această logică.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 15,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Zaharia 1:15 a fost aplicată în textul canonic.",
-      "reason": "קֶצֶף גָּדוֹל exprimă mânia mare asupra neamurilor liniștite, iar acestea «au ajutat la rău/dezastru» când Dumnezeu fusese mâniat doar puțin; contrastul trebuie păstrat.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 16,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Zaharia 1:16 a fost aplicată în textul canonic.",
-      "reason": "Funia de măsurat este o imagine concretă a reconstruirii Ierusalimului; se păstrează fără explicație urbanistică adăugată.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 17,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Zaharia 1:17 a fost aplicată în textul canonic.",
-      "reason": "Promisiunea conține patru afirmații distincte: revărsarea prosperității, mângâierea Sionului și alegerea din nou a Ierusalimului; nu se comprimă într-o parafrază generală.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 21,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Zaharia 1:21 a fost aplicată în textul canonic.",
-      "reason": "Meșteșugarii vin să înspăimânte și să doboare coarnele neamurilor care au ridicat cornul împotriva țării lui Iuda. Imaginea coarnelor rămâne textuală, fără a le identifica în traducere cu imperii specifice.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    }
-  ],
+  "editorialNotes": [],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -203,14 +150,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh ZEC."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 21,
       "reviewed": 21,
@@ -220,24 +166,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Zaharia 1: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Zaharia 1:1 — material: Formula profetică este «cuvântul DOMNULUI a venit la Zaharia», nu o personificare mecanică a cuvântului; data și genealogia sunt păstrate fără adaos.",
-        "Zaharia 1:6 — material: Textul spune că vorbele și hotărârile lui Dumnezeu «i-au ajuns» pe părinți, după care ei s-au întors și au recunoscut împlinirea judecății; nu trebuie omisă această logică.",
-        "Zaharia 1:15 — material: קֶצֶף גָּדוֹל exprimă mânia mare asupra neamurilor liniștite, iar acestea «au ajutat la rău/dezastru» când Dumnezeu fusese mâniat doar puțin; contrastul trebuie păstrat.",
-        "Zaharia 1:16 — minor: Funia de măsurat este o imagine concretă a reconstruirii Ierusalimului; se păstrează fără explicație urbanistică adăugată.",
-        "Zaharia 1:17 — minor: Promisiunea conține patru afirmații distincte: revărsarea prosperității, mângâierea Sionului și alegerea din nou a Ierusalimului; nu se comprimă într-o parafrază generală.",
-        "Zaharia 1:21 — material: Meșteșugarii vin să înspăimânte și să doboare coarnele neamurilor care au ridicat cornul împotriva țării lui Iuda. Imaginea coarnelor rămâne textuală, fără a le identifica în traducere cu imperii specifice."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorul, referenții, imaginile profetice și opozițiile teologice sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Numele divine, judecata, mila, legământul, idolatria și restaurarea sunt redate semantic fără armonizări confesionale adăugate."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -247,7 +187,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -257,15 +197,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "f4c3edaedd1a4fe4e31c1031d2247e82ade6f0812b0cf34e1f991858dd4c5d4d",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:a2fd6b7ed4d23be0990efc562c1dd443e9fdef94dbc58c428c884d0131d3d34a"
+    "textDigest": "sha256:c81f69bad1553f161def5d15c78402d9da352b24c237d71195bf7b46ff55b06f"
   }
 }

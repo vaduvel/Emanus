@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/NAM01.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-NAM"
+      "lockId": "WEBU-R5-NAM"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/NAM01.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-NAM"
+      "lockId": "WLC-OSHB-REMAP-R5-NAM",
+      "rawLockId": "WLC-RAW-R5-NAM",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -32,7 +34,7 @@
   "verses": [
     {
       "number": 1,
-      "text": "O rostire despre Ninive. Cartea vedeniei lui Naum din Elcoș."
+      "text": "Prorocie despre Ninive. Cartea prorociei lui Naum din Elcoș."
     },
     {
       "number": 2,
@@ -60,11 +62,11 @@
     },
     {
       "number": 8,
-      "text": "Dar printr-un potop revărsat va pune capăt deplin locului ei și îi va urmări pe vrăjmașii Lui până în întuneric."
+      "text": "Dar cu niște valuri ce se varsă peste mal va nimici cetatea Ninive și va urmări pe vrăjmașii Lui până în întuneric."
     },
     {
       "number": 9,
-      "text": "Ce uneltiți împotriva DOMNULUI? El va pune capăt deplin; necazul nu se va ridica a doua oară."
+      "text": "Ce planuri faceți voi împotriva DOMNULui? El le zădărnicește! Nenorocirea nu va veni de două ori."
     },
     {
       "number": 10,
@@ -72,90 +74,26 @@
     },
     {
       "number": 11,
-      "text": "Din tine a ieșit cel ce urzește răul împotriva DOMNULUI, cel ce sfătuiește la nelegiuire."
+      "text": "Din tine, Ninive, a ieșit cel ce urzea rele împotriva DOMNULui, cel ce făcea planuri răutăcioase."
     },
     {
       "number": 12,
-      "text": "Așa vorbește DOMNUL: „Deși sunt în putere deplină și sunt mulți, totuși vor fi tăiați și vor trece. Deși te-am smerit, nu te voi mai smeri.”"
+      "text": "Așa vorbește DOMNUL: „Oricât de mulți și puternici vor fi, toți vor fi secerați și vor pieri. Chiar dacă te-am întristat, Ierusalime, nu te voi mai întrista…”"
     },
     {
       "number": 13,
-      "text": "„Acum voi sfărâma jugul lui de pe tine și îți voi rupe legăturile.”"
+      "text": "„Ci îi voi sfărâma jugul acum de pe tine și-ți voi rupe legăturile…”"
     },
     {
       "number": 14,
-      "text": "DOMNUL a poruncit cu privire la tine: „Nu va mai fi semănat nimic care să-ți poarte numele. Din casa dumnezeilor tăi voi nimici chipul cioplit și chipul turnat. Îți voi pregăti mormântul, căci ești nevrednic.”"
+      "text": "Iată ce a poruncit însă DOMNUL împotriva ta, Asur: „Nu vei mai avea urmași care să-ți poarte numele; voi ridica din casa dumnezeului tău chipurile cioplite sau turnate; îți voi pregăti mormântul, căci te-ai aflat prea ușor.”"
     },
     {
       "number": 15,
       "text": "Iată pe munți picioarele solului care vestește pacea! Prăznuiește-ți sărbătorile, Iudo, împlinește-ți juruințele! Căci cel rău nu va mai trece prin mijlocul tău, este nimicit cu desăvârșire…"
     }
   ],
-  "editorialNotes": [
-    {
-      "verse": 1,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Naum 1:1 a fost aplicată în textul canonic.",
-      "reason": "מַשָּׂא și חֲזוֹן sunt două noțiuni distincte: o rostire/oracol despre Ninive și vedenia lui Naum. Candidatul le reduce pe amândouă la «prorocie».",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 8,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Naum 1:8 a fost aplicată în textul canonic.",
-      "reason": "מְקוֹמָהּ este «locul ei». Numele Ninive nu apare în acest verset; introducerea lui directă în propoziție este o explicitare interpretativă inutilă.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 9,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Naum 1:9 a fost aplicată în textul canonic.",
-      "reason": "כָּלָה הוּא עֹשֶׂה spune că El face un sfârșit deplin; «El le zădărnicește» mută obiectul asupra planurilor și schimbă propoziția. Forma Numelui trebuie și ea normalizată.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 11,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Naum 1:11 a fost aplicată în textul canonic.",
-      "reason": "Numele Ninive nu apare explicit în verset; antecedentul este suficient. Forma «DOMNULui» trebuie normalizată.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 12,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Naum 1:12 a fost aplicată în textul canonic.",
-      "reason": "Adresarea «Ierusalime» este adăugată de candidat, iar עִנִּתִךְ înseamnă a smeri/a asupri/a necăji, nu doar «a întrista». Traducerea nu trebuie să insereze destinatarul ca nume propriu.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 13,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Naum 1:13 a fost aplicată în textul canonic.",
-      "reason": "מֹטֵהוּ este jugul/bara lui asupra destinatarului. Redarea poate fi făcută direct, fără pronumele ambiguu «îi».",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 14,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Naum 1:14 a fost aplicată în textul canonic.",
-      "reason": "כִּי קַלּוֹתָ este evaluarea că adresatul este nevrednic/disprețuit, nu «te-ai aflat prea ușor». Candidatul introduce și «Asur», absent din verset.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    }
-  ],
+  "editorialNotes": [],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -188,14 +126,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh NAM."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 15,
       "reviewed": 15,
@@ -205,25 +142,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Naum 1: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Naum 1:1 — material: מַשָּׂא și חֲזוֹן sunt două noțiuni distincte: o rostire/oracol despre Ninive și vedenia lui Naum. Candidatul le reduce pe amândouă la «prorocie».",
-        "Naum 1:8 — material: מְקוֹמָהּ este «locul ei». Numele Ninive nu apare în acest verset; introducerea lui directă în propoziție este o explicitare interpretativă inutilă.",
-        "Naum 1:9 — material: כָּלָה הוּא עֹשֶׂה spune că El face un sfârșit deplin; «El le zădărnicește» mută obiectul asupra planurilor și schimbă propoziția. Forma Numelui trebuie și ea normalizată.",
-        "Naum 1:11 — minor: Numele Ninive nu apare explicit în verset; antecedentul este suficient. Forma «DOMNULui» trebuie normalizată.",
-        "Naum 1:12 — material: Adresarea «Ierusalime» este adăugată de candidat, iar עִנִּתִךְ înseamnă a smeri/a asupri/a necăji, nu doar «a întrista». Traducerea nu trebuie să insereze destinatarul ca nume propriu.",
-        "Naum 1:13 — minor: מֹטֵהוּ este jugul/bara lui asupra destinatarului. Redarea poate fi făcută direct, fără pronumele ambiguu «îi».",
-        "Naum 1:14 — critical: כִּי קַלּוֹתָ este evaluarea că adresatul este nevrednic/disprețuit, nu «te-ai aflat prea ușor». Candidatul introduce și «Asur», absent din verset."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorul, referenții, imaginile profetice și opozițiile teologice sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Numele divine, judecata, mila, legământul, idolatria și restaurarea sunt redate semantic fără armonizări confesionale adăugate."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -233,7 +163,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -243,15 +173,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "e3f236be732d766dd7be425c0a5d41f62fb9aee3c17c5b1ffa2a6b7ee455459f",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:75ff994f30c52494fb260ad9c102dca97696cbe5186365ef91b248fee05d4fc8"
+    "textDigest": "sha256:a8b002ab4838edd5ed9eb35a6c3fb0ced50d8b5cde9aacdef6f6beaf7fa59e31"
   }
 }

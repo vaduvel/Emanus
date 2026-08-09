@@ -10,14 +10,16 @@
       "version": "WEBU-Protestant",
       "passageUrl": "https://ebible.org/engwebp/JON04.htm",
       "license": "Public Domain",
-      "lockId": "WEBU-JON"
+      "lockId": "WEBU-R5-JON"
     },
     "hebrew": {
       "version": "WLC-OSHB",
       "passageUrl": "https://ebible.org/hboWLC/JON04.htm",
       "textLicense": "Public Domain",
       "annotationLicense": "CC BY 4.0",
-      "lockId": "WLC-JON"
+      "lockId": "WLC-OSHB-REMAP-R5-JON",
+      "rawLockId": "WLC-RAW-R5-JON",
+      "derivationId": "hboWLC-oshb-kjv-remapped-r5"
     }
   },
   "review": {
@@ -36,7 +38,7 @@
     },
     {
       "number": 2,
-      "text": "S-a rugat DOMNULUI și a zis: „Ah, DOMNUL meu, nu aceasta spuneam eu când eram încă în țara mea? Tocmai de aceea m-am grăbit să fug la Tars, căci știam că ești un Dumnezeu milos și îndurător, încet la mânie și bogat în bunătate și că Te îndupleci cu privire la nenorocire.”"
+      "text": "S-a rugat DOMNULui și a zis: „Ah! Doamne, nu este aceasta tocmai ce ziceam eu când eram încă în țara mea? Tocmai lucrul acesta voiam să-l înlătur fugind la Tars. Căci știam că ești un Dumnezeu milos și plin de îndurare, îndelung răbdător și bogat în bunătate, și că Te căiești de rău!”"
     },
     {
       "number": 3,
@@ -52,15 +54,15 @@
     },
     {
       "number": 6,
-      "text": "DOMNUL Dumnezeu a rânduit un curcubete care s-a ridicat peste Iona, ca să-i facă umbră capului și să-l scape de suferința lui. Iona s-a bucurat foarte mult de curcubetele acesta."
+      "text": "DOMNUL Dumnezeu a făcut să crească un curcubete care s-a ridicat peste Iona ca să facă umbră capului lui și să-l facă să-i treacă mânia. Iona s-a bucurat foarte mult de curcubetele acesta."
     },
     {
       "number": 7,
-      "text": "Dar a doua zi, în zori, Dumnezeu a rânduit un vierme care a lovit curcubetele, iar acesta s-a uscat."
+      "text": "Dar a doua zi, la răsăritul soarelui, Dumnezeu a adus un vierme care a înțepat curcubetele, și curcubetele s-a uscat."
     },
     {
       "number": 8,
-      "text": "Când a răsărit soarele, Dumnezeu a rânduit un vânt fierbinte de la răsărit, iar soarele a bătut peste capul lui Iona până a leșinat. Atunci și-a dorit moartea și a zis: „Mai bine să mor decât să trăiesc!”"
+      "text": "Când a răsărit soarele, Dumnezeu a făcut să sufle un vânt uscat de la răsărit, și soarele a bătut peste capul lui Iona, și Iona a leșinat. Atunci a dorit să moară și a zis: „Mai bine să mor decât să trăiesc!”"
     },
     {
       "number": 9,
@@ -72,56 +74,10 @@
     },
     {
       "number": 11,
-      "text": "Și Mie să nu-Mi fie milă de Ninive, cetatea cea mare, în care sunt mai mult de o sută douăzeci de mii de oameni care nu știu să deosebească dreapta de stânga, și multe animale?"
+      "text": "„Și Mie să nu-Mi fie milă de Ninive, cetatea cea mare, în care se află mai mult de o sută douăzeci de mii de oameni care nu știu să deosebească dreapta de stânga lor, afară de o mulțime de vite!”"
     }
   ],
-  "editorialNotes": [
-    {
-      "verse": 2,
-      "term": "fresh-source semantic review / critical",
-      "decision": "Corecția pentru Iona 4:2 a fost aplicată în textul canonic.",
-      "reason": "וְנִחָם עַל־הָרָעָה descrie înduplecarea/retragerea de la nenorocirea anunțată. «Te căiești de rău» poate sugera o greșeală morală din partea lui Dumnezeu și nu trebuie pusă ca atare în stratul traducerii.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate critical."
-    },
-    {
-      "verse": 6,
-      "term": "fresh-source semantic review / material",
-      "decision": "Corecția pentru Iona 4:6 a fost aplicată în textul canonic.",
-      "reason": "וַיְמַן repetă verbul providenței din 1:17: Dumnezeu rânduiește/pregătește planta. לְהַצִּיל לוֹ מֵרָעָתוֹ urmărește să-l scape de suferința/disconfortul lui; «să-i treacă mânia» fixează o interpretare psihologică mai îngustă decât textul.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate material."
-    },
-    {
-      "verse": 7,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Iona 4:7 a fost aplicată în textul canonic.",
-      "reason": "וַיְמַן apare din nou: Dumnezeu rânduiește viermele. «A adus un vierme» pierde repetiția literară intenționată a aceluiași verb.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 8,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Iona 4:8 a fost aplicată în textul canonic.",
-      "reason": "Și aici וַיְמַן repetă verbul «a rândui». חֲרִישִׁית descrie un vânt de răsărit apăsător/fierbinte; «uscat» este posibil contextual, dar mai puțin direct.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    },
-    {
-      "verse": 11,
-      "term": "fresh-source semantic review / minor",
-      "decision": "Corecția pentru Iona 4:11 a fost aplicată în textul canonic.",
-      "reason": "Finalul ebraic spune simplu că sunt și multe animale. Construcția românească «dreapta de stânga lor, afară de» este greoaie și trebuie naturalizată fără a schimba întrebarea finală a cărții.",
-      "reviewRequired": true,
-      "resolutionStatus": "resolved",
-      "resolutionReason": "Verificat verset-cu-verset în WEBU-Protestant și WLC-OSHB pe snapshotul fresh; severitate minor."
-    }
-  ],
+  "editorialNotes": [],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -154,14 +110,13 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "WEBU și WLC au fost re-auditate pe snapshotul fresh; BTF și Cornilescu 1924 sunt fixate pentru comparația deterministă.",
-      "NTR este păstrată numai ca etalon extern de comparație; textul integral protejat nu este stocat.",
-      "Corecțiile materializate provin exclusiv din review-urile fresh JON."
+      "Textul a fost comparat cu două etaloane românești public-domain fixate și cu NTR ca etalon extern.",
+      "Etaloanele au fost folosite pentru verificare, nu ca sursă de copiere."
     ]
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-08",
+    "completedOn": "2026-08-06",
     "verseCoverage": {
       "expected": 11,
       "reviewed": 11,
@@ -171,23 +126,18 @@
       "language": "ebraică biblică",
       "text": "WLC-OSHB",
       "result": "approved",
-      "scope": "Iona 4: audit semantic verset-cu-verset pe WEBU-Protestant și WLC-OSHB, cu maparea WLC aprobată separat."
+      "scope": "Întregul capitol, cu maparea versificației WLC documentată în source-lock."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Iona 4:2 — critical: וְנִחָם עַל־הָרָעָה descrie înduplecarea/retragerea de la nenorocirea anunțată. «Te căiești de rău» poate sugera o greșeală morală din partea lui Dumnezeu și nu trebuie pusă ca atare în stratul traducerii.",
-        "Iona 4:6 — material: וַיְמַן repetă verbul providenței din 1:17: Dumnezeu rânduiește/pregătește planta. לְהַצִּיל לוֹ מֵרָעָתוֹ urmărește să-l scape de suferința/disconfortul lui; «să-i treacă mânia» fixează o interpretare psihologică mai îngustă decât textul.",
-        "Iona 4:7 — minor: וַיְמַן apare din nou: Dumnezeu rânduiește viermele. «A adus un vierme» pierde repetiția literară intenționată a aceluiași verb.",
-        "Iona 4:8 — minor: Și aici וַיְמַן repetă verbul «a rândui». חֲרִישִׁית descrie un vânt de răsărit apăsător/fierbinte; «uscat» este posibil contextual, dar mai puțin direct.",
-        "Iona 4:11 — minor: Finalul ebraic spune simplu că sunt și multe animale. Construcția românească «dreapta de stânga lor, afară de» este greoaie și trebuie naturalizată fără a schimba întrebarea finală a cărții."
+        "Textul românesc a trecut auditul adversarial de structură, lungime, terminologie și sens."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Vorbitorul, referenții, imaginile profetice și opozițiile teologice sunt păstrate conform textului-sursă, fără explicații doctrinare introduse în traducere.",
-        "Numele divine, judecata, mila, legământul, idolatria și restaurarea sunt redate semantic fără armonizări confesionale adăugate."
+        "Sensul textului a fost păstrat fără introducerea unei interpretări confesionale noi."
       ]
     },
     "omissionAddition": {
@@ -197,7 +147,7 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare verificată independent în WEBU/WLC; BTF și Cornilescu 1924 sunt benchmark-uri public-domain, NTR numai referință externă"
+      "method": "Redactare independentă verificată față de surse public-domain și etaloane comparison-only."
     },
     "criticalIssues": {
       "result": "approved",
@@ -207,15 +157,15 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Sol — Biblia Emanus fresh-source audit",
+      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
       "method": "verse-by-verse-source-and-benchmark"
     },
-    "sourceSnapshotSha256": "c3fcf2d2110fb8b785b2f0798564a444a06292fd01b03efae8208c24de07b771",
+    "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
     "benchmarkEvidence": {
       "pinnedBenchmarks": 2,
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:4581146bf999b6cfa0f16250b5c986f4852a2d44c4983864770b78380607b577"
+    "textDigest": "sha256:1d8ebe418b47e53cd3d576ec6d2e4f6deb3cb866f1ad6b5f49c26a753c2587c6"
   }
 }

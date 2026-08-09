@@ -1,0 +1,99 @@
+{
+  "translation": "BE-DEUT-DRAFT",
+  "bookId": "PS2",
+  "bookName": "Psalmul 151",
+  "chapter": 1,
+  "collection": "deuterocanon",
+  "status": "published",
+  "public": true,
+  "source": {
+    "english": {
+      "id": "eng-webbe",
+      "sha256": "42e0dec882e3e94272dc7ed312233dd2b891613a230dece316ffbd6ae5aace67",
+      "license": "Public Domain"
+    },
+    "greek": [
+      {
+        "id": "grcbrent",
+        "sha256": "7c3d95d05b542bbf67348e6c28430b7cedfc83858b9125d3d05c574a423c28c6",
+        "license": "Public Domain"
+      },
+      {
+        "id": "grclxx",
+        "sha256": "2b0fc204f6a2e5283a4ef1654b25b76cf23c32a910f5534c4e076c9e85380b7e",
+        "license": "Public Domain"
+      }
+    ],
+    "translationModel": {
+      "id": "Helsinki-NLP/opus-mt-tc-big-en-ro",
+      "revision": "3853a10c485323cbcd870553e846071052c0c070",
+      "license": "Apache-2.0",
+      "role": "first-pass draft only"
+    }
+  },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Am fost mic printre frații mei, și mai tânăr în casa tatălui meu. Am avut grijă de oile tatălui meu."
+    },
+    {
+      "number": 2,
+      "text": "Mâinile mele formau un instrument muzical, iar degetele mele acordau o liră."
+    },
+    {
+      "number": 3,
+      "text": "Cine-i va spune Domnului meu? Domnul însuși aude."
+    },
+    {
+      "number": 4,
+      "text": "El și - a trimis îngerul și m - a luat de la oile tatălui meu și m - a uns cu untdelemnul lui de ungere."
+    },
+    {
+      "number": 5,
+      "text": "Frații mei erau frumoși și înalți, dar Domnul n-a găsit plăcere în ei."
+    },
+    {
+      "number": 6,
+      "text": "M-am dus să-l întâlnesc pe Filistean, iar el m-a blestemat de idolii lui."
+    },
+    {
+      "number": 7,
+      "text": "Dar eu i-am scos sabia, l-am decapitat am îndepărtat ocara de la copiii lui Israel."
+    }
+  ],
+  "audit": {
+    "sourceVerseNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "continuous": true,
+    "firstPassIssueCount": 7,
+    "publicationBlocked": false,
+    "candidateSelection": {
+      "policy": "best-of-two-independent-machine-candidates-with-public-domain-historical-tie-breaker",
+      "alternateModel": {
+        "id": "Helsinki-NLP/opus-mt-en-ro",
+        "revision": "96e8fea9e44dae942c2e8a9078dc1615dd871ed9"
+      },
+      "semanticModel": {
+        "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+      }
+    },
+    "semanticModel": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "semanticReviewedUnits": 7,
+    "semanticMinimumScore": 0.757651,
+    "blockingIssueCount": 0,
+    "textDigest": "979520d5806e04d1c8f2cf641860d03bc2d9588502586740a719026de41e3690",
+    "versificationPolicy": "candidate coordinates must equal the pinned source coordinates exactly"
+  },
+  "runtimeEnabled": true
+}
