@@ -9,8 +9,8 @@ const ledgerPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-roman
 
 // Automatic Romanian edits are intentionally limited to context-free corruptions
 // and forms whose diacritized spelling is unambiguous in reader-facing Romanian.
-// Context-sensitive forms (for example simpla -> simpla/simplă, credinta -> credință/credința,
-// curata -> curată/curăță or arata -> arată/arăta) remain audit-only.
+// Context-sensitive forms (credinta -> credință/credința, viata -> viață/viața,
+// curata -> curată/curăță, arata -> arată/arăta etc.) remain audit-only.
 const REPLACEMENTS = new Map([
   ["mangaie-re", "mângâiere"],
   ["mangaere", "mângâiere"],
@@ -28,6 +28,7 @@ const REPLACEMENTS = new Map([
   ["dintai", "dintâi"],
   ["intaia", "întâia"],
   ["invatator", "învățător"],
+  ["invatatura", "învățătură"],
   ["imparatie", "împărăție"],
   ["imparatia", "împărăția"],
   ["pacat", "păcat"],
@@ -58,6 +59,7 @@ const REPLACEMENTS = new Map([
   ["botezatorul", "botezătorul"],
   ["fagaduise", "făgăduise"],
   ["fagaduit", "făgăduit"],
+  ["fagaduinta", "făgăduință"],
   ["facut", "făcut"],
   ["facatorului", "făcătorului"],
   ["urmareste", "urmărește"],
@@ -103,7 +105,7 @@ function fixString(value, location, ledger) {
   let out = value
   for (const [wrong, expected] of REPLACEMENTS) {
     const escaped = wrong.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
-    const regex = new RegExp(`\\b${escaped}\\b`, "giu")
+    const regex = new RegExp(`(?<![\\p{L}\\p{N}_])${escaped}(?![\\p{L}\\p{N}_])`, "giu")
     out = out.replace(regex, (match) => {
       const replacement = preserveCase(match, expected)
       ledger.push({ location, before: match, after: replacement })
@@ -137,5 +139,5 @@ for (const file of fs.readdirSync(dir).filter((name) => name.endsWith(".json")).
   }
   if (ledger.length !== beforeCount) fs.writeFileSync(full, JSON.stringify(book, null, 2) + "\n", "utf8")
 }
-fs.writeFileSync(ledgerPath, JSON.stringify({ schema: "emanus-nt-romanian-fix-ledger-v3", policy: "context-free-corruptions-and-unambiguous-diacritics-only; context-sensitive inflections remain manual-review", count: ledger.length, fixes: ledger }, null, 2) + "\n", "utf8")
+fs.writeFileSync(ledgerPath, JSON.stringify({ schema: "emanus-nt-romanian-fix-ledger-v4", policy: "context-free-corruptions-and-unambiguous-diacritics-only; Unicode-aware token boundaries; context-sensitive inflections remain manual-review", count: ledger.length, fixes: ledger }, null, 2) + "\n", "utf8")
 console.log(`NT Romanian safe fixes applied: ${ledger.length}.`)
