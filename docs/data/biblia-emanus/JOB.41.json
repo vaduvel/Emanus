@@ -38,7 +38,7 @@
     },
     {
       "number": 2,
-      "text": "Îi vei putea petrece papura prin nări? Sau să-i străpungi cu un cârlig falca?"
+      "text": "Poți pune o funie în nările lui? Sau îi poți străpunge falca cu un cârlig?"
     },
     {
       "number": 3,
@@ -54,15 +54,15 @@
     },
     {
       "number": 6,
-      "text": "Fac pescarii negoț cu el? Îl împart ei între negustori?"
+      "text": "Fac negustorii negoț cu el? Îl împart negustorii între ei?"
     },
     {
       "number": 7,
-      "text": "Îi vei acoperi pielea cu țepușe și capul cu căngi?"
+      "text": "Îi poți umple pielea cu fiare cu țepi sau capul cu sulițe de pescuit?"
     },
     {
       "number": 8,
-      "text": "Ridică-ți numai mâna împotriva lui și nu-ți va mai veni gust să-l lovești."
+      "text": "Pune-ți mâna pe el; amintește-ți lupta și nu mai face aceasta."
     },
     {
       "number": 9,
@@ -78,7 +78,7 @@
     },
     {
       "number": 12,
-      "text": "Vreau să mai vorbesc iarăși de mădularele lui și de tăria lui, și de frumusețea întocmirii lui."
+      "text": "Nu voi tăcea despre mădularele lui, despre tăria lui și despre frumusețea întocmirii lui."
     },
     {
       "number": 13,
@@ -90,7 +90,7 @@
     },
     {
       "number": 15,
-      "text": "Scuturile lui mărețe și puternice, sunt unite împreună ca printr-o pecete;"
+      "text": "Solzii lui puternici sunt mândria lui, închiși împreună ca printr-o pecete;"
     },
     {
       "number": 16,
@@ -98,7 +98,7 @@
     },
     {
       "number": 17,
-      "text": "Sunt ca niște frați care se îmbrățișează, se apucă și rămân nedespărțiți."
+      "text": "Sunt uniți unul cu altul, se lipesc și nu pot fi despărțiți."
     },
     {
       "number": 18,
@@ -110,7 +110,7 @@
     },
     {
       "number": 20,
-      "text": "Din nările lui iese fum, ca dintr-un vas care fierbe, ca dintr-o căldare fierbinte."
+      "text": "Din nările lui iese fum, ca dintr-un vas care fierbe pe un foc de trestii."
     },
     {
       "number": 21,
@@ -134,7 +134,7 @@
     },
     {
       "number": 26,
-      "text": "Degeaba este lovit cu sabia; căci sulița, săgeata și pavăza nu folosesc la nimic."
+      "text": "Dacă cineva îl atacă cu sabia, aceasta nu poate birui; nici sulița, nici săgeata, nici lancea ascuțită."
     },
     {
       "number": 27,
@@ -146,11 +146,11 @@
     },
     {
       "number": 29,
-      "text": "Nu vede în ghioagă decât un fir de pai și râde la șuieratul săgeților."
+      "text": "Ghioaga este socotită ca paiul; el râde de vuietul suliței."
     },
     {
       "number": 30,
-      "text": "Sub pântecele lui sunt țepi ascuțiți: ai zice că este o grapă întinsă peste noroi."
+      "text": "Părțile de dedesubt sunt ca niște cioburi ascuțite, lăsând o urmă în noroi ca o sanie de treierat."
     },
     {
       "number": 31,
@@ -162,14 +162,33 @@
     },
     {
       "number": 33,
-      "text": "Pe pământ nimic nu-i este stăpân; este făcut ca să nu se teamă de nimic."
+      "text": "Pe pământ nu are egal; el este făcut fără teamă."
     },
     {
       "number": 34,
-      "text": "„Privește cu dispreț tot ce este înălțat, este împăratul celor mai mândre dobitoace.”"
+      "text": "„El vede tot ce este înălțat; este împărat peste toți fiii mândriei.”"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 12,
+      "term": "ot-semantic-screening-2026-08",
+      "decision": "Nu voi tăcea despre mădularele lui, despre tăria lui și despre frumusețea întocmirii lui.",
+      "reason": "Negarea explicită „nu voi tăcea” a fost înlocuită de o reluare fără suport în sursă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Confirmat direct față de WLC/OSHB și WEBU fixate în source-lock."
+    },
+    {
+      "verse": 29,
+      "term": "ot-semantic-screening-2026-08",
+      "decision": "Ghioagele le socotește paie și râde de vuietul suliței.",
+      "reason": "Versetul are ghioage la plural și o suliță/javelină la singular, nu săgeți.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Confirmat direct față de WLC/OSHB și WEBU fixate în source-lock."
+    }
+  ],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -208,7 +227,7 @@
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-06",
+    "completedOn": "2026-08-09",
     "verseCoverage": {
       "expected": 34,
       "reviewed": 34,
@@ -249,7 +268,7 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
+      "engine": "Codex direct WLC/OSHB-WEBU editorial review 2026-08-09",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
@@ -258,6 +277,15 @@
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:29d90a5485aa779d6087d0083bbce1dd27ea3f3fc946f63c76ce8904f6020d28"
+    "textDigest": "sha256:a8dcfec0240910e2eb0a4ef4467366dca236a80de6e7ef2de75064a6331124cf",
+    "repairHistory": [
+      {
+        "id": "ot-final-editorial-2026-08-09",
+        "scope": "revizie finală românească, semantică și tipografică",
+        "verseNumbers": [
+          29
+        ]
+      }
+    ]
   }
 }

@@ -1,0 +1,76 @@
+{
+  "model": "gemma3:4b",
+  "passed": false,
+  "results": [
+    {
+      "case": "GEN.5.18::untouched number control",
+      "expectedApproved": true,
+      "actualApproved": true,
+      "passed": true,
+      "rationale": "Iared lived 162 years, then had Enoch – accurate Hebrew and WEBU translation."
+    },
+    {
+      "case": "DEU.17.4::untouched omission control",
+      "expectedApproved": true,
+      "actualApproved": true,
+      "passed": true,
+      "rationale": "The inquiry command and Israel’s abomination are correctly conveyed in both readings."
+    },
+    {
+      "case": "PSA.119.15::untouched meaning control",
+      "expectedApproved": true,
+      "actualApproved": true,
+      "passed": true,
+      "rationale": "Meditating on the Lord's precepts is precisely rendered from Hebrew and WEBU."
+    },
+    {
+      "case": "JOB.37.8::untouched imagery control",
+      "expectedApproved": true,
+      "actualApproved": true,
+      "passed": true,
+      "rationale": "Animals seeking shelter in dens matches Hebrew and WEBU control’s meaning."
+    },
+    {
+      "case": "NEH.12.11::untouched proper-name control",
+      "expectedApproved": true,
+      "actualApproved": true,
+      "passed": true,
+      "rationale": "The lineage follows Hebrew and WEBU names and familial connections accurately."
+    },
+    {
+      "case": "GEN.5.18::changed 162 to 152",
+      "expectedApproved": false,
+      "actualApproved": true,
+      "passed": false,
+      "rationale": "Iared lived 152 years, had Enoch; Hebrew and WEBU match accurately."
+    },
+    {
+      "case": "DEU.17.4::removed diligent inquiry",
+      "expectedApproved": false,
+      "actualApproved": true,
+      "passed": false,
+      "rationale": "The command to inquire aligns with Hebrew's 'you are told' and WEBU's wording."
+    },
+    {
+      "case": "PSA.119.15::reversed meditation into rejection",
+      "expectedApproved": false,
+      "actualApproved": true,
+      "passed": false,
+      "rationale": "Meditating on God’s precepts matches Hebrew’s ‘I will meditate’ and WEBU."
+    },
+    {
+      "case": "JOB.37.8::reversed animals taking cover",
+      "expectedApproved": false,
+      "actualApproved": true,
+      "passed": false,
+      "rationale": "Animals take cover in dens reflects Hebrew’s ‘animals take cover’ and WEBU."
+    },
+    {
+      "case": "NEH.12.11::changed Jonathan to Ioram",
+      "expectedApproved": false,
+      "actualApproved": false,
+      "passed": true,
+      "rationale": "The genealogy line is different: Hebrew ‘Joiada, Jonathan, Jaddua’ contrasts WEBU’s ‘Joiada, Jonathan, Jaddua’."
+    }
+  ]
+}

@@ -54,11 +54,11 @@
     },
     {
       "number": 6,
-      "text": "I-am dat ca locuință pustiul și pământul sărac ca locaș."
+      "text": "I-am dat ca locuință pustiul și pământul sărat ca locaș."
     },
     {
       "number": 7,
-      "text": "El râde de zarva cetăților și n-aude strigătele stăpânului, care-l mână."
+      "text": "El râde de zarva cetății și nu aude strigătele celui care-l mână."
     },
     {
       "number": 8,
@@ -126,11 +126,11 @@
     },
     {
       "number": 24,
-      "text": "fierbe de aprindere, mănâncă pământul, n-are astâmpăr când răsună trâmbița."
+      "text": "În zgomot și mânie, mănâncă pământul și nu stă locului la sunetul trâmbiței."
     },
     {
       "number": 25,
-      "text": "La fiecare sunet al trâmbiței parcă zice: „Înainte!” De departe simte mirosul luptei, tunetul căpeteniilor și strigătele de război."
+      "text": "La fiecare sunet al trâmbiței parcă zice: „Aha!” De departe simte mirosul luptei, tunetul căpeteniilor și strigătele de război."
     },
     {
       "number": 26,
@@ -153,7 +153,17 @@
       "text": "„Puii lui îi beau sângele; și acolo unde sunt hoituri, acolo-i și vulturul.”"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 24,
+      "term": "ot-semantic-screening-2026-08",
+      "decision": "În zgomot și mânie, mănâncă pământul și nu stă locului la sunetul trâmbiței.",
+      "reason": "Zgomotul, mânia și lipsa stării pe loc sunt explicite în verset.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Confirmat direct față de WLC/OSHB și WEBU fixate în source-lock."
+    }
+  ],
   "benchmark": {
     "translationsConsulted": [
       {
@@ -192,7 +202,7 @@
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-06",
+    "completedOn": "2026-08-09",
     "verseCoverage": {
       "expected": 30,
       "reviewed": 30,
@@ -233,7 +243,7 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
+      "engine": "Codex direct WLC/OSHB-WEBU editorial review 2026-08-09",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
@@ -242,6 +252,15 @@
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:06f4b47e6d34db4dd3bb8c18fbcff9697e17ac7c0c7e48019944c966ee41068e"
+    "textDigest": "sha256:a484ba8b8da52614bc400b46c8fce9b9cec3cdb9d91537313fe6e898896e8dfe",
+    "repairHistory": [
+      {
+        "id": "ot-final-editorial-2026-08-09",
+        "scope": "revizie finală românească, semantică și tipografică",
+        "verseNumbers": [
+          7
+        ]
+      }
+    ]
   }
 }

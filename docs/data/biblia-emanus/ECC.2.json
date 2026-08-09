@@ -34,7 +34,7 @@
   "verses": [
     {
       "number": 1,
-      "text": "Am zis inimii mele: „Haide! Vreau să te încerc cu veselie, și gustă fericirea.”"
+      "text": "Am zis inimii mele: „Haide! Vreau să te încerc cu veselie, și gustă fericirea.” Dar iată că și aceasta este o deșertăciune."
     },
     {
       "number": 2,
@@ -78,7 +78,7 @@
     },
     {
       "number": 12,
-      "text": "Atunci mi-am întors privirile spre înțelepciune, prostie și nebunie. – Căci ce va face omul care va veni după împărat? Ceea ce s-a făcut și mai înainte. –"
+      "text": "Atunci mi-am întors privirile spre înțelepciune, prostie și nebunie. – Căci ce va face omul care va veni după împărat? Ceea ce s-a făcut și mai înainte."
     },
     {
       "number": 13,
@@ -94,7 +94,7 @@
     },
     {
       "number": 16,
-      "text": "Căci pomenirea înțeleptului nu este mai veșnică decât a nebunului: chiar în zilele următoare totul este uitat. Și apoi și înțeleptul moare, și nebunul!"
+      "text": "Căci nici înțeleptul, nici nebunul nu vor fi pomeniți pentru totdeauna; în zilele care vin, amândoi vor fi uitați. Și cum moare înțeleptul la fel ca nebunul!"
     },
     {
       "number": 17,
@@ -176,7 +176,7 @@
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-06",
+    "completedOn": "2026-08-09",
     "verseCoverage": {
       "expected": 26,
       "reviewed": 26,
@@ -217,7 +217,7 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
+      "engine": "Codex direct WLC/OSHB-WEBU editorial review 2026-08-09",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
@@ -226,6 +226,22 @@
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:5481c891bec3e9c4d8bafbbd74711b1834f74a82c3f97bc78e179018140f6b31"
+    "textDigest": "sha256:7ea9e15fabc0020ed7bcc379decaa0c8ad79950e8852fe92c351b43cbbeb4964",
+    "repairHistory": [
+      {
+        "id": "ot-canonical-high-confidence-omissions-2026-08-08",
+        "verseNumbers": [
+          1
+        ],
+        "scope": "completarea unei omisiuni confirmate de WEBU și WLC/OSHB"
+      },
+      {
+        "id": "ot-final-editorial-2026-08-09",
+        "scope": "revizie finală românească, semantică și tipografică",
+        "verseNumbers": [
+          16
+        ]
+      }
+    ]
   }
 }

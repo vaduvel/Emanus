@@ -1,0 +1,76 @@
+{
+  "model": "qwen3:8b",
+  "passed": false,
+  "results": [
+    {
+      "case": "GEN.5.18::untouched number control",
+      "expectedApproved": true,
+      "actualApproved": true,
+      "passed": true,
+      "rationale": "Romanian-ul respectă numărul și numele copilului din WEBU."
+    },
+    {
+      "case": "DEU.17.4::untouched omission control",
+      "expectedApproved": true,
+      "actualApproved": true,
+      "passed": true,
+      "rationale": "Romanian-ul reflectă conținutul WEBU cu precizie."
+    },
+    {
+      "case": "PSA.119.15::untouched meaning control",
+      "expectedApproved": true,
+      "actualApproved": true,
+      "passed": true,
+      "rationale": "Romanian-ul păstrează sensul și subiectul din WEBU."
+    },
+    {
+      "case": "JOB.37.8::untouched imagery control",
+      "expectedApproved": true,
+      "actualApproved": true,
+      "passed": true,
+      "rationale": "Romanian-ul corespunde cuvintelor și sensului din WEBU."
+    },
+    {
+      "case": "NEH.12.11::untouched proper-name control",
+      "expectedApproved": true,
+      "actualApproved": true,
+      "passed": true,
+      "rationale": "Romanian-ul respectă numele și relația din WEBU."
+    },
+    {
+      "case": "GEN.5.18::changed 162 to 152",
+      "expectedApproved": false,
+      "actualApproved": true,
+      "passed": false,
+      "rationale": "Romanian respectă numărul și numele, nu există discrepanțe."
+    },
+    {
+      "case": "DEU.17.4::removed diligent inquiry",
+      "expectedApproved": false,
+      "actualApproved": true,
+      "passed": false,
+      "rationale": "Romanian reflectă corect mesajul și nu există erori semnificative."
+    },
+    {
+      "case": "PSA.119.15::reversed meditation into rejection",
+      "expectedApproved": false,
+      "actualApproved": false,
+      "passed": true,
+      "rationale": "Romanian traduce greșit poruncile, nu respectă textul original."
+    },
+    {
+      "case": "JOB.37.8::reversed animals taking cover",
+      "expectedApproved": false,
+      "actualApproved": false,
+      "passed": true,
+      "rationale": "Romanian interpretează greșit fiara, nu corespunde cu textul hebraic."
+    },
+    {
+      "case": "NEH.12.11::changed Jonathan to Ioram",
+      "expectedApproved": false,
+      "actualApproved": true,
+      "passed": false,
+      "rationale": "Romanian menține numele și relația corect, nu există discrepanțe."
+    }
+  ]
+}

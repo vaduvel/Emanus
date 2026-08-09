@@ -225,6 +225,17 @@ def validate_manifest(manifest: dict[str, Any]) -> dict[str, Path]:
         fail("manifest.json: status trebuie să fie 'draft' sau 'published'")
     if not isinstance(manifest.get("public"), bool):
         fail("manifest.json: public trebuie să fie boolean")
+    manifest_status = manifest.get("status")
+    if manifest_status not in ALLOWED_STATUSES:
+        fail("manifest.json: status invalid")
+    publication_block = manifest.get("publicationBlock")
+    if manifest_status == "published":
+        if manifest.get("public") is not True:
+            fail("manifest.json: un corpus published trebuie să fie public")
+        if publication_block is not None:
+            fail("manifest.json: un corpus published nu poate păstra publicationBlock")
+    elif publication_block != "automated-audit-required":
+        fail("manifest.json: un corpus nepublicat trebuie să păstreze poarta automată")
 
     required_files = {
         "sourceLedger": "source-ledger.json",
@@ -1704,6 +1715,42 @@ def main() -> int:
             fail("manifest.json: chaptersPublished nu corespunde statusurilor")
         if manifest.get("public") != (published_count > 0):
             fail("manifest.json: public trebuie să reflecte existența capitolelor publicate")
+
+        all_chapters_published = published_count == len(validated)
+        if manifest.get("status") == "published" and not all_chapters_published:
+            fail("manifest.json: status published cere publicarea tuturor capitolelor canonice")
+        complete_canonical_corpus = (
+            set(source_data["books"]) == set(BOOK_NAMES)
+            and len(chapter_ids) == 1189
+        )
+        if complete_canonical_corpus and all_chapters_published and manifest.get("status") != "published":
+            fail("manifest.json: toate capitolele sunt publicate, dar corpusul nu este published")
+        if manifest.get("status") == "published":
+            if progress.get("booksPlanned") != len(source_data["books"]):
+                fail("manifest.json: booksPlanned nu corespunde corpusului publicat")
+            if progress.get("chaptersPlanned") != len(chapter_ids):
+                fail("manifest.json: chaptersPlanned nu corespunde corpusului publicat")
+
+        ot_book_ids = {
+            book_id
+            for book_id, record in source_data["books"].items()
+            if record.get("testament") == "OT"
+        }
+        canonical_ot_ids = set(list(BOOK_NAMES)[:39])
+        if ot_book_ids == canonical_ot_ids or manifest.get("oldTestament") is not None:
+            ot_validated = [
+                item for item in validated if item[0].split(".", 1)[0] in ot_book_ids
+            ]
+            ot_all_published = all(item[3] == "published" for item in ot_validated)
+            expected_ot_status = {
+                "books": len(ot_book_ids),
+                "chapters": len(ot_validated),
+                "verses": sum(item[1] for item in ot_validated),
+                "status": "published" if ot_all_published else "in_review",
+                "public": ot_all_published,
+            }
+            if manifest.get("oldTestament") != expected_ot_status:
+                fail("manifest.json: starea Vechiului Testament nu corespunde corpusului validat")
 
         nt_books_present = set(source_data["books"]).intersection(NT_CHAPTER_COUNTS)
         if nt_books_present:

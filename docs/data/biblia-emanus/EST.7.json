@@ -54,7 +54,7 @@
     },
     {
       "number": 6,
-      "text": "Estera a răspuns: „Apăsătorul, vrăjmașul este Haman, răul acesta!”"
+      "text": "Estera a răspuns: „Apăsătorul, vrăjmașul este Haman, răul acesta!” Atunci Haman s-a înspăimântat înaintea împăratului și a împărătesei."
     },
     {
       "number": 7,
@@ -62,7 +62,7 @@
     },
     {
       "number": 8,
-      "text": "Când s-a întors împăratul din grădina casei împărătești în odaia ospățului, a văzut pe Haman că se aruncase spre patul pe care era Estera și i-a zis: „Cum, să mai și silești pe împărăteasă, la mine, în casa împărătească?”"
+      "text": "Când s-a întors împăratul din grădina casei împărătești în odaia ospățului, a văzut pe Haman că se aruncase spre patul pe care era Estera și i-a zis: „Cum, să mai și silești pe împărăteasă, la mine, în casa împărătească?” Cuvântul abia ieșise din gura împăratului, când i-au acoperit fața lui Haman."
     },
     {
       "number": 9,
@@ -112,7 +112,7 @@
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-06",
+    "completedOn": "2026-08-09",
     "verseCoverage": {
       "expected": 10,
       "reviewed": 10,
@@ -153,7 +153,7 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
+      "engine": "Codex direct WLC/OSHB-WEBU editorial review 2026-08-09",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
@@ -162,6 +162,22 @@
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:b5700f46da037b013c8de659c96adb87a047abadc937099a95b4648db55aa9b9"
+    "textDigest": "sha256:c2936ff8393ad741c0219d394634b7d2d37d9d60e53db2a0c24defc1994bed48",
+    "repairHistory": [
+      {
+        "id": "ot-canonical-high-confidence-omissions-2026-08-08",
+        "verseNumbers": [
+          6
+        ],
+        "scope": "completarea unei omisiuni confirmate de WEBU și WLC/OSHB"
+      },
+      {
+        "id": "ot-historical-exile-wlc-webu-audit-2026-08-08",
+        "scope": "corecții confirmate direct în WLC/OSHB și WEBU fixate",
+        "verseNumbers": [
+          8
+        ]
+      }
+    ]
   }
 }

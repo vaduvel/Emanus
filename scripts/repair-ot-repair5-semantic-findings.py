@@ -30,7 +30,7 @@ REPLACEMENTS = {
     "ISA.32:19": "Chiar dacă grindina va doborî pădurea, iar cetatea va fi făcută una cu pământul.",
     "JER.52:22": "Deasupra lui era un capitel de bronz, înalt de cinci coți. Împrejurul capitelului erau o rețea și rodii, toate de bronz. Al doilea stâlp avea aceeași înfățișare, cu rodii.",
     "PSA.13:4": "ca să nu spună vrăjmașul meu: «L-am biruit!» și potrivnicii mei să nu se bucure când mă clatin.",
-    "2KI.9:10": "Câinii o vor mânca pe Izabela pe ogorul din Izreel și nu va fi nimeni care s-o îngroape.» Apoi tânărul a deschis ușa și a fugit.",
+    "2KI.9:10": "„Câinii o vor mânca pe Izabela pe ogorul din Izreel și nu va fi nimeni care s-o îngroape.” Apoi tânărul a deschis ușa și a fugit.",
     "EZK.18:25": "Dar voi spuneți: «Calea Stăpânului nu este dreaptă.» Ascultă, casă a lui Israel! Oare calea Mea nu este dreaptă? Nu sunt mai degrabă căile voastre nedrepte?",
     "1KI.2:38": "Șimei i-a spus împăratului: «Cuvântul este bun. Slujitorul tău va face așa cum a spus domnul meu, împăratul.» Șimei a locuit multe zile la Ierusalim.",
     "PSA.18:3": "Îl chem pe DOMNUL, care este vrednic de laudă, și sunt izbăvit de vrăjmașii mei.",
@@ -85,14 +85,24 @@ def main() -> None:
         doc = json.loads(path.read_text(encoding="utf-8"))
         verses = doc.get("verses", [])
         by_number = {int(v.get("number", 0)): v for v in verses}
-        notes = [n for n in doc.get("editorialNotes", []) if n.get("term") != "repair5-semantic-finding"]
+        notes = list(doc.get("editorialNotes", []))
+        chapter_changed = False
         for number, replacement in sorted(replacements.items()):
             ref = f"{book}.{chapter}:{number}"
             verse = by_number.get(number)
             if verse is None:
                 raise SystemExit(f"Missing target verse: {ref}")
             old = str(verse.get("text", ""))
+            if old == replacement:
+                # Keep the original audit note and its historical digest. A
+                # rerun must not recast the repaired text as the old text.
+                continue
             verse["text"] = replacement
+            notes = [
+                note
+                for note in notes
+                if not (note.get("term") == "repair5-semantic-finding" and note.get("verse") == number)
+            ]
             notes.append({
                 "verse": number,
                 "term": "repair5-semantic-finding",
@@ -107,6 +117,9 @@ def main() -> None:
                 "repairedText": replacement,
                 "reason": REASONS[ref],
             })
+            chapter_changed = True
+        if not chapter_changed:
+            continue
         doc["editorialNotes"] = notes
         audit = doc.setdefault("audit", {})
         audit["textDigest"] = digest(verses)
@@ -115,12 +128,13 @@ def main() -> None:
             passes.append("ot-repair5-semantic-findings-1")
         path.write_text(json.dumps(doc, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
-    payload = {
-        "repairPass": "ot-repair5-semantic-findings-1",
-        "count": len(changed),
-        "changes": changed,
-    }
-    OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    if changed:
+        payload = {
+            "repairPass": "ot-repair5-semantic-findings-1",
+            "count": len(changed),
+            "changes": changed,
+        }
+        OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"count": len(changed), "references": [x["reference"] for x in changed]}, ensure_ascii=False, indent=2))
 
 

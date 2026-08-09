@@ -46,7 +46,7 @@
     },
     {
       "number": 4,
-      "text": "Mă culc și zic: „Când mă voi scula? Când se va sfârși noaptea?”"
+      "text": "Mă culc și zic: „Când mă voi scula? Când se va sfârși noaptea?” Și mă satur de frământări până în revărsatul zorilor."
     },
     {
       "number": 5,
@@ -156,7 +156,7 @@
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-06",
+    "completedOn": "2026-08-09",
     "verseCoverage": {
       "expected": 21,
       "reviewed": 21,
@@ -197,7 +197,7 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
+      "engine": "Codex direct WLC/OSHB-WEBU editorial review 2026-08-09",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
@@ -206,6 +206,15 @@
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:c30ab954d2e16146d9cba77ae64f5e5e330ba1acdb5f7b7d5454815fa2579311"
+    "textDigest": "sha256:5324cfe065fb41148f57cb73dc58a71193168e87e8a3992053456a765323f879",
+    "repairHistory": [
+      {
+        "id": "ot-canonical-high-confidence-omissions-2026-08-08",
+        "verseNumbers": [
+          4
+        ],
+        "scope": "completarea unei omisiuni confirmate de WEBU și WLC/OSHB"
+      }
+    ]
   }
 }

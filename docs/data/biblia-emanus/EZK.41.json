@@ -66,7 +66,7 @@
     },
     {
       "number": 9,
-      "text": "Zidul de afară al odăilor lăturalnice avea o grosime de cinci coți."
+      "text": "Zidul de afară al odăilor lăturalnice avea o grosime de cinci coți. Locul rămas era al odăilor lăturalnice care țineau de Casă."
     },
     {
       "number": 10,
@@ -90,7 +90,7 @@
     },
     {
       "number": 15,
-      "text": "A măsurat lungimea clădirii dinaintea locului gol, pe partea dinapoi a Casei, și pridvoarele ei de fiecare parte: erau o sută de coți."
+      "text": "A măsurat lungimea clădirii dinaintea locului gol, pe partea dinapoi a Casei, și pridvoarele ei de fiecare parte: erau o sută de coți. A măsurat o sută de coți din templul interior și pridvoarele curții."
     },
     {
       "number": 16,
@@ -118,7 +118,7 @@
     },
     {
       "number": 22,
-      "text": "ca un altar de lemn, înalt de trei coți, lung de doi coți și lat de doi coți. Colțurile, temelia și pereții lui erau de lemn. Omul acela mi-a zis: „Aceasta este masa care este înaintea DOMNULUI!”"
+      "text": "ca un altar de lemn, înalt de trei coți și lung de doi coți. Colțurile, temelia și pereții lui erau de lemn. Omul acela mi-a zis: „Aceasta este masa care este înaintea DOMNULUI!”"
     },
     {
       "number": 23,
@@ -176,7 +176,7 @@
   },
   "audit": {
     "schemaVersion": 1,
-    "completedOn": "2026-08-06",
+    "completedOn": "2026-08-09",
     "verseCoverage": {
       "expected": 26,
       "reviewed": 26,
@@ -217,7 +217,7 @@
     "engineVersion": "2.0.0",
     "reviewAgent": {
       "type": "ai",
-      "engine": "GPT-5.6 Thinking — Biblia Emanus OT final audit",
+      "engine": "Codex direct WLC/OSHB-WEBU editorial review 2026-08-09",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "c1b7658f3490ef55b7d61ebfb2cdd8d2c36048ef2b5593e985c5bd04fb20879b",
@@ -226,6 +226,23 @@
       "externalBenchmarks": 1,
       "result": "approved"
     },
-    "textDigest": "sha256:5e50e79e0972c1354fa1e8143f1526f14f54d38b16598129e63c9e70588435a3"
+    "textDigest": "sha256:b548bad907c876564e4e09138408c4bcafd0f6d41c33a389b4905c0aedd470ce",
+    "repairHistory": [
+      {
+        "id": "ot-canonical-high-confidence-omissions-2026-08-08",
+        "verseNumbers": [
+          15
+        ],
+        "scope": "completarea unei omisiuni confirmate de WEBU și WLC/OSHB"
+      },
+      {
+        "id": "ot-major-prophets-wlc-webu-direct-audit-2026-08-08",
+        "scope": "corecții certe confirmate direct în WLC și WEBU locale fixate",
+        "verseNumbers": [
+          9,
+          22
+        ]
+      }
+    ]
   }
 }
