@@ -1,5 +1,6 @@
 import { assertCompleteOverlay, type ExplainedBookOverlay } from "../explainedOverlay.js"
 import { reviewCantarea01_02_04_05_08Explanations } from "./cantarea01_02_04_05_08ExplanationReview.js"
+import { restoreCantarea1FinalPoonenFidelity } from "./cantarea1FinalPoonenFidelityReview.js"
 import { CANTAREA_DEEPENED } from "./cantareaDeepened.js"
 import { CANTAREA_CANTARILOR_EXPLAINED as POONEN_BASE } from "./cantareaCantarilorOverlay.js"
 import { restoreCantareaPoonenFidelity } from "./cantareaPoonenFidelityReview.js"
@@ -24,8 +25,10 @@ const CANTAREA_EDITORIAL_BASE: ExplainedBookOverlay = {
   chapters,
 }
 
-const CANTAREA_EDITORIAL_REVIEWED = restoreCantareaPoonenFidelity(
-  reviewCantarea01_02_04_05_08Explanations(CANTAREA_EDITORIAL_BASE),
+const CANTAREA_EDITORIAL_REVIEWED = restoreCantarea1FinalPoonenFidelity(
+  restoreCantareaPoonenFidelity(
+    reviewCantarea01_02_04_05_08Explanations(CANTAREA_EDITORIAL_BASE),
+  ),
 )
 
 export const CANTAREA_EDITORIAL_EXPLAINED = assertCompleteOverlay(CANTAREA_EDITORIAL_REVIEWED, 8)
