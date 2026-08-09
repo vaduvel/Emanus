@@ -9,8 +9,8 @@ const ledgerPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-roman
 
 // Automatic Romanian edits are intentionally limited to context-free corruptions
 // and forms whose diacritized spelling is unambiguous in reader-facing Romanian.
-// Forms such as credinta -> credință/credința, viata -> viață/viața,
-// curata -> curată/curăță or arata -> arată/arăta remain audit-only.
+// Context-sensitive forms (for example simpla -> simpla/simplă, credinta -> credință/credința,
+// curata -> curată/curăță or arata -> arată/arăta) remain audit-only.
 const REPLACEMENTS = new Map([
   ["mangaie-re", "mângâiere"],
   ["mangaere", "mângâiere"],
@@ -74,7 +74,6 @@ const REPLACEMENTS = new Map([
   ["raspicat", "răspicat"],
   ["capatul", "capătul"],
   ["aceeasi", "aceeași"],
-  ["simpla", "simplă"],
   ["inalte", "înalte"],
   ["decat", "decât"],
   ["incurcatura", "încurcătură"],
@@ -138,5 +137,5 @@ for (const file of fs.readdirSync(dir).filter((name) => name.endsWith(".json")).
   }
   if (ledger.length !== beforeCount) fs.writeFileSync(full, JSON.stringify(book, null, 2) + "\n", "utf8")
 }
-fs.writeFileSync(ledgerPath, JSON.stringify({ schema: "emanus-nt-romanian-fix-ledger-v2", policy: "context-free-corruptions-and-unambiguous-diacritics-only", count: ledger.length, fixes: ledger }, null, 2) + "\n", "utf8")
+fs.writeFileSync(ledgerPath, JSON.stringify({ schema: "emanus-nt-romanian-fix-ledger-v3", policy: "context-free-corruptions-and-unambiguous-diacritics-only; context-sensitive inflections remain manual-review", count: ledger.length, fixes: ledger }, null, 2) + "\n", "utf8")
 console.log(`NT Romanian safe fixes applied: ${ledger.length}.`)
