@@ -4,75 +4,68 @@ const transcript = ".research/poonen-through-the-bible-OT/transcripts/jeremiah-l
 
 const IEREMIA_23: ExplainedOverlayChapter = {
   number: 23,
-  title: "Ieremia 23 — Odrasla dreaptă și profeții care spun «DOMNUL a vorbit» când El nu a vorbit",
+  title: "Ieremia 23 — Păstori răi, Odrasla dreaptă și profeți care vorbesc fără să fi auzit",
   summary:
-    "Capitolul începe prin condamnarea păstorilor care risipesc turma și promisiunea unei Odrasle drepte din David, numită «DOMNUL, Dreptatea noastră». Apoi Ieremia denunță profeții falși care nu au stat în sfatul DOMNULUI, își povestesc visele și pun formula divină peste cuvinte născute din propria inimă. Zac Poonen recomandă acest capitol oricui predică și insistă că este periculos să spui «așa vorbește DOMNUL» când nu ai auzit de la Dumnezeu.",
+    "Capitolul condamnă păstorii care risipesc turma, promite Odrasla dreaptă din David — Regele numit «DOMNUL, Dreptatea noastră» — și apoi atacă profeția falsă: oameni care spun «DOMNUL a zis» fără să fi stat în sfatul Lui. Zac Poonen insistă exact asupra acestei diferențe dintre omul care a auzit de la Dumnezeu și omul care vorbește din propria minte.",
   units: [
     {
       from: 1,
       to: 8,
-      heading: "Păstorii risipesc turma, dar Dumnezeu promite Odrasla dreaptă",
+      heading: "Păstorii răi nu anulează promisiunea Odraslei drepte",
       teaching:
-        "Primul «vai» este pentru păstorii care nimicesc și risipesc oile. Dumnezeu îi face răspunzători tocmai pentru că turma le fusese încredințată. Conducerea spirituală nu este privilegiul de a folosi oamenii, ci răspunderea de a-i păzi și hrăni.\n\nÎn contrast cu acești păstori apare promisiunea unei Odrasle drepte din David. El va domni cu înțelepciune și va face judecată și dreptate. Numele proclamat este `YHWH Tsidqenu` — «DOMNUL, Dreptatea noastră».\n\nPoonen citește vv.5–6 direct mesianic despre Isus și leagă titlul de justificarea Noului Legământ. Această lectură se află în linia mai largă a Noului Testament, unde Hristos devine pentru credincios dreptate de la Dumnezeu. Nu înseamnă că formula ebraică este o definiție completă a doctrinei pauline, dar direcția cristologică a predicii lui Poonen este legitimă și trebuie păstrată.\n\nPromisiunea este cu atât mai puternică fiindcă vine după eșecul păstorilor. Speranța finală a turmei nu este găsirea unui lider omenesc perfect, ci Păstorul-Rege drept pe care Dumnezeu Îl ridică.",
+        "DOMNUL spune «vai» păstorilor care nimicesc și împrăștie oile. Autoritatea religioasă nu protejează liderul de judecată atunci când turma este vătămată prin neglijență, exploatare sau falsitate.\n\nDar judecata păstorilor este urmată de promisiunea unei Odrasle drepte din David. El va domni ca Rege și va face judecată și dreptate. Numele Lui este «DOMNUL, Dreptatea noastră». Pentru lectura creștină, aceasta se împlinește în Hristos: dreptatea poporului lui Dumnezeu nu este produsul reputației liderilor, ci este legată de Regele drept.\n\nPoonen vede aici venirea lui Isus Hristos și justificarea: El devine dreptatea noastră. Accentul lui trebuie păstrat. Tocmai într-un capitol despre păstori compromiși, Dumnezeu mută speranța de la performanța omului la Odrasla pe care El o ridică.",
       source: {
         kind: "poonen",
         transcript,
-        anchor: "chapter twenty-three ... coming of Jesus Christ ... righteous branch ... the Lord our righteousness ... justification",
+        anchor:
+          "Jeremiah 23 ... coming of Jesus Christ ... righteous branch ... the Lord our righteousness ... justification",
       },
       explanationKind: "exposition",
-      words: [
-        {
-          original: "יְהוָה צִדְקֵנוּ",
-          transliteration: "YHWH Tsidqenu",
-          language: "ebraica",
-          meaning: "DOMNUL este dreptatea noastră / DOMNUL, Dreptatea noastră",
-          verseRef: "Ieremia 23:6",
-          lexicalSource: "WLC-OSHB",
-        },
-      ],
       forYourHeart:
-        "Când liderii dezamăgesc, nu coborî standardul dreptății ca să-i protejezi. Ieremia mută speranța spre Regele drept, nu spre cosmetizarea păstorului rău.",
+        "Nu construi credința ta pe presupunerea că liderii nu vor eșua niciodată. Dumnezeu a pus dreptatea ta în Hristos, nu în reputația unui om.",
     },
     {
       from: 9,
       to: 22,
-      heading: "Problema profetului fals începe înainte de cuvinte: nu a stat în sfatul DOMNULUI",
+      heading: "Profetul adevărat stă în sfatul DOMNULUI ca să audă",
       teaching:
-        "Ieremia este zdrobit de starea profeților. Adulterul, minciuna și întărirea mâinilor celor răi merg alături de mesajele religioase. Dumnezeu spune despre profeții Ierusalimului că fac poporul să nu se întoarcă de la răutate.\n\nVersetul 18 pune întrebarea decisivă: cine a stat în sfatul DOMNULUI ca să vadă și să audă Cuvântul Lui? Poonen spune că aceasta este problema fundamentală a profetului fals: dorește onoarea de a vorbi, dar nu petrece timp ascultând.\n\nVersetul 22 oferă și testul rodului: dacă ar fi stat în sfatul Meu, ar fi vestit cuvintele Mele și ar fi întors poporul de la calea rea. Mesajul autentic nu este măsurat numai prin senzația profetului că «a primit ceva», ci și prin fidelitatea față de caracterul și cuvântul lui Dumnezeu.\n\nAceasta nu înseamnă că orice predică fără convertiri imediate este falsă; Ieremia însuși a predicat mult unui popor care nu s-a întors. Testul este dacă mesajul cheamă onest la adevăr și pocăință, nu dacă flatează răul pentru a păstra audiența.",
+        "Ieremia tremură în fața folosirii false a Numelui lui Dumnezeu. Profeții își folosesc poziția ca să încurajeze răul și spun oamenilor care disprețuiesc Cuvântul: «veți avea pace».\n\nVersetul 18 pune întrebarea decisivă: «cine a stat în sfatul DOMNULUI ca să vadă și să audă Cuvântul Lui?» Poonen accentuează că profetul fals vrea să vorbească, dar nu stă înaintea lui Dumnezeu ca să asculte. Dacă ar fi stat în sfatul Lui, ar fi întors poporul de la căile rele.\n\nAdevărata slujire profetică nu începe cu nevoia de a avea ceva nou de spus. Începe cu ascultarea. Omul trebuie să fie mai interesat de ceea ce Dumnezeu spune decât de propria lui platformă, originalitate sau reacția audienței.\n\nAcest criteriu nu înseamnă că orice predicator care spune lucruri dure este automat profet adevărat. Ieremia leagă profeția adevărată de Cuvântul lui Dumnezeu și de rodul întoarcerii de la rău.",
       source: {
         kind: "poonen",
         transcript,
-        anchor: "chapter twenty-three ... false prophets ... don't stand in the counsel of the Lord to listen",
+        anchor:
+          "Jeremiah 23 ... false prophets ... don't stand in the counsel of the Lord to listen ... if they had stood in My counsel they would turn people from evil",
       },
       explanationKind: "exposition",
       forYourHeart:
-        "Înainte să întrebi dacă ai ceva puternic de spus, întreabă dacă ai stat suficient de mult înaintea lui Dumnezeu ca să fii tu însuți judecat de ceea ce urmează să spui.",
+        "Înainte să vrei să fii auzit de oameni, învață să stai înaintea lui Dumnezeu până când ai auzit tu.",
     },
     {
       from: 23,
       to: 32,
-      heading: "«Am avut un vis» nu este dovadă că Dumnezeu a vorbit",
+      heading: "Cuvântul adevărat este foc și ciocan; visul nu devine revelație doar fiindcă este numit astfel",
       teaching:
-        "Profeții spun: «am visat, am visat!» și își vestesc visele în Numele lui Dumnezeu. Ieremia nu declară că Dumnezeu nu poate vorbi niciodată prin vis; chiar Scriptura conține vise date de Dumnezeu. Condamnarea este împotriva oamenilor care folosesc visul propriu pentru a legitima minciuna și pentru a face poporul să uite Numele lui Dumnezeu.\n\nPoonen este foarte direct: nu te lăsa impresionat de cineva doar pentru că spune că a avut un vis. El numește periculoasă formula «așa vorbește DOMNUL» când cuvântul vine de fapt din mintea omului.\n\nVersetul 28 oferă o comparație: ce are paiul cu grâul? Iar v.29 spune că adevăratul Cuvânt al lui Dumnezeu este ca focul și ca ciocanul care sfărâmă stânca. Poonen întreabă de ce multe mesaje care pretind originea divină nu au caracterul Cuvântului lui Dumnezeu: pentru că nu au venit de la El.\n\nNu transformăm însă «foc și ciocan» în cerința ca fiecare predică autentică să fie zgomotoasă, agresivă sau emoțional devastatoare. Imaginea vorbește despre eficacitatea și greutatea Cuvântului lui Dumnezeu, nu despre volumul vocii predicatorului.\n\nPentru Emanus regula de proveniență este direct relevantă: o intuiție editorială, o formulare de model AI sau o aplicație pastorală nu trebuie etichetată Poonen ori «Dumnezeu spune» dacă sursa nu o susține. Precizia sursei este și o disciplină spirituală, nu doar tehnică.",
+        "Profeții spun «am avut un vis» și își împrumută cuvintele unii de la alții, apoi pretind autoritate divină. Ieremia nu spune că orice vis este imposibil, ci condamnă folosirea lui pentru a pune în gura lui Dumnezeu ceea ce El nu a spus.\n\nPoonen se oprește la v.29: «Cuvântul Meu nu este ca un foc... și ca un ciocan care sfărâmă stânca?» El întreabă de ce atâtea cuvinte atribuite lui Dumnezeu nu ard și nu zdrobesc rezistența inimii: fiindcă nu au venit de la Domnul.\n\nPuterea spirituală nu se fabrică prin tonul vocii și nici prin formula «Dumnezeu mi-a spus». Mesajul trebuie să vină din ascultarea reală a Cuvântului.\n\nDe aceea este periculos să folosești Numele lui Dumnezeu ca amplificator pentru impresii personale. Mai bine spui cu modestie «cred că...» decât să spui «DOMNUL a zis» când nu ai primit un cuvânt de la El.",
       source: {
         kind: "poonen",
         transcript,
-        anchor: "chapter twenty-three ... I had a dream ... falsehood ... thus said the Lord but the Lord hasn't spoken ... word like a fire and like a hammer",
+        anchor:
+          "Jeremiah 23 ... I had a dream ... thus said the Lord but the Lord hasn't spoken ... my word is like a fire and like a hammer ... why isn't your word going like a fire / hammer ... because it never came from the Lord",
       },
       explanationKind: "exposition",
       forYourHeart:
-        "Mai bine spui cinstit «cred că» decât să pui autoritatea lui Dumnezeu peste o impresie de care tu însuți nu ești sigur.",
+        "Nu pune Numele lui Dumnezeu peste propria părere ca s-o faci mai greu de contestat.",
     },
     {
       from: 33,
       to: 40,
-      heading: "Când formula religioasă devine joc, Dumnezeu judecă și limbajul",
+      heading: "«Povara DOMNULUI» nu trebuie transformată în slogan religios",
       teaching:
-        "Finalul capitolului tratează expresia «povara DOMNULUI». Poporul și profeții o folosesc într-un mod pe care Dumnezeu îl condamnă, iar Ieremia introduce un joc de cuvinte între «povară/oracol» și povara în care oamenii înșiși ajung.\n\nMesajul este în continuitate cu tot capitolul: limbajul sacru nu protejează o vorbire falsă. Poți folosi formule biblice și totuși să iei Numele lui Dumnezeu în deșert dacă le folosești pentru a da greutate propriilor cuvinte.\n\nAceasta cere sobrietate în orice slujire de predicare sau profeție: autoritatea nu vine din formula rostită, ci din fidelitatea față de adevărul pe care Dumnezeu l-a dat.",
+        "Finalul capitolului arată cât de grav tratează Dumnezeu folosirea mecanică a limbajului profetic. Oamenii transformaseră expresia «povara DOMNULUI» într-o formulă repetată, iar Dumnezeu le cere să vorbească simplu despre ce a răspuns și ce a spus El.\n\nCând limbajul sfânt devine tic, el poate ascunde faptul că omul nu mai ascultă. Termenii religioși nu compensează lipsa adevărului.\n\nAceasta încheie natural capitolul: problema nu este numai profetul fals evident, ci orice om care folosește vocabularul lui Dumnezeu fără realitatea ascultării de Dumnezeu.",
       source: {
         kind: "canonical-exegesis",
         sources: ["Ieremia 23:33-40"],
-        note: "Finalul dezvoltă judecata asupra folosirii abuzive a limbajului profetic.",
+        note: "Finalul condamnă folosirea abuzivă și repetitivă a formulei «povara DOMNULUI».",
       },
       explanationKind: "exposition",
     },
@@ -81,60 +74,50 @@ const IEREMIA_23: ExplainedOverlayChapter = {
 
 const IEREMIA_29: ExplainedOverlayChapter = {
   number: 29,
-  title: "Ieremia 29 — Caută binele cetății în exil și nu transforma 29:11 într-un slogan de succes rapid",
+  title: "Ieremia 29 — Șaptezeci de ani în Babilon, apoi căutarea din toată inima",
   summary:
-    "Ieremia scrie exilaților din Babilon că exilul nu se va termina imediat: trebuie să construiască locuințe, să planteze, să întemeieze familii și să caute `shalom`-ul cetății în care Dumnezeu i-a dus, în timp ce resping profeții care promit o ieșire rapidă. După șaptezeci de ani, Dumnezeu promite restaurare, viitor și speranță, iar poporul Îl va găsi când Îl caută din toată inima. Zac Poonen pune accentul pe această căutare totală și pe ieșirea spirituală din «Babilon» spre voia deplină a lui Dumnezeu.",
+    "Ieremia le scrie exilaților să nu creadă profeții care promit o întoarcere imediată. Cei șaptezeci de ani trebuie împliniți. În mijlocul disciplinei, Dumnezeu spune însă că Se va lăsa găsit când poporul Îl va căuta din toată inima. Zac Poonen folosește această mișcare din Babilon spre Ierusalim ca imagine pentru ieșirea din creștinismul compromis spre voia deplină a lui Dumnezeu și biserica adevărată.",
   units: [
     {
       from: 1,
       to: 9,
-      heading: "Mesajul adevărat nu este «ieși imediat din Babilon», ci «trăiește credincios acolo unde ești»",
+      heading: "Nu lăsa profeția falsă să scurteze disciplina pe care Dumnezeu ți-a spus s-o primești",
       teaching:
-        "Scrisoarea lui Ieremia îi surprinde pe exilați. Ei trebuie să construiască case, să planteze grădini, să se căsătorească, să aibă copii și să se înmulțească. Exilul nu este o oprire de câteva săptămâni.\n\nMai mult, trebuie să caute `shalom`-ul cetății în care Dumnezeu i-a dus și să se roage pentru ea, deoarece binele lor este legat de binele cetății. A trăi ca popor al lui Dumnezeu în Babilon nu înseamnă să urască orice lucru din societatea în care se află. Pot refuza idolatria și totuși lucra pentru binele vecinilor lor.\n\nIeremia îi avertizează în același timp asupra profeților și visătorilor care promit altceva. Adevărul poate fi mai puțin spectaculos decât mesajul «Dumnezeu vă scoate acum», dar tocmai acceptarea perioadei reale este forma ascultării.\n\nAceasta pune v.11 în context înainte să fie citat. Planul de speranță nu este promisiunea că Dumnezeu va elimina imediat împrejurarea grea; destinatarii tocmai au aflat că trebuie să-și construiască viața în ea pentru o generație.",
+        "Ieremia le spune exilaților să construiască, să planteze, să se căsătorească și să caute binele cetății în care au fost duși. Exilul nu se termină fiindcă un profet oferă un mesaj mai plăcut.\n\nProfeții falși din Babilon promiteau ceea ce oamenii voiau să audă. Dumnezeu spune să nu-i asculte. O promisiune religioasă nu devine adevărată doar fiindcă reduce disconfortul.\n\nAceastă parte este importantă pentru lectura spirituală a Babilonului: ieșirea nu este produsul nerăbdării omului. Dumnezeu are timpul Lui, iar credinciosul trebuie să fie ascultător chiar într-un loc din care dorește să plece.",
       source: {
         kind: "canonical-exegesis",
-        sources: ["Ieremia 29:1-9"],
-        note: "Contextul imediat este viața credincioasă în exil și respingerea profețiilor de întoarcere rapidă.",
+        sources: ["Ieremia 29:1-9", "Ieremia 28:1-17"],
+        note: "Contextul exilului și al profeților falși pregătește promisiunea căutării din toată inima.",
       },
       explanationKind: "exposition",
-      forYourHeart:
-        "Uneori credința nu înseamnă că vei ieși mâine, ci că vei construi, vei planta și vei face binele fără să te închini Babilonului.",
     },
     {
       from: 10,
       to: 14,
-      heading: "«Gânduri de pace» după șaptezeci de ani — speranță reală, nu prosperitate instantanee",
+      heading: "«Mă veți găsi când Mă veți căuta din toată inima»",
       teaching:
-        "Versetul 10 fixează timpul: după șaptezeci de ani pentru Babilon, Dumnezeu Își va cerceta poporul și îl va aduce înapoi. Abia apoi vine celebrul v.11: Dumnezeu cunoaște planurile/gândurile pe care le are pentru ei, gânduri de `shalom`, nu de rău, ca să le dea viitor și speranță.\n\n`Shalom` este mai bogat decât ideea modernă de succes financiar: pace, bunăstare, întregire, stare bună. În context, el coexistă cu o lungă perioadă de exil și disciplină. De aceea versetul nu poate fi folosit onest ca garanție că fiecare afacere, relație sau proiect al unui credincios se va termina rapid exact cum dorește el.\n\nDar corectarea abuzului nu cere slăbirea promisiunii. Dumnezeu chiar spune că judecata nu este ultimul Lui scop pentru popor. Există un viitor pe care exilul nu-l poate anula.\n\nPoonen se oprește în special la vv.12–13: «Mă veți chema... Mă veți căuta și Mă veți găsi când Mă veți căuta din toată inima». Pentru el, adevărata ieșire din Babilon începe cu omul care s-a săturat de compromisul lui și Îl caută pe Dumnezeu fără rezervă.\n\nAceastă aplicație spirituală a «Babilonului» este a lui Poonen; sensul istoric este exilul babilonian real. Mesajul comun este însă clar: restaurarea nu este o scurtătură religioasă, ci o întoarcere a inimii spre Dumnezeu.",
+        "După șaptezeci de ani, Dumnezeu promite că va cerceta poporul și îl va aduce înapoi. Versetele cunoscute despre «gânduri de pace» nu sunt o promisiune izolată de succes personal; sunt rostite unor exilați aflați într-o disciplină lungă.\n\nCentrul spiritual este v.13: «Mă veți căuta și Mă veți găsi când Mă veți căuta din toată inima». Poonen aplică aceasta foarte direct: omul care s-a săturat de viața babiloniană trebuie să-L caute pe Dumnezeu fără rezervă. Dacă nu-L caută din toată inima, nu-L va găsi.\n\nEl vede mișcarea Babilon–Ierusalim ca mișcare din creștinismul corupt și compromis spre voia deplină a lui Dumnezeu și spre biserica adevărată. Aceasta este învățătura sursei și rămâne direct în explicație.\n\nIeșirea reală din Babilon nu începe cu schimbarea etichetei unei organizații, ci cu omul care Îl caută pe Dumnezeu din toată inima și este dispus să urmeze lumina primită.",
       source: {
         kind: "poonen",
         transcript,
-        anchor: "chapter twenty-nine ... seventy years in Babylon ... seek me ... find me when you seek me with all your heart",
+        anchor:
+          "Jeremiah 29 ... seventy years in Babylon ... movement from Babylon to Jerusalem to the true church ... when you're sick and tired of that Babylonian life, seek Me with all your heart and then you'll find Me. If you don't seek Me wholeheartedly, you will not find Me",
       },
       explanationKind: "exposition",
-      words: [
-        {
-          original: "שָׁלוֹם",
-          transliteration: "shalom",
-          language: "ebraica",
-          meaning: "pace, bunăstare, întregire, stare bună; în Ieremia 29:11 descrie scopul restaurator al lui Dumnezeu după perioada de exil",
-          verseRef: "Ieremia 29:11",
-          lexicalSource: "WLC-OSHB",
-        },
-      ],
       forYourHeart:
-        "Speranța biblică nu înseamnă că nu vei avea șaptezeci de ani simbolici de așteptare; înseamnă că exilul nu poate anula scopul final al lui Dumnezeu.",
+        "Nu schimba doar decorul religios. Caută-L pe Dumnezeu din toată inima și urmează-L acolo unde te conduce.",
     },
     {
       from: 15,
       to: 32,
-      heading: "Profeții falși din Babilon sunt numiți, nu protejați de ambiguitate",
+      heading: "Profeții falși din exil sunt numiți, nu protejați prin ambiguitate",
       teaching:
-        "Ieremia revine la profeții falși dintre exilați și îi numește pe Ahab, Zedechia și Șemaia. Poonen observă că profetul nu se teme să-i numească atunci când mesajele lor concrete fac rău poporului.\n\nAceasta nu este licență pentru campanii moderne de defăimare sau pentru etichetarea oricărui dezacord drept «profet fals». În text există afirmații identificabile, opoziție față de cuvântul dat prin Ieremia și consecințe concrete. Numele apar în cadrul unei responsabilități profetice, nu al unei vendete personale.\n\nPrincipiul sănătos este că protejarea comunității poate cere uneori identificarea clară a unei învățături și a sursei ei; dar acuzația trebuie susținută prin fapte și text, nu prin zvon sau antipatie.",
+        "Ieremia numește profeții care mințeau în Numele lui Dumnezeu. Faptul că oamenii sunt deja în exil nu înseamnă că orice voce religioasă de acolo este sigură.\n\nPoonen observă direct că Ieremia îi numește pe profeții falși. Un slujitor adevărat nu trebuie să transforme claritatea morală în ambiguitate doar pentru a evita conflictul.\n\nTotuși numirea unui fals profet nu este licență pentru calomnie sau pentru a eticheta drept «fals» pe oricine nu este de acord cu noi. Ieremia are un cuvânt verificabil al lui Dumnezeu și avertizează împotriva unor mesaje concrete care contraziceau ce spusese Domnul despre durata exilului.\n\nDiscernământul are nevoie de conținut, nu doar de etichete.",
       source: {
         kind: "poonen",
         transcript,
-        anchor: "in Babylon ... false prophets ... verse twenty-one and verse thirty-one ... he names them ... not afraid to name the false prophets",
+        anchor:
+          "Jeremiah 29 ... even in Babylon be careful about the false prophets ... verse 21 and verse 31 ... false prophets ... he names them",
       },
       explanationKind: "exposition",
     },
@@ -143,20 +126,21 @@ const IEREMIA_29: ExplainedOverlayChapter = {
 
 const IEREMIA_31: ExplainedOverlayChapter = {
   number: 31,
-  title: "Ieremia 31 — Iubire veșnică, restaurare și Noul Legământ scris în inimă",
+  title: "Ieremia 31 — Iubire veșnică, restaurare și Legământul Nou scris în inimă",
   summary:
-    "Ieremia descrie restaurarea lui Israel prin iubirea veșnică a lui Dumnezeu, lacrimile Rahelei, întoarcerea copiilor și o nouă așezare a poporului. Capitolul culminează cu promisiunea explicită a unui `berit hadashah`, un Legământ Nou, diferit de legământul pe care părinții l-au încălcat: Legea va fi scrisă în inimă, poporul Îl va cunoaște pe DOMNUL, iar păcatul va fi iertat. Evrei 8 și 10 citează acest pasaj ca text fundamental pentru Noul Legământ în Hristos.",
+    "Capitolul unește iubirea veșnică a lui Dumnezeu, întoarcerea exilaților, plânsul Rahelei, responsabilitatea personală și promisiunea explicită a unui Legământ Nou. Legea va fi scrisă în inimă, poporul Îl va cunoaște pe Dumnezeu, iar păcatul va fi iertat și nu va mai fi ținut minte împotriva lui. Zac Poonen subliniază atât iubirea veșnică din v.3, cât și faptul că Ieremia profețește amplu despre Noul Legământ.",
   units: [
     {
       from: 1,
       to: 14,
-      heading: "«Te iubesc cu o iubire veșnică» în contextul unui popor restaurat după disciplină",
+      heading: "«Te iubesc cu o iubire veșnică» în mijlocul restaurării după disciplină",
       teaching:
-        "Versetul 3 este unul dintre textele pe care Poonen le evidențiază pentru încurajare: «Te iubesc cu o iubire veșnică; de aceea Îmi păstrez bunătatea față de tine». În context, această iubire este rostită către un popor care a trecut prin judecată și exil. Ea nu este sentimentalism care declară păcatul neimportant, ci fidelitate de legământ care continuă să urmărească restaurarea după disciplină.\n\nCapitolul descrie din nou zidire, plantare, dans, vii și adunarea unei rămășițe inclusiv dintre cei slabi și vulnerabili. Dumnezeu este prezentat ca Tată al lui Israel și ca păstor care își strânge turma.\n\nAplicarea creștină a iubirii veșnice nu trebuie desprinsă de această fidelitate restauratoare. Dumnezeu nu iubește prin aprobarea oricărei căi, ci prin refuzul de a abandona scopul Său pentru popor.",
+        "Versetul 3 este unul dintre marile cuvinte de încurajare ale cărții: «Te iubesc cu o iubire veșnică; de aceea te-am atras cu bunătate». Poonen îl citează direct ca încurajare pentru credincios.\n\nContextul este important: iubirea veșnică nu este spusă unui popor care n-a trecut prin disciplină, ci unui popor pe care Dumnezeu îl readuce. Disciplina nu a anulat dragostea; tocmai fidelitatea Lui face posibilă restaurarea.\n\nAceasta ne ferește de două extreme. Nu transformăm iubirea lui Dumnezeu în tolerarea oricărui păcat, dar nici disciplina în dovada că El a încetat să iubească.\n\nPoonen păstrează accentul pe caracterul durabil al iubirii lui Dumnezeu: când omul se întoarce, nu descoperă un Dumnezeu care a devenit între timp indiferent, ci pe Cel care l-a atras prin bunătate.",
       source: {
         kind: "poonen",
         transcript,
-        anchor: "chapter thirty-one verse three ... I have loved you with an everlasting love",
+        anchor:
+          "Jeremiah 31:3 ... wonderful verse to encourage us ... I have loved you with an everlasting love, therefore I've drawn you with loving kindness",
       },
       explanationKind: "exposition",
       forYourHeart:
@@ -205,7 +189,7 @@ const IEREMIA_31: ExplainedOverlayChapter = {
           original: "בְּרִית חֲדָשָׁה",
           transliteration: "berit hadashah",
           language: "ebraica",
-          meaning: "Legământ Nou",
+          meaning: "legământ nou / noul legământ",
           verseRef: "Ieremia 31:31",
           lexicalSource: "WLC-OSHB",
         },
