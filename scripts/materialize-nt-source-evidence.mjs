@@ -5,6 +5,7 @@ import path from "node:path"
 import crypto from "node:crypto"
 import { NT_SOURCE_EVIDENCE_BLUEPRINTS } from "./nt-source-evidence-blueprints.mjs"
 import { NT_SOURCE_EVIDENCE_WAVE_A } from "./nt-source-evidence-wave-a.mjs"
+import { NT_SOURCE_EVIDENCE_WAVE_B } from "./nt-source-evidence-wave-b.mjs"
 
 const ROOT = process.cwd()
 const outputPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-source-evidence.json")
@@ -13,7 +14,7 @@ function fail(message) { console.error(`[NT source evidence] ${message}`); proce
 function stableRecord(value) { return JSON.stringify(value, Object.keys(value).sort(), 0) }
 function sha256(value) { return crypto.createHash("sha256").update(value).digest("hex") }
 
-const allBlueprints = [...NT_SOURCE_EVIDENCE_BLUEPRINTS, ...NT_SOURCE_EVIDENCE_WAVE_A]
+const allBlueprints = [...NT_SOURCE_EVIDENCE_BLUEPRINTS, ...NT_SOURCE_EVIDENCE_WAVE_A, ...NT_SOURCE_EVIDENCE_WAVE_B]
 const ids = new Set()
 const records = allBlueprints.map((input) => {
   if (!input?.id || !input.sourceId || !input.sourceUrl || !input.locator || !input.claimSummary) fail(`invalid evidence record ${input?.id ?? "<missing-id>"}`)
