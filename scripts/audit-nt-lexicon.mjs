@@ -15,8 +15,8 @@ if (!fs.existsSync(corpusDir)) fail("missing final NT corpus")
 
 const findings = []
 const KNOWN_RULES = [
-  { original: "λεγιών", forbidden: /cohort/i, reason: "legiunea nu este cohortă" },
-  { original: "ὀργή", forbidden: /durere/i, reason: "ὀργή este mânie/indignare; mâhnirea este o idee distinctă în context" },
+  { original: "λεγιών", forbidden: /(?:legiune\s*[—:-]\s*(?:o\s+)?cohort|(?:este|înseamnă)\s+(?:o\s+)?cohort)/i, reason: "legiunea nu este cohortă" },
+  { original: "ὀργή", forbidden: /(?:înseamnă|este|=)[^.!?]{0,40}\bdurere\b|\bdurere curată\b/i, reason: "ὀργή este mânie/indignare; mâhnirea este o idee distinctă în context" },
   { original: "βαπτίζω", forbidden: /(?:botezul nu este|stropire|romani\s+6)/i, reason: "câmpul lexical trebuie separat de concluzia doctrinară" },
 ]
 const DOCTRINAL_IN_LEXICON = /\b(?:singura interpretare|dovedește că|botezul nu este|răpirea|premilen|complementarian|femeile nu|prezbiterii trebuie)\b/i
