@@ -54,7 +54,7 @@ export const NT_BOOK_02: BibleBook = {
               "original": "βαπτίζω",
               "transliteration": "baptizo",
               "language": "greaca",
-              "meaning": "cufund, scufund. Botezul nu este o stropire, ci o cufundare în apă, asemenea morții și învierii (Romani 6:3-4)."
+              "meaning": "a cufunda, a scufunda; în uzul Noului Testament, a boteza. Câmpul lexical descrie sensul cuvântului; aplicația doctrinară a botezului rămâne în explicația pasajului."
             }
           ],
           "crossRefs": [
@@ -270,7 +270,7 @@ export const NT_BOOK_02: BibleBook = {
               "original": "ὀργή",
               "transliteration": "orgē",
               "language": "greaca",
-              "meaning": "mânie. Cuvântul descrie aici, la Marcu 3:5, nu o izbucnire, ci o durere curată: mânie pentru om și pentru inima împietrită, nu pentru sine."
+              "meaning": "mânie, indignare. În Marcu 3:5 termenul denumește mânia lui Isus; mâhnirea față de împietrirea inimii este exprimată separat în propoziție."
             }
           ],
           "crossRefs": [
@@ -511,7 +511,7 @@ export const NT_BOOK_02: BibleBook = {
               "original": "λεγιών",
               "transliteration": "legion",
               "language": "greaca",
-              "meaning": "legiune — o cohortă romană cu mii de soldați. Un singur nume arată câte duhuri stăpâneau omul acela — și o singură poruncă a Domnului a fost de ajuns."
+              "meaning": "legiune — unitate militară romană de ordinul miilor de soldați. Termenul nu este sinonim cu «cohortă»; în Marcu 5 numele subliniază numărul foarte mare al duhurilor."
             }
           ],
           "crossRefs": [
