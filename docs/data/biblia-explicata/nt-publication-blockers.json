@@ -4,19 +4,20 @@
   "manifestStatus": "in_review",
   "manifestPublicationReady": false,
   "counts": {
-    "blockerClasses": 7,
+    "blockerClasses": 5,
     "books": 27,
     "chapters": 260,
-    "units": 938,
-    "wholeChapterSummaryUnits": 22,
+    "units": 970,
+    "wholeChapterSummaryUnits": 0,
     "thinUnits": 42,
     "emptyHeadings": 0,
-    "missingSourceAnchors": 784,
+    "missingSourceAnchors": 0,
+    "invalidSourceAnchors": 0,
     "rawEditorialFindings": 96,
     "editorialClassificationUnresolved": 0,
     "editorialSourceTraceabilityPending": 95,
-    "embeddedQuoteFindings": 126,
-    "romanianLanguageFindings": 287,
+    "embeddedQuoteFindings": 124,
+    "romanianLanguageFindings": 284,
     "lexiconFindings": 219
   },
   "blockers": [
@@ -26,113 +27,6 @@
       "message": "Canonical text is provisional, not final.",
       "canonicalTextVersion": "BE-NT-PROVISIONAL-2026-08-09",
       "corpusSha256": "c65e31515638ec7082836d5d7cd3fa675827cd868eba61b2946fd4240687f412"
-    },
-    {
-      "id": "whole-chapter-summary-units",
-      "count": 22,
-      "message": "22 rebuilt chapters are still one whole-chapter unit.",
-      "examples": [
-        {
-          "bookId": "apocalipsa",
-          "chapter": 1,
-          "ref": "Apocalipsa 1:1-20"
-        },
-        {
-          "bookId": "apocalipsa",
-          "chapter": 2,
-          "ref": "Apocalipsa 2:1-29"
-        },
-        {
-          "bookId": "apocalipsa",
-          "chapter": 3,
-          "ref": "Apocalipsa 3:1-22"
-        },
-        {
-          "bookId": "apocalipsa",
-          "chapter": 4,
-          "ref": "Apocalipsa 4:1-11"
-        },
-        {
-          "bookId": "apocalipsa",
-          "chapter": 5,
-          "ref": "Apocalipsa 5:1-14"
-        },
-        {
-          "bookId": "apocalipsa",
-          "chapter": 6,
-          "ref": "Apocalipsa 6:1-17"
-        },
-        {
-          "bookId": "apocalipsa",
-          "chapter": 7,
-          "ref": "Apocalipsa 7:1-17"
-        },
-        {
-          "bookId": "apocalipsa",
-          "chapter": 8,
-          "ref": "Apocalipsa 8:1-13"
-        },
-        {
-          "bookId": "apocalipsa",
-          "chapter": 9,
-          "ref": "Apocalipsa 9:1-21"
-        },
-        {
-          "bookId": "apocalipsa",
-          "chapter": 10,
-          "ref": "Apocalipsa 10:1-11"
-        },
-        {
-          "bookId": "apocalipsa",
-          "chapter": 11,
-          "ref": "Apocalipsa 11:1-19"
-        },
-        {
-          "bookId": "apocalipsa",
-          "chapter": 12,
-          "ref": "Apocalipsa 12:1-17"
-        },
-        {
-          "bookId": "apocalipsa",
-          "chapter": 13,
-          "ref": "Apocalipsa 13:1-18"
-        },
-        {
-          "bookId": "apocalipsa",
-          "chapter": 14,
-          "ref": "Apocalipsa 14:1-20"
-        },
-        {
-          "bookId": "apocalipsa",
-          "chapter": 15,
-          "ref": "Apocalipsa 15:1-8"
-        },
-        {
-          "bookId": "apocalipsa",
-          "chapter": 16,
-          "ref": "Apocalipsa 16:1-21"
-        },
-        {
-          "bookId": "apocalipsa",
-          "chapter": 17,
-          "ref": "Apocalipsa 17:1-18"
-        },
-        {
-          "bookId": "apocalipsa",
-          "chapter": 18,
-          "ref": "Apocalipsa 18:1-24"
-        },
-        {
-          "bookId": "apocalipsa",
-          "chapter": 19,
-          "ref": "Apocalipsa 19:1-21"
-        },
-        {
-          "bookId": "apocalipsa",
-          "chapter": 20,
-          "ref": "Apocalipsa 20:1-15"
-        }
-      ]
     },
     {
       "id": "thin-explanation-units",
@@ -262,121 +156,14 @@
       ]
     },
     {
-      "id": "missing-source-anchors",
-      "count": 784,
-      "message": "784/938 units lack reproducible sourceAnchors.",
-      "examples": [
-        {
-          "bookId": "matei",
-          "chapter": 1,
-          "ref": "Matei 1:1-17"
-        },
-        {
-          "bookId": "matei",
-          "chapter": 1,
-          "ref": "Matei 1:18-25"
-        },
-        {
-          "bookId": "matei",
-          "chapter": 2,
-          "ref": "Matei 2:1-12"
-        },
-        {
-          "bookId": "matei",
-          "chapter": 2,
-          "ref": "Matei 2:13-18"
-        },
-        {
-          "bookId": "matei",
-          "chapter": 2,
-          "ref": "Matei 2:19-23"
-        },
-        {
-          "bookId": "matei",
-          "chapter": 3,
-          "ref": "Matei 3:1-12"
-        },
-        {
-          "bookId": "matei",
-          "chapter": 3,
-          "ref": "Matei 3:13-17"
-        },
-        {
-          "bookId": "matei",
-          "chapter": 4,
-          "ref": "Matei 4:1-11"
-        },
-        {
-          "bookId": "matei",
-          "chapter": 4,
-          "ref": "Matei 4:12-17"
-        },
-        {
-          "bookId": "matei",
-          "chapter": 4,
-          "ref": "Matei 4:18-22"
-        },
-        {
-          "bookId": "matei",
-          "chapter": 4,
-          "ref": "Matei 4:23-25"
-        },
-        {
-          "bookId": "matei",
-          "chapter": 5,
-          "ref": "Matei 5:1-12"
-        },
-        {
-          "bookId": "matei",
-          "chapter": 5,
-          "ref": "Matei 5:13-16"
-        },
-        {
-          "bookId": "matei",
-          "chapter": 5,
-          "ref": "Matei 5:17-20"
-        },
-        {
-          "bookId": "matei",
-          "chapter": 5,
-          "ref": "Matei 5:21-26"
-        },
-        {
-          "bookId": "matei",
-          "chapter": 5,
-          "ref": "Matei 5:27-32"
-        },
-        {
-          "bookId": "matei",
-          "chapter": 5,
-          "ref": "Matei 5:33-37"
-        },
-        {
-          "bookId": "matei",
-          "chapter": 5,
-          "ref": "Matei 5:38-42"
-        },
-        {
-          "bookId": "matei",
-          "chapter": 5,
-          "ref": "Matei 5:43-48"
-        },
-        {
-          "bookId": "matei",
-          "chapter": 6,
-          "ref": "Matei 6:1-4"
-        }
-      ]
-    },
-    {
       "id": "embedded-quote-audit",
-      "count": 126,
+      "count": 124,
       "message": "embedded quote audit is manual-source-check-required.",
       "status": "manual-source-check-required"
     },
     {
       "id": "romanian-language-audit",
-      "count": 287,
+      "count": 284,
       "message": "Romanian language audit is manual-edit-required.",
       "status": "manual-edit-required"
     },

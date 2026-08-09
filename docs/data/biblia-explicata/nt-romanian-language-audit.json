@@ -2,69 +2,9 @@
   "schema": "emanus-nt-romanian-language-audit-v2",
   "status": "manual-edit-required",
   "policy": "Reader-facing Romanian must use standard diacritics. This audit flags likely missing-diacritic tokens but does not guess context-sensitive replacements. Automatic fixes are limited to context-free corruption tokens in a separate script.",
-  "count": 287,
-  "findingGroups": 250,
+  "count": 284,
+  "findingGroups": 247,
   "findings": [
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 4,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 5,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 12,
-      "field": "units[4].teaching",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 23,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 28,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "marcu",
-      "book": "Marcu",
-      "chapter": 12,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
-    },
     {
       "bookId": "ioan",
       "book": "Ioan",
@@ -219,16 +159,6 @@
       "bookId": "ioan",
       "book": "Ioan",
       "chapter": 1,
-      "field": "units[0].words[0].meaning",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 1,
       "field": "units[0].words[1].meaning",
       "kind": "missing-diacritics",
       "token": "viata",
@@ -358,16 +288,6 @@
     {
       "bookId": "ioan",
       "book": "Ioan",
-      "chapter": 1,
-      "field": "units[4].teaching",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
       "chapter": 2,
       "field": "summary",
       "kind": "missing-diacritics",
@@ -443,16 +363,6 @@
       "kind": "missing-diacritics",
       "token": "curata",
       "expected": "curată / curăță",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 2,
-      "field": "units[0].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă",
       "occurrences": 1
     },
     {
@@ -583,16 +493,6 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 2,
-      "field": "units[2].words[1].meaning",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă",
       "occurrences": 1
     },
     {
@@ -753,16 +653,6 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 4,
-      "field": "historicalContext",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă",
       "occurrences": 1
     },
     {
@@ -1449,16 +1339,6 @@
       "bookId": "ioan",
       "book": "Ioan",
       "chapter": 8,
-      "field": "units[1].words[0].meaning",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 8,
       "field": "units[2].teaching",
       "kind": "missing-diacritics",
       "token": "viata",
@@ -1524,16 +1404,6 @@
       "token": "credinta",
       "expected": "credință / credința",
       "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 9,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 2
     },
     {
       "bookId": "ioan",
@@ -1679,16 +1549,6 @@
       "bookId": "ioan",
       "book": "Ioan",
       "chapter": 10,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 10,
       "field": "units[0].words[0].meaning",
       "kind": "missing-diacritics",
       "token": "viata",
@@ -1744,16 +1604,6 @@
       "token": "legatura",
       "expected": "legătură / legătura",
       "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 10,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 2
     },
     {
       "bookId": "ioan",
@@ -2049,16 +1899,6 @@
       "bookId": "ioan",
       "book": "Ioan",
       "chapter": 13,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 13,
       "field": "units[2].teaching",
       "kind": "missing-diacritics",
       "token": "adevarata",
@@ -2083,36 +1923,6 @@
       "kind": "missing-diacritics",
       "token": "arata",
       "expected": "arată / arăta",
-      "occurrences": 1
-    },
-    {
-      "bookId": "romani",
-      "book": "Romani",
-      "chapter": 6,
-      "field": "literaryContext",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "romani",
-      "book": "Romani",
-      "chapter": 9,
-      "field": "units[1].heading",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "coloseni",
-      "book": "Coloseni",
-      "chapter": 1,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă",
       "occurrences": 1
     },
     {
@@ -2428,7 +2238,7 @@
     {
       "bookId": "apocalipsa",
       "book": "Apocalipsa",
-      "chapter": 3,
+      "chapter": 2,
       "field": "units[0].teaching",
       "kind": "missing-diacritics",
       "token": "in",
@@ -2438,8 +2248,18 @@
     {
       "bookId": "apocalipsa",
       "book": "Apocalipsa",
-      "chapter": 6,
-      "field": "units[0].teaching",
+      "chapter": 2,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "doua",
+      "expected": "două",
+      "occurrences": 1
+    },
+    {
+      "bookId": "apocalipsa",
+      "book": "Apocalipsa",
+      "chapter": 2,
+      "field": "units[2].teaching",
       "kind": "missing-diacritics",
       "token": "in",
       "expected": "în",
@@ -2448,7 +2268,47 @@
     {
       "bookId": "apocalipsa",
       "book": "Apocalipsa",
-      "chapter": 8,
+      "chapter": 2,
+      "field": "units[3].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 2
+    },
+    {
+      "bookId": "apocalipsa",
+      "book": "Apocalipsa",
+      "chapter": 3,
+      "field": "units[1].heading",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "apocalipsa",
+      "book": "Apocalipsa",
+      "chapter": 3,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "apocalipsa",
+      "book": "Apocalipsa",
+      "chapter": 3,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "apocalipsa",
+      "book": "Apocalipsa",
+      "chapter": 7,
       "field": "units[0].teaching",
       "kind": "missing-diacritics",
       "token": "in",
@@ -2468,8 +2328,48 @@
     {
       "bookId": "apocalipsa",
       "book": "Apocalipsa",
+      "chapter": 9,
+      "field": "units[1].heading",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "apocalipsa",
+      "book": "Apocalipsa",
+      "chapter": 9,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "apocalipsa",
+      "book": "Apocalipsa",
+      "chapter": 12,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "apocalipsa",
+      "book": "Apocalipsa",
       "chapter": 13,
-      "field": "units[0].teaching",
+      "field": "units[1].heading",
+      "kind": "missing-diacritics",
+      "token": "doua",
+      "expected": "două",
+      "occurrences": 1
+    },
+    {
+      "bookId": "apocalipsa",
+      "book": "Apocalipsa",
+      "chapter": 13,
+      "field": "units[1].teaching",
       "kind": "missing-diacritics",
       "token": "doua",
       "expected": "două",
@@ -2488,7 +2388,37 @@
     {
       "bookId": "apocalipsa",
       "book": "Apocalipsa",
+      "chapter": 14,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "apocalipsa",
+      "book": "Apocalipsa",
       "chapter": 16,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 2
+    },
+    {
+      "bookId": "apocalipsa",
+      "book": "Apocalipsa",
+      "chapter": 16,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "apocalipsa",
+      "book": "Apocalipsa",
+      "chapter": 18,
       "field": "units[0].teaching",
       "kind": "missing-diacritics",
       "token": "in",
@@ -2503,6 +2433,46 @@
       "kind": "missing-diacritics",
       "token": "in",
       "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "apocalipsa",
+      "book": "Apocalipsa",
+      "chapter": 20,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "apocalipsa",
+      "book": "Apocalipsa",
+      "chapter": 20,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "doua",
+      "expected": "două",
+      "occurrences": 1
+    },
+    {
+      "bookId": "apocalipsa",
+      "book": "Apocalipsa",
+      "chapter": 21,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "doua",
+      "expected": "două",
+      "occurrences": 1
+    },
+    {
+      "bookId": "apocalipsa",
+      "book": "Apocalipsa",
+      "chapter": 22,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "doua",
+      "expected": "două",
       "occurrences": 1
     }
   ]
