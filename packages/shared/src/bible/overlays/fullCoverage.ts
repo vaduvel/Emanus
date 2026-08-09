@@ -37,6 +37,7 @@ import { TEFANIA_EXPLAINED as TEFANIA_BASE } from "./tefaniaOverlay.js"
 import { HAGAI_EXPLAINED as HAGAI_BASE } from "./hagaiOverlay.js"
 import { ZAHARIA_EXPLAINED as ZAHARIA_BASE } from "./zahariaOverlay.js"
 import { MALEAHI_EXPLAINED as MALEAHI_BASE } from "./maleahiOverlay.js"
+import { guardOverlayPublicAttribution } from "./publicCopyAttributionGuard.js"
 
 function full(
   base: Parameters<typeof completeOverlayCoverage>[0],
@@ -56,11 +57,12 @@ function full(
 
   const completed = completeOverlayCoverage(base, data.verseCounts, data.narratives)
   const reviewed = assertVerseCompleteOverlay(completed, data.verseCounts)
+  const readerSafe = guardOverlayPublicAttribution(reviewed)
 
   // Acesta este statusul stratului explicativ, nu al traducerii biblice.
   // Reader-ul decide separat dacă textul biblic asociat este încă provizoriu.
   return {
-    ...reviewed,
+    ...readerSafe,
     status: "published" as const,
   }
 }
