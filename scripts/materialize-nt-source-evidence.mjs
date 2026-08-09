@@ -27,6 +27,8 @@ const RECOVERED_EPISODE_REGISTRIES = [
   ["filipeni", "legacy-poonen-philippians", "filipeni-poonen-source.json"],
   ["coloseni", "legacy-poonen-colossians", "coloseni-poonen-source.json"],
   ["1-tesaloniceni", "legacy-poonen-1thess", "1-tesaloniceni-poonen-source.json"],
+]
+const RECOVERED_SUPPORTING_RANGE_REGISTRIES = [
   ["filimon", "legacy-poonen-philemon", "filimon-poonen-source.json"],
 ]
 
@@ -88,6 +90,32 @@ function recoveredEpisodeBlueprints() {
   }
   return out
 }
+function recoveredSupportingRangeBlueprints() {
+  const out = []
+  for (const [bookId, sourceId, fileName] of RECOVERED_SUPPORTING_RANGE_REGISTRIES) {
+    const file = path.join(sourceRegistryDir, fileName)
+    if (!fs.existsSync(file)) fail(`missing supporting source registry ${fileName}`)
+    const registry = JSON.parse(fs.readFileSync(file, "utf8"))
+    const source = registry.poonen
+    if (!source?.coveredPassage || !source.supportingTranscriptUrl || !source.officialSeriesUrl || source.officialSeriesIncludesBook !== true) {
+      fail(`${fileName}: incomplete supporting transcript registry`)
+    }
+    const coverage = parseRange(source.coveredPassage, `${fileName} coveredPassage`)
+    out.push({
+      id: `ev-recovered-${bookId}-supporting-transcript`,
+      sourceId,
+      sourceUrl: source.supportingTranscriptUrl,
+      officialSeriesUrl: source.officialSeriesUrl,
+      sourceTitle: source.supportingTranscriptTitle ?? `${registry.bookName ?? bookId} supporting transcript`,
+      locator: `Full supporting transcript: ${source.coveredPassage}`,
+      evidenceKind: "supporting-transcript-range",
+      verificationLevel: "supporting-full-transcript-with-official-series-confirmation",
+      claimSummary: `Registrul leagă cartea ${registry.bookName ?? bookId} de seria oficială CFC și de un transcript complet de suport pentru ${source.coveredPassage}.`,
+      ...coverage,
+    })
+  }
+  return out
+}
 
 const allBlueprints = [
   ...NT_SOURCE_EVIDENCE_BLUEPRINTS,
@@ -97,6 +125,7 @@ const allBlueprints = [
   ...NT_SOURCE_EVIDENCE_WAVE_D,
   ...NT_SOURCE_EVIDENCE_RECOVERED_GAP,
   ...recoveredEpisodeBlueprints(),
+  ...recoveredSupportingRangeBlueprints(),
 ]
 const ids = new Set()
 const records = allBlueprints.map((input) => {
@@ -118,14 +147,16 @@ const records = allBlueprints.map((input) => {
 
 const recoveredEpisodeRecords = records.filter((record) => record.evidenceKind === "official-episode-range").length
 const recoveredOfficialGapRecords = NT_SOURCE_EVIDENCE_RECOVERED_GAP.length
+const recoveredSupportingRangeRecords = records.filter((record) => record.evidenceKind === "supporting-transcript-range").length
 const output = {
   schema: "emanus-nt-source-evidence-v1",
-  policy: "Each evidenceSha256 hashes the stable local evidence record (source URL + locator + reviewed or registry-derived claim). It is not represented as a hash of third-party source bytes. Final source traceability also requires the locator to remain independently reviewable.",
+  policy: "Each evidenceSha256 hashes the stable local evidence record (source URL + locator + reviewed or registry-derived claim). It is not represented as a hash of third-party source bytes. Final source traceability also requires the locator to remain independently reviewable. Evidence kinds retain their verification strength; supporting transcripts are not relabeled as official episode evidence.",
   count: records.length,
   recoveredEpisodeRecords,
   recoveredOfficialGapRecords,
+  recoveredSupportingRangeRecords,
   records,
 }
 fs.mkdirSync(path.dirname(outputPath), { recursive: true })
 fs.writeFileSync(outputPath, JSON.stringify(output, null, 2) + "\n", "utf8")
-console.log(`NT source evidence materialized: ${records.length} locator records (${recoveredEpisodeRecords} recovered-book episode records + ${recoveredOfficialGapRecords} direct official John/Titus records).`)
+console.log(`NT source evidence materialized: ${records.length} locator records (${recoveredEpisodeRecords} recovered-book episode records + ${recoveredOfficialGapRecords} direct official John/Titus records + ${recoveredSupportingRangeRecords} supporting transcript records).`)
