@@ -1,0 +1,52 @@
+name: Review OT Source Evidence
+
+on:
+  workflow_dispatch:
+    inputs:
+      book:
+        description: USFM book ID, for example GEN
+        required: true
+        type: string
+      model:
+        description: Approved OpenAI-compatible model ID
+        required: true
+        type: string
+      limit:
+        description: Optional pilot limit. Leave empty only for a complete book.
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  review-book:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 360
+    env:
+      OPENAI_API_KEY: ${{ secrets.OT_REVIEW_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Refuse a run without the protected provider key
+        run: |
+          test -n "$OPENAI_API_KEY" || { echo 'Configure OT_REVIEW_API_KEY in GitHub Actions secrets.' >&2; exit 1; }
+      - name: Run source-bound AI review
+        env:
+          BOOK: ${{ inputs.book }}
+          MODEL: ${{ inputs.model }}
+          LIMIT: ${{ inputs.limit }}
+        run: |
+          set -euo pipefail
+          mkdir -p artifacts/ot-source-evidence
+          args=(--book "$BOOK" --model "$MODEL" --output "artifacts/ot-source-evidence/${BOOK}.jsonl")
+          if [ -n "$LIMIT" ]; then args+=(--limit "$LIMIT"); fi
+          python3 scripts/review-biblia-emanus-ot-with-openai-compatible.py "${args[@]}"
+          if [ -z "$LIMIT" ]; then
+            python3 scripts/check-biblia-emanus-ot-source-evidence-shard.py --book "$BOOK" --input "artifacts/ot-source-evidence/${BOOK}.jsonl"
+          fi
+      - name: Upload validated evidence shard
+        uses: actions/upload-artifact@v4
+        with:
+          name: ot-source-evidence-${{ inputs.book }}
+          path: artifacts/ot-source-evidence/${{ inputs.book }}.jsonl
+          if-no-files-found: error
