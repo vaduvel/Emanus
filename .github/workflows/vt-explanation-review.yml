@@ -35,6 +35,7 @@ on:
 permissions:
   contents: read
   statuses: write
+  issues: write
 
 concurrency:
   group: vt-explanation-review-${{ github.ref }}
@@ -60,7 +61,7 @@ jobs:
       - name: Fetch main for PR-range whitespace check
         run: git fetch origin main:refs/remotes/origin/main
 
-      - name: Run VT gates and publish commit statuses
+      - name: Run VT gates, publish statuses and report failures
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TARGET_SHA: ${{ github.sha }}
@@ -68,6 +69,8 @@ jobs:
         run: |
           set +e
           failed=0
+          report=/tmp/vt-gate-report.md
+          printf '### VT explanation gate report — `%s`\n\n' "$TARGET_SHA" > "$report"
 
           post_status() {
             local context="$1"
@@ -86,16 +89,24 @@ jobs:
             local context="$1"
             local label="$2"
             local command="$3"
+            local slug
+            slug=$(echo "$context" | tr '/:' '__')
+            local log="/tmp/${slug}.log"
             post_status "$context" pending "$label running"
             echo "::group::$label"
-            bash -lc "$command"
+            bash -lc "$command" >"$log" 2>&1
             local rc=$?
+            cat "$log"
             echo "::endgroup::"
             if [ "$rc" -eq 0 ]; then
               post_status "$context" success "$label passed"
+              printf -- '- ✅ `%s`\n' "$label" >> "$report"
             else
               post_status "$context" failure "$label failed"
               failed=1
+              printf -- '- ❌ `%s`\n\n```text\n' "$label" >> "$report"
+              tail -n 28 "$log" >> "$report"
+              printf '\n```\n\n' >> "$report"
             fi
           }
 
@@ -107,5 +118,16 @@ jobs:
           run_gate "vt/shared-typecheck" "shared TypeScript typecheck" "pnpm --filter @emanus/shared typecheck"
           run_gate "vt/shared-build" "shared build" "pnpm --filter @emanus/shared build"
           run_gate "vt/diff-check" "git diff --check" "git diff --check && git diff --check origin/main...HEAD"
+
+          if [ "$failed" -ne 0 ]; then
+            payload=$(python3 -c 'import json, pathlib; print(json.dumps({"body": pathlib.Path("/tmp/vt-gate-report.md").read_text()}))')
+            curl --fail --silent --show-error \
+              -X POST \
+              -H "Accept: application/vnd.github+json" \
+              -H "Authorization: Bearer ${GH_TOKEN}" \
+              -H "X-GitHub-Api-Version: 2022-11-28" \
+              "https://api.github.com/repos/${GITHUB_REPOSITORY}/issues/85/comments" \
+              -d "$payload" >/dev/null
+          fi
 
           exit "$failed"
