@@ -98,9 +98,16 @@ jobs:
           pnpm --filter @emanus/web test:smoke:bible
 
       - name: Verify clean diff and main mergeability
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          PR_BASE_REF: ${{ github.event.pull_request.base.ref }}
         run: |
           set -euo pipefail
           git diff --check
+          if [ "${EVENT_NAME}" = "pull_request" ] && [ "${PR_BASE_REF}" != "main" ]; then
+            echo "Stacked PR verificat față de ${PR_BASE_REF}; mergeability cu main rămâne pe PR-ul final."
+            exit 0
+          fi
           git fetch origin main:refs/remotes/origin/main
           git diff --check origin/main...HEAD
           git merge-tree --write-tree HEAD origin/main >/dev/null
