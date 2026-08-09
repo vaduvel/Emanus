@@ -39,6 +39,7 @@ import { ZAHARIA_EXPLAINED as ZAHARIA_BASE } from "./zahariaOverlay.js"
 import { MALEAHI_EXPLAINED as MALEAHI_BASE } from "./maleahiOverlay.js"
 import { guardOverlayPublicAttribution } from "./publicCopyAttributionGuard.js"
 import { applyUltraFinalSourceFirstReview } from "./ultraFinalSourceFirstReview.js"
+import { applyFinalTextualGapCorrections } from "./finalTextualGapCorrections.js"
 import { applyVerifiedUltraFinalPoonenOverrides } from "./verifiedUltraFinalPoonenOverrides.js"
 
 function full(
@@ -59,7 +60,8 @@ function full(
 
   const completed = completeOverlayCoverage(base, data.verseCounts, data.narratives)
   const sourceFirstReviewed = applyUltraFinalSourceFirstReview(completed)
-  const sourceVerified = applyVerifiedUltraFinalPoonenOverrides(sourceFirstReviewed)
+  const textualGapsCorrected = applyFinalTextualGapCorrections(sourceFirstReviewed)
+  const sourceVerified = applyVerifiedUltraFinalPoonenOverrides(textualGapsCorrected)
   const reviewed = assertVerseCompleteOverlay(sourceVerified, data.verseCounts)
   const readerSafe = guardOverlayPublicAttribution(reviewed)
 
