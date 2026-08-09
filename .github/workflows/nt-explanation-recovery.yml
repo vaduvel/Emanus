@@ -58,17 +58,23 @@ jobs:
           set -euo pipefail
           node scripts/materialize-nt-explanations-from-legacy.mjs --legacy-root ../nt-legacy
           node scripts/check-nt-explanation-recovery.mjs
+
+      - name: Rebuild quarantined books source-first
+        run: |
+          set -euo pipefail
+          node scripts/materialize-nt-source-first.mjs
+          node scripts/check-nt-source-first.mjs
           git diff --check
 
-      - name: Commit deterministic recovery snapshot
+      - name: Commit deterministic NT editorial snapshots
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/data/biblia-explicata docs/biblia-explicata
           if git diff --cached --quiet; then
-            echo "Recovery snapshot already current."
+            echo "NT snapshots already current."
             exit 0
           fi
-          git commit -m "Materialize clean NT explanation recovery"
+          git commit -m "Materialize source-first NT explanation snapshots"
           git push origin HEAD:agent/biblia-explicata-nt-integration-clean
