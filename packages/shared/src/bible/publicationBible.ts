@@ -6,6 +6,7 @@ import {
   VT_OVERLAY_TEMPORARY_TEXTS,
   VT_OVERLAY_TRANSLATION_BLOCKERS,
 } from "./overlayBibleBooks.js"
+import { sourceFirstPoonenReaderText } from "./sourceFirstReaderCleanup.js"
 
 /**
  * Proveniența rămâne în metadata internă. Cititorul primește explicația direct,
@@ -115,6 +116,15 @@ function directReaderText(value: string): string {
     .trim()
 }
 
+function isPoonenUnit(explanationSource: string | undefined): boolean {
+  return /^(?:Zac\s+)?Poonen\b/iu.test(explanationSource ?? "")
+}
+
+function readerUnitText(value: string, explanationSource: string | undefined): string {
+  const sourceFirst = isPoonenUnit(explanationSource) ? sourceFirstPoonenReaderText(value) : value
+  return directReaderText(sourceFirst)
+}
+
 function withoutNamedAttribution(book: BibleBook): BibleBook {
   return {
     ...book,
@@ -128,13 +138,15 @@ function withoutNamedAttribution(book: BibleBook): BibleBook {
       prayer: directReaderText(chapter.prayer),
       units: chapter.units.map((unit) => ({
         ...unit,
-        heading: directReaderText(unit.heading),
-        teaching: directReaderText(unit.teaching),
+        heading: readerUnitText(unit.heading, unit.explanationSource),
+        teaching: readerUnitText(unit.teaching, unit.explanationSource),
         words: unit.words?.map((word) => ({
           ...word,
           meaning: directReaderText(word.meaning),
         })),
-        forYourHeart: unit.forYourHeart ? directReaderText(unit.forYourHeart) : undefined,
+        forYourHeart: unit.forYourHeart
+          ? readerUnitText(unit.forYourHeart, unit.explanationSource)
+          : undefined,
         // Proveniența nominală este exclusiv internă.
         explanationSource: undefined,
       })),
