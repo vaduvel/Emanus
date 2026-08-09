@@ -5,7 +5,7 @@ import path from "node:path"
 import crypto from "node:crypto"
 
 const ROOT = process.cwd()
-const recoveredDir = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-audited-recovered")
+const recoveredDir = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-audited-recovered-refined")
 const rebuiltDir = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-source-first")
 const outputDir = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-final-source-first")
 const manifestPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-final-source-first-manifest.json")
@@ -29,7 +29,6 @@ function fail(message) {
 }
 function stable(value) { return JSON.stringify(value, null, 2) + "\n" }
 function hash(value) { return crypto.createHash("sha256").update(value).digest("hex") }
-
 function readBooks(dir, sourceClass) {
   if (!fs.existsSync(dir)) fail(`missing ${dir}`)
   const map = new Map()
@@ -41,11 +40,10 @@ function readBooks(dir, sourceClass) {
   return map
 }
 
-const audited = readBooks(recoveredDir, "audited-recovered-poonen")
+const audited = readBooks(recoveredDir, "refined-audited-recovered-poonen")
 const rebuilt = readBooks(rebuiltDir, "rebuilt-poonen-source-first")
 if (audited.size !== 15) fail(`audited books ${audited.size}/15`)
 if (rebuilt.size !== 12) fail(`rebuilt books ${rebuilt.size}/12`)
-
 fs.rmSync(outputDir, { recursive: true, force: true })
 fs.mkdirSync(outputDir, { recursive: true })
 
@@ -67,10 +65,7 @@ for (let index = 0; index < CANON.length; index += 1) {
     const units = chapter.units ?? []
     if (!units.length) fail(`${id} ${chapter.number}: no explanation units`)
     totalUnits += units.length
-    return {
-      ...chapter,
-      finalSourceClass: entry.sourceClass,
-    }
+    return { ...chapter, finalSourceClass: entry.sourceClass }
   })
 
   const payload = {
