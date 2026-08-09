@@ -33,9 +33,26 @@ function fail(message) { console.error(`[NT source evidence] ${message}`); proce
 function stableRecord(value) { return JSON.stringify(value, Object.keys(value).sort(), 0) }
 function sha256(value) { return crypto.createHash("sha256").update(value).digest("hex") }
 function parseRange(value, label) {
-  const match = String(value ?? "").match(/(\d+):(\d+)\s*-\s*(\d+):(\d+)/u)
-  if (!match) fail(`${label}: cannot parse passage range ${JSON.stringify(value)}`)
-  const [, startChapter, startVerse, endChapter, endVerse] = match
+  const raw = String(value ?? "")
+  let startChapter
+  let startVerse
+  let endChapter
+  let endVerse
+  const full = raw.match(/(\d+):(\d+)\s*-\s*(\d+):(\d+)/u)
+  const sameChapter = raw.match(/(\d+):(\d+)\s*-\s*(\d+)(?!\s*:)/u)
+  const single = raw.match(/(\d+):(\d+)/u)
+  if (full) {
+    [, startChapter, startVerse, endChapter, endVerse] = full
+  } else if (sameChapter) {
+    [, startChapter, startVerse, endVerse] = sameChapter
+    endChapter = startChapter
+  } else if (single) {
+    [, startChapter, startVerse] = single
+    endChapter = startChapter
+    endVerse = startVerse
+  } else {
+    fail(`${label}: cannot parse passage range ${JSON.stringify(value)}`)
+  }
   const coverage = {
     coverageStartChapter: Number(startChapter), coverageStartVerse: Number(startVerse),
     coverageEndChapter: Number(endChapter), coverageEndVerse: Number(endVerse),
