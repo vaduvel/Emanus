@@ -35,7 +35,6 @@ on:
 permissions:
   contents: read
   statuses: write
-  issues: write
 
 concurrency:
   group: vt-explanation-review-${{ github.ref }}
@@ -61,7 +60,7 @@ jobs:
       - name: Fetch main for PR-range whitespace check
         run: git fetch origin main:refs/remotes/origin/main
 
-      - name: Run VT gates, publish statuses and report failures
+      - name: Run VT gates and publish diagnostic statuses
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TARGET_SHA: ${{ github.sha }}
@@ -69,8 +68,6 @@ jobs:
         run: |
           set +e
           failed=0
-          report=/tmp/vt-gate-report.md
-          printf '### VT explanation gate report — `%s`\n\n' "$TARGET_SHA" > "$report"
 
           post_status() {
             local context="$1"
@@ -83,6 +80,18 @@ jobs:
               -H "X-GitHub-Api-Version: 2022-11-28" \
               "https://api.github.com/repos/${GITHUB_REPOSITORY}/statuses/${TARGET_SHA}" \
               -d "{\"state\":\"${state}\",\"context\":\"${context}\",\"description\":\"${description}\"}" >/dev/null
+          }
+
+          diagnostic_context() {
+            local log="$1"
+            local line
+            line=$(grep -E -m1 'error TS[0-9]+|\[.*\] EROARE|Error:|ERR_PNPM|SyntaxError|ReferenceError|TypeError|Cannot find|does not exist|is not exported' "$log")
+            if [ -z "$line" ]; then
+              line=$(tail -n 1 "$log")
+            fi
+            line=$(echo "$line" | tr '\n\r' '  ' | sed -E 's/[^[:alnum:]_.()\/-]+/_/g' | cut -c1-90)
+            [ -n "$line" ] || line="unknown_error"
+            echo "vt/error-${line}"
           }
 
           run_gate() {
@@ -100,13 +109,12 @@ jobs:
             echo "::endgroup::"
             if [ "$rc" -eq 0 ]; then
               post_status "$context" success "$label passed"
-              printf -- '- ✅ `%s`\n' "$label" >> "$report"
             else
               post_status "$context" failure "$label failed"
+              local diag
+              diag=$(diagnostic_context "$log")
+              post_status "$diag" failure "$label first error"
               failed=1
-              printf -- '- ❌ `%s`\n\n```text\n' "$label" >> "$report"
-              tail -n 28 "$log" >> "$report"
-              printf '\n```\n\n' >> "$report"
             fi
           }
 
@@ -118,16 +126,5 @@ jobs:
           run_gate "vt/shared-typecheck" "shared TypeScript typecheck" "pnpm --filter @emanus/shared typecheck"
           run_gate "vt/shared-build" "shared build" "pnpm --filter @emanus/shared build"
           run_gate "vt/diff-check" "git diff --check" "git diff --check && git diff --check origin/main...HEAD"
-
-          if [ "$failed" -ne 0 ]; then
-            payload=$(python3 -c 'import json, pathlib; print(json.dumps({"body": pathlib.Path("/tmp/vt-gate-report.md").read_text()}))')
-            curl --fail --silent --show-error \
-              -X POST \
-              -H "Accept: application/vnd.github+json" \
-              -H "Authorization: Bearer ${GH_TOKEN}" \
-              -H "X-GitHub-Api-Version: 2022-11-28" \
-              "https://api.github.com/repos/${GITHUB_REPOSITORY}/issues/85/comments" \
-              -d "$payload" >/dev/null
-          fi
 
           exit "$failed"
