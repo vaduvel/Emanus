@@ -4,8 +4,8 @@ import fs from "node:fs"
 import path from "node:path"
 
 const ROOT = process.cwd()
-const corpusDir = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-audited-recovered")
-const reportPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-subtle-editorial-findings.json")
+const corpusDir = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-audited-recovered-refined")
+const reportPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-subtle-editorial-refined-findings.json")
 
 const RULES = [
   ["authority-boundary", /\b(?:niciun|nicio|nu)\b[^.!?]{0,120}\b(?:lider|conducator|slujitor|prezbiter|pastor|autoritate)\b[^.!?]{0,160}\b(?:dreptul|control|controleze|constrang|domina|manipul)/i],
@@ -25,7 +25,7 @@ function sentences(text) {
 }
 
 if (!fs.existsSync(corpusDir)) {
-  console.error("Missing nt-audited-recovered")
+  console.error("Missing nt-audited-recovered-refined")
   process.exit(1)
 }
 const findings = []
@@ -52,11 +52,11 @@ for (const file of fs.readdirSync(corpusDir).filter((name) => name.endsWith(".js
   }
 }
 fs.writeFileSync(reportPath, JSON.stringify({
-  schema: "emanus-nt-subtle-editorial-audit-v1",
+  schema: "emanus-nt-subtle-editorial-refined-audit-v1",
   status: findings.length ? "manual-source-check-required" : "clean",
-  policy: "Candidates only. Do not delete automatically; verify against Poonen/CFC source before changing doctrine.",
+  policy: "Residual candidates after high-confidence cleanup. Verify each against Poonen/CFC or direct historical/textual context before accepting or removing it.",
   count: findings.length,
   findings,
 }, null, 2) + "\n", "utf8")
-console.log(`NT subtle editorial audit: ${findings.length} candidates.`)
+console.log(`NT refined subtle editorial audit: ${findings.length} residual candidates.`)
 for (const finding of findings) console.log(`${finding.bookId} ${finding.chapter} ${finding.rule}: ${finding.sentence}`)
