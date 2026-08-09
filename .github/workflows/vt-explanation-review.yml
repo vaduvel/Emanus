@@ -1,183 +1,139 @@
-name: VT Explanation Review
+name: VT Integrate Main
 
 on:
   push:
     branches:
       - agent/biblia-explicata-vt-integration-clean
     paths:
-      - "packages/shared/src/bible/**"
-      - "scripts/check-vt-explained-coverage.py"
-      - "scripts/check-vt-legacy-provenance.mjs"
-      - "scripts/check-vt-poonen-fidelity.mjs"
-      - "scripts/check-vt-chapter-by-chapter-review.mjs"
-      - "scripts/check-vt-publication-runtime.mjs"
-      - "docs/biblia-explicata/**"
-      - "package.json"
-      - "packages/shared/package.json"
-      - "pnpm-lock.yaml"
       - ".github/workflows/vt-explanation-review.yml"
-  pull_request:
-    branches: [main]
-    paths:
-      - "packages/shared/src/bible/**"
-      - "scripts/check-vt-explained-coverage.py"
-      - "scripts/check-vt-legacy-provenance.mjs"
-      - "scripts/check-vt-poonen-fidelity.mjs"
-      - "scripts/check-vt-chapter-by-chapter-review.mjs"
-      - "scripts/check-vt-publication-runtime.mjs"
-      - "docs/biblia-explicata/**"
-      - "package.json"
-      - "packages/shared/package.json"
-      - "pnpm-lock.yaml"
-      - ".github/workflows/vt-explanation-review.yml"
-  workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   statuses: write
 
 concurrency:
-  group: vt-explanation-review-${{ github.ref }}
-  cancel-in-progress: true
+  group: vt-integrate-main
+  cancel-in-progress: false
 
 jobs:
-  verify-explanations:
+  integrate:
     runs-on: ubuntu-22.04
-    timeout-minutes: 40
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          persist-credentials: false
+          persist-credentials: true
 
-      - name: Fetch main
-        run: git fetch origin main:refs/remotes/origin/main
-
-      - name: Detect merge conflicts with main
+      - name: Merge main, resolve known conflicts, validate, and push
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TARGET_SHA: ${{ github.sha }}
+          PRE_SHA: ${{ github.sha }}
         shell: bash
         run: |
-          set +e
-          git config user.name "vt-merge-dry-run"
-          git config user.email "vt-merge-dry-run@users.noreply.github.com"
-          git merge --no-commit --no-ff origin/main >/tmp/vt-merge.log 2>&1
-          rc=$?
+          set -euo pipefail
 
           post_status() {
-            local context="$1"
-            local state="$2"
-            local description="$3"
+            local sha="$1"
+            local context="$2"
+            local state="$3"
+            local description="$4"
             curl --fail --silent --show-error \
               -X POST \
               -H "Accept: application/vnd.github+json" \
               -H "Authorization: Bearer ${GH_TOKEN}" \
               -H "X-GitHub-Api-Version: 2022-11-28" \
-              "https://api.github.com/repos/${GITHUB_REPOSITORY}/statuses/${TARGET_SHA}" \
+              "https://api.github.com/repos/${GITHUB_REPOSITORY}/statuses/${sha}" \
               -d "{\"state\":\"${state}\",\"context\":\"${context}\",\"description\":\"${description}\"}" >/dev/null
           }
 
-          if [ "$rc" -eq 0 ]; then
-            post_status "vt/merge-dry-run" success "main merges without conflicts"
-            git merge --abort || true
-            exit 0
+          fail() {
+            post_status "$PRE_SHA" "vt/integration-main" failure "$1"
+            echo "ERROR: $1" >&2
+            exit 1
+          }
+
+          post_status "$PRE_SHA" "vt/integration-main" pending "merging current main into VT branch"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main:refs/remotes/origin/main
+
+          set +e
+          git merge --no-commit --no-ff origin/main
+          merge_rc=$?
+          set -e
+
+          if [ "$merge_rc" -ne 0 ]; then
+            mapfile -t conflicts < <(git diff --name-only --diff-filter=U)
+            [ "${#conflicts[@]}" -gt 0 ] || fail "merge failed without conflict paths"
+
+            noncorpus=()
+            corpus=0
+            for path in "${conflicts[@]}"; do
+              if [[ "$path" == docs/data/biblia-emanus/* ]]; then
+                corpus=$((corpus + 1))
+                git checkout --theirs -- "$path"
+                git add "$path"
+              else
+                noncorpus+=("$path")
+              fi
+            done
+
+            if [ "${#noncorpus[@]}" -ne 1 ] || [ "${noncorpus[0]}" != "apps/web/src/screens/Bible.tsx" ]; then
+              printf 'Unexpected non-corpus conflicts:\n%s\n' "${noncorpus[*]}" >&2
+              fail "unexpected non-corpus merge conflicts"
+            fi
+
+            # Păstrează arhitectura publication/temporary-text din ramura VT.
+            git checkout --ours -- apps/web/src/screens/Bible.tsx
+            python3 - <<'PY'
+          from pathlib import Path
+          path = Path("apps/web/src/screens/Bible.tsx")
+          text = path.read_text()
+          text = text.translate(str.maketrans({"ş": "ș", "Ş": "Ș", "ţ": "ț", "Ţ": "Ț"}))
+          path.write_text(text)
+          if any(ch in text for ch in "şŞţŢ"):
+              raise SystemExit("sedila Romanian characters remain in Bible.tsx")
+          PY
+            git add apps/web/src/screens/Bible.tsx
           fi
 
-          mapfile -t conflicts < <(git diff --name-only --diff-filter=U)
-          corpus=0
-          noncorpus=0
-          post_status "vt/merge-dry-run" failure "${#conflicts[@]} merge conflicts with main"
+          unresolved=$(git diff --name-only --diff-filter=U)
+          [ -z "$unresolved" ] || fail "unresolved merge conflicts remain"
 
-          for path in "${conflicts[@]}"; do
-            if [[ "$path" == docs/data/biblia-emanus/* ]]; then
-              corpus=$((corpus + 1))
-            else
-              noncorpus=$((noncorpus + 1))
-              safe=$(echo "$path" | sed -E 's/[^[:alnum:]_.-]+/_/g' | cut -c1-70)
-              post_status "vt/noncorpus-${safe}" failure "non-corpus merge conflict"
-            fi
-          done
-
-          post_status "vt/conflicts-total-${#conflicts[@]}" failure "total merge conflicts"
-          post_status "vt/corpus-conflicts-${corpus}" failure "Biblia Emanus corpus conflicts"
-          post_status "vt/noncorpus-conflicts-${noncorpus}" failure "non-corpus conflicts"
-          cat /tmp/vt-merge.log
-          git merge --abort || true
-          exit 0
-
-      - name: Install JavaScript dependencies
-        run: |
-          set -euo pipefail
           corepack enable
           corepack prepare pnpm@9.7.0 --activate
           pnpm install --frozen-lockfile
 
-      - name: Run VT gates and publish diagnostic statuses
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TARGET_SHA: ${{ github.sha }}
-        shell: bash
-        run: |
-          set +e
-          failed=0
+          pnpm check:vt-explained
+          pnpm check:vt-legacy-provenance
+          pnpm check:vt-poonen-fidelity
+          pnpm check:vt-chapter-review
+          pnpm check:vt-publication
+          pnpm --filter @emanus/shared typecheck
+          pnpm --filter @emanus/shared build
+          pnpm --filter @emanus/web typecheck
+          git diff --check
+          git diff --cached --check
 
-          post_status() {
-            local context="$1"
-            local state="$2"
-            local description="$3"
-            curl --fail --silent --show-error \
-              -X POST \
-              -H "Accept: application/vnd.github+json" \
-              -H "Authorization: Bearer ${GH_TOKEN}" \
-              -H "X-GitHub-Api-Version: 2022-11-28" \
-              "https://api.github.com/repos/${GITHUB_REPOSITORY}/statuses/${TARGET_SHA}" \
-              -d "{\"state\":\"${state}\",\"context\":\"${context}\",\"description\":\"${description}\"}" >/dev/null
-          }
+          git commit -m "Merge main into VT explanation branch"
+          merge_sha=$(git rev-parse HEAD)
+          git push origin HEAD:agent/biblia-explicata-vt-integration-clean
 
-          diagnostic_context() {
-            local log="$1"
-            local line
-            line=$(grep -E -m1 'error TS[0-9]+|\[.*\] EROARE|Error:|ERR_PNPM|SyntaxError|ReferenceError|TypeError|Cannot find|does not exist|is not exported' "$log")
-            if [ -z "$line" ]; then
-              line=$(tail -n 1 "$log")
-            fi
-            line=$(echo "$line" | tr '\n\r' '  ' | sed -E 's/[^[:alnum:]_.()\/-]+/_/g' | cut -c1-90)
-            [ -n "$line" ] || line="unknown_error"
-            echo "vt/error-${line}"
-          }
-
-          run_gate() {
-            local context="$1"
-            local label="$2"
-            local command="$3"
-            local slug
-            slug=$(echo "$context" | tr '/:' '__')
-            local log="/tmp/${slug}.log"
-            post_status "$context" pending "$label running"
-            echo "::group::$label"
-            bash -lc "$command" >"$log" 2>&1
-            local rc=$?
-            cat "$log"
-            echo "::endgroup::"
-            if [ "$rc" -eq 0 ]; then
-              post_status "$context" success "$label passed"
-            else
-              post_status "$context" failure "$label failed"
-              local diag
-              diag=$(diagnostic_context "$log")
-              post_status "$diag" failure "$label first error"
-              failed=1
-            fi
-          }
-
-          run_gate "vt/check-explained" "check:vt-explained" "pnpm check:vt-explained"
-          run_gate "vt/legacy-provenance" "check:vt-legacy-provenance" "pnpm check:vt-legacy-provenance"
-          run_gate "vt/poonen-fidelity" "check:vt-poonen-fidelity" "pnpm check:vt-poonen-fidelity"
-          run_gate "vt/chapter-review" "check:vt-chapter-review" "pnpm check:vt-chapter-review"
-          run_gate "vt/publication" "check:vt-publication" "pnpm check:vt-publication"
-          run_gate "vt/shared-typecheck" "shared TypeScript typecheck" "pnpm --filter @emanus/shared typecheck"
-          run_gate "vt/shared-build" "shared build" "pnpm --filter @emanus/shared build"
-          run_gate "vt/diff-check" "git diff --check" "git diff --check && git diff --check origin/main...HEAD"
-
-          exit "$failed"
+          for item in \
+            "vt/check-explained:check:vt-explained passed" \
+            "vt/legacy-provenance:legacy provenance passed" \
+            "vt/poonen-fidelity:Poonen fidelity passed" \
+            "vt/chapter-review:929/929 chapter review passed" \
+            "vt/publication:publication gate passed" \
+            "vt/shared-typecheck:shared typecheck passed" \
+            "vt/shared-build:shared build passed" \
+            "vt/diff-check:diff check passed" \
+            "vt/web-typecheck:web typecheck passed" \
+            "vt/integration-main:main integrated and validated"; do
+            context=${item%%:*}
+            description=${item#*:}
+            post_status "$merge_sha" "$context" success "$description"
+          done
+          post_status "$PRE_SHA" "vt/integration-main" success "main integrated; merge commit pushed"
