@@ -45,27 +45,40 @@ const READER_STOPWORDS = new Set([
   "spune", "subliniază", "arată", "explică", "observă", "citește", "vede", "urmărește", "aplică",
 ])
 
+// Aceste expresii nu sunt declarate automat greșeli doctrinare. Sunt semnale de audit:
+// când apar într-o unitate cu provenance Poonen, trebuie demonstrat că limitarea vine
+// chiar din sursă. Altfel, este o calificare editorială introdusă peste sursă.
 const DILUTION_PATTERNS = [
   ["self-reference Emanus", /\bEmanus\b/iu],
   ["overlay/editorial meta", /\boverlay(?:-ul)?\b|\beditorial(?:ă|e)?\b/iu],
   ["multiple interpretations", /\bmai multe (?:interpretări|lecturi|modele)\b/iu],
   ["interpreted differently", /\binterpretat(?:ă|e|i)? diferit\b/iu],
   ["possible reading", /\bo posibilă (?:lectură|interpretare)\b/iu],
+  ["Poonen reduced to interpretation", /\b(?:aceasta|această poziție|această schemă).{0,35}\binterpretarea lui (?:Zac\s+)?Poonen\b/iu],
   ["not doctrine", /\bnu (?:este|sunt|devine|devin).{0,55}\bdoctrin(?:ă|ar)\b/iu],
   ["not doctrinal condition", /\bnu.{0,45}\bcondiți(?:e|a) doctrinară\b/iu],
   ["mark as interpretation", /\b(?:marchează|marcăm|etichetează|etichetăm).{0,55}\binterpret/iu],
-  ["do not transform", /\bnu transform(?:ă|ăm).{0,80}\b/iu],
+  ["textual caveat", /\b(?:Textul|Pasajul|Relatarea|Narațiunea|Narațiunile|Episodul|Această imagine|Această scenă|Această viziune|Această profeție) nu\b/iu],
+  ["do not transform", /\bnu transform(?:ă|ăm|i).{0,80}\b/iu],
+  ["does not transfer", /\bnu (?:se )?transfer(?:ă|ăm).{0,80}\b/iu],
   ["text does not authorize", /\btextul nu autorizează\b/iu],
   ["not a formula/regime/promise", /\bnu este (?:o|un) (?:formulă|regim|promisiune)\b/iu],
+  ["not mandate/model/method", /\bnu (?:constituie|devine|devin|sunt) (?:un|o|niște)?\s*(?:mandat|model|metodă|metode)\b/iu],
   ["not universal", /\bnu.{0,45}\buniversal(?:ă|e)?\b/iu],
-  ["do not diagnose/use", /\bnu trebuie (?:diagnosticat(?:ă)?|folosit(?:ă)?|înțeles|înțeleasă)\b/iu],
+  ["do not diagnose/use", /\bnu trebuie (?:diagnosticat(?:ă)?|folosit(?:ă)?|înțeles|înțeleasă|confundat(?:ă)?)\b/iu],
   ["different Christian models", /\b(?:tradițiile|modelele) creștine.{0,80}\b(?:difer|interpret)/iu],
+  ["modern violence caveat", /\b(?:violență|război|eliminarea).{0,90}\bmodern(?:ă|e)?\b/iu],
 ]
 
 const PUBLIC_UNCERTAINTY_PATTERNS = [
   ["possible reading introduced", /\bo posibilă lectură\b/iu],
   ["possible interpretation introduced", /\bo posibilă interpretare\b/iu],
 ]
+
+const findings = []
+function flag(where, label, value) {
+  findings.push({ where, label, snippet: text(value).replace(/\s+/g, " ").slice(0, 420) })
+}
 
 const transcriptCache = new Map()
 
@@ -100,11 +113,11 @@ function assertAnchorGrounded(book, chapter, unit) {
   )
 }
 
-function assertNoSourceDilution(where, value) {
+function auditSourceDilution(where, value) {
   const content = text(value)
   if (!content) return
   for (const [label, pattern] of DILUTION_PATTERNS) {
-    need(!pattern.test(content), `${where}: posibilă diluare/editorializare (${label}) — ${content.slice(0, 220)}`)
+    if (pattern.test(content)) flag(where, label, content)
   }
 }
 
@@ -114,18 +127,20 @@ function meaningfulReaderTokens(value) {
   )
 }
 
-function assertReaderPreservesSource(where, internalText, publicText) {
+function auditReaderPreservesSource(where, internalText, publicText) {
   const sourceTokens = meaningfulReaderTokens(internalText)
   const publicTokens = new Set(meaningfulReaderTokens(publicText))
   if (sourceTokens.length >= 12) {
     const retained = sourceTokens.filter((token) => publicTokens.has(token)).length
     const ratio = retained / sourceTokens.length
-    need(ratio >= 0.78, `${where}: neutralizarea publică a pierdut prea mult conținut-sursă (${retained}/${sourceTokens.length}, ${(ratio * 100).toFixed(1)}%)`)
+    if (ratio < 0.78) {
+      flag(where, `public sanitizer token retention ${(ratio * 100).toFixed(1)}%`, publicText)
+    }
   }
 
   for (const [label, pattern] of PUBLIC_UNCERTAINTY_PATTERNS) {
-    if (!pattern.test(internalText)) {
-      need(!pattern.test(publicText), `${where}: sanitizerul a introdus ${label}`)
+    if (!pattern.test(internalText) && pattern.test(publicText)) {
+      flag(where, `sanitizer introduced ${label}`, publicText)
     }
   }
 }
@@ -183,21 +198,21 @@ for (const book of overlayBooks) {
         stats.poonenOverlayUnits += 1
         need(unit.explanationKind === "exposition", `${where}: unitate Poonen care nu este exposition`)
         assertAnchorGrounded(book, chapter, unit)
-        assertNoSourceDilution(`${where} teaching`, unit.teaching)
-        assertNoSourceDilution(`${where} heading`, unit.heading)
-        assertNoSourceDilution(`${where} application`, unit.forYourHeart)
+        auditSourceDilution(`${where} teaching`, unit.teaching)
+        auditSourceDilution(`${where} heading`, unit.heading)
+        auditSourceDilution(`${where} application`, unit.forYourHeart)
 
         const publicUnit = publicChapter.units.find(
           (item) => item.verseStart === unit.from && item.verseEnd === unit.to,
         )
         need(publicUnit, `${where}: unitatea Poonen nu mai poate fi mapată exact în reader`)
-        assertReaderPreservesSource(where, unit.teaching, publicUnit.teaching)
+        auditReaderPreservesSource(where, unit.teaching, publicUnit.teaching)
       } else if (unit.source?.kind === "poonen-official") {
         stats.poonenOfficialUnits += 1
         need(unit.explanationKind === "exposition", `${where}: poonen-official care nu este exposition`)
         need(text(unit.source.sourceUrl), `${where}: sourceUrl poonen-official lipsă`)
         need(text(unit.source.section), `${where}: section poonen-official lipsă`)
-        assertNoSourceDilution(`${where} teaching`, unit.teaching)
+        auditSourceDilution(`${where} teaching`, unit.teaching)
       } else if (unit.source?.kind === "canonical-exegesis") {
         stats.canonicalExegesisUnits += 1
       }
@@ -226,13 +241,13 @@ for (const book of legacyBooks) {
       if (/\bPoonen\b/iu.test(unit.explanationSource ?? "")) {
         stats.poonenLegacyUnits += 1
         need(unit.explanationKind === "exposition", `${where}: provenance Poonen fără exposition`)
-        assertNoSourceDilution(`${where} teaching`, unit.teaching)
-        assertNoSourceDilution(`${where} heading`, unit.heading)
-        assertNoSourceDilution(`${where} application`, unit.forYourHeart)
+        auditSourceDilution(`${where} teaching`, unit.teaching)
+        auditSourceDilution(`${where} heading`, unit.heading)
+        auditSourceDilution(`${where} application`, unit.forYourHeart)
 
         const publicUnit = publicChapter.units.find((item) => item.ref === unit.ref)
         need(publicUnit, `${where}: unitatea legacy Poonen lipsește din reader`)
-        assertReaderPreservesSource(where, unit.teaching, publicUnit.teaching)
+        auditReaderPreservesSource(where, unit.teaching, publicUnit.teaching)
       }
 
       if (unit.explanationKind === "textual-overview") {
@@ -270,7 +285,7 @@ for (const book of publicOt) {
       ]) {
         if (!value) continue
         need(!publicForbidden.test(value), `${unit.ref} ${label}: provenance modern expus public`)
-        need(!publicEditorialMeta.test(value), `${unit.ref} ${label}: limbaj editorial/diluant expus public`)
+        if (publicEditorialMeta.test(value)) flag(`${unit.ref} ${label}`, "public editorial/dilution language", value)
       }
       need(!unit.explanationSource, `${unit.ref}: explanationSource expus public`)
     }
@@ -284,13 +299,22 @@ need(stats.poonenOverlayUnits + stats.poonenOfficialUnits + stats.poonenLegacyUn
 const duplicateGroups = [...teachingOwners.entries()].filter(([, owners]) => owners.length > 1)
 stats.duplicateTeachings = duplicateGroups.length
 if (duplicateGroups.length) {
-  console.warn(`[VT ultra-final] WARN — ${duplicateGroups.length} grupuri de teaching identic >=220 caractere; necesită doar inspecție dacă nu sunt repetări intenționate.`)
+  console.warn(`[VT ultra-final] WARN — ${duplicateGroups.length} grupuri de teaching identic >=220 caractere; necesită inspecție dacă nu sunt repetări intenționate.`)
   duplicateGroups.slice(0, 20).forEach(([, owners]) => console.warn(`  - ${owners.join(" | ")}`))
+}
+
+if (findings.length) {
+  console.error(`[VT ultra-final] FAIL — ${findings.length} semnale source-first/public-sanitizer necesită verificare directă în sursă:`)
+  findings.forEach((finding, index) => {
+    console.error(`\n${index + 1}. ${finding.where} — ${finding.label}`)
+    console.error(`   ${finding.snippet}`)
+  })
+  throw new Error(`[VT ultra-final] ${findings.length} semnale rămase; nu se aprobă publicarea până la rezolvare sau demonstrarea lor din sursă.`)
 }
 
 console.log(
   `[VT ultra-final] PASS — ${stats.books}/${EXPECTED_BOOKS} cărți, ${stats.chapters}/${EXPECTED_CHAPTERS} capitole, ${stats.publicVerses}/${EXPECTED_VERSES} versete; ` +
     `${stats.poonenOverlayUnits} unități Poonen overlay, ${stats.poonenOfficialUnits} poonen-official, ${stats.poonenLegacyUnits} legacy Poonen, ` +
     `${stats.canonicalExegesisUnits} canonical-exegesis, ${stats.textualOverviewUnits} textual-overview. ` +
-    `Fără diluare editorială detectată în unitățile Poonen și fără incertitudine introdusă de sanitizer în reader.`,
+    `Fără semnale de diluare editorială în unitățile Poonen și fără incertitudine introdusă de sanitizer în reader.`,
 )
