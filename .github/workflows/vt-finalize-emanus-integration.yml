@@ -1,0 +1,117 @@
+name: VT Finalize Emanus Integration
+
+on:
+  push:
+    branches: [agent/biblia-explicata-vt-integration-clean]
+    paths:
+      - ".github/workflows/vt-finalize-emanus-integration.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  statuses: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Merge main, validate VT, and push without workflow-file changes
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PRE_SHA: ${{ github.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          post() {
+            curl --fail --silent --show-error -X POST \
+              -H "Accept: application/vnd.github+json" \
+              -H "Authorization: Bearer ${GH_TOKEN}" \
+              -H "X-GitHub-Api-Version: 2022-11-28" \
+              "https://api.github.com/repos/${GITHUB_REPOSITORY}/statuses/$1" \
+              -d "{\"state\":\"$3\",\"context\":\"$2\",\"description\":\"$4\"}" >/dev/null
+          }
+          trap 'rc=$?; if [ "$rc" -ne 0 ]; then post "$PRE_SHA" "vt/finalize-push" failure "final integration failed"; fi' EXIT
+          post "$PRE_SHA" "vt/finalize-push" pending "merging and validating final Emanus VT"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main:refs/remotes/origin/main
+          git merge-base --is-ancestor 9d40cd53643d1568f8c806645d9b576f6c70b961 origin/main
+
+          set +e
+          git merge --no-commit --no-ff origin/main >/tmp/merge.log 2>&1
+          merge_rc=$?
+          set -e
+          if [ "$merge_rc" -ne 0 ]; then
+            mapfile -t conflicts < <(git diff --name-only --diff-filter=U)
+            unexpected=()
+            for path in "${conflicts[@]}"; do
+              case "$path" in
+                docs/data/biblia-emanus/*|docs/data/biblia-emanus-candidates/*|docs/biblia-emanus/*|scripts/*biblia-emanus*|scripts/test_biblia_emanus*|package.json|.github/workflows/*)
+                  git checkout --theirs -- "$path"; git add "$path" ;;
+                apps/web/src/screens/Bible.tsx|packages/shared/package.json)
+                  git checkout --ours -- "$path"; git add "$path" ;;
+                *) unexpected+=("$path") ;;
+              esac
+            done
+            if [ "${#unexpected[@]}" -ne 0 ]; then
+              printf 'Unexpected conflicts:\n%s\n' "${unexpected[*]}" >&2
+              exit 1
+            fi
+          fi
+          test -z "$(git diff --name-only --diff-filter=U)"
+
+          # Canonical Emanus tree is always exactly main; PR85 never edits Scripture.
+          git rm -r -f docs/data/biblia-emanus >/dev/null || true
+          git checkout origin/main -- docs/data/biblia-emanus
+          test ! -e docs/data/biblia-emanus/ot-source-evidence.jsonl
+          test -e docs/data/biblia-emanus/ot-source-evidence.jsonl.gz
+
+          # Preserve main package scripts and add only explained-VT commands.
+          git checkout origin/main -- package.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('package.json'); d=json.loads(p.read_text()); s=d.setdefault('scripts', {})
+          s.update({
+            'materialize:vt-emanus-runtime':'python3 scripts/materialize-published-emanus-ot-runtime.py',
+            'check:vt-explained':'python3 scripts/check-vt-explained-coverage.py',
+            'check:vt-legacy-provenance':'pnpm build:shared && node scripts/check-vt-legacy-provenance.mjs',
+            'check:vt-poonen-fidelity':'pnpm build:shared && node scripts/check-vt-poonen-fidelity.mjs',
+            'check:vt-chapter-review':'pnpm build:shared && node scripts/check-vt-chapter-by-chapter-review.mjs',
+            'check:vt-emanus-binding':'python3 scripts/materialize-published-emanus-ot-runtime.py --check && pnpm build:shared && node scripts/check-vt-emanus-binding.mjs',
+            'check:vt-publication':'python3 scripts/materialize-published-emanus-ot-runtime.py --check && pnpm build:shared && node scripts/check-vt-emanus-binding.mjs',
+          }); p.write_text(json.dumps(d, ensure_ascii=False, indent=2)+'\n')
+          p=Path('packages/shared/package.json'); d=json.loads(p.read_text()); d.setdefault('exports', {})['./bible-publication']={'types':'./dist/bible/publicationBibleFinal.d.ts','default':'./dist/bible/publicationBibleFinal.js'}; p.write_text(json.dumps(d, ensure_ascii=False, indent=2)+'\n')
+          PY
+
+          python3 scripts/materialize-published-emanus-ot-runtime.py
+          corepack enable
+          corepack prepare pnpm@9.7.0 --activate
+          pnpm install --frozen-lockfile
+          python3 scripts/check-biblia-emanus-ot-publication-gate.py
+          pnpm check:vt-explained
+          pnpm check:vt-legacy-provenance
+          pnpm check:vt-poonen-fidelity
+          pnpm check:vt-chapter-review
+          pnpm check:vt-publication
+          pnpm --filter @emanus/shared typecheck
+          pnpm --filter @emanus/shared build
+          pnpm --filter @emanus/web typecheck
+          git diff --check
+
+          # GitHub Actions token may not push workflow-file modifications.
+          # Keep the branch's pre-run workflow tree unchanged in this merge commit.
+          git rm -r -f .github/workflows >/dev/null
+          git checkout "$PRE_SHA" -- .github/workflows
+          git add -A
+          git diff --cached --check
+          git commit --no-verify -m "Bind explained VT to published Biblia Emanus"
+          final_sha=$(git rev-parse HEAD)
+          git push origin HEAD:agent/biblia-explicata-vt-integration-clean
+          post "$final_sha" "vt/finalize-push" success "validated Emanus VT integration pushed"
+          post "$PRE_SHA" "vt/finalize-push" success "validated Emanus VT integration pushed"
