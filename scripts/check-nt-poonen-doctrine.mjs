@@ -30,7 +30,12 @@ function check(bookId, chapter, fn) { const label = `${bookId} ${chapter}`; fn(c
 
 check("2-tesaloniceni", 2, (t, l) => {
   allOf(t, [/apostaz|lepadarea de credinta/, /antihrist|omul faradelegii/, /strangerea|adunarea/, /mai intai|inainte/, /iub.*adevar|adevar.*iub/], l)
-  anyOf(t, [/nu trebuie.*ideea.*disparea.*inainte.*antihrist/, /antihrist.*inainte.*strangerea/], l)
+  anyOf(t, [
+    /nu trebuie.*(?:disparit|rapir|plecar).*inainte.*antihrist/,
+    /(?:disparit|rapir|plecar).*secreta.*inainte.*antihrist/,
+    /antihrist.*inainte.*(?:strangerea|adunarea|rapir)/,
+    /(?:apostaz|omul faradelegii|antihrist).*inainte.*venirea.*(?:domnului|hristos)/,
+  ], l)
   noneOf(t, [/o posibila lectura/, /interpretari diferite/], l)
 })
 check("1-timotei", 2, (t, l) => { allOf(t, [/femei|femeia/, /autoritate|invatator|invata/, /barbat/, /ruga|proroc/], l); noneOf(t, [/doar o norma culturala/, /nu mai este valabil/, /o posibila lectura/, /interpretari diferite/], l) })
@@ -48,7 +53,6 @@ check("2-petru", 2, (t, l) => allOf(t, [/invatatori falsi|falsii invatatori/, /s
 check("1-ioan", 4, (t, l) => allOf(t, [/isus.*venit in trup|venit in trup/, /duh/, /dragoste/, /om real|omeneasc|ascult/], l))
 check("iuda", 1, (t, l) => {
   allOf(t, [/har/, /pacat|destrabal/, /egipt/, /salvat|scos/, /pierit|nimicit|necredin/], l)
-  // Positive source assertion: a good beginning does NOT make falling impossible.
   anyOf(t, [/inceput bun.*nu.*imposibil.*cad/, /siguranta falsa.*inceput bun.*imposibil.*cad/, /salvat.*egipt.*pierit/], l)
 })
 check("apocalipsa", 7, (t, l) => { allOf(t, [/necazul cel mare|marele necaz/, /multim/, /miel/], l); anyOf(t, [/biserica.*nu primeste promisiunea.*evita.*necaz/, /credincios.*prin.*necaz/, /vin din necazul cel mare/], l) })
