@@ -28,7 +28,7 @@ const MISSING_DIACRITICS = new Map([
   ["usurinta", "ușurință / ușurința"], ["aceeasi", "aceeași"], ["lasa", "lasă / lăsa"], ["inalte", "înalte"], ["decat", "decât"],
   ["incurcatura", "încurcătură"], ["crestin", "creștin"], ["crestine", "creștine"], ["fapturii", "făpturii"],
   ["legatura", "legătură / legătura"], ["vietii", "vieții"], ["viata", "viață / viața"], ["intuneric", "întuneric"], ["amandoua", "amândouă"],
-  ["inteles", "înțeles"], ["biruinta", "biruință / biruința"], ["simpla", "simplă"], ["daruieste", "dăruiește"], ["descopera", "descoperă"],
+  ["inteles", "înțeles"], ["biruinta", "biruință / biruința"], ["simpla", "simplă / simpla"], ["daruieste", "dăruiește"], ["descopera", "descoperă"],
   ["curata", "curată / curăță"], ["stapanire", "stăpânire"], ["stapanit", "stăpânit"], ["inviere", "înviere"], ["invierea", "învierea"],
 ])
 
@@ -47,6 +47,15 @@ function fields(chapter) {
     ]),
   ].filter(([, value]) => typeof value === "string" && value.trim())
 }
+function contextFor(value, token) {
+  const escaped = token.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+  const regex = new RegExp(`(?<![\\p{L}\\p{N}_])${escaped}(?![\\p{L}\\p{N}_])`, "iu")
+  const match = regex.exec(value)
+  if (!match) return null
+  const start = Math.max(0, match.index - 55)
+  const end = Math.min(value.length, match.index + match[0].length + 55)
+  return `${start > 0 ? "…" : ""}${value.slice(start, end).replace(/\s+/g, " ").trim()}${end < value.length ? "…" : ""}`
+}
 
 if (!fs.existsSync(corpusDir)) throw new Error("missing final NT corpus")
 const findings = []
@@ -56,13 +65,13 @@ for (const file of fs.readdirSync(corpusDir).filter((name) => name.endsWith(".js
     for (const [field, value] of fields(chapter)) {
       for (const [wrong, expected] of MISSING_DIACRITICS) {
         const escaped = wrong.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
-        const regex = new RegExp(`\\b${escaped}\\b`, "giu")
+        const regex = new RegExp(`(?<![\\p{L}\\p{N}_])${escaped}(?![\\p{L}\\p{N}_])`, "giu")
         const matches = value.match(regex)
-        if (matches?.length) findings.push({ bookId: book.id, book: book.name, chapter: chapter.number, field, kind: "missing-diacritics", token: wrong, expected, occurrences: matches.length })
+        if (matches?.length) findings.push({ bookId: book.id, book: book.name, chapter: chapter.number, field, kind: "missing-diacritics", token: wrong, expected, occurrences: matches.length, context: contextFor(value, wrong) })
       }
       for (const [pattern, expected] of TYPO_PATTERNS) {
         const matches = value.match(pattern)
-        if (matches?.length) findings.push({ bookId: book.id, book: book.name, chapter: chapter.number, field, kind: "known-typo", token: matches[0], expected, occurrences: matches.length })
+        if (matches?.length) findings.push({ bookId: book.id, book: book.name, chapter: chapter.number, field, kind: "known-typo", token: matches[0], expected, occurrences: matches.length, context: contextFor(value, matches[0]) })
       }
     }
   }
@@ -71,17 +80,18 @@ for (const file of fs.readdirSync(corpusDir).filter((name) => name.endsWith(".js
 const tokenSummaryMap = new Map()
 for (const finding of findings) {
   const key = `${finding.kind}\u0000${String(finding.token).toLowerCase()}\u0000${finding.expected}`
-  const current = tokenSummaryMap.get(key) ?? { kind: finding.kind, token: String(finding.token).toLowerCase(), expected: finding.expected, occurrences: 0, groups: 0 }
+  const current = tokenSummaryMap.get(key) ?? { kind: finding.kind, token: String(finding.token).toLowerCase(), expected: finding.expected, occurrences: 0, groups: 0, samples: [] }
   current.occurrences += finding.occurrences
   current.groups += 1
+  if (finding.context && current.samples.length < 12) current.samples.push({ bookId: finding.bookId, chapter: finding.chapter, field: finding.field, context: finding.context })
   tokenSummaryMap.set(key, current)
 }
 const tokenSummary = [...tokenSummaryMap.values()].sort((a, b) => b.occurrences - a.occurrences || a.token.localeCompare(b.token, "ro"))
 
 const report = {
-  schema: "emanus-nt-romanian-language-audit-v2",
+  schema: "emanus-nt-romanian-language-audit-v3",
   status: findings.length ? "manual-edit-required" : "clean",
-  policy: "Reader-facing Romanian must use standard diacritics. This audit flags likely missing-diacritic tokens but does not guess context-sensitive replacements. Automatic fixes are limited to context-free corruption tokens in a separate script.",
+  policy: "Reader-facing Romanian must use standard diacritics. Audit contexts support deterministic grammar-aware review; automatic fixes remain limited to unambiguous forms or explicitly reviewed contextual rules.",
   count: findings.reduce((sum, finding) => sum + finding.occurrences, 0),
   findingGroups: findings.length,
   tokenSummary,
