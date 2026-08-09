@@ -40,23 +40,19 @@ const REVIEWED_2_19_25: ExplainedOverlayUnit = {
     "Nu lua în râs lucrurile lui Dumnezeu, dar nici nu folosi onoarea lui Dumnezeu ca pretext pentru răzbunarea ta. Hristos te cheamă să lași judecata în mâna Lui.",
 }
 
-function neutralizeChapter1Attribution(book: ExplainedBookOverlay): ExplainedBookOverlay {
+function neutralizeDanglingAttribution(book: ExplainedBookOverlay): ExplainedBookOverlay {
   return {
     ...book,
-    chapters: book.chapters.map((chapter) =>
-      chapter.number === 1
-        ? {
-            ...chapter,
-            units: chapter.units.map((unit) => ({
-              ...unit,
-              teaching: unit.teaching.replace(
-                "Aplicația lui este explicită:",
-                "Aplicația este explicită:",
-              ),
-            })),
-          }
-        : chapter,
-    ),
+    chapters: book.chapters.map((chapter) => ({
+      ...chapter,
+      units: chapter.units.map((unit) => ({
+        ...unit,
+        teaching: unit.teaching
+          .replace(/\bAplicația lui este\b/giu, "Aplicația este")
+          .replace(/\bLectura lui este\b/giu, "Lectura este")
+          .replace(/\bInterpretarea lui este\b/giu, "Interpretarea este"),
+      })),
+    })),
   }
 }
 
@@ -75,5 +71,5 @@ export function reviewImparati2Explanations(book: ExplainedBookOverlay): Explain
     ),
   }
 
-  return neutralizeChapter1Attribution(reviewed)
+  return neutralizeDanglingAttribution(reviewed)
 }
