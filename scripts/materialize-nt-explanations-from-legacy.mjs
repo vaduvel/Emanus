@@ -21,63 +21,33 @@ const manifestPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-rec
 const reportPath = path.join(ROOT, "docs", "biblia-explicata", "NT-RECOVERY-REPORT.md")
 
 const CANON = [
-  ["matei", "MAT", "Matei", 28],
-  ["marcu", "MRK", "Marcu", 16],
-  ["luca", "LUK", "Luca", 24],
-  ["ioan", "JHN", "Ioan", 21],
-  ["fapte", "ACT", "Faptele Apostolilor", 28],
-  ["romani", "ROM", "Romani", 16],
-  ["1-corinteni", "1CO", "1 Corinteni", 16],
-  ["2-corinteni", "2CO", "2 Corinteni", 13],
-  ["galateni", "GAL", "Galateni", 6],
-  ["efeseni", "EPH", "Efeseni", 6],
-  ["filipeni", "PHP", "Filipeni", 4],
-  ["coloseni", "COL", "Coloseni", 4],
-  ["1-tesaloniceni", "1TH", "1 Tesaloniceni", 5],
-  ["2-tesaloniceni", "2TH", "2 Tesaloniceni", 3],
-  ["1-timotei", "1TI", "1 Timotei", 6],
-  ["2-timotei", "2TI", "2 Timotei", 4],
-  ["tit", "TIT", "Tit", 3],
-  ["filimon", "PHM", "Filimon", 1],
-  ["evrei", "HEB", "Evrei", 13],
-  ["iacov", "JAS", "Iacov", 5],
-  ["1-petru", "1PE", "1 Petru", 5],
-  ["2-petru", "2PE", "2 Petru", 3],
-  ["1-ioan", "1JN", "1 Ioan", 5],
-  ["2-ioan", "2JN", "2 Ioan", 1],
-  ["3-ioan", "3JN", "3 Ioan", 1],
-  ["iuda", "JUD", "Iuda", 1],
-  ["apocalipsa", "REV", "Apocalipsa", 22],
+  ["matei", "MAT", "Matei", 28], ["marcu", "MRK", "Marcu", 16], ["luca", "LUK", "Luca", 24],
+  ["ioan", "JHN", "Ioan", 21], ["fapte", "ACT", "Faptele Apostolilor", 28], ["romani", "ROM", "Romani", 16],
+  ["1-corinteni", "1CO", "1 Corinteni", 16], ["2-corinteni", "2CO", "2 Corinteni", 13], ["galateni", "GAL", "Galateni", 6],
+  ["efeseni", "EPH", "Efeseni", 6], ["filipeni", "PHP", "Filipeni", 4], ["coloseni", "COL", "Coloseni", 4],
+  ["1-tesaloniceni", "1TH", "1 Tesaloniceni", 5], ["2-tesaloniceni", "2TH", "2 Tesaloniceni", 3], ["1-timotei", "1TI", "1 Timotei", 6],
+  ["2-timotei", "2TI", "2 Timotei", 4], ["tit", "TIT", "Tit", 3], ["filimon", "PHM", "Filimon", 1],
+  ["evrei", "HEB", "Evrei", 13], ["iacov", "JAS", "Iacov", 5], ["1-petru", "1PE", "1 Petru", 5],
+  ["2-petru", "2PE", "2 Petru", 3], ["1-ioan", "1JN", "1 Ioan", 5], ["2-ioan", "2JN", "2 Ioan", 1],
+  ["3-ioan", "3JN", "3 Ioan", 1], ["iuda", "JUD", "Iuda", 1], ["apocalipsa", "REV", "Apocalipsa", 22],
 ]
 
-// Aceste 15 cărți au conținut editorial scris înainte de completion-ul generic.
-// Ele sunt RECUPERATE, nu declarate încă fidele sursei: auditul source-first urmează separat.
 const RECOVERABLE_IDS = new Set([
   "matei", "marcu", "luca", "ioan", "fapte", "romani", "1-corinteni", "2-corinteni",
   "galateni", "efeseni", "filipeni", "coloseni", "1-tesaloniceni", "tit", "filimon",
 ])
-
-// Aceste 12 cărți au fost create prin ntCompletionBooks.ts. Se păstrează numai ca material de lucru
-// și NU pot fi publicate până când explicațiile sunt reconstruite direct din Poonen/CFC.
 const QUARANTINED_IDS = new Set([
   "2-tesaloniceni", "1-timotei", "2-timotei", "evrei", "iacov", "1-petru", "2-petru",
   "1-ioan", "2-ioan", "3-ioan", "iuda", "apocalipsa",
 ])
-
 const EXPECTED = { books: 27, chapters: 260, verses: 7941, recoverableChapters: 191, quarantinedChapters: 69 }
 
 function fail(message) {
   console.error(`[NT recovery] ${message}`)
   process.exit(1)
 }
-
-function sha256(value) {
-  return crypto.createHash("sha256").update(value).digest("hex")
-}
-
-function jsonStable(value) {
-  return JSON.stringify(value, null, 2) + "\n"
-}
+function sha256(value) { return crypto.createHash("sha256").update(value).digest("hex") }
+function jsonStable(value) { return JSON.stringify(value, null, 2) + "\n" }
 
 function loadEmanusChapter(code, chapter) {
   const file = path.join(emanusDir, `${code}.${chapter}.json`)
@@ -87,12 +57,47 @@ function loadEmanusChapter(code, chapter) {
   if (data.status !== "published" || data.public !== true) fail(`${code}.${chapter}: Biblia Emanus nu este published/public`)
   if (data.bookId !== code || data.chapter !== chapter) fail(`${code}.${chapter}: metadata Biblia Emanus invalidă`)
   if (!Array.isArray(data.verses) || data.verses.length === 0) fail(`${code}.${chapter}: verses lipsă`)
-  data.verses.forEach((verse, index) => {
-    if (!verse || verse.number !== index + 1 || typeof verse.text !== "string" || !verse.text.trim()) {
-      fail(`${code}.${chapter}:${index + 1}: verset Biblia Emanus invalid`)
+
+  const verseNumbers = []
+  const mainVerseNumbers = new Set()
+  let previous = 0
+  for (const verse of data.verses) {
+    if (!verse || !Number.isInteger(verse.number) || verse.number <= previous) {
+      fail(`${code}.${chapter}: numerotare BE neordonată sau invalidă`)
     }
-  })
-  return data
+    if (typeof verse.text !== "string" || !verse.text.trim()) fail(`${code}.${chapter}:${verse.number}: text BE gol`)
+    previous = verse.number
+    verseNumbers.push(verse.number)
+    mainVerseNumbers.add(verse.number)
+  }
+
+  const criticalReferenceNumbers = []
+  for (const note of Array.isArray(data.referenceNotes) ? data.referenceNotes : []) {
+    if (!Number.isInteger(note?.number) || note.number < 1 || mainVerseNumbers.has(note.number)) continue
+    if (note.status !== "not-in-critical-main-text" || note.resolutionStatus !== "resolved") {
+      fail(`${code}.${chapter}:${note.number}: slot absent din text fără rezoluție critică explicită`)
+    }
+    if (typeof note.displayNote !== "string" || !note.displayNote.trim()) {
+      fail(`${code}.${chapter}:${note.number}: referenceNote critic fără displayNote`)
+    }
+    criticalReferenceNumbers.push(note.number)
+  }
+  criticalReferenceNumbers.sort((a, b) => a - b)
+
+  const lastVerseNumber = Math.max(...verseNumbers, ...criticalReferenceNumbers)
+  const criticalSet = new Set(criticalReferenceNumbers)
+  for (let number = 1; number <= lastVerseNumber; number += 1) {
+    if (!mainVerseNumbers.has(number) && !criticalSet.has(number)) {
+      fail(`${code}.${chapter}:${number}: gol de numerotare fără referenceNote critic rezolvat`)
+    }
+  }
+
+  return {
+    verseEntryCount: data.verses.length,
+    lastVerseNumber,
+    criticalReferenceNumbers,
+    criticalSet,
+  }
 }
 
 function parseRange(ref, chapterNumber) {
@@ -106,14 +111,19 @@ function parseRange(ref, chapterNumber) {
   return [from, to]
 }
 
-function cleanUnit(unit, chapterNumber, verseCount) {
+function cleanUnit(unit, chapterNumber, binding) {
   const [verseStart, verseEnd] = parseRange(unit.ref, chapterNumber)
-  if (verseEnd > verseCount) fail(`${unit.ref}: depășește Biblia Emanus (${verseCount} versete)`)
+  if (verseEnd > binding.lastVerseNumber) fail(`${unit.ref}: depășește numerotarea Biblia Emanus (${binding.lastVerseNumber})`)
+  const criticalReferenceNumbers = []
+  for (let number = verseStart; number <= verseEnd; number += 1) {
+    if (binding.criticalSet.has(number)) criticalReferenceNumbers.push(number)
+  }
   return {
     id: unit.id,
     ref: unit.ref,
     verseStart,
     verseEnd,
+    ...(criticalReferenceNumbers.length ? { criticalReferenceNumbers } : {}),
     heading: unit.heading,
     teaching: unit.teaching,
     ...(Array.isArray(unit.words) && unit.words.length ? { words: unit.words } : {}),
@@ -124,24 +134,19 @@ function cleanUnit(unit, chapterNumber, verseCount) {
 
 function copySourceRegistry() {
   const legacyData = path.join(legacyRoot, "docs", "data")
+  fs.rmSync(sourceOutputDir, { recursive: true, force: true })
   fs.mkdirSync(sourceOutputDir, { recursive: true })
   const copied = []
   if (!fs.existsSync(legacyData)) return copied
   for (const name of fs.readdirSync(legacyData).sort()) {
-    if (!name.endsWith(".json")) continue
-    if (!name.toLowerCase().includes("poonen")) continue
-    const source = path.join(legacyData, name)
-    const target = path.join(sourceOutputDir, name)
-    fs.copyFileSync(source, target)
+    if (!name.endsWith(".json") || !name.toLowerCase().includes("poonen")) continue
+    fs.copyFileSync(path.join(legacyData, name), path.join(sourceOutputDir, name))
     copied.push(name)
   }
   return copied
 }
 
-if (!fs.existsSync(legacyIndex)) {
-  fail(`nu există ${legacyIndex}; compilează mai întâi @emanus/shared pe agent/complete-new-testament`)
-}
-
+if (!fs.existsSync(legacyIndex)) fail(`nu există ${legacyIndex}; compilează mai întâi @emanus/shared pe agent/complete-new-testament`)
 const legacyModule = await import(pathToFileURL(legacyIndex).href + `?t=${Date.now()}`)
 const legacyBooks = (legacyModule.BIBLE_BOOKS ?? []).filter((book) => book?.testament === "nt")
 if (legacyBooks.length !== EXPECTED.books) fail(`catalog legacy NT ${legacyBooks.length}/${EXPECTED.books}`)
@@ -153,6 +158,7 @@ let totalVerses = 0
 let recoverableChapters = 0
 let quarantinedChapters = 0
 let totalUnits = 0
+let totalCriticalReferenceSlots = 0
 
 fs.rmSync(outputDir, { recursive: true, force: true })
 fs.mkdirSync(outputDir, { recursive: true })
@@ -161,9 +167,7 @@ for (let order = 0; order < CANON.length; order += 1) {
   const [id, code, canonicalName, expectedChapters] = CANON[order]
   const legacy = byId.get(id)
   if (!legacy) fail(`lipsește cartea legacy ${id}`)
-  if (!Array.isArray(legacy.chapters) || legacy.chapters.length !== expectedChapters) {
-    fail(`${id}: capitole ${legacy.chapters?.length ?? 0}/${expectedChapters}`)
-  }
+  if (!Array.isArray(legacy.chapters) || legacy.chapters.length !== expectedChapters) fail(`${id}: capitole ${legacy.chapters?.length ?? 0}/${expectedChapters}`)
 
   const recoveryClass = RECOVERABLE_IDS.has(id)
     ? "recovered-needs-source-audit"
@@ -174,26 +178,21 @@ for (let order = 0; order < CANON.length; order += 1) {
   const chapters = []
   let bookVerses = 0
   let bookUnits = 0
+  let bookCriticalSlots = 0
   for (let index = 0; index < legacy.chapters.length; index += 1) {
     const number = index + 1
     const chapter = legacy.chapters[index]
     if (chapter.number !== number) fail(`${id}: capitole necontinue la ${number}`)
-    const be = loadEmanusChapter(code, number)
-    const verseCount = be.verses.length
-    const units = (chapter.units ?? []).map((unit) => cleanUnit(unit, number, verseCount))
+    const binding = loadEmanusChapter(code, number)
+    const units = (chapter.units ?? []).map((unit) => cleanUnit(unit, number, binding))
     if (!units.length) fail(`${id} ${number}: units gol`)
 
-    // Acoperirea trebuie să fie continuă 1..ultimul verset; această verificare refuză atât goluri, cât și suprapuneri.
     let expectedNext = 1
     for (const unit of units) {
-      if (unit.verseStart !== expectedNext) {
-        fail(`${id} ${number}: acoperire discontinuă; așteptat ${expectedNext}, găsit ${unit.verseStart}`)
-      }
+      if (unit.verseStart !== expectedNext) fail(`${id} ${number}: acoperire discontinuă; așteptat ${expectedNext}, găsit ${unit.verseStart}`)
       expectedNext = unit.verseEnd + 1
     }
-    if (expectedNext !== verseCount + 1) {
-      fail(`${id} ${number}: acoperire ${expectedNext - 1}/${verseCount}`)
-    }
+    if (expectedNext !== binding.lastVerseNumber + 1) fail(`${id} ${number}: acoperire numerică ${expectedNext - 1}/${binding.lastVerseNumber}`)
 
     chapters.push({
       number,
@@ -204,13 +203,22 @@ for (let order = 0; order < CANON.length; order += 1) {
       units,
       prayer: chapter.prayer,
       status: recoveryClass === "recovered-needs-source-audit" ? "in_review" : "quarantined",
-      emanusTextBinding: { translation: "BE", bookId: code, chapter: number, verseCount },
+      emanusTextBinding: {
+        translation: "BE",
+        bookId: code,
+        chapter: number,
+        verseEntryCount: binding.verseEntryCount,
+        lastVerseNumber: binding.lastVerseNumber,
+        criticalReferenceNumbers: binding.criticalReferenceNumbers,
+      },
     })
     totalChapters += 1
-    totalVerses += verseCount
+    totalVerses += binding.verseEntryCount
     totalUnits += units.length
-    bookVerses += verseCount
+    totalCriticalReferenceSlots += binding.criticalReferenceNumbers.length
+    bookVerses += binding.verseEntryCount
     bookUnits += units.length
+    bookCriticalSlots += binding.criticalReferenceNumbers.length
     if (recoveryClass === "recovered-needs-source-audit") recoverableChapters += 1
     else quarantinedChapters += 1
   }
@@ -227,22 +235,12 @@ for (let order = 0; order < CANON.length; order += 1) {
     sourcePolicy: recoveryClass === "recovered-needs-source-audit"
       ? "Conținut editorial recuperat. Nu se publică până la audit source-first Poonen/CFC capitol cu capitol."
       : "Completion generic detectat. Nu se publică și nu se promovează la source-first; trebuie reconstruit din sursa Poonen/CFC.",
-    textPolicy: "Textul RCCV legacy nu este copiat. Intervalele sunt validate exclusiv față de Biblia Emanus BE publicată.",
+    textPolicy: "Textul biblic legacy nu este copiat. Intervalele sunt validate exclusiv față de Biblia Emanus BE publicată, inclusiv sloturile critice rezolvate.",
     chapters,
   }
   const rendered = jsonStable(payload)
   fs.writeFileSync(path.join(outputDir, `${String(order + 1).padStart(2, "0")}-${id}.json`), rendered, "utf8")
-  outputBooks.push({
-    order: 40 + order,
-    id,
-    bookId: code,
-    name: canonicalName,
-    recoveryClass,
-    chapters: expectedChapters,
-    verses: bookVerses,
-    units: bookUnits,
-    sha256: sha256(rendered),
-  })
+  outputBooks.push({ order: 40 + order, id, bookId: code, name: canonicalName, recoveryClass, chapters: expectedChapters, verses: bookVerses, units: bookUnits, criticalReferenceSlots: bookCriticalSlots, sha256: sha256(rendered) })
 }
 
 if (totalChapters !== EXPECTED.chapters) fail(`capitole ${totalChapters}/${EXPECTED.chapters}`)
@@ -259,14 +257,9 @@ const manifest = {
   publicationBlocked: true,
   rule: "Poonen/CFC source-first. Conținutul generic nu poate fi publicat.",
   counts: {
-    books: outputBooks.length,
-    chapters: totalChapters,
-    verses: totalVerses,
-    units: totalUnits,
-    recoverableBooks: RECOVERABLE_IDS.size,
-    recoverableChapters,
-    quarantinedBooks: QUARANTINED_IDS.size,
-    quarantinedChapters,
+    books: outputBooks.length, chapters: totalChapters, verses: totalVerses, units: totalUnits,
+    criticalReferenceSlots: totalCriticalReferenceSlots, recoverableBooks: RECOVERABLE_IDS.size,
+    recoverableChapters, quarantinedBooks: QUARANTINED_IDS.size, quarantinedChapters,
   },
   sourceRegistryFiles: copiedSources,
   books: outputBooks,
@@ -279,22 +272,21 @@ const quarantinedRows = outputBooks.filter((book) => book.recoveryClass === "qua
 const report = `# NT explicat — raport de recuperare curată\n\n` +
   `## Verdict intermediar\n\n` +
   `Catalogul legacy \`agent/complete-new-testament\` conține structural **${outputBooks.length}/27 cărți, ${totalChapters}/260 capitole**. ` +
-  `Niciun text RCCV nu este importat în acest corpus. Fiecare interval este validat față de **Biblia Emanus BE publicată (${totalVerses} versete NT)**.\n\n` +
+  `Textul biblic vechi nu este importat. Fiecare interval este validat față de **Biblia Emanus BE publicată (${totalVerses} versete NT)**, iar numerele absente din textul critic sunt acceptate numai când BE le păstrează ca note critice rezolvate.\n\n` +
   `- **${recoverableRows.length} cărți / ${recoverableChapters} capitole**: conținut editorial recuperat, obligatoriu de auditat source-first Poonen/CFC înainte de publicare.\n` +
   `- **${quarantinedRows.length} cărți / ${quarantinedChapters} capitole**: completion generic; rămâne în carantină și trebuie reconstruit direct din sursa Poonen/CFC.\n` +
+  `- **${totalCriticalReferenceSlots} sloturi numerice critice** sunt păstrate ca referințe, nu transformate în versete BE.\n` +
   `- **Publicare: BLOCATĂ** până la auditul integral 27/27 și 260/260.\n\n` +
   `## Regula doctrinară\n\n` +
   `Unde Zac Poonen/CFC dezvoltă pasajul, explicația finală păstrează doctrina, interpretarea, tipologia și aplicația lui fără diluare sau relativizare. ` +
   `Numele sursei rămâne în provenance intern; reader-ul public nu îl expune. În golurile reale ale sursei se poate folosi numai rezumat textual sau exegeza canonică verificată, clar separată.\n\n` +
-  `## Recuperabile, dar încă nepublicabile\n\n` +
-  recoverableRows.map((book) => `- ${book.name}: ${book.chapters} capitole, ${book.units} unități`).join("\n") +
-  `\n\n## Carantină — de refăcut din Poonen/CFC\n\n` +
-  quarantinedRows.map((book) => `- ${book.name}: ${book.chapters} capitole, ${book.units} unități legacy generice`).join("\n") +
-  `\n\n## Următoarea poartă\n\n` +
-  `Fiecare capitol trebuie să primească provenance source-first și verdict editorial. Nicio carte nu devine \`published\` doar pentru că are acoperire structurală completă.\n`
+  `## Recuperabile, dar încă nepublicabile\n\n` + recoverableRows.map((book) => `- ${book.name}: ${book.chapters} capitole, ${book.units} unități`).join("\n") +
+  `\n\n## Carantină — de refăcut din Poonen/CFC\n\n` + quarantinedRows.map((book) => `- ${book.name}: ${book.chapters} capitole, ${book.units} unități legacy generice`).join("\n") +
+  `\n\n## Următoarea poartă\n\nFiecare capitol trebuie să primească provenance source-first și verdict editorial. Nicio carte nu devine \`published\` doar pentru că are acoperire structurală completă.\n`
 fs.mkdirSync(path.dirname(reportPath), { recursive: true })
 fs.writeFileSync(reportPath, report, "utf8")
 
 console.log(`NT recovery OK: ${outputBooks.length} books / ${totalChapters} chapters / ${totalVerses} BE verses / ${totalUnits} units`)
+console.log(`Critical reference slots preserved: ${totalCriticalReferenceSlots}`)
 console.log(`Recoverable: ${recoverableRows.length} books / ${recoverableChapters} chapters`)
 console.log(`Quarantined generic completion: ${quarantinedRows.length} books / ${quarantinedChapters} chapters`)
