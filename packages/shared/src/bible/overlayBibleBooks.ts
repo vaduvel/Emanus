@@ -1,9 +1,7 @@
 import type { BibleBook, BibleChapter, BibleUnit, WordStudy } from "./types.js"
+import { BIBLIA_EMANUS_TRANSLATION } from "./types.js"
 import { VT_EXPLAINED_OVERLAYS } from "./overlays/index.js"
-import {
-  VT_CANONICAL_TEXT_BY_BOOK,
-  VT_TEMPORARY_TEXT_BOOKS,
-} from "./generated/vtCanonicalText/index.js"
+import { PUBLISHED_EMANUS_OT_TEXT_BY_ORDER } from "./generated/publishedEmanusOtText.js"
 import type { ExplainedOverlayUnit } from "./explainedOverlay.js"
 
 function sourceLabel(unit: ExplainedOverlayUnit): string {
@@ -45,6 +43,8 @@ function toReaderUnit(
   return {
     id: `${bookId}-${chapterNumber}-${index + 1}`,
     ref: `${bookName} ${chapterNumber}:${suffix}`,
+    verseStart: unit.from,
+    verseEnd: unit.to,
     heading: unit.heading,
     text: unitText(verseTexts, unit.from, unit.to),
     teaching: unit.teaching,
@@ -56,16 +56,15 @@ function toReaderUnit(
 }
 
 export const VT_OVERLAY_BIBLE_BOOKS: BibleBook[] = VT_EXPLAINED_OVERLAYS.map((overlay) => {
-  const textBook = VT_CANONICAL_TEXT_BY_BOOK.get(overlay.bookId)
+  const textBook = PUBLISHED_EMANUS_OT_TEXT_BY_ORDER.get(overlay.order)
   if (!textBook) {
-    throw new Error(`[${overlay.name}] lipsește textul biblic de lucru materializat.`)
+    throw new Error(`[${overlay.name}] lipsește textul publicat Biblia Emanus.`)
   }
 
-  const temporary = textBook.textStage === "temporary-editorial"
   const chapters: BibleChapter[] = overlay.chapters.map((chapter) => {
     const verseTexts = textBook.chapters[chapter.number]
     if (!verseTexts) {
-      throw new Error(`[${overlay.name} ${chapter.number}] lipsește textul biblic de lucru.`)
+      throw new Error(`[${overlay.name} ${chapter.number}] lipsește textul publicat Biblia Emanus.`)
     }
 
     return {
@@ -80,10 +79,7 @@ export const VT_OVERLAY_BIBLE_BOOKS: BibleBook[] = VT_EXPLAINED_OVERLAYS.map((ov
         toReaderUnit(overlay.name, overlay.bookId, chapter.number, verseTexts, unit, index),
       ),
       prayer: "",
-      // Explicația poate fi editorial `published`, dar un text biblic de lucru
-      // provizoriu nu trebuie deschis în ediția publică. Când Biblia Emanus
-      // înlocuiește acel text, statusul explicației se propagă automat aici.
-      status: temporary ? "in_review" : overlay.status,
+      status: overlay.status,
     }
   })
 
@@ -92,16 +88,15 @@ export const VT_OVERLAY_BIBLE_BOOKS: BibleBook[] = VT_EXPLAINED_OVERLAYS.map((ov
     name: overlay.name,
     testament: "vt" as const,
     order: overlay.order,
-    blurb: temporary
-      ? "Text biblic provizoriu pentru lucru editorial, separat de explicație și marcat pentru înlocuire cu Biblia Emanus. Explicația este revizuită separat și nu depinde editorial de această traducere de lucru."
-      : "Text Biblia Emanus cu explicația separată de Scriptură. Explicația a fost revizuită editorial independent de textul biblic afișat.",
+    blurb:
+      "Text Biblia Emanus publicat, cu explicația separată de Scriptură. Explicația a fost revizuită editorial independent și este legată de intervalele canonice de versete.",
     chapters,
-    translation: textBook.translationLabel,
+    translation: BIBLIA_EMANUS_TRANSLATION,
   }
 })
 
-/** Cărți al căror strat explicativ este gata, dar textul biblic trebuie schimbat cu BE înainte de deschiderea publică a capitolului. */
-export const VT_OVERLAY_TEMPORARY_TEXTS = VT_TEMPORARY_TEXT_BOOKS
+/** Nu mai există texte VT provizorii în catalogul final al Bibliei explicate. */
+export const VT_OVERLAY_TEMPORARY_TEXTS = [] as const
 
-/** Explicațiile nu sunt blocate editorial de traducerea finală. */
+/** Explicațiile nu mai au blocker de traducere pentru VT: Biblia Emanus este publicată. */
 export const VT_OVERLAY_TRANSLATION_BLOCKERS = [] as const
