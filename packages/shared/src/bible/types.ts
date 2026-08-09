@@ -25,6 +25,9 @@ export interface BibleUnit {
   id: string
   /** Referinta exacta, de exemplu Geneza 1:1 sau Geneza 1:3-5. */
   ref: string
+  /** Intervalul exact din textul canonic. Devine obligatoriu în catalogul publicat. */
+  verseStart?: number
+  verseEnd?: number
   heading: string
   /** Textul biblic al traducerii asociate cărții, păstrat separat de explicație. */
   text: string
