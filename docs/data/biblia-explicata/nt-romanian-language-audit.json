@@ -1,110 +1,10 @@
 {
   "schema": "emanus-nt-romanian-language-audit-v1",
   "status": "manual-edit-required",
-  "policy": "Reader-facing Romanian must use standard diacritics and contain no known corruption tokens. This gate is intentionally narrower than a full stylistic review.",
-  "count": 528,
-  "findingGroups": 450,
+  "policy": "Reader-facing Romanian must use standard diacritics and contain no known corruption tokens. Only unambiguous missing-diacritic forms are flagged automatically; ambiguous Romanian morphology is left for manual review.",
+  "count": 420,
+  "findingGroups": 354,
   "findings": [
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 5,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 9,
-      "field": "units[4].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 16,
-      "field": "units[3].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 17,
-      "field": "title",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 17,
-      "field": "summary",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 17,
-      "field": "literaryContext",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 17,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 17,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 2
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 17,
-      "field": "units[0].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 17,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
     {
       "bookId": "marcu",
       "book": "Marcu",
@@ -113,106 +13,6 @@
       "kind": "known-typo",
       "token": "omensec",
       "expected": "omenesc",
-      "occurrences": 1
-    },
-    {
-      "bookId": "marcu",
-      "book": "Marcu",
-      "chapter": 8,
-      "field": "units[4].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "marcu",
-      "book": "Marcu",
-      "chapter": 9,
-      "field": "title",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "marcu",
-      "book": "Marcu",
-      "chapter": 9,
-      "field": "literaryContext",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "marcu",
-      "book": "Marcu",
-      "chapter": 9,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "marcu",
-      "book": "Marcu",
-      "chapter": 9,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 2
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 2,
-      "field": "title",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 2,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 11,
-      "field": "units[3].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 11,
-      "field": "units[3].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "luca",
-      "book": "Luca",
-      "chapter": 17,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
       "occurrences": 1
     },
     {
@@ -383,16 +183,6 @@
       "kind": "missing-diacritics",
       "token": "botezatorul",
       "expected": "botezătorul",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 1,
-      "field": "literaryContext",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
       "occurrences": 1
     },
     {
@@ -719,16 +509,6 @@
       "bookId": "ioan",
       "book": "Ioan",
       "chapter": 1,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 1,
       "field": "units[2].forYourHeart",
       "kind": "missing-diacritics",
       "token": "adevar",
@@ -878,36 +658,6 @@
     {
       "bookId": "ioan",
       "book": "Ioan",
-      "chapter": 1,
-      "field": "units[4].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 1,
-      "field": "units[4].words[2].meaning",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 2,
-      "field": "title",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
       "chapter": 2,
       "field": "summary",
       "kind": "missing-diacritics",
@@ -929,16 +679,6 @@
       "bookId": "ioan",
       "book": "Ioan",
       "chapter": 2,
-      "field": "literaryContext",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 2
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 2,
       "field": "prayer",
       "kind": "missing-diacritics",
       "token": "credinta",
@@ -953,16 +693,6 @@
       "kind": "missing-diacritics",
       "token": "adevar",
       "expected": "adevăr",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 2,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
       "occurrences": 1
     },
     {
@@ -1001,38 +731,8 @@
       "chapter": 2,
       "field": "units[0].teaching",
       "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 4
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 2,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
       "token": "curata",
       "expected": "curată",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 2,
-      "field": "units[0].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 2,
-      "field": "units[0].words[2].meaning",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
       "occurrences": 1
     },
     {
@@ -1379,16 +1079,6 @@
       "bookId": "ioan",
       "book": "Ioan",
       "chapter": 3,
-      "field": "units[1].words[0].meaning",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 3,
       "field": "units[2].teaching",
       "kind": "missing-diacritics",
       "token": "cuvantul",
@@ -1589,16 +1279,6 @@
       "bookId": "ioan",
       "book": "Ioan",
       "chapter": 4,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 4,
       "field": "units[0].forYourHeart",
       "kind": "missing-diacritics",
       "token": "adevar",
@@ -1714,16 +1394,6 @@
       "token": "cuvantul",
       "expected": "cuvântul",
       "occurrences": 2
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 4,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "tata",
-      "expected": "tată",
-      "occurrences": 1
     },
     {
       "bookId": "ioan",
@@ -2009,16 +1679,6 @@
       "bookId": "ioan",
       "book": "Ioan",
       "chapter": 5,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 5,
       "field": "units[1].forYourHeart",
       "kind": "missing-diacritics",
       "token": "credinta",
@@ -2109,16 +1769,6 @@
       "bookId": "ioan",
       "book": "Ioan",
       "chapter": 5,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 2
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 5,
       "field": "units[2].forYourHeart",
       "kind": "missing-diacritics",
       "token": "marturia",
@@ -2129,30 +1779,10 @@
       "bookId": "ioan",
       "book": "Ioan",
       "chapter": 5,
-      "field": "units[2].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 5,
       "field": "units[2].words[0].meaning",
       "kind": "missing-diacritics",
       "token": "marturie",
       "expected": "mărturie",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 5,
-      "field": "units[2].words[1].meaning",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
       "occurrences": 1
     },
     {
@@ -2459,16 +2089,6 @@
       "bookId": "ioan",
       "book": "Ioan",
       "chapter": 7,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 7,
       "field": "units[0].teaching",
       "kind": "missing-diacritics",
       "token": "cuvantul",
@@ -2499,30 +2119,10 @@
       "bookId": "ioan",
       "book": "Ioan",
       "chapter": 7,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 2
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 7,
       "field": "units[0].forYourHeart",
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 7,
-      "field": "units[0].words[1].meaning",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
       "occurrences": 1
     },
     {
@@ -2553,16 +2153,6 @@
       "kind": "missing-diacritics",
       "token": "fara",
       "expected": "fără",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 7,
-      "field": "units[1].words[2].meaning",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
       "occurrences": 1
     },
     {
@@ -2793,16 +2383,6 @@
       "kind": "missing-diacritics",
       "token": "tatal",
       "expected": "tatăl",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 8,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "tata",
-      "expected": "tată",
       "occurrences": 1
     },
     {
@@ -3439,16 +3019,6 @@
       "bookId": "ioan",
       "book": "Ioan",
       "chapter": 10,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 10,
       "field": "units[1].words[2].meaning",
       "kind": "missing-diacritics",
       "token": "tatal",
@@ -3589,16 +3159,6 @@
       "bookId": "ioan",
       "book": "Ioan",
       "chapter": 11,
-      "field": "literaryContext",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 11,
       "field": "historicalContext",
       "kind": "missing-diacritics",
       "token": "ramane",
@@ -3669,16 +3229,6 @@
       "bookId": "ioan",
       "book": "Ioan",
       "chapter": 11,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 11,
       "field": "units[1].teaching",
       "kind": "missing-diacritics",
       "token": "tatal",
@@ -3703,16 +3253,6 @@
       "kind": "missing-diacritics",
       "token": "inainte",
       "expected": "înainte",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 11,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
       "occurrences": 1
     },
     {
@@ -3779,16 +3319,6 @@
       "bookId": "ioan",
       "book": "Ioan",
       "chapter": 12,
-      "field": "literaryContext",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 12,
       "field": "prayer",
       "kind": "missing-diacritics",
       "token": "adevarat",
@@ -3821,16 +3351,6 @@
       "chapter": 12,
       "field": "prayer",
       "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 12,
-      "field": "prayer",
-      "kind": "missing-diacritics",
       "token": "curata",
       "expected": "curată",
       "occurrences": 1
@@ -3853,16 +3373,6 @@
       "kind": "missing-diacritics",
       "token": "ramane",
       "expected": "rămâne",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 12,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
       "occurrences": 1
     },
     {
@@ -3899,16 +3409,6 @@
       "bookId": "ioan",
       "book": "Ioan",
       "chapter": 12,
-      "field": "units[0].words[1].meaning",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 2
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 12,
       "field": "units[1].teaching",
       "kind": "missing-diacritics",
       "token": "adevarat",
@@ -3933,36 +3433,6 @@
       "kind": "missing-diacritics",
       "token": "fara",
       "expected": "fără",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 12,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 12,
-      "field": "units[1].words[0].meaning",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 12,
-      "field": "units[2].heading",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
       "occurrences": 1
     },
     {
@@ -4018,56 +3488,6 @@
     {
       "bookId": "ioan",
       "book": "Ioan",
-      "chapter": 12,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 2
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 12,
-      "field": "units[2].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 12,
-      "field": "units[2].words[0].meaning",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 13,
-      "field": "summary",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 13,
-      "field": "literaryContext",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
       "chapter": 13,
       "field": "units[0].teaching",
       "kind": "missing-diacritics",
@@ -4109,16 +3529,6 @@
       "bookId": "ioan",
       "book": "Ioan",
       "chapter": 13,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 13,
       "field": "units[2].forYourHeart",
       "kind": "missing-diacritics",
       "token": "ramane",
@@ -4133,376 +3543,6 @@
       "kind": "missing-diacritics",
       "token": "fara",
       "expected": "fără",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 13,
-      "field": "units[2].words[1].meaning",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 14,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 15,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 17,
-      "field": "literaryContext",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 17,
-      "field": "historicalContext",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 17,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 17,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 2
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 17,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 2
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 17,
-      "field": "units[2].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 18,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 21,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 2,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 3,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 5,
-      "field": "units[1].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "fapte",
-      "book": "Faptele Apostolilor",
-      "chapter": 7,
-      "field": "units[5].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "romani",
-      "book": "Romani",
-      "chapter": 1,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "romani",
-      "book": "Romani",
-      "chapter": 3,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "romani",
-      "book": "Romani",
-      "chapter": 9,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "romani",
-      "book": "Romani",
-      "chapter": 11,
-      "field": "units[4].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "romani",
-      "book": "Romani",
-      "chapter": 15,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "romani",
-      "book": "Romani",
-      "chapter": 16,
-      "field": "units[3].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "1-corinteni",
-      "book": "1 Corinteni",
-      "chapter": 2,
-      "field": "units[1].heading",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "1-corinteni",
-      "book": "1 Corinteni",
-      "chapter": 10,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "1-corinteni",
-      "book": "1 Corinteni",
-      "chapter": 10,
-      "field": "units[3].heading",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "1-corinteni",
-      "book": "1 Corinteni",
-      "chapter": 10,
-      "field": "units[3].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "1-corinteni",
-      "book": "1 Corinteni",
-      "chapter": 11,
-      "field": "literaryContext",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "2-corinteni",
-      "book": "2 Corinteni",
-      "chapter": 3,
-      "field": "summary",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "2-corinteni",
-      "book": "2 Corinteni",
-      "chapter": 3,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "2-corinteni",
-      "book": "2 Corinteni",
-      "chapter": 3,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "2-corinteni",
-      "book": "2 Corinteni",
-      "chapter": 4,
-      "field": "literaryContext",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "2-corinteni",
-      "book": "2 Corinteni",
-      "chapter": 4,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "2-corinteni",
-      "book": "2 Corinteni",
-      "chapter": 9,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "galateni",
-      "book": "Galateni",
-      "chapter": 1,
-      "field": "units[0].heading",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "efeseni",
-      "book": "Efeseni",
-      "chapter": 2,
-      "field": "units[1].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "filipeni",
-      "book": "Filipeni",
-      "chapter": 2,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "apocalipsa",
-      "book": "Apocalipsa",
-      "chapter": 15,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
-      "occurrences": 1
-    },
-    {
-      "bookId": "apocalipsa",
-      "book": "Apocalipsa",
-      "chapter": 21,
-      "field": "summary",
-      "kind": "missing-diacritics",
-      "token": "slava",
-      "expected": "slavă",
       "occurrences": 1
     }
   ]
