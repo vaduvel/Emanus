@@ -1,8 +1,14 @@
 {
-  "schema": "emanus-nt-lexicon-audit-v1",
-  "status": "clean",
-  "policy": "Lexical fields define the Greek/Hebrew term. Poonen/Emanus doctrinal conclusions remain in teaching, not disguised as uncontested lexical meaning.",
+  "schema": "emanus-nt-lexicon-audit-v2",
+  "status": "manual-review-required",
+  "policy": "Automated rules catch known lexical/category errors, but publication is clean only after every current Greek/Hebrew entry is explicitly reviewed in nt-lexicon-review-ledger.json. Poonen/Emanus doctrinal conclusions remain in teaching, not disguised as uncontested lexical meaning.",
   "entries": 219,
-  "count": 0,
-  "findings": []
+  "automatedFindingCount": 0,
+  "reviewLedgerStatus": "missing",
+  "reviewedEntries": 0,
+  "unresolvedManualReview": 219,
+  "reviewProblemCount": 0,
+  "count": 219,
+  "findings": [],
+  "reviewProblems": []
 }
