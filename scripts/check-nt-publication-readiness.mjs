@@ -60,12 +60,13 @@ const blockers = []
 if (binding.missing) pushBlocker(blockers, "canonical-binding-missing", 1, "Canonical binding is missing.")
 else if (binding.releaseState !== "final" || binding.publicationReady !== true) pushBlocker(blockers, "canonical-text-not-final", 1, `Canonical text is ${binding.releaseState ?? "unknown"}, not final.`, { canonicalTextVersion: binding.canonicalTextVersion ?? null, corpusSha256: binding.corpusSha256 ?? null })
 
-let unresolvedEditorial = null
+let editorialClassificationUnresolved = null
+let editorialSourceTraceabilityPending = null
 if (editorialRaw.missing) {
   pushBlocker(blockers, "editorial-audit-missing", 1, "Editorial raw audit is missing.")
 } else if (editorialDecisions.missing) {
-  unresolvedEditorial = Number(editorialRaw.count ?? 1)
-  pushBlocker(blockers, "editorial-decisions-missing", unresolvedEditorial, "Editorial candidates exist but the reviewed decisions ledger is missing.")
+  editorialClassificationUnresolved = Number(editorialRaw.count ?? 1)
+  pushBlocker(blockers, "editorial-decisions-missing", editorialClassificationUnresolved, "Editorial candidates exist but the reviewed decisions ledger is missing.")
 } else {
   const raw = Number(editorialRaw.count ?? -1)
   const decisions = Array.isArray(editorialDecisions.decisions) ? editorialDecisions.decisions : []
@@ -74,11 +75,12 @@ if (editorialRaw.missing) {
   const decided = Object.values(actions).reduce((sum, value) => sum + Number(value ?? 0), 0)
   const validActions = decisions.every((item) => ["keep-reviewed", "remove-modern-editorial", "rewrite-reviewed"].includes(item.action) && typeof item.rationale === "string" && item.rationale.trim())
   if (editorialDecisions.rawFindings !== raw || unique !== decisions.length || decided !== decisions.length || !validActions) {
-    unresolvedEditorial = raw >= 0 ? raw : 1
-    pushBlocker(blockers, "editorial-decisions-incomplete", unresolvedEditorial, "Editorial decisions do not completely and validly cover the raw findings ledger.", { rawFindings: raw, uniqueCandidateSentences: unique, decisions: decisions.length, decided })
+    editorialClassificationUnresolved = raw >= 0 ? raw : 1
+    pushBlocker(blockers, "editorial-decisions-incomplete", editorialClassificationUnresolved, "Editorial decisions do not completely and validly cover the raw findings ledger.", { rawFindings: raw, uniqueCandidateSentences: unique, decisions: decisions.length, decided })
   } else {
-    unresolvedEditorial = 0
+    editorialClassificationUnresolved = 0
   }
+  editorialSourceTraceabilityPending = decisions.filter((item) => item.sourceTraceabilityState !== "verified").length
 }
 
 pushBlocker(blockers, "whole-chapter-summary-units", wholeChapterSummaries.length, `${wholeChapterSummaries.length} rebuilt chapters are still one whole-chapter unit.`, { examples: wholeChapterSummaries.slice(0, 20) })
@@ -106,7 +108,8 @@ const report = {
     emptyHeadings: empty.length,
     missingSourceAnchors: missingAnchors.length,
     rawEditorialFindings: editorialRaw.count ?? null,
-    unresolvedEditorialFindings: unresolvedEditorial,
+    editorialClassificationUnresolved,
+    editorialSourceTraceabilityPending,
     embeddedQuoteFindings: quoteAudit.count ?? null,
     romanianLanguageFindings: languageAudit.count ?? null,
     lexiconFindings: lexiconAudit.count ?? null,
