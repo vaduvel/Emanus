@@ -58,7 +58,7 @@ for (let index = 0; index < CANON.length; index += 1) {
   const chapters = source.chapters.map((chapter, chapterIndex) => {
     if (chapter.number !== chapterIndex + 1) fail(`${id}: non-contiguous chapter numbering`)
     if (chapter.status !== "in_review") fail(`${id} ${chapter.number}: must remain in_review before final release review`)
-    if (entry.sourceClass === "audited-recovered-poonen" && chapter.provenance?.subtleEditorialReviewResolved !== true) fail(`${id} ${chapter.number}: recovered chapter has not passed manual subtle-editorial resolution`)
+    if (entry.sourceClass === "audited-recovered-poonen" && chapter.provenance?.subtleEditorialClassificationComplete !== true) fail(`${id} ${chapter.number}: modern-editorial classification is incomplete`)
     const units = chapter.units ?? []
     if (!units.length) fail(`${id} ${chapter.number}: no explanation units`)
     totalUnits += units.length
@@ -83,8 +83,10 @@ const manifest = {
   doctrinePolicy: "Poonen/CFC source-first. Where the source develops the passage, preserve its doctrine, interpretation, typology and application without dilution. Modern provenance remains internal.",
   genericCompletionAllowed: false,
   legacyBibleTextAllowed: false,
-  counts: { books: manifestBooks.length, chapters: totalChapters, units: totalUnits, auditedRecoveredBooks: 15, rebuiltSourceFirstBooks: 12, manuallyResolvedRecoveredBooks: 15 },
+  sourceTraceabilityComplete: false,
+  counts: { books: manifestBooks.length, chapters: totalChapters, units: totalUnits, auditedRecoveredBooks: 15, rebuiltSourceFirstBooks: 12, modernEditorialClassifiedRecoveredBooks: 15 },
   books: manifestBooks,
 }
 fs.writeFileSync(manifestPath, stable(manifest), "utf8")
-console.log(`NT final source-first materialized from manually resolved recovered layer: ${manifestBooks.length} books / ${totalChapters} chapters / ${totalUnits} units.`)
+console.log(`NT final source-first materialized from classified recovered layer: ${manifestBooks.length} books / ${totalChapters} chapters / ${totalUnits} units.`)
+console.log("Publication remains blocked until source traceability and all other readiness blockers are clear.")
