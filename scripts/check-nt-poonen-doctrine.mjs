@@ -42,9 +42,7 @@ function chapterText(books, bookId, chapterNumber) {
   ].filter(Boolean).join("\n"))
 }
 function allOf(text, patterns, label) {
-  for (const pattern of patterns) {
-    if (!pattern.test(text)) fail(`${label}: missing required source-first concept ${pattern}`)
-  }
+  for (const pattern of patterns) if (!pattern.test(text)) fail(`${label}: missing required source-first concept ${pattern}`)
 }
 function anyOf(text, patterns, label) {
   if (!patterns.some((pattern) => pattern.test(text))) fail(`${label}: none of required source-first concepts found: ${patterns.join(" OR ")}`)
@@ -55,7 +53,6 @@ function noneOf(text, patterns, label) {
 
 const books = loadCorpus()
 if (books.size !== 27) fail(`books ${books.size}/27`)
-
 const assertions = []
 function check(bookId, chapter, fn) {
   const label = `${bookId} ${chapter}`
@@ -64,14 +61,14 @@ function check(bookId, chapter, fn) {
   assertions.push(label)
 }
 
-// 2 Tesaloniceni: Poonen explicitly places apostasy and revelation of Antichrist
-// before the coming/gathering, and makes love of truth the protection against deception.
 check("2-tesaloniceni", 2, (t, l) => {
   allOf(t, [/apostaz|lepadarea de credinta/, /antihrist|omul faradelegii/, /strangerea|adunarea/, /mai intai|inainte/, /iub.*adevar|adevar.*iub/], l)
-  noneOf(t, [/biserica.*dispare.*inainte.*antihrist/, /rapire.*inainte.*antihrist/, /o posibila lectura/, /interpretari diferite/], l)
+  // Require the anti-pretribulation statement positively instead of searching for
+  // the same words without understanding a preceding Romanian negation.
+  anyOf(t, [/nu trebuie.*ideea.*disparea.*inainte.*antihrist/, /nu.*inainte.*antihrist.*strangerea/, /antihrist.*inainte.*strangerea/], l)
+  noneOf(t, [/o posibila lectura/, /interpretari diferite/], l)
 })
 
-// 1 Timotei 2–3: preserve Poonen's church-order teaching and elder qualifications.
 check("1-timotei", 2, (t, l) => {
   allOf(t, [/femei|femeia/, /autoritate|invatator|invata/, /barbat/, /ruga|proroc/], l)
   noneOf(t, [/doar o norma culturala/, /nu mai este valabil/, /o posibila lectura/, /interpretari diferite/], l)
@@ -80,14 +77,11 @@ check("1-timotei", 3, (t, l) => {
   allOf(t, [/prezbiter|supraveghetor/, /famil|casa/, /bani|lacom|castig/, /caracter|fara repros|cumpatat/], l)
 })
 
-// 2 Timotei: standards must not be lowered to gather a crowd.
 check("2-timotei", 4, (t, l) => {
   allOf(t, [/predic|propovadui.*cuvant/, /gadil|urech/, /standard/, /multim|ucenic/], l)
   noneOf(t, [/adaptam standardul/, /standardul.*relativ/], l)
 })
 
-// Hebrews: true humanity, learned obedience, maturity/falling-away warning,
-// new-and-living-way obedience and deliberate sin warning.
 check("evrei", 2, (t, l) => {
   allOf(t, [/om|omeneasc|asemenea fratilor/, /ispit/, /sufer/, /fara pacat/], l)
 })
@@ -106,12 +100,10 @@ check("evrei", 11, (t, l) => {
   noneOf(t, [/credinta.*garanteaza.*confort/, /credinta.*garanteaza.*prosper/], l)
 })
 
-// James: faith is alive and demonstrated by works, not mere verbal assent.
 check("iacov", 2, (t, l) => {
   allOf(t, [/credinta/, /fapte/, /moart/], l)
 })
 
-// 1 Peter: keep source teaching on submission, unjust suffering and Christ's example.
 check("1-petru", 2, (t, l) => {
   allOf(t, [/supun|autoritat/, /sufer.*nedrept|nedrept.*sufer/, /hristos/, /model|exempl|urmeaz/], l)
   noneOf(t, [/victim/, /abuz/, /raportarea/, /protectie juridica/], l)
@@ -121,31 +113,29 @@ check("1-petru", 3, (t, l) => {
   noneOf(t, [/victim/, /abuz/, /consimtam/, /protectie juridica/], l)
 })
 
-// 2 Peter: false teachers are exposed through sensuality and money-love.
 check("2-petru", 2, (t, l) => {
   allOf(t, [/invatatori falsi|falsii invatatori/, /sexual|senzual|imoral/, /bani|castig|lacom|plata/, /balaam/], l)
 })
 
-// 1 John: confession that Jesus came in the flesh is central and tied to lived victory.
 check("1-ioan", 4, (t, l) => {
   allOf(t, [/isus.*venit in trup|venit in trup/, /duh/, /dragoste/, /om real|omeneasc|ascult/], l)
 })
 
-// Jude: people saved from Egypt later perished; grace is not permission for sin.
 check("iuda", 1, (t, l) => {
   allOf(t, [/har/, /pacat|destrabal/, /egipt/, /salvat|scos/, /pierit|nimicit|necredin/], l)
   noneOf(t, [/inceput bun.*imposibil.*cad/], l)
 })
 
-// Revelation: preserve Poonen's distinctive eschatological line directly.
 check("apocalipsa", 7, (t, l) => {
   allOf(t, [/necazul cel mare|marele necaz/, /multim/, /miel/], l)
-  noneOf(t, [/biserica.*evita.*necaz/, /rapita.*inainte.*necaz/], l)
+  // Source-first content must state directly that the church is not promised escape.
+  anyOf(t, [/biserica.*nu primeste promisiunea.*evita.*necaz/, /credincios.*prin.*necaz/, /vin din necazul cel mare/], l)
 })
 check("apocalipsa", 13, (t, l) => {
   allOf(t, [/antihrist/, /fiara/, /inchinare/, /semn/], l)
-  anyOf(t, [/biserica.*pregatit|credincios.*pregatit|crestin.*pregatit/, /nu.*presupun.*antihrist/], l)
-  noneOf(t, [/biserica.*nu va vedea.*antihrist/, /rapita.*inainte.*antihrist/], l)
+  // Require Poonen's positive preparation claim; do not use a naive forbidden regex
+  // that would also match a sentence rejecting pre-Antichrist removal.
+  anyOf(t, [/biserica trebuie sa fie pregatita/, /credincios.*pregatit/, /nu.*presupunerea.*antihrist.*nu va fi vazut/], l)
 })
 check("apocalipsa", 17, (t, l) => {
   allOf(t, [/babilon/, /desfranat|curva/, /relig/, /putere|bogat|lume/], l)
@@ -157,7 +147,6 @@ check("apocalipsa", 20, (t, l) => {
   allOf(t, [/o mie de ani|1000 de ani|mileniu/, /satan/, /domn.*hristos|hristos.*domn/, /judec/], l)
 })
 
-// Global anti-dilution scan on public explanation copy.
 for (const [bookId, book] of books) {
   for (const chapter of book.chapters) {
     const text = chapterText(books, bookId, chapter.number)
