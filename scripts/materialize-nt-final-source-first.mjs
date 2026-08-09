@@ -7,6 +7,7 @@ import crypto from "node:crypto"
 const ROOT = process.cwd()
 const recoveredDir = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-reviewed-recovered")
 const rebuiltDir = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-source-first")
+const evidencePath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-source-evidence.json")
 const outputDir = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-final-source-first")
 const manifestPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-final-source-first-manifest.json")
 
@@ -36,6 +37,51 @@ function readBooks(dir, sourceClass) {
   }
   return map
 }
+function pointAtOrBefore(chapterA, verseA, chapterB, verseB) {
+  return chapterA < chapterB || (chapterA === chapterB && verseA <= verseB)
+}
+function evidenceCoversVerse(record, chapter, verse) {
+  return pointAtOrBefore(record.coverageStartChapter, record.coverageStartVerse, chapter, verse) &&
+    pointAtOrBefore(chapter, verse, record.coverageEndChapter, record.coverageEndVerse)
+}
+
+if (!fs.existsSync(evidencePath)) fail("missing nt-source-evidence.json; run materialize-nt-source-evidence.mjs first")
+const evidenceRegistry = JSON.parse(fs.readFileSync(evidencePath, "utf8"))
+const recoveredEvidenceBySource = new Map()
+for (const record of evidenceRegistry.records ?? []) {
+  if (record.evidenceKind !== "official-episode-range") continue
+  if (![record.coverageStartChapter, record.coverageStartVerse, record.coverageEndChapter, record.coverageEndVerse].every(Number.isInteger)) continue
+  const bucket = recoveredEvidenceBySource.get(record.sourceId) ?? []
+  bucket.push(record)
+  recoveredEvidenceBySource.set(record.sourceId, bucket)
+}
+for (const bucket of recoveredEvidenceBySource.values()) {
+  bucket.sort((a, b) => a.coverageStartChapter - b.coverageStartChapter || a.coverageStartVerse - b.coverageStartVerse || String(a.id).localeCompare(String(b.id)))
+}
+function recoveredAnchorsForUnit(unit, chapterNumber) {
+  if (!Number.isInteger(unit.verseStart) || !Number.isInteger(unit.verseEnd) || unit.verseEnd < unit.verseStart) return []
+  const candidates = [...new Map(
+    (unit.sourceIds ?? [])
+      .flatMap((sourceId) => recoveredEvidenceBySource.get(sourceId) ?? [])
+      .filter((record) => {
+        const startsBeforeUnitEnds = pointAtOrBefore(record.coverageStartChapter, record.coverageStartVerse, chapterNumber, unit.verseEnd)
+        const endsAfterUnitStarts = pointAtOrBefore(chapterNumber, unit.verseStart, record.coverageEndChapter, record.coverageEndVerse)
+        return startsBeforeUnitEnds && endsAfterUnitStarts
+      })
+      .map((record) => [record.id, record]),
+  ).values()]
+  if (!candidates.length) return []
+  for (let verse = unit.verseStart; verse <= unit.verseEnd; verse += 1) {
+    if (!candidates.some((record) => evidenceCoversVerse(record, chapterNumber, verse))) return []
+  }
+  return candidates.map((record) => ({
+    sourceId: record.sourceId,
+    locator: record.locator,
+    evidenceId: record.id,
+    evidenceSha256: record.evidenceSha256,
+    verificationLevel: record.verificationLevel,
+  }))
+}
 
 const audited = readBooks(recoveredDir, "audited-recovered-poonen")
 const rebuilt = readBooks(rebuiltDir, "rebuilt-poonen-source-first")
@@ -47,6 +93,8 @@ fs.mkdirSync(outputDir, { recursive: true })
 let totalChapters = 0
 let totalUnits = 0
 let passageRebuiltChapters = 0
+let recoveredUnitsWithSourceLocatorAnchors = 0
+let recoveredUnitsWithoutSourceLocatorAnchors = 0
 const manifestBooks = []
 for (let index = 0; index < CANON.length; index += 1) {
   const [id, bookId, name, expectedChapters] = CANON[index]
@@ -60,11 +108,29 @@ for (let index = 0; index < CANON.length; index += 1) {
     if (chapter.number !== chapterIndex + 1) fail(`${id}: non-contiguous chapter numbering`)
     if (chapter.status !== "in_review") fail(`${id} ${chapter.number}: must remain in_review before final release review`)
     if (entry.sourceClass === "audited-recovered-poonen" && chapter.provenance?.subtleEditorialClassificationComplete !== true) fail(`${id} ${chapter.number}: modern-editorial classification is incomplete`)
-    const units = chapter.units ?? []
-    if (!units.length) fail(`${id} ${chapter.number}: no explanation units`)
+    const sourceUnits = chapter.units ?? []
+    if (!sourceUnits.length) fail(`${id} ${chapter.number}: no explanation units`)
+    const units = sourceUnits.map((unit) => {
+      if (entry.sourceClass !== "audited-recovered-poonen") return unit
+      const existing = Array.isArray(unit.sourceAnchors) ? unit.sourceAnchors : []
+      const anchors = existing.length ? existing : recoveredAnchorsForUnit(unit, chapter.number)
+      if (anchors.length) recoveredUnitsWithSourceLocatorAnchors += 1
+      else recoveredUnitsWithoutSourceLocatorAnchors += 1
+      return anchors.length ? { ...unit, sourceAnchors: anchors } : unit
+    })
     totalUnits += units.length
     if (entry.sourceClass === "rebuilt-poonen-source-first" && chapter.reviewState === "source-first-passage-rebuilt") passageRebuiltChapters += 1
-    return { ...chapter, finalSourceClass: entry.sourceClass }
+    return {
+      ...chapter,
+      units,
+      provenance: {
+        ...chapter.provenance,
+        ...(entry.sourceClass === "audited-recovered-poonen" ? {
+          sourceLocatorAnchorsComplete: units.every((unit) => Array.isArray(unit.sourceAnchors) && unit.sourceAnchors.length > 0),
+        } : {}),
+      },
+      finalSourceClass: entry.sourceClass,
+    }
   })
   const payload = {
     schema: "emanus-nt-final-source-first-v1", id, bookId, name, testament: "nt", order: 40 + index,
@@ -95,10 +161,13 @@ const manifest = {
     modernEditorialClassifiedRecoveredBooks: 15,
     passageRebuiltSourceFirstChapters: passageRebuiltChapters,
     chapterSummaryOnlySourceFirstChapters: 69 - passageRebuiltChapters,
+    recoveredUnitsWithSourceLocatorAnchors,
+    recoveredUnitsWithoutSourceLocatorAnchors,
   },
   books: manifestBooks,
 }
 fs.writeFileSync(manifestPath, stable(manifest), "utf8")
 console.log(`NT final source-first materialized: ${manifestBooks.length} books / ${totalChapters} chapters / ${totalUnits} units.`)
 console.log(`Rebuilt-book passage chapters: ${passageRebuiltChapters}/69; whole-chapter summaries remaining: ${69 - passageRebuiltChapters}.`)
+console.log(`Recovered source locator anchors: ${recoveredUnitsWithSourceLocatorAnchors} anchored / ${recoveredUnitsWithoutSourceLocatorAnchors} still missing.`)
 console.log("Publication remains blocked until source traceability and all other readiness blockers are clear.")
