@@ -64,6 +64,11 @@ jobs:
           set -euo pipefail
           node scripts/materialize-nt-source-first.mjs
           node scripts/check-nt-source-first.mjs
+
+      - name: Inventory recovered-book audit candidates
+        run: |
+          set -euo pipefail
+          node scripts/audit-nt-recovered-source-first.mjs
           git diff --check
 
       - name: Commit deterministic NT editorial snapshots
