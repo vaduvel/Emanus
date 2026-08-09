@@ -21,7 +21,7 @@ on:
       - "pnpm-lock.yaml"
       - ".github/workflows/vt-explanation-review.yml"
   pull_request:
-    branches: [main]
+    branches: [main, agent/biblia-explicata-vt-integration-clean]
     paths:
       - "packages/shared/src/bible/**"
       - "packages/shared/package.json"
