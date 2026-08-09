@@ -2,8 +2,8 @@
   "schema": "emanus-nt-romanian-language-audit-v2",
   "status": "manual-edit-required",
   "policy": "Reader-facing Romanian must use standard diacritics. This audit flags likely missing-diacritic tokens but does not guess context-sensitive replacements. Automatic fixes are limited to context-free corruption tokens in a separate script.",
-  "count": 1905,
-  "findingGroups": 1275,
+  "count": 1915,
+  "findingGroups": 1285,
   "findings": [
     {
       "bookId": "matei",
@@ -12623,6 +12623,106 @@
       "kind": "missing-diacritics",
       "token": "in",
       "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "evrei",
+      "book": "Evrei",
+      "chapter": 2,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "evrei",
+      "book": "Evrei",
+      "chapter": 3,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "evrei",
+      "book": "Evrei",
+      "chapter": 4,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "si",
+      "expected": "și",
+      "occurrences": 1
+    },
+    {
+      "bookId": "evrei",
+      "book": "Evrei",
+      "chapter": 6,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "evrei",
+      "book": "Evrei",
+      "chapter": 9,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "evrei",
+      "book": "Evrei",
+      "chapter": 9,
+      "field": "units[3].teaching",
+      "kind": "missing-diacritics",
+      "token": "doua",
+      "expected": "două",
+      "occurrences": 1
+    },
+    {
+      "bookId": "evrei",
+      "book": "Evrei",
+      "chapter": 11,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "iacov",
+      "book": "Iacov",
+      "chapter": 4,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "iacov",
+      "book": "Iacov",
+      "chapter": 4,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "iacov",
+      "book": "Iacov",
+      "chapter": 5,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "simpla",
+      "expected": "simplă",
       "occurrences": 1
     },
     {
