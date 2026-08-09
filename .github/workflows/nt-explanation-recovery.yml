@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - agent/biblia-explicata-nt-integration-clean
+  pull_request:
+    branches:
+      - main
+    types: [opened, synchronize, reopened]
   workflow_dispatch:
 
 permissions:
@@ -11,13 +15,16 @@ permissions:
 
 jobs:
   recover:
-    if: github.actor != 'github-actions[bot]'
+    if: >-
+      github.actor != 'github-actions[bot]' &&
+      (github.event_name != 'pull_request' || github.event.pull_request.head.ref == 'agent/biblia-explicata-nt-integration-clean')
     runs-on: ubuntu-22.04
     timeout-minutes: 45
     steps:
       - name: Checkout clean integration branch
         uses: actions/checkout@v4
         with:
+          ref: agent/biblia-explicata-nt-integration-clean
           fetch-depth: 0
           persist-credentials: true
 
