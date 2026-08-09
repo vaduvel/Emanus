@@ -7,6 +7,7 @@ import { NT_SOURCE_EVIDENCE_BLUEPRINTS } from "./nt-source-evidence-blueprints.m
 import { NT_SOURCE_EVIDENCE_WAVE_A } from "./nt-source-evidence-wave-a.mjs"
 import { NT_SOURCE_EVIDENCE_WAVE_B } from "./nt-source-evidence-wave-b.mjs"
 import { NT_SOURCE_EVIDENCE_WAVE_C } from "./nt-source-evidence-wave-c.mjs"
+import { NT_SOURCE_EVIDENCE_WAVE_D } from "./nt-source-evidence-wave-d.mjs"
 
 const ROOT = process.cwd()
 const outputPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-source-evidence.json")
@@ -36,15 +37,10 @@ function parseRange(value, label) {
   if (!match) fail(`${label}: cannot parse passage range ${JSON.stringify(value)}`)
   const [, startChapter, startVerse, endChapter, endVerse] = match
   const coverage = {
-    coverageStartChapter: Number(startChapter),
-    coverageStartVerse: Number(startVerse),
-    coverageEndChapter: Number(endChapter),
-    coverageEndVerse: Number(endVerse),
+    coverageStartChapter: Number(startChapter), coverageStartVerse: Number(startVerse),
+    coverageEndChapter: Number(endChapter), coverageEndVerse: Number(endVerse),
   }
-  if (coverage.coverageStartChapter > coverage.coverageEndChapter ||
-      (coverage.coverageStartChapter === coverage.coverageEndChapter && coverage.coverageStartVerse > coverage.coverageEndVerse)) {
-    fail(`${label}: invalid passage range ${value}`)
-  }
+  if (coverage.coverageStartChapter > coverage.coverageEndChapter || (coverage.coverageStartChapter === coverage.coverageEndChapter && coverage.coverageStartVerse > coverage.coverageEndVerse)) fail(`${label}: invalid passage range ${value}`)
   return coverage
 }
 function recoveredEpisodeBlueprints() {
@@ -64,12 +60,8 @@ function recoveredEpisodeBlueprints() {
       const sourceUrl = episode.audioUrl ?? episode.url ?? officialSeriesUrl
       out.push({
         id: `ev-recovered-${bookId}-episode-${String(ordinal).padStart(3, "0")}`,
-        sourceId,
-        sourceUrl,
-        officialSeriesUrl,
-        sourceTitle: episode.title,
-        locator: `Episode ${ordinal}: ${passage}`,
-        evidenceKind: "official-episode-range",
+        sourceId, sourceUrl, officialSeriesUrl, sourceTitle: episode.title,
+        locator: `Episode ${ordinal}: ${passage}`, evidenceKind: "official-episode-range",
         verificationLevel: "official-episode-range-registry",
         claimSummary: `Registrul sursei oficiale indică faptul că episodul ${ordinal} acoperă ${passage}.`,
         ...coverage,
@@ -84,6 +76,7 @@ const allBlueprints = [
   ...NT_SOURCE_EVIDENCE_WAVE_A,
   ...NT_SOURCE_EVIDENCE_WAVE_B,
   ...NT_SOURCE_EVIDENCE_WAVE_C,
+  ...NT_SOURCE_EVIDENCE_WAVE_D,
   ...recoveredEpisodeBlueprints(),
 ]
 const ids = new Set()
@@ -92,20 +85,13 @@ const records = allBlueprints.map((input) => {
   if (ids.has(input.id)) fail(`duplicate evidence id ${input.id}`)
   ids.add(input.id)
   const payload = {
-    id: input.id,
-    sourceId: input.sourceId,
-    sourceUrl: input.sourceUrl,
+    id: input.id, sourceId: input.sourceId, sourceUrl: input.sourceUrl,
     ...(input.officialSeriesUrl ? { officialSeriesUrl: input.officialSeriesUrl } : {}),
-    sourceTitle: input.sourceTitle,
-    locator: input.locator,
-    evidenceKind: input.evidenceKind,
-    verificationLevel: input.verificationLevel,
-    claimSummary: input.claimSummary,
+    sourceTitle: input.sourceTitle, locator: input.locator, evidenceKind: input.evidenceKind,
+    verificationLevel: input.verificationLevel, claimSummary: input.claimSummary,
     ...(Number.isInteger(input.coverageStartChapter) ? {
-      coverageStartChapter: input.coverageStartChapter,
-      coverageStartVerse: input.coverageStartVerse,
-      coverageEndChapter: input.coverageEndChapter,
-      coverageEndVerse: input.coverageEndVerse,
+      coverageStartChapter: input.coverageStartChapter, coverageStartVerse: input.coverageStartVerse,
+      coverageEndChapter: input.coverageEndChapter, coverageEndVerse: input.coverageEndVerse,
     } : {}),
   }
   return { ...payload, evidenceSha256: `sha256:${sha256(stableRecord(payload))}` }
