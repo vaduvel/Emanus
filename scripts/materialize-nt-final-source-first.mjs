@@ -23,6 +23,7 @@ const CANON = [
   ["3-ioan", "3JN", "3 Ioan", 1], ["iuda", "JUD", "Iuda", 1], ["apocalipsa", "REV", "Apocalipsa", 22],
 ]
 const EXPECTED = { books: 27, chapters: 260 }
+const RECOVERED_COVERAGE_EVIDENCE_KINDS = new Set(["official-episode-range", "official-source-coverage", "supporting-transcript-range"])
 
 function fail(message) { console.error(`[NT final source-first] ${message}`); process.exit(1) }
 function stable(value) { return JSON.stringify(value, null, 2) + "\n" }
@@ -49,7 +50,7 @@ if (!fs.existsSync(evidencePath)) fail("missing nt-source-evidence.json; run mat
 const evidenceRegistry = JSON.parse(fs.readFileSync(evidencePath, "utf8"))
 const recoveredEvidenceBySource = new Map()
 for (const record of evidenceRegistry.records ?? []) {
-  if (record.evidenceKind !== "official-episode-range") continue
+  if (!RECOVERED_COVERAGE_EVIDENCE_KINDS.has(record.evidenceKind)) continue
   if (![record.coverageStartChapter, record.coverageStartVerse, record.coverageEndChapter, record.coverageEndVerse].every(Number.isInteger)) continue
   const bucket = recoveredEvidenceBySource.get(record.sourceId) ?? []
   bucket.push(record)
@@ -148,7 +149,7 @@ const manifest = {
   status: "in_review",
   publicationReady: false,
   canonicalText: "Biblia Emanus (BE)",
-  doctrinePolicy: "Poonen/CFC source-first. Where the source develops the passage, preserve its doctrine, interpretation, typology and application without dilution. Modern provenance remains internal.",
+  doctrinePolicy: "Poonen/CFC source-first. Where the source develops the passage, preserve doctrine, interpretation, typology and application without dilution. Modern provenance remains internal.",
   genericCompletionAllowed: false,
   legacyBibleTextAllowed: false,
   sourceTraceabilityComplete: false,
