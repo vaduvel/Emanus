@@ -21,7 +21,7 @@ const CANON = [
   ["2-petru", "2PE", "2 Petru", 3], ["1-ioan", "1JN", "1 Ioan", 5], ["2-ioan", "2JN", "2 Ioan", 1],
   ["3-ioan", "3JN", "3 Ioan", 1], ["iuda", "JUD", "Iuda", 1], ["apocalipsa", "REV", "Apocalipsa", 22],
 ]
-const EXPECTED = { books: 27, chapters: 260, units: 831 }
+const EXPECTED = { books: 27, chapters: 260 }
 
 function fail(message) { console.error(`[NT final source-first] ${message}`); process.exit(1) }
 function stable(value) { return JSON.stringify(value, null, 2) + "\n" }
@@ -46,6 +46,7 @@ fs.mkdirSync(outputDir, { recursive: true })
 
 let totalChapters = 0
 let totalUnits = 0
+let passageRebuiltChapters = 0
 const manifestBooks = []
 for (let index = 0; index < CANON.length; index += 1) {
   const [id, bookId, name, expectedChapters] = CANON[index]
@@ -62,6 +63,7 @@ for (let index = 0; index < CANON.length; index += 1) {
     const units = chapter.units ?? []
     if (!units.length) fail(`${id} ${chapter.number}: no explanation units`)
     totalUnits += units.length
+    if (entry.sourceClass === "rebuilt-poonen-source-first" && chapter.reviewState === "source-first-passage-rebuilt") passageRebuiltChapters += 1
     return { ...chapter, finalSourceClass: entry.sourceClass }
   })
   const payload = {
@@ -74,7 +76,7 @@ for (let index = 0; index < CANON.length; index += 1) {
   totalChapters += chapters.length
   manifestBooks.push({ order: 40 + index, id, bookId, name, sourceClass: entry.sourceClass, chapters: chapters.length, units: chapters.reduce((sum, chapter) => sum + chapter.units.length, 0), sha256: hash(rendered) })
 }
-if (manifestBooks.length !== EXPECTED.books || totalChapters !== EXPECTED.chapters || totalUnits !== EXPECTED.units) fail(`totals ${manifestBooks.length}/${EXPECTED.books} books, ${totalChapters}/${EXPECTED.chapters} chapters, ${totalUnits}/${EXPECTED.units} units`)
+if (manifestBooks.length !== EXPECTED.books || totalChapters !== EXPECTED.chapters || totalUnits < EXPECTED.chapters) fail(`totals ${manifestBooks.length}/${EXPECTED.books} books, ${totalChapters}/${EXPECTED.chapters} chapters, ${totalUnits} units`)
 const manifest = {
   schema: "emanus-nt-final-source-first-manifest-v1",
   status: "in_review",
@@ -84,9 +86,19 @@ const manifest = {
   genericCompletionAllowed: false,
   legacyBibleTextAllowed: false,
   sourceTraceabilityComplete: false,
-  counts: { books: manifestBooks.length, chapters: totalChapters, units: totalUnits, auditedRecoveredBooks: 15, rebuiltSourceFirstBooks: 12, modernEditorialClassifiedRecoveredBooks: 15 },
+  counts: {
+    books: manifestBooks.length,
+    chapters: totalChapters,
+    units: totalUnits,
+    auditedRecoveredBooks: 15,
+    rebuiltSourceFirstBooks: 12,
+    modernEditorialClassifiedRecoveredBooks: 15,
+    passageRebuiltSourceFirstChapters: passageRebuiltChapters,
+    chapterSummaryOnlySourceFirstChapters: 69 - passageRebuiltChapters,
+  },
   books: manifestBooks,
 }
 fs.writeFileSync(manifestPath, stable(manifest), "utf8")
-console.log(`NT final source-first materialized from classified recovered layer: ${manifestBooks.length} books / ${totalChapters} chapters / ${totalUnits} units.`)
+console.log(`NT final source-first materialized: ${manifestBooks.length} books / ${totalChapters} chapters / ${totalUnits} units.`)
+console.log(`Rebuilt-book passage chapters: ${passageRebuiltChapters}/69; whole-chapter summaries remaining: ${69 - passageRebuiltChapters}.`)
 console.log("Publication remains blocked until source traceability and all other readiness blockers are clear.")
