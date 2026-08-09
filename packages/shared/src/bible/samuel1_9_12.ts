@@ -104,18 +104,18 @@ export const SAMUEL1_11 = samuel1Chapter({
     {
       id: "1-samuel-11-1-15",
       ref: "1 Samuel 11:1-15",
-      heading: "Saul îi ajută pe cei aflați în primejdie și refuză răzbunarea",
+      heading: "Saul îi ajută pe cei aflați în primejdie și își iartă vrăjmașii",
       text: samuel1Passage(11, 1, 15),
       teaching: teaching(
         "Când aude necazul oamenilor din Iabeș, Duhul lui Dumnezeu vine peste Saul și el este aprins de zel pentru a-i ajuta. Poonen vede aici grija pentru frații aflați în strâmtorare.",
         "Saul arată curaj în luptă, iar DOMNUL dă izbăvire.",
-        "După victorie, Saul nu îngăduie uciderea celor care îl disprețuiseră. El spune că nimeni nu va muri în ziua în care DOMNUL a lucrat mântuire în Israel. Puterea primită nu este folosită pentru reglarea conturilor personale.",
+        "După victorie, Saul nu îngăduie uciderea celor care îl disprețuiseră. Poonen numește aceasta direct una dintre calitățile lui bune de la început: Saul și-a iertat vrăjmașii. El refuză să folosească victoria pentru a-i pedepsi pe cei care îl respinseseră.",
       ),
       crossRefs: ["Romani 12:19-21"],
-      forYourHeart: "Victoria pe care o dă Dumnezeu nu trebuie transformată în prilej de răzbunare împotriva celor care te-au disprețuit.",
+      forYourHeart: "Iartă-i pe cei care te-au disprețuit. Poonen pune iertarea vrăjmașilor între calitățile bune pe care Saul le avea la început.",
     },
   ],
-  prayer: "Doamne, dă-ne zel să-i ajutăm pe cei în primejdie, curaj pentru responsabilitatea primită și o inimă care refuză răzbunarea.\n\nAjută-ne să recunoaștem că izbăvirea vine de la Tine. Amin.",
+  prayer: "Doamne, dă-ne zel să-i ajutăm pe cei în primejdie, curaj pentru responsabilitatea primită și o inimă care își iartă vrăjmașii.\n\nAjută-ne să recunoaștem că izbăvirea vine de la Tine. Amin.",
   status: SAMUEL1_STATUSES[11],
 })
 
