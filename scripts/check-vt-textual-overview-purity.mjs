@@ -10,15 +10,18 @@ function flag(where, label, value) {
   violations.push({ where, label, value: String(value ?? "").replace(/\s+/g, " ").slice(0, 420) })
 }
 
+// Acest gate verifică numai unitățile etichetate textual-overview. Cuvinte ca
+// „credincios” (care poate însemna simplu fidel) sau „astăzi” (care poate fi
+// chiar în text) nu sunt suficiente singure pentru a demonstra o aplicație.
 const forbidden = [
-  ["product/editorial meta", /\bEmanus\b|\boverlay(?:-ul)?\b|\btranscript(?:ul|ului|e)?\b/iu],
-  ["modern/contemporary application", /\bmodern(?:ă|e|i)?\b|\bcontemporan(?:ă|e|i)?\b|\bastăzi\b/iu],
-  ["Christian/church application", /\bcreștin(?:ă|e|i)?\b|\bbiseric(?:ă|ii|ile|ilor)\b|\bcredincios(?:ul|ului|i|ii)?\b/iu],
+  ["product/editorial meta", /\bEmanus\b|\boverlay(?:-ul)?\b|\btranscript(?:ul|ului|e)?\b|\b(?:Zac\s+)?Poonen\b/iu],
+  ["modern/contemporary application", /\bmodern(?:ă|e|i)?\b|\bcontemporan(?:ă|e|i)?\b|\bcredincioșilor de astăzi\b/iu],
+  ["Christian/church application", /\bcreștin(?:ă|e|i)?\b|\bbiseric(?:ă|ii|ile|ilor)\b/iu],
   ["explicit doctrinal framing", /\bdoctrin(?:ă|ar|ară|are)\b|\bteologi(?:e|c|că)\b/iu],
   ["application framing", /\baplic(?:ă|ăm|are|area|abil|abilă)\b|\bpentru noi\b|\bîn viața noastră\b/iu],
-  ["normative transfer caveat", /\bnu (?:constituie|devine|devin|este|sunt).{0,45}\b(?:mandat|model|metodă|poruncă|regulă)\b/iu],
+  ["normative transfer caveat", /\bnu (?:constituie|devine|devin|este|sunt).{0,55}\b(?:mandat|model|metodă|poruncă|regulă)\b/iu],
   ["transfer/safety caveat", /\bnu (?:se )?transfer(?:ă|ăm)\b|\bnu autorizează\b|\bnu justifică\b/iu],
-  ["cross-testament interpretation", /\bNoul Testament\b|\bIisus\b|\bHristos\b|\bapostol(?:ul|ii)?\b/iu],
+  ["cross-testament interpretation", /\bNoul Testament\b|\bIisus\b|\bHristos\b|\bapostol(?:ul|ii)?\b|\bEvrei\s+\d|\bRomani\s+\d|\bIoan\s+\d|\bMatei\s+\d|\bLuca\s+\d/iu],
 ]
 
 function checkUnit(bookName, chapterNumber, unit, legacy = false) {
