@@ -1,5 +1,5 @@
 {
-  "schema": "emanus-nt-source-first-manifest-v1",
+  "schema": "emanus-nt-source-first-manifest-v2",
   "status": "in_review",
   "publicationReady": false,
   "doctrinePolicy": "Where Poonen/CFC develops the passage, preserve doctrine, interpretation, typology and application without dilution. Modern-source provenance stays internal.",
@@ -7,7 +7,9 @@
   "counts": {
     "books": 12,
     "chapters": 69,
-    "units": 69
+    "units": 77,
+    "passageRebuiltChapters": 3,
+    "chapterSummaryOnlyChapters": 66
   },
   "books": [
     {
@@ -15,133 +17,157 @@
       "bookId": "2TH",
       "name": "2 Tesaloniceni",
       "chapters": 3,
+      "units": 11,
+      "passageRebuiltChapters": 3,
       "sources": [
         "ttb-1-2-thess",
         "vbv-2-thess"
       ],
-      "sha256": "0d5fe48cbd9ae6700d17f50ba140907ee13e2777c02d9f32de448c1dfa143010"
+      "sha256": "860e7ce6d91a3bf7dd5b7bfb121733216c6063d9e26303a71ed9d5bb3a9c7261"
     },
     {
       "id": "1-timotei",
       "bookId": "1TI",
       "name": "1 Timotei",
       "chapters": 6,
+      "units": 6,
+      "passageRebuiltChapters": 0,
       "sources": [
         "ttb-1-tim",
         "vbv-1-tim"
       ],
-      "sha256": "269e54472908de50b194829ec5ef3f31a0a1ce08a64e5fcf2d10f272970783b8"
+      "sha256": "7b715423715b9a4453c38dfe438c7d1eb3af95f4af5bee9bf234f9af0ade2efb"
     },
     {
       "id": "2-timotei",
       "bookId": "2TI",
       "name": "2 Timotei",
       "chapters": 4,
+      "units": 4,
+      "passageRebuiltChapters": 0,
       "sources": [
         "ttb-2-tim",
         "vbv-2-tim"
       ],
-      "sha256": "5bbeb81d865156ad299744a69e19a72eba70a8e7b9053dc0cea3b2706e8b147e"
+      "sha256": "b4d14fb3f09251f4a63f48f1f50da232c715651da2e34318e0b30ca01e1ea659"
     },
     {
       "id": "evrei",
       "bookId": "HEB",
       "name": "Evrei",
       "chapters": 13,
+      "units": 13,
+      "passageRebuiltChapters": 0,
       "sources": [
         "ttb-hebrews",
         "vbv-hebrews"
       ],
-      "sha256": "eaad0a2bfb5edf3be505e57d54cb1f4ebd70c8aa2b40a0356ed317856c94dd14"
+      "sha256": "7816e20d97178fce0cb3ebb6d2f30b1087d4c144f8ad553575a08f2851e39f17"
     },
     {
       "id": "iacov",
       "bookId": "JAS",
       "name": "Iacov",
       "chapters": 5,
+      "units": 5,
+      "passageRebuiltChapters": 0,
       "sources": [
         "ttb-james",
         "vbv-james"
       ],
-      "sha256": "d2afb1a8e85333a34c4fb9c988fa0259eb9cb5ffe34e9dd234b77fdee6da2dea"
+      "sha256": "989ab0bf1a1e5d9b3dd46ef2c0195e8b9fa366ecffa37f20ded4e405c7a18f25"
     },
     {
       "id": "1-petru",
       "bookId": "1PE",
       "name": "1 Petru",
       "chapters": 5,
+      "units": 5,
+      "passageRebuiltChapters": 0,
       "sources": [
         "ttb-peter",
         "vbv-1-peter"
       ],
-      "sha256": "42cc577b338aee1c79c6eab9dd1948e0d17502f360bb6cb920075d168867525a"
+      "sha256": "6b666b359402d852d557e9fd5e534099dd1f1707fd4b93a0246f4edd18b4ea5f"
     },
     {
       "id": "2-petru",
       "bookId": "2PE",
       "name": "2 Petru",
       "chapters": 3,
+      "units": 3,
+      "passageRebuiltChapters": 0,
       "sources": [
         "ttb-peter",
         "vbv-2-peter"
       ],
-      "sha256": "20530ab21b9672b70f4e6c22a33c53beb277831ac4afde4a0501632688a60b9f"
+      "sha256": "1b13be3ea1c4d581c3f4fa26a1f2c357fba104a729d453176e84c5a4d72994cb"
     },
     {
       "id": "1-ioan",
       "bookId": "1JN",
       "name": "1 Ioan",
       "chapters": 5,
+      "units": 5,
+      "passageRebuiltChapters": 0,
       "sources": [
         "ttb-1-john",
         "vbv-1-john"
       ],
-      "sha256": "ee279154298b3a8c2cf263e4dfd236a9e2041d1b3791b2b49a5a403ff840a535"
+      "sha256": "cf5e651e26325dffca63993db52822691b4c2cb0611da54ec344a8623487e430"
     },
     {
       "id": "2-ioan",
       "bookId": "2JN",
       "name": "2 Ioan",
       "chapters": 1,
+      "units": 1,
+      "passageRebuiltChapters": 0,
       "sources": [
         "ttb-john-jude",
         "vbv-john-jude"
       ],
-      "sha256": "0f913985b133d705e4bca10b390d8b902f7d361eb914da407404160c17aca38c"
+      "sha256": "e03cbb24df65ae9222b5274c3412f976acf596fb6ddb7adceefd015f951ec22c"
     },
     {
       "id": "3-ioan",
       "bookId": "3JN",
       "name": "3 Ioan",
       "chapters": 1,
+      "units": 1,
+      "passageRebuiltChapters": 0,
       "sources": [
         "ttb-john-jude",
         "vbv-john-jude"
       ],
-      "sha256": "1cdebff8c702d6b31ff0fa6752d695df7f6333acd9ec449a1a1e624da5c7aab2"
+      "sha256": "1a6178bab3a1ba1161785c6b569508c533fa02f7f9d4fcca8f8d5929d7a98837"
     },
     {
       "id": "iuda",
       "bookId": "JUD",
       "name": "Iuda",
       "chapters": 1,
+      "units": 1,
+      "passageRebuiltChapters": 0,
       "sources": [
         "ttb-john-jude",
         "vbv-john-jude"
       ],
-      "sha256": "11c70386d172e0ec68cfeff86962e6fd0c33b092903ff849294adedadd65d5cc"
+      "sha256": "b2adce1d52a0be122cec36330977ae46504cb6ccbd366c5cd7ee641cdd95855f"
     },
     {
       "id": "apocalipsa",
       "bookId": "REV",
       "name": "Apocalipsa",
       "chapters": 22,
+      "units": 22,
+      "passageRebuiltChapters": 0,
       "sources": [
         "ttb-revelation",
         "vbv-revelation",
         "final-triumph"
       ],
-      "sha256": "55a77f723aa305b406c02b87d605f2215649044d28662c93f6b33a9bc8a341b1"
+      "sha256": "6f56260ffe35893a7ce49a362120a2535c835abedc94569905a7fac722ff6edd"
     }
   ]
 }

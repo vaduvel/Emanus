@@ -2,8 +2,8 @@
   "schema": "emanus-nt-romanian-language-audit-v2",
   "status": "manual-edit-required",
   "policy": "Reader-facing Romanian must use standard diacritics. This audit flags likely missing-diacritic tokens but does not guess context-sensitive replacements. Automatic fixes are limited to context-free corruption tokens in a separate script.",
-  "count": 1895,
-  "findingGroups": 1265,
+  "count": 1898,
+  "findingGroups": 1268,
   "findings": [
     {
       "bookId": "matei",
@@ -12490,6 +12490,36 @@
       "book": "1 Tesaloniceni",
       "chapter": 5,
       "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "2-tesaloniceni",
+      "book": "2 Tesaloniceni",
+      "chapter": 1,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "2-tesaloniceni",
+      "book": "2 Tesaloniceni",
+      "chapter": 2,
+      "field": "units[3].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1
+    },
+    {
+      "bookId": "2-tesaloniceni",
+      "book": "2 Tesaloniceni",
+      "chapter": 3,
+      "field": "units[1].teaching",
       "kind": "missing-diacritics",
       "token": "in",
       "expected": "în",

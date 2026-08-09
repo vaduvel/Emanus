@@ -7,15 +7,15 @@
     "blockerClasses": 7,
     "books": 27,
     "chapters": 260,
-    "units": 831,
-    "wholeChapterSummaryUnits": 69,
+    "units": 839,
+    "wholeChapterSummaryUnits": 66,
     "thinUnits": 42,
     "emptyHeadings": 2,
-    "missingSourceAnchors": 831,
+    "missingSourceAnchors": 828,
     "rawEditorialFindings": 96,
     "unresolvedEditorialFindings": 0,
     "embeddedQuoteFindings": 122,
-    "romanianLanguageFindings": 1895,
+    "romanianLanguageFindings": 1898,
     "lexiconFindings": 0
   },
   "blockers": [
@@ -28,24 +28,9 @@
     },
     {
       "id": "whole-chapter-summary-units",
-      "count": 69,
-      "message": "69 rebuilt chapters are still one whole-chapter unit.",
+      "count": 66,
+      "message": "66 rebuilt chapters are still one whole-chapter unit.",
       "examples": [
-        {
-          "bookId": "2-tesaloniceni",
-          "chapter": 1,
-          "ref": "2 Tesaloniceni 1:1-12"
-        },
-        {
-          "bookId": "2-tesaloniceni",
-          "chapter": 2,
-          "ref": "2 Tesaloniceni 2:1-17"
-        },
-        {
-          "bookId": "2-tesaloniceni",
-          "chapter": 3,
-          "ref": "2 Tesaloniceni 3:1-18"
-        },
         {
           "bookId": "1-timotei",
           "chapter": 1,
@@ -130,6 +115,21 @@
           "bookId": "evrei",
           "chapter": 7,
           "ref": "Evrei 7:1-28"
+        },
+        {
+          "bookId": "evrei",
+          "chapter": 8,
+          "ref": "Evrei 8:1-13"
+        },
+        {
+          "bookId": "evrei",
+          "chapter": 9,
+          "ref": "Evrei 9:1-28"
+        },
+        {
+          "bookId": "evrei",
+          "chapter": 10,
+          "ref": "Evrei 10:1-39"
         }
       ]
     },
@@ -279,8 +279,8 @@
     },
     {
       "id": "missing-source-anchors",
-      "count": 831,
-      "message": "831/831 units lack reproducible sourceAnchors.",
+      "count": 828,
+      "message": "828/839 units lack reproducible sourceAnchors.",
       "examples": [
         {
           "bookId": "matei",
@@ -392,7 +392,7 @@
     },
     {
       "id": "romanian-language-audit",
-      "count": 1895,
+      "count": 1898,
       "message": "Romanian language audit is manual-edit-required.",
       "status": "manual-edit-required"
     }
