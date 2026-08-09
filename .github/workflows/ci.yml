@@ -26,19 +26,43 @@ jobs:
           git fetch --depth=1 origin "${HEAD_SHA}"
           git checkout --detach FETCH_HEAD
           if command -v python3.11 >/dev/null 2>&1; then echo 'PYTHON_BIN=python3.11' >> "$GITHUB_ENV"; else echo 'PYTHON_BIN=python3' >> "$GITHUB_ENV"; fi
+      - name: Detect Biblia Emanus changes
+        id: changes
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_SHA: ${{ github.sha }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          set -euo pipefail
+          if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ] || [ -z "${BASE_SHA}" ] || [[ "${BASE_SHA}" =~ ^0+$ ]]; then
+            echo 'biblia=true' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          git fetch --depth=1 origin "${BASE_SHA}"
+          changed_files="$(git diff --name-only "${BASE_SHA}" "${HEAD_SHA}")"
+          if printf '%s\n' "${changed_files}" | grep -Eiq '(^|/)(biblia|bible)|publica-geneza|romanian-quality'; then
+            echo 'biblia=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'biblia=false' >> "$GITHUB_OUTPUT"
+          fi
       - name: Install JavaScript dependencies
         run: |
           set -euo pipefail
           corepack enable
           corepack prepare pnpm@9.7.0 --activate
           pnpm install --frozen-lockfile
-      - name: Verify repository and Biblia Emanus
+      - name: Verify repository and Porți
         run: |
           set -euo pipefail
           pnpm check:quotes
           pnpm check:typos
           pnpm check:content
           pnpm check:porti
+      - name: Verify Biblia Emanus
+        if: steps.changes.outputs.biblia == 'true'
+        run: |
+          set -euo pipefail
           pnpm check:bible-publication
           "$PYTHON_BIN" scripts/check-biblia-emanus-romanian-quality.py
           pnpm check:biblia-emanus
@@ -48,6 +72,7 @@ jobs:
           pnpm check:biblia-emanus-versification
           pnpm seal:biblia-emanus --check
       - name: Verify Old Testament repair candidates when present
+        if: steps.changes.outputs.biblia == 'true'
         run: |
           set -euo pipefail
           if [ ! -f docs/data/biblia-emanus-candidates/manifest.json ]; then
