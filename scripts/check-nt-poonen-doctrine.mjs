@@ -64,7 +64,15 @@ check("apocalipsa", 7, (t, l) => {
     /dupa.*persecut.*sfint.*inainte.*maniei/,
   ], l)
 })
-check("apocalipsa", 13, (t, l) => { allOf(t, [/antihrist/, /fiara/, /inchinare/, /semn/], l); anyOf(t, [/biserica trebuie sa fie pregatita/, /credincios.*pregatit/, /nu.*presupunerea.*antihrist.*nu va fi vazut/], l) })
+check("apocalipsa", 13, (t, l) => {
+  allOf(t, [/antihrist/, /fiara/, /inchinare/, /semn/], l)
+  anyOf(t, [
+    /biserica.*nu trebuie.*presupun.*(?:antihrist|fiara).*nu.*(?:ved|intaln)/,
+    /fiara.*antihrist.*biserica.*(?:ved|pregat)/,
+    /sfint.*(?:persever|credint).*fiara/,
+    /credincios.*(?:pregatit|loial).*antihrist/,
+  ], l)
+})
 check("apocalipsa", 17, (t, l) => allOf(t, [/babilon/, /desfranat|curva/, /relig/, /putere|bogat|lume/], l))
 check("apocalipsa", 18, (t, l) => allOf(t, [/iesiti.*babilon|iesiti din ea/, /bogat|comerci|piata/, /sistem/], l))
 check("apocalipsa", 20, (t, l) => allOf(t, [/o mie de ani|1000 de ani|mileniu/, /satan/, /domn.*hristos|hristos.*domn/, /judec/], l))
