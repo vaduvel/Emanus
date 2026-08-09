@@ -116,16 +116,13 @@ function restoreIeremia31(chapter: ExplainedOverlayChapter): ExplainedOverlayCha
         heading: "«Te iubesc cu o iubire veșnică»",
         teaching:
           "Ieremia 31:3 este un verset minunat de încurajare: «Te iubesc cu o iubire veșnică; de aceea te-am atras cu bunătate».\n\nDragostea lui Dumnezeu nu începe când reușești să fii suficient de bun. Este o iubire veșnică, iar bunătatea Lui te atrage spre El.\n\nPoporul care trecuse prin disciplină și exil aude din nou această declarație. Dumnezeu nu Și-a pierdut inima pentru ei. El îi adună, îi zidește și îi aduce din nou la bucurie.\n\nCând treci prin zdrobire, nu interpreta disciplina ca dovadă că Dumnezeu a încetat să te iubească. El spune: «te iubesc cu o iubire veșnică».",
-          source: source(
-            "Jeremiah 31:3 ... wonderful verse to encourage us ... I have loved you with an everlasting love, therefore I've drawn you with loving kindness",
-          ),
-          explanationKind: "exposition",
-          forYourHeart:
-            "Lasă bunătatea Lui să te atragă. Disciplina nu înseamnă că iubirea Lui s-a terminat.",
-        }
+        source: source(
+          "Jeremiah 31:3 ... wonderful verse to encourage us ... I have loved you with an everlasting love, therefore I've drawn you with loving kindness",
+        ),
+        explanationKind: "exposition",
+        forYourHeart:
+          "Lasă bunătatea Lui să te atragă. Disciplina nu înseamnă că iubirea Lui s-a terminat.",
       }
-
-      return unit
     }),
   }
 }
