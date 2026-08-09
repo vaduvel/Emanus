@@ -2,12 +2,15 @@
 
 import fs from "node:fs"
 import path from "node:path"
+import crypto from "node:crypto"
 
 const ROOT = process.cwd()
 const corpusDir = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-final-source-first")
 const beDir = path.join(ROOT, "docs", "data", "biblia-emanus")
+const bindingPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-canonical-binding.json")
 const generatedDir = path.join(ROOT, "packages", "shared", "src", "bible", "generated", "ntExplained")
 const generatedIndex = path.join(ROOT, "packages", "shared", "src", "bible", "generated", "ntExplained.ts")
+const generatedBinding = path.join(ROOT, "packages", "shared", "src", "bible", "generated", "ntExplainedBinding.ts")
 const runtimePath = path.join(ROOT, "packages", "shared", "src", "bible", "ntPublicationBible.ts")
 
 const EXPECTED = { books: 27, chapters: 260, verseEntries: 7941 }
@@ -18,18 +21,45 @@ function fail(message) {
 }
 function q(value) { return JSON.stringify(value) }
 function ident(index) { return `NT_BOOK_${String(index).padStart(2, "0")}` }
+function sha256(value) { return crypto.createHash("sha256").update(value).digest("hex") }
 function tsValue(value, indent = 0) {
   return JSON.stringify(value, null, 2)
     .split("\n")
     .map((line, index) => index === 0 ? line : `${" ".repeat(indent)}${line}`)
     .join("\n")
 }
+function canonicalPayload(be) {
+  const main = be.verses.map((verse) => ({ number: verse.number, text: verse.text }))
+  const mainNumbers = new Set(main.map((verse) => verse.number))
+  const critical = (be.referenceNotes ?? [])
+    .filter((note) => Number.isInteger(note?.number) && !mainNumbers.has(note.number))
+    .map((note) => ({
+      number: note.number,
+      status: note.status,
+      resolutionStatus: note.resolutionStatus,
+      traditionalReading: typeof note.traditionalReading === "string" ? note.traditionalReading : undefined,
+    }))
+    .sort((a, b) => a.number - b.number)
+  return { bookId: be.bookId, chapter: be.chapter, verses: main, criticalReferences: critical }
+}
+
+if (!fs.existsSync(bindingPath)) fail("missing nt-canonical-binding.json; run materialize-nt-canonical-binding.mjs first")
+const canonicalBinding = JSON.parse(fs.readFileSync(bindingPath, "utf8"))
+if (canonicalBinding.schema !== "emanus-nt-canonical-binding-v1") fail("invalid canonical binding schema")
+if (canonicalBinding.counts?.books !== EXPECTED.books || canonicalBinding.counts?.chapters !== EXPECTED.chapters || canonicalBinding.counts?.verseEntries !== EXPECTED.verseEntries) fail("canonical binding totals mismatch")
+if (!canonicalBinding.canonicalTextVersion || !canonicalBinding.corpusSha256) fail("canonical binding version/hash missing")
+const bindingByChapter = new Map(canonicalBinding.chapters.map((entry) => [`${entry.bookId}.${entry.chapter}`, entry]))
 
 function loadBe(bookId, chapter) {
   const file = path.join(beDir, `${bookId}.${chapter}.json`)
   if (!fs.existsSync(file)) fail(`missing ${bookId}.${chapter}.json`)
   const be = JSON.parse(fs.readFileSync(file, "utf8"))
-  if (be.translation !== "BE" || be.status !== "published" || be.public !== true) fail(`${bookId}.${chapter}: BE not published/public`)
+  if (be.translation !== "BE" || be.status !== "published" || be.public !== true) fail(`${bookId}.${chapter}: BE not public/published at data layer`)
+  const bound = bindingByChapter.get(`${bookId}.${chapter}`)
+  if (!bound) fail(`${bookId}.${chapter}: canonical binding entry missing`)
+  const digest = sha256(JSON.stringify(canonicalPayload(be)))
+  if (digest !== bound.canonicalTextSha256) fail(`${bookId}.${chapter}: BE text changed after canonical binding (${digest} != ${bound.canonicalTextSha256})`)
+  if (typeof be.audit?.textDigest !== "string" || be.audit.textDigest !== bound.sourceAuditTextDigest) fail(`${bookId}.${chapter}: BE audit textDigest changed after binding`)
   return be
 }
 
@@ -119,6 +149,10 @@ indexLines.push(`  return findNtExplainedBook(bookId)?.chapters.find((chapter) =
 indexLines.push(`}`)
 fs.writeFileSync(generatedIndex, indexLines.join("\n") + "\n", "utf8")
 
-const runtime = `export {\n  NT_EXPLAINED_BOOKS,\n  NT_EXPLAINED_TRANSLATION,\n  NT_EXPLAINED_STATUS,\n  findNtExplainedBook,\n  findNtExplainedChapter,\n} from "./generated/ntExplained.js"\n`
+const bindingModule = `export const NT_EXPLAINED_CANONICAL_VERSION = ${q(canonicalBinding.canonicalTextVersion)} as const\nexport const NT_EXPLAINED_CANONICAL_STATE = ${q(canonicalBinding.releaseState)} as const\nexport const NT_EXPLAINED_CANONICAL_SHA256 = ${q(canonicalBinding.corpusSha256)} as const\nexport const NT_EXPLAINED_CANONICAL_PUBLICATION_READY = ${canonicalBinding.publicationReady === true ? "true" : "false"} as const\nexport const NT_EXPLAINED_CANONICAL_CHAPTERS = ${tsValue(canonicalBinding.chapters)} as const\n`
+fs.writeFileSync(generatedBinding, bindingModule, "utf8")
+
+const runtime = `export {\n  NT_EXPLAINED_BOOKS,\n  NT_EXPLAINED_TRANSLATION,\n  NT_EXPLAINED_STATUS,\n  findNtExplainedBook,\n  findNtExplainedChapter,\n} from "./generated/ntExplained.js"\nexport {\n  NT_EXPLAINED_CANONICAL_VERSION,\n  NT_EXPLAINED_CANONICAL_STATE,\n  NT_EXPLAINED_CANONICAL_SHA256,\n  NT_EXPLAINED_CANONICAL_PUBLICATION_READY,\n  NT_EXPLAINED_CANONICAL_CHAPTERS,\n} from "./generated/ntExplainedBinding.js"\n`
 fs.writeFileSync(runtimePath, runtime, "utf8")
 console.log(`NT runtime materialized: ${files.length} books / ${totalChapters} chapters / ${totalVerseEntries} Biblia Emanus verse entries.`)
+console.log(`Canonical binding: ${canonicalBinding.canonicalTextVersion} / ${canonicalBinding.releaseState} / sha256:${canonicalBinding.corpusSha256}.`)
