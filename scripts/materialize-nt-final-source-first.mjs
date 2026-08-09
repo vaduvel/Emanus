@@ -5,7 +5,7 @@ import path from "node:path"
 import crypto from "node:crypto"
 
 const ROOT = process.cwd()
-const recoveredDir = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-audited-recovered-refined")
+const recoveredDir = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-reviewed-recovered")
 const rebuiltDir = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-source-first")
 const outputDir = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-final-source-first")
 const manifestPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-final-source-first-manifest.json")
@@ -39,7 +39,7 @@ function readBooks(dir, sourceClass) {
 
 const audited = readBooks(recoveredDir, "audited-recovered-poonen")
 const rebuilt = readBooks(rebuiltDir, "rebuilt-poonen-source-first")
-if (audited.size !== 15) fail(`audited books ${audited.size}/15`)
+if (audited.size !== 15) fail(`reviewed recovered books ${audited.size}/15`)
 if (rebuilt.size !== 12) fail(`rebuilt books ${rebuilt.size}/12`)
 fs.rmSync(outputDir, { recursive: true, force: true })
 fs.mkdirSync(outputDir, { recursive: true })
@@ -58,6 +58,7 @@ for (let index = 0; index < CANON.length; index += 1) {
   const chapters = source.chapters.map((chapter, chapterIndex) => {
     if (chapter.number !== chapterIndex + 1) fail(`${id}: non-contiguous chapter numbering`)
     if (chapter.status !== "in_review") fail(`${id} ${chapter.number}: must remain in_review before final release review`)
+    if (entry.sourceClass === "audited-recovered-poonen" && chapter.provenance?.subtleEditorialReviewResolved !== true) fail(`${id} ${chapter.number}: recovered chapter has not passed manual subtle-editorial resolution`)
     const units = chapter.units ?? []
     if (!units.length) fail(`${id} ${chapter.number}: no explanation units`)
     totalUnits += units.length
@@ -82,8 +83,8 @@ const manifest = {
   doctrinePolicy: "Poonen/CFC source-first. Where the source develops the passage, preserve its doctrine, interpretation, typology and application without dilution. Modern provenance remains internal.",
   genericCompletionAllowed: false,
   legacyBibleTextAllowed: false,
-  counts: { books: manifestBooks.length, chapters: totalChapters, units: totalUnits, auditedRecoveredBooks: 15, rebuiltSourceFirstBooks: 12, refinedRecoveredBooks: 15 },
+  counts: { books: manifestBooks.length, chapters: totalChapters, units: totalUnits, auditedRecoveredBooks: 15, rebuiltSourceFirstBooks: 12, manuallyResolvedRecoveredBooks: 15 },
   books: manifestBooks,
 }
 fs.writeFileSync(manifestPath, stable(manifest), "utf8")
-console.log(`NT final source-first materialized: ${manifestBooks.length} books / ${totalChapters} chapters / ${totalUnits} units.`)
+console.log(`NT final source-first materialized from manually resolved recovered layer: ${manifestBooks.length} books / ${totalChapters} chapters / ${totalUnits} units.`)
