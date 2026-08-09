@@ -30,7 +30,7 @@ function restoreChapter24(chapter: BibleChapter): BibleChapter {
     heading: "«Nu voi aduce DOMNULUI ceva care nu mă costă nimic»",
     teaching: [
       "David merge la aria lui Aravna ca să aducă jertfă. Aravna îi oferă gratuit locul, boii și lemnul, dar David refuză.",
-      "Versetul 24 este unul de ținut minte toată viața: «nu voi aduce DOMNULUI Dumnezeului meu arderi-de-tot care să nu mă coste nimic». David nu vrea să numească jertfă un dar al cărui preț îl plătește altcineva.",
+      "Versetul 24 este unul de ținut minte toată viața: «nu voi aduce DOMNULUI Dumnezeului meu arderi-de-tot care să nu mă coste nimic». Poonen fixează principiul în forma directă: nu voi aduce DOMNULUI ceva care nu mă costă nimic. David nu vrea să numească jertfă un dar al cărui preț îl plătește altcineva.",
       "Slujirea și închinarea adevărată ne costă. Îi dăm lui Dumnezeu din timpul nostru, puterea noastră, banii noștri, confortul nostru și viața noastră, nu doar lucruri care nu ne cer nimic.",
       "Pe acel loc este adusă jertfa și urgia se oprește. Mai târziu locul va fi legat de templu. Cartea se încheie astfel cu un om care, după ce s-a sprijinit pe ceea ce putea număra, ajunge din nou la altar și spune că nu-I va da lui Dumnezeu ceea ce nu îl costă.",
     ].join("\n\n"),
