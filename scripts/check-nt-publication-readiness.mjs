@@ -7,6 +7,7 @@ const ROOT = process.cwd()
 const corpusDir = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-final-source-first")
 const manifestPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-final-source-first-manifest.json")
 const bindingPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-canonical-binding.json")
+const sourceEvidencePath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-source-evidence.json")
 const editorialRawPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-subtle-editorial-refined-findings.json")
 const editorialDecisionsPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-subtle-editorial-decisions.json")
 const quoteAuditPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-embedded-quote-audit.json")
@@ -22,6 +23,7 @@ function pushBlocker(blockers, id, count, message, details = {}) { if (!count) r
 if (!fs.existsSync(corpusDir) || !fs.existsSync(manifestPath)) fail("final NT corpus/manifest missing")
 const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"))
 const binding = readJson(bindingPath, "canonical binding")
+const sourceEvidence = readJson(sourceEvidencePath, "source evidence")
 const editorialRaw = readJson(editorialRawPath, "editorial raw audit")
 const editorialDecisions = readJson(editorialDecisionsPath, "editorial decisions")
 const quoteAudit = readJson(quoteAuditPath, "embedded quote audit")
@@ -29,10 +31,12 @@ const languageAudit = readJson(languageAuditPath, "Romanian language audit")
 const lexiconAudit = readJson(lexiconAuditPath, "lexicon audit")
 
 const bindingByChapter = new Map((binding.chapters ?? []).map((entry) => [`${entry.bookId}.${entry.chapter}`, entry]))
+const evidenceById = new Map((sourceEvidence.records ?? []).map((entry) => [entry.id, entry]))
 const wholeChapterSummaries = []
 const thin = []
 const empty = []
 const missingAnchors = []
+const invalidAnchors = []
 let units = 0
 
 for (const file of fs.readdirSync(corpusDir).filter((name) => name.endsWith(".json")).sort()) {
@@ -45,8 +49,27 @@ for (const file of fs.readdirSync(corpusDir).filter((name) => name.endsWith(".js
       if (words < 45) thin.push({ bookId: book.id, chapter: chapter.number, ref: unit.ref, words })
       if (typeof unit.heading !== "string" || !unit.heading.trim()) empty.push({ bookId: book.id, chapter: chapter.number, ref: unit.ref })
       const anchors = Array.isArray(unit.sourceAnchors) ? unit.sourceAnchors : []
-      if (!anchors.length || anchors.some((anchor) => typeof anchor?.sourceId !== "string" || !anchor.sourceId || typeof anchor?.locator !== "string" || !anchor.locator || typeof anchor?.evidenceSha256 !== "string" || !/^sha256:[0-9a-f]{64}$/i.test(anchor.evidenceSha256))) {
+      if (!anchors.length) {
         missingAnchors.push({ bookId: book.id, chapter: chapter.number, ref: unit.ref })
+      } else {
+        for (const anchor of anchors) {
+          const formatValid = typeof anchor?.sourceId === "string" && anchor.sourceId &&
+            typeof anchor?.locator === "string" && anchor.locator &&
+            typeof anchor?.evidenceId === "string" && anchor.evidenceId &&
+            typeof anchor?.evidenceSha256 === "string" && /^sha256:[0-9a-f]{64}$/i.test(anchor.evidenceSha256)
+          if (!formatValid) {
+            invalidAnchors.push({ bookId: book.id, chapter: chapter.number, ref: unit.ref, evidenceId: anchor?.evidenceId ?? null, reason: "invalid-anchor-format" })
+            continue
+          }
+          const evidence = evidenceById.get(anchor.evidenceId)
+          if (!evidence) {
+            invalidAnchors.push({ bookId: book.id, chapter: chapter.number, ref: unit.ref, evidenceId: anchor.evidenceId, reason: "evidence-record-missing" })
+            continue
+          }
+          if (evidence.sourceId !== anchor.sourceId || evidence.locator !== anchor.locator || evidence.evidenceSha256 !== anchor.evidenceSha256) {
+            invalidAnchors.push({ bookId: book.id, chapter: chapter.number, ref: unit.ref, evidenceId: anchor.evidenceId, reason: "anchor-evidence-mismatch" })
+          }
+        }
       }
     }
     if (book.sourceClass === "rebuilt-poonen-source-first" && chapter.units?.length === 1 && bound) {
@@ -59,6 +82,7 @@ for (const file of fs.readdirSync(corpusDir).filter((name) => name.endsWith(".js
 const blockers = []
 if (binding.missing) pushBlocker(blockers, "canonical-binding-missing", 1, "Canonical binding is missing.")
 else if (binding.releaseState !== "final" || binding.publicationReady !== true) pushBlocker(blockers, "canonical-text-not-final", 1, `Canonical text is ${binding.releaseState ?? "unknown"}, not final.`, { canonicalTextVersion: binding.canonicalTextVersion ?? null, corpusSha256: binding.corpusSha256 ?? null })
+if (sourceEvidence.missing) pushBlocker(blockers, "source-evidence-missing", 1, "Source evidence registry is missing.")
 
 let editorialClassificationUnresolved = null
 let editorialSourceTraceabilityPending = null
@@ -86,7 +110,8 @@ if (editorialRaw.missing) {
 pushBlocker(blockers, "whole-chapter-summary-units", wholeChapterSummaries.length, `${wholeChapterSummaries.length} rebuilt chapters are still one whole-chapter unit.`, { examples: wholeChapterSummaries.slice(0, 20) })
 pushBlocker(blockers, "thin-explanation-units", thin.length, `${thin.length} explanation units are under 45 words.`, { examples: thin.slice(0, 20) })
 pushBlocker(blockers, "empty-unit-headings", empty.length, `${empty.length} explanation units have empty headings.`, { examples: empty.slice(0, 20) })
-pushBlocker(blockers, "missing-source-anchors", missingAnchors.length, `${missingAnchors.length}/${units} units lack reproducible sourceAnchors.`, { examples: missingAnchors.slice(0, 20) })
+pushBlocker(blockers, "missing-source-anchors", missingAnchors.length, `${missingAnchors.length}/${units} units lack sourceAnchors.`, { examples: missingAnchors.slice(0, 20) })
+pushBlocker(blockers, "invalid-source-anchors", invalidAnchors.length, `${invalidAnchors.length} source anchors do not match the evidence registry.`, { examples: invalidAnchors.slice(0, 20) })
 
 for (const [audit, label, id] of [[quoteAudit, "embedded quote", "embedded-quote-audit"], [languageAudit, "Romanian language", "romanian-language-audit"], [lexiconAudit, "lexicon", "lexicon-audit"]]) {
   if (audit.missing) pushBlocker(blockers, `${id}-missing`, 1, `${label} audit is missing.`)
@@ -107,6 +132,7 @@ const report = {
     thinUnits: thin.length,
     emptyHeadings: empty.length,
     missingSourceAnchors: missingAnchors.length,
+    invalidSourceAnchors: invalidAnchors.length,
     rawEditorialFindings: editorialRaw.count ?? null,
     editorialClassificationUnresolved,
     editorialSourceTraceabilityPending,
