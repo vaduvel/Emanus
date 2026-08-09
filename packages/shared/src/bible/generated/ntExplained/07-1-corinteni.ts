@@ -255,7 +255,7 @@ export const NT_BOOK_07: BibleBook = {
           "ref": "1 Corinteni 5:9-13",
           "heading": "Judecata responsabilă începe înăuntru",
           "text": "V-am scris în epistolă să nu vă asociați cu oamenii imorali sexual, nu în mod absolut cu oamenii imorali sexual din lumea aceasta, sau cu cei lacomi și răpitori, sau cu idolatrii, fiindcă atunci ar trebui să ieșiți din lume. Dar acum v-am scris să nu vă asociați cu nimeni care, deși se numește frate, este imoral sexual, sau lacom, sau idolatru, sau batjocoritor, sau bețiv, sau răpitor; cu unul ca acesta nici să nu mâncați. Căci ce am eu să-i judec pe cei de afară? Nu-i judecați voi pe cei dinăuntru? Pe cei de afară îi judecă Dumnezeu. „Dați afară dintre voi pe omul rău!”",
-          "teaching": "Pavel nu cere izolarea de oamenii lumii, altfel credincioșii ar trebui să iasă din lume. El cere discernământ în relația de părtășie cu cel care se numește frate, dar apără o viață evident contrară lui Hristos.\n\nAceastă responsabilitate nu autorizează vânătoarea de greșeli, zvonurile sau controlul vieții private. Ea se aplică faptelor serioase și confirmate, cu procedură dreaptă, chemare la pocăință și disponibilitate pentru restaurare.",
+          "teaching": "Pavel nu cere izolarea de oamenii lumii, altfel credincioșii ar trebui să iasă din lume. El cere discernământ în relația de părtășie cu cel care se numește frate, dar apără o viață evident contrară lui Hristos. Ea se aplică faptelor serioase și confirmate, cu procedură dreaptă, chemare la pocăință și disponibilitate pentru restaurare.",
           "crossRefs": [
             "1 Timotei 5:19-21",
             "2 Corinteni 2:6-8",
@@ -331,7 +331,7 @@ export const NT_BOOK_07: BibleBook = {
           "ref": "1 Corinteni 7:1-9",
           "heading": "Trupul soților este dat în grijă reciprocă",
           "text": "Cu privire la lucrurile despre care ați scris: este bine pentru un bărbat să nu se atingă de femeie. Dar, din cauza imoralităților sexuale, fiecare să-și aibă propria soție și fiecare femeie să-și aibă propriul soț. Soțul să-i dea soției datoria conjugală; la fel și soția soțului. Soția nu are stăpânire asupra propriului trup, ci soțul; la fel, nici soțul nu are stăpânire asupra propriului trup, ci soția. Nu vă lipsiți unii de alții, dacă nu este de acord pentru un timp, ca să vă dați pe voi înșivă la post și rugăciune și să fiți din nou împreună, ca Satana să nu vă ispitească din cauza lipsei de stăpânire de sine. Dar spun aceasta ca îngăduință, nu ca poruncă. Totuși, aș vrea ca toți oamenii să fie ca mine, dar fiecare om are darul lui de la Dumnezeu, unul de acest fel altul de acest fel. Celor necăsătoriți și văduvelor le spun că este bine pentru ei dacă rămân ca mine. Dar dacă nu se pot stăpâni, să se căsătorească; căci este mai bine să se căsătorească decât să ardă.",
-          "teaching": "Căsătoria include responsabilitate reciprocă, nu privilegiu unilateral. Soțul și soția trebuie să se îngrijească unul de celălalt și să nu folosească abstinența ca armă, decât prin acord și pentru un timp.\n\nReciprocitatea nu justifică niciodată constrângerea sexuală.",
+          "teaching": "Căsătoria include responsabilitate reciprocă, nu privilegiu unilateral. Soțul și soția trebuie să se îngrijească unul de celălalt și să nu folosească abstinența ca armă, decât prin acord și pentru un timp.",
           "crossRefs": [
             "Geneza 2:24",
             "Efeseni 5:21-33",
@@ -472,7 +472,7 @@ export const NT_BOOK_07: BibleBook = {
           "ref": "1 Corinteni 9:24-27",
           "heading": "Aleargă ca să câștigi",
           "text": "Nu știți că cei care aleargă într-o cursă aleargă toți, dar numai unul primește premiul? Alergați astfel încât să-l câștigați. Fiecare om care se străduiește în jocuri exercită auto-control în toate lucrurile. Acum ei o fac pentru a primi o coroană coruptibil, dar noi o incoruptibil. Eu, așadar, alerg nu ca fără țintă; lupt cu pumnii, nu ca unul care lovește aerul. Ci îmi lovesc trupul și-l aduc în robie, ca nu cumva, după ce am predicat altora, eu însumi să fiu găsit respins.",
-          "teaching": "Participarea la cursă nu este același lucru cu alergarea disciplinată. Pavel își ține trupul sub control ca să nu predice altora o viață pe care el însuși refuză să o trăiască.\n\nDisciplinarea trupului nu este ură față de corp și nu justifică practici dăunătoare. Este o ordine sănătoasă a somnului, hranei, sexualității, timpului și obiceiurilor sub scopul lui Dumnezeu.",
+          "teaching": "Participarea la cursă nu este același lucru cu alergarea disciplinată. Pavel își ține trupul sub control ca să nu predice altora o viață pe care el însuși refuză să o trăiască. Este o ordine sănătoasă a somnului, hranei, sexualității, timpului și obiceiurilor sub scopul lui Dumnezeu.",
           "crossRefs": [
             "2 Timotei 4:7-8",
             "Evrei 12:1-2",

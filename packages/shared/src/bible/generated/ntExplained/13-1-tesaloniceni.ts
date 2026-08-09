@@ -34,7 +34,7 @@ export const NT_BOOK_13: BibleBook = {
           "ref": "1 Tesaloniceni 1:4-5",
           "heading": "Alegerea cunoscută prin puterea Evangheliei",
           "text": "Știm, frați iubiți de Dumnezeu, că sunteți aleși, că Vestea cea Bună a venit la voi nu numai prin cuvânt, ci prin putere, prin Duhul Sfânt cu multă. Știți ce fel de oameni ne-am arătat a fi printre voi pentru voi.",
-          "teaching": "Pavel nu speculează despre alegerea lui Dumnezeu într-un mod rece. El o recunoaște prin felul în care Evanghelia a venit nu numai prin cuvinte, ci cu putere, cu Duhul Sfânt și cu o convingere adâncă ce a schimbat viața ascultătorilor.\n\nPuterea spirituală nu se măsoară prin volum, spectacol sau presiune emoțională. Mesagerii au trăit între oameni într-un fel care confirma mesajul. Nicio pretinsă ungere nu autorizează manipularea, intimidarea, minciuna sau controlul conștiinței; caracterul și adevărul trebuie să însoțească lucrarea Duhului.",
+          "teaching": "Pavel nu speculează despre alegerea lui Dumnezeu într-un mod rece. El o recunoaște prin felul în care Evanghelia a venit nu numai prin cuvinte, ci cu putere, cu Duhul Sfânt și cu o convingere adâncă ce a schimbat viața ascultătorilor. Puterea spirituală nu se măsoară prin volum, spectacol sau presiune emoțională. Mesagerii au trăit între oameni într-un fel care confirma mesajul.",
           "crossRefs": [
             "1 Corinteni 2:1-5",
             "2 Corinteni 4:2",
@@ -99,7 +99,7 @@ export const NT_BOOK_13: BibleBook = {
           "ref": "1 Tesaloniceni 2:5-8",
           "heading": "Fără lingușire, lăcomie sau glorie omenească",
           "text": "Căci nu am fost niciodată găsiți folosind cuvinte de lingușire, după cum știți, nici o mantie de lăcomie (Dumnezeu este martor), nici să căutăm glorie de la oameni (nici de la voi, nici de la alții), când am fi putut pretinde autoritate ca apostoli ai lui Hristos. Dar noi am fost blânzi între voi, așa cum o mamă care alăptează îngrijește copiii. Chiar așa, tânjind după tine, am fost bucuroși să-țim nu numai Vestea cea Bună a lui Dumnezeu, ci sufletele noastre, pentru că ne-ai devenit foarte drag.",
-          "teaching": "Pavel respinge trei unelte ale slujirii false: cuvintele lingușitoare, pretextul care ascunde lăcomia și căutarea onoarei de la oameni. Autoritatea apostolică nu a fost folosită pentru a apăsa comunitatea sau pentru a cere privilegii.\n\nEl compară purtarea lor cu grija unei mame care își hrănește copiii și spune că erau gata să împărtășească nu doar Evanghelia, ci și propria viață. Această imagine exprimă tandrețe și sacrificiu; nu autorizează liderii să controleze conștiința, banii, relațiile sau trupul oamenilor care le sunt încredințați.",
+          "teaching": "Pavel respinge trei unelte ale slujirii false: cuvintele lingușitoare, pretextul care ascunde lăcomia și căutarea onoarei de la oameni. Autoritatea apostolică nu a fost folosită pentru a apăsa comunitatea sau pentru a cere privilegii. El compară purtarea lor cu grija unei mame care își hrănește copiii și spune că erau gata să împărtășească nu doar Evanghelia, ci și propria viață.",
           "crossRefs": [
             "1 Petru 5:2-3",
             "2 Corinteni 12:14-15",
@@ -125,7 +125,7 @@ export const NT_BOOK_13: BibleBook = {
           "ref": "1 Tesaloniceni 2:13-16",
           "heading": "Cuvântul care lucrează și suferința pentru credință",
           "text": "Pentru aceasta îi mulțumim și lui Dumnezeu fără încetare că atunci când ați primit de la noi cuvântul mesajului lui Dumnezeu, nu l-ați acceptat ca cuvânt al oamenilor, ci ca în adevăr, Cuvântul lui Dumnezeu, care, de asemenea, lucrează în voi care credeți. Căci voi, fraților, ați imitat adunările lui Dumnezeu care sunt în Iudeea, în Hristos Isus; căci și voi ați suferit aceleași lucruri de la compatrioții voștri, cum au făcut ei de la Iudei. care a omorît pe Domnul Isus și pe prorocii lor, și ne-a izgonit, și nu voia lui Dumnezeu, și s-au împotrivit tuturor oamenilor, și ne-a oprit să vorbim Neamurilor, ca să fie mîntuiți, ca să-și umple totdeauna păcatele. Dar mâinia a venit peste ei până la capăt.",
-          "teaching": "Tesalonicenii au primit mesajul nu ca simplu cuvânt omenesc, ci ca adevărul lui Dumnezeu, care lucrează în cei ce cred. Cuvântul viu nu doar informează, ci confruntă, mângâie și modelează ascultarea.\n\nPavel compară suferința lor cu cea a bisericilor din Iudeea și descrie opoziția unor conducători care Îl respinseseră pe Hristos și persecutaseră mesagerii. Textul judecă acțiuni concrete și nu justifică antisemitismul, ura etnică sau vina colectivă împotriva poporului evreu; Pavel însuși era evreu și iubea profund poporul său.",
+          "teaching": "Tesalonicenii au primit mesajul nu ca simplu cuvânt omenesc, ci ca adevărul lui Dumnezeu, care lucrează în cei ce cred. Cuvântul viu nu doar informează, ci confruntă, mângâie și modelează ascultarea. Pavel compară suferința lor cu cea a bisericilor din Iudeea și descrie opoziția unor conducători care Îl respinseseră pe Hristos și persecutaseră mesagerii.",
           "crossRefs": [
             "Evrei 4:12",
             "Faptele 17:5-9",
@@ -229,7 +229,7 @@ export const NT_BOOK_13: BibleBook = {
           "ref": "1 Tesaloniceni 4:3-8",
           "heading": "Voia lui Dumnezeu: sfințirea și respectarea trupului",
           "text": "Căci aceasta este voia lui Dumnezeu: sfințirea voastră, că vă abțineți de la imoralitatea sexuală, că fiecare dintre voi știe cum să-și controleze propriul corp în sfințire și onoare, nu în pasiunea poftei, ca neamurile care nu cunosc pe Dumnezeu, ca nimeni să nu profite de un frate sau o soră nedrept în această privință, pentru că Domnul este răzbunător în toate aceste lucruri, așa cum v-am avertizat și am mărturisit. Căci Dumnezeu nu ne-a chemat pentru necurăție, ci pentru sfințire. Prin urmare, cel care respinge acest lucru nu îl respinge pe om, ci pe Dumnezeu, care-a dat și Duhul Sfânt.",
-          "teaching": "Sfințirea include despărțirea de imoralitatea sexuală și învățarea stăpânirii propriului trup în sfințenie și cinste. Explicația accentuează că dorința nu trebuie lăsată să conducă, iar curăția începe în inimă, în privire și în felul în care îl tratăm pe celălalt.\n\nNimeni nu trebuie să încalce drepturile sau să profite de fratele ori sora sa.\n\nA respinge această chemare înseamnă a-L respinge pe Dumnezeu, care dă Duhul Sfânt. Duhul nu produce rușinare, posesivitate sau control asupra trupului altuia, ci curăție, autocontrol, adevăr și respect.",
+          "teaching": "Sfințirea include despărțirea de imoralitatea sexuală și învățarea stăpânirii propriului trup în sfințenie și cinste. Explicația accentuează că dorința nu trebuie lăsată să conducă, iar curăția începe în inimă, în privire și în felul în care îl tratăm pe celălalt. Nimeni nu trebuie să încalce drepturile sau să profite de fratele ori sora sa. A respinge această chemare înseamnă a-L respinge pe Dumnezeu, care dă Duhul Sfânt.",
           "crossRefs": [
             "1 Corinteni 6:18-20",
             "Matei 5:27-30",
@@ -246,8 +246,7 @@ export const NT_BOOK_13: BibleBook = {
             "2 Tesaloniceni 3:10-13",
             "Efeseni 4:28",
             "Iacov 5:4"
-          ],
-          "forYourHeart": "Lucrează cinstit în responsabilitatea de azi și observă cine are nevoie de ajutor fără rușinare."
+          ]
         },
         {
           "id": "1-tesaloniceni-4-13-18",

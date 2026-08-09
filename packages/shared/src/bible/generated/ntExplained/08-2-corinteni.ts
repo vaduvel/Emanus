@@ -47,7 +47,7 @@ export const NT_BOOK_08: BibleBook = {
           "ref": "2 Corinteni 1:12-22",
           "heading": "Da-ul lui Dumnezeu în Hristos",
           "text": "Căci lauda noastră este aceasta: mărturia conștiinței noastre că ne-am purtat în lume, și mai ales față de voi, în sfințenie și sinceritate de la Dumnezeu, nu în înțelepciune firească, ci în harul lui Dumnezeu. Căci nu vă scriem altceva decât ceea ce citiți și ceea ce și recunoașteți; și sper că veți recunoaște până la capăt, Așa cum ne-ați recunoscut și voi în parte că noi suntem lauda voastră, așa cum și voi sunteți a noastră, în ziua Domnului nostru Isus. Și în această încredere voiam să vin mai întâi la voi, ca să aveți parte de un al doilea har, și prin voi să trec în Macedonia, iar din Macedonia să vin iarăși la voi și de la voi să fiu petrecut spre Iudeea. Așadar, vrând aceasta, am lucrat oare cu ușurătate? Sau cele pe care le hotărăsc le hotărăsc după carne, ca să fie la mine „Da, da” și „Nu, nu”? Dar, așa cum Dumnezeu este credincios, cuvântul nostru față de tine nu a fost da și nu. Căci Fiul lui Dumnezeu, Isus Hristos, cel predicat între voi prin noi, prin mine, prin Silvan și prin Timotei, n-a fost „Da” și „Nu”, ci în El s-a făcut „Da”. Fiindcă oricâte promisiuni ale lui Dumnezeu sunt, în El este „Da”; de aceea tot prin El este și „Aminul”, spre slava lui Dumnezeu prin noi. Iar Cel care ne întărește împreună cu voi în Hristos și ne-a uns este Dumnezeu, care ne-a și pecetluit și a dat în inimile noastre arvuna Duhului.",
-          "teaching": "Pavel își apără purtarea printr-o conștiință curată, nu prin abilitate politică. Un slujitor al noului legământ nu spune «da» și «nu» după interes, ci caută simplitatea și sinceritatea harului.\n\nToate făgăduințele lui Dumnezeu sunt «Da» în Hristos. Duhul Sfânt este pecetea și arvuna lucrării viitoare, nu un instrument prin care liderul își legitimează orice decizie.",
+          "teaching": "Pavel își apără purtarea printr-o conștiință curată, nu prin abilitate politică. Un slujitor al noului legământ nu spune «da» și «nu» după interes, ci caută simplitatea și sinceritatea harului. Toate făgăduințele lui Dumnezeu sunt «Da» în Hristos.",
           "crossRefs": [
             "Matei 5:37",
             "Efeseni 1:13-14",
@@ -60,7 +60,7 @@ export const NT_BOOK_08: BibleBook = {
           "ref": "2 Corinteni 1:23-24",
           "heading": "Nu stăpâni peste credința altuia",
           "text": "Iar eu îl chem pe Dumnezeu martor asupra sufletului meu că, fiindcă voiam să vă cruț, n-am mai venit la Corint. Nu că stăpânim peste credința voastră, ci suntem împreună-lucrători pentru bucuria voastră; căci prin credință stați tari.",
-          "teaching": "Pavel spune că a amânat vizita pentru a-i cruța. Autoritatea apostolică urmărește bucuria și maturizarea oamenilor, nu dependența lor de lider.\n\nNiciun conducător creștin nu primește dreptul de a controla conștiința, banii, relațiile sau deciziile personale ale altuia.",
+          "teaching": "Pavel spune că a amânat vizita pentru a-i cruța. Autoritatea apostolică urmărește bucuria și maturizarea oamenilor, nu dependența lor de lider.",
           "crossRefs": [
             "Marcu 10:42-45",
             "1 Petru 5:2-3",
@@ -500,7 +500,7 @@ export const NT_BOOK_08: BibleBook = {
           "ref": "2 Corinteni 10:1-6",
           "heading": "Arme puternice înaintea lui Dumnezeu",
           "text": "Iar eu, Pavel însumi, vă îndemn prin blândețea și bunătatea lui Hristos, eu, care, față către față, sunt smerit între voi, dar absent, sunt îndrăzneț față de voi. Vă rog însă ca, atunci când voi fi de față, să nu fiu nevoit să arăt îndrăzneala cu care socotesc să îndrăznesc împotriva unora care ne socotesc ca umblând după carne. Căci, deși umblăm în carne, nu ne războim după carne. Pentru că armele războiului nostru nu sunt firești, ci puternice prin Dumnezeu spre dărâmarea fortărețelor, Aruncarea în jos imaginații și orice lucru înalt, care este înălțat împotriva cunoașterii lui Dumnezeu și aducerea fiecare gând în captivitate la ascultarea lui Hristos, și fiind gata să pedepsim orice neascultare, de îndată ce ascultarea voastră va fi deplină.",
-          "teaching": "Blândețea lui Hristos nu este lipsă de curaj. Pavel refuză să lupte prin intimidare, bârfă, manipulare sau forță, deoarece armele slujirii sunt adevărul, rugăciunea și ascultarea de Hristos.\n\n«Dărâmarea întăriturilor» se referă la argumente și înălțări care se ridică împotriva cunoașterii lui Dumnezeu. Textul nu autorizează etichetarea oamenilor ca dușmani spirituali ori folosirea violenței împotriva lor.",
+          "teaching": "Blândețea lui Hristos nu este lipsă de curaj. Pavel refuză să lupte prin intimidare, bârfă, manipulare sau forță, deoarece armele slujirii sunt adevărul, rugăciunea și ascultarea de Hristos. «Dărâmarea întăriturilor» se referă la argumente și înălțări care se ridică împotriva cunoașterii lui Dumnezeu.",
           "crossRefs": [
             "Efeseni 6:10-18",
             "2 Timotei 2:24-26",

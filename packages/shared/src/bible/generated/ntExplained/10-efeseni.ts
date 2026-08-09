@@ -128,7 +128,7 @@ export const NT_BOOK_10: BibleBook = {
           "ref": "Efeseni 2:11-18",
           "heading": "Hristos este pacea noastră",
           "text": "De aceea,-vă că, odată ce voi, Neamurile în trup, care numitenecircumcizie„ prin ceea ce secircumcizie” (în trup, făcute de mâini), Că în vremea aceea erați despărțiți de Hristos, înstrăin de oba lui Israel străini de legămintele făgăduinței, neavând nici o nădejde fără Dumnezeu în lume. Dar acum, în Hristos Isus, voi, care odinioară erați departe, făcuți aproape în sângele lui Hristos. Căci El este pacea noastră, care a făcut pe unul și a dărâmat zidul de mijloc al despărțirii, după ce a desființat în trupul său ostilitatea, legea poruncilor cuprinsă în rânduieli, ca să poată crea în sine un om nou dintre cei doi, făcând pace, și le-ar putea împăca pe amândouă într-un singur trup cu Dumnezeu prin cruce, după ce ar fi ucis ostilitatea prin ea. El a venit și v-a propovăduit pacea, care era departe și celor apropiați. Căci prin El avem amândoi acces într-un singur Duh la Tatăl.",
-          "teaching": "Neamurile erau fără Mesia, fără legăminte și fără speranță, dar sângele lui Hristos i-a apropiat. Isus nu a creat două categorii spirituale; în trupul Său a omorât ostilitatea și a făcut un singur om nou.\n\nPacea biblică nu înseamnă ascunderea nedreptății sau reducerea la tăcere a celui rănit.",
+          "teaching": "Neamurile erau fără Mesia, fără legăminte și fără speranță, dar sângele lui Hristos i-a apropiat. Isus nu a creat două categorii spirituale; în trupul Său a omorât ostilitatea și a făcut un singur om nou.",
           "crossRefs": [
             "Galateni 3:26-29",
             "Coloseni 1:20-22",
@@ -218,7 +218,7 @@ export const NT_BOOK_10: BibleBook = {
           "ref": "Efeseni 4:1-6",
           "heading": "Păstrați unitatea Duhului",
           "text": "Prin urmare, eu, prizonierul în Domnul, te implor să umbli cu vrednicie de chemarea cu care ai fost chemat, cu toată smerenia și umilința, cu răbdare, care se poartă unii cu alții în dragoste, fiind dornici să păstreze unitatea Duhului în legătura păcii. Există un singur trup și un singur Duh, așa cum și voi ați fost chemați într-o singură nădejde a chemării voastre, un singur Domn, o singură credință, un singur botez, un singur Dumnezeu și Tatăl tuturor, care este peste tot și prin toți și în noi toți.",
-          "teaching": "Chemarea cere o umblare corespunzătoare: smerenie, blândețe, răbdare și îngăduință în dragoste. Unitatea nu este creată de noi; Duhul a creat-o, iar noi suntem chemați să o păstrăm în legătura păcii.\n\nExistă un singur trup, un singur Duh, o singură speranță, un singur Domn, o singură credință și un singur Tată. Această unitate nu justifică uniformitatea forțată, mușamalizarea păcatului sau cererea de loialitate necondiționată față de un lider.",
+          "teaching": "Chemarea cere o umblare corespunzătoare: smerenie, blândețe, răbdare și îngăduință în dragoste. Unitatea nu este creată de noi; Duhul a creat-o, iar noi suntem chemați să o păstrăm în legătura păcii. Există un singur trup, un singur Duh, o singură speranță, un singur Domn, o singură credință și un singur Tată.",
           "crossRefs": [
             "Filipeni 2:1-4",
             "Coloseni 3:12-15",
@@ -352,8 +352,7 @@ export const NT_BOOK_10: BibleBook = {
             "Coloseni 3:20-21",
             "Marcu 10:13-16",
             "Proverbele 22:6"
-          ],
-          "forYourHeart": "Ca părinte sau mentor, corectează fără umilire și fă din casa ta un loc în care adevărul poate fi spus în siguranță."
+          ]
         },
         {
           "id": "efeseni-6-5-9",
