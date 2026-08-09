@@ -127,7 +127,7 @@ def render(books: list[dict]) -> str:
         f"export const PUBLISHED_EMANUS_OT_CHAPTER_COUNT = {EXPECTED_CHAPTERS} as const",
         f"export const PUBLISHED_EMANUS_OT_VERSE_COUNT = {EXPECTED_VERSES} as const",
         "",
-        "export const PUBLISHED_EMANUS_OT_TEXT_BY_ORDER: ReadonlyMap<number, PublishedEmanusOtTextBook> = new Map([",
+        "export const PUBLISHED_EMANUS_OT_TEXT_BY_ORDER: ReadonlyMap<number, PublishedEmanusOtTextBook> = new Map<number, PublishedEmanusOtTextBook>([",
     ]
 
     for book in books:
