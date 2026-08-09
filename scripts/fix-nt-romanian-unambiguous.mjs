@@ -7,19 +7,13 @@ const ROOT = process.cwd()
 const dir = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-audited-recovered-refined")
 const ledgerPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-romanian-fix-ledger.json")
 
+// Automatic Romanian edits are intentionally limited to context-free corruptions.
+// Diacritics such as credinta -> credință/credința or curata -> curată/curăță
+// require sentence context and are audit-only, never guessed mechanically.
 const REPLACEMENTS = new Map([
-  ["cuvant", "cuvânt"], ["cuvantul", "cuvântul"], ["tatal", "tatăl"],
-  ["intai", "întâi"], ["intaia", "întâia"], ["invatator", "învățător"], ["invatatura", "învățătură"],
-  ["imparatie", "împărăție"], ["imparatia", "împărăția"], ["credinta", "credință"], ["pacat", "păcat"],
-  ["pacate", "păcate"], ["mantuire", "mântuire"], ["mantuit", "mântuit"], ["inceput", "început"],
-  ["vesnic", "veșnic"], ["vesnicia", "veșnicia"], ["adevar", "adevăr"], ["adevarat", "adevărat"],
-  ["nastere", "naștere"], ["sange", "sânge"], ["pamant", "pământ"], ["pamantesc", "pământesc"],
-  ["ramane", "rămâne"], ["raman", "rămân"], ["raspuns", "răspuns"], ["fara", "fără"],
-  ["inainte", "înainte"], ["inapoi", "înapoi"], ["intelege", "înțelege"], ["intelegere", "înțelegere"],
-  ["marturisire", "mărturisire"], ["marturie", "mărturie"], ["marturia", "mărturia"],
-  ["botezatorul", "botezătorul"], ["fagaduise", "făgăduise"], ["fagaduit", "făgăduit"],
-  ["fagaduinta", "făgăduință"], ["curata", "curată"],
-  ["mangaie-re", "mângâiere"], ["mangaere", "mângâiere"], ["omensec", "omenesc"],
+  ["mangaie-re", "mângâiere"],
+  ["mangaere", "mângâiere"],
+  ["omensec", "omenesc"],
 ])
 
 function fail(message) { console.error(`[NT Romanian fixes] ${message}`); process.exit(1) }
@@ -67,5 +61,5 @@ for (const file of fs.readdirSync(dir).filter((name) => name.endsWith(".json")).
   }
   if (ledger.length !== beforeCount) fs.writeFileSync(full, JSON.stringify(book, null, 2) + "\n", "utf8")
 }
-fs.writeFileSync(ledgerPath, JSON.stringify({ schema: "emanus-nt-romanian-fix-ledger-v1", count: ledger.length, fixes: ledger }, null, 2) + "\n", "utf8")
-console.log(`NT Romanian unambiguous fixes applied: ${ledger.length}.`)
+fs.writeFileSync(ledgerPath, JSON.stringify({ schema: "emanus-nt-romanian-fix-ledger-v1", policy: "context-free-corruptions-only", count: ledger.length, fixes: ledger }, null, 2) + "\n", "utf8")
+console.log(`NT Romanian context-free typo fixes applied: ${ledger.length}.`)
