@@ -1,13 +1,14 @@
 {
   "schema": "emanus-nt-embedded-quote-audit-v1",
   "status": "manual-source-check-required",
-  "policy": "Quoted spans of at least five words are checked against the exact current Biblia Emanus corpus. Non-matches must be replaced with BE wording, explicitly classified as non-Bible quotations, or removed before publication.",
+  "policy": "Quoted spans of at least five words are checked against the exact current Biblia Emanus text in the same canonical book and chapter. A match elsewhere in the NT does not clear the finding. Non-matches must be replaced with BE wording, explicitly classified as non-Bible quotations, or removed before publication.",
   "quotedFragments": 152,
-  "exactMatches": 31,
-  "count": 121,
+  "exactMatches": 27,
+  "count": 125,
   "findings": [
     {
       "bookId": "matei",
+      "canonicalBookId": "MAT",
       "book": "Matei",
       "chapter": 2,
       "field": "units[2].teaching",
@@ -16,6 +17,7 @@
     },
     {
       "bookId": "matei",
+      "canonicalBookId": "MAT",
       "book": "Matei",
       "chapter": 5,
       "field": "literaryContext",
@@ -24,6 +26,7 @@
     },
     {
       "bookId": "matei",
+      "canonicalBookId": "MAT",
       "book": "Matei",
       "chapter": 7,
       "field": "units[3].teaching",
@@ -32,6 +35,7 @@
     },
     {
       "bookId": "matei",
+      "canonicalBookId": "MAT",
       "book": "Matei",
       "chapter": 11,
       "field": "units[0].teaching",
@@ -40,6 +44,7 @@
     },
     {
       "bookId": "matei",
+      "canonicalBookId": "MAT",
       "book": "Matei",
       "chapter": 14,
       "field": "literaryContext",
@@ -48,6 +53,20 @@
     },
     {
       "bookId": "matei",
+      "canonicalBookId": "MAT",
+      "book": "Matei",
+      "chapter": 14,
+      "field": "units[2].teaching",
+      "quote": "Eu sunt; nu vă temeți",
+      "wordCount": 5,
+      "exactMatchElsewhere": [
+        "JHN.6",
+        "MRK.6"
+      ]
+    },
+    {
+      "bookId": "matei",
+      "canonicalBookId": "MAT",
       "book": "Matei",
       "chapter": 16,
       "field": "historicalContext",
@@ -56,6 +75,20 @@
     },
     {
       "bookId": "matei",
+      "canonicalBookId": "MAT",
+      "book": "Matei",
+      "chapter": 16,
+      "field": "units[1].teaching",
+      "quote": "voi cine ziceți că sunt?",
+      "wordCount": 5,
+      "exactMatchElsewhere": [
+        "LUK.9",
+        "MRK.8"
+      ]
+    },
+    {
+      "bookId": "matei",
+      "canonicalBookId": "MAT",
       "book": "Matei",
       "chapter": 17,
       "field": "units[0].teaching",
@@ -64,6 +97,7 @@
     },
     {
       "bookId": "matei",
+      "canonicalBookId": "MAT",
       "book": "Matei",
       "chapter": 19,
       "field": "units[2].teaching",
@@ -72,6 +106,7 @@
     },
     {
       "bookId": "matei",
+      "canonicalBookId": "MAT",
       "book": "Matei",
       "chapter": 23,
       "field": "units[0].teaching",
@@ -80,6 +115,7 @@
     },
     {
       "bookId": "matei",
+      "canonicalBookId": "MAT",
       "book": "Matei",
       "chapter": 24,
       "field": "units[0].teaching",
@@ -88,6 +124,7 @@
     },
     {
       "bookId": "matei",
+      "canonicalBookId": "MAT",
       "book": "Matei",
       "chapter": 25,
       "field": "units[2].teaching",
@@ -96,6 +133,7 @@
     },
     {
       "bookId": "matei",
+      "canonicalBookId": "MAT",
       "book": "Matei",
       "chapter": 26,
       "field": "units[0].teaching",
@@ -104,6 +142,7 @@
     },
     {
       "bookId": "matei",
+      "canonicalBookId": "MAT",
       "book": "Matei",
       "chapter": 26,
       "field": "units[2].teaching",
@@ -112,6 +151,7 @@
     },
     {
       "bookId": "matei",
+      "canonicalBookId": "MAT",
       "book": "Matei",
       "chapter": 28,
       "field": "units[0].teaching",
@@ -120,6 +160,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 1,
       "field": "units[1].teaching",
@@ -128,6 +169,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 1,
       "field": "units[2].teaching",
@@ -136,6 +178,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 1,
       "field": "units[4].teaching",
@@ -144,6 +187,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 1,
       "field": "units[5].teaching",
@@ -152,6 +196,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 1,
       "field": "units[5].teaching",
@@ -160,6 +205,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 1,
       "field": "units[7].teaching",
@@ -168,6 +214,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 1,
       "field": "units[8].teaching",
@@ -176,6 +223,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 2,
       "field": "units[0].teaching",
@@ -184,6 +232,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 3,
       "field": "units[0].teaching",
@@ -192,6 +241,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 3,
       "field": "units[0].teaching",
@@ -200,6 +250,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 3,
       "field": "units[0].teaching",
@@ -208,6 +259,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 3,
       "field": "units[1].teaching",
@@ -216,6 +268,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 3,
       "field": "units[2].teaching",
@@ -224,6 +277,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 3,
       "field": "units[2].teaching",
@@ -232,6 +286,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 3,
       "field": "units[2].teaching",
@@ -240,6 +295,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 3,
       "field": "units[3].teaching",
@@ -248,6 +304,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 3,
       "field": "units[3].teaching",
@@ -256,6 +313,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 3,
       "field": "units[3].teaching",
@@ -264,6 +322,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 3,
       "field": "units[3].teaching",
@@ -272,6 +331,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 3,
       "field": "units[3].teaching",
@@ -280,6 +340,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 3,
       "field": "units[3].teaching",
@@ -288,6 +349,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 3,
       "field": "units[3].teaching",
@@ -296,6 +358,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 3,
       "field": "units[4].teaching",
@@ -304,6 +367,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 3,
       "field": "units[4].teaching",
@@ -312,6 +376,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 4,
       "field": "units[0].teaching",
@@ -320,6 +385,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 4,
       "field": "units[1].teaching",
@@ -328,6 +394,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 4,
       "field": "units[1].teaching",
@@ -336,6 +403,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 4,
       "field": "units[2].teaching",
@@ -344,6 +412,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 4,
       "field": "units[2].teaching",
@@ -352,6 +421,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 4,
       "field": "units[2].teaching",
@@ -360,6 +430,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 4,
       "field": "units[2].teaching",
@@ -368,6 +439,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 4,
       "field": "units[3].teaching",
@@ -376,6 +448,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 4,
       "field": "units[3].teaching",
@@ -384,6 +457,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 4,
       "field": "units[3].teaching",
@@ -392,6 +466,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 4,
       "field": "units[3].teaching",
@@ -400,6 +475,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 4,
       "field": "units[4].teaching",
@@ -408,6 +484,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 4,
       "field": "units[4].teaching",
@@ -416,6 +493,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 4,
       "field": "units[4].teaching",
@@ -424,6 +502,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 4,
       "field": "units[5].teaching",
@@ -432,6 +511,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 4,
       "field": "units[5].teaching",
@@ -440,6 +520,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 4,
       "field": "units[6].teaching",
@@ -448,6 +529,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 4,
       "field": "units[6].teaching",
@@ -456,6 +538,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 4,
       "field": "units[7].teaching",
@@ -464,6 +547,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 4,
       "field": "units[7].teaching",
@@ -472,6 +556,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 4,
       "field": "units[7].teaching",
@@ -480,6 +565,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 4,
       "field": "units[7].teaching",
@@ -488,6 +574,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 4,
       "field": "units[7].teaching",
@@ -496,6 +583,19 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "book": "Marcu",
+      "chapter": 5,
+      "field": "literaryContext",
+      "quote": "Cine este Acesta de Îl ascultă chiar și vântul și marea?",
+      "wordCount": 11,
+      "exactMatchElsewhere": [
+        "MRK.4"
+      ]
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 5,
       "field": "units[0].teaching",
@@ -504,6 +604,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 5,
       "field": "units[0].teaching",
@@ -512,6 +613,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 5,
       "field": "units[0].teaching",
@@ -520,6 +622,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 5,
       "field": "units[1].teaching",
@@ -528,6 +631,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 5,
       "field": "units[1].teaching",
@@ -536,6 +640,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 5,
       "field": "units[1].teaching",
@@ -544,6 +649,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 5,
       "field": "units[1].teaching",
@@ -552,6 +658,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 5,
       "field": "units[2].teaching",
@@ -560,6 +667,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 5,
       "field": "units[2].teaching",
@@ -568,6 +676,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 5,
       "field": "units[2].teaching",
@@ -576,6 +685,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 5,
       "field": "units[2].teaching",
@@ -584,6 +694,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 5,
       "field": "units[2].forYourHeart",
@@ -592,6 +703,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 6,
       "field": "prayer",
@@ -600,6 +712,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 6,
       "field": "units[4].teaching",
@@ -608,6 +721,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 8,
       "field": "units[0].teaching",
@@ -616,6 +730,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 8,
       "field": "units[0].teaching",
@@ -624,6 +739,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 8,
       "field": "units[1].teaching",
@@ -632,6 +748,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 8,
       "field": "units[1].teaching",
@@ -640,6 +757,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 8,
       "field": "units[1].teaching",
@@ -648,6 +766,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 8,
       "field": "units[1].teaching",
@@ -656,6 +775,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 8,
       "field": "units[1].teaching",
@@ -664,6 +784,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 8,
       "field": "units[2].teaching",
@@ -672,6 +793,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 8,
       "field": "units[2].teaching",
@@ -680,6 +802,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 8,
       "field": "units[4].teaching",
@@ -688,6 +811,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 8,
       "field": "units[4].teaching",
@@ -696,6 +820,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 8,
       "field": "units[4].teaching",
@@ -704,6 +829,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 8,
       "field": "units[4].teaching",
@@ -712,6 +838,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 9,
       "field": "units[0].teaching",
@@ -720,6 +847,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 9,
       "field": "units[1].teaching",
@@ -728,6 +856,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 14,
       "field": "units[2].teaching",
@@ -736,6 +865,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 15,
       "field": "units[2].teaching",
@@ -744,6 +874,7 @@
     },
     {
       "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 16,
       "field": "units[0].teaching",
@@ -752,6 +883,7 @@
     },
     {
       "bookId": "luca",
+      "canonicalBookId": "LUK",
       "book": "Luca",
       "chapter": 1,
       "field": "units[2].forYourHeart",
@@ -760,6 +892,7 @@
     },
     {
       "bookId": "luca",
+      "canonicalBookId": "LUK",
       "book": "Luca",
       "chapter": 3,
       "field": "units[2].forYourHeart",
@@ -768,6 +901,7 @@
     },
     {
       "bookId": "luca",
+      "canonicalBookId": "LUK",
       "book": "Luca",
       "chapter": 7,
       "field": "units[0].forYourHeart",
@@ -776,6 +910,7 @@
     },
     {
       "bookId": "luca",
+      "canonicalBookId": "LUK",
       "book": "Luca",
       "chapter": 7,
       "field": "units[3].teaching",
@@ -784,6 +919,7 @@
     },
     {
       "bookId": "luca",
+      "canonicalBookId": "LUK",
       "book": "Luca",
       "chapter": 8,
       "field": "units[4].teaching",
@@ -792,6 +928,20 @@
     },
     {
       "bookId": "luca",
+      "canonicalBookId": "LUK",
+      "book": "Luca",
+      "chapter": 9,
+      "field": "units[0].teaching",
+      "quote": "Dați-le voi să mănânce",
+      "wordCount": 5,
+      "exactMatchElsewhere": [
+        "MAT.14",
+        "MRK.6"
+      ]
+    },
+    {
+      "bookId": "luca",
+      "canonicalBookId": "LUK",
       "book": "Luca",
       "chapter": 9,
       "field": "units[2].teaching",
@@ -800,6 +950,7 @@
     },
     {
       "bookId": "luca",
+      "canonicalBookId": "LUK",
       "book": "Luca",
       "chapter": 17,
       "field": "units[3].teaching",
@@ -808,6 +959,7 @@
     },
     {
       "bookId": "luca",
+      "canonicalBookId": "LUK",
       "book": "Luca",
       "chapter": 23,
       "field": "units[1].teaching",
@@ -816,6 +968,7 @@
     },
     {
       "bookId": "fapte",
+      "canonicalBookId": "ACT",
       "book": "Faptele Apostolilor",
       "chapter": 1,
       "field": "units[1].forYourHeart",
@@ -824,6 +977,7 @@
     },
     {
       "bookId": "fapte",
+      "canonicalBookId": "ACT",
       "book": "Faptele Apostolilor",
       "chapter": 18,
       "field": "units[0].teaching",
@@ -832,6 +986,7 @@
     },
     {
       "bookId": "fapte",
+      "canonicalBookId": "ACT",
       "book": "Faptele Apostolilor",
       "chapter": 24,
       "field": "units[2].teaching",
@@ -840,6 +995,7 @@
     },
     {
       "bookId": "romani",
+      "canonicalBookId": "ROM",
       "book": "Romani",
       "chapter": 11,
       "field": "units[2].teaching",
@@ -848,6 +1004,7 @@
     },
     {
       "bookId": "1-corinteni",
+      "canonicalBookId": "1CO",
       "book": "1 Corinteni",
       "chapter": 10,
       "field": "units[3].forYourHeart",
@@ -856,6 +1013,7 @@
     },
     {
       "bookId": "1-corinteni",
+      "canonicalBookId": "1CO",
       "book": "1 Corinteni",
       "chapter": 11,
       "field": "literaryContext",
@@ -864,6 +1022,7 @@
     },
     {
       "bookId": "1-corinteni",
+      "canonicalBookId": "1CO",
       "book": "1 Corinteni",
       "chapter": 12,
       "field": "units[1].teaching",
@@ -872,6 +1031,7 @@
     },
     {
       "bookId": "1-corinteni",
+      "canonicalBookId": "1CO",
       "book": "1 Corinteni",
       "chapter": 14,
       "field": "units[2].teaching",
@@ -880,6 +1040,7 @@
     },
     {
       "bookId": "1-corinteni",
+      "canonicalBookId": "1CO",
       "book": "1 Corinteni",
       "chapter": 14,
       "field": "units[2].teaching",
@@ -888,6 +1049,7 @@
     },
     {
       "bookId": "1-corinteni",
+      "canonicalBookId": "1CO",
       "book": "1 Corinteni",
       "chapter": 16,
       "field": "units[2].teaching",
@@ -896,6 +1058,7 @@
     },
     {
       "bookId": "1-corinteni",
+      "canonicalBookId": "1CO",
       "book": "1 Corinteni",
       "chapter": 16,
       "field": "units[2].teaching",
@@ -904,6 +1067,7 @@
     },
     {
       "bookId": "2-corinteni",
+      "canonicalBookId": "2CO",
       "book": "2 Corinteni",
       "chapter": 13,
       "field": "units[1].teaching",
@@ -912,6 +1076,7 @@
     },
     {
       "bookId": "filipeni",
+      "canonicalBookId": "PHP",
       "book": "Filipeni",
       "chapter": 1,
       "field": "units[3].forYourHeart",
@@ -920,6 +1085,7 @@
     },
     {
       "bookId": "filipeni",
+      "canonicalBookId": "PHP",
       "book": "Filipeni",
       "chapter": 2,
       "field": "units[2].teaching",
@@ -928,6 +1094,7 @@
     },
     {
       "bookId": "coloseni",
+      "canonicalBookId": "COL",
       "book": "Coloseni",
       "chapter": 1,
       "field": "units[4].teaching",
@@ -936,6 +1103,7 @@
     },
     {
       "bookId": "coloseni",
+      "canonicalBookId": "COL",
       "book": "Coloseni",
       "chapter": 2,
       "field": "units[4].teaching",
@@ -944,6 +1112,7 @@
     },
     {
       "bookId": "tit",
+      "canonicalBookId": "TIT",
       "book": "Tit",
       "chapter": 1,
       "field": "units[2].teaching",
@@ -952,6 +1121,7 @@
     },
     {
       "bookId": "filimon",
+      "canonicalBookId": "PHM",
       "book": "Filimon",
       "chapter": 1,
       "field": "units[3].teaching",
@@ -960,6 +1130,7 @@
     },
     {
       "bookId": "apocalipsa",
+      "canonicalBookId": "REV",
       "book": "Apocalipsa",
       "chapter": 6,
       "field": "units[0].teaching",
@@ -968,6 +1139,7 @@
     },
     {
       "bookId": "apocalipsa",
+      "canonicalBookId": "REV",
       "book": "Apocalipsa",
       "chapter": 16,
       "field": "units[0].teaching",
