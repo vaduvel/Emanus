@@ -60,7 +60,7 @@ export const NT_BOOK_08: BibleBook = {
           "ref": "2 Corinteni 1:23-24",
           "heading": "Nu stăpâni peste credința altuia",
           "text": "Iar eu îl chem pe Dumnezeu martor asupra sufletului meu că, fiindcă voiam să vă cruț, n-am mai venit la Corint. Nu că stăpânim peste credința voastră, ci suntem împreună-lucrători pentru bucuria voastră; căci prin credință stați tari.",
-          "teaching": "Pavel spune că a amânat vizita pentru a-i cruța. Autoritatea apostolică urmărește bucuria și maturizarea oamenilor, nu dependența lor de lider.",
+          "teaching": "Pavel spune că a amânat vizita pentru a-i cruța. Autoritatea apostolică urmărește bucuria și maturizarea oamenilor, nu dependența lor de lider.\n\nPavel precizează că nu stăpânește peste credința lor; slujitorii lucrează împreună pentru bucuria lor, iar ei stau prin credință.",
           "crossRefs": [
             "Marcu 10:42-45",
             "1 Petru 5:2-3",
@@ -99,7 +99,7 @@ export const NT_BOOK_08: BibleBook = {
           "ref": "2 Corinteni 2:5-11",
           "heading": "Să nu fie copleșit de prea multă întristare",
           "text": "Dar, dacă cineva a întristat, nu pe mine m-a întristat, ci, într-o anumită măsură, ca să nu vă împovărez pe toți, pe voi toți. Această pedeapsă care a fost provocată de cei mulți este suficientă pentru aceasta; așa încât, dimpotrivă, mai degrabă să-l iertați și să-l mângâiați, ca nu cumva unul ca acesta să fie înghițit de prea multă întristare. De aceea vă rog să întăriți față de el dragostea. Căci pentru aceasta v-am și scris: ca să cunosc dovada voastră, dacă sunteți ascultători în toate. Celui căruia îi iertați ceva, îi iert și eu; căci și eu, dacă am iertat ceva, am iertat pentru voi în fața lui Hristos, ca Satan să nu ne poată fi de folos, căci nu suntem neștiutori de planurile lui.",
-          "teaching": "După pocăință, comunitatea trebuie să ierte, să mângâie și să-și confirme dragostea. Disciplina fără cale de întoarcere devine pedeapsă omenească, nu restaurare creștină.\n\nEa refuză răzbunarea personală, în timp ce adevărul, limitele și dreptatea pot rămâne necesare.",
+          "teaching": "După pocăință, comunitatea trebuie să ierte, să mângâie și să-și confirme dragostea. Disciplina fără cale de întoarcere devine pedeapsă omenească, nu restaurare creștină.\n\nEa refuză răzbunarea personală, în timp ce adevărul, limitele și dreptatea pot rămâne necesare.\n\nScopul corectării este câștigarea și întărirea celui pocăit. Când iertarea este refuzată după pocăință, întristarea poate deveni o nouă capcană pe care Pavel o leagă de planurile Satanei.",
           "crossRefs": [
             "Luca 15:20-24",
             "Efeseni 4:31-32",
@@ -319,7 +319,7 @@ export const NT_BOOK_08: BibleBook = {
           "ref": "2 Corinteni 6:14-18",
           "heading": "Templul Dumnezeului celui viu",
           "text": "Nu vă înjugați la un jug nepotrivit cu necredincioșii. Căci ce părtășie are dreptatea cu fărădelegea? Sau ce comuniune are lumina cu întunericul? Ce armonie este între Hristos și Belial? Sau ce parte are un credincios cu un necredincios? Și ce înțelegere este între templul lui Dumnezeu și idoli? Căci noi suntem templul Dumnezeului celui viu, așa cum a spus Dumnezeu: „Voi locui în ei și voi umbla printre ei; Eu voi fi Dumnezeul lor și ei vor fi poporul Meu.” De aceea: „Ieșiți din mijlocul lor și despărțiți-vă, spune Domnul; nu atingeți ce este necurat, și Eu vă voi primi.” „Eu vă voi fi Tată, iar voi Îmi veți fi fii și fiice”, spune Domnul Atotputernicul.",
-          "teaching": "A nu fi înjugat nepotrivit nu este o chemare la izolare sau superioritate, ci la refuzul alianțelor care cer compromis cu idolatria și nedreptatea.\n\nSfințenia nu protejează aparența unei relații cu prețul persoanei rănite.",
+          "teaching": "A nu fi înjugat nepotrivit nu este o chemare la izolare sau superioritate, ci la refuzul alianțelor care cer compromis cu idolatria și nedreptatea.\n\nSfințenia nu protejează aparența unei relații cu prețul persoanei rănite.\n\nÎntrebările lui Pavel pun în contrast dreptatea cu fărădelegea, lumina cu întunericul și templul lui Dumnezeu cu idolii. Centrul pasajului este loialitatea față de Dumnezeu.",
           "crossRefs": [
             "Deuteronom 22:10",
             "1 Corinteni 10:20-22",
@@ -578,7 +578,7 @@ export const NT_BOOK_08: BibleBook = {
           "ref": "2 Corinteni 11:16-21",
           "heading": "Îi suportați pe cei care vă robesc",
           "text": "Iarăși spun: nimeni să nu mă creadă nebun; dar, dacă totuși, primiți-mă măcar ca pe un nebun, ca să mă laud și eu puțin. Ceea ce spun, nu spun după Domnul, ci ca în nebunie, în această încredere a laudei. De vreme ce mulți se laudă după carne, mă voi lăuda și eu. Căci voi suportați cu bucurie pe cei fără minte, fiind voi înșivă înțelepți. Fiindcă suportați dacă cineva vă înrobește, dacă cineva vă devorează, dacă cineva vă exploatează, dacă cineva se înalță, dacă cineva vă lovește peste față. Spre rușinea mea o spun: ca și cum noi am fi fost slabi. Dar, în orice îndrăznește cineva — vorbesc în nebunie — îndrăznesc și eu.",
-          "teaching": "Corintenii tolerau oameni care îi robeau, îi exploatau, îi prindeau și îi umileau.",
+          "teaching": "Corintenii tolerau oameni care îi robeau, îi exploatau, îi prindeau și îi umileau.\n\nIronia lui Pavel scoate la lumină contrastul: ei suportau dominația agresivă, în timp ce îl considerau slab pe apostolul care refuza să-i trateze astfel.",
           "crossRefs": [
             "Marcu 10:42-45",
             "Fapte 16:37-39",

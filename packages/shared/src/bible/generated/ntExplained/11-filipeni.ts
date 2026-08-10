@@ -98,7 +98,7 @@ export const NT_BOOK_11: BibleBook = {
           "ref": "Filipeni 2:1-4",
           "heading": "Unitate prin smerenie, nu prin control",
           "text": "Dacă deci este vreo încurajare în Hristos, dacă este vreo mângâiere a dragostei, dacă este vreo părtășie a Duhului, dacă este vreo afecțiune adâncă și vreo îndurare, faceți-mi bucuria deplină: să gândiți același lucru, având aceeași dragoste, uniți în suflet, gândind una, nefăcând nimic din ambiție egoistă sau din slavă deșartă, ci, în smerenie, considerându-i pe alții mai presus de voi înșivă, Fiecare dintre voi să privească nu numai la lucrurile lui, ci la lucrurile altora.",
-          "teaching": "Părtășia Duhului produce aceeași dragoste și aceeași direcție, nu uniformitate forțată. Pavel atacă ambiția egoistă și slava deșartă, chemând fiecare credincios să observe nevoile altora și să nu se considere centrul comunității.",
+          "teaching": "Părtășia Duhului produce aceeași dragoste și aceeași direcție, nu uniformitate forțată. Pavel atacă ambiția egoistă și slava deșartă, chemând fiecare credincios să observe nevoile altora și să nu se considere centrul comunității.\n\nUnitatea descrisă aici nu șterge persoanele, ci mută centrul de greutate de la interesul propriu la grija concretă pentru ceilalți.",
           "crossRefs": [
             "Romani 12:10",
             "Galateni 5:13",
@@ -137,7 +137,7 @@ export const NT_BOOK_11: BibleBook = {
           "ref": "Filipeni 2:19-24",
           "heading": "Timotei caută binele altora",
           "text": "Sper însă în Domnul Isus să vi-l trimit curând pe Timotei, ca să fiu și eu încurajat când voi afla cele despre voi. Căci n-am pe nimeni atât de apropiat în simțire, care să se îngrijească în mod sincer de cele despre voi, fiindcă toți își caută ale lor, nu pe ale lui Isus Hristos. Dar îi cunoașteți caracterul încercat, căci, ca un fiu alături de tatăl său, a slujit împreună cu mine pentru înaintarea Evangheliei. Prin urmare, sper să-l trimit imediat, de îndată ce voi vedea cum va merge cu mine. și am încredere în Domnul că voi veni și eu curând.",
-          "teaching": "Timotei este recomandat nu pentru talent, ci pentru preocuparea sinceră față de oameni. Într-un mediu în care mulți își urmăreau propriile interese, el dovedise un caracter de fiu și colaborator credincios în Evanghelie.",
+          "teaching": "Timotei este recomandat nu pentru talent, ci pentru preocuparea sinceră față de oameni. Într-un mediu în care mulți își urmăreau propriile interese, el dovedise un caracter de fiu și colaborator credincios în Evanghelie.\n\nPavel îl numește încercat: grija lui nu este o impresie de moment, ci un caracter dovedit prin slujirea împreună pentru Evanghelie.",
           "crossRefs": [
             "1 Corinteni 4:16-17",
             "1 Timotei 4:12",

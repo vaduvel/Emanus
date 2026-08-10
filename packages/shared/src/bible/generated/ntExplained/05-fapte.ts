@@ -229,7 +229,7 @@ export const NT_BOOK_05: BibleBook = {
           "ref": "Fapte 4:23-31",
           "heading": "Nu scăpare ușoară, ci îndrăzneală",
           "text": "După ce li s-a dat drumul, s-au dus la ai lor și le-au istorisit tot ce le spuseseră marii preoți și bătrânii. Când au auzit, și-au ridicat glasul într-un cuget către Dumnezeu și au zis: „Stăpâne, Tu, Cel care ai făcut cerul, pământul, marea și tot ce este în ele, Tu ai spus prin Duhul Sfânt, prin gura părintelui nostru David, slujitorul Tău: «De ce s-au înfuriat neamurile și au cugetat popoarele lucruri deșarte? Regii pământului s-au ridicat, iar conducătorii s-au adunat împreună împotriva DOMNULUI și împotriva Unsului Său.» Căci, cu adevărat, în această cetate s-au adunat împotriva Sfântului Tău Slujitor Isus, pe care L-ai uns, atât Irod, cât și Ponțiu Pilat, împreună cu neamurile și popoarele lui Israel, să faci tot ceea ce mâna ta sfatul tău au hotărât să se întâmple. Acum, Doamne, uită-te la amenințările lor, și dă robilor Tăi să vorbească cuvântul Tău cu toată îndrăzneala, în timp ce Îți întinzi mâna ca să vindeci și se fac semne și minuni prin Numele Sfântului Tău Slujitor Isus.” După ce s-au rugat, s-a cutremurat locul unde erau adunați; toți au fost umpluți de Duhul Sfânt și vesteau Cuvântul lui Dumnezeu cu îndrăzneală.",
-          "teaching": "Biserica nu se roagă mai întâi ca orice presiune să dispară, ci ca robii lui Dumnezeu să vestească cuvântul cu îndrăzneală. Ei Îl văd pe Dumnezeu ca Stăpân suveran peste amenințările oamenilor.",
+          "teaching": "Biserica nu se roagă mai întâi ca orice presiune să dispară, ci ca robii lui Dumnezeu să vestească cuvântul cu îndrăzneală. Ei Îl văd pe Dumnezeu ca Stăpân suveran peste amenințările oamenilor.\n\nRăspunsul lor este comunitar: se ridică împreună spre Dumnezeu, iar cererea centrală privește mărturia despre Isus, nu protejarea confortului lor.",
           "crossRefs": [
             "Psalmul 2:1-6",
             "Efeseni 6:18-20",
@@ -281,7 +281,7 @@ export const NT_BOOK_05: BibleBook = {
           "ref": "Fapte 5:12-16",
           "heading": "Semne care Îl indică pe Dumnezeu",
           "text": "Prin mâinile apostolilor se făceau multe semne și minuni în popor. Toți erau într-un cuget în Porticul lui Solomon. Nici unul dintre ceilalți nu a îndrăznit să li se alăture; totuși, poporul i-a onorat. Și tot mai mulți credincioși în Domnul li se adăugau, mulțimi de bărbați și de femei, așa încât îi scoteau pe bolnavi chiar și pe străzi și îi așezau pe paturi mici și pe tărgi, pentru ca, atunci când venea Petru, măcar umbra lui să cadă peste vreunul dintre ei. Mulțimea s-a strâns din cetățile din jurul Ierusalimului, aducînd pe oameni bolnavi și pe cei chinuiți de duhuri necurate, și toți au fost vindecați.",
-          "teaching": "Mulți sunt vindecați, iar oamenii recunosc o lucrare puternică. Apostolii rămân împreună și nu folosesc semnele ca să ridice vedete rivale. Rugăciunea pentru vindecare poate merge împreună cu medicină, evaluare competentă și sprijin practic.",
+          "teaching": "Mulți sunt vindecați, iar oamenii recunosc o lucrare puternică. Apostolii rămân împreună și nu folosesc semnele ca să ridice vedete rivale. Rugăciunea pentru vindecare poate merge împreună cu medicină, evaluare competentă și sprijin practic.\n\nPasajul leagă minunile de creșterea numărului celor care cred în Domnul; semnul nu este scopul final, ci slujește mărturiei.",
           "crossRefs": [
             "Marcu 16:20",
             "1 Corinteni 12:9",

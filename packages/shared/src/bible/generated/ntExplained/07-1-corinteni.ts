@@ -216,7 +216,7 @@ export const NT_BOOK_07: BibleBook = {
           "ref": "1 Corinteni 4:14-21",
           "heading": "Un tată spiritual unește dragostea cu adevărul",
           "text": "Nu vă scriu acestea ca să vă fac de rușine, ci ca să vă avertizez, ca pe copiii mei iubiți. Căci, chiar dacă ați avea zece mii de pedagogi în Hristos, totuși n-aveți mulți părinți; fiindcă eu v-am născut în Hristos Isus prin Evanghelie. Vă îndemn deci: fiți imitatorii mei. De aceea l-am trimis la voi pe Timotei, care este copilul meu iubit și credincios în Domnul, și el vă va aminti căile mele în Hristos, așa cum învăț pretutindeni, în fiecare biserică. Unii s-au umflat de mândrie, ca și cum n-aș mai veni la voi. Dar voi veni curând la voi, dacă Domnul va vrea, și voi cunoaște nu vorba celor umflați, ci puterea. Căci Regatul lui Dumnezeu nu este în cuvânt, ci în putere. Ce voiți? Să vin la voi cu nuiaua sau cu dragoste și cu un duh de blândețe?",
-          "teaching": "Pavel nu îi rușinează ca să-i zdrobească, ci îi avertizează ca pe niște copii iubiți. Un tată spiritual nu caută salariu, control sau admirație, ci binele și maturizarea celor slujiți.",
+          "teaching": "Pavel nu îi rușinează ca să-i zdrobească, ci îi avertizează ca pe niște copii iubiți. Un tată spiritual nu caută salariu, control sau admirație, ci binele și maturizarea celor slujiți.\n\nDe aceea îi poate chema să-i urmeze exemplul și îl trimite pe Timotei să le amintească felul său de viață în Hristos.",
           "crossRefs": [
             "1 Tesaloniceni 2:7-12",
             "2 Timotei 2:24-26",
@@ -331,7 +331,7 @@ export const NT_BOOK_07: BibleBook = {
           "ref": "1 Corinteni 7:1-9",
           "heading": "Trupul soților este dat în grijă reciprocă",
           "text": "Cu privire la lucrurile despre care ați scris: este bine pentru un bărbat să nu se atingă de femeie. Dar, din cauza imoralităților sexuale, fiecare să-și aibă propria soție și fiecare femeie să-și aibă propriul soț. Soțul să-i dea soției datoria conjugală; la fel și soția soțului. Soția nu are stăpânire asupra propriului trup, ci soțul; la fel, nici soțul nu are stăpânire asupra propriului trup, ci soția. Nu vă lipsiți unii de alții, dacă nu este de acord pentru un timp, ca să vă dați pe voi înșivă la post și rugăciune și să fiți din nou împreună, ca Satana să nu vă ispitească din cauza lipsei de stăpânire de sine. Dar spun aceasta ca îngăduință, nu ca poruncă. Totuși, aș vrea ca toți oamenii să fie ca mine, dar fiecare om are darul lui de la Dumnezeu, unul de acest fel altul de acest fel. Celor necăsătoriți și văduvelor le spun că este bine pentru ei dacă rămân ca mine. Dar dacă nu se pot stăpâni, să se căsătorească; căci este mai bine să se căsătorească decât să ardă.",
-          "teaching": "Căsătoria include responsabilitate reciprocă, nu privilegiu unilateral. Soțul și soția trebuie să se îngrijească unul de celălalt și să nu folosească abstinența ca armă, decât prin acord și pentru un timp.",
+          "teaching": "Căsătoria include responsabilitate reciprocă, nu privilegiu unilateral. Soțul și soția trebuie să se îngrijească unul de celălalt și să nu folosească abstinența ca armă, decât prin acord și pentru un timp.\n\nPavel leagă înfrânarea temporară de acord reciproc, rugăciune și revenirea împreună, tocmai pentru a nu transforma spiritualitatea într-un pretext pentru neglijarea celuilalt.",
           "crossRefs": [
             "Geneza 2:24",
             "Efeseni 5:21-33",
@@ -680,7 +680,7 @@ export const NT_BOOK_07: BibleBook = {
           "ref": "1 Corinteni 13:4-7",
           "heading": "Dragostea nu caută folosul său",
           "text": "Dragostea îndelung rabdă, dragostea este bună; dragostea nu pizmuiește, nu se laudă, nu se umflă de mândrie, nu se poartă necuviincios, nu-și caută ale ei, nu se aprinde de mânie, nu ține seama de rău, nu se bucură de nedreptate, ci se bucură de adevăr; acoperă totul, crede totul, speră totul și îndură totul.",
-          "teaching": "Dragostea este răbdătoare, bună, fără invidie, laudă și aroganță. Ea nu ține registrul răului pentru a hrăni resentimentul și nu se bucură când adversarul cade.",
+          "teaching": "Dragostea este răbdătoare, bună, fără invidie, laudă și aroganță. Ea nu ține registrul răului pentru a hrăni resentimentul și nu se bucură când adversarul cade.\n\nÎn loc să se hrănească din nedreptate, dragostea se bucură împreună cu adevărul și continuă să poarte, să creadă, să spere și să rabde.",
           "crossRefs": [
             "Romani 12:9-21",
             "Efeseni 4:31-32",
@@ -873,7 +873,7 @@ export const NT_BOOK_07: BibleBook = {
           "ref": "1 Corinteni 16:1-4",
           "heading": "Dărnicie regulată, proporțională și transparentă",
           "text": "Cu privire la strângerea pentru sfinți, așa cum am rânduit bisericilor Galatiei, așa să faceți și voi. În prima zi a fiecărei săptămâni, fiecare dintre voi să salveze cum va prospera, că nu se fac colecții când voi veni. Iar când voi ajunge, pe cei pe care îi veți aproba prin scrisori, pe aceștia îi voi trimite să ducă darul vostru la Ierusalim. Dacă va fi potrivit să merg și eu, vor merge cu mine.",
-          "teaching": "Fiecare trebuia să pună deoparte în prima zi a săptămânii, după prosperitatea primită. Dărnicia nu era impuls manipulabil, ci disciplină planificată și proporțională.\n\nPavel nu urma să transporte singur banii; comunitatea alegea persoane aprobate.",
+          "teaching": "Fiecare trebuia să pună deoparte în prima zi a săptămânii, după prosperitatea primită. Dărnicia nu era impuls manipulabil, ci disciplină planificată și proporțională.\n\nPavel nu urma să transporte singur banii; comunitatea alegea persoane aprobate.\n\nColecta are astfel atât ritm personal, cât și răspundere comunitară: darul este pregătit din timp și încredințat unor oameni aprobați.",
           "crossRefs": [
             "2 Corinteni 8:12-21",
             "2 Corinteni 9:6-8",

@@ -347,7 +347,7 @@ export const NT_BOOK_10: BibleBook = {
           "ref": "Efeseni 6:1-4",
           "heading": "Copii ascultători, părinți care nu zdrobesc",
           "text": "Copii, ascultați de părinții voștri în Domnul, căci așa este drept. Cinstește pe tatăl tău pe mama ta„, care este prima poruncă cu o promisiune: Ca să vă fie bine și să trăiți mult pe pământ. Voi, taților, nu vă mâniați copiii, ci hrăniți-i în disciplina și învățătura Domnului.",
-          "teaching": "Copiii sunt chemați să asculte «în Domnul», iar părinții să-i crească prin disciplina și învățătura Lui. Autoritatea părintească este administrată înaintea lui Hristos și trebuie să formeze, nu să provoace mânie sau disperare.",
+          "teaching": "Copiii sunt chemați să asculte «în Domnul», iar părinții să-i crească prin disciplina și învățătura Lui. Autoritatea părintească este administrată înaintea lui Hristos și trebuie să formeze, nu să provoace mânie sau disperare.\n\nChemarea copiilor la ascultare este pusă lângă porunca adresată direct taților: să nu-și întărâte copiii. Textul limitează astfel autoritatea chiar în momentul în care o afirmă.",
           "crossRefs": [
             "Coloseni 3:20-21",
             "Marcu 10:13-16",
