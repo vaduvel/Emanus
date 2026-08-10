@@ -1,15 +1,22 @@
 {
   "schema": "emanus-nt-semantic-manual-review-status-v1",
-  "status": "review_frozen",
+  "status": "in_progress",
   "policy": "Manual semantic review is allowed only against complete transcript content with deterministic transcript SHA-256 evidence. Source locators or transcript addressability alone never count as reviewed.",
-  "currentBook": "1-ioan",
-  "currentBookUnits": 14,
-  "manualDecisionsFrozen": 14,
-  "officialAudioSources": [],
+  "currentBook": "2-petru",
+  "currentBookUnits": 9,
+  "manualDecisionsFrozen": 0,
+  "officialAudioSources": [
+    {
+      "id": "2-petru-ttb",
+      "officialSourceUrl": "https://www.cfcindia.com/through-the-bible/1-peter-2-peter",
+      "officialAudioUrl": "https://www.cfcindia.org/resources/en/study-series/through-the-bible/66-1peter-and-2peter.mp3",
+      "sourceRange": "1 Peter 1:1-2 Peter 3:18; semantic review target: complete 2 Peter section"
+    }
+  ],
   "lastVerifiedCoverage": {
     "rawTranscriptReviewed": 73,
     "directTranscriptAddressable": 426,
     "pendingTranscriptRecovery": 471,
-    "note": "1 Ioan review frozen at 14 decisions (10 rewrite / 4 keep). Semantic ledger remains 123 until recovery merges the frozen artifact. Official VBV 05 audio/transcript snapshot is persisted under nt-official-transcripts."
+    "note": "Semantic ledger is verified at 137 approved units before 2 Petru is frozen; total reviewed raw+semantic is 210/970 and 760 units remain pending semantic review."
   }
 }
