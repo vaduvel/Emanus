@@ -3,8 +3,10 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import os
 import subprocess
 import sys
+import time
 from pathlib import Path
 from typing import Any
 
@@ -17,8 +19,38 @@ if spec is None or spec.loader is None:
     raise RuntimeError("Cannot load semantic base worker")
 base = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(base)
-base.MODEL = "claude-haiku-4.5"
+base.MODEL = "auto"
 original_load_rows = base.load_rows
+
+
+def call_copilot_default(prompt: str, retries: int = 3) -> dict[str, Any]:
+    token = os.environ.get("GITHUB_TOKEN")
+    if not token:
+        raise RuntimeError("GITHUB_TOKEN missing")
+    env = os.environ.copy()
+    env.update({"GITHUB_TOKEN": token, "COPILOT_GITHUB_TOKEN": token, "NO_COLOR": "1"})
+    command = [
+        "copilot", "-p", prompt, "-s",
+        "--no-ask-user", "--no-custom-instructions", "--no-auto-update", "--no-remote",
+        "--deny-tool=shell", "--deny-tool=write", "--log-level", "error",
+    ]
+    last = "unknown"
+    for attempt in range(1, retries + 1):
+        try:
+            proc = subprocess.run(command, cwd=ROOT, env=env, text=True, capture_output=True, timeout=base.TIMEOUT)
+            if proc.returncode == 0:
+                return base.extract_json(proc.stdout)
+            last = f"exit={proc.returncode}; stderr={proc.stderr[-2500:]}"
+        except subprocess.TimeoutExpired:
+            last = f"timeout={base.TIMEOUT}s"
+        except Exception as exc:
+            last = repr(exc)
+        if attempt < retries:
+            time.sleep(min(12, 2**attempt))
+    raise RuntimeError(f"Copilot semantic review failed after {retries} attempts: {last}")
+
+
+base.call_copilot = call_copilot_default
 
 
 def ensure_direct() -> dict[str, Any]:
