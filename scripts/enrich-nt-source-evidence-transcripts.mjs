@@ -9,9 +9,12 @@ const dataDir = path.join(ROOT, "docs", "data", "biblia-explicata")
 const evidencePath = path.join(dataDir, "nt-source-evidence.json")
 const cataloguePath = path.join(dataDir, "nt-poonen-transcript-catalogue.json")
 const mappingPath = path.join(dataDir, "nt-transcript-episode-mapping.json")
+const source12Path = path.join(dataDir, "source-registry-protected", "source-first-12.json")
+const source15Path = path.join(dataDir, "source-registry-protected", "source-first-15.json")
 
 function fail(message) { console.error(`[NT transcript mapping] ${message}`); process.exit(1) }
 function sha256(value) { return `sha256:${crypto.createHash("sha256").update(String(value)).digest("hex")}` }
+const transcriptLike = (url) => /sermonindex\.net\/speakers\/zac-poonen\//i.test(String(url ?? ""))
 
 const BOOK_ALIASES = [
   ["1-corinteni", /(?:^|\()1\s*corinthians\)?/i], ["2-corinteni", /(?:^|\()2\s*corinthians\)?/i],
@@ -27,7 +30,7 @@ const BOOK_ALIASES = [
 ]
 
 function bookFromTitle(title) {
-  const normalized = String(title).replace(/^\s*\(/, "").trim()
+  const normalized = String(title ?? "").replace(/^\s*\(/, "").trim()
   for (const [id, regex] of BOOK_ALIASES) if (regex.test(normalized)) return id
   return null
 }
@@ -35,7 +38,6 @@ function parseTitleRange(title) {
   const bookId = bookFromTitle(title)
   if (!bookId) return null
   const s = String(title)
-  // Common SermonIndex VBV titles: "(Romans) Romans 1:1-1:32", "(Matthew) ch.12:31-13:13", "Hebrews ch.1:1-3:8".
   let m = s.match(/(?:ch\.?\s*)?(\d+)\s*:\s*(\d+)\s*(?:-|to)\s*(\d+)\s*:\s*(\d+)/i)
   if (m) return { bookId, startChapter:+m[1], startVerse:+m[2], endChapter:+m[3], endVerse:+m[4] }
   m = s.match(/(?:ch\.?\s*)?(\d+)\s*:\s*(\d+)\s*(?:-|to)\s*(\d+)(?!\s*:)/i)
@@ -48,10 +50,23 @@ function recoveredBookId(record) {
 }
 function exactKey(bookId, sc, sv, ec, ev) { return `${bookId}:${sc}:${sv}-${ec}:${ev}` }
 
-if (!fs.existsSync(evidencePath) || !fs.existsSync(cataloguePath)) fail("source evidence/catalogue missing")
+for (const required of [evidencePath,cataloguePath,source12Path,source15Path]) if (!fs.existsSync(required)) fail(`missing ${path.relative(ROOT,required)}`)
 const evidence = JSON.parse(fs.readFileSync(evidencePath,"utf8"))
 const catalogue = JSON.parse(fs.readFileSync(cataloguePath,"utf8"))
+const source12 = JSON.parse(fs.readFileSync(source12Path,"utf8"))
+const source15 = JSON.parse(fs.readFileSync(source15Path,"utf8"))
 if (!Array.isArray(evidence.records) || !Array.isArray(catalogue.items)) fail("invalid inputs")
+
+const sourceBooks = new Map()
+for (const source of source12.sources ?? []) sourceBooks.set(source.id, Array.isArray(source.books) ? source.books : [])
+for (const source of source15.sources ?? []) sourceBooks.set(source.id, source.book ? [source.book] : (Array.isArray(source.books) ? source.books : []))
+function evidenceBookId(record) {
+  const recovered = recoveredBookId(record)
+  if (recovered) return recovered
+  const books = sourceBooks.get(record.sourceId) ?? []
+  if (books.length === 1) return books[0]
+  return bookFromTitle(`${record.sourceTitle ?? ""} ${record.locator ?? ""} ${record.id ?? ""}`)
+}
 
 const catalogByKey = new Map()
 const parsedCatalogue = []
@@ -65,13 +80,19 @@ for (const item of catalogue.items) {
   parsedCatalogue.push({ ...parsed, url:item.url, title:item.title, key })
 }
 
-let eligible=0, matched=0, ambiguous=0, unmatched=0
+let eligible=0, matched=0, ambiguous=0, unmatched=0, alreadyTranscript=0, noBook=0
 const mappings=[]
 for (const record of evidence.records) {
-  const bookId=recoveredBookId(record)
-  if (!bookId || !Number.isInteger(record.coverageStartChapter)) continue
+  if (!Number.isInteger(record.coverageStartChapter)) continue
+  const bookId=evidenceBookId(record)
+  if (!bookId) { noBook += 1; mappings.push({evidenceId:record.id,status:"no-book-resolution"}); continue }
   eligible += 1
   const key=exactKey(bookId,record.coverageStartChapter,record.coverageStartVerse,record.coverageEndChapter,record.coverageEndVerse)
+  if (transcriptLike(record.sourceUrl)) {
+    alreadyTranscript += 1
+    mappings.push({evidenceId:record.id,bookId,key,status:"existing-transcript-source",transcriptUrl:record.sourceUrl})
+    continue
+  }
   const candidates=catalogByKey.get(key) ?? []
   if (candidates.length===1) {
     matched += 1
@@ -90,17 +111,16 @@ for (const record of evidence.records) {
   }
 }
 
-// Recompute stable evidence hashes because transcript representation metadata becomes part of the reviewable evidence record.
 for (const record of evidence.records) {
   const { evidenceSha256: _old, ...payload } = record
   record.evidenceSha256=sha256(JSON.stringify(payload,Object.keys(payload).sort()))
 }
 fs.writeFileSync(evidencePath,JSON.stringify(evidence,null,2)+"\n","utf8")
 fs.writeFileSync(mappingPath,JSON.stringify({
-  schema:"emanus-nt-transcript-episode-mapping-v1",
-  policy:"Only exact book + start/end chapter/verse matches between official recovered episode coverage and pinned SermonIndex transcript catalogue are accepted automatically. Ambiguous or unmatched records require separate recovery; no fuzzy match is accepted.",
+  schema:"emanus-nt-transcript-episode-mapping-v2",
+  policy:"Only exact book + start/end chapter/verse matches between range-bound source evidence and the pinned SermonIndex transcript catalogue are accepted automatically. Existing transcript URLs remain valid representations. Ambiguous/unmatched records require separate recovery; no fuzzy match is accepted.",
   catalogueSourcePageSha256:catalogue.sourcePageSha256,
-  counts:{eligible,matched,ambiguous,unmatched,parsedCatalogue:parsedCatalogue.length},
+  counts:{eligible,matched,alreadyTranscript,ambiguous,unmatched,noBookResolution:noBook,parsedCatalogue:parsedCatalogue.length},
   mappings,
 },null,2)+"\n","utf8")
-console.log(`NT transcript mapping: ${matched}/${eligible} exact; ${ambiguous} ambiguous; ${unmatched} unmatched; ${parsedCatalogue.length} catalog ranges parsed.`)
+console.log(`NT transcript mapping: ${matched} new exact + ${alreadyTranscript} existing transcript / ${eligible}; ${ambiguous} ambiguous; ${unmatched} unmatched; ${noBook} no-book; ${parsedCatalogue.length} catalog ranges parsed.`)
