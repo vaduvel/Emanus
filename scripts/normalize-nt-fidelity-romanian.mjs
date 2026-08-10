@@ -14,17 +14,41 @@ function fail(message) {
 if (!fs.existsSync(corpusDir)) fail("reviewed recovered corpus missing")
 
 const readerKeys = new Set(["title", "summary", "literaryContext", "historicalContext", "heading", "teaching", "forYourHeart", "prayer", "meaning"])
-let replacements = 0
+const forbiddenSourceName = /\b(?:Zac\s+Poonen|Poonen|CFC|Christian Fellowship|SermonIndex|Allen Nolan|Nolan|Robert Breaker|Breaker|Mohler)\b/iu
+const approvedReaderReplacements = [
+  {
+    before: "sunt tratate de Poonen ca lucrări supranaturale reale ale Duhului",
+    after: "sunt tratate în această expunere ca lucrări supranaturale reale ale Duhului",
+  },
+]
+
+let romanianReplacements = 0
+let sourceAttributionReplacements = 0
 const touched = []
 
 function visit(value, key, trace) {
   if (typeof value === "string") {
     if (!readerKeys.has(key)) return value
-    const count = [...value.matchAll(/\bdoua\b/gu)].length
-    if (!count) return value
-    replacements += count
-    touched.push({ trace, count })
-    return value.replace(/\bdoua\b/gu, "două")
+    let next = value
+
+    const douaCount = [...next.matchAll(/\bdoua\b/gu)].length
+    if (douaCount) {
+      next = next.replace(/\bdoua\b/gu, "două")
+      romanianReplacements += douaCount
+      touched.push({ trace, kind: "romanian-diacritic", count: douaCount })
+    }
+
+    for (const replacement of approvedReaderReplacements) {
+      const count = next.split(replacement.before).length - 1
+      if (!count) continue
+      next = next.split(replacement.before).join(replacement.after)
+      sourceAttributionReplacements += count
+      touched.push({ trace, kind: "reader-source-attribution", count })
+    }
+
+    const forbidden = next.match(forbiddenSourceName)
+    if (forbidden) fail(`${trace}: modern source name remains in reader copy: ${forbidden[0]}`)
+    return next
   }
   if (Array.isArray(value)) return value.map((item, index) => visit(item, key, `${trace}[${index}]`))
   if (value && typeof value === "object") {
@@ -46,5 +70,6 @@ for (const file of fs.readdirSync(corpusDir).filter((name) => name.endsWith(".js
   }
 }
 
-if (replacements !== 3) fail(`expected exactly 3 post-fidelity 'doua' reader-copy fixes, found ${replacements}`)
-console.log(`NT fidelity Romanian normalization: ${replacements} replacements in ${touched.length} reader fields.`)
+if (romanianReplacements !== 3) fail(`expected exactly 3 post-fidelity 'doua' reader-copy fixes, found ${romanianReplacements}`)
+if (sourceAttributionReplacements !== 1) fail(`expected exactly 1 approved reader-source attribution rewrite, found ${sourceAttributionReplacements}`)
+console.log(`NT fidelity reader normalization: ${romanianReplacements} Romanian fixes + ${sourceAttributionReplacements} source-attribution rewrite; no forbidden modern source names remain.`)
