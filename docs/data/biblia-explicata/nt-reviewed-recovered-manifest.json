@@ -15,7 +15,9 @@
     "romanianContextualFixes": 196,
     "romanianResidualFixes": 30,
     "passageBoundThinUnitExpansions": 14,
-    "poonenRawTranscriptReviewedUnits": 73
+    "poonenRawTranscriptReviewedUnits": 73,
+    "poonenSourceDerivedReviewedUnits": 689,
+    "poonenFidelityReviewedUnits": 762
   },
   "books": [
     {
@@ -24,7 +26,7 @@
       "name": "Matei",
       "chapters": 28,
       "units": 129,
-      "sha256": "f638bb6674e03764178b6e7f6f5ec5c743d28ca01e1f0e780088d9d4b4a96f8b"
+      "sha256": "bd7c3549a25544ca160f0a8e50999a24f6f75d9619e921480f37d7d55fb29dde"
     },
     {
       "id": "marcu",
@@ -32,7 +34,7 @@
       "name": "Marcu",
       "chapters": 16,
       "units": 73,
-      "sha256": "05bfa303cff35b92e270f908f12c58506b9820fa595ff245c42439643ce8729d"
+      "sha256": "5cd264a3d2944743b0c352675bab70bf5ec758ab6b8d7f72d008e056f36114e2"
     },
     {
       "id": "luca",
@@ -40,7 +42,7 @@
       "name": "Luca",
       "chapters": 24,
       "units": 112,
-      "sha256": "6236146778076b68c96b481308d0f059d4034bc02012e6634c2f3a1e23ae017e"
+      "sha256": "597bc5262c46a62f49dc3936c3ffe1d08d7126ac65f9ec5e190768422af9f809"
     },
     {
       "id": "ioan",
@@ -48,7 +50,7 @@
       "name": "Ioan",
       "chapters": 21,
       "units": 65,
-      "sha256": "406597f3a18a140de285d294448bdb0c959aed3ad0cb772b4d0adda8ae0b8e72"
+      "sha256": "bd017e35058b94c861ca4d7dd8093c8d443bcc9fa4023083071d069b428c92c4"
     },
     {
       "id": "fapte",
@@ -56,7 +58,7 @@
       "name": "Faptele Apostolilor",
       "chapters": 28,
       "units": 95,
-      "sha256": "8f342bd9046bb9c6cf5d98e1ee0435d2b9b3000d4c86ec3fbb3c739436b6677c"
+      "sha256": "864a42b2337cd61971408b6f3d8567afa7322eb927802b80a9bcf36b94c4ec24"
     },
     {
       "id": "romani",
@@ -64,7 +66,7 @@
       "name": "Romani",
       "chapters": 16,
       "units": 68,
-      "sha256": "d069701c3e0660b790cdf62be94ad994e40bc1cb78d5e0e064dae96b37f1fbb1"
+      "sha256": "8a1a751caca13a6fae351b586eb08a18b3cc44af41bbc30a3a02f4a906ecde84"
     },
     {
       "id": "1-corinteni",
@@ -72,7 +74,7 @@
       "name": "1 Corinteni",
       "chapters": 16,
       "units": 54,
-      "sha256": "9575528ccd779447eedab06021daea9224a3b136b7a4e6654d7e305ee18be88a"
+      "sha256": "a917d35805fab355bb0b4f5ec16eef599355574e927af0d11c08d4cf2cb43817"
     },
     {
       "id": "2-corinteni",
@@ -80,7 +82,7 @@
       "name": "2 Corinteni",
       "chapters": 13,
       "units": 41,
-      "sha256": "72af8e9dae6afbf014a04e723b06d0d6a8fc0144739fe499536f0e814ed2874b"
+      "sha256": "73ebcfcc67fc50f29d64a9434dcf5b719bd568ef54d7f059bffeedcabaf68604"
     },
     {
       "id": "galateni",
@@ -88,7 +90,7 @@
       "name": "Galateni",
       "chapters": 6,
       "units": 21,
-      "sha256": "a6c7daadc6efd7fb6c7b2b956c047304690a159775886061d13204110d2e9398"
+      "sha256": "33525376190ac231e7727350e44872fc8f62efaed93a58fc16cda92e6b565793"
     },
     {
       "id": "efeseni",
@@ -96,7 +98,7 @@
       "name": "Efeseni",
       "chapters": 6,
       "units": 23,
-      "sha256": "37ffd1574d4a30bdfd2dcaa3be2a325b8afe1240eb2ae122c09ed1f7634bd011"
+      "sha256": "2b6355c83a08261c8fc48852aeb8ef8e7a47e2ef998d36bb2dfd0fc8188750e2"
     },
     {
       "id": "filipeni",
@@ -104,7 +106,7 @@
       "name": "Filipeni",
       "chapters": 4,
       "units": 19,
-      "sha256": "0a88c409a347d0c6061f7770a42f9d887cb01d58dd1341cff5b6268729529cb4"
+      "sha256": "00fa967d098f1f25bec020af8dda695c3047bc17be2a99e097a8074d0b225169"
     },
     {
       "id": "coloseni",
@@ -112,7 +114,7 @@
       "name": "Coloseni",
       "chapters": 4,
       "units": 22,
-      "sha256": "f1d5599d4d03e77271688d753366154b2d0fc01a976e7d17b5071060178c5260"
+      "sha256": "a40be342661f9755d74304fddd93a2b3716d924f9d061960146dfbbf34f219de"
     },
     {
       "id": "1-tesaloniceni",
@@ -120,7 +122,7 @@
       "name": "1 Tesaloniceni",
       "chapters": 5,
       "units": 23,
-      "sha256": "0283408fcfa534cd7c0002f1dce29fac78f3cd772150e107b40bef2a0aa80dc9"
+      "sha256": "43d7d472651abb459746f14d5a6e27020abe60e8102bc22ca4c85df228fc40ca"
     },
     {
       "id": "tit",
@@ -128,7 +130,7 @@
       "name": "Tit",
       "chapters": 3,
       "units": 12,
-      "sha256": "f314cb2f9a14df98e9993359171b656d91270a9c56bd213b2d31313ee85c8359"
+      "sha256": "7979f256199f6e2c275bbfc47883d86f89f410ac702a962db9a874d10e895fbe"
     },
     {
       "id": "filimon",
@@ -136,7 +138,92 @@
       "name": "Filimon",
       "chapters": 1,
       "units": 5,
-      "sha256": "b9a6df9fd08a918c87e713aa69689c8442f5e53bcbf70f9082631c7ab9785b16"
+      "sha256": "1c9f54bed8daea3e9c39dda49a187972e9f4aae7d1044cd153efc6808d240191"
     }
-  ]
+  ],
+  "sourceFidelity": {
+    "status": "covered-with-tiered-evidence",
+    "pinnedLegacyCommit": "3d305d2b894257a702acf00e2c6d41a7ab83ffde",
+    "rawTranscriptReviewedUnits": 73,
+    "sourceDerivedReviewedUnits": 689,
+    "totalUnits": 762,
+    "policy": "raw-transcript-reviewed is stronger than source-derived-legacy. The latter must never be presented as raw transcript verification.",
+    "books": [
+      {
+        "id": "matei",
+        "rawTranscriptReviewedUnits": 0,
+        "sourceDerivedReviewedUnits": 129
+      },
+      {
+        "id": "marcu",
+        "rawTranscriptReviewedUnits": 73,
+        "sourceDerivedReviewedUnits": 0
+      },
+      {
+        "id": "luca",
+        "rawTranscriptReviewedUnits": 0,
+        "sourceDerivedReviewedUnits": 112
+      },
+      {
+        "id": "ioan",
+        "rawTranscriptReviewedUnits": 0,
+        "sourceDerivedReviewedUnits": 65
+      },
+      {
+        "id": "fapte",
+        "rawTranscriptReviewedUnits": 0,
+        "sourceDerivedReviewedUnits": 95
+      },
+      {
+        "id": "romani",
+        "rawTranscriptReviewedUnits": 0,
+        "sourceDerivedReviewedUnits": 68
+      },
+      {
+        "id": "1-corinteni",
+        "rawTranscriptReviewedUnits": 0,
+        "sourceDerivedReviewedUnits": 54
+      },
+      {
+        "id": "2-corinteni",
+        "rawTranscriptReviewedUnits": 0,
+        "sourceDerivedReviewedUnits": 41
+      },
+      {
+        "id": "galateni",
+        "rawTranscriptReviewedUnits": 0,
+        "sourceDerivedReviewedUnits": 21
+      },
+      {
+        "id": "efeseni",
+        "rawTranscriptReviewedUnits": 0,
+        "sourceDerivedReviewedUnits": 23
+      },
+      {
+        "id": "filipeni",
+        "rawTranscriptReviewedUnits": 0,
+        "sourceDerivedReviewedUnits": 19
+      },
+      {
+        "id": "coloseni",
+        "rawTranscriptReviewedUnits": 0,
+        "sourceDerivedReviewedUnits": 22
+      },
+      {
+        "id": "1-tesaloniceni",
+        "rawTranscriptReviewedUnits": 0,
+        "sourceDerivedReviewedUnits": 23
+      },
+      {
+        "id": "tit",
+        "rawTranscriptReviewedUnits": 0,
+        "sourceDerivedReviewedUnits": 12
+      },
+      {
+        "id": "filimon",
+        "rawTranscriptReviewedUnits": 0,
+        "sourceDerivedReviewedUnits": 5
+      }
+    ]
+  }
 }

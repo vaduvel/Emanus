@@ -1,8 +1,8 @@
 {
   "schema": "emanus-nt-embedded-quote-candidates-v1",
   "policy": "Diagnostic only. Candidate scores compare each unresolved quoted span with contiguous Biblia Emanus text from the same canonical chapter. This report never edits reader copy or clears a publication blocker by itself.",
-  "count": 60,
-  "strongCandidateCount": 1,
+  "count": 68,
+  "strongCandidateCount": 3,
   "findings": [
     {
       "bookId": "matei",
@@ -1137,6 +1137,196 @@
     {
       "bookId": "marcu",
       "canonicalBookId": "MRK",
+      "chapter": 13,
+      "field": "units[0].teaching",
+      "quote": "Să nu vă înșele cineva.",
+      "wordCount": 5,
+      "best": {
+        "raw": "să nu vă rătăcească cineva",
+        "score": 0.82,
+        "lcsRatio": 0.8,
+        "overlap": 0.8,
+        "lengthRatio": 1,
+        "start": 90,
+        "width": 5
+      },
+      "alternatives": [
+        {
+          "raw": "grijă să nu vă rătăcească cineva",
+          "score": 0.6833,
+          "lcsRatio": 0.6667,
+          "overlap": 0.6667,
+          "lengthRatio": 0.8333,
+          "start": 89,
+          "width": 6
+        },
+        {
+          "raw": "să nu vă rătăcească cineva! Mulți",
+          "score": 0.6833,
+          "lcsRatio": 0.6667,
+          "overlap": 0.6667,
+          "lengthRatio": 0.8333,
+          "start": 90,
+          "width": 6
+        }
+      ],
+      "bestMargin": 0.1367
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 13,
+      "field": "units[0].teaching",
+      "quote": "Cine va răbda până la sfârșit va fi mântuit.",
+      "wordCount": 9,
+      "best": {
+        "raw": "care va răbda până la sfârșit va fi mântuit",
+        "score": 0.9,
+        "lcsRatio": 0.8889,
+        "overlap": 0.8889,
+        "lengthRatio": 1,
+        "start": 270,
+        "width": 9
+      },
+      "alternatives": [
+        {
+          "raw": "va răbda până la sfârșit va fi mântuit. Când",
+          "score": 0.9,
+          "lcsRatio": 0.8889,
+          "overlap": 0.8889,
+          "lengthRatio": 1,
+          "start": 271,
+          "width": 9
+        },
+        {
+          "raw": "va răbda până la sfârșit va fi mântuit",
+          "score": 0.8889,
+          "lcsRatio": 0.8889,
+          "overlap": 0.8889,
+          "lengthRatio": 0.8889,
+          "start": 271,
+          "width": 8
+        }
+      ],
+      "bestMargin": 0
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 13,
+      "field": "units[1].teaching",
+      "quote": "Hristos este aici, în secret",
+      "wordCount": 5,
+      "best": {
+        "raw": "cineva: «Iată, Hristos este aici",
+        "score": 0.64,
+        "lcsRatio": 0.6,
+        "overlap": 0.6,
+        "lengthRatio": 1,
+        "start": 418,
+        "width": 5
+      },
+      "alternatives": [
+        {
+          "raw": "Iată, Hristos este aici!» sau",
+          "score": 0.64,
+          "lcsRatio": 0.6,
+          "overlap": 0.6,
+          "lengthRatio": 1,
+          "start": 419,
+          "width": 5
+        },
+        {
+          "raw": "Hristos este aici!» sau «Iată",
+          "score": 0.64,
+          "lcsRatio": 0.6,
+          "overlap": 0.6,
+          "lengthRatio": 1,
+          "start": 420,
+          "width": 5
+        }
+      ],
+      "bestMargin": 0
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 13,
+      "field": "units[2].teaching",
+      "quote": "Generația aceasta nu va trece...",
+      "wordCount": 5,
+      "best": {
+        "raw": "generația aceasta nicidecum nu va trece",
+        "score": 0.8333,
+        "lcsRatio": 0.8333,
+        "overlap": 0.8333,
+        "lengthRatio": 0.8333,
+        "start": 578,
+        "width": 6
+      },
+      "alternatives": [
+        {
+          "raw": "generația aceasta nicidecum nu va",
+          "score": 0.82,
+          "lcsRatio": 0.8,
+          "overlap": 0.8,
+          "lengthRatio": 1,
+          "start": 578,
+          "width": 5
+        },
+        {
+          "raw": "aceasta nicidecum nu va trece",
+          "score": 0.82,
+          "lcsRatio": 0.8,
+          "overlap": 0.8,
+          "lengthRatio": 1,
+          "start": 579,
+          "width": 5
+        }
+      ],
+      "bestMargin": 0.0133
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 14,
+      "field": "units[0].teaching",
+      "quote": "Ea a făcut ce a putut.",
+      "wordCount": 6,
+      "best": {
+        "raw": "Ea a făcut ce i-a",
+        "score": 0.85,
+        "lcsRatio": 0.8333,
+        "overlap": 0.8333,
+        "lengthRatio": 1,
+        "start": 166,
+        "width": 6
+      },
+      "alternatives": [
+        {
+          "raw": "întotdeauna. Ea a făcut ce i-a",
+          "score": 0.7286,
+          "lcsRatio": 0.7143,
+          "overlap": 0.7143,
+          "lengthRatio": 0.8571,
+          "start": 165,
+          "width": 7
+        },
+        {
+          "raw": "Ea a făcut ce i-a stat",
+          "score": 0.7286,
+          "lcsRatio": 0.7143,
+          "overlap": 0.7143,
+          "lengthRatio": 0.8571,
+          "start": 166,
+          "width": 7
+        }
+      ],
+      "bestMargin": 0.1214
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
       "chapter": 14,
       "field": "units[2].teaching",
       "quote": "nu ce voiesc Eu, ci ce voiești Tu",
@@ -1148,37 +1338,124 @@
     {
       "bookId": "marcu",
       "canonicalBookId": "MRK",
-      "chapter": 16,
-      "field": "units[0].teaching",
-      "quote": "Isus din Nazaret, care a fost răstignit, a înviat; nu este aici",
-      "wordCount": 12,
+      "chapter": 14,
+      "field": "units[2].teaching",
+      "quote": "Vegheați și rugați-vă ca să nu intrați în ispită.",
+      "wordCount": 10,
       "best": {
-        "raw": "căutați pe Isus Nazarineanul, Cel răstignit. A fost înviat; nu este aici",
-        "score": 0.6542,
-        "lcsRatio": 0.5833,
-        "overlap": 0.6667,
+        "raw": "Privește și roagă-te, ca să nu intri în ispită",
+        "score": 0.64,
+        "lcsRatio": 0.6,
+        "overlap": 0.6,
         "lengthRatio": 1,
-        "start": 94,
-        "width": 12
+        "start": 796,
+        "width": 10
       },
       "alternatives": [
         {
-          "raw": "pe Isus Nazarineanul, Cel răstignit. A fost înviat; nu este aici. Iată",
-          "score": 0.6542,
-          "lcsRatio": 0.5833,
-          "overlap": 0.6667,
+          "raw": "și roagă-te, ca să nu intri în ispită. Spiritul",
+          "score": 0.64,
+          "lcsRatio": 0.6,
+          "overlap": 0.6,
           "lengthRatio": 1,
-          "start": 95,
-          "width": 12
+          "start": 797,
+          "width": 10
         },
         {
-          "raw": "Isus Nazarineanul, Cel răstignit. A fost înviat; nu este aici. Iată locul",
-          "score": 0.6542,
-          "lcsRatio": 0.5833,
-          "overlap": 0.6667,
+          "raw": "și roagă-te, ca să nu intri în ispită",
+          "score": 0.63,
+          "lcsRatio": 0.6,
+          "overlap": 0.6,
+          "lengthRatio": 0.9,
+          "start": 797,
+          "width": 9
+        }
+      ],
+      "bestMargin": 0
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 15,
+      "field": "units[1].teaching",
+      "quote": "dacă vrea cineva să vină după Mine",
+      "wordCount": 7,
+      "best": null,
+      "alternatives": [],
+      "bestMargin": null
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 16,
+      "field": "units[0].teaching",
+      "quote": "spuneți ucenicilor Lui și lui Petru",
+      "wordCount": 6,
+      "best": {
+        "raw": "spuneți-le ucenicilor Lui și lui Petru",
+        "score": 0.8571,
+        "lcsRatio": 0.8571,
+        "overlap": 0.8571,
+        "lengthRatio": 0.8571,
+        "start": 115,
+        "width": 7
+      },
+      "alternatives": [
+        {
+          "raw": "spuneți-le ucenicilor Lui și lui",
+          "score": 0.85,
+          "lcsRatio": 0.8333,
+          "overlap": 0.8333,
           "lengthRatio": 1,
-          "start": 96,
-          "width": 12
+          "start": 115,
+          "width": 6
+        },
+        {
+          "raw": "le ucenicilor Lui și lui Petru",
+          "score": 0.85,
+          "lcsRatio": 0.8333,
+          "overlap": 0.8333,
+          "lengthRatio": 1,
+          "start": 116,
+          "width": 6
+        }
+      ],
+      "bestMargin": 0.0071
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 16,
+      "field": "units[2].teaching",
+      "quote": "Cine crede și este botezat...",
+      "wordCount": 5,
+      "best": {
+        "raw": "care crede și este botezat",
+        "score": 0.82,
+        "lcsRatio": 0.8,
+        "overlap": 0.8,
+        "lengthRatio": 1,
+        "start": 302,
+        "width": 5
+      },
+      "alternatives": [
+        {
+          "raw": "crede și este botezat va",
+          "score": 0.82,
+          "lcsRatio": 0.8,
+          "overlap": 0.8,
+          "lengthRatio": 1,
+          "start": 303,
+          "width": 5
+        },
+        {
+          "raw": "Cel care crede și este botezat",
+          "score": 0.6833,
+          "lcsRatio": 0.6667,
+          "overlap": 0.6667,
+          "lengthRatio": 0.8333,
+          "start": 301,
+          "width": 6
         }
       ],
       "bestMargin": 0

@@ -22,6 +22,8 @@ export const NT_BOOK_18: BibleBook = {
           "heading": "Biserica din casa ta",
           "text": "Pavel, prizonier al lui Hristos Isus, și Timotei, fratele nostru, lui Filimon, preaiubitul nostru colaborator, către iubita Apphia, către Arhip, tovarășul nostru soldat, către adunarea din casa ta: Har vouă și pace de la Dumnezeu Tatăl nostru și Domnul Isus Hristos.",
           "teaching": "Explicația observă că scrisoarea este adresată unui om înstărit, în casa căruia se aduna biserica. Apfia era probabil soția lui, iar Arhip probabil fiul său. Chiar dacă problema îl privea direct pe Filimon, Pavel o așază în lumina părtășiei creștine: relațiile din casă și felul în care este primit un frate nu sunt separate de viața bisericii.\n\nPavel se prezintă ca întemnițat al lui Hristos, nu ca un om care cere compasiune pentru sine. Harul și pacea cu care începe scrisoarea pregătesc felul în care va trata conflictul: nu cu amenințare, presiune sau rușinare publică, ci cu duhul Domnului Isus.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
             "Coloseni 4:7-9",
             "Coloseni 4:17",
@@ -35,6 +37,8 @@ export const NT_BOOK_18: BibleBook = {
           "heading": "Inimile sfinților au fost înviorate",
           "text": "Îi mulțumesc întotdeauna lui Dumnezeu că te-am menționat în rugăciunile mele, auzind de dragostea ta și de credința pe care o ai față de Domnul Isus și față de toți sfinții, pentru ca părtășia credinței voastre să devină eficientă în cunoașterea oricărui lucru bun care este în noi în Hristos Isus. Căci noi avem multă bucurie și mângâiere în dragostea Ta, pentru că inimile sfinților au fost înviorate prin tine, frate.",
           "teaching": "Înainte să-i ceară ceva greu, Pavel îi spune lui Filimon că se roagă pentru el și că se bucură sincer de ceea ce Dumnezeu a lucrat în viața lui. Explicația insistă că aceasta nu era lingușire. Filimon îi primise cu dragoste pe credincioși, îi ajutase, iar mulți fuseseră înviorați prin ospitalitatea lui.\n\nUn om primește mai ușor o rugăminte grea când știe că este iubit și purtat în rugăciune. Pavel nu folosește o tehnică de manipulare; el spune adevărul despre binele din Filimon și vorbește dintr-o relație în care dragostea fusese deja dovedită.\n\nPărtășia credinței trebuie să se arate prin fapte. Credința care rămâne numai în cuvinte nu înviorează pe nimeni; credința lucrătoare face din casă un loc în care alții găsesc odihnă, ajutor și curaj.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
             "Iacov 2:14-18",
             "Evrei 13:1-2",
@@ -48,6 +52,8 @@ export const NT_BOOK_18: BibleBook = {
           "heading": "Nu-ți poruncesc; te rog în numele dragostei",
           "text": "De aceea, deși am toată îndrăzneala în Hristos să vă poruncesc ceea ce este potrivit, Totuși, din dragoste, prefer să apelez la voi, fiind unul ca Pavel, cel în vîrstă, dar și prizonier al lui Isus Hristos. Fac apel la tine pentru copilul meu Onisim, pe care l-am devenit tatăl în lanțurile mele, care odată a fost inutil pentru tine, dar acum este util pentru tine și pentru mine. Eu îl trimit înapoi. Prin urmare, să-l primească, adică, propria mea inimă, Pe care voiam s-o țin cu mine, ca să mă slujească în lanțurile mele pentru Evanghelie. Dar am fost dispus să nu fac nimic fără consimțământul tău, că bunătatea ta nu ar fi ca de necesitate, ci de liber arbitru. Căci poate că a fost despărțit de tine pentru o vreme, ca să-l ai pentru totdeauna, nu mai mult ca un sclav, ci mai mult decât un sclav, un frate iubit în mod special pentru mine, ci cât de mult mai degrabă pentru tine, atât în carne, cât și în Domnul.",
           "teaching": "Pavel avea autoritate și știa că Filimon îl respecta, dar refuză să profite de această poziție. Explicația vede aici un model pentru orice slujitor: chiar când oamenii sunt gata să facă orice pentru tine, nu-i comanda pentru avantajul tău. Autoritatea duhovnicească adevărată roagă, convinge și lasă binele să fie făcut de bunăvoie.\n\nOnisim fugise, ajunsese la Roma și, în providența lui Dumnezeu, îl întâlnise pe Pavel. Acolo fusese adus la credință. Pavel nu-i spune să se ascundă de trecut; îl trimite înapoi. Harul care iartă îl face pe om și responsabil: convertirea nu șterge obligația de a înfrunta cinstit răul făcut.\n\nNumele Onisim înseamnă «folositor». Cel care fusese nefolositor se întoarce schimbat. Pavel nu pretinde că trecutul n-a existat, dar nici nu-l lasă pe Onisim închis în vechea lui identitate. În Hristos, Filimon trebuie să-l primească mai presus de vechea lui poziție socială: ca pe un frate preaiubit.\n\nPavel spune cu smerenie «poate» când vorbește despre rostul despărțirii. El vede mâna lui Dumnezeu, dar nu transformă presupunerea într-o revelație sigură. Dumnezeu poate întoarce chiar și o fugă păcătoasă spre mântuire și împăcare, fără ca păcatul să devină astfel bun.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "Ὀνήσιμος",
@@ -56,6 +62,7 @@ export const NT_BOOK_18: BibleBook = {
               "meaning": "folositor, de folos. Pavel folosește sensul numelui pentru a arăta schimbarea omului care fusese nefolositor și acum devenise folositor."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Coloseni 4:9",
             "Luca 19:8",
@@ -69,6 +76,8 @@ export const NT_BOOK_18: BibleBook = {
           "heading": "Pune aceasta în socoteala mea",
           "text": "Dacă mă consideri partener, primește-l așa cum m-ai primi pe mine. Dar dacă te-a nedreptățit sau îți datorează ceva, pune asta în contul meu. Eu, Pavel, scriu aceasta cu mâna mea: o voi răsplăti (să nu-ți mai spun că îmi ești dator și mie în afară de tine însuți). Da, frate, lasă-mă să am bucurie de la tine în Domnul. Împrospătează-mi inima în Domnul. Având încredere în ascultarea ta, îți scriu, știind că vei face chiar mai mult decât ceea ce spun. De asemenea, pregătiți o cameră de oaspeți pentru mine, pentru că sper că prin rugăciunile voastre voi fi restaurat la tine.",
           "teaching": "Explicația pune în centru cererea lui Pavel: «Primește-l ca pe mine însumi». El vede aici duhul mijlocirii lui Hristos. Păcătosul care fugise este adus înapoi, iar cel care mijlocește cere să fie primit după valoarea lui, nu după vrednicia fugarului. Tot astfel, Tatăl ne primește în Hristos.\n\nApoi Pavel merge mai departe: orice vătămare sau datorie a lui Onisim să fie trecută în contul lui. Aceasta este o imagine limpede a înlocuirii: altul se oferă să plătească ceea ce vinovatul nu poate acoperi. Pavel nu se limitează la cuvinte frumoase, ci este gata să suporte un cost real.\n\nExplicația contrastează această atitudine cu slujirea care ia bani de la oamenii săraci. Pavel, care muncea cu mâinile lui, era gata să folosească din puținul său ca să ajute un om îndatorat. Un slujitor al lui Dumnezeu nu folosește convertiții ca sursă de câștig; caută cum să le poarte povara.\n\nÎn același timp, Onisim nu este învățat că datoria nu contează. Pavel o recunoaște și o asumă. Iertarea creștină nu numește nedreptatea drept nimic; ea găsește o cale prin care adevărul, plata și primirea să se întâlnească în har.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
             "Isaia 53:4-6",
             "2 Corinteni 5:19-21",
@@ -83,6 +92,8 @@ export const NT_BOOK_18: BibleBook = {
           "heading": "Tovarășii mei de lucru vă trimit sănătate",
           "text": "Epafras, tovarășul meu prizonier în Hristos Isus, te salută, ca Marcu, Aristarh, Demas Luca, tovarășii mei de slujbă. Harul Domnului nostru Isus Hristos să fie cu duhul vostru. Amin.",
           "teaching": "Scrisoarea se încheie cu numele unei echipe de lucrători. Împăcarea lui Onisim cu Filimon nu era o problemă izolată de trupul lui Hristos. Aceiași oameni care lucrau împreună pentru Evanghelie urmau să vadă dacă harul predicat putea uni și două persoane despărțite de vină și teamă.\n\nExplicația subliniază prioritatea chemării lui Pavel: apostolul nu și-a consumat viața conducând fiecare cauză socială bună din imperiu, ci vestind Evanghelia și zidind biserica. În comunitatea creștină, Filimon și Onisim trebuiau să se întâlnească înainte de toate ca frați, chiar într-o societate ale cărei structuri nedrepte nu dispăruseră încă.\n\nUltimul cuvânt este harul. Numai harul Domnului Isus poate face ca un om rănit să primească, un om vinovat să se întoarcă și un mijlocitor să fie gata să plătească. Fără har, fiecare rămâne închis în drepturile și frica lui.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
             "Coloseni 4:10-14",
             "Efeseni 2:14-18",

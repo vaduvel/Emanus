@@ -22,6 +22,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Cuvântul, viața și lumina",
           "text": "La început era Cuvântul, și Cuvântul era cu Dumnezeu, și Cuvântul era Dumnezeu. El era la început cu Dumnezeu. Toate lucrurile au fost făcute prin el. Fără el, nu s-a făcut nimic din ce s-a făcut. În El era viața și viața era lumina oamenilor. Și lumina luminează în întuneric, iar întunericul n-a biruit-o.",
           "teaching": "Sa ne oprim aici și sa nu trecem mai departe cu ușurință. Ioan deschide Evanghelia aproape cu aceeași poarta cu care se deschide Geneza: la început. Numai ca aici nu ni se spune ce a început, ci Cine era deja acolo. Înainte de iesle, înainte de Betleem, înainte de Avraam, înainte de Adam, era Cuvântul.\n\nSe cuvine sa fim cinstiți cu textul. Ioan nu ne lasă loc sa coborâm pe Domnul Isus la rangul unui învățător mare ori al unei fapturi înalte. Cuvântul era cu Dumnezeu, deci era deosebit de Tatăl; și Cuvântul era Dumnezeu, deci nu era mai prejos decât Dumnezeu. Taina aceasta nu este o încurcătură, ci începutul descoperirii creștine: Fiul este cu Tatăl și este una în dumnezeire cu Tatăl.\n\nApoi ia aminte la toate lucrurile. Nu se spune ca unele au fost făcute prin El, iar altele fără El. Se spune limpede: nimic din ce a fost făcut n-a fost făcut fără El. Deci Cuvântul nu sta în rândul celor făcute. El este de partea Făcătorului, nu de partea făpturii.\n\nȘi mai ia aminte la legătura dintre viața și lumina. În El era viața; nu doar darul vieții, ci izvorul ei. Și viața aceasta era lumina oamenilor. Fără El, omul nu este doar slab, ci și în întuneric. Pacatul nu a adus numai vina, ci și orbire. De aceea venirea lui Hristos nu este doar ajutor, ci lumina adevărată pentru omul care nu mai vede drumul spre Tatăl.\n\nLa urma, Ioan spune ca întunericul n-a biruit-o. Cuvântul poate însemna și ca n-a cuprins-o, și ca n-a învins-o. Amândouă sunt adevărate în mersul Evangheliei. Lumea cazuta nu L-a înțeles pe deplin și nici nu L-a putut stinge. Crucea nu este biruința intunericului asupra luminii, ci locul în care lumina trece prin întuneric și iese biruitoare.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "Λόγος",
@@ -42,6 +44,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "lumina. Ceea ce descoperă, curată și arată drumul."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Geneza 1:1-3",
             "Ioan 8:12",
@@ -58,6 +61,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Martorul și cei ce primesc Lumina",
           "text": "A venit un om trimis de la Dumnezeu, al cărui nume era Ioan. Acesta a venit ca mărturie, ca să mărturisească despre Lumină, pentru ca toți să creadă prin el. El nu era lumina, ci a fost trimis ca să mărturisească despre lumină. Adevărata lumină care luminează pe toată lumea venea în lume. El a fost în lume, și lumea a fost făcută prin el, și lumea nu l-a recunoscut. El a venit la ai săi, iar cei care erau ai lui nu l-au primit. Dar tuturor celor care L-au primit le-a dat dreptul să devină copii ai lui Dumnezeu, celor ce cred în Numele Lui, care s-au născut nu din sânge, nici din voia cărnii, nici din voia vreunui bărbat, ci din Dumnezeu.",
           "teaching": "Ia aminte cum intra aici Ioan Botezătorul: nu ca lumina, ci ca martor. Se cuvine sa luam bine seama la randuiala aceasta. Cel mai mare om din rândurile acestea nu este decât un glas și un martor. În lucrarea lui Dumnezeu, omul nu este izvorul luminii, ci cel care arată spre ea.\n\nApoi vine una dintre cele mai dureroase propoziții din Evanghelie: lumea nu L-a cunoscut. Tocmai lumea facuta prin El n-a recunoscut pe Făcătorul ei. Și ai Sai nu L-au primit. Pacatul se vede aici nu doar ca necurăție, ci ca orbire și împotrivire fata de Cel care vine la noi.\n\nDar ia aminte și la răsturnarea plina de har: tuturor celor ce L-au primit, le-a dat dreptul sa se faca copii ai lui Dumnezeu. Nu se spune ca și-au castigat dreptul, nici ca l-au mostenit din neam, nici ca l-au cumparat prin ravna lor. L-au primit. La Ioan, credința nu este o plata adusa lui Dumnezeu, ci mana intinsa care primește pe Fiul.\n\nȘi se cuvine sa fim foarte atenti la nașterea aceasta. Nu din sânge, nici din voia firii, nici din voia vreunui om, ci din Dumnezeu. Cu alte cuvinte, filiația aceasta nu se moștenește prin familie, nu se produce prin efort și nu se fabrica prin religie. Numai Dumnezeu o da. Aici sta una dintre marile mângâieri ale Evangheliei: copil al lui Dumnezeu nu devii fiindca ai avut începutul potrivit pe pământ, ci fiindca Dumnezeu te naște de sus.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "μαρτυρία",
@@ -78,6 +83,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "din Dumnezeu. Originea noii nasteri nu este omeneasca, ci dumnezeiasca."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ioan 3:3-8",
             "Ioan 8:12",
@@ -93,6 +99,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Cuvântul S-a făcut trup",
           "text": "Și Cuvântul S-a făcut carne și a locuit printre noi, și noi I-am privit gloria, glorie ca a Singurului de la Tatăl, plin de har și de adevăr. (Ioan mărturisește despre El și a strigat zicând: Acesta era Cel despre care am spus: Cel care vine după mine a ajuns înaintea mea, pentru că era mai înainte de mine.) Căci din plinătatea Lui am primit noi toți, și har peste har. Pentru că Legea a fost dată prin Moise; harul și adevărul au venit prin Isus Hristos. Pe Dumnezeu nimeni nu L-a văzut vreodată; Dumnezeu, Cel unic, care este în sânul Tatălui, Acela L-a făcut cunoscut.",
           "teaching": "Sa ne oprim aici cu multa luare-aminte, fiindca acesta este unul dintre cele mai mari rânduri din toată Sfânta Scriptura: Cuvântul S-a făcut trup. Nu se spune ca a părut trup, nici ca a locuit numai pentru o vreme intr-un trup strain. Se spune ca S-a făcut trup. Fiul lui Dumnezeu a intrat cu adevărat în omenitatea noastră, fără sa înceteze sa fie ce era din veșnicie.\n\nSe cuvine sa păstrăm cele două maluri ale adevarului. Domnul Isus este cu adevărat Dumnezeu, cum s-a spus mai sus, și este cu adevărat om, cum se spune aici. Cine rupe una dintre acestea pierde Evanghelia. Dacă nu este Dumnezeu, nu ne poate mântui în chip desăvârșit. Dacă nu este om, nu sta cu adevărat în locul nostru.\n\nApoi ia aminte la a locuit printre noi. Cuvântul acesta suna ca așezarea cortului. Ioan ne arată astfel ca în Isus Dumnezeu a venit sa locuiasca în mijlocul nostru, cum slava statea odinioara peste cortul întâlnirii. Numai ca acum nu mai privim umbra, ci plinătatea.\n\nȘi iarasi har și adevăr. Nu har fără adevăr, care mângâie fără sa vindece; nici adevăr fără har, care loveste fără sa ridice. În Domnul Isus vin amândouă împreună. De aceea omul nu este chemat nici sa se ascunda de lumina, nici sa deznadajduiasca sub ea.\n\nLa urma, Ioan spune ca nimeni n-a văzut vreodată pe Dumnezeu, iar Fiul L-a făcut cunoscut. De aceea, când vrei sa știi cum este Dumnezeu, nu trebuie sa-L ghicești din frica, nici sa-L plămădești dupa gândurile tale. Te uiți la Fiul. Cine Îl vede pe Isus cum vorbește, cum plânge, cum mustra, cum primește și cum Se jertfește, acela începe sa-L cunoasca pe Tatăl.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "σὰρξ",
@@ -113,6 +121,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "singurul născut, unicul de acest fel. Arată unicitatea Fiului fata de Tatăl."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Exod 33:18-23",
             "Exod 40:34-35",
@@ -128,6 +137,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Iata Mielul lui Dumnezeu",
           "text": "Și aceasta este mărturia lui Ioan, când iudeii au trimis din Ierusalim preoți și leviți să-l întrebe: Tu cine ești? El a mărturisit și n-a negat; a mărturisit: «Eu nu sunt Hristosul.» Și l-au întrebat: Atunci cine? Ești tu Ilie? El zice: Nu sunt. Ești tu Profetul? Și a răspuns: Nu. Atunci i-au zis: Cine ești, ca să dăm un răspuns celor care ne-au trimis? Ce spui despre tine însuți? El a spus: Eu sunt glasul celui ce strigă în pustiu: Îndreptați calea Domnului, cum a spus profetul Isaia. Iar cei trimiși erau dintre farisei. Și l-au întrebat: Atunci de ce botezi, dacă nu ești tu Hristosul, nici Ilie, nici Profetul? Ioan le-a răspuns zicând: Eu botez în apă. În mijlocul vostru stă Unul pe care voi nu-L cunoașteți. El este Cel care vine după mine, căruia eu nu sunt vrednic să-I dezleg cureaua sandalei. Acestea s-au petrecut în Betania, dincolo de Iordan, unde boteza Ioan. A doua zi îl vede pe Isus venind spre el și zice: Iată Mielul lui Dumnezeu, Cel care ridică păcatul lumii! Acesta este Cel despre care am spus: «După mine vine un om care a ajuns înaintea mea, pentru că era mai înainte de mine.» Nici eu nu-L cunoșteam, dar tocmai pentru aceasta am venit eu să botez în apă, ca El să fie arătat lui Israel. Și Ioan a mărturisit zicând: Am văzut Duhul coborând din cer ca un porumbel și a rămas peste El. Nici eu nu-L cunoșteam, dar Cel care m-a trimis să botez în apă, Acela mi-a spus: Peste cine vei vedea Duhul coborând și rămânând, Acela este Cel care botează în Duh Sfânt. Am văzut și am mărturisit că acesta este Fiul lui Dumnezeu.",
           "teaching": "Ia aminte la smerenia lui Ioan. Toată lumea îl intreaba cine este, iar el raspunde mai ales spunand cine nu este. Nu este Hristosul, nu este centrul, nu este lumina. În casa lui Dumnezeu, lucrarea cea mai curată este aceea care nu strange oamenii în jurul numelui nostru, ci ii muta spre Domnul Isus.\n\nApoi vine strigarea mare: Iata Mielul lui Dumnezeu. Se cuvine sa luam bine seama la cuvântul acesta. Ioan nu zice numai iata Invatatorul, nici numai iata Imparatul, ci iata Mielul. Încă de la începutul Evangheliei, crucea sta în fata. Fiul vine nu doar sa invete, ci sa poarte pacatul.\n\nȘi ia aminte la pacatul lumii. Nu se spune doar pacatul unui neam ori al unei categorii. Mielul lui Dumnezeu sta inaintea unei nevoi universale. Tot omul poarta vina pe care nu și-o poate ridica singur, iar Dumnezeu da Mielul pe care omul nu-l putea da.\n\nMai departe, Ioan marturiseste despre Duhul care S-a coborat și a ramas peste El. Aici nu ni se spune ca Domnul Isus ar fi devenit atunci Fiul lui Dumnezeu; Ioan tocmai a marturisit ca El era mai înainte de el. Semnul acesta este pentru descoperirea publica a Celui care era deja Fiul.\n\nȘi se cuvine sa păstrăm și ultima propozitie cu multa evlavie: El este Cel ce boteaza cu Duhul Sfant. Nu Ioan, nu vreun alt slujitor, ci Isus. Numai El poate sa dea omului nu doar apa din afara, ci viață dinlăuntru.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "ἀμνός",
@@ -148,6 +159,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "a rămâne. Duhul nu doar atinge, ci rămâne peste Fiul."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Isaia 40:3",
             "Isaia 53:7",
@@ -164,6 +176,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Veniti de vedeti",
           "text": "Din nou, a doua zi, Ioan stătea cu doi dintre discipolii săi, și, privind la Isus, care umbla, a zis: Iată Mielul lui Dumnezeu! Cei doi discipoli l-au auzit vorbind, și l-au urmat pe Isus. Isus S-a întors, i-a văzut urmându-L și le-a zis: Ce căutați? Ei I-au spus: Rabi (care, tradus, înseamnă Învățătorule), unde rămâi? El le-a zis: Veniți și veți vedea. Așadar au venit și au văzut unde rămânea și au rămas la El în ziua aceea. Era cam pe la ceasul al zecelea. Unul dintre cei doi care l-au auzit pe Ioan și l-au urmat a fost Andrei, fratele lui Simon Petru. El îl găsește mai întâi pe fratele său Simon și-i zice: L-am găsit pe Mesia (care, tradus, înseamnă Hristos). L-a adus la Isus. Privindu-l, Isus i-a zis: Tu ești Simon, fiul lui Ioan; tu te vei numi Chifa (care se traduce Petru). A doua zi, Isus a vrut să plece în Galileea. L-a găsit pe Filip și i-a zis: Urmează-Mă. Iar Filip era din Betsaida, cetatea lui Andrei și a lui Petru. Filip îl găsește pe Natanael și-i zice: L-am găsit pe Acela despre care au scris Moise în Lege și profeții: pe Isus, fiul lui Iosif, din Nazaret. Natanael i-a zis: Poate ieși ceva bun din Nazaret? Filip i-a zis: Vino și vezi. Isus l-a văzut pe Natanael venind spre El și a zis despre el: Iată cu adevărat un israelit în care nu este vicleșug. Natanael I-a zis: De unde mă cunoști? Isus i-a răspuns: Te-am văzut înainte să te cheme Filip, când erai sub smochin. Natanael I-a răspuns: Rabi, Tu ești Fiul lui Dumnezeu, Tu ești Împăratul lui Israel! Isus i-a răspuns: Crezi pentru că ți-am spus că te-am văzut sub smochin? Vei vedea lucruri mai mari decât acestea. Și i-a zis: Adevărat, adevărat vă spun: veți vedea cerul deschis și pe îngerii lui Dumnezeu suindu-se și coborându-se peste Fiul omului.",
           "teaching": "Ia aminte cum se face chemarea. Doi ucenici îl aud pe Ioan spunand iarasi: Iata Mielul lui Dumnezeu. Și merg dupa Isus. Lucrarea buna a unui martor nu se supara când cei ce îl ascultau incep sa mearga dupa Domnul.\n\nApoi vine întrebarea lui Isus: Ce cautati? Nu este o intrebare aruncata la intamplare. Evanghelia dupa Ioan pune mereu omul inaintea acestei cercetari: ce cauti de fapt? semn, pâine, slava, scapare, ori pe El Insusi?\n\nȘi ia aminte la raspunsul Domnului: Veniti de vedeti. Credința nu începe cu un tratat rece, ci cu apropierea de Persoana Lui. Ei au venit, au văzut și au ramas la El. Asa începe ucenicia adevărată: omul vine, vede și rămâne.\n\nDe acolo, mărturia curge mai departe firesc. Andrei îl aduce pe Simon. Filip îl cheama pe Natanael. Cine L-a gasit cu adevărat pe Mesia nu tine vestea numai pentru sine. Dar ia aminte și la felul în care este adus Natanael. Nu prin constrangere, ci printr-o chemare simplă: vino și vezi.\n\nLa urma, Domnul Isus își spune numele de Fiul omului și vorbește despre cerul deschis și ingerii care se suie și se coboara peste El. Ioan ne trimite astfel înapoi la visul lui Iacov. Scara dintre cer și pământ nu mai este acum un semn văzut intr-o noapte, ci Persoana Fiului. În El se ating cerul și pamantul. În El vine Dumnezeu la om și în El este dus omul la Dumnezeu.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "ῥαββί",
@@ -184,6 +198,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "Fiul omului. Nume prin care Domnul Isus vorbește despre sine cu smerenie și slava laolalta."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Geneza 28:12-17",
             "Daniel 7:13-14",
@@ -211,6 +226,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Începutul semnelor în Cana",
           "text": "Și în a treia zi s-a făcut nuntă în Cana Galileii, iar mama lui Isus era acolo. A fost invitat la nuntă și Isus, împreună cu ucenicii lui. Când s-a terminat vinul, mama lui Isus i-a zis: „Nu au vin.” Și Isus i-a zis: „Ce este între mine și tine, femeie? Încă n-a venit ceasul meu.” Mama lui le-a zis slujitorilor: „Faceți orice vă va spune.” Erau puse acolo șase vase de piatră pentru curățirea iudeilor, fiecare cuprinzând câte două sau trei măsuri. Isus le-a zis: „Umpleți vasele cu apă.” Și le-au umplut până sus. Apoi le-a zis: „Scoateți acum și duceți celui care conduce ospățul.” Iar ei i-au dus. Când cel care conducea ospățul a gustat apa făcută vin și nu știa de unde este, deși slujitorii care scoseseră apa știau, cel care conducea ospățul l-a chemat pe mire și i-a zis: „Orice om pune mai întâi vinul bun, iar după ce s-au îmbătat, pe cel mai slab; tu ai păstrat vinul bun până acum.” Acesta a fost începutul semnelor lui Isus, făcut în Cana Galileii; astfel și-a arătat slava, iar ucenicii lui au crezut în el. După aceasta s-a coborât la Capernaum, el, mama lui, frații lui și ucenicii lui; și au rămas acolo nu multe zile.",
           "teaching": "Sa luam bine seama unde începe Ioan semnele Domnului Isus. Nu în palat, nu în mijlocul unei dezbateri, ci la o nunta. Evanghelia nu intra în lume ca sa usuce bucuria curată a omului, ci sa o curateasca și sa o umple de slava lui Dumnezeu.\n\nApoi vine lipsa. Nu mai au vin. Se cuvine sa observam ca semnul acesta nu este făcut pentru spectacol, ci în miezul unei nevoi care ar fi adus rusine unei case. Domnul vede nevoia omeneasca și nu o dispretuieste. Dar tot textul ne pazeste sa nu coborâm semnul la un simplu ajutor social ori la o reteta pentru confortul nostru. Ioan spune limpede: acesta a fost începutul semnelor Lui și prin el Și-a aratat slava.\n\nCuvintele spuse mamei Sale trebuie citite cu evlavie și cu masura. Domnul nu o cinsteste mai putin, dar arată ca lucrarea Lui nu este condusa nici de apropierea de familie, nici de presiunea clipei, ci de ceasul hotarat de Tatăl. În Evanghelia aceasta, ceasul Lui merge spre cruce și spre slava.\n\nȘi ia aminte la vorba mamei Lui catre slugi: Sa faceti orice va va zice. Este una dintre cele mai simple și mai curate chemari la ascultare din toată Scriptura. Acolo începe și minunea: nu în zgomotul multimii, ci în ascultarea celor care umplu vasele pana sus.\n\nLa urma, Ioan spune ca ucenicii au crezut în El. Nu inseamna ca pana atunci nu avusesera niciun fel de credință, ci ca prin semnul acesta credința lor a fost adancita. Asa lucreaza și Domnul cu ai Sai: arată slava Lui pe rand, ca sa-i aseze mai adanc în incredere.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "σημεῖον",
@@ -231,6 +248,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "slava. Frumusetea și greutatea dumnezeiasca aratate în Fiul."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ioan 1:14",
             "Ioan 7:30",
@@ -245,6 +263,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Casa Tatalui Meu",
           "text": "Paștele iudeilor era aproape, iar Isus s-a suit la Ierusalim. Și i-a găsit în templu pe cei care vindeau boi, oi și porumbei, și pe schimbătorii de bani așezați acolo. Și, făcând un bici din funii, i-a scos pe toți afară din templu, atât oile, cât și boii; a vărsat monedele schimbătorilor și le-a răsturnat mesele. Iar celor care vindeau porumbeii le-a zis: „Luați acestea de aici; nu faceți din casa Tatălui meu o casă de comerț.” Ucenicii lui și-au adus aminte că este scris: „Zelul pentru casa ta mă va mistui.” Atunci iudeii au răspuns și i-au zis: „Ce semn ne arăți, că faci acestea?” Isus a răspuns și le-a zis: „Dărâmați templul acesta și în trei zile îl voi ridica.” Atunci iudeii au zis: „Templul acesta a fost zidit în patruzeci și șase de ani, iar tu îl vei ridica în trei zile?” Dar el vorbea despre templul trupului său. Când deci a fost înviat dintre morți, ucenicii lui și-au adus aminte că spunea aceasta, și au crezut Scriptura și cuvântul pe care îl spusese Isus.",
           "teaching": "Ia aminte la schimbarea de tablou. Din bucuria unei nunti ajungem la curtile Templului. Același Domn care a umplut lipsa unei case este și Domnul care curăță casa Tatalui Sau. Harul Lui nu inseamna nepasare fata de profanare.\n\nSe cuvine sa fim cinstiți cu textul. Mania aceasta nu este capriciu, nici iesire necontrolata. Este ravna sfânta pentru locul în care Dumnezeu trebuia cinstit, nu vandut. Ceea ce trebuia sa ajute inchinarea ajunsese sa o acopere. Și aceasta rămâne o cercetare pentru orice vreme: lucrurile religioase se pot inmulti pana acopera pe Dumnezeu Insusi.\n\nApoi ia aminte la vorba: casa Tatalui Meu. Domnul Isus nu Se poarta aici ca un reformator oarecare, ci ca Fiul. Tocmai de aceea cererea de semn nu este nevinovata. Ei nu vad sfintenia casei, ci se impiedica de autoritatea Fiului.\n\nRaspunsul Lui merge mai adanc decât au înțeles cei de fata: Stricati templul acesta, și în trei zile îl voi ridica. Ioan insusi ne pazeste de orice ratacire spunand ca El vorbea despre templul trupului Sau. Cu alte cuvinte, adevărata întâlnire dintre Dumnezeu și om nu se va mai odihni în ziduri, ci în Persoana Fiului care va muri și va invia.\n\nUcenicii au înțeles deplin abia dupa înviere. Și aici se cuvine sa luam mângâiere. Sunt cuvinte ale Domnului pe care le auzim acum fără sa le putem purta pe deplin. Dar dupa ce trecem prin cruce și înviere, lumina lor se așază altfel în noi.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "ζῆλος",
@@ -259,6 +279,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "templu. În vorba Domnului de aici, Ioan arată ca se refera la trupul Sau."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Psalmul 69:9",
             "Matei 21:12-13",
@@ -274,6 +295,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "El stia ce este în om",
           "text": "Pe când era în Ierusalim, la Paște, în timpul sărbătorii, mulți au crezut în numele lui, văzând semnele pe care le făcea. Dar Isus nu s-a încredințat lor, pentru că îi cunoștea pe toți, și pentru că nu avea nevoie ca cineva să mărturisească despre om, fiindcă el însuși cunoștea ce era în om.",
           "teaching": "Sa nu trecem cu graba peste aceste trei versete, fiindca ele sunt grele. Multi au crezut în Numele Lui, vazand semnele. Și totusi Isus nu Se incredea în ei. Ioan foloseste aproape același cuvânt pentru credința lor și pentru increderea pe care El nu Și-o pune în ei. Se vede astfel ca nu orice miscare a omului spre Isus este încă predare adanca a inimii.\n\nSe cuvine sa fim cinstiți cu textul și cu noi insine. Exista o credință starnita de uimire, de folosul primit ori de puterea vazuta, care încă nu a ajuns la zdrobirea adevărată inaintea Fiului. Domnul nu dispretuieste omul aflat la început, dar nici nu se lasă inselat de entuziasmul de suprafata.\n\nApoi vine una dintre cele mai patrunzatoare propoziții despre El: stia ce este în om. Nu doar ce spune omul, nici numai ce arată în clipa aceea, ci ce este în om. De aceea Evanghelia nu se sprijină pe impresia pe care o lasam noi inaintea Lui. Ea se sprijină pe faptul ca El ne cunoaste mai adanc decât ne cunoastem noi și totusi cheama la Sine.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "πιστεύω",
@@ -288,6 +311,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "a cunoaste. La Ioan, cunoastere reala, nu simpla informatie."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "1 Samuel 16:7",
             "Ioan 6:26",
@@ -315,6 +339,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Nașterea de sus",
           "text": "Și era un om dintre farisei, numele lui Nicodim, un conducător al iudeilor. Acesta a venit la el noaptea și i-a spus: Rabi, știm că ai venit de la Dumnezeu ca învățător, fiindcă nimeni nu poate face aceste semne pe care le faci tu, dacă nu este Dumnezeu cu el. Isus i-a răspuns: Adevărat, adevărat îți spun: dacă cineva nu se naște de sus, nu poate vedea Împărăția lui Dumnezeu. Nicodim i-a spus: Cum poate un om să se nască, fiind bătrân? Poate să intre a doua oară în pântecele mamei lui și să se nască? Isus a răspuns: Adevărat, adevărat îți spun: dacă cineva nu se naște din apă și din Duh, nu poate intra în Împărăția lui Dumnezeu. Ceea ce este născut din carne este carne. Ceea ce este născut din Duh este spirit. Nu vă mirați că v-am spus: Trebuie să vă nașteți cu toții din nou. Vântul suflă unde vrea și îi auzi sunetul, dar nu știi de unde vine și unde se duce; tot așa este oricine este născut din Duhul.",
           "teaching": "Sa ne oprim aici și sa luam bine seama cine vine la Isus. Nu un om de la margine, ci un fariseu, un fruntas, un învățător al lui Israel. Și tocmai lui ii spune Domnul ca trebuie sa se nasca din nou. Asta inseamna ca problema omului nu se rezolva prin pozitie, prin varsta, prin cunostinta biblica ori prin respectul pe care i-l dau altii.\n\nNicodim începe cu cinste: stim ca esti un Învățător venit de la Dumnezeu. Dar Domnul nu Se oprește la respectul lui. El merge drept la inima nevoii: trebuie sa te nasti din nou. Cu alte cuvinte, nu este de ajuns sa adaugi putina lumina unei vieti vechi. Omul are nevoie de început nou, nu doar de indreptare usoara.\n\nSe cuvine sa fim cinstiți și cu expresia apa și Duh. Crestinii au înțeles locul acesta în feluri diferite. Unii au văzut aici botezul, altii curățirea fagaduita de Dumnezeu și lucrarea Duhului, altii legătura stransa dintre spalare și nașterea launtrica. Lucrul limpede, pe care nu-l pierdem, este acesta: nașterea noua nu se produce prin carne, ci prin lucrarea lui Dumnezeu.\n\nApoi Domnul da pilda vantului. Același cuvânt poate însemna suflare, vant și duh. Nu poti comanda vantului de unde sa vina, dar ii vezi lucrarea. Tot asa, nașterea din Duhul nu este o tehnica omeneasca. Nu omul o produce, nu omul o masoara în intregime, ci Dumnezeu o lucreaza, iar roada ei se vede.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "ἄνωθεν",
@@ -329,6 +355,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "duh, suflare, vant. Același cuvânt le leaga pe toate trei în vorbirea Domnului."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ezechiel 36:25-27",
             "Ioan 1:12-13",
@@ -343,6 +370,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Fiul inaltat și iubirea lui Dumnezeu",
           "text": "Nicodim a răspuns și i-a spus: Cum pot fi acestea? Isus i-a răspuns:„ Ești învățătorul lui Israel, și nu înțelegi aceste lucruri? Adevărat, adevărat îți spun că noi vorbim ce știm și mărturisim ce am văzut, dar voi nu primiți mărturia noastră. Dacă v-am spus lucrurile pământești și nu credeți, cum veți crede dacă vă voi spune lucrurile cerești? Nimeni nu s-a suit în cer decât cel care a coborât din cer, Fiul Omului, care este în ceruri. Și, după cum Moise a înălțat șarpele în pustie, tot așa trebuie să fie înălțat Fiul Omului, ca oricine crede în El să nu piară, ci să aibă viața veșnică. Fiindcă atât de mult a iubit Dumnezeu lumea, încât l-a dat pe Fiul Său unic, pentru ca oricine crede în el să nu piară, ci să aibă viață veșnică. Căci Dumnezeu nu l-a trimis pe Fiul în lume ca să judece lumea, ci ca lumea să fie mântuită prin el. Cel care crede în El nu este judecat. Cel care nu crede a fost deja judecat, pentru că nu a crezut în numele singurului Fiu născut al lui Dumnezeu. Și aceasta este judecata: că lumina a venit în lume, iar oamenii au iubit mai mult întunericul decât lumina, pentru că faptele lor erau rele. Căci oricine face lucruri rele urăște lumina și nu vine la lumină, ca faptele lui să nu fie date pe față. Dar cel care face adevărul vine la lumină, pentru ca faptele lui să fie arătate, fiindcă sunt lucrate în Dumnezeu.",
           "teaching": "Ia aminte cum raspunde Domnul la nepriceperea lui Nicodim. Nu printr-o schema rece, ci ducandu-l spre cruce. Sarpele inaltat în pustie era pentru cei muscati, neputinciosi și gata sa moara. Vindecarea nu venea din forta lor, ci din privirea credinței spre ceea ce Dumnezeu randuise. Tot asa trebuie sa fie inaltat Fiul omului.\n\nApoi vine rândul pe care îl stie aproape toată lumea, dar pe care putini îl lasă sa-i judece cu adevărat inima: atat de mult a iubit Dumnezeu lumea. Se cuvine sa luam bine seama la ordinea lui. Întâi iubirea lui Dumnezeu, apoi darul Fiului, apoi chemarea credinței, apoi viața veșnică. Evanghelia nu începe cu ce aduci tu, ci cu ce a dat El.\n\nDar iubirea aceasta nu trebuie despartita de adevăr. Dumnezeu n-a trimis pe Fiul ca sa judece lumea, ci ca lumea sa fie mantuita prin El. Totusi cine nu crede a și fost judecat. Cu alte cuvinte, Fiul nu vine ca sa aduca o condamnare straina peste oameni nevinovati, ci sa mantuiasca o lume deja pierduta. Refuzul Lui lasă omul în ceea ce era deja.\n\nLa urma, Domnul arată radacina adanca a impotrivirii: oamenii au iubit mai mult întunericul decât lumina. Problema nu este numai ca omul nu înțelege lumina, ci ca nu o vrea, fiindca lumina ii descoperă faptele. De aceea venirea la Hristos este și mângâiere, și descoperire. El nu doar iarta, ci și da pe fata ce ascundem, ca sa vindece cu adevărat.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "ὑψωθῆναι",
@@ -357,6 +386,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "judecata. Punerea lucrurilor la lumina și aratarea lor asa cum sunt."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Numeri 21:8-9",
             "Ioan 8:12",
@@ -371,6 +401,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Trebuie ca El sa creasca",
           "text": "După aceste lucruri, Isus a venit cu ucenicii Săi în țara Iudeii. El a rămas acolo cu ei și a botezat. Și Ioan boteza și el în Ainon, aproape de Salim, pentru că acolo erau ape multe; și oamenii veneau și erau botezați. Căci Ioan încă nu fusese aruncat în închisoare. De aceea s-a ridicat o dispută din partea discipolilor lui Ioan cu unii iudei cu privire la purificare. Și au venit la Ioan și i-au spus: Rabi, cel care era cu tine dincolo de Iordan, acela despre care ai mărturisit, iată, acesta botează și toți vin la el. Ioan a răspuns: Omul nu poate primi nimic dacă nu i-a fost dat din cer. Voi înșivă îmi sunteți martori că am spus: Nu sunt eu Hristosul, ci sunt trimis înaintea lui. Cel ce are mireasa este mirele; dar prietenul mirelui, care stă în picioare și îl aude, se bucură foarte mult din cauza vocii mirelui. De aceea bucuria mea este împlinită. El trebuie să crească, dar eu trebuie să scadă. Cel care vine de sus este mai presus de toate. Cel ce este de pe pământ este al pământului și vorbește despre pământ. Cel ce vine din cer este mai presus de toate. Despre ceea ce a văzut și a auzit mărturisește, dar nimeni nu primește mărturia lui. Cel care a primit mărturia lui a pecetluit că Dumnezeu este adevărat. Căci cel pe care l-a trimis Dumnezeu vorbește cuvintele lui Dumnezeu, căci Dumnezeu dă Duhul fără măsură. Tatăl îl iubește pe Fiul și i-a dat toate în mâna lui. Cine crede în Fiul are viață veșnică; dar cine nu ascultă de Fiul nu va vedea viața, ci mânia lui Dumnezeu rămâne peste el.”",
           "teaching": "Ia aminte la ispita ucenicilor lui Ioan. Ei vad cresterea lucrarii lui Isus ca pe o scadere a invatatorului lor. Asa masoara inima omului lucrurile: în termeni de concurenta, de numar și de pierdere. Dar Ioan raspunde din alta lume.\n\nOmul nu poate primi decât ce-i este dat din cer. Cu alte cuvinte, lucrarea nu este proprietatea noastră. Nici chemarea, nici rodul, nici locul nu ne apartin. Tot ce avem este primit. De aceea Ioan nu se roade de invidie, ci se bucura ca glasul Mirelui se aude.\n\nTrebuie ca El sa creasca, iar eu sa ma micsorez. Se cuvine sa luam bine seama: nu este amaraciune în cuvântul acesta, ci bucurie. Micsorarea omului nu este o pierdere atunci când Hristos este văzut mai limpede. Dimpotriva, aceasta este sanatatea oricarei slujiri creștine.\n\nLa sfarsit, Ioan ridica iarasi ochii spre Fiul. El vine din cer, vorbește cuvintele lui Dumnezeu, are Duhul fără masura și are toate lucrurile în mana Lui. De aceea capitolul nu se incheie cu Ioan, ci cu chemarea fata de Fiul: cine crede în El are viață veșnică. Cine Îl refuza nu rămâne neutru, ci sub mania lui Dumnezeu. Evanghelia nu ne lasă intr-un loc de mijloc.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "νυμφίος",
@@ -385,6 +417,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "rămâne. La finalul capitolului, mania lui Dumnezeu nu vine abia atunci, ci rămâne peste omul care refuza pe Fiul."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ioan 1:26-34",
             "Ioan 1:30",
@@ -413,6 +446,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Dacă ai fi cunoscut tu darul lui Dumnezeu",
           "text": "Așadar, când a aflat Isus că fariseii au auzit că Isus face și botează mai mulți ucenici decât Ioan deși Isus însuși nu boteza, ci ucenicii lui, a părăsit Iudeea și a plecat iarăși în Galileea. Și trebuia să treacă prin Samaria. A venit deci într-o cetate a Samariei, numită Sihar, aproape de ogorul pe care Iacov i l-a dat fiului său Iosif. Era acolo izvorul lui Iacov. Isus deci, obosit de drum, s-a așezat astfel lângă izvor. Era cam pe la ceasul al șaselea. O femeie din Samaria a venit să scoată apă. Isus i-a zis:„ Dă-mi să beau. Căci ucenicii lui plecaseră în cetate ca să cumpere hrană. Femeia samariteancă îi zice deci: Cum se face că tu, fiind iudeu, ceri să bei de la mine, care sunt o femeie samariteancă? Căci iudeii nu au legături cu samaritenii. Isus a răspuns și i-a zis: Dacă ai fi cunoscut darul lui Dumnezeu și cine este cel care îți spune: Dă-mi să beau, tu i-ai fi cerut, iar el ți-ar fi dat apă vie. Femeia îi zice: Domnule, nu ai cu ce să scoți, și fântâna este adâncă; de unde ai deci apa cea vie? Ești tu mai mare decât tatăl nostru Iacov, care ne-a dat fântâna și a băut din ea el însuși, și fiii lui, și turmele lui? Isus a răspuns și i-a zis: Oricine bea din apa aceasta va înseta din nou, dar cine va bea din apa pe care i-o voi da eu nu va mai înseta în veac, ci apa pe care i-o voi da eu se va face în el un izvor de apă țâșnind spre viață veșnică. Femeia îi zice: Domnule, dă-mi această apă, ca să nu mai însetez și nici să nu mai vin pe aici să scot. Isus i-a spus: Du-te, sună-ți soțul și vino aici. Femeia a răspuns și i-a zis: Nu am bărbat. Isus îi zice: Bine ai spus: Nu am bărbat, căci ai avut cinci bărbați, iar cel pe care îl ai acum nu-ți este bărbat. În aceasta ai spus adevărul. Femeia îi zice: Domnule, văd că ești profet. Părinții noștri s-au închinat pe muntele acesta, iar voi spuneți că în Ierusalim este locul unde trebuie să se închine. Isus îi zice: Crede-mă, femeie, vine ceasul când nici pe muntele acesta, nici în Ierusalim nu vă veți închina Tatălui. Voi vă închinați la ceea ce nu cunoașteți; noi ne închinăm la ceea ce cunoaștem, pentru că mântuirea este din iudei. Dar vine ceasul și acum este, când adevărații închinători se vor închina Tatălui în duh și adevăr, căci Tatăl tocmai pe unii ca aceștia îi caută, pe cei ce i se închină. Dumnezeu este spirit, iar cei care i se închină trebuie să se închine în spirit și adevăr. Femeia îi zice: Știu că vine Mesia, cel numit Hristos; când va veni acela, ne va vesti toate. Isus i-a zis: Eu sunt Cel ce-ți vorbește.",
           "teaching": "Sa luam bine seama cum începe totul. Domnul Isus, ostenit de calatorie, sedea langa fantana. Ioan nu ascunde nici slava Lui, nici omenitatea Lui. Cel care da apa vie este și Cel care cere sa bea. Cel care poarta lumea este și Cel care Se așază obosit la marginea drumului.\n\nApoi vine marea rasturnare. Femeia vede un iudeu obosit. Domnul ii deschide înainte darul lui Dumnezeu. Ea gandeste încă în marginea fantanii, a vasului și a setei de fiecare zi. El o ridica spre setea mai adanca, pe care apa obisnuita nu o poate stinge. Aici se cuvine sa fim cinstiți cu noi insine: omul poate merge o viață intreaga la aceeași fantana, repetand aceleasi drumuri, și totusi sa ramana gol pe dinlăuntru.\n\nCuvântul Domnului merge apoi spre rana ascunsa: du-te și cheama pe barbatul tău. Nu este o cruzime, ci atingerea exacta a locului unde femeia avea nevoie de adevăr. Hristos nu da apa vie trecand pe langa păcat ca și cum nu l-ar vedea. El aduce mangaierea împreună cu descoperirea.\n\nDe aici discutia urca spre inchinare. Femeia muta vorba la munte și la Ierusalim; Domnul o muta la Tatăl. Asta este o schimbare uriasa. Inchinarea adevărată nu se va masura prin geografie, ci prin adevarul cu care omul vine inaintea lui Dumnezeu și prin lucrarea Duhului. Nu inseamna ca adevarul devine nehotarat, ci dimpotriva: locul vechi își afla plinirea în Fiul care deschide drumul spre Tatăl.\n\nLa urma, Domnul spune limpede cine este: Eu, cel care vorbesc cu tine, sunt Acela. Nu în fata unui sobor, ci langa o fantana, unei femei cu trecut incurcat. Asa lucreaza harul lui Dumnezeu: descoperiri mari în locuri obisnuite, catre oameni pe care lumea nu i-ar fi chemat în fata.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "δωρεά",
@@ -433,6 +468,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "a se inchina. A se pleca inaintea lui Dumnezeu cu cinstire și adevăr."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Isaia 12:3",
             "Ieremia 2:13",
@@ -448,6 +484,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Ridicati-va ochii și priviti holdele",
           "text": "Și tocmai atunci au venit ucenicii lui și se mirau că vorbea cu o femeie. Totuși, nimeni nu i-a zis: Ce cauți? sau: De ce vorbești cu ea? Femeia și-a lăsat deci ulciorul, a plecat în cetate și le zice oamenilor: Veniți să vedeți un om care mi-a spus toate câte am făcut. Nu cumva acesta este Hristosul? Au ieșit din cetate și veneau la el. Între timp, ucenicii îl rugau, zicând: Rabbi, mănâncă. Dar el le-a zis: Eu am de mâncat o hrană pe care voi nu o cunoașteți. Atunci ucenicii ziceau unii către alții: Oare i-a adus cineva ceva de mâncare? Isus le zice: Hrana mea este să fac voia celui ce m-a trimis și să-i împlinesc lucrarea. Nu spuneți voi că mai sunt încă patru luni și vine secerișul? Iată, vă spun: ridicați-vă ochii și priviți câmpiile, că sunt deja albe pentru seceriș. Cel ce seceră își primește plata și adună rod pentru viață veșnică, pentru ca atât cel ce seamănă, cât și cel ce seceră să se bucure împreună. Căci în aceasta este adevărat cuvântul: Unul seamănă și altul seceră. Eu v-am trimis să secerați ceea ce voi nu ați muncit; alții au muncit, iar voi ați intrat în munca lor. Mulți dintre samaritenii din cetatea aceea au crezut în el din pricina cuvântului femeii, care mărturisea: Mi-a spus toate câte am făcut. Când au venit deci la el samaritenii, îl rugau să rămână la ei; și a rămas acolo două zile. Și mult mai mulți au crezut din pricina cuvântului lui, Ei i-au zis femeii: Noi credem acum, nu din pricina vorbelor tale; căci am auzit pentru noi înșine știm că acesta este într-adevăr Hristosul, Mântuitorul lumii.",
           "teaching": "Sa luam bine seama la galeata lasata jos. Este un amanunt mic și totusi graitor. Femeia venise pentru apa obisnuita, iar dupa ce se intalneste cu Hristos pleaca grabita spre cetate. Lucrul pentru care venise trece pe planul al doilea. Când omul este atins cu adevărat de Domnul, se schimba și ordinea grabirilor lui.\n\nApoi ia aminte la felul în care marturiseste. Nu tine o cuvantare lunga și nici nu incearca sa para mai buna decât era. Spune simplu: mi-a spus tot ce am făcut. Tocmai locul în care s-ar fi putut rusina devine usa prin care altii sunt chemati la Hristos. Harul nu transforma trecutul intr-o lauda, dar nici nu mai lasă rusinea sa inchida gura martorului.\n\nDomnul, intre timp, vorbește ucenicilor despre alta mancare: sa faca voia Tatalui. Se cuvine sa luam bine seama la asta. Omul își masoara puterea dupa painea care intra în trup; Fiul își arată bucuria în ascultarea de Tatăl. Nu inseamna ca nevoile trupesti sunt dispretuite, ci ca voia lui Dumnezeu este hrana mai adanca a slujirii.\n\nȘi apoi vine chemarea: ridicati-va ochii și priviti holdele. Ucenicii vedeau încă drumul, foamea și neobisnuita vorbire cu o femeie. Domnul vedea deja secerisul. Asa lucreaza El: ne cheama sa vedem oamenii nu numai prin ceea ce par acum, ci prin ceea ce harul poate face din ei.\n\nLa urma, samaritenii spun un cuvânt mare: Mantuitorul lumii. Ei pornesc de la mărturia femeii, dar se opresc la cuvintele Lui. Și aici este randuiala buna a oricarei marturii creștine: omul poate fi adus prin mărturia altuia, dar trebuie asezat inaintea lui Hristos Insusi.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "μαρτυρία",
@@ -462,6 +500,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "Mantuitorul lumii. Mărturisire larga despre intinderea mantuirii aduse de Fiul."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Matei 9:37-38",
             "Ioan 3:17",
@@ -476,6 +515,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Fiul tău traieste",
           "text": "După cele două zile, a ieșit de acolo s-a dus în Galileea. Căci Isus însuși a mărturisit că un profet nu are onoare în propria sa țară. Când a venit deci în Galileea, galileenii l-au primit, fiindcă văzuseră toate câte făcuse în Ierusalim la sărbătoare, căci și ei veniseră la sărbătoare. Isus a venit din nou în Cana Galileii, unde a prefăcut apa în vin. Era un nobil al cărui fiu era bolnav la Capernaum. Când a auzit că Isus ieșise din Iudeea în Galileea, s-a dus la el și l-a implorat să coboare și să vindece pe fiul său, căci era la moarte. Atunci Isus i-a zis: Dacă nu vedeți semne și minuni, nicidecum nu veți crede. Nobilul i-a spus, domnule, coboară înainte ca copilul meu să moară. Isus îi zice: Du-te, fiul tău trăiește. Omul a crezut cuvântul pe care i l-a spus Isus și a plecat. În timp ce mergea în jos, servitorii săi l-au întâlnit și a raportat, spunând copilul tău trăiește! Așadar, i-a întrebat la ce ceas a început să-i fie mai bine. Ei i-au zis: Ieri, pe la ceasul al șaptelea, l-a lăsat febra. Atunci tatăl a știut că acela era ceasul în care îi spusese Isus: Fiul tău trăiește. Și a crezut el și toată casa lui. Acesta a fost iarăși al doilea semn pe care l-a făcut Isus după ce a venit din Iudeea în Galileea.”",
           "teaching": "Sa luam bine seama la miscarea credinței omului acestuia. La început vine cu dorinta ca Isus sa coboare la casa lui. Ca multi dintre noi, el leaga ajutorul Domnului de un anumit fel în care ar trebui sa lucreze. Dar Hristos nu Se lasă inchis în asteptarile noastre. El da un cuvânt: fiul tău traieste.\n\nApoi textul spune ceva simplu și mare: omul acela a crezut cuvintele pe care i le spusese Isus și a pornit la drum. Nu avea încă dovada vazuta în casa lui, nu vedea copilul ridicat, nu avea niciun semn suplimentar pe drum. Avea doar cuvântul Domnului. Și a mers pe el. Aici se coace credința: când omul se sprijină pe cuvântul lui Hristos înainte sa vada implinirea.\n\nLa urma, când robii îl intampina, ceasul se potriveste intocmai. Domnul nu daduse o mangaiere vaga, ci o vorba cu putere deplina. Și casa intreaga este adusa la credință. Semnul nu rămâne inchis în usurarea unui tata, ci se largeste spre mărturia unei case.\n\nSe cuvine sa observam și legătura cu tot capitolul. Samaritenii au ajuns sa creada din pricina cuvintelor Lui, nu numai din pricina spuselor femeii. Aici slujbasul crede cuvintele Lui înainte sa vada. Ioan leaga semnele de cuvânt tocmai ca sa ne arate ca tinta nu este uimirea trecătoare, ci increderea în Persoana Fiului.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "πιστεύω",
@@ -490,6 +531,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "traieste. Cuvânt scurt și puternic prin care Domnul aduce viață și mangaiere."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Psalmul 107:20",
             "Matei 8:8-13",
@@ -517,6 +559,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Vrei sa te faci sanatos?",
           "text": "După acestea, era o sărbătoare a iudeilor și Isus S-a suit la Ierusalim. Și în Ierusalim, la Poarta Oilor, este o scăldătoare numită în ebraică Betesda, având cinci pridvoare. În ei zăceau o mare mulțime de oameni bolnavi, orbi, șchiopi sau paralizați, care așteptau mișcarea apei. Și era acolo un om care de treizeci și opt de ani își avea boala. Când l-a văzut Isus zăcând și a știut că este așa de multă vreme, îi spune: Vrei să te faci sănătos? I-a răspuns bolnavul: Doamne, nu am pe nimeni care, atunci când se tulbură apa, să mă arunce în scăldătoare; iar până ajung eu, altul coboară înaintea mea. Isus îi spune: Ridică-te, ia-ți rogojina și umblă. Și îndată omul s-a făcut sănătos, și-a luat rogojina și umbla. Și era sabat în ziua aceea. Atunci iudeii îi spuneau celui vindecat: Este sabat și nu-ți este îngăduit să-ți ridici rogojina. Dar el le-a răspuns: Cel care m-a făcut sănătos, acela mi-a spus: Ia-ți rogojina și umblă. L-au întrebat deci: Cine este omul care ți-a spus: Ia și umblă? Dar cel vindecat nu știa cine este, căci Isus Se strecurase de acolo, fiind mulțime în locul acela. După acestea, Isus îl găsește în templu și i-a spus: Iată, te-ai făcut sănătos. Să nu mai păcătuiești, ca să nu ți se întâmple ceva mai rău. Omul a plecat și le-a vestit iudeilor că Isus este Cel care l-a făcut sănătos. De aceea iudeii L-au prigonit pe Isus au căutat să-L omoare, pentru că El făcea aceste lucruri în ziua Sabatului. Dar Isus le-a răspuns: Tatăl Meu încă lucrează, că și Eu lucrez. Din cauza aceasta deci iudeii căutau și mai mult să-L omoare, pentru că nu doar încălca sabatul, ci și spunea că Dumnezeu este Tatăl Lui propriu, făcându-Se egal cu Dumnezeu.",
           "teaching": "Sa ne oprim la întrebarea Domnului: Vrei sa te faci sanatos? La prima vedere pare ciudata, fiindca omul zacea acolo de ani lungi. Dar Hristos nu pune intrebari goale. El aduce pe om în fata propriei nevoi, nu doar în fata durerii purtate de atata vreme.\n\nApoi ia aminte la raspunsul bolnavului. El nu spune da ori nu, ci povesteste neputinta lui: n-am pe nimeni. Aici se vede adancimea saraciei omului. Nu numai boala, ci și singuratatea apasa peste el. Toată nadajduirea lui statea intr-un moment, intr-o tulburare a apei și intr-o viteza pe care nu o mai avea.\n\nDar Domnul nu intra în concursul acesta al neputintei omenesti. El nu-i spune sa astepte mai bine clipa potrivita, ci ii da un cuvânt cu putere: scoala-te. Asa lucreaza Hristos. El nu doar imbunatateste sansele omului, ci aduce o porunca vie care ridica acolo unde omul nu se putea ridica singur.\n\nȘi totusi, imediat dupa vindecare, apare impotrivirea. Iudeii nu se bucura de omul ridicat, ci se opresc la patul purtat în Sabat. Se cuvine sa luam bine seama la primejdia aceasta: randuiala, rupta de inima lui Dumnezeu, poate ajunge sa vada incalcarea unei forme mai repede decât ridicarea unui om cazut.\n\nApoi Domnul spune un cuvânt de cercetare: de acum sa nu mai pacatuiesti, ca sa nu ti se intample ceva mai rau. Nu inseamna ca orice boala vine direct dintr-un păcat anume, caci Evanghelia insasi ne va pazi de aceasta simplificare. Dar spune limpede ca vindecarea trupeasca nu este cel mai mare bine dacă omul rămâne neschimbat inaintea lui Dumnezeu.\n\nLa urma, totul ajunge la miezul marelui conflict: Tatăl Meu lucreaza pana acum; și Eu, de asemenea, lucrez. Iudeii au înțeles ce spunea. El nu Se compara doar cu un proroc, ci Se așază în unitate de lucrare cu Tatăl. De aceea capitolul trece de la o vindecare la descoperirea Persoanei Fiului.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "Βηθεσδά",
@@ -531,6 +575,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "Sabat. Ziua odihnei, aici devenita loc de conflict cu privire la adevărata ei implinire."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Exod 20:8-11",
             "Ioan 7:21-24",
@@ -545,6 +590,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Fiul dă viață cui vrea",
           "text": "A răspuns deci Isus și le spunea: Adevărat, adevărat vă spun: Fiul nu poate să facă nimic de la Sine, dacă nu vede pe Tatăl făcând; căci orice face Acela, acestea le face și Fiul în același fel. Căci Tatăl Îl iubește pe Fiul și-I arată toate câte face El Însuși; și-I va arăta lucrări mai mari decât acestea, ca voi să vă minunați. Căci așa cum Tatăl învie morții și le dă viață, tot așa și Fiul dă viață cui dorește. Căci Tatăl nu judecă pe nimeni, ci a dat toată judecata Fiului, pentru ca toți să-L cinstească pe Fiul așa cum Îl cinstesc pe Tatăl. Cine nu-L cinstește pe Fiul nu-L cinstește pe Tatăl care L-a trimis. Adevărat, adevărat vă spun că cine ascultă cuvântul Meu și crede în Cel care M-a trimis are viață veșnică și nu vine la judecată, ci a trecut din moarte în viață. Adevărat, adevărat vă spun că vine ceasul și acum este, când cei morți vor auzi glasul Fiului lui Dumnezeu, iar cei care îl vor auzi vor trăi. Căci așa cum Tatăl are viață în el însuși, tot așa a dat și Fiului să aibă viață în el însuși. Și I-a dat autoritate să facă judecată, pentru că este Fiul Omului. Nu vă mirați de aceasta, pentru că vine ceasul în care toți cei din morminte vor auzi glasul Lui și vor ieși: cei care au făcut cele bune spre învierea vieții, iar cei care au făcut cele rele spre învierea judecății. Eu nu pot să fac nimic de la Mine Însumi. Judec după cum aud și judecata Mea este dreaptă, pentru că nu caut voia Mea, ci voia Celui care M-a trimis.",
           "teaching": "Se cuvine sa luam aceste versete cu mare evlavie, fiindca aici Domnul Isus vorbește despre unitatea Lui cu Tatăl intr-un fel pe care nimeni dintre oameni nu-l poate rosti despre sine. Când spune ca nu poate face nimic de la Sine, nu arată lipsa de putere, ci desavarsita unitate cu Tatăl. Fiul nu este desprins, nu lucreaza în voia unui sine rupt de Tatăl, ci în aceeași voie sfânta și aceeași lucrare dumnezeiasca.\n\nApoi Ioan așază inaintea noastră două lucruri pe care numai Dumnezeu le poate face: să dea viață și sa judece. Și tocmai acestea sunt puse în mana Fiului. Fiul dă viață cui vrea. Toată judecata a fost data Fiului. Nu avem voie sa slabim cuvântul acesta. Dacă Fiul dă viață dupa voia Lui și primește toată judecata, atunci slava Lui nu este a unei simple slujiri omenesti, ci a Persoanei dumnezeiesti trimise de Tatăl.\n\nIa aminte apoi la tinta: pentru ca toti sa cinsteasca pe Fiul cum cinstesc pe Tatăl. Nu mai putin, nu intr-un fel secundar, nu ca pe un trimis printre altii, ci cum cinstesc pe Tatăl. De aceea orice cinstire a lui Dumnezeu care îl ocoleste pe Hristos rămâne lipsita de miezul ei. Cine nu cinsteste pe Fiul nu cinsteste pe Tatăl.\n\nȘi apoi vine una dintre cele mai dulci fagaduinte ale Evangheliei: cine asculta cuvintele Mele și crede în Cel ce M-a trimis are viață veșnică și a trecut din moarte la viață. Se cuvine sa luam bine seama la timpul verbului. Nu va trece doar candva, ci a trecut. Credinciosul nu asteapta viața ca pe un salariu de la capătul drumului; a intrat deja în ea prin Fiul.\n\nDar același glas care dă viață acum va chema intr-o zi toate mormintele. Hristos nu este numai Mangaietorul sufletului, ci și Domnul invierii și al judecatii finale. Tocmai de aceea Evanghelia nu ne lasă sa-L luam usor.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "ζωὴ ἐν ἑαυτῷ",
@@ -565,6 +612,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "sa cinsteasca. Respect, onoare și inchinare cuvenite Fiului."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Daniel 7:13-14",
             "Ioan 1:4",
@@ -580,6 +628,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Scripturile marturisesc despre Mine",
           "text": "Dacă Eu mărturisesc despre Mine Însumi, mărturia Mea nu este adevărată. Este Altul care mărturisește despre Mine și știu că mărturia pe care o mărturisește El despre Mine este adevărată. Voi ați trimis la Ioan și el a mărturisit pentru adevăr. Dar Eu nu primesc mărturia de la om; ci spun acestea ca să fiți mântuiți. Acela era candela care arde și luminează, iar voi ați vrut să vă bucurați pentru o vreme în lumina lui. Dar Eu am mărturia mai mare decât a lui Ioan; căci lucrările pe care Mi le-a dat Tatăl ca să le împlinesc, chiar lucrările acestea pe care le fac mărturisesc despre Mine că Tatăl M-a trimis. Tatăl însuși, care m-a trimis, a mărturisit despre mine. Nu i-ați auzit niciodată vocea, nici nu i-ați văzut forma. Și nu aveți cuvântul Lui rămânând în voi, pentru că nu credeți în Acela pe care L-a trimis El. Voi cercetați Scripturile, pentru că socotiți că în ele aveți viață veșnică; și ele sunt cele care mărturisesc despre Mine. Și nu vreți să veniți la Mine ca să aveți viață. Eu nu primesc slavă de la oameni, dar v-am cunoscut: nu aveți în voi dragostea lui Dumnezeu. Eu am venit în Numele Tatălui Meu și nu Mă primiți; dacă va veni altul în numele lui însuși, pe acela îl veți primi. Cum puteți crede voi, când primiți slavă unii de la alții și nu căutați slava care vine de la singurul Dumnezeu? Să nu credeți că Eu vă voi acuza înaintea Tatălui; este cine vă acuză: Moise, în care v-ați pus nădejdea. Căci, dacă l-ați crede pe Moise, M-ați crede și pe Mine, fiindcă el a scris despre Mine. Dar, dacă nu credeți scrierile lui, cum veți crede cuvintele Mele?",
           "teaching": "Ia aminte cate marturii așază Domnul inaintea lor: Ioan Botezătorul, lucrarile, Tatăl, Scripturile și Moise. Necredinta lor nu vine din lipsa de lumina, ci din refuzul ei.\n\nSe cuvine sa luam bine seama la cuvântul despre Scripturi. Domnul nu le dispretuieste cercetarea, dar arată primejdia ei: poti cerceta Scripturile și totusi sa nu vii la Hristos. Poti iubi textul ca obiect de stăpânit, fără sa ajungi la Persoana spre care arată textul. Tocmai aceasta este tragedia religiei fără zdrobire: are Biblia în mana, dar nu vrea sa vina la Fiul pentru viață.\n\nApoi Domnul descoperă o radacina adanca a necredintei: umblati dupa slava pe care v-o dati unii altora. Aici este o boala veche și foarte vie. Omul nu rămâne departe de Hristos numai fiindca nu are argumente suficiente, ci și fiindca inima lui este legata de aprobarea celorlalti. Cine traieste din slava oamenilor va primi greu pe Fiul care zdrobeste mandria.\n\nLa urma, chiar Moise ajunge martor impotriva lor. Ei se sprijineau pe el, dar nu vedeau ca el a scris despre Hristos. Cu alte cuvinte, Vechiul Legamant nu este o lume inchisa în sine, ci drum spre Fiul. Nu poti onora cu adevărat Scriptura și în același timp sa-L respingi pe Cel despre care ea marturiseste.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "μαρτυρία",
@@ -594,6 +644,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "slava. Aici și în sensul de onoare omeneasca pe care oamenii și-o dau unii altora."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Deuteronom 18:15",
             "Luca 24:27",
@@ -622,6 +673,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Painea inmultita și Domnul care vine pe ape",
           "text": "După aceste lucruri, Isus s-a dus de cealaltă parte a mării Galileii, care este numită Marea Tiberiadei. Și o mare mulțime Îl urma, pentru că vedeau semnele pe care le făcea asupra celor bolnavi. Iar Isus S-a urcat pe munte și ședea acolo cu ucenicii Lui. Și era aproape Paștele, sărbătoarea iudeilor. Așadar, Isus, ridicându-Și ochii și văzând că o mare mulțime vine la El, îi spune lui Filip: De unde să cumpărăm pâini, ca să mănânce aceștia? El a spus acest lucru pentru a-l testa, pentru că el însuși știa ce ar face. Filip I-a răspuns: Pâini de două sute de dinari nu le ajung, ca fiecare să ia câte puțin. Unul dintre discipolii săi, Andrei, fratele lui Simon Petru, i-a spus: Este aici un băiețaș care are cinci pâini de orz și doi peștișori; dar ce sunt acestea pentru atâția? Isus a zis: Faceți-i pe oameni să se așeze. Și era multă iarbă în locul acela. Așadar, bărbații s-au așezat, în număr cam de cinci mii. Așadar, Isus a luat pâinile și, după ce a mulțumit, le-a împărțit celor așezați; la fel și din peștișori, cât au vrut. Iar după ce s-au săturat, le spune ucenicilor Lui: Adunați bucățile rămase, ca să nu se piardă nimic. Așadar, le-au adunat și au umplut douăsprezece coșuri cu bucăți din cele cinci pâini de orz, care au rămas de la cei ce mâncaseră. Când oamenii au văzut semnul pe care l-a făcut Isus, au zis: Acesta este într-adevăr profetul care vine în lume. Prin urmare, Isus, dându-seama că erau pe cale să vină să-l ia cu ca să-l facă rege, s-a retras din nou pe munte de unul singur. Iar când s-a făcut seară, ucenicii Lui au coborât la mare. Și, urcându-se într-o barcă, mergeau dincolo de mare, spre Capernaum. Și deja se făcuse întuneric, iar Isus încă nu venise la ei. Iar marea se ridica, fiindcă sufla un vânt puternic. Așadar, după ce au vâslit cam douăzeci și cinci sau treizeci de stadii, Îl văd pe Isus umblând pe mare și apropiindu-Se de barcă, și s-au temut. Dar El le spune: Eu sunt; nu vă temeți. Așadar, voiau să-L ia în barcă, și îndată barca a ajuns la țărmul spre care mergeau.",
           "teaching": "Sa luam bine seama la întrebarea pusa lui Filip. Domnul stia ce are de gand sa faca, dar își începe lucrarea atingand neputinta ucenicilor. Asa lucreaza de multe ori: nu pentru ca El ar avea nevoie de calculele noastre, ci pentru ca noi sa vedem mai limpede cat de repede ne oprim la lipsa.\n\nApoi vine darul unui baietel, atat de mic în fata multimii. Cinci paini de orz și doi pesti par nimic la atatia. Dar în mana lui Hristos putinul adus cu ascultare nu mai rămâne putin. Se cuvine sa luam aminte: minunea nu începe din belșug omenesc, ci din slabiciune asezata inaintea Domnului.\n\nTotusi semnul nu trebuie citit doar ca indestulare. Ioan va arată imediat ca oamenii au văzut în minune o cale spre un imparat al painii. Domnul Se retrage tocmai fiindca nu poate fi coborat la asteptarile unei gloate care vrea sa-L foloseasca. El nu a venit sa hraneasca ambitia omului, ci sa Se dea pe Sine.\n\nÎn a două scena, ucenicii ajung în noapte, în vant și pe o mare intaratata. Tocmai dupa ce au văzut minunea painii, ei ajung iarasi în spaima. Asa este inima omului: primește o dovada a puterii lui Dumnezeu și, la urmatoarea furtuna, tremura din nou. Dar Domnul vine pe ape și spune: Eu sunt, nu va temeti. Nu doar ajutorul Lui, ci prezenta Lui aduce liniste.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "σημεῖον",
@@ -636,6 +689,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "Eu sunt. Formula grea de prezenta și autoritate rostita de Domnul."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Exod 16:4-15",
             "Psalmul 77:19",
@@ -650,6 +704,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Eu sunt Painea vieții",
           "text": "A doua zi, mulțimea, care stătea de cealaltă parte a mării, a văzut că nu era nici o altă corabie acolo, cu excepția celei în care se îmbarcaseră ucenicii Lui, și că Isus nu intrase cu ucenicii Săi în corabie, ci ucenicii Lui plecaseră singuri. Dar au venit bărcuțe din Tiberiada aproape de locul unde mâncaseră pâinea, după ce Domnul mulțumise. Așadar, când mulțimea a văzut că nici Isus nu este acolo, nici ucenicii Lui, s-au urcat și ei în bărcuțe și au venit la Capernaum, căutându-L pe Isus. Când l-au găsit de cealaltă parte a mării, l-au întrebat, Rabbi, când ai venit aici? Isus le-a răspuns și a zis: Adevărat, adevărat vă spun: Mă căutați nu pentru că ați văzut semne, ci pentru că ați mâncat din pâini și v-ați săturat. Lucrați nu pentru mâncarea care piere, ci pentru mâncarea care rămâne pentru viață veșnică, pe care v-o va da Fiul Omului; fiindcă pe El L-a pecetluit Dumnezeu Tatăl. Așadar, I-au zis: Ce să facem, ca să lucrăm lucrările lui Dumnezeu? Isus a răspuns și le-a zis: Aceasta este lucrarea lui Dumnezeu: să credeți în Acela pe care L-a trimis El. Atunci I-au zis: Ce semn faci Tu, deci, ca să vedem și să credem în Tine? Ce lucrezi Tu? Părinții noștri au mâncat mana în pustie, după cum este scris: Le-a dat să mănânce pâine din cer. Așadar, Isus le-a zis: Adevărat, adevărat vă spun: nu Moise v-a dat pâinea din cer, ci Tatăl Meu vă dă pâinea adevărată din cer. Căci pâinea lui Dumnezeu este cea care coboară din cer și dă viață lumii. Așadar, I-au zis: Doamne, dă-ne întotdeauna pâinea aceasta. Isus le-a zis: Eu sunt pâinea vieții; cel ce vine la Mine nu va flămânzi nicidecum, iar cel ce crede în Mine nu va înseta nicicând. Dar v-am spus că M-ați și văzut și tot nu credeți. Toți cei pe care mi-i dă Tatăl vor veni la mine. Cel ce vine la mine nu voi arunca în nici un fel afară. fiindcă M-am coborât din cer nu ca să fac voia Mea, ci voia Celui ce M-a trimis. Iar aceasta este voia Celui ce M-a trimis: să nu pierd nimic din tot ce Mi-a dat, ci să-l învii în ziua de pe urmă. Căci aceasta este voia Tatălui Meu: ca oricine Îl vede pe Fiul și crede în El să aibă viață veșnică, iar Eu îl voi învia în ziua de pe urmă. Așadar, iudeii cârteau cu privire la El, pentru că spusese: Eu sunt pâinea coborâtă din cer. Și spuneau: Nu este acesta Isus, fiul lui Iosif, al cărui tată și mamă îi știm? Cum spune El acum: M-am coborât din cer? Isus a răspuns și le-a zis: Nu cârtiți între voi. Nimeni nu poate veni la Mine, dacă nu-l atrage Tatăl, Cel ce M-a trimis, iar Eu îl voi învia în ziua de pe urmă. Este scris în profeți: Și toți vor fi învățați de Dumnezeu. Oricine a auzit de la Tatăl și a învățat vine la Mine. Nu că L-a văzut cineva pe Tatăl, decât Cel ce este de la Dumnezeu; Acesta L-a văzut pe Tatăl. Adevărat, adevărat vă spun: cel ce crede are viață veșnică. Eu sunt pâinea vieții. Părinții voștri au mâncat mana în pustie și au murit. Aceasta este pâinea care coboară din cer, ca să mănânce cineva din ea și să nu moară. Eu sunt pâinea cea vie, care s-a coborât din cer. Dacă mănâncă cineva din pâinea aceasta, va trăi în veac; și pâinea pe care o voi da Eu pentru viața lumii este carnea Mea. Așadar, iudeii se certau între ei, spunând: Cum poate Acesta să ne dea carnea Lui s-o mâncăm? Așadar, Isus le-a zis: Adevărat, adevărat vă spun: dacă nu mâncați carnea Fiului Omului și nu beți sângele Lui, nu aveți viață în voi înșivă. Cel ce Îmi mănâncă carnea și Îmi bea sângele are viață veșnică, iar Eu îl voi învia în ziua de pe urmă. Căci carnea mea este într-adevăr hrană, și sângele meu este într-adevăr băutură. Cel care mănâncă carnea mea și bea sângele meu trăiește în mine, și eu în el. După cum M-a trimis pe Mine Tatăl cel viu și Eu trăiesc datorită Tatălui, tot așa și cel ce Mă mănâncă va trăi și el datorită Mie. Aceasta este pâinea care s-a coborât din cer; nu ca aceea pe care au mâncat-o părinții și au murit. Cel ce mănâncă pâinea aceasta va trăi în veac. Acestea le-a spus în sinagogă, învățând în Capernaum.",
           "teaching": "Sa luam bine seama la mustrarea Domnului: Ma cautati nu pentru ca ati văzut semne, ci pentru ca ati mancat și v-ati saturat. Este cu putinta sa-L cauti pe Hristos și totusi sa ramai prins în jurul folosului primit. Omul vrea adesea painea de la El, fără sa-L primeasca pe El Insusi.\n\nCând norodul intreaba ce sa faca, Domnul nu le da o lista de merite, ci un singur răspuns: sa credeti în Acela pe care L-a trimis El. Aici se cuvine sa stam cu multa luare-aminte. Lucrarea lui Dumnezeu începe nu cu acumularea noastră, ci cu credință în Fiul.\n\nApoi vine marele Eu sunt: Painea vieții. Mana a fost dar real, dar trecator. Cei ce au mancat din ea au murit. Hristos nu este un ajutor pentru cateva zile, ci hrana adevărată pentru viața veșnică. De aceea cine vine la El și crede în El gaseste ceea ce nicio alta hrana nu poate da.\n\nVersetele despre mancatul trupului și bautul sangelui cer multa masura. Nu se cuvine sa le golim de greutate, dar nici sa le fortam intr-o explicatie ingusta. Lucrul limpede este acesta: viața nu vine dintr-o apropiere exterioara de Isus, ci dintr-o impartasire reala de El prin credință. Omul trebuie sa-L primeasca pe Hristos în adanc, nu doar sa-L admire de departe. Iar daruirea trupului Lui priveste limpede spre jertfa crucii.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "ἄρτος τῆς ζωῆς",
@@ -670,6 +726,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "a rămâne. Legătura vie și statornica dintre credincios și Hristos."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Exod 16:15",
             "Isaia 55:1-3",
@@ -685,6 +742,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Tu ai cuvintele vieții vesnice",
           "text": "De aceea, dintre discipolii săi, când au auzit aceasta, au spus: Aceasta este o vorbă grea! Cine o poate asculta? Dar Isus, știind în Sine că ucenicii Lui cârtesc cu privire la aceasta, le-a zis: Aceasta vă face să vă poticniți? Dar dacă L-ați vedea pe Fiul Omului urcându-Se unde era mai înainte? Spiritul este cel care dă viață. Carnea nu valorează nimic. Cuvintele pe care vi le spun sunt spirite, și sunt viață. Dar sunt unii dintre voi care nu cred. Căci Isus știa de la început cine sunt cei ce nu cred și cine este cel ce avea să-L trădeze. Și spunea: De aceea v-am zis că nimeni nu poate veni la Mine, dacă nu-i este dat de la Tatăl. La aceasta, mulți dintre discipolii săi s-au întors și nu mai umblau cu el. Așadar, Isus le-a zis celor doisprezece: Nu vreți să plecați și voi? Simon Petru I-a răspuns: Doamne, la cine să ne ducem? Tu ai cuvintele vieții veșnice, Am ajuns să credem și să știm că tu ești Hristosul, Fiul Dumnezeului celui viu. Isus le-a răspuns: Nu Eu v-am ales pe voi, cei doisprezece? Și unul dintre voi este un diavol. Și a vorbit despre Iuda, fiul lui Simon Iscarioteanul, căci el era cel ce avea să-l trădeze, fiind unul din cei doisprezece.",
           "teaching": "Sa luam bine seama la cernerea de la sfarsitul capitolului. Multi au mers dupa Isus cat timp au văzut semne, au primit pâine și au auzit lucruri care li s-au părut frumoase. Dar când cuvântul Lui a intrat în adanc, multi s-au intors înapoi. Hristos nu-și tine ucenicii diluand adevarul.\n\nCând spune: Duhul este acela care dă viață, carnea nu foloseste la nimic, Domnul nu dispretuieste trupul omenesc, ci taie intelegerea pur fireasca. Omul nu poate patrunde lucrarea lui Hristos numai cu mintea și masura firii. Este nevoie de luminarea Duhului.\n\nApoi vine întrebarea grea pusa celor doisprezece: Voi nu vreti sa va duceti? Domnul nu-i tine prin constrangere. Iar raspunsul lui Petru, cu toate slabiciunile pe care le va avea mai tarziu, rămâne unul dintre cele mai curate raspunsuri ale credinței: la cine sa ne ducem? Credința adevărată nu spune doar Tu ne ajuti, ci Tu esti singurul la care putem rămâne.\n\nȘi totusi, în cercul celor doisprezece sta deja Iuda. Se cuvine sa luam aminte: apropierea exterioara de lucrurile sfinte nu mantuieste de la sine. Poti fi aproape de cuvânt, de semne și de ceilalti ucenici, și totusi sa porti în tine o inima nemantuita.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "ῥήματα ζωῆς αἰωνίου",
@@ -699,6 +758,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "a poticni, a scandaliza. Cuvântul adevarului loveste în asteptarile firii."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ioan 15:3",
             "Ioan 17:8",
@@ -726,6 +786,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Vremea Mea n-a sosit încă",
           "text": "După aceste lucruri, Isus umbla în Galileea, căci nu voia să umble în Iudeea, pentru că iudeii căutau să-l omoare. Praznicul Iudeilor, Sărbătoarea Corturilor, era aproape. Frații săi i-au zis: Pleacă de aici du-te în Iudeea, pentru ca ucenicii tăi să vadă lucrările tale pe care le faci. Căci nimeni nu face nimic în secret, în timp ce el caută să fie cunoscut în mod deschis. Dacă faci aceste lucruri, arată-te lumii. Căci nici frații lui nu credeau în el. Isus le-a zis: Nu mi-a venit încă vremea, dar timpul vostru este totdeauna gata. Lumea nu te poate urî, dar pe mine mă urăște, pentru că mărturisesc despre ea, că faptele ei sunt rele. Te duci până la sărbătoare. Eu nu sunt încă de gând până la acest festin, pentru că timpul meu nu este încă împlinit. După ce le-a spus aceste lucruri, a rămas în Galileea. Dar după ce frații lui s-au suit la sărbătoare, s-a suit nu în public, ci în ascuns. Iudeii L-au căutat la ospă L-au întrebat: Unde este? Unii ziceau: Este un om bun! Alții ziceau: Nu este așa, dar ducea în rătăcire. Dar nimeni nu a vorbit deschis despre el de frica iudeilor. Dar când era acum mijlocul sărbătorii, Isus s-a suit în templu și a învățat. Atunci iudeii s-au mirat au zis: Cum cunoaște omul acesta scrisorile, după ce n-a fost educat niciodată? Isus le-a răspuns: Învățătura Mea nu este a Mea, ci a Celui ce M-a trimis pe Mine. Dacă cineva dorește să facă voia Lui, el va ști despre învățătură, fie că este de la Dumnezeu sau dacă vorbesc de la mine. Cel care vorbește de la sine caută propria sa glorie, dar cel care caută slava celui care l-a trimis este adevărat, și nici o nedreptate nu este în el. Nu v-a dat Moise Legea? Și totuși niciunul dintre voi nu împlinește Legea. De ce căutați să Mă ucideți? mea a răspuns: Ai demon! Cine vrea să te omoare? Isus le-a răspuns: Eu am făcut o singură lucrare voi toți vă minun din cauza aceasta. Moise ți-a dat circumcizie (nu că este de la Moise, ci de la tați), și în ziua de Sabat vă circumcizia un băiat. Dacă un om primește circumcizia în sabat, ca nu cumva legea lui Moise să se calce, sunteți mâniați pe mine pentru că am făcut un om în întregime sănătos în sabat? Nu judeca după aparențe, dar judecă judecata dreaptă.",
           "teaching": "Sa luam bine seama la necredinta fratilor Lui. Ei vad lucrarile, dar nu cred. Mai mult, îl imping spre o aratare potrivita mintii lumii: dacă faci aceste lucruri, arată-Te lumii. Lumea iubeste ceea ce se impune repede, vizibil și zgomotos. Hristos merge însă dupa vremea Tatalui, nu dupa agenda presiunii omenesti.\n\nApoi vine cuvântul greu: Pe Mine lumea Ma uraste, pentru ca marturisesc despre ea ca lucrarile ei sunt rele. Se cuvine sa luam aminte ca impotrivirea fata de Hristos nu se naște numai din neintelegere, ci din faptul ca El descoperă omul asa cum este. Lumina Lui nu mângâie mintind, ci spune adevarul.\n\nCând Domnul ajunge în Templu și invata, iudeii se mira de învățătură Lui. Dar El nu își atribuie slava sie insusi. Învățătură Mea nu este a Mea, ci a Celui ce M-a trimis. Aici vedem curatia Fiului: El nu cauta sa stranga slava în jurul unui eu omenesc, ci arată spre Tatăl. De aceea, cel ce vrea sa faca voia lui Dumnezeu ajunge sa cunoasca dacă învățătură este de sus. Nu totul se judeca prin ascutimea mintii, ci și prin așezarea inimii.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "καιρός",
@@ -740,6 +802,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "slava. Onoarea pe care omul o cauta pentru sine sau o da lui Dumnezeu."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ioan 2:4",
             "Ioan 5:19",
@@ -754,6 +817,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Dacă inseteaza cineva",
           "text": "De aceea unii din Ierusalim ziceau: Oare nu pe acesta caută ei să-l omoare? Iată, el vorbește deschis, și ei nu-i spun nimic. Poate că conducătorii știu într-adevăr că acesta este cu adevărat Hristosul? Totuși, știm de unde vine acest om, dar când va veni Hristosul, nimeni nu va ști de unde vine. Isus a strigat în Templu, învățând zicând: Mă cunoașteți amândoi știți de unde sunt. Eu n-am venit de la Mine însumi, ci Cel ce M-a trimis este adevărat, pe Care voi nu-L cunoașteți. Eu îl cunosc, pentru că sunt de la el el m-a trimis. Ei căutau deci să-l ia; dar nimeni n-a pus mâna pe el, pentru că încă nu-i sosise ceasul. Dar din, au crezut în El. Ei ziceau: Când va veni Hristosul, nu va face El oare mai multe semne decât a făcut omul acesta? Fariseii au auzit mulțimea murmurând aceste lucruri despre el, și preoții cei mai de seamă și fariseii au trimis ofițeri să-l aresteze. Isus i-a răspuns: Încă timp voi fi cu tine, apoi mă voi duce la Cel ce M-a trimis. Mă vei căuta și nu mă vei găsi. Poți să vii unde sunt eu. Iudeii ziceau deci între ei: Unde se va duce omul acesta de nu-l vom găsi? Se va duce el la risipirea printre greci și-i va învăța pe greci? Care este cuvântul acesta pe care l-a spus: Mă vei căuta nu Mă vei găsiUnde sunt Eu, nu vei putea veni? Acum, în ultima cea mai mare zi a sărbătorii, Isus S-a ridicat a strigat: Dacă însetează cineva, să vină la Mine să bea! Cel care crede în mine, așa cum a spus Scriptura, din el va curge râuri de apă vie. Dar el a spus aceasta despre Duhul, pe care urmau să-L primească cei care credeau în El. Căci Duhul Sfânt nu era încă dat, pentru că Isus nu era încă glorificat.",
           "teaching": "Sa luam bine seama la neputinta omului de a-L cunoaste pe Hristos numai din datele de la suprafata. Unii spun: stim de unde este. Dar tocmai aici se poticnesc. Îl privesc dinspre Nazaret, familie și văzut, dar nu Îl cunosc dinspre Tatăl care L-a trimis. Asa rămâne omul și astazi dacă-L masoara pe Hristos numai cu rigla istoriei vazute, fără sa se plece inaintea adevarului Lui ceresc.\n\nApoi vine strigarea din ziua cea mare a praznicului: Dacă inseteaza cineva, sa vina la Mine și sa bea. Se cuvine sa luam aminte la lărgimea chemarii. Nu spune: dacă a ajuns cineva destul de vrednic. Nu spune: dacă a lamurit toate tainele. Spune: dacă inseteaza cineva. Hristos cheama omul din locul lipsei, al uscaciunii și al neimplinirii.\n\nDar chemarea nu se oprește la alinarea personala. Cine crede în Mine, din inima lui vor curge rauri de apa vie. Ioan lamureste ca este vorba despre Duhul. Cu alte cuvinte, omul care vine la Hristos nu primește doar o mangaiere inchisa în sine, ci ajunge purtator al unei vieti care se revarsa. Duhul Sfant nu vine sa faca sufletul o balta oprita, ci un izvor.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "διψάω",
@@ -774,6 +839,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "a fost proslavit. La Ioan, slava Fiului trece prin cruce, înviere și inaltare."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Isaia 44:3",
             "Isaia 55:1",
@@ -789,6 +855,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Niciodata n-a vorbit vreun om ca omul acesta",
           "text": "din, când au auzit cuvintele acestea, au zis: Acesta este cu adevărat profetul! Alții ziceau: Acesta este Hristosul! Dar unii ziceau: Ce, a ieșit Hristosul din Galileea? Nu a spus Scriptura că Hristosul vine din sămânța lui David și din Betleem, satul unde era David? Din pricina lui s-a făcut o dezbinare în mulțime. Unii dintre ei l-ar fi arestat, dar nimeni nu a pus mâna pe el. Slujitorii au venit deci la preoții cei mai de seamă la farisei le-au zis: Pentru ce nu l-adus? Ofițerii au răspuns: Niciodată vreun om nu a vorbit ca omul acesta. Fariseii le-au răspuns: Nu cumva voi rătăciți? A crezut vreunul dintre conducători sau vreunul dintre farisei în el? Dar această mulțime care nu știe că legea este blestemată. Nicodim (cel care a venit la el noaptea, fiind unul dintre ei) le-a spus: Legea noastră judecă un om dacă nu aude pentru prima dată de el și știe ce face? Ei i-au răspuns: Și tu ești din Galileea? Caută vezi că nici un profet nu s-a ridicat din Galileea. Fiecare s-a dus la casa lui,",
           "teaching": "Capitolul se inchide cu dezbinare. Unii cred, altii se impotrivesc, altii rămân în nedumerire. Se cuvine sa luam aminte: Hristos nu aduce o pace ieftina, cuminte și comoda pentru fire. Prezenta Lui scoate la iveala ce este în om.\n\nAprozii dau o mărturie frumoasa fără sa fi devenit încă ucenici deplini: Niciodata n-a vorbit vreun om ca omul acesta. Uneori omul nu poate pune încă toată marturisirea pe buze, dar simte ca în Hristos este ceva ce nu poate fi asezat în rândul celorlalti.\n\nNicodim, care venise noaptea, face aici un pas mic, dar real. El nu predica încă pe fata, dar se opune nedreptatii. Asa lucreaza uneori harul: nu prin salturi spectaculoase, ci prin mișcări smerite care arată ca lumina începe sa biruie frica. În același timp, fariseii își arată mandria religioasa, dispretuind norodul și sprijinindu-se pe prestigiul lor, nu pe adevăr.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "σχίσμα",
@@ -803,6 +871,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "a duce în ratacire. Acuzatia adusa Domnului de cei impotrivitori."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ioan 3:1-2",
             "Ioan 12:42-43",
@@ -830,6 +899,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Nici Eu nu te osandesc. Eu sunt Lumina lumii",
           "text": "Dar Isus s-a dus la Muntele Măslinilor. Dimineața foarte devreme, s-a întors în Templu, și tot poporul a venit la El. S-a așezat și i-a învățat. Cărturarii și Fariseii au adus o femeie luată la adulter, după ce au pus-o la mijloc, Ei i-au spus: Învățătorule, am găsit-o pe această femeie în adulter, chiar în faptă. Acum, în legea noastră, Moise ne-a poruncit să cu pietre astfel de femei. Ce spui atunci despre ea? Ei l-au pus la încercare, ca să aibă de ce să-l acuze, dar Isus s-a aplecat și a scris pe pământ cu degetul. Și în timp ce continuau să îl întrebe, s-a ridicat și le-a spus: Acela care este fără păcat dintre voi, să arunce primul cu piatra în ea. Din nou s-a aplecat și a scris pe jos cu degetul. Ei, când au auzit lucrul acesta, fiind condamnați de conștiința lor, au ieșit unul cîte unul, începând de la cel mai vechi, până la cel din urmă. Isus a rămas singur cu femeia din mijloc, unde era ea. Isus, în picioare, a văzut-o și a spus, Femeie, în cazul în care sunt acuzatorii tăi? Nu te-a condamnat nimeni? Iar ea a spus: Nimeni, Doamne. Și Isus i-a spus: Nici eu nu te condamn; du-te și nu mai păcătui. Din nou, prin urmare, Isus le-a vorbit, spunând: Eu sunt lumina lumii. Cel care mă urmează nu va umbla în întuneric, dar va avea lumina vieții. Fariseii i-au zis: Tu mărturis despre tine însuți, dar mărturia ta nu este adevărată. Isus le-a răspuns: Chiar dacă Eu mărturisesc despre Mine Însumi, mărturia Mea este adevărată, căci Eu știu de unde am venit unde Mă duc; dar voi nu știți de unde am venit nici unde Mă duc. Tu judeci după trup, eu nu judec pe nimeni. Chiar dacă judec, judecata mea este adevărată, pentru că nu sunt singur, ci sunt cu Tatăl care M-a trimis. Este, de asemenea, scris în legea ta că mărturia a două persoane este valabilă. Eu sunt Cel ce mărturisesc despre Mine Însumi, Tatăl, care M-a trimis, mărturisește despre Mine. Ei i-au zis: Unde este Tatăl tău? Isus a răspuns: Tu nu mă cunoști nici pe mine, nici pe Tatăl meu. Dacă m-ai cunoaște pe mine, l-ai cunoaște pe Tatăl meu. Isus a rostit aceste cuvinte în vistierie, în timp ce învăța în templu. Totuși, nimeni nu l-a arestat, pentru că ceasul lui nu venise încă.",
           "teaching": "Sa luam bine seama la capcana intinsa în jurul femeii. Oamenii acestia nu cauta dreptate, ci prilej impotriva Domnului. Femeia este pusa în mijloc nu ca sa fie indreptata, ci ca sa fie folosita. Asa lucreaza adesea inima fără mila: transforma chiar și pacatul altuia în unealta pentru propriul ei scop.\n\nDomnul nu slabeste pacatul și nici nu-l numeste altfel decât este. La sfarsit spune limpede: sa nu mai pacatuiesti. Dar mai înainte rupe mandria osanditorilor: cine este fără păcat sa arunce cel dintâi cu piatra. Hristos nu muta atentia de la vina femeii spre relativism, ci ii aduce pe toti sub aceeași lumina care cerceteaza.\n\nApoi vine marele cuvânt: Eu sunt Lumina lumii. Se cuvine sa vedem legătura. Dupa o scena în care întunericul moral și religios a stat în plina vedere, Domnul Se descoperă ca Lumina. Lumina Lui nu numai ca descoperă pacatul, ci și arată iesirea din el. De aceea cine Îl urmeaza nu umbla în întuneric. Nu se spune ca nu va mai avea lupte, ci ca nu va mai merge fără lumina.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "φῶς τοῦ κόσμου",
@@ -844,6 +915,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "mărturie. Adeverirea identitatii lui Hristos."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Isaia 42:6",
             "Ioan 3:17-21",
@@ -858,6 +930,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Adevarul va va face slobozi",
           "text": "Isus le-a zis din nou: Eu Mă duc, Mă căuta, muri în păcatele voastre. Unde Mă duc Eu, voi nu veni. Atunci iudeii au spus: Oare se va omorî el însuși? Pentru că spune: Acolo unde mă duc eu, voi nu puteți veni. El le-a zis: Tu ești de dedesubt. Eu sunt de sus. Tu ești din lumea aceasta. Eu nu sunt din lumea aceasta. De aceea v-am spus că veți muri în păcatele voastre; căci dacă nu credeți că eu sunt, veți muri în păcatele voastre. Ei i-au zis: Cine ești? Isus le-a zis: Iată ce v-am spus de la început. Am multe lucruri de spus și de judecat cu privire la tine. Cu toate acestea, cel care m-a trimis este adevărat; și lucrurile pe care le-am auzit de la el, acestea spun lumii. Ei nu au înțeles că el le-a vorbit despre Tatăl. Isus le-a zis: După ce ați ridicat pe Fiul omului, atunci veți ști că Eu sunt El, și nu fac nimic de la Mine, ci după cum M-a învățat Tatăl Meu, Eu spun aceste lucruri. Cel care m-a trimis este cu mine. Tatăl nu m-a lăsat în pace, pentru că întotdeauna fac lucrurile care îi sunt plăcute. În timp ce vorbea aceste lucruri, mulți credeau în el. Prin urmare, Isus le-a spus acelor iudei care l-au crezut: Dacă rămâneți în cuvântul meu, atunci sunteți cu adevărat discipolii mei. Veți ști adevărul, și adevărul te va face liber. Ei i-au răspuns: Noi suntem urmașii lui Avraam n-am fost robi nimănui. Cum zici tu: Vei fi slobod? Isus le-a răspuns: Adevărat vă spun că oricine săvârșește păcatul este robul păcatului. Un servitor nu locuieste in casa pentru totdeauna. Un fiu ramane pentru totdeauna. Prin urmare, dacă Fiul vă face liberi, fi cu adevărat liberi. Știu că sunteți urmașii lui Abraham, totuși căutați să mă omorâți, pentru că cuvântul meu nu găsește loc în voi. Eu spun lucrurile pe care le-am văzut cu Tatăl meu; și tu faci, de asemenea, lucrurile pe care le-ați văzut cu tatăl tău. Ei i-au răspuns: Tatăl nostru este Avraam. Isus le-a zis: Dacă ați fi copiii lui Avraam, ați face lucrările lui Avraam. Dar acum să mă ucideți pe mine, un om care v-am spus adevărul pe care l-am auzit de la Dumnezeu: Avraam n-a făcut aceasta. Voi faceți faptele tatălui vostru. Atunci ei i-au spus: Noi nu suntem născuți din curvie; avem un Tată, pe Dumnezeu. De aceea Isus le-a zis: Dacă Dumnezeu ar fi tatăl vostru, M-iubi, căci Eu am ieșit am venit de la Dumnezeu; căci Eu n-am venit de la Mine Însumi, ci El M-a trimis. De ce nu înțelegi discursul meu? Pentru că poți să nu auzi cuvântul meu. Ești din tatăl tău diavolul, și vrei să faci dorințele tatălui tău. El a fost un criminal de la început, și nu stă în adevăr, pentru că nu există adevăr în el. Când el spune o minciună, el vorbește pe cont propriu, pentru că el este un mincinos, și tatăl minciunilor. Dar pentru că spun adevărul, nu mă crezi. Cine dintre voi mă dovedește vinovat de păcat? Și dacă spun adevărul, de ce nu mă credeți? Cel ce este de la Dumnezeu ascultă cuvintele lui Dumnezeu; de aceea voi nu auziți, pentru că nu de la Dumnezeu.",
           "teaching": "Sa luam bine seama la felul în care Domnul leaga adevarul de ramasul în Cuvântul Lui. Nu orice miscare de moment este ucenicie adevărată. Dacă ramaneti în Cuvântul Meu, sunteti în adevăr ucenicii Mei. Credința care se coace rămâne, asculta și lasă cuvântul sa patrunda adanc.\n\nApoi vine una dintre cele mai limpezi diagnostice ale inimii omenesti: oricine traieste în păcat este rob al pacatului. Omul firesc se crede liber tocmai atunci când este cel mai legat. Se lauda cu neamul, cu traditia, cu dreptatea lui, dar poarta în el robia pe care nu o poate rupe singur. De aceea libertatea nu vine din mandria identitatii, ci din Fiul.\n\nDiscutia despre parinti și despre tata merge mai adanc decât genealogia. Domnul le arată ca faptele descoperă paternitatea reala. Cine iubeste minciuna, ura și impotrivirea fata de adevăr arată ce duh îl stapaneste. Se cuvine sa luam aminte: nu e destul sa spui Dumnezeu este Tatăl meu dacă inima se ridica impotriva Fiului.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "ἀλήθεια",
@@ -878,6 +952,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "a rămâne. Statornicia în cuvântul lui Hristos."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ioan 14:6",
             "Romani 6:16-18",
@@ -892,6 +967,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Mai înainte ca sa se nasca Avraam, sunt Eu",
           "text": "Iudeii i-au răspuns: Nu ziceam noi bine că ești samaritean, și că ai un demon? Isus a răspuns, nu am un demon, dar eu îl onorez pe Tatăl meu și tu mă dezonorezi. Dar eu nu caut propria mea glorie. Există unul care caută și judecători. Adevărat, adevărat vă spun că, dacă cineva va păzi cuvântul Meu, nu va vedea niciodată moartea. Atunci Iudeii i-au zis: Acum știm că ai demon; Avraam a murit, cum au murit proorocii; tu zici: Dacă păzește cineva cuvântul Meu, nu va gusta moartea. î Ești mai mare decât tatăl nostru Avraam, care a murit? Profeții au murit. Cine te faci să fii? Isus a răspuns: Dacă Eu Mă slăvesc pe Mine Însumi, slava Mea nu este nimic. Tatăl Meu Mă slăv pe Mine, despre Care voi zice că este Dumnezeul nostru. Tu nu l-ai cunoscut, dar eu îl cunosc. Dacă am spus, eu nu-l cunosc, eu ar fi ca tine, un mincinos. Dar eu îl cunosc și ține cuvântul lui. Tatăl tău Avraam s-a bucurat să vadă ziua mea; a văzut-o s-a bucurat. Iudeii i-au zis: Tu n-ai împlinit încă cincizeci de ani! L-ai văzut pe Avraam? Isus le-a zis: Adevărat, adevărat vă spun că Eu sunt, înainte ca Avraam să fi venit la. De aceea, ei au ridicat pietre ca să arunce împotriva lui, dar Isus s-a ascuns și a ieșit din Templu, trecând prin mijlocul lor, și așa a trecut.",
           "teaching": "Capitolul urca aici la o inaltime de unde nu mai poate fi coborat. Domnul nu spune doar ca a fost înainte de Avraam, ci: sunt Eu. Se cuvine sa luam cuvântul acesta cu toată greutatea lui. El nu este doar o pretentie de vechime, ci o mărturie despre identitatea Lui dumnezeiasca. De aceea iudeii inteleg gravitatea și iau pietre.\n\nApoi sa luam aminte la promisiunea despre moarte. Dacă pazeste cineva Cuvântul Meu, în veac nu va vedea moartea. Domnul nu neaga moartea trupeasca, dar ii rupe miezul ei ultim. Pentru omul care rămâne în Hristos, moartea nu mai este osanda și ruptura finala, ci trecere sub stăpânirea Celui care este viața.\n\nȘi iarasi, Avraam nu este pus impotriva lui Hristos. Dimpotriva, Avraam a saltat de bucurie de ziua Lui. Asta inseamna ca toate fagaduintele vechi își gasesc plinirea în Fiul. Cine vrea sa-l cinsteasca pe Avraam fără sa se plece inaintea lui Hristos nu l-a înțeles cu adevărat nici pe Avraam.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "ἐγώ εἰμι",
@@ -906,6 +983,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "a pazi. A tine cuvântul cu credinciosie, nu doar a-l auzi."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Exod 3:14",
             "Ioan 1:1",
@@ -933,6 +1011,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Ca sa se arate în el lucrarile lui Dumnezeu",
           "text": "În timp ce trecea, a văzut un om orb de la naștere. Ucenicii Lui L-au întrebat: Rabbi, cine a păcătuit, omul acesta sau părinții lui, de s-a născut orb? Isus a răspuns: Omul acesta n-a păcătuit, nici părinții lui, ci ca să se descopere în el lucrările lui Dumnezeu. trebuie să lucrez lucrările Celui ce M-a trimis cât este ziuă. Vine noaptea, când nimeni nu poate lucra. Cât timp sunt în lume, eu sunt lumina lumii. După ce a spus acestea, a scuipat pe pământ, a făcut noroi cu salivă, a uns ochii orbului cu noroi, și i-a zis: Du-te, spală-te în iazul Siloam (ceea ce înseamnă că ai trimis). Așa că a plecat, s-a spălat, și s-a întors să vadă. Vecinii cei care l-au văzut înainte au zis: Nu este acesta cel ce dea cera? Alții ziceau: El este! Alții ziceau: Seamănă cu el! El a răspuns: Eu sunt. Ei îl întrebau: Cum ți s-au deschis ochii? El a răspuns: Un om numit Isus a făcut noroi, mi-a uns ochii și mi-a spus: Du-te la iazul Siloamului și spală-te. că m-am dus și m-am spălat, și am primit vedere. Atunci ei l-au întrebat: Unde este? El a răspuns: Nu știu.",
           "teaching": "Sa luam bine seama la întrebarea ucenicilor. Ei cauta o vina care sa explice suferinta: cine a pacatuit? Asa judeca adesea inima omului, mai ales când se intalneste cu durerea altuia. Vrea o schemă simplă, o cauza rapida, o ordine usor de purtat. Dar Domnul nu le ingaduie sa inchida omul acesta intr-un verdict pripit.\n\nCând spune: s-a născut asa, ca sa se arate în el lucrarile lui Dumnezeu, Domnul nu minimalizeaza durerea și nici nu cere omului sa iubeasca suferinta pentru ea insasi. El deschide însă o usa mai larga: exista locuri ale neputintei pe care omul le numeste numai pierdere, iar Dumnezeu le poate face loc de aratare a lucrarii Sale.\n\nApoi, înainte de vindecare, Domnul spune iarasi: sunt Lumina lumii. Minunea nu este doar ajutor pentru un orb, ci semn despre cine este El. De aceea omul se intoarce vazand, iar întrebarea nu mai poate fi ocolita: cine este acesta care face asa ceva?\n\nȘi mai luam aminte la ascultarea simpla a orbului. I s-a spus: du-te și spala-te. El s-a dus, s-a spalat și s-a intors vazand bine. Credința nu inseamna ca omul înțelege mai întâi totul, ci ca merge pe cuvântul lui Hristos.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "φῶς τοῦ κόσμου",
@@ -947,6 +1027,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "Siloam, talmacit Trimis. Nume care se potriveste cu Cel ce trimite și cu Cel trimis."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ioan 8:12",
             "Ioan 11:4",
@@ -961,6 +1042,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Eram orb, și acum vad",
           "text": "L-au adus pe cel care fusese orb de farisei. Era un Sabat când Isus a făcut noroiul și i-a deschis ochii. Fariseii l-au întrebat din nou cum-a căpătat vederea. El le-a zis: Mi-a pus noroi pe ochi, m-am spălat văd. Unii dintre farisei ziceau: Omul acesta nu este de la Dumnezeu, pentru că nu ține Sabatul. Alții ziceau: Cum poate un om păcătos să facă astfel de semne? Și s-a făcut dezbinare între ei. De aceea l-au întrebat din nou pe orb: Ce spui despre el, pentru că ți-a deschis ochii? El a răspuns: Este un profet. Iudeii n-au crezut că fusese orb că primise vederea, până ce n-au chemat pe părinții celui ce primise vederea, Și le-a zis: Acesta este fiul vostru, despre care ziceți că s-a născut orb? Cum vede acum? Părinții lui le-au răspuns: Știm că acesta este fiul nostru, și că s-a născut orb; Dar cum vede el acum, noi nu știm; sau cine a deschis ochii, noi nu știm. El este de vârstă. Întreabă-l. El va vorbi pentru el însuși. Părinții lui au spus aceste lucruri pentru că se temeau de iudei; pentru că iudeii fuseseră deja de acord că, dacă cineva îl va mărturisi ca Hristos, va fi dat afară din sinagogă. De aceea, părinții lui au zis: Este în vârstă, întrebați-l pe el! L-au chemat a doua oară pe orb, i-au zis: Dă slavă lui Dumnezeu, căci știm că omul acesta este un păcătos. El a răspuns: Nu știu dacă este un păcătos; știu un lucru: că, eram orb, acum văd. Ei i-au zis din nou: Ce ți-a făcut? Cum ți-a deschis ochii? El le-a răspuns: V-am spus deja n-ascultat. De ce vreți să auziți din nou? Nu vreți să deveniți discipolii Lui, nu-i așa? Ei l-au insultat i-au spus: Tu ești discipolul lui, dar noi suntem discipolii lui Moise. Știm că Dumnezeu i-a vorbit lui Moise, dar omul acesta nu știe de unde vine. Omul le-a răspuns: Ce uimitor! Nu știi de unde vine, dar mi-a deschis ochii. Știm că Dumnezeu nu ascultă de păcătoși, dar dacă cineva este un închinător al lui Dumnezeu și face voia lui, el îl ascultă. De când lumea a început, nu s-a auzit niciodată că cineva a deschis ochii cuiva născut orb. Dacă acest om nu era de la Dumnezeu, nu putea face nimic. Ei i-au răspuns: Tu te-ai născut cu totul în păcate, tu ne înveți pe noi? Apoi l-au dat afară.",
           "teaching": "Sa luam bine seama la contrastul dureros din aceasta cercetare. Omul care abia a primit vederea merge simplu pe ce stie. Fariseii, care se cred vazatori, se incurca tot mai mult în refuz. Asa lucreaza impietrirea: lumina nu lipseste, dar inima nu vrea sa se plece.\n\nMărturia orbului este una dintre cele mai curate din Evanghelie: eu una stiu: ca eram orb, și acum vad. Nu are încă toată teologia, nu poate raspunde la toate intrebarile, dar are un fapt de necontestat. Se cuvine sa luam aminte ca mărturia vie a unui om atins de Hristos nu începe intotdeauna cu toate lamuririle, ci cu ceea ce Domnul a făcut cu adevărat în el.\n\nParintii lui se tem și se retrag, fiindca excluderea din sinagoga era grea. Omul vindecat, în schimb, merge înainte. Harul îl face mai tare decât pozitia lui sociala. Iar când este dat afara, se vede iarasi cat de intunecata poate deveni religia fără Hristos: scoate afara pe omul la care s-au aratat lucrarile lui Dumnezeu.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "σημεῖα",
@@ -975,6 +1058,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "sinagoga. Loc al vieții religioase și sociale, din care excluderea era grea."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ioan 7:12-13",
             "Ioan 12:42-43",
@@ -989,6 +1073,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Cred, Doamne",
           "text": "Isus a auzit că l-au dat afară, și că l-au găsit, a zis el, Crezi în Fiul lui Dumnezeu? El a răspuns: Cine este, Doamne, ca să cred în El? Isus i-a zis: L-văzut amândoi El este Cel ce vorbește cu voi. El a spus: Doamne, eu cred! i s-a închinat. Isus a spus: Eu am venit în lumea aceasta pentru judecată, pentru ca cei care nu văd să vadă, iar cei care văd să devină orbi. Aceia dintre fariseii care erau cu el au auzit aceste lucruri i-au zis: Oare noi suntem orbi? Isus le-a zis: Dacă ați fi orbi, n-avea păcat; dar acum ziceți: Vedem! De aceea rămâne păcatul vostru.",
           "teaching": "Sa luam bine seama la mangaierea aceasta: Isus a auzit ca l-au dat afara și, când l-a gasit… Ceea ce oamenii izgonesc, Hristos cauta. Omul a pierdut locul din sinagoga, dar este gasit de Fiul lui Dumnezeu. Nu exista castigare mai mare.\n\nApoi vedem cresterea credinței lui. La început Îl numea omul acela caruia I se zice Isus. Apoi proroc. Aici ajunge sa spuna: Cred, Doamne, și I se inchina. Asa creste lumina în om: din vedere trupeasca spre vedere duhovniceasca, din răspuns despre o minune spre plecarea inimii inaintea Persoanei Lui.\n\nLa urma, Domnul rosteste o judecata tulburatoare: cei ce se cred vazatori ajung orbi. Se cuvine sa luam aminte ca primejdia cea mai mare nu este sa fii slab, ci sa te crezi intreg fără Hristos. Cine recunoaste ca nu vede, poate fi luminat. Cine se laudă ca vede deja, își inchide singur ochii.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "προσκυνέω",
@@ -1003,6 +1089,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "judecata. Separarea produsa de venirea luminii."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ioan 3:19-21",
             "Ioan 5:22",
@@ -1030,6 +1117,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Eu sunt Usa. Eu sunt Pastorul cel bun",
           "text": "Adevărat vă spun că cel care nu intră pe ușă în staulul oilor, ci se urcă pe altă cale, este hoț tâlhar. Dar cel care intră pe ușă este păstorul oilor. Portarul deschide poarta pentru el, și oile ascultă vocea lui. El își cheamă oile pe nume și le conduce afară. Ori de câte ori își scoate oile, el merge înaintea lor; și oile îl urmează, pentru că ei cunosc vocea lui. Ei nu vor urma nicidecum un străin, ci vor fugi de el, căci nu cunosc glasul străinilor.„ Isus le-a spus această parabolă, dar ei nu au înțeles ce le spunea el. De aceea Isus le-a zis din nou: Adevărat, adevărat vă spun că Eu sunt ușa oilor. Toți cei care au venit înaintea mea sunt hoți și hoți, dar oile nu le-au ascultat. Eu sunt ușa; dacă intră cineva prin mine va fi salvat și va intra și va ieși și va găsi pășune. Hoțul nu vine decât să fure, să ucidă să distrugă. Eu am venit ca ei să aibă s-o aibă din belșug. Eu sunt păstorul cel bun. Păstorul cel bun își dă viața pentru oi. Cel care este un angajat, și nu un păstor, care nu deține oile, vede lupul venind, lasă oile și fuge. Lupul smulge oile și le împrăștie. Mâna angajat fuge pentru că el este un angajat de mână și nu are grijă de oaie. Eu sunt păstorul cel bun. Îl cunosc pe al meu, și sunt cunoscut de al meu; Așa cum Tatăl mă cunoaște pe mine, și eu îl cunosc pe Tatăl. Îmi dau viața pentru oi. Am alte oi care nu sunt din staulul acesta. Trebuie să le aduc și pe ele, și ele vor auzi glasul Meu. Ele vor deveni o singură turmă cu un singur păstor. De aceea Tatăl mă iubește, pentru că îmi dau viața, ca s-o iau din nou. Nimeni nu mi-o ia, dar o las singură. Am puterea să o las jos, și am puterea să o iau din nou. Am primit această poruncă de la Tatăl meu.",
           "teaching": "Sa luam bine seama la bogatia acestor imagini. Domnul nu spune doar ca arată usa, ci ca El Insusi este Usa. Intrarea în mântuire, în siguranta și în pasune nu se face pe langa El. Nu exista alta trecere, alta scurtatura și alta poarta care sa duca la viață.\n\nApoi vine mărturia despre Pastorul cel bun. Se cuvine sa luam aminte la bunatatea Lui, dar și la felul acestei bunatati. El nu doar hraneste turma, ci Își dă viață pentru oi. Bunatatea lui Hristos nu este blandete neputincioasa, ci iubire jertfitoare. În contrast, cel platit fuge fiindca nu-i pasa de oi. Lumea religioasa poate avea slujitori care poarta functia, dar nu poarta inima pastorului.\n\nCuvintele Eu Imi cunosc oile Mele, și ele Ma cunosc pe Mine trebuie primite cu mangaiere și sfiala. Credința nu este o simplă adeziune la o învățătură rece, ci chemare personala sub glasul unui Pastor viu. Oile sunt chemate pe nume, nu în masa fără chip.\n\nȘi sa luam bine seama și la celelalte oi. Harul lui Hristos nu rămâne inchis în staulul iudaic. El își aduna o turma din locuri diferite. Nu mai multe turme sub stapani diferiti, ci o turma și un Pastor. Aici se vede lărgimea Evangheliei și unitatea ei adevărată.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "θύρα",
@@ -1050,6 +1139,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "din belșug. viața dată de Hristos nu este saraca, ci plina."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Psalmul 23:1-4",
             "Ezechiel 34:11-16",
@@ -1065,6 +1155,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Oile Mele asculta glasul Meu",
           "text": "De aceea s-a făcut din nou dezbinare între iudei din cauza acestor cuvinte. dintre ei spuneau: ”Are demon este nebun! De ce-l ascultați?„ Alții ziceau: Acestea nu sunt cuvintele celui posedat de un demon. Nu este cu putință ca un demon să deschidă ochii orbilor, nu-i așa?” Era sărbătoarea consacrării la Ierusalim. Era iarnă, iar Isus umbla în templu, în pridvorul lui Solomon. Iudeii s-au apropiat de el i-au zis: Până când ne vei ține în suspans? Dacă tu ești Hristosul, spune-ne deslușit.„ Isus le-a răspuns: Eu v-am spus voi nu credeți; lucrările pe care le fac Eu în numele Tatălui Meu, acestea mărturisesc despre Mine. Dar tu nu crezi, pentru că nu ești din oile mele, așa cum ți-am spus. Oile mele îmi aud vocea, și le cunosc, și ele mă urmează. Le dau viața veșnică. Nu vor pieri niciodată, și nimeni nu le va smulge din mâna mea. Tatăl meu care mi le-a dat este mai mare decât toate. Nimeni nu este capabil să le smulgă din mâna Tatălui meu. Eu și Tatăl suntem unul.",
           "teaching": "Sa luam bine seama la legătura dintre credință și ascultarea glasului. Domnul nu spune doar ca oile Lui aud uneori despre El, ci ca asculta glasul Lui și vin dupa El. Credința adevărată nu este simpla simpatie, ci urmare.\n\nApoi vine unul dintre cele mai mangaietoare rânduri din Evanghelie: nimeni nu le va smulge din mana Mea. Se cuvine sa primim aceasta făgăduință cu recunostinta, dar și fără usuratate. Siguranta oilor nu sta în puterea lor de a se tine singure, ci în mana Pastorului și în mana Tatalui. De aceea nadejdea credinciosului nu se sprijină pe oscilatiile inimii lui, ci pe credinciosia lui Hristos.\n\nLa sfarsit, mărturia ajunge iarasi la miez: Eu și Tatăl una suntem. Nu este vorba de simpla înțelegere omeneasca, ci de unitate sfânta și adanca. De aceea cuvântul acesta nu poate fi tratat usor. El cere inchinare. Cine îl slabeste pierde din slava Fiului; cine îl primește este dus spre o cinstire mai adanca a Lui.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "ἁρπάζω",
@@ -1085,6 +1177,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "una. Unitate adanca intre Tatăl și Fiul."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ioan 6:37-40",
             "Ioan 17:11",
@@ -1099,6 +1192,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Eu și Tatăl una suntem",
           "text": "Iudeii au luat din nou pietre ca să-l ucidă cu pietre. Isus le-a răspuns: V-am arătat multe fapte bune de la Tatăl Meu; pentru care din aceste fapte Mă ucideți cu pietre?” Iudeii i-au răspuns: Noi nu te ucidem cu pietre pentru o faptă bună, ci pentru blasfemie, pentru că tu, fiind om, te faci Dumnezeu.„ Isus le-a răspuns: Oare nu este scris în Legea voastră: Eu am zis: dumnezei? Dacă el i-a numit dumnezei, la care a venit Cuvântul lui Dumnezeu (și Scriptura nu poate fi ruptă), Spui despre cel pe care Tatăl l-a sfințit și l-a trimis în lume? Tu hulești, pentru că eu am spus, eu sunt Fiul lui Dumnezeu? Dacă nu fac lucrările Tatălui Meu, să nu Mă credeți. Dar dacă le fac, chiar dacă nu Mă credeți pe Mine, credeți lucrările, ca să știți să credeți că Tatăl este în Mine Eu în Tatăl.” Ei au căutat din nou să-l prindă, și el a ieșit din mâna lor. El a plecat din nou dincolo de Iordan în locul unde Ioan boteza la început, și a rămas acolo. Mulți au venit la el. Ei au spus: Ioan într-adevăr nu a făcut nici un semn, dar tot ceea ce Ioan a spus despre acest om este adevărat. Mulți au crezut în el acolo.",
           "teaching": "Sa luam bine seama la motivul pietrelor: Tu, care esti un om, Te faci Dumnezeu. Dusmanii Lui inteleg bine directia cuvintelor Lui. De aceea nu se cuvine sa coborâm noi ceea ce ei au auzit limpede. Domnul Își apara mărturia nu retragand-o, ci aratand ca Scriptura și lucrarile Sale merg împreună spre același adevăr.\n\nCuvântul Scriptura nu poate fi desfiintata rămâne și el de mare pret. Domnul Isus vorbește despre Scriptura cu deplina autoritate și siguranta. Nu o trateaza ca pe un material pe care omul îl poate desface dupa bunul plac, ci ca pe un cuvânt tare, în fata caruia și disputa trebuie purtata cu sfiala.\n\nLa sfarsit, multi cred în El dincolo de Iordan, amintindu-și mărturia lui Ioan Botezătorul. Este frumos sa vedem ca o mărturie credincioasa, chiar fără semne, rămâne roditoare mai tarziu. Cuvintele spuse în adevăr pot pregati inimi care vor crede când Îl vor intalni pe Hristos.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "βλασφημία",
@@ -1113,6 +1208,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "Scriptura nu poate fi desfiintata. Taria și autoritatea permanenta a Scripturii."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Psalmul 82:6",
             "Ioan 5:36-39",
@@ -1140,6 +1236,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Eu sunt învierea și viața",
           "text": "Un om era bolnav, Lazăr din Betania, din satul Mariei și din sora ei, Marta. Maria a fost aceea care a uns pe Domnul cu mir și i-a șters picioarele cu părul ei, al cărui frate Lazăr era bolnav. Surorile au trimis deci la el i-au zis: Doamne, iată că cel pentru care ai multă dragoste este bolnav. Dar Isus, auzind aceasta, a zis: Boala aceasta nu este spre moarte, ci spre slava lui Dumnezeu, pentru ca Fiul lui Dumnezeu să fie proslăvit prin ea. Isus a iubit-o pe Marta, pe sora ei și pe Lazăr. Când a auzit că era bolnav, a stat două zile în locul unde era. Apoi, după aceasta, el a spus discipolilor, Să mergem din nou în Iudeea. Ucenicii l-au întrebat: Rabbi, evreii încercau doar să te ucidă cu pietre. Te duci din nou acolo? Isus a răspuns: Nu sunt douăsprezece ceasuri de zi? Dacă umblă cineva ziua, nu se poticnește, pentru că vede lumina lumii acesteia. Dar dacă un om umblă noaptea, se împiedică, pentru că lumina nu este în el. El le-a spus aceste lucruri, iar după aceea le-a spus: Prietenul nostru Lazăr a adormit, dar eu mă duc ca să-l trezesc din somn. Ucenicii au zis: Doamne, dacă a adormit, se va însănăto. Isus vorbise acum despre moartea sa, dar ei credeau că vorbea despre odihna în somn. Atunci Isus le-a spus clar: Lazăr a murit. Mă bucur pentru binele vostru că nu am fost acolo, astfel încât să puteți crede. Cu toate acestea, să mergem la el. De aceea, Toma, care se Didim, le-a spus tovarășilor săi discipoli: Să mergem noi, ca să murim împreună cu el. Când a venit Isus, a aflat că era deja de patru zile în mormânt. Betania era aproape de Ierusalim, la vreo cincisprezece stadioane distanță. Mulți iudei se alăturaseră femeilor din jurul Martei și al Mariei, ca să-i consoleze cu privire la fratele lor. Marta, când a auzit că Isus vine, s-a dus și l-a întîlnit, dar Maria a rămas în casă. Marta i-a zis lui Isus: Doamne, dacă ai fi fost aici, fratele meu n-ar fi murit. Și acum știu că orice vei cere de la Dumnezeu, Dumnezeu îți va da. Isus i-a zis: Fratele tău va învia. Marta i-a zis: tiu că va învia la înviere, în ziua de apoi. Isus i-a zis: Eu sunt învierea și viața. Cine crede în Mine va mai trăi, chiar dacă va muri. Cine trăiește și crede în mine nu va muri niciodată. Ea i-a răspuns: Da, Doamne, am ajuns să cred că Tu ești Hristosul, Fiul lui Dumnezeu, Cel ce vine în lume.",
           "teaching": "Sa luam bine seama la una dintre cele mai grele legaturi din tot capitolul: Isus iubea… deci a mai zabovit două zile. Mintea noastră ar astepta altceva. Dacă iubeste, ar fi trebuit sa plece indata. Dar tocmai aici se vede ca iubirea lui Dumnezeu nu merge intotdeauna pe drumul scurt al ușurării grabite. El urmărește slava Fiului și credința celor ai Sai chiar și prin întârziere.\n\nApoi vine marele Eu sunt: învierea și viața. Domnul nu spune doar ca poate invia, ci ca El Insusi este învierea și viața. Cu alte cuvinte, raspunsul final la mormant nu este o idee, o doctrina rupta de Persoana, ci Hristos Insusi. De aceea întrebarea pusa Martei rămâne vie și pentru noi: crezi lucrul acesta?\n\nMărturia Martei este pretioasa. Ea nu înțelege încă tot ce va urma, dar se sprijină pe cine este El. Asa se poarta adesea credința sub apasarea durerii: nu vede încă iesirea, dar se pleaca inaintea Fiului lui Dumnezeu.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "ἀνάστασις",
@@ -1154,6 +1252,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "viață. La Ioan, viață deplină, aflata în Fiul."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ioan 5:21-29",
             "Ioan 6:39-40",
@@ -1168,6 +1267,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Isus plânge și striga spre mormant",
           "text": "După ce a spus acestea, ea s-a dus a chemat-o pe Maria, sora ei, în taină, zicând: Învățătorul este aici te cheamă. Când a auzit asta, s-a sculat repede și s-a dus la el. Isus nu intrase încă în sat, ci era în locul unde l-a întâlnit Marta. Atunci iudeii, care erau cu ea în casă și o mângâiau, văzând-o pe Maria că s-a ridicat în grabă și a ieșit, au urmat-o, spunând: Se duce la mormânt ca să plângă acolo. De aceea, când Maria a ajuns unde era Isus l-a văzut, a căzut la picioarele lui i-a zis: Doamne, dacă ai fi fost aici, fratele meu n-ar fi murit. De aceea Isus, când a văzut-o plângând, și pe iudeii care veniseră cu ea plângând, a gemut în duhul lui și s-a tulburat. i-au zis: Unde l-ai pus? Ei i-au zis: Doamne, vino vezi! Isus a plâns. Atunci iudeii au zis: Vedeți câtă avea pentru el! Unii dintre ei ziceau: Oare nu putea omul acesta, care a deschis ochii orbului, să-l păzească pe omul acesta de moarte? Isus, gemînd din nou în el, a venit la mormânt. Acum era o peșteră, și o piatră se întindea pe ea. Și Isus a zis: Ia piatra! Marta, sora celui mort, i-a zis: Doamne, de data aceasta este o duhoare, căci el este mort de patru zile. Isus i-a zis: Nu ți-am spus că, dacă vei crede, vei vedea slava lui Dumnezeu? Atunci au luat piatra de unde era pus mortul. Și Isus a ridicat ochii în sus și a spus: Tată, îți mulțumesc că m-ai auzit. Știu că mă asculți mereu, dar din cauza mulțimii care stătea în jurul meu am spus asta, ca ei să creadă că tu m-ai trimis. După ce a spus acestea, a strigat cu glas tare: Lazăr, ieși afară! Și mortul a ieșit cu mâinile și picioarele legate cu fâșii de pânză, și fața îi era înfășurată cu un ștergar. Isus le-a spus: Dezlegați-l și lăsați-l să meargă. De aceea, mulți dintre iudeii care au venit la Maria și au văzut ce a crezut Isus în el. Dar unii dintre ei s-au dus la farisei și le-au spus ce făcuse Isus.",
           "teaching": "Sa luam bine seama la aceste două cuvinte mici și mari: Isus plangea. Fiul lui Dumnezeu nu sta rece langa mormant. El stie ce va face și totusi plânge. Asta ne pazeste de două rataciri: sa credem ca durerea nu mai conteaza dacă exista nădejde, ori sa credem ca plansul este lipsă de credință. În Domnul vedem și slava, și lacrima.\n\nApoi, înainte de a-l chema pe Lazar afara, Domnul multumeste Tatalui și spune limpede ca face aceasta pentru credința celor de fata. Semnul nu este spectacol, ci descoperire. Lazar nu este inviat pentru uimire goala, ci pentru ca lumea sa vada cine este Fiul și ca Tatăl L-a trimis.\n\nȘi totusi, chiar în fata unui asemenea semn, raspunsurile se despart. Unii cred, altii se duc sa paruiasca. Se cuvine sa luam aminte ca inima impietrita nu se vindeca automat nici prin cel mai mare semn. Ea are nevoie sa se plece.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "ἐδάκρυσεν",
@@ -1182,6 +1283,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "a striga cu glas tare. Porunca plina de autoritate data mortului."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Isaia 53:3-4",
             "Luca 19:41",
@@ -1196,6 +1298,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Mai bine sa moara un singur om pentru norod",
           "text": "Preoții cei mai de seamă fariseii au adunat un sobor au zis: Ce facem? Căci omul acesta face multe semne. Dacă îl lăsăm în pace așa, toți vor crede în el, iar romanii vor veni și ne vor lua atât locul, cât și națiunea. Dar unul din ei, Caiafa, care era mare preot în anul acela, le-a zis: Nu știți nimic, Nici nu vă gândiți că este bine pentru noi ca un singur om să moară pentru popor și ca întreaga națiune să nu piară. Acum, el nu a spus acest lucru despre sine, dar fiind mare preot în acel an, el a profețit că Isus va muri pentru națiune, Și nu numai pentru acea națiune, ci și ca să adune într-unul singur pe copiii lui Dumnezeu, cei risipiți. Astfel, din acea zi, ei s-au sfătuit să-l omoare. Isus n-a mai umblat deschis printre Iudei, ci a plecat de acolo în țara din apropierea pustiei, într'o cetate numită Efraim, și a rămas acolo cu ucenicii Săi. Paștele iudeilor era aproape. Mulți s-au suit din țară la Ierusalim, înainte de Paște, ca să se purifice. Apoi l-au căutat pe Isus și au vorbit unii cu alții în timp ce stăteau în templu. Ce crezi că nu vine deloc la sărbătoare? Preoții cei mai de seamă și fariseii au poruncit ca, dacă cineva ar ști unde este, să spună lucrul acesta, ca să-l prindă.",
           "teaching": "Sa luam bine seama la orbirea soborului. Ei nu mai pot tagadui ca Isus face multe minuni. Problema nu este lipsa de dovezi, ci frica pentru locul lor, pentru neamul lor și pentru stăpânirea lor. Asa ajunge omul sa lupte cu adevarul tocmai ca sa-și apere pozitia.\n\nCuvântul lui Caiafa este rostit cu alt gand, dar Dumnezeu îl intoarce spre adevăr. El vorbește politic, Dumnezeu vorbește mantuitor. Mai bine sa moara un singur om pentru norod. Fără sa stie, marele preot rosteste esenta jertfei lui Hristos. Asa domneste Dumnezeu chiar peste gura celor care I se impotrivesc.\n\nȘi mai luam aminte la lărgimea finalului: nu numai pentru neamul acela, ci pentru adunarea copiilor lui Dumnezeu cei risipiti. Crucea nu este improvizatie de ultim moment, ci calea prin care Fiul aduna laolalta un popor largit prin har.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "συνέδριον",
@@ -1210,6 +1314,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "sa adune intr-unul. Lucrarea de strangere a copiilor lui Dumnezeu prin moartea Fiului."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Isaia 49:6",
             "Ioan 10:16",
@@ -1237,6 +1342,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Mirul din Betania și Imparatul smerit",
           "text": "Apoi, cu șase zile înainte de Paște, Isus a venit în Betania, unde era Lazăr, care era mort, pe care îl înviase din morți. Și i-au făcut acolo o cină. Marta a slujit, dar Lazăr era unul dintre cei ce ședeau la masă cu el. De aceea Maria a luat o liră de mir de nard curat, foarte prețios, și a uns pe Isus și a șters picioarele cu părul ei. Casa a fost umplut cu parfumul unguentului. Iuda Iscarioteanul, fiul lui Simon, unul din ucenicii Lui, care avea să-L trădeze, a zis: De ce nu s-a vândut mirul acesta cu trei sute de dinari nu s-a dat săracilor? El a zis lucrul acesta, nu pentru că avea grijă de săraci, ci pentru că era hoț, și avea cutia cu bani, obișnuia să fure ce era pus în ea. Dar Isus a zis: Lăs-o în pace, căci a păstrat-o pentru ziua îngropării mele. Căci pe săraci îi ai mereu cu tine, dar pe mine nu mă ai întotdeauna. De aceea, o mare mulțime de Iudei au aflat că el era acolo; și au venit nu numai din cauza lui Isus, ci și ca să vadă pe Lazăr, pe care-l înviase din morți. Dar preoții cei mai de seamă au conspirat să-l omoare și pe Lazăr, pentru că, din cauza lui, mulți dintre iudei au plecat și au crezut în Isus. A doua zi, o mare mulțime venise la sărbătoare. Când au auzit că Isus venea la Ierusalim, Ei au luat ramurile finicilor, au ieșit înaintea lui au strigat: Osana! Binecuvântat este Cel ce vine în Numele Domnului, Împăratul lui Israel! Isus, după ce a găsit un măgar tânăr, a șezut pe el, așa cum este scris, Nu-ți fie frică, fiica Sionului. Iată, vine regele tău, șezând pe un măgar mânz. Discipolii săi nu au înțeles aceste lucruri la început, dar când Isus a fost glorificat, atunci și-au amintit că aceste lucruri au fost scrise despre el și că i-au făcut aceste lucruri. De aceea, mulțimea care era cu el când l-a chemat pe Lazăr din mormânt și l-a înviat din morți a mărturisit despre aceasta. Din pricina aceasta, mulțimea s-a dus și L-a întîlnit, pentru că au auzit că făcuse semnul acesta. Fariseii au zis deci între ei: Vedeți cum nu nimic; iată că lumea s-a dus după el.",
           "teaching": "Sa luam bine seama la casa din Betania. Marta slujeste, Lazar sade la masa, Maria toarna mirul. Fiecare sta altfel langa Domnul, dar în inima scenei rămâne dragostea care nu mai calculeaza. Maria nu masoara gestul dupa folosul de fata, ci dupa vrednicia Persoanei Lui și dupa ceasul care se apropie.\n\nIuda pune masca grijii pentru saraci peste o inima stricata. Se cuvine sa luam aminte: nu orice vorba dreapta la suprafata vine dintr-o inima curată. Uneori omul foloseste chiar și cauza buna ca sa ascunda iubirea de bani ori lipsa de dragoste fata de Hristos.\n\nApoi, la intrarea în Ierusalim, Domnul este primit ca Imparat, dar nu intra pe cal de lupta, ci pe magarus. El este cu adevărat Imparat, numai ca nu dupa chipul asteptarii firesti. Slava Lui merge pe drumul smereniei și spre cruce.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "ὡσαννά",
@@ -1251,6 +1358,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "slava. În Ioan, slava Fiului merge spre cruce și apoi spre proslavire."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Zaharia 9:9",
             "Psalmul 118:25-26",
@@ -1265,6 +1373,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "A sosit ceasul sa fie proslavit Fiul omului",
           "text": "Printre cei ce s-au suit să se închine la sărbătoare erau și câțiva greci. au venit la Filip, care era din Betsaida Galileii, l-au întrebat, zicând: Domnule, vrem să-L vedem pe Isus. Filip a venit și i-a spus lui Andrei, iar la rândul său, Andrei a venit cu Filip, iar ei i-au spus lui Isus. Isus le-a răspuns: A venit timpul ca Fiul Omului să fie glorificat. Cu siguranță vă spun, dacă un grăunte de grâu nu cade în pământ și moare, rămâne singur. Dar dacă moare, dă mult rod. Cel care își iubește viața o va pierde. Cel care își urăște viața în această lume o va păstra pentru viața veșnică. Dacă îmi servește cineva, să mă urmeze; și unde sunt eu, acolo va fi și servitorul meu; dacă îmi servește cineva, Tatăl meu îl va onora. Acum sufletul meu este tulburat. Ce să spun? Tată, salvează-mă de acest timp? Dar am venit la acest timp pentru această cauză. Tată, proslăvește Numele Tău! Atunci un glas a ieșit din cer a zis: L-am proslăvit iarăși îl voi proslăvi. De aceea, a care stătea lângă el-l auzea, a spus că a tunat. Alții ziceau: Un înger i-a vorbit. Isus a răspuns: Glasul acesta n-a venit pentru Mine, ci pentru voi. Acum este judecata acestei lumi. Acum prințul acestei lumi va fi aruncat afară. Și eu, dacă eu sunt ridicat de pe pământ, va atrage toți oamenii la mine. Dar el a spus acest lucru, semnificând prin ce fel de moarte ar trebui să moară. mea i-a răspuns: Am auzit din Lege că Hristosul rămâne în veac. Cum zici tu: Fiul Omului trebuie înălțat? Cine este Fiul Omului? De aceea Isus le-a zis: Încă puțină vreme lumina este cu voi; umblați cât lumina, pentru ca întunericul să nu vă ajungă; cel ce umblă în întuneric nu știe unde se duce. Cât timp lumina, credeți în lumină, ca să deveniți copii ai luminii. Isus a spus aceste lucruri a plecat S-a ascuns de ei.",
           "teaching": "Sa luam bine seama la raspunsul Domnului fata de greci. Ei spun: am vrea sa vedem pe Isus. Iar raspunsul Lui merge direct spre cruce. Asta inseamna ca adevărata vedere a lui Isus nu se oprește la curiozitate, ci ajunge la ceasul proslavirii prin moarte. Nu-L vezi cu adevărat pe Hristos dacă ocolesti crucea.\n\nGrauntele de grau care moare este una dintre cele mai limpezi icoane ale rodirii prin jertfa. Hristos nu rămâne singur; prin moartea Lui aduce mult rod. Și chemarea data ucenicului merge în aceeași directie: cine Imi slujeste, sa Ma urmeze. Nu exista slujire crestina fără drum de moarte fata de sine.\n\nApoi Domnul spune ca va fi inaltat și ca astfel va atrage la Sine pe toti oamenii. Inaltarea aceasta este și cruce, și slava. Lumea vede rusine, Dumnezeu arată biruința. Stapanitorul lumii este judecat tocmai în ceasul în care pare ca raul a castigat.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "ὑψωθῶ",
@@ -1279,6 +1389,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "judecata. Punerea lumii și a stapanitorului ei sub sentinta lui Dumnezeu."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ioan 3:14-15",
             "Ioan 8:28",
@@ -1293,6 +1404,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Au iubit mai mult slava oamenilor",
           "text": "Dar făcuse atâtea semne înaintea lor, ei nu credeau în el, ca să se împlinească cuvântul proorocului Isaia, pe care-l spusese:„ Doamne, cine a crezut raportul nostru? Cui i-a fost descoperit brațul Domnului? Pentru aceasta nu puteau crede, căci Isaia a zis din nou: El le-a orbit ochii le-a împietrit inima, ca nu cumva să vadă cu ochii, să vadă cu inima, să se întoarcă Eu să-i vindec. Isaia a spus aceste lucruri când a văzut slava Lui, și a vorbit despre El. Cu toate acestea, chiar și mulți dintre conducători au crezut în el, dar din cauza fariseilor nu au mărturisit-o, astfel încât să nu fie sc din sinagogă, căci ei iubeau oamenii și lăudau mai mult decât lauda lui Dumnezeu. Isus a strigat a zis: Cine crede în Mine, nu crede în Mine, ci în Cel ce M-a trimis pe Mine. Cine mă vede pe mine îl vede pe cel care m-a trimis. Am venit ca o lumină în lume, pentru ca oricine crede în mine să nu rămână în întuneric. Dacă cineva ascultă cuvintele mele și nu crede, eu nu-l judeca. Pentru că am venit nu pentru a judeca lumea, ci pentru a salva lumea. Cel care mă respinge, și nu primește cuvintele mele, are unul care-l judecă. Cuvântul pe care l-am vorbit îl va judeca în ultima zi. Eu nu am vorbit de la Mine Însumi, ci Tatăl, care M-a trimis, Mi-a dat o poruncă: ce să spun ce să vorbesc. Știu că porunca lui este viața veșnică. Prin urmare, lucrurile pe care le vorbesc, așa cum Tatăl mi-a spus, așa că vorbesc.”",
           "teaching": "Sa luam bine seama la taina grea a impietririi. Ioan nu spune ca lumina ar fi fost slaba, ci ca semnele au fost multe și totusi nu credeau. Aici se vede cat de adanca este impotrivirea inimii omului când nu vrea sa se plece.\n\nApoi vine una dintre cele mai aspre propoziții pentru inima religioasa: au iubit mai mult slava oamenilor decât slava lui Dumnezeu. Se cuvine sa luam aminte la aceasta primejdie. Nu este nevoie sa urasti direct adevarul ca sa-L pierzi; este destul sa iubesti mai mult fata oamenilor, aprobarea lor și locul tău intre ei.\n\nLa sfarsit, Domnul Își strange mărturia: cine Ma vede pe Mine vede pe Cel ce M-a trimis pe Mine. Credința în Hristos nu este o abatere de la Dumnezeu, ci intrarea la Dumnezeu. Iar respingerea cuvintelor Lui nu rămâne fără urmari. Cuvântul insusi va judeca în ziua de apoi.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "δόξα τῶν ἀνθρώπων",
@@ -1307,6 +1420,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "lumina. Hristos ca iesire din întuneric."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Isaia 6:9-10",
             "Isaia 53:1",
@@ -1335,6 +1449,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "I-a iubit pana la capat",
           "text": "Înainte de sărbătoarea Paștelui, Isus, știind că venise vremea ca el să se depărteze de la această lume la Tatăl, după ce și-a iubit pe ai săi care erau în lume, i-a iubit până la sfârșit. În timpul cinei, diavolul a pus deja în inima lui Iuda Iscarioteanul, fiul lui Simon, să-l trădeze, Isus, știind că Tatăl a dat toate lucrurile în mâinile sale, și că a venit de la Dumnezeu și mergea la Dumnezeu, S-a sculat de la cină, și și-a pus hainele de afară. A luat un prosop și și-a înfășurat un prosop în jurul taliei. Apoi a turnat apă în bazin și a început să spele picioarele ucenicilor și să le șteargă cu prosopul care era înfășurat în jurul lui. Apoi a venit la Simon Petru i-a zis: Doamne, îmi speli picioarele? Isus i-a răspuns: Nu știi ce fac acum, dar vei mai târziu. Petru i-a zis: Nu-mi vei spăla niciodată picioarele! Isus i-a răspuns: Dacă nu te spăl, nu vei avea parte cu mine. Simon Petru i-a zis: Doamne, nu numai picioarele mele, ci mâinile capul meu! Isus i-a zis: Cineva care a făcut baie nu are nevoie decât să i se spele picioarele, dar este complet curat. Căci el îl cunoștea pe cel ce avea să-l trădeze; de aceea a zis: Nu sunteți toți curați. După ce le-a spălat picioarele,-a pus haina de pe s-a din nou, le-a zis: tiți ce v-am făcut? Tu mă nume Învățătorule Doamne Tu spui aceasta corect, pentru că așa sunt eu. Dacă atunci eu, Domnul și Învățătorul, v-am spălat picioarele, ar trebui să vă spălați și voi picioarele. Pentru că v-am dat un exemplu, că ar trebui să facă, de asemenea, așa cum am făcut pentru tine. Cu siguranță vă spun, un servitor nu este mai mare decât domnul său, nici unul care este trimis mai mare decât cel care l-a trimis. Dacă știți acestea, fericiți sunteți dacă le faceți.",
           "teaching": "Sa luam bine seama la începutul capitolului: fiindca iubea pe ai Sai, i-a iubit pana la capat. Tot ce urmeaza trebuie citit în lumina acestei iubiri. Spalarea picioarelor nu este doar lectie de eticheta smerita, ci icoana a iubirii care coboara pana jos de tot.\n\nȘi iarasi, tocmai când stia ca Tatăl Ii daduse toate lucrurile în maini, Domnul Se incinge cu stergarul. Asta inseamna ca adevărata mărime nu se teme sa slujească. Omul mic fuge de slujirea de jos tocmai fiindca se teme sa nu piarda ceva din inaltimea lui inchipuita. Hristos, care stie de unde vine și unde Se duce, coboara fără frica.\n\nCuvintele catre Petru arată și mai mult. Dacă nu te spal Eu, nu vei avea parte deloc cu Mine. Cu alte cuvinte, slujirea Domnului fata de noi nu este doar exemplu moral, ci necesitate mantuitoare. Omul nu se poate face singur curat pentru partasia cu Hristos. Trebuie spalat de El. Abia dupa aceea invata și sa slujească altora.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "τέλος",
@@ -1349,6 +1465,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "a spala. Aici, spalarea picioarelor în semn de curatire și slujire."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Luca 22:27",
             "Filipeni 2:5-8",
@@ -1363,6 +1480,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Era noapte",
           "text": "Eu nu vorbesc despre voi toți; știu pe cine am ales, dar ca să se împlinească Scriptura: Cel ce mănâncă pâine cu mine-a ridicat călcâiul împotriva mea. De acum înainte, vă spun înainte de a se întâmpla, că atunci când se întâmplă, s-ar putea crede că eu sunt el. Cu siguranță vă spun, cel care primește pe cine trimit, mă primește; și cel care mă primește, primește pe cel care m-a trimis. După ce a spus Isus acestea, a fost tulburat în duh și a adus mărturie și a spus: Adevărat, adevărat vă spun, că unul dintre voi mă va trăda. Discipolii se uitau unii la alții, nedumeriți în legătură cu cine vorbea. Unul dintre discipolii săi, pe care i-a iubit Isus, era la masă, sprijinindu-se de pieptul lui Isus. Simon Petru i-a făcut semn i-a zis: Spune-ne cine este acela despre care vorbește. El, sprijinindu-se pe pieptul lui Isus, l-a întrebat: Doamne, cine este? Isus a răspuns: El este acela căruia îi voi da această bucată de pâine, după ce o voi înmuia. După ce a înmuiat bucata de pâine, i-a dat-o lui Iuda, fiul lui Simon Iscarioteanul. Dupăca de pâine, Satana a intrat în el, Isus i-a zis: Ce faci, fă repede! Nimeni de la masă nu știa de ce i-a spus asta. Căci unii s-au gândit, pentru că Iuda avea cutia cu bani, că Isus i-a spus: Cumpără lucrurile de care avem nevoie pentru sărbătoare, sau că ar trebui să dea ceva săracilor. De aceea, după ce a primit acea bucată, el a ieșit imediat afară. Era noapte.",
           "teaching": "Sa luam bine seama la tulburarea Domnului. El stie ce urmeaza și totusi Se tulbura în duhul Lui. Nu este slabiciune pacatoasa, ci adancime sfânta a suferintei. Tradarea nu este pentru El o simplă mutare în istorie, ci rana traita pana în adanc.\n\nApoi Ioan inchide scena cu aceste trei cuvinte: Era noapte. Nu este doar ora din zi, ci și starea duhovniceasca în care iese Iuda. El pleaca din odaia în care stralucea iubirea pana la capat și intra în întunericul pe care l-a hranit în sine de multa vreme. Asa lucreaza și pacatul primit și nejudecat: omul iese tot mai adanc în noapte.\n\nȘi totusi, chiar aici, Domnul spune ca toate acestea le spune de pe acum ca sa creada ca Eu sunt. Cu alte cuvinte, nici tradarea nu-I rupe carma din mana. El rămâne Domnul chiar în clipa în care este parasit.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "ἐταράχθη",
@@ -1377,6 +1496,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "noapte. Întuneric real, dar și simbolic în mersul lui Iuda."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Psalmul 41:9",
             "Ioan 12:27",
@@ -1391,6 +1511,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Sa va iubiti unii pe altii",
           "text": "După ce a ieșit, Isus a spus: Acum Fiul Omului a fost glorificat Dumnezeu a fost glorificat în el. Dacă Dumnezeu a fost glorificat în el, Dumnezeu îl va glorifica și în el însuși, și îl va glorifica imediat. Copilașilor, mai sunt puțin cu voi. Mă veți căuta, și cum am spus iudeilor că: Unde mă duc eu voi nu puteți veni, tot așa vă spun acum. O nouă poruncă pe care v-o dau vouă, că vă iubiți unii pe alții. Așa cum v-am iubit și eu, vă iubiți și voi unii pe alții. Prin aceasta vor ști toți că sunteți discipolii mei, dacă aveți dragoste unii pentru alții. Simon Petru i-a zis: Doamne, unde te duci? Isus a răspuns: Unde Mă duc Eu, nu poți să mă urmezi acum, dar o vei urma după aceea. Petru I-a zis: Doamne, de ce nu Te pot urma acum? Îmi voi da viața pentru Tine. Isus i-a răspuns: Vrei să-ți dai viața pentru mine? Adevărat îți spun, cocoșul nu va cînta până nu te vei lepăda de Mine de trei ori.",
           "teaching": "Sa luam bine seama la legătura dintre slava și iesirea lui Iuda. Omul ar spune ca totul cade în întuneric. Domnul spune: acum, Fiul omului a fost proslavit. Aici se vede iarasi taina Evangheliei: ceasul rusinii în ochii lumii este ceasul slavei în planul Tatalui.\n\nApoi vine porunca noua. Nu este noua prin faptul ca iubirea n-ar mai fi fost ceruta niciodata, ci prin masura ei: cum v-am iubit Eu. Masura dragostei fratesti nu este firea noastră, nici reciprocitatea, nici simpatiile noastre, ci Hristos. De aceea semnul uceniciei nu este stralucirea unui dar, ci dragostea dintre frati.\n\nPetru iubeste sincer, dar se cunoaste putin pe sine. Se cuvine sa luam aminte la aceasta. Ravna adevărată, dacă nu este trecuta prin zdrobire, se poate bizui prea mult pe sine. Domnul nu-l leapada pe Petru, dar îl trece prin adevarul amar al propriei slabiciuni.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "ἐντολή καινή",
@@ -1405,6 +1527,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "a proslavi. a arăta slava prin ascultare și jertfa."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ioan 15:12-13",
             "Romani 12:10",
@@ -1432,6 +1555,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Eu sunt Calea, Adevărul și Viața",
           "text": "Nu lăsa inima ta să fie tulburată. Crede în Dumnezeu. Crede, de asemenea, în mine. În casa Tatălui meu sunt multe case. Dacă n-ar fi fost așa, v-fi spus. Am de gând să vă pregătesc un loc. Dacă mă duc să vă pregătesc un loc, voi veni din nou vă voi primi la Mine; pentru ca acolo unde sunt Eu, să fiți voi acolo. Știi unde mă duc, și știi drumul. Toma i-a zis: Doamne, nu știm încotro te îndrepți. Cum putem cunoaște calea? Isus i-a zis: Eu sunt calea, adevărul și viața. Nimeni nu vine la Tatăl decât prin Mine. Dacă m-ai fi cunoscut, l-ai fi cunoscut și pe Tatăl meu. De acum înainte, îl cunoști și l-ai fi văzut. Filip i-a zis: Doamne, arată-ne pe Tatăl ne va fi de ajuns. Isus i-a zis: De atâta vreme sunt cu tine nu mă cunoști, Filipe? Cel ce m-a văzut pe mine l-a văzut pe Tatăl. Cum zici tu: Arată-ne pe Tatăl!? Nu crezi că eu sunt în Tatăl, și Tatăl în mine? Cuvintele pe care eu vă spun, Eu nu vorbesc de la mine; dar Tatăl care trăiește în mine face lucrările sale. Crede-mă că eu sunt în Tatăl, și Tatăl în mine; sau altfel crede-mă pentru lucrările însăși de dragul. Adevărat, adevărat vă spun că cine crede în Mine, va face el lucrările pe care le fac Eu; va face lucrări mai mari decât acestea, pentru că Mă duc la Tatăl Meu. Orice vei cere în numele meu, o voi face, pentru ca Tatăl să fie glorificat în Fiul. Dacă mă întrebi ceva în numele meu, o voi face.",
           "teaching": "Să luăm bine seama cum începe Domnul: să nu vi se tulbure inima. El nu le vorbește unor oameni liniștiți, ci unor ucenici tulburați. De aceea mângâierea nu vine prin negarea necazului, ci prin așezarea credinței: aveți credință în Dumnezeu și aveți credință în Mine.\n\nApoi vine unul dintre cele mai limpezi și mai grele cuvinte din toată Evanghelia: Eu sunt Calea, Adevărul și Viața. Nu se cuvine să-l slăbim. Domnul nu spune că arată o cale printre altele, nici că oferă un drum potrivit pentru unii. El este Calea. Asta închide orice laudă a omului și orice ocol al firii.\n\nȘi iarăși, cine M-a văzut pe Mine a văzut pe Tatăl. Nu înseamnă că Fiul și Tatăl sunt aceeași Persoană, ci că Fiul Îl descoperă desăvârșit pe Tatăl. De aceea, dacă vrei să știi cum este Dumnezeu, te uiți la Hristos.\n\nLucrările mai mari nu înseamnă că ucenicii vor întrece în slavă Persoana Domnului, ci că, după plecarea Lui la Tatăl, lucrarea Evangheliei se va întinde mai larg prin puterea dată de sus. Iar rugăciunea în Numele Lui nu este formulă magică, ci cerere făcută sub stăpânirea Persoanei și voii Lui.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "ὁδός",
@@ -1452,6 +1577,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "viață. Viața deplină, veșnică, aflată în Hristos."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ioan 1:18",
             "Ioan 11:25",
@@ -1466,6 +1592,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Un alt Mângâietor",
           "text": "Dacă mă iubești, păzește-mi poruncile. Mă voi ruga Tatălui, El vă va da un alt Sfetnic, ca să fie cu voi în veac: Duhul adevărului, pe care lumea îl poate primi, pentru că nu-l vede și nu-l cunoaște. Îl cunoști, pentru că trăiește cu tine și va fi în tine. Nu vă voi lăsa orfani, voi veni la voi. Încă puțin timp, și lumea nu mă va mai vedea; dar mă vei vedea. Pentru că eu trăiesc, vei trăi, de asemenea. În ziua aceea veți că Eu sunt în Tatăl Meu și voi în Mine și Eu în voi. Unul care are poruncile mele și le păstrează, acea persoană este una care mă iubește. Unul care mă iubește va fi iubit de Tatăl meu, și eu îl voi iubi, și mă va revela lui. Iuda (nu Iscarioteanul) i-a zis: Doamne, ce s-a întâmplat de ești pe cale să ni te descoperi nouă nu lumii? Isus i-a răspuns: Dacă un om mă iubește, el se va ține de cuvântul Meu. Tatăl Meu îl va iubi, și noi vom veni la El și ne vom face casa împreună cu El. Cel care nu mă iubește nu păstrează cuvintele mele. Cuvântul pe care îl auzi este al meu, ci Tatăl care m-a trimis. V-am spus aceste lucruri în timp ce încă trăiam cu voi. Dar Consilierul, Duhul Sfânt, pe care Tatăl îl va trimite în numele meu, vă va învăța toate lucrurile, și vă va aminti de tot ce v-am spus.",
           "teaching": "Să luăm bine seama la legătura dintre iubire și ascultare. Domnul nu spune: dacă Mă iubiți, veți simți numai lucruri înalte despre Mine. Spune: veți păzi poruncile Mele. Dragostea față de Hristos nu rămâne în căldură afectivă, ci intră în ascultare.\n\nApoi vine făgăduința Mângâietorului. Se cuvine să luăm aminte că ucenicii nu sunt lăsați orfani. Plecarea văzută a lui Isus nu înseamnă părăsire, ci schimbarea chipului în care rămâne cu ai Săi. Duhul adevărului nu este adaos secundar, ci darul prin care prezența lui Hristos ajunge vie și lăuntrică în credincioși.\n\nȘi iarăși, Noi vom veni la el și vom locui împreună cu el. Aceasta este una dintre cele mai dulci făgăduințe ale capitolului. Omul care iubește pe Hristos și păzește cuvântul Lui nu primește doar ajutor din afară, ci locuire. Dumnezeu Însuși face din inima lui loc de prezență.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "παράκλητος",
@@ -1480,6 +1608,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "a rămâne, a locui. Prezența statornică a Duhului și a lui Hristos."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ioan 15:10",
             "Ioan 16:7-15",
@@ -1494,6 +1623,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Vă las pacea Mea",
           "text": "Pace plec cu tine. Pacea mea îți dau; nu ca lumea dă, eu dau la tine. Nu lăsa inima ta să fie tulburată, nici să fie frică. Ați auzit cum v-am spus: Mă duc mă voi întoarce la voi. Dacă m-fi iubit, v-fi bucurat pentru că am spus: Mă duc la Tatăl meu, pentru că Tatăl este mai mare decât mine. Ți-am spus înainte să se întâmple, ca atunci când se va întâmpla, să crezi. Nu voi mai vorbi mult cu tine, pentru că prințul lumii vine, și el nu are nimic în mine. Dar că lumea poate ști că eu iubesc pe Tatăl, și așa cum Tatăl mi-a poruncit, chiar și așa fac. Ridică-te, să plecăm de aici.",
           "teaching": "Să luăm bine seama la felul păcii pe care o dă Domnul. Nu v-o dau cum o dă lumea. Lumea dă pace prin împrejurări prielnice, control, evitare și liniștire de suprafață. Hristos dă pace chiar înaintea arestării și a crucii. De aceea pacea Lui este mai adâncă decât vremea de afară.\n\nCuvântul despre Tatăl este mai mare decât Mine cere și el măsură. Nu se cuvine folosit ca să micșorăm dumnezeirea Fiului. În context, Domnul vorbește în starea smeririi Lui și în randuiala trimiterii și ascultării față de Tatăl. Tocmai prin această ascultare desăvârșită se va arăta slava Fiului.\n\nȘi iarăși, vine stăpânitorul lumii acesteia; el n-are nimic în Mine. Câtă mângâiere stă aici! Domnul merge spre cruce fără să fie prins într-un punct de potrivire cu răul. Nu există în El loc unde diavolul să poată agăța ceva. El merge curat, ascultător și sfânt până la capăt.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "εἰρήνη",
@@ -1508,6 +1639,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "stăpânitorul lumii. Puterea întunericului aflată sub judecata lui Dumnezeu."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ioan 12:31",
             "Ioan 16:33",
@@ -1535,6 +1667,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Rămâneți în Mine",
           "text": "Eu sunt adevărata viță de vie, iar Tatăl meu este fermierul. Fiecare ramură din mine care nu dă rod, el ia. Fiecare ramură care dă rod, el prune, ca să poată aduce mai multe fructe. Sunteți deja curățiți din cauza cuvântului pe care vi l-am spus. Rămâneți în Mine, Eu în voi. După cum mlădi nu poate aduce rod de la sine, dacă nu rămâne în vi, tot așa nici voi nu, dacă nu rămâneți în Mine. Eu sunt vița de vie. Tu ești ramurile. Cel care rămâne în mine și eu în el aduce multe roade, pentru că în afară de mine nu poți face nimic. Dacă un om nu rămâne în mine, el este aruncat afară ca o ramură și este uscat; și le adună, arunca-le în foc, și sunt arse. Dacă rămâneți în mine și cuvintele mele trăiesc în voi, cereți orice doriți și vi se va face. În aceasta Tatăl meu este glorificat, că veți da mult rod; și astfel veți fi discipolii mei. Așa cum Tatăl m-a iubit pe mine, eu v-am iubit pe voi. Rămâneți în iubirea mea. Dacă păziți poruncile Mele, rămâne în dragostea Mea, după cum Eu am păzit poruncile Tatălui Meu rămân în dragostea Lui. V-am spus aceste lucruri, ca bucuria mea să rămână în voi, și bucuria voastră să fie deplină.",
           "teaching": "Să luăm bine seama la marele cuvânt al capitolului: rămâneți. Domnul nu cere de la ucenici să inventeze viața, ci să rămână în Izvorul ei. Mlădița nu produce viață din ea însăși și nici nu se laudă cu rodul ca și cum ar fi al ei. Totul vine din legătura vie cu Vița.\n\nApoi se cuvine să luăm aminte la curățirea făcută de Vier. Rodirea nu înseamnă lipsa tăierilor și a curățirii, ci tocmai trecerea prin ele. Tatăl nu curăță ca să piardă mlădița roditoare, ci ca să o facă și mai roditoare. Multe dureri ale ucenicului nu sunt semn că a fost părăsit, ci că este lucrat.\n\nȘi iarăși, despărțiți de Mine nu puteți face nimic. Câtă simplitate și cât adevăr stau aici! Nu se spune: nu puteți face puțin bine, ci nimic. Toată viața roditoare a credinciosului stă atârnată de Hristos. De aceea rugăciunea, ascultarea și bucuria nu se nasc din auto-suficiență, ci din rămânere.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "μένω",
@@ -1555,6 +1689,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "rod. Viață și lucrare născute din unirea cu Hristos."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Psalmul 80:8-9",
             "Isaia 5:1-7",
@@ -1569,6 +1704,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Să vă iubiți cum v-am iubit Eu",
           "text": "Aceasta este porunca mea, că vă iubiți unii pe alții, așa cum v-am iubit și eu. Nimeni nu are o dragoste mai mare decât aceasta, ca cineva să-și dea pentru prietenii săi. Sunteți prietenii mei dacă faceți tot ce vă poruncesc. Nu vă mai numesc servitori, pentru că servitorul nu știe ce face stăpânul său. Dar v-am numit prieteni, pentru tot ce am auzit de la Tatăl meu, v-am făcut cunoscut. nu voi m-ați ales pe mine, ci eu v-am ales pe voi și v-am rânduit, ca voi să mergeți și să aduce rod, și rodul vostru să rămână; pentru ca orice veți cere de la Tatăl în numele Meu, El să vi-l dea. Vă poruncesc aceste lucruri, ca să vă iubiți unii pe alții.",
           "teaching": "Să luăm bine seama la măsura iubirii cerute: cum v-am iubit Eu. Domnul nu lasă dragostea frățească la nivelul simpatiei, al afinității sau al schimbului de bunăvoințe. Măsura ei este dragostea Lui jertfitoare. De aceea porunca aceasta nu poate fi împlinită din fire, ci numai din rămânere în El.\n\nApoi, numele de prieteni nu slăbește autoritatea Domnului, ci adâncește apropierea. El nu încetează să fie Domnul, dar face cunoscută inima Tatălui celor ai Lui. În prietenia aceasta nu intri prin egalitate cu Hristos, ci prin harul Lui care te trage aproape și te face părtaș la cuvântul Său.\n\nȘi iarăși, nu voi M-ați ales pe Mine; ci Eu v-am ales pe voi. Câtă smerenie ar trebui să nască acest cuvânt! Rodirea nu stă pe temelia inițiativei noastre, ci pe alegerea și rânduirea Lui. De aceea orice slujire curată trebuie să rămână fără laudă în sine.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "φίλοι",
@@ -1583,6 +1720,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "a-și pune viața. Limbaj al jertfirii de sine."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ioan 13:34-35",
             "Ioan 10:11",
@@ -1597,6 +1735,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Dacă vă urăște lumea",
           "text": "dacă lumea te urăște, că m-a urât pe mine înainte să te urască pe tine. Dacă ați fi din lume, lumea ar iubi ce este al ei. Dar pentru că nu din lume, de vreme ce v-am ales din lume, de aceea lumea vă urăște. Amintiți-vă cuvântul pe care eu vi l-am spus: Robul nu este mai mare decât domnul său. Dacă m-au persecutat pe mine și pe voi vă vor persecuta; dacă au ținut cuvântul meu și pe al vostru îl vor ține. Dar îți vor face toate aceste lucruri de dragul numelui meu, pentru că nu-l cunosc pe cel care m-a trimis. Dacă n-aș fi venit și nu le-aș fi vorbit, n-ar fi avut păcat, dar acum nu mai au nici o scuză pentru păcatul lor. Cel care mă urăște, îl urăște și pe Tatăl meu. Dacă n-aș fi făcut printre ei lucrările pe care nimeni altcineva nu le-ar fi făcut, n-ar fi avut păcat. Dar acum m-au văzut și de asemenea m-au urât atât pe mine cât și pe Tatăl meu. Dar aceasta s-a întâmplat ca să se împlinească cuvântul care era scris în legea lor: M-au urât fără temei„. Când Consilierul va veni, pe care vi-l voi trimite de la Tatăl, Duhul adevărului, care provine de la Tatăl, el va mărturisi despre mine. Și tu vei depune mărturie, pentru că ai fost cu mine de la început.”",
           "teaching": "Să luăm bine seama la realismul Domnului. El nu promite ucenicilor că rămânerea în El îi va face iubiți de lume. Dimpotrivă, îi pregătește pentru ură. Asta ne păzește de un creștinism care își măsoară adevărul după cât de bine este primit de toți.\n\nȘi totuși, în mijlocul urii, Domnul nu lasă ucenicii singuri. Mângâietorul va mărturisi despre El și ucenicii vor mărturisi împreună cu Duhul. Cu alte cuvinte, mărturia Bisericii nu este purtare omenească izolată, ci lucrare în care Duhul adevărului merge înainte.\n\nApoi, ura lumii este legată de necunoașterea Tatălui și de refuzul luminii primite. Se cuvine să luăm aminte că opoziția față de Hristos nu este doar diferență de gust, ci răspuns moral și duhovnicesc față de adevăr.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "κόσμος",
@@ -1617,6 +1757,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "a mărturisi. Lucrarea Duhului și a ucenicilor despre Hristos."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Psalmul 69:4",
             "Ioan 14:26",
@@ -1644,6 +1785,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Vă este de folos să Mă duc",
           "text": "v-am spus aceste lucruri ca să nu vă poticni. Ei te vor scoate din sinagogi. Da, vine timpul ca oricine te va ucide să creadă că el îi oferă servicii lui Dumnezeu. Ei vor face aceste lucruri pentru că nu l-au cunoscut nici pe Tatăl, nici pe mine. Dar v-am spus aceste lucruri astfel încât, atunci când va veni momentul, să vă amintiți că v-am spus despre ele. Nu v-am spus aceste lucruri de la început, pentru că am fost cu voi. Dar acum mă duc la cel care m-a trimis, și niciunul dintre voi nu mă întreabă, unde vă duceți? Dar pentru că v-am spus aceste lucruri, întristarea v-a umplut inima. Cu toate acestea, vă spun adevărul: este în avantajul vostru ca eu să plec; pentru că dacă nu plec, consilierul nu va veni la voi. Dar dacă mă duc, îl voi trimite la voi. Când va veni, va convinge lumea despre păcat, despre dreptate despre judecată; despre păcat, pentru că ei nu cred în mine; despre dreptate, pentru că Eu Mă duc la Tatăl Meu și voi nu Mă veți mai vedea; Despre judecată, pentru că prințul acestei lumi a fost judecat. Încă mai am multe lucruri să-ți spun, dar nu le poți suporta acum. Dar când va veni El, Duhul adevărului, vă va povăi în tot adevărul, căci nu va vorbi de la El, ci va vorbi tot ce va auzi, vă va vesti ce va veni. El mă va glorifica, pentru că el va lua din ceea ce este al meu și vă va declara. Toate lucrurile pe care le are Tatăl sunt ale mele; de aceea am spus că el ia de la mine și vă va declara.",
           "teaching": "Să luăm bine seama la realismul Domnului. El nu ascunde ucenicilor prigonirea care vine. Mai mult, arată că unii îi vor ucide crezând că aduc o slujbă lui Dumnezeu. Se cuvine să luăm aminte: zelul religios nu este dovadă sigură a cunoașterii lui Dumnezeu. Omul poate purta numele slujirii și, totuși, să lupte împotriva Fiului.\n\nApoi vine unul dintre cele mai greu de primit și mai mângâietoare cuvinte: vă este de folos să Mă duc. Ucenicii ar fi ales cu siguranță rămânerea Lui văzută. Dar Domnul știa că pentru lucrarea deplină a mântuirii și pentru viața Bisericii era nevoie de plecarea Lui spre cruce, înviere, înălțare și trimiterea Duhului.\n\nLucrarea Duhului este legată strâns de Hristos. El nu vine să ocupe locul Fiului în altă direcție, ci să-L proslăvească. De aceea orice vorbire despre Duhul care nu duce la o vedere mai adâncă a lui Hristos s-a abătut deja din cale.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "παράκλητος",
@@ -1658,6 +1801,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "a dovedi vinovat, a aduce la lumină. Lucrarea Duhului asupra lumii."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ioan 14:16-17",
             "Ioan 15:26",
@@ -1672,6 +1816,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Întristarea voastră se va preface în bucurie",
           "text": "Încă puțin și nu Mă veți mai vedea. Încă puțin și Mă veți vedea. Atunci unii dintre discipolii lui au spus între ei: Ce este aceasta ce ne spune: Puțin timp și nu mă veți vedea și din nou, puțin timp și mă veți vedea? Și: Pentru că eu mă duc la Tatăl? Ei au zis deci: Ce este aceasta ce zice el: Încă puțină vreme? Nu știm ce zice el. De aceea, Isus a înțeles că voiau să-L întrebe le-a zis: Întrebați între voi despre aceasta, că Eu am zis: Puțin nu Mă mai vedea, iarăși Mă vedea? Adevărat vă spun că plânge vă tângui, dar lumea se va bucura; fi întrist, dar întristarea voastră se va preface în bucurie. O femeie, cand naste, are tristete pentru ca i-a venit timpul. Dar cand a nascut copilul, nu-si mai aminteste chinul, pentru bucuria ca o fiinta umana se naste in lume. De aceea acum ai tristete, dar te voi vedea din nou, si inima ta se va bucura, si nimeni nu va lua bucuria ta departe de tine. În ziua aceea nu-Mi pune întrebări; adevărat vă spun că orice cere de la Tatăl în Numele Meu, El vă va da. Până acum, n-ai cerut nimic în numele meu. Întreabă, și vei primi, pentru ca bucuria ta să fie deplină.",
           "teaching": "Să luăm bine seama la felul în care Domnul vorbește despre întristare. El nu spune că ucenicii nu se vor întrista, ci că întristarea lor se va preface în bucurie. Asta este mângâiere mare pentru orice vreme de noapte: Evanghelia nu ne învață să negăm durerea, ci să așteptăm prefacerea ei prin lucrarea lui Hristos.\n\nPilda femeii care naște arată că suferința nu este ultimul cuvânt. Ceasul durerii este real, dar din el iese o bucurie nouă. Tot astfel, crucea va zdrobi inima ucenicilor pentru puțină vreme, dar învierea va aduce o bucurie pe care nimeni nu o va mai putea smulge.\n\nȘi iarăși, rugăciunea în Numele Lui este legată de această bucurie deplină. Ucenicii nu vor fi lăsați doar cu amintirea Domnului, ci cu deschidere spre Tatăl prin Fiul. Aici se vede frumusețea Noului Legământ: bucuria și rugăciunea merg împreună sub Numele lui Isus.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "λύπη",
@@ -1686,6 +1832,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "bucurie. Bucuria dată de Hristos și legată de învierea Lui."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ioan 14:1",
             "Ioan 20:20",
@@ -1700,6 +1847,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Îndrăzniți, Eu am biruit lumea",
           "text": "V-am spus aceste lucruri în figuri de stil. Dar vine timpul când nu vă voi mai vorbi în figuri de vorbire, ci vă voi spune clar despre Tatăl. În acea zi veți cere în numele meu; și eu nu vă spun că mă voi ruga Tatălui pentru voi, pentru că Tatăl însuși te iubește, pentru că m-ai iubit, și au crezut că am venit de la Dumnezeu. Am venit de la Tatăl și am venit în lume. Din nou, las lumea și mă duc la Tatăl. Ucenicii Lui I-au zis: Iată, acum vorbești deslușit nu folosești nici o figură de stil. Acum știm că știm toate lucrurile, și nu trebuie ca cineva să te întrebe. Prin aceasta noi credem că ai venit de la Dumnezeu. Isus le-a răspuns: Credeți acum? Iată, vine timpul, da, și a venit acum, că veți fi împrăștiați, toată lumea la locul său, și mă veți lăsa în pace. Cu toate acestea, eu nu sunt singur, pentru că Tatăl este cu mine. Ți-am spus aceste lucruri, că în mine s-ar putea să ai pace. În lume ai probleme; dar înveselește-te! Am biruit lumea.",
           "teaching": "Să luăm bine seama la mângâierea: Tatăl Însuși vă iubește. Ucenicii nu sunt primiți cu greu prin Fiul, ca și cum Tatăl ar rămâne rece. Fiul îi aduce la cunoașterea inimii Tatălui. Dragostea Tatălui nu este mai puțin mare decât dragostea Fiului.\n\nApoi Domnul nu se lasă amăgit de graba încrederii ucenicilor. Când ei spun: acum credem, El le arată risipirea care vine. Se cuvine să luăm aminte: există o credință sinceră, dar încă neîncercată. Hristos cunoaște mai bine decât noi cât ține inima noastră în ceasul presiunii.\n\nȘi capitolul se închide cu una dintre cele mai mari mângâieri din toată Evanghelia: în lume veți avea necazuri; dar îndrăzniți, Eu am biruit lumea. Domnul nu promite lipsa necazurilor, ci pace în El și biruința Lui peste ele. Nădejdea credinciosului nu este că lumea va deveni ușoară, ci că Hristos a biruit-o deja.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "θαρσεῖτε",
@@ -1714,6 +1863,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "am biruit. Biruință deja câștigată și cu efect durabil."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ioan 14:27",
             "Ioan 17:11",
@@ -1741,6 +1891,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Tată, a sosit ceasul",
           "text": "Isus a spus aceste lucruri, apoi ridicându-ochii spre cer, a spus: Tată, a venit timpul să-L glorifici pe Fiul tău, ca Fiul tău să te glorifice pe tine; așa cum tu i-ai dat putere peste orice făptură, așa că el va da viața veșnică tuturor celor pe care i-ai dat-o. Aceasta este viața veșnică, că ei ar trebui să te cunoască, singurul Dumnezeu adevărat, și cel pe care l-ai trimis, Isus Hristos. Te-am glorificat pe pământ. Am realizat lucrarea pe care mi-ai dat-o să o fac. Acum, Tată, glorifică-mă cu sinele tău cu gloria pe care am avut-o cu tine înainte ca lumea să existe.",
           "teaching": "Să luăm bine seama la felul în care Domnul intră în ceasul crucii. Nu cu disperare și nu cu neclaritate, ci spunând: a sosit ceasul. Crucea nu este accident, ci ceasul hotărât în planul Tatălui.\n\nApoi, viața veșnică este definită nu doar ca durată fără sfârșit, ci ca cunoaștere a Tatălui și a Fiului. Se cuvine să luăm aminte: viața veșnică nu începe abia după moarte, ci în cunoașterea vie a lui Dumnezeu prin Isus Hristos.\n\nȘi iarăși, slava pe care o avea la Tine înainte de a fi lumea arată limpede preexistența și dumnezeirea Fiului. Domnul nu începe să existe în iesle; El cere aici întoarcerea la slava pe care o avea la Tatăl din veșnicie.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "δόξα",
@@ -1755,6 +1907,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "viață veșnică. Viață în cunoașterea lui Dumnezeu prin Fiul."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ioan 1:1-2",
             "Ioan 3:16",
@@ -1769,6 +1922,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Păzește-i și sfințește-i prin adevăr",
           "text": "Am dezvăluit numele Tău oamenilor pe care Mi i-ai dat din lume. Ei erau ai Tăi, și Tu mi i-ai dat. Ei au păzit cuvântul Tău. Acum au știut că toate lucrurile pe care mi le-ai dat sunt de la tine, pentru cuvintele pe care mi le-ai dat le-am dat; și le-au primit, și știau sigur că am venit de la tine. Ei au crezut că m-ai trimis. Mă rog pentru ei. Nu mă rog pentru lume, ci pentru cei pe care mi i-ai dat, pentru că sunt ai tăi. Toate lucrurile care sunt ale mele sunt ale tale, și ale tale sunt ale mele, și eu sunt glorificat în ele. Eu nu mai sunt în lume, dar acestea sunt în lume, și eu vin la tine. Sfinte Părinte, păstrează-le prin numele tău pe care mi l-ai dat, pentru ca ele să fie una, așa cum suntem noi. Cât timp am fost cu ei în lume, i-am păstrat în numele Tău. Am păzit pe cei pe care Mi i-ai dat. Nici unul dintre ei nu este pierdut, cu excepția fiului pierzării, ca să se împlinească Scriptura. Dar acum vin la tine, și spun aceste lucruri în lume, pentru ca ei să aibă bucuria mea plină în ei înșiși. Le-am dat cuvântul tău. Lumea i-a urât pentru că nu sunt din lume, așa cum eu nu sunt din lume. Nu mă rog să-i iei din lume, ci să-i ții departe de cel rău. Ei nu sunt din lume, așa cum nici eu nu sunt din lume. Sfințește-i în adevărul Tău. Cuvântul Tău este adevărul. Așa cum m-ai trimis în lume, chiar și așa le-am trimis în lume. De dragul lor mă sfințesc pe mine însumi, pentru ca și ei înșiși să poată fi în adevăr.",
           "teaching": "Să luăm bine seama la două cereri mari ale Domnului: păzește-i și sfințește-i. Ucenicii nu sunt scoși din lume, dar sunt ținuți în ea prin rugăciunea Fiului. Asta ne păzește de două căi greșite: să fugim din lume ca și cum chemarea noastră ar fi doar retragerea, ori să ne contopim cu lumea ca și cum nu am mai fi deosebiți de ea.\n\nCuvântul Tău este adevărul. Se cuvine să luăm aminte că sfințirea nu se face prin atmosferă religioasă ori prin disciplină goală, ci prin adevărul lui Dumnezeu. Adevărul nu este dușmanul sfințirii, ci instrumentul ei.\n\nȘi iarăși, Domnul nu cere doar păstrare, ci unitate: pentru ca ei să fie una. Unitatea aceasta nu este uniformitate rece și nici negociere a adevărului, ci unitate ținută în Numele Tatălui și în cuvântul Lui.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "ἁγιάζω",
@@ -1783,6 +1938,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "adevăr. Realitatea descoperită de Dumnezeu, prin care El și sfințește."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ioan 15:18-19",
             "Efeseni 5:25-27",
@@ -1797,6 +1953,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Mă rog și pentru cei ce vor crede",
           "text": "Nu numai pentru acestea mă rog, ci și pentru cei care vor crede în mine prin cuvântul lor, ca toți să fie unul; așa cum și tu, Tată, ești în mine, și eu în tine, ca să fie și ei unul în noi; ca lumea să creadă că m-ai trimis. Slava pe care mi-ai dat-o, le-am dat-o lor, ca ei să fie unul, așa cum suntem noi unul, eu în ei, și tu în mine, ca ei să fie desăvârș într-unul singur, ca lumea să că Tu m-ai trimis și i-ai iubit, cum m-ai iubit pe mine. Tată, doresc ca și cei pe care mi i-ai dat să fie cu mine unde sunt, ca să vadă gloria mea pe care mi-ai dat-o, pentru că m-ai iubit înainte de întemeierea lumii. Tată drept, lumea nu Te-a cunoscut, dar Eu Te-am cunoscut; au știut că Tu M-ai trimis. Le-am făcut cunoscut numele Tău-l voi face cunoscut; pentru ca dragostea cu care M-ai iubit să fie în ei, iar eu în ei.„”",
           "teaching": "Să ne oprim aici cu sfială mare, fiindcă în aceste versete Domnul Se roagă și pentru noi: pentru cei ce vor crede prin cuvântul lor. Biserica nu apare târziu în atenția Lui, ci stă deja purtată în rugăciunea Sa înainte de cruce.\n\nApoi, unitatea cerută aici trebuie citită cu multă măsură. Nu este chemare la amestec fără adevăr, ci la o unitate care izvorăște din Tatăl și Fiul, din slava dată de Hristos și din locuirea Lui în ai Săi. Unitatea ruptă de adevăr nu este unitatea pentru care Se roagă Domnul.\n\nLa sfârșit, rugăciunea ajunge la dorința Fiului: vreau ca acolo unde sunt Eu, să fie împreună cu Mine și aceia pe care Mi i-ai dat Tu. Câtă mângâiere! Mântuirea nu se oprește la iertare și slujire aici jos; ținta ei este să fim cu Hristos și să vedem slava Lui.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "ἵνα πάντες ἓν ὦσιν",
@@ -1811,6 +1969,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "vreau. Dorința hotărâtă a Fiului pentru ai Săi."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ioan 10:16",
             "Ioan 14:3",
@@ -1838,6 +1997,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Eu sunt. Baga-ți sabia în teacă",
           "text": "După ce a rostit aceste cuvinte, Isus a ieșit cu ucenicii Săi peste pârâul Chedron, unde era o grădină, în care a intrat împreună cu ucenicii Săi. Iuda, care l-a trădat, cunoștea el locul, pentru că Isus se întâlnea adesea acolo cu discipolii săi. Iuda, după ce a luat un detașament de soldați și ofițeri de la preoții cei mai de seamă și de la farisei, a venit acolo cu felinare, torțe și arme. De aceea, Isus, cunoscând toate cele ce i se întâmplau, a ieșit le-a zis: Pe cine? Ei I-au răspuns: Isus din Nazaret. Isus le-a zis: Eu sunt. Și Iuda, care L-a vîndut, stătea cu ei. De aceea, când le-a zis: Eu sunt, ei s-au întors au căzut la pământ. Și i-a întrebat iarăși: Pe cine?Isus din Nazaret. Isus i-a răspuns: i-am spus că Eu sunt. Dacă Mă cauți pe Mine, lasă-i pe aceștia să plece. ca să se împlinească cuvântul pe care-l spusese: Dintre cei pe care Mi i-ai dat, n-am pierdut pe niciunul. Simon Petru, avînd sabie, a scos-o, a lovit pe robul marelui preot, i-a tăiat urechea dreaptă. Numele robului era Malchus. Isus i-a zis lui Petru: Pune sabia în teacă; paharul pe care Mi l-a dat Tatăl, să nu-l beau eu oare? Deci detașamentul, comandantul și ofițerii iudeilor l-au prins pe Isus și l-au legat, și l-a dus mai întâi la Ana, căci era socrul lui Caiafa, care era mare preot în anul acela. Acum Caiafa a fost cea care i-a sfătuit pe iudei că era bine ca un singur om să piară pentru popor.",
           "teaching": "Să luăm bine seama că Domnul nu este prins ca unul luat prin surprindere. Ioan spune limpede: știa tot ce avea să I se întâmple și a mers spre ei. Hristos nu fuge de ceas, ci îl întâmpină.\n\nApoi, la cuvântul Eu sunt, cei veniți cu arme cad la pământ. Se cuvine să luăm aminte că și în ceasul predării Sale, slava Lui izbucnește pentru o clipă. Patimile nu-I anulează autoritatea. El Se lasă legat, dar nu pentru că n-ar putea să Se apere.\n\nȘi iarăși, Petru vrea să ajute cu sabia. Domnul îl oprește. Împărăția Lui nu se apără prin fierul firii, ci prin ascultarea de paharul dat de Tatăl. Câtă învățătură este aici pentru orice slujire care ar vrea să-l apere pe Hristos cu armele lumii!",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "ἐγώ εἰμι",
@@ -1852,6 +2013,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "pahar. Ceasul hotărât al suferinței primite în ascultare de la Tatăl."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ioan 6:39",
             "Ioan 10:17-18",
@@ -1866,6 +2028,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Isus mărturisește. Petru se leapădă",
           "text": "Simon Petru l-a urmat pe Isus, la fel ca un alt ucenic. Acel ucenic era cunoscut marelui preot a intrat cu Isus în curtea marelui preot. Dar Petru stătea afară la ușă. Și celălalt ucenic, care era cunoscut marelui preot, a ieșit a vorbit cu cea care păzea ușa, l-a adus pe Petru. Atunci slujnica care păzea ușa a zis lui Petru: Și tu ești unul din ucenicii omului acestuia? El a răspuns: Nu sunt. Slujitorii și ofițerii stăteau acolo, făcînd un foc de cărbuni, căci era frig; se încălzeau. Petru era cu ei, stând în picioare și încălzindu-se. Prin urmare, marele preot l-a întrebat pe Isus despre discipolii săi și despre învățătura sa. Isus i-a răspuns, am vorbit deschis lumii. am mereu în sinagogi și în templu, unde evreii se întâlneau mereu. nu am spus nimic în secret. De ce mă întrebi pe mine? Întreabă pe cei care m-au auzit ce le-am spus. Iată, ei știu lucrurile pe care le-am spus. După ce a spus aceasta, unul dintrei care stăteau lângă Isus l-a pălmuit cu mâna, spunând: Îi răspunzi astfel marelui preot? Isus i-a răspuns: Dacă am vorbit rău, mărturisește despre rău; dar dacă este bine, de ce mă bați? Annas l-a trimis legat de Caiafa, marele preot. Simon Petru stătea în picioare se încălzea. Ei i-au zis deci: Nu cumva ești tu unul din ucenicii Lui? El a tăgăduit lucrul acesta a zis: Nu sunt. Unul din slujitorii marelui preot, fiind rudă cu cel căruia Petru îi tăiase urechea, a zis: Nu te-am văzut în grădină cu el? Petru a negat din nou lucrul acesta, și îndată a cântat cocoșul.",
           "teaching": "Să luăm bine seama la contrastul dureros dintre Domnul și Petru. Isus stă înaintea întrebărilor și a loviturii fără să se abată de la adevăr. Petru, deși Îl iubește, se încălzește la focul străin și spune de trei ori: nu sunt.\n\nSe cuvine să luăm aminte că lepădarea nu începe numai cu cuvintele, ci și cu locul unde stă omul și focul la care se încălzește. Petru voia să fie aproape, dar nu destul de aproape ca să fie văzut cu Domnul. Acolo se coace adesea frica.\n\nȘi iarăși, Domnul nu răspunde cu violență la palmă, ci cu adevăr limpede: dacă am vorbit rău, arată ce am spus rău. Aici vedem blândețea puternică a lui Hristos, care nu se lasă dus nici în minciună, nici în izbucnire.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "ἀρνέομαι",
@@ -1880,6 +2044,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "adevăr. Ceea ce Domnul poartă fără abatere chiar sub lovituri."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ioan 13:38",
             "Luca 22:61-62",
@@ -1894,6 +2059,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Împărăția Mea nu este din lumea aceasta",
           "text": "Ei au dus deci pe Isus din Caiafa în Pretoriu. Era devreme, și n-au intrat în Pretoriu, ca să nu fie pângăriți, ci să mănînce Paștele. Pilat a ieșit la ei le-a zis: Ce acuzație aduceți împotriva acestui om? Ei i-au răspuns: Dacă omul acesta n-ar fi fost un răufăcător, noi nu ți l-am fi dat. Atunci Pilat le-a zis: Lu-l voi judecați-l după legea voastră. De aceea Iudeii i-au zis: Este ilegal să omorâm pe cineva. ca să se împlinească cuvântul lui Isus, pe care l-a rostit, semnificând prin ce fel de moarte avea să moară. Pilat a intrat din nou în Pretoriu, a chemat pe Isus i-a zis: Tu ești Împăratul Iudeilor? Isus i-a răspuns: Tu singur spui aceasta, sau ți-au spus despre Mine? Pilat a răspuns: Sunt eu iudeu? Națiunea ta și preoții de seamă mi te-au predat; ce ai făcut? Isus a răspuns, Regatul meu nu este din această lume. Dacă Regatul meu ar fi din această lume, atunci slujitorii mei ar lupta, că nu aș fi dat evreilor. Dar acum Regatul meu nu este de aici. Atunci Pilat i-a zis: E împărat? Isus a răspuns: Tu zici că sunt împărat. De aceea m-am născut de aceea am venit în lume, ca să depun mărturie despre adevăr. Oricine este din adevăr ascultă glasul meu. Pilat i-a zis: Ce este adevărul? După ce a zis aceste vorbe, a ieșit din nou la Iudei, le-a zis: Nu găsesc nici un temei pentru o acuzație împotriva lui. Dar aveți un obicei pe care ar trebui să elibereze cineva pentru tine la Paște. Prin urmare, vrei să vă elibereze regele iudeilor? Atunci toți au strigat din nou, spunând: Nu pe acest om, ci pe Baraba! Iar acum Baraba era un tâlhar.",
           "teaching": "Să luăm bine seama la ironia amară a acestei scene. Oamenii care nu vor să intre în odaia de judecată ca să nu se spurce lucrează în același timp la condamnarea Fiului lui Dumnezeu. Aici se vede cât de departe poate merge formalismul religios rupt de adevăr.\n\nApoi, răspunsul Domnului despre împărăție cere multă măsură. Împărăția Mea nu este din lumea aceasta nu înseamnă că nu are nimic a face cu lumea, ci că izvorul, puterea și felul ei nu sunt de aici. Ea nu se sprijină pe sabia firii și nici pe mecanismele puterii lumești.\n\nȘi iarăși, oricine este din adevăr ascultă glasul Meu. Pilat întreabă: ce este adevărul?, dar nu rămâne să asculte răspunsul. Asta rămâne primejdie vie și astăzi: să pui întrebarea adevărului fără să te pleci înaintea Celui care este Adevărul.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "βασιλεία",
@@ -1908,6 +2075,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "adevăr. Realitatea lui Dumnezeu mărturisită de Hristos."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ioan 8:32",
             "Ioan 14:6",
@@ -1935,6 +2103,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Iată Omul. Noi n-avem alt împărat decât pe cezarul",
           "text": "Atunci Pilat l-a luat pe Isus și l-a biciuit. Solda au răsucit spini într-o coroană și i-au pus-o pe cap și l-au îmbrăcat într-un veșmânt purpuriu. Ei au continuat să spună: Bucură-te, regele iudeilor! l-au tot pălmuit. Atunci Pilat a ieșit din nou afară le-a zis: Iată, vi-l aduc afară, ca să știți că nu găsesc nici un temei pentru o acuzație împotriva lui. Isus a ieșit deci, purtând cununa de spini haina de purpură. Pilat le-a zis: Iată omul! Preoții cei mai de seamă slujbașii l-au văzut, au strigat: Răstignește! Răstignește! Pilat le-a zis: Lu-l voi răstigniți-l, căci nu găsesc nici o bază pentru o acuzație împotriva lui. Iudeii i-au răspuns: Noi avem o lege după legea noastră El trebuie să moară, pentru că S-a făcut pe Sine Fiul lui Dumnezeu. De aceea, când Pilat a auzit aceste cuvinte, s-a temut mai mult. A intrat din nou în pretoriu i-a zis lui Isus: De unde ești? Dar Isus nu i-a răspuns nimic. Pilat i-a zis: Nu-mi vorbești? Nu știi că am putere să te eliberez să te răstignesc? Isus i-a răspuns: N-ai avea nici o putere împotriva Mea, dacă nu ți-ar fi dată de sus; de aceea, cine M-a dat pe Mine are un păcat mai mare. La aceasta, Pilat a fost în căutarea să-l elibereze, dar evreii au strigat, spunând, Dacă eliberați acest om, sunteți Cezareus! Oricine se face un rege vorbește împotriva Cezarului! Când Pilat a auzit aceste cuvinte, l-a scos pe Isus afară s-a pe scaunul de judecată într-un loc numitPăvălia, dar în ebraică, Gabbata. Acum era Ziua Pregătiriilui, cam pe la ceasul allea. El le-a zis iudeilor: Iată-l pe Împăratul vostru! Ei au strigat: Pleacă cu el! Pleacă cu el! Răstignește-l! Pilat le-a zis: Să-l răstignesc pe regele vostru? Preoții cei mai de seamă au răspuns: Nu avem alt împărat în afară de Cezar! Așa că l-a dat lor să fie răstignit, așa că l-au luat pe Isus și l-au dus departe.",
           "teaching": "Să luăm bine seama la acest cuvânt: Iată Omul. Pilat îl rostește într-o scenă de batjocură, dar fără să știe atinge adânc ceva mare. În fața lor stă Omul adevărat, omul fără păcat, omul cum n-a mai fost altul.\n\nApoi, cuvântul n-ai avea nicio putere asupra Mea dacă nu ți-ar fi fost dată de sus arată iarăși domnia lui Dumnezeu peste tot ce se întâmplă. Puterea lui Pilat este reală, dar nu ultimă. Crucea nu scapă de sub ochiul Tatălui.\n\nȘi ce grea este mărturisirea preoților: noi n-avem alt împărat decât pe cezarul. Aici se vede până unde poate coborî inima religioasă când respinge pe Fiul. Ca să nu-L primească pe Hristos, se predă unei stăpâniri pe care altădată ar fi detestat-o.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "ἴδε ὁ ἄνθρωπος",
@@ -1949,6 +2119,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "putere, autoritate. Autoritatea omenească stă sub cea de sus."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Isaia 53:3-7",
             "Ioan 18:36-37",
@@ -1963,6 +2134,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "S-a isprăvit",
           "text": "El a, purtându-și crucea, în locul numitLocul unui craniu, care este numit în ebraicăGolgota, unde L-au răstignit, și împreună cu El, alți doi, de o parte și de alta, și Isus la mijloc. Pilat a scris el un titlu l-a pus pe cruce. Acolo era scris: Isus din Nazaret, împăratul iudeilor. De aceea, mulți iudei au citit acest titlu, căci locul unde a fost răstignit Isus era aproape de cetate; și a fost scris în ebraică, în latină și în greacă. Atunci preoții de seamă ai iudeilor i-au spus lui Pilat: Nu scrie: Împăratul iudeilor, ci scrie că el a spus: Sunt Împărat al iudeilor. Pilat a răspuns: Ceea ce am scris, am scris. Când au răstignit pe Isus, ostașii și-au luat hainele, și-au făcut cîte patru părți la fiecare ostaș; și tunica. Acum tunica era fără cusătură, țesută din vârf. Și au zis unul către altul: Să nu-l rupem, ci să tragem la sorți, ca să hotărască al cui va fi! Ca să se împlinească Scriptura, care zice: Mi-au hainele între ei, au tras la sorți pentru hainele mele. De aceeai au făcut aceste lucruri. Dar în picioare de cruce Isus au fost mama lui, mama lui, sora lui, Maria, soția lui Clopas, și Maria Magdalena. De aceea, când Isus a văzut pe mama Sa pe ucenicul pe care îl iubea stând acolo, i-a zis mamei Sale: Femeie, iată fiul tău! Apoi i-a zis ucenicului: Iată mama ta! Din ceasul acela, ucenicul a luat-o acasă. După aceasta, Isus, văzând că toate lucrurile s-au terminat acum, pentru ca Scriptura să se împlinească, a spus, Mi-e sete! Acolo era pus un vas plin cu oțet; așa că au pus un burete plin cu oțet pe isop, și l-au ținut la gura lui. După ce a primit oțetul, Isus a zis: S-a isprăvit! Apoi-a plecat capul-a dat duhul.",
           "teaching": "Să luăm bine seama la liniștea stăpânitoare a Domnului în mijlocul cruzimii. Chiar pe cruce, El vede Scriptura, poartă grijă de mama Lui și merge până la capăt fără abatere.\n\nCuvântul s-a isprăvit nu este strigătul unei înfrângeri, ci al unei lucrări împlinite. Se cuvine să luăm aminte: Hristos nu moare spunând s-a pierdut totul, ci s-a isprăvit. Tot ce a dat Tatăl de făcut în calea jertfei a fost dus până la capăt.\n\nȘi iarăși, Ioan spune că Și-a dat duhul. Nu i s-a smuls viața de la sine, ci El o dă. Aici stă taina glorioasă a crucii: în locul rușinii omenești, Fiul Își exercită până la capăt ascultarea și stăpânirea sfântă.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "τετέλεσται",
@@ -1977,6 +2150,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "a-Și da duhul. Predarea vieții în mod voit."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Psalmul 22:18",
             "Psalmul 69:21",
@@ -1991,6 +2165,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Vor vedea pe cine au străpuns",
           "text": "De aceea Iudeii, pentru că era Ziua Pregătirii, astfel încât trupurile să nu rămână pe cruce în ziua Sabatului (căci Sabatul acela era unul special), au cerut lui Pilat să li se rupă picioarele și să li se ia. Soldații au venit au rupt picioarele celui dintâi ale celuilalt care a fost răstignit împreună cu el. Dar când au venit la Isus și au văzut că el era deja mort, nu i-au rupt picioarele. Totuși, unul dintre soldați i-a străpuns partea cu o suliță, și imediat a ieșit afară sânge și apă. Cel care a văzut a mărturisit și mărturia lui este adevărată. El știe că spune adevărul, ca voi să credeți. Căci aceste lucruri s-au întâmplat ca Scriptura să se împlinească, nu se va rupe nici un os din el. Din nou o altă Scriptură spune, ei se vor uita la cel pe care l-au străpuns. După aceste lucruri, Iosif din Arimataea, fiind ucenic al lui Isus, dar în taină de frica iudeilor, a cerut lui Pilat să ia trupul lui Isus. Pilat i-a dat îngăduința; a venit deci și i-a luat trupul. Nicodim, care la început a venit la Isus noaptea, a venit, de asemenea, aducând un amestec de smirnă și aloe, aproximativ o sută de lire sterline romane. Au luat deci trupul lui Isus și l-au legat în haine de in cu miresme, cum este obiceiul iudeilor de a-l îngropa. În locul unde a fost răstignit era o grădină, în grădină era un mormânt nou în care nimeni nu fusese pus vreodată. Atunci, din pricina Iudeilor, au pus acolo pe Isus Ziua Pregătirii, căci mormântul era aproape.",
           "teaching": "Să luăm bine seama la insistența lui Ioan asupra adevărului văzut: mărturia lui este adevărată. Crucea și moartea Domnului nu sunt legendă plutitoare, ci fapt văzut, atins și mărturisit.\n\nApoi, Scriptura străbate și această parte a capitolului. Niciun os nu este sfărâmat și coasta este străpunsă, așa cum era scris. Se cuvine să luăm aminte că nimic nu scapă în voia întâmplării. Până și detaliile cele mai sfâșietoare stau sub cuvântul lui Dumnezeu.\n\nȘi este frumos să vedem și rodul ascuns al harului. Iosif, ucenic pe ascuns, și Nicodim, omul nopții, ies acum la vedere pentru trupul Domnului. Uneori curajul pe care omul nu l-a avut la început se naște tocmai lângă cruce.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "μαρτυρία",
@@ -2005,6 +2181,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "au străpuns. Trimitere la împlinirea profeției."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Exod 12:46",
             "Zaharia 12:10",
@@ -2032,6 +2209,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Maria, de ce plângi?",
           "text": "În prima zi a săptămânii, Maria Magdalena s-a dus devreme, pe când era încă întuneric, la mormânt, a văzut că piatra fusese luată din mormânt. De aceea a alergat a venit la Simon Petru la celălalt ucenic pe care-l iubea Isus le-a zis: L-au scos pe Domnul din mormânt nu știm unde L-au pus! Petru și celălalt ucenic au ieșit, și s-au dus spre mormânt. Amândoi au fugit împreună, celălalt discipol l-a întrecut pe Petru și a venit la mormânt mai întâi. Stooping și în căutarea în, el a văzut pânzele de in situată acolo; totuși el nu a intrat în. Simon Petru a venit după el, și a intrat în mormânt. A văzut hainele de in zăcând, și cârpa care fusese pe capul lui, nu culcată cu hainele de in, ci înfășurată într-un loc de unul singur. Atunci a intrat și celălalt ucenic, care a venit primul la mormânt, și a văzut și a crezut. Căci ei încă nu cunoșteau Scriptura, că El trebuie să învie din morți. Astfel ucenicii au plecat din nou la casele lor. Dar Maria stătea afară, la mormânt, și, în timp ce plângea, s-a aplecat și s-a uitat în mormânt, Și a văzut doi îngeri în alb, unul la cap unul la picioare, unde zăcuse trupul lui Isus. Ei au întrebat-o: Femeie, de ce plângi? Ea le-a răspuns: Pentru că l-au luat pe Domnul meu nu știu unde l-au pus. După ce a spus aceasta, ea s-a întors și l-a văzut pe Isus stând în picioare și nu știa că era Isus. Isus i-a zis: Femeie, de ce plângi? Pe cine cauți? Ea, crezând că este grădinarul, i-a zis: Domnule, dacă l-ai luat, spune-mi unde l-ai pus îl voi lua. Isus i-a zis: Marie! Ea s-a întors i-a zis: Raboni!, adică: Învățătorule! Isus i-a zis: Nu mă ține, căci nu m-am suit încă la Tatăl Meu; ci du-te la frații Mei spune-le: Mă sui la Tatăl Meu Tatăl vostru, la Dumnezeul Meu Dumnezeul vostru. Maria Magdalena a venit și le-a spus discipolilor că văzuse pe Domnul, și că el îi spusese aceste lucruri.",
           "teaching": "Să luăm bine seama că dimineața învierii începe pe când era încă întuneric. Așa pășește adesea credința spre lumină: cu pași încă tulburi, încă plini de lacrimi, încă fără înțelegere deplină.\n\nMaria plânge lângă mormânt și, în durerea ei, nu-L recunoaște pe Domnul. Dar în clipa când El îi spune pe nume, totul se schimbă. Se cuvine să luăm aminte: Hristosul înviat nu este doar adevăr general, ci Domnul care cheamă pe ai Lui pe nume.\n\nȘi iarăși, mormântul gol nu este haos sau furt, ci semn de ordine sfântă. Fâșiile de pânză și ștergarul pus deoparte arată că moartea nu L-a aruncat din sine pe Hristos, ci El a ieșit biruitor din ea. Învierea nu este panică, ci biruință liniștită.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "ῥαββουνί",
@@ -2046,6 +2225,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "a învia, a se ridica din morți."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Psalmul 16:10",
             "Ioan 10:3",
@@ -2060,6 +2240,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Pace vouă. Domnul meu și Dumnezeul meu",
           "text": "De aceea, când era seară în acea zi, în prima zi a săptămânii, și când ușile erau încuiate unde erau adunați discipolii, de teama iudeilor, Isus a venit și a stat în mijloc și le-a spus: Pace vouă. După ce a zis lucrul acesta, le-a arătat mâinile și partea lui. De aceea ucenicii s-au bucurat când au văzut pe Domnul. De aceea Isus le-a zis din nou: Pace vouă! Precum M-a trimis pe Mine Tatăl, așa vă trimit Eu pe voi. Și după ce a spus aceasta, a suflat peste ei și le-a spus: Primiți Duhul Sfânt: Dacă iertați păcatele cuiva, ele au fost iertate; dacă păstrați păcatele cuiva, ele au fost ținute. Dar Toma, unul dintre cei doisprezece, numit Didymus, nu era cu ei când a venit Isus. Ceilalți ucenici I-au zis deci: Am văzut pe Domnul! Dar El le-a zis: Dacă nu voi vedea în mâinile Lui urmele cuielor, dacă nu voi pune degetul Meu în urmele cuielor, dacă nu voi pune mâna Mea în coasta Lui, nu voi crede. După opt zile, discipolii lui au fost din nou înăuntru și Toma a fost cu ei. Isus a venit, ușile fiind încuiate, și a stat în mijloc, și a spus, Pacea să fie pentru tine. Apoi a zis lui Toma: Ajunge aici degetul tău și vezi mâinile mele. Întinde aici mâna ta și pune-o în coasta mea. Nu fi necredincios, ci credincios. Toma i-a răspuns: Domnul meu Dumnezeul meu! Isus i-a răspuns: Pentru că M-ai văzut, ai crezut; ferice de cei ce n-au văzut au crezut!",
           "teaching": "Să luăm bine seama la primul cuvânt al Domnului în mijlocul ușilor încuiate: pace vouă. Nu mustrare aspră pentru fuga lor, nu dispreț față de frica lor, ci pace. Așa intră Hristosul înviat în locul tulburării ucenicilor.\n\nApoi, Toma este adesea privit numai ca necredincios. Se cuvine să fim mai drepți cu textul. El cere cu încordare, dar Domnul nu-l rupe, ci vine spre rana lui și îl ridică. Totuși, nu-l lasă în condițiile lui, ci îl cheamă: nu fi necredincios, ci credincios.\n\nMărturisirea lui Toma este una dintre cele mai mari din toată Evanghelia: Domnul meu și Dumnezeul meu. Învierea nu lasă loc pentru un Hristos micșorat. Cel care stă înaintea lui Toma este Domn și Dumnezeu. Iar fericirea dată celor ce n-au văzut și au crezut deschide ușa pentru toate generațiile de după apostoli.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "εἰρήνη ὑμῖν",
@@ -2074,6 +2256,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "Domnul meu și Dumnezeul meu. Mărturisirea lui Toma despre Hristos."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ioan 14:27",
             "Ioan 16:22",
@@ -2088,6 +2271,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Aceste lucruri au fost scrise",
           "text": "Și într-adevăr multe alte semne a făcut Isus în prezența discipolilor săi care nu sunt scrise în această carte. Dar acestea sunt scrise ca să credeți că Isus este Hristosul, Fiul lui Dumnezeu, și că crezând că puteți avea viață în numele Lui.",
           "teaching": "Ioan își ridică aici condeiul și ne spune limpede de ce a scris. Nu pentru simplă curiozitate, nu pentru memorie religioasă, ci pentru credință și viață. Se cuvine să luăm aminte: Evanghelia după Ioan nu este carte de admirat de departe, ci chemare la credință în Isus Hristos, Fiul lui Dumnezeu.\n\nȘi iarăși, viața este legată de Numele Lui. Nu de o dispoziție morală, nu de un respect vag față de creștinism, ci de Persoana Lui. Acolo se închide și se deschide totul.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "πιστεύητε",
@@ -2102,6 +2287,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "să aveți viață. Rodul credinței în Fiul."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ioan 3:16",
             "Ioan 11:25-27",
@@ -2128,6 +2314,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Este Domnul",
           "text": "După aceste lucruri, Isus S-a arătat din nou ucenicilor la marea Tiberiadei. El S-a descoperit astfel. Simon Petru, Toma, numit Didymus, Natanael din Cana în Galileea, și fiii lui Zebedei, și alți doi dintre discipolii săi au fost împreună. Simon Petru le-a zis: Mă duc la pescuit. Ei i-au răspuns: Venim noi cu voi. Ei au ieșit îndată au intrat în corabie. În noaptea aceea n-au prins nimic. Dar când a venit ziua, Isus a stat pe plajă; totuși discipolii nu știau că era Isus. Isus le-a zis: Copii, ceva de mâncat? Ei i-au răspuns: Nu. El le-a zis: Aruncați mreaja în partea dreaptă a corăbiei, găsi ceva. Ei au aruncat-o, acum n-au mai putut s-o tragă dupăa pelor. Ucenicul acela pe care-l iubea Isus i-a zis deci lui Petru: Este Domnul! Și Simon Petru, auzind că este Domnul,-a înfășurat haina în jurul lui însuși (căci era gol), s-a aruncat în mare. Dar ceilalți ucenici au venit cu o corabie mică, căci nu erau departe de țară, ci la vreo două sute de coți depărtare, trăgând plasa plină de pești. Și când au ieșit pe pământ, au văzut un foc de cărbuni acolo, cu pește și pâine pusă pe el. Isus le-a zis: Aduceți din peștii pe care i-prins. Simon Petru s-a suit, wi a scos mreaja la uscat, plinq de o sutq cincizeci wi trei de pewti mari. Chiar dacq erau atkt de mulyi, plasa n-a fost ruptq. Isus le-a zis: Veniți mâncați micul dejun! Nici unul dintre ucenici n-a îndrăznit să-L întrebe: Cine ești?, știind că era Domnul. Apoi Isus a venit și a luat pâinea, le-a dat-o, și peștele la fel. Aceasta este a treia oară când Isus a fost revelat discipolilor săi după ce a înviat din morți.",
           "teaching": "Să luăm bine seama la noaptea fără rod a ucenicilor. Ei sunt împreună, au corabie și au pricepere veche, dar fără cuvântul Domnului nu prind nimic. Se cuvine să luăm aminte: multă osteneală poate rămâne goală când lucrarea omului se mișcă înaintea glasului lui Hristos.\n\nApoi, recunoașterea vine odată cu ascultarea. După ce aruncă mreaja la cuvântul Lui, ucenicul iubit spune: este Domnul. De multe ori ochiul inimii vede limpede tocmai după ce mâna a ascultat.\n\nȘi iarăși, Domnul îi așteaptă pe țărm cu jăratic, pește și pâine. Câtă blândețe este aici! Hristosul înviat nu-i primește cu asprime după noaptea lor goală, ci le pregătește masă. El nu doar poruncește rodire, ci și hrănește pe cei obosiți.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "φανερόω",
@@ -2142,6 +2330,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "Este Domnul. Recunoașterea identității lui Isus."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Luca 5:4-11",
             "Ioan 20:19-20",
@@ -2156,6 +2345,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Mă iubești? Paște oile Mele",
           "text": "Și după ce au mâncat, Isus i-a spus lui Simon Petru: Simone, fiul lui Iona, mă iubești tu mai mult decât aceștia? El i-a spus: Da, Doamne; tu știi că te iubesc. Isus i-a spus: Paște mielușeii mei. I-a spus din nou a doua oară: Simone, fiul lui Iona, mă iubești? El i-a spus: Da, Doamne; știi că te iubesc. El i-a spus: Paște oile mele. El i-a spus a treia oară: Simone, fiul lui Iona, mă iubești tu? Petru s-a mâhnit că îi spusese a treia oară: Mă iubești? Și i-a spus: Doamne, tu toate le știi; tu știi că te iubesc. Isus i-a spus: Paște oile mele. Cu siguranta iti spun, cand erai tanar, te-ai imbracat si ai mers unde ai vrut. Dar cand esti batran, iti vei intinde mainile, si altul te va imbraca si te va duce unde nu vrei sa mergi. El a spus aceasta, semnificând prin ce fel de moarte avea să-L glorifice pe Dumnezeu. După ce a spus aceasta, i-a zis: Urmează-mă!",
           "teaching": "Să luăm bine seama la blândețea sfântă cu care Domnul îl ridică pe Petru. Nu-l zdrobește cu numărarea căderii lui, deși a fost mare, ci îl aduce la rădăcină: mă iubești? Înainte de slujire, înainte de rol, înainte de orice lucrare, Domnul cercetează dragostea inimii.\n\nApoi, de trei ori vine întrebarea și de trei ori vine încredințarea turmei. Se cuvine să luăm aminte că restaurarea nu înseamnă micșorarea sfințeniei, ci refacerea omului prin adevăr și har. Petru nu este mângâiat prin uitare superficială, ci este vindecat în locul unde a fost rănit.\n\nȘi iarăși, păstorirea oilor este legată de dragostea față de Hristos și de disponibilitatea de a-L urma până la capăt. Turma nu este a lui Petru, ci a Domnului: mielușeii Mei, oițele Mele, oile Mele. Orice slujire curată trebuie să stea sub acest Meu al lui Hristos.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "ἀγαπᾷς / φιλεῖς",
@@ -2170,6 +2361,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "paște, păstorește. Chemarea de a hrăni și îngriji turma Domnului."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Luca 22:31-32",
             "Ioan 13:37-38",
@@ -2184,6 +2376,8 @@ export const NT_BOOK_04: BibleBook = {
           "heading": "Tu vino după Mine",
           "text": "Apoi Petru, întorcându-se, a văzut un ucenic urmându-l. Acesta a fost discipolul pe care l-a iubit Isus, cel care s-a aplecat și el pe pieptul lui Isus la cină și a întrebat, Doamne, cine te va trăda? Petru, văzându-l, i-a zis lui Isus: Doamne, cum rămâne cu omul acesta? Isus i-a zis: Dacă voiesc să rămână până voi veni Eu, ce-ți pasă ție? Prin urmare, această zicală a ieșit printre frați că acest discipol nu va muri. Cu toate acestea, Isus nu i-a spus că nu va muri, dar, dacă doresc ca el să rămână până când voi veni, ceea ce este asta pentru tine? Acesta este ucenicul care mărturisește despre aceste lucruri, a scris aceste lucruri. Noi știm că mărturia lui este adevărată. Există, de asemenea, multe alte lucruri pe care le-a făcut Isus, care, dacă ar fi toate scrise, presupun că nici chiar lumea însăși nu ar avea loc pentru cărțile care ar fi scrise.",
           "teaching": "Să luăm bine seama cât de repede se poate muta inima de la chemarea ei la întrebarea despre altul: dar cu acesta ce va fi? Domnul taie scurt această curiozitate și îl aduce pe Petru înapoi la ascultarea proprie: tu vino după Mine.\n\nSe cuvine să luăm aminte că multe tulburări în slujire și în viața credinciosului vin din comparație. Omul vrea să știe drumul altuia, măsura altuia, sfârșitul altuia. Dar Domnul nu ne hrănește cu comparație, ci cu chemare personală.\n\nȘi încheierea Evangheliei lasă încă deschisă mărimea lui Hristos: mai sunt multe alte lucruri pe care le-a făcut Isus. Cartea se termină, dar slava Domnului nu încape între coperte. Tocmai de aceea mărturia lui Ioan rămâne adevărată și suficientă pentru credință, deși nu e exhaustivă.",
+          "explanationKind": "exposition",
+          "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
               "original": "ἀκολούθει μοι",
@@ -2198,6 +2392,7 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "mărturie. Adeverirea scrisă despre Hristos."
             }
           ],
+          "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
           "crossRefs": [
             "Ioan 13:23",
             "Ioan 19:35",

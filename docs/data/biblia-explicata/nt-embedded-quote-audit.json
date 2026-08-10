@@ -2,9 +2,9 @@
   "schema": "emanus-nt-embedded-quote-audit-v1",
   "status": "manual-source-check-required",
   "policy": "Quoted spans of at least five words are checked against the exact current Biblia Emanus text in the same canonical book and chapter. A match elsewhere in the NT does not clear the finding. Non-matches must be replaced with BE wording, explicitly classified as non-Bible quotations, or removed before publication.",
-  "quotedFragments": 89,
-  "exactMatches": 28,
-  "count": 61,
+  "quotedFragments": 98,
+  "exactMatches": 29,
+  "count": 69,
   "findings": [
     {
       "bookId": "matei",
@@ -329,6 +329,54 @@
       "bookId": "marcu",
       "canonicalBookId": "MRK",
       "book": "Marcu",
+      "chapter": 13,
+      "field": "units[0].teaching",
+      "quote": "Să nu vă înșele cineva.",
+      "wordCount": 5
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "book": "Marcu",
+      "chapter": 13,
+      "field": "units[0].teaching",
+      "quote": "Cine va răbda până la sfârșit va fi mântuit.",
+      "wordCount": 9
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "book": "Marcu",
+      "chapter": 13,
+      "field": "units[1].teaching",
+      "quote": "Hristos este aici, în secret",
+      "wordCount": 5
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "book": "Marcu",
+      "chapter": 13,
+      "field": "units[2].teaching",
+      "quote": "Generația aceasta nu va trece...",
+      "wordCount": 5,
+      "exactMatchElsewhere": [
+        "LUK.21"
+      ]
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "book": "Marcu",
+      "chapter": 14,
+      "field": "units[0].teaching",
+      "quote": "Ea a făcut ce a putut.",
+      "wordCount": 6
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "book": "Marcu",
       "chapter": 14,
       "field": "units[2].teaching",
       "quote": "nu ce voiesc Eu, ci ce voiești Tu",
@@ -338,10 +386,40 @@
       "bookId": "marcu",
       "canonicalBookId": "MRK",
       "book": "Marcu",
+      "chapter": 14,
+      "field": "units[2].teaching",
+      "quote": "Vegheați și rugați-vă ca să nu intrați în ispită.",
+      "wordCount": 10
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "book": "Marcu",
+      "chapter": 15,
+      "field": "units[1].teaching",
+      "quote": "dacă vrea cineva să vină după Mine",
+      "wordCount": 7,
+      "exactMatchElsewhere": [
+        "MAT.16"
+      ]
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "book": "Marcu",
       "chapter": 16,
       "field": "units[0].teaching",
-      "quote": "Isus din Nazaret, care a fost răstignit, a înviat; nu este aici",
-      "wordCount": 12
+      "quote": "spuneți ucenicilor Lui și lui Petru",
+      "wordCount": 6
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "book": "Marcu",
+      "chapter": 16,
+      "field": "units[2].teaching",
+      "quote": "Cine crede și este botezat...",
+      "wordCount": 5
     },
     {
       "bookId": "luca",

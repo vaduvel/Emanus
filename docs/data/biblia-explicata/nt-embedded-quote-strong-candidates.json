@@ -1,8 +1,8 @@
 {
   "schema": "emanus-nt-embedded-quote-strong-candidates-v1",
   "policy": "Review batch only. Strong same-chapter Biblia Emanus candidates are diagnostic, not automatic replacements. Each decision must confirm that the quoted span is intended as Scripture and that the selected BE wording is the correct local passage.",
-  "sourceCount": 60,
-  "count": 1,
+  "sourceCount": 68,
+  "count": 3,
   "entries": [
     {
       "reviewId": "2c626926911785530716ccd20f56ac7ec390cf3c03737f8216e78f7e2e5082d9",
@@ -39,6 +39,86 @@
           "overlap": 0.7143,
           "lengthRatio": 0.8571,
           "start": 544,
+          "width": 7
+        }
+      ],
+      "bestMargin": 0.1214
+    },
+    {
+      "reviewId": "4f9a5106d808648f53f95654127328e5338ec7c0101ee7287087504cc3ada0f6",
+      "quoteSha256": "sha256:c58e53259f3e414cedc916a8d6a8ce19e456671f8203a0f7526b891844063828",
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 13,
+      "field": "units[0].teaching",
+      "quote": "Să nu vă înșele cineva.",
+      "wordCount": 5,
+      "best": {
+        "raw": "să nu vă rătăcească cineva",
+        "score": 0.82,
+        "lcsRatio": 0.8,
+        "overlap": 0.8,
+        "lengthRatio": 1,
+        "start": 90,
+        "width": 5
+      },
+      "alternatives": [
+        {
+          "raw": "grijă să nu vă rătăcească cineva",
+          "score": 0.6833,
+          "lcsRatio": 0.6667,
+          "overlap": 0.6667,
+          "lengthRatio": 0.8333,
+          "start": 89,
+          "width": 6
+        },
+        {
+          "raw": "să nu vă rătăcească cineva! Mulți",
+          "score": 0.6833,
+          "lcsRatio": 0.6667,
+          "overlap": 0.6667,
+          "lengthRatio": 0.8333,
+          "start": 90,
+          "width": 6
+        }
+      ],
+      "bestMargin": 0.1367
+    },
+    {
+      "reviewId": "dd000c89993a5dd2f13f5e10b522e5cf84a352007d9be2eaea810150efb67693",
+      "quoteSha256": "sha256:82010c3e640449a8ca716264a2c51b76cb6e6b9fa15c637a26dde369fcf2e8c6",
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 14,
+      "field": "units[0].teaching",
+      "quote": "Ea a făcut ce a putut.",
+      "wordCount": 6,
+      "best": {
+        "raw": "Ea a făcut ce i-a",
+        "score": 0.85,
+        "lcsRatio": 0.8333,
+        "overlap": 0.8333,
+        "lengthRatio": 1,
+        "start": 166,
+        "width": 6
+      },
+      "alternatives": [
+        {
+          "raw": "întotdeauna. Ea a făcut ce i-a",
+          "score": 0.7286,
+          "lcsRatio": 0.7143,
+          "overlap": 0.7143,
+          "lengthRatio": 0.8571,
+          "start": 165,
+          "width": 7
+        },
+        {
+          "raw": "Ea a făcut ce i-a stat",
+          "score": 0.7286,
+          "lcsRatio": 0.7143,
+          "overlap": 0.7143,
+          "lengthRatio": 0.8571,
+          "start": 166,
           "width": 7
         }
       ],
