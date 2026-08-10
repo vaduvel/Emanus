@@ -1,6 +1,8 @@
 // Final-pass Romanian restorations discovered by corpus-derived candidate mining.
-// Keep this list context-free. Ambiguous homographs such as ca/că, sa/să,
-// lumina/lumină, slava/slavă, sta/stă, intra/intră, afla/află are excluded.
+// Keep this list STRICTLY context-free. Ambiguous homographs and feminine
+// definite/pre-nominal forms are excluded. Where only an internal diacritic is
+// context-free, restore only that internal diacritic and leave the ending for
+// contextual review (e.g. adanca -> adânca, not adâncă).
 export const FINAL_ROMANIAN_SAFE_REPLACEMENTS = new Map([
   ["dupa", "după"],
   ["afara", "afară"],
@@ -16,7 +18,6 @@ export const FINAL_ROMANIAN_SAFE_REPLACEMENTS = new Map([
   ["intr-o", "într-o"],
   ["intr-un", "într-un"],
   ["esti", "ești"],
-  ["ii", "îi"],
   ["insusi", "însuși"],
   ["insine", "înșine"],
   ["insasi", "însăși"],
@@ -45,10 +46,9 @@ export const FINAL_ROMANIAN_SAFE_REPLACEMENTS = new Map([
   ["mormant", "mormânt"],
   ["usor", "ușor"],
   ["adanc", "adânc"],
-  ["adanca", "adâncă"],
+  ["adanca", "adânca"],
   ["mandria", "mândria"],
   ["omenesti", "omenești"],
-  ["omeneasca", "omenească"],
   ["traieste", "trăiește"],
   ["catre", "către"],
   ["imparat", "împărat"],
@@ -80,7 +80,7 @@ export const FINAL_ROMANIAN_SAFE_REPLACEMENTS = new Map([
   ["urmeaza", "urmează"],
   ["vada", "vadă"],
   ["vazand", "văzând"],
-  ["vazuta", "văzută"],
+  ["vazuta", "văzuta"],
   ["vedeti", "vedeți"],
   ["veniti", "veniți"],
   ["acuzatia", "acuzația"],
@@ -93,7 +93,7 @@ export const FINAL_ROMANIAN_SAFE_REPLACEMENTS = new Map([
   ["fratilor", "fraților"],
   ["grauntele", "grăuntele"],
   ["inchis", "închis"],
-  ["inchisa", "închisă"],
+  ["inchisa", "închisa"],
   ["increderea", "încrederea"],
   ["informatie", "informație"],
   ["intalneste", "întâlnește"],
@@ -103,17 +103,7 @@ export const FINAL_ROMANIAN_SAFE_REPLACEMENTS = new Map([
   ["mangaiere", "mângâiere"],
   ["miscarea", "mișcarea"],
   ["capat", "capăt"],
-  ["buna", "bună"],
-  ["religioasa", "religioasă"],
-  ["multa", "multă"],
-  ["deplina", "deplină"],
   ["dimpotriva", "dimpotrivă"],
-  ["dumnezeiasca", "dumnezeiască"],
-  ["exterioara", "exterioară"],
-  ["facuta", "făcută"],
-  ["adusa", "adusă"],
-  ["deschisa", "deschisă"],
-  ["pusa", "pusă"],
-  ["legata", "legată"],
+  ["facuta", "făcuta"],
   ["aratat", "arătat"],
 ]);
