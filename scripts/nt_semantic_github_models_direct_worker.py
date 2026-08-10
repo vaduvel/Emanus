@@ -30,7 +30,10 @@ def load_rows_with_direct(book_id: str) -> list[dict[str, Any]]:
     by_key = {(str(row["bookId"]), int(row["chapter"]), str(row["unitId"])): row for row in rows}
 
     direct = json.loads(DIRECT.read_text(encoding="utf-8"))
-    if direct.get("schema") != "emanus-nt-direct-transcript-coverage-v1":
+    if direct.get("schema") not in {
+        "emanus-nt-direct-transcript-coverage-v1",
+        "emanus-nt-direct-transcript-coverage-v2",
+    }:
         raise RuntimeError("Unexpected direct transcript coverage schema")
     coverage_by_key = {
         (str(item["bookId"]), int(item["chapter"]), str(item["unitId"])): item
@@ -62,7 +65,10 @@ def load_rows_with_direct(book_id: str) -> list[dict[str, Any]]:
             }
             if key in by_key:
                 existing = by_key[key]
-                known = {str(r.get("_transcriptUrl") or r.get("transcriptRepresentationUrl") or r.get("sourceUrl")) for r in existing["transcriptRecords"]}
+                known = {
+                    str(r.get("_transcriptUrl") or r.get("transcriptRepresentationUrl") or r.get("sourceUrl"))
+                    for r in existing["transcriptRecords"]
+                }
                 if coverage["transcriptRepresentationUrl"] not in known:
                     existing["transcriptRecords"].append(pseudo)
             else:
@@ -78,7 +84,10 @@ def load_rows_with_direct(book_id: str) -> list[dict[str, Any]]:
                     "sourceFidelity": unit.get("sourceFidelity", {}),
                     "transcriptRecords": [pseudo],
                 }
-    return sorted(by_key.values(), key=lambda row: (int(row["chapter"]), int(row.get("verseStart", 0)), str(row["unitId"])))
+    return sorted(
+        by_key.values(),
+        key=lambda row: (int(row["chapter"]), int(row.get("verseStart", 0)), str(row["unitId"])),
+    )
 
 
 base.load_rows = load_rows_with_direct
