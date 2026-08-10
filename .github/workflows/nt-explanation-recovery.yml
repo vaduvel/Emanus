@@ -76,6 +76,7 @@ jobs:
           node scripts/materialize-nt-source-evidence.mjs
           node scripts/materialize-nt-source-first.mjs
           node scripts/check-nt-source-first.mjs
+          node scripts/review-nt-source-first-fidelity.mjs
 
       - name: Audit, clean, refine and classify recovered source-first books
         run: |
