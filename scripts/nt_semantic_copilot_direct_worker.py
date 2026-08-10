@@ -18,7 +18,7 @@ if spec is None or spec.loader is None:
     raise RuntimeError("Cannot load semantic base worker")
 base = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(base)
-base.MODEL = os.environ.get("NT_SEMANTIC_COPILOT_MODEL", "auto")
+base.MODEL = os.environ.get("NT_SEMANTIC_COPILOT_MODEL", "gpt-5.2")
 original_load_rows = base.load_rows
 
 
