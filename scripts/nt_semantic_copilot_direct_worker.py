@@ -3,7 +3,6 @@ from __future__ import annotations
 
 import importlib.util
 import json
-import os
 import subprocess
 import sys
 from pathlib import Path
@@ -18,9 +17,9 @@ if spec is None or spec.loader is None:
     raise RuntimeError("Cannot load semantic base worker")
 base = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(base)
-# Never use Copilot's automatic model selector for publication review. The workflow
-# must name an explicit model so quota/model changes cannot silently alter the reviewer.
-base.MODEL = os.environ.get("NT_SEMANTIC_COPILOT_MODEL", "claude-haiku-4.5")
+# Explicit supported CLI model. Transcript hashing runs before any model call so
+# manual review remains reproducible even if the external request quota is exhausted.
+base.MODEL = "claude-haiku-4.5"
 original_load_rows = base.load_rows
 
 
