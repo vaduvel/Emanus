@@ -13,6 +13,11 @@ if (!fs.existsSync(corpusDir) || !fs.existsSync(evidencePath)) fail("final corpu
 const evidence = JSON.parse(fs.readFileSync(evidencePath, "utf8"))
 const byId = new Map((evidence.records ?? []).map((item) => [item.id, item]))
 const transcriptLike = (url) => /sermonindex\.net\/speakers\/zac-poonen\//i.test(String(url ?? ""))
+function transcriptUrl(record) {
+  if (transcriptLike(record?.transcriptRepresentationUrl)) return record.transcriptRepresentationUrl
+  if (transcriptLike(record?.sourceUrl)) return record.sourceUrl
+  return null
+}
 
 const rows = []
 const groups = new Map()
@@ -28,8 +33,8 @@ for (const file of fs.readdirSync(corpusDir).filter((name) => name.endsWith(".js
         continue
       }
       const records = (unit.sourceAnchors ?? []).map((anchor) => byId.get(anchor.evidenceId)).filter(Boolean)
-      const transcriptRecords = records.filter((record) => transcriptLike(record.sourceUrl))
-      const urls = [...new Set(transcriptRecords.map((record) => record.sourceUrl))]
+      const transcriptRecords = records.map((record) => ({ record, url: transcriptUrl(record) })).filter((item) => item.url)
+      const urls = [...new Set(transcriptRecords.map((item) => item.url))]
       const row = {
         bookId: book.id,
         chapter: chapter.number,
@@ -44,10 +49,9 @@ for (const file of fs.readdirSync(corpusDir).filter((name) => name.endsWith(".js
       if (urls.length) {
         counts.transcriptAddressable += 1
         for (const url of urls) {
-          const key = url
-          const group = groups.get(key) ?? { transcriptUrl: url, units: [] }
+          const group = groups.get(url) ?? { transcriptUrl: url, units: [] }
           group.units.push({ bookId: book.id, chapter: chapter.number, unitId: unit.id, ref: unit.ref })
-          groups.set(key, group)
+          groups.set(url, group)
         }
       } else counts.needsTranscriptRecovery += 1
     }
@@ -57,17 +61,12 @@ for (const file of fs.readdirSync(corpusDir).filter((name) => name.endsWith(".js
 const transcriptAddressable = rows.filter((row) => row.transcriptAddressable).length
 const needsTranscriptRecovery = rows.length - transcriptAddressable
 const output = {
-  schema: "emanus-nt-semantic-review-index-v1",
-  policy: "Discovery only. A transcript URL makes a unit review-addressable but does not approve semantic fidelity. Official CFC source attribution remains primary; SermonIndex is transcript representation only.",
-  counts: {
-    pendingUnits: rows.length,
-    transcriptAddressable,
-    needsTranscriptRecovery,
-    transcriptGroups: groups.size,
-  },
+  schema: "emanus-nt-semantic-review-index-v2",
+  policy: "Discovery only. A transcript representation URL makes a unit review-addressable but does not approve semantic fidelity. Official CFC source attribution remains primary; SermonIndex is transcript representation only. Exact catalogue mappings are accepted only after book+range verification in nt-transcript-episode-mapping.json.",
+  counts: { pendingUnits: rows.length, transcriptAddressable, needsTranscriptRecovery, transcriptGroups: groups.size },
   byBook,
   transcriptGroups: [...groups.values()].sort((a,b) => a.transcriptUrl.localeCompare(b.transcriptUrl)),
   unitsNeedingTranscriptRecovery: rows.filter((row) => !row.transcriptAddressable),
 }
 fs.writeFileSync(outputPath, JSON.stringify(output, null, 2) + "\n", "utf8")
-console.log(`NT semantic review index: ${transcriptAddressable}/${rows.length} pending units already have transcript URLs; ${needsTranscriptRecovery} need transcript recovery; ${groups.size} transcript groups.`)
+console.log(`NT semantic review index: ${transcriptAddressable}/${rows.length} pending units transcript-addressable; ${needsTranscriptRecovery} need recovery; ${groups.size} transcript groups.`)
