@@ -12,7 +12,8 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 WORKER_PATH = ROOT / 'scripts' / 'nt_final_editorial_worker.py'
-COPILOT_MODEL = os.environ.get('NT_FINAL_COPILOT_MODEL', 'gpt-5.4')
+COPILOT_MODEL = os.environ.get('NT_FINAL_COPILOT_MODEL', 'auto')
+COPILOT_TIMEOUT = int(os.environ.get('NT_FINAL_COPILOT_TIMEOUT', '240'))
 
 
 def load_worker():
@@ -45,7 +46,7 @@ def extract_json(text: str) -> dict[str, Any]:
     raise RuntimeError(f'Copilot CLI nu a întors JSON valid; tail={value[-2000:]}')
 
 
-def copilot_call_model(payload: dict[str, Any], token: str, retries: int = 3) -> dict[str, Any]:
+def copilot_call_model(payload: dict[str, Any], token: str, retries: int = 2) -> dict[str, Any]:
     messages = payload.get('messages')
     if not isinstance(messages, list):
         raise RuntimeError('Payload fără messages')
@@ -64,13 +65,18 @@ def copilot_call_model(payload: dict[str, Any], token: str, retries: int = 3) ->
     env = os.environ.copy()
     env['GITHUB_TOKEN'] = token
     env['COPILOT_GITHUB_TOKEN'] = token
-    env['COPILOT_MODEL'] = COPILOT_MODEL
     env['NO_COLOR'] = '1'
     command = [
         'copilot',
+        '-p', prompt,
         '-s',
         '--no-ask-user',
+        '--no-custom-instructions',
+        '--no-auto-update',
+        '--no-remote',
         '--model', COPILOT_MODEL,
+        '--deny-tool=shell',
+        '--deny-tool=write',
         '--log-level', 'error',
     ]
 
@@ -79,22 +85,25 @@ def copilot_call_model(payload: dict[str, Any], token: str, retries: int = 3) ->
         try:
             proc = subprocess.run(
                 command,
-                input=prompt,
                 text=True,
                 capture_output=True,
                 env=env,
                 cwd=ROOT,
-                timeout=600,
+                timeout=COPILOT_TIMEOUT,
                 check=False,
             )
             if proc.returncode != 0:
                 last = f'exit={proc.returncode}; stderr={proc.stderr[-4000:]}; stdout={proc.stdout[-2000:]}'
             else:
                 return extract_json(proc.stdout)
+        except subprocess.TimeoutExpired as exc:
+            stdout = exc.stdout[-2000:] if isinstance(exc.stdout, str) else ''
+            stderr = exc.stderr[-4000:] if isinstance(exc.stderr, str) else ''
+            last = f'timeout={COPILOT_TIMEOUT}s; stderr={stderr}; stdout={stdout}'
         except Exception as exc:
             last = repr(exc)
         if attempt < retries:
-            time.sleep(min(20, 2 ** attempt))
+            time.sleep(min(10, 2 ** attempt))
 
     raise RuntimeError(f'Copilot CLI ({COPILOT_MODEL}) a eșuat după {retries} încercări: {last}')
 
