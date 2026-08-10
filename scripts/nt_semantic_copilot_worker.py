@@ -139,7 +139,15 @@ def load_rows(book_id: str) -> list[dict[str, Any]]:
             key = (book_id, int(chapter["number"]), str(unit["id"]))
             if key in frozen or unit.get("sourceFidelity",{}).get("reviewState") == "reviewed-against-raw-transcript": continue
             recs = [by_id.get(str(a.get("evidenceId"))) for a in unit.get("sourceAnchors", [])]
-            transcript_recs = [r for r in recs if isinstance(r,dict) and transcript_url(str(r.get("sourceUrl") or ""))]
+            transcript_recs = []
+            for record in recs:
+                if not isinstance(record, dict):
+                    continue
+                represented = str(record.get("transcriptRepresentationUrl") or "")
+                original = str(record.get("sourceUrl") or "")
+                url = represented if transcript_url(represented) else (original if transcript_url(original) else "")
+                if url:
+                    transcript_recs.append({**record, "_transcriptUrl": url})
             if not transcript_recs: continue
             rows.append({"bookId":book_id,"chapter":chapter["number"],"unitId":unit["id"],"ref":unit["ref"],"heading":unit.get("heading",""),"text":unit.get("text",""),"teaching":unit.get("teaching",""),"forYourHeart":unit.get("forYourHeart"),"sourceFidelity":unit.get("sourceFidelity",{}),"transcriptRecords":transcript_recs})
     return rows
@@ -148,14 +156,16 @@ def load_rows(book_id: str) -> list[dict[str, Any]]:
 def build_transcripts(records: list[dict[str,Any]], cache: dict[str,str]) -> tuple[str,list[dict[str,Any]]]:
     sections=[]; evidence=[]; seen=set()
     for rec in records:
-        url=str(rec["sourceUrl"])
+        url=str(rec.get("_transcriptUrl") or rec.get("transcriptRepresentationUrl") or rec["sourceUrl"])
         if url in seen: continue
         seen.add(url)
         if url not in cache: cache[url]=extract_transcript(url)
         transcript=cache[url]
         sections.append(f"=== TRANSCRIPT SOURCE {len(sections)+1} ===\nURL: {url}\nLOCATOR: {rec.get('locator','')}\n{transcript}")
         official=str(rec.get("officialSeriesUrl") or "")
-        if not official.startswith("https://"): raise RuntimeError(f"transcript record lacks officialSeriesUrl: {url}")
+        if not official.startswith("https://") and rec.get("transcriptRepresentationUrl"):
+            official=str(rec.get("sourceUrl") or "")
+        if not official.startswith("https://"): raise RuntimeError(f"transcript record lacks official source URL: {url}")
         th=sha256(transcript)
         payload=json.dumps({"officialSourceUrl":official,"transcriptSourceUrl":url,"sourceRange":str(rec.get("locator") or ""),"transcriptSha256":th},ensure_ascii=False,sort_keys=True,separators=(",",":"))
         evidence.append({"officialSourceUrl":official,"transcriptSourceUrl":url,"sourceRange":str(rec.get("locator") or ""),"transcriptSha256":th,"evidenceSha256":sha256(payload)})
@@ -189,7 +199,7 @@ def main() -> int:
         args.output.parent.mkdir(parents=True,exist_ok=True); args.output.write_text(json.dumps({"schema":"emanus-nt-semantic-review-book-v1","bookId":args.book,"decisions":[],"alreadyReviewedOrUnaddressable":True},indent=2)+"\n",encoding="utf-8"); print(f"semantic review {args.book}: nothing new"); return 0
     groups: dict[tuple[str,...],list[dict[str,Any]]]={}
     for row in rows:
-        key=tuple(sorted({str(r["sourceUrl"]) for r in row["transcriptRecords"]})); groups.setdefault(key,[]).append(row)
+        key=tuple(sorted({str(r.get("_transcriptUrl") or r.get("transcriptRepresentationUrl") or r["sourceUrl"]) for r in row["transcriptRecords"]})); groups.setdefault(key,[]).append(row)
     cache: dict[str,str]={}; decisions=[]
     for _, group in groups.items():
         transcripts,evidence=build_transcripts(group[0]["transcriptRecords"],cache)
