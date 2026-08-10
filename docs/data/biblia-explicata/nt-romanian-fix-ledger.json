@@ -1,7 +1,7 @@
 {
-  "schema": "emanus-nt-romanian-fix-ledger-v4",
-  "policy": "context-free-corruptions-and-unambiguous-diacritics-only; Unicode-aware token boundaries; context-sensitive inflections remain manual-review",
-  "count": 1450,
+  "schema": "emanus-nt-romanian-fix-ledger-v5",
+  "policy": "context-free-corruptions-and-unambiguous-diacritics-only; shared registry; Unicode-aware token boundaries; context-sensitive inflections remain reviewed separately",
+  "count": 1801,
   "fixes": [
     {
       "location": "matei.3.literaryContext",
@@ -290,6 +290,11 @@
     },
     {
       "location": "ioan.1.historicalContext",
+      "before": "asteptari",
+      "after": "așteptări"
+    },
+    {
+      "location": "ioan.1.historicalContext",
       "before": "ratiunii",
       "after": "rațiunii"
     },
@@ -302,6 +307,11 @@
       "location": "ioan.1.historicalContext",
       "before": "capatul",
       "after": "capătul"
+    },
+    {
+      "location": "ioan.1.historicalContext",
+      "before": "acelasi",
+      "after": "același"
     },
     {
       "location": "ioan.1.prayer",
@@ -385,6 +395,21 @@
     },
     {
       "location": "ioan.1.prayer",
+      "before": "inca",
+      "after": "încă"
+    },
+    {
+      "location": "ioan.1.prayer",
+      "before": "inca",
+      "after": "încă"
+    },
+    {
+      "location": "ioan.1.prayer",
+      "before": "inca",
+      "after": "încă"
+    },
+    {
+      "location": "ioan.1.prayer",
       "before": "vesnic",
       "after": "veșnic"
     },
@@ -395,13 +420,23 @@
     },
     {
       "location": "ioan.1.prayer",
+      "before": "intuneric",
+      "after": "întuneric"
+    },
+    {
+      "location": "ioan.1.prayer",
       "before": "facut",
       "after": "făcut"
     },
     {
       "location": "ioan.1.prayer",
-      "before": "intuneric",
-      "after": "întuneric"
+      "before": "multumim",
+      "after": "mulțumim"
+    },
+    {
+      "location": "ioan.1.prayer",
+      "before": "nadejde",
+      "after": "nădejde"
     },
     {
       "location": "ioan.1.units[0].heading",
@@ -580,6 +615,16 @@
     },
     {
       "location": "ioan.1.units[0].teaching",
+      "before": "inceputul",
+      "after": "începutul"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "adevarate",
+      "after": "adevărate"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
       "before": "Inainte",
       "after": "Înainte"
     },
@@ -600,6 +645,36 @@
     },
     {
       "location": "ioan.1.units[0].teaching",
+      "before": "inteles",
+      "after": "înțeles"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "intuneric",
+      "after": "întuneric"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "intuneric",
+      "after": "întuneric"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "intunericul",
+      "after": "întunericul"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "insemna",
+      "after": "însemna"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "invins",
+      "after": "învins"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
       "before": "facut",
       "after": "făcut"
     },
@@ -607,6 +682,16 @@
       "location": "ioan.1.units[0].teaching",
       "before": "facut",
       "after": "făcut"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "facute",
+      "after": "făcute"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "facute",
+      "after": "făcute"
     },
     {
       "location": "ioan.1.units[0].teaching",
@@ -655,23 +740,18 @@
     },
     {
       "location": "ioan.1.units[0].teaching",
-      "before": "intuneric",
-      "after": "întuneric"
-    },
-    {
-      "location": "ioan.1.units[0].teaching",
-      "before": "intuneric",
-      "after": "întuneric"
-    },
-    {
-      "location": "ioan.1.units[0].teaching",
       "before": "Amandoua",
       "after": "Amândouă"
     },
     {
       "location": "ioan.1.units[0].teaching",
-      "before": "inteles",
-      "after": "înțeles"
+      "before": "cinstiti",
+      "after": "cinstiți"
+    },
+    {
+      "location": "ioan.1.units[0].teaching",
+      "before": "coboram",
+      "after": "coborâm"
     },
     {
       "location": "ioan.1.units[0].forYourHeart",
@@ -700,13 +780,33 @@
     },
     {
       "location": "ioan.1.units[0].forYourHeart",
+      "before": "intuneric",
+      "after": "întuneric"
+    },
+    {
+      "location": "ioan.1.units[0].forYourHeart",
+      "before": "intunericul",
+      "after": "întunericul"
+    },
+    {
+      "location": "ioan.1.units[0].forYourHeart",
       "before": "decat",
       "after": "decât"
     },
     {
       "location": "ioan.1.units[0].forYourHeart",
-      "before": "intuneric",
-      "after": "întuneric"
+      "before": "sprijina",
+      "after": "sprijină"
+    },
+    {
+      "location": "ioan.1.units[0].forYourHeart",
+      "before": "emotie",
+      "after": "emoție"
+    },
+    {
+      "location": "ioan.1.units[0].forYourHeart",
+      "before": "trecatoare",
+      "after": "trecătoare"
     },
     {
       "location": "ioan.1.units[0].words[0].meaning",
@@ -717,6 +817,11 @@
       "location": "ioan.1.units[0].words[0].meaning",
       "before": "Cuvantul",
       "after": "Cuvântul"
+    },
+    {
+      "location": "ioan.1.units[0].words[0].meaning",
+      "before": "facute",
+      "after": "făcute"
     },
     {
       "location": "ioan.1.units[0].words[1].meaning",
@@ -732,6 +837,11 @@
       "location": "ioan.1.units[0].words[1].meaning",
       "before": "daruieste",
       "after": "dăruiește"
+    },
+    {
+      "location": "ioan.1.units[0].words[1].meaning",
+      "before": "biologica",
+      "after": "biologică"
     },
     {
       "location": "ioan.1.units[0].words[2].meaning",
@@ -790,6 +900,21 @@
     },
     {
       "location": "ioan.1.units[1].teaching",
+      "before": "inceputul",
+      "after": "începutul"
+    },
+    {
+      "location": "ioan.1.units[1].teaching",
+      "before": "nasterea",
+      "after": "nașterea"
+    },
+    {
+      "location": "ioan.1.units[1].teaching",
+      "before": "naste",
+      "after": "naște"
+    },
+    {
+      "location": "ioan.1.units[1].teaching",
       "before": "sange",
       "after": "sânge"
     },
@@ -800,8 +925,18 @@
     },
     {
       "location": "ioan.1.units[1].teaching",
+      "before": "rasturnarea",
+      "after": "răsturnarea"
+    },
+    {
+      "location": "ioan.1.units[1].teaching",
       "before": "Botezatorul",
       "after": "Botezătorul"
+    },
+    {
+      "location": "ioan.1.units[1].teaching",
+      "before": "Facatorul",
+      "after": "Făcătorul"
     },
     {
       "location": "ioan.1.units[1].teaching",
@@ -814,6 +949,41 @@
       "after": "decât"
     },
     {
+      "location": "ioan.1.units[1].teaching",
+      "before": "propozitii",
+      "after": "propoziții"
+    },
+    {
+      "location": "ioan.1.units[1].teaching",
+      "before": "necuratie",
+      "after": "necurăție"
+    },
+    {
+      "location": "ioan.1.units[1].teaching",
+      "before": "filiatia",
+      "after": "filiația"
+    },
+    {
+      "location": "ioan.1.units[1].teaching",
+      "before": "mosteneste",
+      "after": "moștenește"
+    },
+    {
+      "location": "ioan.1.units[1].teaching",
+      "before": "mangaieri",
+      "after": "mângâieri"
+    },
+    {
+      "location": "ioan.1.units[1].teaching",
+      "before": "primeste",
+      "after": "primește"
+    },
+    {
+      "location": "ioan.1.units[1].teaching",
+      "before": "impotrivire",
+      "after": "împotrivire"
+    },
+    {
       "location": "ioan.1.units[1].forYourHeart",
       "before": "Daca",
       "after": "Dacă"
@@ -822,6 +992,16 @@
       "location": "ioan.1.units[1].forYourHeart",
       "before": "daca",
       "after": "dacă"
+    },
+    {
+      "location": "ioan.1.units[1].forYourHeart",
+      "before": "inca",
+      "after": "încă"
+    },
+    {
+      "location": "ioan.1.units[1].forYourHeart",
+      "before": "tau",
+      "after": "tău"
     },
     {
       "location": "ioan.1.units[1].words[0].meaning",
@@ -945,8 +1125,23 @@
     },
     {
       "location": "ioan.1.units[2].teaching",
+      "before": "mantui",
+      "after": "mântui"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
       "before": "incepe",
       "after": "începe"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "inceteze",
+      "after": "înceteze"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "vesnicie",
+      "after": "veșnicie"
     },
     {
       "location": "ioan.1.units[2].teaching",
@@ -1005,8 +1200,128 @@
     },
     {
       "location": "ioan.1.units[2].teaching",
+      "before": "randuri",
+      "after": "rânduri"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "asezarea",
+      "after": "așezarea"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
       "before": "amandoua",
       "after": "amândouă"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "toata",
+      "after": "toată"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "Sfanta",
+      "after": "Sfânta"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "parut",
+      "after": "părut"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "pastram",
+      "after": "păstrăm"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "desavarsit",
+      "after": "desăvârșit"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "intalnirii",
+      "after": "întâlnirii"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "plinatatea",
+      "after": "plinătatea"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "mangaie",
+      "after": "mângâie"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "impreuna",
+      "after": "împreună"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "vazut",
+      "after": "văzut"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "vreodata",
+      "after": "vreodată"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "cand",
+      "after": "când"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "stii",
+      "after": "știi"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "ghicesti",
+      "after": "ghicești"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "plamadesti",
+      "after": "plămădești"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "gandurile",
+      "after": "gândurile"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "uiti",
+      "after": "uiți"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "vorbeste",
+      "after": "vorbește"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "plange",
+      "after": "plânge"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "primeste",
+      "after": "primește"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "jertfeste",
+      "after": "jertfește"
+    },
+    {
+      "location": "ioan.1.units[2].teaching",
+      "before": "noastra",
+      "after": "noastră"
     },
     {
       "location": "ioan.1.units[2].forYourHeart",
@@ -1062,6 +1377,11 @@
       "location": "ioan.1.units[2].words[1].meaning",
       "before": "Cuvant",
       "after": "Cuvânt"
+    },
+    {
+      "location": "ioan.1.units[2].words[1].meaning",
+      "before": "intins",
+      "after": "întins"
     },
     {
       "location": "ioan.1.units[2].words[2].meaning",
@@ -1125,8 +1445,33 @@
     },
     {
       "location": "ioan.1.units[3].teaching",
+      "before": "inceputul",
+      "after": "începutul"
+    },
+    {
+      "location": "ioan.1.units[3].teaching",
+      "before": "Inca",
+      "after": "Încă"
+    },
+    {
+      "location": "ioan.1.units[3].teaching",
       "before": "inainte",
       "after": "înainte"
+    },
+    {
+      "location": "ioan.1.units[3].teaching",
+      "before": "Toata",
+      "after": "Toată"
+    },
+    {
+      "location": "ioan.1.units[3].teaching",
+      "before": "pastram",
+      "after": "păstrăm"
+    },
+    {
+      "location": "ioan.1.units[3].teaching",
+      "before": "dinlauntru",
+      "after": "dinlăuntru"
     },
     {
       "location": "ioan.1.units[3].forYourHeart",
@@ -1152,6 +1497,16 @@
       "location": "ioan.1.units[3].forYourHeart",
       "before": "adevarat",
       "after": "adevărat"
+    },
+    {
+      "location": "ioan.1.units[3].forYourHeart",
+      "before": "vazut",
+      "after": "văzut"
+    },
+    {
+      "location": "ioan.1.units[3].forYourHeart",
+      "before": "Cand",
+      "after": "Când"
     },
     {
       "location": "ioan.1.units[3].words[0].meaning",
@@ -1314,6 +1669,36 @@
       "after": "mărturia"
     },
     {
+      "location": "ioan.1.units[4].teaching",
+      "before": "vazut",
+      "after": "văzut"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "vazut",
+      "after": "văzut"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "cand",
+      "after": "când"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "vorbeste",
+      "after": "vorbește"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "paine",
+      "after": "pâine"
+    },
+    {
+      "location": "ioan.1.units[4].teaching",
+      "before": "intrebarea",
+      "after": "întrebarea"
+    },
+    {
       "location": "ioan.1.units[4].forYourHeart",
       "before": "si",
       "after": "și"
@@ -1339,6 +1724,11 @@
       "after": "și"
     },
     {
+      "location": "ioan.1.units[4].words[2].meaning",
+      "before": "vorbeste",
+      "after": "vorbește"
+    },
+    {
       "location": "ioan.2.title",
       "before": "si",
       "after": "și"
@@ -1352,6 +1742,16 @@
       "location": "ioan.2.summary",
       "before": "si",
       "after": "și"
+    },
+    {
+      "location": "ioan.2.summary",
+      "before": "inceputul",
+      "after": "începutul"
+    },
+    {
+      "location": "ioan.2.summary",
+      "before": "curatirea",
+      "after": "curățirea"
     },
     {
       "location": "ioan.2.literaryContext",
@@ -1459,6 +1859,16 @@
       "after": "descoperă"
     },
     {
+      "location": "ioan.2.historicalContext",
+      "before": "cand",
+      "after": "când"
+    },
+    {
+      "location": "ioan.2.historicalContext",
+      "before": "curatirea",
+      "after": "curățirea"
+    },
+    {
       "location": "ioan.2.prayer",
       "before": "si",
       "after": "și"
@@ -1482,6 +1892,11 @@
       "location": "ioan.2.prayer",
       "before": "in",
       "after": "în"
+    },
+    {
+      "location": "ioan.2.prayer",
+      "before": "inceputul",
+      "after": "începutul"
     },
     {
       "location": "ioan.2.prayer",
@@ -1489,9 +1904,24 @@
       "after": "adevăr"
     },
     {
+      "location": "ioan.2.prayer",
+      "before": "stii",
+      "after": "știi"
+    },
+    {
+      "location": "ioan.2.prayer",
+      "before": "multumim",
+      "after": "mulțumim"
+    },
+    {
       "location": "ioan.2.units[0].heading",
       "before": "in",
       "after": "în"
+    },
+    {
+      "location": "ioan.2.units[0].heading",
+      "before": "Inceputul",
+      "after": "Începutul"
     },
     {
       "location": "ioan.2.units[0].teaching",
@@ -1605,8 +2035,23 @@
     },
     {
       "location": "ioan.2.units[0].teaching",
+      "before": "inceputul",
+      "after": "începutul"
+    },
+    {
+      "location": "ioan.2.units[0].teaching",
       "before": "facut",
       "after": "făcut"
+    },
+    {
+      "location": "ioan.2.units[0].teaching",
+      "before": "coboram",
+      "after": "coborâm"
+    },
+    {
+      "location": "ioan.2.units[0].teaching",
+      "before": "toata",
+      "after": "toată"
     },
     {
       "location": "ioan.2.units[0].forYourHeart",
@@ -1745,8 +2190,23 @@
     },
     {
       "location": "ioan.2.units[1].teaching",
+      "before": "inteles",
+      "after": "înțeles"
+    },
+    {
+      "location": "ioan.2.units[1].teaching",
+      "before": "inteles",
+      "after": "înțeles"
+    },
+    {
+      "location": "ioan.2.units[1].teaching",
       "before": "aseaza",
       "after": "așază"
+    },
+    {
+      "location": "ioan.2.units[1].teaching",
+      "before": "Acelasi",
+      "after": "Același"
     },
     {
       "location": "ioan.2.units[1].teaching",
@@ -1755,16 +2215,6 @@
     },
     {
       "location": "ioan.2.units[1].teaching",
-      "before": "inteles",
-      "after": "înțeles"
-    },
-    {
-      "location": "ioan.2.units[1].teaching",
-      "before": "inteles",
-      "after": "înțeles"
-    },
-    {
-      "location": "ioan.2.units[1].teaching",
       "before": "inviere",
       "after": "înviere"
     },
@@ -1772,6 +2222,16 @@
       "location": "ioan.2.units[1].teaching",
       "before": "inviere",
       "after": "înviere"
+    },
+    {
+      "location": "ioan.2.units[1].teaching",
+      "before": "cinstiti",
+      "after": "cinstiți"
+    },
+    {
+      "location": "ioan.2.units[1].teaching",
+      "before": "sfanta",
+      "after": "sfânta"
     },
     {
       "location": "ioan.2.units[1].forYourHeart",
@@ -1782,6 +2242,21 @@
       "location": "ioan.2.units[1].forYourHeart",
       "before": "in",
       "after": "în"
+    },
+    {
+      "location": "ioan.2.units[1].forYourHeart",
+      "before": "acelasi",
+      "after": "același"
+    },
+    {
+      "location": "ioan.2.units[1].forYourHeart",
+      "before": "mangaie",
+      "after": "mângâie"
+    },
+    {
+      "location": "ioan.2.units[1].forYourHeart",
+      "before": "cand",
+      "after": "când"
     },
     {
       "location": "ioan.2.units[1].words[1].meaning",
@@ -1860,8 +2335,43 @@
     },
     {
       "location": "ioan.2.units[2].teaching",
+      "before": "inca",
+      "after": "încă"
+    },
+    {
+      "location": "ioan.2.units[2].teaching",
+      "before": "inca",
+      "after": "încă"
+    },
+    {
+      "location": "ioan.2.units[2].teaching",
+      "before": "acelasi",
+      "after": "același"
+    },
+    {
+      "location": "ioan.2.units[2].teaching",
       "before": "decat",
       "after": "decât"
+    },
+    {
+      "location": "ioan.2.units[2].teaching",
+      "before": "cinstiti",
+      "after": "cinstiți"
+    },
+    {
+      "location": "ioan.2.units[2].teaching",
+      "before": "sprijina",
+      "after": "sprijină"
+    },
+    {
+      "location": "ioan.2.units[2].teaching",
+      "before": "sprijina",
+      "after": "sprijină"
+    },
+    {
+      "location": "ioan.2.units[2].teaching",
+      "before": "propozitii",
+      "after": "propoziții"
     },
     {
       "location": "ioan.2.units[2].forYourHeart",
@@ -1889,6 +2399,11 @@
       "after": "decât"
     },
     {
+      "location": "ioan.2.units[2].forYourHeart",
+      "before": "cand",
+      "after": "când"
+    },
+    {
       "location": "ioan.2.units[2].words[0].meaning",
       "before": "si",
       "after": "și"
@@ -1904,6 +2419,11 @@
       "after": "în"
     },
     {
+      "location": "ioan.2.units[2].words[0].meaning",
+      "before": "Acelasi",
+      "after": "Același"
+    },
+    {
       "location": "ioan.3.summary",
       "before": "si",
       "after": "și"
@@ -1912,6 +2432,11 @@
       "location": "ioan.3.summary",
       "before": "si",
       "after": "și"
+    },
+    {
+      "location": "ioan.3.summary",
+      "before": "nasterea",
+      "after": "nașterea"
     },
     {
       "location": "ioan.3.summary",
@@ -1922,6 +2447,11 @@
       "location": "ioan.3.summary",
       "before": "Botezatorul",
       "after": "Botezătorul"
+    },
+    {
+      "location": "ioan.3.summary",
+      "before": "vorbeste",
+      "after": "vorbește"
     },
     {
       "location": "ioan.3.literaryContext",
@@ -1969,6 +2499,11 @@
       "after": "rândul"
     },
     {
+      "location": "ioan.3.literaryContext",
+      "before": "noastra",
+      "after": "noastră"
+    },
+    {
       "location": "ioan.3.historicalContext",
       "before": "si",
       "after": "și"
@@ -2012,6 +2547,11 @@
       "location": "ioan.3.historicalContext",
       "before": "in",
       "after": "în"
+    },
+    {
+      "location": "ioan.3.historicalContext",
+      "before": "nasterea",
+      "after": "nașterea"
     },
     {
       "location": "ioan.3.historicalContext",
@@ -2072,6 +2612,31 @@
       "location": "ioan.3.prayer",
       "before": "nastere",
       "after": "naștere"
+    },
+    {
+      "location": "ioan.3.prayer",
+      "before": "intunericul",
+      "after": "întunericul"
+    },
+    {
+      "location": "ioan.3.prayer",
+      "before": "cand",
+      "after": "când"
+    },
+    {
+      "location": "ioan.3.prayer",
+      "before": "noastra",
+      "after": "noastră"
+    },
+    {
+      "location": "ioan.3.prayer",
+      "before": "multumim",
+      "after": "mulțumim"
+    },
+    {
+      "location": "ioan.3.units[0].heading",
+      "before": "Nasterea",
+      "after": "Nașterea"
     },
     {
       "location": "ioan.3.units[0].teaching",
@@ -2145,8 +2710,53 @@
     },
     {
       "location": "ioan.3.units[0].teaching",
+      "before": "nasterea",
+      "after": "nașterea"
+    },
+    {
+      "location": "ioan.3.units[0].teaching",
+      "before": "nasterea",
+      "after": "nașterea"
+    },
+    {
+      "location": "ioan.3.units[0].teaching",
+      "before": "nasterea",
+      "after": "nașterea"
+    },
+    {
+      "location": "ioan.3.units[0].teaching",
       "before": "inteles",
       "after": "înțeles"
+    },
+    {
+      "location": "ioan.3.units[0].teaching",
+      "before": "insemna",
+      "after": "însemna"
+    },
+    {
+      "location": "ioan.3.units[0].teaching",
+      "before": "Acelasi",
+      "after": "Același"
+    },
+    {
+      "location": "ioan.3.units[0].teaching",
+      "before": "cinstiti",
+      "after": "cinstiți"
+    },
+    {
+      "location": "ioan.3.units[0].teaching",
+      "before": "vazut",
+      "after": "văzut"
+    },
+    {
+      "location": "ioan.3.units[0].teaching",
+      "before": "curatirea",
+      "after": "curățirea"
+    },
+    {
+      "location": "ioan.3.units[0].teaching",
+      "before": "opreste",
+      "after": "oprește"
     },
     {
       "location": "ioan.3.units[0].forYourHeart",
@@ -2192,6 +2802,11 @@
       "location": "ioan.3.units[0].words[1].meaning",
       "before": "cuvant",
       "after": "cuvânt"
+    },
+    {
+      "location": "ioan.3.units[0].words[1].meaning",
+      "before": "Acelasi",
+      "after": "Același"
     },
     {
       "location": "ioan.3.units[1].heading",
@@ -2280,6 +2895,11 @@
     },
     {
       "location": "ioan.3.units[1].teaching",
+      "before": "intunericul",
+      "after": "întunericul"
+    },
+    {
+      "location": "ioan.3.units[1].teaching",
       "before": "randul",
       "after": "rândul"
     },
@@ -2290,8 +2910,23 @@
     },
     {
       "location": "ioan.3.units[1].teaching",
+      "before": "credintei",
+      "after": "credinței"
+    },
+    {
+      "location": "ioan.3.units[1].teaching",
+      "before": "credintei",
+      "after": "credinței"
+    },
+    {
+      "location": "ioan.3.units[1].teaching",
       "before": "descopera",
       "after": "descoperă"
+    },
+    {
+      "location": "ioan.3.units[1].teaching",
+      "before": "toata",
+      "after": "toată"
     },
     {
       "location": "ioan.3.units[1].forYourHeart",
@@ -2379,9 +3014,39 @@
       "after": "creștine"
     },
     {
+      "location": "ioan.3.units[2].teaching",
+      "before": "vazut",
+      "after": "văzut"
+    },
+    {
+      "location": "ioan.3.units[2].teaching",
+      "before": "cand",
+      "after": "când"
+    },
+    {
+      "location": "ioan.3.units[2].teaching",
+      "before": "vorbeste",
+      "after": "vorbește"
+    },
+    {
+      "location": "ioan.3.units[2].teaching",
+      "before": "noastra",
+      "after": "noastră"
+    },
+    {
       "location": "ioan.3.units[2].forYourHeart",
       "before": "in",
       "after": "în"
+    },
+    {
+      "location": "ioan.3.units[2].forYourHeart",
+      "before": "vazut",
+      "after": "văzut"
+    },
+    {
+      "location": "ioan.3.units[2].forYourHeart",
+      "before": "Cand",
+      "after": "Când"
     },
     {
       "location": "ioan.3.units[2].words[0].meaning",
@@ -2407,6 +3072,11 @@
       "location": "ioan.4.title",
       "before": "cuvant",
       "after": "cuvânt"
+    },
+    {
+      "location": "ioan.4.title",
+      "before": "sprijina",
+      "after": "sprijină"
     },
     {
       "location": "ioan.4.summary",
@@ -2474,9 +3144,24 @@
       "after": "așază"
     },
     {
-      "location": "ioan.4.historicalContext",
-      "before": "si",
-      "after": "și"
+      "location": "ioan.4.literaryContext",
+      "before": "sprijina",
+      "after": "sprijină"
+    },
+    {
+      "location": "ioan.4.literaryContext",
+      "before": "vorbeste",
+      "after": "vorbește"
+    },
+    {
+      "location": "ioan.4.literaryContext",
+      "before": "noastra",
+      "after": "noastră"
+    },
+    {
+      "location": "ioan.4.literaryContext",
+      "before": "largimea",
+      "after": "lărgimea"
     },
     {
       "location": "ioan.4.historicalContext",
@@ -2507,6 +3192,16 @@
       "location": "ioan.4.historicalContext",
       "before": "si",
       "after": "și"
+    },
+    {
+      "location": "ioan.4.historicalContext",
+      "before": "si",
+      "after": "și"
+    },
+    {
+      "location": "ioan.4.historicalContext",
+      "before": "vorbeste",
+      "after": "vorbește"
     },
     {
       "location": "ioan.4.prayer",
@@ -2577,6 +3272,16 @@
       "location": "ioan.4.prayer",
       "before": "adevar",
       "after": "adevăr"
+    },
+    {
+      "location": "ioan.4.prayer",
+      "before": "Tau",
+      "after": "Tău"
+    },
+    {
+      "location": "ioan.4.prayer",
+      "before": "multumim",
+      "after": "mulțumim"
     },
     {
       "location": "ioan.4.units[0].heading",
@@ -2680,6 +3385,11 @@
     },
     {
       "location": "ioan.4.units[0].teaching",
+      "before": "inca",
+      "after": "încă"
+    },
+    {
+      "location": "ioan.4.units[0].teaching",
       "before": "adevar",
       "after": "adevăr"
     },
@@ -2697,6 +3407,26 @@
       "location": "ioan.4.units[0].teaching",
       "before": "aceeasi",
       "after": "aceeași"
+    },
+    {
+      "location": "ioan.4.units[0].teaching",
+      "before": "cinstiti",
+      "after": "cinstiți"
+    },
+    {
+      "location": "ioan.4.units[0].teaching",
+      "before": "tau",
+      "after": "tău"
+    },
+    {
+      "location": "ioan.4.units[0].teaching",
+      "before": "impreuna",
+      "after": "împreună"
+    },
+    {
+      "location": "ioan.4.units[0].teaching",
+      "before": "dinlauntru",
+      "after": "dinlăuntru"
     },
     {
       "location": "ioan.4.units[0].forYourHeart",
@@ -2717,6 +3447,11 @@
       "location": "ioan.4.units[0].forYourHeart",
       "before": "adevar",
       "after": "adevăr"
+    },
+    {
+      "location": "ioan.4.units[0].forYourHeart",
+      "before": "tau",
+      "after": "tău"
     },
     {
       "location": "ioan.4.units[0].words[1].meaning",
@@ -2820,6 +3555,11 @@
     },
     {
       "location": "ioan.4.units[1].teaching",
+      "before": "inca",
+      "after": "încă"
+    },
+    {
+      "location": "ioan.4.units[1].teaching",
       "before": "adevarat",
       "after": "adevărat"
     },
@@ -2849,6 +3589,21 @@
       "after": "creștine"
     },
     {
+      "location": "ioan.4.units[1].teaching",
+      "before": "Cand",
+      "after": "Când"
+    },
+    {
+      "location": "ioan.4.units[1].teaching",
+      "before": "vorbeste",
+      "after": "vorbește"
+    },
+    {
+      "location": "ioan.4.units[1].forYourHeart",
+      "before": "inceputul",
+      "after": "începutul"
+    },
+    {
       "location": "ioan.4.units[1].forYourHeart",
       "before": "incurcatura",
       "after": "încurcătură"
@@ -2872,6 +3627,11 @@
       "location": "ioan.4.units[1].words[1].meaning",
       "before": "Marturisire",
       "after": "Mărturisire"
+    },
+    {
+      "location": "ioan.4.units[2].heading",
+      "before": "tau",
+      "after": "tău"
     },
     {
       "location": "ioan.4.units[2].teaching",
@@ -2955,6 +3715,11 @@
     },
     {
       "location": "ioan.4.units[2].teaching",
+      "before": "inca",
+      "after": "încă"
+    },
+    {
+      "location": "ioan.4.units[2].teaching",
       "before": "ramane",
       "after": "rămâne"
     },
@@ -2972,6 +3737,36 @@
       "location": "ioan.4.units[2].teaching",
       "before": "marturia",
       "after": "mărturia"
+    },
+    {
+      "location": "ioan.4.units[2].teaching",
+      "before": "credintei",
+      "after": "credinței"
+    },
+    {
+      "location": "ioan.4.units[2].teaching",
+      "before": "sprijina",
+      "after": "sprijină"
+    },
+    {
+      "location": "ioan.4.units[2].teaching",
+      "before": "trecatoare",
+      "after": "trecătoare"
+    },
+    {
+      "location": "ioan.4.units[2].teaching",
+      "before": "tau",
+      "after": "tău"
+    },
+    {
+      "location": "ioan.4.units[2].teaching",
+      "before": "cand",
+      "after": "când"
+    },
+    {
+      "location": "ioan.4.units[2].teaching",
+      "before": "cand",
+      "after": "când"
     },
     {
       "location": "ioan.4.units[2].forYourHeart",
@@ -2994,6 +3789,16 @@
       "after": "înapoi"
     },
     {
+      "location": "ioan.4.units[2].forYourHeart",
+      "before": "Cand",
+      "after": "Când"
+    },
+    {
+      "location": "ioan.4.units[2].forYourHeart",
+      "before": "vorbeste",
+      "after": "vorbește"
+    },
+    {
       "location": "ioan.4.units[2].words[0].meaning",
       "before": "si",
       "after": "și"
@@ -3002,6 +3807,11 @@
       "location": "ioan.4.units[2].words[0].meaning",
       "before": "cuvantul",
       "after": "cuvântul"
+    },
+    {
+      "location": "ioan.4.units[2].words[0].meaning",
+      "before": "sprijina",
+      "after": "sprijină"
     },
     {
       "location": "ioan.4.units[2].words[1].meaning",
@@ -3050,6 +3860,11 @@
     },
     {
       "location": "ioan.5.summary",
+      "before": "incredintate",
+      "after": "încredințate"
+    },
+    {
+      "location": "ioan.5.summary",
       "before": "marturie",
       "after": "mărturie"
     },
@@ -3057,6 +3872,11 @@
       "location": "ioan.5.summary",
       "before": "descopera",
       "after": "descoperă"
+    },
+    {
+      "location": "ioan.5.summary",
+      "before": "impreuna",
+      "after": "împreună"
     },
     {
       "location": "ioan.5.literaryContext",
@@ -3087,6 +3907,11 @@
       "location": "ioan.5.literaryContext",
       "before": "intai",
       "after": "întâi"
+    },
+    {
+      "location": "ioan.5.literaryContext",
+      "before": "marturiile",
+      "after": "mărturiile"
     },
     {
       "location": "ioan.5.literaryContext",
@@ -3137,6 +3962,11 @@
       "location": "ioan.5.historicalContext",
       "before": "decat",
       "after": "decât"
+    },
+    {
+      "location": "ioan.5.historicalContext",
+      "before": "Cand",
+      "after": "Când"
     },
     {
       "location": "ioan.5.prayer",
@@ -3197,6 +4027,31 @@
       "location": "ioan.5.prayer",
       "before": "marturia",
       "after": "mărturia"
+    },
+    {
+      "location": "ioan.5.prayer",
+      "before": "Tau",
+      "after": "Tău"
+    },
+    {
+      "location": "ioan.5.prayer",
+      "before": "cand",
+      "after": "când"
+    },
+    {
+      "location": "ioan.5.prayer",
+      "before": "Vorbeste",
+      "after": "Vorbește"
+    },
+    {
+      "location": "ioan.5.prayer",
+      "before": "impotrivire",
+      "after": "împotrivire"
+    },
+    {
+      "location": "ioan.5.prayer",
+      "before": "multumim",
+      "after": "mulțumim"
     },
     {
       "location": "ioan.5.units[0].teaching",
@@ -3280,6 +4135,11 @@
     },
     {
       "location": "ioan.5.units[0].teaching",
+      "before": "inteles",
+      "after": "înțeles"
+    },
+    {
+      "location": "ioan.5.units[0].teaching",
       "before": "aseaza",
       "after": "așază"
     },
@@ -3290,8 +4150,13 @@
     },
     {
       "location": "ioan.5.units[0].teaching",
-      "before": "inteles",
-      "after": "înțeles"
+      "before": "Toata",
+      "after": "Toată"
+    },
+    {
+      "location": "ioan.5.units[0].teaching",
+      "before": "intrebarea",
+      "after": "întrebarea"
     },
     {
       "location": "ioan.5.units[0].forYourHeart",
@@ -3464,6 +4329,46 @@
       "after": "aceeași"
     },
     {
+      "location": "ioan.5.units[1].teaching",
+      "before": "acelasi",
+      "after": "același"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "Toata",
+      "after": "Toată"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "toata",
+      "after": "toată"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "sfanta",
+      "after": "sfânta"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "Cand",
+      "after": "Când"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "vorbeste",
+      "after": "vorbește"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "primeste",
+      "after": "primește"
+    },
+    {
+      "location": "ioan.5.units[1].teaching",
+      "before": "noastra",
+      "after": "noastră"
+    },
+    {
       "location": "ioan.5.units[1].forYourHeart",
       "before": "Si",
       "after": "Și"
@@ -3497,6 +4402,11 @@
       "location": "ioan.5.units[1].forYourHeart",
       "before": "fara",
       "after": "fără"
+    },
+    {
+      "location": "ioan.5.units[1].forYourHeart",
+      "before": "sprijina",
+      "after": "sprijină"
     },
     {
       "location": "ioan.5.units[1].words[0].meaning",
@@ -3592,6 +4502,11 @@
       "location": "ioan.5.units[2].teaching",
       "before": "aseaza",
       "after": "așază"
+    },
+    {
+      "location": "ioan.5.units[2].teaching",
+      "before": "acelasi",
+      "after": "același"
     },
     {
       "location": "ioan.5.units[2].teaching",
@@ -3724,6 +4639,26 @@
       "after": "vieții"
     },
     {
+      "location": "ioan.6.literaryContext",
+      "before": "vazut",
+      "after": "văzut"
+    },
+    {
+      "location": "ioan.6.literaryContext",
+      "before": "paine",
+      "after": "pâine"
+    },
+    {
+      "location": "ioan.6.literaryContext",
+      "before": "insa",
+      "after": "însă"
+    },
+    {
+      "location": "ioan.6.literaryContext",
+      "before": "sfarseste",
+      "after": "sfârșește"
+    },
+    {
       "location": "ioan.6.historicalContext",
       "before": "si",
       "after": "și"
@@ -3752,6 +4687,16 @@
       "location": "ioan.6.historicalContext",
       "before": "raman",
       "after": "rămân"
+    },
+    {
+      "location": "ioan.6.historicalContext",
+      "before": "cand",
+      "after": "când"
+    },
+    {
+      "location": "ioan.6.historicalContext",
+      "before": "vorbeste",
+      "after": "vorbește"
     },
     {
       "location": "ioan.6.prayer",
@@ -3787,6 +4732,36 @@
       "location": "ioan.6.prayer",
       "before": "vietii",
       "after": "vieții"
+    },
+    {
+      "location": "ioan.6.prayer",
+      "before": "trecatoare",
+      "after": "trecătoare"
+    },
+    {
+      "location": "ioan.6.prayer",
+      "before": "Tau",
+      "after": "Tău"
+    },
+    {
+      "location": "ioan.6.prayer",
+      "before": "cand",
+      "after": "când"
+    },
+    {
+      "location": "ioan.6.prayer",
+      "before": "cand",
+      "after": "când"
+    },
+    {
+      "location": "ioan.6.prayer",
+      "before": "Paine",
+      "after": "Pâine"
+    },
+    {
+      "location": "ioan.6.prayer",
+      "before": "multumim",
+      "after": "mulțumim"
     },
     {
       "location": "ioan.6.units[0].heading",
@@ -3874,6 +4849,31 @@
       "after": "două"
     },
     {
+      "location": "ioan.6.units[0].teaching",
+      "before": "vazut",
+      "after": "văzut"
+    },
+    {
+      "location": "ioan.6.units[0].teaching",
+      "before": "vazut",
+      "after": "văzut"
+    },
+    {
+      "location": "ioan.6.units[0].teaching",
+      "before": "primeste",
+      "after": "primește"
+    },
+    {
+      "location": "ioan.6.units[0].teaching",
+      "before": "intrebarea",
+      "after": "întrebarea"
+    },
+    {
+      "location": "ioan.6.units[0].teaching",
+      "before": "belsug",
+      "after": "belșug"
+    },
+    {
       "location": "ioan.6.units[0].forYourHeart",
       "before": "si",
       "after": "și"
@@ -3887,6 +4887,21 @@
       "location": "ioan.6.units[0].forYourHeart",
       "before": "intai",
       "after": "întâi"
+    },
+    {
+      "location": "ioan.6.units[0].forYourHeart",
+      "before": "Cand",
+      "after": "Când"
+    },
+    {
+      "location": "ioan.6.units[0].forYourHeart",
+      "before": "cand",
+      "after": "când"
+    },
+    {
+      "location": "ioan.6.units[0].forYourHeart",
+      "before": "uiti",
+      "after": "uiți"
     },
     {
       "location": "ioan.6.units[0].words[1].meaning",
@@ -3964,6 +4979,21 @@
       "after": "vieții"
     },
     {
+      "location": "ioan.6.units[1].teaching",
+      "before": "vazut",
+      "after": "văzut"
+    },
+    {
+      "location": "ioan.6.units[1].teaching",
+      "before": "Cand",
+      "after": "Când"
+    },
+    {
+      "location": "ioan.6.units[1].teaching",
+      "before": "noastra",
+      "after": "noastră"
+    },
+    {
       "location": "ioan.6.units[1].forYourHeart",
       "before": "si",
       "after": "și"
@@ -3982,6 +5012,11 @@
       "location": "ioan.6.units[1].forYourHeart",
       "before": "ramane",
       "after": "rămâne"
+    },
+    {
+      "location": "ioan.6.units[1].forYourHeart",
+      "before": "tau",
+      "after": "tău"
     },
     {
       "location": "ioan.6.units[1].words[0].meaning",
@@ -4084,6 +5119,41 @@
       "after": "înapoi"
     },
     {
+      "location": "ioan.6.units[2].teaching",
+      "before": "credintei",
+      "after": "credinței"
+    },
+    {
+      "location": "ioan.6.units[2].teaching",
+      "before": "parut",
+      "after": "părut"
+    },
+    {
+      "location": "ioan.6.units[2].teaching",
+      "before": "vazut",
+      "after": "văzut"
+    },
+    {
+      "location": "ioan.6.units[2].teaching",
+      "before": "cand",
+      "after": "când"
+    },
+    {
+      "location": "ioan.6.units[2].teaching",
+      "before": "Cand",
+      "after": "Când"
+    },
+    {
+      "location": "ioan.6.units[2].teaching",
+      "before": "paine",
+      "after": "pâine"
+    },
+    {
+      "location": "ioan.6.units[2].teaching",
+      "before": "intrebarea",
+      "after": "întrebarea"
+    },
+    {
       "location": "ioan.6.units[2].forYourHeart",
       "before": "in",
       "after": "în"
@@ -4097,6 +5167,21 @@
       "location": "ioan.6.units[2].forYourHeart",
       "before": "intelege",
       "after": "înțelege"
+    },
+    {
+      "location": "ioan.6.units[2].forYourHeart",
+      "before": "cand",
+      "after": "când"
+    },
+    {
+      "location": "ioan.6.units[2].forYourHeart",
+      "before": "stii",
+      "after": "știi"
+    },
+    {
+      "location": "ioan.6.units[2].forYourHeart",
+      "before": "intrebarea",
+      "after": "întrebarea"
     },
     {
       "location": "ioan.6.units[2].words[0].meaning",
@@ -4194,6 +5279,11 @@
       "after": "rămâne"
     },
     {
+      "location": "ioan.7.literaryContext",
+      "before": "impotrivire",
+      "after": "împotrivire"
+    },
+    {
       "location": "ioan.7.historicalContext",
       "before": "si",
       "after": "și"
@@ -4252,6 +5342,31 @@
       "location": "ioan.7.prayer",
       "before": "daca",
       "after": "dacă"
+    },
+    {
+      "location": "ioan.7.prayer",
+      "before": "Tau",
+      "after": "Tău"
+    },
+    {
+      "location": "ioan.7.prayer",
+      "before": "Tau",
+      "after": "Tău"
+    },
+    {
+      "location": "ioan.7.prayer",
+      "before": "noastra",
+      "after": "noastră"
+    },
+    {
+      "location": "ioan.7.prayer",
+      "before": "multumim",
+      "after": "mulțumim"
+    },
+    {
+      "location": "ioan.7.units[0].heading",
+      "before": "inca",
+      "after": "încă"
     },
     {
       "location": "ioan.7.units[0].teaching",
@@ -4325,8 +5440,43 @@
     },
     {
       "location": "ioan.7.units[0].teaching",
+      "before": "naste",
+      "after": "naște"
+    },
+    {
+      "location": "ioan.7.units[0].teaching",
+      "before": "asezarea",
+      "after": "așezarea"
+    },
+    {
+      "location": "ioan.7.units[0].teaching",
       "before": "descopera",
       "after": "descoperă"
+    },
+    {
+      "location": "ioan.7.units[0].teaching",
+      "before": "mangaie",
+      "after": "mângâie"
+    },
+    {
+      "location": "ioan.7.units[0].teaching",
+      "before": "Cand",
+      "after": "Când"
+    },
+    {
+      "location": "ioan.7.units[0].teaching",
+      "before": "insa",
+      "after": "însă"
+    },
+    {
+      "location": "ioan.7.units[0].forYourHeart",
+      "before": "inca",
+      "after": "încă"
+    },
+    {
+      "location": "ioan.7.units[0].forYourHeart",
+      "before": "cand",
+      "after": "când"
     },
     {
       "location": "ioan.7.units[0].words[0].meaning",
@@ -4419,6 +5569,26 @@
       "after": "rămâne"
     },
     {
+      "location": "ioan.7.units[1].teaching",
+      "before": "vazut",
+      "after": "văzut"
+    },
+    {
+      "location": "ioan.7.units[1].teaching",
+      "before": "primeste",
+      "after": "primește"
+    },
+    {
+      "location": "ioan.7.units[1].teaching",
+      "before": "largimea",
+      "after": "lărgimea"
+    },
+    {
+      "location": "ioan.7.units[1].teaching",
+      "before": "opreste",
+      "after": "oprește"
+    },
+    {
       "location": "ioan.7.units[1].forYourHeart",
       "before": "si",
       "after": "și"
@@ -4427,6 +5597,11 @@
       "location": "ioan.7.units[1].forYourHeart",
       "before": "Daca",
       "after": "Dacă"
+    },
+    {
+      "location": "ioan.7.units[1].words[0].meaning",
+      "before": "inseta",
+      "after": "înseta"
     },
     {
       "location": "ioan.7.units[1].words[1].meaning",
@@ -4495,6 +5670,21 @@
     },
     {
       "location": "ioan.7.units[2].teaching",
+      "before": "inca",
+      "after": "încă"
+    },
+    {
+      "location": "ioan.7.units[2].teaching",
+      "before": "inca",
+      "after": "încă"
+    },
+    {
+      "location": "ioan.7.units[2].teaching",
+      "before": "inca",
+      "after": "încă"
+    },
+    {
+      "location": "ioan.7.units[2].teaching",
       "before": "adevar",
       "after": "adevăr"
     },
@@ -4517,6 +5707,16 @@
       "location": "ioan.7.units[2].teaching",
       "before": "randul",
       "after": "rândul"
+    },
+    {
+      "location": "ioan.7.units[2].teaching",
+      "before": "acelasi",
+      "after": "același"
+    },
+    {
+      "location": "ioan.7.units[2].teaching",
+      "before": "toata",
+      "after": "toată"
     },
     {
       "location": "ioan.7.units[2].forYourHeart",
@@ -4545,6 +5745,16 @@
     },
     {
       "location": "ioan.7.units[2].forYourHeart",
+      "before": "inceputul",
+      "after": "începutul"
+    },
+    {
+      "location": "ioan.7.units[2].forYourHeart",
+      "before": "inca",
+      "after": "încă"
+    },
+    {
+      "location": "ioan.7.units[2].forYourHeart",
       "before": "ramane",
       "after": "rămâne"
     },
@@ -4552,6 +5762,11 @@
       "location": "ioan.7.units[2].forYourHeart",
       "before": "inainte",
       "after": "înainte"
+    },
+    {
+      "location": "ioan.7.units[2].forYourHeart",
+      "before": "tau",
+      "after": "tău"
     },
     {
       "location": "ioan.7.units[2].words[1].meaning",
@@ -4592,6 +5807,11 @@
       "location": "ioan.8.summary",
       "before": "marturia",
       "after": "mărturia"
+    },
+    {
+      "location": "ioan.8.summary",
+      "before": "noastra",
+      "after": "noastră"
     },
     {
       "location": "ioan.8.literaryContext",
@@ -4719,6 +5939,31 @@
       "after": "adevărat"
     },
     {
+      "location": "ioan.8.prayer",
+      "before": "intunericul",
+      "after": "întunericul"
+    },
+    {
+      "location": "ioan.8.prayer",
+      "before": "intunericul",
+      "after": "întunericul"
+    },
+    {
+      "location": "ioan.8.prayer",
+      "before": "Tau",
+      "after": "Tău"
+    },
+    {
+      "location": "ioan.8.prayer",
+      "before": "Tau",
+      "after": "Tău"
+    },
+    {
+      "location": "ioan.8.prayer",
+      "before": "multumim",
+      "after": "mulțumim"
+    },
+    {
       "location": "ioan.8.units[0].teaching",
       "before": "si",
       "after": "și"
@@ -4810,6 +6055,16 @@
     },
     {
       "location": "ioan.8.units[0].teaching",
+      "before": "intuneric",
+      "after": "întuneric"
+    },
+    {
+      "location": "ioan.8.units[0].teaching",
+      "before": "intunericul",
+      "after": "întunericul"
+    },
+    {
+      "location": "ioan.8.units[0].teaching",
       "before": "aceeasi",
       "after": "aceeași"
     },
@@ -4817,11 +6072,6 @@
       "location": "ioan.8.units[0].teaching",
       "before": "decat",
       "after": "decât"
-    },
-    {
-      "location": "ioan.8.units[0].teaching",
-      "before": "intuneric",
-      "after": "întuneric"
     },
     {
       "location": "ioan.8.units[0].teaching",
@@ -4842,6 +6092,11 @@
       "location": "ioan.8.units[0].words[0].meaning",
       "before": "si",
       "after": "și"
+    },
+    {
+      "location": "ioan.8.units[0].words[0].meaning",
+      "before": "calauzire",
+      "after": "călăuzire"
     },
     {
       "location": "ioan.8.units[0].words[1].meaning",
@@ -4959,6 +6214,11 @@
       "after": "descoperă"
     },
     {
+      "location": "ioan.8.units[1].teaching",
+      "before": "cand",
+      "after": "când"
+    },
+    {
       "location": "ioan.8.units[1].forYourHeart",
       "before": "si",
       "after": "și"
@@ -4982,6 +6242,11 @@
       "location": "ioan.8.units[1].forYourHeart",
       "before": "Cuvantul",
       "after": "Cuvântul"
+    },
+    {
+      "location": "ioan.8.units[1].forYourHeart",
+      "before": "cand",
+      "after": "când"
     },
     {
       "location": "ioan.8.units[1].words[0].meaning",
@@ -5090,13 +6355,23 @@
     },
     {
       "location": "ioan.8.units[2].teaching",
+      "before": "inteles",
+      "after": "înțeles"
+    },
+    {
+      "location": "ioan.8.units[2].teaching",
       "before": "marturie",
       "after": "mărturie"
     },
     {
       "location": "ioan.8.units[2].teaching",
-      "before": "inteles",
-      "after": "înțeles"
+      "before": "stapanirea",
+      "after": "stăpânirea"
+    },
+    {
+      "location": "ioan.8.units[2].teaching",
+      "before": "toata",
+      "after": "toată"
     },
     {
       "location": "ioan.8.units[2].forYourHeart",
@@ -5107,6 +6382,16 @@
       "location": "ioan.8.units[2].forYourHeart",
       "before": "inainte",
       "after": "înainte"
+    },
+    {
+      "location": "ioan.8.units[2].forYourHeart",
+      "before": "Cand",
+      "after": "Când"
+    },
+    {
+      "location": "ioan.8.units[2].forYourHeart",
+      "before": "clatinat",
+      "after": "clătinat"
     },
     {
       "location": "ioan.8.units[2].words[1].meaning",
@@ -5137,6 +6422,11 @@
       "location": "ioan.9.summary",
       "before": "nastere",
       "after": "naștere"
+    },
+    {
+      "location": "ioan.9.summary",
+      "before": "credintei",
+      "after": "credinței"
     },
     {
       "location": "ioan.9.literaryContext",
@@ -5170,6 +6460,11 @@
     },
     {
       "location": "ioan.9.literaryContext",
+      "before": "intuneric",
+      "after": "întuneric"
+    },
+    {
+      "location": "ioan.9.literaryContext",
       "before": "marturia",
       "after": "mărturia"
     },
@@ -5185,8 +6480,8 @@
     },
     {
       "location": "ioan.9.literaryContext",
-      "before": "intuneric",
-      "after": "întuneric"
+      "before": "primeste",
+      "after": "primește"
     },
     {
       "location": "ioan.9.historicalContext",
@@ -5229,6 +6524,16 @@
       "after": "rămâne"
     },
     {
+      "location": "ioan.9.historicalContext",
+      "before": "intrebarea",
+      "after": "întrebarea"
+    },
+    {
+      "location": "ioan.9.historicalContext",
+      "before": "impotrivire",
+      "after": "împotrivire"
+    },
+    {
       "location": "ioan.9.prayer",
       "before": "si",
       "after": "și"
@@ -5260,8 +6565,23 @@
     },
     {
       "location": "ioan.9.prayer",
+      "before": "marturisim",
+      "after": "mărturisim"
+    },
+    {
+      "location": "ioan.9.prayer",
       "before": "facut",
       "after": "făcut"
+    },
+    {
+      "location": "ioan.9.prayer",
+      "before": "noastra",
+      "after": "noastră"
+    },
+    {
+      "location": "ioan.9.prayer",
+      "before": "multumim",
+      "after": "mulțumim"
     },
     {
       "location": "ioan.9.units[0].heading",
@@ -5319,6 +6639,31 @@
       "after": "înțelege"
     },
     {
+      "location": "ioan.9.units[0].teaching",
+      "before": "cand",
+      "after": "când"
+    },
+    {
+      "location": "ioan.9.units[0].teaching",
+      "before": "Cand",
+      "after": "Când"
+    },
+    {
+      "location": "ioan.9.units[0].teaching",
+      "before": "insa",
+      "after": "însă"
+    },
+    {
+      "location": "ioan.9.units[0].teaching",
+      "before": "intrebarea",
+      "after": "întrebarea"
+    },
+    {
+      "location": "ioan.9.units[0].teaching",
+      "before": "intrebarea",
+      "after": "întrebarea"
+    },
+    {
       "location": "ioan.9.units[0].forYourHeart",
       "before": "si",
       "after": "și"
@@ -5327,6 +6672,11 @@
       "location": "ioan.9.units[0].forYourHeart",
       "before": "vietii",
       "after": "vieții"
+    },
+    {
+      "location": "ioan.9.units[0].forYourHeart",
+      "before": "intrebarea",
+      "after": "întrebarea"
     },
     {
       "location": "ioan.9.units[0].words[0].meaning",
@@ -5390,6 +6740,11 @@
     },
     {
       "location": "ioan.9.units[1].teaching",
+      "before": "inca",
+      "after": "încă"
+    },
+    {
+      "location": "ioan.9.units[1].teaching",
       "before": "adevarat",
       "after": "adevărat"
     },
@@ -5419,6 +6774,16 @@
       "after": "decât"
     },
     {
+      "location": "ioan.9.units[1].teaching",
+      "before": "toata",
+      "after": "toată"
+    },
+    {
+      "location": "ioan.9.units[1].teaching",
+      "before": "cand",
+      "after": "când"
+    },
+    {
       "location": "ioan.9.units[1].forYourHeart",
       "before": "si",
       "after": "și"
@@ -5432,6 +6797,11 @@
       "location": "ioan.9.units[1].forYourHeart",
       "before": "facut",
       "after": "făcut"
+    },
+    {
+      "location": "ioan.9.units[1].forYourHeart",
+      "before": "stii",
+      "after": "știi"
     },
     {
       "location": "ioan.9.units[1].words[0].meaning",
@@ -5494,6 +6864,16 @@
       "after": "răspuns"
     },
     {
+      "location": "ioan.9.units[2].teaching",
+      "before": "credintei",
+      "after": "credinței"
+    },
+    {
+      "location": "ioan.9.units[2].teaching",
+      "before": "cand",
+      "after": "când"
+    },
+    {
       "location": "ioan.9.units[2].forYourHeart",
       "before": "si",
       "after": "și"
@@ -5507,6 +6887,11 @@
       "location": "ioan.9.units[2].forYourHeart",
       "before": "Daca",
       "after": "Dacă"
+    },
+    {
+      "location": "ioan.9.units[2].forYourHeart",
+      "before": "cand",
+      "after": "când"
     },
     {
       "location": "ioan.9.units[2].words[0].meaning",
@@ -5542,6 +6927,21 @@
       "location": "ioan.10.summary",
       "before": "descopera",
       "after": "descoperă"
+    },
+    {
+      "location": "ioan.10.summary",
+      "before": "vorbeste",
+      "after": "vorbește"
+    },
+    {
+      "location": "ioan.10.summary",
+      "before": "impotrivire",
+      "after": "împotrivire"
+    },
+    {
+      "location": "ioan.10.summary",
+      "before": "belsug",
+      "after": "belșug"
     },
     {
       "location": "ioan.10.literaryContext",
@@ -5592,6 +6992,11 @@
       "location": "ioan.10.literaryContext",
       "before": "decat",
       "after": "decât"
+    },
+    {
+      "location": "ioan.10.literaryContext",
+      "before": "vorbeste",
+      "after": "vorbește"
     },
     {
       "location": "ioan.10.historicalContext",
@@ -5659,6 +7064,21 @@
       "after": "înțeles"
     },
     {
+      "location": "ioan.10.historicalContext",
+      "before": "cand",
+      "after": "când"
+    },
+    {
+      "location": "ioan.10.historicalContext",
+      "before": "vorbeste",
+      "after": "vorbește"
+    },
+    {
+      "location": "ioan.10.historicalContext",
+      "before": "curatirea",
+      "after": "curățirea"
+    },
+    {
       "location": "ioan.10.prayer",
       "before": "si",
       "after": "și"
@@ -5702,6 +7122,21 @@
       "location": "ioan.10.prayer",
       "before": "decat",
       "after": "decât"
+    },
+    {
+      "location": "ioan.10.prayer",
+      "before": "Tau",
+      "after": "Tău"
+    },
+    {
+      "location": "ioan.10.prayer",
+      "before": "noastra",
+      "after": "noastră"
+    },
+    {
+      "location": "ioan.10.prayer",
+      "before": "multumim",
+      "after": "mulțumim"
     },
     {
       "location": "ioan.10.units[0].teaching",
@@ -5814,6 +7249,11 @@
       "after": "mărturia"
     },
     {
+      "location": "ioan.10.units[0].teaching",
+      "before": "largimea",
+      "after": "lărgimea"
+    },
+    {
       "location": "ioan.10.units[0].forYourHeart",
       "before": "si",
       "after": "și"
@@ -5847,6 +7287,11 @@
       "location": "ioan.10.units[0].words[1].meaning",
       "before": "adevarat",
       "after": "adevărat"
+    },
+    {
+      "location": "ioan.10.units[0].words[2].meaning",
+      "before": "belsug",
+      "after": "belșug"
     },
     {
       "location": "ioan.10.units[1].teaching",
@@ -5934,6 +7379,26 @@
       "after": "făgăduință"
     },
     {
+      "location": "ioan.10.units[1].teaching",
+      "before": "randuri",
+      "after": "rânduri"
+    },
+    {
+      "location": "ioan.10.units[1].teaching",
+      "before": "sprijina",
+      "after": "sprijină"
+    },
+    {
+      "location": "ioan.10.units[1].teaching",
+      "before": "sfanta",
+      "after": "sfânta"
+    },
+    {
+      "location": "ioan.10.units[1].teaching",
+      "before": "primeste",
+      "after": "primește"
+    },
+    {
       "location": "ioan.10.units[1].forYourHeart",
       "before": "Si",
       "after": "Și"
@@ -5942,6 +7407,11 @@
       "location": "ioan.10.units[1].forYourHeart",
       "before": "decat",
       "after": "decât"
+    },
+    {
+      "location": "ioan.10.units[1].forYourHeart",
+      "before": "Cand",
+      "after": "Când"
     },
     {
       "location": "ioan.10.units[1].words[1].meaning",
@@ -6079,6 +7549,31 @@
       "after": "Botezătorul"
     },
     {
+      "location": "ioan.10.units[2].teaching",
+      "before": "acelasi",
+      "after": "același"
+    },
+    {
+      "location": "ioan.10.units[2].teaching",
+      "before": "coboram",
+      "after": "coborâm"
+    },
+    {
+      "location": "ioan.10.units[2].teaching",
+      "before": "impreuna",
+      "after": "împreună"
+    },
+    {
+      "location": "ioan.10.units[2].teaching",
+      "before": "cand",
+      "after": "când"
+    },
+    {
+      "location": "ioan.10.units[2].teaching",
+      "before": "vorbeste",
+      "after": "vorbește"
+    },
+    {
       "location": "ioan.10.units[2].forYourHeart",
       "before": "si",
       "after": "și"
@@ -6097,6 +7592,16 @@
       "location": "ioan.10.units[2].forYourHeart",
       "before": "marturie",
       "after": "mărturie"
+    },
+    {
+      "location": "ioan.10.units[2].forYourHeart",
+      "before": "sprijina",
+      "after": "sprijină"
+    },
+    {
+      "location": "ioan.10.units[2].forYourHeart",
+      "before": "Cand",
+      "after": "Când"
     },
     {
       "location": "ioan.10.units[2].words[1].meaning",
@@ -6132,6 +7637,16 @@
       "location": "ioan.11.summary",
       "before": "Invierea",
       "after": "Învierea"
+    },
+    {
+      "location": "ioan.11.summary",
+      "before": "impreuna",
+      "after": "împreună"
+    },
+    {
+      "location": "ioan.11.summary",
+      "before": "plange",
+      "after": "plânge"
     },
     {
       "location": "ioan.11.literaryContext",
@@ -6177,6 +7692,16 @@
       "location": "ioan.11.literaryContext",
       "before": "invierea",
       "after": "învierea"
+    },
+    {
+      "location": "ioan.11.literaryContext",
+      "before": "sfarseste",
+      "after": "sfârșește"
+    },
+    {
+      "location": "ioan.11.literaryContext",
+      "before": "intarziere",
+      "after": "întârziere"
     },
     {
       "location": "ioan.11.historicalContext",
@@ -6249,6 +7774,21 @@
       "after": "Învierea"
     },
     {
+      "location": "ioan.11.prayer",
+      "before": "Cand",
+      "after": "Când"
+    },
+    {
+      "location": "ioan.11.prayer",
+      "before": "multumim",
+      "after": "mulțumim"
+    },
+    {
+      "location": "ioan.11.prayer",
+      "before": "Multumim",
+      "after": "Mulțumim"
+    },
+    {
       "location": "ioan.11.units[0].heading",
       "before": "si",
       "after": "și"
@@ -6290,6 +7830,16 @@
     },
     {
       "location": "ioan.11.units[0].teaching",
+      "before": "inca",
+      "after": "încă"
+    },
+    {
+      "location": "ioan.11.units[0].teaching",
+      "before": "inca",
+      "after": "încă"
+    },
+    {
+      "location": "ioan.11.units[0].teaching",
       "before": "ramane",
       "after": "rămâne"
     },
@@ -6324,6 +7874,36 @@
       "after": "învierea"
     },
     {
+      "location": "ioan.11.units[0].teaching",
+      "before": "sprijina",
+      "after": "sprijină"
+    },
+    {
+      "location": "ioan.11.units[0].teaching",
+      "before": "intrebarea",
+      "after": "întrebarea"
+    },
+    {
+      "location": "ioan.11.units[0].teaching",
+      "before": "noastra",
+      "after": "noastră"
+    },
+    {
+      "location": "ioan.11.units[0].teaching",
+      "before": "intarziere",
+      "after": "întârziere"
+    },
+    {
+      "location": "ioan.11.units[0].teaching",
+      "before": "usurarii",
+      "after": "ușurării"
+    },
+    {
+      "location": "ioan.11.units[0].forYourHeart",
+      "before": "Cand",
+      "after": "Când"
+    },
+    {
       "location": "ioan.11.units[0].words[0].meaning",
       "before": "inviere",
       "after": "înviere"
@@ -6337,6 +7917,11 @@
       "location": "ioan.11.units[1].heading",
       "before": "si",
       "after": "și"
+    },
+    {
+      "location": "ioan.11.units[1].heading",
+      "before": "plange",
+      "after": "plânge"
     },
     {
       "location": "ioan.11.units[1].teaching",
@@ -6409,6 +7994,16 @@
       "after": "două"
     },
     {
+      "location": "ioan.11.units[1].teaching",
+      "before": "plange",
+      "after": "plânge"
+    },
+    {
+      "location": "ioan.11.units[1].teaching",
+      "before": "nadejde",
+      "after": "nădejde"
+    },
+    {
       "location": "ioan.11.units[1].forYourHeart",
       "before": "Daca",
       "after": "Dacă"
@@ -6417,6 +8012,11 @@
       "location": "ioan.11.units[1].forYourHeart",
       "before": "ramane",
       "after": "rămâne"
+    },
+    {
+      "location": "ioan.11.units[1].forYourHeart",
+      "before": "vreodata",
+      "after": "vreodată"
     },
     {
       "location": "ioan.11.units[1].words[0].meaning",
@@ -6464,6 +8064,26 @@
       "after": "adevăr"
     },
     {
+      "location": "ioan.11.units[2].teaching",
+      "before": "stapanirea",
+      "after": "stăpânirea"
+    },
+    {
+      "location": "ioan.11.units[2].teaching",
+      "before": "vorbeste",
+      "after": "vorbește"
+    },
+    {
+      "location": "ioan.11.units[2].teaching",
+      "before": "vorbeste",
+      "after": "vorbește"
+    },
+    {
+      "location": "ioan.11.units[2].teaching",
+      "before": "largimea",
+      "after": "lărgimea"
+    },
+    {
       "location": "ioan.11.units[2].forYourHeart",
       "before": "si",
       "after": "și"
@@ -6472,6 +8092,11 @@
       "location": "ioan.11.units[2].forYourHeart",
       "before": "si",
       "after": "și"
+    },
+    {
+      "location": "ioan.11.units[2].forYourHeart",
+      "before": "cand",
+      "after": "când"
     },
     {
       "location": "ioan.12.title",
@@ -6502,11 +8127,21 @@
       "location": "ioan.12.summary",
       "before": "in",
       "after": "în"
+    },
+    {
+      "location": "ioan.12.summary",
+      "before": "inca",
+      "after": "încă"
     },
     {
       "location": "ioan.12.summary",
       "before": "raman",
       "after": "rămân"
+    },
+    {
+      "location": "ioan.12.summary",
+      "before": "vorbeste",
+      "after": "vorbește"
     },
     {
       "location": "ioan.12.literaryContext",
@@ -6559,6 +8194,16 @@
       "after": "făcut"
     },
     {
+      "location": "ioan.12.historicalContext",
+      "before": "acelasi",
+      "after": "același"
+    },
+    {
+      "location": "ioan.12.historicalContext",
+      "before": "credintei",
+      "after": "credinței"
+    },
+    {
       "location": "ioan.12.prayer",
       "before": "si",
       "after": "și"
@@ -6605,13 +8250,23 @@
     },
     {
       "location": "ioan.12.prayer",
+      "before": "intuneric",
+      "after": "întuneric"
+    },
+    {
+      "location": "ioan.12.prayer",
       "before": "decat",
       "after": "decât"
     },
     {
       "location": "ioan.12.prayer",
-      "before": "intuneric",
-      "after": "întuneric"
+      "before": "Tau",
+      "after": "Tău"
+    },
+    {
+      "location": "ioan.12.prayer",
+      "before": "multumim",
+      "after": "mulțumim"
     },
     {
       "location": "ioan.12.units[0].heading",
@@ -6662,6 +8317,11 @@
       "location": "ioan.12.units[0].forYourHeart",
       "before": "si",
       "after": "și"
+    },
+    {
+      "location": "ioan.12.units[0].forYourHeart",
+      "before": "sfanta",
+      "after": "sfânta"
     },
     {
       "location": "ioan.12.units[0].words[0].meaning",
@@ -6744,6 +8404,11 @@
       "after": "aceeași"
     },
     {
+      "location": "ioan.12.units[1].teaching",
+      "before": "opreste",
+      "after": "oprește"
+    },
+    {
       "location": "ioan.12.units[1].forYourHeart",
       "before": "si",
       "after": "și"
@@ -6772,6 +8437,11 @@
       "location": "ioan.12.units[1].forYourHeart",
       "before": "Daca",
       "after": "Dacă"
+    },
+    {
+      "location": "ioan.12.units[1].forYourHeart",
+      "before": "naste",
+      "after": "naște"
     },
     {
       "location": "ioan.12.units[1].words[0].meaning",
@@ -6834,6 +8504,21 @@
       "after": "decât"
     },
     {
+      "location": "ioan.12.units[2].teaching",
+      "before": "propozitii",
+      "after": "propoziții"
+    },
+    {
+      "location": "ioan.12.units[2].teaching",
+      "before": "tau",
+      "after": "tău"
+    },
+    {
+      "location": "ioan.12.units[2].teaching",
+      "before": "cand",
+      "after": "când"
+    },
+    {
       "location": "ioan.12.units[2].forYourHeart",
       "before": "si",
       "after": "și"
@@ -6847,6 +8532,11 @@
       "location": "ioan.12.units[2].forYourHeart",
       "before": "in",
       "after": "în"
+    },
+    {
+      "location": "ioan.12.units[2].forYourHeart",
+      "before": "inca",
+      "after": "încă"
     },
     {
       "location": "ioan.12.units[2].words[0].meaning",
@@ -6984,6 +8674,16 @@
       "after": "așază"
     },
     {
+      "location": "ioan.13.prayer",
+      "before": "noastra",
+      "after": "noastră"
+    },
+    {
+      "location": "ioan.13.prayer",
+      "before": "multumim",
+      "after": "mulțumim"
+    },
+    {
       "location": "ioan.13.units[0].teaching",
       "before": "Si",
       "after": "Și"
@@ -7029,6 +8729,31 @@
       "after": "Tatăl"
     },
     {
+      "location": "ioan.13.units[0].teaching",
+      "before": "inceputul",
+      "after": "începutul"
+    },
+    {
+      "location": "ioan.13.units[0].teaching",
+      "before": "cand",
+      "after": "când"
+    },
+    {
+      "location": "ioan.13.units[0].teaching",
+      "before": "marime",
+      "after": "mărime"
+    },
+    {
+      "location": "ioan.13.units[0].teaching",
+      "before": "slujeasca",
+      "after": "slujească"
+    },
+    {
+      "location": "ioan.13.units[0].teaching",
+      "before": "slujeasca",
+      "after": "slujească"
+    },
+    {
       "location": "ioan.13.units[0].forYourHeart",
       "before": "si",
       "after": "și"
@@ -7042,6 +8767,11 @@
       "location": "ioan.13.units[0].forYourHeart",
       "before": "decat",
       "after": "decât"
+    },
+    {
+      "location": "ioan.13.units[0].forYourHeart",
+      "before": "curatirea",
+      "after": "curățirea"
     },
     {
       "location": "ioan.13.units[0].words[1].meaning",
@@ -7139,6 +8869,16 @@
       "after": "rămâne"
     },
     {
+      "location": "ioan.13.units[1].teaching",
+      "before": "intunericul",
+      "after": "întunericul"
+    },
+    {
+      "location": "ioan.13.units[1].teaching",
+      "before": "sfanta",
+      "after": "sfânta"
+    },
+    {
       "location": "ioan.13.units[1].forYourHeart",
       "before": "in",
       "after": "în"
@@ -7152,6 +8892,16 @@
       "location": "ioan.13.units[1].forYourHeart",
       "before": "il",
       "after": "îl"
+    },
+    {
+      "location": "ioan.13.units[1].forYourHeart",
+      "before": "intunericul",
+      "after": "întunericul"
+    },
+    {
+      "location": "ioan.13.units[1].forYourHeart",
+      "before": "stii",
+      "after": "știi"
     },
     {
       "location": "ioan.13.units[1].words[0].meaning",
@@ -7212,6 +8962,11 @@
       "location": "ioan.13.units[2].teaching",
       "before": "intuneric",
       "after": "întuneric"
+    },
+    {
+      "location": "ioan.13.units[2].teaching",
+      "before": "noastra",
+      "after": "noastră"
     },
     {
       "location": "ioan.13.units[2].forYourHeart",

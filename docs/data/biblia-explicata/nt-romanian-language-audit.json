@@ -1,9 +1,9 @@
 {
-  "schema": "emanus-nt-romanian-language-audit-v3",
+  "schema": "emanus-nt-romanian-language-audit-v4",
   "status": "manual-edit-required",
-  "policy": "Reader-facing Romanian must use standard diacritics. Audit contexts support deterministic grammar-aware review; automatic fixes remain limited to unambiguous forms or explicitly reviewed contextual rules.",
-  "count": 102,
-  "findingGroups": 84,
+  "policy": "Reader-facing Romanian must use standard diacritics. Deterministic and audit rules share one registry; context-sensitive forms are handled separately, and valid definite forms such as 'simpla citare' are not false positives.",
+  "count": 88,
+  "findingGroups": 72,
   "tokenSummary": [
     {
       "kind": "missing-diacritics",
@@ -28,19 +28,19 @@
           "bookId": "ioan",
           "chapter": 1,
           "field": "units[0].words[1].meaning",
-          "context": "viață. La Ioan, nu numai suflare biologica, ci viata deplina care este în Fiul și se dăruiește prin El."
+          "context": "viață. La Ioan, nu numai suflare biologică, ci viata deplina care este în Fiul și se dăruiește prin El."
         },
         {
           "bookId": "ioan",
           "chapter": 1,
           "field": "units[3].teaching",
-          "context": "…Numai El poate sa dea omului nu doar apa din afara, ci viata dinlauntru."
+          "context": "…Numai El poate sa dea omului nu doar apa din afara, ci viata dinlăuntru."
         },
         {
           "bookId": "ioan",
           "chapter": 3,
           "field": "units[1].teaching",
-          "context": "…ezeu, apoi darul Fiului, apoi chemarea credintei, apoi viata vesnica. Evanghelia nu începe cu ce aduci tu, ci cu ce…"
+          "context": "…ezeu, apoi darul Fiului, apoi chemarea credinței, apoi viata vesnica. Evanghelia nu începe cu ce aduci tu, ci cu ce…"
         },
         {
           "bookId": "ioan",
@@ -52,13 +52,13 @@
           "bookId": "ioan",
           "chapter": 5,
           "field": "summary",
-          "context": "…cu Tatăl și aduce o mărturie ampla despre autoritatea, viata și judecata incredintate Lui."
+          "context": "…cu Tatăl și aduce o mărturie ampla despre autoritatea, viata și judecata încredințate Lui."
         },
         {
           "bookId": "ioan",
           "chapter": 5,
           "field": "literaryContext",
-          "context": "…espre Fiul: unitatea Lui cu Tatăl, puterea Lui de a da viata, autoritatea Lui de a judeca și marturiile care arată…"
+          "context": "…espre Fiul: unitatea Lui cu Tatăl, puterea Lui de a da viata, autoritatea Lui de a judeca și mărturiile care arată…"
         },
         {
           "bookId": "ioan",
@@ -97,7 +97,7 @@
           "bookId": "ioan",
           "chapter": 2,
           "field": "summary",
-          "context": "…in Cana, apoi curatirea Templului și deosebirea dintre credinta trezita de semne și cunoasterea deplina a inimii omulu…"
+          "context": "…in Cana, apoi curățirea Templului și deosebirea dintre credinta trezita de semne și cunoasterea deplina a inimii omulu…"
         },
         {
           "bookId": "ioan",
@@ -109,37 +109,37 @@
           "bookId": "ioan",
           "chapter": 2,
           "field": "units[2].words[0].meaning",
-          "context": "a crede, a se increde. Acelasi verb arată aici și credinta oamenilor, și faptul ca Isus nu Se incredea în ei."
+          "context": "a crede, a se increde. Același verb arată aici și credinta oamenilor, și faptul ca Isus nu Se incredea în ei."
         },
         {
           "bookId": "ioan",
           "chapter": 4,
           "field": "prayer",
-          "context": "…lo unde ne ceri sa mergem numai pe cuvântul Tau, da-ne credinta slujbasului imparatesc. Amin."
+          "context": "…lo unde ne ceri sa mergem numai pe cuvântul Tău, da-ne credinta slujbasului imparatesc. Amin."
         },
         {
           "bookId": "ioan",
           "chapter": 4,
           "field": "units[2].teaching",
-          "context": "…doar cuvântul Domnului. Și a mers pe el. Aici se coace credinta: cand omul se sprijina pe cuvântul lui Hristos înainte…"
+          "context": "…doar cuvântul Domnului. Și a mers pe el. Aici se coace credinta: când omul se sprijină pe cuvântul lui Hristos înainte…"
         },
         {
           "bookId": "ioan",
           "chapter": 5,
           "field": "units[1].forYourHeart",
-          "context": "Dacă Fiul are viata în Sine, atunci credinta ta nu se sprijina pe taria ta de a te tine în viata, c…"
+          "context": "Dacă Fiul are viata în Sine, atunci credinta ta nu se sprijină pe taria ta de a te tine în viata, c…"
         },
         {
           "bookId": "ioan",
           "chapter": 6,
           "field": "literaryContext",
-          "context": "…la adanc. Multi vin pentru paine, insa Domnul le cere credinta în Persoana Lui. De aceea capitolul se sfarseste cu o…"
+          "context": "…la adanc. Multi vin pentru pâine, însă Domnul le cere credinta în Persoana Lui. De aceea capitolul se sfârșește cu o…"
         },
         {
           "bookId": "ioan",
           "chapter": 6,
           "field": "units[1].teaching",
-          "context": "…ea lui Dumnezeu începe nu cu acumularea noastra, ci cu credinta în Fiul. Apoi vine marele Eu sunt: Painea vieții. Man…"
+          "context": "…ea lui Dumnezeu începe nu cu acumularea noastră, ci cu credinta în Fiul. Apoi vine marele Eu sunt: Painea vieții. Man…"
         },
         {
           "bookId": "ioan",
@@ -151,100 +151,19 @@
           "bookId": "ioan",
           "chapter": 6,
           "field": "units[2].forYourHeart",
-          "context": "…une Domnul, dar intrebarea rămâne: la cine sa te duci? Credinta matura nu inseamna ca toate au devenit usoare, ci ca a…"
+          "context": "…une Domnul, dar întrebarea rămâne: la cine sa te duci? Credinta matura nu inseamna ca toate au devenit usoare, ci ca a…"
         },
         {
           "bookId": "ioan",
           "chapter": 8,
           "field": "units[2].forYourHeart",
-          "context": "Cand tot ce poate fi clatinat se clatina, credinta ta se poate odihni în Acesta: mai înainte de Avraam, E…"
+          "context": "Când tot ce poate fi clătinat se clatina, credinta ta se poate odihni în Acesta: mai înainte de Avraam, E…"
         },
         {
           "bookId": "ioan",
           "chapter": 9,
           "field": "historicalContext",
-          "context": "…intrebarea despre originea lui Isus taie din nou intre credinta și impotrivire."
-        }
-      ]
-    },
-    {
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă / simpla",
-      "occurrences": 15,
-      "groups": 13,
-      "samples": [
-        {
-          "bookId": "matei",
-          "chapter": 4,
-          "field": "units[0].teaching",
-          "context": "…ceea un verset smuls din context nu devine adevăr prin simpla citare. Cele trei scurtături sunt încă înaintea omulu…"
-        },
-        {
-          "bookId": "matei",
-          "chapter": 5,
-          "field": "units[2].teaching",
-          "context": "…duce la har, apoi harul ne învață o ascultare pe care simpla aparență nu o poate produce."
-        },
-        {
-          "bookId": "matei",
-          "chapter": 12,
-          "field": "units[4].teaching",
-          "context": "…ata. Imaginea duhului care se întoarce avertizează că simpla curățare exterioară lasă casa goală. Reforma fără prez…"
-        },
-        {
-          "bookId": "matei",
-          "chapter": 23,
-          "field": "units[0].teaching",
-          "context": "…saluturi, titluri și primele locuri. Problema nu este simpla folosire a unui cuvânt de respect, ci construirea unei…"
-        },
-        {
-          "bookId": "matei",
-          "chapter": 28,
-          "field": "units[0].teaching",
-          "context": "…cum spusese. Învierea este trupească și istorică, nu simpla continuare a influenței lui Isus în memoria ucenicilor…"
-        },
-        {
-          "bookId": "marcu",
-          "chapter": 12,
-          "field": "units[1].teaching",
-          "context": "…ripturile, nici puterea lui Dumnezeu. Învierea nu este simpla continuare a rânduielilor de acum; Dumnezeu este Dumne…"
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 2,
-          "field": "units[2].words[1].meaning",
-          "context": "a cunoaste. La Ioan, cunoastere reala, nu simpla informatie."
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 8,
-          "field": "units[1].words[0].meaning",
-          "context": "adevăr. La Ioan, adevăr viu și mantuitor, nu simpla informatie."
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 9,
-          "field": "units[0].teaching",
-          "context": "…es cand se intalneste cu durerea altuia. Vrea o schema simpla, o cauza rapida, o ordine usor de purtat. Dar Domnul n…"
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 10,
-          "field": "units[1].teaching",
-          "context": "…glasul Lui și vin dupa El. Credința adevărată nu este simpla simpatie, ci urmare. Apoi vine unul dintre cele mai m…"
-        },
-        {
-          "bookId": "romani",
-          "chapter": 6,
-          "field": "literaryContext",
-          "context": "…i că harul ar încuraja păcatul. El mută discuția de la simpla iertare la identitatea și viața nouă a celui unit cu H…"
-        },
-        {
-          "bookId": "romani",
-          "chapter": 9,
-          "field": "units[1].heading",
-          "context": "Copiii promisiunii, nu simpla descendență"
+          "context": "…întrebarea despre originea lui Isus taie din nou intre credinta și împotrivire."
         }
       ]
     },
@@ -259,7 +178,7 @@
           "bookId": "ioan",
           "chapter": 6,
           "field": "prayer",
-          "context": "…imim de la Tine. Invata-ne sa venim la Tine cu foamea adevarata a sufletului și sa ramanem langa cuvântul Tau chiar at…"
+          "context": "…imim de la Tine. Invata-ne sa venim la Tine cu foamea adevarata a sufletului și sa ramanem langa cuvântul Tău chiar at…"
         },
         {
           "bookId": "ioan",
@@ -277,7 +196,7 @@
           "bookId": "ioan",
           "chapter": 7,
           "field": "prayer",
-          "context": "…ina la Mine, adu-ne și pe noi la Tine cu setea noastra adevarata. Da-ne Duhul Tau, ca în noi sa nu stea uscaciunea, ci…"
+          "context": "…ina la Mine, adu-ne și pe noi la Tine cu setea noastră adevarata. Da-ne Duhul Tău, ca în noi sa nu stea uscaciunea, ci…"
         },
         {
           "bookId": "ioan",
@@ -295,7 +214,7 @@
           "bookId": "ioan",
           "chapter": 8,
           "field": "units[1].forYourHeart",
-          "context": "…confunda libertatea cu a face ce vrei. Domnul spune ca adevarata slobozire vine atunci cand Fiul rupe lantul pacatului.…"
+          "context": "…confunda libertatea cu a face ce vrei. Domnul spune ca adevarata slobozire vine atunci când Fiul rupe lantul pacatului.…"
         },
         {
           "bookId": "ioan",
@@ -307,7 +226,7 @@
           "bookId": "ioan",
           "chapter": 10,
           "field": "units[0].teaching",
-          "context": "…stor. Aici se vede largimea Evangheliei și unitatea ei adevarata."
+          "context": "…stor. Aici se vede lărgimea Evangheliei și unitatea ei adevarata."
         },
         {
           "bookId": "ioan",
@@ -319,84 +238,33 @@
           "bookId": "ioan",
           "chapter": 12,
           "field": "units[1].teaching",
-          "context": "…aspunsul Lui merge direct spre cruce. Asta inseamna ca adevarata vedere a lui Isus nu se opreste la curiozitate, ci aju…"
+          "context": "…aspunsul Lui merge direct spre cruce. Asta inseamna ca adevarata vedere a lui Isus nu se oprește la curiozitate, ci aju…"
         },
         {
           "bookId": "ioan",
           "chapter": 13,
           "field": "units[0].teaching",
-          "context": "…aini, Domnul Se incinge cu stergarul. Asta inseamna ca adevarata marime nu se teme sa slujeasca. Omul mic fuge de sluji…"
+          "context": "…aini, Domnul Se incinge cu stergarul. Asta inseamna ca adevarata mărime nu se teme sa slujească. Omul mic fuge de sluji…"
+        }
+      ]
+    },
+    {
+      "kind": "contextual-missing-diacritics",
+      "token": "simpla",
+      "expected": "simplă",
+      "occurrences": 1,
+      "groups": 1,
+      "samples": [
+        {
+          "bookId": "ioan",
+          "chapter": 9,
+          "field": "units[0].teaching",
+          "context": "…es când se intalneste cu durerea altuia. Vrea o schema simpla, o cauza rapida, o ordine usor de purtat. Dar Domnul n…"
         }
       ]
     }
   ],
   "findings": [
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 4,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă / simpla",
-      "occurrences": 1,
-      "context": "…ceea un verset smuls din context nu devine adevăr prin simpla citare. Cele trei scurtături sunt încă înaintea omulu…"
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 5,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă / simpla",
-      "occurrences": 1,
-      "context": "…duce la har, apoi harul ne învață o ascultare pe care simpla aparență nu o poate produce."
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 12,
-      "field": "units[4].teaching",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă / simpla",
-      "occurrences": 1,
-      "context": "…ata. Imaginea duhului care se întoarce avertizează că simpla curățare exterioară lasă casa goală. Reforma fără prez…"
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 23,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă / simpla",
-      "occurrences": 1,
-      "context": "…saluturi, titluri și primele locuri. Problema nu este simpla folosire a unui cuvânt de respect, ci construirea unei…"
-    },
-    {
-      "bookId": "matei",
-      "book": "Matei",
-      "chapter": 28,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă / simpla",
-      "occurrences": 1,
-      "context": "…cum spusese. Învierea este trupească și istorică, nu simpla continuare a influenței lui Isus în memoria ucenicilor…"
-    },
-    {
-      "bookId": "marcu",
-      "book": "Marcu",
-      "chapter": 12,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă / simpla",
-      "occurrences": 1,
-      "context": "…ripturile, nici puterea lui Dumnezeu. Învierea nu este simpla continuare a rânduielilor de acum; Dumnezeu este Dumne…"
-    },
     {
       "bookId": "ioan",
       "book": "Ioan",
@@ -428,7 +296,7 @@
       "token": "viata",
       "expected": "viață / viața",
       "occurrences": 1,
-      "context": "viață. La Ioan, nu numai suflare biologica, ci viata deplina care este în Fiul și se dăruiește prin El."
+      "context": "viață. La Ioan, nu numai suflare biologică, ci viata deplina care este în Fiul și se dăruiește prin El."
     },
     {
       "bookId": "ioan",
@@ -439,7 +307,7 @@
       "token": "viata",
       "expected": "viață / viața",
       "occurrences": 1,
-      "context": "…Numai El poate sa dea omului nu doar apa din afara, ci viata dinlauntru."
+      "context": "…Numai El poate sa dea omului nu doar apa din afara, ci viata dinlăuntru."
     },
     {
       "bookId": "ioan",
@@ -450,7 +318,7 @@
       "token": "credinta",
       "expected": "credință / credința",
       "occurrences": 1,
-      "context": "…in Cana, apoi curatirea Templului și deosebirea dintre credinta trezita de semne și cunoasterea deplina a inimii omulu…"
+      "context": "…in Cana, apoi curățirea Templului și deosebirea dintre credinta trezita de semne și cunoasterea deplina a inimii omulu…"
     },
     {
       "bookId": "ioan",
@@ -472,18 +340,7 @@
       "token": "credinta",
       "expected": "credință / credința",
       "occurrences": 1,
-      "context": "a crede, a se increde. Acelasi verb arată aici și credinta oamenilor, și faptul ca Isus nu Se incredea în ei."
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 2,
-      "field": "units[2].words[1].meaning",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă / simpla",
-      "occurrences": 1,
-      "context": "a cunoaste. La Ioan, cunoastere reala, nu simpla informatie."
+      "context": "a crede, a se increde. Același verb arată aici și credinta oamenilor, și faptul ca Isus nu Se incredea în ei."
     },
     {
       "bookId": "ioan",
@@ -494,7 +351,7 @@
       "token": "viata",
       "expected": "viață / viața",
       "occurrences": 1,
-      "context": "…ezeu, apoi darul Fiului, apoi chemarea credintei, apoi viata vesnica. Evanghelia nu începe cu ce aduci tu, ci cu ce…"
+      "context": "…ezeu, apoi darul Fiului, apoi chemarea credinței, apoi viata vesnica. Evanghelia nu începe cu ce aduci tu, ci cu ce…"
     },
     {
       "bookId": "ioan",
@@ -516,7 +373,7 @@
       "token": "credinta",
       "expected": "credință / credința",
       "occurrences": 1,
-      "context": "…lo unde ne ceri sa mergem numai pe cuvântul Tau, da-ne credinta slujbasului imparatesc. Amin."
+      "context": "…lo unde ne ceri sa mergem numai pe cuvântul Tău, da-ne credinta slujbasului imparatesc. Amin."
     },
     {
       "bookId": "ioan",
@@ -527,7 +384,7 @@
       "token": "credinta",
       "expected": "credință / credința",
       "occurrences": 1,
-      "context": "…doar cuvântul Domnului. Și a mers pe el. Aici se coace credinta: cand omul se sprijina pe cuvântul lui Hristos înainte…"
+      "context": "…doar cuvântul Domnului. Și a mers pe el. Aici se coace credinta: când omul se sprijină pe cuvântul lui Hristos înainte…"
     },
     {
       "bookId": "ioan",
@@ -538,7 +395,7 @@
       "token": "viata",
       "expected": "viață / viața",
       "occurrences": 1,
-      "context": "…cu Tatăl și aduce o mărturie ampla despre autoritatea, viata și judecata incredintate Lui."
+      "context": "…cu Tatăl și aduce o mărturie ampla despre autoritatea, viata și judecata încredințate Lui."
     },
     {
       "bookId": "ioan",
@@ -549,7 +406,7 @@
       "token": "viata",
       "expected": "viață / viața",
       "occurrences": 1,
-      "context": "…espre Fiul: unitatea Lui cu Tatăl, puterea Lui de a da viata, autoritatea Lui de a judeca și marturiile care arată…"
+      "context": "…espre Fiul: unitatea Lui cu Tatăl, puterea Lui de a da viata, autoritatea Lui de a judeca și mărturiile care arată…"
     },
     {
       "bookId": "ioan",
@@ -604,7 +461,7 @@
       "token": "credinta",
       "expected": "credință / credința",
       "occurrences": 1,
-      "context": "Dacă Fiul are viata în Sine, atunci credinta ta nu se sprijina pe taria ta de a te tine în viata, c…"
+      "context": "Dacă Fiul are viata în Sine, atunci credinta ta nu se sprijină pe taria ta de a te tine în viata, c…"
     },
     {
       "bookId": "ioan",
@@ -615,7 +472,7 @@
       "token": "viata",
       "expected": "viață / viața",
       "occurrences": 3,
-      "context": "Dacă Fiul are viata în Sine, atunci credinta ta nu se sprijina pe taria ta…"
+      "context": "Dacă Fiul are viata în Sine, atunci credinta ta nu se sprijină pe taria ta…"
     },
     {
       "bookId": "ioan",
@@ -648,7 +505,7 @@
       "token": "credinta",
       "expected": "credință / credința",
       "occurrences": 1,
-      "context": "…la adanc. Multi vin pentru paine, insa Domnul le cere credinta în Persoana Lui. De aceea capitolul se sfarseste cu o…"
+      "context": "…la adanc. Multi vin pentru pâine, însă Domnul le cere credinta în Persoana Lui. De aceea capitolul se sfârșește cu o…"
     },
     {
       "bookId": "ioan",
@@ -659,7 +516,7 @@
       "token": "adevarata",
       "expected": "adevărată / adevărata",
       "occurrences": 1,
-      "context": "…imim de la Tine. Invata-ne sa venim la Tine cu foamea adevarata a sufletului și sa ramanem langa cuvântul Tau chiar at…"
+      "context": "…imim de la Tine. Invata-ne sa venim la Tine cu foamea adevarata a sufletului și sa ramanem langa cuvântul Tău chiar at…"
     },
     {
       "bookId": "ioan",
@@ -670,7 +527,7 @@
       "token": "credinta",
       "expected": "credință / credința",
       "occurrences": 2,
-      "context": "…ea lui Dumnezeu începe nu cu acumularea noastra, ci cu credinta în Fiul. Apoi vine marele Eu sunt: Painea vieții. Man…"
+      "context": "…ea lui Dumnezeu începe nu cu acumularea noastră, ci cu credinta în Fiul. Apoi vine marele Eu sunt: Painea vieții. Man…"
     },
     {
       "bookId": "ioan",
@@ -725,7 +582,7 @@
       "token": "viata",
       "expected": "viață / viața",
       "occurrences": 1,
-      "context": "…iluand adevarul. Cand spune: Duhul este acela care da viata, carnea nu foloseste la nimic, Domnul nu dispretuieste…"
+      "context": "…iluand adevarul. Când spune: Duhul este acela care da viata, carnea nu foloseste la nimic, Domnul nu dispretuieste…"
     },
     {
       "bookId": "ioan",
@@ -736,7 +593,7 @@
       "token": "credinta",
       "expected": "credință / credința",
       "occurrences": 1,
-      "context": "…une Domnul, dar intrebarea rămâne: la cine sa te duci? Credinta matura nu inseamna ca toate au devenit usoare, ci ca a…"
+      "context": "…une Domnul, dar întrebarea rămâne: la cine sa te duci? Credinta matura nu inseamna ca toate au devenit usoare, ci ca a…"
     },
     {
       "bookId": "ioan",
@@ -747,7 +604,7 @@
       "token": "viata",
       "expected": "viață / viața",
       "occurrences": 1,
-      "context": "…ca toate au devenit usoare, ci ca ai ajuns sa stii ca viata nu este în alta parte."
+      "context": "…ca toate au devenit usoare, ci ca ai ajuns sa știi ca viata nu este în alta parte."
     },
     {
       "bookId": "ioan",
@@ -769,7 +626,7 @@
       "token": "adevarata",
       "expected": "adevărată / adevărata",
       "occurrences": 1,
-      "context": "…ina la Mine, adu-ne și pe noi la Tine cu setea noastra adevarata. Da-ne Duhul Tau, ca în noi sa nu stea uscaciunea, ci…"
+      "context": "…ina la Mine, adu-ne și pe noi la Tine cu setea noastră adevarata. Da-ne Duhul Tău, ca în noi sa nu stea uscaciunea, ci…"
     },
     {
       "bookId": "ioan",
@@ -780,7 +637,7 @@
       "token": "viata",
       "expected": "viață / viața",
       "occurrences": 1,
-      "context": "…. Da-ne Duhul Tau, ca în noi sa nu stea uscaciunea, ci viata care curge. Fereste-ne de mandria religioasa care jud…"
+      "context": "…. Da-ne Duhul Tău, ca în noi sa nu stea uscaciunea, ci viata care curge. Fereste-ne de mandria religioasa care jud…"
     },
     {
       "bookId": "ioan",
@@ -791,7 +648,7 @@
       "token": "viata",
       "expected": "viață / viața",
       "occurrences": 1,
-      "context": "a inseta. Foamea adanca a omului dupa viata lui Dumnezeu."
+      "context": "a înseta. Foamea adanca a omului dupa viata lui Dumnezeu."
     },
     {
       "bookId": "ioan",
@@ -813,7 +670,7 @@
       "token": "viata",
       "expected": "viață / viața",
       "occurrences": 1,
-      "context": "Lumina lumii. Hristos ca descoperire, calauzire și viata pentru om."
+      "context": "Lumina lumii. Hristos ca descoperire, călăuzire și viata pentru om."
     },
     {
       "bookId": "ioan",
@@ -835,18 +692,7 @@
       "token": "adevarata",
       "expected": "adevărată / adevărata",
       "occurrences": 1,
-      "context": "…confunda libertatea cu a face ce vrei. Domnul spune ca adevarata slobozire vine atunci cand Fiul rupe lantul pacatului.…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 8,
-      "field": "units[1].words[0].meaning",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă / simpla",
-      "occurrences": 1,
-      "context": "adevăr. La Ioan, adevăr viu și mantuitor, nu simpla informatie."
+      "context": "…confunda libertatea cu a face ce vrei. Domnul spune ca adevarata slobozire vine atunci când Fiul rupe lantul pacatului.…"
     },
     {
       "bookId": "ioan",
@@ -857,7 +703,7 @@
       "token": "viata",
       "expected": "viață / viața",
       "occurrences": 1,
-      "context": "…tura finala, ci trecere sub stapanirea Celui care este viata. Și iarasi, Avraam nu este pus impotriva lui Hristos.…"
+      "context": "…tura finala, ci trecere sub stăpânirea Celui care este viata. Și iarasi, Avraam nu este pus impotriva lui Hristos.…"
     },
     {
       "bookId": "ioan",
@@ -868,7 +714,7 @@
       "token": "credinta",
       "expected": "credință / credința",
       "occurrences": 1,
-      "context": "Cand tot ce poate fi clatinat se clatina, credinta ta se poate odihni în Acesta: mai înainte de Avraam, E…"
+      "context": "Când tot ce poate fi clătinat se clatina, credinta ta se poate odihni în Acesta: mai înainte de Avraam, E…"
     },
     {
       "bookId": "ioan",
@@ -879,7 +725,7 @@
       "token": "credinta",
       "expected": "credință / credința",
       "occurrences": 1,
-      "context": "…intrebarea despre originea lui Isus taie din nou intre credinta și impotrivire."
+      "context": "…întrebarea despre originea lui Isus taie din nou intre credinta și împotrivire."
     },
     {
       "bookId": "ioan",
@@ -890,18 +736,18 @@
       "token": "viata",
       "expected": "viață / viața",
       "occurrences": 1,
-      "context": "…i vindecat, sa marturisim cu simplitate ce ai făcut în viata noastra. Fereste-ne de orbirea care se lauda ca vede.…"
+      "context": "…i vindecat, sa mărturisim cu simplitate ce ai făcut în viata noastră. Fereste-ne de orbirea care se lauda ca vede.…"
     },
     {
       "bookId": "ioan",
       "book": "Ioan",
       "chapter": 9,
       "field": "units[0].teaching",
-      "kind": "missing-diacritics",
+      "kind": "contextual-missing-diacritics",
       "token": "simpla",
-      "expected": "simplă / simpla",
-      "occurrences": 2,
-      "context": "…es cand se intalneste cu durerea altuia. Vrea o schema simpla, o cauza rapida, o ordine usor de purtat. Dar Domnul n…"
+      "expected": "simplă",
+      "occurrences": 1,
+      "context": "…es când se intalneste cu durerea altuia. Vrea o schema simpla, o cauza rapida, o ordine usor de purtat. Dar Domnul n…"
     },
     {
       "bookId": "ioan",
@@ -934,7 +780,7 @@
       "token": "viata",
       "expected": "viață / viața",
       "occurrences": 1,
-      "context": "…bun, vorbeste despre oile care-I cunosc glasul, despre viata data cu belsug și despre unitatea Lui cu Tatăl, starni…"
+      "context": "…bun, vorbește despre oile care-I cunosc glasul, despre viata data cu belșug și despre unitatea Lui cu Tatăl, starni…"
     },
     {
       "bookId": "ioan",
@@ -967,7 +813,7 @@
       "token": "viata",
       "expected": "viață / viața",
       "occurrences": 1,
-      "context": "…ător, ci Usa oilor și Pastorul cel bun, care Ti-ai dat viata pentru noi. Invata-ne sa ascultam glasul Tau mai mult…"
+      "context": "…ător, ci Usa oilor și Pastorul cel bun, care Ti-ai dat viata pentru noi. Invata-ne sa ascultam glasul Tău mai mult…"
     },
     {
       "bookId": "ioan",
@@ -978,7 +824,7 @@
       "token": "adevarata",
       "expected": "adevărată / adevărata",
       "occurrences": 1,
-      "context": "…stor. Aici se vede largimea Evangheliei și unitatea ei adevarata."
+      "context": "…stor. Aici se vede lărgimea Evangheliei și unitatea ei adevarata."
     },
     {
       "bookId": "ioan",
@@ -1011,7 +857,7 @@
       "token": "viata",
       "expected": "viață / viața",
       "occurrences": 1,
-      "context": "din belsug. Viata data de Hristos nu este saraca, ci plina."
+      "context": "din belșug. Viata data de Hristos nu este saraca, ci plina."
     },
     {
       "bookId": "ioan",
@@ -1023,17 +869,6 @@
       "expected": "credință / credința",
       "occurrences": 1,
       "context": "Sa luam bine seama la legătura dintre credinta și ascultarea glasului. Domnul nu spune doar ca oile L…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 10,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă / simpla",
-      "occurrences": 2,
-      "context": "…glasul Lui și vin dupa El. Credința adevărată nu este simpla simpatie, ci urmare. Apoi vine unul dintre cele mai m…"
     },
     {
       "bookId": "ioan",
@@ -1055,7 +890,7 @@
       "token": "credinta",
       "expected": "credință / credința",
       "occurrences": 1,
-      "context": "Credinta ta nu se sprijina pe o mărturie moale, ci pe lucrarile…"
+      "context": "Credinta ta nu se sprijină pe o mărturie moale, ci pe lucrarile…"
     },
     {
       "bookId": "ioan",
@@ -1066,7 +901,7 @@
       "token": "viata",
       "expected": "viață / viața",
       "occurrences": 1,
-      "context": "…plange impreuna cu ai Sai, Se descoperă ca Învierea și Viata, îl cheama pe Lazar afara din mormant și, prin acest s…"
+      "context": "…plânge împreună cu ai Sai, Se descoperă ca Învierea și Viata, îl cheama pe Lazar afara din mormant și, prin acest s…"
     },
     {
       "bookId": "ioan",
@@ -1077,7 +912,7 @@
       "token": "credinta",
       "expected": "credință / credința",
       "occurrences": 1,
-      "context": "…umple de intrebari, ajuta-ne sa ramanem inaintea Ta cu credinta Martei: Tu esti Hristosul, Fiul lui Dumnezeu. Multumi…"
+      "context": "…umple de intrebari, ajuta-ne sa ramanem inaintea Ta cu credinta Martei: Tu esti Hristosul, Fiul lui Dumnezeu. Mulțumi…"
     },
     {
       "bookId": "ioan",
@@ -1088,7 +923,7 @@
       "token": "viata",
       "expected": "viață / viața",
       "occurrences": 1,
-      "context": "Doamne Isuse, Iti multumim ca Tu esti Învierea și Viata și ca nici mormantul nu sta în afara puterii Tale. Can…"
+      "context": "Doamne Isuse, Iti mulțumim ca Tu esti Învierea și Viata și ca nici mormantul nu sta în afara puterii Tale. Cân…"
     },
     {
       "bookId": "ioan",
@@ -1110,7 +945,7 @@
       "token": "credinta",
       "expected": "credință / credința",
       "occurrences": 2,
-      "context": "…curt al usurarii grabite. El urmărește slava Fiului și credinta celor ai Sai chiar și prin intarziere. Apoi vine mare…"
+      "context": "…curt al ușurării grabite. El urmărește slava Fiului și credinta celor ai Sai chiar și prin întârziere. Apoi vine mare…"
     },
     {
       "bookId": "ioan",
@@ -1121,7 +956,7 @@
       "token": "viata",
       "expected": "viață / viața",
       "occurrences": 2,
-      "context": "…rin intarziere. Apoi vine marele Eu sunt: învierea și viata. Domnul nu spune doar ca poate invia, ci ca El Insusi…"
+      "context": "…rin întârziere. Apoi vine marele Eu sunt: învierea și viata. Domnul nu spune doar ca poate invia, ci ca El Insusi…"
     },
     {
       "bookId": "ioan",
@@ -1143,7 +978,7 @@
       "token": "credinta",
       "expected": "credință / credința",
       "occurrences": 2,
-      "context": "…exista nadejde, ori sa credem ca plansul este lipsa de credinta. În Domnul vedem și slava, și lacrima. Apoi, înainte…"
+      "context": "…exista nădejde, ori sa credem ca plansul este lipsa de credinta. În Domnul vedem și slava, și lacrima. Apoi, înainte…"
     },
     {
       "bookId": "ioan",
@@ -1165,7 +1000,7 @@
       "token": "adevarata",
       "expected": "adevărată / adevărata",
       "occurrences": 1,
-      "context": "…aspunsul Lui merge direct spre cruce. Asta inseamna ca adevarata vedere a lui Isus nu se opreste la curiozitate, ci aju…"
+      "context": "…aspunsul Lui merge direct spre cruce. Asta inseamna ca adevarata vedere a lui Isus nu se oprește la curiozitate, ci aju…"
     },
     {
       "bookId": "ioan",
@@ -1176,7 +1011,7 @@
       "token": "viata",
       "expected": "viață / viața",
       "occurrences": 1,
-      "context": "…e naste rodul, și cum se pierde lumea ca sa se castige viata."
+      "context": "…e naște rodul, și cum se pierde lumea ca sa se castige viata."
     },
     {
       "bookId": "ioan",
@@ -1198,7 +1033,7 @@
       "token": "adevarata",
       "expected": "adevărată / adevărata",
       "occurrences": 1,
-      "context": "…aini, Domnul Se incinge cu stergarul. Asta inseamna ca adevarata marime nu se teme sa slujeasca. Omul mic fuge de sluji…"
+      "context": "…aini, Domnul Se incinge cu stergarul. Asta inseamna ca adevarata mărime nu se teme sa slujească. Omul mic fuge de sluji…"
     },
     {
       "bookId": "ioan",
@@ -1209,7 +1044,7 @@
       "token": "adevarata",
       "expected": "adevărată / adevărata",
       "occurrences": 1,
-      "context": "…ca trebuie mai întâi sa te lase spalat de El. Smerenia adevarata nu este doar sa cobori, ci și sa primesti curatirea pe…"
+      "context": "…ca trebuie mai întâi sa te lase spalat de El. Smerenia adevarata nu este doar sa cobori, ci și sa primesti curățirea pe…"
     },
     {
       "bookId": "ioan",
@@ -1221,39 +1056,6 @@
       "expected": "adevărată / adevărata",
       "occurrences": 1,
       "context": "…in pe sine. Se cuvine sa luam aminte la aceasta. Ravna adevarata, dacă nu este trecuta prin zdrobire, se poate bizui pr…"
-    },
-    {
-      "bookId": "romani",
-      "book": "Romani",
-      "chapter": 6,
-      "field": "literaryContext",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă / simpla",
-      "occurrences": 1,
-      "context": "…i că harul ar încuraja păcatul. El mută discuția de la simpla iertare la identitatea și viața nouă a celui unit cu H…"
-    },
-    {
-      "bookId": "romani",
-      "book": "Romani",
-      "chapter": 9,
-      "field": "units[1].heading",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă / simpla",
-      "occurrences": 1,
-      "context": "Copiii promisiunii, nu simpla descendență"
-    },
-    {
-      "bookId": "coloseni",
-      "book": "Coloseni",
-      "chapter": 1,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă / simpla",
-      "occurrences": 1,
-      "context": "…r la grupul apropiat. Speranța păstrată în cer nu este simpla scăpare din necaz, ci transformarea după chipul lui Hr…"
     }
   ]
 }
