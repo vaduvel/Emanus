@@ -19,7 +19,7 @@ jobs:
       github.event_name != 'pull_request' ||
       github.event.pull_request.head.ref == 'agent/biblia-explicata-nt-integration-clean'
     runs-on: ubuntu-22.04
-    timeout-minutes: 60
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
         with:
@@ -68,99 +68,9 @@ jobs:
           cp docs/data/biblia-explicata/nt-final-source-first/19-evrei.json /tmp/evrei-transcripts/19-evrei.json
           cp docs/data/biblia-explicata/nt-direct-transcript-coverage.json /tmp/evrei-transcripts/nt-direct-transcript-coverage.json
 
-      - name: Export exact 1 Ioan transcript representation
-        run: |
-          set -euo pipefail
-          mkdir -p /tmp/unu-ioan-transcript
-          python3 - <<'PY'
-          import importlib.util
-          import json
-          from pathlib import Path
-
-          root = Path('.').resolve()
-          worker_path = root / 'scripts/nt_semantic_copilot_worker.py'
-          spec = importlib.util.spec_from_file_location('emanus_semantic_export_1john', worker_path)
-          if spec is None or spec.loader is None:
-              raise SystemExit('Cannot load semantic worker extractor')
-          worker = importlib.util.module_from_spec(spec)
-          spec.loader.exec_module(worker)
-
-          url = 'https://sermonindex.net/speakers/zac-poonen/through-the-bible-1-john/'
-          text = worker.extract_transcript(url)
-          sha = worker.sha256(text)
-          out = Path('/tmp/unu-ioan-transcript')
-          (out / '1-john.txt').write_text(text + '\n', encoding='utf-8')
-          (out / 'manifest.json').write_text(json.dumps({
-              'url': url,
-              'sha256': sha,
-              'words': len(text.split()),
-          }, indent=2) + '\n', encoding='utf-8')
-          print('1-john.txt', sha, len(text.split()))
-          PY
-          cp docs/data/biblia-explicata/nt-final-source-first/23-1-ioan.json /tmp/unu-ioan-transcript/23-1-ioan.json
-          cp docs/data/biblia-explicata/nt-direct-transcript-coverage.json /tmp/unu-ioan-transcript/nt-direct-transcript-coverage.json
-
-      - name: Extract official CFC 1 Ioan 5 audio source
-        run: |
-          set -euo pipefail
-          python3 - <<'PY'
-          import html
-          import json
-          import re
-          import urllib.parse
-          import urllib.request
-          from pathlib import Path
-
-          page = 'https://www.cfcindia.com/verse-by-verse/051john-chapter-51-to-chapter-521'
-          req = urllib.request.Request(page, headers={'User-Agent': 'Emanus-Editorial-Research/1.0'})
-          with urllib.request.urlopen(req, timeout=60) as response:
-              raw = response.read().decode('utf-8', errors='replace')
-          Path('/tmp/unu-ioan-transcript/1-john-vbv-05-page.html').write_text(raw, encoding='utf-8')
-          decoded = html.unescape(raw).replace('\\/', '/')
-          candidates = []
-          for pattern in [
-              r'https?://[^\"\'<>\s]+?\.mp3(?:\?[^\"\'<>\s]*)?',
-              r'(?:src|href)=[\"\']([^\"\']+?\.mp3(?:\?[^\"\']*)?)[\"\']',
-          ]:
-              for match in re.finditer(pattern, decoded, flags=re.I):
-                  value = match.group(1) if match.lastindex else match.group(0)
-                  value = urllib.parse.urljoin(page, value)
-                  if value not in candidates:
-                      candidates.append(value)
-          expected = 'https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt23-1john-chapter-5-1-to-chapter-5-21.mp3'
-          if expected not in candidates:
-              raise SystemExit(f'Expected official audio not present in current episode HTML: {candidates}')
-          print('Verified official 1 Ioan 5 audio:', expected)
-          Path('/tmp/unu-ioan-transcript/1-john-vbv-05-audio.json').write_text(json.dumps({
-              'officialSourceUrl': page,
-              'officialAudioUrl': expected,
-          }, indent=2) + '\n', encoding='utf-8')
-          PY
-
-      - name: Transcribe official CFC 1 Ioan 5 audio
-        env:
-          NT_TRANSCRIPTION_MODEL: small.en
-        run: |
-          set -euo pipefail
-          python3 scripts/transcribe_nt_current_official_audio.py
-          cp docs/data/biblia-explicata/nt-official-transcripts/1-ioan-vbv-05.json /tmp/unu-ioan-transcript/1-ioan-vbv-05.json
-          python3 - <<'PY'
-          import json
-          p='/tmp/unu-ioan-transcript/1-ioan-vbv-05.json'
-          d=json.load(open(p, encoding='utf-8'))
-          print('VBV05 transcript', d['transcriptSha256'], 'words', d['wordCount'], 'audio', d['officialAudioSha256'])
-          PY
-
       - uses: actions/upload-artifact@v4
         with:
           name: evrei-full-transcripts
           path: /tmp/evrei-transcripts
-          if-no-files-found: error
-          retention-days: 1
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: 1-ioan-exact-transcript
-          path: /tmp/unu-ioan-transcript
           if-no-files-found: error
           retention-days: 1
