@@ -16,6 +16,7 @@ OLLAMA_URL = os.environ.get('NT_FINAL_OLLAMA_URL', 'http://127.0.0.1:11434/api/c
 OLLAMA_MODEL = os.environ.get('NT_FINAL_OLLAMA_MODEL', 'qwen3:8b')
 OLLAMA_TIMEOUT = int(os.environ.get('NT_FINAL_OLLAMA_TIMEOUT', '900'))
 OLLAMA_CONTEXT = int(os.environ.get('NT_FINAL_OLLAMA_CONTEXT', '32768'))
+OLLAMA_MAX_PREDICT = int(os.environ.get('NT_FINAL_OLLAMA_MAX_PREDICT', '4096'))
 OLLAMA_THINK = os.environ.get('NT_FINAL_OLLAMA_THINK', 'false').strip().lower() in {'1', 'true', 'yes', 'on'}
 
 OUTPUT_SCHEMA = {
@@ -48,6 +49,14 @@ OUTPUT_SCHEMA = {
     'required': ['verses'],
 }
 
+CONCISE_INSTRUCTION = '''
+CERINȚĂ DE CONCIZIE PENTRU EFICIENȚĂ, FĂRĂ REDUCEREA RIGORII:
+- fiecare dintre sourceRationale, romanianRationale și semanticRationale trebuie să fie O SINGURĂ propoziție concisă;
+- țintește aproximativ 12-24 de cuvinte în afara ancorelor, dar păstrează minimum 32 de caractere și explicația semantică reală;
+- nu repeta întregul verset, nu adăuga introduceri, concluzii sau formule editoriale;
+- păstrează literal ancorele cerute și particularizează justificarea pentru versetul respectiv.
+'''.strip()
+
 
 def load_worker():
     spec = importlib.util.spec_from_file_location('nt_final_editorial_worker_impl', WORKER_PATH)
@@ -58,6 +67,16 @@ def load_worker():
     return module
 
 
+def _messages_with_concision(messages: list[Any]) -> list[Any]:
+    out = [dict(item) if isinstance(item, dict) else item for item in messages]
+    for index in range(len(out) - 1, -1, -1):
+        item = out[index]
+        if isinstance(item, dict) and item.get('role') == 'user' and isinstance(item.get('content'), str):
+            item['content'] += '\n\n' + CONCISE_INSTRUCTION
+            break
+    return out
+
+
 def ollama_call_model(payload: dict[str, Any], token: str, retries: int = 2) -> dict[str, Any]:
     messages = payload.get('messages')
     if not isinstance(messages, list):
@@ -65,7 +84,7 @@ def ollama_call_model(payload: dict[str, Any], token: str, retries: int = 2) -> 
 
     request_payload = {
         'model': OLLAMA_MODEL,
-        'messages': messages,
+        'messages': _messages_with_concision(messages),
         'stream': False,
         'format': OUTPUT_SCHEMA,
         'think': OLLAMA_THINK,
@@ -74,6 +93,7 @@ def ollama_call_model(payload: dict[str, Any], token: str, retries: int = 2) -> 
             'temperature': 0,
             'seed': 42,
             'num_ctx': OLLAMA_CONTEXT,
+            'num_predict': OLLAMA_MAX_PREDICT,
         },
     }
     body = json.dumps(request_payload, ensure_ascii=False).encode('utf-8')
