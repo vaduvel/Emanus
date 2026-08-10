@@ -2,9 +2,9 @@
   "schema": "emanus-nt-embedded-quote-audit-v1",
   "status": "manual-source-check-required",
   "policy": "Quoted spans of at least five words are checked against the exact current Biblia Emanus text in the same canonical book and chapter. A match elsewhere in the NT does not clear the finding. Non-matches must be replaced with BE wording, explicitly classified as non-Bible quotations, or removed before publication.",
-  "quotedFragments": 88,
-  "exactMatches": 28,
-  "count": 60,
+  "quotedFragments": 75,
+  "exactMatches": 26,
+  "count": 49,
   "findings": [
     {
       "bookId": "matei",
@@ -181,116 +181,23 @@
       "book": "Marcu",
       "chapter": 8,
       "field": "units[0].teaching",
-      "quote": "Mi-e milă de norodul acesta",
-      "wordCount": 6
+      "quote": "Mi-e milă de mulțime.",
+      "wordCount": 5,
+      "exactMatchElsewhere": [
+        "MAT.15"
+      ]
     },
     {
       "bookId": "marcu",
       "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 8,
-      "field": "units[0].teaching",
-      "quote": "Cum ar putea cineva să sature cu pâine pe oamenii aceștia, aici într-un loc pustiu?",
-      "wordCount": 16
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "book": "Marcu",
-      "chapter": 8,
-      "field": "units[1].teaching",
-      "quote": "nu i se va da deloc un semn",
-      "wordCount": 8
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "book": "Marcu",
-      "chapter": 8,
-      "field": "units[1].teaching",
-      "quote": "Luați seama, să vă păziți bine de aluatul fariseilor și de aluatul lui Irod!",
-      "wordCount": 14
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "book": "Marcu",
-      "chapter": 8,
-      "field": "units[1].teaching",
-      "quote": "Aveți ochi, și nu vedeți? Aveți urechi, și nu auziți?",
-      "wordCount": 10
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "book": "Marcu",
-      "chapter": 8,
-      "field": "units[1].teaching",
-      "quote": "câte coșuri pline cu firimituri ați ridicat?",
-      "wordCount": 7
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "book": "Marcu",
-      "chapter": 8,
-      "field": "units[1].teaching",
-      "quote": "câte coșnițe pline cu firimituri ați ridicat?",
-      "wordCount": 7
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "book": "Marcu",
-      "chapter": 8,
-      "field": "units[2].teaching",
-      "quote": "niște oameni umblând, dar mi se par ca niște copaci",
-      "wordCount": 10
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "book": "Marcu",
-      "chapter": 8,
-      "field": "units[2].teaching",
-      "quote": "a fost tămăduit și a văzut toate lucrurile deslușit",
-      "wordCount": 9
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "book": "Marcu",
-      "chapter": 8,
-      "field": "units[4].teaching",
-      "quote": "Fiul omului trebuie să pătimească mult, să fie tăgăduit de bătrâni, de preoții cei mai de seamă și de cărturari, să fie omorât, și după trei zile să învie",
-      "wordCount": 29
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "book": "Marcu",
-      "chapter": 8,
-      "field": "units[4].teaching",
-      "quote": "Înapoia Mea, Satano! Fiindcă tu nu te gândești la lucrurile lui Dumnezeu, ci la lucrurile oamenilor",
-      "wordCount": 16
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "book": "Marcu",
-      "chapter": 8,
-      "field": "units[4].teaching",
-      "quote": "Dacă voiește cineva să vină după Mine, să se lepede de sine însuși, să-și ia crucea și să Mă urmeze",
-      "wordCount": 21
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "book": "Marcu",
-      "chapter": 8,
-      "field": "units[4].teaching",
-      "quote": "Și ce folosește unui om să câștige toată lumea, dacă își pierde sufletul?",
-      "wordCount": 13
+      "field": "units[3].teaching",
+      "quote": "Dar voi cine spuneți că sunt?",
+      "wordCount": 6,
+      "exactMatchElsewhere": [
+        "MAT.16"
+      ]
     },
     {
       "bookId": "marcu",

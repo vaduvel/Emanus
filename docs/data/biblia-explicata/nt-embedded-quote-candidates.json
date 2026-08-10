@@ -1,8 +1,8 @@
 {
   "schema": "emanus-nt-embedded-quote-candidates-v1",
   "policy": "Diagnostic only. Candidate scores compare each unresolved quoted span with contiguous Biblia Emanus text from the same canonical chapter. This report never edits reader copy or clears a publication blocker by itself.",
-  "count": 59,
-  "strongCandidateCount": 0,
+  "count": 48,
+  "strongCandidateCount": 1,
   "findings": [
     {
       "bookId": "matei",
@@ -612,160 +612,35 @@
       "canonicalBookId": "MRK",
       "chapter": 8,
       "field": "units[0].teaching",
-      "quote": "Mi-e milă de norodul acesta",
-      "wordCount": 6,
-      "best": null,
-      "alternatives": [],
-      "bestMargin": null
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "chapter": 8,
-      "field": "units[0].teaching",
-      "quote": "Cum ar putea cineva să sature cu pâine pe oamenii aceștia, aici într-un loc pustiu?",
-      "wordCount": 16,
+      "quote": "Mi-e milă de mulțime.",
+      "wordCount": 5,
       "best": {
-        "raw": "De unde poate cineva să sature pe poporul acesta cu pâine aici, într-un loc pustiu",
-        "score": 0.6844,
-        "lcsRatio": 0.625,
-        "overlap": 0.6875,
-        "lengthRatio": 1,
-        "start": 68,
-        "width": 16
-      },
-      "alternatives": [
-        {
-          "raw": "unde poate cineva să sature pe poporul acesta cu pâine aici, într-un loc pustiu? El",
-          "score": 0.6844,
-          "lcsRatio": 0.625,
-          "overlap": 0.6875,
-          "lengthRatio": 1,
-          "start": 69,
-          "width": 16
-        },
-        {
-          "raw": "poate cineva să sature pe poporul acesta cu pâine aici, într-un loc pustiu? El le",
-          "score": 0.6844,
-          "lcsRatio": 0.625,
-          "overlap": 0.6875,
-          "lengthRatio": 1,
-          "start": 70,
-          "width": 16
-        }
-      ],
-      "bestMargin": 0
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "chapter": 8,
-      "field": "units[1].teaching",
-      "quote": "nu i se va da deloc un semn",
-      "wordCount": 8,
-      "best": {
-        "raw": "mai sigur vă spun, nici un semn nu",
-        "score": 0.4812,
-        "lcsRatio": 0.375,
-        "overlap": 0.5,
-        "lengthRatio": 1,
-        "start": 229,
-        "width": 8
-      },
-      "alternatives": [
-        {
-          "raw": "sigur vă spun, nici un semn nu va",
-          "score": 0.4812,
-          "lcsRatio": 0.375,
-          "overlap": 0.5,
-          "lengthRatio": 1,
-          "start": 230,
-          "width": 8
-        },
-        {
-          "raw": "vă spun, nici un semn nu va fi",
-          "score": 0.4812,
-          "lcsRatio": 0.375,
-          "overlap": 0.5,
-          "lengthRatio": 1,
-          "start": 231,
-          "width": 8
-        }
-      ],
-      "bestMargin": 0
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "chapter": 8,
-      "field": "units[1].teaching",
-      "quote": "Luați seama, să vă păziți bine de aluatul fariseilor și de aluatul lui Irod!",
-      "wordCount": 14,
-      "best": {
-        "raw": "le-a spus: Lu seama, păziți-vă de drojdia fariseilor de drojdia lui Irod",
-        "score": 0.575,
-        "lcsRatio": 0.5,
-        "overlap": 0.5714,
-        "lengthRatio": 1,
-        "start": 276,
-        "width": 14
-      },
-      "alternatives": [
-        {
-          "raw": "a spus: Lu seama, păziți-vă de drojdia fariseilor de drojdia lui Irod. Ei",
-          "score": 0.575,
-          "lcsRatio": 0.5,
-          "overlap": 0.5714,
-          "lengthRatio": 1,
-          "start": 277,
-          "width": 14
-        },
-        {
-          "raw": "spus: Lu seama, păziți-vă de drojdia fariseilor de drojdia lui Irod. Ei vorbeau",
-          "score": 0.575,
-          "lcsRatio": 0.5,
-          "overlap": 0.5714,
-          "lengthRatio": 1,
-          "start": 278,
-          "width": 14
-        }
-      ],
-      "bestMargin": 0
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "chapter": 8,
-      "field": "units[1].teaching",
-      "quote": "Aveți ochi, și nu vedeți? Aveți urechi, și nu auziți?",
-      "wordCount": 10,
-      "best": {
-        "raw": "voastră încă împietrită? Ai ochi, nu vezi? Ai urechi, nu",
+        "raw": "Am compasiune față de mulțime",
         "score": 0.46,
         "lcsRatio": 0.4,
         "overlap": 0.4,
         "lengthRatio": 1,
-        "start": 324,
-        "width": 10
+        "start": 22,
+        "width": 5
       },
       "alternatives": [
         {
-          "raw": "încă împietrită? Ai ochi, nu vezi? Ai urechi, nu auzi",
+          "raw": "compasiune față de mulțime, pentru",
           "score": 0.46,
           "lcsRatio": 0.4,
           "overlap": 0.4,
           "lengthRatio": 1,
-          "start": 325,
-          "width": 10
+          "start": 23,
+          "width": 5
         },
         {
-          "raw": "împietrită? Ai ochi, nu vezi? Ai urechi, nu auzi? Nu",
+          "raw": "față de mulțime, pentru că",
           "score": 0.46,
           "lcsRatio": 0.4,
           "overlap": 0.4,
           "lengthRatio": 1,
-          "start": 326,
-          "width": 10
+          "start": 24,
+          "width": 5
         }
       ],
       "bestMargin": 0
@@ -774,278 +649,39 @@
       "bookId": "marcu",
       "canonicalBookId": "MRK",
       "chapter": 8,
-      "field": "units[1].teaching",
-      "quote": "câte coșuri pline cu firimituri ați ridicat?",
-      "wordCount": 7,
+      "field": "units[3].teaching",
+      "quote": "Dar voi cine spuneți că sunt?",
+      "wordCount": 6,
       "best": {
-        "raw": "cei patru mii, câte coșuri pline cu",
-        "score": 0.6143,
-        "lcsRatio": 0.5714,
-        "overlap": 0.5714,
+        "raw": "Dar voi cine ziceți că sunt",
+        "score": 0.85,
+        "lcsRatio": 0.8333,
+        "overlap": 0.8333,
         "lengthRatio": 1,
-        "start": 369,
-        "width": 7
+        "start": 544,
+        "width": 6
       },
       "alternatives": [
         {
-          "raw": "patru mii, câte coșuri pline cu bucăți",
-          "score": 0.6143,
-          "lcsRatio": 0.5714,
-          "overlap": 0.5714,
-          "lengthRatio": 1,
-          "start": 370,
-          "width": 7
-        },
-        {
-          "raw": "mii, câte coșuri pline cu bucăți rupte",
-          "score": 0.6143,
-          "lcsRatio": 0.5714,
-          "overlap": 0.5714,
-          "lengthRatio": 1,
-          "start": 371,
-          "width": 7
-        }
-      ],
-      "bestMargin": 0
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "chapter": 8,
-      "field": "units[1].teaching",
-      "quote": "câte coșnițe pline cu firimituri ați ridicat?",
-      "wordCount": 7,
-      "best": {
-        "raw": "cei patru mii, câte coșuri pline cu",
-        "score": 0.4857,
-        "lcsRatio": 0.4286,
-        "overlap": 0.4286,
-        "lengthRatio": 1,
-        "start": 369,
-        "width": 7
-      },
-      "alternatives": [
-        {
-          "raw": "patru mii, câte coșuri pline cu bucăți",
-          "score": 0.4857,
-          "lcsRatio": 0.4286,
-          "overlap": 0.4286,
-          "lengthRatio": 1,
-          "start": 370,
-          "width": 7
-        },
-        {
-          "raw": "mii, câte coșuri pline cu bucăți rupte",
-          "score": 0.4857,
-          "lcsRatio": 0.4286,
-          "overlap": 0.4286,
-          "lengthRatio": 1,
-          "start": 371,
-          "width": 7
-        }
-      ],
-      "bestMargin": 0
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "chapter": 8,
-      "field": "units[2].teaching",
-      "quote": "niște oameni umblând, dar mi se par ca niște copaci",
-      "wordCount": 10,
-      "best": {
-        "raw": "oameni, dar îi văd ca pe niște copaci care se",
-        "score": 0.585,
-        "lcsRatio": 0.5,
-        "overlap": 0.6,
-        "lengthRatio": 1,
-        "start": 448,
-        "width": 10
-      },
-      "alternatives": [
-        {
-          "raw": "spus: Văd oameni, dar îi văd ca pe niște copaci",
-          "score": 0.55,
-          "lcsRatio": 0.5,
-          "overlap": 0.5,
-          "lengthRatio": 1,
-          "start": 446,
-          "width": 10
-        },
-        {
-          "raw": "Văd oameni, dar îi văd ca pe niște copaci care",
-          "score": 0.55,
-          "lcsRatio": 0.5,
-          "overlap": 0.5,
-          "lengthRatio": 1,
-          "start": 447,
-          "width": 10
-        }
-      ],
-      "bestMargin": 0.035
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "chapter": 8,
-      "field": "units[2].teaching",
-      "quote": "a fost tămăduit și a văzut toate lucrurile deslușit",
-      "wordCount": 9,
-      "best": {
-        "raw": "cu atenție și a fost restaurat și a văzut",
-        "score": 0.6,
-        "lcsRatio": 0.5556,
-        "overlap": 0.5556,
-        "lengthRatio": 1,
-        "start": 471,
-        "width": 9
-      },
-      "alternatives": [
-        {
-          "raw": "atenție și a fost restaurat și a văzut pe",
-          "score": 0.6,
-          "lcsRatio": 0.5556,
-          "overlap": 0.5556,
-          "lengthRatio": 1,
-          "start": 472,
-          "width": 9
-        },
-        {
-          "raw": "și a fost restaurat și a văzut pe toată",
-          "score": 0.6,
-          "lcsRatio": 0.5556,
-          "overlap": 0.5556,
-          "lengthRatio": 1,
-          "start": 473,
-          "width": 9
-        }
-      ],
-      "bestMargin": 0
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "chapter": 8,
-      "field": "units[4].teaching",
-      "quote": "Fiul omului trebuie să pătimească mult, să fie tăgăduit de bătrâni, de preoții cei mai de seamă și de cărturari, să fie omorât, și după trei zile să învie",
-      "wordCount": 29,
-      "best": {
-        "raw": "i că Fiul Omului trebuie să sufere multe să fie respins de bătrâni, de preoții cei mai de seamă de cărturari să fie ucis după trei zile să învie",
-        "score": 0.8138,
-        "lcsRatio": 0.7931,
-        "overlap": 0.7931,
-        "lengthRatio": 1,
-        "start": 571,
-        "width": 29
-      },
-      "alternatives": [
-        {
-          "raw": "că Fiul Omului trebuie să sufere multe să fie respins de bătrâni, de preoții cei mai de seamă de cărturari să fie ucis după trei zile să învie din",
-          "score": 0.8138,
-          "lcsRatio": 0.7931,
-          "overlap": 0.7931,
-          "lengthRatio": 1,
-          "start": 572,
-          "width": 29
-        },
-        {
-          "raw": "Fiul Omului trebuie să sufere multe să fie respins de bătrâni, de preoții cei mai de seamă de cărturari să fie ucis după trei zile să învie din nou",
-          "score": 0.8138,
-          "lcsRatio": 0.7931,
-          "overlap": 0.7931,
-          "lengthRatio": 1,
-          "start": 573,
-          "width": 29
-        }
-      ],
-      "bestMargin": 0
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "chapter": 8,
-      "field": "units[4].teaching",
-      "quote": "Înapoia Mea, Satano! Fiindcă tu nu te gândești la lucrurile lui Dumnezeu, ci la lucrurile oamenilor",
-      "wordCount": 16,
-      "best": {
-        "raw": "zis: Înapoia mea, Satano! Căci nu te gândești la lucrurile lui Dumnezeu, ci la lucrurile oamenilor",
-        "score": 0.8875,
-        "lcsRatio": 0.875,
-        "overlap": 0.875,
-        "lengthRatio": 1,
-        "start": 629,
-        "width": 16
-      },
-      "alternatives": [
-        {
-          "raw": "Înapoia mea, Satano! Căci nu te gândești la lucrurile lui Dumnezeu, ci la lucrurile oamenilor. Și",
-          "score": 0.8875,
-          "lcsRatio": 0.875,
-          "overlap": 0.875,
-          "lengthRatio": 1,
-          "start": 630,
-          "width": 16
-        },
-        {
-          "raw": "Înapoia mea, Satano! Căci nu te gândești la lucrurile lui Dumnezeu, ci la lucrurile oamenilor",
-          "score": 0.8813,
-          "lcsRatio": 0.875,
-          "overlap": 0.875,
-          "lengthRatio": 0.9375,
-          "start": 630,
-          "width": 15
-        }
-      ],
-      "bestMargin": 0
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "chapter": 8,
-      "field": "units[4].teaching",
-      "quote": "Dacă voiește cineva să vină după Mine, să se lepede de sine însuși, să-și ia crucea și să Mă urmeze",
-      "wordCount": 21,
-      "best": {
-        "raw": "Oricine voiește să vină după mine, să se dezică de el însuși și să își ridice crucea și să mă urmeze",
-        "score": 0.7595,
-        "lcsRatio": 0.7143,
-        "overlap": 0.7619,
-        "lengthRatio": 1,
-        "start": 657,
-        "width": 21
-      },
-      "alternatives": [
-        {
-          "raw": "voiește să vină după mine, să se dezică de el însuși și să își ridice crucea și să mă urmeze. Căci",
-          "score": 0.7595,
+          "raw": "zis: Dar voi cine ziceți că sunt",
+          "score": 0.7286,
           "lcsRatio": 0.7143,
-          "overlap": 0.7619,
-          "lengthRatio": 1,
-          "start": 658,
-          "width": 21
+          "overlap": 0.7143,
+          "lengthRatio": 0.8571,
+          "start": 543,
+          "width": 7
         },
         {
-          "raw": "voiește să vină după mine, să se dezică de el însuși și să își ridice crucea și să mă urmeze",
-          "score": 0.7548,
+          "raw": "Dar voi cine ziceți că sunt eu",
+          "score": 0.7286,
           "lcsRatio": 0.7143,
-          "overlap": 0.7619,
-          "lengthRatio": 0.9524,
-          "start": 658,
-          "width": 20
+          "overlap": 0.7143,
+          "lengthRatio": 0.8571,
+          "start": 544,
+          "width": 7
         }
       ],
-      "bestMargin": 0
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "chapter": 8,
-      "field": "units[4].teaching",
-      "quote": "Și ce folosește unui om să câștige toată lumea, dacă își pierde sufletul?",
-      "wordCount": 13,
-      "best": null,
-      "alternatives": [],
-      "bestMargin": null
+      "bestMargin": 0.1214
     },
     {
       "bookId": "marcu",
