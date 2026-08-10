@@ -105,6 +105,7 @@ jobs:
           node scripts/analyze-nt-embedded-quote-candidates.mjs
           node scripts/audit-nt-embedded-bible-quotes.mjs
           node scripts/audit-nt-romanian-language.mjs
+          node scripts/materialize-nt-lexicon-source-evidence.mjs
           node scripts/audit-nt-lexicon.mjs
 
       - name: Bind canonical Biblia Emanus NT text
