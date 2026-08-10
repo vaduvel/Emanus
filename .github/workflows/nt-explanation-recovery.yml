@@ -12,8 +12,6 @@ on:
 
 permissions:
   contents: write
-  models: read
-  copilot-requests: write
 
 concurrency:
   group: nt-explanation-recovery-${{ github.ref }}
@@ -167,28 +165,13 @@ jobs:
           set -euo pipefail
           python3 scripts/transcribe_nt_current_official_audio.py
 
-      - name: Install GitHub Copilot CLI for semantic review
-        run: |
-          set -euo pipefail
-          npm install -g @github/copilot
-          copilot --version
-
-      - name: Review Galatians against complete transcript content
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NT_SEMANTIC_COPILOT_MODEL: gpt-5.2
-          NT_SEMANTIC_COPILOT_TIMEOUT: '300'
-          NT_SEMANTIC_BATCH_SIZE: '4'
+      - name: Materialize and merge frozen manual Galatians semantic review
         run: |
           set -euo pipefail
           node scripts/materialize-nt-final-source-first.mjs
-          mkdir -p /tmp/nt-semantic-current
-          python3 scripts/nt_semantic_copilot_direct_worker.py \
-            --book galateni \
-            --reviewed-on "$(date -u +%F)" \
-            --output /tmp/nt-semantic-current/galateni.json
+          node scripts/materialize-nt-manual-semantic-galateni.mjs
           python3 scripts/merge_nt_semantic_review_artifacts.py \
-            --input /tmp/nt-semantic-current \
+            --input docs/data/biblia-explicata/nt-semantic-review-manual \
             --ledger docs/data/biblia-explicata/nt-semantic-review-ledger.json
 
       - name: Apply frozen semantic transcript review ledger
