@@ -817,7 +817,7 @@ export const NT_BOOK_01: BibleBook = {
               "original": "καθαρίζω",
               "transliteration": "katharizo",
               "language": "greaca",
-              "meaning": "a curăți. Termen medical și ritual, potrivit întoarcerii omului în comunitate."
+              "meaning": "a curăți, a purifica."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -1091,10 +1091,10 @@ export const NT_BOOK_01: BibleBook = {
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
-              "original": "φοβέομαι",
+              "original": "φοβεῖσθε",
               "transliteration": "phobeomai",
               "language": "greaca",
-              "meaning": "a se teme; după obiect și context, poate fi groază ori respect sfânt."
+              "meaning": "nu vă temeți / vă temeți; formă a verbului φοβέομαι, «a se teme»."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -1297,7 +1297,7 @@ export const NT_BOOK_01: BibleBook = {
               "original": "βλασφημία",
               "transliteration": "blasphemia",
               "language": "greaca",
-              "meaning": "hulă, vorbire defăimătoare împotriva lui Dumnezeu și a lucrării Sale."
+              "meaning": "hulă, defăimare, vorbire insultătoare; în context, împotriva lui Dumnezeu și a lucrării Sale."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -1704,7 +1704,7 @@ export const NT_BOOK_01: BibleBook = {
               "original": "ἐκκλησία",
               "transliteration": "ekklesia",
               "language": "greaca",
-              "meaning": "adunare, comunitate chemată. Aici, Biserica pe care Hristos o numește a Sa."
+              "meaning": "adunare, comunitate; aici, Biserica pe care Hristos o numește a Sa."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -1892,7 +1892,7 @@ export const NT_BOOK_01: BibleBook = {
               "original": "ἔλεγξον",
               "transliteration": "elenxon",
               "language": "greaca",
-              "meaning": "arată-i greșeala, confruntă prin adevăr cu scopul de a câștiga."
+              "meaning": "arată-i greșeala, mustră-l; în context, confruntarea urmărește câștigarea fratelui."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -2040,7 +2040,7 @@ export const NT_BOOK_01: BibleBook = {
               "original": "ὀφθαλμός ... πονηρός",
               "transliteration": "ophthalmos ... poneros",
               "language": "greaca",
-              "meaning": "Literal, «ochi rău»: o expresie pentru invidie și zgârcenie, aici stârnite de bunătatea stăpânului."
+              "meaning": "literal, «ochi rău»; în context, exprimă invidia față de bunătatea stăpânului."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -2819,7 +2819,7 @@ export const NT_BOOK_01: BibleBook = {
               "original": "μαθητεύσατε",
               "transliteration": "matheteusate",
               "language": "greaca",
-              "meaning": "Faceți ucenici: formați oameni care Îl urmează pe Isus, sunt botezați și învață să păzească poruncile Lui."
+              "meaning": "faceți ucenici; verbul μαθητεύω înseamnă a face pe cineva ucenic."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",

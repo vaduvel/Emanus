@@ -60,7 +60,7 @@ export const NT_BOOK_03: BibleBook = {
               "original": "ῥῆμα",
               "transliteration": "rhema",
               "language": "greaca",
-              "meaning": "cuvânt rostit. În context, făgăduința lui Dumnezeu nu este goală, ci poartă puterea necesară împlinirii ei."
+              "meaning": "cuvânt, rostire, declarație; în context, cuvântul sau promisiunea lui Dumnezeu."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",

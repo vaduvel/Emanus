@@ -1,13 +1,22 @@
 {
-  "schema": "emanus-nt-lexicon-source-evidence-ambiguous-index-v3",
-  "policy": "Entries with multiple TBESG Strong/lemma candidates after direct or passage-bounded MorphGNT resolution. Candidate records are retained for sense disambiguation; no candidate is auto-selected.",
-  "source": {
+  "schema": "emanus-nt-lexicon-source-evidence-ambiguous-index-v4",
+  "policy": "Entries with multiple pinned lexical candidates after diacritic-preserving form/lemma resolution. Candidate records are retained for explicit editorial sense selection; no candidate is auto-selected merely to satisfy publication gates.",
+  "primaryLexicalSource": {
     "id": "stepbible-tbesg",
     "repository": "STEPBible/STEPBible-Data",
     "commitSha": "b86d26cdb1f51729e73b5b4eb7f7ccadc5dfba39",
     "path": "Lexicons/TBESG - Translators Brief lexicon of Extended Strongs for Greek - STEPBible.org CC BY.txt",
     "blobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
     "verifiedBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+    "license": "CC BY 4.0"
+  },
+  "fallbackLexicalSource": {
+    "id": "stepbible-tflsj",
+    "repository": "STEPBible/STEPBible-Data",
+    "commitSha": "b86d26cdb1f51729e73b5b4eb7f7ccadc5dfba39",
+    "path": "Lexicons/TFLSJ  0-5624 - Translators Formatted full LSJ Bible lexicon - STEPBible.org CC BY.txt",
+    "blobSha": "db44789a0b3523ad00ba2c93c6fe78ad3db1b4bb",
+    "verifiedBlobSha": "db44789a0b3523ad00ba2c93c6fe78ad3db1b4bb",
     "license": "CC BY 4.0"
   },
   "morphologySource": {
@@ -31,11 +40,6 @@
         "bookId": "ioan",
         "file": "64-Jn-morphgnt.txt",
         "blobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
-      },
-      {
-        "bookId": "efeseni",
-        "file": "70-Eph-morphgnt.txt",
-        "blobSha": "c506f4c4933b0c202f07742ca54aad26ff5495bc"
       }
     ]
   },
@@ -112,14 +116,14 @@
       ]
     },
     {
-      "reviewId": "8f3f0199eb5974764a6279f89da46aa240902a56f17314ca7718c1bc01befc3e",
+      "reviewId": "a95afb9e85a5188209daf9606be1ae9c1213e7d689c3374545c82246294fd4ab",
       "bookId": "ioan",
       "chapter": 10,
       "ref": "Ioan 10:19-30",
       "original": "ἕν",
       "normalizedLemma": "εν",
-      "meaning": "una. Unitate adanca intre Tatăl și Fiul.",
-      "meaningSha256": "sha256:e52aed88bddb3d3ebd01404454e7c5337ab48997008ab94e090d3f650176005b",
+      "meaning": "una, unul (formă neutră); în context, expresia despre Tatăl și Fiul.",
+      "meaningSha256": "sha256:1d7d4ea6123ef1d8e8d7e5e85968511e9e5dc7a9dd9ffa52358efabe4b176afc",
       "candidateCount": 2,
       "candidates": [
         {
@@ -197,14 +201,14 @@
       ]
     },
     {
-      "reviewId": "6ed7b73a0daab47ad05cafb4d7d23f6a61649eaf38bf59415a028815f8db9752",
+      "reviewId": "198125047248b93e8ff1b13b82274f908fbf99b1f916521b1748cd16d6387bf7",
       "bookId": "ioan",
       "chapter": 10,
       "ref": "Ioan 10:31-42",
       "original": "ἡ γραφὴ οὐ δύναται λυθῆναι",
       "normalizedLemma": "ηγραφηουδυναταιλυθηναι",
-      "meaning": "Scriptura nu poate fi desfiintata. Taria și autoritatea permanenta a Scripturii.",
-      "meaningSha256": "sha256:ed7b96766d00b11e6090f3e2e9cef8e8ac9d2c2649664e2fa61f3b39ce398db4",
+      "meaning": "Scriptura nu poate fi desființată. Tăria și autoritatea permanenta a Scripturii.",
+      "meaningSha256": "sha256:9d45279e196cb2c6e959cedf7f9e295d47a0f19febd0270257181987a75e5dac",
       "candidateCount": 4,
       "candidates": [
         {
@@ -690,14 +694,14 @@
       ]
     },
     {
-      "reviewId": "d6544d8dc8c862b78f99d1937e3c9c334c02631307bde3fafd4e681dfb3d4ef4",
+      "reviewId": "8ca6dd9afa3b43892b127019264882b274f0c4fe69d74062bd1dfe2f4219f450",
       "bookId": "ioan",
       "chapter": 11,
       "ref": "Ioan 11:47-57",
       "original": "συναγάγῃ εἰς ἕν",
       "normalizedLemma": "συναγαγηεισεν",
-      "meaning": "sa adune intr-unul. Lucrarea de strangere a copiilor lui Dumnezeu prin moartea Fiului.",
-      "meaningSha256": "sha256:fb5e49289ba5dfbc2f2533b3482db607a94292a9d1ce93e93968178d06813197",
+      "meaning": "sa adune într-unul. Lucrarea de strângere a copiilor lui Dumnezeu prin moartea Fiului.",
+      "meaningSha256": "sha256:981a5c0042cc85e6a4471d77556004673324ae2e9e4ca396497fd4f7cc87a5da",
       "candidateCount": 2,
       "candidates": [
         {

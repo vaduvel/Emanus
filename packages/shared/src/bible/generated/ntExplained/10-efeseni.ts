@@ -26,10 +26,10 @@ export const NT_BOOK_10: BibleBook = {
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
-              "original": "huiothesia",
+              "original": "υἱοθεσία",
               "transliteration": "huiothesia",
               "language": "greaca",
-              "meaning": "așezare ca fiu, înfiere cu drepturi și responsabilitate"
+              "meaning": "înfiere, adopție ca fiu; așezare în statutul de fiu."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -123,10 +123,10 @@ export const NT_BOOK_10: BibleBook = {
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
-              "original": "poiēma",
+              "original": "ποίημα",
               "transliteration": "poiema",
               "language": "greaca",
-              "meaning": "lucrare făcută, operă, ceea ce este modelat de un creator"
+              "meaning": "lucrare, lucru făcut, operă sau creație."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",

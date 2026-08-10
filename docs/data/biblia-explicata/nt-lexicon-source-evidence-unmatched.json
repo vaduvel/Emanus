@@ -1,13 +1,22 @@
 {
-  "schema": "emanus-nt-lexicon-source-evidence-unmatched-v3",
-  "policy": "Entries with no verified TBESG candidate even after passage-bounded MorphGNT 6.12 form-to-lemma resolution. These require manual lemmatization, correction of the original-language note, or another pinned lexical reference; they are not approvable from absence of evidence.",
-  "source": {
+  "schema": "emanus-nt-lexicon-source-evidence-unmatched-v4",
+  "policy": "Entries with no verified pinned lexical candidate after diacritic-preserving TBESG lookup, passage-bounded MorphGNT 6.12 lemmatization, explicit-lemma resolution, and the pinned TFLSJ fallback. These remain unapprovable and block the frozen lexical ledger.",
+  "primaryLexicalSource": {
     "id": "stepbible-tbesg",
     "repository": "STEPBible/STEPBible-Data",
     "commitSha": "b86d26cdb1f51729e73b5b4eb7f7ccadc5dfba39",
     "path": "Lexicons/TBESG - Translators Brief lexicon of Extended Strongs for Greek - STEPBible.org CC BY.txt",
     "blobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
     "verifiedBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+    "license": "CC BY 4.0"
+  },
+  "fallbackLexicalSource": {
+    "id": "stepbible-tflsj",
+    "repository": "STEPBible/STEPBible-Data",
+    "commitSha": "b86d26cdb1f51729e73b5b4eb7f7ccadc5dfba39",
+    "path": "Lexicons/TFLSJ  0-5624 - Translators Formatted full LSJ Bible lexicon - STEPBible.org CC BY.txt",
+    "blobSha": "db44789a0b3523ad00ba2c93c6fe78ad3db1b4bb",
+    "verifiedBlobSha": "db44789a0b3523ad00ba2c93c6fe78ad3db1b4bb",
     "license": "CC BY 4.0"
   },
   "morphologySource": {
@@ -31,181 +40,9 @@
         "bookId": "ioan",
         "file": "64-Jn-morphgnt.txt",
         "blobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
-      },
-      {
-        "bookId": "efeseni",
-        "file": "70-Eph-morphgnt.txt",
-        "blobSha": "c506f4c4933b0c202f07742ca54aad26ff5495bc"
       }
     ]
   },
-  "count": 12,
-  "entries": [
-    {
-      "reviewId": "5113bc9bfeae5dc779dd2470ad1cbb0527b8dfd2358f00e12a18737c0d8bac23",
-      "bookId": "matei",
-      "chapter": 10,
-      "ref": "Matei 10:24-33",
-      "original": "φοβέομαι",
-      "normalizedLemma": "φοβεομαι",
-      "meaning": "a se teme; după obiect și context, poate fi groază ori respect sfânt.",
-      "meaningSha256": "sha256:88921362b71b805dcc17c126528f89e1e45aa035c9925cc4f111237f2c602690",
-      "candidateCount": 0,
-      "morphgntProblem": "surface-not-found-in-passage:φοβέομαι",
-      "morphgntFile": "61-Mt-morphgnt.txt",
-      "morphgntBlobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621"
-    },
-    {
-      "reviewId": "edcace0ef59b9baf2e2a38e3cd526785e96583551370493694a8fc9859e9a280",
-      "bookId": "marcu",
-      "chapter": 1,
-      "ref": "Marcu 1:40-45",
-      "original": "σπλαγχνίζομαι",
-      "normalizedLemma": "σπλαγχνιζομαι",
-      "meaning": "mi se face milă, mă îndur din adâncul ființei. Milă înseamnă că Dumnezeu nu se întoarce de la cel necurat; Se apropie și Se atinge.",
-      "meaningSha256": "sha256:a125c522f42584d7ec6c6efdfb5ea2f5307ee9e12dc6a1a756281fc33f067467",
-      "candidateCount": 0,
-      "morphgntProblem": "surface-not-found-in-passage:σπλαγχνίζομαι",
-      "morphgntFile": "62-Mk-morphgnt.txt",
-      "morphgntBlobSha": "6bd9ce1627e12bd45434b0d18f875c89581d855f"
-    },
-    {
-      "reviewId": "8361775d5156eb7b35e394cc62d8813d4a540af8c0341ef19892870a7a60ee7a",
-      "bookId": "marcu",
-      "chapter": 5,
-      "ref": "Marcu 5:21-34",
-      "original": "σώζω",
-      "normalizedLemma": "σωζω",
-      "meaning": "mântuiesc, fac întreg, tămăduiesc. Cuvântul acoperă și sufletul, și trupul: mântuirea nu este doar despre lumea de dincolo.",
-      "meaningSha256": "sha256:7613f8df1dbd6c2e8feb18727b96076452a893ca9df998a95c6b3513ab19c976",
-      "candidateCount": 0,
-      "morphgntProblem": "surface-not-found-in-passage:σώζω",
-      "morphgntFile": "62-Mk-morphgnt.txt",
-      "morphgntBlobSha": "6bd9ce1627e12bd45434b0d18f875c89581d855f"
-    },
-    {
-      "reviewId": "647f5f7e29c78e34333c29d130fa1d53115ecc47db089a69647f5e0ca9689629",
-      "bookId": "ioan",
-      "chapter": 5,
-      "ref": "Ioan 5:19-30",
-      "original": "ζωὴ ἐν ἑαυτῷ",
-      "normalizedLemma": "ζωηενεαυτω",
-      "meaning": "viață în Sine. Viață neîmprumutată, proprie dumnezeirii.",
-      "meaningSha256": "sha256:a2e480241da08c1ff8d83ee0e74720d6f2eac4e068fbec0dad9923bf154930f0",
-      "candidateCount": 0,
-      "morphgntProblem": "surface-not-found-in-passage:ζωὴ",
-      "morphgntFile": "64-Jn-morphgnt.txt",
-      "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
-    },
-    {
-      "reviewId": "4b9729b882b3ba7aaf3914de383d7b541d5301a9c82a5a2e196d612d40adda60",
-      "bookId": "ioan",
-      "chapter": 10,
-      "ref": "Ioan 10:19-30",
-      "original": "ζωὴ αἰώνιος",
-      "normalizedLemma": "ζωηαιωνιοσ",
-      "meaning": "viață veșnică. Viață dată acum și purtata pana la capat de Hristos.",
-      "meaningSha256": "sha256:be7963ed834ee9cb49aa343376731fee6ac620c5ef753479135975da06f9169f",
-      "candidateCount": 0,
-      "morphgntProblem": "surface-not-found-in-passage:ζωὴ",
-      "morphgntFile": "64-Jn-morphgnt.txt",
-      "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
-    },
-    {
-      "reviewId": "ffab466b3e41753ba538d290acb238b7b4ce546716a443034e4ca95ddcc873fe",
-      "bookId": "ioan",
-      "chapter": 12,
-      "ref": "Ioan 12:37-50",
-      "original": "δόξα τῶν ἀνθρώπων",
-      "normalizedLemma": "δοξατωνανθρωπων",
-      "meaning": "slava oamenilor. Aprobarea omeneasca iubita mai mult decât cinstea lui Dumnezeu.",
-      "meaningSha256": "sha256:b8db329173b0a94f19346de25a110e38aa90d35beffcb1d70687c175e2507014",
-      "candidateCount": 0,
-      "morphgntProblem": "surface-not-found-in-passage:δόξα",
-      "morphgntFile": "64-Jn-morphgnt.txt",
-      "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
-    },
-    {
-      "reviewId": "9be1704e2513d1432b3be09e0e2b6586d8f20fc09c49fb4a1383f5dc445a433f",
-      "bookId": "ioan",
-      "chapter": 13,
-      "ref": "Ioan 13:31-38",
-      "original": "ἐντολή καινή",
-      "normalizedLemma": "εντοληκαινη",
-      "meaning": "porunca noua. Porunca iubirii în masura lui Hristos.",
-      "meaningSha256": "sha256:67bc55ad8fa72372a37c9ce13c1bbbb790fca6ff36bb50ab107611e5c9b3cfc4",
-      "candidateCount": 0,
-      "morphgntProblem": "surface-not-found-in-passage:ἐντολή",
-      "morphgntFile": "64-Jn-morphgnt.txt",
-      "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
-    },
-    {
-      "reviewId": "977128ac686f389d0f709a99a983ed41b7e8298200345676edfdaa9113acbb2e",
-      "bookId": "ioan",
-      "chapter": 15,
-      "ref": "Ioan 15:12-17",
-      "original": "τίθημι τὴν ψυχήν",
-      "normalizedLemma": "τιθημιτηνψυχην",
-      "meaning": "a-și pune viața. Limbaj al jertfirii de sine.",
-      "meaningSha256": "sha256:b609ef23e1c4c42b7c4bbc875cc14e857bbe1e1aad7d56a4e9484b3dcaa2e9fb",
-      "candidateCount": 0,
-      "morphgntProblem": "surface-not-found-in-passage:τίθημι",
-      "morphgntFile": "64-Jn-morphgnt.txt",
-      "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
-    },
-    {
-      "reviewId": "751dc12057839a9cc7f8a0f5c26f248002282d3f1adee49e2113c264573d8c3b",
-      "bookId": "ioan",
-      "chapter": 19,
-      "ref": "Ioan 19:17-30",
-      "original": "παραδίδωμι τὸ πνεῦμα",
-      "normalizedLemma": "παραδιδωμιτοπνευμα",
-      "meaning": "a-Și da duhul. Predarea vieții în mod voit.",
-      "meaningSha256": "sha256:f202cd693d508bfb72cb0310730d7da4bde7f3cfd72cc8c79872708bf534e65f",
-      "candidateCount": 0,
-      "morphgntProblem": "surface-not-found-in-passage:παραδίδωμι",
-      "morphgntFile": "64-Jn-morphgnt.txt",
-      "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
-    },
-    {
-      "reviewId": "3d15ee8d12a6235a6c79b09ca74cc43e0d9e2f49644ae1c290e99556f725070f",
-      "bookId": "ioan",
-      "chapter": 20,
-      "ref": "Ioan 20:1-18",
-      "original": "ῥαββουνί",
-      "normalizedLemma": "ραββουνι",
-      "meaning": "Învățătorule. Formă caldă și personală de adresare.",
-      "meaningSha256": "sha256:a2cd04d0d0db499c418ebeac7fc2f7824219a49447396e584b2b170b77c1047b",
-      "candidateCount": 0,
-      "morphgntProblem": "resolved-lemma-not-in-tbesg:ραββουνι",
-      "morphgntFile": "64-Jn-morphgnt.txt",
-      "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
-    },
-    {
-      "reviewId": "7f8e6fdd5c5d205197fc229995b3b6b3a541debca6518fcf96f6193a3d592301",
-      "bookId": "efeseni",
-      "chapter": 1,
-      "ref": "Efeseni 1:1-6",
-      "original": "huiothesia",
-      "normalizedLemma": "",
-      "meaning": "așezare ca fiu, înfiere cu drepturi și responsabilitate",
-      "meaningSha256": "sha256:f5dd9337b282e881162a03de739a1607c51b0caf6135ee151f5475c361839858",
-      "candidateCount": 0,
-      "morphgntProblem": "no-greek-tokens"
-    },
-    {
-      "reviewId": "78937e6f4687b36d16440f7c3ea7f0428d72b3df4577368fa2835f09061ea0ee",
-      "bookId": "efeseni",
-      "chapter": 2,
-      "ref": "Efeseni 2:8-10",
-      "original": "poiēma",
-      "normalizedLemma": "",
-      "meaning": "lucrare făcută, operă, ceea ce este modelat de un creator",
-      "meaningSha256": "sha256:f0782a3370daf3734a4108a472d12608b4ef47bb06d8e93e4200f578a77811e4",
-      "candidateCount": 0,
-      "morphgntProblem": "surface-not-found-in-passage:̄",
-      "morphgntFile": "70-Eph-morphgnt.txt",
-      "morphgntBlobSha": "c506f4c4933b0c202f07742ca54aad26ff5495bc"
-    }
-  ]
+  "count": 0,
+  "entries": []
 }

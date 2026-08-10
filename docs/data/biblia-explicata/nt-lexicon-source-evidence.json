@@ -31,22 +31,20 @@
         "bookId": "ioan",
         "file": "64-Jn-morphgnt.txt",
         "blobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
-      },
-      {
-        "bookId": "efeseni",
-        "file": "70-Eph-morphgnt.txt",
-        "blobSha": "c506f4c4933b0c202f07742ca54aad26ff5495bc"
       }
     ]
   },
   "counts": {
-    "entries": 219,
-    "matched": 207,
-    "unique": 199,
+    "entries": 216,
+    "matched": 216,
+    "unique": 208,
     "ambiguous": 8,
-    "unmatched": 12,
-    "morphResolved": 70,
-    "tflsjResolved": 4
+    "unmatched": 0,
+    "morphResolved": 75,
+    "explicitLemmaResolved": 2,
+    "reviewedAccentVariantResolved": 2,
+    "tflsjResolved": 3,
+    "reviewedStrongAliasesResolved": 1
   },
   "entries": [
     {
@@ -1238,14 +1236,14 @@
       ]
     },
     {
-      "reviewId": "c6365fc025b624ddcd8a6e9c3cfd1794a5aeffe56761bf2927de03c5d3852dba",
+      "reviewId": "a9e2ccc96107fc80eae37645dd63fba43a5e631162f4a40620b97ae68c3a4f72",
       "bookId": "matei",
       "chapter": 8,
       "ref": "Matei 8:1-4",
       "original": "καθαρίζω",
       "normalizedLemma": "καθαριζω",
-      "meaning": "a curăți. Termen medical și ritual, potrivit întoarcerii omului în comunitate.",
-      "meaningSha256": "sha256:d734f2f32f81767eb0275abf7b00aad7da86be3fe0d73f7304acc69d2be36dda",
+      "meaning": "a curăți, a purifica.",
+      "meaningSha256": "sha256:85d1b7ac5669b1a3e5d0b5b5683b88cacb7617411a842d4c01bb931fcfb9fb32",
       "candidateCount": 1,
       "candidates": [
         {
@@ -1349,19 +1347,65 @@
       "morphgntBlobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621"
     },
     {
-      "reviewId": "5113bc9bfeae5dc779dd2470ad1cbb0527b8dfd2358f00e12a18737c0d8bac23",
+      "reviewId": "c54b35e3ce273074b203a2573026bb395f50fb1e455213f7cff8d3407d499d83",
       "bookId": "matei",
       "chapter": 10,
       "ref": "Matei 10:24-33",
-      "original": "φοβέομαι",
-      "normalizedLemma": "φοβεομαι",
-      "meaning": "a se teme; după obiect și context, poate fi groază ori respect sfânt.",
-      "meaningSha256": "sha256:88921362b71b805dcc17c126528f89e1e45aa035c9925cc4f111237f2c602690",
-      "candidateCount": 0,
-      "candidates": [],
-      "morphgntProblem": "surface-not-found-in-passage:φοβέομαι",
+      "original": "φοβεῖσθε",
+      "normalizedLemma": "φοβεισθε",
+      "meaning": "nu vă temeți / vă temeți; formă a verbului φοβέομαι, «a se teme».",
+      "meaningSha256": "sha256:7e5efb8b323d7ed41afd4a620d9faee217405a4600e830febe951ef7f32d1412",
+      "candidateCount": 1,
+      "candidates": [
+        {
+          "sourceId": "stepbible-tbesg",
+          "sourceCommitSha": "b86d26cdb1f51729e73b5b4eb7f7ccadc5dfba39",
+          "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+          "sourceLocator": "TBESG line 5561",
+          "strongId": "G5399",
+          "canonicalLemma": "φοβέω",
+          "transliteration": "phobeō",
+          "morphology": "G:V",
+          "briefGloss": "to fear",
+          "matchKind": "reviewed-morphgnt-deponent-lemma-to-strong-alias",
+          "lineSha256": "sha256:45e5ee809b9a49c78d764c75be76c7d9254a07ec8a85dce41f2af6e76f32f2e2",
+          "rawLine": "G5399\tG5399 =\tG5399\tφοβέω\tphobeō\tG:V\tto fear\t <b>φοβέέω</b>, ῶ<BR /> (φόβος) [in LXX chiefly for מִן יָרֵא ;] <BR />__1. in Hem., to put to flight. Pass., to be put to flight, to flee affrighted <BR /> __2. to terrify, frighten (Wis 179; Hdt. and Att..). Pass. (so always in NT; cf. M, <i>Pr.</i>, 162), <b>to be seized with fear, be affrighted, fear</b>: <ref='Mat.10.31; 14.27'>Mat.10:31 14:27</ref>, <ref='Mrk.5.33; 6.50'>Mrk.5:33 6:50</ref>, <ref='Luk.1.13; 8.50'>Luk.1:13 8:50</ref>, <ref='Jhn.6.19; 12.15'>Jhn.6:19 12:15</ref>, <ref='Act.16.38'>Act.16:38</ref>, al.; opposite to ὑψηλοφρονεῖν, <ref='Rom.11.20'>Rom.11:20;</ref> σφόδρα, <ref='Mat.17.6; 27.54'>Mat.17:6 27:54</ref>; with cogn. accusative, φόβον μέγαν, <ref='Mrk.4.41'>Mrk.4:41</ref>, <ref='Luk.2.9'>Luk.2:9</ref> (<ref='1Ma.10.8'>1Ma.10:8</ref>); φόβον αὐτῶν (obj, genitive, but cf. <i>ICC</i>, in l), <ref='1Pe.3.14'>1Pe.3:14;</ref> πτόησιν, <ref='1Pe.3.6'>1Pe.3:6;</ref> with accusative of person(s), <ref='Mat.10.26'>Mat.10:26</ref>, <ref='Mrk.11.18'>Mrk.11:18</ref>, <ref='Luk.19.21'>Luk.19:21</ref>, <ref='Jhn.9.22'>Jhn.9:22</ref>, <ref='Act.9.26'>Act.9:26</ref>,  <BR /> <ref='Rom.13.3'>Rom.13:3</ref>, al.; before ἀπό (like <i>Heb.</i> יָרֵא, <ref='Jer.1.8'>Jer.1:8</ref>, al.; cf. M, <i>Pr.</i>, 102, 104n„), <ref='Mat.10.28'>Mat.10:28</ref>, <ref='Luk.12.4'>Luk.12:4</ref>; before μή (cl.; Bl., § 65, 3; M, <i>Pr.</i>, 184 f.), <ref='Act.23.10; 27.17'>Act.23:10 27:17</ref>; μήπως, <ref='Act.27.29'>Act.27:29</ref>, <ref='2Co.11.3; 12.20'>2Co.11:3 12:20</ref>, <ref='Gal.4.11'>Gal.4:11</ref>; μήποτε, <ref='Heb.4.1'>Heb.4:1;</ref> with inf. (Bl., § 69, 4; M, <i>Pr.</i>, 205), <ref='Mat.1.20'>Mat.1:20</ref>, <ref='Mrk.9.32'>Mrk.9:32</ref>, al.; of reverential fear: <ref='Mrk.6.20'>Mrk.6:20</ref>, <ref='Eph.5.33'>Eph.5:33</ref>; τ. θεόν, <ref='Luk.1.50'>Luk.1:50</ref>, <ref='Act.10.2'>Act.10:2</ref>, <ref='1Pe.2.17'>1Pe.2:17</ref>, <ref='Rev.14.7'>Rev.14:7</ref>, al.; τ. κύριον, <ref='Col.3.22'>Col.3:22</ref>, <ref='Rev.15.4'>Rev.15:4</ref>; τ. ὄνομα τ. θεοῦ (see: ὄνομα), <ref='Rev.11.18'>Rev.11:18;</ref> οἱ φοβούμενοι τ. θεόν, of proselytes, <ref='Act.13.16, 26'>Act.13:16, 26</ref> (cf. ἐκ-φοβέω) <BR /> (AS)",
+          "reviewedAliasRationale": "MorphGNT uses the deponent lemma φοβέομαι for the exact Matthew 10 surface form; the pinned Extended Strong lexical family is G5399. The alias is reviewed explicitly rather than inferred by accent stripping or fuzzy lemma matching.",
+          "morphgntEvidence": {
+            "repository": "morphgnt/sblgnt",
+            "ref": "6.12",
+            "file": "61-Mt-morphgnt.txt",
+            "surface": "φοβεῖσθε",
+            "lemma": "φοβέομαι",
+            "occurrences": [
+              {
+                "bcv": "011028",
+                "word": "φοβεῖσθε",
+                "normalizedWord": "φοβεῖσθε",
+                "lemma": "φοβέομαι"
+              },
+              {
+                "bcv": "011028",
+                "word": "φοβεῖσθε",
+                "normalizedWord": "φοβεῖσθε",
+                "lemma": "φοβέομαι"
+              },
+              {
+                "bcv": "011031",
+                "word": "φοβεῖσθε",
+                "normalizedWord": "φοβεῖσθε",
+                "lemma": "φοβέομαι"
+              }
+            ]
+          }
+        }
+      ],
       "morphgntFile": "61-Mt-morphgnt.txt",
-      "morphgntBlobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621"
+      "morphgntBlobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621",
+      "reviewedStrongAlias": {
+        "strongId": "G5399",
+        "rationale": "MorphGNT uses the deponent lemma φοβέομαι for the exact Matthew 10 surface form; the pinned Extended Strong lexical family is G5399. The alias is reviewed explicitly rather than inferred by accent stripping or fuzzy lemma matching."
+      }
     },
     {
       "reviewId": "e4fb4fdbad36b50e59e2baf47be58e642a88e7050fd836d420f29e605ed840cc",
@@ -1445,14 +1489,14 @@
       ]
     },
     {
-      "reviewId": "179cc2db422024fcec4cf1fcce74f100ec08ba812d247b49f92f98e186f7d787",
+      "reviewId": "e02b4b11a5433555ff204f040eb4fac0089bb3a2fe53a5a7ca006cf6dcecbef2",
       "bookId": "matei",
       "chapter": 12,
       "ref": "Matei 12:22-32",
       "original": "βλασφημία",
       "normalizedLemma": "βλασφημια",
-      "meaning": "hulă, vorbire defăimătoare împotriva lui Dumnezeu și a lucrării Sale.",
-      "meaningSha256": "sha256:a4795d01bed5d3c59da5e4f9ba6fec4a0595d2c1f77fb1945bc59f1adcf5a780",
+      "meaning": "hulă, defăimare, vorbire insultătoare; în context, împotriva lui Dumnezeu și a lucrării Sale.",
+      "meaningSha256": "sha256:afd1674bf982a11a47f523f844bc5223b475569792a22132d1ace10040fe2431",
       "candidateCount": 1,
       "candidates": [
         {
@@ -1786,14 +1830,14 @@
       "morphgntBlobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621"
     },
     {
-      "reviewId": "e33d09644c772faea499770c98017ee13913583cd72ebfb9e075585f19cc06ad",
+      "reviewId": "cdced7dab4dc0fff7a0a6f8a350e3747fa1b2d7406f898c4cadbb265273efe08",
       "bookId": "matei",
       "chapter": 16,
       "ref": "Matei 16:13-20",
       "original": "ἐκκλησία",
       "normalizedLemma": "εκκλησια",
-      "meaning": "adunare, comunitate chemată. Aici, Biserica pe care Hristos o numește a Sa.",
-      "meaningSha256": "sha256:e8288b7b2ecf6ca881a4f4083c97935bbdef5c1e1a8d2797a45f3ab3ff9645a8",
+      "meaning": "adunare, comunitate; aici, Biserica pe care Hristos o numește a Sa.",
+      "meaningSha256": "sha256:61c3fd4d94293ce2e205363de4ac9c4250a35cd1764ce9b605657c1b7b91b148",
       "candidateCount": 1,
       "candidates": [
         {
@@ -1886,14 +1930,14 @@
       "morphgntBlobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621"
     },
     {
-      "reviewId": "4d63e81036bc4639bb3c4ecb6e062c2ac13cf7f55596b3da9a5852e2a3f6d4f3",
+      "reviewId": "bdf6d26030f9121d232bd4ac87abc5f5fe35b01c62c4daa8eb6fc07cc07cdb78",
       "bookId": "matei",
       "chapter": 18,
       "ref": "Matei 18:15-20",
       "original": "ἔλεγξον",
       "normalizedLemma": "ελεγξον",
-      "meaning": "arată-i greșeala, confruntă prin adevăr cu scopul de a câștiga.",
-      "meaningSha256": "sha256:a61f3614ef5dfce4130c065016afc9b1545bf75a13edea3cbc454c07bcd6c47d",
+      "meaning": "arată-i greșeala, mustră-l; în context, confruntarea urmărește câștigarea fratelui.",
+      "meaningSha256": "sha256:4b20c714d666d935cc73ba02ce28dd47e692a9a8e3cc9a8179b14f449d77dca2",
       "candidateCount": 1,
       "candidates": [
         {
@@ -2043,14 +2087,14 @@
       ]
     },
     {
-      "reviewId": "3b8ba710189727f5d043f32441dff532df1d85fef772f79a09b7e012bd188a80",
+      "reviewId": "9ef227b874b6e3ae8b5395176ab5e0416c4c05a0d2125559e4bb7e2d49e729b3",
       "bookId": "matei",
       "chapter": 20,
       "ref": "Matei 20:1-16",
       "original": "ὀφθαλμός ... πονηρός",
       "normalizedLemma": "οφθαλμοσπονηροσ",
-      "meaning": "Literal, «ochi rău»: o expresie pentru invidie și zgârcenie, aici stârnite de bunătatea stăpânului.",
-      "meaningSha256": "sha256:6cf1edf4f89cc355c40b60576d3c7eee49ccecabbcbff9cde0bb50f2fa0a1f0e",
+      "meaning": "literal, «ochi rău»; în context, exprimă invidia față de bunătatea stăpânului.",
+      "meaningSha256": "sha256:861cf9cda4e7e24583e19b2df72a486fb34dde18fdf1245d6f5d2d546ced67a8",
       "candidateCount": 1,
       "candidates": [
         {
@@ -2197,14 +2241,14 @@
       ]
     },
     {
-      "reviewId": "cdca05ae955888dff6739a20ab9caa97dec0871b3ab1eae47e5c7002b0b11612",
+      "reviewId": "9140fd3c93532f56aef317601538d615ea42b28573bf7e32ba11d0fbabd57e9d",
       "bookId": "matei",
       "chapter": 28,
       "ref": "Matei 28:16-20",
       "original": "μαθητεύσατε",
       "normalizedLemma": "μαθητευσατε",
-      "meaning": "Faceți ucenici: formați oameni care Îl urmează pe Isus, sunt botezați și învață să păzească poruncile Lui.",
-      "meaningSha256": "sha256:b7d1e11372c21b31ffc8291f811071b42b7f85cb0eab5f250a0d37f543d6f2ce",
+      "meaning": "faceți ucenici; verbul μαθητεύω înseamnă a face pe cineva ucenic.",
+      "meaningSha256": "sha256:5ca7b96461937f754ee63121107ab209aeb546b0830a515f81ed50c55a3b104d",
       "candidateCount": 1,
       "candidates": [
         {
@@ -2335,14 +2379,14 @@
       ]
     },
     {
-      "reviewId": "a5016a950e24459b006a41babb44db9333ca9a6c3aa875a90bc09b19e53903de",
+      "reviewId": "336e8415cbab17384021f7d1f3128a0a520002061fc5f1892726ca47bfc0b65e",
       "bookId": "marcu",
       "chapter": 1,
       "ref": "Marcu 1:14-20",
       "original": "δεῦτε ὀπίσω μου",
       "normalizedLemma": "δευτεοπισωμου",
-      "meaning": "veniți după Mine. Chemarea nu este o invitație la o opinie, ci la o urmare: Isus înainte, ucenicul în urma Lui.",
-      "meaningSha256": "sha256:5feff95ceb3dc6ba8f52f6e1bb0624c4f2b0cc475625e2ed2cb9e0385f8670be",
+      "meaning": "veniți după Mine; literal, «veniți» + «după/în urma» + «Mine».",
+      "meaningSha256": "sha256:6e341e767c779d72300350c6b517b673102f090c61ae43429fc34800a5813a8e",
       "candidateCount": 1,
       "candidates": [
         {
@@ -2432,14 +2476,14 @@
       "morphgntBlobSha": "6bd9ce1627e12bd45434b0d18f875c89581d855f"
     },
     {
-      "reviewId": "191afd60ed1331bb50ed4c59ff42d4232aac4a05b84b0f515a4327e1646f5925",
+      "reviewId": "cff0d6314855254bc29c096abd7d7adf015de68e6a7cb397d4eac1d9cdbb8417",
       "bookId": "marcu",
       "chapter": 1,
       "ref": "Marcu 1:21-28",
       "original": "ἐξουσία",
       "normalizedLemma": "εξουσια",
-      "meaning": "autoritate, drept de stăpânire. Nu este vorba de un ton mai tare, ci de o putere reală, care ascultă de cuvântul Domnului.",
-      "meaningSha256": "sha256:e1ab76a36c7883414dbfb6cbc434049d8e175a28f38ee65c1c288e9ce48003d7",
+      "meaning": "autoritate, drept, putere de a acționa; în context, autoritatea reală a lui Isus.",
+      "meaningSha256": "sha256:e5f96e9fe3cbb74e86ab8cbde68820f8e4e1ecdb32caea65b35da6ff08a8cf46",
       "candidateCount": 1,
       "candidates": [
         {
@@ -2457,21 +2501,6 @@
           "rawLine": "G1849\tG1849 =\tG1849\tἐξουσία\texousia\tG:N-F\tauthority\t <b>ἐξουσία</b>, -ας, ἡ <BR /> (ἔξεστι), [in LXX: <ref='4Ki.20.13'>4Ki.20:13</ref>, Psa.113 (114):2 135 (136)8, 9, <ref='Isa.39.2'>Isa.39:2</ref>, Jer.28 (51):28 (מֶמְשָׁלָה), frequently in Da for Aram. שָׁלְטָן, etc., <ref='Wis.10.14'>Wis.10:14</ref>, <ref='Sir.9.13'>Sir.9:13</ref>, al. ;] <BR /> __1. prop., <b>liberty</b> or <b>power to act</b>, freedom to exercise the inward force or faculty expressed by δύναμις (which see): <ref='1Co.9.12'>1Co.9:12;</ref> ἐ. ἔχειν, <ref='2Th.3.9'>2Th.3:9;</ref> id. before inf., <ref='Jhn.10.18'>Jhn.10:18</ref>, <ref='1Co.9.4'>1Co.9:4</ref>, 5; with genitive obj., <ref='Rom.9.21'>Rom.9:21;</ref> before ἐπί, with accusative, <ref='Rev.22.14'>Rev.22:14;</ref> περί, <ref='1Co.7.37.'>1Co.7:37.</ref> <BR /> __2. Later  (cf. Milligan, <i>Th.</i>, 114; MM, <i>Exp.</i>, xiv), of the power of <b>right, authority</b>: <ref='Mat.21.33'>Mat.21:33</ref>, <ref='Mrk.11.28'>Mrk.11:28</ref>, <ref='Luk.20.2'>Luk.20:2</ref>; of Messianic authority, <ref='Mat.9.6'>Mat.9:6</ref>, <ref='Mrk.2.10'>Mrk.2:10</ref>, al.; of apostolic authority, <ref='2Co.10.8; 13.10'>2Co.10:8 13:10</ref>; of the authority of government: <ref='Mat.8.9; 28.18'>Mat.8:9 28:18</ref>, <ref='Jude.25'>Ju 25</ref>, <ref='Rev.12.10'>Rev.12:10</ref>, al.; esp. of judicial authority, <ref='Luk.20.20'>Luk.20:20</ref>, <ref='Jhn.19.10, 11'>Jhn.19:10, 11</ref>. <BR /> __3. Meton., <BR />__(a) <b>jurisdiction</b>: <ref='Luk.23.7'>Luk.23:7</ref> (cf. <ref='1Ma.6.11'>1Ma.6:11</ref>, <ref='Isa.39.2'>Isa.39:2</ref>); <BR /> __(b) <b>a ruler</b> or <b>magistrate</b>: <ref='Rom.13.1-3;'>Rom.13:1-3;</ref> pl., <ref='Luk.12.11'>Luk.12:11</ref>, <ref='Rom.13.1'>Rom.13:1</ref>, <ref='Tit.3.1'>Tit.3:1</ref>; <BR /> __(with) <b>of supramundane powers </b>(syn. with ἀρχή, δύναμις, θρόνος, κυριότης): <ref='1Co.15.24'>1Co.15:24</ref>, <ref='Eph.1.21; 3.10'>Eph.1:21 3:10</ref>, <ref='Col.2.10'>Col.2:10</ref>, <ref='1Pe.3.22'>1Pe.3:22</ref>, al. (Cremer. 236). <BR /> <re><i>SYN.</i>: see: δύναμις.</re> (AS)"
         }
       ]
-    },
-    {
-      "reviewId": "edcace0ef59b9baf2e2a38e3cd526785e96583551370493694a8fc9859e9a280",
-      "bookId": "marcu",
-      "chapter": 1,
-      "ref": "Marcu 1:40-45",
-      "original": "σπλαγχνίζομαι",
-      "normalizedLemma": "σπλαγχνιζομαι",
-      "meaning": "mi se face milă, mă îndur din adâncul ființei. Milă înseamnă că Dumnezeu nu se întoarce de la cel necurat; Se apropie și Se atinge.",
-      "meaningSha256": "sha256:a125c522f42584d7ec6c6efdfb5ea2f5307ee9e12dc6a1a756281fc33f067467",
-      "candidateCount": 0,
-      "candidates": [],
-      "morphgntProblem": "surface-not-found-in-passage:σπλαγχνίζομαι",
-      "morphgntFile": "62-Mk-morphgnt.txt",
-      "morphgntBlobSha": "6bd9ce1627e12bd45434b0d18f875c89581d855f"
     },
     {
       "reviewId": "52314782915afa1d76c115164228d2ac6554f78e245a2bbbf9c386d527912fcc",
@@ -2574,14 +2603,14 @@
       "morphgntBlobSha": "6bd9ce1627e12bd45434b0d18f875c89581d855f"
     },
     {
-      "reviewId": "cc9b4a6f3d8ddebe6a7808be4bf36029817ef546e8485019a51a86870e9406dd",
+      "reviewId": "513ec04445e482410cff196b4602feea668b788de79c766ab8136c83d3dc6c30",
       "bookId": "marcu",
       "chapter": 3,
       "ref": "Marcu 3:20-30",
       "original": "βλασφημέω",
       "normalizedLemma": "βλασφημεω",
-      "meaning": "a huli, a vorbi de rău. Hula nu este orice cuvânt aspru, ci luarea de poziție împotriva a ceea ce se știe că este adevărat.",
-      "meaningSha256": "sha256:022a10467fd69972d0604c3a9a54404c1fbc6acdba082e50e85e006c43b1e5f2",
+      "meaning": "a huli, a defăima, a vorbi insultător; în context, împotrivirea verbală față de lucrarea Duhului.",
+      "meaningSha256": "sha256:e4cac63acf20b101f38c5362201bb6babdcc953a8a92eb1e77c60115d7e4ef0a",
       "candidateCount": 1,
       "candidates": [
         {
@@ -2601,14 +2630,14 @@
       ]
     },
     {
-      "reviewId": "147358b188a07be9e13114358966b5f80574dfde8756c6f47cd7b46899dc9656",
+      "reviewId": "c1df2ba9f2f8a168f6c5dccbf1e8242f533a4d4764db0e643de98911eee876ad",
       "bookId": "marcu",
       "chapter": 4,
       "ref": "Marcu 4:10-12",
       "original": "μυστήριον",
       "normalizedLemma": "μυστηριον",
-      "meaning": "taină, secret. În Scriptură nu înseamnă ceva de neînțeles, ci un plan al lui Dumnezeu pe care El Însuși îl descoperă celor care Îl urmează.",
-      "meaningSha256": "sha256:cb4eaff48a86b87e777bab02c73364a3142a34b911cd6a41f7c015237ee6a2b8",
+      "meaning": "taină, mister, secret; în Noul Testament poate desemna ceva ascuns și apoi descoperit de Dumnezeu.",
+      "meaningSha256": "sha256:7a60b12de28b1a2e28a3b9e8f5abce50be937e4b4710ec499f4835495fe0ab4d",
       "candidateCount": 1,
       "candidates": [
         {
@@ -2685,14 +2714,14 @@
       "morphgntBlobSha": "6bd9ce1627e12bd45434b0d18f875c89581d855f"
     },
     {
-      "reviewId": "4a49d0d1edd107d18e780b7cbbc9819cbd11c57e07def28eb63d863d59a81d77",
+      "reviewId": "2bc6a9d1a7adbe2d6ecaa32ac19bcc38150f39ef74521a550e79e3746fe93bf4",
       "bookId": "marcu",
       "chapter": 5,
       "ref": "Marcu 5:1-20",
       "original": "λεγιών",
       "normalizedLemma": "λεγιων",
-      "meaning": "legiune — unitate militară romană de ordinul miilor de soldați. Termenul nu este sinonim cu «cohortă»; în Marcu 5 numele subliniază numărul foarte mare al duhurilor.",
-      "meaningSha256": "sha256:5ab7ffffce682f25bec0932a5f33cb1e00cbf91e37d8255eae5243b5ecc8c2f0",
+      "meaning": "legiune; termen latin pentru o mare unitate militară romană, folosit aici ca nume care sugerează un număr foarte mare.",
+      "meaningSha256": "sha256:8526596dba0dc41f5d1988dca9a72d6387c224365f796a4a84b8525d07600e89",
       "candidateCount": 1,
       "candidates": [
         {
@@ -2716,29 +2745,76 @@
       "fallbackSource": "stepbible-tflsj"
     },
     {
-      "reviewId": "8361775d5156eb7b35e394cc62d8813d4a540af8c0341ef19892870a7a60ee7a",
+      "reviewId": "44a672bb9333f93d5541d576a9344897f38fc933ff6dab12f84b84f4390c3c8d",
       "bookId": "marcu",
       "chapter": 5,
       "ref": "Marcu 5:21-34",
       "original": "σώζω",
       "normalizedLemma": "σωζω",
-      "meaning": "mântuiesc, fac întreg, tămăduiesc. Cuvântul acoperă și sufletul, și trupul: mântuirea nu este doar despre lumea de dincolo.",
-      "meaningSha256": "sha256:7613f8df1dbd6c2e8feb18727b96076452a893ca9df998a95c6b3513ab19c976",
-      "candidateCount": 0,
-      "candidates": [],
-      "morphgntProblem": "surface-not-found-in-passage:σώζω",
+      "meaning": "a salva, a mântui, a izbăvi; în unele contexte, a vindeca.",
+      "meaningSha256": "sha256:84b58c98b68c66231b0584b8bd39df704f6a721a8757d8cd8d7a8ff34f77f151",
+      "candidateCount": 1,
+      "candidates": [
+        {
+          "sourceId": "stepbible-tbesg",
+          "sourceCommitSha": "b86d26cdb1f51729e73b5b4eb7f7ccadc5dfba39",
+          "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+          "sourceLocator": "TBESG line 5134",
+          "strongId": "G4982",
+          "canonicalLemma": "σῴζω",
+          "transliteration": "sōzō",
+          "morphology": "G:V",
+          "briefGloss": "to save",
+          "matchKind": "reviewed-accent-variant-lemma+unique-passage+unique-tbesg",
+          "lineSha256": "sha256:c3a23b05acc5e3ea8e62ec6d55007d8ade8ad0ec48f39fce19b59979b9076984",
+          "rawLine": "G4982\tG4982 =\tG4982\tσῴζω\tsōzō\tG:V\tto save\t <b>σώζω</b> (on the more accurate σῴζω, see WH, <i>Intr.</i>, §410; Bl., §3, 1-3), <BR /> [in LXX chiefly for ישׁע hi., also for מלט ni., נצל ni., etc. ;] <BR /><b>to save</b> from peril, <b>injury or suffering</b>: <ref='Mat.8.25'>Mat.8:25</ref>, <ref='Mrk.13.20'>Mrk.13:20</ref>, <ref='Luk.23.35'>Luk.23:35</ref>, al.; τ. ψυχήν, <ref='Mat.16.25'>Mat.16:25</ref>, al.; before ἐκ, <ref='Jhn.12.27'>Jhn.12:27</ref>, <ref='Heb.5.7'>Heb.5:7</ref>, <ref='Jude.5'>Ju 5</ref>; of healing, <b>restoring to health</b>: <ref='Mat.9.22'>Mat.9:22</ref>, <ref='Mrk.5.34'>Mrk.5:34</ref>, al. In NT, esp. of salvation from spiritual disease and death, in which sense it is \"spoken of in Scripture as either (1) past, (2) present, or (3) future, according as redemption, grace, or glory is the point in view. Thus (1) <ref='Rom.8.24'>Rom.8:24</ref>, <ref='Eph.2.5'>Eph.2:5</ref>, 8 <ref='2Ti.1.9'>2Ti.1:9</ref>, <ref='Tit.3.5'>Tit.3:5</ref>; (2) <ref='Act.2.47'>Act.2:47</ref>, <ref='1Cor.1.18'>1Co.1:18</ref>, 15:2, <ref='2Co.2.15'>2Co.2:15</ref>; (3) <ref='Mat.10.22'>Mat.10:22</ref>, <ref='Rom.13.11'>Rom.13:11</ref>, <ref='Php.2.12'>Php.2:12</ref>, <ref='Heb.9.28'>Heb.9:28</ref>\" (Vau. on <ref='Rom.5.9'>Rom.5:9</ref>). Seq. ἀπό, <ref='Mat.1.21'>Mat.1:21</ref>, <ref='Act.2.40'>Act.2:40</ref>, <ref='Rom.5.9'>Rom.5:9</ref>; ἐκ, <ref='Jas.5.20'>Jas.5:20</ref>, <ref='Jude.23'>Ju 23</ref> (cf. Cremer, 532ff.). <BR /> (AS)",
+          "morphgntEvidence": {
+            "sourceId": "morphgnt-sblgnt-6.12",
+            "repository": "morphgnt/sblgnt",
+            "ref": "6.12",
+            "file": "62-Mk-morphgnt.txt",
+            "tokens": [
+              {
+                "inputLemma": "σώζω",
+                "actualLemma": "σῴζω",
+                "resolution": "accent-variant-reconciled-by-unique-passage-lemma",
+                "occurrences": [
+                  {
+                    "bcv": "020523",
+                    "word": "σωθῇ",
+                    "normalizedWord": "σωθῇ",
+                    "lemma": "σῴζω"
+                  },
+                  {
+                    "bcv": "020528",
+                    "word": "σωθήσομαι",
+                    "normalizedWord": "σωθήσομαι",
+                    "lemma": "σῴζω"
+                  },
+                  {
+                    "bcv": "020534",
+                    "word": "σέσωκέν",
+                    "normalizedWord": "σέσωκε(ν)",
+                    "lemma": "σῴζω"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
       "morphgntFile": "62-Mk-morphgnt.txt",
       "morphgntBlobSha": "6bd9ce1627e12bd45434b0d18f875c89581d855f"
     },
     {
-      "reviewId": "4728bb95ccc78b835e5ce456af8add4c4137a699ae43067d4a12a6c91126d20f",
+      "reviewId": "dfea4ce8ca1cdf0f2e562cd925bb0f819a797592580b6a895d8a4ea40c76c5b1",
       "bookId": "marcu",
       "chapter": 5,
       "ref": "Marcu 5:35-43",
       "original": "καθεύδω",
       "normalizedLemma": "καθευδω",
-      "meaning": "dorm. Isus vorbește despre moarte cu un cuvânt pe care îl vor folosi apoi toți ai Lui: pentru cine este al Lui, moartea este somnul dinaintea deșteptării.",
-      "meaningSha256": "sha256:85044e8fe97466545cb48dc45be4b9f6205fcb0483af12c30fc4273cb3279245",
+      "meaning": "a dormi; aici Isus folosește somnul ca imagine pentru moarte.",
+      "meaningSha256": "sha256:17f23145972e3eaf09e4ecc02ca0f99f72ce1b624e88bfbeb58af7928cb32dce",
       "candidateCount": 1,
       "candidates": [
         {
@@ -2858,14 +2934,14 @@
       ]
     },
     {
-      "reviewId": "bbb72f18822ebec923e339217f27bd0115a5e504818287f672a19bb6355b4ccd",
+      "reviewId": "debd6170f74486b4b08cb77af9b65f105a58743bcdeb29ac08bd594c721033ce",
       "bookId": "marcu",
       "chapter": 8,
       "ref": "Marcu 8:27-30",
       "original": "Χριστός",
       "normalizedLemma": "χριστοσ",
-      "meaning": "Unsul, Mesia cel făgăduit. Mărturisirea lui Petru nu Îl face pe Isus un profet între profeți, ci Unsul lui Dumnezeu, Cel așteptat de Israel.",
-      "meaningSha256": "sha256:ba52b8f38fffca9b750d6ce23af6dc9c8ad49573bbd37d9d4973eb2a34f017f4",
+      "meaning": "Unsul; titlul grecesc corespunzător lui Mesia/Hristos.",
+      "meaningSha256": "sha256:8a23b1365f495c4ee514744370c69d9e064627d4abd900f2bf8f08be68edefcf",
       "candidateCount": 1,
       "candidates": [
         {
@@ -2885,14 +2961,14 @@
       ]
     },
     {
-      "reviewId": "58bb1fb8f873156af4aace9209a14c32fa47bf4cc8b0241e937963e8f07b6b05",
+      "reviewId": "55b6490098841a61dc1c3fa9ac3ac7719233a13d395679c9ba63475cf9bea4c5",
       "bookId": "marcu",
       "chapter": 8,
       "ref": "Marcu 8:31-38",
       "original": "ψυχή",
       "normalizedLemma": "ψυχη",
-      "meaning": "viața sufletească, viața care se caută pe sine. Isus nu vorbește despre viața trupului, ci despre acea viață care își apără propria păstrare, propria onoare și propria plăcere; a o pierde pentru El înseamnă a o câștiga cu adevărat.",
-      "meaningSha256": "sha256:48f790004d41aaa14caea1b1ba05e65ae86c086a050f14646ee27620dc7d0979",
+      "meaning": "suflet, viață, persoană sau sine, după context; în Marcu 8 sensul are legătură cu viața/sinele pe care omul încearcă să-l păstreze.",
+      "meaningSha256": "sha256:9d91c51036bb6f8b813ad015fac0f16372f2cc192e6d087ae88a57bb40580f48",
       "candidateCount": 1,
       "candidates": [
         {
@@ -2939,14 +3015,14 @@
       ]
     },
     {
-      "reviewId": "5619cea46d8445ae935625a6f4c4dd3fd7f7b4bed480f5cecf5e0d420fbd0726",
+      "reviewId": "2f85d5d77570edf90d40cab82b7189d1731bda094fc7ac2f6e79b1204bf4d37e",
       "bookId": "luca",
       "chapter": 1,
       "ref": "Luca 1:26-38",
       "original": "ῥῆμα",
       "normalizedLemma": "ρημα",
-      "meaning": "cuvânt rostit. În context, făgăduința lui Dumnezeu nu este goală, ci poartă puterea necesară împlinirii ei.",
-      "meaningSha256": "sha256:93bd01a9a7574d6f3093f558334fbec667af23b397734afe7bb742c784885a22",
+      "meaning": "cuvânt, rostire, declarație; în context, cuvântul sau promisiunea lui Dumnezeu.",
+      "meaningSha256": "sha256:a971144782be2e5f72ff669ef6b92d1160cbc98e76fe7444cf67137e1501dd9b",
       "candidateCount": 1,
       "candidates": [
         {
@@ -2966,14 +3042,14 @@
       ]
     },
     {
-      "reviewId": "0ce926d23837e306c2fe30b560653b868c94749868ce0075016000ca95033317",
+      "reviewId": "38b1b7ef4b685c053c73248d6e62d7a72373e25edac0b038e8bbed094ac90ca7",
       "bookId": "ioan",
       "chapter": 1,
       "ref": "Ioan 1:1-5",
       "original": "Λόγος",
       "normalizedLemma": "λογοσ",
-      "meaning": "Cuvântul. Nu o simplă vorbire, ci Persoana prin care Dumnezeu Se face cunoscut și prin care toate au fost făcute.",
-      "meaningSha256": "sha256:0c0ba1b9f731c761752711d9f059ec505c3a6ba4d24293e894ae86a300acb168",
+      "meaning": "cuvânt, mesaj, rostire; în Ioan 1, «Cuvântul» este titlul folosit pentru Persoana prezentată în pasaj.",
+      "meaningSha256": "sha256:fc99bedd0fd8a5b2fe475d8796547a423f8f974f1ac20c35517afc3183fdbee6",
       "candidateCount": 1,
       "candidates": [
         {
@@ -3020,14 +3096,14 @@
       ]
     },
     {
-      "reviewId": "f2ba50f382130236184f4061393787a509ecdfe8beed7cb83d4dab1df4a8aeed",
+      "reviewId": "22c0c6b8171207b28cb8e55d7e9655befb1a3690155a2a71eff9ac7c3a343e87",
       "bookId": "ioan",
       "chapter": 1,
       "ref": "Ioan 1:1-5",
       "original": "φῶς",
       "normalizedLemma": "φωσ",
-      "meaning": "lumina. Ceea ce descoperă, curată și arată drumul.",
-      "meaningSha256": "sha256:00da09682a1596c63a41e5bf71dfccd115573300b455f130b56a9316d1a723af",
+      "meaning": "lumină; în context, imagine pentru descoperire și călăuzire.",
+      "meaningSha256": "sha256:fc7c0d33afebec9ecc9550c0a2ff478b4d0239f1875702bf699ac23881678401",
       "candidateCount": 1,
       "candidates": [
         {
@@ -3047,14 +3123,14 @@
       ]
     },
     {
-      "reviewId": "50ff40f99aaa6456ed9d6f0c1a1cb2675818d300464135f020f58c8b8d4b4d85",
+      "reviewId": "8f58c4adaf2058a38410dc091737bce5619d602e2dc6446e3a576d88a5155a7a",
       "bookId": "ioan",
       "chapter": 1,
       "ref": "Ioan 1:6-13",
       "original": "μαρτυρία",
       "normalizedLemma": "μαρτυρια",
-      "meaning": "mărturie. Spunerea adevarului despre cine este Cineva.",
-      "meaningSha256": "sha256:c2d2c915e3656ef5393d3949598c3e3ec6bc1e1e790f0586ee4537b7f132f6dd",
+      "meaning": "mărturie. Spunerea adevărului despre cine este Cineva.",
+      "meaningSha256": "sha256:87b6f78707a6009d7323bfa4201c394c3353a6eb2d64d7822a444f4a29c4c128",
       "candidateCount": 1,
       "candidates": [
         {
@@ -3163,14 +3239,14 @@
       "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
-      "reviewId": "57bf748954a68d74a5962f57eeeef8ff748b00c4a7fe9cc3aa8f3b8ccd2ccb15",
+      "reviewId": "20e2584ac69fa1cf5131d9874a4a97b2838e93e3d1ea5d3d3ea754e623b663eb",
       "bookId": "ioan",
       "chapter": 1,
       "ref": "Ioan 1:6-13",
       "original": "ἐκ θεοῦ",
       "normalizedLemma": "εκθεου",
-      "meaning": "din Dumnezeu. Originea noii nasteri nu este omeneasca, ci dumnezeiasca.",
-      "meaningSha256": "sha256:2e8f0e4e677cbbce710e6c2d8bfe57617462b95a48712a648fa3fbd59617aa32",
+      "meaning": "din Dumnezeu. Originea noii nasteri nu este omeneasca, ci dumnezeiască.",
+      "meaningSha256": "sha256:492d907fc6957cf322c5fb778a258feb69c503557a5e9379aa6dfa3b17cf8863",
       "candidateCount": 1,
       "candidates": [
         {
@@ -3276,14 +3352,14 @@
       "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
-      "reviewId": "96e86faf6c65f9b04f041fd33c7b5b3250a0316129c3381a30fa945e9b6a99b9",
+      "reviewId": "244f0b0286e214f8e7d040f846adb4080d65979d8c8ce47340be8ec69eb70146",
       "bookId": "ioan",
       "chapter": 1,
       "ref": "Ioan 1:14-18",
       "original": "σὰρξ",
       "normalizedLemma": "σαρξ",
-      "meaning": "trup, carne. Aici arată omenitatea adevărată asumata de Fiul.",
-      "meaningSha256": "sha256:7978a932ea88305783e5498e74aa97ffe869b0f2853217b03d74dfcb58c5eb20",
+      "meaning": "trup, carne. Aici arată omenitatea adevărată asumată de Fiul.",
+      "meaningSha256": "sha256:7f4c1c4ce61c16058ac4a705db99feedbc3f6eb30d5ed907ada055f345ba19f6",
       "candidateCount": 1,
       "candidates": [
         {
@@ -3333,14 +3409,14 @@
       "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
-      "reviewId": "90a58a95c557dd22e274ebccd6c7e7e9669ac7edec7811344e963b05abe0388e",
+      "reviewId": "55ecf76dae024fb60633128d520ef1d00610e7fcd266b13fe4580efebfb082f4",
       "bookId": "ioan",
       "chapter": 1,
       "ref": "Ioan 1:14-18",
       "original": "ἐσκήνωσεν",
       "normalizedLemma": "εσκηνωσεν",
-      "meaning": "a locuit, și-a întins cortul. Cuvânt care trimite spre prezenta lui Dumnezeu în mijlocul poporului.",
-      "meaningSha256": "sha256:e7fddc339ac93821ced48666b085beea7a66732b56604ff703d2575dc240c28b",
+      "meaning": "a locuit, și-a întins cortul. Cuvânt care trimite spre prezența lui Dumnezeu în mijlocul poporului.",
+      "meaningSha256": "sha256:51ff7692e690b37c9f57d4866ce1726ee2dec1518b6525e23398e4145756e013",
       "candidateCount": 1,
       "candidates": [
         {
@@ -3390,14 +3466,14 @@
       "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
-      "reviewId": "4f9fd829c92a77073bdfd8e5885aec79a7f33543039749d514dda453db274e10",
+      "reviewId": "19c815e2a65cf3bcabd949f360f715aa31448e4a527d2a0d6dbdbde490a8c755",
       "bookId": "ioan",
       "chapter": 1,
       "ref": "Ioan 1:14-18",
       "original": "μονογενής",
       "normalizedLemma": "μονογενησ",
-      "meaning": "singurul născut, unicul de acest fel. Arată unicitatea Fiului fata de Tatăl.",
-      "meaningSha256": "sha256:d1208ff13be52ae308c65629efde035a4e87d97f5c81b8af22bfd8e1cfb194dd",
+      "meaning": "unic, singurul de acest fel; în context, unicitatea Fiului față de Tatăl.",
+      "meaningSha256": "sha256:7394ea2ee689f3e6962d55ec5b7d5b8b5ad554779f119f74de1f31417a3a1796",
       "candidateCount": 1,
       "candidates": [
         {
@@ -3444,14 +3520,14 @@
       ]
     },
     {
-      "reviewId": "a1ca5c56729348d593132a6056db25d43fe08c6691f93865c4e51726a9dfeb7b",
+      "reviewId": "cc8b77f7d674aacfecdd37f693ef7f50c0ab6c52be5ddd5cb812edc813c09309",
       "bookId": "ioan",
       "chapter": 1,
       "ref": "Ioan 1:19-34",
       "original": "μαρτυρέω",
       "normalizedLemma": "μαρτυρεω",
-      "meaning": "a marturisi. A spune deschis adevarul despre cine este Hristos.",
-      "meaningSha256": "sha256:9bf59b18a424db15e68866c3a3e7d0539540a3abc3ace6ec4d1ebd0b762b591c",
+      "meaning": "a marturisi. A spune deschis adevărul despre cine este Hristos.",
+      "meaningSha256": "sha256:00ec0cc5f9c1e24dfa67daf20ba8add08f9e0626cb72c7e5c0af74e275edc7a0",
       "candidateCount": 1,
       "candidates": [
         {
@@ -3498,14 +3574,14 @@
       ]
     },
     {
-      "reviewId": "5264c7c9cb821e2c2b1d6da5cb166a12ab4c26e15b039ce7cda0f1328f050391",
+      "reviewId": "ae192cc520d78485dd3dcbe20c3959a0868b10a514cef439a734b587266d3321",
       "bookId": "ioan",
       "chapter": 1,
       "ref": "Ioan 1:35-51",
       "original": "ῥαββί",
       "normalizedLemma": "ραββι",
-      "meaning": "Invatatorule. Titlul cu care ucenicii se apropie de Isus.",
-      "meaningSha256": "sha256:fbb1606dae29b4ac7ef0226b4a0e7d86e2fb2441d38eb4b09578ec831991ab15",
+      "meaning": "Învățătorule. Titlul cu care ucenicii se apropie de Isus.",
+      "meaningSha256": "sha256:cb95ce769923a97c90a0b187aa6bfdd16b2a96dc2e17547af3805355d260f4db",
       "candidateCount": 1,
       "candidates": [
         {
@@ -3525,14 +3601,14 @@
       ]
     },
     {
-      "reviewId": "e08de8145f144fda8109f670599b70033b787d4e150efb1f9fc1f257389a00a8",
+      "reviewId": "df8fd878afda288d9249530288775e695bdb466cf2df90be45e84504417795ea",
       "bookId": "ioan",
       "chapter": 1,
       "ref": "Ioan 1:35-51",
       "original": "Μεσσίας",
       "normalizedLemma": "μεσσιασ",
-      "meaning": "Mesia, Unsul. Cel asteptat în fagaduintele lui Dumnezeu.",
-      "meaningSha256": "sha256:344792ffe1a5e29952eaca7026e589a8d3685b3ef8b9b1c956bf9aece02e1b8d",
+      "meaning": "Mesia, Unsul. Cel așteptat în făgăduințele lui Dumnezeu.",
+      "meaningSha256": "sha256:62f0102389fb98281df529f3ef83769c09eee7d46f299fd89abbfc9cc94cf204",
       "candidateCount": 1,
       "candidates": [
         {
@@ -3552,14 +3628,14 @@
       ]
     },
     {
-      "reviewId": "62f8c3432d846833d861c4ff55e62184880f4a459ba846dfded4742f19494a8a",
+      "reviewId": "8c17a56798684592258a54d40e219addfdf6fb8582fa5adade1da2aa5a22f1a3",
       "bookId": "ioan",
       "chapter": 1,
       "ref": "Ioan 1:35-51",
       "original": "υἱὸς τοῦ ἀνθρώπου",
       "normalizedLemma": "υιοστουανθρωπου",
-      "meaning": "Fiul omului. Nume prin care Domnul Isus vorbește despre sine cu smerenie și slava laolalta.",
-      "meaningSha256": "sha256:0e6a1a695269a10101137293b8df019e8dbd9e4d9d380a2e47261f6787f6b023",
+      "meaning": "Fiul omului; titlu folosit de Isus despre Sine.",
+      "meaningSha256": "sha256:10c46cf4a3e2ebd1e18a6efbb8c90c41875100a23a8cccb428e7313b8a880262",
       "candidateCount": 1,
       "candidates": [
         {
@@ -3724,14 +3800,14 @@
       ]
     },
     {
-      "reviewId": "8d45264c5b70f9715c2e34a6b8c62ce9fd60d91f0cff9f8809524b828895a41f",
+      "reviewId": "a99f544ab925425e8ca9683492224b623b408b0f926b66c2f708624fc0a9c5fe",
       "bookId": "ioan",
       "chapter": 2,
       "ref": "Ioan 2:1-12",
       "original": "ὥρα",
       "normalizedLemma": "ωρα",
-      "meaning": "ceasul. Vremea hotarata a lucrarii și a slavei lui Hristos.",
-      "meaningSha256": "sha256:bb6d2818fedd2278b995bed579a0c71f8bbdfdb163b6ae549dcebb310016736b",
+      "meaning": "ceasul. Vremea hotărâtă a lucrarii și a slavei lui Hristos.",
+      "meaningSha256": "sha256:c61985f64aa0536494a66df4862837f900cebbf48d4b5cd3b94443d6a335083c",
       "candidateCount": 1,
       "candidates": [
         {
@@ -3751,14 +3827,14 @@
       ]
     },
     {
-      "reviewId": "85546929a6abcb410bfbb06c0085a90f19a7a19345fb9d34e99dae9a5f1257a8",
+      "reviewId": "e5ccef6374c2074564a1baa35553aa0c71ad166289a0000dd93d3458a4d64002",
       "bookId": "ioan",
       "chapter": 2,
       "ref": "Ioan 2:1-12",
       "original": "δόξα",
       "normalizedLemma": "δοξα",
-      "meaning": "slava. Frumusetea și greutatea dumnezeiasca aratate în Fiul.",
-      "meaningSha256": "sha256:e86b203fa3c27fd0195a3d86773b7a81b35f1ad0694f86fe0808ac34fd8c794c",
+      "meaning": "slavă, glorie, onoare; în context, slava arătată în Fiul.",
+      "meaningSha256": "sha256:63d7fbc98a260ce34055a9cfd513926505e35c1f678d2acafe82143c78fc09a6",
       "candidateCount": 1,
       "candidates": [
         {
@@ -3778,14 +3854,14 @@
       ]
     },
     {
-      "reviewId": "012afb55d1d03c4b37b0d4b81aedb95bdbe905ed48a39058182a95d15c9b457b",
+      "reviewId": "fc05a7719ffdbe08bd1af55620718c3250c2148938fa4f65af7040326863a655",
       "bookId": "ioan",
       "chapter": 2,
       "ref": "Ioan 2:13-22",
       "original": "ζῆλος",
       "normalizedLemma": "ζηλοσ",
-      "meaning": "ravna. Foc sfant pentru onoarea lui Dumnezeu.",
-      "meaningSha256": "sha256:2d247b2c1e7e3336ccca961d4b7ad3489f570fb953cf10710417354ba804055f",
+      "meaning": "râvnă, zel.",
+      "meaningSha256": "sha256:ec371ddffbeadc5d9e2e15eef97d3da5a742b9d63f89aedeb4192f2cb41cbc4a",
       "candidateCount": 1,
       "candidates": [
         {
@@ -3832,14 +3908,14 @@
       ]
     },
     {
-      "reviewId": "8200387887239ea91ad34348e36b1e10cbfe3a57ae1dc659d5400ca368baa071",
+      "reviewId": "6965574d62716adbcfba29cd03257771a45abd034370f99d17795bf230161e66",
       "bookId": "ioan",
       "chapter": 2,
       "ref": "Ioan 2:23-25",
       "original": "πιστεύω",
       "normalizedLemma": "πιστευω",
-      "meaning": "a crede, a se increde. Același verb arată aici și credința oamenilor, și faptul ca Isus nu Se incredea în ei.",
-      "meaningSha256": "sha256:aab5f2c725ca64f1346607c4a83ee427fd2ae27cce538d65430dfc0c4304cf8f",
+      "meaning": "a crede, a se încrede. Același verb arată aici și credința oamenilor, și faptul ca Isus nu Se încredea în ei.",
+      "meaningSha256": "sha256:815ac9bcf847e745ab68f5264a122024d37e2e4f5f02f2084cebdc7868961a9d",
       "candidateCount": 1,
       "candidates": [
         {
@@ -3859,14 +3935,14 @@
       ]
     },
     {
-      "reviewId": "190005914e77d347c517393e9531e5ce8a66939de95c7d4e2624a825fd939c16",
+      "reviewId": "85cbf464b77737683084655e0934ef3f5e1ca63ec5f1b6a4e7bcb6db7602ec46",
       "bookId": "ioan",
       "chapter": 2,
       "ref": "Ioan 2:23-25",
       "original": "γινώσκω",
       "normalizedLemma": "γινωσκω",
-      "meaning": "a cunoaste. La Ioan, cunoastere reala, nu simpla informatie.",
-      "meaningSha256": "sha256:370037a19c5562ca4898ec4f548953a6d4727f4cd41b56b7175224762bb37f32",
+      "meaning": "a cunoaste. La Ioan, cunoaștere reala, nu simpla informatie.",
+      "meaningSha256": "sha256:7d9e9528defedcaed53a06d65097be40e1396dd66ab9620fec79dd86864f48a3",
       "candidateCount": 1,
       "candidates": [
         {
@@ -3940,14 +4016,14 @@
       ]
     },
     {
-      "reviewId": "a89e7b28cf436712439cfa047fe039a37fa84ae493a5e7d2edf9bb965daa3a51",
+      "reviewId": "8852d4e7ebccb482e660cc95d5a7fa12bbd7097823faa65c56d4f9531288f63f",
       "bookId": "ioan",
       "chapter": 3,
       "ref": "Ioan 3:9-21",
       "original": "ὑψωθῆναι",
       "normalizedLemma": "υψωθηναι",
-      "meaning": "a fi inaltat. La Ioan, cuvântul priveste spre cruce și spre slava de dupa ea.",
-      "meaningSha256": "sha256:0798db880a9c58c7181c519c01bcbb828bf00752c4914debc9b58c116de63afd",
+      "meaning": "a fi înălțat. La Ioan, cuvântul priveste spre cruce și spre slava de dupa ea.",
+      "meaningSha256": "sha256:71a05876d3205377056060b19169926290ee6633d811797c0c1edae38d25a9e1",
       "candidateCount": 1,
       "candidates": [
         {
@@ -3997,14 +4073,14 @@
       "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
-      "reviewId": "282b22b290bd35719fed8017fc935bc7f53c83ac197760be166b7539d7786ab0",
+      "reviewId": "79a6ebbe41f0f2dc46917a715b117ab311aff690b77b0cb5ca663576d8483517",
       "bookId": "ioan",
       "chapter": 3,
       "ref": "Ioan 3:9-21",
       "original": "κρίσις",
       "normalizedLemma": "κρισισ",
-      "meaning": "judecata. Punerea lucrurilor la lumina și aratarea lor asa cum sunt.",
-      "meaningSha256": "sha256:6d524d518dc4fd1fa0f0e8cce78bd519b49ef57a59355f75ad749a915ba5a568",
+      "meaning": "judecată, actul sau hotărârea de judecare.",
+      "meaningSha256": "sha256:5e9e968d77c708a27a316caea626e15ea2a3fe05bc2013e0a3de17fd14e67c44",
       "candidateCount": 1,
       "candidates": [
         {
@@ -4051,14 +4127,14 @@
       ]
     },
     {
-      "reviewId": "d4c0a6d4f3a0fcd3d79d1d03f759b1c87183b8f3ba7604eb4599917b4ee268d5",
+      "reviewId": "b30b4beaaf93a6e3a9b2a17a300991388512845e89f7cd099eafc2adf6dcbe87",
       "bookId": "ioan",
       "chapter": 3,
       "ref": "Ioan 3:22-36",
       "original": "μένει",
       "normalizedLemma": "μενει",
-      "meaning": "rămâne. La finalul capitolului, mania lui Dumnezeu nu vine abia atunci, ci rămâne peste omul care refuza pe Fiul.",
-      "meaningSha256": "sha256:270ed499cf9c187432ef0260a78361485dc0c7ce1035b7f912c1c942a0cac389",
+      "meaning": "rămâne. La finalul capitolului, mânia lui Dumnezeu nu vine abia atunci, ci rămâne peste omul care refuză pe Fiul.",
+      "meaningSha256": "sha256:0c620d0a49bdff166e89f3e94742897005feff38592d74798445afc6102b30cc",
       "candidateCount": 1,
       "candidates": [
         {
@@ -4302,14 +4378,14 @@
       ]
     },
     {
-      "reviewId": "fea0cd992e1b0c8308c6ad516e27dd3912e3e3fff101cacef37057cc166353ad",
+      "reviewId": "83fa3235ce313b76c6bfce2b9c843db1f0ca8650742acb8afb7afced16ab614b",
       "bookId": "ioan",
       "chapter": 4,
       "ref": "Ioan 4:27-42",
       "original": "σωτὴρ τοῦ κόσμου",
       "normalizedLemma": "σωτηρτουκοσμου",
-      "meaning": "Mantuitorul lumii. Mărturisire larga despre intinderea mantuirii aduse de Fiul.",
-      "meaningSha256": "sha256:fc5f3dfa5a33659428c71d7a7946e7e3ea7e0265f37a9dbad8de7c6da6a1c8cc",
+      "meaning": "Mântuitorul lumii. Mărturisire larga despre intinderea mântuirii aduse de Fiul.",
+      "meaningSha256": "sha256:546d469f4d00e1bfca2adca4ae95695e0aa677ceedd076460616241b445021e1",
       "candidateCount": 1,
       "candidates": [
         {
@@ -4399,14 +4475,14 @@
       "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
-      "reviewId": "1f0065a88a0d71ad24cf650e5dd64b2ace5b5b5c579a1420a3ccdf10d43fd705",
+      "reviewId": "2f6949597e64790905730d2614a17555792de7c24bfdf8dbe40cf1084f5f9f21",
       "bookId": "ioan",
       "chapter": 4,
       "ref": "Ioan 4:43-54",
       "original": "πιστεύω",
       "normalizedLemma": "πιστευω",
-      "meaning": "a crede, a se increde. La Ioan, credința adevărată se sprijină pe Fiul și pe cuvântul Lui.",
-      "meaningSha256": "sha256:fe9936d0c68e745dae7a5d6d0789951dd42ff6b7f2f6e823bfc2fcbefe3fe406",
+      "meaning": "a crede, a se încrede. La Ioan, credința adevărată se sprijină pe Fiul și pe cuvântul Lui.",
+      "meaningSha256": "sha256:64994f7ee5a71e61be9f7c0da3d53920969036a38a610718d0624ecbaa6215c4",
       "candidateCount": 1,
       "candidates": [
         {
@@ -4426,14 +4502,14 @@
       ]
     },
     {
-      "reviewId": "99d6be88804965a37fa8fb304ca0a364191292032c62550f92fd601992166d4d",
+      "reviewId": "3f8c1deec1a5705c2b1a5ad59f6dd18667f75e6f7dc9c084809403bc6dba2c30",
       "bookId": "ioan",
       "chapter": 4,
       "ref": "Ioan 4:43-54",
       "original": "ζῇ",
       "normalizedLemma": "ζη",
-      "meaning": "traieste. Cuvânt scurt și puternic prin care Domnul aduce viață și mangaiere.",
-      "meaningSha256": "sha256:76b90c151ac148b329b4428bce13bbfe1ff38a8a2da0190c7bf4572b3b0578c1",
+      "meaning": "traieste. Cuvânt scurt și puternic prin care Domnul aduce viață și mângâiere.",
+      "meaningSha256": "sha256:890ff20d438671bee6a0c02ac3b54b11149ae9cb54473fe163ff28d8b886a6ed",
       "candidateCount": 1,
       "candidates": [
         {
@@ -4499,37 +4575,6 @@
       "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
-      "reviewId": "a11549ba868eff8b40bf08d62f2b63461919b0da0e4dca81ca8d514b8e486955",
-      "bookId": "ioan",
-      "chapter": 5,
-      "ref": "Ioan 5:1-18",
-      "original": "Βηθεσδά",
-      "normalizedLemma": "βηθεσδα",
-      "meaning": "Betesda. Numele a fost legat de ideea milei ori a harului, potrivit cu scena neputintei omenesti.",
-      "meaningSha256": "sha256:b8f7646c81ca34b442bfe565670ff4a2eef989a154369fedfd4810e3ce09926f",
-      "candidateCount": 1,
-      "candidates": [
-        {
-          "sourceId": "stepbible-tflsj",
-          "sourceCommitSha": "b86d26cdb1f51729e73b5b4eb7f7ccadc5dfba39",
-          "sourceBlobSha": "db44789a0b3523ad00ba2c93c6fe78ad3db1b4bb",
-          "sourceLocator": "TFLSJ line 1059",
-          "canonicalLemma": "Βηθεσδά",
-          "strongId": null,
-          "transliteration": null,
-          "morphology": null,
-          "briefGloss": null,
-          "matchKind": "tflsj-exact-lemma-fallback",
-          "lineSha256": "sha256:694793437b0f2c4a9b90a8d961ee3b7066c40240609a59711828a6f760953acb",
-          "rawLine": "G0964\tG0964 =\tG0964\tΒηθζαθά\tBēthesda\tN:N--L\tBethesda\t <b>Βηθεσδά</b>, ἡ, indecl. (deriv. uncertain, see Westc. on <ref='Jhn.5.2'>Jhn.5:2</ref>, and <i>DB</i>, i, 279), <BR /> <b>Bethesda</b>, <b>a pool in Jerusalem</b>: <ref='Jhn.5.2'>Jhn.5:2</ref>, Rec. (Βηθζαθά, WH, Βηθσαϊδά, WH, mg.).†<BR />  (From Abbott-Smith. LSJ has no entry)"
-        }
-      ],
-      "morphgntProblem": "resolved-lemma-not-in-tbesg:Βηθεσδά",
-      "morphgntFile": "64-Jn-morphgnt.txt",
-      "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
-      "fallbackSource": "stepbible-tflsj"
-    },
-    {
       "reviewId": "dca1917e723220882dbc86b635f838e178095fec9b8dc6d47017d13cb9e541d7",
       "bookId": "ioan",
       "chapter": 5,
@@ -4557,29 +4602,151 @@
       ]
     },
     {
-      "reviewId": "647f5f7e29c78e34333c29d130fa1d53115ecc47db089a69647f5e0ca9689629",
+      "reviewId": "82946550c758575b832dee81260af40a92b1a497263d7f22542fbe304282b6ac",
       "bookId": "ioan",
       "chapter": 5,
       "ref": "Ioan 5:19-30",
-      "original": "ζωὴ ἐν ἑαυτῷ",
-      "normalizedLemma": "ζωηενεαυτω",
-      "meaning": "viață în Sine. Viață neîmprumutată, proprie dumnezeirii.",
-      "meaningSha256": "sha256:a2e480241da08c1ff8d83ee0e74720d6f2eac4e068fbec0dad9923bf154930f0",
-      "candidateCount": 0,
-      "candidates": [],
-      "morphgntProblem": "surface-not-found-in-passage:ζωὴ",
+      "original": "ζωὴν ἐν ἑαυτῷ",
+      "normalizedLemma": "ζωηνενεαυτω",
+      "meaning": "viață în Sine; ζωή = viață, ἐν = în, ἑαυτῷ = în Sine/în el însuși.",
+      "meaningSha256": "sha256:ebc2849f15575b73c989d19ca63660dc7adc6cb87fcfa237e7b0acd1b5a0552c",
+      "candidateCount": 1,
+      "candidates": [
+        {
+          "sourceId": "stepbible-tbesg",
+          "sourceCommitSha": "b86d26cdb1f51729e73b5b4eb7f7ccadc5dfba39",
+          "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+          "sourceLocator": "TBESG line 2367 + TBESG line 1863 + TBESG line 1570",
+          "strongId": "G2222 + G1722 + G1438",
+          "canonicalLemma": "ζωή ἐν ἑαυτοῦ",
+          "transliteration": "zōē en heautou",
+          "morphology": "G:N-F | G:PREP | G:F-3",
+          "briefGloss": "life; in/on/among; themself",
+          "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
+          "lineSha256": "sha256:f4e5fe4500affe36883b86bbaad2c2b2eeeb6c96a4ef0a8b4f85b6eb5b166bb2",
+          "rawLine": "G2222\tG2222 =\tG2222\tζωή\tzōē\tG:N-F\tlife\t <b>ζωή</b>, -ῆς, ἡ (ζάω), <BR /> [in LXX chiefly for חַיִּים ;] <BR /><b>life</b> (in Hom., Hdt., = βίος, which see; later, <i>existence, vita quâ vivimus</i>, as distinct from βίος, <i>vita quam vivimus</i>; opposite to θάνατος); <BR />__1. <b>of natural life</b>: <ref='Luk.16.25'>Luk.16:25</ref>, <ref='Act.8.33'>Act.8:33</ref>, <ref='1Co.15.19'>1Co.15:19</ref>, <ref='1Ti.4.8'>1Ti.4:8</ref>, <ref='Heb.7.3'>Heb.7:3</ref>, <ref='Jas.4.14'>Jas.4:14</ref>; πνεῦμα ζωῆς, <ref='Rev.11.11'>Rev.11:11;</ref> ψυχὴ ζωῆς ( <ref='Gen.1.30'>Gen.1:30</ref>), <ref='Rev.16.3'>Rev.16:3</ref>; of the life of one risen from the dead, <ref='Rom.5.10'>Rom.5:10</ref>, <ref='Heb.7.16'>Heb.7:16</ref>. <BR /> __2. <b>Of the life of the kingdom of God, the present life of grace and the life of glory which is to follow </b>(Dalman, <i>Words</i>, 156ff.; Westc, <i>Epp. Jo.</i>, 214ff.; Cremer, 272ff.): <ref='Jhn.6.51, 53'>Jhn.6:51, 53</ref> <ref='Rom.7.10; 8.6, 10'>Rom.7:10 8:6, 10</ref> <ref='Php.2.16'>Php.2:16</ref>, <ref='Col.3.4'>Col.3:4</ref>, <ref='2Pe.1.3'>2Pe.1:3</ref>; αἰώνος (reff. supr.; <i>DCG</i>, i, 538a, ii, 30f.), <ref='Jhn.4.36; 12.50; 17.3'>Jhn.4:36 12:50 17:3</ref>, <ref='1Jn.1.2'>1Jn.1:2</ref>, al.; τ. φῶς τῆς ζ., <ref='Jhn.8.12'>Jhn.8:12;</ref> ὁ Λόγος τ. ζ., <ref='1Jn.1.1'>1Jn.1:1;</ref> ὁ ἄρτος τ. ζ., <ref='Jhn.6.35, 48'>Jo 6:35, 48</ref>; δικαίωσις ζωῆς, <ref='Rom.5.18'>Rom.5:18;</ref> μετάνοια εἰς ζ., <ref='Act.11.18'>Act.11:18;</ref> ἐν αὐτῷ ζ. ἦν,  <ref='Jhn.1.4'>Jhn.1:4;</ref> ζ. ἡ ἐν. Χ. Ἰ., <ref='2Ti.1.1'>2Ti.1:1;</ref> τὰ πρὸς ζωήν, <ref='2Pe.1.3'>2Pe.1:3</ref>, al.; στέφανος τῆς ζ., <ref='Jas.1.12'>Jas.1:12</ref>, <ref='Rev.2.10'>Rev.2:10</ref>; χάρις ζωῆς (genitive expl.), <ref='1Pe.3.7'>1Pe.3:7;</ref> ζ. καὶ εἰρήνη, <ref='Rom.8.6'>Rom.8:6;</ref> ζ. καὶ ἀφθαρσία, <ref='2Ti.1.10'>2Ti.1:10;</ref> ἀνάστασις ζωῆς, <ref='Jhn.5.29'>Jhn.5:29;</ref> βίβλος ζωῆς, <ref='Php.4.3'>Php.4:3</ref>, <ref='Rev.3.5'>Rev.3:5</ref>; ξύλον ζωῆς, <ref='Rev.2.7'>Rev.2:7;</ref> ὕδωρ ζωῆς, <ref='Rev.22.17'>Rev.22:17;</ref> meton., of that which has life: τ. πνεῦμα, <ref='Rom.8.10'>Rom.8:10;</ref> ῥήματα, <ref='Jhn.6.63'>Jhn.6:63;</ref> of one who gives life, <ref='Jhn.11.25; 14.6'>Jhn.11:25 14:6</ref>, <ref='1Jn.1.2'>1Jn.1:2</ref>; ἡ ἐντολή, <ref='Jhn.12.50.'>Jhn.12:50.</ref> <BR /> <re><i>SYN.</i>: see: βίος.</re> (AS)\nG1722\tG1722 =\tG1722\tἐν\ten\tG:PREP\tin/on/among\t <b>ἐν</b>, <BR /> <i>prep</i>, (the most frequently of all in NT), with dative (= Heb. בְּ, Lat. in, with <i>abl.). </i> <BR /> __I. Of place, with dative of thing(s), of person(s), <b>in, within, on, at, by, among</b>: ἐν τ. πόλει, <ref='Luk.7.37'>Luk.7:37;</ref> τ. οφθαλμῷ, <ref='Mat.7.3'>Mat.7:3;</ref> τ. κοιλίᾳ, <ref='Mat.12.40'>Mat.12:40;</ref> τ. ὄρει, <ref='2Pe.1.18'>2Pe.1:18;</ref> τ. θρόνῳ, <ref='Rev.3.21'>Rev.3:21;</ref> τ. δεξιᾷ τ. θεοῦ, <ref='Rom.8.34'>Rom.8:34;</ref> ἐν ἡμῖν <note>Abbott-Smith has ὑμῖν.</note>, <ref='Luk.1.1'>Luk.1:1;</ref> of books, ἐν τ. βιβλίῳ, <ref='Gal.3.10'>Gal.3:10;</ref> τ. νόμῳ, <ref='Mat.12.5'>Mat.12:5</ref>, al.; ἐν τοῖς τ. Πατρός, <b>in my Father's house</b> (RV; cf. M, <i>Pr.</i>, 103), <ref='Luk.2.49'>Luk.2:49;</ref> trop., of the region of thought or feeling, ἐν τ. καρδίᾳ (-αις), <ref='Mat.5.28'>Mat.5:28</ref>, <ref='2Co.4.6'>2Co.4:6</ref>, al.; τ. συνειδήσεσιν, <ref='2Co.5.11'>2Co.5:11;</ref> after verbs of motion, instead of εἰς (constructio praegnans, a usage extended in late Gk. beyond the limits observed in cl.; cf. Bl., §41, 1; M, <i>Th.</i>, 12), ἀποστέλλω . . . ἐν, <ref='Mat.10.16.'>Mat.10:16.</ref> δέδωκεν ἐν τ. χειρί (cf. τιθέναι ἐν χερσί, Hom., <i>Il.</i>, i, 441, al.), <ref='Jhn.3.35'>Jhn.3:35;</ref> id. after verbs of coming and going (not in cl.), εἰσῆλθε, <ref='Luk.9.46'>Luk.9:46;</ref> ἐξῆλθεν, <ref='Luk.7.17.'>Luk.7:17.</ref> <BR /> __II. Of state, condition, form, occupation, etc.: ἐν ζωῇ, <ref='Rom.5.10'>Rom.5:10;</ref> ἐν τ. θανάτῳ, <ref='1Jn.3.14'>1Jn.3:14;</ref> ἐν πειρασμοῖς, <ref='1Pe.1.6'>1Pe.1:6;</ref> ἐν εἰρήνῃ, <ref='Mrk.5.25'>Mrk.5:25;</ref> ἐν δόξῃ, <ref='Php.4.19'>Php.4:19;</ref> ἐν πραΰτητι, <ref='Jas.3.13'>Jas.3:13;</ref> ἐν μυστηρίῳ, <ref='1Co.2.7'>1Co.2:7;</ref> ἐν τ. διδαχῇ, <ref='Mrk.4.2'>Mrk.4:2;</ref> of a part as contained in a whole, ἐν τ. ἀμπέλῳ, <ref='Jhn.15.4'>Jhn.15:4;</ref> ἐν ἑνὶ σώματι, <ref='Rom.12.4'>Rom.12:4;</ref> of accompanying objects or persons (simple dative in cl.), <b>with</b>, ἐν αἵματι, <ref='Heb.9.25'>Heb.9:25;</ref> ἐν δέκα χιλιάσιν, <ref='Luk.14.31'>Luk.14:31</ref> (cf. <ref='Jude.14'>Ju 14</ref>, <ref='Act.7.14'>Act.7:14</ref>); similarly (cl.), of clothing, armour, arms, ἐν στολαῖς, <ref='Mrk.12.38'>Mrk.12:38;</ref> ἐν ἐσθῆτι λαμπρᾷ, <ref='Jas.2.2'>Jas.2:2;</ref> ἐν μαξαίρῃ, <ref='Luk.22.49'>Luk.22:49;</ref> ἐν ῥάβδῳ, <ref='1Co.4.21'>1Co.4:21</ref> (cf. ἐν τόξοις, Xen., <i>Mem.</i>, 3, 9, 2); of manner (cl.), ἐν τάχει (= ταχέως), <ref='Luk.18.8'>Luk.18:8</ref> (cf. Bl., §41, 1); of spiritual influence, ἐν πνεύματι, <ref='Rom.8.9'>Rom.8:9;</ref> ἐν π. ἀκαθάρτῳ, <ref='Mrk.1.23'>Mrk.1:23;</ref> of the mystical relation of the Christian life and the believer himself, <b>to God and Christ </b>(cf. <i>ICC</i>, <i>Ro.</i>, 160f.;  Mayor on <ref='Jude.1'>Ju 1</ref>; M, <i>Pr.</i>, 103): ἐν Χριστῷ, <ref='Rom.3.24; 6.11'>Rom.3:24, 6:11</ref>, <ref='1Co.3.1; 4.10'>1Co.3:1, 4:10</ref>, <ref='2Co.12.2'>2Co.12:2</ref>, <ref='Gal.2.17'>Gal.2:17</ref>, <ref='Eph.6.21'>Eph.6:21</ref>, <ref='Col.4.7'>Col.4:7</ref>, <ref='1Th.4.16'>1Th.4:16</ref>, al. <BR /> __III. Of the agent, instrument or means (an extension of cl. ἐν of instr.—see LS, see word Ill—corresponding to similar use of Heb. בְּ), <b>by, with</b>: ἐν ὑμῖν κρίνεται ὁ κόσμος (= cl. παρά, C. dative), <ref='1Co.6.2'>1Co.6:2;</ref> ἐν τ. ἄρχοντι τ. δαιμονίων, <ref='Mat.9.34'>Mat.9:34;</ref> ἐν αἵματι, <ref='Heb.9.22'>Heb.9:22;</ref> ἐν ὕδατι, <ref='Mat.3.11'>Mat.3:11</ref>, al.; ἐν μαχαίρᾳ ἀποκτενεῖ (cf. the absol. ἐν μ., ἐν ῥάβδῳ, supr., II, which some would classify here), <ref='Rev.13.10'>Rev.13:10</ref> (<ref='Rev.6.8'>cf. 6:8</ref>). Allied to this usage and distinctly Semitic are the following: ἠγόρασας . . . ἐν τ. αἵματι σου (cf. <i>BDB</i>, see word בְּ, III, 3), <ref='Rev.5.9'>Rev.5:9;</ref> ὁμολογεῖν ἐν (= Aram. אודי בּ; cf. McNeile on Mt, I.with; M, <i>Pr.</i>, 104), <ref='Mat.10.32'>Mat.10:32</ref>, <ref='Luk.12.8'>Luk.12:8</ref>; ὀμνύναι ἐν (= cl. accusative, so <ref='Jas.5.12'>Jas.5:12</ref>), <ref='Mat.5.34'>Mat.5:34</ref>, al.; also <b>at the rate of, amounting to</b>, <ref='Mrk.4.8'>Mrk.4:8</ref> (WH; vv. ll., εἰς, ἒν), <ref='Act.7.14'>Act.7:14</ref> (LXX). <BR /> __IV. Of time, <BR />__(a) <b>in</b> or <b>during</b> a period: ἐν τ. ἡμέρᾳ (νυκτί), <ref='Jhn.11.9'>Jhn.11:9</ref>, al.; ἐν σαββάτῳ, <ref='Mat.12.2'>Mat.12:2</ref>, al.; ἐν τῷ μεταξύ, <b>meanwhile</b>, <ref='Jhn.4.31'>Jhn.4:31;</ref> <BR /> __(b) <b>at the time of an event</b>: ἐν τ. παρουσίᾳ, <ref='1Co.15.23'>1Co.15:23;</ref> ἐν τ. ἀναστάσει, <ref='Mat.22.28'>Mat.22:28;</ref> <BR /> __(with) with art. inf., <BR />__(α) present (so sometimes in cl., but not as in NT = ἕως; V. M, <i>Pr.</i>, 215), <b>while</b>: <ref='Mat.13.4'>Mat.13:4</ref>, <ref='Mrk.6.48'>Mrk.6:48</ref>, <ref='Gal.4.18'>Gal.4:18</ref>, al.; <BR /> __(β) aor., <b>when, after</b>: <ref='Luk.9.36'>Luk.9:36</ref>, al.; <BR /> __(d) <b>within</b> (cl.): <ref='Mat.27.40'>Mat.27:40</ref>, <BR /> __V. <b>In composition</b>: (1) meaning: (a) with adjectives, it signifies usually the possession of a quality, as ἐνάλιος, ἐν́δοξος; (b) with verbs, continuance in (before ἐν) or motion into (before εἰς), as ἐμμένω, ἐμβαίνω. (ii) Assimilation: ἐν becomes ἐμ- before β, μ, π, φ, ψ; ἐγ- before γ, κ, ξ, χ; ἐλ- before λ. But in the older MSS of NT, followed by modern editions, assimilation is sometimes neglected, as in ἐνγράφω, ἐγκαινίζω, etc.<BR /> (AS)\nG1438\tG1438 =\tG1438\tἑαυτοῦ\theautou\tG:F-3\tthemself\t <b>ἑαυτοῦ</b>, -ῆς, -οῦ, dative -ῷ, etc., accusative -όν, etc., pi. -ῶν, etc. (Att. contr. αὑτοῦ, etc); <BR /> <i>reflex pron.</i>; <BR /> __1. prop, of 3rd person (Lat. sui, sibi, se), <b>of himself, herself, itself</b>, etc.: <ref='Mat.27.42'>Mat.27:42</ref>, <ref='Mrk.15.31'>Mrk.15:31</ref>, <ref='Luk.23.35'>Luk.23:35</ref>, al.; added to a middle verb, διεμερίσαντο ἑαυτοῖς, <ref='Jhn.19.24'>Jhn.19:24;</ref> to an active verb, <ref='Act.14.14'>Act.14:14</ref> (M, <i>Pr.</i>, 157); ἀφ᾽ ἑαυτοῦ, <ref='Luk.12.57; 21.30'>Luk.12:57 21:30</ref>, <ref='Jhn.5.19'>Jhn.5:19</ref>, al. (see: ἀπό); δι᾽ ἑαυτοῦ, <ref='Rom.14.14'>Rom.14:14;</ref> ἐν ἑ., <ref='Mat.3.9'>Mat.3:9</ref>, <ref='Mrk.5.30'>Mrk.5:30</ref>, al.; εἰς ἑ., <ref='Luk.15.17'>Luk.15:17;</ref> καθ᾽ ἑαυτόν, <ref='Act.28.16'>Act.28:16</ref>, <ref='Jas.2.17'>Jas.2:17</ref>; παρ᾽ ἑαυτῷ, <b>at his own house</b>, <ref='1Co.16.2'>1Co.16:2;</ref> πρὸς ἑ., <b>with, to himself</b>, <ref='Luk.18.11'>Luk.18:11;</ref> as poss. pron. (with emphasis weakened; see M, <i>Pr.</i>, 87f.), τ. ἑαυτῶν νεκρούς, <ref='Luk.9.60.'>Luk.9:60.</ref> <BR /> __2. As reflexive 1st and 2nd of person(s) (so also frequently in cl., chiefly poetry), <ref='Mat.23.31'>Mat.23:31</ref>, <ref='Mrk.9.50'>Mrk.9:50</ref>, <ref='Rom.8.23'>Rom.8:23</ref>, <ref='1Th.2.8'>1Th.2:8</ref>, al. <BR /> __3. In pl., for reciprocal pron., ἀλλήλων, -οις, -ους, <b>of one another</b>, etc.: <ref='Mat.21.38'>Mat.21:38</ref>, <ref='Mrk.16.3'>Mrk.16:3</ref>, <ref='Eph.5.19'>Eph.5:19</ref>, al. <BR /> (AS)",
+          "morphgntEvidence": {
+            "sourceId": "morphgnt-sblgnt-6.12",
+            "repository": "morphgnt/sblgnt",
+            "ref": "6.12",
+            "file": "64-Jn-morphgnt.txt",
+            "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+            "license": "CC-BY-SA",
+            "tokens": [
+              {
+                "inputToken": "ζωὴν",
+                "resolution": "exact-diacritic-preserving-surface",
+                "lemma": "ζωή",
+                "occurrences": [
+                  {
+                    "bcv": "040524",
+                    "word": "ζωὴν",
+                    "normalizedWord": "ζωήν",
+                    "lemma": "ζωή",
+                    "pos": "N-",
+                    "parsing": "----ASF-"
+                  },
+                  {
+                    "bcv": "040526",
+                    "word": "ζωὴν",
+                    "normalizedWord": "ζωήν",
+                    "lemma": "ζωή",
+                    "pos": "N-",
+                    "parsing": "----ASF-"
+                  },
+                  {
+                    "bcv": "040526",
+                    "word": "ζωὴν",
+                    "normalizedWord": "ζωήν",
+                    "lemma": "ζωή",
+                    "pos": "N-",
+                    "parsing": "----ASF-"
+                  }
+                ]
+              },
+              {
+                "inputToken": "ἐν",
+                "resolution": "exact-diacritic-preserving-surface",
+                "lemma": "ἐν",
+                "occurrences": [
+                  {
+                    "bcv": "040526",
+                    "word": "ἐν",
+                    "normalizedWord": "ἐν",
+                    "lemma": "ἐν",
+                    "pos": "P-",
+                    "parsing": "--------"
+                  },
+                  {
+                    "bcv": "040526",
+                    "word": "ἐν",
+                    "normalizedWord": "ἐν",
+                    "lemma": "ἐν",
+                    "pos": "P-",
+                    "parsing": "--------"
+                  },
+                  {
+                    "bcv": "040528",
+                    "word": "ἐν",
+                    "normalizedWord": "ἐν",
+                    "lemma": "ἐν",
+                    "pos": "P-",
+                    "parsing": "--------"
+                  },
+                  {
+                    "bcv": "040528",
+                    "word": "ἐν",
+                    "normalizedWord": "ἐν",
+                    "lemma": "ἐν",
+                    "pos": "P-",
+                    "parsing": "--------"
+                  }
+                ]
+              },
+              {
+                "inputToken": "ἑαυτῷ",
+                "resolution": "exact-diacritic-preserving-surface",
+                "lemma": "ἑαυτοῦ",
+                "occurrences": [
+                  {
+                    "bcv": "040526",
+                    "word": "ἑαυτῷ",
+                    "normalizedWord": "ἑαυτῷ",
+                    "lemma": "ἑαυτοῦ",
+                    "pos": "RP",
+                    "parsing": "----DSM-"
+                  },
+                  {
+                    "bcv": "040526",
+                    "word": "ἑαυτῷ",
+                    "normalizedWord": "ἑαυτῷ",
+                    "lemma": "ἑαυτοῦ",
+                    "pos": "RP",
+                    "parsing": "----DSM-"
+                  }
+                ]
+              }
+            ]
+          },
+          "tbesgLineNumbers": [
+            1570,
+            1863,
+            2367
+          ]
+        }
+      ],
       "morphgntFile": "64-Jn-morphgnt.txt",
       "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
-      "reviewId": "dd22334513562d58e6e73f2391709ff96c12a3b48a67fb6cdbe611132ce65cfd",
+      "reviewId": "7746c2bdb1efe61d87cda5707895b22e663cd600af37ad0b3bcd943eb86375e2",
       "bookId": "ioan",
       "chapter": 5,
       "ref": "Ioan 5:19-30",
       "original": "κρίσις",
       "normalizedLemma": "κρισισ",
-      "meaning": "judecata. Autoritatea de a pune toate lucrurile la lumina și de a da hotararea dreapta.",
-      "meaningSha256": "sha256:cf7f5aa741182ea7f9c60bb0efbaca095a0f65347ef11d34cec92c65545f3e89",
+      "meaning": "judecată, actul sau hotărârea de judecare.",
+      "meaningSha256": "sha256:5e9e968d77c708a27a316caea626e15ea2a3fe05bc2013e0a3de17fd14e67c44",
       "candidateCount": 1,
       "candidates": [
         {
@@ -4599,14 +4766,14 @@
       ]
     },
     {
-      "reviewId": "e35150c04ed36dbeb225a554a1f4b432c2d0cba8a4ede2c16c16a1471c6161f9",
+      "reviewId": "a586f1a9829f64e4351a7f6dd0602ae55dbb20abf3471225e52bb4fab0b71093",
       "bookId": "ioan",
       "chapter": 5,
       "ref": "Ioan 5:19-30",
       "original": "τιμῶσι",
       "normalizedLemma": "τιμωσι",
-      "meaning": "sa cinsteasca. Respect, onoare și inchinare cuvenite Fiului.",
-      "meaningSha256": "sha256:31e7e5c93b6631a6cee70ec1cb400fcfe2f5900d197647e4a979819ff7a5c08e",
+      "meaning": "să cinstească, să onoreze; în context, cinstirea Fiului.",
+      "meaningSha256": "sha256:595bc617607895f20274a8e369fa94c7b3c9267a332c878007235868efc08ba0",
       "candidateCount": 1,
       "candidates": [
         {
@@ -4745,14 +4912,14 @@
       ]
     },
     {
-      "reviewId": "eba657b0c2c7c30a0dff03634df9ec17c9f33855fcd747c344ebf008905fd346",
+      "reviewId": "828d53dcf60484e2b7c7ac90ea924aabd1ba312b013854847438ae8086ae7f67",
       "bookId": "ioan",
       "chapter": 6,
       "ref": "Ioan 6:1-21",
       "original": "ἐγώ εἰμι",
       "normalizedLemma": "εγωειμι",
-      "meaning": "Eu sunt. Formula grea de prezenta și autoritate rostita de Domnul.",
-      "meaningSha256": "sha256:2a50dfe54ef076249ecdb666027ba2a6d7dea1888b175f5f7e0cf94e93df8af6",
+      "meaning": "Eu sunt. Formula grea de prezența și autoritate rostita de Domnul.",
+      "meaningSha256": "sha256:9a5cecfbed2290e9537db092d49aea9ae0bb569f2f3414f9a3973e931fc7db33",
       "candidateCount": 1,
       "candidates": [
         {
@@ -4818,14 +4985,14 @@
       "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
-      "reviewId": "44eb3846b3ef6c87398f19ecdfbeae08bfd1b0551bcb7d1d40947c0cc9ec5f32",
+      "reviewId": "c6353469398bb74b5496f975191da93ba18807d02a98b50b9ad2a4df79caf146",
       "bookId": "ioan",
       "chapter": 6,
       "ref": "Ioan 6:22-59",
       "original": "ἄρτος τῆς ζωῆς",
       "normalizedLemma": "αρτοστησζωησ",
-      "meaning": "Painea vieții. Hristos ca hrana adevărată și de neocolit a sufletului.",
-      "meaningSha256": "sha256:768357a0df643ff07bfcdc3ecd0787bf9a9d6510d40b1db1178bc55e6a1962a4",
+      "meaning": "Pâinea vieții. Hristos ca hrana adevărată și de neocolit a sufletului.",
+      "meaningSha256": "sha256:8c3e74e5f0084d9fb06b0ddc4343799597c43fd89982cf64ab01f16d3783f0ae",
       "candidateCount": 1,
       "candidates": [
         {
@@ -5038,14 +5205,14 @@
       ]
     },
     {
-      "reviewId": "887283aade34723a6b7b3868880d65ff2c3c54fa1f96fe35f00f09344ea7c97d",
+      "reviewId": "e72b99f50539e2adcaf18020cf8c38debb0104cf57b7835230da608ba095f2fd",
       "bookId": "ioan",
       "chapter": 6,
       "ref": "Ioan 6:22-59",
       "original": "μένω",
       "normalizedLemma": "μενω",
-      "meaning": "a rămâne. Legătura vie și statornica dintre credincios și Hristos.",
-      "meaningSha256": "sha256:1857a3cf6a7d79e48b2ce4813968dab4d1989123b4311a9d05dffe60d31ed477",
+      "meaning": "a rămâne. Legătura vie și statornică dintre credincios și Hristos.",
+      "meaningSha256": "sha256:83e2ef74b2025c7c93818e15f9d5bd596a4e4b9d2f775376f62df2e4ac75c825",
       "candidateCount": 1,
       "candidates": [
         {
@@ -5065,14 +5232,14 @@
       ]
     },
     {
-      "reviewId": "4bdd04a34278e1b7119772230f47914d79cd2888bb7388aa4aac27b53d41afc7",
+      "reviewId": "b23597dad359d8c7aebdac8b20825879602c5a2dda3d3284ae0f5d735e3e8440",
       "bookId": "ioan",
       "chapter": 6,
       "ref": "Ioan 6:60-71",
       "original": "ῥήματα ζωῆς αἰωνίου",
       "normalizedLemma": "ρηματαζωησαιωνιου",
-      "meaning": "cuvintele vieții vesnice. Vorbirea lui Hristos ca izvor de viață.",
-      "meaningSha256": "sha256:93694bcfb5fd33561aca6379049985a7641ce1fb891f16f0a021abb663fc3579",
+      "meaning": "cuvintele vieții veșnice. Vorbirea lui Hristos ca izvor de viață.",
+      "meaningSha256": "sha256:8f3df03c1475ae468727175d1324c324b3c27c51856efbfb2193ef358d727ea6",
       "candidateCount": 1,
       "candidates": [
         {
@@ -5162,14 +5329,14 @@
       "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
-      "reviewId": "a6037ed1638c90f1c8ce3f02c70de0a02ea22159d2e0a592c02b1fc1d0b9f36b",
+      "reviewId": "fbcf70e4de3c69ecc6bbe5ba555fb7f5532f545499eecb12f495c44e51bceaef",
       "bookId": "ioan",
       "chapter": 6,
       "ref": "Ioan 6:60-71",
       "original": "σκανδαλίζω",
       "normalizedLemma": "σκανδαλιζω",
-      "meaning": "a poticni, a scandaliza. Cuvântul adevarului loveste în asteptarile firii.",
-      "meaningSha256": "sha256:c204219802128c4abca57e3c1ff9833c3e7170c4078d55c69926dc76284b4a19",
+      "meaning": "a poticni, a scandaliza. Cuvântul adevărului loveste în așteptările firii.",
+      "meaningSha256": "sha256:07ad954847ee1fb09a1bee81f89d86292c312c077577e88ba4f18ee602a73a3e",
       "candidateCount": 1,
       "candidates": [
         {
@@ -5189,14 +5356,14 @@
       ]
     },
     {
-      "reviewId": "edfcd3dfcced8bf1796062642f4efba117b3f8d8bec2d42610a62b125436f64c",
+      "reviewId": "45603208b59bbd0b824dc082cff55aa5ff5bc28b723a59dd5192deaec095e3a1",
       "bookId": "ioan",
       "chapter": 7,
       "ref": "Ioan 7:1-24",
       "original": "καιρός",
       "normalizedLemma": "καιροσ",
-      "meaning": "vreme, ceas potrivit. Timp hotarat în randuiala lui Dumnezeu.",
-      "meaningSha256": "sha256:5488fc90c24004466a97376ee8223f907b442d0f56f5ba591d41dd2ce7b1238a",
+      "meaning": "vreme, ceas potrivit. Timp hotarat în rânduiala lui Dumnezeu.",
+      "meaningSha256": "sha256:f28c0f7069e9c1fc3fd88a5beb31b3096e0f7f6ea61556d05b6d938bb8d9bee3",
       "candidateCount": 1,
       "candidates": [
         {
@@ -5243,14 +5410,14 @@
       ]
     },
     {
-      "reviewId": "d353a04a697008e90e459dfb5296a2515b456381b628052a37af6af6da443620",
+      "reviewId": "fedeb3e0a38baab8ea49b97df3d53601e77c08caeaf7489f272d3f57360915cf",
       "bookId": "ioan",
       "chapter": 7,
       "ref": "Ioan 7:25-39",
       "original": "διψάω",
       "normalizedLemma": "διψαω",
-      "meaning": "a înseta. Foamea adanca a omului după viața lui Dumnezeu.",
-      "meaningSha256": "sha256:225bed7548508f4bfb2bceef204c4bcadd50c18951c4a0a932473d5d8427e9ff",
+      "meaning": "a înseta. Foamea adâncă a omului după viața lui Dumnezeu.",
+      "meaningSha256": "sha256:a51b6957ff10b73a7fa29ed03780b2e089dd8ec82bdf17712ddac2e4e1281b05",
       "candidateCount": 1,
       "candidates": [
         {
@@ -5359,14 +5526,14 @@
       "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
-      "reviewId": "200af621be7f5e9b5d03fbb21c0fd19200713e372791015a18dafa2204c828db",
+      "reviewId": "d2dad7ecc89c3b36df3923daf38c109403ef6aa6ceca51d37c8ed5e251940537",
       "bookId": "ioan",
       "chapter": 7,
       "ref": "Ioan 7:25-39",
       "original": "ἐδοξάσθη",
       "normalizedLemma": "εδοξασθη",
-      "meaning": "a fost proslavit. La Ioan, slava Fiului trece prin cruce, înviere și inaltare.",
-      "meaningSha256": "sha256:ce8775eab595dec75239b0aad4485f9d8567b43cdeda76db9b2bc378fa9c8108",
+      "meaning": "a fost proslăvit. La Ioan, slava Fiului trece prin cruce, înviere și înălțare.",
+      "meaningSha256": "sha256:772f89b042993fc2007eb6f2f273496961c791e3757b6d39067b6f915db1ddb5",
       "candidateCount": 1,
       "candidates": [
         {
@@ -5443,14 +5610,14 @@
       ]
     },
     {
-      "reviewId": "63f1e33c4abc7f8217bd40d8cb5f66024d41d597b7f82bf1737da83125b73bcf",
+      "reviewId": "a15ce67708d74e88c0418196cb6afaa75bf9b42b1894d34e0fe096cead163f07",
       "bookId": "ioan",
       "chapter": 7,
       "ref": "Ioan 7:40-53",
       "original": "πλανάω",
       "normalizedLemma": "πλαναω",
-      "meaning": "a duce în ratacire. Acuzatia adusa Domnului de cei impotrivitori.",
-      "meaningSha256": "sha256:6ef150d46909235f0808ced5af114ae175e0caabbaf9db5fabb2385de0c8da5f",
+      "meaning": "a duce în rătăcire. Acuzatia adusa Domnului de cei împotrivitori.",
+      "meaningSha256": "sha256:96b5b7b694bca9518c1dc3d866421518798e9d21a1b3379a4a5c148e33392be2",
       "candidateCount": 1,
       "candidates": [
         {
@@ -5675,14 +5842,14 @@
       ]
     },
     {
-      "reviewId": "d7b35eb9b262c225bcfcbfbb22b5352a8c3afc46ffbb9d04ac8c216b02f47f90",
+      "reviewId": "8dc6fe8dde306d1e6cf2ec68bd49d7047feca2a2c16b2acacca8102e417fd557",
       "bookId": "ioan",
       "chapter": 8,
       "ref": "Ioan 8:48-59",
       "original": "ἐγώ εἰμι",
       "normalizedLemma": "εγωειμι",
-      "meaning": "Eu sunt. Formula de auto-descoperire cu greutate dumnezeiasca.",
-      "meaningSha256": "sha256:ba6116ed1b44b3989c27c7f5cc2aa6d54baf3ebfbafe1d4f8b9db9f779c0fd04",
+      "meaning": "Eu sunt. Formula de auto-descoperire cu greutate dumnezeiască.",
+      "meaningSha256": "sha256:ca989cc826b81a4758de36116c93c74d4dcacab6821a91ddd29090c6f0b43437",
       "candidateCount": 1,
       "candidates": [
         {
@@ -5928,14 +6095,14 @@
       "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
-      "reviewId": "ba67384049462bc8d4033265027282714828c98643278c255a316f2afa245eac",
+      "reviewId": "4e85be8ea8871f063669782f68324e495d6e07a4f8fa453006892b68a2b09314",
       "bookId": "ioan",
       "chapter": 9,
       "ref": "Ioan 9:1-12",
       "original": "Σιλωάμ",
       "normalizedLemma": "σιλωαμ",
-      "meaning": "Siloam, talmacit Trimis. Nume care se potriveste cu Cel ce trimite și cu Cel trimis.",
-      "meaningSha256": "sha256:e5bb09ca0b90bf4bde7bdec0991ce170c1453f935f952d627ac6027f085a35a6",
+      "meaning": "Siloam, tălmăcit Trimis. Nume care se potriveste cu Cel ce trimite și cu Cel trimis.",
+      "meaningSha256": "sha256:47d34b56b211a4417d9a81a321876ff9c8c5e3b6147ac999e9be23edf7402ff3",
       "candidateCount": 1,
       "candidates": [
         {
@@ -5955,14 +6122,14 @@
       ]
     },
     {
-      "reviewId": "33b9d5a27edbd438d1207aacda669ee9e76139d304cc4f4240f33090bd4fec38",
+      "reviewId": "87ba85973735e71e217d1c0531e873c69d052ce9101ff1778f766f442a292fa5",
       "bookId": "ioan",
       "chapter": 9,
       "ref": "Ioan 9:13-34",
       "original": "σημεῖα",
       "normalizedLemma": "σημεια",
-      "meaning": "semne. Lucrari care arată prezenta și autoritatea lui Dumnezeu în Hristos.",
-      "meaningSha256": "sha256:6f6cf4c125c503a644988cfb624531ad8be0a3f6e221c5690c30c86ffc11e850",
+      "meaning": "semne. Lucrări care arată prezența și autoritatea lui Dumnezeu în Hristos.",
+      "meaningSha256": "sha256:9437d7018c89babfac73b8d4f0c20e20cb10da3b30eaef7f7add0a282971ec39",
       "candidateCount": 1,
       "candidates": [
         {
@@ -6120,14 +6287,14 @@
       ]
     },
     {
-      "reviewId": "d0acd3384c73a3db67f5682b5ddf943e0bae9645ee52987487c18de90fafa3a1",
+      "reviewId": "6bb39df24b7be72e98a0499dab3d7efd38ab979555d30baf592c2d32361ce48b",
       "bookId": "ioan",
       "chapter": 10,
       "ref": "Ioan 10:1-18",
       "original": "ποιμὴν ὁ καλός",
       "normalizedLemma": "ποιμηνοκαλοσ",
-      "meaning": "Pastorul cel bun. Pastor frumos, adevărat, vrednic și plin de jertfire.",
-      "meaningSha256": "sha256:eeaf30080b9f28740c048eedf813e7f199367105df20c2cee03c2129172e432e",
+      "meaning": "Păstorul cel bun; ποιμήν = păstor, καλός = bun, frumos sau nobil.",
+      "meaningSha256": "sha256:10b307a9218bfc5514d9b468ad74568d614448f1f93ebd5eddd718814300d428",
       "candidateCount": 1,
       "candidates": [
         {
@@ -6362,14 +6529,14 @@
       "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
-      "reviewId": "b8a5d292d974f989951520b9d58a615a0798415bdb9af513df291e4210777150",
+      "reviewId": "a818dbc09e31bdafc9dfed92b0453addaa42241441668a207237cc0cc513bea4",
       "bookId": "ioan",
       "chapter": 10,
       "ref": "Ioan 10:1-18",
       "original": "περισσόν",
       "normalizedLemma": "περισσον",
-      "meaning": "din belșug. viața dată de Hristos nu este saraca, ci plina.",
-      "meaningSha256": "sha256:44f050d376713d2b52c7e054c961d4c040182a873f91d986796c8e61cda9b72d",
+      "meaning": "din belșug, din abundență, peste măsură.",
+      "meaningSha256": "sha256:dee31e495c4fa888b22eb5adf4f814bfd8d36a51bc9fe6a9191a98fd1f4c0fd7",
       "candidateCount": 1,
       "candidates": [
         {
@@ -6419,14 +6586,14 @@
       "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
-      "reviewId": "b4930a975bef1eac78ace3c37babbee76ca765b26aba301255be275169ac42e5",
+      "reviewId": "d8c4193ca48608bbfd7ab68e122e767c567c2ee193cbe2f9c74e5c6b73348fc6",
       "bookId": "ioan",
       "chapter": 10,
       "ref": "Ioan 10:19-30",
       "original": "ἁρπάζω",
       "normalizedLemma": "αρπαζω",
-      "meaning": "a smulge, a rapune prin forta. Nimeni nu poate smulge oile din mana Lui.",
-      "meaningSha256": "sha256:2afb95f20b91284b3bef0b61f4567ed9bdeaf2b2bdafcd9eb0efe5cf0d1497ba",
+      "meaning": "a smulge, a răpune prin forta. Nimeni nu poate smulge oile din mâna Lui.",
+      "meaningSha256": "sha256:9be4bcbf4a77f5821e68b65f2db15815b32ccc1e944323a57da54b1a153119b9",
       "candidateCount": 1,
       "candidates": [
         {
@@ -6446,29 +6613,77 @@
       ]
     },
     {
-      "reviewId": "4b9729b882b3ba7aaf3914de383d7b541d5301a9c82a5a2e196d612d40adda60",
+      "reviewId": "4a202680b915971bb91e294ad7f94c48be743e5a4465517e4b7302bad3a7ae55",
       "bookId": "ioan",
       "chapter": 10,
       "ref": "Ioan 10:19-30",
       "original": "ζωὴ αἰώνιος",
       "normalizedLemma": "ζωηαιωνιοσ",
-      "meaning": "viață veșnică. Viață dată acum și purtata pana la capat de Hristos.",
-      "meaningSha256": "sha256:be7963ed834ee9cb49aa343376731fee6ac620c5ef753479135975da06f9169f",
-      "candidateCount": 0,
-      "candidates": [],
-      "morphgntProblem": "surface-not-found-in-passage:ζωὴ",
+      "meaning": "viață veșnică. Viață dată acum și purtata până la capăt de Hristos.",
+      "meaningSha256": "sha256:bb2a6af4d3438bb016d85fc26d5fcb072f5b6aed20eabb2b839c9b2a1aa8ae12",
+      "candidateCount": 1,
+      "candidates": [
+        {
+          "sourceId": "stepbible-tbesg",
+          "sourceCommitSha": "b86d26cdb1f51729e73b5b4eb7f7ccadc5dfba39",
+          "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+          "sourceLocator": "TBESG lines 265,2367",
+          "strongId": "G2222 + G0166",
+          "canonicalLemma": "ζωή αἰώνιος",
+          "transliteration": "zōē aiōnios",
+          "morphology": "G:N-F | G:A",
+          "briefGloss": "life; eternal",
+          "matchKind": "reviewed-accent-variant-lemma+unique-passage+unique-tbesg",
+          "lineSha256": "sha256:b4052fd882b8d7fcf5928644032275deabaea6951707b7c5c70e8e98dbd56f69",
+          "rawLine": "G2222\tG2222 =\tG2222\tζωή\tzōē\tG:N-F\tlife\t <b>ζωή</b>, -ῆς, ἡ (ζάω), <BR /> [in LXX chiefly for חַיִּים ;] <BR /><b>life</b> (in Hom., Hdt., = βίος, which see; later, <i>existence, vita quâ vivimus</i>, as distinct from βίος, <i>vita quam vivimus</i>; opposite to θάνατος); <BR />__1. <b>of natural life</b>: <ref='Luk.16.25'>Luk.16:25</ref>, <ref='Act.8.33'>Act.8:33</ref>, <ref='1Co.15.19'>1Co.15:19</ref>, <ref='1Ti.4.8'>1Ti.4:8</ref>, <ref='Heb.7.3'>Heb.7:3</ref>, <ref='Jas.4.14'>Jas.4:14</ref>; πνεῦμα ζωῆς, <ref='Rev.11.11'>Rev.11:11;</ref> ψυχὴ ζωῆς ( <ref='Gen.1.30'>Gen.1:30</ref>), <ref='Rev.16.3'>Rev.16:3</ref>; of the life of one risen from the dead, <ref='Rom.5.10'>Rom.5:10</ref>, <ref='Heb.7.16'>Heb.7:16</ref>. <BR /> __2. <b>Of the life of the kingdom of God, the present life of grace and the life of glory which is to follow </b>(Dalman, <i>Words</i>, 156ff.; Westc, <i>Epp. Jo.</i>, 214ff.; Cremer, 272ff.): <ref='Jhn.6.51, 53'>Jhn.6:51, 53</ref> <ref='Rom.7.10; 8.6, 10'>Rom.7:10 8:6, 10</ref> <ref='Php.2.16'>Php.2:16</ref>, <ref='Col.3.4'>Col.3:4</ref>, <ref='2Pe.1.3'>2Pe.1:3</ref>; αἰώνος (reff. supr.; <i>DCG</i>, i, 538a, ii, 30f.), <ref='Jhn.4.36; 12.50; 17.3'>Jhn.4:36 12:50 17:3</ref>, <ref='1Jn.1.2'>1Jn.1:2</ref>, al.; τ. φῶς τῆς ζ., <ref='Jhn.8.12'>Jhn.8:12;</ref> ὁ Λόγος τ. ζ., <ref='1Jn.1.1'>1Jn.1:1;</ref> ὁ ἄρτος τ. ζ., <ref='Jhn.6.35, 48'>Jo 6:35, 48</ref>; δικαίωσις ζωῆς, <ref='Rom.5.18'>Rom.5:18;</ref> μετάνοια εἰς ζ., <ref='Act.11.18'>Act.11:18;</ref> ἐν αὐτῷ ζ. ἦν,  <ref='Jhn.1.4'>Jhn.1:4;</ref> ζ. ἡ ἐν. Χ. Ἰ., <ref='2Ti.1.1'>2Ti.1:1;</ref> τὰ πρὸς ζωήν, <ref='2Pe.1.3'>2Pe.1:3</ref>, al.; στέφανος τῆς ζ., <ref='Jas.1.12'>Jas.1:12</ref>, <ref='Rev.2.10'>Rev.2:10</ref>; χάρις ζωῆς (genitive expl.), <ref='1Pe.3.7'>1Pe.3:7;</ref> ζ. καὶ εἰρήνη, <ref='Rom.8.6'>Rom.8:6;</ref> ζ. καὶ ἀφθαρσία, <ref='2Ti.1.10'>2Ti.1:10;</ref> ἀνάστασις ζωῆς, <ref='Jhn.5.29'>Jhn.5:29;</ref> βίβλος ζωῆς, <ref='Php.4.3'>Php.4:3</ref>, <ref='Rev.3.5'>Rev.3:5</ref>; ξύλον ζωῆς, <ref='Rev.2.7'>Rev.2:7;</ref> ὕδωρ ζωῆς, <ref='Rev.22.17'>Rev.22:17;</ref> meton., of that which has life: τ. πνεῦμα, <ref='Rom.8.10'>Rom.8:10;</ref> ῥήματα, <ref='Jhn.6.63'>Jhn.6:63;</ref> of one who gives life, <ref='Jhn.11.25; 14.6'>Jhn.11:25 14:6</ref>, <ref='1Jn.1.2'>1Jn.1:2</ref>; ἡ ἐντολή, <ref='Jhn.12.50.'>Jhn.12:50.</ref> <BR /> <re><i>SYN.</i>: see: βίος.</re> (AS)\nG0166\tG0166 =\tG0166\tαἰώνιος\taiōnios\tG:A\teternal\t<b>αἰώνιος</b>, -ον (as usual in Attic), also -α, -ον. <ref='2Th.2.16'>2Th.2:16</ref>, <ref='Heb.9.12'>Heb.9:12</ref>; <BR /> (αἰών), [in LXX chiefly for עוֹלָם ;] <BR /><b>age-long, eternal</b>, <BR />__(a) <b>of that which is without either beginning or end</b>: <ref='Rom.16.26'>Rom.16:26</ref>, <ref='Heb.9.14'>Heb.9:14</ref>; <BR /> __(b) <b>of that which is without beginning</b>: <ref='Rom.16.25'>Rom.16:25</ref>, <ref='2Ti.1.9'>2Ti.1:9</ref>, <ref='Tit.1.2'>Tit.1:2</ref>; <BR /> __(with) <b>of that which is without end </b>(MM, <i>VGT</i>, see word): σκηναί, <ref='Luk.16.9'>Luk.16:9</ref> οἰκία, <ref='2Co.5.1'>2Co.5:1;</ref> διαθήκη, <ref='Heb.13.20'>Heb.13:20;</ref> εὐαγγέλιον, <ref='Rev.14.6'>Rev.14:6;</ref> παράκλησις, <ref='2Th.2.16'>2Th.2:16;</ref> λύτρωσις,  <ref='Heb.9.12'>Heb.9:12;</ref> κληρονομία, ib. 15; κόλασις, <ref='Mat.25.46'>Mat.25:46;</ref> κρίμα, <ref='Heb.6.2'>Heb.6:2;</ref> κρίσις, <ref='Mrk.3.29'>Mrk.3:29;</ref> ὄλεθρον, <ref='2Th.1.9'>2Th.1:9;</ref> πῦρ, <ref='Mat.18.8'>Mat.18:8;</ref> frequently with ζωή, which see <BR /> <re><i>SYN.</i>: ἀΐδιος, which see</re> (AS)",
+          "morphgntEvidence": {
+            "sourceId": "morphgnt-sblgnt-6.12",
+            "repository": "morphgnt/sblgnt",
+            "ref": "6.12",
+            "file": "64-Jn-morphgnt.txt",
+            "tokens": [
+              {
+                "inputLemma": "ζωὴ",
+                "actualLemma": "ζωή",
+                "resolution": "accent-variant-reconciled-by-unique-passage-lemma",
+                "occurrences": [
+                  {
+                    "bcv": "041028",
+                    "word": "ζωὴν",
+                    "normalizedWord": "ζωήν",
+                    "lemma": "ζωή"
+                  }
+                ]
+              },
+              {
+                "inputLemma": "αἰώνιος",
+                "actualLemma": "αἰώνιος",
+                "resolution": "exact-lemma-in-passage",
+                "occurrences": [
+                  {
+                    "bcv": "041028",
+                    "word": "αἰώνιον",
+                    "normalizedWord": "αἰώνιον",
+                    "lemma": "αἰώνιος"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
       "morphgntFile": "64-Jn-morphgnt.txt",
       "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
-      "reviewId": "8f3f0199eb5974764a6279f89da46aa240902a56f17314ca7718c1bc01befc3e",
+      "reviewId": "a95afb9e85a5188209daf9606be1ae9c1213e7d689c3374545c82246294fd4ab",
       "bookId": "ioan",
       "chapter": 10,
       "ref": "Ioan 10:19-30",
       "original": "ἕν",
       "normalizedLemma": "εν",
-      "meaning": "una. Unitate adanca intre Tatăl și Fiul.",
-      "meaningSha256": "sha256:e52aed88bddb3d3ebd01404454e7c5337ab48997008ab94e090d3f650176005b",
+      "meaning": "una, unul (formă neutră); în context, expresia despre Tatăl și Fiul.",
+      "meaningSha256": "sha256:1d7d4ea6123ef1d8e8d7e5e85968511e9e5dc7a9dd9ffa52358efabe4b176afc",
       "candidateCount": 2,
       "candidates": [
         {
@@ -6587,14 +6802,14 @@
       ]
     },
     {
-      "reviewId": "6ed7b73a0daab47ad05cafb4d7d23f6a61649eaf38bf59415a028815f8db9752",
+      "reviewId": "198125047248b93e8ff1b13b82274f908fbf99b1f916521b1748cd16d6387bf7",
       "bookId": "ioan",
       "chapter": 10,
       "ref": "Ioan 10:31-42",
       "original": "ἡ γραφὴ οὐ δύναται λυθῆναι",
       "normalizedLemma": "ηγραφηουδυναταιλυθηναι",
-      "meaning": "Scriptura nu poate fi desfiintata. Taria și autoritatea permanenta a Scripturii.",
-      "meaningSha256": "sha256:ed7b96766d00b11e6090f3e2e9cef8e8ac9d2c2649664e2fa61f3b39ce398db4",
+      "meaning": "Scriptura nu poate fi desființată. Tăria și autoritatea permanenta a Scripturii.",
+      "meaningSha256": "sha256:9d45279e196cb2c6e959cedf7f9e295d47a0f19febd0270257181987a75e5dac",
       "candidateCount": 4,
       "candidates": [
         {
@@ -7176,14 +7391,14 @@
       ]
     },
     {
-      "reviewId": "fdd489b1a32642b543b30d771294aaf07ac1c4b349b41aab4b76aceac8e72f3f",
+      "reviewId": "8c0b2782b3d0721d80462a9fa0754506dfa3c37eba5e7178dc433097ef89158c",
       "bookId": "ioan",
       "chapter": 11,
       "ref": "Ioan 11:28-46",
       "original": "ἐδάκρυσεν",
       "normalizedLemma": "εδακρυσεν",
-      "meaning": "a plans. Lacrima reala a Domnului în fata durerii și a mortii.",
-      "meaningSha256": "sha256:f0ba95d284d60a261902316e69109f01d38c83eec34c348f1182e72d151c837d",
+      "meaning": "a plâns. Lacrimă reala a Domnului în fața durerii și a morții.",
+      "meaningSha256": "sha256:eae42dabb0fc40fe2b54b38f99185115eb550df974f70b5897c9c0cec64109f3",
       "candidateCount": 1,
       "candidates": [
         {
@@ -7233,14 +7448,14 @@
       "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
-      "reviewId": "2d960310c45857315ecd3c0d822e154f94a465f3f1d0649e99db6d43cacf0b80",
+      "reviewId": "5368c53cfcf813602ac32c009927604bf9628b1c195c5248021dc24f1f9151a0",
       "bookId": "ioan",
       "chapter": 11,
       "ref": "Ioan 11:28-46",
       "original": "κράζω",
       "normalizedLemma": "κραζω",
-      "meaning": "a striga cu glas tare. Porunca plina de autoritate data mortului.",
-      "meaningSha256": "sha256:4260dd3ff75d5bf1cd04951e8ab731aab1e44eaee96acb52abc5116020240340",
+      "meaning": "a striga cu glas tare. Porunca plină de autoritate data mortului.",
+      "meaningSha256": "sha256:6a3f1aaafbe8d8b711887202ca6ccbea3a8470ffb64e3cb83ee4bc7e282b019a",
       "candidateCount": 1,
       "candidates": [
         {
@@ -7260,14 +7475,14 @@
       ]
     },
     {
-      "reviewId": "ef69b776c4e8936168ff5a1960d6e56e9095e22a4a5ab52b8e3437d70766fe55",
+      "reviewId": "da791841281813161e6aa490d529e338e850252e9846afef47c84cf3bc893527",
       "bookId": "ioan",
       "chapter": 11,
       "ref": "Ioan 11:47-57",
       "original": "συνέδριον",
       "normalizedLemma": "συνεδριον",
-      "meaning": "sobor, Sinedriu. Adunarea conducatorilor religiosi.",
-      "meaningSha256": "sha256:337dc185764e782826b0d5ce2b7afbbee36c1abb953616d9ba268752b853c62e",
+      "meaning": "sobor, Sinedriu. Adunarea conducătorilor religiosi.",
+      "meaningSha256": "sha256:74a09ad312bb198385061142680a3c73e6675aaeed6f58d0106d1707c2d60591",
       "candidateCount": 1,
       "candidates": [
         {
@@ -7287,14 +7502,14 @@
       ]
     },
     {
-      "reviewId": "d6544d8dc8c862b78f99d1937e3c9c334c02631307bde3fafd4e681dfb3d4ef4",
+      "reviewId": "8ca6dd9afa3b43892b127019264882b274f0c4fe69d74062bd1dfe2f4219f450",
       "bookId": "ioan",
       "chapter": 11,
       "ref": "Ioan 11:47-57",
       "original": "συναγάγῃ εἰς ἕν",
       "normalizedLemma": "συναγαγηεισεν",
-      "meaning": "sa adune intr-unul. Lucrarea de strangere a copiilor lui Dumnezeu prin moartea Fiului.",
-      "meaningSha256": "sha256:fb5e49289ba5dfbc2f2533b3482db607a94292a9d1ce93e93968178d06813197",
+      "meaning": "sa adune într-unul. Lucrarea de strângere a copiilor lui Dumnezeu prin moartea Fiului.",
+      "meaningSha256": "sha256:981a5c0042cc85e6a4471d77556004673324ae2e9e4ca396497fd4f7cc87a5da",
       "candidateCount": 2,
       "candidates": [
         {
@@ -7530,14 +7745,14 @@
       "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
-      "reviewId": "9fad96255c3e1ac480e849155f0c8097781cf446ec84a95347139001fa2212e2",
+      "reviewId": "c3d45286642b4d704f82cd978e3695c2233bbac6eb8a1adc4044f7fecfeef613",
       "bookId": "ioan",
       "chapter": 12,
       "ref": "Ioan 12:1-19",
       "original": "ὡσαννά",
       "normalizedLemma": "ωσαννα",
-      "meaning": "Osana. Strigare de rugaminte și lauda pentru mântuire.",
-      "meaningSha256": "sha256:4109879900babdcaf3bb113e99875f4dc92100b662830af0e435749e5178ab3f",
+      "meaning": "Osana. Strigare de rugăminte și lauda pentru mântuire.",
+      "meaningSha256": "sha256:2354dc1e3c357af65f3b180d6578920ebdc1d86febbdc348692c36b239adf62d",
       "candidateCount": 1,
       "candidates": [
         {
@@ -7557,14 +7772,14 @@
       ]
     },
     {
-      "reviewId": "54ac2888244c40d42bb20469824afcca42e4ba51ed3803cba4bd05560b73e70d",
+      "reviewId": "806a15a59c4a395026fdd9fd3654ee4bc9e82fb2bd4d8d6731bfe39765aa0fe2",
       "bookId": "ioan",
       "chapter": 12,
       "ref": "Ioan 12:1-19",
       "original": "δόξα",
       "normalizedLemma": "δοξα",
-      "meaning": "slava. În Ioan, slava Fiului merge spre cruce și apoi spre proslavire.",
-      "meaningSha256": "sha256:04b58309b14466ce82e56e5abc9e085ba1e8a603575df78dc4ff5e161c3b22a5",
+      "meaning": "slava. În Ioan, slava Fiului merge spre cruce și apoi spre proslăvire.",
+      "meaningSha256": "sha256:af6e52cc4652fa39ba6073d24478d2ae7f489012de7a9f5b3c6cabc55c446453",
       "candidateCount": 1,
       "candidates": [
         {
@@ -7584,14 +7799,14 @@
       ]
     },
     {
-      "reviewId": "431daec0f335275957ba37453ffefd789e4c44c7240fbab409d2361bd6af1cc1",
+      "reviewId": "9649ab5342b009c1ae3dff3da47bc959c4a26e22cef7cedae7d470d56a52729f",
       "bookId": "ioan",
       "chapter": 12,
       "ref": "Ioan 12:20-36",
       "original": "ὑψωθῶ",
       "normalizedLemma": "υψωθω",
-      "meaning": "voi fi inaltat. La Ioan, arată spre cruce și spre slava ei.",
-      "meaningSha256": "sha256:4054a4cef714cc1fb955664541cc6a01098d0c64df2a8d99c15c73937efa25f3",
+      "meaning": "voi fi înălțat. La Ioan, arată spre cruce și spre slava ei.",
+      "meaningSha256": "sha256:f2057fa81371d4e4473f53a476b1c3a24be1547c89a01065975b56466d772017",
       "candidateCount": 1,
       "candidates": [
         {
@@ -7641,14 +7856,14 @@
       "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
-      "reviewId": "af93f33484362120ec5371efaf6a1af9e0f24ccb9f6fab41b7e74af3c67fd80f",
+      "reviewId": "bea68df74e890473cd0e9554843e0e0eca1d61384f9a3d87cc74a4efbc10220c",
       "bookId": "ioan",
       "chapter": 12,
       "ref": "Ioan 12:20-36",
       "original": "κρίσις",
       "normalizedLemma": "κρισισ",
-      "meaning": "judecata. Punerea lumii și a stapanitorului ei sub sentinta lui Dumnezeu.",
-      "meaningSha256": "sha256:3eef3a08dec6e173707638037ebd96f05fbda0d7b1e13e9537f59498aa5c1c1b",
+      "meaning": "judecata. Punerea lumii și a stăpânitorului ei sub sentinta lui Dumnezeu.",
+      "meaningSha256": "sha256:5838189b68f6abf87e41c4cf5abe0e7cfe22c1791547d92907e40fe12a60ae95",
       "candidateCount": 1,
       "candidates": [
         {
@@ -7668,17 +7883,162 @@
       ]
     },
     {
-      "reviewId": "ffab466b3e41753ba538d290acb238b7b4ce546716a443034e4ca95ddcc873fe",
+      "reviewId": "a9fb58310d107903430bb82096ff147e7c347d004b55f8038b8826a18c6c5f89",
       "bookId": "ioan",
       "chapter": 12,
       "ref": "Ioan 12:37-50",
-      "original": "δόξα τῶν ἀνθρώπων",
-      "normalizedLemma": "δοξατωνανθρωπων",
-      "meaning": "slava oamenilor. Aprobarea omeneasca iubita mai mult decât cinstea lui Dumnezeu.",
-      "meaningSha256": "sha256:b8db329173b0a94f19346de25a110e38aa90d35beffcb1d70687c175e2507014",
-      "candidateCount": 0,
-      "candidates": [],
-      "morphgntProblem": "surface-not-found-in-passage:δόξα",
+      "original": "τὴν δόξαν τῶν ἀνθρώπων",
+      "normalizedLemma": "τηνδοξαντωνανθρωπων",
+      "meaning": "slava oamenilor; în context, aprobarea omenească iubită mai mult decât cinstea lui Dumnezeu.",
+      "meaningSha256": "sha256:3dd6fda1be046e2ea690cce4e6cc3a68797851bf07e13723aba315ba3047c457",
+      "candidateCount": 1,
+      "candidates": [
+        {
+          "sourceId": "stepbible-tbesg",
+          "sourceCommitSha": "b86d26cdb1f51729e73b5b4eb7f7ccadc5dfba39",
+          "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+          "sourceLocator": "TBESG line 3702 + TBESG line 1523 + TBESG line 3702 + TBESG line 551",
+          "strongId": "G3588 + G1391 + G3588 + G0444",
+          "canonicalLemma": "ὁ δόξα ὁ ἄνθρωπος",
+          "transliteration": "ho doxa ho anthrōpos",
+          "morphology": "G:T | G:N-F | G:T | G:N-M",
+          "briefGloss": "the/this/who; glory; the/this/who; a human",
+          "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
+          "lineSha256": "sha256:4e2060c2d95334a6882c24eaa4b6a37e1f14a49e3f92f5fc519e07ef14efc585",
+          "rawLine": "G3588\tG3588 =\tG3588\tὁ\tho\tG:T\tthe/this/who\t <b>ὁ</b>, ἡ, τό, <BR /> <i>the prepositive article</i> (ἄρθρον προτακτικόν), originally a demonstr. pron. (so usually in Hom.), in general corresponding to the Eng. definite article.<lb /> <BR /> __I. As demonstr. pron. <BR />__1. As frequently in Hom., absol., <b>he (she, it), his</b> (etc.): <ref='Act.17.28'>Act.17:28</ref> (quoted from the poet Aratus).<BR /> __2. Distributive, ὁ μὲν . . . ὁ δέ, <b>the one . . . the other</b>: <ref='1Co.7.7'>1Co.7:7</ref>, <ref='Gal.4.22'>Gal.4:22</ref>; pl., <ref='Act.14.4; 17.32'>Act.14:4, 17:32</ref>, <ref='Php.1.16'>Php.1:16</ref>, al.; οἱ μὲν . . . ἄλλοι δέ, <ref='Mat.16.14'>Mat.16:14</ref>, <ref='Jhn.7.12'>Jhn.7:12</ref>; οἱ μεν̀ . . . ὁδέ, <ref='Heb.7.21, 23'>Heb.7:21, 23</ref>.<BR /> __3. In narration (without ὁ μὲν preceding), ὁ δέ, <b>but he</b>: <ref='Mat.2.14'>Mat.2:14</ref>, <ref='Mrk.1.45'>Mrk.1:45</ref>, <ref='Luk.8.21'>Luk.8:21</ref>, <ref='Jhn.9.38'>Jhn.9:38</ref>, al. mult. <BR /> __II. As prepositive article, <b>the</b>, prefixed, <BR />__1. <b>to nouns unmodified</b>: ὁ θεός, τὸ φῶς, etc.; to abstract nouns, ἡ σοφία, etc., to pl. nouns which indicate a class, οἱ ἀλώπεκες, foxes, <ref='Mat.8.20'>Mat.8:20</ref>, al.; to an individual as representing a class, ὁ ἐργάτης, <ref='Luk.10.7'>Luk.10:7;</ref> with nom. = voc. in addresses, <ref='Mat.11.26'>Mat.11:26</ref>, <ref='Jhn.19.3'>Jhn.19:3</ref>, <ref='Jas.5.1'>Jas.5:1</ref>, al.; to things which pertain to one, ἡ χεῖρ, <b>his hand</b>, <ref='Mrk.3.1'>Mrk.3:1;</ref> to names of persons well known or already mentioned; usually to names of countries (originally adjectives), ἡ Ἰουδαία, etc.<BR /> __2. <b>To modified nouns</b>: with of person(s) pron. genitive, μοῦ, σοῦ, etc.; with poss. pron., ἐμός, σός, etc.; with adj. between the art. and the noun, ὁ ἀγαθὸς ἄνθρωπος, <ref='Mat.12.35'>Mat.12:35;</ref> the noun foll, by adj., both with art., ὁ ποιμὴν ὁ καλός, <ref='Jhn.10.11'>Jhn.10:11</ref> (on ὁ ὄχλος πολύς, <ref='Jhn.12.9'>Jhn.12:9</ref>, see M, <i>Pr.</i>, 84); before adjectival phrases, ἡ κατ᾽ ἐκλογὴν πρόθεσις, <ref='Rom.9.11.'>Rom.9:11.</ref> <BR /> __3. To Other parts of speech used as substantives; <BR />__(a) <b>neuter adjectives</b>: τ. ἀγαθόν, etc.;<BR /> __(b) <b>cardinal numerals</b>: ὁ εἶς, οἷ δύο, etc.;<BR /> __(with) <b>participles</b>: ὁ βαπτίζων (= ὁ Βαπτιστής, <ref='Mat.14.2'>Mat.14:2</ref>), <ref='Mrk.6.14'>Mrk.6:14</ref>; πᾶς ὁ, with ptcp., <b>every one who</b>, etc.;<BR /> __(d) <b>adverbs</b>: τὸ πέραν, τὰ νῦν, ὁ ἔσω ἄνθρωπος;<BR /> __(e) <b>infinitives</b>: nom., τὸ θέλειν, <ref='Rom.7.18'>Rom.7:18</ref>, al.; genitive, τοῦ, after adjectives, ἄξιον τοῦ πορεύεσθαι, <ref='1Co.16.4'>1Co.16:4;</ref> verbs, ἐλαχεν τοῦ θυμιᾶσαι, <ref='Luk.1.9'>Luk.1:9;</ref> and frequently in a final sense, ἐξῆλθεν ὁ σπείρειν, <ref='Mat.13.3'>Mat.13:3</ref> (on the artic. inf., see Bl., §71). <BR /> __4. In the neut. to sentences, <b>phrases or single words treated as a quotation</b>: τὸ Ἐι δύνῃ, <ref='Mrk.9.23'>Mrk.9:23;</ref> τὸ ἔτι ἅπαξ, <ref='Heb.12.27'>Heb.12:27;</ref> τὸ ἀνέβη, <ref='Eph.4.9'>Eph.4:9</ref>, al.<BR /> __5. <b>To prepositional phrases</b>: οἱ ἀπὸ Ἰταλίας, <ref='Heb.13.24'>Heb.13:24;</ref> οἱ ἐκ νόμου, <ref='Rom.4.14'>Rom.4:14;</ref> neut. accusative absol., in adverbial phrases, τὸ καθ᾽ ἡμέραν, <b>daily</b>, <ref='Luk.11.3'>Luk.11:3;</ref> τὸ κατὰ σάρκα, <b>as regards the flesh</b>, <ref='Rom.9.5.'>Rom.9:5.</ref> <BR /> __6. To nouns in the genitive, denoting kinship, association, etc.: ὁ τοῦ, <b>the son of</b> (unless context indicates a different relationship), <ref='Mat.10.2'>Mat.10:2</ref>, al.; τὰ τοῦ θεοῦ, <b>the things that pertain to God</b>, <ref='Mat.16.23'>Mat.16:23;</ref> τὰ τῆς εἰρήνης, <ref='Rom.14.19'>Rom.14:19</ref> (cf. M, <i>Pr.</i>, 81ff.; Bl, §§46, 47).<BR /> (AS)\nG1391\tG1391 =\tG1391\tδόξα\tdoxa\tG:N-F\tglory\t <b>δόξα</b>, -ης, ἡ <BR /> (δοκέω), [in LXX very frequently for כָּבוֹד, also for הוֹד ,פִּפְאֶרֶת, etc., 25 words in all ;] <BR />in cl., <BR />__1. <b>expectation, judgment, opinion</b> (<ref='4Ma.5.18'>4Ma.5:18</ref>). <BR /> __2. <b>opinion, estimation</b> in which one is held, <b>repute</b>; in NT, always <b>good opinion</b>, hence <b>reputation, praise, honour, glory</b>: <ref='Luk.14.10'>Luk.14:10</ref>, <ref='Jhn.12.43'>Jhn.12:43</ref>, <ref='Heb.3.3'>Heb.3:3</ref>; opposite to αἰσχύνη, <ref='Php.3.19'>Php.3:19;</ref> to ἀτιμία, <ref='2Co.6.8'>2Co.6:8;</ref> δ. κ. τιμή, <ref='Rom.2.7, 10'>Rom.2:7, 10</ref> <ref='1Pe.1.7'>1Pe.1:7</ref>, <ref='2Pe.1.17'>2Pe.1:17</ref>; ζητεῖν, <ref='Jhn.5.44; 7.18; 8.50'>Jhn.5:44 7:18 8:50</ref>, <ref='1Th.2.6'>1Th.2:6</ref>; λαμβάνειν, <ref='Jhn.5.41'>Jhn.5:41</ref>, <ref='2Pe.1.17'>2Pe.1:17</ref>, <ref='Rev.5.12'>Rev.5:12</ref>; διδόναι δ. τ. θεῷ (cf. נָתַן כָּבוֹד לַיהוָֹה, <ref='Jer.13.16'>Jer.13:16</ref>, al.), <ref='Luk.17.18'>Luk.17:18</ref>, <ref='Jhn.9.24'>Jhn.9:24</ref>, <ref='Act.12.23'>Act.12:23</ref>, <ref='Rom.4.20'>Rom.4:20</ref>, <ref='Rev.4.9'>Rev.4:9</ref>; εἰς (τ.) δ. θεοῦ, <ref='Rom.3.7; 15.7'>Rom.3:7 15:7</ref>, <ref='Php.1.11'>Php.1:11</ref>, al.; in doxologies, τ. θεῷ (ᾧ) ἡ δ., <ref='Luk.2.14'>Luk.2:14</ref>, <ref='Rom.11.36; 16.27'>Rom.11:36 16:27</ref>, <ref='Gal.1.5'>Gal.1:5</ref>, <ref='Eph.3.21'>Eph.3:21</ref>, al. <BR /> __3. Later also (not cl.) as in LXX (= הוֹד, <ref='Job.39.20'>Job.39:20</ref>, <ref='1Ch.29.25'>1Ch.29:25</ref>; כָּבוֹד, <ref='Job.19.9'>Job.19:9</ref>, <ref='Est.5.11'>Est.5:11</ref>, al.), visible <b>brightness, splendour, glory</b>: of light, <ref='Act.22.11'>Act.22:11;</ref> of heavenly bodies, <ref='1Co.15.40'>1Co.15:40</ref>ff.; esp. that wh. radiates from God's presence, as manifested in the pillar of cloud and in the Holy of Holies (= כָּבוֹד, <ref='Exo.16.10; 25.22; 40.34'>Exo.16:10 25:22 40:34</ref>, al.; and new Heb. שְׁכִינָה, <ref='2Ma.2.8'>2Ma.2:8;</ref> see <i>DB</i>, iv, 489b), <ref='Rom.9.4'>Rom.9:4</ref>, <ref='Jas.2.1'>Jas.2:1</ref> (see Hort, Mayor, in l.); hence of the manifested glory of God, <ref='Rom.1.23'>Rom.1:23</ref>, <ref='Col.1.11'>Col.1:11</ref> <ref='Eph.1.6, 12, 17; 3.16'>Eph.1:6, 12 17 3:16</ref>; of the same as communicated to man through Christ, <ref='2Co.3.18; 4.6'>2Co.3:18 4:6</ref>; and of the glorious condition into which Christians shall enter hereafter, <ref='Rom.8.18, 21; 9.23'>Rom.8:18, 21 9:23</ref>, <ref='2Ti.2.10'>2Ti.2:10</ref>, al. <BR /> <re><i>SYN.</i>: ἔπαινος τιμή (see Hort on <ref='1Pe.1.7'>1Pe.1:7</ref>).</re> (AS)\nG3588\tG3588 =\tG3588\tὁ\tho\tG:T\tthe/this/who\t <b>ὁ</b>, ἡ, τό, <BR /> <i>the prepositive article</i> (ἄρθρον προτακτικόν), originally a demonstr. pron. (so usually in Hom.), in general corresponding to the Eng. definite article.<lb /> <BR /> __I. As demonstr. pron. <BR />__1. As frequently in Hom., absol., <b>he (she, it), his</b> (etc.): <ref='Act.17.28'>Act.17:28</ref> (quoted from the poet Aratus).<BR /> __2. Distributive, ὁ μὲν . . . ὁ δέ, <b>the one . . . the other</b>: <ref='1Co.7.7'>1Co.7:7</ref>, <ref='Gal.4.22'>Gal.4:22</ref>; pl., <ref='Act.14.4; 17.32'>Act.14:4, 17:32</ref>, <ref='Php.1.16'>Php.1:16</ref>, al.; οἱ μὲν . . . ἄλλοι δέ, <ref='Mat.16.14'>Mat.16:14</ref>, <ref='Jhn.7.12'>Jhn.7:12</ref>; οἱ μεν̀ . . . ὁδέ, <ref='Heb.7.21, 23'>Heb.7:21, 23</ref>.<BR /> __3. In narration (without ὁ μὲν preceding), ὁ δέ, <b>but he</b>: <ref='Mat.2.14'>Mat.2:14</ref>, <ref='Mrk.1.45'>Mrk.1:45</ref>, <ref='Luk.8.21'>Luk.8:21</ref>, <ref='Jhn.9.38'>Jhn.9:38</ref>, al. mult. <BR /> __II. As prepositive article, <b>the</b>, prefixed, <BR />__1. <b>to nouns unmodified</b>: ὁ θεός, τὸ φῶς, etc.; to abstract nouns, ἡ σοφία, etc., to pl. nouns which indicate a class, οἱ ἀλώπεκες, foxes, <ref='Mat.8.20'>Mat.8:20</ref>, al.; to an individual as representing a class, ὁ ἐργάτης, <ref='Luk.10.7'>Luk.10:7;</ref> with nom. = voc. in addresses, <ref='Mat.11.26'>Mat.11:26</ref>, <ref='Jhn.19.3'>Jhn.19:3</ref>, <ref='Jas.5.1'>Jas.5:1</ref>, al.; to things which pertain to one, ἡ χεῖρ, <b>his hand</b>, <ref='Mrk.3.1'>Mrk.3:1;</ref> to names of persons well known or already mentioned; usually to names of countries (originally adjectives), ἡ Ἰουδαία, etc.<BR /> __2. <b>To modified nouns</b>: with of person(s) pron. genitive, μοῦ, σοῦ, etc.; with poss. pron., ἐμός, σός, etc.; with adj. between the art. and the noun, ὁ ἀγαθὸς ἄνθρωπος, <ref='Mat.12.35'>Mat.12:35;</ref> the noun foll, by adj., both with art., ὁ ποιμὴν ὁ καλός, <ref='Jhn.10.11'>Jhn.10:11</ref> (on ὁ ὄχλος πολύς, <ref='Jhn.12.9'>Jhn.12:9</ref>, see M, <i>Pr.</i>, 84); before adjectival phrases, ἡ κατ᾽ ἐκλογὴν πρόθεσις, <ref='Rom.9.11.'>Rom.9:11.</ref> <BR /> __3. To Other parts of speech used as substantives; <BR />__(a) <b>neuter adjectives</b>: τ. ἀγαθόν, etc.;<BR /> __(b) <b>cardinal numerals</b>: ὁ εἶς, οἷ δύο, etc.;<BR /> __(with) <b>participles</b>: ὁ βαπτίζων (= ὁ Βαπτιστής, <ref='Mat.14.2'>Mat.14:2</ref>), <ref='Mrk.6.14'>Mrk.6:14</ref>; πᾶς ὁ, with ptcp., <b>every one who</b>, etc.;<BR /> __(d) <b>adverbs</b>: τὸ πέραν, τὰ νῦν, ὁ ἔσω ἄνθρωπος;<BR /> __(e) <b>infinitives</b>: nom., τὸ θέλειν, <ref='Rom.7.18'>Rom.7:18</ref>, al.; genitive, τοῦ, after adjectives, ἄξιον τοῦ πορεύεσθαι, <ref='1Co.16.4'>1Co.16:4;</ref> verbs, ἐλαχεν τοῦ θυμιᾶσαι, <ref='Luk.1.9'>Luk.1:9;</ref> and frequently in a final sense, ἐξῆλθεν ὁ σπείρειν, <ref='Mat.13.3'>Mat.13:3</ref> (on the artic. inf., see Bl., §71). <BR /> __4. In the neut. to sentences, <b>phrases or single words treated as a quotation</b>: τὸ Ἐι δύνῃ, <ref='Mrk.9.23'>Mrk.9:23;</ref> τὸ ἔτι ἅπαξ, <ref='Heb.12.27'>Heb.12:27;</ref> τὸ ἀνέβη, <ref='Eph.4.9'>Eph.4:9</ref>, al.<BR /> __5. <b>To prepositional phrases</b>: οἱ ἀπὸ Ἰταλίας, <ref='Heb.13.24'>Heb.13:24;</ref> οἱ ἐκ νόμου, <ref='Rom.4.14'>Rom.4:14;</ref> neut. accusative absol., in adverbial phrases, τὸ καθ᾽ ἡμέραν, <b>daily</b>, <ref='Luk.11.3'>Luk.11:3;</ref> τὸ κατὰ σάρκα, <b>as regards the flesh</b>, <ref='Rom.9.5.'>Rom.9:5.</ref> <BR /> __6. To nouns in the genitive, denoting kinship, association, etc.: ὁ τοῦ, <b>the son of</b> (unless context indicates a different relationship), <ref='Mat.10.2'>Mat.10:2</ref>, al.; τὰ τοῦ θεοῦ, <b>the things that pertain to God</b>, <ref='Mat.16.23'>Mat.16:23;</ref> τὰ τῆς εἰρήνης, <ref='Rom.14.19'>Rom.14:19</ref> (cf. M, <i>Pr.</i>, 81ff.; Bl, §§46, 47).<BR /> (AS)\nG0444\tG0444 =\tG0444\tἄνθρωπος\tanthrōpos\tG:N-M\ta human\t <b>ἄνθρωπος</b>, -ου, ὁ, <BR /> [in LXX chiefly for אִישׁ ,אָדָם, also for אֱנוֹשׁ, etc. ;] <BR /><b>man</b>: <BR />__1. <b>generically, a human being, male or female </b>(Lat. homo): <ref='Jhn.16.21'>Jhn.16:21;</ref> with art., <ref='Mat.4.4; 12.35'>Mat.4:4 12:35</ref>, <ref='Mrk.2.27'>Mrk.2:27</ref>, <ref='Jhn.2.25'>Jhn.2:25</ref>, <ref='Rom.7.1'>Rom.7:1</ref>, al; disting. from God, <ref='Mat.19.6'>Mat.19:6</ref>, <ref='Jhn.10.33'>Jhn.10:33</ref>, <ref='Col.3.23'>Col.3:23</ref>, al.; from animals, etc., <ref='Mat.4.19'>Mat.4:19</ref>, <ref='Luk.5.10'>Luk.5:10</ref>, <ref='Rev.9.4'>Rev.9:4</ref>, al.; implying human frailty and imperfection, <ref='1Co.3.4'>1Co.3:4;</ref> σοφία ἀνθρώπων, <ref='1Co.2.5'>1Co.2:5;</ref> ἀνθρώπων ἐπιθυμίαι, <ref='1Pe.4.2'>1Pe.4:2;</ref> κατὰ ἄνθρωπον περιπατεῖν, <ref='1Co.3.3'>1Co.3:3;</ref> κατὰ ἄ. λέγειν (λαλεῖν), <ref='Rom.3.5'>Rom.3:5</ref>, <ref='1Co.9.8'>1Co.9:8</ref>; κατὰ ἄ- λέγειν, <ref='Gal.3.15'>Gal.3:15</ref> (cf. <ref='1Co.15.32'>1Co.15:32</ref>, <ref='Gal.1.11'>Gal.1:11</ref>); by meton., of man's nature or condition, ὁ ἔσω (ἔξω) ἄ., <ref='Rom.7.22'>Rom.7:22</ref>, <ref='Eph.3.16'>Eph.3:16</ref>, <ref='2Co.4.16'>2Co.4:16</ref> (cf. <ref='1Pe.3.4'>1Pe.3:4</ref>); ὁ παλαιὸς, καινὸς, νέος ἄ., <ref='Rom.6.6'>Rom.6:6</ref>, <ref='Eph.2.15; 4.22, 24'>Eph.2:15 4:22, 24</ref> <ref='Col.3.9, 10'>Col.3:9, 10</ref>; joined with another subst., ἄ. ἔμπορος, <b>a merchant</b>, <ref='Mat.13.45'>Mat.13:45</ref> (WH, txt. om. ἄ.); οἰκοδεσπότης, <ref='Mat.13.52'>Mat.13:52;</ref> βασιλεύς, 18:23; φάγος, 11:19; with name of nation, Κυρηναῖος, <ref='Mat.27.32'>Mat.27:32;</ref> Ἰουδαῖος, <ref='Act.21.39'>Act.21:39;</ref> Ῥωμαῖος, <ref='Act.16.37'>Act.16:37;</ref> pl. οἱ ἄ., <b>men, people</b>: <ref='Mat.5.13, 16'>Mat.5:13, 16</ref> <ref='Mrk.8.24'>Mrk.8:24</ref>, <ref='Jhn.4.28'>Jhn.4:28</ref>; οὐδεὶς ἀνθρώπων, <ref='Mrk.11.2'>Mrk.11:2</ref>, <ref='1Ti.6.16'>1Ti.6:16</ref>. <BR /> __2. Indef., ἄ. = τις, <b>some one, a man</b>: <ref='Mat.17.14'>Mat.17:14</ref>, <ref='Mrk.12.1'>Mrk.12:1</ref>, al.; τις ἄ., <ref='Mat.18.12'>Mat.18:12</ref>, <ref='Jhn.5.5'>Jhn.5:5</ref>, al.; indef. <b>one</b> (Fr. <i>on</i>), <ref='Rom.3.28'>Rom.3:28</ref>, <ref='Gal.2.16'>Gal.2:16</ref>, al.; opposite to women, servants, etc., <ref='Mat.10.36; 19.10'>Mat.10:36 19:10</ref>, <ref='Jhn.7.22'>Jhn.7:22</ref>, 23. <BR /> __3. Definitely, with art., of some particular person; <ref='Mat.12.13'>Mat.12:13</ref>, <ref='Mrk.3.5'>Mrk.3:5</ref>, al.; οὗτος ὁ ἄ., <ref='Luk.14.30'>Luk.14:30;</ref> ὁ ἄ οὗτος, ἐκεῖνος, <ref='Mrk.14.71'>Mrk.14:71</ref>, <ref='Mat.12.45'>Mat.12:45</ref>; ὁ ἄ. τ. ἀνομίας, <ref='2Th.2.3'>2Th.2:3;</ref> ἄ τ. θεοῦ (of Heb. אִישׁ אֱלֹהִים), <ref='1Ti.6.11'>1Ti.6:11</ref>, <ref='2Ti.3.17'>2Ti.3:17</ref>, <ref='2Pe.1.21'>2Pe.1:21</ref>; ὁ υἰὸς τοῦ ἀ., see: υἱός. <BR /> <re><i>SYN.</i>: ἀνήρ, which see (and cf. MM, <i>VGT</i>, 44; Cremer, 103, 635).</re> (AS)",
+          "morphgntEvidence": {
+            "sourceId": "morphgnt-sblgnt-6.12",
+            "repository": "morphgnt/sblgnt",
+            "ref": "6.12",
+            "file": "64-Jn-morphgnt.txt",
+            "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+            "license": "CC-BY-SA",
+            "tokens": [
+              {
+                "inputToken": "τὴν",
+                "resolution": "exact-diacritic-preserving-surface",
+                "lemma": "ὁ",
+                "occurrences": [
+                  {
+                    "bcv": "041240",
+                    "word": "τὴν",
+                    "normalizedWord": "τήν",
+                    "lemma": "ὁ",
+                    "pos": "RA",
+                    "parsing": "----ASF-"
+                  },
+                  {
+                    "bcv": "041241",
+                    "word": "τὴν",
+                    "normalizedWord": "τήν",
+                    "lemma": "ὁ",
+                    "pos": "RA",
+                    "parsing": "----ASF-"
+                  },
+                  {
+                    "bcv": "041243",
+                    "word": "τὴν",
+                    "normalizedWord": "τήν",
+                    "lemma": "ὁ",
+                    "pos": "RA",
+                    "parsing": "----ASF-"
+                  },
+                  {
+                    "bcv": "041243",
+                    "word": "τὴν",
+                    "normalizedWord": "τήν",
+                    "lemma": "ὁ",
+                    "pos": "RA",
+                    "parsing": "----ASF-"
+                  }
+                ]
+              },
+              {
+                "inputToken": "δόξαν",
+                "resolution": "exact-diacritic-preserving-surface",
+                "lemma": "δόξα",
+                "occurrences": [
+                  {
+                    "bcv": "041241",
+                    "word": "δόξαν",
+                    "normalizedWord": "δόξαν",
+                    "lemma": "δόξα",
+                    "pos": "N-",
+                    "parsing": "----ASF-"
+                  },
+                  {
+                    "bcv": "041243",
+                    "word": "δόξαν",
+                    "normalizedWord": "δόξαν",
+                    "lemma": "δόξα",
+                    "pos": "N-",
+                    "parsing": "----ASF-"
+                  },
+                  {
+                    "bcv": "041243",
+                    "word": "δόξαν",
+                    "normalizedWord": "δόξαν",
+                    "lemma": "δόξα",
+                    "pos": "N-",
+                    "parsing": "----ASF-"
+                  }
+                ]
+              },
+              {
+                "inputToken": "τῶν",
+                "resolution": "exact-diacritic-preserving-surface",
+                "lemma": "ὁ",
+                "occurrences": [
+                  {
+                    "bcv": "041242",
+                    "word": "τῶν",
+                    "normalizedWord": "τῶν",
+                    "lemma": "ὁ",
+                    "pos": "RA",
+                    "parsing": "----GPM-"
+                  },
+                  {
+                    "bcv": "041243",
+                    "word": "τῶν",
+                    "normalizedWord": "τῶν",
+                    "lemma": "ὁ",
+                    "pos": "RA",
+                    "parsing": "----GPM-"
+                  },
+                  {
+                    "bcv": "041247",
+                    "word": "τῶν",
+                    "normalizedWord": "τῶν",
+                    "lemma": "ὁ",
+                    "pos": "RA",
+                    "parsing": "----GPN-"
+                  }
+                ]
+              },
+              {
+                "inputToken": "ἀνθρώπων",
+                "resolution": "exact-diacritic-preserving-surface",
+                "lemma": "ἄνθρωπος",
+                "occurrences": [
+                  {
+                    "bcv": "041243",
+                    "word": "ἀνθρώπων",
+                    "normalizedWord": "ἀνθρώπων",
+                    "lemma": "ἄνθρωπος",
+                    "pos": "N-",
+                    "parsing": "----GPM-"
+                  }
+                ]
+              }
+            ]
+          },
+          "tbesgLineNumbers": [
+            551,
+            1523,
+            3702
+          ]
+        }
+      ],
       "morphgntFile": "64-Jn-morphgnt.txt",
       "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
@@ -7710,14 +8070,14 @@
       ]
     },
     {
-      "reviewId": "d139015bf97ca63cdbaa58fe4dea8843a25d363d4a7c2caf7d8085c8eebb11f0",
+      "reviewId": "02796d4c1bb68f481a6a14a9920b427b64ab0fbbd099d2fee6c1c0b8b0ab24ca",
       "bookId": "ioan",
       "chapter": 13,
       "ref": "Ioan 13:1-17",
       "original": "τέλος",
       "normalizedLemma": "τελοσ",
-      "meaning": "capat, deplinatate. Iubirea dusa pana la implinirea ei intreaga.",
-      "meaningSha256": "sha256:fcae3a4f3d6b75caf6c34245e9f0a931aed6d769e738dc987b9c23ea9d1332d5",
+      "meaning": "sfârșit, capăt, țintă; în expresia εἰς τέλος poate avea sensul «până la capăt».",
+      "meaningSha256": "sha256:1b0325852929ef39d9ac888c9ee37c899a2daa35c39c4d6a819fa9e764c3404d",
       "candidateCount": 1,
       "candidates": [
         {
@@ -7737,14 +8097,14 @@
       ]
     },
     {
-      "reviewId": "ab52f6e69a1c63d3522b83b89af2ebd7caa6fc29e27eacbd91f61c061d5fe68e",
+      "reviewId": "db01381a2f1a7bb97248030281b5f3efa9f286999919016647c802361e908833",
       "bookId": "ioan",
       "chapter": 13,
       "ref": "Ioan 13:1-17",
       "original": "νίπτω",
       "normalizedLemma": "νιπτω",
-      "meaning": "a spala. Aici, spalarea picioarelor în semn de curatire și slujire.",
-      "meaningSha256": "sha256:585a0b04619a0bf929df3f37418dbc6ae95218b1db44ef72c9879f51aa101102",
+      "meaning": "a spăla. Aici, spalarea picioarelor în semn de curățire și slujire.",
+      "meaningSha256": "sha256:1110ecd73eab30bd5dbeb0efcc878a472c4834ef020bf53a4ed7009eca55bd54",
       "candidateCount": 1,
       "candidates": [
         {
@@ -7764,14 +8124,14 @@
       ]
     },
     {
-      "reviewId": "73a6e6cc5e43f0455f8080de799c00f114cc9f717ff3a2cdb972ccf50e77a013",
+      "reviewId": "a048df34bd7e628a9889e6af7600178c1dc978ebc7076f15d7b053fcbd2f0d8a",
       "bookId": "ioan",
       "chapter": 13,
       "ref": "Ioan 13:18-30",
       "original": "ἐταράχθη",
       "normalizedLemma": "εταραχθη",
-      "meaning": "S-a tulburat. Miscare adanca a sufletului în fata raului și a durerii.",
-      "meaningSha256": "sha256:809dcf0c0628a53999753442eb2c644d6a465eb33ab3dbd7095e47649b40cd58",
+      "meaning": "S-a tulburat. Mișcare adâncă a sufletului în fața răului și a durerii.",
+      "meaningSha256": "sha256:98fdb46febc5b6a89a2ec8a67617bb291b178e55736f137314f2c50a24adfc65",
       "candidateCount": 1,
       "candidates": [
         {
@@ -7848,17 +8208,75 @@
       ]
     },
     {
-      "reviewId": "9be1704e2513d1432b3be09e0e2b6586d8f20fc09c49fb4a1383f5dc445a433f",
+      "reviewId": "713031bd2f8c82a32cc4627fe2c145648cce5cbee46ad746daeea69dcd84c67e",
       "bookId": "ioan",
       "chapter": 13,
       "ref": "Ioan 13:31-38",
-      "original": "ἐντολή καινή",
-      "normalizedLemma": "εντοληκαινη",
-      "meaning": "porunca noua. Porunca iubirii în masura lui Hristos.",
-      "meaningSha256": "sha256:67bc55ad8fa72372a37c9ce13c1bbbb790fca6ff36bb50ab107611e5c9b3cfc4",
-      "candidateCount": 0,
-      "candidates": [],
-      "morphgntProblem": "surface-not-found-in-passage:ἐντολή",
+      "original": "ἐντολὴν καινὴν",
+      "normalizedLemma": "εντοληνκαινην",
+      "meaning": "poruncă nouă; ἐντολή = poruncă, καινός = nou.",
+      "meaningSha256": "sha256:a2f63bae21b3bdec031efd66641c28fcca7d34fe5be3759146465f563452cb7c",
+      "candidateCount": 1,
+      "candidates": [
+        {
+          "sourceId": "stepbible-tbesg",
+          "sourceCommitSha": "b86d26cdb1f51729e73b5b4eb7f7ccadc5dfba39",
+          "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+          "sourceLocator": "TBESG line 1926 + TBESG line 2720",
+          "strongId": "G1785 + G2537",
+          "canonicalLemma": "ἐντολή καινός",
+          "transliteration": "entolē kainos",
+          "morphology": "G:N-F | G:A",
+          "briefGloss": "commandment; new",
+          "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
+          "lineSha256": "sha256:78e35262d26fdd116e86136af1b4361512678547519c8bb617982786f09d4f08",
+          "rawLine": "G1785\tG1785 =\tG1785\tἐντολή\tentolē\tG:N-F\tcommandment\t <b>ἐντολή</b>, -ῆς, ἡ<BR /> (ἐντέλλω, which see), [in LXX chiefly for מִצְוָה; in pl. frequently in Pss for פִּקּוּד ;] <BR />__1. <b>generally, a charge, injunction, order, command</b>: <ref='Luk.15.29'>Luk.15:29</ref>, <ref='Jhn.10.18; 11.57; 12.49-50; 14.31'>Jhn.10:18 11:57 12:49-50 14:31</ref>, <ref='Act.17.15'>Act.17:15</ref>, <ref='Col.4.10'>Col.4:10</ref>; ἐ. σαρκίνη, <ref='Heb.7.16, 18'>Heb.7:16, 18</ref> <BR /> __2. Esp. of religious precepts and commandments; <BR /> __(a) <b>of God's commandments</b>: in OT, <ref='Mat.15.3; 22.36, 38; 22.40'>Mat.15:3 22:36, 38 22:40</ref> <ref='Mrk.7.8-9'>Mk  7:8-9</ref>; <ref='Mrk.10.5, 19; 12.28, 31'>Mrk.10:5, 19 12:28, 31</ref> <ref='Eph.2.15'>Eph.2:15</ref>, <ref='Heb.9.19'>Heb.9:19</ref>; esp. of the decalogue, <ref='Mat.5.19; 19.17'>Mat.5:19 19:17</ref>, <ref='Mrk.10.19'>Mrk.10:19</ref>, <ref='Luk.18.20; 23.56'>Luk.18:20 23:56</ref>, <ref='Rom.7.8-13; 13.9'>Rom.7:8-13 13:9</ref>, <ref='Eph.6.2'>Eph.6:2</ref>; of God's command­ments in general, <ref='Luk.1.6'>Luk.1:6</ref>, <ref='1Co.7.19'>1Co.7:19</ref>, <ref='1Jn.2.3-8'>1Jn.2:3-8</ref> <ref='Jhn.3.22-24'>Jn 3:22-24</ref> <ref='Jhn.4.21'>Jn 4:21</ref> <ref='Jhn.5.2-3'>Jn 5:2-3</ref>, <ref='Rev.12.17; 14.12'>Rev.12:17 14:12</ref>; collectively, ἡ ἐ. (cf. τ. ἔργον τ. θεοῦ, <ref='Jhn.6.29'>Jhn.6:29</ref>), <ref='1Ti.6.14'>1Ti.6:14</ref>, <ref='2Pe.2.21; 3.2'>2Pe.2:21 3:2</ref>; <BR /> __(b) <b>of things commanded Christ by the Father</b>: <ref='Jhn.12.49-50; 14.31; 15.10'>Jhn.12:49-50 14:31 15:10</ref>; <BR /> __(with) <b>of the precepts of Christ</b>: <ref='Jhn.13.34; 14.15, 21; 15.10, 12'>Jhn.13:34 14:15, 21 15:10, 12</ref>, <ref='1Co.14.37'>1Co.14:37</ref>. <BR /> __3. <b>Phrases</b>: before ἵνα, <ref='Jhn.13.34; 15.12'>Jhn.13:34 15:12</ref>, <ref='1Jn.3.23'>1Jn.3:23</ref> <ref='Jhn.4.21'>Jn 4:21</ref>, <ref='2Jn.6'>2Jn.6</ref>; ἐντολὴν (ὰς) παραβαίνειν, <ref='Mat.15.3'>Mat.15:3;</ref> ἀκυροῦν, <ref='Mat.15.6'>Mat.15:6</ref> Rec.; τηρεῖν, <ref='Mat.19.17'>Mat.19:17</ref> <ref='Jhn.15.10'>Jhn.15:10</ref>, al.; ποιεῖν, <ref='1Jn.5.2'>1Jn.5:2;</ref> διδόναι, <ref='Jhn.11.57'>Jhn.11:57;</ref> λαμβάνειν, <ref='Jhn.10.18'>Jhn.10:18</ref>, <ref='2Jn.4'>2Jn.4</ref>; ἔχειν, <ref='Jhn.14.21'>Jhn.14:21</ref>, <ref='Heb.7.5'>Heb.7:5</ref>; ἐ. καὶ δικαιώματα, <ref='Luk.1.6'>Luk.1:6;</ref> ἐντολαὶ ἀνθρώπων (of Jewish tradition), <ref='Tit.1.14'>Tit.1:14;</ref> i. καινή, <ref='Jhn.13.34'>Jhn.13:34</ref>, <ref='1Jn.2.7'>1Jn.2:7</ref>, <ref='2Jn.5'>2Jn.5</ref>.†<BR /> (AS)\nG2537\tG2537 =\tG2537\tκαινός\tkainos\tG:A\tnew\t <b>καινός</b>, -ή, -όν <BR /> [in LXX (<ref='Ezk.11.19'>Eze.11:19</ref>, al.) for חָדָשׁ, exc. <ref='Isa.65.15'>Isa.65:15</ref> (אַחֵר) ;] <BR /><b>of that which is unused or unaccustomed, new in respect to form or quality, fresh, unused, novel</b>: opposite to παλαιός, ἀρχαῖος, <ref='Mat.9.17; 13.52'>Mat.9:17 13:52</ref>, <ref='Mrk.2.21-22'>Mrk.2:21-22</ref> <ref='Luk.5.36, 38'>Luk.5:36, 38</ref>, <ref='2Co.5.17'>2Co.5:17</ref>, <ref='Eph.4.24'>Eph.4:24</ref>; πλήρωμα, <ref='Mrk.2.21'>Mrk.2:21;</ref> μνημεῖον, <ref='Mat.27.60'>Mat.27:60</ref>, <ref='Jhn.19.41'>Jhn.19:41</ref>; διαθήκη (T, WH, R, txt., omit), <ref='Luk.22.20'>Luk.22:20</ref>, <ref='1Co.11.25'>1Co.11:25</ref>, <ref='2Co.3.6'>2Co.3:6</ref>, <ref='Heb.8.8'>Heb.8:8</ref>\" (LXX), <ref='Heb.8.13; 9.15'>Heb.8:13 9:15</ref>; οὐρανοί, γῆ, <ref='2Pe.3.13'>2Pe.3:13</ref>, <ref='Rev.21.1'>Rev.21:1</ref>\" (LXX)  Ἰερουσαλήμ, <ref='Rev.3.12; 21.2'>Rev.3:12 21:2</ref>; ἄνθρωπος, <ref='Eph.2.15'>Eph.2:15</ref> (cf. <ref='Ezk.18.31'>Eze.18:31</ref>); πάντα, <ref='Rev.21.5'>Rev.21:5;</ref> γέννημα τ. ἀμπέλου, <ref='Mat.26.29'>Mat.26:29</ref>, <ref='Mrk.14.25'>Mrk.14:25</ref>; διδαχή, <ref='Mrk.1.27'>Mrk.1:27</ref>, <ref='Act.17.19'>Act.17:19</ref>; ἐντολή, <ref='Jhn.13.34'>Jhn.13:34</ref>, <ref='1Jn.2.7-8'>1Jn.2:7-8</ref>, <ref='2Jn.5'>2Jn.5</ref>; ὄνομα, <ref='Rev.2.17'>Rev.2:17</ref> (LXX); ᾠδή, <ref='Rev.5.9; 14.3'>Rev.5:9 14:3</ref> (of. <ref='Psa.144.9'>Psa.144:9</ref>); κτίσις, <ref='2Co.5.17'>2Co.5:17</ref>, <ref='Gal.6.15'>Gal.6:15</ref>; γλῶσσαι, <ref='Mrk.16.17'>Mrk.16:17;</ref> compar., <ref='Act.17.21.'>Act.17:21.</ref>†<BR /> <re><i>SYN.</i>: νέος, \"the new primarily in reference to time, the young, recent; κ. . the new primarily in reference to quality, the fresh, unworn\". Cf. Tr., <i>Syn.</i>, § lx (the distinction, however, is less marked in late Gk.; cf. <ref='Heb.12.24'>Heb.12:24</ref> with He, ll. with supr., and see MM, <i>Exp.</i>, xv) </re> (AS)",
+          "morphgntEvidence": {
+            "sourceId": "morphgnt-sblgnt-6.12",
+            "repository": "morphgnt/sblgnt",
+            "ref": "6.12",
+            "file": "64-Jn-morphgnt.txt",
+            "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+            "license": "CC-BY-SA",
+            "tokens": [
+              {
+                "inputToken": "ἐντολὴν",
+                "resolution": "exact-diacritic-preserving-surface",
+                "lemma": "ἐντολή",
+                "occurrences": [
+                  {
+                    "bcv": "041334",
+                    "word": "ἐντολὴν",
+                    "normalizedWord": "ἐντολήν",
+                    "lemma": "ἐντολή",
+                    "pos": "N-",
+                    "parsing": "----ASF-"
+                  }
+                ]
+              },
+              {
+                "inputToken": "καινὴν",
+                "resolution": "exact-diacritic-preserving-surface",
+                "lemma": "καινός",
+                "occurrences": [
+                  {
+                    "bcv": "041334",
+                    "word": "καινὴν",
+                    "normalizedWord": "καινήν",
+                    "lemma": "καινός",
+                    "pos": "A-",
+                    "parsing": "----ASF-"
+                  }
+                ]
+              }
+            ]
+          },
+          "tbesgLineNumbers": [
+            1926,
+            2720
+          ]
+        }
+      ],
       "morphgntFile": "64-Jn-morphgnt.txt",
       "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
@@ -7971,14 +8389,14 @@
       ]
     },
     {
-      "reviewId": "d2d602bf86cc261b268500ecbf2acd7f468c666c45e639827630b745abfe9804",
+      "reviewId": "7e24a2ddd4e47829db7d4f3b4ff69a78794fd51fc305e0f66a6faac17a69e933",
       "bookId": "ioan",
       "chapter": 14,
       "ref": "Ioan 14:15-26",
       "original": "παράκλητος",
       "normalizedLemma": "παρακλητοσ",
-      "meaning": "Mângâietor, ajutor, apărător. Cel chemat alături de ai lui Hristos.",
-      "meaningSha256": "sha256:75b8523ad081ecb026071186698616c095b1253598dfdd8d90b66f19a0a234f8",
+      "meaning": "sfătuitor, ajutor, apărător; tradițional, Mângâietor.",
+      "meaningSha256": "sha256:91c5f45a7af4b247bb3d61c9436d8a87f9596915bae1a0d1195c3f727de22e46",
       "candidateCount": 1,
       "candidates": [
         {
@@ -8293,29 +8711,139 @@
       "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
-      "reviewId": "977128ac686f389d0f709a99a983ed41b7e8298200345676edfdaa9113acbb2e",
+      "reviewId": "876df777b9310a816e4d0c47af7f4e22bbe462bdc456e0573b1c895b5e43c7ed",
       "bookId": "ioan",
       "chapter": 15,
       "ref": "Ioan 15:12-17",
-      "original": "τίθημι τὴν ψυχήν",
-      "normalizedLemma": "τιθημιτηνψυχην",
-      "meaning": "a-și pune viața. Limbaj al jertfirii de sine.",
-      "meaningSha256": "sha256:b609ef23e1c4c42b7c4bbc875cc14e857bbe1e1aad7d56a4e9484b3dcaa2e9fb",
-      "candidateCount": 0,
-      "candidates": [],
-      "morphgntProblem": "surface-not-found-in-passage:τίθημι",
+      "original": "τὴν ψυχὴν αὐτοῦ θῇ",
+      "normalizedLemma": "τηνψυχηναυτουθη",
+      "meaning": "să-și pună viața; θῇ este formă a verbului τίθημι, «a pune», iar ψυχή poate însemna aici «viață».",
+      "meaningSha256": "sha256:d775c434458362cbbf014385f72f7aa8ba3b796b74bd61f265fe6678ac45c9ae",
+      "candidateCount": 1,
+      "candidates": [
+        {
+          "sourceId": "stepbible-tbesg",
+          "sourceCommitSha": "b86d26cdb1f51729e73b5b4eb7f7ccadc5dfba39",
+          "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+          "sourceLocator": "TBESG line 3702 + TBESG lines 5761-5765 + TBESG line 958 + TBESG line 5242",
+          "strongId": "G3588 + G5590 + G0846 + G5087",
+          "canonicalLemma": "ὁ ψυχή αὐτός τίθημι",
+          "transliteration": "ho psuchē autos tithēmi",
+          "morphology": "G:T | G:N-F | G:P | G:V",
+          "briefGloss": "the/this/who; soul / soul: life / soul: myself / soul: person / soul: animal; it/s/he; to place",
+          "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
+          "lineSha256": "sha256:32813013c5bc4c46e3c11cb9f16af3efc2ef6dc622a5a28a5afe231229634fe8",
+          "rawLine": "G3588\tG3588 =\tG3588\tὁ\tho\tG:T\tthe/this/who\t <b>ὁ</b>, ἡ, τό, <BR /> <i>the prepositive article</i> (ἄρθρον προτακτικόν), originally a demonstr. pron. (so usually in Hom.), in general corresponding to the Eng. definite article.<lb /> <BR /> __I. As demonstr. pron. <BR />__1. As frequently in Hom., absol., <b>he (she, it), his</b> (etc.): <ref='Act.17.28'>Act.17:28</ref> (quoted from the poet Aratus).<BR /> __2. Distributive, ὁ μὲν . . . ὁ δέ, <b>the one . . . the other</b>: <ref='1Co.7.7'>1Co.7:7</ref>, <ref='Gal.4.22'>Gal.4:22</ref>; pl., <ref='Act.14.4; 17.32'>Act.14:4, 17:32</ref>, <ref='Php.1.16'>Php.1:16</ref>, al.; οἱ μὲν . . . ἄλλοι δέ, <ref='Mat.16.14'>Mat.16:14</ref>, <ref='Jhn.7.12'>Jhn.7:12</ref>; οἱ μεν̀ . . . ὁδέ, <ref='Heb.7.21, 23'>Heb.7:21, 23</ref>.<BR /> __3. In narration (without ὁ μὲν preceding), ὁ δέ, <b>but he</b>: <ref='Mat.2.14'>Mat.2:14</ref>, <ref='Mrk.1.45'>Mrk.1:45</ref>, <ref='Luk.8.21'>Luk.8:21</ref>, <ref='Jhn.9.38'>Jhn.9:38</ref>, al. mult. <BR /> __II. As prepositive article, <b>the</b>, prefixed, <BR />__1. <b>to nouns unmodified</b>: ὁ θεός, τὸ φῶς, etc.; to abstract nouns, ἡ σοφία, etc., to pl. nouns which indicate a class, οἱ ἀλώπεκες, foxes, <ref='Mat.8.20'>Mat.8:20</ref>, al.; to an individual as representing a class, ὁ ἐργάτης, <ref='Luk.10.7'>Luk.10:7;</ref> with nom. = voc. in addresses, <ref='Mat.11.26'>Mat.11:26</ref>, <ref='Jhn.19.3'>Jhn.19:3</ref>, <ref='Jas.5.1'>Jas.5:1</ref>, al.; to things which pertain to one, ἡ χεῖρ, <b>his hand</b>, <ref='Mrk.3.1'>Mrk.3:1;</ref> to names of persons well known or already mentioned; usually to names of countries (originally adjectives), ἡ Ἰουδαία, etc.<BR /> __2. <b>To modified nouns</b>: with of person(s) pron. genitive, μοῦ, σοῦ, etc.; with poss. pron., ἐμός, σός, etc.; with adj. between the art. and the noun, ὁ ἀγαθὸς ἄνθρωπος, <ref='Mat.12.35'>Mat.12:35;</ref> the noun foll, by adj., both with art., ὁ ποιμὴν ὁ καλός, <ref='Jhn.10.11'>Jhn.10:11</ref> (on ὁ ὄχλος πολύς, <ref='Jhn.12.9'>Jhn.12:9</ref>, see M, <i>Pr.</i>, 84); before adjectival phrases, ἡ κατ᾽ ἐκλογὴν πρόθεσις, <ref='Rom.9.11.'>Rom.9:11.</ref> <BR /> __3. To Other parts of speech used as substantives; <BR />__(a) <b>neuter adjectives</b>: τ. ἀγαθόν, etc.;<BR /> __(b) <b>cardinal numerals</b>: ὁ εἶς, οἷ δύο, etc.;<BR /> __(with) <b>participles</b>: ὁ βαπτίζων (= ὁ Βαπτιστής, <ref='Mat.14.2'>Mat.14:2</ref>), <ref='Mrk.6.14'>Mrk.6:14</ref>; πᾶς ὁ, with ptcp., <b>every one who</b>, etc.;<BR /> __(d) <b>adverbs</b>: τὸ πέραν, τὰ νῦν, ὁ ἔσω ἄνθρωπος;<BR /> __(e) <b>infinitives</b>: nom., τὸ θέλειν, <ref='Rom.7.18'>Rom.7:18</ref>, al.; genitive, τοῦ, after adjectives, ἄξιον τοῦ πορεύεσθαι, <ref='1Co.16.4'>1Co.16:4;</ref> verbs, ἐλαχεν τοῦ θυμιᾶσαι, <ref='Luk.1.9'>Luk.1:9;</ref> and frequently in a final sense, ἐξῆλθεν ὁ σπείρειν, <ref='Mat.13.3'>Mat.13:3</ref> (on the artic. inf., see Bl., §71). <BR /> __4. In the neut. to sentences, <b>phrases or single words treated as a quotation</b>: τὸ Ἐι δύνῃ, <ref='Mrk.9.23'>Mrk.9:23;</ref> τὸ ἔτι ἅπαξ, <ref='Heb.12.27'>Heb.12:27;</ref> τὸ ἀνέβη, <ref='Eph.4.9'>Eph.4:9</ref>, al.<BR /> __5. <b>To prepositional phrases</b>: οἱ ἀπὸ Ἰταλίας, <ref='Heb.13.24'>Heb.13:24;</ref> οἱ ἐκ νόμου, <ref='Rom.4.14'>Rom.4:14;</ref> neut. accusative absol., in adverbial phrases, τὸ καθ᾽ ἡμέραν, <b>daily</b>, <ref='Luk.11.3'>Luk.11:3;</ref> τὸ κατὰ σάρκα, <b>as regards the flesh</b>, <ref='Rom.9.5.'>Rom.9:5.</ref> <BR /> __6. To nouns in the genitive, denoting kinship, association, etc.: ὁ τοῦ, <b>the son of</b> (unless context indicates a different relationship), <ref='Mat.10.2'>Mat.10:2</ref>, al.; τὰ τοῦ θεοῦ, <b>the things that pertain to God</b>, <ref='Mat.16.23'>Mat.16:23;</ref> τὰ τῆς εἰρήνης, <ref='Rom.14.19'>Rom.14:19</ref> (cf. M, <i>Pr.</i>, 81ff.; Bl, §§46, 47).<BR /> (AS)\nG5590\tG5590G =\tG5590G\tψυχή\tpsuchē\tG:N-F\tsoul\t <b>ψυχή</b>, -ῆς, ἡ, <BR /> [in LXX very frequently for נֶפֶשׁ, sometimes for לֵבַב ,לֵב, etc. ;] <BR /> __1. <b>breath</b> (Lat. anima), <b>breath of life, life</b> (Hom., al.; in Arist., of <b>the vital principle</b>): <ref='Mat.6.25'>Mat.6:25</ref>, <ref='Mrk.3.4; 10.45'>Mrk.3:4 10:45</ref>, <ref='Luk.12.22'>Luk.12:22</ref>, <ref='Jhn.10.11'>Jhn.10:11</ref>, <ref='Act.20.10, 24'>Act.20:10, 24</ref> <ref='2Co.1.23'>2Co.1:23</ref>, <ref='Php.2.30'>Php.2:30</ref>, <ref='1Th.2.8'>1Th.2:8</ref>, al. <BR /> __2. <b>the soul</b>, <BR />__(a) <b>as the seat of the will, desires and affections</b>: <ref='Mat.26.38'>Mat.26:38</ref>, <ref='Mrk.12.30'>Mrk.12:30</ref>\" (LXX) 14:34, <ref='Luk.1.46'>Luk.1:46</ref>, <ref='Jhn.10.24'>Jhn.10:24</ref>, <ref='Act.14.2'>Act.14:2</ref>, <ref='Php.1.27'>Php.1:27</ref>, al.; ἐκ ψυχῆς, <b>from the heart</b>, <b>heartily</b>: <ref='Eph.6.6'>Eph.6:6</ref>, <ref='Col.3.23'>Col.3:23</ref>; <BR /> __(b) <b>as a periphrasis for person or self </b>(frequently in  translation from Semitic originals, see M, <i>Pr.</i>, 87; Robinson, <i>Gospels</i>, 113ff.; but also frequently in cl., see LS, see word II, 2; Edwards, <i>Lex.</i>, App. A.): <ref='Mat.11.29'>Mat.11:29</ref>, <ref='Mrk.8.36'>Mrk.8:36</ref>, <ref='Act.2.41'>Act.2:41</ref>, <ref='Rom.2.9'>Rom.2:9</ref>, <ref='1Pe.3.20'>1Pe.3:20</ref>, al.; πᾶσα ψ., <ref='Act.2.43; 3.23'>Act.2:43 3:23</ref>\" (LXX), <ref='Rom.13.1'>Rom.13:1;</ref> ψ. ζῶσα (ζωῆς), <ref='1Co.15.45'>1Co.15:45</ref>, <ref='Rev.16.3'>Rev.16:3</ref>; <BR /> __(with) <b>as the object of divine grace and eternal salvation</b>: <ref='Heb.13.17'>Heb.13:17</ref>, <ref='Jas.1.21; 5.20'>Jas.1:21 5:20</ref>, <ref='1Pe.1.9, 22; 2.11; 4.19, 3'>1Pe.1:9, 22 2:11 4:19, 3</ref>Jo.2. <BR /> <re><i>SYN.</i>: see: νοῦς, πνεῦμα, ψυχικός, and cf. <i>ICC</i> on <ref='1Th.5.23'>1Th.5:23</ref>, Lft., <i>Notes</i>, 88f.</re> (AS)\nG5590\tG5590H = a Meaning of\tG5590G\tψυχή\tpsuchē\tG:N-F\tsoul: life\t <b>ψυχή</b>, -ῆς, ἡ, <BR /> [in LXX very frequently for נֶפֶשׁ, sometimes for לֵבַב ,לֵב, etc. ;] <BR /> __1. <b>breath</b> (Lat. anima), <b>breath of life, life</b> (Hom., al.; in Arist., of <b>the vital principle</b>): <ref='Mat.6.25'>Mat.6:25</ref>, <ref='Mrk.3.4; 10.45'>Mrk.3:4 10:45</ref>, <ref='Luk.12.22'>Luk.12:22</ref>, <ref='Jhn.10.11'>Jhn.10:11</ref>, <ref='Act.20.10, 24'>Act.20:10, 24</ref> <ref='2Co.1.23'>2Co.1:23</ref>, <ref='Php.2.30'>Php.2:30</ref>, <ref='1Th.2.8'>1Th.2:8</ref>, al. <BR /> __2. <b>the soul</b>, <BR />__(a) <b>as the seat of the will, desires and affections</b>: <ref='Mat.26.38'>Mat.26:38</ref>, <ref='Mrk.12.30'>Mrk.12:30</ref>\" (LXX) 14:34, <ref='Luk.1.46'>Luk.1:46</ref>, <ref='Jhn.10.24'>Jhn.10:24</ref>, <ref='Act.14.2'>Act.14:2</ref>, <ref='Php.1.27'>Php.1:27</ref>, al.; ἐκ ψυχῆς, <b>from the heart</b>, <b>heartily</b>: <ref='Eph.6.6'>Eph.6:6</ref>, <ref='Col.3.23'>Col.3:23</ref>; <BR /> __(b) <b>as a periphrasis for person or self </b>(frequently in  translation from Semitic originals, see M, <i>Pr.</i>, 87; Robinson, <i>Gospels</i>, 113ff.; but also frequently in cl., see LS, see word II, 2; Edwards, <i>Lex.</i>, App. A.): <ref='Mat.11.29'>Mat.11:29</ref>, <ref='Mrk.8.36'>Mrk.8:36</ref>, <ref='Act.2.41'>Act.2:41</ref>, <ref='Rom.2.9'>Rom.2:9</ref>, <ref='1Pe.3.20'>1Pe.3:20</ref>, al.; πᾶσα ψ., <ref='Act.2.43; 3.23'>Act.2:43 3:23</ref>\" (LXX), <ref='Rom.13.1'>Rom.13:1;</ref> ψ. ζῶσα (ζωῆς), <ref='1Co.15.45'>1Co.15:45</ref>, <ref='Rev.16.3'>Rev.16:3</ref>; <BR /> __(with) <b>as the object of divine grace and eternal salvation</b>: <ref='Heb.13.17'>Heb.13:17</ref>, <ref='Jas.1.21; 5.20'>Jas.1:21 5:20</ref>, <ref='1Pe.1.9, 22; 2.11; 4.19, 3'>1Pe.1:9, 22 2:11 4:19, 3</ref>Jo.2. <BR /> <re><i>SYN.</i>: see: νοῦς, πνεῦμα, ψυχικός, and cf. <i>ICC</i> on <ref='1Th.5.23'>1Th.5:23</ref>, Lft., <i>Notes</i>, 88f.</re> (AS)\nG5590\tG5590I = a Meaning of\tG5590G\tψυχή\tpsuchē\tG:N-F\tsoul: myself\t <b>ψυχή</b>, -ῆς, ἡ, <BR /> [in LXX very frequently for נֶפֶשׁ, sometimes for לֵבַב ,לֵב, etc. ;] <BR /> __1. <b>breath</b> (Lat. anima), <b>breath of life, life</b> (Hom., al.; in Arist., of <b>the vital principle</b>): <ref='Mat.6.25'>Mat.6:25</ref>, <ref='Mrk.3.4; 10.45'>Mrk.3:4 10:45</ref>, <ref='Luk.12.22'>Luk.12:22</ref>, <ref='Jhn.10.11'>Jhn.10:11</ref>, <ref='Act.20.10, 24'>Act.20:10, 24</ref> <ref='2Co.1.23'>2Co.1:23</ref>, <ref='Php.2.30'>Php.2:30</ref>, <ref='1Th.2.8'>1Th.2:8</ref>, al. <BR /> __2. <b>the soul</b>, <BR />__(a) <b>as the seat of the will, desires and affections</b>: <ref='Mat.26.38'>Mat.26:38</ref>, <ref='Mrk.12.30'>Mrk.12:30</ref>\" (LXX) 14:34, <ref='Luk.1.46'>Luk.1:46</ref>, <ref='Jhn.10.24'>Jhn.10:24</ref>, <ref='Act.14.2'>Act.14:2</ref>, <ref='Php.1.27'>Php.1:27</ref>, al.; ἐκ ψυχῆς, <b>from the heart</b>, <b>heartily</b>: <ref='Eph.6.6'>Eph.6:6</ref>, <ref='Col.3.23'>Col.3:23</ref>; <BR /> __(b) <b>as a periphrasis for person or self </b>(frequently in  translation from Semitic originals, see M, <i>Pr.</i>, 87; Robinson, <i>Gospels</i>, 113ff.; but also frequently in cl., see LS, see word II, 2; Edwards, <i>Lex.</i>, App. A.): <ref='Mat.11.29'>Mat.11:29</ref>, <ref='Mrk.8.36'>Mrk.8:36</ref>, <ref='Act.2.41'>Act.2:41</ref>, <ref='Rom.2.9'>Rom.2:9</ref>, <ref='1Pe.3.20'>1Pe.3:20</ref>, al.; πᾶσα ψ., <ref='Act.2.43; 3.23'>Act.2:43 3:23</ref>\" (LXX), <ref='Rom.13.1'>Rom.13:1;</ref> ψ. ζῶσα (ζωῆς), <ref='1Co.15.45'>1Co.15:45</ref>, <ref='Rev.16.3'>Rev.16:3</ref>; <BR /> __(with) <b>as the object of divine grace and eternal salvation</b>: <ref='Heb.13.17'>Heb.13:17</ref>, <ref='Jas.1.21; 5.20'>Jas.1:21 5:20</ref>, <ref='1Pe.1.9, 22; 2.11; 4.19, 3'>1Pe.1:9, 22 2:11 4:19, 3</ref>Jo.2. <BR /> <re><i>SYN.</i>: see: νοῦς, πνεῦμα, ψυχικός, and cf. <i>ICC</i> on <ref='1Th.5.23'>1Th.5:23</ref>, Lft., <i>Notes</i>, 88f.</re> (AS)\nG5590\tG5590J = a Meaning of\tG5590G\tψυχή\tpsuchē\tG:N-F\tsoul: person\t <b>ψυχή</b>, -ῆς, ἡ, <BR /> [in LXX very frequently for נֶפֶשׁ, sometimes for לֵבַב ,לֵב, etc. ;] <BR /> __1. <b>breath</b> (Lat. anima), <b>breath of life, life</b> (Hom., al.; in Arist., of <b>the vital principle</b>): <ref='Mat.6.25'>Mat.6:25</ref>, <ref='Mrk.3.4; 10.45'>Mrk.3:4 10:45</ref>, <ref='Luk.12.22'>Luk.12:22</ref>, <ref='Jhn.10.11'>Jhn.10:11</ref>, <ref='Act.20.10, 24'>Act.20:10, 24</ref> <ref='2Co.1.23'>2Co.1:23</ref>, <ref='Php.2.30'>Php.2:30</ref>, <ref='1Th.2.8'>1Th.2:8</ref>, al. <BR /> __2. <b>the soul</b>, <BR />__(a) <b>as the seat of the will, desires and affections</b>: <ref='Mat.26.38'>Mat.26:38</ref>, <ref='Mrk.12.30'>Mrk.12:30</ref>\" (LXX) 14:34, <ref='Luk.1.46'>Luk.1:46</ref>, <ref='Jhn.10.24'>Jhn.10:24</ref>, <ref='Act.14.2'>Act.14:2</ref>, <ref='Php.1.27'>Php.1:27</ref>, al.; ἐκ ψυχῆς, <b>from the heart</b>, <b>heartily</b>: <ref='Eph.6.6'>Eph.6:6</ref>, <ref='Col.3.23'>Col.3:23</ref>; <BR /> __(b) <b>as a periphrasis for person or self </b>(frequently in  translation from Semitic originals, see M, <i>Pr.</i>, 87; Robinson, <i>Gospels</i>, 113ff.; but also frequently in cl., see LS, see word II, 2; Edwards, <i>Lex.</i>, App. A.): <ref='Mat.11.29'>Mat.11:29</ref>, <ref='Mrk.8.36'>Mrk.8:36</ref>, <ref='Act.2.41'>Act.2:41</ref>, <ref='Rom.2.9'>Rom.2:9</ref>, <ref='1Pe.3.20'>1Pe.3:20</ref>, al.; πᾶσα ψ., <ref='Act.2.43; 3.23'>Act.2:43 3:23</ref>\" (LXX), <ref='Rom.13.1'>Rom.13:1;</ref> ψ. ζῶσα (ζωῆς), <ref='1Co.15.45'>1Co.15:45</ref>, <ref='Rev.16.3'>Rev.16:3</ref>; <BR /> __(with) <b>as the object of divine grace and eternal salvation</b>: <ref='Heb.13.17'>Heb.13:17</ref>, <ref='Jas.1.21; 5.20'>Jas.1:21 5:20</ref>, <ref='1Pe.1.9, 22; 2.11; 4.19, 3'>1Pe.1:9, 22 2:11 4:19, 3</ref>Jo.2. <BR /> <re><i>SYN.</i>: see: νοῦς, πνεῦμα, ψυχικός, and cf. <i>ICC</i> on <ref='1Th.5.23'>1Th.5:23</ref>, Lft., <i>Notes</i>, 88f.</re> (AS)\nG5590\tG5590K = a Meaning of\tG5590G\tψυχή\tpsuchē\tG:N-F\tsoul: animal\t <b>ψυχή</b>, -ῆς, ἡ, <BR /> [in LXX very frequently for נֶפֶשׁ, sometimes for לֵבַב ,לֵב, etc. ;] <BR /> __1. <b>breath</b> (Lat. anima), <b>breath of life, life</b> (Hom., al.; in Arist., of <b>the vital principle</b>): <ref='Mat.6.25'>Mat.6:25</ref>, <ref='Mrk.3.4; 10.45'>Mrk.3:4 10:45</ref>, <ref='Luk.12.22'>Luk.12:22</ref>, <ref='Jhn.10.11'>Jhn.10:11</ref>, <ref='Act.20.10, 24'>Act.20:10, 24</ref> <ref='2Co.1.23'>2Co.1:23</ref>, <ref='Php.2.30'>Php.2:30</ref>, <ref='1Th.2.8'>1Th.2:8</ref>, al. <BR /> __2. <b>the soul</b>, <BR />__(a) <b>as the seat of the will, desires and affections</b>: <ref='Mat.26.38'>Mat.26:38</ref>, <ref='Mrk.12.30'>Mrk.12:30</ref>\" (LXX) 14:34, <ref='Luk.1.46'>Luk.1:46</ref>, <ref='Jhn.10.24'>Jhn.10:24</ref>, <ref='Act.14.2'>Act.14:2</ref>, <ref='Php.1.27'>Php.1:27</ref>, al.; ἐκ ψυχῆς, <b>from the heart</b>, <b>heartily</b>: <ref='Eph.6.6'>Eph.6:6</ref>, <ref='Col.3.23'>Col.3:23</ref>; <BR /> __(b) <b>as a periphrasis for person or self </b>(frequently in  translation from Semitic originals, see M, <i>Pr.</i>, 87; Robinson, <i>Gospels</i>, 113ff.; but also frequently in cl., see LS, see word II, 2; Edwards, <i>Lex.</i>, App. A.): <ref='Mat.11.29'>Mat.11:29</ref>, <ref='Mrk.8.36'>Mrk.8:36</ref>, <ref='Act.2.41'>Act.2:41</ref>, <ref='Rom.2.9'>Rom.2:9</ref>, <ref='1Pe.3.20'>1Pe.3:20</ref>, al.; πᾶσα ψ., <ref='Act.2.43; 3.23'>Act.2:43 3:23</ref>\" (LXX), <ref='Rom.13.1'>Rom.13:1;</ref> ψ. ζῶσα (ζωῆς), <ref='1Co.15.45'>1Co.15:45</ref>, <ref='Rev.16.3'>Rev.16:3</ref>; <BR /> __(with) <b>as the object of divine grace and eternal salvation</b>: <ref='Heb.13.17'>Heb.13:17</ref>, <ref='Jas.1.21; 5.20'>Jas.1:21 5:20</ref>, <ref='1Pe.1.9, 22; 2.11; 4.19, 3'>1Pe.1:9, 22 2:11 4:19, 3</ref>Jo.2. <BR /> <re><i>SYN.</i>: see: νοῦς, πνεῦμα, ψυχικός, and cf. <i>ICC</i> on <ref='1Th.5.23'>1Th.5:23</ref>, Lft., <i>Notes</i>, 88f.</re> (AS)\nG0846\tG0846 =\tG0846\tαὐτός\tautos\tG:P\tit/s/he\t <b>αὐτός</b>, -ή, -ό, <BR /> <i>determinative pron.</i>, in late Gk. much more frequently than in cl. (WM, 178f.; Jannaris, <i>HGG</i>, §1399).  <BR /> __1. Emphatic (so always in nom. exc. when preceded by the art., see infr., iii); <BR />__(1) <b>self</b> (ipse), expressing opposition, distinction, exclusion, etc., αὐ. ἐκχυθήσεται, <ref='Luk.5.37'>Luk.5:37;</ref> αὐ. ἐγινώσκεν, <ref='Jhn.2.25'>Jhn.2:25;</ref> αὐ.ὑμεῖς, <ref='Jhn.3.28'>Jhn.3:28;</ref> καὶ αὐ. ἐγώ, <ref='Rom.15.14'>Rom.15:14;</ref> αὐ. Ἰησοῦς, <ref='Jhn.2.24'>Jhn.2:24;</ref> αὐ. καὶ οἱ μετ᾽ αὐτοῦ, <ref='Mrk.2.25'>Mrk.2:25;</ref> ὑμεῖς αὐ., <ref='Mrk.6.31'>Mrk.6:31;</ref> esp. (as freq in cl.) αὐ. ὁ, <ref='Mat.3.4'>Mat.3:4</ref>, <ref='Mrk.6.17'>Mrk.6:17</ref>, <ref='Jhn.16.27'>Jhn.16:27</ref>, <ref='1Th.3.11'>1Th.3:11</ref>, al.; in late Gk., sometimes weakened, ἐν αὐτῇ τ. ὥρᾳ, <b>in that hour</b>, <ref='Luk.10.21'>Luk.10:21</ref> (M, <i>Pr.</i>, 91; MM, see word); <BR /> __(2) emphatic, <b>he, she, it</b> (M, <i>Pr.</i>, 86; Bl., §48, 1, 2, 7), <ref='Mat.1.21; 12.50'>Mat.1:21, 12:50</ref>, <ref='Luk.6.35'>Luk.6:35</ref>, al.; pointing to some one as master (cl.), <ref='Mat.8.24'>Mat.8:24</ref>, <ref='Mrk.4.38'>Mrk.4:38</ref>, al.; αὐ., καὶ αὐ. = οὗτος, ὁ δε (BL, §48, 1), <ref='Mat.14.2'>Mat.14:2</ref>, <ref='Mrk.14.15, 44'>Mrk.14:15, 44</ref>, <ref='Luk.1.22; 2.28'>Luk.1:22, 2:28</ref>, al.<BR /> __2. In oblique cases (cl.), for the simple pron. of 3rd of person(s), <b>he, she, it</b>, <ref='Mat.7.9; 10.12; 26.44'>Mat.7:9, 10:12, 26:44</ref>, al.; with ptcp. in genitive absol., <ref='Mat.9.18'>Mat.9:18</ref>, <ref='Mrk.13.1'>Mrk.13:1</ref>, al. (for irreg. constructions, V. Bl., §74, 5); pleonastically after the relative (cf. Heb. אֲשֶׁר לוֹ; WM, 184ff.; Bl., §50, 4; MM, see word), <ref='Mrk.7.25'>Mrk.7:25</ref>, <ref='Rev.3.8; 7.2'>Rev.3:8, 7:2</ref>, al.; in constr. ad sensum, without proper subject expressly indicated, <ref='Mat.4.23'>Mat.4:23</ref>, <ref='Act.8.5'>Act.8:5</ref>, <ref='2Co.2.13'>2Co.2:13</ref>, al.; genitive αὐτοῦ = ἐκείνου, <ref='Rom.11.11'>Rom.11:11</ref>, <ref='1Th.2.19'>1Th.2:19</ref>, <ref='Tit.3.5'>Tit.3:5</ref>, <ref='Heb.2.4'>Heb.2:4</ref>.<BR /> __3. ὁ, ἡ, τὸ αὐ., <b>the same</b>: <ref='Heb.1.12; 13.8'>Heb.1:12, 13:8</ref>; τὸ αὐ., ποιεῖν, <ref='Mat.5.46, 47'>Mat.5:46, 47</ref>, al.; φρονεῖν, <ref='Rom.12.16; 15.5'>Rom.12:16, 15:5</ref>, <ref='Php.2.2'>Php.2:2</ref>, al.; τὰ αὐ., <ref='Act.15.27'>Act.15:27</ref>, <ref='Rom.2.1'>Rom.2:1</ref>, al.; κατὰ τὸ (τὰ) αὐ. (MM, see word), <ref='Act.14.1'>Act.14:1</ref>, <ref='Luk.6.23'>Luk.6:23</ref>, al.; ἐπὶ τὸ αὐ., <b>together</b> (MM, see word), <ref='Mat.22.34'>Mat.22:34</ref>, <ref='Act.1.15'>Act.1:15</ref>, al.; ἓν κ. τὸ αὐ., <ref='1Co.11.5; 12.11'>1Co.11:5, 12:11</ref>; with dative (cl.), <ref='1Co.11.5'>1Co.11:5;</ref> with a noun, λόγος, <ref='Mrk.14.39'>Mrk.14:39;</ref> μέτρος, <ref='Php.1.30'>Php.1:30;</ref> πνεῦμα, <ref='1Co.12.4.'>1Co.12:4.</ref><BR /> (AS)\nG5087\tG5087 =\tG5087\tτίθημι\ttithēmi\tG:V\tto place\t <b>τίθημι</b>, <BR /> [in LXX for שִׁית ,נתן ,שׂוּם, etc. ;] <BR /> __1. causative of κεῖμαι, <BR />__(a) <b>to place, lay, set</b>: <ref='Luk.6.48'>Luk.6:48</ref>, <ref='Rom.9.33'>Rom.9:33</ref>, al.; of laying the dead to rest, <ref='Mrk.15.47'>Mrk.15:47</ref>, <ref='Luk.23.55'>Luk.23:55</ref>, <ref='Jhn.11.34'>Jhn.11:34</ref>, <ref='Act.7.16'>Act.7:16</ref>, al.; before ἐπί, with genitive, <ref='Luk.8.16'>Luk.8:16</ref>, <ref='Jhn.19.19'>Jhn.19:19</ref>, al.; id. with accusative, <ref='Mrk.4.21'>Mrk.4:21</ref>, <ref='2Co.3.13'>2Co.3:13</ref>, al.; ὑπό, <ref='Mat.5.15'>Mat.5:15</ref>, al.; παρά, <ref='Act.4.35, 37'>Act.4:35, 37</ref>. Mid., <b>to have put or placed, to place for oneself</b>: of putting in prison, <ref='Act.4.3; 5.18, 25'>Act.4:3, 5:18, 25</ref>, al.; of giving counsel, βουλήν, <ref='Acts.27.12'>Act.27:12</ref>; of laying up in one's heart, <ref='Luk.1.66; 21.14'>Luk.1:66 21:14</ref> ( <ref='1Sa.21.12'>1Ki.21:12</ref>); <BR /> __(b) <b>to put down, lay down</b>: of bending the knees, τ. γόνατα, <b>to kneel</b>, <ref='Mrk.15.19'>Mrk.15:19</ref>, <ref='Act.7.60'>Act.7:60</ref>, al.; of putting off garments, <ref='Jhn.13.4'>Jhn.13:4;</ref> of laying down life, τ. ψυχήν, <ref='Jhn.10.11, 15, 17, 18; 13.37, 38; 15.13'>Jhn.10:11, 15 17, 18 13:37, 38 15:13</ref>, <ref='1Jn.3.16'>1Jn.3:16</ref>; of laying by money, παρ ̓ ἑαυτῷ, <ref='1Co.16.2'>1Co.16:2;</ref> of setting on food, <ref='Jhn.2.10'>Jhn.2:10;</ref> metaphorically, of setting forth an idea in symbolism, <ref='Mrk.4.30.'>Mrk.4:30.</ref> <BR /> __2. <b>to set, fix, establish</b>: ὑπόδειγμα, <ref='2Pe.2.6.'>2Pe.2:6.</ref> <BR /> __3. <b>to make, appoint</b>: <ref='Mat.22.44'>Mat.22:44</ref>, <ref='Mrk.12.36'>Mrk.12:36</ref>, <ref='Luk.20.43'>Luk.20:43</ref>, <ref='Act.2.35'>Act.2:35</ref>, <ref='Rom.4.17'>Rom.4:17</ref>, al. Mid., <b>to make, set</b> or <b>appoint for oneself</b>: <ref='Act.20.28'>Act.20:28</ref>, <ref='1Co.12.28'>1Co.12:28</ref>, <ref='1Th.5.9'>1Th.5:9</ref>, <ref='1Ti.1.12'>1Ti.1:12</ref>, al.; before ἵνα, <ref='Jhn.15.16'>Jhn.15:16</ref> (cf . ἀνα-, προσ-ανα-, ἀπο-, δια-, ἀντι-δια-, ἐκ-, ἐπι-, συν-επι-, κατα-, συν-κατα-, μετα-, παρα-, περι-, προ-, προσ-, συν-, ὑπο-τίθημι). <BR /> (AS)",
+          "morphgntEvidence": {
+            "sourceId": "morphgnt-sblgnt-6.12",
+            "repository": "morphgnt/sblgnt",
+            "ref": "6.12",
+            "file": "64-Jn-morphgnt.txt",
+            "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+            "license": "CC-BY-SA",
+            "tokens": [
+              {
+                "inputToken": "τὴν",
+                "resolution": "exact-diacritic-preserving-surface",
+                "lemma": "ὁ",
+                "occurrences": [
+                  {
+                    "bcv": "041513",
+                    "word": "τὴν",
+                    "normalizedWord": "τήν",
+                    "lemma": "ὁ",
+                    "pos": "RA",
+                    "parsing": "----ASF-"
+                  }
+                ]
+              },
+              {
+                "inputToken": "ψυχὴν",
+                "resolution": "exact-diacritic-preserving-surface",
+                "lemma": "ψυχή",
+                "occurrences": [
+                  {
+                    "bcv": "041513",
+                    "word": "ψυχὴν",
+                    "normalizedWord": "ψυχήν",
+                    "lemma": "ψυχή",
+                    "pos": "N-",
+                    "parsing": "----ASF-"
+                  }
+                ]
+              },
+              {
+                "inputToken": "αὐτοῦ",
+                "resolution": "exact-diacritic-preserving-surface",
+                "lemma": "αὐτός",
+                "occurrences": [
+                  {
+                    "bcv": "041513",
+                    "word": "αὐτοῦ",
+                    "normalizedWord": "αὐτοῦ",
+                    "lemma": "αὐτός",
+                    "pos": "RP",
+                    "parsing": "----GSM-"
+                  },
+                  {
+                    "bcv": "041513",
+                    "word": "αὐτοῦ",
+                    "normalizedWord": "αὐτοῦ",
+                    "lemma": "αὐτός",
+                    "pos": "RP",
+                    "parsing": "----GSM-"
+                  },
+                  {
+                    "bcv": "041515",
+                    "word": "αὐτοῦ",
+                    "normalizedWord": "αὐτοῦ",
+                    "lemma": "αὐτός",
+                    "pos": "RP",
+                    "parsing": "----GSM-"
+                  }
+                ]
+              },
+              {
+                "inputToken": "θῇ",
+                "resolution": "exact-diacritic-preserving-surface",
+                "lemma": "τίθημι",
+                "occurrences": [
+                  {
+                    "bcv": "041513",
+                    "word": "θῇ",
+                    "normalizedWord": "θῇ",
+                    "lemma": "τίθημι",
+                    "pos": "V-",
+                    "parsing": "3AAS-S--"
+                  }
+                ]
+              }
+            ]
+          },
+          "tbesgLineNumbers": [
+            958,
+            3702,
+            5242,
+            5761,
+            5762,
+            5763,
+            5764,
+            5765
+          ]
+        }
+      ],
       "morphgntFile": "64-Jn-morphgnt.txt",
       "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
-      "reviewId": "eb04180d8b907a9a9bfd4d1f19e633fe6fdc95a869d53f1531fe1fbe233eb56c",
+      "reviewId": "33c7d596531947b31d603d98fc8227d477e62c4f59e5ea98d85509eddbeb0107",
       "bookId": "ioan",
       "chapter": 15,
       "ref": "Ioan 15:18-27",
       "original": "κόσμος",
       "normalizedLemma": "κοσμοσ",
-      "meaning": "lume. Omenirea organizată în răzvrătire față de Dumnezeu.",
-      "meaningSha256": "sha256:91f4ee570a2a5d678e66f656a667c4efa7441c159c5dfd253d1546de367d0240",
+      "meaning": "lume; în contextul opoziției din Ioan 15, omenirea ostilă lui Hristos.",
+      "meaningSha256": "sha256:4bcdc4aa512ced2190e30fce1fa71f6f4553c8f7e3a4b05ab2d72317875a51ee",
       "candidateCount": 1,
       "candidates": [
         {
@@ -8389,14 +8917,14 @@
       ]
     },
     {
-      "reviewId": "5484072c08b57400615f33416578f04c8e0cffe81965bfbf693b5368a3afacce",
+      "reviewId": "5624208b57f253890ac33739594c7c2bf55dd26b1fac1b18885b1c4aa27dada9",
       "bookId": "ioan",
       "chapter": 16,
       "ref": "Ioan 16:1-15",
       "original": "παράκλητος",
       "normalizedLemma": "παρακλητοσ",
-      "meaning": "Mângâietor, ajutor, apărător. Duhul Sfânt dat ucenicilor.",
-      "meaningSha256": "sha256:f331688ef22ff6393f67b36a42946e6024a76c4c4285d26509ee2b0e39d3a95a",
+      "meaning": "sfătuitor, ajutor, apărător; tradițional, Mângâietor; aici, Duhul Sfânt.",
+      "meaningSha256": "sha256:03a47286157be421a6b971e61e35fd490167c0f8aea044fbcfdff25d0daa5c30",
       "candidateCount": 1,
       "candidates": [
         {
@@ -8416,14 +8944,14 @@
       ]
     },
     {
-      "reviewId": "4bf6501a626c4e88408591f65a340b8be023c9cc0376a027b281ae042adf4719",
+      "reviewId": "c986b3fe7ff956b993055a370e9173d956ade2abba2235b7cd373779ee5fd0cb",
       "bookId": "ioan",
       "chapter": 16,
       "ref": "Ioan 16:1-15",
       "original": "ἐλέγχω",
       "normalizedLemma": "ελεγχω",
-      "meaning": "a dovedi vinovat, a aduce la lumină. Lucrarea Duhului asupra lumii.",
-      "meaningSha256": "sha256:46418813646fba62ffaafd75cd5026658ddef532cdf2917dcda2a2677c0972a7",
+      "meaning": "a mustra, a convinge de vină, a expune; în context, lucrarea Duhului față de lume.",
+      "meaningSha256": "sha256:1238d156123db25f6997b6b11a7aeaca3a57404426c4a63dfee1d9729b2a7994",
       "candidateCount": 1,
       "candidates": [
         {
@@ -8611,14 +9139,14 @@
       "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
-      "reviewId": "9e7112390b2ce20c339aa4b27a9e22148b77491ca939f04d2e47cd4bddf43411",
+      "reviewId": "794b6eabbdb83b828de3f197b8e52cfc7d6977a8262613fc2a31c0508a187f2c",
       "bookId": "ioan",
       "chapter": 17,
       "ref": "Ioan 17:1-5",
       "original": "δόξα",
       "normalizedLemma": "δοξα",
-      "meaning": "slavă. Greutatea și frumusețea dumnezeiască arătate în Fiul.",
-      "meaningSha256": "sha256:3c56d1196a9b99dca9912015144d91e8baf6d5cf37a7dd67af99f5263e5aae79",
+      "meaning": "slavă, glorie, onoare; în context, slava Fiului.",
+      "meaningSha256": "sha256:21068152354712ec875f3f76ff90a490da327a1ff48c959dca8d16c18242ecf0",
       "candidateCount": 1,
       "candidates": [
         {
@@ -10124,17 +10652,100 @@
       "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
-      "reviewId": "751dc12057839a9cc7f8a0f5c26f248002282d3f1adee49e2113c264573d8c3b",
+      "reviewId": "b9a0a1e75a48dfdf90d6d8af2ec6e691b14afc62d502aa6ee251873b60205586",
       "bookId": "ioan",
       "chapter": 19,
       "ref": "Ioan 19:17-30",
-      "original": "παραδίδωμι τὸ πνεῦμα",
-      "normalizedLemma": "παραδιδωμιτοπνευμα",
-      "meaning": "a-Și da duhul. Predarea vieții în mod voit.",
-      "meaningSha256": "sha256:f202cd693d508bfb72cb0310730d7da4bde7f3cfd72cc8c79872708bf534e65f",
-      "candidateCount": 0,
-      "candidates": [],
-      "morphgntProblem": "surface-not-found-in-passage:παραδίδωμι",
+      "original": "παρέδωκεν τὸ πνεῦμα",
+      "normalizedLemma": "παρεδωκεντοπνευμα",
+      "meaning": "a dat/a predat duhul; παρέδωκεν este formă a verbului παραδίδωμι, «a da/preda», iar πνεῦμα = duh/spirit.",
+      "meaningSha256": "sha256:c4f1ceca8df543bfca8c29f9133a4ce70b54087796954f5cc877baaff3401373",
+      "candidateCount": 1,
+      "candidates": [
+        {
+          "sourceId": "stepbible-tbesg",
+          "sourceCommitSha": "b86d26cdb1f51729e73b5b4eb7f7ccadc5dfba39",
+          "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+          "sourceLocator": "TBESG line 3978 + TBESG line 3702 + TBESG lines 4276-4277",
+          "strongId": "G3860 + G3588 + G4151",
+          "canonicalLemma": "παραδίδωμι ὁ πνεῦμα",
+          "transliteration": "paradidōmi ho pneuma",
+          "morphology": "G:V | G:T | G:N-N",
+          "briefGloss": "to deliver; the/this/who; spirit/breath: spirit / spirit/breath: breath",
+          "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
+          "lineSha256": "sha256:3c36464c56a449db945ae1ebca974e310b1f1591238e45549ce9e37806a284f3",
+          "rawLine": "G3860\tG3860 =\tG3860\tπαραδίδωμι\tparadidōmi\tG:V\tto deliver\t <b>παρα-δίδωμι</b>, <BR /> [in LXX chiefly for נתן ;] correl. to παρδέχομαι, <BR /> __1. <b>to give</b> or <b>hand over</b> to another: with accusative and dative, <ref='Mat.11.27; 25.14'>Mat.11:27 25:14</ref>, <ref='Luk.4.6'>Luk.4:6</ref>, al.; of being delivered up to a course of teaching, pass. before εἰς, <ref='Rom.6.17.'>Rom.6:17.</ref> <BR /> __2. <b>to commit, commend</b>: <ref='Act.14.26; 15.40'>Act.14:26 15:40</ref>, <ref='1Pe.2.23'>1Pe.2:23</ref>. <BR /> __3. <b>to give</b> or <b>deliver up</b> to prison or judgment: with accusative of person(s), <ref='Mat.4.12'>Mat.4:12</ref>, <ref='Mrk.1.14'>Mrk.1:14</ref>, <ref='Rom.4.25'>Rom.4:25</ref>, <ref='2Pe.2.4'>2Pe.2:4</ref>; id. before ὑπέρ, <ref='Rom.8.32'>Rom.8:32;</ref> with dative, <ref='Mat.5.25'>Mat.5:25</ref>, <ref='Mrk.15.1'>Mrk.15:1</ref>, <ref='Luk.12.58'>Luk.12:58</ref>, <ref='Jhn.19.11'>Jhn.19:11</ref>, al.; id. before ἵνα, <ref='Jhn.19.16'>Jhn.19:16;</ref> with inf., <ref='Act.12.4'>Act.12:4;</ref> before εἰς, <ref='Mat.10.17; 17.22; 24.9'>Mat.10:17 17:22 24:9</ref>, <ref='Luk.21.12'>Luk.21:12</ref>, <ref='Act.8.3'>Act.8:3</ref>, <ref='2Co.4.11'>2Co.4:11</ref>, al.; τ. Σατανᾷ, <ref='1Ti.1.20'>1Ti.1:20;</ref> id. before εἰς, <ref='1Co.5.5'>1Co.5:5;</ref> with the collat. idea of treachery (= προδίδωμι), with accusative of person(s), <ref='Mat.26.25'>Mat.26:25</ref>, <ref='Mrk.14.11'>Mrk.14:11</ref>, <ref='Jhn.6.64'>Jhn.6:64</ref>, al.; id. with dative, <ref='Mat.26.15'>Mat.26:15</ref>, al.; present ptcp., ὁ παραδιδοὺς, <ref='Mat.26.25'>Mat.26:25</ref>, <ref='Mrk.14.42'>Mrk.14:42</ref>, <ref='Jhn.13.11'>Jhn.13:11</ref>. <BR /> __4. <b>to hand down, hand on</b> or <b>deliver</b> verbally (traditions, commands, etc.): <ref='Mrk.7.13'>Mrk.7:13</ref>, <ref='Luk.1.2'>Luk.1:2</ref>, <ref='Act.6.14'>Act.6:14</ref>, <ref='1Co.11.2; 15.2'>1Co.11:2 15:2</ref>; pass., <ref='2Pe.2.21'>2Pe.2:21</ref>, <ref='Jude.3'>Ju 3</ref>. <BR /> __5. <b>to permit</b> (for exx. in cl., see LS, see word): <ref='Mrk.4.29.'>Mrk.4:29.</ref><BR /> (AS)\nG3588\tG3588 =\tG3588\tὁ\tho\tG:T\tthe/this/who\t <b>ὁ</b>, ἡ, τό, <BR /> <i>the prepositive article</i> (ἄρθρον προτακτικόν), originally a demonstr. pron. (so usually in Hom.), in general corresponding to the Eng. definite article.<lb /> <BR /> __I. As demonstr. pron. <BR />__1. As frequently in Hom., absol., <b>he (she, it), his</b> (etc.): <ref='Act.17.28'>Act.17:28</ref> (quoted from the poet Aratus).<BR /> __2. Distributive, ὁ μὲν . . . ὁ δέ, <b>the one . . . the other</b>: <ref='1Co.7.7'>1Co.7:7</ref>, <ref='Gal.4.22'>Gal.4:22</ref>; pl., <ref='Act.14.4; 17.32'>Act.14:4, 17:32</ref>, <ref='Php.1.16'>Php.1:16</ref>, al.; οἱ μὲν . . . ἄλλοι δέ, <ref='Mat.16.14'>Mat.16:14</ref>, <ref='Jhn.7.12'>Jhn.7:12</ref>; οἱ μεν̀ . . . ὁδέ, <ref='Heb.7.21, 23'>Heb.7:21, 23</ref>.<BR /> __3. In narration (without ὁ μὲν preceding), ὁ δέ, <b>but he</b>: <ref='Mat.2.14'>Mat.2:14</ref>, <ref='Mrk.1.45'>Mrk.1:45</ref>, <ref='Luk.8.21'>Luk.8:21</ref>, <ref='Jhn.9.38'>Jhn.9:38</ref>, al. mult. <BR /> __II. As prepositive article, <b>the</b>, prefixed, <BR />__1. <b>to nouns unmodified</b>: ὁ θεός, τὸ φῶς, etc.; to abstract nouns, ἡ σοφία, etc., to pl. nouns which indicate a class, οἱ ἀλώπεκες, foxes, <ref='Mat.8.20'>Mat.8:20</ref>, al.; to an individual as representing a class, ὁ ἐργάτης, <ref='Luk.10.7'>Luk.10:7;</ref> with nom. = voc. in addresses, <ref='Mat.11.26'>Mat.11:26</ref>, <ref='Jhn.19.3'>Jhn.19:3</ref>, <ref='Jas.5.1'>Jas.5:1</ref>, al.; to things which pertain to one, ἡ χεῖρ, <b>his hand</b>, <ref='Mrk.3.1'>Mrk.3:1;</ref> to names of persons well known or already mentioned; usually to names of countries (originally adjectives), ἡ Ἰουδαία, etc.<BR /> __2. <b>To modified nouns</b>: with of person(s) pron. genitive, μοῦ, σοῦ, etc.; with poss. pron., ἐμός, σός, etc.; with adj. between the art. and the noun, ὁ ἀγαθὸς ἄνθρωπος, <ref='Mat.12.35'>Mat.12:35;</ref> the noun foll, by adj., both with art., ὁ ποιμὴν ὁ καλός, <ref='Jhn.10.11'>Jhn.10:11</ref> (on ὁ ὄχλος πολύς, <ref='Jhn.12.9'>Jhn.12:9</ref>, see M, <i>Pr.</i>, 84); before adjectival phrases, ἡ κατ᾽ ἐκλογὴν πρόθεσις, <ref='Rom.9.11.'>Rom.9:11.</ref> <BR /> __3. To Other parts of speech used as substantives; <BR />__(a) <b>neuter adjectives</b>: τ. ἀγαθόν, etc.;<BR /> __(b) <b>cardinal numerals</b>: ὁ εἶς, οἷ δύο, etc.;<BR /> __(with) <b>participles</b>: ὁ βαπτίζων (= ὁ Βαπτιστής, <ref='Mat.14.2'>Mat.14:2</ref>), <ref='Mrk.6.14'>Mrk.6:14</ref>; πᾶς ὁ, with ptcp., <b>every one who</b>, etc.;<BR /> __(d) <b>adverbs</b>: τὸ πέραν, τὰ νῦν, ὁ ἔσω ἄνθρωπος;<BR /> __(e) <b>infinitives</b>: nom., τὸ θέλειν, <ref='Rom.7.18'>Rom.7:18</ref>, al.; genitive, τοῦ, after adjectives, ἄξιον τοῦ πορεύεσθαι, <ref='1Co.16.4'>1Co.16:4;</ref> verbs, ἐλαχεν τοῦ θυμιᾶσαι, <ref='Luk.1.9'>Luk.1:9;</ref> and frequently in a final sense, ἐξῆλθεν ὁ σπείρειν, <ref='Mat.13.3'>Mat.13:3</ref> (on the artic. inf., see Bl., §71). <BR /> __4. In the neut. to sentences, <b>phrases or single words treated as a quotation</b>: τὸ Ἐι δύνῃ, <ref='Mrk.9.23'>Mrk.9:23;</ref> τὸ ἔτι ἅπαξ, <ref='Heb.12.27'>Heb.12:27;</ref> τὸ ἀνέβη, <ref='Eph.4.9'>Eph.4:9</ref>, al.<BR /> __5. <b>To prepositional phrases</b>: οἱ ἀπὸ Ἰταλίας, <ref='Heb.13.24'>Heb.13:24;</ref> οἱ ἐκ νόμου, <ref='Rom.4.14'>Rom.4:14;</ref> neut. accusative absol., in adverbial phrases, τὸ καθ᾽ ἡμέραν, <b>daily</b>, <ref='Luk.11.3'>Luk.11:3;</ref> τὸ κατὰ σάρκα, <b>as regards the flesh</b>, <ref='Rom.9.5.'>Rom.9:5.</ref> <BR /> __6. To nouns in the genitive, denoting kinship, association, etc.: ὁ τοῦ, <b>the son of</b> (unless context indicates a different relationship), <ref='Mat.10.2'>Mat.10:2</ref>, al.; τὰ τοῦ θεοῦ, <b>the things that pertain to God</b>, <ref='Mat.16.23'>Mat.16:23;</ref> τὰ τῆς εἰρήνης, <ref='Rom.14.19'>Rom.14:19</ref> (cf. M, <i>Pr.</i>, 81ff.; Bl, §§46, 47).<BR /> (AS)\nG4151\tG4151G =\tG4151G\tπνεῦμα\tpneuma\tG:N-N\tspirit/breath: spirit\t <b>πνεῦμα</b>, -τος, τό, <BR /> [in LXX chiefly and very frequently for רוּחַ ;] <BR /> __1. <b>of air in motion</b>; <BR />__(a) <b>wind</b>: <ref='Jhn.3.8'>Jhn.3:8;</ref> pl., <ref='Heb.1.7'>Heb.1:7</ref> (LXX); <BR /> __(b) <b>breath</b>: π. ζωῆς, <ref='Rev.11.11'>Rev.11:11;</ref> π. τοῦ στόματος, figuratively, <ref='2Th.2.8'>2Th.2:8</ref> (cf. Ps 32 (33)6). <BR /> __2. Of the vital principle, <b>the spirit</b> (Arist., Polyb., al.): <ref='Luk.8.55'>Luk.8:55</ref>, <ref='Jhn.19.30'>Jhn.19:30</ref>, <ref='Act.7.59'>Act.7:59</ref>, al.; opposite to σάρξ, <ref='Mat.26.41'>Mat.26:41</ref>, <ref='Mrk.14.38'>Mrk.14:38</ref>, <ref='1Co.5.5'>1Co.5:5</ref>, al.; to σῶμα, <ref='Rom.8.10'>Rom.8:10</ref>, <ref='1Co.6.17; 7.34'>1Co.6:17 7:34</ref>, <ref='1Pe.4.6'>1Pe.4:6</ref>; to ψυχή, <ref='Php.1.27'>Php.1:27</ref>, <ref='Heb.4.12'>Heb.4:12</ref>; τὸ π. καὶ ἡ ψ. καὶ τ. σῶμα, <ref='1Th.5.23'>1Th.5:23</ref> (M, <i>Th.</i>, in l.); dative, τῷ π., <b>in spirit</b>, <ref='Mrk.2.8; 8.12'>Mrk.2:8 8:12</ref>, <ref='Jhn.11.33; 13.21'>Jhn.11:33 13:21</ref>, <ref='Act.18.25'>Act.18:25</ref>, <ref='Rom.12.11'>Rom.12:11</ref>, <ref='1Co.7.34'>1Co.7:34</ref>, <ref='1Pe.3.18'>1Pe.3:18</ref>, al.; of the human spirit of Christ, <ref='Rom.1.4'>Rom.1:4</ref>, <ref='1Ti.3.16'>1Ti.3:16</ref>. <BR /> __3. <b>spirit</b>, i.e. frame of mind, <b>disposition, influence</b>: <ref='Luk.1.17'>Luk.1:17</ref>, <ref='Rom.8.15'>Rom.8:15</ref>, <ref='1Co.4.21'>1Co.4:21</ref>, <ref='Gal.6.1'>Gal 6:1</ref>, <ref='Eph.2.2'>Eph.2:2</ref>, <ref='2Ti.1.7'>2Ti.1:7</ref>, <ref='1Jn.4.6'>1Jn.4:6</ref>, al. <BR /> __4. An incorporeal being, <b>a spirit</b>: <ref='Luk.24.37, 39'>Luk.24:37, 39</ref> <ref='Act.23.8'>Act.23:8</ref>; π. ὁ θεός, <b>God is spirit</b>, <ref='Jhn.4.24'>Jhn.4:24;</ref> πατὴρ τῶν π., <ref='Heb.12.9'>Heb.12:9;</ref> of disembodied human beings, <ref='Heb.12.23'>Heb.12:23</ref>, <ref='1Pe.3.19'>1Pe.3:19</ref> (<i>ICC</i>, in l.; <i>DB</i>, iii, 795); of angels. <ref='Heb.1.14'>Heb.1:14;</ref> of demons or evil spirits, <ref='Mat.8.16'>Mat.8:16</ref>, <ref='Mrk.9.20'>Mrk.9:20</ref>, <ref='Luk.9.39'>Luk.9:39</ref>, al.; π. πύθυωνα, <ref='Act.16.16'>Act.16:16;</ref> πνεύματα δαιμονίων, <ref='Rev.16.14'>Rev.16:14;</ref> π. δαιμονίου ἀκαθάρτου, <ref='Luk.4.33'>Luk.4:33;</ref> π. ἀσθενείας (Bl., §35, 5), <ref='Luk.13.11'>Luk.13:11;</ref> π. ἀκάθαρτον, <ref='Mat.10.1'>Mat.10:1</ref>, <ref='Mrk.1.23'>Mrk.1:23</ref>, <ref='Luk.4.36'>Luk.4:36</ref>, <ref='Act.5.16'>Act.5:16</ref>; π. ἄλαλον (καὶ κωφόν), <ref='Mrk.9.17, 25'>Mrk.9:17, 25</ref>; πονηρόν, <ref='Luk.7.21'>Luk.7:21</ref>, <ref='Act.19.12'>Act.19:12</ref>, al. <BR /> __5. Of the <b>Holy Spirit</b>, π. ἅγιον, τὸ ἅ. π., τὸ π. τὸ ἅ. τὸ π., π. (the article as a rule being used when the Spirit is regarded as a Person or a Divine Power, and omitted when the reference is to an operation, influence or gift of the Spirit; see WM, 151:5; Bl., §46, 7): anarth., <ref='Mat.1.18; 3.11'>Mat.1:18 3:11</ref>, 16 4:1, <ref='Mrk.1.8'>Mrk.1:8</ref> (Swete, in l.), ib.10, <ref='Luk.1.15'>Luk.1:15</ref>, <ref='Jhn.7.39'>Jhn.7:39</ref>, <ref='Act.19.2'>Act.19:2</ref>, <ref='Rom.5.5'>Rom.5:5</ref>, <ref='1Co.2.4'>1Co.2:4</ref>, al.; with art., <ref='Mat.4.1; 12.31, 32'>Mat.4:1 12:31, 32</ref> <ref='Mrk.1.10; 3.29'>Mrk.1:10 3:29</ref>, <ref='Luk.2.26'>Luk.2:26</ref>, <ref='Jhn.7.36; 14.26'>Jhn.7:36 14:26</ref>, <ref='Act.4.31; 5.3'>Act.4:31 5:3</ref>, <ref='Rom.8.16'>Rom.8:16</ref>, al.; (τὸ) π. (τοῦ) θεοῦ, <ref='Mat.3.16'>Mat.3:16</ref>, <ref='Rom.8.9'>Rom.8:9</ref>, <ref='Eph.3.16'>Eph.3:16</ref>, <ref='1Jn.4.2'>1Jn.4:2</ref>, al.; τὸ π. τ. πατρός, <ref='Mat.10.20'>Mat.10:20;</ref> π. θεοῦ ζῶντος, <ref='2Co.3.3'>2Co.3:3;</ref> (τὸ) π. τοῦ κυρίου, <ref='Luk.4.18'>Luk.4:18</ref>, <ref='Act.5.9; 8.39'>Act.5:9 8:39</ref>; τὸ π. Ἰησοῦ, <ref='Act.16.7'>Act.16:7;</ref> Χριστοῦ, <ref='Rom.8.9'>Rom.8:9;</ref> Ἰησοῦ Χριστοῦ, <ref='Php.1.19'>Php.1:19;</ref> τὸ π. τ. ἀληθείας, <ref='Jhn.15.26; 16.13'>Jhn.15:26 16:13</ref>, <ref='1Jn.4.6'>1Jn.4:6;</ref> λείγει (μαρτυρεῖ) τὸ π. (τὸ ἅγιον), <ref='Act.21.11; 28.25'>Act.21:11 28:25</ref>, <ref='1Ti.4.1'>1Ti.4:1</ref>, <ref='Heb.3.7; 10.15'>Heb.3:7 10:15</ref>, <ref='Rev.14.13'>Rev.14:13</ref>; before τ. ἐκκλησίαις,  <ref='Rev.2.7, 11'>Rev.2:7, 11</ref> 17, 29, 3:6, 12, 22; ἐν τ. π., <ref='Luk.2.27'>Luk.2:27;</ref> κατὰ πνεῦμα, <ref='Rom.8.4'>Rom.8:4</ref>, 5; ἐξ ὕδατος καὶ π., <ref='Jhn.3.5'>Jhn.3:5</ref>, διὰ πνεύματος αἰωνίου, <ref='Heb.9.14'>Heb.9:14;</ref> ἐν ἁγιασμῷ πνεύματος, <ref='2Th.2.13'>2Th.2:13</ref>, <ref='1Pe.1.2'>1Pe.1:2</ref>; ἓν π., <ref='1Co.12.13'>1Co.12:13</ref>, <ref='Eph.2.18; 4.4'>Eph.2:18 4:4</ref>; ὁ δὲ κύριος τὸ π. ἐστιν, <ref='2Co.3.17'>2Co.3:17;</ref> of that which is effected or governed by the Spirit, opposite to γράμμα, <ref='Rom.2.29; 7.6'>Rom.2:29 7:6</ref>, <ref='2Co.3.6'>2Co.3:6</ref>. <BR /> <re><i>SYN.</i>: νοῦς, which in NT is contrasted with π. as \"the action of the understanding in man with that of the spiritual or ecstatic impulse\" (<i>DB</i>, iv, 612); ψυχή — the usual term in cl. psychology—in NT, \"expresses man as apart from God, a separate individual, π. expresses man as drawing his life from God\" (<i>DB</i>, 1-vol., 872).</re> (AS)\nG4151\tG4151H = a Meaning of\tG4151G\tπνεῦμα\tpneuma\tG:N-N\tspirit/breath: breath\t <b>πνεῦμα</b>, -τος, τό, <BR /> [in LXX chiefly and very frequently for רוּחַ ;] <BR /> __1. <b>of air in motion</b>; <BR />__(a) <b>wind</b>: <ref='Jhn.3.8'>Jhn.3:8;</ref> pl., <ref='Heb.1.7'>Heb.1:7</ref> (LXX); <BR /> __(b) <b>breath</b>: π. ζωῆς, <ref='Rev.11.11'>Rev.11:11;</ref> π. τοῦ στόματος, figuratively, <ref='2Th.2.8'>2Th.2:8</ref> (cf. Ps 32 (33)6). <BR /> __2. Of the vital principle, <b>the spirit</b> (Arist., Polyb., al.): <ref='Luk.8.55'>Luk.8:55</ref>, <ref='Jhn.19.30'>Jhn.19:30</ref>, <ref='Act.7.59'>Act.7:59</ref>, al.; opposite to σάρξ, <ref='Mat.26.41'>Mat.26:41</ref>, <ref='Mrk.14.38'>Mrk.14:38</ref>, <ref='1Co.5.5'>1Co.5:5</ref>, al.; to σῶμα, <ref='Rom.8.10'>Rom.8:10</ref>, <ref='1Co.6.17; 7.34'>1Co.6:17 7:34</ref>, <ref='1Pe.4.6'>1Pe.4:6</ref>; to ψυχή, <ref='Php.1.27'>Php.1:27</ref>, <ref='Heb.4.12'>Heb.4:12</ref>; τὸ π. καὶ ἡ ψ. καὶ τ. σῶμα, <ref='1Th.5.23'>1Th.5:23</ref> (M, <i>Th.</i>, in l.); dative, τῷ π., <b>in spirit</b>, <ref='Mrk.2.8; 8.12'>Mrk.2:8 8:12</ref>, <ref='Jhn.11.33; 13.21'>Jhn.11:33 13:21</ref>, <ref='Act.18.25'>Act.18:25</ref>, <ref='Rom.12.11'>Rom.12:11</ref>, <ref='1Co.7.34'>1Co.7:34</ref>, <ref='1Pe.3.18'>1Pe.3:18</ref>, al.; of the human spirit of Christ, <ref='Rom.1.4'>Rom.1:4</ref>, <ref='1Ti.3.16'>1Ti.3:16</ref>. <BR /> __3. <b>spirit</b>, i.e. frame of mind, <b>disposition, influence</b>: <ref='Luk.1.17'>Luk.1:17</ref>, <ref='Rom.8.15'>Rom.8:15</ref>, <ref='1Co.4.21'>1Co.4:21</ref>, <ref='Gal.6.1'>Gal 6:1</ref>, <ref='Eph.2.2'>Eph.2:2</ref>, <ref='2Ti.1.7'>2Ti.1:7</ref>, <ref='1Jn.4.6'>1Jn.4:6</ref>, al. <BR /> __4. An incorporeal being, <b>a spirit</b>: <ref='Luk.24.37, 39'>Luk.24:37, 39</ref> <ref='Act.23.8'>Act.23:8</ref>; π. ὁ θεός, <b>God is spirit</b>, <ref='Jhn.4.24'>Jhn.4:24;</ref> πατὴρ τῶν π., <ref='Heb.12.9'>Heb.12:9;</ref> of disembodied human beings, <ref='Heb.12.23'>Heb.12:23</ref>, <ref='1Pe.3.19'>1Pe.3:19</ref> (<i>ICC</i>, in l.; <i>DB</i>, iii, 795); of angels. <ref='Heb.1.14'>Heb.1:14;</ref> of demons or evil spirits, <ref='Mat.8.16'>Mat.8:16</ref>, <ref='Mrk.9.20'>Mrk.9:20</ref>, <ref='Luk.9.39'>Luk.9:39</ref>, al.; π. πύθυωνα, <ref='Act.16.16'>Act.16:16;</ref> πνεύματα δαιμονίων, <ref='Rev.16.14'>Rev.16:14;</ref> π. δαιμονίου ἀκαθάρτου, <ref='Luk.4.33'>Luk.4:33;</ref> π. ἀσθενείας (Bl., §35, 5), <ref='Luk.13.11'>Luk.13:11;</ref> π. ἀκάθαρτον, <ref='Mat.10.1'>Mat.10:1</ref>, <ref='Mrk.1.23'>Mrk.1:23</ref>, <ref='Luk.4.36'>Luk.4:36</ref>, <ref='Act.5.16'>Act.5:16</ref>; π. ἄλαλον (καὶ κωφόν), <ref='Mrk.9.17, 25'>Mrk.9:17, 25</ref>; πονηρόν, <ref='Luk.7.21'>Luk.7:21</ref>, <ref='Act.19.12'>Act.19:12</ref>, al. <BR /> __5. Of the <b>Holy Spirit</b>, π. ἅγιον, τὸ ἅ. π., τὸ π. τὸ ἅ. τὸ π., π. (the article as a rule being used when the Spirit is regarded as a Person or a Divine Power, and omitted when the reference is to an operation, influence or gift of the Spirit; see WM, 151:5; Bl., §46, 7): anarth., <ref='Mat.1.18; 3.11'>Mat.1:18 3:11</ref>, 16 4:1, <ref='Mrk.1.8'>Mrk.1:8</ref> (Swete, in l.), ib.10, <ref='Luk.1.15'>Luk.1:15</ref>, <ref='Jhn.7.39'>Jhn.7:39</ref>, <ref='Act.19.2'>Act.19:2</ref>, <ref='Rom.5.5'>Rom.5:5</ref>, <ref='1Co.2.4'>1Co.2:4</ref>, al.; with art., <ref='Mat.4.1; 12.31, 32'>Mat.4:1 12:31, 32</ref> <ref='Mrk.1.10; 3.29'>Mrk.1:10 3:29</ref>, <ref='Luk.2.26'>Luk.2:26</ref>, <ref='Jhn.7.36; 14.26'>Jhn.7:36 14:26</ref>, <ref='Act.4.31; 5.3'>Act.4:31 5:3</ref>, <ref='Rom.8.16'>Rom.8:16</ref>, al.; (τὸ) π. (τοῦ) θεοῦ, <ref='Mat.3.16'>Mat.3:16</ref>, <ref='Rom.8.9'>Rom.8:9</ref>, <ref='Eph.3.16'>Eph.3:16</ref>, <ref='1Jn.4.2'>1Jn.4:2</ref>, al.; τὸ π. τ. πατρός, <ref='Mat.10.20'>Mat.10:20;</ref> π. θεοῦ ζῶντος, <ref='2Co.3.3'>2Co.3:3;</ref> (τὸ) π. τοῦ κυρίου, <ref='Luk.4.18'>Luk.4:18</ref>, <ref='Act.5.9; 8.39'>Act.5:9 8:39</ref>; τὸ π. Ἰησοῦ, <ref='Act.16.7'>Act.16:7;</ref> Χριστοῦ, <ref='Rom.8.9'>Rom.8:9;</ref> Ἰησοῦ Χριστοῦ, <ref='Php.1.19'>Php.1:19;</ref> τὸ π. τ. ἀληθείας, <ref='Jhn.15.26; 16.13'>Jhn.15:26 16:13</ref>, <ref='1Jn.4.6'>1Jn.4:6;</ref> λείγει (μαρτυρεῖ) τὸ π. (τὸ ἅγιον), <ref='Act.21.11; 28.25'>Act.21:11 28:25</ref>, <ref='1Ti.4.1'>1Ti.4:1</ref>, <ref='Heb.3.7; 10.15'>Heb.3:7 10:15</ref>, <ref='Rev.14.13'>Rev.14:13</ref>; before τ. ἐκκλησίαις,  <ref='Rev.2.7, 11'>Rev.2:7, 11</ref> 17, 29, 3:6, 12, 22; ἐν τ. π., <ref='Luk.2.27'>Luk.2:27;</ref> κατὰ πνεῦμα, <ref='Rom.8.4'>Rom.8:4</ref>, 5; ἐξ ὕδατος καὶ π., <ref='Jhn.3.5'>Jhn.3:5</ref>, διὰ πνεύματος αἰωνίου, <ref='Heb.9.14'>Heb.9:14;</ref> ἐν ἁγιασμῷ πνεύματος, <ref='2Th.2.13'>2Th.2:13</ref>, <ref='1Pe.1.2'>1Pe.1:2</ref>; ἓν π., <ref='1Co.12.13'>1Co.12:13</ref>, <ref='Eph.2.18; 4.4'>Eph.2:18 4:4</ref>; ὁ δὲ κύριος τὸ π. ἐστιν, <ref='2Co.3.17'>2Co.3:17;</ref> of that which is effected or governed by the Spirit, opposite to γράμμα, <ref='Rom.2.29; 7.6'>Rom.2:29 7:6</ref>, <ref='2Co.3.6'>2Co.3:6</ref>. <BR /> <re><i>SYN.</i>: νοῦς, which in NT is contrasted with π. as \"the action of the understanding in man with that of the spiritual or ecstatic impulse\" (<i>DB</i>, iv, 612); ψυχή — the usual term in cl. psychology—in NT, \"expresses man as apart from God, a separate individual, π. expresses man as drawing his life from God\" (<i>DB</i>, 1-vol., 872).</re> (AS)",
+          "morphgntEvidence": {
+            "sourceId": "morphgnt-sblgnt-6.12",
+            "repository": "morphgnt/sblgnt",
+            "ref": "6.12",
+            "file": "64-Jn-morphgnt.txt",
+            "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+            "license": "CC-BY-SA",
+            "tokens": [
+              {
+                "inputToken": "παρέδωκεν",
+                "resolution": "exact-diacritic-preserving-surface",
+                "lemma": "παραδίδωμι",
+                "occurrences": [
+                  {
+                    "bcv": "041930",
+                    "word": "παρέδωκεν",
+                    "normalizedWord": "παρέδωκε(ν)",
+                    "lemma": "παραδίδωμι",
+                    "pos": "V-",
+                    "parsing": "3AAI-S--"
+                  }
+                ]
+              },
+              {
+                "inputToken": "τὸ",
+                "resolution": "exact-diacritic-preserving-surface",
+                "lemma": "ὁ",
+                "occurrences": [
+                  {
+                    "bcv": "041930",
+                    "word": "τὸ",
+                    "normalizedWord": "τό",
+                    "lemma": "ὁ",
+                    "pos": "RA",
+                    "parsing": "----ASN-"
+                  },
+                  {
+                    "bcv": "041930",
+                    "word": "τὸ",
+                    "normalizedWord": "τό",
+                    "lemma": "ὁ",
+                    "pos": "RA",
+                    "parsing": "----ASN-"
+                  }
+                ]
+              },
+              {
+                "inputToken": "πνεῦμα",
+                "resolution": "exact-diacritic-preserving-surface",
+                "lemma": "πνεῦμα",
+                "occurrences": [
+                  {
+                    "bcv": "041930",
+                    "word": "πνεῦμα",
+                    "normalizedWord": "πνεῦμα",
+                    "lemma": "πνεῦμα",
+                    "pos": "N-",
+                    "parsing": "----ASN-"
+                  }
+                ]
+              }
+            ]
+          },
+          "tbesgLineNumbers": [
+            3702,
+            3978,
+            4276,
+            4277
+          ]
+        }
+      ],
       "morphgntFile": "64-Jn-morphgnt.txt",
       "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
@@ -10219,21 +10830,6 @@
           ]
         }
       ],
-      "morphgntFile": "64-Jn-morphgnt.txt",
-      "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
-    },
-    {
-      "reviewId": "3d15ee8d12a6235a6c79b09ca74cc43e0d9e2f49644ae1c290e99556f725070f",
-      "bookId": "ioan",
-      "chapter": 20,
-      "ref": "Ioan 20:1-18",
-      "original": "ῥαββουνί",
-      "normalizedLemma": "ραββουνι",
-      "meaning": "Învățătorule. Formă caldă și personală de adresare.",
-      "meaningSha256": "sha256:a2cd04d0d0db499c418ebeac7fc2f7824219a49447396e584b2b170b77c1047b",
-      "candidateCount": 0,
-      "candidates": [],
-      "morphgntProblem": "resolved-lemma-not-in-tbesg:ραββουνι",
       "morphgntFile": "64-Jn-morphgnt.txt",
       "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
@@ -12177,14 +12773,14 @@
       "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
-      "reviewId": "cef86caf678a0fb3598fea02dbd9d562090dccffe52aecdf775b972370fac27c",
+      "reviewId": "f181f0d7d14158e54df23c65ae6e20015279bacb9073d10012b0a8be84d0a8c4",
       "bookId": "ioan",
       "chapter": 21,
       "ref": "Ioan 21:15-19",
       "original": "ἀγαπᾷς / φιλεῖς",
       "normalizedLemma": "αγαπασφιλεισ",
-      "meaning": "iubești. Limbajul dragostei cercetate și mărturisite înaintea Domnului.",
-      "meaningSha256": "sha256:12bfb7c968665b76269a55644286a861f21b13d4d206bba65ef7781c98c884e4",
+      "meaning": "iubești; ἀγαπάω și φιλέω pot ambele însemna «a iubi», iar o opoziție rigidă între ele nu trebuie dedusă numai din lexic.",
+      "meaningSha256": "sha256:d1e6f0407335fe1255aed5ec484f0ac7fab5e547db834f41ca00da0f5d2ac811",
       "candidateCount": 1,
       "candidates": [
         {
@@ -12447,32 +13043,58 @@
       ]
     },
     {
-      "reviewId": "7f8e6fdd5c5d205197fc229995b3b6b3a541debca6518fcf96f6193a3d592301",
+      "reviewId": "482be9832dc1f564d76489b76c651383821343adaa32f28e9e462fbef28b4e33",
       "bookId": "efeseni",
       "chapter": 1,
       "ref": "Efeseni 1:1-6",
-      "original": "huiothesia",
-      "normalizedLemma": "",
-      "meaning": "așezare ca fiu, înfiere cu drepturi și responsabilitate",
-      "meaningSha256": "sha256:f5dd9337b282e881162a03de739a1607c51b0caf6135ee151f5475c361839858",
-      "candidateCount": 0,
-      "candidates": [],
-      "morphgntProblem": "no-greek-tokens"
+      "original": "υἱοθεσία",
+      "normalizedLemma": "υιοθεσια",
+      "meaning": "înfiere, adopție ca fiu; așezare în statutul de fiu.",
+      "meaningSha256": "sha256:2acecf1a552962fc7656617dd4b9cfd4718978db6b6c372ce7f76352d218fbdc",
+      "candidateCount": 1,
+      "candidates": [
+        {
+          "sourceId": "stepbible-tbesg",
+          "sourceCommitSha": "b86d26cdb1f51729e73b5b4eb7f7ccadc5dfba39",
+          "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+          "sourceLocator": "TBESG line 5361",
+          "strongId": "G5206",
+          "canonicalLemma": "υἱοθεσία",
+          "transliteration": "uhiothesia",
+          "morphology": "G:N-F",
+          "briefGloss": "adoption (as son)",
+          "matchKind": "canonical-lemma-diacritic-exact",
+          "lineSha256": "sha256:55e8df05f5ef04246e7c9b6c84512f7c6be27835d65740f80d4449a46c0a3e8d",
+          "rawLine": "G5206\tG5206 =\tG5206\tυἱοθεσία\tuhiothesia\tG:N-F\tadoption (as son)\t <b>υἱοθεσία</b>, -ας, ἡ<BR /> (cf. the cl. phrases, υἱὸν τίθεσθαι, θετὸς υἱός), frequently in Inscr. (see Deiss., BS, 239), adoption of a son (or daughter); metaphorically, of God's relation established <BR />__(a) <b>with Israel</b>: <ref='Rom.9.4'>Rom.9:4;</ref> <BR /> __(b) <b>with Christ­ians</b>: <ref='Rom.8.15'>Rom.8:15</ref>, <ref='Gal.4.5'>Gal.4:5</ref>, <ref='Eph.1.5'>Eph.1:5</ref>; of its consummation, <ref='Rom.8.23.'>Rom.8:23.</ref>†<BR /> (AS)"
+        }
+      ]
     },
     {
-      "reviewId": "78937e6f4687b36d16440f7c3ea7f0428d72b3df4577368fa2835f09061ea0ee",
+      "reviewId": "a874570184b788285780f4006e070f89d51a419a476e155d2e26d72c002ff9ef",
       "bookId": "efeseni",
       "chapter": 2,
       "ref": "Efeseni 2:8-10",
-      "original": "poiēma",
-      "normalizedLemma": "",
-      "meaning": "lucrare făcută, operă, ceea ce este modelat de un creator",
-      "meaningSha256": "sha256:f0782a3370daf3734a4108a472d12608b4ef47bb06d8e93e4200f578a77811e4",
-      "candidateCount": 0,
-      "candidates": [],
-      "morphgntProblem": "surface-not-found-in-passage:̄",
-      "morphgntFile": "70-Eph-morphgnt.txt",
-      "morphgntBlobSha": "c506f4c4933b0c202f07742ca54aad26ff5495bc"
+      "original": "ποίημα",
+      "normalizedLemma": "ποιημα",
+      "meaning": "lucrare, lucru făcut, operă sau creație.",
+      "meaningSha256": "sha256:336849c2bc4db8cc45520a33c92208ceac9dc0e1913d93962573116d7b530dc5",
+      "candidateCount": 1,
+      "candidates": [
+        {
+          "sourceId": "stepbible-tbesg",
+          "sourceCommitSha": "b86d26cdb1f51729e73b5b4eb7f7ccadc5dfba39",
+          "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+          "sourceLocator": "TBESG line 4290",
+          "strongId": "G4161",
+          "canonicalLemma": "ποίημα",
+          "transliteration": "poiēma",
+          "morphology": "G:N-N",
+          "briefGloss": "workmanship",
+          "matchKind": "canonical-lemma-diacritic-exact",
+          "lineSha256": "sha256:7b428a7ebf58414ab8574f78bd4c118fc0912fd38d9ba652dba03e37ad8d1459",
+          "rawLine": "G4161\tG4161 =\tG4161\tποίημα\tpoiēma\tG:N-N\tworkmanship\t <b>ποίημα</b>, -τος, τό<BR /> (ποιέω), [in LXX chiefly for מַעֲשֶׂה (frequently in Ec) ;] <BR /><b>that which is made or done, a work</b>: <ref='Rom.1.20'>Rom.1:20</ref>, <ref='Eph.2.10'>Eph.2:10</ref>.†<BR /> (AS)"
+        }
+      ]
     },
     {
       "reviewId": "eb8fe96b1e09ebc7d2f9c9c6d170110b1b7f2b5316e57f886fd3e86e1b500aa3",
@@ -12529,14 +13151,14 @@
       ]
     },
     {
-      "reviewId": "14c652e5748bc9b4378c98f021bde85e939921a4355128577c36a24f5de8ff72",
+      "reviewId": "e65136562ddca1c394229c404476d8aac9d70613eba455e5c44ae14894879a73",
       "bookId": "filimon",
       "chapter": 1,
       "ref": "Filimon 1:8-16",
       "original": "Ὀνήσιμος",
       "normalizedLemma": "ονησιμοσ",
-      "meaning": "folositor, de folos. Pavel folosește sensul numelui pentru a arăta schimbarea omului care fusese nefolositor și acum devenise folositor.",
-      "meaningSha256": "sha256:21fd6ef8a023f32b921877d1b26b0c099c132f053c534d2b39a9737dd1c313cb",
+      "meaning": "Onesimus, nume propriu; în versetul 11 Pavel construiește un joc de cuvinte între «nefolositor» și «folositor».",
+      "meaningSha256": "sha256:40732d66ebc0fe11f71313720279c37f0d77357cf18a96bf26f7e94dadb8f006",
       "candidateCount": 1,
       "candidates": [
         {

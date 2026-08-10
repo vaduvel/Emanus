@@ -114,7 +114,7 @@ export const NT_BOOK_02: BibleBook = {
               "original": "δεῦτε ὀπίσω μου",
               "transliteration": "deute opiso mou",
               "language": "greaca",
-              "meaning": "veniți după Mine. Chemarea nu este o invitație la o opinie, ci la o urmare: Isus înainte, ucenicul în urma Lui."
+              "meaning": "veniți după Mine; literal, «veniți» + «după/în urma» + «Mine»."
             }
           ],
           "wordSource": "Lexical research tracked separately against SBLGNT/STEPBible TBESG; not attributed to the sermon source unless explicitly stated there",
@@ -139,7 +139,7 @@ export const NT_BOOK_02: BibleBook = {
               "original": "ἐξουσία",
               "transliteration": "exousia",
               "language": "greaca",
-              "meaning": "autoritate, drept de stăpânire. Nu este vorba de un ton mai tare, ci de o putere reală, care ascultă de cuvântul Domnului."
+              "meaning": "autoritate, drept, putere de a acționa; în context, autoritatea reală a lui Isus."
             }
           ],
           "wordSource": "Lexical research tracked separately against SBLGNT/STEPBible TBESG; not attributed to the sermon source unless explicitly stated there",
@@ -187,14 +187,6 @@ export const NT_BOOK_02: BibleBook = {
           "teaching": "Leprosul vine cu credința că Isus poate să-l curățească și Îi lasă Lui hotărârea: «Dacă vrei, poți». Isus este mișcat de milă, îl atinge și îl curăță. Apoi îi poruncește să respecte ceea ce ceruse Moise și să se arate preotului; perioada Noului Legământ nu fusese încă inaugurată prin lucrarea încheiată a crucii.\n\nOmul este recunoscător, dar nu ascultă porunca de a păstra tăcerea. Intenția bună nu transformă neascultarea în ascultare: răspândirea veștii ajunge să îngreuneze intrarea publică a lui Isus în cetăți. Putem avea entuziasm sincer și totuși să împiedicăm lucrarea dacă presupunem că știm mai bine decât Domnul cum trebuie slujit.\n\nIsus nu urmărește să fie cunoscut în primul rând ca Vindecător. Vindecarea este o lucrare a milei Lui, dar scopul principal rămâne salvarea omului de păcat și vestirea Evangheliei. Darurile și minunile nu trebuie să mute centrul de pe Mântuitor și de pe mesajul Lui.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-transcript-primary",
-          "words": [
-            {
-              "original": "σπλαγχνίζομαι",
-              "transliteration": "splanchnizomai",
-              "language": "greaca",
-              "meaning": "mi se face milă, mă îndur din adâncul ființei. Milă înseamnă că Dumnezeu nu se întoarce de la cel necurat; Se apropie și Se atinge."
-            }
-          ],
           "wordSource": "Lexical research tracked separately against SBLGNT/STEPBible TBESG; not attributed to the sermon source unless explicitly stated there",
           "crossRefs": [
             "Levitic 13:45-46",
@@ -369,7 +361,7 @@ export const NT_BOOK_02: BibleBook = {
               "original": "βλασφημέω",
               "transliteration": "blasfemeo",
               "language": "greaca",
-              "meaning": "a huli, a vorbi de rău. Hula nu este orice cuvânt aspru, ci luarea de poziție împotriva a ceea ce se știe că este adevărat."
+              "meaning": "a huli, a defăima, a vorbi insultător; în context, împotrivirea verbală față de lucrarea Duhului."
             }
           ],
           "wordSource": "Lexical research tracked separately against SBLGNT/STEPBible TBESG; Greek glosses are not attributed to the sermon source unless explicitly stated there",
@@ -438,7 +430,7 @@ export const NT_BOOK_02: BibleBook = {
               "original": "μυστήριον",
               "transliteration": "mysterion",
               "language": "greaca",
-              "meaning": "taină, secret. În Scriptură nu înseamnă ceva de neînțeles, ci un plan al lui Dumnezeu pe care El Însuși îl descoperă celor care Îl urmează."
+              "meaning": "taină, mister, secret; în Noul Testament poate desemna ceva ascuns și apoi descoperit de Dumnezeu."
             }
           ],
           "wordSource": "Lexical research tracked separately against SBLGNT/STEPBible TBESG; Greek glosses are not attributed to the sermon source unless explicitly stated there",
@@ -575,7 +567,7 @@ export const NT_BOOK_02: BibleBook = {
               "original": "λεγιών",
               "transliteration": "legion",
               "language": "greaca",
-              "meaning": "legiune — unitate militară romană de ordinul miilor de soldați. Termenul nu este sinonim cu «cohortă»; în Marcu 5 numele subliniază numărul foarte mare al duhurilor."
+              "meaning": "legiune; termen latin pentru o mare unitate militară romană, folosit aici ca nume care sugerează un număr foarte mare."
             }
           ],
           "wordSource": "Lexical research tracked separately against SBLGNT/STEPBible TBESG; Greek glosses are not attributed to the sermon source unless explicitly stated there",
@@ -599,7 +591,7 @@ export const NT_BOOK_02: BibleBook = {
               "original": "σώζω",
               "transliteration": "sozo",
               "language": "greaca",
-              "meaning": "mântuiesc, fac întreg, tămăduiesc. Cuvântul acoperă și sufletul, și trupul: mântuirea nu este doar despre lumea de dincolo."
+              "meaning": "a salva, a mântui, a izbăvi; în unele contexte, a vindeca."
             }
           ],
           "wordSource": "Lexical research tracked separately against SBLGNT/STEPBible TBESG; Greek glosses are not attributed to the sermon source unless explicitly stated there",
@@ -623,7 +615,7 @@ export const NT_BOOK_02: BibleBook = {
               "original": "καθεύδω",
               "transliteration": "katheudo",
               "language": "greaca",
-              "meaning": "dorm. Isus vorbește despre moarte cu un cuvânt pe care îl vor folosi apoi toți ai Lui: pentru cine este al Lui, moartea este somnul dinaintea deșteptării."
+              "meaning": "a dormi; aici Isus folosește somnul ca imagine pentru moarte."
             }
           ],
           "wordSource": "Lexical research tracked separately against SBLGNT/STEPBible TBESG; Greek glosses are not attributed to the sermon source unless explicitly stated there",
@@ -902,7 +894,7 @@ export const NT_BOOK_02: BibleBook = {
               "original": "Χριστός",
               "transliteration": "Christos",
               "language": "greaca",
-              "meaning": "Unsul, Mesia cel făgăduit. Mărturisirea lui Petru nu Îl face pe Isus un profet între profeți, ci Unsul lui Dumnezeu, Cel așteptat de Israel."
+              "meaning": "Unsul; titlul grecesc corespunzător lui Mesia/Hristos."
             }
           ],
           "wordSource": "Lexical research tracked separately against SBLGNT/STEPBible TBESG; Greek glosses are not attributed to the sermon source unless explicitly stated there",
@@ -926,7 +918,7 @@ export const NT_BOOK_02: BibleBook = {
               "original": "ψυχή",
               "transliteration": "psyche",
               "language": "greaca",
-              "meaning": "viața sufletească, viața care se caută pe sine. Isus nu vorbește despre viața trupului, ci despre acea viață care își apără propria păstrare, propria onoare și propria plăcere; a o pierde pentru El înseamnă a o câștiga cu adevărat."
+              "meaning": "suflet, viață, persoană sau sine, după context; în Marcu 8 sensul are legătură cu viața/sinele pe care omul încearcă să-l păstreze."
             }
           ],
           "wordSource": "The sermon explicitly discusses the Greek soul-life distinction in Mark 8:35-37; lexical claims still require independent verification against SBLGNT/STEPBible TBESG",

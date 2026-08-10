@@ -59,7 +59,7 @@ export const NT_BOOK_18: BibleBook = {
               "original": "Ὀνήσιμος",
               "transliteration": "Onesimos",
               "language": "greaca",
-              "meaning": "folositor, de folos. Pavel folosește sensul numelui pentru a arăta schimbarea omului care fusese nefolositor și acum devenise folositor."
+              "meaning": "Onesimus, nume propriu; în versetul 11 Pavel construiește un joc de cuvinte între «nefolositor» și «folositor»."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",

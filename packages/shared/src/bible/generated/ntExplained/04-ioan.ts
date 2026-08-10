@@ -29,7 +29,7 @@ export const NT_BOOK_04: BibleBook = {
               "original": "Λόγος",
               "transliteration": "Logos",
               "language": "greaca",
-              "meaning": "Cuvântul. Nu o simplă vorbire, ci Persoana prin care Dumnezeu Se face cunoscut și prin care toate au fost făcute."
+              "meaning": "cuvânt, mesaj, rostire; în Ioan 1, «Cuvântul» este titlul folosit pentru Persoana prezentată în pasaj."
             },
             {
               "original": "ζωή",
@@ -41,7 +41,7 @@ export const NT_BOOK_04: BibleBook = {
               "original": "φῶς",
               "transliteration": "phos",
               "language": "greaca",
-              "meaning": "lumina. Ceea ce descoperă, curată și arată drumul."
+              "meaning": "lumină; în context, imagine pentru descoperire și călăuzire."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -68,7 +68,7 @@ export const NT_BOOK_04: BibleBook = {
               "original": "μαρτυρία",
               "transliteration": "martyria",
               "language": "greaca",
-              "meaning": "mărturie. Spunerea adevarului despre cine este Cineva."
+              "meaning": "mărturie. Spunerea adevărului despre cine este Cineva."
             },
             {
               "original": "τέκνα θεοῦ",
@@ -80,7 +80,7 @@ export const NT_BOOK_04: BibleBook = {
               "original": "ἐκ θεοῦ",
               "transliteration": "ek Theou",
               "language": "greaca",
-              "meaning": "din Dumnezeu. Originea noii nasteri nu este omeneasca, ci dumnezeiasca."
+              "meaning": "din Dumnezeu. Originea noii nasteri nu este omeneasca, ci dumnezeiască."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -106,19 +106,19 @@ export const NT_BOOK_04: BibleBook = {
               "original": "σὰρξ",
               "transliteration": "sarx",
               "language": "greaca",
-              "meaning": "trup, carne. Aici arată omenitatea adevărată asumata de Fiul."
+              "meaning": "trup, carne. Aici arată omenitatea adevărată asumată de Fiul."
             },
             {
               "original": "ἐσκήνωσεν",
               "transliteration": "eskenosen",
               "language": "greaca",
-              "meaning": "a locuit, și-a întins cortul. Cuvânt care trimite spre prezenta lui Dumnezeu în mijlocul poporului."
+              "meaning": "a locuit, și-a întins cortul. Cuvânt care trimite spre prezența lui Dumnezeu în mijlocul poporului."
             },
             {
               "original": "μονογενής",
               "transliteration": "monogenes",
               "language": "greaca",
-              "meaning": "singurul născut, unicul de acest fel. Arată unicitatea Fiului fata de Tatăl."
+              "meaning": "unic, singurul de acest fel; în context, unicitatea Fiului față de Tatăl."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -150,7 +150,7 @@ export const NT_BOOK_04: BibleBook = {
               "original": "μαρτυρέω",
               "transliteration": "martyreo",
               "language": "greaca",
-              "meaning": "a marturisi. A spune deschis adevarul despre cine este Hristos."
+              "meaning": "a marturisi. A spune deschis adevărul despre cine este Hristos."
             },
             {
               "original": "μένω",
@@ -183,19 +183,19 @@ export const NT_BOOK_04: BibleBook = {
               "original": "ῥαββί",
               "transliteration": "rabbi",
               "language": "greaca",
-              "meaning": "Invatatorule. Titlul cu care ucenicii se apropie de Isus."
+              "meaning": "Învățătorule. Titlul cu care ucenicii se apropie de Isus."
             },
             {
               "original": "Μεσσίας",
               "transliteration": "Messias",
               "language": "greaca",
-              "meaning": "Mesia, Unsul. Cel asteptat în fagaduintele lui Dumnezeu."
+              "meaning": "Mesia, Unsul. Cel așteptat în făgăduințele lui Dumnezeu."
             },
             {
               "original": "υἱὸς τοῦ ἀνθρώπου",
               "transliteration": "huios tou anthropou",
               "language": "greaca",
-              "meaning": "Fiul omului. Nume prin care Domnul Isus vorbește despre sine cu smerenie și slava laolalta."
+              "meaning": "Fiul omului; titlu folosit de Isus despre Sine."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -239,13 +239,13 @@ export const NT_BOOK_04: BibleBook = {
               "original": "ὥρα",
               "transliteration": "hora",
               "language": "greaca",
-              "meaning": "ceasul. Vremea hotarata a lucrarii și a slavei lui Hristos."
+              "meaning": "ceasul. Vremea hotărâtă a lucrarii și a slavei lui Hristos."
             },
             {
               "original": "δόξα",
               "transliteration": "doxa",
               "language": "greaca",
-              "meaning": "slava. Frumusetea și greutatea dumnezeiasca aratate în Fiul."
+              "meaning": "slavă, glorie, onoare; în context, slava arătată în Fiul."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -270,7 +270,7 @@ export const NT_BOOK_04: BibleBook = {
               "original": "ζῆλος",
               "transliteration": "zelos",
               "language": "greaca",
-              "meaning": "ravna. Foc sfant pentru onoarea lui Dumnezeu."
+              "meaning": "râvnă, zel."
             },
             {
               "original": "ναός",
@@ -302,13 +302,13 @@ export const NT_BOOK_04: BibleBook = {
               "original": "πιστεύω",
               "transliteration": "pisteuo",
               "language": "greaca",
-              "meaning": "a crede, a se increde. Același verb arată aici și credința oamenilor, și faptul ca Isus nu Se incredea în ei."
+              "meaning": "a crede, a se încrede. Același verb arată aici și credința oamenilor, și faptul ca Isus nu Se încredea în ei."
             },
             {
               "original": "γινώσκω",
               "transliteration": "ginosko",
               "language": "greaca",
-              "meaning": "a cunoaste. La Ioan, cunoastere reala, nu simpla informatie."
+              "meaning": "a cunoaste. La Ioan, cunoaștere reala, nu simpla informatie."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -377,13 +377,13 @@ export const NT_BOOK_04: BibleBook = {
               "original": "ὑψωθῆναι",
               "transliteration": "hypsothenai",
               "language": "greaca",
-              "meaning": "a fi inaltat. La Ioan, cuvântul priveste spre cruce și spre slava de dupa ea."
+              "meaning": "a fi înălțat. La Ioan, cuvântul priveste spre cruce și spre slava de dupa ea."
             },
             {
               "original": "κρίσις",
               "transliteration": "krisis",
               "language": "greaca",
-              "meaning": "judecata. Punerea lucrurilor la lumina și aratarea lor asa cum sunt."
+              "meaning": "judecată, actul sau hotărârea de judecare."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -414,7 +414,7 @@ export const NT_BOOK_04: BibleBook = {
               "original": "μένει",
               "transliteration": "menei",
               "language": "greaca",
-              "meaning": "rămâne. La finalul capitolului, mania lui Dumnezeu nu vine abia atunci, ci rămâne peste omul care refuza pe Fiul."
+              "meaning": "rămâne. La finalul capitolului, mânia lui Dumnezeu nu vine abia atunci, ci rămâne peste omul care refuză pe Fiul."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -497,7 +497,7 @@ export const NT_BOOK_04: BibleBook = {
               "original": "σωτὴρ τοῦ κόσμου",
               "transliteration": "soter tou kosmou",
               "language": "greaca",
-              "meaning": "Mantuitorul lumii. Mărturisire larga despre intinderea mantuirii aduse de Fiul."
+              "meaning": "Mântuitorul lumii. Mărturisire larga despre intinderea mântuirii aduse de Fiul."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -522,13 +522,13 @@ export const NT_BOOK_04: BibleBook = {
               "original": "πιστεύω",
               "transliteration": "pisteuo",
               "language": "greaca",
-              "meaning": "a crede, a se increde. La Ioan, credința adevărată se sprijină pe Fiul și pe cuvântul Lui."
+              "meaning": "a crede, a se încrede. La Ioan, credința adevărată se sprijină pe Fiul și pe cuvântul Lui."
             },
             {
               "original": "ζῇ",
               "transliteration": "ze",
               "language": "greaca",
-              "meaning": "traieste. Cuvânt scurt și puternic prin care Domnul aduce viață și mangaiere."
+              "meaning": "traieste. Cuvânt scurt și puternic prin care Domnul aduce viață și mângâiere."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -563,12 +563,6 @@ export const NT_BOOK_04: BibleBook = {
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
-              "original": "Βηθεσδά",
-              "transliteration": "Bethesda",
-              "language": "greaca",
-              "meaning": "Betesda. Numele a fost legat de ideea milei ori a harului, potrivit cu scena neputintei omenesti."
-            },
-            {
               "original": "σάββατον",
               "transliteration": "sabbaton",
               "language": "greaca",
@@ -594,22 +588,22 @@ export const NT_BOOK_04: BibleBook = {
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
-              "original": "ζωὴ ἐν ἑαυτῷ",
+              "original": "ζωὴν ἐν ἑαυτῷ",
               "transliteration": "zoe en heauto",
               "language": "greaca",
-              "meaning": "viață în Sine. Viață neîmprumutată, proprie dumnezeirii."
+              "meaning": "viață în Sine; ζωή = viață, ἐν = în, ἑαυτῷ = în Sine/în el însuși."
             },
             {
               "original": "κρίσις",
               "transliteration": "krisis",
               "language": "greaca",
-              "meaning": "judecata. Autoritatea de a pune toate lucrurile la lumina și de a da hotararea dreapta."
+              "meaning": "judecată, actul sau hotărârea de judecare."
             },
             {
               "original": "τιμῶσι",
               "transliteration": "timosi",
               "language": "greaca",
-              "meaning": "sa cinsteasca. Respect, onoare și inchinare cuvenite Fiului."
+              "meaning": "să cinstească, să onoreze; în context, cinstirea Fiului."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -686,7 +680,7 @@ export const NT_BOOK_04: BibleBook = {
               "original": "ἐγώ εἰμι",
               "transliteration": "ego eimi",
               "language": "greaca",
-              "meaning": "Eu sunt. Formula grea de prezenta și autoritate rostita de Domnul."
+              "meaning": "Eu sunt. Formula grea de prezența și autoritate rostita de Domnul."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -711,7 +705,7 @@ export const NT_BOOK_04: BibleBook = {
               "original": "ἄρτος τῆς ζωῆς",
               "transliteration": "artos tes zoes",
               "language": "greaca",
-              "meaning": "Painea vieții. Hristos ca hrana adevărată și de neocolit a sufletului."
+              "meaning": "Pâinea vieții. Hristos ca hrana adevărată și de neocolit a sufletului."
             },
             {
               "original": "ἕλκω",
@@ -723,7 +717,7 @@ export const NT_BOOK_04: BibleBook = {
               "original": "μένω",
               "transliteration": "meno",
               "language": "greaca",
-              "meaning": "a rămâne. Legătura vie și statornica dintre credincios și Hristos."
+              "meaning": "a rămâne. Legătura vie și statornică dintre credincios și Hristos."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -749,13 +743,13 @@ export const NT_BOOK_04: BibleBook = {
               "original": "ῥήματα ζωῆς αἰωνίου",
               "transliteration": "rhemata zoes aioniou",
               "language": "greaca",
-              "meaning": "cuvintele vieții vesnice. Vorbirea lui Hristos ca izvor de viață."
+              "meaning": "cuvintele vieții veșnice. Vorbirea lui Hristos ca izvor de viață."
             },
             {
               "original": "σκανδαλίζω",
               "transliteration": "skandalizo",
               "language": "greaca",
-              "meaning": "a poticni, a scandaliza. Cuvântul adevarului loveste în asteptarile firii."
+              "meaning": "a poticni, a scandaliza. Cuvântul adevărului loveste în așteptările firii."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -793,7 +787,7 @@ export const NT_BOOK_04: BibleBook = {
               "original": "καιρός",
               "transliteration": "kairos",
               "language": "greaca",
-              "meaning": "vreme, ceas potrivit. Timp hotarat în randuiala lui Dumnezeu."
+              "meaning": "vreme, ceas potrivit. Timp hotarat în rânduiala lui Dumnezeu."
             },
             {
               "original": "δόξα",
@@ -824,7 +818,7 @@ export const NT_BOOK_04: BibleBook = {
               "original": "διψάω",
               "transliteration": "dipsao",
               "language": "greaca",
-              "meaning": "a înseta. Foamea adanca a omului după viața lui Dumnezeu."
+              "meaning": "a înseta. Foamea adâncă a omului după viața lui Dumnezeu."
             },
             {
               "original": "ποταμοὶ ὕδατος ζῶντος",
@@ -836,7 +830,7 @@ export const NT_BOOK_04: BibleBook = {
               "original": "ἐδοξάσθη",
               "transliteration": "edoxasthe",
               "language": "greaca",
-              "meaning": "a fost proslavit. La Ioan, slava Fiului trece prin cruce, înviere și inaltare."
+              "meaning": "a fost proslăvit. La Ioan, slava Fiului trece prin cruce, înviere și înălțare."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -868,7 +862,7 @@ export const NT_BOOK_04: BibleBook = {
               "original": "πλανάω",
               "transliteration": "planao",
               "language": "greaca",
-              "meaning": "a duce în ratacire. Acuzatia adusa Domnului de cei impotrivitori."
+              "meaning": "a duce în rătăcire. Acuzatia adusa Domnului de cei împotrivitori."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -974,7 +968,7 @@ export const NT_BOOK_04: BibleBook = {
               "original": "ἐγώ εἰμι",
               "transliteration": "ego eimi",
               "language": "greaca",
-              "meaning": "Eu sunt. Formula de auto-descoperire cu greutate dumnezeiasca."
+              "meaning": "Eu sunt. Formula de auto-descoperire cu greutate dumnezeiască."
             },
             {
               "original": "τηρέω",
@@ -1024,7 +1018,7 @@ export const NT_BOOK_04: BibleBook = {
               "original": "Σιλωάμ",
               "transliteration": "Siloam",
               "language": "greaca",
-              "meaning": "Siloam, talmacit Trimis. Nume care se potriveste cu Cel ce trimite și cu Cel trimis."
+              "meaning": "Siloam, tălmăcit Trimis. Nume care se potriveste cu Cel ce trimite și cu Cel trimis."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -1049,7 +1043,7 @@ export const NT_BOOK_04: BibleBook = {
               "original": "σημεῖα",
               "transliteration": "semeia",
               "language": "greaca",
-              "meaning": "semne. Lucrari care arată prezenta și autoritatea lui Dumnezeu în Hristos."
+              "meaning": "semne. Lucrări care arată prezența și autoritatea lui Dumnezeu în Hristos."
             },
             {
               "original": "συναγωγή",
@@ -1130,13 +1124,13 @@ export const NT_BOOK_04: BibleBook = {
               "original": "ποιμὴν ὁ καλός",
               "transliteration": "poimen ho kalos",
               "language": "greaca",
-              "meaning": "Pastorul cel bun. Pastor frumos, adevărat, vrednic și plin de jertfire."
+              "meaning": "Păstorul cel bun; ποιμήν = păstor, καλός = bun, frumos sau nobil."
             },
             {
               "original": "περισσόν",
               "transliteration": "perisson",
               "language": "greaca",
-              "meaning": "din belșug. viața dată de Hristos nu este saraca, ci plina."
+              "meaning": "din belșug, din abundență, peste măsură."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -1162,19 +1156,19 @@ export const NT_BOOK_04: BibleBook = {
               "original": "ἁρπάζω",
               "transliteration": "harpazo",
               "language": "greaca",
-              "meaning": "a smulge, a rapune prin forta. Nimeni nu poate smulge oile din mana Lui."
+              "meaning": "a smulge, a răpune prin forta. Nimeni nu poate smulge oile din mâna Lui."
             },
             {
               "original": "ζωὴ αἰώνιος",
               "transliteration": "zoe aionios",
               "language": "greaca",
-              "meaning": "viață veșnică. Viață dată acum și purtata pana la capat de Hristos."
+              "meaning": "viață veșnică. Viață dată acum și purtata până la capăt de Hristos."
             },
             {
               "original": "ἕν",
               "transliteration": "hen",
               "language": "greaca",
-              "meaning": "una. Unitate adanca intre Tatăl și Fiul."
+              "meaning": "una, unul (formă neutră); în context, expresia despre Tatăl și Fiul."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -1205,7 +1199,7 @@ export const NT_BOOK_04: BibleBook = {
               "original": "ἡ γραφὴ οὐ δύναται λυθῆναι",
               "transliteration": "he graphe ou dynatai lythenai",
               "language": "greaca",
-              "meaning": "Scriptura nu poate fi desfiintata. Taria și autoritatea permanenta a Scripturii."
+              "meaning": "Scriptura nu poate fi desființată. Tăria și autoritatea permanenta a Scripturii."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -1274,13 +1268,13 @@ export const NT_BOOK_04: BibleBook = {
               "original": "ἐδάκρυσεν",
               "transliteration": "edakrysen",
               "language": "greaca",
-              "meaning": "a plans. Lacrima reala a Domnului în fata durerii și a mortii."
+              "meaning": "a plâns. Lacrimă reala a Domnului în fața durerii și a morții."
             },
             {
               "original": "κράζω",
               "transliteration": "krazo",
               "language": "greaca",
-              "meaning": "a striga cu glas tare. Porunca plina de autoritate data mortului."
+              "meaning": "a striga cu glas tare. Porunca plină de autoritate data mortului."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -1305,13 +1299,13 @@ export const NT_BOOK_04: BibleBook = {
               "original": "συνέδριον",
               "transliteration": "synedrion",
               "language": "greaca",
-              "meaning": "sobor, Sinedriu. Adunarea conducatorilor religiosi."
+              "meaning": "sobor, Sinedriu. Adunarea conducătorilor religiosi."
             },
             {
               "original": "συναγάγῃ εἰς ἕν",
               "transliteration": "synagage eis hen",
               "language": "greaca",
-              "meaning": "sa adune intr-unul. Lucrarea de strangere a copiilor lui Dumnezeu prin moartea Fiului."
+              "meaning": "sa adune într-unul. Lucrarea de strângere a copiilor lui Dumnezeu prin moartea Fiului."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -1349,13 +1343,13 @@ export const NT_BOOK_04: BibleBook = {
               "original": "ὡσαννά",
               "transliteration": "hosanna",
               "language": "greaca",
-              "meaning": "Osana. Strigare de rugaminte și lauda pentru mântuire."
+              "meaning": "Osana. Strigare de rugăminte și lauda pentru mântuire."
             },
             {
               "original": "δόξα",
               "transliteration": "doxa",
               "language": "greaca",
-              "meaning": "slava. În Ioan, slava Fiului merge spre cruce și apoi spre proslavire."
+              "meaning": "slava. În Ioan, slava Fiului merge spre cruce și apoi spre proslăvire."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -1380,13 +1374,13 @@ export const NT_BOOK_04: BibleBook = {
               "original": "ὑψωθῶ",
               "transliteration": "hypsotho",
               "language": "greaca",
-              "meaning": "voi fi inaltat. La Ioan, arată spre cruce și spre slava ei."
+              "meaning": "voi fi înălțat. La Ioan, arată spre cruce și spre slava ei."
             },
             {
               "original": "κρίσις",
               "transliteration": "krisis",
               "language": "greaca",
-              "meaning": "judecata. Punerea lumii și a stapanitorului ei sub sentinta lui Dumnezeu."
+              "meaning": "judecata. Punerea lumii și a stăpânitorului ei sub sentinta lui Dumnezeu."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -1408,10 +1402,10 @@ export const NT_BOOK_04: BibleBook = {
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
-              "original": "δόξα τῶν ἀνθρώπων",
+              "original": "τὴν δόξαν τῶν ἀνθρώπων",
               "transliteration": "doxa ton anthropon",
               "language": "greaca",
-              "meaning": "slava oamenilor. Aprobarea omeneasca iubita mai mult decât cinstea lui Dumnezeu."
+              "meaning": "slava oamenilor; în context, aprobarea omenească iubită mai mult decât cinstea lui Dumnezeu."
             },
             {
               "original": "φῶς",
@@ -1456,13 +1450,13 @@ export const NT_BOOK_04: BibleBook = {
               "original": "τέλος",
               "transliteration": "telos",
               "language": "greaca",
-              "meaning": "capat, deplinatate. Iubirea dusa pana la implinirea ei intreaga."
+              "meaning": "sfârșit, capăt, țintă; în expresia εἰς τέλος poate avea sensul «până la capăt»."
             },
             {
               "original": "νίπτω",
               "transliteration": "nipto",
               "language": "greaca",
-              "meaning": "a spala. Aici, spalarea picioarelor în semn de curatire și slujire."
+              "meaning": "a spăla. Aici, spalarea picioarelor în semn de curățire și slujire."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -1487,7 +1481,7 @@ export const NT_BOOK_04: BibleBook = {
               "original": "ἐταράχθη",
               "transliteration": "etarachthe",
               "language": "greaca",
-              "meaning": "S-a tulburat. Miscare adanca a sufletului în fata raului și a durerii."
+              "meaning": "S-a tulburat. Mișcare adâncă a sufletului în fața răului și a durerii."
             },
             {
               "original": "νύξ",
@@ -1515,10 +1509,10 @@ export const NT_BOOK_04: BibleBook = {
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
             {
-              "original": "ἐντολή καινή",
+              "original": "ἐντολὴν καινὴν",
               "transliteration": "entole kaine",
               "language": "greaca",
-              "meaning": "porunca noua. Porunca iubirii în masura lui Hristos."
+              "meaning": "poruncă nouă; ἐντολή = poruncă, καινός = nou."
             },
             {
               "original": "δοξάζω",
@@ -1599,7 +1593,7 @@ export const NT_BOOK_04: BibleBook = {
               "original": "παράκλητος",
               "transliteration": "parakletos",
               "language": "greaca",
-              "meaning": "Mângâietor, ajutor, apărător. Cel chemat alături de ai lui Hristos."
+              "meaning": "sfătuitor, ajutor, apărător; tradițional, Mângâietor."
             },
             {
               "original": "μένω",
@@ -1714,10 +1708,10 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "prieteni. Cei apropiați cărora Domnul le face cunoscut ce a auzit de la Tatăl."
             },
             {
-              "original": "τίθημι τὴν ψυχήν",
+              "original": "τὴν ψυχὴν αὐτοῦ θῇ",
               "transliteration": "tithemi ten psychen",
               "language": "greaca",
-              "meaning": "a-și pune viața. Limbaj al jertfirii de sine."
+              "meaning": "să-și pună viața; θῇ este formă a verbului τίθημι, «a pune», iar ψυχή poate însemna aici «viață»."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -1742,7 +1736,7 @@ export const NT_BOOK_04: BibleBook = {
               "original": "κόσμος",
               "transliteration": "kosmos",
               "language": "greaca",
-              "meaning": "lume. Omenirea organizată în răzvrătire față de Dumnezeu."
+              "meaning": "lume; în contextul opoziției din Ioan 15, omenirea ostilă lui Hristos."
             },
             {
               "original": "μισέω",
@@ -1792,13 +1786,13 @@ export const NT_BOOK_04: BibleBook = {
               "original": "παράκλητος",
               "transliteration": "parakletos",
               "language": "greaca",
-              "meaning": "Mângâietor, ajutor, apărător. Duhul Sfânt dat ucenicilor."
+              "meaning": "sfătuitor, ajutor, apărător; tradițional, Mângâietor; aici, Duhul Sfânt."
             },
             {
               "original": "ἐλέγχω",
               "transliteration": "elencho",
               "language": "greaca",
-              "meaning": "a dovedi vinovat, a aduce la lumină. Lucrarea Duhului asupra lumii."
+              "meaning": "a mustra, a convinge de vină, a expune; în context, lucrarea Duhului față de lume."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -1898,7 +1892,7 @@ export const NT_BOOK_04: BibleBook = {
               "original": "δόξα",
               "transliteration": "doxa",
               "language": "greaca",
-              "meaning": "slavă. Greutatea și frumusețea dumnezeiască arătate în Fiul."
+              "meaning": "slavă, glorie, onoare; în context, slava Fiului."
             },
             {
               "original": "ζωὴ αἰώνιος",
@@ -2144,10 +2138,10 @@ export const NT_BOOK_04: BibleBook = {
               "meaning": "S-a isprăvit. Lucrare dusă la capăt, împlinită pe deplin."
             },
             {
-              "original": "παραδίδωμι τὸ πνεῦμα",
+              "original": "παρέδωκεν τὸ πνεῦμα",
               "transliteration": "paradidomi to pneuma",
               "language": "greaca",
-              "meaning": "a-Și da duhul. Predarea vieții în mod voit."
+              "meaning": "a dat/a predat duhul; παρέδωκεν este formă a verbului παραδίδωμι, «a da/preda», iar πνεῦμα = duh/spirit."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -2212,12 +2206,6 @@ export const NT_BOOK_04: BibleBook = {
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "words": [
-            {
-              "original": "ῥαββουνί",
-              "transliteration": "rabbouni",
-              "language": "greaca",
-              "meaning": "Învățătorule. Formă caldă și personală de adresare."
-            },
             {
               "original": "ἀναστῆναι",
               "transliteration": "anastenai",
@@ -2352,7 +2340,7 @@ export const NT_BOOK_04: BibleBook = {
               "original": "ἀγαπᾷς / φιλεῖς",
               "transliteration": "agapas / phileis",
               "language": "greaca",
-              "meaning": "iubești. Limbajul dragostei cercetate și mărturisite înaintea Domnului."
+              "meaning": "iubești; ἀγαπάω și φιλέω pot ambele însemna «a iubi», iar o opoziție rigidă între ele nu trebuie dedusă numai din lexic."
             },
             {
               "original": "βόσκε / ποίμαινε",
