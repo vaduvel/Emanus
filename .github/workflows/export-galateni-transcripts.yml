@@ -1,4 +1,4 @@
-name: Export Galatians Transcripts
+name: Export Ephesians Transcripts
 
 on:
   push:
@@ -19,7 +19,7 @@ jobs:
       github.event_name != 'pull_request' ||
       github.event.pull_request.head.ref == 'agent/biblia-explicata-nt-integration-clean'
     runs-on: ubuntu-22.04
-    timeout-minutes: 10
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
         with:
@@ -29,9 +29,8 @@ jobs:
       - name: Export exact semantic transcript representations
         run: |
           set -euo pipefail
-          mkdir -p /tmp/galateni-transcripts
+          mkdir -p /tmp/efeseni-transcripts
           python3 - <<'PY'
-          import hashlib
           import importlib.util
           import json
           from pathlib import Path
@@ -45,12 +44,15 @@ jobs:
           spec.loader.exec_module(worker)
 
           sources = [
-              ('01-galatians-1-1-to-2-21.txt', 'https://sermonindex.net/speakers/zac-poonen/galatians-ch11-ch221/'),
-              ('02-galatians-2-1-to-4-7.txt', 'https://sermonindex.net/speakers/zac-poonen/galatians-ch21-ch47/'),
-              ('03-galatians-4-8-to-5-13.txt', 'https://sermonindex.net/speakers/zac-poonen/galatians-ch48-ch513/'),
-              ('04-galatians-5-14-to-6-18.txt', 'https://sermonindex.net/speakers/zac-poonen/galatians-ch514-ch618/'),
+              ('01-ephesians-1-1-to-1-17.txt', 'https://sermonindex.net/speakers/zac-poonen/ephesians-ephesians-11-17/'),
+              ('02-ephesians-1-18-to-2-9.txt', 'https://sermonindex.net/speakers/zac-poonen/ephesians-ephesians-118-29/'),
+              ('03-ephesians-2-10-to-3-9.txt', 'https://sermonindex.net/speakers/zac-poonen/ephesians-ephesians-210-39/'),
+              ('04-ephesians-3-10-to-4-22.txt', 'https://sermonindex.net/speakers/zac-poonen/ephesians-ephesians-310-422/'),
+              ('05-ephesians-4-23-to-5-20.txt', 'https://sermonindex.net/speakers/zac-poonen/ephesians-ephesians-423-520/'),
+              ('06-ephesians-5-21-to-6-11.txt', 'https://sermonindex.net/speakers/zac-poonen/ephesians-ephesians-521-611/'),
+              ('07-ephesians-6-12-to-6-24.txt', 'https://sermonindex.net/speakers/zac-poonen/ephesians-ephesians-612-24/'),
           ]
-          out = Path('/tmp/galateni-transcripts')
+          out = Path('/tmp/efeseni-transcripts')
           meta = []
           for name, url in sources:
               text = worker.extract_transcript(url)
@@ -60,12 +62,12 @@ jobs:
               print(name, sha, len(text.split()))
           (out / 'manifest.json').write_text(json.dumps(meta, indent=2) + '\n', encoding='utf-8')
           PY
-          cp docs/data/biblia-explicata/nt-final-source-first/09-galateni.json /tmp/galateni-transcripts/09-galateni.json
-          cp docs/data/biblia-explicata/nt-direct-transcript-coverage.json /tmp/galateni-transcripts/nt-direct-transcript-coverage.json
+          cp docs/data/biblia-explicata/nt-final-source-first/10-efeseni.json /tmp/efeseni-transcripts/10-efeseni.json
+          cp docs/data/biblia-explicata/nt-direct-transcript-coverage.json /tmp/efeseni-transcripts/nt-direct-transcript-coverage.json
 
       - uses: actions/upload-artifact@v4
         with:
-          name: galateni-full-transcripts
-          path: /tmp/galateni-transcripts
+          name: efeseni-full-transcripts
+          path: /tmp/efeseni-transcripts
           if-no-files-found: error
           retention-days: 1
