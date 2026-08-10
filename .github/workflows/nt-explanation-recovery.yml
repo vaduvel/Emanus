@@ -95,6 +95,7 @@ jobs:
           node scripts/review-nt-poonen-fidelity.mjs
           node scripts/review-nt-poonen-fidelity-marcu-3-4.mjs
           node scripts/review-nt-poonen-fidelity-marcu-5.mjs
+          node scripts/review-nt-poonen-fidelity-marcu-6.mjs
 
       - name: Combine and verify final 27-book source-first corpus
         run: |
@@ -141,5 +142,13 @@ jobs:
             exit 0
           fi
           git commit -m "Materialize blocked NT review snapshots with canonical binding"
-          git pull --rebase origin agent/biblia-explicata-nt-integration-clean
-          git push origin HEAD:agent/biblia-explicata-nt-integration-clean
+          for attempt in 1 2 3; do
+            git fetch origin agent/biblia-explicata-nt-integration-clean
+            git rebase FETCH_HEAD
+            if git push origin HEAD:agent/biblia-explicata-nt-integration-clean; then
+              exit 0
+            fi
+            echo "Snapshot push raced with another branch update; retrying ($attempt/3)."
+          done
+          echo "Could not publish deterministic NT snapshots after 3 attempts."
+          exit 1
