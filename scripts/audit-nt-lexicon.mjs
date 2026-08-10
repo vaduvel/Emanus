@@ -9,6 +9,7 @@ const corpusDir = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-final-
 const outputPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-lexicon-audit.json")
 const reviewQueuePath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-lexicon-review-queue.json")
 const reviewLedgerPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-lexicon-review-ledger.json")
+const reviewSourcesPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-lexicon-review-sources.json")
 
 function fail(message) {
   console.error(`[NT lexicon audit] ${message}`)
@@ -16,6 +17,16 @@ function fail(message) {
 }
 function sha256(value) { return crypto.createHash("sha256").update(value).digest("hex") }
 if (!fs.existsSync(corpusDir)) fail("missing final NT corpus")
+if (!fs.existsSync(reviewSourcesPath)) fail("missing nt-lexicon-review-sources.json")
+
+const reviewSources = JSON.parse(fs.readFileSync(reviewSourcesPath, "utf8"))
+if (reviewSources.schema !== "emanus-nt-lexicon-review-sources-v1" || !Array.isArray(reviewSources.sources) || !reviewSources.sources.length) fail("invalid lexical review source registry")
+const lexicalSources = new Map()
+for (const source of reviewSources.sources) {
+  if (!source?.id || lexicalSources.has(source.id)) fail(`invalid/duplicate lexical source ${source?.id ?? "<missing>"}`)
+  if (!source.repository || !source.path || !/^[0-9a-f]{40}$/i.test(source.blobSha ?? "") || !source.license) fail(`incomplete lexical source ${source.id}`)
+  lexicalSources.set(source.id, source)
+}
 
 const findings = []
 const reviewQueue = []
@@ -55,9 +66,10 @@ for (const file of fs.readdirSync(corpusDir).filter((name) => name.endsWith(".js
 }
 
 fs.writeFileSync(reviewQueuePath, JSON.stringify({
-  schema: "emanus-nt-lexicon-review-queue-v1",
-  policy: "Every lexical entry must receive explicit lexical review. reviewId binds the book/chapter/unit/original/meaning snapshot; meaningSha256 prevents a stale approval from surviving an edit.",
+  schema: "emanus-nt-lexicon-review-queue-v2",
+  policy: "Every lexical entry must receive explicit lexical review. reviewId binds the book/chapter/unit/original/meaning snapshot; meaningSha256 prevents a stale approval from surviving an edit. Approval additionally requires a pinned sourceId/sourceBlobSha and a non-empty sourceLocator from nt-lexicon-review-sources.json.",
   count: reviewQueue.length,
+  allowedSourceIds: [...lexicalSources.keys()],
   entries: reviewQueue,
 }, null, 2) + "\n", "utf8")
 
@@ -67,8 +79,8 @@ const reviewProblems = []
 if (fs.existsSync(reviewLedgerPath)) {
   const ledger = JSON.parse(fs.readFileSync(reviewLedgerPath, "utf8"))
   reviewLedgerStatus = "present"
-  if (ledger.schema !== "emanus-nt-lexicon-review-ledger-v1" || !Array.isArray(ledger.decisions)) {
-    reviewProblems.push({ kind: "invalid-review-ledger-schema" })
+  if (ledger.schema !== "emanus-nt-lexicon-review-ledger-v2" || !Array.isArray(ledger.decisions)) {
+    reviewProblems.push({ kind: "invalid-review-ledger-schema", expected: "emanus-nt-lexicon-review-ledger-v2" })
   } else {
     const decisions = new Map()
     for (const decision of ledger.decisions) {
@@ -92,6 +104,19 @@ if (fs.existsSync(reviewLedgerPath)) {
         reviewProblems.push({ kind: "review-not-approved", reviewId: entry.reviewId, bookId: entry.bookId, chapter: entry.chapter, ref: entry.ref, original: entry.original })
         continue
       }
+      const source = lexicalSources.get(decision.sourceId)
+      if (!source) {
+        reviewProblems.push({ kind: "unknown-lexical-source", reviewId: entry.reviewId, sourceId: decision.sourceId ?? null })
+        continue
+      }
+      if (decision.sourceBlobSha !== source.blobSha) {
+        reviewProblems.push({ kind: "stale-lexical-source", reviewId: entry.reviewId, sourceId: source.id, expectedBlobSha: source.blobSha, actualBlobSha: decision.sourceBlobSha ?? null })
+        continue
+      }
+      if (typeof decision.sourceLocator !== "string" || !decision.sourceLocator.trim()) {
+        reviewProblems.push({ kind: "missing-source-locator", reviewId: entry.reviewId, sourceId: source.id })
+        continue
+      }
       reviewed += 1
     }
     for (const reviewId of decisions.keys()) if (!reviewQueue.some((entry) => entry.reviewId === reviewId)) reviewProblems.push({ kind: "orphan-review", reviewId })
@@ -106,10 +131,11 @@ const status = findings.length
     : "clean"
 const count = findings.length || reviewProblems.length || unresolvedManualReview
 const report = {
-  schema: "emanus-nt-lexicon-audit-v2",
+  schema: "emanus-nt-lexicon-audit-v3",
   status,
-  policy: "Automated rules catch known lexical/category errors, but publication is clean only after every current Greek/Hebrew entry is explicitly reviewed in nt-lexicon-review-ledger.json. Poonen/Emanus doctrinal conclusions remain in teaching, not disguised as uncontested lexical meaning.",
+  policy: "Automated rules catch known lexical/category errors, but publication is clean only after every current Greek/Hebrew entry is explicitly reviewed against a pinned lexical source snapshot. Each approval must carry sourceId, exact sourceBlobSha and sourceLocator. Poonen/Emanus doctrinal conclusions remain in teaching, not disguised as uncontested lexical meaning.",
   entries,
+  lexicalSources: [...lexicalSources.values()].map((source) => ({ id: source.id, repository: source.repository, path: source.path, blobSha: source.blobSha, license: source.license })),
   automatedFindingCount: findings.length,
   reviewLedgerStatus,
   reviewedEntries: reviewed,
@@ -120,4 +146,4 @@ const report = {
   reviewProblems,
 }
 fs.writeFileSync(outputPath, JSON.stringify(report, null, 2) + "\n", "utf8")
-console.log(`NT lexicon audit: ${entries} entries / ${findings.length} automated findings / ${reviewed} reviewed / ${unresolvedManualReview} awaiting review.`)
+console.log(`NT lexicon audit: ${entries} entries / ${findings.length} automated findings / ${reviewed} source-backed reviewed / ${unresolvedManualReview} awaiting review.`)
