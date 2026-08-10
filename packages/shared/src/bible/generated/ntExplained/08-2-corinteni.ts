@@ -578,7 +578,7 @@ export const NT_BOOK_08: BibleBook = {
           "ref": "2 Corinteni 11:16-21",
           "heading": "Îi suportați pe cei care vă robesc",
           "text": "Iarăși spun: nimeni să nu mă creadă nebun; dar, dacă totuși, primiți-mă măcar ca pe un nebun, ca să mă laud și eu puțin. Ceea ce spun, nu spun după Domnul, ci ca în nebunie, în această încredere a laudei. De vreme ce mulți se laudă după carne, mă voi lăuda și eu. Căci voi suportați cu bucurie pe cei fără minte, fiind voi înșivă înțelepți. Fiindcă suportați dacă cineva vă înrobește, dacă cineva vă devorează, dacă cineva vă exploatează, dacă cineva se înalță, dacă cineva vă lovește peste față. Spre rușinea mea o spun: ca și cum noi am fi fost slabi. Dar, în orice îndrăznește cineva — vorbesc în nebunie — îndrăznesc și eu.",
-          "teaching": "Corintenii tolerau oameni care îi robeau, îi exploatau, îi prindeau și îi umileau.\n\nIronia lui Pavel scoate la lumină contrastul: ei suportau dominația agresivă, în timp ce îl considerau slab pe apostolul care refuza să-i trateze astfel.",
+          "teaching": "Corintenii tolerau oameni care îi robeau, îi exploatau, îi prindeau și îi umileau.\n\nIronia lui Pavel scoate la lumină contrastul: ei suportau dominația agresivă, în timp ce îl considerau slab pe apostolul care refuza să-i trateze astfel. Pavel spune că le vorbește spre rușine ca și cum el ar fi fost slab, apoi începe comparația cu cei pe care comunitatea îi tolera.",
           "crossRefs": [
             "Marcu 10:42-45",
             "Fapte 16:37-39",
