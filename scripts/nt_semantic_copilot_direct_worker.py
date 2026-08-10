@@ -17,8 +17,6 @@ if spec is None or spec.loader is None:
     raise RuntimeError("Cannot load semantic base worker")
 base = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(base)
-# Explicit supported CLI model. Transcript hashing runs before any model call so
-# manual review remains reproducible even if the external request quota is exhausted.
 base.MODEL = "claude-haiku-4.5"
 original_load_rows = base.load_rows
 
@@ -26,9 +24,42 @@ original_load_rows = base.load_rows
 def ensure_direct() -> dict[str, Any]:
     subprocess.run(["node", "scripts/materialize-nt-direct-transcript-coverage.mjs"], cwd=ROOT, check=True)
     data = json.loads(DIRECT_PATH.read_text(encoding="utf-8"))
-    if data.get("schema") not in {"emanus-nt-direct-transcript-coverage-v1", "emanus-nt-direct-transcript-coverage-v2"}:
+    if data.get("schema") not in {
+        "emanus-nt-direct-transcript-coverage-v1",
+        "emanus-nt-direct-transcript-coverage-v2",
+        "emanus-nt-direct-transcript-coverage-v3",
+    }:
         raise RuntimeError("Unexpected direct transcript coverage schema")
     return data
+
+
+def representation_records(item: dict[str, Any], unit_id: str) -> list[dict[str, Any]]:
+    reps=item.get("transcriptRepresentations")
+    if not isinstance(reps,list) or not reps:
+        reps=[{
+            "transcriptRepresentationUrl":item["transcriptRepresentationUrl"],
+            "transcriptTitle":item["transcriptTitle"],
+            "transcriptRange":item["transcriptRange"],
+        }]
+    records=[]
+    for index,rep in enumerate(reps,start=1):
+        url=str(rep.get("transcriptRepresentationUrl") or "")
+        locator=str(rep.get("transcriptRange") or "")
+        if not url.startswith("https://") or not locator:
+            raise RuntimeError(f"{unit_id}: malformed transcript representation #{index}")
+        records.append({
+            "id":f"direct-transcript-{unit_id}-{index}",
+            "sourceUrl":item["officialSourceUrl"],
+            "officialSeriesUrl":item["officialSourceUrl"],
+            "transcriptRepresentationUrl":url,
+            "_transcriptUrl":url,
+            "sourceTitle":str(rep.get("transcriptTitle") or ""),
+            "locator":locator,
+            "evidenceKind":"direct-contiguous-vbv-transcript-coverage" if len(reps)>1 else "direct-containing-vbv-transcript-range",
+            "verificationLevel":item["verification"],
+            "coverageEvidenceSha256":item["coverageEvidenceSha256"],
+        })
+    return records
 
 
 def load_rows_with_direct(book_id: str) -> list[dict[str, Any]]:
@@ -50,26 +81,17 @@ def load_rows_with_direct(book_id: str) -> list[dict[str, Any]]:
             item = coverage.get(key)
             if not item:
                 continue
-            pseudo = {
-                "id": f"direct-transcript-{unit['id']}",
-                "sourceUrl": item["officialSourceUrl"],
-                "officialSeriesUrl": item["officialSourceUrl"],
-                "transcriptRepresentationUrl": item["transcriptRepresentationUrl"],
-                "_transcriptUrl": item["transcriptRepresentationUrl"],
-                "sourceTitle": item["transcriptTitle"],
-                "locator": item["transcriptRange"],
-                "evidenceKind": "direct-containing-vbv-transcript-range",
-                "verificationLevel": item["verification"],
-                "coverageEvidenceSha256": item["coverageEvidenceSha256"],
-            }
+            pseudos=representation_records(item,str(unit["id"]))
             if key in by_key:
                 row = by_key[key]
                 known = {
                     str(r.get("_transcriptUrl") or r.get("transcriptRepresentationUrl") or r.get("sourceUrl"))
                     for r in row["transcriptRecords"]
                 }
-                if item["transcriptRepresentationUrl"] not in known:
-                    row["transcriptRecords"].append(pseudo)
+                for pseudo in pseudos:
+                    if pseudo["transcriptRepresentationUrl"] not in known:
+                        row["transcriptRecords"].append(pseudo)
+                        known.add(pseudo["transcriptRepresentationUrl"])
             else:
                 by_key[key] = {
                     "bookId": book_id,
@@ -81,10 +103,10 @@ def load_rows_with_direct(book_id: str) -> list[dict[str, Any]]:
                     "teaching": unit.get("teaching", ""),
                     "forYourHeart": unit.get("forYourHeart"),
                     "sourceFidelity": unit.get("sourceFidelity", {}),
-                    "transcriptRecords": [pseudo],
+                    "transcriptRecords": pseudos,
                 }
     result = sorted(by_key.values(), key=lambda row: (int(row["chapter"]), str(row["unitId"])))
-    print(f"semantic review {book_id}: {len(result)} transcript-addressable pending units after direct-range coverage", flush=True)
+    print(f"semantic review {book_id}: {len(result)} transcript-addressable pending units after strict direct coverage", flush=True)
     return result
 
 
