@@ -1,6 +1,6 @@
 {
-  "schema": "emanus-nt-lexicon-source-evidence-unique-compact-v1",
-  "policy": "Compact human-review projection of exact canonical-lemma TBESG matches. It intentionally omits long dictionary examples while retaining Strong ID, canonical lemma, morphology, brief gloss, pinned source locator and meaning hash.",
+  "schema": "emanus-nt-lexicon-source-evidence-unique-compact-v2",
+  "policy": "Compact human-review projection of TBESG candidates, retaining Strong ID, canonical lemma, morphology, brief gloss, pinned TBESG locator, meaning hash and MorphGNT passage-form lemmatization evidence when used.",
   "source": {
     "id": "stepbible-tbesg",
     "repository": "STEPBible/STEPBible-Data",
@@ -10,8 +10,90 @@
     "verifiedBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
     "license": "CC BY 4.0"
   },
-  "count": 129,
+  "morphologySource": {
+    "id": "morphgnt-sblgnt-6.12",
+    "repository": "morphgnt/sblgnt",
+    "ref": "6.12",
+    "license": "CC-BY-SA",
+    "citation": "Tauber, J. K., ed. (2017) MorphGNT: SBLGNT Edition, Version 6.12",
+    "files": [
+      {
+        "bookId": "matei",
+        "file": "61-Mt-morphgnt.txt",
+        "blobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621"
+      },
+      {
+        "bookId": "marcu",
+        "file": "62-Mk-morphgnt.txt",
+        "blobSha": "6bd9ce1627e12bd45434b0d18f875c89581d855f"
+      },
+      {
+        "bookId": "ioan",
+        "file": "64-Jn-morphgnt.txt",
+        "blobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
+      }
+    ]
+  },
+  "count": 182,
   "entries": [
+    {
+      "reviewId": "934998666f2f4a94385490a94fda1c83f5a2f0aa2c20abbc45dc4be8d0ac04ff",
+      "bookId": "matei",
+      "chapter": 1,
+      "ref": "Matei 1:1-17",
+      "original": "βίβλος γενέσεως",
+      "meaning": "cartea neamului sau a obârșiei. Expresia face punte spre Geneza și deschide istoria unui nou început.",
+      "meaningSha256": "sha256:513442c4a915e835ab536aa1a6976c07f8aaf499cb59e1ac7a2cd327590a4847",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 1098 + TBESG line 1204",
+      "strongId": "G0976 + G1078",
+      "canonicalLemma": "βίβλος γένεσις",
+      "transliteration": "biblos genesis",
+      "morphology": "G:N-F | G:N-F",
+      "briefGloss": "book; origin",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "61-Mt-morphgnt.txt",
+        "fileBlobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "βιβλοσ",
+            "lemma": "βίβλος",
+            "normalizedLemma": "βιβλοσ",
+            "occurrences": [
+              {
+                "bcv": "010101",
+                "word": "Βίβλος",
+                "normalizedWord": "βίβλος",
+                "lemma": "βίβλος",
+                "pos": "N-",
+                "parsing": "----NSF-"
+              }
+            ]
+          },
+          {
+            "inputToken": "γενεσεωσ",
+            "lemma": "γένεσις",
+            "normalizedLemma": "γενεσισ",
+            "occurrences": [
+              {
+                "bcv": "010101",
+                "word": "γενέσεως",
+                "normalizedWord": "γενέσεως",
+                "lemma": "γένεσις",
+                "pos": "N-",
+                "parsing": "----GSF-"
+              }
+            ]
+          }
+        ]
+      }
+    },
     {
       "reviewId": "53f036375c1887ced1788427c7a7c53d870f5aaace11934442885f5a2ccbad71",
       "bookId": "matei",
@@ -28,6 +110,24 @@
       "transliteration": "Christos",
       "morphology": "N:N--T",
       "briefGloss": "Christ",
+      "matchKind": "canonical-lemma-column-exact"
+    },
+    {
+      "reviewId": "ccf5facfb1acb075c48b330a38af586d7280f8f1c57f044ad1068b6e121abf39",
+      "bookId": "matei",
+      "chapter": 1,
+      "ref": "Matei 1:18-25",
+      "original": "Ἰησοῦς",
+      "meaning": "Isus, forma grecească a numelui Ieșua: Domnul mântuiește. Numele este legat chiar în text de mântuirea de păcate.",
+      "meaningSha256": "sha256:9ceb18c4dd5213a7a34c6328872cfd8919bde754a1f6d4af4b60d0621ccb4ae1",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG lines 2577-2581",
+      "strongId": "G2424",
+      "canonicalLemma": "Ἰησοῦς",
+      "transliteration": "Iēsous",
+      "morphology": "N:N-M-P",
+      "briefGloss": "Jesus / Joshua",
       "matchKind": "canonical-lemma-column-exact"
     },
     {
@@ -49,6 +149,49 @@
       "matchKind": "canonical-lemma-column-exact"
     },
     {
+      "reviewId": "db14ee0597159a73a15ed73211618bd6833e19c74ba6be961c8da51278cf784e",
+      "bookId": "matei",
+      "chapter": 2,
+      "ref": "Matei 2:1-12",
+      "original": "μάγοι",
+      "meaning": "magi, învățați ai Răsăritului. Textul nu îi numește împărați și nu precizează numărul lor.",
+      "meaningSha256": "sha256:3b9465a2cb117d0db758ca53676fa35269ab8f81d8d89e9428a2a1060096b3c3",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 3299",
+      "strongId": "G3097",
+      "canonicalLemma": "μάγος",
+      "transliteration": "magos",
+      "morphology": "G:N-M",
+      "briefGloss": "sage",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "61-Mt-morphgnt.txt",
+        "fileBlobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "μαγοι",
+            "lemma": "μάγος",
+            "normalizedLemma": "μαγοσ",
+            "occurrences": [
+              {
+                "bcv": "010201",
+                "word": "μάγοι",
+                "normalizedWord": "μάγοι",
+                "lemma": "μάγος",
+                "pos": "N-",
+                "parsing": "----NPM-"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "reviewId": "4b086fe0ad036d2aff6eae5cc70d041217ed5222e6c273278074a29a95ee9909",
       "bookId": "matei",
       "chapter": 2,
@@ -65,6 +208,49 @@
       "morphology": "G:V",
       "briefGloss": "to worship",
       "matchKind": "canonical-lemma-column-exact"
+    },
+    {
+      "reviewId": "4976313388f7860ea756eae9845067749d2e930c1c2823ee895a7b24da416c88",
+      "bookId": "matei",
+      "chapter": 3,
+      "ref": "Matei 3:1-12",
+      "original": "μετανοεῖτε",
+      "meaning": "pocăiți-vă, schimbați-vă mintea și întoarceți-vă. Nu simplă emoție, ci schimbarea direcției.",
+      "meaningSha256": "sha256:d7390535d964421ccf8435a4ad14111c9e6d62e8591ed7ea803fe29de8479d57",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 3453",
+      "strongId": "G3340",
+      "canonicalLemma": "μετανοέω",
+      "transliteration": "metanoeō",
+      "morphology": "G:V",
+      "briefGloss": "to repent",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "61-Mt-morphgnt.txt",
+        "fileBlobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "μετανοειτε",
+            "lemma": "μετανοέω",
+            "normalizedLemma": "μετανοεω",
+            "occurrences": [
+              {
+                "bcv": "010302",
+                "word": "Μετανοεῖτε",
+                "normalizedWord": "μετανοεῖτε",
+                "lemma": "μετανοέω",
+                "pos": "V-",
+                "parsing": "2PAD-P--"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "reviewId": "c7472acaf01c185319729892d19b81117a23d2ad571a7d5f51a2b7871a563d9c",
@@ -103,6 +289,204 @@
       "matchKind": "canonical-lemma-column-exact"
     },
     {
+      "reviewId": "b52ec9557d91f7fbe29757e5c3de9bb0d8df82d2af75b5766a624a2517d91c57",
+      "bookId": "matei",
+      "chapter": 4,
+      "ref": "Matei 4:1-11",
+      "original": "πειράζω",
+      "meaning": "a încerca sau a ispiti. Contextul arată dacă este o probă care descoperă credincioșia ori o ademenire spre rău.",
+      "meaningSha256": "sha256:89bd0be0bc9cfe5442e95f438c749d6635d6aba03579127204cb763ec2c08183",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG lines 4104-4106",
+      "strongId": "G3985",
+      "canonicalLemma": "πειράζω",
+      "transliteration": "peirazō",
+      "morphology": "G:V",
+      "briefGloss": "to test/tempt: tempt / to test/tempt: test / to test/tempt: try",
+      "matchKind": "canonical-lemma-column-exact"
+    },
+    {
+      "reviewId": "7cb283f10a500dcbfebd85fe36dddae6a9907e450c7f1ae7c1c590a4906e745c",
+      "bookId": "matei",
+      "chapter": 4,
+      "ref": "Matei 4:18-22",
+      "original": "δεῦτε ὀπίσω μου",
+      "meaning": "veniți după Mine. Chemare la apropiere, urmare și ascultare personală.",
+      "meaningSha256": "sha256:c186279aed1818c8b7f713bd3a829038c54c8d64b6be9c7728db7e280f3ee6ef",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 1337 + TBESG line 3810 + TBESG line 1605",
+      "strongId": "G1205 + G3694 + G1473",
+      "canonicalLemma": "δεῦτε ὀπίσω ἐγώ",
+      "transliteration": "deute opisō egō",
+      "morphology": "G:INJ | G:ADV | G:P-1",
+      "briefGloss": "come; after; I/we",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "61-Mt-morphgnt.txt",
+        "fileBlobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "δευτε",
+            "lemma": "δεῦτε",
+            "normalizedLemma": "δευτε",
+            "occurrences": [
+              {
+                "bcv": "010419",
+                "word": "Δεῦτε",
+                "normalizedWord": "δεῦτε",
+                "lemma": "δεῦτε",
+                "pos": "D-",
+                "parsing": "--------"
+              }
+            ]
+          },
+          {
+            "inputToken": "οπισω",
+            "lemma": "ὀπίσω",
+            "normalizedLemma": "οπισω",
+            "occurrences": [
+              {
+                "bcv": "010419",
+                "word": "ὀπίσω",
+                "normalizedWord": "ὀπίσω",
+                "lemma": "ὀπίσω",
+                "pos": "P-",
+                "parsing": "--------"
+              }
+            ]
+          },
+          {
+            "inputToken": "μου",
+            "lemma": "ἐγώ",
+            "normalizedLemma": "εγω",
+            "occurrences": [
+              {
+                "bcv": "010419",
+                "word": "μου",
+                "normalizedWord": "μου",
+                "lemma": "ἐγώ",
+                "pos": "RP",
+                "parsing": "----GS--"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "reviewId": "91b6801d78255b00805aa07c40fc7b81c2d3b47f89b483160faf976020d8dcd2",
+      "bookId": "matei",
+      "chapter": 5,
+      "ref": "Matei 5:1-12",
+      "original": "μακάριοι",
+      "meaning": "fericiți, binecuvântați, aflați sub bunăvoința lui Dumnezeu.",
+      "meaningSha256": "sha256:4e228c1e9c461f3f8d2299c4c5c69faa739e1b1d5be571f42d108447862b7973",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 3309",
+      "strongId": "G3107",
+      "canonicalLemma": "μακάριος",
+      "transliteration": "makarios",
+      "morphology": "G:A",
+      "briefGloss": "blessed",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "61-Mt-morphgnt.txt",
+        "fileBlobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "μακαριοι",
+            "lemma": "μακάριος",
+            "normalizedLemma": "μακαριοσ",
+            "occurrences": [
+              {
+                "bcv": "010503",
+                "word": "Μακάριοι",
+                "normalizedWord": "μακάριοι",
+                "lemma": "μακάριος",
+                "pos": "A-",
+                "parsing": "----NPM-"
+              },
+              {
+                "bcv": "010504",
+                "word": "μακάριοι",
+                "normalizedWord": "μακάριοι",
+                "lemma": "μακάριος",
+                "pos": "A-",
+                "parsing": "----NPM-"
+              },
+              {
+                "bcv": "010505",
+                "word": "μακάριοι",
+                "normalizedWord": "μακάριοι",
+                "lemma": "μακάριος",
+                "pos": "A-",
+                "parsing": "----NPM-"
+              },
+              {
+                "bcv": "010506",
+                "word": "μακάριοι",
+                "normalizedWord": "μακάριοι",
+                "lemma": "μακάριος",
+                "pos": "A-",
+                "parsing": "----NPM-"
+              },
+              {
+                "bcv": "010507",
+                "word": "μακάριοι",
+                "normalizedWord": "μακάριοι",
+                "lemma": "μακάριος",
+                "pos": "A-",
+                "parsing": "----NPM-"
+              },
+              {
+                "bcv": "010508",
+                "word": "μακάριοι",
+                "normalizedWord": "μακάριοι",
+                "lemma": "μακάριος",
+                "pos": "A-",
+                "parsing": "----NPM-"
+              },
+              {
+                "bcv": "010509",
+                "word": "μακάριοι",
+                "normalizedWord": "μακάριοι",
+                "lemma": "μακάριος",
+                "pos": "A-",
+                "parsing": "----NPM-"
+              },
+              {
+                "bcv": "010510",
+                "word": "μακάριοι",
+                "normalizedWord": "μακάριοι",
+                "lemma": "μακάριος",
+                "pos": "A-",
+                "parsing": "----NPM-"
+              },
+              {
+                "bcv": "010511",
+                "word": "μακάριοί",
+                "normalizedWord": "μακάριοι",
+                "lemma": "μακάριος",
+                "pos": "A-",
+                "parsing": "----NPM-"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "reviewId": "9d542f42132e3c13f0cccea5cf199d2139f3cbad6a32d8c04b6874b35096893e",
       "bookId": "matei",
       "chapter": 5,
@@ -139,6 +523,135 @@
       "matchKind": "canonical-lemma-column-exact"
     },
     {
+      "reviewId": "a4fd024c761a89a495d80b44b5dabef8fdb7fe51197d9f9d088ff47d76ab0399",
+      "bookId": "matei",
+      "chapter": 5,
+      "ref": "Matei 5:43-48",
+      "original": "τέλειοι",
+      "meaning": "maturi, întregi, ajunși la țintă. Aici, iubirea care nu rămâne fragmentată de favoritism.",
+      "meaningSha256": "sha256:7264f53d88331e3fafcffc73deec85ba287d46b2519969371259b104c166b7b4",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 5198",
+      "strongId": "G5046",
+      "canonicalLemma": "τέλειος",
+      "transliteration": "teleios",
+      "morphology": "G:A",
+      "briefGloss": "perfect",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "61-Mt-morphgnt.txt",
+        "fileBlobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "τελειοι",
+            "lemma": "τέλειος",
+            "normalizedLemma": "τελειοσ",
+            "occurrences": [
+              {
+                "bcv": "010548",
+                "word": "τέλειοι",
+                "normalizedWord": "τέλειοι",
+                "lemma": "τέλειος",
+                "pos": "A-",
+                "parsing": "----NPM-"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "reviewId": "3e17f318d765113982b9edf885bd71fa160032a8c67abea91ff8a8e231f93e19",
+      "bookId": "matei",
+      "chapter": 6,
+      "ref": "Matei 6:9-13",
+      "original": "ἁγιασθήτω",
+      "meaning": "să fie sfințit, socotit sfânt și cinstit ca atare.",
+      "meaningSha256": "sha256:6f20314f9d359527da8acc85dd02c16c2e2ad69173f5da2c2198f888319bfdb3",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 130",
+      "strongId": "G0037",
+      "canonicalLemma": "ἁγιάζω",
+      "transliteration": "hagiazō",
+      "morphology": "G:V",
+      "briefGloss": "to sanctify",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "61-Mt-morphgnt.txt",
+        "fileBlobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "αγιασθητω",
+            "lemma": "ἁγιάζω",
+            "normalizedLemma": "αγιαζω",
+            "occurrences": [
+              {
+                "bcv": "010609",
+                "word": "ἁγιασθήτω",
+                "normalizedWord": "ἁγιασθήτω",
+                "lemma": "ἁγιάζω",
+                "pos": "V-",
+                "parsing": "3APD-S--"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "reviewId": "5ca43770fb899381babb312e77f7e024754bee5af4384e501c6311b258934995",
+      "bookId": "matei",
+      "chapter": 6,
+      "ref": "Matei 6:9-13",
+      "original": "ἐπιούσιον",
+      "meaning": "de fiecare zi sau necesar zilei; un cuvânt rar legat de dependența zilnică.",
+      "meaningSha256": "sha256:0d240bf2e586bb1b86a4f96c9c9ca2e48052c94422cea748115df7a8521cb0bb",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 2108",
+      "strongId": "G1967",
+      "canonicalLemma": "ἐπιούσιος",
+      "transliteration": "epiousios",
+      "morphology": "G:A",
+      "briefGloss": "daily",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "61-Mt-morphgnt.txt",
+        "fileBlobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "επιουσιον",
+            "lemma": "ἐπιούσιος",
+            "normalizedLemma": "επιουσιοσ",
+            "occurrences": [
+              {
+                "bcv": "010611",
+                "word": "ἐπιούσιον",
+                "normalizedWord": "ἐπιούσιον",
+                "lemma": "ἐπιούσιος",
+                "pos": "A-",
+                "parsing": "----ASM-"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "reviewId": "a75d7d81891420ef3aad0377de3713fe8a0538192b5008319b7df89c80eb94f9",
       "bookId": "matei",
       "chapter": 6,
@@ -155,6 +668,79 @@
       "morphology": "G:V",
       "briefGloss": "to worry",
       "matchKind": "canonical-lemma-column-exact"
+    },
+    {
+      "reviewId": "05788fdc7cbe943cd3b7f58d5b21251b4932818d3e7952809e4b5fafdb9de779",
+      "bookId": "matei",
+      "chapter": 7,
+      "ref": "Matei 7:6-12",
+      "original": "αἰτεῖτε, ζητεῖτε, κρούετε",
+      "meaning": "cereți, căutați, bateți: o chemare continuă la dependență și stăruință.",
+      "meaningSha256": "sha256:04be11854ba23963040544135cc2918e24ea18f6361d1ed7b422f1fdc3a2e11c",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 252 + TBESG line 2356 + TBESG line 3120",
+      "strongId": "G0154 + G2212 + G2925",
+      "canonicalLemma": "αἰτέω ζητέω κρούω",
+      "transliteration": "aiteō zēteō krouō",
+      "morphology": "G:V | G:V | G:V",
+      "briefGloss": "to ask; to seek; to knock",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "61-Mt-morphgnt.txt",
+        "fileBlobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "αιτειτε",
+            "lemma": "αἰτέω",
+            "normalizedLemma": "αιτεω",
+            "occurrences": [
+              {
+                "bcv": "010707",
+                "word": "Αἰτεῖτε",
+                "normalizedWord": "αἰτεῖτε",
+                "lemma": "αἰτέω",
+                "pos": "V-",
+                "parsing": "2PAD-P--"
+              }
+            ]
+          },
+          {
+            "inputToken": "ζητειτε",
+            "lemma": "ζητέω",
+            "normalizedLemma": "ζητεω",
+            "occurrences": [
+              {
+                "bcv": "010707",
+                "word": "ζητεῖτε",
+                "normalizedWord": "ζητεῖτε",
+                "lemma": "ζητέω",
+                "pos": "V-",
+                "parsing": "2PAD-P--"
+              }
+            ]
+          },
+          {
+            "inputToken": "κρουετε",
+            "lemma": "κρούω",
+            "normalizedLemma": "κρουω",
+            "occurrences": [
+              {
+                "bcv": "010707",
+                "word": "κρούετε",
+                "normalizedWord": "κρούετε",
+                "lemma": "κρούω",
+                "pos": "V-",
+                "parsing": "2PAD-P--"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "reviewId": "2143b12dccbad187409f8945b8a6babad4df8296a4acf3c5433674b751212c46",
@@ -209,6 +795,49 @@
       "morphology": "G:N-N",
       "briefGloss": "mercy",
       "matchKind": "canonical-lemma-column-exact"
+    },
+    {
+      "reviewId": "9f8e36d6169bfc8da7f57b9c1f696ebc4cc8a1ac6e9964560d111cfb6340e9b0",
+      "bookId": "matei",
+      "chapter": 9,
+      "ref": "Matei 9:18-26",
+      "original": "θάρσει",
+      "meaning": "îndrăznește, prinde curaj. Cuvânt de apropiere, nu mustrare a fricii.",
+      "meaningSha256": "sha256:e3abd70379b046b5679539895ccb3e08afbb58aa3196918887ebd3d4e92325a1",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 2442",
+      "strongId": "G2293",
+      "canonicalLemma": "θαρσέω",
+      "transliteration": "tharseō",
+      "morphology": "G:V",
+      "briefGloss": "take heart",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "61-Mt-morphgnt.txt",
+        "fileBlobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "θαρσει",
+            "lemma": "θαρσέω",
+            "normalizedLemma": "θαρσεω",
+            "occurrences": [
+              {
+                "bcv": "010922",
+                "word": "Θάρσει",
+                "normalizedWord": "θάρσει",
+                "lemma": "θαρσέω",
+                "pos": "V-",
+                "parsing": "2PAD-S--"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "reviewId": "e4fb4fdbad36b50e59e2baf47be58e642a88e7050fd836d420f29e605ed840cc",
@@ -319,6 +948,161 @@
       "matchKind": "canonical-lemma-column-exact"
     },
     {
+      "reviewId": "6e934b0309eedee57330d19580058622c212ff5012a0a560d6fe93962f98bfa5",
+      "bookId": "matei",
+      "chapter": 15,
+      "ref": "Matei 15:21-28",
+      "original": "Κύριε, υἱὸς Δαυίδ",
+      "meaning": "Doamne, Fiul lui David: mărturisirea mesianică a unei femei dintre neamuri.",
+      "meaningSha256": "sha256:3eee42658ab776363b97b53a2dfd81c30bc91df02c11d697b1016743bf41322f",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG lines 3157-3158 + TBESG line 5362 + TBESG line 1270",
+      "strongId": "G2962 + G5207 + G1138",
+      "canonicalLemma": "κύριος υἱός Δαυείδ, Δαυίδ, Δαβίδ",
+      "transliteration": "kurios uhios Daueid, Dauid, Dabid",
+      "morphology": "G:N-M | G:N-M | N:N-M-P",
+      "briefGloss": "lord: God / lord: master; son; David",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "61-Mt-morphgnt.txt",
+        "fileBlobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "κυριε",
+            "lemma": "κύριος",
+            "normalizedLemma": "κυριοσ",
+            "occurrences": [
+              {
+                "bcv": "011522",
+                "word": "κύριε",
+                "normalizedWord": "κύριε",
+                "lemma": "κύριος",
+                "pos": "N-",
+                "parsing": "----VSM-"
+              },
+              {
+                "bcv": "011525",
+                "word": "Κύριε",
+                "normalizedWord": "κύριε",
+                "lemma": "κύριος",
+                "pos": "N-",
+                "parsing": "----VSM-"
+              },
+              {
+                "bcv": "011527",
+                "word": "κύριε",
+                "normalizedWord": "κύριε",
+                "lemma": "κύριος",
+                "pos": "N-",
+                "parsing": "----VSM-"
+              }
+            ]
+          },
+          {
+            "inputToken": "υιοσ",
+            "lemma": "υἱός",
+            "normalizedLemma": "υιοσ",
+            "occurrences": [
+              {
+                "bcv": "011522",
+                "word": "υἱὸς",
+                "normalizedWord": "υἱός",
+                "lemma": "υἱός",
+                "pos": "N-",
+                "parsing": "----NSM-"
+              }
+            ]
+          },
+          {
+            "inputToken": "δαυιδ",
+            "lemma": "Δαυίδ",
+            "normalizedLemma": "δαυιδ",
+            "occurrences": [
+              {
+                "bcv": "011522",
+                "word": "Δαυίδ",
+                "normalizedWord": "Δαυίδ",
+                "lemma": "Δαυίδ",
+                "pos": "N-",
+                "parsing": "----GSM-"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "reviewId": "93c1ad857bab298c9dbf0c3aa9b79bab835570148c88ed022a312dfaf015df2e",
+      "bookId": "matei",
+      "chapter": 16,
+      "ref": "Matei 16:13-20",
+      "original": "πέτρος / πέτρα",
+      "meaning": "Petru / stâncă. Joc de cuvinte legat de persoana și mărturisirea lui Petru; tradițiile creștine explică precis legătura în moduri diferite.",
+      "meaningSha256": "sha256:39d0b7d2a6581fa0db4dfbe7006d38864dd6267045844506d65015f4ff939f28",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 4196 + TBESG line 4195",
+      "strongId": "G4074 + G4073",
+      "canonicalLemma": "Πέτρος πέτρα",
+      "transliteration": "Petros petra",
+      "morphology": "N:N-M-P | G:N-F",
+      "briefGloss": "Peter; rock",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "61-Mt-morphgnt.txt",
+        "fileBlobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "πετροσ",
+            "lemma": "Πέτρος",
+            "normalizedLemma": "πετροσ",
+            "occurrences": [
+              {
+                "bcv": "011616",
+                "word": "Πέτρος",
+                "normalizedWord": "Πέτρος",
+                "lemma": "Πέτρος",
+                "pos": "N-",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "011618",
+                "word": "Πέτρος",
+                "normalizedWord": "Πέτρος",
+                "lemma": "Πέτρος",
+                "pos": "N-",
+                "parsing": "----NSM-"
+              }
+            ]
+          },
+          {
+            "inputToken": "πετρα",
+            "lemma": "πέτρα",
+            "normalizedLemma": "πετρα",
+            "occurrences": [
+              {
+                "bcv": "011618",
+                "word": "πέτρᾳ",
+                "normalizedWord": "πέτρᾳ",
+                "lemma": "πέτρα",
+                "pos": "N-",
+                "parsing": "----DSF-"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "reviewId": "e33d09644c772faea499770c98017ee13913583cd72ebfb9e075585f19cc06ad",
       "bookId": "matei",
       "chapter": 16,
@@ -337,6 +1121,165 @@
       "matchKind": "canonical-lemma-column-exact"
     },
     {
+      "reviewId": "e3e784054c9e71e9e430b852ab89c801c8404a48f03acce89c34448289fe7be5",
+      "bookId": "matei",
+      "chapter": 16,
+      "ref": "Matei 16:24-28",
+      "original": "ἀπαρνησάσθω ἑαυτόν",
+      "meaning": "să se lepede de sine: să renunțe la revendicarea autonomiei și a stăpânirii de sine.",
+      "meaningSha256": "sha256:3e3806e3624c7f3b70489550ccafdd7d4f2ac17112de1c05d5eb9a9633f1bcf3",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 641 + TBESG line 1570",
+      "strongId": "G0533 + G1438",
+      "canonicalLemma": "ἀπαρνέομαι ἑαυτοῦ",
+      "transliteration": "aparneomai heautou",
+      "morphology": "G:V | G:F-3",
+      "briefGloss": "to deny; themself",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "61-Mt-morphgnt.txt",
+        "fileBlobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "απαρνησασθω",
+            "lemma": "ἀπαρνέομαι",
+            "normalizedLemma": "απαρνεομαι",
+            "occurrences": [
+              {
+                "bcv": "011624",
+                "word": "ἀπαρνησάσθω",
+                "normalizedWord": "ἀπαρνησάσθω",
+                "lemma": "ἀπαρνέομαι",
+                "pos": "V-",
+                "parsing": "3AMD-S--"
+              }
+            ]
+          },
+          {
+            "inputToken": "εαυτον",
+            "lemma": "ἑαυτοῦ",
+            "normalizedLemma": "εαυτου",
+            "occurrences": [
+              {
+                "bcv": "011624",
+                "word": "ἑαυτὸν",
+                "normalizedWord": "ἑαυτόν",
+                "lemma": "ἑαυτοῦ",
+                "pos": "RP",
+                "parsing": "----ASM-"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "reviewId": "4d63e81036bc4639bb3c4ecb6e062c2ac13cf7f55596b3da9a5852e2a3f6d4f3",
+      "bookId": "matei",
+      "chapter": 18,
+      "ref": "Matei 18:15-20",
+      "original": "ἔλεγξον",
+      "meaning": "arată-i greșeala, confruntă prin adevăr cu scopul de a câștiga.",
+      "meaningSha256": "sha256:a61f3614ef5dfce4130c065016afc9b1545bf75a13edea3cbc454c07bcd6c47d",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 1791",
+      "strongId": "G1651",
+      "canonicalLemma": "ἐλέγχω",
+      "transliteration": "elegchō",
+      "morphology": "G:V",
+      "briefGloss": "to rebuke",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "61-Mt-morphgnt.txt",
+        "fileBlobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "ελεγξον",
+            "lemma": "ἐλέγχω",
+            "normalizedLemma": "ελεγχω",
+            "occurrences": [
+              {
+                "bcv": "011815",
+                "word": "ἔλεγξον",
+                "normalizedWord": "ἔλεγξον",
+                "lemma": "ἐλέγχω",
+                "pos": "V-",
+                "parsing": "2AAD-S--"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "reviewId": "4c91735c2591e813c168495b1bed32a1b432c4ee455cb52cf503c87704447c59",
+      "bookId": "matei",
+      "chapter": 18,
+      "ref": "Matei 18:21-35",
+      "original": "μυρίων ταλάντων",
+      "meaning": "zece mii de talanți, o datorie intenționat uriașă și imposibil de achitat.",
+      "meaningSha256": "sha256:3bf6fd6723de8ef3cad26f140d9ad7b2175cc44785b8cc3475855e88bbb7ae80",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 3576 + TBESG line 5159",
+      "strongId": "G3463 + G5007",
+      "canonicalLemma": "μύριοι τάλαντον",
+      "transliteration": "murioi talanton",
+      "morphology": "G:A | G:N-N",
+      "briefGloss": "myriad; talent",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "61-Mt-morphgnt.txt",
+        "fileBlobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "μυριων",
+            "lemma": "μύριοι",
+            "normalizedLemma": "μυριοι",
+            "occurrences": [
+              {
+                "bcv": "011824",
+                "word": "μυρίων",
+                "normalizedWord": "μυρίων",
+                "lemma": "μύριοι",
+                "pos": "A-",
+                "parsing": "----GPN-"
+              }
+            ]
+          },
+          {
+            "inputToken": "ταλαντων",
+            "lemma": "τάλαντον",
+            "normalizedLemma": "ταλαντον",
+            "occurrences": [
+              {
+                "bcv": "011824",
+                "word": "ταλάντων",
+                "normalizedWord": "ταλάντων",
+                "lemma": "τάλαντον",
+                "pos": "N-",
+                "parsing": "----GPN-"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "reviewId": "9f5bb5ce31cd3c344aebd13ef1772585841fccb30f00a75ec510889541697f38",
       "bookId": "matei",
       "chapter": 19,
@@ -353,6 +1296,64 @@
       "morphology": "G:N-F",
       "briefGloss": "sexual sin",
       "matchKind": "canonical-lemma-column-exact"
+    },
+    {
+      "reviewId": "3b8ba710189727f5d043f32441dff532df1d85fef772f79a09b7e012bd188a80",
+      "bookId": "matei",
+      "chapter": 20,
+      "ref": "Matei 20:1-16",
+      "original": "ὀφθαλμός ... πονηρός",
+      "meaning": "Literal, «ochi rău»: o expresie pentru invidie și zgârcenie, aici stârnite de bunătatea stăpânului.",
+      "meaningSha256": "sha256:6cf1edf4f89cc355c40b60576d3c7eee49ccecabbcbff9cde0bb50f2fa0a1f0e",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 3906 + TBESG line 4319",
+      "strongId": "G3788 + G4190",
+      "canonicalLemma": "ὀφθαλμός πονηρός",
+      "transliteration": "ophthalmos ponēros",
+      "morphology": "G:N-M | G:A",
+      "briefGloss": "eye; evil/bad",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "61-Mt-morphgnt.txt",
+        "fileBlobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "οφθαλμοσ",
+            "lemma": "ὀφθαλμός",
+            "normalizedLemma": "οφθαλμοσ",
+            "occurrences": [
+              {
+                "bcv": "012015",
+                "word": "ὀφθαλμός",
+                "normalizedWord": "ὀφθαλμός",
+                "lemma": "ὀφθαλμός",
+                "pos": "N-",
+                "parsing": "----NSM-"
+              }
+            ]
+          },
+          {
+            "inputToken": "πονηροσ",
+            "lemma": "πονηρός",
+            "normalizedLemma": "πονηροσ",
+            "occurrences": [
+              {
+                "bcv": "012015",
+                "word": "πονηρός",
+                "normalizedWord": "πονηρός",
+                "lemma": "πονηρός",
+                "pos": "A-",
+                "parsing": "----NSM-"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "reviewId": "5600aa6f3f750f731b50cb0f5d6e0648820cd9906cd2eb27c0b786f53976cb73",
@@ -409,6 +1410,49 @@
       "matchKind": "canonical-lemma-column-exact"
     },
     {
+      "reviewId": "cdca05ae955888dff6739a20ab9caa97dec0871b3ab1eae47e5c7002b0b11612",
+      "bookId": "matei",
+      "chapter": 28,
+      "ref": "Matei 28:16-20",
+      "original": "μαθητεύσατε",
+      "meaning": "Faceți ucenici: formați oameni care Îl urmează pe Isus, sunt botezați și învață să păzească poruncile Lui.",
+      "meaningSha256": "sha256:b7d1e11372c21b31ffc8291f811071b42b7f85cb0eab5f250a0d37f543d6f2ce",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 3302",
+      "strongId": "G3100",
+      "canonicalLemma": "μαθητεύω",
+      "transliteration": "mathēteuō",
+      "morphology": "G:V",
+      "briefGloss": "to disciple",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "61-Mt-morphgnt.txt",
+        "fileBlobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "μαθητευσατε",
+            "lemma": "μαθητεύω",
+            "normalizedLemma": "μαθητευω",
+            "occurrences": [
+              {
+                "bcv": "012819",
+                "word": "μαθητεύσατε",
+                "normalizedWord": "μαθητεύσατε",
+                "lemma": "μαθητεύω",
+                "pos": "V-",
+                "parsing": "2AAD-P--"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "reviewId": "4cabede9378668b80beea65a063e072271083ab5f9fd18131fa0f66cbe2cee66",
       "bookId": "marcu",
       "chapter": 1,
@@ -463,6 +1507,87 @@
       "matchKind": "canonical-lemma-column-exact"
     },
     {
+      "reviewId": "a5016a950e24459b006a41babb44db9333ca9a6c3aa875a90bc09b19e53903de",
+      "bookId": "marcu",
+      "chapter": 1,
+      "ref": "Marcu 1:14-20",
+      "original": "δεῦτε ὀπίσω μου",
+      "meaning": "veniți după Mine. Chemarea nu este o invitație la o opinie, ci la o urmare: Isus înainte, ucenicul în urma Lui.",
+      "meaningSha256": "sha256:5feff95ceb3dc6ba8f52f6e1bb0624c4f2b0cc475625e2ed2cb9e0385f8670be",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 1337 + TBESG line 3810 + TBESG line 1605",
+      "strongId": "G1205 + G3694 + G1473",
+      "canonicalLemma": "δεῦτε ὀπίσω ἐγώ",
+      "transliteration": "deute opisō egō",
+      "morphology": "G:INJ | G:ADV | G:P-1",
+      "briefGloss": "come; after; I/we",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "62-Mk-morphgnt.txt",
+        "fileBlobSha": "6bd9ce1627e12bd45434b0d18f875c89581d855f",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "δευτε",
+            "lemma": "δεῦτε",
+            "normalizedLemma": "δευτε",
+            "occurrences": [
+              {
+                "bcv": "020117",
+                "word": "Δεῦτε",
+                "normalizedWord": "δεῦτε",
+                "lemma": "δεῦτε",
+                "pos": "D-",
+                "parsing": "--------"
+              }
+            ]
+          },
+          {
+            "inputToken": "οπισω",
+            "lemma": "ὀπίσω",
+            "normalizedLemma": "οπισω",
+            "occurrences": [
+              {
+                "bcv": "020117",
+                "word": "ὀπίσω",
+                "normalizedWord": "ὀπίσω",
+                "lemma": "ὀπίσω",
+                "pos": "P-",
+                "parsing": "--------"
+              },
+              {
+                "bcv": "020120",
+                "word": "ὀπίσω",
+                "normalizedWord": "ὀπίσω",
+                "lemma": "ὀπίσω",
+                "pos": "P-",
+                "parsing": "--------"
+              }
+            ]
+          },
+          {
+            "inputToken": "μου",
+            "lemma": "ἐγώ",
+            "normalizedLemma": "εγω",
+            "occurrences": [
+              {
+                "bcv": "020117",
+                "word": "μου",
+                "normalizedWord": "μου",
+                "lemma": "ἐγώ",
+                "pos": "RP",
+                "parsing": "----GS--"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "reviewId": "191afd60ed1331bb50ed4c59ff42d4232aac4a05b84b0f515a4327e1646f5925",
       "bookId": "marcu",
       "chapter": 1,
@@ -499,6 +1624,64 @@
       "matchKind": "canonical-lemma-column-exact"
     },
     {
+      "reviewId": "3fbafc743a77e986e9fa3b79e9557ef75ec7235eef9b0d7aabf17872356343ee",
+      "bookId": "marcu",
+      "chapter": 3,
+      "ref": "Marcu 3:13-19",
+      "original": "μετ' αὐτοῦ",
+      "meaning": "cu El. Scopul dintâi al chemării nu era lucrarea, ci apropierea: întâi stau cu El, apoi sunt trimiși (Marcu 3:14).",
+      "meaningSha256": "sha256:c0d86377ad199d36557f1dbc3c58a6e56635788f8f1e1d26c26db37e3d6a2720",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 3439 + TBESG line 958",
+      "strongId": "G3326 + G0846",
+      "canonicalLemma": "μετά αὐτός",
+      "transliteration": "meta autos",
+      "morphology": "G:PREP | G:P",
+      "briefGloss": "with/after; it/s/he",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "62-Mk-morphgnt.txt",
+        "fileBlobSha": "6bd9ce1627e12bd45434b0d18f875c89581d855f",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "μετ",
+            "lemma": "μετά",
+            "normalizedLemma": "μετα",
+            "occurrences": [
+              {
+                "bcv": "020314",
+                "word": "μετ’",
+                "normalizedWord": "μετά",
+                "lemma": "μετά",
+                "pos": "P-",
+                "parsing": "--------"
+              }
+            ]
+          },
+          {
+            "inputToken": "αυτου",
+            "lemma": "αὐτός",
+            "normalizedLemma": "αυτοσ",
+            "occurrences": [
+              {
+                "bcv": "020314",
+                "word": "αὐτοῦ",
+                "normalizedWord": "αὐτοῦ",
+                "lemma": "αὐτός",
+                "pos": "RP",
+                "parsing": "----GSM-"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "reviewId": "cc9b4a6f3d8ddebe6a7808be4bf36029817ef546e8485019a51a86870e9406dd",
       "bookId": "marcu",
       "chapter": 3,
@@ -533,6 +1716,49 @@
       "morphology": "G:N-N",
       "briefGloss": "mystery",
       "matchKind": "canonical-lemma-column-exact"
+    },
+    {
+      "reviewId": "3095d72c7c76fc2c98e06dfd2926aec023a74a46fcad3751a9cd1013a44359c5",
+      "bookId": "marcu",
+      "chapter": 4,
+      "ref": "Marcu 4:26-29",
+      "original": "αὐτομάτη",
+      "meaning": "de la sine, de ea însăși. Pământul rodește singur: creșterea nu este silită și nu este făcută de om, ci este lucrarea lui Dumnezeu.",
+      "meaningSha256": "sha256:528ce961809b31f9ff17fd6a09c5d711c6067f465da57c33df134e48b6cec2a2",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 956",
+      "strongId": "G0844",
+      "canonicalLemma": "αὐτόματος",
+      "transliteration": "automatos",
+      "morphology": "G:A",
+      "briefGloss": "by itself",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "62-Mk-morphgnt.txt",
+        "fileBlobSha": "6bd9ce1627e12bd45434b0d18f875c89581d855f",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "αυτοματη",
+            "lemma": "αὐτόματος",
+            "normalizedLemma": "αυτοματοσ",
+            "occurrences": [
+              {
+                "bcv": "020428",
+                "word": "αὐτομάτη",
+                "normalizedWord": "αὐτομάτη",
+                "lemma": "αὐτόματος",
+                "pos": "A-",
+                "parsing": "----NSF-"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "reviewId": "8361775d5156eb7b35e394cc62d8813d4a540af8c0341ef19892870a7a60ee7a",
@@ -604,6 +1830,24 @@
       "transliteration": "Christos",
       "morphology": "N:N--T",
       "briefGloss": "Christ",
+      "matchKind": "canonical-lemma-column-exact"
+    },
+    {
+      "reviewId": "58bb1fb8f873156af4aace9209a14c32fa47bf4cc8b0241e937963e8f07b6b05",
+      "bookId": "marcu",
+      "chapter": 8,
+      "ref": "Marcu 8:31-38",
+      "original": "ψυχή",
+      "meaning": "viața sufletească, viața care se caută pe sine. Isus nu vorbește despre viața trupului, ci despre acea viață care își apără propria păstrare, propria onoare și propria plăcere; a o pierde pentru El înseamnă a o câștiga cu adevărat.",
+      "meaningSha256": "sha256:48f790004d41aaa14caea1b1ba05e65ae86c086a050f14646ee27620dc7d0979",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG lines 5761-5765",
+      "strongId": "G5590",
+      "canonicalLemma": "ψυχή",
+      "transliteration": "psuchē",
+      "morphology": "G:N-F",
+      "briefGloss": "soul / soul: life / soul: myself / soul: person / soul: animal",
       "matchKind": "canonical-lemma-column-exact"
     },
     {
@@ -715,6 +1959,178 @@
       "matchKind": "canonical-lemma-column-exact"
     },
     {
+      "reviewId": "4f0456c57b8b1cfb43cdfff97cdcbbb1a8fc34afe6c6640fffc4c6e74dcdc98f",
+      "bookId": "ioan",
+      "chapter": 1,
+      "ref": "Ioan 1:6-13",
+      "original": "τέκνα θεοῦ",
+      "meaning": "copii ai lui Dumnezeu. Expresia filiatiei date prin har.",
+      "meaningSha256": "sha256:fa113aaa378cc23e47063a737896ecd28dc7cd0fc65f24a6d07352be3dcaa88b",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 5195 + TBESG line 2465",
+      "strongId": "G5043 + G2316",
+      "canonicalLemma": "τέκνον θεός",
+      "transliteration": "teknon theos",
+      "morphology": "G:N-N | G:N-M/F",
+      "briefGloss": "child; God",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "τεκνα",
+            "lemma": "τέκνον",
+            "normalizedLemma": "τεκνον",
+            "occurrences": [
+              {
+                "bcv": "040112",
+                "word": "τέκνα",
+                "normalizedWord": "τέκνα",
+                "lemma": "τέκνον",
+                "pos": "N-",
+                "parsing": "----APN-"
+              }
+            ]
+          },
+          {
+            "inputToken": "θεου",
+            "lemma": "θεός",
+            "normalizedLemma": "θεοσ",
+            "occurrences": [
+              {
+                "bcv": "040106",
+                "word": "θεοῦ",
+                "normalizedWord": "θεοῦ",
+                "lemma": "θεός",
+                "pos": "N-",
+                "parsing": "----GSM-"
+              },
+              {
+                "bcv": "040112",
+                "word": "θεοῦ",
+                "normalizedWord": "θεοῦ",
+                "lemma": "θεός",
+                "pos": "N-",
+                "parsing": "----GSM-"
+              },
+              {
+                "bcv": "040113",
+                "word": "θεοῦ",
+                "normalizedWord": "θεοῦ",
+                "lemma": "θεός",
+                "pos": "N-",
+                "parsing": "----GSM-"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "reviewId": "57bf748954a68d74a5962f57eeeef8ff748b00c4a7fe9cc3aa8f3b8ccd2ccb15",
+      "bookId": "ioan",
+      "chapter": 1,
+      "ref": "Ioan 1:6-13",
+      "original": "ἐκ θεοῦ",
+      "meaning": "din Dumnezeu. Originea noii nasteri nu este omeneasca, ci dumnezeiasca.",
+      "meaningSha256": "sha256:2e8f0e4e677cbbce710e6c2d8bfe57617462b95a48712a648fa3fbd59617aa32",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 1677 + TBESG line 2465",
+      "strongId": "G1537 + G2316",
+      "canonicalLemma": "ἐκ θεός",
+      "transliteration": "ek theos",
+      "morphology": "G:PREP | G:N-M/F",
+      "briefGloss": "out from; God",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "εκ",
+            "lemma": "ἐκ",
+            "normalizedLemma": "εκ",
+            "occurrences": [
+              {
+                "bcv": "040113",
+                "word": "ἐξ",
+                "normalizedWord": "ἐκ",
+                "lemma": "ἐκ",
+                "pos": "P-",
+                "parsing": "--------"
+              },
+              {
+                "bcv": "040113",
+                "word": "ἐκ",
+                "normalizedWord": "ἐκ",
+                "lemma": "ἐκ",
+                "pos": "P-",
+                "parsing": "--------"
+              },
+              {
+                "bcv": "040113",
+                "word": "ἐκ",
+                "normalizedWord": "ἐκ",
+                "lemma": "ἐκ",
+                "pos": "P-",
+                "parsing": "--------"
+              },
+              {
+                "bcv": "040113",
+                "word": "ἐκ",
+                "normalizedWord": "ἐκ",
+                "lemma": "ἐκ",
+                "pos": "P-",
+                "parsing": "--------"
+              }
+            ]
+          },
+          {
+            "inputToken": "θεου",
+            "lemma": "θεός",
+            "normalizedLemma": "θεοσ",
+            "occurrences": [
+              {
+                "bcv": "040106",
+                "word": "θεοῦ",
+                "normalizedWord": "θεοῦ",
+                "lemma": "θεός",
+                "pos": "N-",
+                "parsing": "----GSM-"
+              },
+              {
+                "bcv": "040112",
+                "word": "θεοῦ",
+                "normalizedWord": "θεοῦ",
+                "lemma": "θεός",
+                "pos": "N-",
+                "parsing": "----GSM-"
+              },
+              {
+                "bcv": "040113",
+                "word": "θεοῦ",
+                "normalizedWord": "θεοῦ",
+                "lemma": "θεός",
+                "pos": "N-",
+                "parsing": "----GSM-"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "reviewId": "96e86faf6c65f9b04f041fd33c7b5b3250a0316129c3381a30fa945e9b6a99b9",
       "bookId": "ioan",
       "chapter": 1,
@@ -731,6 +2147,49 @@
       "morphology": "G:N-F",
       "briefGloss": "flesh",
       "matchKind": "canonical-lemma-column-exact"
+    },
+    {
+      "reviewId": "90a58a95c557dd22e274ebccd6c7e7e9669ac7edec7811344e963b05abe0388e",
+      "bookId": "ioan",
+      "chapter": 1,
+      "ref": "Ioan 1:14-18",
+      "original": "ἐσκήνωσεν",
+      "meaning": "a locuit, și-a întins cortul. Cuvânt care trimite spre prezenta lui Dumnezeu în mijlocul poporului.",
+      "meaningSha256": "sha256:e7fddc339ac93821ced48666b085beea7a66732b56604ff703d2575dc240c28b",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 4783",
+      "strongId": "G4637",
+      "canonicalLemma": "σκηνόω",
+      "transliteration": "skēnoō",
+      "morphology": "G:V",
+      "briefGloss": "to dwell",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "εσκηνωσεν",
+            "lemma": "σκηνόω",
+            "normalizedLemma": "σκηνοω",
+            "occurrences": [
+              {
+                "bcv": "040114",
+                "word": "ἐσκήνωσεν",
+                "normalizedWord": "ἐσκήνωσε(ν)",
+                "lemma": "σκηνόω",
+                "pos": "V-",
+                "parsing": "3AAI-S--"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "reviewId": "4f9fd829c92a77073bdfd8e5885aec79a7f33543039749d514dda453db274e10",
@@ -985,6 +2444,67 @@
       "matchKind": "canonical-lemma-column-exact"
     },
     {
+      "reviewId": "4ece62acf15b2be77a9a026fe390c6901043924c0726df1c7311b42fac8a819f",
+      "bookId": "ioan",
+      "chapter": 3,
+      "ref": "Ioan 3:1-8",
+      "original": "πνεῦμα",
+      "meaning": "duh, suflare, vant. Același cuvânt le leaga pe toate trei în vorbirea Domnului.",
+      "meaningSha256": "sha256:5933060adc7b2a47b7e9473dd35d8da5f35c0463c69ea6efd5b49a152ef3792e",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG lines 4276-4277",
+      "strongId": "G4151",
+      "canonicalLemma": "πνεῦμα",
+      "transliteration": "pneuma",
+      "morphology": "G:N-N",
+      "briefGloss": "spirit/breath: spirit / spirit/breath: breath",
+      "matchKind": "canonical-lemma-column-exact"
+    },
+    {
+      "reviewId": "a89e7b28cf436712439cfa047fe039a37fa84ae493a5e7d2edf9bb965daa3a51",
+      "bookId": "ioan",
+      "chapter": 3,
+      "ref": "Ioan 3:9-21",
+      "original": "ὑψωθῆναι",
+      "meaning": "a fi inaltat. La Ioan, cuvântul priveste spre cruce și spre slava de dupa ea.",
+      "meaningSha256": "sha256:0798db880a9c58c7181c519c01bcbb828bf00752c4914debc9b58c116de63afd",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 5468",
+      "strongId": "G5312",
+      "canonicalLemma": "ὑψόω",
+      "transliteration": "hupsoō",
+      "morphology": "G:V",
+      "briefGloss": "to lift up",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "υψωθηναι",
+            "lemma": "ὑψόω",
+            "normalizedLemma": "υψοω",
+            "occurrences": [
+              {
+                "bcv": "040314",
+                "word": "ὑψωθῆναι",
+                "normalizedWord": "ὑψωθῆναι",
+                "lemma": "ὑψόω",
+                "pos": "V-",
+                "parsing": "-APN----"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "reviewId": "282b22b290bd35719fed8017fc935bc7f53c83ac197760be166b7539d7786ab0",
       "bookId": "ioan",
       "chapter": 3,
@@ -1021,6 +2541,49 @@
       "matchKind": "canonical-lemma-column-exact"
     },
     {
+      "reviewId": "d4c0a6d4f3a0fcd3d79d1d03f759b1c87183b8f3ba7604eb4599917b4ee268d5",
+      "bookId": "ioan",
+      "chapter": 3,
+      "ref": "Ioan 3:22-36",
+      "original": "μένει",
+      "meaning": "rămâne. La finalul capitolului, mania lui Dumnezeu nu vine abia atunci, ci rămâne peste omul care refuza pe Fiul.",
+      "meaningSha256": "sha256:270ed499cf9c187432ef0260a78361485dc0c7ce1035b7f912c1c942a0cac389",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 3419",
+      "strongId": "G3306",
+      "canonicalLemma": "μένω",
+      "transliteration": "menō",
+      "morphology": "G:V",
+      "briefGloss": "to stay",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "μενει",
+            "lemma": "μένω",
+            "normalizedLemma": "μενω",
+            "occurrences": [
+              {
+                "bcv": "040336",
+                "word": "μένει",
+                "normalizedWord": "μένει",
+                "lemma": "μένω",
+                "pos": "V-",
+                "parsing": "3PAI-S--"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "reviewId": "aa6679a461d8e9ec786f1073b708b3813a93e47844c15e1ecd95d07275db3d14",
       "bookId": "ioan",
       "chapter": 4,
@@ -1037,6 +2600,104 @@
       "morphology": "G:N-F",
       "briefGloss": "free gift",
       "matchKind": "canonical-lemma-column-exact"
+    },
+    {
+      "reviewId": "76eadd9fc3775ae5a48f33de378d0c5e785c3c3e02d5a88e1aeaa563fc377ce6",
+      "bookId": "ioan",
+      "chapter": 4,
+      "ref": "Ioan 4:1-26",
+      "original": "ὕδωρ ζῶν",
+      "meaning": "apa vie. Apa curgatoare, dar la Ioan și imagine a vieții date de Hristos.",
+      "meaningSha256": "sha256:48bc8fbb249771953bc71a88259addc2b42d4d45b71e75536688f7f7b41fb16e",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 5359 + TBESG line 2341",
+      "strongId": "G5204 + G2198",
+      "canonicalLemma": "ὕδωρ ζάω",
+      "transliteration": "hudōr, hudatos zaō",
+      "morphology": "G:N-N | G:V",
+      "briefGloss": "water; to live",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "υδωρ",
+            "lemma": "ὕδωρ",
+            "normalizedLemma": "υδωρ",
+            "occurrences": [
+              {
+                "bcv": "040407",
+                "word": "ὕδωρ",
+                "normalizedWord": "ὕδωρ",
+                "lemma": "ὕδωρ",
+                "pos": "N-",
+                "parsing": "----ASN-"
+              },
+              {
+                "bcv": "040410",
+                "word": "ὕδωρ",
+                "normalizedWord": "ὕδωρ",
+                "lemma": "ὕδωρ",
+                "pos": "N-",
+                "parsing": "----ASN-"
+              },
+              {
+                "bcv": "040411",
+                "word": "ὕδωρ",
+                "normalizedWord": "ὕδωρ",
+                "lemma": "ὕδωρ",
+                "pos": "N-",
+                "parsing": "----ASN-"
+              },
+              {
+                "bcv": "040414",
+                "word": "ὕδωρ",
+                "normalizedWord": "ὕδωρ",
+                "lemma": "ὕδωρ",
+                "pos": "N-",
+                "parsing": "----NSN-"
+              },
+              {
+                "bcv": "040415",
+                "word": "ὕδωρ",
+                "normalizedWord": "ὕδωρ",
+                "lemma": "ὕδωρ",
+                "pos": "N-",
+                "parsing": "----ASN-"
+              }
+            ]
+          },
+          {
+            "inputToken": "ζων",
+            "lemma": "ζάω",
+            "normalizedLemma": "ζαω",
+            "occurrences": [
+              {
+                "bcv": "040410",
+                "word": "ζῶν",
+                "normalizedWord": "ζῶν",
+                "lemma": "ζάω",
+                "pos": "V-",
+                "parsing": "-PAPASN-"
+              },
+              {
+                "bcv": "040411",
+                "word": "ζῶν",
+                "normalizedWord": "ζῶν",
+                "lemma": "ζάω",
+                "pos": "V-",
+                "parsing": "-PAPASN-"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "reviewId": "242c9b2768286b026bca6dcdf2fb87f2ae911b80cd1e0eef4ed6b5a863535fb8",
@@ -1147,6 +2808,57 @@
       "matchKind": "canonical-lemma-column-exact"
     },
     {
+      "reviewId": "e35150c04ed36dbeb225a554a1f4b432c2d0cba8a4ede2c16c16a1471c6161f9",
+      "bookId": "ioan",
+      "chapter": 5,
+      "ref": "Ioan 5:19-30",
+      "original": "τιμῶσι",
+      "meaning": "sa cinsteasca. Respect, onoare și inchinare cuvenite Fiului.",
+      "meaningSha256": "sha256:31e7e5c93b6631a6cee70ec1cb400fcfe2f5900d197647e4a979819ff7a5c08e",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 5246",
+      "strongId": "G5091",
+      "canonicalLemma": "τιμάω",
+      "transliteration": "timaō",
+      "morphology": "G:V",
+      "briefGloss": "to honor",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "τιμωσι",
+            "lemma": "τιμάω",
+            "normalizedLemma": "τιμαω",
+            "occurrences": [
+              {
+                "bcv": "040523",
+                "word": "τιμῶσι",
+                "normalizedWord": "τιμῶσι(ν)",
+                "lemma": "τιμάω",
+                "pos": "V-",
+                "parsing": "3PAS-P--"
+              },
+              {
+                "bcv": "040523",
+                "word": "τιμῶσι",
+                "normalizedWord": "τιμῶσι(ν)",
+                "lemma": "τιμάω",
+                "pos": "V-",
+                "parsing": "3PAI-P--"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "reviewId": "f1962cc613dd971b8eadc661e27f9d9bb5e143e94ad37e460d36763904636a2f",
       "bookId": "ioan",
       "chapter": 5,
@@ -1237,6 +2949,87 @@
       "matchKind": "canonical-lemma-column-exact"
     },
     {
+      "reviewId": "4bdd04a34278e1b7119772230f47914d79cd2888bb7388aa4aac27b53d41afc7",
+      "bookId": "ioan",
+      "chapter": 6,
+      "ref": "Ioan 6:60-71",
+      "original": "ῥήματα ζωῆς αἰωνίου",
+      "meaning": "cuvintele vieții vesnice. Vorbirea lui Hristos ca izvor de viață.",
+      "meaningSha256": "sha256:93694bcfb5fd33561aca6379049985a7641ce1fb891f16f0a021abb663fc3579",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 4620 + TBESG line 2367 + TBESG line 265",
+      "strongId": "G4487 + G2222 + G0166",
+      "canonicalLemma": "ῥῆμα ζωή αἰώνιος",
+      "transliteration": "rhēma zōē aiōnios",
+      "morphology": "G:N-N | G:N-F | G:A",
+      "briefGloss": "declaration; life; eternal",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "ρηματα",
+            "lemma": "ῥῆμα",
+            "normalizedLemma": "ρημα",
+            "occurrences": [
+              {
+                "bcv": "040663",
+                "word": "ῥήματα",
+                "normalizedWord": "ῥήματα",
+                "lemma": "ῥῆμα",
+                "pos": "N-",
+                "parsing": "----NPN-"
+              },
+              {
+                "bcv": "040668",
+                "word": "ῥήματα",
+                "normalizedWord": "ῥήματα",
+                "lemma": "ῥῆμα",
+                "pos": "N-",
+                "parsing": "----APN-"
+              }
+            ]
+          },
+          {
+            "inputToken": "ζωησ",
+            "lemma": "ζωή",
+            "normalizedLemma": "ζωη",
+            "occurrences": [
+              {
+                "bcv": "040668",
+                "word": "ζωῆς",
+                "normalizedWord": "ζωῆς",
+                "lemma": "ζωή",
+                "pos": "N-",
+                "parsing": "----GSF-"
+              }
+            ]
+          },
+          {
+            "inputToken": "αιωνιου",
+            "lemma": "αἰώνιος",
+            "normalizedLemma": "αιωνιοσ",
+            "occurrences": [
+              {
+                "bcv": "040668",
+                "word": "αἰωνίου",
+                "normalizedWord": "αἰωνίου",
+                "lemma": "αἰώνιος",
+                "pos": "A-",
+                "parsing": "----GSF-"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "reviewId": "a6037ed1638c90f1c8ce3f02c70de0a02ea22159d2e0a592c02b1fc1d0b9f36b",
       "bookId": "ioan",
       "chapter": 6,
@@ -1307,6 +3100,122 @@
       "morphology": "G:V",
       "briefGloss": "to thirst",
       "matchKind": "canonical-lemma-column-exact"
+    },
+    {
+      "reviewId": "e7daa3752f47c5538b77b050e182b9d4c76797ec4e1717df3f7e880d9fd85e39",
+      "bookId": "ioan",
+      "chapter": 7,
+      "ref": "Ioan 7:25-39",
+      "original": "ποταμοὶ ὕδατος ζῶντος",
+      "meaning": "rauri de apa vie. Imagine a vieții Duhului care se revarsa.",
+      "meaningSha256": "sha256:7f4e79a8f4c57585a1de9301fcf772c43d2db49dc33af06e4509299e58d8a8e1",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 4344 + TBESG line 5359 + TBESG line 2341",
+      "strongId": "G4215 + G5204 + G2198",
+      "canonicalLemma": "ποταμός ὕδωρ ζάω",
+      "transliteration": "potamos hudōr, hudatos zaō",
+      "morphology": "G:N-M | G:N-N | G:V",
+      "briefGloss": "river; water; to live",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "ποταμοι",
+            "lemma": "ποταμός",
+            "normalizedLemma": "ποταμοσ",
+            "occurrences": [
+              {
+                "bcv": "040738",
+                "word": "ποταμοὶ",
+                "normalizedWord": "ποταμοί",
+                "lemma": "ποταμός",
+                "pos": "N-",
+                "parsing": "----NPM-"
+              }
+            ]
+          },
+          {
+            "inputToken": "υδατοσ",
+            "lemma": "ὕδωρ",
+            "normalizedLemma": "υδωρ",
+            "occurrences": [
+              {
+                "bcv": "040738",
+                "word": "ὕδατος",
+                "normalizedWord": "ὕδατος",
+                "lemma": "ὕδωρ",
+                "pos": "N-",
+                "parsing": "----GSN-"
+              }
+            ]
+          },
+          {
+            "inputToken": "ζωντοσ",
+            "lemma": "ζάω",
+            "normalizedLemma": "ζαω",
+            "occurrences": [
+              {
+                "bcv": "040738",
+                "word": "ζῶντος",
+                "normalizedWord": "ζῶντος",
+                "lemma": "ζάω",
+                "pos": "V-",
+                "parsing": "-PAPGSN-"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "reviewId": "200af621be7f5e9b5d03fbb21c0fd19200713e372791015a18dafa2204c828db",
+      "bookId": "ioan",
+      "chapter": 7,
+      "ref": "Ioan 7:25-39",
+      "original": "ἐδοξάσθη",
+      "meaning": "a fost proslavit. La Ioan, slava Fiului trece prin cruce, înviere și inaltare.",
+      "meaningSha256": "sha256:ce8775eab595dec75239b0aad4485f9d8567b43cdeda76db9b2bc378fa9c8108",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 1524",
+      "strongId": "G1392",
+      "canonicalLemma": "δοξάζω",
+      "transliteration": "doxazō",
+      "morphology": "G:V",
+      "briefGloss": "to glorify",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "εδοξασθη",
+            "lemma": "δοξάζω",
+            "normalizedLemma": "δοξαζω",
+            "occurrences": [
+              {
+                "bcv": "040739",
+                "word": "ἐδοξάσθη",
+                "normalizedWord": "ἐδοξάσθη",
+                "lemma": "δοξάζω",
+                "pos": "V-",
+                "parsing": "3API-S--"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "reviewId": "e2e012bb225aa3398b89d88f924dfa645fcab0744193ab5ebf1ba08445d5f984",
@@ -1417,6 +3326,24 @@
       "matchKind": "canonical-lemma-column-exact"
     },
     {
+      "reviewId": "eddacba61f5168ce6eb091887de710209fea877f32343fec88cc74f8354b9587",
+      "bookId": "ioan",
+      "chapter": 8,
+      "ref": "Ioan 8:48-59",
+      "original": "τηρέω",
+      "meaning": "a pazi. A tine cuvântul cu credinciosie, nu doar a-l auzi.",
+      "meaningSha256": "sha256:b14deed83f988b811b7d6b0ad8e2b65db5d5c28d4344affcd30293bc4eec541f",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG lines 5235-5237",
+      "strongId": "G5083",
+      "canonicalLemma": "τηρέω",
+      "transliteration": "tēreō",
+      "morphology": "G:V",
+      "briefGloss": "to keep: observe / to keep: guard / to keep: protect",
+      "matchKind": "canonical-lemma-column-exact"
+    },
+    {
       "reviewId": "ba67384049462bc8d4033265027282714828c98643278c255a316f2afa245eac",
       "bookId": "ioan",
       "chapter": 9,
@@ -1433,6 +3360,49 @@
       "morphology": "N:N--L",
       "briefGloss": "Siloam",
       "matchKind": "canonical-lemma-column-exact"
+    },
+    {
+      "reviewId": "33b9d5a27edbd438d1207aacda669ee9e76139d304cc4f4240f33090bd4fec38",
+      "bookId": "ioan",
+      "chapter": 9,
+      "ref": "Ioan 9:13-34",
+      "original": "σημεῖα",
+      "meaning": "semne. Lucrari care arată prezenta și autoritatea lui Dumnezeu în Hristos.",
+      "meaningSha256": "sha256:6f6cf4c125c503a644988cfb624531ad8be0a3f6e221c5690c30c86ffc11e850",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 4730",
+      "strongId": "G4592",
+      "canonicalLemma": "σημεῖον",
+      "transliteration": "sēmeion",
+      "morphology": "G:N-N",
+      "briefGloss": "sign",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "σημεια",
+            "lemma": "σημεῖον",
+            "normalizedLemma": "σημειον",
+            "occurrences": [
+              {
+                "bcv": "040916",
+                "word": "σημεῖα",
+                "normalizedWord": "σημεῖα",
+                "lemma": "σημεῖον",
+                "pos": "N-",
+                "parsing": "----APN-"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "reviewId": "a56b91c661a7ed7cf4008e00863b692a7f40d9cadc754a631b8bd6033728e1fa",
@@ -1505,6 +3475,49 @@
       "morphology": "G:N-F",
       "briefGloss": "door",
       "matchKind": "canonical-lemma-column-exact"
+    },
+    {
+      "reviewId": "b8a5d292d974f989951520b9d58a615a0798415bdb9af513df291e4210777150",
+      "bookId": "ioan",
+      "chapter": 10,
+      "ref": "Ioan 10:1-18",
+      "original": "περισσόν",
+      "meaning": "din belșug. viața dată de Hristos nu este saraca, ci plina.",
+      "meaningSha256": "sha256:44f050d376713d2b52c7e054c961d4c040182a873f91d986796c8e61cda9b72d",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 4175",
+      "strongId": "G4053",
+      "canonicalLemma": "περισσός",
+      "transliteration": "perissos",
+      "morphology": "G:A / G:ADV",
+      "briefGloss": "excessive",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "περισσον",
+            "lemma": "περισσός",
+            "normalizedLemma": "περισσοσ",
+            "occurrences": [
+              {
+                "bcv": "041010",
+                "word": "περισσὸν",
+                "normalizedWord": "περισσόν",
+                "lemma": "περισσός",
+                "pos": "A-",
+                "parsing": "----ASN-"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "reviewId": "b4930a975bef1eac78ace3c37babbee76ca765b26aba301255be275169ac42e5",
@@ -1597,6 +3610,49 @@
       "matchKind": "canonical-lemma-column-exact"
     },
     {
+      "reviewId": "fdd489b1a32642b543b30d771294aaf07ac1c4b349b41aab4b76aceac8e72f3f",
+      "bookId": "ioan",
+      "chapter": 11,
+      "ref": "Ioan 11:28-46",
+      "original": "ἐδάκρυσεν",
+      "meaning": "a plans. Lacrima reala a Domnului în fata durerii și a mortii.",
+      "meaningSha256": "sha256:f0ba95d284d60a261902316e69109f01d38c83eec34c348f1182e72d151c837d",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 1277",
+      "strongId": "G1145",
+      "canonicalLemma": "δακρύω",
+      "transliteration": "dakruō",
+      "morphology": "G:V",
+      "briefGloss": "to weep",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "εδακρυσεν",
+            "lemma": "δακρύω",
+            "normalizedLemma": "δακρυω",
+            "occurrences": [
+              {
+                "bcv": "041135",
+                "word": "ἐδάκρυσεν",
+                "normalizedWord": "ἐδάκρυσε(ν)",
+                "lemma": "δακρύω",
+                "pos": "V-",
+                "parsing": "3AAI-S--"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "reviewId": "2d960310c45857315ecd3c0d822e154f94a465f3f1d0649e99db6d43cacf0b80",
       "bookId": "ioan",
       "chapter": 11,
@@ -1669,6 +3725,49 @@
       "matchKind": "canonical-lemma-column-exact"
     },
     {
+      "reviewId": "431daec0f335275957ba37453ffefd789e4c44c7240fbab409d2361bd6af1cc1",
+      "bookId": "ioan",
+      "chapter": 12,
+      "ref": "Ioan 12:20-36",
+      "original": "ὑψωθῶ",
+      "meaning": "voi fi inaltat. La Ioan, arată spre cruce și spre slava ei.",
+      "meaningSha256": "sha256:4054a4cef714cc1fb955664541cc6a01098d0c64df2a8d99c15c73937efa25f3",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 5468",
+      "strongId": "G5312",
+      "canonicalLemma": "ὑψόω",
+      "transliteration": "hupsoō",
+      "morphology": "G:V",
+      "briefGloss": "to lift up",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "υψωθω",
+            "lemma": "ὑψόω",
+            "normalizedLemma": "υψοω",
+            "occurrences": [
+              {
+                "bcv": "041232",
+                "word": "ὑψωθῶ",
+                "normalizedWord": "ὑψωθῶ",
+                "lemma": "ὑψόω",
+                "pos": "V-",
+                "parsing": "1APS-S--"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "reviewId": "af93f33484362120ec5371efaf6a1af9e0f24ccb9f6fab41b7e74af3c67fd80f",
       "bookId": "ioan",
       "chapter": 12,
@@ -1739,6 +3838,49 @@
       "morphology": "G:V",
       "briefGloss": "to wash",
       "matchKind": "canonical-lemma-column-exact"
+    },
+    {
+      "reviewId": "73a6e6cc5e43f0455f8080de799c00f114cc9f717ff3a2cdb972ccf50e77a013",
+      "bookId": "ioan",
+      "chapter": 13,
+      "ref": "Ioan 13:18-30",
+      "original": "ἐταράχθη",
+      "meaning": "S-a tulburat. Miscare adanca a sufletului în fata raului și a durerii.",
+      "meaningSha256": "sha256:809dcf0c0628a53999753442eb2c644d6a465eb33ab3dbd7095e47649b40cd58",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 5167",
+      "strongId": "G5015",
+      "canonicalLemma": "ταράσσω",
+      "transliteration": "tarassō",
+      "morphology": "G:V",
+      "briefGloss": "to trouble",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "εταραχθη",
+            "lemma": "ταράσσω",
+            "normalizedLemma": "ταρασσω",
+            "occurrences": [
+              {
+                "bcv": "041321",
+                "word": "ἐταράχθη",
+                "normalizedWord": "ἐταράχθη",
+                "lemma": "ταράσσω",
+                "pos": "V-",
+                "parsing": "3API-S--"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "reviewId": "e086609b109f56cffe8123f4ecb20d51bd2c88e2210f505a4e4608e034c27540",
@@ -1921,6 +4063,49 @@
       "matchKind": "canonical-lemma-column-exact"
     },
     {
+      "reviewId": "8851679985551018dcce9ee6697297648931d6369136c94ba9a07c3befe4a675",
+      "bookId": "ioan",
+      "chapter": 15,
+      "ref": "Ioan 15:12-17",
+      "original": "φίλοι",
+      "meaning": "prieteni. Cei apropiați cărora Domnul le face cunoscut ce a auzit de la Tatăl.",
+      "meaningSha256": "sha256:5d73f1f0d7bbb03224d1b34da566639039952f1e6662dc29a677bee79deb2dca",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 5546",
+      "strongId": "G5384",
+      "canonicalLemma": "φίλος",
+      "transliteration": "philos",
+      "morphology": "G:A",
+      "briefGloss": "friendly/friend",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "φιλοι",
+            "lemma": "φίλος",
+            "normalizedLemma": "φιλοσ",
+            "occurrences": [
+              {
+                "bcv": "041514",
+                "word": "φίλοι",
+                "normalizedWord": "φίλοι",
+                "lemma": "φίλος",
+                "pos": "A-",
+                "parsing": "----NPM-"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "reviewId": "eb04180d8b907a9a9bfd4d1f19e633fe6fdc95a869d53f1531fe1fbe233eb56c",
       "bookId": "ioan",
       "chapter": 15,
@@ -2047,6 +4232,92 @@
       "matchKind": "canonical-lemma-column-exact"
     },
     {
+      "reviewId": "0f6d266548f7872e6380bdda7f22cf4eb77f24fe883b7f02d969b2a8f99adbc4",
+      "bookId": "ioan",
+      "chapter": 16,
+      "ref": "Ioan 16:25-33",
+      "original": "θαρσεῖτε",
+      "meaning": "îndrăzniți, aveți curaj. Chemare la inimă tare în Hristos.",
+      "meaningSha256": "sha256:c02b4ad9637fc5a64da24f1a81236ef37b4c561177f135d62117bee805f18275",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 2442",
+      "strongId": "G2293",
+      "canonicalLemma": "θαρσέω",
+      "transliteration": "tharseō",
+      "morphology": "G:V",
+      "briefGloss": "take heart",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "θαρσειτε",
+            "lemma": "θαρσέω",
+            "normalizedLemma": "θαρσεω",
+            "occurrences": [
+              {
+                "bcv": "041633",
+                "word": "θαρσεῖτε",
+                "normalizedWord": "θαρσεῖτε",
+                "lemma": "θαρσέω",
+                "pos": "V-",
+                "parsing": "2PAD-P--"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "reviewId": "d66cd959463f1e1a67820924995a586e799dc1c4bfd2d765e06bab1d5e12ebe8",
+      "bookId": "ioan",
+      "chapter": 16,
+      "ref": "Ioan 16:25-33",
+      "original": "νενίκηκα",
+      "meaning": "am biruit. Biruință deja câștigată și cu efect durabil.",
+      "meaningSha256": "sha256:a9dc240a216450ce1c2aeb489768c91e4c68eccc0bc03ea06062b034030d1660",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 3641",
+      "strongId": "G3528",
+      "canonicalLemma": "νικάω",
+      "transliteration": "nikaō",
+      "morphology": "G:V",
+      "briefGloss": "to conquer",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "νενικηκα",
+            "lemma": "νικάω",
+            "normalizedLemma": "νικαω",
+            "occurrences": [
+              {
+                "bcv": "041633",
+                "word": "νενίκηκα",
+                "normalizedWord": "νενίκηκα",
+                "lemma": "νικάω",
+                "pos": "V-",
+                "parsing": "1XAI-S--"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "reviewId": "9e7112390b2ce20c339aa4b27a9e22148b77491ca939f04d2e47cd4bddf43411",
       "bookId": "ioan",
       "chapter": 17,
@@ -2063,6 +4334,64 @@
       "morphology": "G:N-F",
       "briefGloss": "glory",
       "matchKind": "canonical-lemma-column-exact"
+    },
+    {
+      "reviewId": "a0c8e5b54ff9fa56974ac9c4274ecbab5fbbd59c501b954a42632227bd91aa23",
+      "bookId": "ioan",
+      "chapter": 17,
+      "ref": "Ioan 17:1-5",
+      "original": "ζωὴ αἰώνιος",
+      "meaning": "viață veșnică. Viață în cunoașterea lui Dumnezeu prin Fiul.",
+      "meaningSha256": "sha256:9071e88ef9ed35d5f5b77b8b4b3fb735f43a341cd6abd9a87bd134aac72b7861",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 2367 + TBESG line 265",
+      "strongId": "G2222 + G0166",
+      "canonicalLemma": "ζωή αἰώνιος",
+      "transliteration": "zōē aiōnios",
+      "morphology": "G:N-F | G:A",
+      "briefGloss": "life; eternal",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "ζωη",
+            "lemma": "ζωή",
+            "normalizedLemma": "ζωη",
+            "occurrences": [
+              {
+                "bcv": "041703",
+                "word": "ζωὴ",
+                "normalizedWord": "ζωή",
+                "lemma": "ζωή",
+                "pos": "N-",
+                "parsing": "----NSF-"
+              }
+            ]
+          },
+          {
+            "inputToken": "αιωνιοσ",
+            "lemma": "αἰώνιος",
+            "normalizedLemma": "αιωνιοσ",
+            "occurrences": [
+              {
+                "bcv": "041703",
+                "word": "αἰώνιος",
+                "normalizedWord": "αἰώνιος",
+                "lemma": "αἰώνιος",
+                "pos": "A-",
+                "parsing": "----NSF-"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "reviewId": "eee23b61670b38b3b160846ba448bf205fb80ea7bc8cec4c88b098b98be910a0",
@@ -2227,6 +4556,57 @@
       "matchKind": "canonical-lemma-column-exact"
     },
     {
+      "reviewId": "9740b13f7d46c05592c3733e55a08a45b6ae0b15e7ec83e01f2e04a1b3dc9c19",
+      "bookId": "ioan",
+      "chapter": 19,
+      "ref": "Ioan 19:17-30",
+      "original": "τετέλεσται",
+      "meaning": "S-a isprăvit. Lucrare dusă la capăt, împlinită pe deplin.",
+      "meaningSha256": "sha256:0fe373ff7a192cb13db1bc38d93bc146c5499bbfe683d168c23a4e49f61d5ea4",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 5207",
+      "strongId": "G5055",
+      "canonicalLemma": "τελέω",
+      "transliteration": "teleō",
+      "morphology": "G:V",
+      "briefGloss": "to finish",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "τετελεσται",
+            "lemma": "τελέω",
+            "normalizedLemma": "τελεω",
+            "occurrences": [
+              {
+                "bcv": "041928",
+                "word": "τετέλεσται",
+                "normalizedWord": "τετέλεσται",
+                "lemma": "τελέω",
+                "pos": "V-",
+                "parsing": "3XPI-S--"
+              },
+              {
+                "bcv": "041930",
+                "word": "Τετέλεσται",
+                "normalizedWord": "τετέλεσται",
+                "lemma": "τελέω",
+                "pos": "V-",
+                "parsing": "3XPI-S--"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "reviewId": "24b8261485c93388a8d8010b6ba4e34b7d07cd9e80dba77dffc57b7a85d258eb",
       "bookId": "ioan",
       "chapter": 19,
@@ -2245,6 +4625,283 @@
       "matchKind": "canonical-lemma-column-exact"
     },
     {
+      "reviewId": "600df21c5280ce120ec99e88c1e6908ffda408b3e80ad52d94bd73110d625ce8",
+      "bookId": "ioan",
+      "chapter": 19,
+      "ref": "Ioan 19:31-42",
+      "original": "ἐξεκέντησαν",
+      "meaning": "au străpuns. Trimitere la împlinirea profeției.",
+      "meaningSha256": "sha256:8e773f6dc868bafbf2d21e1e209aa95d37f2ce0fd094460d3c7de9882a0bc5a6",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 1714",
+      "strongId": "G1574",
+      "canonicalLemma": "ἐκκεντέω",
+      "transliteration": "ekkenteō",
+      "morphology": "G:V",
+      "briefGloss": "to pierce",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "εξεκεντησαν",
+            "lemma": "ἐκκεντέω",
+            "normalizedLemma": "εκκεντεω",
+            "occurrences": [
+              {
+                "bcv": "041937",
+                "word": "ἐξεκέντησαν",
+                "normalizedWord": "ἐξεκέντησαν",
+                "lemma": "ἐκκεντέω",
+                "pos": "V-",
+                "parsing": "3AAI-P--"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "reviewId": "9bc2c5c15b3512a8904e876458a62a0c60acb1bcf61b6e055e2ec99a63d87aac",
+      "bookId": "ioan",
+      "chapter": 20,
+      "ref": "Ioan 20:1-18",
+      "original": "ἀναστῆναι",
+      "meaning": "a învia, a se ridica din morți.",
+      "meaningSha256": "sha256:9ad9e704bd1e3b5f3712c662f8cea8c7e6e2779378a6511c47b1c1bfd504f894",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 557",
+      "strongId": "G0450",
+      "canonicalLemma": "ἀνίστημι",
+      "transliteration": "anistēmi",
+      "morphology": "G:V",
+      "briefGloss": "to arise",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "αναστηναι",
+            "lemma": "ἀνίστημι",
+            "normalizedLemma": "ανιστημι",
+            "occurrences": [
+              {
+                "bcv": "042009",
+                "word": "ἀναστῆναι",
+                "normalizedWord": "ἀναστῆναι",
+                "lemma": "ἀνίστημι",
+                "pos": "V-",
+                "parsing": "-AAN----"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "reviewId": "f73544934e7c97eaf0a68a357cbdf04a62ade8e3a10eeacf87162f7a98bc3472",
+      "bookId": "ioan",
+      "chapter": 20,
+      "ref": "Ioan 20:19-29",
+      "original": "εἰρήνη ὑμῖν",
+      "meaning": "Pace vouă. Salutul plin de mângâiere al Domnului înviat.",
+      "meaningSha256": "sha256:a2492f118e68140e38b83cc0cfdcef5d1eb3e69f11bfdfa76e8ca19bfd6b405d",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 1655 + TBESG line 4919",
+      "strongId": "G1515 + G4771",
+      "canonicalLemma": "εἰρήνη σύ",
+      "transliteration": "eirēnē su",
+      "morphology": "G:N-F | G:P-2",
+      "briefGloss": "peace; you",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "ειρηνη",
+            "lemma": "εἰρήνη",
+            "normalizedLemma": "ειρηνη",
+            "occurrences": [
+              {
+                "bcv": "042019",
+                "word": "Εἰρήνη",
+                "normalizedWord": "εἰρήνη",
+                "lemma": "εἰρήνη",
+                "pos": "N-",
+                "parsing": "----NSF-"
+              },
+              {
+                "bcv": "042021",
+                "word": "Εἰρήνη",
+                "normalizedWord": "εἰρήνη",
+                "lemma": "εἰρήνη",
+                "pos": "N-",
+                "parsing": "----NSF-"
+              },
+              {
+                "bcv": "042026",
+                "word": "Εἰρήνη",
+                "normalizedWord": "εἰρήνη",
+                "lemma": "εἰρήνη",
+                "pos": "N-",
+                "parsing": "----NSF-"
+              }
+            ]
+          },
+          {
+            "inputToken": "υμιν",
+            "lemma": "σύ",
+            "normalizedLemma": "συ",
+            "occurrences": [
+              {
+                "bcv": "042019",
+                "word": "ὑμῖν",
+                "normalizedWord": "ὑμῖν",
+                "lemma": "σύ",
+                "pos": "RP",
+                "parsing": "----DP--"
+              },
+              {
+                "bcv": "042021",
+                "word": "ὑμῖν",
+                "normalizedWord": "ὑμῖν",
+                "lemma": "σύ",
+                "pos": "RP",
+                "parsing": "----DP--"
+              },
+              {
+                "bcv": "042026",
+                "word": "ὑμῖν",
+                "normalizedWord": "ὑμῖν",
+                "lemma": "σύ",
+                "pos": "RP",
+                "parsing": "----DP--"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "reviewId": "33dc5c1d7a7602fd8b64963bd47501517e7bf5d6faf1b95a46158438144fa31a",
+      "bookId": "ioan",
+      "chapter": 20,
+      "ref": "Ioan 20:30-31",
+      "original": "πιστεύητε",
+      "meaning": "să credeți. Scopul declarat al scrierii lui Ioan.",
+      "meaningSha256": "sha256:ccc9e05c8f5fbf79f13cbf766b7b3392f0572f4034e9258781e36cd51f67bd3a",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 4224",
+      "strongId": "G4100",
+      "canonicalLemma": "πιστεύω",
+      "transliteration": "pisteuō",
+      "morphology": "G:V",
+      "briefGloss": "to trust (in)",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "πιστευητε",
+            "lemma": "πιστεύω",
+            "normalizedLemma": "πιστευω",
+            "occurrences": [
+              {
+                "bcv": "042031",
+                "word": "πιστεύητε",
+                "normalizedWord": "πιστεύητε",
+                "lemma": "πιστεύω",
+                "pos": "V-",
+                "parsing": "2PAS-P--"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "reviewId": "9124a5ac2acd6d92d06310a2a17dd833799e2d92745c04254580ad87792fb9da",
+      "bookId": "ioan",
+      "chapter": 20,
+      "ref": "Ioan 20:30-31",
+      "original": "ζωὴν ἔχητε",
+      "meaning": "să aveți viață. Rodul credinței în Fiul.",
+      "meaningSha256": "sha256:1cb09dfbeb0fa02201aa819fbed1cbd68ee5a281c06a8ea70d97d8264d74c222",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 2367 + TBESG line 2334",
+      "strongId": "G2222 + G2192",
+      "canonicalLemma": "ζωή ἔχω",
+      "transliteration": "zōē echō",
+      "morphology": "G:N-F | G:V",
+      "briefGloss": "life; to have/be",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "ζωην",
+            "lemma": "ζωή",
+            "normalizedLemma": "ζωη",
+            "occurrences": [
+              {
+                "bcv": "042031",
+                "word": "ζωὴν",
+                "normalizedWord": "ζωήν",
+                "lemma": "ζωή",
+                "pos": "N-",
+                "parsing": "----ASF-"
+              }
+            ]
+          },
+          {
+            "inputToken": "εχητε",
+            "lemma": "ἔχω",
+            "normalizedLemma": "εχω",
+            "occurrences": [
+              {
+                "bcv": "042031",
+                "word": "ἔχητε",
+                "normalizedWord": "ἔχητε",
+                "lemma": "ἔχω",
+                "pos": "V-",
+                "parsing": "2PAS-P--"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "reviewId": "4375cb3bb68fd09de1dc55b12046d2d1e0594c1b35624083db751de5fd1d1494",
       "bookId": "ioan",
       "chapter": 21,
@@ -2261,6 +4918,204 @@
       "morphology": "G:V",
       "briefGloss": "to reveal",
       "matchKind": "canonical-lemma-column-exact"
+    },
+    {
+      "reviewId": "cef86caf678a0fb3598fea02dbd9d562090dccffe52aecdf775b972370fac27c",
+      "bookId": "ioan",
+      "chapter": 21,
+      "ref": "Ioan 21:15-19",
+      "original": "ἀγαπᾷς / φιλεῖς",
+      "meaning": "iubești. Limbajul dragostei cercetate și mărturisite înaintea Domnului.",
+      "meaningSha256": "sha256:12bfb7c968665b76269a55644286a861f21b13d4d206bba65ef7781c98c884e4",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 117 + TBESG line 5526",
+      "strongId": "G0025 + G5368",
+      "canonicalLemma": "ἀγαπάω φιλέω",
+      "transliteration": "agapaō phileō",
+      "morphology": "G:V | G:V",
+      "briefGloss": "to love; to love",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "αγαπασ",
+            "lemma": "ἀγαπάω",
+            "normalizedLemma": "αγαπαω",
+            "occurrences": [
+              {
+                "bcv": "042115",
+                "word": "ἀγαπᾷς",
+                "normalizedWord": "ἀγαπᾷς",
+                "lemma": "ἀγαπάω",
+                "pos": "V-",
+                "parsing": "2PAI-S--"
+              },
+              {
+                "bcv": "042116",
+                "word": "ἀγαπᾷς",
+                "normalizedWord": "ἀγαπᾷς",
+                "lemma": "ἀγαπάω",
+                "pos": "V-",
+                "parsing": "2PAI-S--"
+              }
+            ]
+          },
+          {
+            "inputToken": "φιλεισ",
+            "lemma": "φιλέω",
+            "normalizedLemma": "φιλεω",
+            "occurrences": [
+              {
+                "bcv": "042117",
+                "word": "φιλεῖς",
+                "normalizedWord": "φιλεῖς",
+                "lemma": "φιλέω",
+                "pos": "V-",
+                "parsing": "2PAI-S--"
+              },
+              {
+                "bcv": "042117",
+                "word": "Φιλεῖς",
+                "normalizedWord": "φιλεῖς",
+                "lemma": "φιλέω",
+                "pos": "V-",
+                "parsing": "2PAI-S--"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "reviewId": "39da7c83712ab0501119122b11cb2e302ba607b1d3c1519d35f511a160d3bbea",
+      "bookId": "ioan",
+      "chapter": 21,
+      "ref": "Ioan 21:15-19",
+      "original": "βόσκε / ποίμαινε",
+      "meaning": "paște, păstorește. Chemarea de a hrăni și îngriji turma Domnului.",
+      "meaningSha256": "sha256:4b4bb78ab76fc003af19d99243a6505043bb845c38fd333426bdd91148438c90",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 1128 + TBESG line 4294",
+      "strongId": "G1006 + G4165",
+      "canonicalLemma": "βόσκω ποιμαίνω",
+      "transliteration": "boskō poimainō",
+      "morphology": "G:V | G:V",
+      "briefGloss": "to feed; to shepherd",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "βοσκε",
+            "lemma": "βόσκω",
+            "normalizedLemma": "βοσκω",
+            "occurrences": [
+              {
+                "bcv": "042115",
+                "word": "Βόσκε",
+                "normalizedWord": "βόσκε",
+                "lemma": "βόσκω",
+                "pos": "V-",
+                "parsing": "2PAD-S--"
+              },
+              {
+                "bcv": "042117",
+                "word": "Βόσκε",
+                "normalizedWord": "βόσκε",
+                "lemma": "βόσκω",
+                "pos": "V-",
+                "parsing": "2PAD-S--"
+              }
+            ]
+          },
+          {
+            "inputToken": "ποιμαινε",
+            "lemma": "ποιμαίνω",
+            "normalizedLemma": "ποιμαινω",
+            "occurrences": [
+              {
+                "bcv": "042116",
+                "word": "Ποίμαινε",
+                "normalizedWord": "ποίμαινε",
+                "lemma": "ποιμαίνω",
+                "pos": "V-",
+                "parsing": "2PAD-S--"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "reviewId": "902a4214fc1afe11c0f8285f53f447df29f880e3d9995a1473daa501ad064f1d",
+      "bookId": "ioan",
+      "chapter": 21,
+      "ref": "Ioan 21:20-25",
+      "original": "ἀκολούθει μοι",
+      "meaning": "urmează-Mă. Chemarea personală și continuă a Domnului.",
+      "meaningSha256": "sha256:bc20420c1dd281f74c8f94fd15fb79288826540b1f2ee798f65b985337e6df8d",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 289 + TBESG line 1605",
+      "strongId": "G0190 + G1473",
+      "canonicalLemma": "ἀκολουθέω ἐγώ",
+      "transliteration": "akoloutheō egō",
+      "morphology": "G:V | G:P-1",
+      "briefGloss": "to follow; I/we",
+      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "ακολουθει",
+            "lemma": "ἀκολουθέω",
+            "normalizedLemma": "ακολουθεω",
+            "occurrences": [
+              {
+                "bcv": "042122",
+                "word": "ἀκολούθει",
+                "normalizedWord": "ἀκολούθει",
+                "lemma": "ἀκολουθέω",
+                "pos": "V-",
+                "parsing": "2PAD-S--"
+              }
+            ]
+          },
+          {
+            "inputToken": "μοι",
+            "lemma": "ἐγώ",
+            "normalizedLemma": "εγω",
+            "occurrences": [
+              {
+                "bcv": "042122",
+                "word": "μοι",
+                "normalizedWord": "μοι",
+                "lemma": "ἐγώ",
+                "pos": "RP",
+                "parsing": "----DS--"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "reviewId": "8e8f3634237f2705c9fb41079b5606274204c9c07b88eeb47c0661acdf2a8b1a",

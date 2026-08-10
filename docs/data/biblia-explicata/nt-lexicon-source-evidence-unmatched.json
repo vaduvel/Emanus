@@ -1,6 +1,6 @@
 {
-  "schema": "emanus-nt-lexicon-source-evidence-unmatched-v2",
-  "policy": "Entries with no exact normalized match in TBESG's canonical lemma column. These are commonly inflected or multi-word forms and require lemmatization or another pinned lexical reference; they are not approvable from absence of evidence.",
+  "schema": "emanus-nt-lexicon-source-evidence-unmatched-v3",
+  "policy": "Entries with no verified TBESG candidate even after passage-bounded MorphGNT 6.12 form-to-lemma resolution. These require manual lemmatization, correction of the original-language note, or another pinned lexical reference; they are not approvable from absence of evidence.",
   "source": {
     "id": "stepbible-tbesg",
     "repository": "STEPBible/STEPBible-Data",
@@ -10,85 +10,32 @@
     "verifiedBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
     "license": "CC BY 4.0"
   },
-  "count": 82,
+  "morphologySource": {
+    "id": "morphgnt-sblgnt-6.12",
+    "repository": "morphgnt/sblgnt",
+    "ref": "6.12",
+    "license": "CC-BY-SA",
+    "citation": "Tauber, J. K., ed. (2017) MorphGNT: SBLGNT Edition, Version 6.12",
+    "files": [
+      {
+        "bookId": "matei",
+        "file": "61-Mt-morphgnt.txt",
+        "blobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621"
+      },
+      {
+        "bookId": "marcu",
+        "file": "62-Mk-morphgnt.txt",
+        "blobSha": "6bd9ce1627e12bd45434b0d18f875c89581d855f"
+      },
+      {
+        "bookId": "ioan",
+        "file": "64-Jn-morphgnt.txt",
+        "blobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
+      }
+    ]
+  },
+  "count": 17,
   "entries": [
-    {
-      "reviewId": "934998666f2f4a94385490a94fda1c83f5a2f0aa2c20abbc45dc4be8d0ac04ff",
-      "bookId": "matei",
-      "chapter": 1,
-      "ref": "Matei 1:1-17",
-      "original": "βίβλος γενέσεως",
-      "normalizedLemma": "βιβλοσγενεσεωσ",
-      "meaning": "cartea neamului sau a obârșiei. Expresia face punte spre Geneza și deschide istoria unui nou început.",
-      "meaningSha256": "sha256:513442c4a915e835ab536aa1a6976c07f8aaf499cb59e1ac7a2cd327590a4847",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "db14ee0597159a73a15ed73211618bd6833e19c74ba6be961c8da51278cf784e",
-      "bookId": "matei",
-      "chapter": 2,
-      "ref": "Matei 2:1-12",
-      "original": "μάγοι",
-      "normalizedLemma": "μαγοι",
-      "meaning": "magi, învățați ai Răsăritului. Textul nu îi numește împărați și nu precizează numărul lor.",
-      "meaningSha256": "sha256:3b9465a2cb117d0db758ca53676fa35269ab8f81d8d89e9428a2a1060096b3c3",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "4976313388f7860ea756eae9845067749d2e930c1c2823ee895a7b24da416c88",
-      "bookId": "matei",
-      "chapter": 3,
-      "ref": "Matei 3:1-12",
-      "original": "μετανοεῖτε",
-      "normalizedLemma": "μετανοειτε",
-      "meaning": "pocăiți-vă, schimbați-vă mintea și întoarceți-vă. Nu simplă emoție, ci schimbarea direcției.",
-      "meaningSha256": "sha256:d7390535d964421ccf8435a4ad14111c9e6d62e8591ed7ea803fe29de8479d57",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "7cb283f10a500dcbfebd85fe36dddae6a9907e450c7f1ae7c1c590a4906e745c",
-      "bookId": "matei",
-      "chapter": 4,
-      "ref": "Matei 4:18-22",
-      "original": "δεῦτε ὀπίσω μου",
-      "normalizedLemma": "δευτεοπισωμου",
-      "meaning": "veniți după Mine. Chemare la apropiere, urmare și ascultare personală.",
-      "meaningSha256": "sha256:c186279aed1818c8b7f713bd3a829038c54c8d64b6be9c7728db7e280f3ee6ef",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "91b6801d78255b00805aa07c40fc7b81c2d3b47f89b483160faf976020d8dcd2",
-      "bookId": "matei",
-      "chapter": 5,
-      "ref": "Matei 5:1-12",
-      "original": "μακάριοι",
-      "normalizedLemma": "μακαριοι",
-      "meaning": "fericiți, binecuvântați, aflați sub bunăvoința lui Dumnezeu.",
-      "meaningSha256": "sha256:4e228c1e9c461f3f8d2299c4c5c69faa739e1b1d5be571f42d108447862b7973",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "e5a09c2a1a944b2f9589f32e90271329862e6d625e240b82c9b732c60fbe1705",
-      "bookId": "matei",
-      "chapter": 5,
-      "ref": "Matei 5:1-12",
-      "original": "πτωχοὶ τῷ πνεύματι",
-      "normalizedLemma": "πτωχοιτωπνευματι",
-      "meaning": "săraci în duh: cei care își recunosc nevoia deplină înaintea lui Dumnezeu.",
-      "meaningSha256": "sha256:fe90be9c58a425ce99c2162bdf9d056db7b645223410cdd344087d0b16019d07",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "a4fd024c761a89a495d80b44b5dabef8fdb7fe51197d9f9d088ff47d76ab0399",
-      "bookId": "matei",
-      "chapter": 5,
-      "ref": "Matei 5:43-48",
-      "original": "τέλειοι",
-      "normalizedLemma": "τελειοι",
-      "meaning": "maturi, întregi, ajunși la țintă. Aici, iubirea care nu rămâne fragmentată de favoritism.",
-      "meaningSha256": "sha256:7264f53d88331e3fafcffc73deec85ba287d46b2519969371259b104c166b7b4",
-      "candidateCount": 0
-    },
     {
       "reviewId": "bbaea766977f2f8fbd43668bc9a07e58991774a2eae933b2c5d9e96a092ac8cb",
       "bookId": "matei",
@@ -98,29 +45,10 @@
       "normalizedLemma": "βατταλογησητε",
       "meaning": "a bolborosi sau a înșira vorbe goale, ca și cum numărul lor ar produce răspunsul.",
       "meaningSha256": "sha256:762cd411783a320e3b3eca165c51bca8f58cf83eaf3e99dd594c8355433ffd1c",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "3e17f318d765113982b9edf885bd71fa160032a8c67abea91ff8a8e231f93e19",
-      "bookId": "matei",
-      "chapter": 6,
-      "ref": "Matei 6:9-13",
-      "original": "ἁγιασθήτω",
-      "normalizedLemma": "αγιασθητω",
-      "meaning": "să fie sfințit, socotit sfânt și cinstit ca atare.",
-      "meaningSha256": "sha256:6f20314f9d359527da8acc85dd02c16c2e2ad69173f5da2c2198f888319bfdb3",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "5ca43770fb899381babb312e77f7e024754bee5af4384e501c6311b258934995",
-      "bookId": "matei",
-      "chapter": 6,
-      "ref": "Matei 6:9-13",
-      "original": "ἐπιούσιον",
-      "normalizedLemma": "επιουσιον",
-      "meaning": "de fiecare zi sau necesar zilei; un cuvânt rar legat de dependența zilnică.",
-      "meaningSha256": "sha256:0d240bf2e586bb1b86a4f96c9c9ca2e48052c94422cea748115df7a8521cb0bb",
-      "candidateCount": 0
+      "candidateCount": 0,
+      "morphgntProblem": "resolved-lemma-not-in-tbesg:βατταλογεω",
+      "morphgntFile": "61-Mt-morphgnt.txt",
+      "morphgntBlobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621"
     },
     {
       "reviewId": "8a2cb8e30e5e264382f01752809ccf9208d2c747bd81d4348a5af7d2c8950a6d",
@@ -131,29 +59,10 @@
       "normalizedLemma": "μαμωνασ",
       "meaning": "mamona, bogăție sau avere personificată ca stăpân rival.",
       "meaningSha256": "sha256:938149ef02699d2f2d707410503d07c46cc2516f5e1c060cc6f38a921c4920cd",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "05788fdc7cbe943cd3b7f58d5b21251b4932818d3e7952809e4b5fafdb9de779",
-      "bookId": "matei",
-      "chapter": 7,
-      "ref": "Matei 7:6-12",
-      "original": "αἰτεῖτε, ζητεῖτε, κρούετε",
-      "normalizedLemma": "αιτειτεζητειτεκρουετε",
-      "meaning": "cereți, căutați, bateți: o chemare continuă la dependență și stăruință.",
-      "meaningSha256": "sha256:04be11854ba23963040544135cc2918e24ea18f6361d1ed7b422f1fdc3a2e11c",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "9f8e36d6169bfc8da7f57b9c1f696ebc4cc8a1ac6e9964560d111cfb6340e9b0",
-      "bookId": "matei",
-      "chapter": 9,
-      "ref": "Matei 9:18-26",
-      "original": "θάρσει",
-      "normalizedLemma": "θαρσει",
-      "meaning": "îndrăznește, prinde curaj. Cuvânt de apropiere, nu mustrare a fricii.",
-      "meaningSha256": "sha256:e3abd70379b046b5679539895ccb3e08afbb58aa3196918887ebd3d4e92325a1",
-      "candidateCount": 0
+      "candidateCount": 0,
+      "morphgntProblem": "surface-not-found-in-passage:μαμωνασ",
+      "morphgntFile": "61-Mt-morphgnt.txt",
+      "morphgntBlobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621"
     },
     {
       "reviewId": "5113bc9bfeae5dc779dd2470ad1cbb0527b8dfd2358f00e12a18737c0d8bac23",
@@ -164,106 +73,10 @@
       "normalizedLemma": "φοβεομαι",
       "meaning": "a se teme; după obiect și context, poate fi groază ori respect sfânt.",
       "meaningSha256": "sha256:88921362b71b805dcc17c126528f89e1e45aa035c9925cc4f111237f2c602690",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "2cfd2b896e2e8e9f1815542531e21dbe4307bb8f85a0c2fb3ed2807b6f8ed6ab",
-      "bookId": "matei",
-      "chapter": 14,
-      "ref": "Matei 14:22-33",
-      "original": "ἐγώ εἰμι",
-      "normalizedLemma": "εγωειμι",
-      "meaning": "Eu sunt. Poate însemna «Eu sunt, nu altul» și poartă ecoul descoperirii dumnezeiești.",
-      "meaningSha256": "sha256:03be2007b851772065c933ac685b0103564faff6c6b89694cfc8961a5f228008",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "6e934b0309eedee57330d19580058622c212ff5012a0a560d6fe93962f98bfa5",
-      "bookId": "matei",
-      "chapter": 15,
-      "ref": "Matei 15:21-28",
-      "original": "Κύριε, υἱὸς Δαυίδ",
-      "normalizedLemma": "κυριευιοσδαυιδ",
-      "meaning": "Doamne, Fiul lui David: mărturisirea mesianică a unei femei dintre neamuri.",
-      "meaningSha256": "sha256:3eee42658ab776363b97b53a2dfd81c30bc91df02c11d697b1016743bf41322f",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "93c1ad857bab298c9dbf0c3aa9b79bab835570148c88ed022a312dfaf015df2e",
-      "bookId": "matei",
-      "chapter": 16,
-      "ref": "Matei 16:13-20",
-      "original": "πέτρος / πέτρα",
-      "normalizedLemma": "πετροσπετρα",
-      "meaning": "Petru / stâncă. Joc de cuvinte legat de persoana și mărturisirea lui Petru; tradițiile creștine explică precis legătura în moduri diferite.",
-      "meaningSha256": "sha256:39d0b7d2a6581fa0db4dfbe7006d38864dd6267045844506d65015f4ff939f28",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "e3e784054c9e71e9e430b852ab89c801c8404a48f03acce89c34448289fe7be5",
-      "bookId": "matei",
-      "chapter": 16,
-      "ref": "Matei 16:24-28",
-      "original": "ἀπαρνησάσθω ἑαυτόν",
-      "normalizedLemma": "απαρνησασθωεαυτον",
-      "meaning": "să se lepede de sine: să renunțe la revendicarea autonomiei și a stăpânirii de sine.",
-      "meaningSha256": "sha256:3e3806e3624c7f3b70489550ccafdd7d4f2ac17112de1c05d5eb9a9633f1bcf3",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "4d63e81036bc4639bb3c4ecb6e062c2ac13cf7f55596b3da9a5852e2a3f6d4f3",
-      "bookId": "matei",
-      "chapter": 18,
-      "ref": "Matei 18:15-20",
-      "original": "ἔλεγξον",
-      "normalizedLemma": "ελεγξον",
-      "meaning": "arată-i greșeala, confruntă prin adevăr cu scopul de a câștiga.",
-      "meaningSha256": "sha256:a61f3614ef5dfce4130c065016afc9b1545bf75a13edea3cbc454c07bcd6c47d",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "4c91735c2591e813c168495b1bed32a1b432c4ee455cb52cf503c87704447c59",
-      "bookId": "matei",
-      "chapter": 18,
-      "ref": "Matei 18:21-35",
-      "original": "μυρίων ταλάντων",
-      "normalizedLemma": "μυριωνταλαντων",
-      "meaning": "zece mii de talanți, o datorie intenționat uriașă și imposibil de achitat.",
-      "meaningSha256": "sha256:3bf6fd6723de8ef3cad26f140d9ad7b2175cc44785b8cc3475855e88bbb7ae80",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "3b8ba710189727f5d043f32441dff532df1d85fef772f79a09b7e012bd188a80",
-      "bookId": "matei",
-      "chapter": 20,
-      "ref": "Matei 20:1-16",
-      "original": "ὀφθαλμός ... πονηρός",
-      "normalizedLemma": "οφθαλμοσπονηροσ",
-      "meaning": "Literal, «ochi rău»: o expresie pentru invidie și zgârcenie, aici stârnite de bunătatea stăpânului.",
-      "meaningSha256": "sha256:6cf1edf4f89cc355c40b60576d3c7eee49ccecabbcbff9cde0bb50f2fa0a1f0e",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "cdca05ae955888dff6739a20ab9caa97dec0871b3ab1eae47e5c7002b0b11612",
-      "bookId": "matei",
-      "chapter": 28,
-      "ref": "Matei 28:16-20",
-      "original": "μαθητεύσατε",
-      "normalizedLemma": "μαθητευσατε",
-      "meaning": "Faceți ucenici: formați oameni care Îl urmează pe Isus, sunt botezați și învață să păzească poruncile Lui.",
-      "meaningSha256": "sha256:b7d1e11372c21b31ffc8291f811071b42b7f85cb0eab5f250a0d37f543d6f2ce",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "a5016a950e24459b006a41babb44db9333ca9a6c3aa875a90bc09b19e53903de",
-      "bookId": "marcu",
-      "chapter": 1,
-      "ref": "Marcu 1:14-20",
-      "original": "δεῦτε ὀπίσω μου",
-      "normalizedLemma": "δευτεοπισωμου",
-      "meaning": "veniți după Mine. Chemarea nu este o invitație la o opinie, ci la o urmare: Isus înainte, ucenicul în urma Lui.",
-      "meaningSha256": "sha256:5feff95ceb3dc6ba8f52f6e1bb0624c4f2b0cc475625e2ed2cb9e0385f8670be",
-      "candidateCount": 0
+      "candidateCount": 0,
+      "morphgntProblem": "surface-not-found-in-passage:φοβεομαι",
+      "morphgntFile": "61-Mt-morphgnt.txt",
+      "morphgntBlobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621"
     },
     {
       "reviewId": "edcace0ef59b9baf2e2a38e3cd526785e96583551370493694a8fc9859e9a280",
@@ -274,29 +87,10 @@
       "normalizedLemma": "σπλαγχνιζομαι",
       "meaning": "mi se face milă, mă îndur din adâncul ființei. Milă înseamnă că Dumnezeu nu se întoarce de la cel necurat; Se apropie și Se atinge.",
       "meaningSha256": "sha256:a125c522f42584d7ec6c6efdfb5ea2f5307ee9e12dc6a1a756281fc33f067467",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "3fbafc743a77e986e9fa3b79e9557ef75ec7235eef9b0d7aabf17872356343ee",
-      "bookId": "marcu",
-      "chapter": 3,
-      "ref": "Marcu 3:13-19",
-      "original": "μετ' αὐτοῦ",
-      "normalizedLemma": "μεταυτου",
-      "meaning": "cu El. Scopul dintâi al chemării nu era lucrarea, ci apropierea: întâi stau cu El, apoi sunt trimiși (Marcu 3:14).",
-      "meaningSha256": "sha256:c0d86377ad199d36557f1dbc3c58a6e56635788f8f1e1d26c26db37e3d6a2720",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "3095d72c7c76fc2c98e06dfd2926aec023a74a46fcad3751a9cd1013a44359c5",
-      "bookId": "marcu",
-      "chapter": 4,
-      "ref": "Marcu 4:26-29",
-      "original": "αὐτομάτη",
-      "normalizedLemma": "αυτοματη",
-      "meaning": "de la sine, de ea însăși. Pământul rodește singur: creșterea nu este silită și nu este făcută de om, ci este lucrarea lui Dumnezeu.",
-      "meaningSha256": "sha256:528ce961809b31f9ff17fd6a09c5d711c6067f465da57c33df134e48b6cec2a2",
-      "candidateCount": 0
+      "candidateCount": 0,
+      "morphgntProblem": "surface-not-found-in-passage:σπλαγχνιζομαι",
+      "morphgntFile": "62-Mk-morphgnt.txt",
+      "morphgntBlobSha": "6bd9ce1627e12bd45434b0d18f875c89581d855f"
     },
     {
       "reviewId": "4a49d0d1edd107d18e780b7cbbc9819cbd11c57e07def28eb63d863d59a81d77",
@@ -307,106 +101,10 @@
       "normalizedLemma": "λεγιων",
       "meaning": "legiune — unitate militară romană de ordinul miilor de soldați. Termenul nu este sinonim cu «cohortă»; în Marcu 5 numele subliniază numărul foarte mare al duhurilor.",
       "meaningSha256": "sha256:5ab7ffffce682f25bec0932a5f33cb1e00cbf91e37d8255eae5243b5ecc8c2f0",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "7a19343c84d092b395d91237d7e10f7e840593510e18e4670fc5533015cf25b6",
-      "bookId": "marcu",
-      "chapter": 6,
-      "ref": "Marcu 6:45-52",
-      "original": "ἐγώ εἰμι",
-      "normalizedLemma": "εγωειμι",
-      "meaning": "Eu sunt. În mijlocul fricii, Isus nu oferă întâi o explicație, ci propria Sa prezență.",
-      "meaningSha256": "sha256:218b3856d9c9553d9b177d99e95dabe1e2df1d77ca9c3cfd95dae3c008158b92",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "4f0456c57b8b1cfb43cdfff97cdcbbb1a8fc34afe6c6640fffc4c6e74dcdc98f",
-      "bookId": "ioan",
-      "chapter": 1,
-      "ref": "Ioan 1:6-13",
-      "original": "τέκνα θεοῦ",
-      "normalizedLemma": "τεκναθεου",
-      "meaning": "copii ai lui Dumnezeu. Expresia filiatiei date prin har.",
-      "meaningSha256": "sha256:fa113aaa378cc23e47063a737896ecd28dc7cd0fc65f24a6d07352be3dcaa88b",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "57bf748954a68d74a5962f57eeeef8ff748b00c4a7fe9cc3aa8f3b8ccd2ccb15",
-      "bookId": "ioan",
-      "chapter": 1,
-      "ref": "Ioan 1:6-13",
-      "original": "ἐκ θεοῦ",
-      "normalizedLemma": "εκθεου",
-      "meaning": "din Dumnezeu. Originea noii nasteri nu este omeneasca, ci dumnezeiasca.",
-      "meaningSha256": "sha256:2e8f0e4e677cbbce710e6c2d8bfe57617462b95a48712a648fa3fbd59617aa32",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "90a58a95c557dd22e274ebccd6c7e7e9669ac7edec7811344e963b05abe0388e",
-      "bookId": "ioan",
-      "chapter": 1,
-      "ref": "Ioan 1:14-18",
-      "original": "ἐσκήνωσεν",
-      "normalizedLemma": "εσκηνωσεν",
-      "meaning": "a locuit, și-a întins cortul. Cuvânt care trimite spre prezenta lui Dumnezeu în mijlocul poporului.",
-      "meaningSha256": "sha256:e7fddc339ac93821ced48666b085beea7a66732b56604ff703d2575dc240c28b",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "62f8c3432d846833d861c4ff55e62184880f4a459ba846dfded4742f19494a8a",
-      "bookId": "ioan",
-      "chapter": 1,
-      "ref": "Ioan 1:35-51",
-      "original": "υἱὸς τοῦ ἀνθρώπου",
-      "normalizedLemma": "υιοστουανθρωπου",
-      "meaning": "Fiul omului. Nume prin care Domnul Isus vorbește despre sine cu smerenie și slava laolalta.",
-      "meaningSha256": "sha256:0e6a1a695269a10101137293b8df019e8dbd9e4d9d380a2e47261f6787f6b023",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "a89e7b28cf436712439cfa047fe039a37fa84ae493a5e7d2edf9bb965daa3a51",
-      "bookId": "ioan",
-      "chapter": 3,
-      "ref": "Ioan 3:9-21",
-      "original": "ὑψωθῆναι",
-      "normalizedLemma": "υψωθηναι",
-      "meaning": "a fi inaltat. La Ioan, cuvântul priveste spre cruce și spre slava de dupa ea.",
-      "meaningSha256": "sha256:0798db880a9c58c7181c519c01bcbb828bf00752c4914debc9b58c116de63afd",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "d4c0a6d4f3a0fcd3d79d1d03f759b1c87183b8f3ba7604eb4599917b4ee268d5",
-      "bookId": "ioan",
-      "chapter": 3,
-      "ref": "Ioan 3:22-36",
-      "original": "μένει",
-      "normalizedLemma": "μενει",
-      "meaning": "rămâne. La finalul capitolului, mania lui Dumnezeu nu vine abia atunci, ci rămâne peste omul care refuza pe Fiul.",
-      "meaningSha256": "sha256:270ed499cf9c187432ef0260a78361485dc0c7ce1035b7f912c1c942a0cac389",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "76eadd9fc3775ae5a48f33de378d0c5e785c3c3e02d5a88e1aeaa563fc377ce6",
-      "bookId": "ioan",
-      "chapter": 4,
-      "ref": "Ioan 4:1-26",
-      "original": "ὕδωρ ζῶν",
-      "normalizedLemma": "υδωρζων",
-      "meaning": "apa vie. Apa curgatoare, dar la Ioan și imagine a vieții date de Hristos.",
-      "meaningSha256": "sha256:48bc8fbb249771953bc71a88259addc2b42d4d45b71e75536688f7f7b41fb16e",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "fea0cd992e1b0c8308c6ad516e27dd3912e3e3fff101cacef37057cc166353ad",
-      "bookId": "ioan",
-      "chapter": 4,
-      "ref": "Ioan 4:27-42",
-      "original": "σωτὴρ τοῦ κόσμου",
-      "normalizedLemma": "σωτηρτουκοσμου",
-      "meaning": "Mantuitorul lumii. Mărturisire larga despre intinderea mantuirii aduse de Fiul.",
-      "meaningSha256": "sha256:fc5f3dfa5a33659428c71d7a7946e7e3ea7e0265f37a9dbad8de7c6da6a1c8cc",
-      "candidateCount": 0
+      "candidateCount": 0,
+      "morphgntProblem": "resolved-lemma-not-in-tbesg:λεγιων",
+      "morphgntFile": "62-Mk-morphgnt.txt",
+      "morphgntBlobSha": "6bd9ce1627e12bd45434b0d18f875c89581d855f"
     },
     {
       "reviewId": "a11549ba868eff8b40bf08d62f2b63461919b0da0e4dca81ca8d514b8e486955",
@@ -417,7 +115,10 @@
       "normalizedLemma": "βηθεσδα",
       "meaning": "Betesda. Numele a fost legat de ideea milei ori a harului, potrivit cu scena neputintei omenesti.",
       "meaningSha256": "sha256:b8f7646c81ca34b442bfe565670ff4a2eef989a154369fedfd4810e3ce09926f",
-      "candidateCount": 0
+      "candidateCount": 0,
+      "morphgntProblem": "resolved-lemma-not-in-tbesg:βηθεσδα",
+      "morphgntFile": "64-Jn-morphgnt.txt",
+      "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
       "reviewId": "647f5f7e29c78e34333c29d130fa1d53115ecc47db089a69647f5e0ca9689629",
@@ -428,139 +129,10 @@
       "normalizedLemma": "ζωηενεαυτω",
       "meaning": "viață în Sine. Viață neîmprumutată, proprie dumnezeirii.",
       "meaningSha256": "sha256:a2e480241da08c1ff8d83ee0e74720d6f2eac4e068fbec0dad9923bf154930f0",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "e35150c04ed36dbeb225a554a1f4b432c2d0cba8a4ede2c16c16a1471c6161f9",
-      "bookId": "ioan",
-      "chapter": 5,
-      "ref": "Ioan 5:19-30",
-      "original": "τιμῶσι",
-      "normalizedLemma": "τιμωσι",
-      "meaning": "sa cinsteasca. Respect, onoare și inchinare cuvenite Fiului.",
-      "meaningSha256": "sha256:31e7e5c93b6631a6cee70ec1cb400fcfe2f5900d197647e4a979819ff7a5c08e",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "eba657b0c2c7c30a0dff03634df9ec17c9f33855fcd747c344ebf008905fd346",
-      "bookId": "ioan",
-      "chapter": 6,
-      "ref": "Ioan 6:1-21",
-      "original": "ἐγώ εἰμι",
-      "normalizedLemma": "εγωειμι",
-      "meaning": "Eu sunt. Formula grea de prezenta și autoritate rostita de Domnul.",
-      "meaningSha256": "sha256:2a50dfe54ef076249ecdb666027ba2a6d7dea1888b175f5f7e0cf94e93df8af6",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "44eb3846b3ef6c87398f19ecdfbeae08bfd1b0551bcb7d1d40947c0cc9ec5f32",
-      "bookId": "ioan",
-      "chapter": 6,
-      "ref": "Ioan 6:22-59",
-      "original": "ἄρτος τῆς ζωῆς",
-      "normalizedLemma": "αρτοστησζωησ",
-      "meaning": "Painea vieții. Hristos ca hrana adevărată și de neocolit a sufletului.",
-      "meaningSha256": "sha256:768357a0df643ff07bfcdc3ecd0787bf9a9d6510d40b1db1178bc55e6a1962a4",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "4bdd04a34278e1b7119772230f47914d79cd2888bb7388aa4aac27b53d41afc7",
-      "bookId": "ioan",
-      "chapter": 6,
-      "ref": "Ioan 6:60-71",
-      "original": "ῥήματα ζωῆς αἰωνίου",
-      "normalizedLemma": "ρηματαζωησαιωνιου",
-      "meaning": "cuvintele vieții vesnice. Vorbirea lui Hristos ca izvor de viață.",
-      "meaningSha256": "sha256:93694bcfb5fd33561aca6379049985a7641ce1fb891f16f0a021abb663fc3579",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "e7daa3752f47c5538b77b050e182b9d4c76797ec4e1717df3f7e880d9fd85e39",
-      "bookId": "ioan",
-      "chapter": 7,
-      "ref": "Ioan 7:25-39",
-      "original": "ποταμοὶ ὕδατος ζῶντος",
-      "normalizedLemma": "ποταμοιυδατοσζωντοσ",
-      "meaning": "rauri de apa vie. Imagine a vieții Duhului care se revarsa.",
-      "meaningSha256": "sha256:7f4e79a8f4c57585a1de9301fcf772c43d2db49dc33af06e4509299e58d8a8e1",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "200af621be7f5e9b5d03fbb21c0fd19200713e372791015a18dafa2204c828db",
-      "bookId": "ioan",
-      "chapter": 7,
-      "ref": "Ioan 7:25-39",
-      "original": "ἐδοξάσθη",
-      "normalizedLemma": "εδοξασθη",
-      "meaning": "a fost proslavit. La Ioan, slava Fiului trece prin cruce, înviere și inaltare.",
-      "meaningSha256": "sha256:ce8775eab595dec75239b0aad4485f9d8567b43cdeda76db9b2bc378fa9c8108",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "fd36b10a216fbc1aa56a38834f0f2136529c7493779783af71c7dd92f80a6c1d",
-      "bookId": "ioan",
-      "chapter": 8,
-      "ref": "Ioan 8:1-20",
-      "original": "φῶς τοῦ κόσμου",
-      "normalizedLemma": "φωστουκοσμου",
-      "meaning": "Lumina lumii. Hristos ca descoperire, călăuzire și viață pentru om.",
-      "meaningSha256": "sha256:bb9fb77dbef1730da707c9dee656ff135a36dd22f5702859aef4ce405f12b469",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "d7b35eb9b262c225bcfcbfbb22b5352a8c3afc46ffbb9d04ac8c216b02f47f90",
-      "bookId": "ioan",
-      "chapter": 8,
-      "ref": "Ioan 8:48-59",
-      "original": "ἐγώ εἰμι",
-      "normalizedLemma": "εγωειμι",
-      "meaning": "Eu sunt. Formula de auto-descoperire cu greutate dumnezeiasca.",
-      "meaningSha256": "sha256:ba6116ed1b44b3989c27c7f5cc2aa6d54baf3ebfbafe1d4f8b9db9f779c0fd04",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "f9f14ada77c6378fe0f85dc9d4edcdfde0dabb3b1b8691afb09a730cb4fe3dd9",
-      "bookId": "ioan",
-      "chapter": 9,
-      "ref": "Ioan 9:1-12",
-      "original": "φῶς τοῦ κόσμου",
-      "normalizedLemma": "φωστουκοσμου",
-      "meaning": "Lumina lumii. Hristos ca lumina care descoperă și vindeca.",
-      "meaningSha256": "sha256:37bd42e0d21ba323ef2513a40a055f2bc00bdf43fc13c2a8637f2b7fc0b87105",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "33b9d5a27edbd438d1207aacda669ee9e76139d304cc4f4240f33090bd4fec38",
-      "bookId": "ioan",
-      "chapter": 9,
-      "ref": "Ioan 9:13-34",
-      "original": "σημεῖα",
-      "normalizedLemma": "σημεια",
-      "meaning": "semne. Lucrari care arată prezenta și autoritatea lui Dumnezeu în Hristos.",
-      "meaningSha256": "sha256:6f6cf4c125c503a644988cfb624531ad8be0a3f6e221c5690c30c86ffc11e850",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "d0acd3384c73a3db67f5682b5ddf943e0bae9645ee52987487c18de90fafa3a1",
-      "bookId": "ioan",
-      "chapter": 10,
-      "ref": "Ioan 10:1-18",
-      "original": "ποιμὴν ὁ καλός",
-      "normalizedLemma": "ποιμηνοκαλοσ",
-      "meaning": "Pastorul cel bun. Pastor frumos, adevărat, vrednic și plin de jertfire.",
-      "meaningSha256": "sha256:eeaf30080b9f28740c048eedf813e7f199367105df20c2cee03c2129172e432e",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "b8a5d292d974f989951520b9d58a615a0798415bdb9af513df291e4210777150",
-      "bookId": "ioan",
-      "chapter": 10,
-      "ref": "Ioan 10:1-18",
-      "original": "περισσόν",
-      "normalizedLemma": "περισσον",
-      "meaning": "din belșug. viața dată de Hristos nu este saraca, ci plina.",
-      "meaningSha256": "sha256:44f050d376713d2b52c7e054c961d4c040182a873f91d986796c8e61cda9b72d",
-      "candidateCount": 0
+      "candidateCount": 0,
+      "morphgntProblem": "surface-not-found-in-passage:ζωη",
+      "morphgntFile": "64-Jn-morphgnt.txt",
+      "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
       "reviewId": "4b9729b882b3ba7aaf3914de383d7b541d5301a9c82a5a2e196d612d40adda60",
@@ -571,29 +143,10 @@
       "normalizedLemma": "ζωηαιωνιοσ",
       "meaning": "viață veșnică. Viață dată acum și purtata pana la capat de Hristos.",
       "meaningSha256": "sha256:be7963ed834ee9cb49aa343376731fee6ac620c5ef753479135975da06f9169f",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "6ed7b73a0daab47ad05cafb4d7d23f6a61649eaf38bf59415a028815f8db9752",
-      "bookId": "ioan",
-      "chapter": 10,
-      "ref": "Ioan 10:31-42",
-      "original": "ἡ γραφὴ οὐ δύναται λυθῆναι",
-      "normalizedLemma": "ηγραφηουδυναταιλυθηναι",
-      "meaning": "Scriptura nu poate fi desfiintata. Taria și autoritatea permanenta a Scripturii.",
-      "meaningSha256": "sha256:ed7b96766d00b11e6090f3e2e9cef8e8ac9d2c2649664e2fa61f3b39ce398db4",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "fdd489b1a32642b543b30d771294aaf07ac1c4b349b41aab4b76aceac8e72f3f",
-      "bookId": "ioan",
-      "chapter": 11,
-      "ref": "Ioan 11:28-46",
-      "original": "ἐδάκρυσεν",
-      "normalizedLemma": "εδακρυσεν",
-      "meaning": "a plans. Lacrima reala a Domnului în fata durerii și a mortii.",
-      "meaningSha256": "sha256:f0ba95d284d60a261902316e69109f01d38c83eec34c348f1182e72d151c837d",
-      "candidateCount": 0
+      "candidateCount": 0,
+      "morphgntProblem": "surface-not-found-in-passage:ζωη",
+      "morphgntFile": "64-Jn-morphgnt.txt",
+      "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
       "reviewId": "d6544d8dc8c862b78f99d1937e3c9c334c02631307bde3fafd4e681dfb3d4ef4",
@@ -604,18 +157,10 @@
       "normalizedLemma": "συναγαγηεισεν",
       "meaning": "sa adune intr-unul. Lucrarea de strangere a copiilor lui Dumnezeu prin moartea Fiului.",
       "meaningSha256": "sha256:fb5e49289ba5dfbc2f2533b3482db607a94292a9d1ce93e93968178d06813197",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "431daec0f335275957ba37453ffefd789e4c44c7240fbab409d2361bd6af1cc1",
-      "bookId": "ioan",
-      "chapter": 12,
-      "ref": "Ioan 12:20-36",
-      "original": "ὑψωθῶ",
-      "normalizedLemma": "υψωθω",
-      "meaning": "voi fi inaltat. La Ioan, arată spre cruce și spre slava ei.",
-      "meaningSha256": "sha256:4054a4cef714cc1fb955664541cc6a01098d0c64df2a8d99c15c73937efa25f3",
-      "candidateCount": 0
+      "candidateCount": 0,
+      "morphgntProblem": "surface-has-2-lemmas:εν",
+      "morphgntFile": "64-Jn-morphgnt.txt",
+      "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
       "reviewId": "ffab466b3e41753ba538d290acb238b7b4ce546716a443034e4ca95ddcc873fe",
@@ -626,18 +171,10 @@
       "normalizedLemma": "δοξατωνανθρωπων",
       "meaning": "slava oamenilor. Aprobarea omeneasca iubita mai mult decât cinstea lui Dumnezeu.",
       "meaningSha256": "sha256:b8db329173b0a94f19346de25a110e38aa90d35beffcb1d70687c175e2507014",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "73a6e6cc5e43f0455f8080de799c00f114cc9f717ff3a2cdb972ccf50e77a013",
-      "bookId": "ioan",
-      "chapter": 13,
-      "ref": "Ioan 13:18-30",
-      "original": "ἐταράχθη",
-      "normalizedLemma": "εταραχθη",
-      "meaning": "S-a tulburat. Miscare adanca a sufletului în fata raului și a durerii.",
-      "meaningSha256": "sha256:809dcf0c0628a53999753442eb2c644d6a465eb33ab3dbd7095e47649b40cd58",
-      "candidateCount": 0
+      "candidateCount": 0,
+      "morphgntProblem": "surface-not-found-in-passage:δοξα",
+      "morphgntFile": "64-Jn-morphgnt.txt",
+      "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
       "reviewId": "9be1704e2513d1432b3be09e0e2b6586d8f20fc09c49fb4a1383f5dc445a433f",
@@ -648,29 +185,10 @@
       "normalizedLemma": "εντοληκαινη",
       "meaning": "porunca noua. Porunca iubirii în masura lui Hristos.",
       "meaningSha256": "sha256:67bc55ad8fa72372a37c9ce13c1bbbb790fca6ff36bb50ab107611e5c9b3cfc4",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "f51b27e70764e4db28915017563cb81bf024a031004741cee4d43c08efb622fc",
-      "bookId": "ioan",
-      "chapter": 14,
-      "ref": "Ioan 14:27-31",
-      "original": "ἄρχων τοῦ κόσμου",
-      "normalizedLemma": "αρχωντουκοσμου",
-      "meaning": "stăpânitorul lumii. Puterea întunericului aflată sub judecata lui Dumnezeu.",
-      "meaningSha256": "sha256:9ebd791f5cf48539112f3dd0e2bad6b122533d925892ec2fd72cec1035972c81",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "8851679985551018dcce9ee6697297648931d6369136c94ba9a07c3befe4a675",
-      "bookId": "ioan",
-      "chapter": 15,
-      "ref": "Ioan 15:12-17",
-      "original": "φίλοι",
-      "normalizedLemma": "φιλοι",
-      "meaning": "prieteni. Cei apropiați cărora Domnul le face cunoscut ce a auzit de la Tatăl.",
-      "meaningSha256": "sha256:5d73f1f0d7bbb03224d1b34da566639039952f1e6662dc29a677bee79deb2dca",
-      "candidateCount": 0
+      "candidateCount": 0,
+      "morphgntProblem": "surface-not-found-in-passage:εντολη",
+      "morphgntFile": "64-Jn-morphgnt.txt",
+      "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
       "reviewId": "977128ac686f389d0f709a99a983ed41b7e8298200345676edfdaa9113acbb2e",
@@ -681,40 +199,10 @@
       "normalizedLemma": "τιθημιτηνψυχην",
       "meaning": "a-și pune viața. Limbaj al jertfirii de sine.",
       "meaningSha256": "sha256:b609ef23e1c4c42b7c4bbc875cc14e857bbe1e1aad7d56a4e9484b3dcaa2e9fb",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "0f6d266548f7872e6380bdda7f22cf4eb77f24fe883b7f02d969b2a8f99adbc4",
-      "bookId": "ioan",
-      "chapter": 16,
-      "ref": "Ioan 16:25-33",
-      "original": "θαρσεῖτε",
-      "normalizedLemma": "θαρσειτε",
-      "meaning": "îndrăzniți, aveți curaj. Chemare la inimă tare în Hristos.",
-      "meaningSha256": "sha256:c02b4ad9637fc5a64da24f1a81236ef37b4c561177f135d62117bee805f18275",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "d66cd959463f1e1a67820924995a586e799dc1c4bfd2d765e06bab1d5e12ebe8",
-      "bookId": "ioan",
-      "chapter": 16,
-      "ref": "Ioan 16:25-33",
-      "original": "νενίκηκα",
-      "normalizedLemma": "νενικηκα",
-      "meaning": "am biruit. Biruință deja câștigată și cu efect durabil.",
-      "meaningSha256": "sha256:a9dc240a216450ce1c2aeb489768c91e4c68eccc0bc03ea06062b034030d1660",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "a0c8e5b54ff9fa56974ac9c4274ecbab5fbbd59c501b954a42632227bd91aa23",
-      "bookId": "ioan",
-      "chapter": 17,
-      "ref": "Ioan 17:1-5",
-      "original": "ζωὴ αἰώνιος",
-      "normalizedLemma": "ζωηαιωνιοσ",
-      "meaning": "viață veșnică. Viață în cunoașterea lui Dumnezeu prin Fiul.",
-      "meaningSha256": "sha256:9071e88ef9ed35d5f5b77b8b4b3fb735f43a341cd6abd9a87bd134aac72b7861",
-      "candidateCount": 0
+      "candidateCount": 0,
+      "morphgntProblem": "surface-not-found-in-passage:τιθημι",
+      "morphgntFile": "64-Jn-morphgnt.txt",
+      "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
       "reviewId": "913253b1682be517535fd4b908c2e0555a483e96ec9c4bf39ace8b069e8de7eb",
@@ -725,40 +213,10 @@
       "normalizedLemma": "ιναπαντεσενωσιν",
       "meaning": "ca toți să fie una. Cererea Domnului pentru unitatea celor ai Lui.",
       "meaningSha256": "sha256:0d9c3fbb0cb74bacf96f8a9d7ab4931bd41b0faf143cbfd749e2081afae55a72",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "0c3f5174c61bd6c2e1df836524cbae8789616055502639cd7ce4de8ac2606ad4",
-      "bookId": "ioan",
-      "chapter": 18,
-      "ref": "Ioan 18:1-14",
-      "original": "ἐγώ εἰμι",
-      "normalizedLemma": "εγωειμι",
-      "meaning": "Eu sunt. Auto-descoperirea Domnului plină de autoritate.",
-      "meaningSha256": "sha256:7cb64fc003455cf102a6a59d8db628b6062970b817cb02d0bac97c0a0a1a51bb",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "b6018ce0a0318dc90ae0df44699a19daaeae09e03e0653393397b34450f52ba0",
-      "bookId": "ioan",
-      "chapter": 19,
-      "ref": "Ioan 19:1-16",
-      "original": "ἴδε ὁ ἄνθρωπος",
-      "normalizedLemma": "ιδεοανθρωποσ",
-      "meaning": "Iată Omul. Prezentare publică a Domnului în umilința Sa.",
-      "meaningSha256": "sha256:f0dd1e5c4f1729113a895ffc7adb524bed4d7dbf2f294a9a97dc17f36fc0892d",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "9740b13f7d46c05592c3733e55a08a45b6ae0b15e7ec83e01f2e04a1b3dc9c19",
-      "bookId": "ioan",
-      "chapter": 19,
-      "ref": "Ioan 19:17-30",
-      "original": "τετέλεσται",
-      "normalizedLemma": "τετελεσται",
-      "meaning": "S-a isprăvit. Lucrare dusă la capăt, împlinită pe deplin.",
-      "meaningSha256": "sha256:0fe373ff7a192cb13db1bc38d93bc146c5499bbfe683d168c23a4e49f61d5ea4",
-      "candidateCount": 0
+      "candidateCount": 0,
+      "morphgntProblem": "surface-has-2-lemmas:εν",
+      "morphgntFile": "64-Jn-morphgnt.txt",
+      "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
       "reviewId": "751dc12057839a9cc7f8a0f5c26f248002282d3f1adee49e2113c264573d8c3b",
@@ -769,18 +227,10 @@
       "normalizedLemma": "παραδιδωμιτοπνευμα",
       "meaning": "a-Și da duhul. Predarea vieții în mod voit.",
       "meaningSha256": "sha256:f202cd693d508bfb72cb0310730d7da4bde7f3cfd72cc8c79872708bf534e65f",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "600df21c5280ce120ec99e88c1e6908ffda408b3e80ad52d94bd73110d625ce8",
-      "bookId": "ioan",
-      "chapter": 19,
-      "ref": "Ioan 19:31-42",
-      "original": "ἐξεκέντησαν",
-      "normalizedLemma": "εξεκεντησαν",
-      "meaning": "au străpuns. Trimitere la împlinirea profeției.",
-      "meaningSha256": "sha256:8e773f6dc868bafbf2d21e1e209aa95d37f2ce0fd094460d3c7de9882a0bc5a6",
-      "candidateCount": 0
+      "candidateCount": 0,
+      "morphgntProblem": "surface-not-found-in-passage:παραδιδωμι",
+      "morphgntFile": "64-Jn-morphgnt.txt",
+      "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
       "reviewId": "3d15ee8d12a6235a6c79b09ca74cc43e0d9e2f49644ae1c290e99556f725070f",
@@ -791,106 +241,10 @@
       "normalizedLemma": "ραββουνι",
       "meaning": "Învățătorule. Formă caldă și personală de adresare.",
       "meaningSha256": "sha256:a2cd04d0d0db499c418ebeac7fc2f7824219a49447396e584b2b170b77c1047b",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "9bc2c5c15b3512a8904e876458a62a0c60acb1bcf61b6e055e2ec99a63d87aac",
-      "bookId": "ioan",
-      "chapter": 20,
-      "ref": "Ioan 20:1-18",
-      "original": "ἀναστῆναι",
-      "normalizedLemma": "αναστηναι",
-      "meaning": "a învia, a se ridica din morți.",
-      "meaningSha256": "sha256:9ad9e704bd1e3b5f3712c662f8cea8c7e6e2779378a6511c47b1c1bfd504f894",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "f73544934e7c97eaf0a68a357cbdf04a62ade8e3a10eeacf87162f7a98bc3472",
-      "bookId": "ioan",
-      "chapter": 20,
-      "ref": "Ioan 20:19-29",
-      "original": "εἰρήνη ὑμῖν",
-      "normalizedLemma": "ειρηνηυμιν",
-      "meaning": "Pace vouă. Salutul plin de mângâiere al Domnului înviat.",
-      "meaningSha256": "sha256:a2492f118e68140e38b83cc0cfdcef5d1eb3e69f11bfdfa76e8ca19bfd6b405d",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "33c38f43b08495c4ab6f4fce6042430f4ed98314067e5b83832481cf7ed3ce20",
-      "bookId": "ioan",
-      "chapter": 20,
-      "ref": "Ioan 20:19-29",
-      "original": "ὁ κύριός μου καὶ ὁ θεός μου",
-      "normalizedLemma": "οκυριοσμουκαιοθεοσμου",
-      "meaning": "Domnul meu și Dumnezeul meu. Mărturisirea lui Toma despre Hristos.",
-      "meaningSha256": "sha256:32cd645867c667383e970e7f358a3ace848371733833cf9323b51ea73be7d9ae",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "33dc5c1d7a7602fd8b64963bd47501517e7bf5d6faf1b95a46158438144fa31a",
-      "bookId": "ioan",
-      "chapter": 20,
-      "ref": "Ioan 20:30-31",
-      "original": "πιστεύητε",
-      "normalizedLemma": "πιστευητε",
-      "meaning": "să credeți. Scopul declarat al scrierii lui Ioan.",
-      "meaningSha256": "sha256:ccc9e05c8f5fbf79f13cbf766b7b3392f0572f4034e9258781e36cd51f67bd3a",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "9124a5ac2acd6d92d06310a2a17dd833799e2d92745c04254580ad87792fb9da",
-      "bookId": "ioan",
-      "chapter": 20,
-      "ref": "Ioan 20:30-31",
-      "original": "ζωὴν ἔχητε",
-      "normalizedLemma": "ζωηνεχητε",
-      "meaning": "să aveți viață. Rodul credinței în Fiul.",
-      "meaningSha256": "sha256:1cb09dfbeb0fa02201aa819fbed1cbd68ee5a281c06a8ea70d97d8264d74c222",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "013bec8c26da6fe001ee2d070352e8455f10427e91e87bf9cde676172063a091",
-      "bookId": "ioan",
-      "chapter": 21,
-      "ref": "Ioan 21:1-14",
-      "original": "κύριός ἐστιν",
-      "normalizedLemma": "κυριοσεστιν",
-      "meaning": "Este Domnul. Recunoașterea identității lui Isus.",
-      "meaningSha256": "sha256:8e2a92e37b850c6de7f6b70b1baeead94c5faf389ee158aa3e9d6c3f354cfcbd",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "cef86caf678a0fb3598fea02dbd9d562090dccffe52aecdf775b972370fac27c",
-      "bookId": "ioan",
-      "chapter": 21,
-      "ref": "Ioan 21:15-19",
-      "original": "ἀγαπᾷς / φιλεῖς",
-      "normalizedLemma": "αγαπασφιλεισ",
-      "meaning": "iubești. Limbajul dragostei cercetate și mărturisite înaintea Domnului.",
-      "meaningSha256": "sha256:12bfb7c968665b76269a55644286a861f21b13d4d206bba65ef7781c98c884e4",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "39da7c83712ab0501119122b11cb2e302ba607b1d3c1519d35f511a160d3bbea",
-      "bookId": "ioan",
-      "chapter": 21,
-      "ref": "Ioan 21:15-19",
-      "original": "βόσκε / ποίμαινε",
-      "normalizedLemma": "βοσκεποιμαινε",
-      "meaning": "paște, păstorește. Chemarea de a hrăni și îngriji turma Domnului.",
-      "meaningSha256": "sha256:4b4bb78ab76fc003af19d99243a6505043bb845c38fd333426bdd91148438c90",
-      "candidateCount": 0
-    },
-    {
-      "reviewId": "902a4214fc1afe11c0f8285f53f447df29f880e3d9995a1473daa501ad064f1d",
-      "bookId": "ioan",
-      "chapter": 21,
-      "ref": "Ioan 21:20-25",
-      "original": "ἀκολούθει μοι",
-      "normalizedLemma": "ακολουθειμοι",
-      "meaning": "urmează-Mă. Chemarea personală și continuă a Domnului.",
-      "meaningSha256": "sha256:bc20420c1dd281f74c8f94fd15fb79288826540b1f2ee798f65b985337e6df8d",
-      "candidateCount": 0
+      "candidateCount": 0,
+      "morphgntProblem": "resolved-lemma-not-in-tbesg:ραββουνι",
+      "morphgntFile": "64-Jn-morphgnt.txt",
+      "morphgntBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
     },
     {
       "reviewId": "7f8e6fdd5c5d205197fc229995b3b6b3a541debca6518fcf96f6193a3d592301",
@@ -901,7 +255,8 @@
       "normalizedLemma": "",
       "meaning": "așezare ca fiu, înfiere cu drepturi și responsabilitate",
       "meaningSha256": "sha256:f5dd9337b282e881162a03de739a1607c51b0caf6135ee151f5475c361839858",
-      "candidateCount": 0
+      "candidateCount": 0,
+      "morphgntProblem": "no-greek-tokens"
     },
     {
       "reviewId": "78937e6f4687b36d16440f7c3ea7f0428d72b3df4577368fa2835f09061ea0ee",
@@ -912,7 +267,8 @@
       "normalizedLemma": "",
       "meaning": "lucrare făcută, operă, ceea ce este modelat de un creator",
       "meaningSha256": "sha256:f0782a3370daf3734a4108a472d12608b4ef47bb06d8e93e4200f578a77811e4",
-      "candidateCount": 0
+      "candidateCount": 0,
+      "morphgntProblem": "no-greek-tokens"
     }
   ]
 }
