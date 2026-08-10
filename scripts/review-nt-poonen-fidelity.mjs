@@ -37,11 +37,21 @@ const EPISODES = {
     path: ".research/marcu-poonen/transcripts/004-BemX5OISVuI.txt",
     blobSha: "53d67a6f533fb228ddde11b79f09ed10ec2f4c95",
   },
+  5: {
+    passage: "Marcu 2:13-20",
+    path: ".research/marcu-poonen/transcripts/005-Z8xY-p3taOQ.txt",
+    blobSha: "649bafe0569423ffcc96d29c69fdc09abfb0bcb7",
+  },
+  6: {
+    passage: "Marcu 2:21-3:6",
+    path: ".research/marcu-poonen/transcripts/006-UXTXXCPjHuw.txt",
+    blobSha: "694dbfdece92921fd55791d6911deca3bf88eb00",
+  },
 }
 
 const PATCHES = [
   {
-    from: 1, to: 3, episode: 1,
+    chapter: 1, from: 1, to: 3, episodes: [1],
     explanationSource: "poonen-transcript-primary+canonical-exegesis",
     researchSources: ["Marcu 1:1-3", "Isaia 40:3", "Maleahi 3:1"],
     teaching: `Marcu deschide Evanghelia spunând direct cine este Isus Hristos, Fiul lui Dumnezeu, apoi mută imediat atenția spre glasul care Îi pregătește calea. Profeția despre mesager și glasul din pustiu ajunge la Ioan Botezătorul: înainte ca oamenii să-L primească pe Hristos, calea inimii trebuie pregătită.
@@ -52,7 +62,7 @@ Titlul «începutul Evangheliei» așază tot capitolul sub vestea bună a lui D
     forYourHeart: "Nu încerca să-L adaugi pe Hristos peste o viață pe care refuzi s-o întorci spre El. Calea începe cu pocăință sinceră și cu disponibilitatea de a asculta.",
   },
   {
-    from: 4, to: 8, episode: 1,
+    chapter: 1, from: 4, to: 8, episodes: [1],
     explanationSource: "poonen-transcript-primary",
     teaching: `Ioan Botezătorul este profetul pocăinței. Mesajul lui pregătește calea Domnului tocmai pentru că omul nu poate ajunge la credință vie în Hristos fără să se întoarcă mai întâi de la păcat. O credință rămasă numai în minte, fără roadele pocăinței, este moartă.
 
@@ -62,7 +72,7 @@ Oamenii își mărturisesc păcatele și intră în apă în ascultare de ceea c
     forYourHeart: "Nu transforma credința într-o idee corectă fără întoarcere și ascultare. Răspunde la lumina pe care o ai, iar Dumnezeu te conduce mai departe.",
   },
   {
-    from: 9, to: 11, episode: 1,
+    chapter: 1, from: 9, to: 11, episodes: [1],
     explanationSource: "poonen-transcript-primary",
     teaching: `Isus nu avea niciun păcat de mărturisit și nimic de care să Se pocăiască. Totuși intră în apă împreună cu oamenii care veneau la Ioan. Ascultarea Lui nu este condusă de argumentul «nu am nevoie de aceasta», ci de călăuzirea Duhului. În botez El arată simbolic disponibilitatea de a coborî în moarte și îngropare și de a fi ridicat de Tatăl.
 
@@ -72,7 +82,7 @@ Accentul pasajului nu este că Isus avea nevoie de curățire, ci tocmai contrar
     forYourHeart: "Când voia lui Dumnezeu este limpede, nu lăsa rațiunea să inventeze scuze pentru neascultare. Ascultarea lui Isus este modelul ucenicului.",
   },
   {
-    from: 12, to: 13, episode: 2,
+    chapter: 1, from: 12, to: 13, episodes: [2],
     explanationSource: "poonen-transcript-primary",
     teaching: `Duhul Îl conduce pe Isus în pustiu, unde Satan Îl ispitește. Dumnezeu nu ispitește pe nimeni, dar îngăduie ispita; în ea se dovedește loialitatea. Sub presiune se vede dacă omul rămâne adevărat, curat în gânduri și atitudini și credincios inclusiv în raportarea la bani și la lucrurile ascunse.
 
@@ -82,7 +92,7 @@ Marcu spune că era între fiare sălbatice, dar și că îngerii Îi slujeau. C
     forYourHeart: "Nu judeca ispita numai ca pe un atac de care trebuie să scapi. Folosește-o ca să vezi unde ai nevoie de Dumnezeu și să-I dovedești loialitatea în lucrurile concrete.",
   },
   {
-    from: 14, to: 20, episode: 2,
+    chapter: 1, from: 14, to: 20, episodes: [2],
     explanationSource: "poonen-transcript-primary",
     teaching: `Când Ioan este întemnițat pentru că a vestit adevărul și sfințenia, lucrarea lui Dumnezeu nu se oprește. Isus preia, ca într-o cursă de ștafetă, același mesaj profetic: Împărăția lui Dumnezeu este aproape; pocăiți-vă și credeți în Evanghelie. Pocăința și credința au fost unite de Dumnezeu și nu trebuie despărțite într-o Evanghelie a «credinței» care nu cere întoarcerea omului.
 
@@ -92,7 +102,7 @@ Răspunsul lor este imediat. Odată ce voia lui Dumnezeu este clară, consecinț
     forYourHeart: "Fii credincios în munca pe care o ai acum și gata să asculți imediat când Dumnezeu îți face limpede următorul pas.",
   },
   {
-    from: 21, to: 28, episode: 3,
+    chapter: 1, from: 21, to: 28, episodes: [3],
     explanationSource: "poonen-transcript-primary",
     teaching: `În sinagoga din Capernaum oamenii aud aceeași Scriptură pe care o citeau și cărturarii, dar simt o autoritate diferită. Autoritatea lui Isus are două rădăcini: El vorbește despre o viață pe care a trăit-o deja în ascultare, inclusiv în anii ascunși din Nazaret, și slujește în puterea Duhului Sfânt. Cunoașterea teoretică nu poate înlocui nici viața trăită, nici ungerea Duhului.
 
@@ -102,40 +112,74 @@ Autoritatea spirituală adevărată rămâne legată de ascultarea de Tatăl și
     forYourHeart: "Nu căuta autoritate prin voce, titlu sau manifestări spectaculoase. Trăiește mai întâi ceea ce spui și caută puterea Duhului pentru a sluji curat.",
   },
   {
-    from: 29, to: 31, episode: 3,
+    chapter: 1, from: 29, to: 34, episodes: [3, 4],
     explanationSource: "poonen-transcript-primary",
-    teaching: `Soacra lui Simon este ridicată din febră și, imediat ce este bine, începe să le slujească. În vindecările lui Isus vedem puterea Lui reală asupra bolii; în relatările Evangheliilor vindecarea este prezentată ca o lucrare concretă, nu ca o sugestie psihologică.
+    teaching: `În casa lui Simon, Isus o ridică pe soacra lui din febră, iar răspunsul ei imediat este slujirea. Darul primit nu devine un capăt în sine: omul ridicat de Dumnezeu primește din nou putere ca să-I aparțină și să slujească, nu doar ca să revină la o viață centrată pe sine.
 
-Răspunsul femeii arată și scopul potrivit al unui dar primit de la Dumnezeu: este ridicată și folosește puterea primităă pentru slujire. Viața, sănătatea și resursele nu ne sunt date numai ca să ne întoarcem la preocupările noastre, ci ca să-I aparținem Domnului și să-I slujim.`,
-    forYourHeart: "Dacă Dumnezeu te ridică și îți dă putere, întreabă nu doar «ce pot face pentru mine?», ci «cum pot să-I slujesc cu ce am primit?»."
+După apus, bolnavii și cei chinuiți de duhuri sunt aduși la ușă, iar cetatea se strânge acolo. Isus vindecă și eliberează, dar nu le permite duhurilor să-L prezinte. Tatăl Își rostise deja mărturia asupra Fiului; El nu are nevoie de validarea oamenilor și cu atât mai puțin de cea a demonilor.
+
+Vindecarea și eliberarea sunt lucrări reale ale milei și puterii lui Dumnezeu și pot deschide uși pentru vestire, dar nu sunt ele însele Evanghelia. Centrul rămâne salvarea din păcat, pocăința, credința și viața nouă în Hristos.`,
+    forYourHeart: "Dacă Dumnezeu te ridică și îți dă putere, întreabă nu doar ce poți face pentru tine, ci cum poți să-I slujești cu ceea ce ai primit.",
   },
   {
-    from: 32, to: 34, episode: 4,
+    chapter: 1, from: 35, to: 39, episodes: [4],
     explanationSource: "poonen-transcript-primary",
-    teaching: `După apus, oamenii aduc bolnavi și oameni chinuiți de demoni, iar cetatea se strânge la ușă. Isus vindecă și eliberează, dar nu le permite duhurilor să vorbească despre identitatea Lui. Nu caută mărturia demonilor și nici nu-Și clădește identitatea pe aprobarea oamenilor; Tatăl spusese deja că Își găsește plăcerea în Fiul Lui.
-
-Minunile au un loc real în lucrarea Lui, dar nu devin centrul Evangheliei. Ele pot deschide uși și pot arăta mila și puterea lui Dumnezeu; mesajul principal rămâne chemarea la pocăință, credință și viața nouă pe care Hristos o aduce.`,
-    forYourHeart: "Nu-ți clădi siguranța pe aplauzele oamenilor sau pe lucrurile spectaculoase. Caută înainte de toate mărturia lui Dumnezeu asupra vieții tale.",
-  },
-  {
-    from: 35, to: 39, episode: 4,
-    explanationSource: "poonen-transcript-primary",
-    teaching: `După o seară lungă de slujire, Isus Se scoală foarte devreme și merge singur să Se roage. Înainte să audă ce vor oamenii, caută voia Tatălui. Tocmai după o lucrare spectaculoasă are nevoie să rămână dependent de Tatăl și să biruiască orice ispită a popularității sau mândriei.
+    teaching: `După o seară lungă de slujire, Isus Se scoală foarte devreme și merge singur să Se roage. Înainte să audă ce vor oamenii, caută voia Tatălui. Tocmai după o lucrare spectaculoasă rămâne dependent de Tatăl și caută ajutor împotriva oricărei ispite a popularității sau mândriei.
 
 Când ucenicii Îl găsesc, argumentul lor este puternic: «toți Te caută». Dar Isus nu ia popularitatea drept călăuzire. Pentru că a căutat deja voia Tatălui, știe că trebuie să meargă și în alte cetăți ca să predice. Rugăciunea Îl păstrează liber de presiunea succesului și de agenda mulțimii.
 
 El continuă să predice și să elibereze oameni, dar direcția lucrării nu este stabilită de cerere, reputație sau statistici. Este stabilită în părtășia cu Tatăl.`,
-    forYourHeart: "Caută voia lui Dumnezeu înainte ca vocile oamenilor să-ți spună ce «trebuie» să faci. Popularitatea nu este același lucru cu călăuzirea.",
+    forYourHeart: "Caută voia lui Dumnezeu înainte ca vocile oamenilor să-ți spună ce trebuie să faci. Popularitatea nu este același lucru cu călăuzirea.",
   },
   {
-    from: 40, to: 45, episode: 4,
+    chapter: 1, from: 40, to: 45, episodes: [4],
     explanationSource: "poonen-transcript-primary",
-    teaching: `Leprosul vine cu credința că Isus poate să-l curățească și Îi lasă Lui hotărârea: «Dacă vrei, poți». Isus este mișcat de milă, îl atinge și îl curăță. Apoi îi poruncește să respecte ceea ce ceruse Moise și să se arate preotului, pentru că Noul Legământ nu fusese încă întemeiat prin cruce.
+    teaching: `Leprosul vine cu credința că Isus poate să-l curățească și Îi lasă Lui hotărârea: «Dacă vrei, poți». Isus este mișcat de milă, îl atinge și îl curăță. Apoi îi poruncește să respecte ceea ce ceruse Moise și să se arate preotului; perioada Noului Legământ nu fusese încă inaugurată prin lucrarea încheiată a crucii.
 
 Omul este recunoscător, dar nu ascultă porunca de a păstra tăcerea. Intenția bună nu transformă neascultarea în ascultare: răspândirea veștii ajunge să îngreuneze intrarea publică a lui Isus în cetăți. Putem avea entuziasm sincer și totuși să împiedicăm lucrarea dacă presupunem că știm mai bine decât Domnul cum trebuie slujit.
 
 Isus nu urmărește să fie cunoscut în primul rând ca Vindecător. Vindecarea este o lucrare a milei Lui, dar scopul principal rămâne salvarea omului de păcat și vestirea Evangheliei. Darurile și minunile nu trebuie să mute centrul de pe Mântuitor și de pe mesajul Lui.`,
-    forYourHeart: "O inimă recunoscătoare are nevoie și de ascultare. Nu face «pentru Dumnezeu» lucrul pe care El ți-a spus să nu-l faci, chiar dacă intenția pare bună.",
+    forYourHeart: "O inimă recunoscătoare are nevoie și de ascultare. Nu face pentru Dumnezeu lucrul pe care El ți-a spus să nu-l faci, chiar dacă intenția pare bună.",
+  },
+  {
+    chapter: 2, from: 1, to: 12, episodes: [4],
+    explanationSource: "poonen-transcript-primary",
+    teaching: `Patru oameni își aduc prietenul paralizat la Isus și nu se opresc când ușa este blocată. Desfac acoperișul, iar perseverența lor face credința vizibilă. Isus vede credința lor și răspunde în folosul celui pe care l-au adus; este o încurajare să venim înaintea lui Dumnezeu nu numai pentru noi, ci și pentru cei pe care îi purtăm în rugăciune.
+
+Primul cuvânt către paralitic nu este despre picioarele lui, ci despre păcat: «păcatele îți sunt iertate». Vindecarea trupească este un bine mare, dar iertarea păcatelor este o nevoie mai adâncă. Isus pune lucrurile în ordinea lor adevărată.
+
+Când cărturarii contestă dreptul Lui de a ierta, Isus vindecă omul înaintea tuturor pentru a arăta că Fiul Omului are autoritate pe pământ să ierte păcatele. Minunea vizibilă susține afirmația invizibilă despre iertare.`,
+    forYourHeart: "Nu te opri la nevoia care se vede cel mai tare. Adu-I Domnului și trupul, și povara altuia, dar caută mai întâi iertarea și împăcarea cu Dumnezeu.",
+  },
+  {
+    chapter: 2, from: 13, to: 17, episodes: [5],
+    explanationSource: "poonen-transcript-primary",
+    teaching: `Levi este chemat direct din slujba lui și răspunde imediat. Și aici Isus cheamă un om care fusese deja obligat să învețe răspunderea în lucrurile materiale. Credincioșia cu banii și munca obișnuită nu produce automat slujire spirituală, dar lipsa de credincioșie în lucrurile pământești nu este o bază sănătoasă pentru responsabilitate spirituală.
+
+La masa lui Levi, Isus stă între vameși și păcătoși. Sfințenia adevărată ne separă de păcat, nu ne face incapabili să ne apropiem de păcătoși. El nu este influențat de păcatul lor, ci îi influențează spre Dumnezeu. Aici este și limita pentru ucenic: apropierea de oameni nu trebuie folosită ca scuză pentru compromis.
+
+Fariseii se cred sănătoși și de aceea nu caută Doctorul. Isus îi eliberează pe cei care își recunosc boala spirituală. Primul pas spre vindecarea sufletului este să încetezi să-ți justifici păcatul și să recunoști că ai nevoie de El.`,
+    forYourHeart: "Nu confunda sfințenia cu izolarea mândră și nici apropierea de oameni cu compromisul. Recunoaște-ți propria nevoie de Doctor și apropie-te de ceilalți ca să-i conduci spre El.",
+  },
+  {
+    chapter: 2, from: 18, to: 22, episodes: [5, 6],
+    explanationSource: "poonen-transcript-primary",
+    teaching: `Întrebarea despre post arată cât de ușor poate fi confundată sfințenia cu un ritual exterior. Postul are locul lui, dar nu face singur inima sfântă. Isus Își apără ucenicii înaintea criticilor, deși în alte împrejurări îi corectează direct; adevărata păstorire nu-și expune oamenii pentru a câștiga aprobarea celor din afară.
+
+După plecarea Mirelui, ucenicii vor posti. În Biserica primară postul apare când credincioșii Îl caută pe Dumnezeu cu toată inima pentru călăuzire și pentru un scop clar, nu ca semn exterior de superioritate religioasă.
+
+Peticul nou și vinul nou duc mai adânc: Noul Legământ nu este un accesoriu pus pe vechiul sistem. Viața lui Isus, lucrată în om prin Duhul Sfânt, este vinul nou; ea cere și burdufuri noi, o viață și o ordine formate după realitatea Noului Legământ. Nu putem păstra vechiul cadru și să-i adăugăm câteva idei creștine noi.`,
+    forYourHeart: "Nu măsura sfințenia după ritualurile pe care le văd oamenii. Caută viața lui Hristos înăuntru și lasă-L să schimbe și vasul în care vrei s-o păstrezi.",
+  },
+  {
+    chapter: 2, from: 23, to: 28, episodes: [6],
+    explanationSource: "poonen-transcript-primary",
+    teaching: `Fariseii nu sunt preocupați aici de propria ascultare, ci de găsirea unei încălcări la alții. Aceasta este una dintre formele legalismului: Cuvântul devine o lupă îndreptată spre vecin, nu o lumină îndreptată mai întâi spre propria inimă.
+
+Isus amintește de David și arată că poruncile lui Dumnezeu nu au fost date ca să zdrobească viața omului. Sabatul a fost făcut pentru om, nu omul pentru Sabat. Ritualul exterior nu trebuie desprins de realitatea interioară spre care arată.
+
+Fiul Omului este Domn și al Sabatului. Expunerea leagă aici Sabatul vechi de odihna spirituală descrisă în Evrei 4: porunca veche arăta înainte spre o realitate mai adâncă a odihnei în Dumnezeu. Tocmai de aceea litera nu poate fi folosită pentru a pierde din vedere scopul lui Dumnezeu și mila față de om.`,
+    forYourHeart: "Când citești o poruncă, aplic-o mai întâi inimii tale. Este mai sigur să ceri lumină pentru propria neascultare decât să devii expert în greșelile altora.",
   },
 ]
 
@@ -143,34 +187,40 @@ if (!fs.existsSync(dir) || !fs.existsSync(manifestPath)) fail("reviewed NT corpu
 const targetFile = path.join(dir, "02-marcu.json")
 if (!fs.existsSync(targetFile)) fail("Marcu reviewed corpus missing")
 const book = JSON.parse(fs.readFileSync(targetFile, "utf8"))
-const chapter = (book.chapters ?? []).find((item) => item.number === 1)
-if (!chapter) fail("Marcu 1 missing")
 
 const reviewed = []
 for (const patch of PATCHES) {
+  const chapter = (book.chapters ?? []).find((item) => item.number === patch.chapter)
+  if (!chapter) fail(`Marcu ${patch.chapter}: chapter missing`)
   const unit = (chapter.units ?? []).find((item) => item.verseStart === patch.from && item.verseEnd === patch.to)
-  if (!unit) fail(`Marcu 1:${patch.from}-${patch.to}: target unit missing`)
-  const episode = EPISODES[patch.episode]
-  if (!episode) fail(`Marcu 1:${patch.from}-${patch.to}: transcript episode missing`)
+  if (!unit) fail(`Marcu ${patch.chapter}:${patch.from}-${patch.to}: target unit missing`)
+
+  const primarySources = patch.episodes.map((episodeNumber) => {
+    const episode = EPISODES[episodeNumber]
+    if (!episode) fail(`Marcu ${patch.chapter}:${patch.from}-${patch.to}: transcript episode ${episodeNumber} missing`)
+    return {
+      kind: "poonen-transcript",
+      episode: episodeNumber,
+      commitSha: MARCU_TRANSCRIPT_COMMIT,
+      path: episode.path,
+      blobSha: episode.blobSha,
+      passage: episode.passage,
+    }
+  })
+
   unit.teaching = patch.teaching
   unit.forYourHeart = patch.forYourHeart
   unit.explanationKind = "exposition"
   unit.explanationSource = patch.explanationSource
   if (Array.isArray(unit.words) && unit.words.length) {
-    unit.wordSource = patch.from === 4 && patch.to === 8
-      ? "Poonen transcript for βαπτίζω; lexical review tracked separately against SBLGNT/STEPBible TBESG"
-      : "Lexical research tracked separately against SBLGNT/STEPBible TBESG"
+    unit.wordSource = patch.chapter === 1 && patch.from === 4 && patch.to === 8
+      ? "Poonen explicitly glosses βαπτίζω as immersion in transcript; lexical verification remains separate against SBLGNT/STEPBible TBESG"
+      : "Lexical research tracked separately against SBLGNT/STEPBible TBESG; not attributed to the sermon source unless explicitly stated there"
   }
   unit.sourceFidelity = {
     reviewState: "reviewed-against-raw-transcript",
     policy: "poonen-primary-research-only-where-source-is-thin",
-    primarySource: {
-      kind: "poonen-transcript",
-      commitSha: MARCU_TRANSCRIPT_COMMIT,
-      path: episode.path,
-      blobSha: episode.blobSha,
-      passage: episode.passage,
-    },
+    primarySources,
     ...(patch.researchSources?.length ? {
       supplementalResearch: {
         kind: "canonical-exegesis",
@@ -179,11 +229,14 @@ for (const patch of PATCHES) {
       },
     } : {}),
   }
-  reviewed.push({ ref: unit.ref, episode: patch.episode, explanationSource: patch.explanationSource })
+  reviewed.push({
+    ref: unit.ref,
+    episodes: [...patch.episodes],
+    explanationSource: patch.explanationSource,
+  })
 }
 
-const rendered = stable(book)
-fs.writeFileSync(targetFile, rendered, "utf8")
+fs.writeFileSync(targetFile, stable(book), "utf8")
 
 const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"))
 const manifestBooks = []
@@ -193,7 +246,7 @@ for (const file of fs.readdirSync(dir).filter((name) => name.endsWith(".json")).
   const data = JSON.parse(fs.readFileSync(full, "utf8"))
   const fileRendered = stable(data)
   reviewedUnits += (data.chapters ?? []).reduce(
-    (sum, ch) => sum + (ch.units ?? []).filter((unit) => unit.sourceFidelity?.reviewState === "reviewed-against-raw-transcript").length,
+    (sum, chapter) => sum + (chapter.units ?? []).filter((unit) => unit.sourceFidelity?.reviewState === "reviewed-against-raw-transcript").length,
     0,
   )
   manifestBooks.push({
@@ -201,7 +254,7 @@ for (const file of fs.readdirSync(dir).filter((name) => name.endsWith(".json")).
     bookId: data.bookId,
     name: data.name,
     chapters: data.chapters?.length ?? 0,
-    units: (data.chapters ?? []).reduce((sum, ch) => sum + (ch.units?.length ?? 0), 0),
+    units: (data.chapters ?? []).reduce((sum, chapter) => sum + (chapter.units?.length ?? 0), 0),
     sha256: sha256(fileRendered),
   })
 }
@@ -209,4 +262,4 @@ manifest.books = manifestBooks
 manifest.counts = { ...manifest.counts, poonenRawTranscriptReviewedUnits: reviewedUnits }
 fs.writeFileSync(manifestPath, stable(manifest), "utf8")
 
-console.log(`NT Poonen fidelity review: ${reviewed.length} Marcu 1 units checked against raw transcripts; ${reviewedUnits} total raw-transcript-reviewed units in corpus.`)
+console.log(`NT Poonen fidelity review: ${reviewed.length} Marcu 1-2 units checked against raw transcripts; ${reviewedUnits} total raw-transcript-reviewed units in corpus.`)
