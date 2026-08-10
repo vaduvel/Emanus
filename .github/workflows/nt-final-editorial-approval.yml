@@ -1,0 +1,166 @@
+name: NT Final Editorial Approval
+
+on:
+  pull_request:
+    types: [edited]
+    branches:
+      - main
+
+permissions:
+  contents: write
+  models: read
+
+concurrency:
+  group: nt-final-editorial-${{ github.event.pull_request.number }}
+  cancel-in-progress: false
+
+jobs:
+  pilot:
+    if: contains(github.event.pull_request.body || '', 'nt-final-editorial-trigger: pilot-mat1')
+    runs-on: ubuntu-22.04
+    timeout-minutes: 30
+    steps:
+      - name: Checkout review branch
+        uses: actions/checkout@v4
+        with:
+          ref: codex/nt-ai-review-handoff
+          fetch-depth: 0
+      - name: Review MAT.1 against locked sources and external benchmarks
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NT_FINAL_MODEL: openai/gpt-5
+        run: |
+          set -euo pipefail
+          python3 scripts/nt_final_editorial_worker.py \
+            --book MAT \
+            --chapter 1 \
+            --consulted-on "$(date -u +%F)" \
+            --output /tmp/MAT.json
+      - name: Validate pilot artifact shape
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          data = json.load(open('/tmp/MAT.json', encoding='utf-8'))
+          assert data['book'] == 'MAT'
+          assert len(data['verses']) == 25
+          assert data['verses'][0]['reference'] == 'MAT.1.1'
+          assert data['verses'][-1]['reference'] == 'MAT.1.25'
+          print('[pilot] MAT.1 evidence:', len(data['verses']))
+          PY
+      - name: Upload pilot evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: nt-final-pilot-mat1
+          path: /tmp/MAT.json
+          retention-days: 1
+
+  review-book:
+    if: contains(github.event.pull_request.body || '', 'nt-final-editorial-trigger: full-v1')
+    runs-on: ubuntu-22.04
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        book:
+          - MAT
+          - MRK
+          - LUK
+          - JHN
+          - ACT
+          - ROM
+          - 1CO
+          - 2CO
+          - GAL
+          - EPH
+          - PHP
+          - COL
+          - 1TH
+          - 2TH
+          - 1TI
+          - 2TI
+          - TIT
+          - PHM
+          - HEB
+          - JAS
+          - 1PE
+          - 2PE
+          - 1JN
+          - 2JN
+          - 3JN
+          - JUD
+          - REV
+    steps:
+      - name: Checkout review branch
+        uses: actions/checkout@v4
+        with:
+          ref: codex/nt-ai-review-handoff
+          fetch-depth: 0
+      - name: Review ${{ matrix.book }} verse by verse
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NT_FINAL_MODEL: openai/gpt-5
+        run: |
+          set -euo pipefail
+          python3 scripts/nt_final_editorial_worker.py \
+            --book "${{ matrix.book }}" \
+            --consulted-on "$(date -u +%F)" \
+            --output "/tmp/${{ matrix.book }}.json"
+      - name: Upload ${{ matrix.book }} evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: nt-evidence-${{ matrix.book }}
+          path: /tmp/${{ matrix.book }}.json
+          retention-days: 1
+
+  aggregate:
+    if: contains(github.event.pull_request.body || '', 'nt-final-editorial-trigger: full-v1')
+    needs: review-book
+    runs-on: ubuntu-22.04
+    timeout-minutes: 30
+    steps:
+      - name: Checkout review branch
+        uses: actions/checkout@v4
+        with:
+          ref: codex/nt-ai-review-handoff
+          fetch-depth: 0
+      - name: Download all book evidence
+        uses: actions/download-artifact@v4
+        with:
+          pattern: nt-evidence-*
+          path: /tmp/nt-evidence
+          merge-multiple: true
+      - name: Build canonical approval register
+        run: |
+          set -euo pipefail
+          python3 scripts/nt_final_editorial_aggregate.py \
+            --evidence-dir /tmp/nt-evidence \
+            --approved-on "$(date -u +%F)" \
+            --run-id "github-actions-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" \
+            --reviewer-system "GitHub Models openai/gpt-5"
+      - name: Rebuild non-approving review queue
+        run: |
+          set -euo pipefail
+          python3 scripts/build-nt-editorial-review-queue.py
+          python3 scripts/build-nt-editorial-review-queue.py --check
+      - name: Run final NT editorial gates
+        run: |
+          set -euo pipefail
+          python3 scripts/check-biblia-emanus-nt-editorial.py
+          python3 scripts/check-biblia-emanus-romanian-quality.py
+          python3 scripts/check-biblia-emanus.py
+          python3 -m unittest scripts/test_nt_editorial_gate.py
+          git diff --check
+      - name: Commit final approval evidence only
+        run: |
+          set -euo pipefail
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add docs/biblia-emanus/NT-EDITORIAL-APPROVAL.json \
+                  docs/biblia-emanus/NT-EDITORIAL-REVIEW-QUEUE.json
+          test -n "$(git diff --cached --name-only)"
+          test "$(git diff --cached --name-only | wc -l)" -eq 2
+          git diff --cached --check
+          git commit -m 'docs(biblia): add canonical NT editorial approval evidence'
+          git push origin HEAD:codex/nt-ai-review-handoff
