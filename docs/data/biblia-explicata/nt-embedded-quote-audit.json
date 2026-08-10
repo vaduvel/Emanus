@@ -1,14 +1,26 @@
 {
   "schema": "emanus-nt-embedded-quote-audit-v2",
-  "status": "clean",
+  "status": "manual-source-check-required",
   "policy": "Quoted spans of at least five words are checked against the exact current Biblia Emanus text in the same canonical book and chapter. Same-chapter exact matches clear automatically. A non-match that intends to quote Scripture must either be rewritten to exact BE wording or be explicitly reviewed as an exact biblical cross-reference to a named BE book/chapter. Only spans that do not claim to quote Scripture may use the hash-bound non-bible-quotation classification. Biblical paraphrases in quotation marks are never cleared merely by classification.",
-  "quotedFragments": 77,
+  "quotedFragments": 78,
   "exactMatches": 62,
   "reviewedNonBibleQuotes": 13,
   "reviewedCrossReferences": 2,
   "reviewLedgerStatus": "present",
   "reviewLedgerProblems": 0,
-  "count": 0,
-  "findings": [],
+  "count": 1,
+  "findings": [
+    {
+      "bookId": "2-tesaloniceni",
+      "canonicalBookId": "2TH",
+      "book": "2 Tesaloniceni",
+      "chapter": 3,
+      "field": "units[1].teaching",
+      "quote": "dacă cineva nu vrea să lucreze, nici să nu mănânce",
+      "wordCount": 10,
+      "reviewId": "930d8c7c5fd58f9aed849dd6bf1864fa42dab32ec06c734e410555860eee329c",
+      "quoteSha256": "sha256:12cc14205b76399bef638632731ff287a51bf10b576c9edbef59f463bf636b22"
+    }
+  ],
   "ledgerProblems": []
 }

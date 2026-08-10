@@ -4,7 +4,7 @@
   "manifestStatus": "in_review",
   "manifestPublicationReady": false,
   "counts": {
-    "blockerClasses": 2,
+    "blockerClasses": 3,
     "books": 27,
     "chapters": 260,
     "units": 970,
@@ -17,12 +17,12 @@
     "rawEditorialFindings": 96,
     "editorialClassificationUnresolved": 0,
     "editorialSourceTraceabilityPending": 0,
-    "embeddedQuoteFindings": 0,
+    "embeddedQuoteFindings": 1,
     "romanianLanguageFindings": 0,
     "lexiconFindings": 0,
-    "semanticFidelityPending": 897,
+    "semanticFidelityPending": 886,
     "rawTranscriptReviewed": 73,
-    "semanticTranscriptReviewed": 0,
+    "semanticTranscriptReviewed": 11,
     "staleSemanticReview": 0
   },
   "blockers": [
@@ -34,11 +34,17 @@
       "corpusSha256": "c65e31515638ec7082836d5d7cd3fa675827cd868eba61b2946fd4240687f412"
     },
     {
+      "id": "embedded-quote-audit",
+      "count": 1,
+      "message": "embedded quote audit is manual-source-check-required.",
+      "status": "manual-source-check-required"
+    },
+    {
       "id": "semantic-source-fidelity-pending",
-      "count": 897,
-      "message": "897/970 explanation units still lack hash-bound semantic review against transcript content.",
+      "count": 886,
+      "message": "886/970 explanation units still lack hash-bound semantic review against transcript content.",
       "rawTranscriptReviewed": 73,
-      "semanticTranscriptReviewed": 0,
+      "semanticTranscriptReviewed": 11,
       "staleSemanticReview": 0,
       "examples": [
         {

@@ -1,7 +1,7 @@
 {
   "schema": "emanus-nt-embedded-quote-candidates-v1",
   "policy": "Diagnostic only. Candidate scores compare each unresolved quoted span with contiguous Biblia Emanus text from the same canonical chapter. This report never edits reader copy or clears a publication blocker by itself.",
-  "count": 15,
+  "count": 16,
   "strongCandidateCount": 0,
   "findings": [
     {
@@ -276,6 +276,44 @@
       "best": null,
       "alternatives": [],
       "bestMargin": null
+    },
+    {
+      "bookId": "2-tesaloniceni",
+      "canonicalBookId": "2TH",
+      "chapter": 3,
+      "field": "units[1].teaching",
+      "quote": "dacă cineva nu vrea să lucreze, nici să nu mănânce",
+      "wordCount": 10,
+      "best": {
+        "raw": "acest lucru: Dacă cineva nu este dispus să lucreze, nu",
+        "score": 0.64,
+        "lcsRatio": 0.6,
+        "overlap": 0.6,
+        "lengthRatio": 1,
+        "start": 200,
+        "width": 10
+      },
+      "alternatives": [
+        {
+          "raw": "lucru: Dacă cineva nu este dispus să lucreze, nu-l",
+          "score": 0.64,
+          "lcsRatio": 0.6,
+          "overlap": 0.6,
+          "lengthRatio": 1,
+          "start": 201,
+          "width": 10
+        },
+        {
+          "raw": "Dacă cineva nu este dispus să lucreze, nu-l lăsați",
+          "score": 0.64,
+          "lcsRatio": 0.6,
+          "overlap": 0.6,
+          "lengthRatio": 1,
+          "start": 202,
+          "width": 10
+        }
+      ],
+      "bestMargin": 0
     }
   ]
 }
