@@ -2,56 +2,149 @@
 import fs from "node:fs"
 import path from "node:path"
 import crypto from "node:crypto"
-import zlib from "node:zlib"
-const ROOT=process.cwd()
-const BOOK=path.join(ROOT,"docs/data/biblia-explicata/nt-final-source-first/19-evrei.json")
-const COVER=path.join(ROOT,"docs/data/biblia-explicata/nt-direct-transcript-coverage.json")
-const OUTDIR=path.join(ROOT,"docs/data/biblia-explicata/nt-semantic-review-manual")
-const OUT=path.join(OUTDIR,"19-evrei.json")
-const OFFICIAL="https://www.cfcindia.com/verse-by-verse/Hebrews"
-const REVIEWER="GPT-5.6 Sol manual sentence-level semantic review against exact exported transcript representation"
-const HASHES={"https://sermonindex.net/speakers/zac-poonen/hebrews-ch11-38/":"sha256:a76a452b0b70f2c3d5d61f80889a59532f4fafb1548ebbd9e9b4843140ed5564","https://sermonindex.net/speakers/zac-poonen/hebrews-ch37-411/":"sha256:8ffa5d2805d93b06ff3ec4d8039d337585abe0d3b33bddbbaeeaacba072e9352","https://sermonindex.net/speakers/zac-poonen/hebrews-ch411-56/":"sha256:d212460c357fc8f8199ff427645c28fc2f642498bf1bced3dfcd5c9d410fbf97","https://sermonindex.net/speakers/zac-poonen/hebrews-ch57-615/":"sha256:5101b321703cb02cd04831ab3cdb1ab5609cdb4e3c11acb2844e683f6cf93492","https://sermonindex.net/speakers/zac-poonen/hebrews-ch616-89/":"sha256:853df418a3cf761b885052cd463183e38747df2a77bbc01468a1e3ca21bf550d","https://sermonindex.net/speakers/zac-poonen/hebrews-ch810-1018/":"sha256:a7f3aee6ad41d1d9cb0e64b70ab4fe4b6e01d93b5a86781b33f36f2bafbe0cea","https://sermonindex.net/speakers/zac-poonen/hebrews-ch1019-39/":"sha256:d24ed3496a3d038b32615c6f2107047e50376b308ef3aa9475ec45aa810342c8","https://sermonindex.net/speakers/zac-poonen/hebrews-ch111-22/":"sha256:234f3282ce51495e2ed06803bcd97c7fc66c697009969b0e574fcc8c2107c5bd","https://sermonindex.net/speakers/zac-poonen/hebrews-ch1123-124/":"sha256:6d717d56d7991a03adc6e25f0b6c1b7abbe2d7586e29583effa536c30552f6b4","https://sermonindex.net/speakers/zac-poonen/hebrews-ch125-1325/":"sha256:5cfe8b74108eac769e4d1645c92c0519b0e665d1203f6dc2557c19a4db2f18a4"}
-const REVIEW=JSON.parse(zlib.inflateSync(Buffer.from("eNrtfcmOHEm23a84uM7McvPJ3MlVgVUP3UKV1ABbWmhnY9KpCPeAD6kWHx4ggPveaKNG73r7gP6Bt2tyUd+hL9G518yHyAwmk41cJqqKrIzwweyO5w52819fubvBtdcC/xTXYz8Pxl37dhinV6//9ZV5r06TG169Flev3J9OzkzOvp2HwXXTu06dxvf99O69ysrq1etXI//PayV84xvji8IYk+V1VRZWN7krciuqNJW6ka7xrsyEsypPG1V5KRrTpGVTe1u7V1evlJnavsMjB/c/h3aijwZFH6mDw6d/HFQ3mqE9TfMhse7jXX+YvnxK/qXFj92c2F4NiVHJ4O7cQf3219YlvsWtXz5dJaalb+5afIw7Pv+9w4+DS36aj5376ObknUsUXoXvfvsLX3rsrTv88PnPnWq7yR3dcPvl09QPyckldpiPeKMZZuP+3//+P9PQd28S05/+1zU+Vbh6aOnCL5/GaVC4rB2n/tDftuoqsbTC/nga2qNK1OnQGlonLgJdB1ppMp6wLOvGL5/uPv9twGIGd0NkcHft6OwfnTLv2+4WxFiWfhV2gs31g26npLdt14ISeBZe0+GP3ju85Crp3PV6FVFAGTdOLvnYHly4lAgZH8ffYP1fPh1mgzWoZDyoO9cmv8x4Eu6eWmxw4G/+pW273/6K796BTUy/t+4QnsjPGucR7+9cMvUKT8UDh3nAS2+S/9yDYr84kPb4+W/dREzEZRZLZ17OXXJ0o/qQHFWb6LljNn7+M5494zIsgnmjkq5XvFRizu/xNlzTjTMW8jpwXNGqw5aILpOiVVsH8ne4SSXeHeYDrqD/VomgfURO47FxIyQKiXnvjsS2BEy6/iWZhyPWf5P8fKBHfflk5ikxM96DS+hFoJPBvg+QCXom+P5h7sbkoBKSHPzhDDZvI8FIqG6Snxxxx5H0OEvUVUSb0SU9xOO3vxAV8Rx7bIcgPyeSn5lIckfvxR5pAUwvPPZuvYVVBdL9K5F7bqe4podizmLIS6DvF72x+Gw084EoGAh0T1D/7Wq1KuW1eBazYlNpqrIqaiNrq8pcGCGrVHiX1lWRpU7XlRJWm7IUlcyLzJnMwhJZrevM1pnfm5X/4dzpnk15G/UWHMMiotY69RG7BS9JqPpjO7YkcEdFqs1aanszgV0qcHTT42iUSMxJw6bVYC0cAkkhq3jC3LV02RviK8SmHyfw88un+ZaNkHEgG1OZBZvldJyHEUpGb8Q97k8tP0dhHXoG8dliDV20bpP7ExlJ007EZJLuHXOyx01+9mTelLkupMo9yFyk0jqT6sY5X5RZWWdOFmWualc1hSnromhyL3WZSdl4maoiU6l54c0F3pTXzXPwpjBKOmNLXQooiyytkKU0onZZJmqhwaZaFcqnXhWlhm8WwolUg0tVKb3LX/Tmot6k16J+Du64vPCuyr3OfZGnRV0DLjmbZXkK9qRNo2yZeWgODFnl6rKsc5tnGWCVrSuX5/Y7wVLbjWHbBv+xi1TwdmoCOfAYQJLOtsyI1ZX2R9eB5Ia8SGRocGRXTMmDU/AUiW6HObgnNc4noB3bKjCSvaklr4nrQOABz25/IN/Wto9AJYIVw3xi98wC8mFmJjBn2vHUTrQawlDEfJYecNe3piURDC8LL0ngRbvWBP5dQk/sCCMN8ELIncEjrYP7BBHJVcLjd8HJjXCWty46b5a46OXV6JhKiWc3TB7+HYQuCNI51lmJOEZCkotuI32jjGM3JD0DdrNglo0LfKMHpAVxDhGmrvShS3c0Orv2JvkDAYtjz7sESDkABR7a0wgUCBadZjDBMcQBaDNw8HeEWfjTlXX8thb3uUOrHRGIr8fnwHUzQSF6+9DrlrAryNGa9d6b5C0zZhGVgCEXSu6ZdsVshVYdWQJ4DW2kAQAMJGcFJHQbQUXGdAAhYCvtOQApZYw7gQzHuGm8aoUvdz2hpQEwqg0cJSjeHjdSArrO7QKpec1TICtJRPJfgPP+ELnF0BHih0VCIoCBbbiwhYqAzCcWgDuIYeI8TEJ7F0D38iLDL4p37IxMDudcfd3E5E82Md5lqcqVrozLszotjWhc3tiyNA7uOi9TLUTWlF7LzJeqsVkBo1PJUiE+00Kn32liYEOgw+AH+wCsEeoJwhzcLTF4Tt4r3jURNpCGjA7UlHTtHEYyXzx4DWvSRQRs2h6fOhaRcQaDR4DSj61uEbBACzt+NJn5PYZ/xNTAWvEH7EwU3/U7DtTGIBUOPuMOKkCauJkcCphYvLrpsllh08pCSSELyTH2Bqmckl97XIonzSeS0/kYoPiJr8XKiWSXbhsP84fgiQIx6ErowTghZnkQPqlDoPIS7NDDKEo6TOvjsEVHIQ3Y0kYxx8ZI1cAF4kbP395nyU3yx36a2ebw7mnpCpHZHJTFRl0io3BH0Sxey0+HAIHMH4NM4GtFC7U9ArM9W9XNFnZhNQinxhDAksKQguJ1A6t2YD1+XJmPCMe3CNUjIzdND+GTC1EvHrRGUhPFne0azGEbZ+y3ijSbA9ZjcsJb8RPoMfpACw6dLRb3EYb5EPwULrHug3XqDYWs9C4HiiKGaiFfszoEUwZ/RLvD14fezG2Iyc7IsBM7mK8zmyCvRfMcRsE53ag0b6D+XuNPZfKqykydycK63GpZS1c5bwsPrJg1mc6kz1NvKkB3YPbmBRU+QIUFpdDE15lTPJk5mVK+tmUN0fUwyFVa1aopmwqBFOInqRE45U5WuvJFobXLCqB5KYythVdZ2nyvxYbadFML+IRdtmS8yevSdt+qTqnuh9627zu2Vkm/TwEsnpzoFVBfQIbBGMxdPxI4IsoGLxCIGDigGBJR5ojQUnDEbUjadTNp58AOwfl+CLjVOvCaFsqmH0anvYusfmDbHa2EXnELwDAA+Vw00X8YFhFUCe/wntNIhmBOYaxbmP09IqPLfj8OCqYXKGmYFsNGO+REFa1m/thyIsv3h34MSh5Ff7FAC3pbMik3ye8dW1nFNv7nW5LwmI3kPMxiUfD4Y0jcDISWyCtd4NvZrf3DnOdqckYm8LQY2qezla5m0qkzyt0kPy6M5o2snHYro4P9G506kmBt3GQ7vgnBV0QgRB6K6D0HYeoRr0AHN4y4WoYEhmXcgOwZh8nb0uLww03ya3CS0+e/tZEaxyUVt7Jrt2HOf6pT38btHXmrZIiSqC9vOE3G7udCwpBQ6y3u0wCdY1Q8egoHGvQ1BBD7ZfjK0D/ICO1knFp3z/AgIs2fxfI0qTZF2uSZymvZ1KmvrFdlJkuX1rLO0kIWFVBkI8uiVrX1piyy1Fvhnchx9YtbuOQW8G/1HNzRpUbor11TZcI6SqzlUltp0zrDf7mtrNbC+9LKQpSVVrWXwovUGFOmMq+KF+484E75eJRVPj3NVudFpXzjS6mFVNq6lP6Exhhd+FzYvPaIs4STqaacqNJK54Be4AxgViNfeHOBN5ISbc/AHN1UTeOd1kqkDgatAuDNjCvyIqvwscTXqc4NlKVW0Jpc12kO/C+gSkZmIvunS5IWu4ePpaB/mBGfmYA3AoBAiEiJK1CGii3sLRDDEG8/hpzMkrZYAwhONWze+CpmWOxWwLxK7tzt+yVvtvMa5MlCkoJd2SXYRC544zzVgQZAB2bvJlOXwdTnP3dcP4SLp8wdQ4V3EJOrsM13CL0GkhnCkMuG3RoOuejQDeVg9pmXEI+G8tqoDnfYIbvZmMTaZeLiVlcBDoT5JaQfN2Dya6SoXWqS8XZ6uGK4FnISYMOaM0KEGbJzw3YTFevmidHKJSZtpdPTQU17lr0O5cHAJDxgo0xUGIpVLS2lBTKzrGWcG4LHT35yDKYHrt8Bfax1PjXteU2KNdJSKO124EzcjvNXiPmxHktx9Hz9zl3MhlFikwNt/uaPtAzSzeTHkHA4T3/uUwShorwHy2FhhP/28CywzjrKi03JjzEXtqHahGqVLBpLUtRFmaC67/LM+5lAxXxv23ONWDWPwPKSGNn0IywtcGseg2GKBeV99njvMsSjNc2n26XMilLYymtRlKqqbKWU874WDrF240yZlyatnRdKVnldwsGkiNoL501aWJn577dLvu1CKAKFnpekFwv2xrJomi3gJ3uIM0sSoi+6QXWgJoUDih5ILkDNFIrgsReMy3hiw3eiTBA0MwQttj3MO4tD+R4qV++s5tfszY9dYPKGzc/WQhlbHSJOrk6rkHzfdJSzXV4Z6El3C5dK+Zr+GKhyk7wN7ohfQQI6OlrV7eB6DjsQ2gWi3DnaMmjR9dSwAF1hbTqQHKxySzGG40S7O8/rR1osIdl8x8J/CITnrgEo3O/AP5ibzZ6ca0O0SlsxnmMGxfURLPFakQd2w6go5Xf87a+BDIZtKpaKwFTHsoKGZARbgb2SpdwJyOh2uTh+4SIcZAnh95d+Gf4OHxC3x5A/fBv2tcmNgUzE5+JlbYfw7hiadEiA7skisQyKpLC9Xo37xoIKwO2RClz19Nq1z73Q2nhZ5rkpRS7qBtisUk1RNKmHBjZCVtakmQEWKBujmrQUDa4XKi3lC3B7CNyq64ZC0mdgTgG8XOW2SYWpTKZk6k2uDBk/i4jGu1KrSopCpwpOM3WqkXkqfVHU1mSFseqFOReYI/LrLH0O7lgFx1Q7Zwtd18oLoyqfG1kJZerKKu9MlcqiLGtVi6yRVhhX42+wr3HW1uI73VesNZ92ibt7LoDyKXbpSdohInL4P94NSoX8yi4l96DjKfRFcaaGqy+JCq1djBkNbuRiqRs4y//AzcWqiOKSC7YwgoVKt4fV08alt+3jzXzJb/+3DeUKhifT2abZRn6Yh6Xcs5WNjz1tqovOy4VMkmo1CTKn5OZBfViANSHvWCMGDUn+1koN9VFyMfWoQxuYOiyGfIX2NwtFWYbXN+NH2jutcRquqXOPQN/0wFm3D5JrEVoHHk73e+R2WdJ95vYsn0cr6eZDUOBFFi6HQrsMKPlieDjb3zkbhOKupZ7EpZiz9UKwB+7xDtMPy4Jj4vSBcFxBya1beiw4PUtV7ocC9wY4JBRO8RgEB/ySCz2NoSeSy6HBJxKTmZD4GPKqjoGZayci19nO4HGsYoVqGii2JrPXAGkzE5KqGY9YCfn04DtzMN/CVT51pUqzulB5Xak6x7d5Cc/rgHArl+vc1zAKTea1MmkOW16J3Jbliw1/YMMlhyDNc3CnML6oKp3a2jSgeOWaukqtyKjFMvNlo+pGlXUFfjmZFeBSaaq6LlVdF3Whs+o7bfhaCQJk5ipNz9DPbBn6mQox0EDKk3fu1FJbRc82i/T2p/k99Sb33G2x1lJCEYOzBktrSjDeoetgV78g4seGlDcbLw9UO+dW2X2HwtITc17qikh+kaWvFZd4Y9AuyqqsgUhYDv5kGcFznVrL7vNjdferrZZA4f8Wa8DAUlmf3jfFpoJ+AEWiafzVHd7T0pyJbbowX8GuB2O79AFQbM+migSTDFB4IJOcqmiK+tYDQg8B1GbBv8U3+ImFzEsJit8QO7KZoUu+Z4TPC53ZIY+w1OKNerwqxWkRNs6LXLDNO5ONN5H6ywvDUtl6BpEJNuNrQrPrY/odywc1XeC786510+sQJcHtd/A+dg6UUszbhVSbB+rCh0eYoKE/tWepvBBR8bfkLFw8EhAjL0R+ynyj+VoSzsvqZzHiTa2rPEtVZRqpy9K5WiIkKo0ziJIMvoQxr31aVEVmTWmLIitgu0VRNkXqz6Ok7zET//j3JSe0a9X/x39sfUX3NX6l8S5LupwJsaHZSB07XPxDq2zoYVycJ7Rujj1no+cWta6FTP+KT4jTrBIXMB8p8NpNtDQhrqYlOpqvJTICPuAC7WoMASCOquPej6sNAi6h9wb8yFDsnPfVouLBToREZqReJN3SrheUzUWpc2dSxy/5+XCznA04OyNxXrcNUI/SB6dI/Y28IR0EfERUhgZ8k0m7fAlTfLFB7D4DLjvNw7wAumP74dCb+Hm4tevbmxVBUZ8Opx1A8q6/o1zr0r66Hu+h5GuwGGQWORNEHOPvQal3MKM3ydsQCqjVNLIoMbCmcxcEtFZpiWVhs1Z4I4GPlyi8lnrnoz5EvAb5o53HPk4A6K1uP4EWRG7C8OddQfXjNaz6yUrelB6hWQp8lmVpk+tUyKqwjcP/V1VjCmUtorumMr5CLF5olfqGNT23NWK9l+rvQ6RWE1bLn4M5lRW+NDrLvcgLZ0uE0wBgPhdeS5ErV6dpU6ZZVmd5g8u0sD7Xoq5MnZWiLr+3KQjEmM00R/7c7zDkJmM3TEGfg3G4inrQnmG1aGsMVRaCY+V7u/a4eOldCpn63vou1rme2MGJHxFgLn0w1DZBfeebg0Dourh8el0UBiqzUOfRRF0jIT982UA/6K1kT87tmfPWT9nvqGEOofHmrKXkalP/0JLZHiCH7d0iY/TAcDiOqze96afQ372cGnOxUZjJeUcXHohEx5Y7TagR5WpP9XfR/MHMBNpzIeddoP6RQsvQy818AOlCw/REe7E9V4oQwfLWFhQS/EASM75hmauXfMM9UogpuQg3H5ZQ+SvMZUcFOTHTA05TExRTUu3kibt4Zmj1iqTp0CElyalbEpB9Ja6CJyI6kvYfXMux79J/hDc9AG27I3Z3DjwnyWdMvLSUB25ypY2+n16HzuOH/TzEaHgGg89h0NmBcV6fjdEBtAlHUdv9cneGovlGvN082VCYrKwbnessrQvZeIR0sOK1VL5wxgGPaeNrYxF5m9yVXjS2tmktcsR3BteYFyv+0Io33yr5PZ07aQ5DbmXZGFnXusxTZaomU02jG1d7ONpMG104XQptAaylynJrZZ0VaQaQrcw/C6R3TXi76rlRnH2iutGhvW2pxkKpRjuPodC+RSxcG75au/tVOCnDbel0AXVa3rYfl7iWjdBjh6F352LxSCoJhzMh+x77CKBDMZCR8bfaEJZ4cU249SuaY2EChrKItLtgBn/pDdYGlKkCWKQNhY2SAYVonZ/46TWfcqGHUonLzEcyQmyOQ62aTP47viNCOAoIw0ZXsEx4jkQOKL61oa/AtLurdsRgc7varsi0WLoLYSFTfzUm7B1cCG1hRn95wHCyWvFMxYk9ylOZPs56KZ3GEwMclyQHJuCyxHY9H713QdhxlI0YX9P2yZRjiW+/JgX3g/J4zoEircDIDRZz7+iSUV6+jGJJMf5V7FI4q+ufZY3PshgRKpzrfnmdZc+h+5UsU1cJ6QXZZueVV1JVqrZVmUlXZKqUpXCA1kKKrJCZMrZ0TZbZyihVnJ/EebHMkTtZ/miK4+nc8UUpdVXWtbQpJTnzsvS6Vk4UXmswytZawmJn8JSNsKrOUq2Kxmep1CYTqX3hzgPu0DHZR1GNSJ9+YsUjLBXCy1JKaRvr69w0UJPU1U0pAWcaJ/NUZ2WR50Y0spFAdeAWolWEQpn+Tse5njsL/Wxby14wevvWIQBbOthHSdoQ2O/69DkrOpCF7fo24t6O51aQtQEob9eeeCrXUIkqnoXceo9WXH/BoW5DRB4knJLz3quH0PeiC/1PQN8+OAfuJKFFuXhMzA1qDuB2EY595pp2/Z5eHKqoF86OvQ1RRhKavtiDzEd3tRTJ+AjmRCltojl5Y/zviC2/DgdZ1dIrQ9g+XHPWnhYOauwmfWwNZvc5QjVJ+DNiSnBlC66ht56126+FzZgbVsmPVh1vEqaTOu92JLcVYyLOS30NfYSFxqEi8dQqPfznw71aXsgP0wE0pjckKEojD+PYN+3thCf5QEvjdPvl0Sq7DN7uGPjaQbl59q4fY2GZXj2GoiqfidnOJDC7Q87LLCnKM/+/VWfDRJdYVIkcxZN4H788sBvi0RP232E4tBB5Kk3qCpsL0eRFlgpXq8JlJf6SrslzZbOsUrqk3h4pFKA5TUcwuXKZeWnwuWzX4XnL5zHsoHPtEaJqobVHkNNY6XRR6CYrwawi05moK5VS50/ldEYhbM0n4nSK+793BALFBfEcaji5yv0ekbgImE48pinSaQ2fQlF/Vj9EBaSua+gv3bGcjb98uPyKawrc/zC48dR3Y+gHYeB72HoQKPQZ8Ra1hEGDugVP4zq2dIdrn1qCCG6k6+eYMiFz8JViJfWGL4HL6ujUHZSTQTiL4/6Q0sXoaUlns7wd73UZbDaaRyEk7fHUj3Ryl4OL89TLMimAMzAIm9j2nu2D/6Ye7JhpXLizmuPXifrtL4rPVy9lzdBRE1uWz2xnULT5dLWdotsKHps9jiebu9AEGmOqRyYKnDet/EjUhD+j2sZSXV0Ofat7dZy1hrOvIMAxxazpiHDYhbFO5ycJdzEUV7JDdBWaQcM5Zu+G43ZMOZgCDv7uekOMpc6k4EtYpMmHRzncAkeawIUN/bfgZy+KAvd69owKtmN7W+PPJszLMcK1MWmpcowk2Hwc/uS2xmA877+3s9qVrs6NUlZd5+J5nEbhhALkl0bnsjCi0qJRHrEAAU+fS2DPuoSXSOu0qqXPGmMQPKQyo3kuqa9fnMYlp5Fn13nzLPxRzuWI13xZZrU1wgldWSlz8EDWTdEgKkhzJ3XaaG3SXFYqr7QmTw+HXygt/vnO+X/8+5ICv9fA9o//2I8WtFupfh2vMJIPAHdu3dmUlqC6lA2/NzNjdNxFTcMLO0OQEffyfB5a45szqQml34msXkzUQ0vnIeTpeZyAofkscEdKj1xaTkKmXMWBEhDIy97h7dokt47FIbGgrBcVfBnSc9MKVdljluXEcxU02X8WYu4B4XMf+zkHiZrXbj+QasBntOJ17say4pHa2Mf+0Fo1UIqRTCFVsUPAQZfHh8UAAh+CVtSBYsNZAKYEVXtwo56hc/TUXb15wfich6JbuCOeXEU8px7a5k8RQ4edUKsdLxUvs9zx8eUTNdjxU2KLCt5Jh6EvistaT+6J4UQonmBzCocRQlKNWi9DW+TgYtREgePtfFDTG2btuyChw72umgfSR/FN280xrAh+aY3izuWSuUfP9qTf8RgQFZzC+JvoyrYWpLXplo91hLkmbo/tz53bGKIEGraza2p9s2vGDN0uS7YutL1EeMO9GbM/uOm+caHxpfIR0/L0QYNGUb6gylxVylzDnGvhsqYsa5HLMpeyUMLolBx0UbgaWLWuvNVe+wY2KS9fsnQXTD+d1Xgsh/od7KFGhCatwRXQ20q441RLK42D+7WNqDNqHPUyb2zm01RRVdxpKYQpG5sXpnphzyX2ZPnjyOk75nTm2jSqAg+cL6VLoTJ5VTphU6EqrxvpfYmw2ytRaCFdJtO6dFTy8iVNH3xRn4v8AXIq0mfhT+5LVzqfwXi5rLKFr40DQzIhTS3LRjR5UxS5sUJm0CpTiVp7mDaphKyVtS/6c4E/3xikKp4+D5IyVGnhlEi9TT08j4GWKFvI1PlKFXlVpyIrwKOKxgAZR5GIBQCuShg3q1+a5S9yp3x0MNN3sKcqdOpg0YRwqrTgj5Y6rxDwqdQ4WaeODF9hskzVtdJFJjPtS6t17oRPyyJ7Yc9F5cG/8ln4I4osVU0jjDEuU5nPrBJZXiHi804WKc2lr4X0Vd2UJq/hbsCtVFVNpuG2ivq7J2cBn3ZjHJ0VRkGNR7d25v5MPbCf/3489aDLHR93+DgfYxfQ2tvF4eU6T3MZPwD0zo1Hap56yh9SUmT6/LfhYzvvB6/adjQt5aoY8/PBnzCMXYXj08lZL/Njw7JOw8yzlbaMVhxzuG3r67MfQjcuDyeM66EcJqKltuNz1wcadBQDjlsa7oSb26TX/UjhLKXyIDZubXamz8JZ4nVoBndx8yynpeHKKLscVXfjmkDi3mDQgc5x/9dAjmMgBjfMByXZNZZFvbJLlN5SZQjvuv4luVMc49I4vuSnnmdLcv6RZjfQwMCE0oLDOtQjTm2iSEsdW4p2tkzaTZCFOJGL++oszX9Sd7FbmVSKz2VQi8gWj55NlYhaO0IaR4RXrONYrm1VaKPzNDiBw7OdHFL7DKjoNuFTQfbCsQNqydyL3yKRbBc+xmAcwenMo/b5RsoUrv0pzGJHpAoCu8rr1E/UAbQ/m/eOyme0U62mD72hoZuhEraMaBwdCNotCWYfGklDGhFUHZ1hQV4OYNwrldFA/L/OYDYHvjxYFes2W5f1Igy7bm1l5uM9U4Q4pXkWU1RKbW1tMycQE8qK6tBlkTeUKDRZ2hSplFlpmsI2StQAxbnMMu3ytDS+kbZ58eQXXMU3ZuKKp8+/RHyPGDE3FUJ7Vee+qW0l4NXTXOdZengsi2da+DW6TcJlN4ZUxdN5XLAL+fFC3cucUc+7sefzh7hqwx4ylpX5D6vUioDIli0KldpXZusMlKXPs8Ko8rKq4pOMJaVtj7NctHI7232IFORuDt1mMNx8RZ75oRhSGeRDTosB8auFtdLJmlS6xnadW4szTXm0lZsNN8NvI5W9WqrK7b7iY+T0nFCJB+NoS7DNpyJ5kY9x6d7aF7G1gS9itVZcTHMMt52Qc+watdW/o1OEv4NKXyU/Sslw7c8sznU/uERB2dpXlGEIGGQEncb0pgkHhhJTjucwWKKnijZFwaY0G2Bylv3+P6sOcldzGpiL68TOLaBwMzVWuByV+dVqq1muWGZdtZMZq26lrOyW1qbB5AusIsSyKwrU2/4HPuWJeZC4sLlSCJq6o755/CIxV89+JUpkfVvzn83C4OjoItuRUEfAMTMMnlnL4FLf+Xnvx/ii3bHk5jJLE5Utgu//oZ6ZTx5ZUiWG0LKfGn9iAPoWciOUcLUTsCW01KxMXLXShRyuNt09Z7GBmyDK5eWlW+1qsRfnUSQhSDkSsypPZ6uzgoFVA5MGILEYeFB8A7h1zCd/wInGjhNVZCPcYuM1j7eG+sf0/Mhk0znQAIOUUuRYveSlSsjK93UBhR0R2qlzg5qbJN59lOmSfBJ4M69WP1488TTDWWlGoGAptZZnZfa66KSpcipWcI6LxvpACtKCVChiwLG05eNL1yGn2xeIFZ6qVNufuzf/j/SL3g9" ,"base64")).toString("utf8"))
-const sha=(v)=>`sha256:${crypto.createHash("sha256").update(String(v)).digest("hex")}`
-const snap=(u,t=u.teaching,h=u.forYourHeart)=>JSON.stringify({heading:String(u.heading??""),teaching:String(t??""),forYourHeart:String(h??"")})
-const fail=(m)=>{console.error(`[Evrei manual semantic review] ${m}`);process.exit(1)}
-const canon=(v)=>Array.isArray(v)?v.map(canon):(v&&typeof v==="object"?Object.fromEntries(Object.keys(v).sort().map(k=>[k,canon(v[k])])):v)
-for(const p of [BOOK,COVER]) if(!fs.existsSync(p)) fail(`missing ${path.relative(ROOT,p)}`)
-const book=JSON.parse(fs.readFileSync(BOOK,"utf8"))
-const coverage=JSON.parse(fs.readFileSync(COVER,"utf8"))
-if(coverage.schema!=="emanus-nt-direct-transcript-coverage-v3") fail(`expected coverage v3, got ${coverage.schema}`)
-const units=new Map()
-for(const ch of book.chapters??[]) for(const u of ch.units??[]) units.set(u.id,{chapter:ch.number,unit:u})
-const ids=Object.keys(REVIEW).sort()
-if(units.size!==ids.length) fail(`expected ${ids.length} Evrei units, found ${units.size}`)
-for(const id of ids) if(!units.has(id)) fail(`missing reviewed unit ${id}`)
-for(const id of units.keys()) if(!REVIEW[id]) fail(`unreviewed Evrei unit ${id}`)
-const covs=new Map((coverage.entries??[]).filter(x=>x.bookId==="evrei").map(x=>[x.unitId,x]))
-if(covs.size!==ids.length) fail(`expected ${ids.length} coverage entries, found ${covs.size}`)
-const decisions=[]
-for(const id of ids){
- const spec=REVIEW[id], located=units.get(id), u=located.unit
- if(located.chapter!==spec.chapter) fail(`${id}: chapter drift`)
- const current=sha(snap(u))
- if(current!==spec.expectedCurrentSnapshotSha256) fail(`${id}: reviewed pre-edit snapshot drifted; ${current} != ${spec.expectedCurrentSnapshotSha256}`)
- const cov=covs.get(id)
- if(!cov||cov.officialSourceUrl!==OFFICIAL) fail(`${id}: source coverage drifted`)
- if(!["catalogue-range-contains-entire-unit","catalogue-contiguous-ranges-cover-entire-unit"].includes(cov.verification)) fail(`${id}: unsupported coverage`)
- const reps=Array.isArray(cov.transcriptRepresentations)&&cov.transcriptRepresentations.length?cov.transcriptRepresentations:[{transcriptRepresentationUrl:cov.transcriptRepresentationUrl,transcriptRange:cov.transcriptRange}]
- const transcriptEvidence=reps.map(rep=>{
-   const transcriptSourceUrl=String(rep.transcriptRepresentationUrl??""),sourceRange=String(rep.transcriptRange??""),transcriptSha256=HASHES[transcriptSourceUrl]
-   if(!transcriptSha256) fail(`${id}: unreviewed transcript ${transcriptSourceUrl}`)
-   const payload={officialSourceUrl:OFFICIAL,transcriptSourceUrl,sourceRange,transcriptSha256}
-   return {...payload,evidenceSha256:sha(JSON.stringify(canon(payload)))}
- })
- const teaching=spec.action==="rewrite"?spec.revisedTeaching:u.teaching
- const heart=Object.prototype.hasOwnProperty.call(spec,"revisedForYourHeart")?spec.revisedForYourHeart:u.forYourHeart
- if(typeof teaching!=="string"||teaching.trim().length<80) fail(`${id}: final teaching too short`)
- if(/\b(?:Poonen|CFC|SermonIndex)\b/i.test(teaching)) fail(`${id}: source attribution leaked`)
- const d={bookId:"evrei",chapter:spec.chapter,unitId:id,status:"approved-against-transcript",action:spec.action,reviewedTeachingSha256:sha(snap(u,teaching,heart)),transcriptEvidence,rationale:spec.rationale,reviewer:REVIEWER,reviewedOn:"2026-08-10"}
- if(spec.action==="rewrite"){d.revisedTeaching=teaching;if(Object.prototype.hasOwnProperty.call(spec,"revisedForYourHeart"))d.revisedForYourHeart=heart}
- decisions.push(d)
+
+const ROOT = process.cwd()
+const BOOK = path.join(ROOT, "docs/data/biblia-explicata/nt-final-source-first/19-evrei.json")
+const COVER = path.join(ROOT, "docs/data/biblia-explicata/nt-direct-transcript-coverage.json")
+const SPEC = path.join(ROOT, "docs/data/biblia-explicata/nt-semantic-review-spec/19-evrei.json")
+const OUTDIR = path.join(ROOT, "docs/data/biblia-explicata/nt-semantic-review-manual")
+const OUT = path.join(OUTDIR, "19-evrei.json")
+const OFFICIAL = "https://www.cfcindia.com/verse-by-verse/Hebrews"
+const REVIEWER = "GPT-5.6 Sol manual sentence-level semantic review against exact exported transcript representation"
+
+const HASHES = {
+  "https://sermonindex.net/speakers/zac-poonen/hebrews-ch11-38/": "sha256:a76a452b0b70f2c3d5d61f80889a59532f4fafb1548ebbd9e9b4843140ed5564",
+  "https://sermonindex.net/speakers/zac-poonen/hebrews-ch37-411/": "sha256:8ffa5d2805d93b06ff3ec4d8039d337585abe0d3b33bddbbaeeaacba072e9352",
+  "https://sermonindex.net/speakers/zac-poonen/hebrews-ch411-56/": "sha256:d212460c357fc8f8199ff427645c28fc2f642498bf1bced3dfcd5c9d410fbf97",
+  "https://sermonindex.net/speakers/zac-poonen/hebrews-ch57-615/": "sha256:5101b321703cb02cd04831ab3cdb1ab5609cdb4e3c11acb2844e683f6cf93492",
+  "https://sermonindex.net/speakers/zac-poonen/hebrews-ch616-89/": "sha256:853df418a3cf761b885052cd463183e38747df2a77bbc01468a1e3ca21bf550d",
+  "https://sermonindex.net/speakers/zac-poonen/hebrews-ch810-1018/": "sha256:a7f3aee6ad41d1d9cb0e64b70ab4fe4b6e01d93b5a86781b33f36f2bafbe0cea",
+  "https://sermonindex.net/speakers/zac-poonen/hebrews-ch1019-39/": "sha256:d24ed3496a3d038b32615c6f2107047e50376b308ef3aa9475ec45aa810342c8",
+  "https://sermonindex.net/speakers/zac-poonen/hebrews-ch111-22/": "sha256:234f3282ce51495e2ed06803bcd97c7fc66c697009969b0e574fcc8c2107c5bd",
+  "https://sermonindex.net/speakers/zac-poonen/hebrews-ch1123-124/": "sha256:6d717d56d7991a03adc6e25f0b6c1b7abbe2d7586e29583effa536c30552f6b4",
+  "https://sermonindex.net/speakers/zac-poonen/hebrews-ch125-1325/": "sha256:5cfe8b74108eac769e4d1645c92c0519b0e665d1203f6dc2557c19a4db2f18a4",
 }
-fs.mkdirSync(OUTDIR,{recursive:true})
-fs.writeFileSync(OUT,JSON.stringify({schema:"emanus-nt-semantic-review-book-v1",bookId:"evrei",reviewMode:"manual-sentence-level-against-exact-exported-transcript-representation",decisions},null,2)+"\n","utf8")
-console.log(`Evrei manual semantic review: ${decisions.length} decisions (${decisions.filter(d=>d.action==="rewrite").length} rewrite / ${decisions.filter(d=>d.action==="keep").length} keep).`)
+
+const sha = (value) => `sha256:${crypto.createHash("sha256").update(String(value)).digest("hex")}`
+const snap = (unit, teaching = unit.teaching, forYourHeart = unit.forYourHeart) => JSON.stringify({
+  heading: String(unit.heading ?? ""),
+  teaching: String(teaching ?? ""),
+  forYourHeart: String(forYourHeart ?? ""),
+})
+const fail = (message) => {
+  console.error(`[Evrei manual semantic review] ${message}`)
+  process.exit(1)
+}
+const canon = (value) => Array.isArray(value)
+  ? value.map(canon)
+  : (value && typeof value === "object"
+      ? Object.fromEntries(Object.keys(value).sort().map((key) => [key, canon(value[key])]))
+      : value)
+
+for (const filePath of [BOOK, COVER, SPEC]) {
+  if (!fs.existsSync(filePath)) fail(`missing ${path.relative(ROOT, filePath)}`)
+}
+
+const book = JSON.parse(fs.readFileSync(BOOK, "utf8"))
+const coverage = JSON.parse(fs.readFileSync(COVER, "utf8"))
+const REVIEW = JSON.parse(fs.readFileSync(SPEC, "utf8"))
+
+if (coverage.schema !== "emanus-nt-direct-transcript-coverage-v3") {
+  fail(`expected coverage v3, got ${coverage.schema}`)
+}
+if (!REVIEW || Array.isArray(REVIEW) || typeof REVIEW !== "object") {
+  fail("semantic review spec must be an object keyed by unit id")
+}
+
+const ids = Object.keys(REVIEW).sort()
+const rewriteCount = ids.filter((id) => REVIEW[id]?.action === "rewrite").length
+const keepCount = ids.filter((id) => REVIEW[id]?.action === "keep").length
+if (ids.length !== 41 || rewriteCount !== 16 || keepCount !== 25) {
+  fail(`expected frozen 41-decision review (16 rewrite / 25 keep), got ${ids.length} (${rewriteCount} rewrite / ${keepCount} keep)`)
+}
+for (const id of ids) {
+  if (!["keep", "rewrite"].includes(REVIEW[id]?.action)) fail(`${id}: invalid action`)
+  if (typeof REVIEW[id]?.rationale !== "string" || !REVIEW[id].rationale.trim()) fail(`${id}: missing rationale`)
+  if (REVIEW[id].action === "rewrite" && (typeof REVIEW[id].revisedTeaching !== "string" || !REVIEW[id].revisedTeaching.trim())) {
+    fail(`${id}: rewrite missing revisedTeaching`)
+  }
+}
+
+const units = new Map()
+for (const chapter of book.chapters ?? []) {
+  for (const unit of chapter.units ?? []) units.set(unit.id, { chapter: chapter.number, unit })
+}
+if (units.size !== ids.length) fail(`expected ${ids.length} Evrei units, found ${units.size}`)
+for (const id of ids) if (!units.has(id)) fail(`missing reviewed unit ${id}`)
+for (const id of units.keys()) if (!REVIEW[id]) fail(`unreviewed Evrei unit ${id}`)
+
+const coverageByUnit = new Map(
+  (coverage.entries ?? []).filter((entry) => entry.bookId === "evrei").map((entry) => [entry.unitId, entry]),
+)
+if (coverageByUnit.size !== ids.length) fail(`expected ${ids.length} coverage entries, found ${coverageByUnit.size}`)
+
+const decisions = []
+for (const id of ids) {
+  const spec = REVIEW[id]
+  const located = units.get(id)
+  const unit = located.unit
+
+  if (located.chapter !== spec.chapter) fail(`${id}: chapter drift`)
+  const current = sha(snap(unit))
+  if (current !== spec.expectedCurrentSnapshotSha256) {
+    fail(`${id}: reviewed pre-edit snapshot drifted; ${current} != ${spec.expectedCurrentSnapshotSha256}`)
+  }
+
+  const cov = coverageByUnit.get(id)
+  if (!cov || cov.officialSourceUrl !== OFFICIAL) fail(`${id}: source coverage drifted`)
+  if (!["catalogue-range-contains-entire-unit", "catalogue-contiguous-ranges-cover-entire-unit"].includes(cov.verification)) {
+    fail(`${id}: unsupported coverage`)
+  }
+
+  const representations = Array.isArray(cov.transcriptRepresentations) && cov.transcriptRepresentations.length
+    ? cov.transcriptRepresentations
+    : [{ transcriptRepresentationUrl: cov.transcriptRepresentationUrl, transcriptRange: cov.transcriptRange }]
+  const transcriptEvidence = representations.map((representation) => {
+    const transcriptSourceUrl = String(representation.transcriptRepresentationUrl ?? "")
+    const sourceRange = String(representation.transcriptRange ?? "")
+    const transcriptSha256 = HASHES[transcriptSourceUrl]
+    if (!transcriptSha256) fail(`${id}: unreviewed transcript ${transcriptSourceUrl}`)
+    const payload = { officialSourceUrl: OFFICIAL, transcriptSourceUrl, sourceRange, transcriptSha256 }
+    return { ...payload, evidenceSha256: sha(JSON.stringify(canon(payload))) }
+  })
+
+  const teaching = spec.action === "rewrite" ? spec.revisedTeaching : unit.teaching
+  const forYourHeart = Object.prototype.hasOwnProperty.call(spec, "revisedForYourHeart")
+    ? spec.revisedForYourHeart
+    : unit.forYourHeart
+  if (typeof teaching !== "string" || teaching.trim().length < 80) fail(`${id}: final teaching too short`)
+  if (/\b(?:Poonen|CFC|SermonIndex)\b/i.test(teaching)) fail(`${id}: source attribution leaked`)
+
+  const decision = {
+    bookId: "evrei",
+    chapter: spec.chapter,
+    unitId: id,
+    status: "approved-against-transcript",
+    action: spec.action,
+    reviewedTeachingSha256: sha(snap(unit, teaching, forYourHeart)),
+    transcriptEvidence,
+    rationale: spec.rationale,
+    reviewer: REVIEWER,
+    reviewedOn: "2026-08-10",
+  }
+  if (spec.action === "rewrite") {
+    decision.revisedTeaching = teaching
+    if (Object.prototype.hasOwnProperty.call(spec, "revisedForYourHeart")) decision.revisedForYourHeart = forYourHeart
+  }
+  decisions.push(decision)
+}
+
+fs.mkdirSync(OUTDIR, { recursive: true })
+fs.writeFileSync(OUT, JSON.stringify({
+  schema: "emanus-nt-semantic-review-book-v1",
+  bookId: "evrei",
+  reviewMode: "manual-sentence-level-against-exact-exported-transcript-representation",
+  decisions,
+}, null, 2) + "\n", "utf8")
+
+console.log(`Evrei manual semantic review: ${decisions.length} decisions (${decisions.filter((d) => d.action === "rewrite").length} rewrite / ${decisions.filter((d) => d.action === "keep").length} keep).`)
