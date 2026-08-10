@@ -1,0 +1,14 @@
+{
+  "schema": "emanus-nt-semantic-manual-review-status-v1",
+  "status": "in_progress",
+  "policy": "Manual semantic review is allowed only against complete transcript content with deterministic transcript SHA-256 evidence. Source locators or transcript addressability alone never count as reviewed.",
+  "currentBook": "2-tesaloniceni",
+  "currentBookUnits": 8,
+  "manualDecisionsFrozen": 0,
+  "lastVerifiedCoverage": {
+    "rawTranscriptReviewed": 73,
+    "directTranscriptAddressable": 370,
+    "pendingTranscriptRecovery": 527,
+    "note": "Addressable is not reviewed. These counts came from the latest deterministic direct-range coverage log before manual decisions were frozen."
+  }
+}
