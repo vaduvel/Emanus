@@ -2,21 +2,21 @@
   "schema": "emanus-nt-semantic-manual-review-status-v1",
   "status": "in_progress",
   "policy": "Manual semantic review is allowed only against complete transcript content with deterministic transcript SHA-256 evidence. Source locators or transcript addressability alone never count as reviewed.",
-  "currentBook": "2-petru",
-  "currentBookUnits": 9,
+  "currentBook": "filimon",
+  "currentBookUnits": 5,
   "manualDecisionsFrozen": 0,
   "officialAudioSources": [
     {
-      "id": "2-petru-ttb",
-      "officialSourceUrl": "https://www.cfcindia.com/through-the-bible/1-peter-2-peter",
-      "officialAudioUrl": "https://www.cfcindia.org/resources/en/study-series/through-the-bible/66-1peter-and-2peter.mp3",
-      "sourceRange": "1 Peter 1:1-2 Peter 3:18; semantic review target: complete 2 Peter section"
+      "id": "titus-filimon-ttb",
+      "officialSourceUrl": "https://www.cfcindia.com/through-the-bible/titus-philemon",
+      "officialAudioUrl": "https://www.cfcindia.org/resources/en/study-series/through-the-bible/60-titus-and-philemon.mp3",
+      "sourceRange": "Titus 1:1-Philemon 1:25; semantic review target: complete Philemon section"
     }
   ],
   "lastVerifiedCoverage": {
     "rawTranscriptReviewed": 73,
     "directTranscriptAddressable": 426,
     "pendingTranscriptRecovery": 471,
-    "note": "Semantic ledger is verified at 137 approved units before 2 Petru is frozen; total reviewed raw+semantic is 210/970 and 760 units remain pending semantic review."
+    "note": "Semantic ledger is verified at 161 approved units after 1 Petru cleanup; total reviewed raw+semantic is 234/970 and 736 units remain pending semantic review."
   }
 }
