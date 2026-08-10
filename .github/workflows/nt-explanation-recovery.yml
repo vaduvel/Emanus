@@ -165,11 +165,12 @@ jobs:
           set -euo pipefail
           python3 scripts/transcribe_nt_current_official_audio.py
 
-      - name: Materialize and merge frozen manual Galatians semantic review
+      - name: Materialize and merge frozen manual semantic reviews
         run: |
           set -euo pipefail
           node scripts/materialize-nt-final-source-first.mjs
           node scripts/materialize-nt-manual-semantic-galateni.mjs
+          node scripts/materialize-nt-manual-semantic-efeseni.mjs
           python3 scripts/merge_nt_semantic_review_artifacts.py \
             --input docs/data/biblia-explicata/nt-semantic-review-manual \
             --ledger docs/data/biblia-explicata/nt-semantic-review-ledger.json
