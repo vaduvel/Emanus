@@ -1,9 +1,12 @@
 {
-  "schema": "emanus-nt-embedded-quote-audit-v1",
+  "schema": "emanus-nt-embedded-quote-audit-v2",
   "status": "manual-source-check-required",
-  "policy": "Quoted spans of at least five words are checked against the exact current Biblia Emanus text in the same canonical book and chapter. A match elsewhere in the NT does not clear the finding. Non-matches must be replaced with BE wording, explicitly classified as non-Bible quotations, or removed before publication.",
+  "policy": "Quoted spans of at least five words are checked against the exact current Biblia Emanus text in the same canonical book and chapter. A match elsewhere in the NT does not clear the finding. Non-matches that intend to quote Scripture must be replaced with exact BE wording or rewritten without quotation marks. Only explicitly reviewed spans that do not claim to quote Scripture may be cleared by the hash-bound non-bible-quotation ledger classification.",
   "quotedFragments": 98,
   "exactMatches": 32,
+  "reviewedNonBibleQuotes": 0,
+  "reviewLedgerStatus": "missing",
+  "reviewLedgerProblems": 0,
   "count": 66,
   "findings": [
     {
@@ -13,7 +16,9 @@
       "chapter": 2,
       "field": "units[2].teaching",
       "quote": "El va fi chemat Nazarinean",
-      "wordCount": 5
+      "wordCount": 5,
+      "reviewId": "0d621de310c8109172956ca2061b2b6f725556d230188822b00171ec10477b04",
+      "quoteSha256": "sha256:f408da2b58e6838f3e1b02d19a2171ab87a5ba427b7f88bc0d5961b1aab4a74d"
     },
     {
       "bookId": "matei",
@@ -22,7 +27,9 @@
       "chapter": 5,
       "field": "literaryContext",
       "quote": "ați auzit... dar Eu vă spun",
-      "wordCount": 6
+      "wordCount": 6,
+      "reviewId": "8985c777dee2b2d2dd81e2bb69b0d27209dba26c3cfcdfa47aa0f8d4001e64c5",
+      "quoteSha256": "sha256:3e008963800492cb77ec4caf41801342bfb3181509cd7eca7212ffff5bea4b6c"
     },
     {
       "bookId": "matei",
@@ -31,7 +38,9 @@
       "chapter": 7,
       "field": "units[3].teaching",
       "quote": "nu v-am mai cunoscut",
-      "wordCount": 5
+      "wordCount": 5,
+      "reviewId": "999b7c341df842bae2a2d6d5065c0bbbaac1072e4da91beff0dab7371650ec9c",
+      "quoteSha256": "sha256:874b1d61a32d4bbb66982450c59c5100f22af8968ee7efd7f6e33a1d264aa278"
     },
     {
       "bookId": "matei",
@@ -40,7 +49,9 @@
       "chapter": 11,
       "field": "units[0].teaching",
       "quote": "Ferice de acela pentru care Eu nu voi fi un prilej de poticnire",
-      "wordCount": 13
+      "wordCount": 13,
+      "reviewId": "9ef2c72d2a35191cf5a6c1f376944d41dd68523715b994abf6b50c7c3c5baa25",
+      "quoteSha256": "sha256:276d6882469254c64bdf707916d530c63c85d6fe47d6a8d7a5ac0c9f4d3a1665"
     },
     {
       "bookId": "matei",
@@ -50,6 +61,8 @@
       "field": "units[2].teaching",
       "quote": "Eu sunt; nu vă temeți",
       "wordCount": 5,
+      "reviewId": "4fcfaac19ce22cc99d1cc1e3c7d0ffdc672abc21b936ced075a7c17873c656b2",
+      "quoteSha256": "sha256:c586f206bd5d0cdff3d31989400537feb17fa04f50e9b4fd7883e2381151cc29",
       "exactMatchElsewhere": [
         "JHN.6",
         "MRK.6"
@@ -62,7 +75,9 @@
       "chapter": 16,
       "field": "historicalContext",
       "quote": "a lega și a dezlega",
-      "wordCount": 5
+      "wordCount": 5,
+      "reviewId": "3e158d8ea12ce18e4dd966f9c36da46cc7dd577db8553012fda23f92ff48092e",
+      "quoteSha256": "sha256:91ec3252ffd547167fb26eccddf3e938d1fb753bd23f844af1801b11bc5da23b"
     },
     {
       "bookId": "matei",
@@ -71,7 +86,9 @@
       "chapter": 19,
       "field": "units[2].teaching",
       "quote": "Cine poate atunci să fie mântuit?",
-      "wordCount": 6
+      "wordCount": 6,
+      "reviewId": "6a8eca1e24c015ae9d4396f90d4ac84fdf8b976c9e2968b6e110227373115d5d",
+      "quoteSha256": "sha256:73ebcc8493ca89c09abb40fb43e419bb486e7931ed2193b913e462a557cb9239"
     },
     {
       "bookId": "matei",
@@ -80,7 +97,9 @@
       "chapter": 23,
       "field": "units[0].teaching",
       "quote": "faceți, dar nu faceți după faptele lor",
-      "wordCount": 7
+      "wordCount": 7,
+      "reviewId": "94f2b7236d709434632693f8f94dfe85d3f078c0981ff353bc34f5bb8786ad0b",
+      "quoteSha256": "sha256:2b86cf8d2f52e9f8e7000c38660209c339a78218aeae5b3ff55bc4a12868538d"
     },
     {
       "bookId": "matei",
@@ -89,7 +108,9 @@
       "chapter": 24,
       "field": "units[0].teaching",
       "quote": "Băgați de seamă să nu vă înșele cineva.",
-      "wordCount": 8
+      "wordCount": 8,
+      "reviewId": "c5d64f3a15f0fb9f56743bbc9ece05938e0c5745c1243488b01dc5de75d92aad",
+      "quoteSha256": "sha256:bf08a91ce155907cb41387c7482f0ef19860099abb9469f5ac1ac1f0c2ea2486"
     },
     {
       "bookId": "matei",
@@ -98,7 +119,9 @@
       "chapter": 26,
       "field": "units[0].teaching",
       "quote": "Pe săraci îi aveți totdeauna",
-      "wordCount": 5
+      "wordCount": 5,
+      "reviewId": "7f5483bec705949e0d50a0c2d152056ee64a65819f59dd26677380b56dac4199",
+      "quoteSha256": "sha256:96b359bc9480827d6b5aa2e1c4c3b9b0aec1ed2df82212e3ca1cf96d9a7efb77"
     },
     {
       "bookId": "matei",
@@ -107,7 +130,9 @@
       "chapter": 26,
       "field": "units[2].teaching",
       "quote": "Duhul este plin de râvnă, dar carnea este neputincioasă",
-      "wordCount": 9
+      "wordCount": 9,
+      "reviewId": "af6277df605ddae5fc794ad3030941af60e2472576da05910a70b27a1bc3a2b6",
+      "quoteSha256": "sha256:0e047e6c2cf0de939f7d5dbe77c9c4daaf05e31b969dd634d87185ae6cea19bd"
     },
     {
       "bookId": "matei",
@@ -116,7 +141,9 @@
       "chapter": 28,
       "field": "units[0].teaching",
       "quote": "cu frică și cu mare bucurie",
-      "wordCount": 6
+      "wordCount": 6,
+      "reviewId": "8644c72a7861e1d41bed914dc1a62439c36f587deaa9080b34c68cf32488ce31",
+      "quoteSha256": "sha256:31f4d9bbf1b0cda9564e16a9cba211341bcc51b9d2b303272284d46794eb4bae"
     },
     {
       "bookId": "marcu",
@@ -125,7 +152,9 @@
       "chapter": 1,
       "field": "units[2].teaching",
       "quote": "nu am nevoie de aceasta",
-      "wordCount": 5
+      "wordCount": 5,
+      "reviewId": "c444a32ad9af310aceab3da3876fd4fda4193196b25f1324c20993dc63259b76",
+      "quoteSha256": "sha256:922df6e3c9f0bc248ebfb37aac06a644ed5f292b25a6544714d5e7be1c5b9895"
     },
     {
       "bookId": "marcu",
@@ -134,7 +163,9 @@
       "chapter": 4,
       "field": "units[7].teaching",
       "quote": "de ce vă este frică?",
-      "wordCount": 5
+      "wordCount": 5,
+      "reviewId": "6d8aca1255152fc5f0bcd043d1aa30b49ceb9732a185e443289903820f8765e9",
+      "quoteSha256": "sha256:247ba2ce72e5a536d9a24be422065a4f0a789383ed14bbc11b855e094be2cdd2"
     },
     {
       "bookId": "marcu",
@@ -144,6 +175,8 @@
       "field": "literaryContext",
       "quote": "Cine este Acesta de Îl ascultă chiar și vântul și marea?",
       "wordCount": 11,
+      "reviewId": "035f649ab43d61381842482938b436582d8ae57a7b6ade785edd9bcb8c609733",
+      "quoteSha256": "sha256:70d1ae74b11a92e2db74c60413352f4c74b58adf8866c97e750b3a3dbb5affdf",
       "exactMatchElsewhere": [
         "MRK.4"
       ]
@@ -155,7 +188,9 @@
       "chapter": 5,
       "field": "units[2].teaching",
       "quote": "Nu te teme; crede numai.",
-      "wordCount": 5
+      "wordCount": 5,
+      "reviewId": "09c3a811d2dc23aaa872d19a9abea2075fe8442645a6fbb8b6eec5b2e814449e",
+      "quoteSha256": "sha256:b838d4601c91fa5c943f022986d00b79a3f0a6deac88d8a4cb4e6e9a032f545d"
     },
     {
       "bookId": "marcu",
@@ -164,7 +199,9 @@
       "chapter": 6,
       "field": "prayer",
       "quote": "Îndrăzniți, Eu sunt, nu vă temeți!",
-      "wordCount": 6
+      "wordCount": 6,
+      "reviewId": "c110dbc02ed2ee87939dac25e3abd17727df13f4fe17c45314bddec57a4902c6",
+      "quoteSha256": "sha256:05a3bf7fec490a9a500924d63894771f1bea2d68be3cb2c9aef1c1f929a60235"
     },
     {
       "bookId": "marcu",
@@ -173,7 +210,9 @@
       "chapter": 6,
       "field": "units[4].teaching",
       "quote": "Îndrăzniți! Eu sunt. Nu vă temeți!",
-      "wordCount": 6
+      "wordCount": 6,
+      "reviewId": "5cc13e06c6c2c567adaea4557b943f000124a51c647fb4316be6709effca53a2",
+      "quoteSha256": "sha256:b56fa650410bb31cc5685f6458224250962c713f3c0c6f04c8d1af40a7978293"
     },
     {
       "bookId": "marcu",
@@ -183,6 +222,8 @@
       "field": "units[0].teaching",
       "quote": "Mi-e milă de mulțime.",
       "wordCount": 5,
+      "reviewId": "4a824829ea33c8ed38f7750e05574b8f4a7d3a4645140c370095200e93691050",
+      "quoteSha256": "sha256:eea1c13cfa26bce19e777d37dd64d2c3b747c1d735f4748e95ed485cf0384b10",
       "exactMatchElsewhere": [
         "MAT.15"
       ]
@@ -194,7 +235,9 @@
       "chapter": 9,
       "field": "units[0].teaching",
       "quote": "Acesta este Fiul Meu preaiubit; pe El să-L ascultați.",
-      "wordCount": 10
+      "wordCount": 10,
+      "reviewId": "81890e13c4326da94d6dee57ef6456fa508a3dc8e32ff2a8cd4c8aef9fbae40c",
+      "quoteSha256": "sha256:77cc89d813aeaccc2015e600b234961003fbcaa8ff6052492c988408ddf48a99"
     },
     {
       "bookId": "marcu",
@@ -203,7 +246,9 @@
       "chapter": 9,
       "field": "units[2].teaching",
       "quote": "Nu pot de la mine; depind de Tatăl.",
-      "wordCount": 8
+      "wordCount": 8,
+      "reviewId": "8f130dfea2d252d0495f09486037917faf103a1263299499aff5d444c76029e4",
+      "quoteSha256": "sha256:47f2353d452bd59fdc716e1c4bc6a13d2a4ff880e6f14abac119f380c5a62528"
     },
     {
       "bookId": "marcu",
@@ -212,7 +257,9 @@
       "chapter": 9,
       "field": "units[3].teaching",
       "quote": "nu ne urma pe noi",
-      "wordCount": 5
+      "wordCount": 5,
+      "reviewId": "5e41b83c0da0624a6054a476a9bec17bfe075a7969093d0422daee9c1788bfa2",
+      "quoteSha256": "sha256:53c435930582283bcc569034030436fb5e5ebeb4c7a552a93f4cce00b7367dc9"
     },
     {
       "bookId": "marcu",
@@ -221,7 +268,9 @@
       "chapter": 9,
       "field": "units[3].teaching",
       "quote": "am dreptul să fac aceasta?",
-      "wordCount": 5
+      "wordCount": 5,
+      "reviewId": "36713b4f58cc0a8e4e06e1be9b23a08338a7c67d882c17ff4decf00603e11041",
+      "quoteSha256": "sha256:1cf20c6c0756fbfa43476f6b9e90b34df6e37c9e24631e4aaebcfb4a5d0113bf"
     },
     {
       "bookId": "marcu",
@@ -230,7 +279,9 @@
       "chapter": 9,
       "field": "units[3].teaching",
       "quote": "zidește? poate împiedica pe altul?",
-      "wordCount": 5
+      "wordCount": 5,
+      "reviewId": "bda3555f98e984d0b54e75bcebf982dba57b91f4b92761354f5e1c86ce7adb81",
+      "quoteSha256": "sha256:a71e2a068c558389efdbe61294e9c2f8b0fe7f68cb9cf05e44c4d83acec38982"
     },
     {
       "bookId": "marcu",
@@ -239,7 +290,9 @@
       "chapter": 10,
       "field": "units[0].teaching",
       "quote": "A lăsa pe tată și pe mamă",
-      "wordCount": 7
+      "wordCount": 7,
+      "reviewId": "a125a0fada00f2702117abbd4112a2d35b79de6344f4f6e8ec548f9968079f25",
+      "quoteSha256": "sha256:9a37ba11cfe31cb4056486609692793c4f17d63b2e4b8abbf47bfa3c06bdaffe"
     },
     {
       "bookId": "marcu",
@@ -248,7 +301,9 @@
       "chapter": 10,
       "field": "units[0].forYourHeart",
       "quote": "cât îmi este permis să rup?",
-      "wordCount": 6
+      "wordCount": 6,
+      "reviewId": "de216fa83e45c9e64ed9d521d521726f6d547b44823f3be51364511d225cf4f2",
+      "quoteSha256": "sha256:8a60acb1aed9c292b42ceec0f0f31bfaef811c15553c451cf93e0ad4e22507fc"
     },
     {
       "bookId": "marcu",
@@ -257,7 +312,9 @@
       "chapter": 10,
       "field": "units[1].teaching",
       "quote": "vinde tot, dă săracilor și urmează-Mă",
-      "wordCount": 7
+      "wordCount": 7,
+      "reviewId": "94172f695af93d944e28d067cc4b51397b65fd9ea0d587b15d50306abb7f8c34",
+      "quoteSha256": "sha256:1881a4beed4a6248a945d57b30031705954692a8da2ad9f71db5e2e51af59194"
     },
     {
       "bookId": "marcu",
@@ -266,7 +323,9 @@
       "chapter": 10,
       "field": "units[3].teaching",
       "quote": "Dumnezeu nu te mai ascultă",
-      "wordCount": 5
+      "wordCount": 5,
+      "reviewId": "7f0c5ab9783d07c9316098c88505f701ee35aee75cc05397edafb01959a3c5b4",
+      "quoteSha256": "sha256:c2c328f600cfb70c9d1c834afdd71b0ef6201f1ededa1f4e4b12bf2282a3108b"
     },
     {
       "bookId": "marcu",
@@ -275,7 +334,9 @@
       "chapter": 10,
       "field": "units[3].teaching",
       "quote": "situația ta este prea rea",
-      "wordCount": 5
+      "wordCount": 5,
+      "reviewId": "f0e27adf320f7c66d9643d38f417c74146d99c17e03b44b99af8f0338e8f78ec",
+      "quoteSha256": "sha256:9955bfef7525fa252670a7bee1299c60291c531ec22b830b86e91aeb9226da48"
     },
     {
       "bookId": "marcu",
@@ -284,7 +345,9 @@
       "chapter": 12,
       "field": "units[1].teaching",
       "quote": "Dați cezarului ce este al cezarului și lui Dumnezeu ce este al lui Dumnezeu.",
-      "wordCount": 14
+      "wordCount": 14,
+      "reviewId": "22d6be1422c9a075d711f7f9cfac415a0eaa739d01252f3f764356192d4bfdd4",
+      "quoteSha256": "sha256:60de6cd89cecfc187dfa8340442c865f5a39185ac04c0c39b6cbc8e3ea546dc6"
     },
     {
       "bookId": "marcu",
@@ -293,7 +356,9 @@
       "chapter": 12,
       "field": "units[1].teaching",
       "quote": "nu mai este al lui",
-      "wordCount": 5
+      "wordCount": 5,
+      "reviewId": "b1eea65e7a5367dcd0fde8d8b88d05ccd0ed9cc99890a33c20954ec5d8c151ce",
+      "quoteSha256": "sha256:489dd7fe9b02a9d4a12b4d17fac783d17ebab82db081993798258013313fd023"
     },
     {
       "bookId": "marcu",
@@ -302,7 +367,9 @@
       "chapter": 12,
       "field": "units[1].teaching",
       "quote": "Dați lui Dumnezeu ce este al lui Dumnezeu",
-      "wordCount": 8
+      "wordCount": 8,
+      "reviewId": "fcd1171a27dbce777536ba055f1d2d7c8a86603ecb346dbc44393c52082d1909",
+      "quoteSha256": "sha256:f491f0d0f8131b58cf4108cff4658477d47be733ad2436c8ee62b91064a580be"
     },
     {
       "bookId": "marcu",
@@ -311,7 +378,9 @@
       "chapter": 12,
       "field": "units[1].teaching",
       "quote": "Eu sunt Dumnezeul lui Avraam, Isaac și Iacov",
-      "wordCount": 8
+      "wordCount": 8,
+      "reviewId": "ac92f4e7129cbb9bd5b495918675424863260b44c34a4d926e6be61a956759f0",
+      "quoteSha256": "sha256:aa967a60f54e2737fa846c268d5073b3de9542160a05ee98c9c02b1934d86838"
     },
     {
       "bookId": "marcu",
@@ -320,7 +389,9 @@
       "chapter": 13,
       "field": "units[0].teaching",
       "quote": "Cine va răbda până la sfârșit va fi mântuit.",
-      "wordCount": 9
+      "wordCount": 9,
+      "reviewId": "727643ff421a8483a5ecc345b3bdc67e308a075c12aefbaafb9e6ab607677466",
+      "quoteSha256": "sha256:05028c0de86b5ac4ddea5611e9fd794fe8860e4454ec595fd4bd5b5ce3f2b36d"
     },
     {
       "bookId": "marcu",
@@ -329,7 +400,9 @@
       "chapter": 13,
       "field": "units[1].teaching",
       "quote": "Hristos este aici, în secret",
-      "wordCount": 5
+      "wordCount": 5,
+      "reviewId": "cc3176940a3dc10af861a33e633b1a4b1f3a1fb20601a8316c83a138d23deaab",
+      "quoteSha256": "sha256:a1ca216b7a2c654c86abe94d159d55cc470e150cd14db12d9e26e94f0847c6d6"
     },
     {
       "bookId": "marcu",
@@ -339,6 +412,8 @@
       "field": "units[2].teaching",
       "quote": "Generația aceasta nu va trece...",
       "wordCount": 5,
+      "reviewId": "e97313a4c0e04b21253bdb889ccf7b401bf829405578455cdb593b39503a2072",
+      "quoteSha256": "sha256:2594d277c620116a591de2887e0340d5e0ae6ac7d35a4e140223ac26d9335967",
       "exactMatchElsewhere": [
         "LUK.21"
       ]
@@ -350,7 +425,9 @@
       "chapter": 14,
       "field": "units[2].teaching",
       "quote": "nu ce voiesc Eu, ci ce voiești Tu",
-      "wordCount": 8
+      "wordCount": 8,
+      "reviewId": "c2c5efe12308a6d20efad86f29dc3110127e159a51ed9d04e3a7fbbbbf46c7b8",
+      "quoteSha256": "sha256:4798708e6588301bf51dd7edf18aefe28312278f56e5b616e14f32e1493a7e58"
     },
     {
       "bookId": "marcu",
@@ -359,7 +436,9 @@
       "chapter": 14,
       "field": "units[2].teaching",
       "quote": "Vegheați și rugați-vă ca să nu intrați în ispită.",
-      "wordCount": 10
+      "wordCount": 10,
+      "reviewId": "8baa1ec1d39c031241c7aadb6ec3cfe32a50cd98d9592047caeb842e25662b6c",
+      "quoteSha256": "sha256:f4a408c53a0d93e0072dee2aea87eebada8954aa5e75daa15853c3360af8ce3c"
     },
     {
       "bookId": "marcu",
@@ -369,6 +448,8 @@
       "field": "units[1].teaching",
       "quote": "dacă vrea cineva să vină după Mine",
       "wordCount": 7,
+      "reviewId": "4c62dea195b96a986e7733e7e4490975983060accd31adbab7e16d4264d15b18",
+      "quoteSha256": "sha256:1f02009c45f4bec87cfc2edac0a5edcfd1ce184043b89a5ad9b57279be5957ff",
       "exactMatchElsewhere": [
         "MAT.16"
       ]
@@ -380,7 +461,9 @@
       "chapter": 16,
       "field": "units[0].teaching",
       "quote": "spuneți ucenicilor Lui și lui Petru",
-      "wordCount": 6
+      "wordCount": 6,
+      "reviewId": "3ed0cc54be6734640776b65aad1167cb3f81c879c12cff3164f8347b6381c2d7",
+      "quoteSha256": "sha256:48b496aa258d63a277c433f7d46b189d53d485b5718b8cda88f24a77d47ab226"
     },
     {
       "bookId": "marcu",
@@ -389,7 +472,9 @@
       "chapter": 16,
       "field": "units[2].teaching",
       "quote": "Cine crede și este botezat...",
-      "wordCount": 5
+      "wordCount": 5,
+      "reviewId": "f0d7a61c49d8c06afb58be38b5fa4c84a62447dc8244a8351dca521f709f10b8",
+      "quoteSha256": "sha256:d26c888a5a87a42560ae0994d27e3b93009f838df49ea74b2b6e97240f87a583"
     },
     {
       "bookId": "luca",
@@ -398,7 +483,9 @@
       "chapter": 1,
       "field": "units[2].forYourHeart",
       "quote": "Sunt al Domnului; fie-mi după cuvântul Tău",
-      "wordCount": 8
+      "wordCount": 8,
+      "reviewId": "ba0a7daf414ffdb0df1b71941c696cfc06cd7f93d4a5a0a6483ef9bb161c8b62",
+      "quoteSha256": "sha256:62268733da9172a0a086fd5b8d12daa50402d26cce27e44f6b6a4c5ebc8de537"
     },
     {
       "bookId": "luca",
@@ -407,7 +494,9 @@
       "chapter": 3,
       "field": "units[2].forYourHeart",
       "quote": "El trebuie să crească, iar eu să mă micșorez",
-      "wordCount": 9
+      "wordCount": 9,
+      "reviewId": "02d235e46fa419831545760b63a35a72a94ce97e04aa34dfe097e563b0eea6b0",
+      "quoteSha256": "sha256:8a6efe6e9bcedc8688b4b2e3b608a5c478dac5b75786720822f824e52e8a65b3"
     },
     {
       "bookId": "luca",
@@ -416,7 +505,9 @@
       "chapter": 7,
       "field": "units[0].forYourHeart",
       "quote": "Cuvântul Tău este suficient; voia Ta este bună",
-      "wordCount": 8
+      "wordCount": 8,
+      "reviewId": "e572409201f46350e21f3e3d277a77a4ce42b7a30157ed919eb39ebf0f66cab7",
+      "quoteSha256": "sha256:f650539e3c9fb36aae4b48a84fdb492e5a4dfba943f99709a58a10d6f791db8e"
     },
     {
       "bookId": "luca",
@@ -425,7 +516,9 @@
       "chapter": 7,
       "field": "units[3].teaching",
       "quote": "sunt cel mai mare păcătos",
-      "wordCount": 5
+      "wordCount": 5,
+      "reviewId": "9b0836049e1232dbd3bce5a6a2d7ff32e6d56d3426afc733c942b3134455eea6",
+      "quoteSha256": "sha256:354184ac20857a2c0127a967981d72d40c710e076ff333aa5da2fa1272d88e34"
     },
     {
       "bookId": "luca",
@@ -434,7 +527,9 @@
       "chapter": 8,
       "field": "units[4].teaching",
       "quote": "Nu mai supăra pe Învățătorul",
-      "wordCount": 5
+      "wordCount": 5,
+      "reviewId": "ac785b44732e50fb9b06cbb79696e17d9bd62e26833f4daf74589547434ae08c",
+      "quoteSha256": "sha256:9a4f80dbe2b011c6c90602c77a95b2b72e90d8b8ba50f6e40261600973122576"
     },
     {
       "bookId": "luca",
@@ -444,6 +539,8 @@
       "field": "units[0].teaching",
       "quote": "Dați-le voi să mănânce",
       "wordCount": 5,
+      "reviewId": "6e0579dd6e082246173181c61a78ec6215f36a78bf3c1c0106ce098e5e58bbe0",
+      "quoteSha256": "sha256:1134df98ae09cccbf7acb5a50e2a986db57c8e9e96968caf918908187b25297b",
       "exactMatchElsewhere": [
         "MAT.14",
         "MRK.6"
@@ -456,7 +553,9 @@
       "chapter": 9,
       "field": "units[2].teaching",
       "quote": "Acesta este Fiul Meu ales; de El să ascultați",
-      "wordCount": 9
+      "wordCount": 9,
+      "reviewId": "15ad811e6edb08243a7bea0390bf14484041fa7dc7b571f1440571fc45aa0f5e",
+      "quoteSha256": "sha256:b356fe08fba0bf0190847e144403ef4ac6533517063f3689c9727855195bdec6"
     },
     {
       "bookId": "luca",
@@ -465,7 +564,9 @@
       "chapter": 17,
       "field": "units[3].teaching",
       "quote": "Unul va fi luat și altul lăsat",
-      "wordCount": 7
+      "wordCount": 7,
+      "reviewId": "ec91af52a0a5d4e94760b8c7e6c1c375be1ab9db1600cd2f433e8b00898a35d1",
+      "quoteSha256": "sha256:c42cfaa1845b78e8e2a46b179ec3a4e02a35b74c5a60bb507af2ea2873d5dc02"
     },
     {
       "bookId": "luca",
@@ -474,7 +575,9 @@
       "chapter": 23,
       "field": "units[1].teaching",
       "quote": "astăzi vei fi cu Mine în rai",
-      "wordCount": 7
+      "wordCount": 7,
+      "reviewId": "6e7e4dd8c2da24cd8bec3039a7c860bb3671dc5264864ca6b0bbedadc5160271",
+      "quoteSha256": "sha256:2f1ee1e546036725e45423bb9505ed76b12b122d7233e819c47332b3bb7fafb4"
     },
     {
       "bookId": "fapte",
@@ -483,7 +586,9 @@
       "chapter": 1,
       "field": "units[1].forYourHeart",
       "quote": "trăiesc astăzi ca martor al lui Isus prin puterea Duhului?",
-      "wordCount": 10
+      "wordCount": 10,
+      "reviewId": "9cb18eedbb6a2dca1dbc1bd43014aeabd36f973c02a132e0b0459785410185d8",
+      "quoteSha256": "sha256:121b4cb46679366969172529ddc82ee2d92c4f279efe2d471a03ca1186ff0bdf"
     },
     {
       "bookId": "fapte",
@@ -492,7 +597,9 @@
       "chapter": 18,
       "field": "units[0].teaching",
       "quote": "Nu te teme... Eu sunt cu tine",
-      "wordCount": 7
+      "wordCount": 7,
+      "reviewId": "5f76af7c9ad8adda7ea80e39b58235f20ee61eb6bc96714095b8c2eb71f3fe9c",
+      "quoteSha256": "sha256:4b41688e26e71ef188df1532b3be7ce70e168fac68bad29cfc77a6d36b8c80db"
     },
     {
       "bookId": "fapte",
@@ -501,7 +608,9 @@
       "chapter": 24,
       "field": "units[2].teaching",
       "quote": "Acum pleacă; te voi chema când voi avea timp.",
-      "wordCount": 9
+      "wordCount": 9,
+      "reviewId": "148c5a647c287a1f14df4d4bf2e668dfed0b3baea12182214c5b8966a47a3376",
+      "quoteSha256": "sha256:8c4a478a6522c083746b9646ec46582858683d22cae7e22932213fb3f908010c"
     },
     {
       "bookId": "1-corinteni",
@@ -510,7 +619,9 @@
       "chapter": 10,
       "field": "units[3].forYourHeart",
       "quote": "Îl slăvește pe Dumnezeu și îl ajută pe aproapele?",
-      "wordCount": 9
+      "wordCount": 9,
+      "reviewId": "f1fd7521a5adbc985eed7f0a8f655c0c36505aab736361e50e487d35a8db3d54",
+      "quoteSha256": "sha256:d682342421f6e11469404868b3bcc97db8ae9fc8d5a92e7d7481086effe6a5e2"
     },
     {
       "bookId": "1-corinteni",
@@ -519,7 +630,9 @@
       "chapter": 11,
       "field": "literaryContext",
       "quote": "totul pentru slava lui Dumnezeu",
-      "wordCount": 5
+      "wordCount": 5,
+      "reviewId": "2af40c1dac2abf38bc14f20e3bd5cff06c899f46bd0e4a6ce866fac57c6d458e",
+      "quoteSha256": "sha256:9f547c6cc4ef16ac6a2411855510c0ecb14f1379401522b9a4a4b1c0b13b0f77"
     },
     {
       "bookId": "1-corinteni",
@@ -528,7 +641,9 @@
       "chapter": 12,
       "field": "units[1].teaching",
       "quote": "nu am nevoie de tine",
-      "wordCount": 5
+      "wordCount": 5,
+      "reviewId": "a58ad792e7565464bfb20c133a3e0499c91cb87576242ac6acc6100ef65c3054",
+      "quoteSha256": "sha256:0b56b37f1c8619e185d46663ad7365ba71a2b15fc00665abb0a3ed8fab648303"
     },
     {
       "bookId": "1-corinteni",
@@ -537,7 +652,9 @@
       "chapter": 14,
       "field": "units[2].teaching",
       "quote": "Duhurile prorocilor sunt supuse prorocilor",
-      "wordCount": 5
+      "wordCount": 5,
+      "reviewId": "2d9caf0c417059b5a32e698bcea6c1add7b32e3bc5c19a7d04a23ddd6cf0acdb",
+      "quoteSha256": "sha256:38edaa90f0e3c0ba796376a930bd37ce7cafcd40c1c14243591fe097b4c934be"
     },
     {
       "bookId": "1-corinteni",
@@ -546,7 +663,9 @@
       "chapter": 14,
       "field": "units[2].teaching",
       "quote": "Dumnezeu m-a făcut să spun",
-      "wordCount": 6
+      "wordCount": 6,
+      "reviewId": "3aa4cd1bcc95cf9be3dbabf7f7c58d8401f12409a5c7cb3575251d0f91458bc3",
+      "quoteSha256": "sha256:fbc2259d37857458508d6eee6deadbc9a2f71de18a263fb84bea28c8ce7bf245"
     },
     {
       "bookId": "1-corinteni",
@@ -555,7 +674,9 @@
       "chapter": 16,
       "field": "units[2].teaching",
       "quote": "Vegheați, stați tari, fiți curajoși",
-      "wordCount": 5
+      "wordCount": 5,
+      "reviewId": "b9cf882eb245d7f0f462ed01c9ec202d902b28fadc23475dc00df9ecbb5e309c",
+      "quoteSha256": "sha256:b72439076730960139632b790aace9d3034996e4b012c0be4dc9c37155ab5a05"
     },
     {
       "bookId": "2-corinteni",
@@ -564,7 +685,9 @@
       "chapter": 13,
       "field": "units[1].teaching",
       "quote": "dovedește-ne că ești apostol",
-      "wordCount": 5
+      "wordCount": 5,
+      "reviewId": "ddf3255e95bd5ce84f48a6a07f608682a5c414d4a124efca360410879c8029a9",
+      "quoteSha256": "sha256:5925b23f12d4f570720ef720e71ebcbfdaa66087d47c0bc5045c2c2cf49eafb3"
     },
     {
       "bookId": "filipeni",
@@ -573,7 +696,9 @@
       "chapter": 1,
       "field": "units[3].forYourHeart",
       "quote": "Pentru mine, a trăi este…",
-      "wordCount": 5
+      "wordCount": 5,
+      "reviewId": "590a5df9355d4a2700e953fc47e575eaea84f0a0d78f1841f83d97e0cab51d42",
+      "quoteSha256": "sha256:2b7e1c8cfd38e0b99458ae2e18ae04d266d9cf4d121ffa56367ebda93040e76f"
     },
     {
       "bookId": "filipeni",
@@ -582,7 +707,9 @@
       "chapter": 2,
       "field": "units[2].teaching",
       "quote": "Duceți până la capăt mântuirea",
-      "wordCount": 5
+      "wordCount": 5,
+      "reviewId": "4a9e98df5f8e393f1c472ccdb3c0d58682d9e807dbe06226b458e7470474fb91",
+      "quoteSha256": "sha256:7537c59ac93aacf6c61f34d1b52b32512c52868d6f6b9551ac705168979f8d48"
     },
     {
       "bookId": "coloseni",
@@ -591,7 +718,9 @@
       "chapter": 2,
       "field": "units[4].teaching",
       "quote": "nu lua, nu gusta, nu atinge",
-      "wordCount": 6
+      "wordCount": 6,
+      "reviewId": "5c46d2c3aeb8d5e9aed02417382356028279ecdf01655ff1d7b6b5eaa8002786",
+      "quoteSha256": "sha256:53c7f618cd92c7a6d5e4b942f9567115914c67ce2c63b93ed37bdef8564fcab8"
     },
     {
       "bookId": "tit",
@@ -600,7 +729,9 @@
       "chapter": 1,
       "field": "units[2].teaching",
       "quote": "ca să fie sănătoși în credință",
-      "wordCount": 6
+      "wordCount": 6,
+      "reviewId": "942ae96608cbb5a5237195c1c7f88b97930e62187feeccc833b9e95a7c6abcdb",
+      "quoteSha256": "sha256:fbb032a4ff97829066b87c343b7ed5be613165a57eb9181ee50dfd47a035f3b8"
     },
     {
       "bookId": "filimon",
@@ -609,7 +740,9 @@
       "chapter": 1,
       "field": "units[3].teaching",
       "quote": "Primește-l ca pe mine însumi",
-      "wordCount": 6
+      "wordCount": 6,
+      "reviewId": "1d3ff9d6811c2d75c7fb43ef466a1f553ba410e6393bdf5dadeb7d60ef3f9b1e",
+      "quoteSha256": "sha256:28930e23a726c42ce24f892ef73f265df5b97da12128bea4b7796368dead3b7b"
     },
     {
       "bookId": "1-ioan",
@@ -618,7 +751,10 @@
       "chapter": 1,
       "field": "units[1].teaching",
       "quote": "dacă zicem că nu avem păcat, ne înșelăm",
-      "wordCount": 8
+      "wordCount": 8,
+      "reviewId": "db116813eda498cd336ae9ed62d4aad7d33c2807fa4e4469041cb503bb6a44af",
+      "quoteSha256": "sha256:54ced7044f8eb35e44cce222a0aee489589e28c46fafaa0d1685dbc7f02f963e"
     }
-  ]
+  ],
+  "ledgerProblems": []
 }
