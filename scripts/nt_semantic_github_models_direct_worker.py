@@ -24,6 +24,36 @@ def ensure_direct_coverage() -> None:
     subprocess.run(["node", "scripts/materialize-nt-direct-transcript-coverage.mjs"], cwd=ROOT, check=True)
 
 
+def representation_records(coverage: dict[str, Any], unit_id: str) -> list[dict[str, Any]]:
+    reps = coverage.get("transcriptRepresentations")
+    if not isinstance(reps, list) or not reps:
+        reps = [{
+            "transcriptRepresentationUrl": coverage["transcriptRepresentationUrl"],
+            "transcriptTitle": coverage["transcriptTitle"],
+            "transcriptRange": coverage["transcriptRange"],
+        }]
+    result=[]
+    for index, rep in enumerate(reps, start=1):
+        url=str(rep.get("transcriptRepresentationUrl") or "")
+        title=str(rep.get("transcriptTitle") or "")
+        locator=str(rep.get("transcriptRange") or "")
+        if not url.startswith("https://") or not locator:
+            raise RuntimeError(f"{unit_id}: malformed transcript representation #{index}")
+        result.append({
+            "id": f"direct-transcript-{unit_id}-{index}",
+            "sourceUrl": coverage["officialSourceUrl"],
+            "officialSeriesUrl": coverage["officialSourceUrl"],
+            "transcriptRepresentationUrl": url,
+            "_transcriptUrl": url,
+            "sourceTitle": title,
+            "locator": locator,
+            "evidenceKind": "direct-contiguous-vbv-transcript-coverage" if len(reps)>1 else "direct-containing-vbv-transcript-range",
+            "verificationLevel": coverage["verification"],
+            "coverageEvidenceSha256": coverage["coverageEvidenceSha256"],
+        })
+    return result
+
+
 def load_rows_with_direct(book_id: str) -> list[dict[str, Any]]:
     ensure_direct_coverage()
     rows = original_load_rows(book_id)
@@ -33,6 +63,7 @@ def load_rows_with_direct(book_id: str) -> list[dict[str, Any]]:
     if direct.get("schema") not in {
         "emanus-nt-direct-transcript-coverage-v1",
         "emanus-nt-direct-transcript-coverage-v2",
+        "emanus-nt-direct-transcript-coverage-v3",
     }:
         raise RuntimeError("Unexpected direct transcript coverage schema")
     coverage_by_key = {
@@ -51,26 +82,17 @@ def load_rows_with_direct(book_id: str) -> list[dict[str, Any]]:
             coverage = coverage_by_key.get(key)
             if not coverage:
                 continue
-            pseudo = {
-                "id": f"direct-transcript-{unit['id']}",
-                "sourceUrl": coverage["officialSourceUrl"],
-                "officialSeriesUrl": coverage["officialSourceUrl"],
-                "transcriptRepresentationUrl": coverage["transcriptRepresentationUrl"],
-                "_transcriptUrl": coverage["transcriptRepresentationUrl"],
-                "sourceTitle": coverage["transcriptTitle"],
-                "locator": coverage["transcriptRange"],
-                "evidenceKind": "direct-containing-vbv-transcript-range",
-                "verificationLevel": coverage["verification"],
-                "coverageEvidenceSha256": coverage["coverageEvidenceSha256"],
-            }
+            pseudos=representation_records(coverage,str(unit["id"]))
             if key in by_key:
                 existing = by_key[key]
                 known = {
                     str(r.get("_transcriptUrl") or r.get("transcriptRepresentationUrl") or r.get("sourceUrl"))
                     for r in existing["transcriptRecords"]
                 }
-                if coverage["transcriptRepresentationUrl"] not in known:
-                    existing["transcriptRecords"].append(pseudo)
+                for pseudo in pseudos:
+                    if pseudo["transcriptRepresentationUrl"] not in known:
+                        existing["transcriptRecords"].append(pseudo)
+                        known.add(pseudo["transcriptRepresentationUrl"])
             else:
                 by_key[key] = {
                     "bookId": book_id,
@@ -82,12 +104,14 @@ def load_rows_with_direct(book_id: str) -> list[dict[str, Any]]:
                     "teaching": unit.get("teaching", ""),
                     "forYourHeart": unit.get("forYourHeart"),
                     "sourceFidelity": unit.get("sourceFidelity", {}),
-                    "transcriptRecords": [pseudo],
+                    "transcriptRecords": pseudos,
                 }
-    return sorted(
+    result=sorted(
         by_key.values(),
         key=lambda row: (int(row["chapter"]), int(row.get("verseStart", 0)), str(row["unitId"])),
     )
+    print(f"semantic review {book_id}: {len(result)} transcript-addressable pending units after strict direct coverage", flush=True)
+    return result
 
 
 base.load_rows = load_rows_with_direct
