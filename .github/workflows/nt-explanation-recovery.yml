@@ -147,6 +147,11 @@ jobs:
           set -euo pipefail
           node scripts/review-nt-source-derived-fidelity.mjs
 
+      - name: Apply lexical editorial review fixes
+        run: |
+          set -euo pipefail
+          node scripts/review-nt-lexicon-editorial-fixes.mjs
+
       - name: Materialize final NT corpus and reviewed quote fixes
         run: |
           set -euo pipefail
