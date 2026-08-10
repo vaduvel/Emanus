@@ -2,6 +2,7 @@
 
 import fs from "node:fs"
 import path from "node:path"
+import { UNAMBIGUOUS_ROMANIAN_DIACRITICS as REPLACEMENTS } from "./nt-romanian-diacritics.mjs"
 
 const ROOT = process.cwd()
 const dir = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-audited-recovered-refined")
@@ -10,89 +11,8 @@ const ledgerPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-roman
 // Automatic Romanian edits are intentionally limited to context-free corruptions
 // and forms whose diacritized spelling is unambiguous in reader-facing Romanian.
 // Context-sensitive forms (credinta -> credință/credința, viata -> viață/viața,
-// curata -> curată/curăță, arata -> arată/arăta etc.) remain audit-only.
-const REPLACEMENTS = new Map([
-  ["mangaie-re", "mângâiere"],
-  ["mangaere", "mângâiere"],
-  ["omensec", "omenesc"],
-  ["si", "și"],
-  ["in", "în"],
-  ["il", "îl"],
-  ["isi", "își"],
-  ["daca", "dacă"],
-  ["fara", "fără"],
-  ["cuvant", "cuvânt"],
-  ["cuvantul", "cuvântul"],
-  ["tatal", "tatăl"],
-  ["intai", "întâi"],
-  ["dintai", "dintâi"],
-  ["intaia", "întâia"],
-  ["invatator", "învățător"],
-  ["invatatura", "învățătură"],
-  ["imparatie", "împărăție"],
-  ["imparatia", "împărăția"],
-  ["pacat", "păcat"],
-  ["pacate", "păcate"],
-  ["mantuire", "mântuire"],
-  ["mantuit", "mântuit"],
-  ["incepe", "începe"],
-  ["inceput", "început"],
-  ["vesnic", "veșnic"],
-  ["vesnicia", "veșnicia"],
-  ["adevar", "adevăr"],
-  ["adevarat", "adevărat"],
-  ["nastere", "naștere"],
-  ["nascut", "născut"],
-  ["sange", "sânge"],
-  ["pamant", "pământ"],
-  ["pamantesc", "pământesc"],
-  ["ramane", "rămâne"],
-  ["raman", "rămân"],
-  ["raspuns", "răspuns"],
-  ["inainte", "înainte"],
-  ["inapoi", "înapoi"],
-  ["intelege", "înțelege"],
-  ["intelegere", "înțelegere"],
-  ["marturisire", "mărturisire"],
-  ["marturie", "mărturie"],
-  ["marturia", "mărturia"],
-  ["botezatorul", "botezătorul"],
-  ["fagaduise", "făgăduise"],
-  ["fagaduit", "făgăduit"],
-  ["fagaduinta", "făgăduință"],
-  ["facut", "făcut"],
-  ["facatorului", "făcătorului"],
-  ["urmareste", "urmărește"],
-  ["doua", "două"],
-  ["miscari", "mișcări"],
-  ["nouasprezece", "nouăsprezece"],
-  ["randul", "rândul"],
-  ["randurile", "rândurile"],
-  ["preoti", "preoți"],
-  ["aseaza", "așază"],
-  ["asteptau", "așteptau"],
-  ["asteptarea", "așteptarea"],
-  ["ratiunii", "rațiunii"],
-  ["raspicat", "răspicat"],
-  ["capatul", "capătul"],
-  ["aceeasi", "aceeași"],
-  ["inalte", "înalte"],
-  ["decat", "decât"],
-  ["incurcatura", "încurcătură"],
-  ["crestin", "creștin"],
-  ["crestine", "creștine"],
-  ["fapturii", "făpturii"],
-  ["vietii", "vieții"],
-  ["intuneric", "întuneric"],
-  ["amandoua", "amândouă"],
-  ["inteles", "înțeles"],
-  ["daruieste", "dăruiește"],
-  ["descopera", "descoperă"],
-  ["stapanire", "stăpânire"],
-  ["stapanit", "stăpânit"],
-  ["inviere", "înviere"],
-  ["invierea", "învierea"],
-])
+// curata -> curată/curăță, arata -> arată/arăta etc.) remain in the reviewed
+// contextual normalizer and publication audit.
 
 function fail(message) { console.error(`[NT Romanian fixes] ${message}`); process.exit(1) }
 function preserveCase(match, replacement) {
@@ -139,5 +59,5 @@ for (const file of fs.readdirSync(dir).filter((name) => name.endsWith(".json")).
   }
   if (ledger.length !== beforeCount) fs.writeFileSync(full, JSON.stringify(book, null, 2) + "\n", "utf8")
 }
-fs.writeFileSync(ledgerPath, JSON.stringify({ schema: "emanus-nt-romanian-fix-ledger-v4", policy: "context-free-corruptions-and-unambiguous-diacritics-only; Unicode-aware token boundaries; context-sensitive inflections remain manual-review", count: ledger.length, fixes: ledger }, null, 2) + "\n", "utf8")
+fs.writeFileSync(ledgerPath, JSON.stringify({ schema: "emanus-nt-romanian-fix-ledger-v5", policy: "context-free-corruptions-and-unambiguous-diacritics-only; shared registry; Unicode-aware token boundaries; context-sensitive inflections remain reviewed separately", count: ledger.length, fixes: ledger }, null, 2) + "\n", "utf8")
 console.log(`NT Romanian safe fixes applied: ${ledger.length}.`)
