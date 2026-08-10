@@ -2,9 +2,9 @@
   "schema": "emanus-nt-embedded-quote-audit-v1",
   "status": "manual-source-check-required",
   "policy": "Quoted spans of at least five words are checked against the exact current Biblia Emanus text in the same canonical book and chapter. A match elsewhere in the NT does not clear the finding. Non-matches must be replaced with BE wording, explicitly classified as non-Bible quotations, or removed before publication.",
-  "quotedFragments": 75,
+  "quotedFragments": 78,
   "exactMatches": 26,
-  "count": 49,
+  "count": 52,
   "findings": [
     {
       "bookId": "matei",
@@ -205,16 +205,43 @@
       "book": "Marcu",
       "chapter": 9,
       "field": "units[0].teaching",
-      "quote": "Acesta este Fiul Meu preaiubit: de El să ascultați!",
-      "wordCount": 9
+      "quote": "Acesta este Fiul Meu preaiubit; pe El să-L ascultați.",
+      "wordCount": 10
     },
     {
       "bookId": "marcu",
       "canonicalBookId": "MRK",
       "book": "Marcu",
       "chapter": 9,
-      "field": "units[1].teaching",
-      "quote": "Cred, Doamne! Ajută necredinței mele",
+      "field": "units[2].teaching",
+      "quote": "Nu pot de la mine; depind de Tatăl.",
+      "wordCount": 8
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "book": "Marcu",
+      "chapter": 9,
+      "field": "units[3].teaching",
+      "quote": "nu ne urma pe noi",
+      "wordCount": 5
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "book": "Marcu",
+      "chapter": 9,
+      "field": "units[3].teaching",
+      "quote": "am dreptul să fac aceasta?",
+      "wordCount": 5
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "book": "Marcu",
+      "chapter": 9,
+      "field": "units[3].teaching",
+      "quote": "zidește? poate împiedica pe altul?",
       "wordCount": 5
     },
     {

@@ -1,7 +1,7 @@
 {
   "schema": "emanus-nt-embedded-quote-candidates-v1",
   "policy": "Diagnostic only. Candidate scores compare each unresolved quoted span with contiguous Biblia Emanus text from the same canonical chapter. This report never edits reader copy or clears a publication blocker by itself.",
-  "count": 48,
+  "count": 51,
   "strongCandidateCount": 1,
   "findings": [
     {
@@ -688,35 +688,35 @@
       "canonicalBookId": "MRK",
       "chapter": 9,
       "field": "units[0].teaching",
-      "quote": "Acesta este Fiul Meu preaiubit: de El să ascultați!",
-      "wordCount": 9,
+      "quote": "Acesta este Fiul Meu preaiubit; pe El să-L ascultați.",
+      "wordCount": 10,
       "best": {
-        "raw": "glas: Acesta este Fiul Meu preaiubit; ascultați de El",
-        "score": 0.8389,
-        "lcsRatio": 0.7778,
-        "overlap": 0.8889,
+        "raw": "un glas: Acesta este Fiul Meu preaiubit; ascultați de El",
+        "score": 0.675,
+        "lcsRatio": 0.6,
+        "overlap": 0.7,
         "lengthRatio": 1,
-        "start": 149,
-        "width": 9
+        "start": 148,
+        "width": 10
       },
       "alternatives": [
         {
-          "raw": "Acesta este Fiul Meu preaiubit; ascultați de El! Deodată",
-          "score": 0.8389,
-          "lcsRatio": 0.7778,
-          "overlap": 0.8889,
+          "raw": "glas: Acesta este Fiul Meu preaiubit; ascultați de El! Deodată",
+          "score": 0.675,
+          "lcsRatio": 0.6,
+          "overlap": 0.7,
           "lengthRatio": 1,
-          "start": 150,
-          "width": 9
+          "start": 149,
+          "width": 10
         },
         {
-          "raw": "Acesta este Fiul Meu preaiubit; ascultați de El",
-          "score": 0.8278,
-          "lcsRatio": 0.7778,
-          "overlap": 0.8889,
-          "lengthRatio": 0.8889,
+          "raw": "Acesta este Fiul Meu preaiubit; ascultați de El! Deodată, uitându",
+          "score": 0.675,
+          "lcsRatio": 0.6,
+          "overlap": 0.7,
+          "lengthRatio": 1,
           "start": 150,
-          "width": 8
+          "width": 10
         }
       ],
       "bestMargin": 0
@@ -725,39 +725,99 @@
       "bookId": "marcu",
       "canonicalBookId": "MRK",
       "chapter": 9,
-      "field": "units[1].teaching",
-      "quote": "Cred, Doamne! Ajută necredinței mele",
+      "field": "units[2].teaching",
+      "quote": "Nu pot de la mine; depind de Tatăl.",
+      "wordCount": 8,
+      "best": null,
+      "alternatives": [],
+      "bestMargin": null
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 9,
+      "field": "units[3].teaching",
+      "quote": "nu ne urma pe noi",
       "wordCount": 5,
       "best": {
-        "raw": "strigat: Cred! Ajută necredinței mele",
-        "score": 0.82,
-        "lcsRatio": 0.8,
-        "overlap": 0.8,
+        "raw": "pe cineva care nu ne",
+        "score": 0.53,
+        "lcsRatio": 0.4,
+        "overlap": 0.6,
         "lengthRatio": 1,
-        "start": 496,
+        "start": 786,
         "width": 5
       },
       "alternatives": [
         {
-          "raw": "Cred! Ajută necredinței mele! Când",
-          "score": 0.82,
-          "lcsRatio": 0.8,
-          "overlap": 0.8,
+          "raw": "Mine nu Mă primește pe",
+          "score": 0.46,
+          "lcsRatio": 0.4,
+          "overlap": 0.4,
           "lengthRatio": 1,
-          "start": 497,
+          "start": 766,
           "width": 5
         },
         {
-          "raw": "a strigat: Cred! Ajută necredinței mele",
-          "score": 0.6833,
-          "lcsRatio": 0.6667,
-          "overlap": 0.6667,
-          "lengthRatio": 0.8333,
-          "start": 495,
-          "width": 6
+          "raw": "nu Mă primește pe Mine",
+          "score": 0.46,
+          "lcsRatio": 0.4,
+          "overlap": 0.4,
+          "lengthRatio": 1,
+          "start": 767,
+          "width": 5
+        }
+      ],
+      "bestMargin": 0.07
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 9,
+      "field": "units[3].teaching",
+      "quote": "am dreptul să fac aceasta?",
+      "wordCount": 5,
+      "best": {
+        "raw": "am spus ucenicilor Tăi să",
+        "score": 0.46,
+        "lcsRatio": 0.4,
+        "overlap": 0.4,
+        "lengthRatio": 1,
+        "start": 368,
+        "width": 5
+      },
+      "alternatives": [
+        {
+          "raw": "noi n-am putut să",
+          "score": 0.46,
+          "lcsRatio": 0.4,
+          "overlap": 0.4,
+          "lengthRatio": 1,
+          "start": 588,
+          "width": 5
+        },
+        {
+          "raw": "n-am putut să-l",
+          "score": 0.46,
+          "lcsRatio": 0.4,
+          "overlap": 0.4,
+          "lengthRatio": 1,
+          "start": 589,
+          "width": 5
         }
       ],
       "bestMargin": 0
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 9,
+      "field": "units[3].teaching",
+      "quote": "zidește? poate împiedica pe altul?",
+      "wordCount": 5,
+      "best": null,
+      "alternatives": [],
+      "bestMargin": null
     },
     {
       "bookId": "marcu",

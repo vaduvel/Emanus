@@ -1,9 +1,37 @@
 {
   "schema": "emanus-nt-romanian-language-audit-v4",
-  "status": "clean",
+  "status": "manual-edit-required",
   "policy": "Reader-facing Romanian must use standard diacritics. Deterministic and audit rules share one registry; context-sensitive forms are handled separately, and valid definite forms such as 'simpla citare' are not false positives.",
-  "count": 0,
-  "findingGroups": 0,
-  "tokenSummary": [],
-  "findings": []
+  "count": 1,
+  "findingGroups": 1,
+  "tokenSummary": [
+    {
+      "kind": "missing-diacritics",
+      "token": "doua",
+      "expected": "două",
+      "occurrences": 1,
+      "groups": 1,
+      "samples": [
+        {
+          "bookId": "marcu",
+          "chapter": 9,
+          "field": "units[0].teaching",
+          "context": "…această expunere, cuvintele nu sunt împinse până la a doua venire, fiindcă oamenii aceia au murit demult, ci sunt…"
+        }
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "bookId": "marcu",
+      "book": "Marcu",
+      "chapter": 9,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "doua",
+      "expected": "două",
+      "occurrences": 1,
+      "context": "…această expunere, cuvintele nu sunt împinse până la a doua venire, fiindcă oamenii aceia au murit demult, ci sunt…"
+    }
+  ]
 }

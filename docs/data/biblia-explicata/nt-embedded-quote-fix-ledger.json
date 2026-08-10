@@ -2,7 +2,7 @@
   "schema": "emanus-nt-embedded-quote-fix-ledger-v1",
   "policy": "Only unique same-chapter Biblia Emanus candidates with <=1 token edit (<=2 for long quotes), >=0.88 sequence score and >=0.80 token overlap are replaced. Ambiguous/non-Bible quotations remain untouched and blocked for manual classification.",
   "fixed": 1,
-  "skipped": 55,
+  "skipped": 58,
   "fixes": [
     {
       "bookId": "marcu",
@@ -189,14 +189,35 @@
       "bookId": "marcu",
       "chapter": 9,
       "field": "teaching",
-      "quote": "Acesta este Fiul Meu preaiubit: de El să ascultați!",
+      "quote": "Acesta este Fiul Meu preaiubit; pe El să-L ascultați.",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
     {
       "bookId": "marcu",
       "chapter": 9,
       "field": "teaching",
-      "quote": "Cred, Doamne! Ajută necredinței mele",
+      "quote": "Nu pot de la mine; depind de Tatăl.",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "marcu",
+      "chapter": 9,
+      "field": "teaching",
+      "quote": "nu ne urma pe noi",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "marcu",
+      "chapter": 9,
+      "field": "teaching",
+      "quote": "am dreptul să fac aceasta?",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "marcu",
+      "chapter": 9,
+      "field": "teaching",
+      "quote": "zidește? poate împiedica pe altul?",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
     {

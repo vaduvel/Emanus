@@ -4,7 +4,7 @@
   "manifestStatus": "in_review",
   "manifestPublicationReady": false,
   "counts": {
-    "blockerClasses": 3,
+    "blockerClasses": 4,
     "books": 27,
     "chapters": 260,
     "units": 970,
@@ -17,8 +17,8 @@
     "rawEditorialFindings": 96,
     "editorialClassificationUnresolved": 0,
     "editorialSourceTraceabilityPending": 0,
-    "embeddedQuoteFindings": 49,
-    "romanianLanguageFindings": 0,
+    "embeddedQuoteFindings": 52,
+    "romanianLanguageFindings": 1,
     "lexiconFindings": 219
   },
   "blockers": [
@@ -31,9 +31,15 @@
     },
     {
       "id": "embedded-quote-audit",
-      "count": 49,
+      "count": 52,
       "message": "embedded quote audit is manual-source-check-required.",
       "status": "manual-source-check-required"
+    },
+    {
+      "id": "romanian-language-audit",
+      "count": 1,
+      "message": "Romanian language audit is manual-edit-required.",
+      "status": "manual-edit-required"
     },
     {
       "id": "lexicon-audit",
