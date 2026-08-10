@@ -24,7 +24,8 @@ const queue = load(queuePath)
 const unique = load(uniquePath)
 const ambiguous = load(ambiguousPath)
 const unmatched = load(unmatchedPath)
-if (!Array.isArray(queue.entries) || queue.entries.length !== 219) fail(`expected 219 queue entries, found ${queue.entries?.length ?? 0}`)
+if (!Array.isArray(queue.entries) || !queue.entries.length) fail("lexicon review queue is empty or invalid")
+const expectedCount = queue.entries.length
 
 const uniqueById = new Map((unique.entries ?? []).map((entry) => [entry.reviewId, entry]))
 const ambiguousById = new Map((ambiguous.entries ?? []).map((entry) => [entry.reviewId, entry]))
@@ -99,6 +100,6 @@ for (let index = 0; index < queue.entries.length; index += 1) {
   })
 }
 
-if (uniqueCount + ambiguousCount + unmatchedCount !== 219) fail(`classification totals do not cover 219 entries: ${uniqueCount}/${ambiguousCount}/${unmatchedCount}`)
+if (uniqueCount + ambiguousCount + unmatchedCount !== expectedCount) fail(`classification totals do not cover ${expectedCount} entries: ${uniqueCount}/${ambiguousCount}/${unmatchedCount}`)
 fs.writeFileSync(outputPath, rows.map((row) => JSON.stringify(row)).join("\n") + "\n", "utf8")
 console.log(`NT lexicon review packet: ${rows.length} rows (${uniqueCount} unique / ${ambiguousCount} ambiguous / ${unmatchedCount} unmatched).`)
