@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import hashlib
+import importlib
 import json
 import os
 import subprocess
@@ -13,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "docs/data/biblia-explicata"
 STATUS = DATA / "nt-semantic-manual-review-status.json"
 OUT_DIR = DATA / "nt-official-transcripts"
+PY_DEPS = Path("/tmp/emanus-nt-python")
 
 
 def sha256(text: str) -> str:
@@ -37,19 +39,51 @@ def need_sources(status: dict) -> list[dict]:
         target = OUT_DIR / f"{source_id}.json"
         if target.exists():
             data = json.loads(target.read_text(encoding="utf-8"))
-            if data.get("officialAudioUrl") == source.get("officialAudioUrl") and data.get("schema") == "emanus-nt-official-audio-transcript-v1":
+            if (
+                data.get("officialAudioUrl") == source.get("officialAudioUrl")
+                and data.get("schema") == "emanus-nt-official-audio-transcript-v1"
+            ):
                 continue
         pending.append(source)
     return pending
 
 
 def ensure_runtime() -> None:
-    try:
-        import faster_whisper  # noqa: F401
-        return
-    except Exception:
-        pass
-    subprocess.run([sys.executable, "-m", "pip", "install", "--quiet", "faster-whisper==1.1.1"], check=True)
+    """Install Whisper into an isolated target and prove this interpreter can import it.
+
+    The GitHub runner previously completed a dynamic pip call but the next import still
+    could not resolve faster_whisper. A fixed --target plus an explicit sys.path entry
+    removes dependence on runner/user-site behaviour and fails before any editorial
+    artifact is written if the runtime is unusable.
+    """
+    PY_DEPS.mkdir(parents=True, exist_ok=True)
+    marker = PY_DEPS / ".faster-whisper-1.1.1"
+    if not marker.exists():
+        subprocess.run(
+            [
+                sys.executable,
+                "-m",
+                "pip",
+                "install",
+                "--disable-pip-version-check",
+                "--quiet",
+                "--target",
+                str(PY_DEPS),
+                "faster-whisper==1.1.1",
+            ],
+            check=True,
+        )
+        marker.write_text("faster-whisper==1.1.1\n", encoding="utf-8")
+
+    deps = str(PY_DEPS)
+    if deps not in sys.path:
+        sys.path.insert(0, deps)
+    importlib.invalidate_caches()
+    module = importlib.import_module("faster_whisper")
+    module_path = getattr(module, "__file__", None)
+    if not module_path:
+        raise RuntimeError("faster_whisper imported without a concrete module path")
+    print(f"Whisper runtime OK: {module_path}", flush=True)
 
 
 def download(url: str, target: Path) -> None:
