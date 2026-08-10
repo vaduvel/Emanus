@@ -1,6 +1,9 @@
 name: NT Final Editorial Approval
 
 on:
+  push:
+    branches:
+      - codex/nt-ai-review-handoff
   pull_request:
     types: [edited, synchronize]
     branches:
@@ -11,12 +14,12 @@ permissions:
   models: read
 
 concurrency:
-  group: nt-final-editorial-${{ github.event.pull_request.number }}
+  group: nt-final-editorial-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
   pilot:
-    if: contains(github.event.pull_request.body || '', 'nt-final-editorial-trigger: pilot-mat1')
+    if: github.event_name == 'push' || contains(github.event.pull_request.body || '', 'nt-final-editorial-trigger: pilot-mat1')
     runs-on: ubuntu-22.04
     timeout-minutes: 30
     steps:
@@ -56,7 +59,7 @@ jobs:
           retention-days: 1
 
   review-book:
-    if: contains(github.event.pull_request.body || '', 'nt-final-editorial-trigger: full-v1')
+    if: github.event_name == 'pull_request' && contains(github.event.pull_request.body || '', 'nt-final-editorial-trigger: full-v1')
     runs-on: ubuntu-22.04
     timeout-minutes: 180
     strategy:
@@ -115,7 +118,7 @@ jobs:
           retention-days: 1
 
   aggregate:
-    if: contains(github.event.pull_request.body || '', 'nt-final-editorial-trigger: full-v1')
+    if: github.event_name == 'pull_request' && contains(github.event.pull_request.body || '', 'nt-final-editorial-trigger: full-v1')
     needs: review-book
     runs-on: ubuntu-22.04
     timeout-minutes: 30
