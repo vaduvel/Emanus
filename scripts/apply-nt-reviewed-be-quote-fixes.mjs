@@ -27,10 +27,10 @@ function resolveField(chapter, field) {
   if (match) {
     const unit = chapter.units?.[Number(match[1])]
     if (!unit) fail(`missing ${field}`)
-    return { owner: unit, key: match[2] }
+    return { owner: unit, key: match[2], unit }
   }
   if (!["title", "summary", "literaryContext", "historicalContext", "prayer"].includes(field)) fail(`unsupported field ${field}`)
-  return { owner: chapter, key: field }
+  return { owner: chapter, key: field, unit: null }
 }
 
 const FIXES = [
@@ -69,10 +69,23 @@ for (const fix of FIXES) {
   const beText = norm((be.verses ?? []).map((verse) => verse.text).join(" "))
   if (!beText.includes(norm(fix.after))) fail(`${fix.bookId} ${fix.chapter} ${fix.field}: reviewed replacement is not exact same-chapter BE wording: ${fix.after}`)
 
-  const { owner, key } = resolveField(chapter, fix.field)
+  const { owner, key, unit } = resolveField(chapter, fix.field)
   const value = owner[key]
   if (typeof value !== "string") fail(`${fix.bookId} ${fix.chapter} ${fix.field}: target not string`)
   const occurrences = value.split(fix.before).length - 1
+
+  if (occurrences === 0 && unit?.sourceFidelity?.reviewState === "reviewed-against-raw-transcript") {
+    ledger.push({
+      ...fix,
+      beforeSha256: `sha256:${sha256(fix.before)}`,
+      afterSha256: `sha256:${sha256(fix.after)}`,
+      verification: "superseded-by-raw-transcript-editorial-review",
+      sourceFidelityPolicy: unit.sourceFidelity.policy,
+      note: "The old quote no longer exists because the complete unit was deliberately rewritten from pinned raw transcript evidence. The fresh embedded-quote audit validates the replacement unit independently.",
+    })
+    continue
+  }
+
   if (occurrences !== 1) fail(`${fix.bookId} ${fix.chapter} ${fix.field}: expected exactly one old quote, found ${occurrences}`)
   owner[key] = value.replace(fix.before, fix.after)
   fs.writeFileSync(full, stable(book), "utf8")
@@ -94,8 +107,8 @@ for (const entry of manifest.books ?? []) {
 }
 fs.writeFileSync(manifestPath, stable(manifest), "utf8")
 fs.writeFileSync(ledgerPath, stable({
-  schema: "emanus-nt-embedded-quote-reviewed-fix-ledger-v1",
-  policy: "Every replacement was manually selected from the strong-candidate review batch and is rejected unless its normalized wording exists in the same current Biblia Emanus chapter. Candidate scores alone never authorize replacement.",
+  schema: "emanus-nt-embedded-quote-reviewed-fix-ledger-v2",
+  policy: "Every direct replacement is rejected unless its normalized wording exists in the same current Biblia Emanus chapter. A legacy quote-fix may be marked superseded only when the exact target unit carries reviewed-against-raw-transcript sourceFidelity; the fresh quote audit then evaluates the rewritten copy independently.",
   count: ledger.length,
   fixes: ledger,
 }), "utf8")
