@@ -3,6 +3,8 @@
 import fs from "node:fs"
 import path from "node:path"
 
+await import("./materialize-nt-semantic-review-index.mjs")
+
 const ROOT = process.cwd()
 const reportPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-publication-blockers.json")
 const semanticPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-semantic-fidelity-audit.json")
