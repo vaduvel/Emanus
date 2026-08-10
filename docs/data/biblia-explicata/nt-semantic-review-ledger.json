@@ -1,7 +1,7 @@
 {
   "schema": "emanus-nt-semantic-review-ledger-v1",
   "policy": "Every decision is sentence-level reviewed against complete transcript content, hash-bound to the final reader teaching/application, and backed by official-source attribution plus a persisted transcript representation. Locator-only evidence never approves semantic fidelity.",
-  "count": 146,
+  "count": 161,
   "decisions": [
     {
       "bookId": "1-ioan",
@@ -301,6 +301,404 @@
       "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against exact exported transcript representation",
       "reviewedOn": "2026-08-10",
       "revisedTeaching": "Isus Hristos a venit prin apă și sânge, iar Duhul mărturisește pentru că Duhul este adevărul. Apa arată spre botezul Lui, unde Tatăl a mărturisit public despre Fiul; sângele arată spre cruce, iar Duhul Sfânt a mărturisit despre Hristos de-a lungul lucrării Lui. Cele trei sunt în acord că Isus este Hristosul, Fiul lui Dumnezeu. Această mărturie are și o aplicație în viața credinciosului: sângele lui Hristos ne dă iertarea păcatelor, botezul în apă mărturisește că am murit împreună cu Hristos ca să nu mai fim robi ai păcatului, iar Duhul Sfânt locuiește în noi și face reală eliberarea de puterea păcatului. Mărturia mai mare este a lui Dumnezeu Însuși despre Fiul Său: Dumnezeu ne-a dat viață veșnică, iar viața aceasta este în Fiul. Cine Îl are pe Fiul are viața; cine nu Îl are pe Fiul nu are viața. A refuza mărturia lui Dumnezeu nu este o simplă slăbiciune a credinței, ci înseamnă a-L trata pe Dumnezeu ca și când ar minți."
+    },
+    {
+      "bookId": "1-petru",
+      "chapter": 1,
+      "unitId": "1-petru-1-1-12-source-first",
+      "status": "approved-against-transcript",
+      "action": "rewrite",
+      "reviewedTeachingSha256": "sha256:8f777590c860cfe9f7d2c8a0776e5256f93858b2ac1be4e73b3d9b12287a4674",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/through-the-bible/1-peter-2-peter",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/through-the-bible/66-1peter-and-2peter.mp3",
+          "sourceRange": "1 Peter 1:1-5:14; official shared study segment 2.26-2624.57s before explicit 2 Peter transition",
+          "transcriptSha256": "sha256:a12b27fe401eeddf6b163bcc7793e6bef67454d7143d1c3e0aec1ee54b240c40",
+          "evidenceSha256": "sha256:45fdd18e76baddfe23a74375eefdbb7d688cc5493b658e5d51bb168bf7468117",
+          "officialAudioSha256": "sha256:2333b5b9a08e6d5c4eaf462a262af056dd3ed771855a8faa1603996e5ec733a5",
+          "parentTranscriptSha256": "sha256:7dd96cd1b728dace6d3fd6652b271726270d88dd10f14a00a6c9786aac08a400",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "reviewedSectionStartSeconds": 2.26,
+          "reviewedSectionEndSeconds": 2624.57,
+          "reviewedSectionWordCount": 6448
+        }
+      ],
+      "rationale": "Copy-ul curent păstrează nădejdea, moștenirea și încercarea credinței, dar transcriptul oficial dezvoltă material cadrul întregii epistole: acesta este «harul adevărat» al lui Dumnezeu, care include încercări de scurtă durată văzute din perspectiva eternității. Sursa explică și alegerea după preștiința Tatălui, lucrarea sfințitoare a Duhului și scopul ascultării de Isus, fără a transforma preștiința lui Dumnezeu în constrângerea alegerilor omului.",
+      "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against persisted official CFC audio transcript",
+      "reviewedOn": "2026-08-10",
+      "revisedTeaching": "Petru descrie de la început harul adevărat al lui Dumnezeu. Tatăl ne-a ales după preștiința Lui, Duhul ne sfințește, iar scopul este ascultarea de Isus Hristos; faptul că Dumnezeu cunoaște sfârșitul de la început nu înseamnă că îi constrânge pe oameni să facă binele sau răul. Nădejdea noastră este vie prin învierea lui Isus, iar moștenirea este păstrată în cer. De aceea încercările nu contrazic harul: pentru puțina vreme a vieții pământești, credința trece prin foc ca aurul, ca să fie curățită și dovedită. Perspectiva eternității face chiar o viață întreagă de încercări să pară scurtă. Harul adevărat nu promite o existență fără suferință, ci păstrează credința și o curăță în mijlocul încercării, până la mântuirea sufletului și arătarea lui Hristos."
+    },
+    {
+      "bookId": "1-petru",
+      "chapter": 1,
+      "unitId": "1-petru-1-13-21-source-first",
+      "status": "approved-against-transcript",
+      "action": "keep",
+      "reviewedTeachingSha256": "sha256:833c96478fb6c58fc1921981fe95a42731dffe80eaa09fba538ae43398c4ec18",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/through-the-bible/1-peter-2-peter",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/through-the-bible/66-1peter-and-2peter.mp3",
+          "sourceRange": "1 Peter 1:1-5:14; official shared study segment 2.26-2624.57s before explicit 2 Peter transition",
+          "transcriptSha256": "sha256:a12b27fe401eeddf6b163bcc7793e6bef67454d7143d1c3e0aec1ee54b240c40",
+          "evidenceSha256": "sha256:45fdd18e76baddfe23a74375eefdbb7d688cc5493b658e5d51bb168bf7468117",
+          "officialAudioSha256": "sha256:2333b5b9a08e6d5c4eaf462a262af056dd3ed771855a8faa1603996e5ec733a5",
+          "parentTranscriptSha256": "sha256:7dd96cd1b728dace6d3fd6652b271726270d88dd10f14a00a6c9786aac08a400",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "reviewedSectionStartSeconds": 2.26,
+          "reviewedSectionEndSeconds": 2624.57,
+          "reviewedSectionWordCount": 6448
+        }
+      ],
+      "rationale": "Copy-ul curent păstrează fără omisiune materială chemarea la sfințenie deoarece Dumnezeu este Tatăl nostru sfânt, teama evlavioasă înaintea Judecătorului nepărtinitor și prețul sângelui lui Hristos, mai mare decât argintul și aurul. Ilustrațiile suplimentare din transcript nu schimbă doctrina unității.",
+      "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against persisted official CFC audio transcript",
+      "reviewedOn": "2026-08-10"
+    },
+    {
+      "bookId": "1-petru",
+      "chapter": 1,
+      "unitId": "1-petru-1-22-25-source-first",
+      "status": "approved-against-transcript",
+      "action": "rewrite",
+      "reviewedTeachingSha256": "sha256:0ba1ab38f23846c5b86fc1d9e36e8a3ee8b46479f91dc289c8fef440cc9f51b9",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/through-the-bible/1-peter-2-peter",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/through-the-bible/66-1peter-and-2peter.mp3",
+          "sourceRange": "1 Peter 1:1-5:14; official shared study segment 2.26-2624.57s before explicit 2 Peter transition",
+          "transcriptSha256": "sha256:a12b27fe401eeddf6b163bcc7793e6bef67454d7143d1c3e0aec1ee54b240c40",
+          "evidenceSha256": "sha256:45fdd18e76baddfe23a74375eefdbb7d688cc5493b658e5d51bb168bf7468117",
+          "officialAudioSha256": "sha256:2333b5b9a08e6d5c4eaf462a262af056dd3ed771855a8faa1603996e5ec733a5",
+          "parentTranscriptSha256": "sha256:7dd96cd1b728dace6d3fd6652b271726270d88dd10f14a00a6c9786aac08a400",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "reviewedSectionStartSeconds": 2.26,
+          "reviewedSectionEndSeconds": 2624.57,
+          "reviewedSectionWordCount": 6448
+        }
+      ],
+      "rationale": "Transcriptul leagă explicit ascultarea adevărului de procesul prin care Dumnezeu curăță sufletul în mijlocul încercărilor: pe măsură ce ascultăm Cuvântul, impuritatea este îndepărtată, devenim mai asemănători cu Hristos, mai blânzi și mai capabili să-i iubim pe frați. Copy-ul anterior păstra ascultarea și dragostea, dar pierdea această legătură materială cu focul încercării și transformarea caracterului.",
+      "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against persisted official CFC audio transcript",
+      "reviewedOn": "2026-08-10",
+      "revisedTeaching": "Nașterea din nou vine prin sămânța nepieritoare a Cuvântului lui Dumnezeu, iar același Cuvânt continuă să ne curățească. Dumnezeu ne arată adevărul zi de zi, iar pe măsură ce îl ascultăm — inclusiv în mijlocul încercărilor — sufletul este curățit, impuritatea este îndepărtată și devenim tot mai asemănători cu Hristos. Încercarea singură nu produce această schimbare; focul trebuie întâmpinat cu ascultarea adevărului. Un rod practic al curățirii este dragostea frățească neprefăcută: omul pe care Dumnezeu l-a smerit și l-a curățit prin încercări devine mai blând și mai puțin gata să-i judece pe cei care suferă. Slava omului se ofilește, dar Cuvântul care ne-a născut și ne modelează rămâne în veac."
+    },
+    {
+      "bookId": "1-petru",
+      "chapter": 2,
+      "unitId": "1-petru-2-1-10-source-first",
+      "status": "approved-against-transcript",
+      "action": "rewrite",
+      "reviewedTeachingSha256": "sha256:eba642bccf5a2565a8f3f0b5156fb7a18b31265f968bcd821fae737e75cd84d0",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/through-the-bible/1-peter-2-peter",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/through-the-bible/66-1peter-and-2peter.mp3",
+          "sourceRange": "1 Peter 1:1-5:14; official shared study segment 2.26-2624.57s before explicit 2 Peter transition",
+          "transcriptSha256": "sha256:a12b27fe401eeddf6b163bcc7793e6bef67454d7143d1c3e0aec1ee54b240c40",
+          "evidenceSha256": "sha256:45fdd18e76baddfe23a74375eefdbb7d688cc5493b658e5d51bb168bf7468117",
+          "officialAudioSha256": "sha256:2333b5b9a08e6d5c4eaf462a262af056dd3ed771855a8faa1603996e5ec733a5",
+          "parentTranscriptSha256": "sha256:7dd96cd1b728dace6d3fd6652b271726270d88dd10f14a00a6c9786aac08a400",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "reviewedSectionStartSeconds": 2.26,
+          "reviewedSectionEndSeconds": 2624.57,
+          "reviewedSectionWordCount": 6448
+        }
+      ],
+      "rationale": "Transcriptul face din foamea după laptele curat al Cuvântului un test practic al nașterii din nou: așa cum un nou-născut viu cere lapte, cel născut din Dumnezeu tânjește după Cuvânt ca să crească în mântuirea sufletului. Sursa leagă apoi această creștere de zidirea împreună cu alți credincioși într-o casă spirituală, nu de un creștinism individualist. Copy-ul anterior păstra imaginile, dar nu această forță a argumentului.",
+      "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against persisted official CFC audio transcript",
+      "reviewedOn": "2026-08-10",
+      "revisedTeaching": "Creșterea începe prin lepădarea răutății, vicleniei, ipocriziei, invidiei și vorbirii de rău și printr-o foame reală după Cuvânt. Așa cum un copil nou-născut viu cere lapte fără să fie învățat, unul dintre semnele unei nașteri din nou reale este dorința după laptele curat al Cuvântului; prin el creștem în ceea ce privește mântuirea sufletului. Harul adevărat nu ne lasă izolați. Venind la Hristos, Piatra vie, suntem zidiți împreună cu alți credincioși ca pietre vii într-o casă spirituală și într-o preoție sfântă. Viața nouă produce atât foame după adevăr, cât și părtășie cu poporul lui Dumnezeu, ca să vestim caracterul Celui care ne-a scos din întuneric."
+    },
+    {
+      "bookId": "1-petru",
+      "chapter": 2,
+      "unitId": "1-petru-2-11-17-source-first",
+      "status": "approved-against-transcript",
+      "action": "rewrite",
+      "reviewedTeachingSha256": "sha256:1078bfacdc9b61413124d50b1357308e2d65e8d374b1a7b5ea8a4146242c2172",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/through-the-bible/1-peter-2-peter",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/through-the-bible/66-1peter-and-2peter.mp3",
+          "sourceRange": "1 Peter 1:1-5:14; official shared study segment 2.26-2624.57s before explicit 2 Peter transition",
+          "transcriptSha256": "sha256:a12b27fe401eeddf6b163bcc7793e6bef67454d7143d1c3e0aec1ee54b240c40",
+          "evidenceSha256": "sha256:45fdd18e76baddfe23a74375eefdbb7d688cc5493b658e5d51bb168bf7468117",
+          "officialAudioSha256": "sha256:2333b5b9a08e6d5c4eaf462a262af056dd3ed771855a8faa1603996e5ec733a5",
+          "parentTranscriptSha256": "sha256:7dd96cd1b728dace6d3fd6652b271726270d88dd10f14a00a6c9786aac08a400",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "reviewedSectionStartSeconds": 2.26,
+          "reviewedSectionEndSeconds": 2624.57,
+          "reviewedSectionWordCount": 6448
+        }
+      ],
+      "rationale": "Copy-ul actual păstrează supunerea față de autorități și cinstirea tuturor, dar transcriptul o prezintă explicit ca parte a mântuirii sufletului și a sfințirii prin harul adevărat, chiar sub o autoritate nedreaptă. Sursa contrastează și cerințele Vechiului Legământ cu deplinătatea Noului Legământ: nu doar unii oameni, ci toți trebuie cinstiți.",
+      "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against persisted official CFC audio transcript",
+      "reviewedOn": "2026-08-10",
+      "revisedTeaching": "Poftele firii se războiesc împotriva sufletului, iar harul adevărat ne învață și supunerea. Petru cere credincioșilor să se supună autorităților omenești pentru Domnul; această chemare a fost dată într-o vreme în care conducătorii puteau fi foarte răi. Dumnezeu poate folosi chiar o autoritate dificilă pentru sfințirea noastră, iar un spirit de revoltă nu este o dovadă de maturitate spirituală. Libertatea în Hristos nu este o acoperire pentru rău. În Noul Legământ chemarea se lărgește: nu cinstim doar o categorie privilegiată, ci pe toți oamenii. Iubim fraternitatea, ne temem de Dumnezeu și dăm cinste autorității, arătând prin purtare că harul lui Dumnezeu ne-a făcut slujitori, nu oameni dominați de rebeliune și dispreț."
+    },
+    {
+      "bookId": "1-petru",
+      "chapter": 2,
+      "unitId": "1-petru-2-18-25-source-first",
+      "status": "approved-against-transcript",
+      "action": "keep",
+      "reviewedTeachingSha256": "sha256:ae365fb3bd9e8c855a27a2ec1c907ddf167a79660d95e0813ecc65a8d288ebb2",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/through-the-bible/1-peter-2-peter",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/through-the-bible/66-1peter-and-2peter.mp3",
+          "sourceRange": "1 Peter 1:1-5:14; official shared study segment 2.26-2624.57s before explicit 2 Peter transition",
+          "transcriptSha256": "sha256:a12b27fe401eeddf6b163bcc7793e6bef67454d7143d1c3e0aec1ee54b240c40",
+          "evidenceSha256": "sha256:45fdd18e76baddfe23a74375eefdbb7d688cc5493b658e5d51bb168bf7468117",
+          "officialAudioSha256": "sha256:2333b5b9a08e6d5c4eaf462a262af056dd3ed771855a8faa1603996e5ec733a5",
+          "parentTranscriptSha256": "sha256:7dd96cd1b728dace6d3fd6652b271726270d88dd10f14a00a6c9786aac08a400",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "reviewedSectionStartSeconds": 2.26,
+          "reviewedSectionEndSeconds": 2624.57,
+          "reviewedSectionWordCount": 6448
+        }
+      ],
+      "rationale": "Copy-ul curent păstrează fidel accentul transcriptului: adevăratul har se vede când omul se supune chiar unui stăpân nerezonabil, suferă pentru bine și urmează pașii lui Isus, Care nu a păcătuit, nu a amenințat și Și-a încredințat cauza Tatălui. Nu este necesară o rescriere materială.",
+      "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against persisted official CFC audio transcript",
+      "reviewedOn": "2026-08-10"
+    },
+    {
+      "bookId": "1-petru",
+      "chapter": 3,
+      "unitId": "1-petru-3-1-7-source-first",
+      "status": "approved-against-transcript",
+      "action": "rewrite",
+      "reviewedTeachingSha256": "sha256:a091580a3ba64091f625e6e642673363cb0d1dd83e7960b01f0c5f86530b0517",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/through-the-bible/1-peter-2-peter",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/through-the-bible/66-1peter-and-2peter.mp3",
+          "sourceRange": "1 Peter 1:1-5:14; official shared study segment 2.26-2624.57s before explicit 2 Peter transition",
+          "transcriptSha256": "sha256:a12b27fe401eeddf6b163bcc7793e6bef67454d7143d1c3e0aec1ee54b240c40",
+          "evidenceSha256": "sha256:45fdd18e76baddfe23a74375eefdbb7d688cc5493b658e5d51bb168bf7468117",
+          "officialAudioSha256": "sha256:2333b5b9a08e6d5c4eaf462a262af056dd3ed771855a8faa1603996e5ec733a5",
+          "parentTranscriptSha256": "sha256:7dd96cd1b728dace6d3fd6652b271726270d88dd10f14a00a6c9786aac08a400",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "reviewedSectionStartSeconds": 2.26,
+          "reviewedSectionEndSeconds": 2624.57,
+          "reviewedSectionWordCount": 6448
+        }
+      ],
+      "rationale": "Copy-ul curent păstrează supunerea soției, duhul blând și cinstea datorată soției, dar transcriptul dezvoltă material responsabilitatea practică a soțului: a trăi cu înțelegere înseamnă să nu pună pe soție poveri pe care el ar trebui să le poarte și să transforme chiar devoțiunea religioasă în ajutor concret când familia are nevoie. Sursa numește aceasta un semn al harului adevărat.",
+      "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against persisted official CFC audio transcript",
+      "reviewedOn": "2026-08-10",
+      "revisedTeaching": "Petru le cheamă pe soții la o purtare curată și la un duh blând și liniștit, care are mare preț înaintea lui Dumnezeu și poate câștiga chiar un soț neascultător de Cuvânt. Dar harul adevărat se vede la fel de concret și în soț. El trebuie să trăiască cu înțelegere, să-și cinstească soția și să recunoască în mod practic slăbiciunea ei fizică, nu punând pe umerii ei poveri pe care el ar trebui să le poarte. Uneori ascultarea de Dumnezeu înseamnă să întrerupi chiar o activitate religioasă și să ajuți acolo unde familia este copleșită. Soțul și soția sunt împreună-moștenitori ai harului vieții, iar o casă în care supunerea, blândețea, cinstea și ajutorul practic se întâlnesc devine o mărturie despre caracterul lui Dumnezeu."
+    },
+    {
+      "bookId": "1-petru",
+      "chapter": 3,
+      "unitId": "1-petru-3-13-22-source-first",
+      "status": "approved-against-transcript",
+      "action": "keep",
+      "reviewedTeachingSha256": "sha256:4b1e31e2c2eebcc2d0e9ebf30f1c41dca1cba2f6e279750a3371599b7e6cbb44",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/through-the-bible/1-peter-2-peter",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/through-the-bible/66-1peter-and-2peter.mp3",
+          "sourceRange": "1 Peter 1:1-5:14; official shared study segment 2.26-2624.57s before explicit 2 Peter transition",
+          "transcriptSha256": "sha256:a12b27fe401eeddf6b163bcc7793e6bef67454d7143d1c3e0aec1ee54b240c40",
+          "evidenceSha256": "sha256:45fdd18e76baddfe23a74375eefdbb7d688cc5493b658e5d51bb168bf7468117",
+          "officialAudioSha256": "sha256:2333b5b9a08e6d5c4eaf462a262af056dd3ed771855a8faa1603996e5ec733a5",
+          "parentTranscriptSha256": "sha256:7dd96cd1b728dace6d3fd6652b271726270d88dd10f14a00a6c9786aac08a400",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "reviewedSectionStartSeconds": 2.26,
+          "reviewedSectionEndSeconds": 2624.57,
+          "reviewedSectionWordCount": 6448
+        }
+      ],
+      "rationale": "Copy-ul curent păstrează fără omisiune materială siguranța celui zelos pentru bine, suferința pentru dreptate, răspunsul despre nădejde dat cu blândețe și conștiința bună, toate confirmate explicit de transcript.",
+      "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against persisted official CFC audio transcript",
+      "reviewedOn": "2026-08-10"
+    },
+    {
+      "bookId": "1-petru",
+      "chapter": 3,
+      "unitId": "1-petru-3-8-12-source-first",
+      "status": "approved-against-transcript",
+      "action": "keep",
+      "reviewedTeachingSha256": "sha256:c0ca0eb2625f4995021c547157a02c49b627238b832137e03379fb9cb04b1968",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/through-the-bible/1-peter-2-peter",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/through-the-bible/66-1peter-and-2peter.mp3",
+          "sourceRange": "1 Peter 1:1-5:14; official shared study segment 2.26-2624.57s before explicit 2 Peter transition",
+          "transcriptSha256": "sha256:a12b27fe401eeddf6b163bcc7793e6bef67454d7143d1c3e0aec1ee54b240c40",
+          "evidenceSha256": "sha256:45fdd18e76baddfe23a74375eefdbb7d688cc5493b658e5d51bb168bf7468117",
+          "officialAudioSha256": "sha256:2333b5b9a08e6d5c4eaf462a262af056dd3ed771855a8faa1603996e5ec733a5",
+          "parentTranscriptSha256": "sha256:7dd96cd1b728dace6d3fd6652b271726270d88dd10f14a00a6c9786aac08a400",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "reviewedSectionStartSeconds": 2.26,
+          "reviewedSectionEndSeconds": 2624.57,
+          "reviewedSectionWordCount": 6448
+        }
+      ],
+      "rationale": "Copy-ul curent păstrează material armonia, compasiunea, refuzul răzbunării, binecuvântarea și controlul limbii; transcriptul confirmă că stăpânirea limbii este un semn al harului adevărat, fără a cere o rescriere substanțială.",
+      "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against persisted official CFC audio transcript",
+      "reviewedOn": "2026-08-10"
+    },
+    {
+      "bookId": "1-petru",
+      "chapter": 4,
+      "unitId": "1-petru-4-1-6-source-first",
+      "status": "approved-against-transcript",
+      "action": "rewrite",
+      "reviewedTeachingSha256": "sha256:f81cc2f628f6ea1b3f6efd7a08bdbaf5d76e9ce566f60e017d4cf8a223845b58",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/through-the-bible/1-peter-2-peter",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/through-the-bible/66-1peter-and-2peter.mp3",
+          "sourceRange": "1 Peter 1:1-5:14; official shared study segment 2.26-2624.57s before explicit 2 Peter transition",
+          "transcriptSha256": "sha256:a12b27fe401eeddf6b163bcc7793e6bef67454d7143d1c3e0aec1ee54b240c40",
+          "evidenceSha256": "sha256:45fdd18e76baddfe23a74375eefdbb7d688cc5493b658e5d51bb168bf7468117",
+          "officialAudioSha256": "sha256:2333b5b9a08e6d5c4eaf462a262af056dd3ed771855a8faa1603996e5ec733a5",
+          "parentTranscriptSha256": "sha256:7dd96cd1b728dace6d3fd6652b271726270d88dd10f14a00a6c9786aac08a400",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "reviewedSectionStartSeconds": 2.26,
+          "reviewedSectionEndSeconds": 2624.57,
+          "reviewedSectionWordCount": 6448
+        }
+      ],
+      "rationale": "Transcriptul dă un sens foarte concret expresiei «înarmați-vă cu același gând»: Isus a suferit în trup prin lepădarea voii proprii și ascultare, iar ucenicul hotărăște cu toată inima că preferă să sufere decât să păcătuiască. Sursa leagă această hotărâre de încetarea de a mai trăi sub stăpânirea păcatului. Copy-ul anterior vorbea despre schimbarea stăpânului, dar pierdea mecanismul central al sursei.",
+      "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against persisted official CFC audio transcript",
+      "reviewedOn": "2026-08-10",
+      "revisedTeaching": "Isus a suferit în zilele trupului Său nu doar prin ceea ce I-au făcut oamenii, ci și prin lepădarea voii proprii și prin ascultare. Ucenicul se înarmează cu aceeași hotărâre: «mai bine sufăr decât să păcătuiesc». Când mintea este hotărâtă cu toată inima să accepte costul ascultării în loc să cedeze poftei, puterea păcatului începe să fie frântă. Aceasta este calea despre care Petru spune că duce la încetarea de a mai trăi pentru păcat. Restul vieții nu mai este dat poftelor oamenilor, ci voii lui Dumnezeu. Trecutul trăit pentru lume este suficient; harul adevărat ne învață să preferăm suferința ascultării în locul plăcerii păcatului."
+    },
+    {
+      "bookId": "1-petru",
+      "chapter": 4,
+      "unitId": "1-petru-4-12-19-source-first",
+      "status": "approved-against-transcript",
+      "action": "rewrite",
+      "reviewedTeachingSha256": "sha256:d1fe088929042bf0dadd816897b8f46af766f1140dee8d8dbd5a4e9a3020e77e",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/through-the-bible/1-peter-2-peter",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/through-the-bible/66-1peter-and-2peter.mp3",
+          "sourceRange": "1 Peter 1:1-5:14; official shared study segment 2.26-2624.57s before explicit 2 Peter transition",
+          "transcriptSha256": "sha256:a12b27fe401eeddf6b163bcc7793e6bef67454d7143d1c3e0aec1ee54b240c40",
+          "evidenceSha256": "sha256:45fdd18e76baddfe23a74375eefdbb7d688cc5493b658e5d51bb168bf7468117",
+          "officialAudioSha256": "sha256:2333b5b9a08e6d5c4eaf462a262af056dd3ed771855a8faa1603996e5ec733a5",
+          "parentTranscriptSha256": "sha256:7dd96cd1b728dace6d3fd6652b271726270d88dd10f14a00a6c9786aac08a400",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "reviewedSectionStartSeconds": 2.26,
+          "reviewedSectionEndSeconds": 2624.57,
+          "reviewedSectionWordCount": 6448
+        }
+      ],
+      "rationale": "Copy-ul curent păstrează încercarea de foc și judecata care începe cu casa lui Dumnezeu, dar transcriptul dezvoltă material două aplicații omise: credinciosul poate suferi rușinos și ca om care se amestecă în treburile altora, iar sensul practic al judecății care începe cu casa lui Dumnezeu este să ne judecăm pe noi înșine înainte de a-i judeca pe ceilalți și să lăsăm judecata lor în mâna lui Dumnezeu.",
+      "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against persisted official CFC audio transcript",
+      "reviewedOn": "2026-08-10",
+      "revisedTeaching": "Încercarea de foc nu este ceva straniu pentru omul care a cunoscut harul adevărat. Dacă suntem batjocoriți pentru Numele lui Hristos, suntem binecuvântați; însă nu orice suferință este suferință pentru Hristos. Petru include nu doar crima, furtul sau răul evident, ci și amestecul în treburile altora: un credincios poate ajunge să sufere din cauza unei preocupări nesfinte pentru viața altora și aceasta este o mărturie rea. Când Petru spune că judecata începe cu casa lui Dumnezeu, aplicația este mai întâi spre noi înșine. În loc să fim grabnici să-i judecăm pe alții, ne lăsăm propria viață cercetată de Dumnezeu și lăsăm judecata celorlalți în mâna Lui. Iar dacă suferim după voia lui Dumnezeu, ne încredințăm Creatorului credincios și continuăm să facem binele."
+    },
+    {
+      "bookId": "1-petru",
+      "chapter": 4,
+      "unitId": "1-petru-4-7-11-source-first",
+      "status": "approved-against-transcript",
+      "action": "keep",
+      "reviewedTeachingSha256": "sha256:15c7c7ce3b3b3b9ae72127ef23636cb94011f856902b34203f60b7c309a94bfd",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/through-the-bible/1-peter-2-peter",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/through-the-bible/66-1peter-and-2peter.mp3",
+          "sourceRange": "1 Peter 1:1-5:14; official shared study segment 2.26-2624.57s before explicit 2 Peter transition",
+          "transcriptSha256": "sha256:a12b27fe401eeddf6b163bcc7793e6bef67454d7143d1c3e0aec1ee54b240c40",
+          "evidenceSha256": "sha256:45fdd18e76baddfe23a74375eefdbb7d688cc5493b658e5d51bb168bf7468117",
+          "officialAudioSha256": "sha256:2333b5b9a08e6d5c4eaf462a262af056dd3ed771855a8faa1603996e5ec733a5",
+          "parentTranscriptSha256": "sha256:7dd96cd1b728dace6d3fd6652b271726270d88dd10f14a00a6c9786aac08a400",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "reviewedSectionStartSeconds": 2.26,
+          "reviewedSectionEndSeconds": 2624.57,
+          "reviewedSectionWordCount": 6448
+        }
+      ],
+      "rationale": "Copy-ul curent păstrează material cumpătarea, rugăciunea, dragostea fierbinte, ospitalitatea și folosirea darului în puterea lui Dumnezeu. Transcriptul accentuează generozitatea și inima largă drept roade ale harului, dar aceste idei nu schimbă suficient conținutul pentru a cere o rescriere completă.",
+      "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against persisted official CFC audio transcript",
+      "reviewedOn": "2026-08-10"
+    },
+    {
+      "bookId": "1-petru",
+      "chapter": 5,
+      "unitId": "1-petru-5-1-5-source-first",
+      "status": "approved-against-transcript",
+      "action": "keep",
+      "reviewedTeachingSha256": "sha256:29d1e9c122d66c894f603d15e4a4d03d6e0227af38ea6a92a536662ff8a6d1dd",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/through-the-bible/1-peter-2-peter",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/through-the-bible/66-1peter-and-2peter.mp3",
+          "sourceRange": "1 Peter 1:1-5:14; official shared study segment 2.26-2624.57s before explicit 2 Peter transition",
+          "transcriptSha256": "sha256:a12b27fe401eeddf6b163bcc7793e6bef67454d7143d1c3e0aec1ee54b240c40",
+          "evidenceSha256": "sha256:45fdd18e76baddfe23a74375eefdbb7d688cc5493b658e5d51bb168bf7468117",
+          "officialAudioSha256": "sha256:2333b5b9a08e6d5c4eaf462a262af056dd3ed771855a8faa1603996e5ec733a5",
+          "parentTranscriptSha256": "sha256:7dd96cd1b728dace6d3fd6652b271726270d88dd10f14a00a6c9786aac08a400",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "reviewedSectionStartSeconds": 2.26,
+          "reviewedSectionEndSeconds": 2624.57,
+          "reviewedSectionWordCount": 6448
+        }
+      ],
+      "rationale": "Copy-ul curent păstrează fidel provocarea transcriptului pentru prezbiteri: slujire voluntară, fără căutarea banilor, fără dominație, prin exemplu; păstrează și chemarea tinerilor la supunere și a tuturor la smerenie. Nu este necesară o rescriere materială.",
+      "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against persisted official CFC audio transcript",
+      "reviewedOn": "2026-08-10"
+    },
+    {
+      "bookId": "1-petru",
+      "chapter": 5,
+      "unitId": "1-petru-5-12-14-source-first",
+      "status": "approved-against-transcript",
+      "action": "keep",
+      "reviewedTeachingSha256": "sha256:b30d9b2518e5307b0c673e99a13b8bdf7df2e321e739f0d633ad05458fa75f0b",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/through-the-bible/1-peter-2-peter",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/through-the-bible/66-1peter-and-2peter.mp3",
+          "sourceRange": "1 Peter 1:1-5:14; official shared study segment 2.26-2624.57s before explicit 2 Peter transition",
+          "transcriptSha256": "sha256:a12b27fe401eeddf6b163bcc7793e6bef67454d7143d1c3e0aec1ee54b240c40",
+          "evidenceSha256": "sha256:45fdd18e76baddfe23a74375eefdbb7d688cc5493b658e5d51bb168bf7468117",
+          "officialAudioSha256": "sha256:2333b5b9a08e6d5c4eaf462a262af056dd3ed771855a8faa1603996e5ec733a5",
+          "parentTranscriptSha256": "sha256:7dd96cd1b728dace6d3fd6652b271726270d88dd10f14a00a6c9786aac08a400",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "reviewedSectionStartSeconds": 2.26,
+          "reviewedSectionEndSeconds": 2624.57,
+          "reviewedSectionWordCount": 6448
+        }
+      ],
+      "rationale": "Copy-ul curent surprinde chiar tema declarată de transcript: epistola descrie adevăratul har al lui Dumnezeu, care produce sfințenie, supunere, dragoste, smerenie și statornicie în suferință. Finalul este deja semantic fidel.",
+      "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against persisted official CFC audio transcript",
+      "reviewedOn": "2026-08-10"
+    },
+    {
+      "bookId": "1-petru",
+      "chapter": 5,
+      "unitId": "1-petru-5-6-11-source-first",
+      "status": "approved-against-transcript",
+      "action": "rewrite",
+      "reviewedTeachingSha256": "sha256:faa0d57d044b8c06861936055148e412ab7a102ade469e858c473b5f369f75bc",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/through-the-bible/1-peter-2-peter",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/through-the-bible/66-1peter-and-2peter.mp3",
+          "sourceRange": "1 Peter 1:1-5:14; official shared study segment 2.26-2624.57s before explicit 2 Peter transition",
+          "transcriptSha256": "sha256:a12b27fe401eeddf6b163bcc7793e6bef67454d7143d1c3e0aec1ee54b240c40",
+          "evidenceSha256": "sha256:45fdd18e76baddfe23a74375eefdbb7d688cc5493b658e5d51bb168bf7468117",
+          "officialAudioSha256": "sha256:2333b5b9a08e6d5c4eaf462a262af056dd3ed771855a8faa1603996e5ec733a5",
+          "parentTranscriptSha256": "sha256:7dd96cd1b728dace6d3fd6652b271726270d88dd10f14a00a6c9786aac08a400",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "reviewedSectionStartSeconds": 2.26,
+          "reviewedSectionEndSeconds": 2624.57,
+          "reviewedSectionWordCount": 6448
+        }
+      ],
+      "rationale": "Transcriptul explică material «mâna puternică a lui Dumnezeu» ca împrejurările pe care Dumnezeu le îngăduie — conducători dificili, vecini, lipsuri, boală și încercare — și leagă smerirea sub această mână de capacitatea de a ne împotrivi diavolului. Copy-ul anterior păstra smerenia și împotrivirea, dar nu această legătură practică centrală.",
+      "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against persisted official CFC audio transcript",
+      "reviewedOn": "2026-08-10",
+      "revisedTeaching": "Dumnezeu dă har celor smeriți, iar a ne smeri sub mâna Lui puternică înseamnă să ne plecăm înaintea împrejurărilor pe care El le îngăduie în viață: un superior dificil, un vecin greu, lipsuri financiare, boală, încercări sau alte situații apăsătoare. Nu numim răul bine, dar recunoaștem că Dumnezeu poate folosi ceea ce îngăduie pentru a ne smeri și forma. Aceeași mână care apasă pentru o vreme știe și când să ridice. Din această poziție de smerenie ne putem împotrivi diavolului, tari în credință; leul care răcnește nu are libertate asupra celui care rămâne sub mâna lui Dumnezeu. Iar după suferința acestei «puține vremi», Dumnezeul oricărui har ne desăvârșește, întărește și așază pentru slava Lui veșnică."
     },
     {
       "bookId": "2-ioan",
