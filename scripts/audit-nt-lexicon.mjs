@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+await import("./check-nt-lexicon-evidence-preflight.mjs")
 await import("./materialize-nt-lexicon-review-ledger.mjs")
 await import("./audit-nt-lexicon-core.mjs")
 await import("./materialize-nt-lexicon-review-packet.mjs")
