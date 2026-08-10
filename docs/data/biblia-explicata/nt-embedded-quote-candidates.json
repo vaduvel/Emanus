@@ -1,8 +1,8 @@
 {
   "schema": "emanus-nt-embedded-quote-candidates-v1",
   "policy": "Diagnostic only. Candidate scores compare each unresolved quoted span with contiguous Biblia Emanus text from the same canonical chapter. This report never edits reader copy or clears a publication blocker by itself.",
-  "count": 120,
-  "strongCandidateCount": 13,
+  "count": 107,
+  "strongCandidateCount": 0,
   "findings": [
     {
       "bookId": "matei",
@@ -133,44 +133,6 @@
       "bookId": "matei",
       "canonicalBookId": "MAT",
       "chapter": 14,
-      "field": "literaryContext",
-      "quote": "Cu adevărat, Tu ești Fiul lui Dumnezeu.",
-      "wordCount": 7,
-      "best": {
-        "raw": "Tu ești cu adevărat Fiul lui Dumnezeu",
-        "score": 0.8429,
-        "lcsRatio": 0.7143,
-        "overlap": 1,
-        "lengthRatio": 1,
-        "start": 607,
-        "width": 7
-      },
-      "alternatives": [
-        {
-          "raw": "ești cu adevărat Fiul lui Dumnezeu! După",
-          "score": 0.7929,
-          "lcsRatio": 0.7143,
-          "overlap": 0.8571,
-          "lengthRatio": 1,
-          "start": 608,
-          "width": 7
-        },
-        {
-          "raw": "ești cu adevărat Fiul lui Dumnezeu",
-          "score": 0.7786,
-          "lcsRatio": 0.7143,
-          "overlap": 0.8571,
-          "lengthRatio": 0.8571,
-          "start": 608,
-          "width": 6
-        }
-      ],
-      "bestMargin": 0.05
-    },
-    {
-      "bookId": "matei",
-      "canonicalBookId": "MAT",
-      "chapter": 14,
       "field": "units[2].teaching",
       "quote": "Eu sunt; nu vă temeți",
       "wordCount": 5,
@@ -242,82 +204,6 @@
         }
       ],
       "bestMargin": 0
-    },
-    {
-      "bookId": "matei",
-      "canonicalBookId": "MAT",
-      "chapter": 16,
-      "field": "units[1].teaching",
-      "quote": "voi cine ziceți că sunt?",
-      "wordCount": 5,
-      "best": {
-        "raw": "voi cine spuneți că sunt",
-        "score": 0.82,
-        "lcsRatio": 0.8,
-        "overlap": 0.8,
-        "lengthRatio": 1,
-        "start": 265,
-        "width": 5
-      },
-      "alternatives": [
-        {
-          "raw": "Dar voi cine spuneți că sunt",
-          "score": 0.6833,
-          "lcsRatio": 0.6667,
-          "overlap": 0.6667,
-          "lengthRatio": 0.8333,
-          "start": 264,
-          "width": 6
-        },
-        {
-          "raw": "voi cine spuneți că sunt?” Simon",
-          "score": 0.6833,
-          "lcsRatio": 0.6667,
-          "overlap": 0.6667,
-          "lengthRatio": 0.8333,
-          "start": 265,
-          "width": 6
-        }
-      ],
-      "bestMargin": 0.1367
-    },
-    {
-      "bookId": "matei",
-      "canonicalBookId": "MAT",
-      "chapter": 17,
-      "field": "units[0].teaching",
-      "quote": "sculați-vă, nu vă temeți",
-      "wordCount": 5,
-      "best": {
-        "raw": "vă și nu vă temeți",
-        "score": 0.82,
-        "lcsRatio": 0.8,
-        "overlap": 0.8,
-        "lengthRatio": 1,
-        "start": 154,
-        "width": 5
-      },
-      "alternatives": [
-        {
-          "raw": "Ridicați-vă și nu vă temeți",
-          "score": 0.6833,
-          "lcsRatio": 0.6667,
-          "overlap": 0.6667,
-          "lengthRatio": 0.8333,
-          "start": 153,
-          "width": 6
-        },
-        {
-          "raw": "vă și nu vă temeți! Când",
-          "score": 0.6833,
-          "lcsRatio": 0.6667,
-          "overlap": 0.6667,
-          "lengthRatio": 0.8333,
-          "start": 154,
-          "width": 6
-        }
-      ],
-      "bestMargin": 0.1367
     },
     {
       "bookId": "matei",
@@ -432,44 +318,6 @@
         }
       ],
       "bestMargin": 0
-    },
-    {
-      "bookId": "matei",
-      "canonicalBookId": "MAT",
-      "chapter": 25,
-      "field": "units[2].teaching",
-      "quote": "Acești foarte neînsemnați frați ai Mei",
-      "wordCount": 6,
-      "best": {
-        "raw": "acești foarte mici frați ai Mei",
-        "score": 0.85,
-        "lcsRatio": 0.8333,
-        "overlap": 0.8333,
-        "lengthRatio": 1,
-        "start": 755,
-        "width": 6
-      },
-      "alternatives": [
-        {
-          "raw": "dintre acești foarte mici frați ai Mei",
-          "score": 0.7286,
-          "lcsRatio": 0.7143,
-          "overlap": 0.7143,
-          "lengthRatio": 0.8571,
-          "start": 754,
-          "width": 7
-        },
-        {
-          "raw": "acești foarte mici frați ai Mei, Mie",
-          "score": 0.7286,
-          "lcsRatio": 0.7143,
-          "overlap": 0.7143,
-          "lengthRatio": 0.8571,
-          "start": 755,
-          "width": 7
-        }
-      ],
-      "bestMargin": 0.1214
     },
     {
       "bookId": "matei",
@@ -816,44 +664,6 @@
     {
       "bookId": "marcu",
       "canonicalBookId": "MRK",
-      "chapter": 1,
-      "field": "units[8].teaching",
-      "quote": "Dacă voiești, poți să mă curățești",
-      "wordCount": 6,
-      "best": {
-        "raw": "Dacă vrei, poți să mă curățești",
-        "score": 0.85,
-        "lcsRatio": 0.8333,
-        "overlap": 0.8333,
-        "lengthRatio": 1,
-        "start": 698,
-        "width": 6
-      },
-      "alternatives": [
-        {
-          "raw": "spus: „Dacă vrei, poți să mă curățești",
-          "score": 0.7286,
-          "lcsRatio": 0.7143,
-          "overlap": 0.7143,
-          "lengthRatio": 0.8571,
-          "start": 697,
-          "width": 7
-        },
-        {
-          "raw": "Dacă vrei, poți să mă curățești.” Mișcat",
-          "score": 0.7286,
-          "lcsRatio": 0.7143,
-          "overlap": 0.7143,
-          "lengthRatio": 0.8571,
-          "start": 698,
-          "width": 7
-        }
-      ],
-      "bestMargin": 0.1214
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
       "chapter": 2,
       "field": "units[0].teaching",
       "quote": "Fiule, păcatele îți sunt iertate",
@@ -888,44 +698,6 @@
         }
       ],
       "bestMargin": 0
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "chapter": 3,
-      "field": "units[0].teaching",
-      "quote": "să vadă dacă-l va vindeca în ziua Sabatului, ca să-L poată învinui",
-      "wordCount": 14,
-      "best": {
-        "raw": "să vadă dacă îl va vindeca în ziua de sabat, ca să-L poată",
-        "score": 0.8071,
-        "lcsRatio": 0.7857,
-        "overlap": 0.7857,
-        "lengthRatio": 1,
-        "start": 19,
-        "width": 14
-      },
-      "alternatives": [
-        {
-          "raw": "urmăreau să vadă dacă îl va vindeca în ziua de sabat, ca să-L poată",
-          "score": 0.7533,
-          "lcsRatio": 0.7333,
-          "overlap": 0.7333,
-          "lengthRatio": 0.9333,
-          "start": 18,
-          "width": 15
-        },
-        {
-          "raw": "să vadă dacă îl va vindeca în ziua de sabat, ca să-L poată acuza",
-          "score": 0.7533,
-          "lcsRatio": 0.7333,
-          "overlap": 0.7333,
-          "lengthRatio": 0.9333,
-          "start": 19,
-          "width": 15
-        }
-      ],
-      "bestMargin": 0.0538
     },
     {
       "bookId": "marcu",
@@ -1116,44 +888,6 @@
         }
       ],
       "bestMargin": 0
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "chapter": 3,
-      "field": "units[2].teaching",
-      "quote": "Iuda Iscarioteanul, care L-a și vândut",
-      "wordCount": 7,
-      "best": {
-        "raw": "Iuda Iscarioteanul, care l-a trădat și",
-        "score": 0.8714,
-        "lcsRatio": 0.8571,
-        "overlap": 0.8571,
-        "lengthRatio": 1,
-        "start": 337,
-        "width": 7
-      },
-      "alternatives": [
-        {
-          "raw": "Canaanitul Iuda Iscarioteanul, care l-a trădat și",
-          "score": 0.7625,
-          "lcsRatio": 0.75,
-          "overlap": 0.75,
-          "lengthRatio": 0.875,
-          "start": 336,
-          "width": 8
-        },
-        {
-          "raw": "Iuda Iscarioteanul, care l-a trădat și el",
-          "score": 0.7625,
-          "lcsRatio": 0.75,
-          "overlap": 0.75,
-          "lengthRatio": 0.875,
-          "start": 337,
-          "width": 8
-        }
-      ],
-      "bestMargin": 0.1089
     },
     {
       "bookId": "marcu",
@@ -1551,44 +1285,6 @@
       "canonicalBookId": "MRK",
       "chapter": 4,
       "field": "units[2].teaching",
-      "quote": "vine Satana îndată și ia Cuvântul semănat în ei",
-      "wordCount": 9,
-      "best": {
-        "raw": "vine îndată Satan și ia Cuvântul semănat în ei",
-        "score": 0.9,
-        "lcsRatio": 0.8889,
-        "overlap": 0.8889,
-        "lengthRatio": 1,
-        "start": 274,
-        "width": 9
-      },
-      "alternatives": [
-        {
-          "raw": "aud, vine îndată Satan și ia Cuvântul semănat în ei",
-          "score": 0.81,
-          "lcsRatio": 0.8,
-          "overlap": 0.8,
-          "lengthRatio": 0.9,
-          "start": 273,
-          "width": 10
-        },
-        {
-          "raw": "vine îndată Satan și ia Cuvântul semănat în ei. La",
-          "score": 0.81,
-          "lcsRatio": 0.8,
-          "overlap": 0.8,
-          "lengthRatio": 0.9,
-          "start": 274,
-          "width": 10
-        }
-      ],
-      "bestMargin": 0.09
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "chapter": 4,
-      "field": "units[2].teaching",
       "quote": "n-au rădăcină în ei",
       "wordCount": 5,
       "best": {
@@ -1659,44 +1355,6 @@
         }
       ],
       "bestMargin": 0
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "chapter": 4,
-      "field": "units[2].teaching",
-      "quote": "aud Cuvântul, îl primesc și fac rod: unul treizeci, altul șaizeci și altul o sută",
-      "wordCount": 15,
-      "best": {
-        "raw": "aud Cuvântul, îl primesc și aduc rod: unul treizeci, altul șaizeci, iar altul o sută",
-        "score": 0.88,
-        "lcsRatio": 0.8667,
-        "overlap": 0.8667,
-        "lengthRatio": 1,
-        "start": 367,
-        "width": 15
-      },
-      "alternatives": [
-        {
-          "raw": "care aud Cuvântul, îl primesc și aduc rod: unul treizeci, altul șaizeci, iar altul o sută",
-          "score": 0.825,
-          "lcsRatio": 0.8125,
-          "overlap": 0.8125,
-          "lengthRatio": 0.9375,
-          "start": 366,
-          "width": 16
-        },
-        {
-          "raw": "aud Cuvântul, îl primesc și aduc rod: unul treizeci, altul șaizeci, iar altul o sută. Le",
-          "score": 0.825,
-          "lcsRatio": 0.8125,
-          "overlap": 0.8125,
-          "lengthRatio": 0.9375,
-          "start": 367,
-          "width": 16
-        }
-      ],
-      "bestMargin": 0.055
     },
     {
       "bookId": "marcu",
@@ -2452,44 +2110,6 @@
         }
       ],
       "bestMargin": 0
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "chapter": 5,
-      "field": "units[1].teaching",
-      "quote": "credința ta te-a mântuit; du-te în pace și fii tămăduită de boala ta",
-      "wordCount": 15,
-      "best": {
-        "raw": "credința ta te-a vindecat. Du-te în pace și fii vindecată de suferința ta",
-        "score": 0.82,
-        "lcsRatio": 0.8,
-        "overlap": 0.8,
-        "lengthRatio": 1,
-        "start": 642,
-        "width": 15
-      },
-      "alternatives": [
-        {
-          "raw": "Fiică, credința ta te-a vindecat. Du-te în pace și fii vindecată de suferința ta",
-          "score": 0.7688,
-          "lcsRatio": 0.75,
-          "overlap": 0.75,
-          "lengthRatio": 0.9375,
-          "start": 641,
-          "width": 16
-        },
-        {
-          "raw": "credința ta te-a vindecat. Du-te în pace și fii vindecată de suferința ta! Pe",
-          "score": 0.7688,
-          "lcsRatio": 0.75,
-          "overlap": 0.75,
-          "lengthRatio": 0.9375,
-          "start": 642,
-          "width": 16
-        }
-      ],
-      "bestMargin": 0.0512
     },
     {
       "bookId": "marcu",
@@ -3671,44 +3291,6 @@
       "bestMargin": 0.0189
     },
     {
-      "bookId": "romani",
-      "canonicalBookId": "ROM",
-      "chapter": 11,
-      "field": "units[2].teaching",
-      "quote": "Stai prin credință; nu te îngâmfa, ci teme-te.",
-      "wordCount": 9,
-      "best": {
-        "raw": "stai prin credință. Nu fi trufaș, ci teme-te",
-        "score": 0.8,
-        "lcsRatio": 0.7778,
-        "overlap": 0.7778,
-        "lengthRatio": 1,
-        "start": 401,
-        "width": 9
-      },
-      "alternatives": [
-        {
-          "raw": "tu stai prin credință. Nu fi trufaș, ci teme-te",
-          "score": 0.72,
-          "lcsRatio": 0.7,
-          "overlap": 0.7,
-          "lengthRatio": 0.9,
-          "start": 400,
-          "width": 10
-        },
-        {
-          "raw": "stai prin credință. Nu fi trufaș, ci teme-te! Căci",
-          "score": 0.72,
-          "lcsRatio": 0.7,
-          "overlap": 0.7,
-          "lengthRatio": 0.9,
-          "start": 401,
-          "width": 10
-        }
-      ],
-      "bestMargin": 0.08
-    },
-    {
       "bookId": "1-corinteni",
       "canonicalBookId": "1CO",
       "chapter": 10,
@@ -3883,44 +3465,6 @@
       "bestMargin": 0
     },
     {
-      "bookId": "1-corinteni",
-      "canonicalBookId": "1CO",
-      "chapter": 16,
-      "field": "units[2].teaching",
-      "quote": "tot ce faceți să fie făcut în dragoste",
-      "wordCount": 8,
-      "best": {
-        "raw": "tot ce faci să fie făcut în dragoste",
-        "score": 0.8875,
-        "lcsRatio": 0.875,
-        "overlap": 0.875,
-        "lengthRatio": 1,
-        "start": 232,
-        "width": 8
-      },
-      "alternatives": [
-        {
-          "raw": "Lasă tot ce faci să fie făcut în dragoste",
-          "score": 0.7889,
-          "lcsRatio": 0.7778,
-          "overlap": 0.7778,
-          "lengthRatio": 0.8889,
-          "start": 231,
-          "width": 9
-        },
-        {
-          "raw": "tot ce faci să fie făcut în dragoste. Vă",
-          "score": 0.7889,
-          "lcsRatio": 0.7778,
-          "overlap": 0.7778,
-          "lengthRatio": 0.8889,
-          "start": 232,
-          "width": 9
-        }
-      ],
-      "bestMargin": 0.0986
-    },
-    {
       "bookId": "2-corinteni",
       "canonicalBookId": "2CO",
       "chapter": 13,
@@ -3968,44 +3512,6 @@
         }
       ],
       "bestMargin": 0
-    },
-    {
-      "bookId": "coloseni",
-      "canonicalBookId": "COL",
-      "chapter": 1,
-      "field": "units[4].teaching",
-      "quote": "Hristos în voi, nădejdea slavei",
-      "wordCount": 5,
-      "best": {
-        "raw": "Hristos în voi, speranța slavei",
-        "score": 0.82,
-        "lcsRatio": 0.8,
-        "overlap": 0.8,
-        "lengthRatio": 1,
-        "start": 543,
-        "width": 5
-      },
-      "alternatives": [
-        {
-          "raw": "este Hristos în voi, speranța slavei",
-          "score": 0.6833,
-          "lcsRatio": 0.6667,
-          "overlap": 0.6667,
-          "lengthRatio": 0.8333,
-          "start": 542,
-          "width": 6
-        },
-        {
-          "raw": "Hristos în voi, speranța slavei. Pe",
-          "score": 0.6833,
-          "lcsRatio": 0.6667,
-          "overlap": 0.6667,
-          "lengthRatio": 0.8333,
-          "start": 543,
-          "width": 6
-        }
-      ],
-      "bestMargin": 0.1367
     },
     {
       "bookId": "coloseni",

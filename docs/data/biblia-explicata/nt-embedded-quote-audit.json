@@ -3,8 +3,8 @@
   "status": "manual-source-check-required",
   "policy": "Quoted spans of at least five words are checked against the exact current Biblia Emanus text in the same canonical book and chapter. A match elsewhere in the NT does not clear the finding. Non-matches must be replaced with BE wording, explicitly classified as non-Bible quotations, or removed before publication.",
   "quotedFragments": 150,
-  "exactMatches": 29,
-  "count": 121,
+  "exactMatches": 42,
+  "count": 108,
   "findings": [
     {
       "bookId": "matei",
@@ -47,15 +47,6 @@
       "canonicalBookId": "MAT",
       "book": "Matei",
       "chapter": 14,
-      "field": "literaryContext",
-      "quote": "Cu adevărat, Tu ești Fiul lui Dumnezeu.",
-      "wordCount": 7
-    },
-    {
-      "bookId": "matei",
-      "canonicalBookId": "MAT",
-      "book": "Matei",
-      "chapter": 14,
       "field": "units[2].teaching",
       "quote": "Eu sunt; nu vă temeți",
       "wordCount": 5,
@@ -71,28 +62,6 @@
       "chapter": 16,
       "field": "historicalContext",
       "quote": "a lega și a dezlega",
-      "wordCount": 5
-    },
-    {
-      "bookId": "matei",
-      "canonicalBookId": "MAT",
-      "book": "Matei",
-      "chapter": 16,
-      "field": "units[1].teaching",
-      "quote": "voi cine ziceți că sunt?",
-      "wordCount": 5,
-      "exactMatchElsewhere": [
-        "LUK.9",
-        "MRK.8"
-      ]
-    },
-    {
-      "bookId": "matei",
-      "canonicalBookId": "MAT",
-      "book": "Matei",
-      "chapter": 17,
-      "field": "units[0].teaching",
-      "quote": "sculați-vă, nu vă temeți",
       "wordCount": 5
     },
     {
@@ -121,15 +90,6 @@
       "field": "units[0].teaching",
       "quote": "Băgați de seamă să nu vă înșele cineva.",
       "wordCount": 8
-    },
-    {
-      "bookId": "matei",
-      "canonicalBookId": "MAT",
-      "book": "Matei",
-      "chapter": 25,
-      "field": "units[2].teaching",
-      "quote": "Acești foarte neînsemnați frați ai Mei",
-      "wordCount": 6
     },
     {
       "bookId": "matei",
@@ -216,28 +176,10 @@
       "bookId": "marcu",
       "canonicalBookId": "MRK",
       "book": "Marcu",
-      "chapter": 1,
-      "field": "units[8].teaching",
-      "quote": "Dacă voiești, poți să mă curățești",
-      "wordCount": 6
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "book": "Marcu",
       "chapter": 2,
       "field": "units[0].teaching",
       "quote": "Fiule, păcatele îți sunt iertate",
       "wordCount": 5
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "book": "Marcu",
-      "chapter": 3,
-      "field": "units[0].teaching",
-      "quote": "să vadă dacă-l va vindeca în ziua Sabatului, ca să-L poată învinui",
-      "wordCount": 14
     },
     {
       "bookId": "marcu",
@@ -283,15 +225,6 @@
       "field": "units[2].teaching",
       "quote": "ca să-i aibă cu Sine și să-i trimită să propovăduiască",
       "wordCount": 12
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "book": "Marcu",
-      "chapter": 3,
-      "field": "units[2].teaching",
-      "quote": "Iuda Iscarioteanul, care L-a și vândut",
-      "wordCount": 7
     },
     {
       "bookId": "marcu",
@@ -398,15 +331,6 @@
       "book": "Marcu",
       "chapter": 4,
       "field": "units[2].teaching",
-      "quote": "vine Satana îndată și ia Cuvântul semănat în ei",
-      "wordCount": 9
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "book": "Marcu",
-      "chapter": 4,
-      "field": "units[2].teaching",
       "quote": "n-au rădăcină în ei",
       "wordCount": 5
     },
@@ -418,15 +342,6 @@
       "field": "units[2].teaching",
       "quote": "năvălesc în ei grijile lumii, înșelăciunea bogățiilor și poftele altor lucruri",
       "wordCount": 11
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "book": "Marcu",
-      "chapter": 4,
-      "field": "units[2].teaching",
-      "quote": "aud Cuvântul, îl primesc și fac rod: unul treizeci, altul șaizeci și altul o sută",
-      "wordCount": 15
     },
     {
       "bookId": "marcu",
@@ -628,15 +543,6 @@
       "field": "units[1].teaching",
       "quote": "Cine s-a atins de hainele Mele?",
       "wordCount": 7
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "book": "Marcu",
-      "chapter": 5,
-      "field": "units[1].teaching",
-      "quote": "credința ta te-a mântuit; du-te în pace și fii tămăduită de boala ta",
-      "wordCount": 15
     },
     {
       "bookId": "marcu",
@@ -967,15 +873,6 @@
       "wordCount": 9
     },
     {
-      "bookId": "romani",
-      "canonicalBookId": "ROM",
-      "book": "Romani",
-      "chapter": 11,
-      "field": "units[2].teaching",
-      "quote": "Stai prin credință; nu te îngâmfa, ci teme-te.",
-      "wordCount": 9
-    },
-    {
       "bookId": "1-corinteni",
       "canonicalBookId": "1CO",
       "book": "1 Corinteni",
@@ -1030,15 +927,6 @@
       "wordCount": 5
     },
     {
-      "bookId": "1-corinteni",
-      "canonicalBookId": "1CO",
-      "book": "1 Corinteni",
-      "chapter": 16,
-      "field": "units[2].teaching",
-      "quote": "tot ce faceți să fie făcut în dragoste",
-      "wordCount": 8
-    },
-    {
       "bookId": "2-corinteni",
       "canonicalBookId": "2CO",
       "book": "2 Corinteni",
@@ -1063,15 +951,6 @@
       "chapter": 2,
       "field": "units[2].teaching",
       "quote": "Duceți până la capăt mântuirea",
-      "wordCount": 5
-    },
-    {
-      "bookId": "coloseni",
-      "canonicalBookId": "COL",
-      "book": "Coloseni",
-      "chapter": 1,
-      "field": "units[4].teaching",
-      "quote": "Hristos în voi, nădejdea slavei",
       "wordCount": 5
     },
     {
