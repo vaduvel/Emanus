@@ -1,5 +1,5 @@
 {
-  "schema": "emanus-nt-publication-blockers-v2",
+  "schema": "emanus-nt-publication-blockers-v3",
   "status": "blocked",
   "manifestStatus": "in_review",
   "manifestPublicationReady": false,
@@ -9,7 +9,8 @@
     "chapters": 260,
     "units": 970,
     "wholeChapterSummaryUnits": 0,
-    "thinUnits": 42,
+    "thinUnits": 14,
+    "conciseUnitsAccepted": 28,
     "emptyHeadings": 0,
     "missingSourceAnchors": 0,
     "invalidSourceAnchors": 0,
@@ -30,128 +31,455 @@
     },
     {
       "id": "thin-explanation-units",
-      "count": 42,
-      "message": "42 explanation units are under 45 words.",
+      "count": 14,
+      "message": "14 explanation units fail the editorial sufficiency gate.",
+      "policy": "Editorial sufficiency is not a magic 45-word teaching threshold. Teaching below 30 words is always blocked. Teaching of 30-39 words is accepted only when teaching + forYourHeart reaches 50 reader-facing words. Teaching of 40+ words is accepted as a concise explanation. Any remaining thin unit must be expanded from its passage and reviewed source context; generic filler is forbidden.",
+      "thresholds": {
+        "minTeachingWords": 30,
+        "conciseTeachingWords": 40,
+        "minReaderWordsWhenConcise": 50
+      },
       "examples": [
         {
           "bookId": "fapte",
+          "bookName": "Faptele Apostolilor",
           "chapter": 4,
+          "unitIndex": 2,
+          "unitId": "fapte-4-23-31",
           "ref": "Fapte 4:23-31",
-          "words": 32
+          "verseStart": 23,
+          "verseEnd": 31,
+          "heading": "Nu scăpare ușoară, ci îndrăzneală",
+          "teaching": "Biserica nu se roagă mai întâi ca orice presiune să dispară, ci ca robii lui Dumnezeu să vestească cuvântul cu îndrăzneală. Ei Îl văd pe Dumnezeu ca Stăpân suveran peste amenințările oamenilor.",
+          "forYourHeart": "Cere nu doar împrejurări ușoare, ci o inimă liberă de frică și discernământ pentru următorul pas.",
+          "thin": true,
+          "reason": "concise-teaching-with-insufficient-reader-context",
+          "teachingWords": 32,
+          "heartWords": 16,
+          "readerWords": 48,
+          "sourceKind": "poonen-source-first-recovered",
+          "sourceIds": [
+            "legacy-poonen-acts"
+          ],
+          "sourceAnchors": [
+            {
+              "sourceId": "legacy-poonen-acts",
+              "locator": "Episode 3: Fapte 3:17-5:11",
+              "evidenceId": "ev-recovered-fapte-episode-003",
+              "evidenceSha256": "sha256:369590d52f966d771c7f205c060ba7bc607061b8e779c09cfd9fbaf9bf7ad80f",
+              "verificationLevel": "official-episode-range-registry"
+            }
+          ]
         },
         {
           "bookId": "fapte",
-          "chapter": 4,
-          "ref": "Fapte 4:32-37",
-          "words": 36
-        },
-        {
-          "bookId": "fapte",
+          "bookName": "Faptele Apostolilor",
           "chapter": 5,
+          "unitIndex": 1,
+          "unitId": "fapte-5-12-16",
           "ref": "Fapte 5:12-16",
-          "words": 34
-        },
-        {
-          "bookId": "fapte",
-          "chapter": 11,
-          "ref": "Fapte 11:27-30",
-          "words": 42
-        },
-        {
-          "bookId": "fapte",
-          "chapter": 14,
-          "ref": "Fapte 14:8-18",
-          "words": 37
-        },
-        {
-          "bookId": "fapte",
-          "chapter": 16,
-          "ref": "Fapte 16:16-24",
-          "words": 41
-        },
-        {
-          "bookId": "fapte",
-          "chapter": 18,
-          "ref": "Fapte 18:12-17",
-          "words": 43
-        },
-        {
-          "bookId": "fapte",
-          "chapter": 23,
-          "ref": "Fapte 23:12-22",
-          "words": 43
+          "verseStart": 12,
+          "verseEnd": 16,
+          "heading": "Semne care Îl indică pe Dumnezeu",
+          "teaching": "Mulți sunt vindecați, iar oamenii recunosc o lucrare puternică. Apostolii rămân împreună și nu folosesc semnele ca să ridice vedete rivale. Rugăciunea pentru vindecare poate merge împreună cu medicină, evaluare competentă și sprijin practic.",
+          "forYourHeart": "Caută slava lui Dumnezeu și binele omului, nu senzaționalul.",
+          "thin": true,
+          "reason": "concise-teaching-with-insufficient-reader-context",
+          "teachingWords": 34,
+          "heartWords": 9,
+          "readerWords": 43,
+          "sourceKind": "poonen-source-first-recovered",
+          "sourceIds": [
+            "legacy-poonen-acts"
+          ],
+          "sourceAnchors": [
+            {
+              "sourceId": "legacy-poonen-acts",
+              "locator": "Episode 4: Fapte 5:12-7:54",
+              "evidenceId": "ev-recovered-fapte-episode-004",
+              "evidenceSha256": "sha256:dcdfdd288240057930b49aa119fd779790975595f2d74b5c32a0d183d79e26a8",
+              "verificationLevel": "official-episode-range-registry"
+            }
+          ]
         },
         {
           "bookId": "romani",
-          "chapter": 8,
-          "ref": "Romani 8:5-11",
-          "words": 40
-        },
-        {
-          "bookId": "romani",
+          "bookName": "Romani",
           "chapter": 12,
+          "unitIndex": 3,
+          "unitId": "romani-12-14-21",
           "ref": "Romani 12:14-21",
-          "words": 34
+          "verseStart": 14,
+          "verseEnd": 21,
+          "heading": "Biruiți răul prin bine",
+          "teaching": "Binecuvântarea persecutorilor, empatia, smerenia și refuzul răzbunării arată caracterul lui Hristos.\n\nÎn inima personală renunțăm la răzbunare și lăsăm judecata lui Dumnezeu, căutând pe cât depinde de noi pacea și biruind răul prin bine.",
+          "forYourHeart": null,
+          "thin": true,
+          "reason": "concise-teaching-with-insufficient-reader-context",
+          "teachingWords": 34,
+          "heartWords": 0,
+          "readerWords": 34,
+          "sourceKind": "poonen-source-first-recovered",
+          "sourceIds": [
+            "legacy-poonen-romans"
+          ],
+          "sourceAnchors": [
+            {
+              "sourceId": "legacy-poonen-romans",
+              "locator": "Episode 12: Romani 12:9-13:10",
+              "evidenceId": "ev-recovered-romani-episode-012",
+              "evidenceSha256": "sha256:538a5b0b64e5c3dbf88efa901c3eb610e3e77f2566ab84d84478ac02a8e451c0",
+              "verificationLevel": "official-episode-range-registry"
+            }
+          ]
         },
         {
           "bookId": "1-corinteni",
+          "bookName": "1 Corinteni",
           "chapter": 4,
+          "unitIndex": 2,
+          "unitId": "1-corinteni-4-14-21",
           "ref": "1 Corinteni 4:14-21",
-          "words": 30
+          "verseStart": 14,
+          "verseEnd": 21,
+          "heading": "Un tată spiritual unește dragostea cu adevărul",
+          "teaching": "Pavel nu îi rușinează ca să-i zdrobească, ci îi avertizează ca pe niște copii iubiți. Un tată spiritual nu caută salariu, control sau admirație, ci binele și maturizarea celor slujiți.",
+          "forYourHeart": "Primește corectarea care vine cu dragoste și refuză conducerea care folosește frica pentru control.",
+          "thin": true,
+          "reason": "concise-teaching-with-insufficient-reader-context",
+          "teachingWords": 30,
+          "heartWords": 14,
+          "readerWords": 44,
+          "sourceKind": "poonen-source-first-recovered",
+          "sourceIds": [
+            "legacy-poonen-1cor"
+          ],
+          "sourceAnchors": [
+            {
+              "sourceId": "legacy-poonen-1cor",
+              "locator": "Episode 4: 1 Corinteni 3:18-4:14",
+              "evidenceId": "ev-recovered-1-corinteni-episode-004",
+              "evidenceSha256": "sha256:9aa50b7ab0c105408ab73ac0d1a9e80a66e7caf1403c87a019859fe04154d7dd",
+              "verificationLevel": "official-episode-range-registry"
+            },
+            {
+              "sourceId": "legacy-poonen-1cor",
+              "locator": "Episode 5: 1 Corinteni 4:15-6:6",
+              "evidenceId": "ev-recovered-1-corinteni-episode-005",
+              "evidenceSha256": "sha256:0c70bea68dc7da5fffb1bfc41405539dbfbd54da38bd34b4fdcd9ea2e7c3d27e",
+              "verificationLevel": "official-episode-range-registry"
+            }
+          ]
         },
         {
           "bookId": "1-corinteni",
-          "chapter": 5,
-          "ref": "1 Corinteni 5:1-8",
-          "words": 35
-        },
-        {
-          "bookId": "1-corinteni",
-          "chapter": 6,
-          "ref": "1 Corinteni 6:1-8",
-          "words": 44
-        },
-        {
-          "bookId": "1-corinteni",
+          "bookName": "1 Corinteni",
           "chapter": 7,
+          "unitIndex": 0,
+          "unitId": "1-corinteni-7-1-9",
           "ref": "1 Corinteni 7:1-9",
-          "words": 31
+          "verseStart": 1,
+          "verseEnd": 9,
+          "heading": "Trupul soților este dat în grijă reciprocă",
+          "teaching": "Căsătoria include responsabilitate reciprocă, nu privilegiu unilateral. Soțul și soția trebuie să se îngrijească unul de celălalt și să nu folosească abstinența ca armă, decât prin acord și pentru un timp.",
+          "forYourHeart": "Vorbește cu sinceritate și blândețe despre nevoile și limitele voastre, fără presiune sau manipulare.",
+          "thin": true,
+          "reason": "concise-teaching-with-insufficient-reader-context",
+          "teachingWords": 31,
+          "heartWords": 14,
+          "readerWords": 45,
+          "sourceKind": "poonen-source-first-recovered",
+          "sourceIds": [
+            "legacy-poonen-1cor"
+          ],
+          "sourceAnchors": [
+            {
+              "sourceId": "legacy-poonen-1cor",
+              "locator": "Episode 7: 1 Corinteni 7:1-7:24",
+              "evidenceId": "ev-recovered-1-corinteni-episode-007",
+              "evidenceSha256": "sha256:588692dff6c2ef4fe54b1cafe5d49979cbe26349e68b09e48b57d5c619bf52fb",
+              "verificationLevel": "official-episode-range-registry"
+            }
+          ]
         },
         {
           "bookId": "1-corinteni",
-          "chapter": 7,
-          "ref": "1 Corinteni 7:10-16",
-          "words": 42
-        },
-        {
-          "bookId": "1-corinteni",
-          "chapter": 10,
-          "ref": "1 Corinteni 10:6-13",
-          "words": 35
-        },
-        {
-          "bookId": "1-corinteni",
+          "bookName": "1 Corinteni",
           "chapter": 13,
+          "unitIndex": 1,
+          "unitId": "1-corinteni-13-4-7",
           "ref": "1 Corinteni 13:4-7",
-          "words": 25
+          "verseStart": 4,
+          "verseEnd": 7,
+          "heading": "Dragostea nu caută folosul său",
+          "teaching": "Dragostea este răbdătoare, bună, fără invidie, laudă și aroganță. Ea nu ține registrul răului pentru a hrăni resentimentul și nu se bucură când adversarul cade.",
+          "forYourHeart": null,
+          "thin": true,
+          "reason": "teaching-below-hard-minimum",
+          "teachingWords": 25,
+          "heartWords": 0,
+          "readerWords": 25,
+          "sourceKind": "poonen-source-first-recovered",
+          "sourceIds": [
+            "legacy-poonen-1cor"
+          ],
+          "sourceAnchors": [
+            {
+              "sourceId": "legacy-poonen-1cor",
+              "locator": "Episode 14: 1 Corinteni 12:22-13:13",
+              "evidenceId": "ev-recovered-1-corinteni-episode-014",
+              "evidenceSha256": "sha256:c89a0bed9dadac8a9c7f6fb3350f9411bde4b96e39afb7c74f2208ca1c342f58",
+              "verificationLevel": "official-episode-range-registry"
+            }
+          ]
         },
         {
           "bookId": "1-corinteni",
-          "chapter": 14,
-          "ref": "1 Corinteni 14:34-40",
-          "words": 44
-        },
-        {
-          "bookId": "1-corinteni",
+          "bookName": "1 Corinteni",
           "chapter": 16,
+          "unitIndex": 0,
+          "unitId": "1-corinteni-16-1-4",
           "ref": "1 Corinteni 16:1-4",
-          "words": 34
+          "verseStart": 1,
+          "verseEnd": 4,
+          "heading": "Dărnicie regulată, proporțională și transparentă",
+          "teaching": "Fiecare trebuia să pună deoparte în prima zi a săptămânii, după prosperitatea primită. Dărnicia nu era impuls manipulabil, ci disciplină planificată și proporțională.\n\nPavel nu urma să transporte singur banii; comunitatea alegea persoane aprobate.",
+          "forYourHeart": "Planifică dărnicia și susține mecanisme prin care banii comunității sunt administrați verificabil.",
+          "thin": true,
+          "reason": "concise-teaching-with-insufficient-reader-context",
+          "teachingWords": 34,
+          "heartWords": 12,
+          "readerWords": 46,
+          "sourceKind": "poonen-source-first-recovered",
+          "sourceIds": [
+            "legacy-poonen-1cor"
+          ],
+          "sourceAnchors": [
+            {
+              "sourceId": "legacy-poonen-1cor",
+              "locator": "Episode 16: 1 Corinteni 15:20-16:24",
+              "evidenceId": "ev-recovered-1-corinteni-episode-016",
+              "evidenceSha256": "sha256:f6512dcc68dd1430ff8c8f4332810ee5ed9c273b601ed6cba1bd36f745fa321c",
+              "verificationLevel": "official-episode-range-registry"
+            }
+          ]
         },
         {
-          "bookId": "1-corinteni",
-          "chapter": 16,
-          "ref": "1 Corinteni 16:5-12",
-          "words": 36
+          "bookId": "2-corinteni",
+          "bookName": "2 Corinteni",
+          "chapter": 1,
+          "unitIndex": 3,
+          "unitId": "2-corinteni-1-23-24",
+          "ref": "2 Corinteni 1:23-24",
+          "verseStart": 23,
+          "verseEnd": 24,
+          "heading": "Nu stăpâni peste credința altuia",
+          "teaching": "Pavel spune că a amânat vizita pentru a-i cruța. Autoritatea apostolică urmărește bucuria și maturizarea oamenilor, nu dependența lor de lider.",
+          "forYourHeart": "Primește îndrumarea, dar păstrează-L pe Hristos ca Domn al conștiinței tale.",
+          "thin": true,
+          "reason": "teaching-below-hard-minimum",
+          "teachingWords": 21,
+          "heartWords": 11,
+          "readerWords": 32,
+          "sourceKind": "poonen-source-first-recovered",
+          "sourceIds": [
+            "legacy-poonen-2cor"
+          ],
+          "sourceAnchors": [
+            {
+              "sourceId": "legacy-poonen-2cor",
+              "locator": "Episode 2: 2 Corinteni 1:20-3:4",
+              "evidenceId": "ev-recovered-2-corinteni-episode-002",
+              "evidenceSha256": "sha256:759654633b3eae9d1840fafc78aac32677d61ff9951d0d98d4741ade7a3e547c",
+              "verificationLevel": "official-episode-range-registry"
+            }
+          ]
+        },
+        {
+          "bookId": "2-corinteni",
+          "bookName": "2 Corinteni",
+          "chapter": 2,
+          "unitIndex": 1,
+          "unitId": "2-corinteni-2-5-11",
+          "ref": "2 Corinteni 2:5-11",
+          "verseStart": 5,
+          "verseEnd": 11,
+          "heading": "Să nu fie copleșit de prea multă întristare",
+          "teaching": "După pocăință, comunitatea trebuie să ierte, să mângâie și să-și confirme dragostea. Disciplina fără cale de întoarcere devine pedeapsă omenească, nu restaurare creștină.\n\nEa refuză răzbunarea personală, în timp ce adevărul, limitele și dreptatea pot rămâne necesare.",
+          "forYourHeart": null,
+          "thin": true,
+          "reason": "concise-teaching-with-insufficient-reader-context",
+          "teachingWords": 37,
+          "heartWords": 0,
+          "readerWords": 37,
+          "sourceKind": "poonen-source-first-recovered",
+          "sourceIds": [
+            "legacy-poonen-2cor"
+          ],
+          "sourceAnchors": [
+            {
+              "sourceId": "legacy-poonen-2cor",
+              "locator": "Episode 2: 2 Corinteni 1:20-3:4",
+              "evidenceId": "ev-recovered-2-corinteni-episode-002",
+              "evidenceSha256": "sha256:759654633b3eae9d1840fafc78aac32677d61ff9951d0d98d4741ade7a3e547c",
+              "verificationLevel": "official-episode-range-registry"
+            }
+          ]
+        },
+        {
+          "bookId": "2-corinteni",
+          "bookName": "2 Corinteni",
+          "chapter": 6,
+          "unitIndex": 2,
+          "unitId": "2-corinteni-6-14-18",
+          "ref": "2 Corinteni 6:14-18",
+          "verseStart": 14,
+          "verseEnd": 18,
+          "heading": "Templul Dumnezeului celui viu",
+          "teaching": "A nu fi înjugat nepotrivit nu este o chemare la izolare sau superioritate, ci la refuzul alianțelor care cer compromis cu idolatria și nedreptatea.\n\nSfințenia nu protejează aparența unei relații cu prețul persoanei rănite.",
+          "forYourHeart": null,
+          "thin": true,
+          "reason": "concise-teaching-with-insufficient-reader-context",
+          "teachingWords": 34,
+          "heartWords": 0,
+          "readerWords": 34,
+          "sourceKind": "poonen-source-first-recovered",
+          "sourceIds": [
+            "legacy-poonen-2cor"
+          ],
+          "sourceAnchors": [
+            {
+              "sourceId": "legacy-poonen-2cor",
+              "locator": "Episode 7: 2 Corinteni 6:3-7:5",
+              "evidenceId": "ev-recovered-2-corinteni-episode-007",
+              "evidenceSha256": "sha256:81feb8bb5da42f25ba00f43d64b2c7ef752171b682a61f144d0b5f96c5fd1825",
+              "verificationLevel": "official-episode-range-registry"
+            }
+          ]
+        },
+        {
+          "bookId": "2-corinteni",
+          "bookName": "2 Corinteni",
+          "chapter": 11,
+          "unitIndex": 2,
+          "unitId": "2-corinteni-11-16-21",
+          "ref": "2 Corinteni 11:16-21",
+          "verseStart": 16,
+          "verseEnd": 21,
+          "heading": "Îi suportați pe cei care vă robesc",
+          "teaching": "Corintenii tolerau oameni care îi robeau, îi exploatau, îi prindeau și îi umileau.",
+          "forYourHeart": null,
+          "thin": true,
+          "reason": "teaching-below-hard-minimum",
+          "teachingWords": 13,
+          "heartWords": 0,
+          "readerWords": 13,
+          "sourceKind": "poonen-source-first-recovered",
+          "sourceIds": [
+            "legacy-poonen-2cor"
+          ],
+          "sourceAnchors": [
+            {
+              "sourceId": "legacy-poonen-2cor",
+              "locator": "Episode 11: 2 Corinteni 11:4-11:33",
+              "evidenceId": "ev-recovered-2-corinteni-episode-011",
+              "evidenceSha256": "sha256:eea3284aeaf6b98fd5586ea00ececd12e9928ed2aab0a198c618df399513e459",
+              "verificationLevel": "official-episode-range-registry"
+            }
+          ]
+        },
+        {
+          "bookId": "efeseni",
+          "bookName": "Efeseni",
+          "chapter": 6,
+          "unitIndex": 0,
+          "unitId": "efeseni-6-1-4",
+          "ref": "Efeseni 6:1-4",
+          "verseStart": 1,
+          "verseEnd": 4,
+          "heading": "Copii ascultători, părinți care nu zdrobesc",
+          "teaching": "Copiii sunt chemați să asculte «în Domnul», iar părinții să-i crească prin disciplina și învățătura Lui. Autoritatea părintească este administrată înaintea lui Hristos și trebuie să formeze, nu să provoace mânie sau disperare.",
+          "forYourHeart": null,
+          "thin": true,
+          "reason": "concise-teaching-with-insufficient-reader-context",
+          "teachingWords": 33,
+          "heartWords": 0,
+          "readerWords": 33,
+          "sourceKind": "poonen-source-first-recovered",
+          "sourceIds": [
+            "legacy-poonen-ephesians"
+          ],
+          "sourceAnchors": [
+            {
+              "sourceId": "legacy-poonen-ephesians",
+              "locator": "Episode 6: Efeseni 5:21-6:11",
+              "evidenceId": "ev-recovered-efeseni-episode-006",
+              "evidenceSha256": "sha256:41c95d6ffcd8e0ebc5034778b3dc1a31cf0ceabda4cb6639c0e551eca45a32b2",
+              "verificationLevel": "official-episode-range-registry"
+            }
+          ]
+        },
+        {
+          "bookId": "filipeni",
+          "bookName": "Filipeni",
+          "chapter": 2,
+          "unitIndex": 0,
+          "unitId": "filipeni-2-1-4",
+          "ref": "Filipeni 2:1-4",
+          "verseStart": 1,
+          "verseEnd": 4,
+          "heading": "Unitate prin smerenie, nu prin control",
+          "teaching": "Părtășia Duhului produce aceeași dragoste și aceeași direcție, nu uniformitate forțată. Pavel atacă ambiția egoistă și slava deșartă, chemând fiecare credincios să observe nevoile altora și să nu se considere centrul comunității.",
+          "forYourHeart": "Alege astăzi un bine concret pe care îl poți urmări pentru altcineva fără să-ți abandonezi limitele sănătoase.",
+          "thin": true,
+          "reason": "concise-teaching-with-insufficient-reader-context",
+          "teachingWords": 32,
+          "heartWords": 17,
+          "readerWords": 49,
+          "sourceKind": "poonen-source-first-recovered",
+          "sourceIds": [
+            "legacy-poonen-philippians"
+          ],
+          "sourceAnchors": [
+            {
+              "sourceId": "legacy-poonen-philippians",
+              "locator": "Episode 1: Filipeni 1:1-2:7",
+              "evidenceId": "ev-recovered-filipeni-episode-001",
+              "evidenceSha256": "sha256:68f993923d6497a0089634ee943e4d6db9a9b7a41b0e8383334d7973d4da5a85",
+              "verificationLevel": "official-episode-range-registry"
+            }
+          ]
+        },
+        {
+          "bookId": "filipeni",
+          "bookName": "Filipeni",
+          "chapter": 2,
+          "unitIndex": 3,
+          "unitId": "filipeni-2-19-24",
+          "ref": "Filipeni 2:19-24",
+          "verseStart": 19,
+          "verseEnd": 24,
+          "heading": "Timotei caută binele altora",
+          "teaching": "Timotei este recomandat nu pentru talent, ci pentru preocuparea sinceră față de oameni. Într-un mediu în care mulți își urmăreau propriile interese, el dovedise un caracter de fiu și colaborator credincios în Evanghelie.",
+          "forYourHeart": "Evaluează slujirea după grija reală pentru oameni, nu după carismă, titlu sau promisiuni impresionante.",
+          "thin": true,
+          "reason": "concise-teaching-with-insufficient-reader-context",
+          "teachingWords": 33,
+          "heartWords": 14,
+          "readerWords": 47,
+          "sourceKind": "poonen-source-first-recovered",
+          "sourceIds": [
+            "legacy-poonen-philippians"
+          ],
+          "sourceAnchors": [
+            {
+              "sourceId": "legacy-poonen-philippians",
+              "locator": "Episode 2: Filipeni 2:5-2:30",
+              "evidenceId": "ev-recovered-filipeni-episode-002",
+              "evidenceSha256": "sha256:04444d1c6a25b6c3fbc40dbeecc7ea85ea789c45c7da70b6d176fc7ffe3e67a1",
+              "verificationLevel": "official-episode-range-registry"
+            }
+          ]
         }
       ]
     },
