@@ -68,9 +68,48 @@ jobs:
           cp docs/data/biblia-explicata/nt-final-source-first/19-evrei.json /tmp/evrei-transcripts/19-evrei.json
           cp docs/data/biblia-explicata/nt-direct-transcript-coverage.json /tmp/evrei-transcripts/nt-direct-transcript-coverage.json
 
+      - name: Export exact 2 Timotei semantic transcript representation
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/doi-timotei-transcript
+          python3 - <<'PY'
+          import importlib.util
+          import json
+          from pathlib import Path
+
+          root = Path('.').resolve()
+          worker_path = root / 'scripts/nt_semantic_copilot_worker.py'
+          spec = importlib.util.spec_from_file_location('emanus_semantic_export_2ti', worker_path)
+          if spec is None or spec.loader is None:
+              raise SystemExit('Cannot load semantic worker extractor')
+          worker = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(worker)
+
+          url = 'https://sermonindex.net/speakers/zac-poonen/through-the-bible-2-timothy-2/'
+          text = worker.extract_transcript(url)
+          sha = worker.sha256(text)
+          out = Path('/tmp/doi-timotei-transcript')
+          (out / '2-timotei.txt').write_text(text + '\n', encoding='utf-8')
+          (out / 'manifest.json').write_text(json.dumps({
+              'url': url,
+              'sha256': sha,
+              'words': len(text.split()),
+          }, indent=2) + '\n', encoding='utf-8')
+          print('2-timotei.txt', sha, len(text.split()))
+          PY
+          cp docs/data/biblia-explicata/nt-final-source-first/16-2-timotei.json /tmp/doi-timotei-transcript/16-2-timotei.json
+          cp docs/data/biblia-explicata/nt-direct-transcript-coverage.json /tmp/doi-timotei-transcript/nt-direct-transcript-coverage.json
+
       - uses: actions/upload-artifact@v4
         with:
           name: evrei-full-transcripts
           path: /tmp/evrei-transcripts
+          if-no-files-found: error
+          retention-days: 1
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: 2-timotei-exact-transcript
+          path: /tmp/doi-timotei-transcript
           if-no-files-found: error
           retention-days: 1
