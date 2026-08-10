@@ -33,7 +33,7 @@ jobs:
         continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NT_FINAL_COPILOT_MODEL: gpt-5.4
+          NT_FINAL_COPILOT_MODEL: auto
         run: |
           set -euo pipefail
           python3 scripts/nt_final_editorial_copilot_runner.py \
@@ -77,7 +77,7 @@ jobs:
               'shapeOutcome': os.environ.get('SHAPE_OUTCOME'),
               'runId': os.environ.get('RUN_ID'),
               'runAttempt': os.environ.get('RUN_ATTEMPT'),
-              'reviewerSystem': 'GitHub Copilot CLI gpt-5.4',
+              'reviewerSystem': 'GitHub Copilot CLI auto',
               'diagnosticTail': log,
           }
           Path('docs/biblia-emanus/NT-FINAL-PILOT.json').write_text(json.dumps(out, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
