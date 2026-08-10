@@ -75,6 +75,7 @@ const seenReviewIds = new Set()
 let quotedFragments = 0
 let exactMatches = 0
 let reviewedNonBibleQuotes = 0
+let reviewedCrossReferences = 0
 
 for (const file of fs.readdirSync(corpusDir).filter((name) => name.endsWith(".json")).sort()) {
   const book = JSON.parse(fs.readFileSync(path.join(corpusDir, file), "utf8"))
@@ -102,14 +103,43 @@ for (const file of fs.readdirSync(corpusDir).filter((name) => name.endsWith(".js
             })
             continue
           }
-          if (decision.classification !== "non-bible-quotation" || typeof decision.rationale !== "string" || !decision.rationale.trim()) {
+          if (typeof decision.rationale !== "string" || !decision.rationale.trim()) {
             findings.push({
               bookId: book.id, canonicalBookId: book.bookId, book: book.name, chapter: chapter.number, field, quote,
-              wordCount: words(quote).length, reviewId, quoteSha256, reviewProblem: "decision-does-not-clear-biblical-paraphrase",
+              wordCount: words(quote).length, reviewId, quoteSha256, reviewProblem: "missing-review-rationale",
             })
             continue
           }
-          reviewedNonBibleQuotes += 1
+          if (decision.classification === "non-bible-quotation") {
+            reviewedNonBibleQuotes += 1
+            continue
+          }
+          if (decision.classification === "biblical-cross-reference") {
+            if (typeof decision.targetCanonicalBookId !== "string" || !Number.isInteger(decision.targetChapter)) {
+              findings.push({
+                bookId: book.id, canonicalBookId: book.bookId, book: book.name, chapter: chapter.number, field, quote,
+                wordCount: words(quote).length, reviewId, quoteSha256, reviewProblem: "invalid-cross-reference-target",
+              })
+              continue
+            }
+            const target = beChapterByKey.get(`${decision.targetCanonicalBookId}.${decision.targetChapter}`)
+            if (!target || !target.text.includes(q)) {
+              findings.push({
+                bookId: book.id, canonicalBookId: book.bookId, book: book.name, chapter: chapter.number, field, quote,
+                wordCount: words(quote).length, reviewId, quoteSha256, reviewProblem: "cross-reference-not-exact-in-target",
+                targetCanonicalBookId: decision.targetCanonicalBookId,
+                targetChapter: decision.targetChapter,
+              })
+              continue
+            }
+            reviewedCrossReferences += 1
+            continue
+          }
+          findings.push({
+            bookId: book.id, canonicalBookId: book.bookId, book: book.name, chapter: chapter.number, field, quote,
+            wordCount: words(quote).length, reviewId, quoteSha256, reviewProblem: "unsupported-review-classification",
+            classification: decision.classification ?? null,
+          })
           continue
         }
 
@@ -141,10 +171,11 @@ const count = findings.length + ledgerProblems.length
 const report = {
   schema: "emanus-nt-embedded-quote-audit-v2",
   status: count ? "manual-source-check-required" : "clean",
-  policy: "Quoted spans of at least five words are checked against the exact current Biblia Emanus text in the same canonical book and chapter. A match elsewhere in the NT does not clear the finding. Non-matches that intend to quote Scripture must be replaced with exact BE wording or rewritten without quotation marks. Only explicitly reviewed spans that do not claim to quote Scripture may be cleared by the hash-bound non-bible-quotation ledger classification.",
+  policy: "Quoted spans of at least five words are checked against the exact current Biblia Emanus text in the same canonical book and chapter. Same-chapter exact matches clear automatically. A non-match that intends to quote Scripture must either be rewritten to exact BE wording or be explicitly reviewed as an exact biblical cross-reference to a named BE book/chapter. Only spans that do not claim to quote Scripture may use the hash-bound non-bible-quotation classification. Biblical paraphrases in quotation marks are never cleared merely by classification.",
   quotedFragments,
   exactMatches,
   reviewedNonBibleQuotes,
+  reviewedCrossReferences,
   reviewLedgerStatus: fs.existsSync(reviewLedgerPath) ? "present" : "missing",
   reviewLedgerProblems: ledgerProblems.length,
   count,
@@ -152,4 +183,4 @@ const report = {
   ledgerProblems,
 }
 fs.writeFileSync(outputPath, JSON.stringify(report, null, 2) + "\n", "utf8")
-console.log(`NT embedded quote audit: ${quotedFragments} quoted fragments; ${exactMatches} exact same-chapter BE matches; ${reviewedNonBibleQuotes} explicitly reviewed non-Bible quotations; ${count} unresolved/review problems.`)
+console.log(`NT embedded quote audit: ${quotedFragments} quoted fragments; ${exactMatches} exact same-chapter BE matches; ${reviewedCrossReferences} exact reviewed cross-references; ${reviewedNonBibleQuotes} reviewed non-Bible quotations; ${count} unresolved/review problems.`)
