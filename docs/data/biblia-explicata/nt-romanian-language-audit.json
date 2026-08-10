@@ -2,33 +2,21 @@
   "schema": "emanus-nt-romanian-language-audit-v4",
   "status": "manual-edit-required",
   "policy": "Reader-facing Romanian must use standard diacritics. Deterministic and audit rules share one registry; context-sensitive forms are handled separately, and valid definite forms such as 'simpla citare' are not false positives.",
-  "count": 88,
-  "findingGroups": 72,
+  "count": 30,
+  "findingGroups": 25,
   "tokenSummary": [
     {
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 50,
-      "groups": 37,
+      "occurrences": 24,
+      "groups": 19,
       "samples": [
-        {
-          "bookId": "ioan",
-          "chapter": 1,
-          "field": "literaryContext",
-          "context": "…i. Mai întâi, prologul arată cine este Isus: Cuvântul, viata, lumina, Singurul născut din Tatăl. Apoi, de la verset…"
-        },
         {
           "bookId": "ioan",
           "chapter": 1,
           "field": "units[0].teaching",
           "context": "…a aminte la legătura dintre viața și lumina. În El era viata; nu doar darul vieții, ci izvorul ei. Și viața aceasta…"
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 1,
-          "field": "units[0].words[1].meaning",
-          "context": "viață. La Ioan, nu numai suflare biologică, ci viata deplina care este în Fiul și se dăruiește prin El."
         },
         {
           "bookId": "ioan",
@@ -51,38 +39,50 @@
         {
           "bookId": "ioan",
           "chapter": 5,
-          "field": "summary",
-          "context": "…cu Tatăl și aduce o mărturie ampla despre autoritatea, viata și judecata încredințate Lui."
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 5,
-          "field": "literaryContext",
-          "context": "…espre Fiul: unitatea Lui cu Tatăl, puterea Lui de a da viata, autoritatea Lui de a judeca și mărturiile care arată…"
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 5,
-          "field": "prayer",
-          "context": "…asă sa ne oprim la litera fără sa venim la Tine. Da-ne viata, lumina și smerenie inaintea Ta. Amin."
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 5,
-          "field": "units[0].forYourHeart",
-          "context": "…te sa intre tocmai în locul unde ai ajuns sa-ti masori viata doar prin neputinta, asteptare și comparatia cu altii."
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 5,
-          "field": "units[1].heading",
-          "context": "Fiul da viata cui vrea"
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 5,
           "field": "units[1].teaching",
           "context": "…ă lucruri pe care numai Dumnezeu le poate face: sa dea viata și sa judece. Și tocmai acestea sunt puse în mana Fiul…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 5,
+          "field": "units[1].forYourHeart",
+          "context": "…credința ta nu se sprijină pe taria ta de a te tine în viata, ci pe El. Și dacă El te-a trecut din moarte la viata,…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 6,
+          "field": "units[1].teaching",
+          "context": "…intr-o explicatie ingusta. Lucrul limpede este acesta: viata nu vine dintr-o apropiere exterioara de Isus, ci dintr…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 8,
+          "field": "units[0].words[0].meaning",
+          "context": "Lumina lumii. Hristos ca descoperire, călăuzire și viata pentru om."
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 9,
+          "field": "prayer",
+          "context": "…i vindecat, sa mărturisim cu simplitate ce ai făcut în viata noastră. Fereste-ne de orbirea care se lauda ca vede.…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 10,
+          "field": "summary",
+          "context": "…bun, vorbește despre oile care-I cunosc glasul, despre viata data cu belșug și despre unitatea Lui cu Tatăl, starni…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 10,
+          "field": "historicalContext",
+          "context": "…i era adanc inradacinata în Scriptura lui Israel și în viata de zi cu zi. Proorocii vorbisera despre pastorii rai ș…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 10,
+          "field": "prayer",
+          "context": "…ător, ci Usa oilor și Pastorul cel bun, care Ti-ai dat viata pentru noi. Invata-ne sa ascultam glasul Tău mai mult…"
         }
       ]
     },
@@ -90,80 +90,32 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 23,
-      "groups": 20,
+      "occurrences": 4,
+      "groups": 4,
       "samples": [
-        {
-          "bookId": "ioan",
-          "chapter": 2,
-          "field": "summary",
-          "context": "…in Cana, apoi curățirea Templului și deosebirea dintre credinta trezita de semne și cunoasterea deplina a inimii omulu…"
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 2,
-          "field": "units[0].teaching",
-          "context": "…Nu inseamna ca pana atunci nu avusesera niciun fel de credinta, ci ca prin semnul acesta credința lor a fost adancita…"
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 2,
-          "field": "units[2].words[0].meaning",
-          "context": "a crede, a se increde. Același verb arată aici și credinta oamenilor, și faptul ca Isus nu Se incredea în ei."
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 4,
-          "field": "prayer",
-          "context": "…lo unde ne ceri sa mergem numai pe cuvântul Tău, da-ne credinta slujbasului imparatesc. Amin."
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 4,
-          "field": "units[2].teaching",
-          "context": "…doar cuvântul Domnului. Și a mers pe el. Aici se coace credinta: când omul se sprijină pe cuvântul lui Hristos înainte…"
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 5,
-          "field": "units[1].forYourHeart",
-          "context": "Dacă Fiul are viata în Sine, atunci credinta ta nu se sprijină pe taria ta de a te tine în viata, c…"
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 6,
-          "field": "literaryContext",
-          "context": "…la adanc. Multi vin pentru pâine, însă Domnul le cere credinta în Persoana Lui. De aceea capitolul se sfârșește cu o…"
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 6,
-          "field": "units[1].teaching",
-          "context": "…ea lui Dumnezeu începe nu cu acumularea noastră, ci cu credinta în Fiul. Apoi vine marele Eu sunt: Painea vieții. Man…"
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 6,
-          "field": "units[1].forYourHeart",
-          "context": "…e doar mai mult ajutor, ci Hristos Insusi, primit prin credinta și tinut aproape."
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 6,
-          "field": "units[2].forYourHeart",
-          "context": "…une Domnul, dar întrebarea rămâne: la cine sa te duci? Credinta matura nu inseamna ca toate au devenit usoare, ci ca a…"
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 8,
-          "field": "units[2].forYourHeart",
-          "context": "Când tot ce poate fi clătinat se clatina, credinta ta se poate odihni în Acesta: mai înainte de Avraam, E…"
-        },
         {
           "bookId": "ioan",
           "chapter": 9,
           "field": "historicalContext",
           "context": "…întrebarea despre originea lui Isus taie din nou intre credinta și împotrivire."
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 10,
+          "field": "literaryContext",
+          "context": "…aznicului Innoirii Templului, unde Domnul leaga iarasi credinta de lucrarile Sale și de ascultarea oilor. Totul culmin…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 10,
+          "field": "units[1].teaching",
+          "context": "Sa luam bine seama la legătura dintre credinta și ascultarea glasului. Domnul nu spune doar ca oile L…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 11,
+          "field": "units[0].teaching",
+          "context": "…dar se sprijină pe cine este El. Asa se poarta adesea credinta sub apasarea durerii: nu vede încă iesirea, dar se ple…"
         }
       ]
     },
@@ -171,27 +123,9 @@
       "kind": "missing-diacritics",
       "token": "adevarata",
       "expected": "adevărată / adevărata",
-      "occurrences": 14,
-      "groups": 14,
+      "occurrences": 2,
+      "groups": 2,
       "samples": [
-        {
-          "bookId": "ioan",
-          "chapter": 6,
-          "field": "prayer",
-          "context": "…imim de la Tine. Invata-ne sa venim la Tine cu foamea adevarata a sufletului și sa ramanem langa cuvântul Tău chiar at…"
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 6,
-          "field": "units[1].teaching",
-          "context": "…Hristos nu este un ajutor pentru cateva zile, ci hrana adevarata pentru viata vesnica. De aceea cine vine la El și cred…"
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 6,
-          "field": "units[1].words[0].meaning",
-          "context": "Painea vieții. Hristos ca hrana adevarata și de neocolit a sufletului."
-        },
         {
           "bookId": "ioan",
           "chapter": 7,
@@ -200,82 +134,14 @@
         },
         {
           "bookId": "ioan",
-          "chapter": 8,
-          "field": "summary",
-          "context": "…ca Lumina lumii, chemarea la ramasul în Cuvânt pentru adevarata slobozire și mărturia Lui dumnezeiasca dinainte de Avr…"
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 8,
-          "field": "units[1].teaching",
-          "context": "…Cuvântul Lui. Nu orice miscare de moment este ucenicie adevarata. Dacă ramaneti în Cuvântul Meu, sunteti în adevăr ucen…"
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 8,
-          "field": "units[1].forYourHeart",
-          "context": "…confunda libertatea cu a face ce vrei. Domnul spune ca adevarata slobozire vine atunci când Fiul rupe lantul pacatului.…"
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 9,
-          "field": "units[1].forYourHeart",
-          "context": "…arturisesti ce a făcut Hristos în tine. Uneori cea mai adevarata vorba este tocmai aceasta: eram orb, și acum vad."
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 10,
-          "field": "units[0].teaching",
-          "context": "…stor. Aici se vede lărgimea Evangheliei și unitatea ei adevarata."
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 12,
-          "field": "units[0].forYourHeart",
-          "context": "Dragostea adevarata fata de Hristos nu cauta mereu cea mai eficienta imagi…"
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 12,
-          "field": "units[1].teaching",
-          "context": "…aspunsul Lui merge direct spre cruce. Asta inseamna ca adevarata vedere a lui Isus nu se oprește la curiozitate, ci aju…"
-        },
-        {
-          "bookId": "ioan",
           "chapter": 13,
           "field": "units[0].teaching",
           "context": "…aini, Domnul Se incinge cu stergarul. Asta inseamna ca adevarata mărime nu se teme sa slujească. Omul mic fuge de sluji…"
         }
       ]
-    },
-    {
-      "kind": "contextual-missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1,
-      "groups": 1,
-      "samples": [
-        {
-          "bookId": "ioan",
-          "chapter": 9,
-          "field": "units[0].teaching",
-          "context": "…es când se intalneste cu durerea altuia. Vrea o schema simpla, o cauza rapida, o ordine usor de purtat. Dar Domnul n…"
-        }
-      ]
     }
   ],
   "findings": [
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 1,
-      "field": "literaryContext",
-      "kind": "missing-diacritics",
-      "token": "viata",
-      "expected": "viață / viața",
-      "occurrences": 1,
-      "context": "…i. Mai întâi, prologul arată cine este Isus: Cuvântul, viata, lumina, Singurul născut din Tatăl. Apoi, de la verset…"
-    },
     {
       "bookId": "ioan",
       "book": "Ioan",
@@ -291,56 +157,12 @@
       "bookId": "ioan",
       "book": "Ioan",
       "chapter": 1,
-      "field": "units[0].words[1].meaning",
-      "kind": "missing-diacritics",
-      "token": "viata",
-      "expected": "viață / viața",
-      "occurrences": 1,
-      "context": "viață. La Ioan, nu numai suflare biologică, ci viata deplina care este în Fiul și se dăruiește prin El."
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 1,
       "field": "units[3].teaching",
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
       "occurrences": 1,
       "context": "…Numai El poate sa dea omului nu doar apa din afara, ci viata dinlăuntru."
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 2,
-      "field": "summary",
-      "kind": "missing-diacritics",
-      "token": "credinta",
-      "expected": "credință / credința",
-      "occurrences": 1,
-      "context": "…in Cana, apoi curățirea Templului și deosebirea dintre credinta trezita de semne și cunoasterea deplina a inimii omulu…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 2,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "credinta",
-      "expected": "credință / credința",
-      "occurrences": 1,
-      "context": "…Nu inseamna ca pana atunci nu avusesera niciun fel de credinta, ci ca prin semnul acesta credința lor a fost adancita…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 2,
-      "field": "units[2].words[0].meaning",
-      "kind": "missing-diacritics",
-      "token": "credinta",
-      "expected": "credință / credința",
-      "occurrences": 1,
-      "context": "a crede, a se increde. Același verb arată aici și credinta oamenilor, și faptul ca Isus nu Se incredea în ei."
     },
     {
       "bookId": "ioan",
@@ -367,89 +189,12 @@
     {
       "bookId": "ioan",
       "book": "Ioan",
-      "chapter": 4,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "credinta",
-      "expected": "credință / credința",
-      "occurrences": 1,
-      "context": "…lo unde ne ceri sa mergem numai pe cuvântul Tău, da-ne credinta slujbasului imparatesc. Amin."
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 4,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "credinta",
-      "expected": "credință / credința",
-      "occurrences": 1,
-      "context": "…doar cuvântul Domnului. Și a mers pe el. Aici se coace credinta: când omul se sprijină pe cuvântul lui Hristos înainte…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 5,
-      "field": "summary",
-      "kind": "missing-diacritics",
-      "token": "viata",
-      "expected": "viață / viața",
-      "occurrences": 1,
-      "context": "…cu Tatăl și aduce o mărturie ampla despre autoritatea, viata și judecata încredințate Lui."
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 5,
-      "field": "literaryContext",
-      "kind": "missing-diacritics",
-      "token": "viata",
-      "expected": "viață / viața",
-      "occurrences": 1,
-      "context": "…espre Fiul: unitatea Lui cu Tatăl, puterea Lui de a da viata, autoritatea Lui de a judeca și mărturiile care arată…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 5,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "viata",
-      "expected": "viață / viața",
-      "occurrences": 1,
-      "context": "…asă sa ne oprim la litera fără sa venim la Tine. Da-ne viata, lumina și smerenie inaintea Ta. Amin."
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 5,
-      "field": "units[0].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "viata",
-      "expected": "viață / viața",
-      "occurrences": 1,
-      "context": "…te sa intre tocmai în locul unde ai ajuns sa-ti masori viata doar prin neputinta, asteptare și comparatia cu altii."
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 5,
-      "field": "units[1].heading",
-      "kind": "missing-diacritics",
-      "token": "viata",
-      "expected": "viață / viața",
-      "occurrences": 1,
-      "context": "Fiul da viata cui vrea"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
       "chapter": 5,
       "field": "units[1].teaching",
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 7,
+      "occurrences": 4,
       "context": "…ă lucruri pe care numai Dumnezeu le poate face: sa dea viata și sa judece. Și tocmai acestea sunt puse în mana Fiul…"
     },
     {
@@ -458,87 +203,10 @@
       "chapter": 5,
       "field": "units[1].forYourHeart",
       "kind": "missing-diacritics",
-      "token": "credinta",
-      "expected": "credință / credința",
-      "occurrences": 1,
-      "context": "Dacă Fiul are viata în Sine, atunci credinta ta nu se sprijină pe taria ta de a te tine în viata, c…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 5,
-      "field": "units[1].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "viata",
-      "expected": "viață / viața",
-      "occurrences": 3,
-      "context": "Dacă Fiul are viata în Sine, atunci credinta ta nu se sprijină pe taria ta…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 5,
-      "field": "units[1].words[0].meaning",
-      "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
       "occurrences": 2,
-      "context": "viata în Sine. Viata neimprumutata, proprie dumnezeirii."
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 5,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "viata",
-      "expected": "viață / viața",
-      "occurrences": 1,
-      "context": "…are Biblia în mana, dar nu vrea sa vina la Fiul pentru viata. Apoi Domnul descoperă o radacina adanca a necredinte…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 6,
-      "field": "literaryContext",
-      "kind": "missing-diacritics",
-      "token": "credinta",
-      "expected": "credință / credința",
-      "occurrences": 1,
-      "context": "…la adanc. Multi vin pentru pâine, însă Domnul le cere credinta în Persoana Lui. De aceea capitolul se sfârșește cu o…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 6,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "adevarata",
-      "expected": "adevărată / adevărata",
-      "occurrences": 1,
-      "context": "…imim de la Tine. Invata-ne sa venim la Tine cu foamea adevarata a sufletului și sa ramanem langa cuvântul Tău chiar at…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 6,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "credinta",
-      "expected": "credință / credința",
-      "occurrences": 2,
-      "context": "…ea lui Dumnezeu începe nu cu acumularea noastră, ci cu credinta în Fiul. Apoi vine marele Eu sunt: Painea vieții. Man…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 6,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "adevarata",
-      "expected": "adevărată / adevărata",
-      "occurrences": 1,
-      "context": "…Hristos nu este un ajutor pentru cateva zile, ci hrana adevarata pentru viata vesnica. De aceea cine vine la El și cred…"
+      "context": "…credința ta nu se sprijină pe taria ta de a te tine în viata, ci pe El. Și dacă El te-a trecut din moarte la viata,…"
     },
     {
       "bookId": "ioan",
@@ -548,74 +216,8 @@
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 2,
-      "context": "…n ajutor pentru cateva zile, ci hrana adevarata pentru viata vesnica. De aceea cine vine la El și crede în El gases…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 6,
-      "field": "units[1].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "credinta",
-      "expected": "credință / credința",
       "occurrences": 1,
-      "context": "…e doar mai mult ajutor, ci Hristos Insusi, primit prin credinta și tinut aproape."
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 6,
-      "field": "units[1].words[0].meaning",
-      "kind": "missing-diacritics",
-      "token": "adevarata",
-      "expected": "adevărată / adevărata",
-      "occurrences": 1,
-      "context": "Painea vieții. Hristos ca hrana adevarata și de neocolit a sufletului."
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 6,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "viata",
-      "expected": "viață / viața",
-      "occurrences": 1,
-      "context": "…iluand adevarul. Când spune: Duhul este acela care da viata, carnea nu foloseste la nimic, Domnul nu dispretuieste…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 6,
-      "field": "units[2].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "credinta",
-      "expected": "credință / credința",
-      "occurrences": 1,
-      "context": "…une Domnul, dar întrebarea rămâne: la cine sa te duci? Credinta matura nu inseamna ca toate au devenit usoare, ci ca a…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 6,
-      "field": "units[2].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "viata",
-      "expected": "viață / viața",
-      "occurrences": 1,
-      "context": "…ca toate au devenit usoare, ci ca ai ajuns sa știi ca viata nu este în alta parte."
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 6,
-      "field": "units[2].words[0].meaning",
-      "kind": "missing-diacritics",
-      "token": "viata",
-      "expected": "viață / viața",
-      "occurrences": 1,
-      "context": "…ntele vieții vesnice. Vorbirea lui Hristos ca izvor de viata."
+      "context": "…intr-o explicatie ingusta. Lucrul limpede este acesta: viata nu vine dintr-o apropiere exterioara de Isus, ci dintr…"
     },
     {
       "bookId": "ioan",
@@ -631,39 +233,6 @@
     {
       "bookId": "ioan",
       "book": "Ioan",
-      "chapter": 7,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "viata",
-      "expected": "viață / viața",
-      "occurrences": 1,
-      "context": "…. Da-ne Duhul Tău, ca în noi sa nu stea uscaciunea, ci viata care curge. Fereste-ne de mandria religioasa care jud…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 7,
-      "field": "units[1].words[0].meaning",
-      "kind": "missing-diacritics",
-      "token": "viata",
-      "expected": "viață / viața",
-      "occurrences": 1,
-      "context": "a înseta. Foamea adanca a omului dupa viata lui Dumnezeu."
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 8,
-      "field": "summary",
-      "kind": "missing-diacritics",
-      "token": "adevarata",
-      "expected": "adevărată / adevărata",
-      "occurrences": 1,
-      "context": "…ca Lumina lumii, chemarea la ramasul în Cuvânt pentru adevarata slobozire și mărturia Lui dumnezeiasca dinainte de Avr…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
       "chapter": 8,
       "field": "units[0].words[0].meaning",
       "kind": "missing-diacritics",
@@ -671,50 +240,6 @@
       "expected": "viață / viața",
       "occurrences": 1,
       "context": "Lumina lumii. Hristos ca descoperire, călăuzire și viata pentru om."
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 8,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "adevarata",
-      "expected": "adevărată / adevărata",
-      "occurrences": 1,
-      "context": "…Cuvântul Lui. Nu orice miscare de moment este ucenicie adevarata. Dacă ramaneti în Cuvântul Meu, sunteti în adevăr ucen…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 8,
-      "field": "units[1].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "adevarata",
-      "expected": "adevărată / adevărata",
-      "occurrences": 1,
-      "context": "…confunda libertatea cu a face ce vrei. Domnul spune ca adevarata slobozire vine atunci când Fiul rupe lantul pacatului.…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 8,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "viata",
-      "expected": "viață / viața",
-      "occurrences": 1,
-      "context": "…tura finala, ci trecere sub stăpânirea Celui care este viata. Și iarasi, Avraam nu este pus impotriva lui Hristos.…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 8,
-      "field": "units[2].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "credinta",
-      "expected": "credință / credința",
-      "occurrences": 1,
-      "context": "Când tot ce poate fi clătinat se clatina, credinta ta se poate odihni în Acesta: mai înainte de Avraam, E…"
     },
     {
       "bookId": "ioan",
@@ -737,39 +262,6 @@
       "expected": "viață / viața",
       "occurrences": 1,
       "context": "…i vindecat, sa mărturisim cu simplitate ce ai făcut în viata noastră. Fereste-ne de orbirea care se lauda ca vede.…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 9,
-      "field": "units[0].teaching",
-      "kind": "contextual-missing-diacritics",
-      "token": "simpla",
-      "expected": "simplă",
-      "occurrences": 1,
-      "context": "…es când se intalneste cu durerea altuia. Vrea o schema simpla, o cauza rapida, o ordine usor de purtat. Dar Domnul n…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 9,
-      "field": "units[1].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "adevarata",
-      "expected": "adevărată / adevărata",
-      "occurrences": 1,
-      "context": "…arturisesti ce a făcut Hristos în tine. Uneori cea mai adevarata vorba este tocmai aceasta: eram orb, și acum vad."
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 9,
-      "field": "units[2].words[0].meaning",
-      "kind": "missing-diacritics",
-      "token": "credinta",
-      "expected": "credință / credința",
-      "occurrences": 1,
-      "context": "a se inchina. Plecare inaintea lui Hristos cu credinta și cinstire."
     },
     {
       "bookId": "ioan",
@@ -821,20 +313,9 @@
       "chapter": 10,
       "field": "units[0].teaching",
       "kind": "missing-diacritics",
-      "token": "adevarata",
-      "expected": "adevărată / adevărata",
-      "occurrences": 1,
-      "context": "…stor. Aici se vede lărgimea Evangheliei și unitatea ei adevarata."
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 10,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 2,
+      "occurrences": 1,
       "context": "…recere, alta scurtatura și alta poarta care sa duca la viata. Apoi vine mărturia despre Pastorul cel bun. Se cuvin…"
     },
     {
@@ -873,28 +354,6 @@
     {
       "bookId": "ioan",
       "book": "Ioan",
-      "chapter": 10,
-      "field": "units[1].words[1].meaning",
-      "kind": "missing-diacritics",
-      "token": "viata",
-      "expected": "viață / viața",
-      "occurrences": 2,
-      "context": "viata vesnica. Viata data acum și purtata pana la capat de H…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 10,
-      "field": "units[2].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "credinta",
-      "expected": "credință / credința",
-      "occurrences": 1,
-      "context": "Credinta ta nu se sprijină pe o mărturie moale, ci pe lucrarile…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
       "chapter": 11,
       "field": "summary",
       "kind": "missing-diacritics",
@@ -902,17 +361,6 @@
       "expected": "viață / viața",
       "occurrences": 1,
       "context": "…plânge împreună cu ai Sai, Se descoperă ca Învierea și Viata, îl cheama pe Lazar afara din mormant și, prin acest s…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 11,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "credinta",
-      "expected": "credință / credința",
-      "occurrences": 1,
-      "context": "…umple de intrebari, ajuta-ne sa ramanem inaintea Ta cu credinta Martei: Tu esti Hristosul, Fiul lui Dumnezeu. Mulțumi…"
     },
     {
       "bookId": "ioan",
@@ -944,8 +392,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 2,
-      "context": "…curt al ușurării grabite. El urmărește slava Fiului și credinta celor ai Sai chiar și prin întârziere. Apoi vine mare…"
+      "occurrences": 1,
+      "context": "…dar se sprijină pe cine este El. Asa se poarta adesea credinta sub apasarea durerii: nu vede încă iesirea, dar se ple…"
     },
     {
       "bookId": "ioan",
@@ -961,72 +409,6 @@
     {
       "bookId": "ioan",
       "book": "Ioan",
-      "chapter": 11,
-      "field": "units[0].words[1].meaning",
-      "kind": "missing-diacritics",
-      "token": "viata",
-      "expected": "viață / viața",
-      "occurrences": 1,
-      "context": "viață. La Ioan, viata deplina, aflata în Fiul."
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 11,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "credinta",
-      "expected": "credință / credința",
-      "occurrences": 2,
-      "context": "…exista nădejde, ori sa credem ca plansul este lipsa de credinta. În Domnul vedem și slava, și lacrima. Apoi, înainte…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 12,
-      "field": "units[0].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "adevarata",
-      "expected": "adevărată / adevărata",
-      "occurrences": 1,
-      "context": "Dragostea adevarata fata de Hristos nu cauta mereu cea mai eficienta imagi…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 12,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "adevarata",
-      "expected": "adevărată / adevărata",
-      "occurrences": 1,
-      "context": "…aspunsul Lui merge direct spre cruce. Asta inseamna ca adevarata vedere a lui Isus nu se oprește la curiozitate, ci aju…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 12,
-      "field": "units[1].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "viata",
-      "expected": "viață / viața",
-      "occurrences": 1,
-      "context": "…e naște rodul, și cum se pierde lumea ca sa se castige viata."
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 12,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "credinta",
-      "expected": "credință / credința",
-      "occurrences": 1,
-      "context": "…ine Ma vede pe Mine vede pe Cel ce M-a trimis pe Mine. Credinta în Hristos nu este o abatere de la Dumnezeu, ci intrar…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
       "chapter": 13,
       "field": "units[0].teaching",
       "kind": "missing-diacritics",
@@ -1034,28 +416,6 @@
       "expected": "adevărată / adevărata",
       "occurrences": 1,
       "context": "…aini, Domnul Se incinge cu stergarul. Asta inseamna ca adevarata mărime nu se teme sa slujească. Omul mic fuge de sluji…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 13,
-      "field": "units[0].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "adevarata",
-      "expected": "adevărată / adevărata",
-      "occurrences": 1,
-      "context": "…ca trebuie mai întâi sa te lase spalat de El. Smerenia adevarata nu este doar sa cobori, ci și sa primesti curățirea pe…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 13,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "adevarata",
-      "expected": "adevărată / adevărata",
-      "occurrences": 1,
-      "context": "…in pe sine. Se cuvine sa luam aminte la aceasta. Ravna adevarata, dacă nu este trecuta prin zdrobire, se poate bizui pr…"
     }
   ]
 }
