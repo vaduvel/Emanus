@@ -23,7 +23,7 @@ jobs:
       github.actor != 'github-actions[bot]' &&
       (github.event_name != 'pull_request' || github.event.pull_request.head.ref == 'agent/biblia-explicata-nt-integration-clean')
     runs-on: ubuntu-22.04
-    timeout-minutes: 45
+    timeout-minutes: 120
     env:
       LEGACY_NT_SOURCE_SHA: 3d305d2b894257a702acf00e2c6d41a7ab83ffde
     steps:
@@ -157,6 +157,13 @@ jobs:
           set -euo pipefail
           node scripts/normalize-nt-final-romanian-wave.mjs
           node scripts/normalize-nt-final-romanian-contextual.mjs
+
+      - name: Transcribe configured official source audio for current semantic book
+        env:
+          NT_TRANSCRIPTION_MODEL: small.en
+        run: |
+          set -euo pipefail
+          python3 scripts/transcribe_nt_current_official_audio.py
 
       - name: Apply frozen semantic transcript review ledger
         run: |
