@@ -68,9 +68,48 @@ jobs:
           cp docs/data/biblia-explicata/nt-final-source-first/19-evrei.json /tmp/evrei-transcripts/19-evrei.json
           cp docs/data/biblia-explicata/nt-direct-transcript-coverage.json /tmp/evrei-transcripts/nt-direct-transcript-coverage.json
 
+      - name: Export exact 1 Ioan transcript representation
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/unu-ioan-transcript
+          python3 - <<'PY'
+          import importlib.util
+          import json
+          from pathlib import Path
+
+          root = Path('.').resolve()
+          worker_path = root / 'scripts/nt_semantic_copilot_worker.py'
+          spec = importlib.util.spec_from_file_location('emanus_semantic_export_1john', worker_path)
+          if spec is None or spec.loader is None:
+              raise SystemExit('Cannot load semantic worker extractor')
+          worker = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(worker)
+
+          url = 'https://sermonindex.net/speakers/zac-poonen/through-the-bible-1-john/'
+          text = worker.extract_transcript(url)
+          sha = worker.sha256(text)
+          out = Path('/tmp/unu-ioan-transcript')
+          (out / '1-john.txt').write_text(text + '\n', encoding='utf-8')
+          (out / 'manifest.json').write_text(json.dumps({
+              'url': url,
+              'sha256': sha,
+              'words': len(text.split()),
+          }, indent=2) + '\n', encoding='utf-8')
+          print('1-john.txt', sha, len(text.split()))
+          PY
+          cp docs/data/biblia-explicata/nt-final-source-first/23-1-ioan.json /tmp/unu-ioan-transcript/23-1-ioan.json
+          cp docs/data/biblia-explicata/nt-direct-transcript-coverage.json /tmp/unu-ioan-transcript/nt-direct-transcript-coverage.json
+
       - uses: actions/upload-artifact@v4
         with:
           name: evrei-full-transcripts
           path: /tmp/evrei-transcripts
+          if-no-files-found: error
+          retention-days: 1
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: 1-ioan-exact-transcript
+          path: /tmp/unu-ioan-transcript
           if-no-files-found: error
           retention-days: 1
