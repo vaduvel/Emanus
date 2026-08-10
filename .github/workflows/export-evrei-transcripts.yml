@@ -68,7 +68,7 @@ jobs:
           cp docs/data/biblia-explicata/nt-final-source-first/19-evrei.json /tmp/evrei-transcripts/19-evrei.json
           cp docs/data/biblia-explicata/nt-direct-transcript-coverage.json /tmp/evrei-transcripts/nt-direct-transcript-coverage.json
 
-      - name: Export exact 2 Ioan, 3 Ioan and Iuda transcript representation
+      - name: Export exact 2 Ioan, 3 Ioan and Iuda transcript representations
         run: |
           set -euo pipefail
           mkdir -p /tmp/ioan-iuda-transcript
@@ -85,17 +85,19 @@ jobs:
           worker = importlib.util.module_from_spec(spec)
           spec.loader.exec_module(worker)
 
-          url = 'https://www.sermonindex.net/speakers/zac-poonen/through-the-bible-2-john-3-john-jude/'
-          text = worker.extract_transcript(url)
-          sha = worker.sha256(text)
+          sources = [
+              ('2-john-3-john-jude.txt', 'https://www.sermonindex.net/speakers/zac-poonen/through-the-bible-2-john-3-john-jude/'),
+              ('jude-evidence-alias.txt', 'https://www.sermonindex.net/speakers/zac-poonen/through-the-bible-2-3-john-jude/'),
+          ]
           out = Path('/tmp/ioan-iuda-transcript')
-          (out / '2-john-3-john-jude.txt').write_text(text + '\n', encoding='utf-8')
-          (out / 'manifest.json').write_text(json.dumps({
-              'url': url,
-              'sha256': sha,
-              'words': len(text.split()),
-          }, indent=2) + '\n', encoding='utf-8')
-          print('2-john-3-john-jude.txt', sha, len(text.split()))
+          meta = []
+          for name, url in sources:
+              text = worker.extract_transcript(url)
+              sha = worker.sha256(text)
+              (out / name).write_text(text + '\n', encoding='utf-8')
+              meta.append({'file': name, 'url': url, 'sha256': sha, 'words': len(text.split())})
+              print(name, sha, len(text.split()))
+          (out / 'manifest.json').write_text(json.dumps(meta, indent=2) + '\n', encoding='utf-8')
           PY
           cp docs/data/biblia-explicata/nt-final-source-first/24-2-ioan.json /tmp/ioan-iuda-transcript/24-2-ioan.json
           cp docs/data/biblia-explicata/nt-final-source-first/25-3-ioan.json /tmp/ioan-iuda-transcript/25-3-ioan.json
