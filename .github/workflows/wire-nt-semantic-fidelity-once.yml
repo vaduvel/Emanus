@@ -1,0 +1,105 @@
+name: Wire NT Semantic Fidelity Once
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-nt-integration-clean
+    paths:
+      - .github/workflows/wire-nt-semantic-fidelity-once.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  wire:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Wire semantic fidelity into publication gates
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+
+          workflow = Path('.github/workflows/nt-explanation-recovery.yml')
+          s = workflow.read_text(encoding='utf-8')
+          audit_anchor = '          node scripts/audit-nt-romanian-language.mjs\n'
+          semantic_line = '          node scripts/audit-nt-semantic-source-fidelity.mjs\n'
+          if semantic_line not in s:
+              if audit_anchor not in s:
+                  raise SystemExit('workflow Romanian audit anchor missing')
+              s = s.replace(audit_anchor, audit_anchor + semantic_line, 1)
+          ui_anchor = '          node scripts/check-nt-final-source-first.mjs\n'
+          ui_line = '          node scripts/check-nt-ui-optional-sections.mjs\n'
+          if ui_line not in s:
+              if ui_anchor not in s:
+                  raise SystemExit('workflow final structure anchor missing')
+              s = s.replace(ui_anchor, ui_anchor + ui_line, 1)
+          workflow.write_text(s, encoding='utf-8')
+
+          readiness = Path('scripts/check-nt-publication-readiness.mjs')
+          r = readiness.read_text(encoding='utf-8')
+          const_anchor = 'const lexiconAuditPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-lexicon-audit.json")\n'
+          const_line = 'const semanticFidelityAuditPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-semantic-fidelity-audit.json")\n'
+          if const_line not in r:
+              if const_anchor not in r:
+                  raise SystemExit('readiness lexicon path anchor missing')
+              r = r.replace(const_anchor, const_anchor + const_line, 1)
+
+          read_anchor = 'const lexiconAudit = readJson(lexiconAuditPath, "lexicon audit")\n'
+          read_line = 'const semanticFidelityAudit = readJson(semanticFidelityAuditPath, "semantic fidelity audit")\n'
+          if read_line not in r:
+              if read_anchor not in r:
+                  raise SystemExit('readiness lexicon read anchor missing')
+              r = r.replace(read_anchor, read_anchor + read_line, 1)
+
+          blocker_anchor = 'for (const [audit, label, id] of [[quoteAudit, "embedded quote", "embedded-quote-audit"], [languageAudit, "Romanian language", "romanian-language-audit"], [lexiconAudit, "lexicon", "lexicon-audit"]]) {'
+          semantic_block = '''if (semanticFidelityAudit.missing) {
+  pushBlocker(blockers, "semantic-fidelity-audit-missing", 1, "Semantic transcript fidelity audit is missing.")
+} else {
+  const pendingSemantic = Number(semanticFidelityAudit.counts?.pendingSemanticReview ?? 0)
+  pushBlocker(blockers, "semantic-source-fidelity-pending", pendingSemantic, `${pendingSemantic}/${units} explanation units still lack hash-bound semantic review against transcript content.`, {
+    rawTranscriptReviewed: Number(semanticFidelityAudit.counts?.rawTranscriptReviewed ?? 0),
+    semanticTranscriptReviewed: Number(semanticFidelityAudit.counts?.semanticTranscriptReviewed ?? 0),
+    staleSemanticReview: Number(semanticFidelityAudit.counts?.staleSemanticReview ?? 0),
+    examples: (semanticFidelityAudit.findings ?? []).slice(0, 20),
+  })
+}
+
+'''
+          if 'semantic-source-fidelity-pending' not in r:
+              if blocker_anchor not in r:
+                  raise SystemExit('readiness audit loop anchor missing')
+              r = r.replace(blocker_anchor, semantic_block + blocker_anchor, 1)
+
+          count_anchor = '    lexiconFindings: lexiconAudit.count ?? null,\n'
+          count_line = '    semanticFidelityPending: semanticFidelityAudit.missing ? null : Number(semanticFidelityAudit.counts?.pendingSemanticReview ?? 0),\n'
+          if count_line not in r:
+              if count_anchor not in r:
+                  raise SystemExit('readiness counts anchor missing')
+              r = r.replace(count_anchor, count_anchor + count_line, 1)
+          readiness.write_text(r, encoding='utf-8')
+          PY
+
+          node scripts/check-nt-ui-optional-sections.mjs
+
+      - name: Remove one-shot and commit
+        run: |
+          set -euo pipefail
+          rm .github/workflows/wire-nt-semantic-fidelity-once.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/workflows/nt-explanation-recovery.yml scripts/check-nt-publication-readiness.mjs .github/workflows/wire-nt-semantic-fidelity-once.yml
+          git commit -m "Gate NT publication on semantic transcript fidelity"
+          for attempt in 1 2 3; do
+            git fetch origin agent/biblia-explicata-nt-integration-clean
+            git rebase FETCH_HEAD
+            if git push origin HEAD:agent/biblia-explicata-nt-integration-clean; then exit 0; fi
+          done
+          exit 1
