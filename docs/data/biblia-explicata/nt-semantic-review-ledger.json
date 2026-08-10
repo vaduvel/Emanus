@@ -1,8 +1,89 @@
 {
   "schema": "emanus-nt-semantic-review-ledger-v1",
   "policy": "Every decision is sentence-level reviewed against complete transcript content, hash-bound to the final reader teaching/application, and backed by official-source attribution plus a persisted transcript representation. Locator-only evidence never approves semantic fidelity.",
-  "count": 110,
+  "count": 123,
   "decisions": [
+    {
+      "bookId": "2-ioan",
+      "chapter": 1,
+      "unitId": "2-ioan-1-1-3-source-first",
+      "status": "approved-against-transcript",
+      "action": "keep",
+      "reviewedTeachingSha256": "sha256:eb8abfc806a232dcf9c11009e37e21fd5eeb9e0486b54e897da7dbf972233a2e",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/bible",
+          "transcriptSourceUrl": "https://www.sermonindex.net/speakers/zac-poonen/through-the-bible-2-john-3-john-jude/",
+          "sourceRange": "Full Transcript — opening section on 2 John: commandments, love, truth, Jesus Christ came in flesh, false teachers and hospitality",
+          "transcriptSha256": "sha256:8b6b0c02ff17dce065d45f7a72d0672fb9a184bd88060e81485b2807e53826fd",
+          "evidenceSha256": "sha256:d2d72d59d253b9c1784dc9d244c0681deb62f6e9f593f520ffbd015418546b3c"
+        }
+      ],
+      "rationale": "Copy-ul curent păstrează fără omisiune materială legătura dintre adevăr, dragoste, har, milă și pace dezvoltată în transcript; nu introduce o teză străină sursei și rămâne potrivit pentru textul cititorului.",
+      "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against exact exported transcript representation",
+      "reviewedOn": "2026-08-10"
+    },
+    {
+      "bookId": "2-ioan",
+      "chapter": 1,
+      "unitId": "2-ioan-1-12-13-source-first",
+      "status": "approved-against-transcript",
+      "action": "keep",
+      "reviewedTeachingSha256": "sha256:a336eca40f66cb7ab345d6fdad7677ac404dfc15b3d6755efc1207230f932b32",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/bible",
+          "transcriptSourceUrl": "https://www.sermonindex.net/speakers/zac-poonen/through-the-bible-2-john-3-john-jude/",
+          "sourceRange": "Full Transcript — opening section on 2 John: commandments, love, truth, Jesus Christ came in flesh, false teachers and hospitality",
+          "transcriptSha256": "sha256:8b6b0c02ff17dce065d45f7a72d0672fb9a184bd88060e81485b2807e53826fd",
+          "evidenceSha256": "sha256:d2d72d59d253b9c1784dc9d244c0681deb62f6e9f593f520ffbd015418546b3c"
+        }
+      ],
+      "rationale": "Copy-ul curent păstrează fără omisiune materială dorința lui Ioan pentru părtășie față către față și bucurie deplină; nu adaugă cercetare străină sursei și nu necesită rescriere materială.",
+      "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against exact exported transcript representation",
+      "reviewedOn": "2026-08-10"
+    },
+    {
+      "bookId": "2-ioan",
+      "chapter": 1,
+      "unitId": "2-ioan-1-4-6-source-first",
+      "status": "approved-against-transcript",
+      "action": "keep",
+      "reviewedTeachingSha256": "sha256:0a544ce988ddb73d9dcbfd10a71063e0d3441fff0e94fdc28619a094d0ac2339",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/bible",
+          "transcriptSourceUrl": "https://www.sermonindex.net/speakers/zac-poonen/through-the-bible-2-john-3-john-jude/",
+          "sourceRange": "Full Transcript — opening section on 2 John: commandments, love, truth, Jesus Christ came in flesh, false teachers and hospitality",
+          "transcriptSha256": "sha256:8b6b0c02ff17dce065d45f7a72d0672fb9a184bd88060e81485b2807e53826fd",
+          "evidenceSha256": "sha256:d2d72d59d253b9c1784dc9d244c0681deb62f6e9f593f520ffbd015418546b3c"
+        }
+      ],
+      "rationale": "Copy-ul curent păstrează fără omisiune materială accentul transcriptului că dragostea se arată prin umblarea în poruncile lui Dumnezeu și nu poate fi separată de adevăr sau ascultare.",
+      "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against exact exported transcript representation",
+      "reviewedOn": "2026-08-10"
+    },
+    {
+      "bookId": "2-ioan",
+      "chapter": 1,
+      "unitId": "2-ioan-1-7-11-source-first",
+      "status": "approved-against-transcript",
+      "action": "rewrite",
+      "reviewedTeachingSha256": "sha256:3d7b5c542e6d45af11bf86ef380efae3cc222b649f061169088ebbdf6df8a485",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/bible",
+          "transcriptSourceUrl": "https://www.sermonindex.net/speakers/zac-poonen/through-the-bible-2-john-3-john-jude/",
+          "sourceRange": "Full Transcript — opening section on 2 John: commandments, love, truth, Jesus Christ came in flesh, false teachers and hospitality",
+          "transcriptSha256": "sha256:8b6b0c02ff17dce065d45f7a72d0672fb9a184bd88060e81485b2807e53826fd",
+          "evidenceSha256": "sha256:d2d72d59d253b9c1784dc9d244c0681deb62f6e9f593f520ffbd015418546b3c"
+        }
+      ],
+      "rationale": "Copy-ul curent păstrează umanitatea reală a lui Isus și refuzul de a sprijini înșelarea, dar transcriptul dezvoltă material două accente suplimentare: Isus a venit în trup ca noi, a fost ispitit ca noi și nu a păcătuit, astfel încât viața Lui devine standard practic al ascultării; iar în vreme de înșelare orice învățătură, manifestare sau lucrare trebuie comparată cu felul în care a trăit și a lucrat Isus, fără a merge dincolo de învățătura Lui.",
+      "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against exact exported transcript representation",
+      "reviewedOn": "2026-08-10",
+      "revisedTeaching": "Mulți înșelători au ieșit în lume, iar punctul decisiv este mărturisirea că Isus Hristos a venit cu adevărat în trup. El a fost făcut asemenea nouă, a fost ispitit ca noi și totuși a rămas fără păcat; de aceea viața Lui devine răspunsul practic la ideea că ascultarea și dragostea ar fi imposibile. Într-o vreme de doctrine aproape scripturale, credinciosul își ascute discernământul privind la Isus: ceea ce este prezentat drept lucrare, prosperitate sau experiență spirituală trebuie comparat cu felul în care a trăit și a lucrat El. A rămâne în învățătura lui Hristos înseamnă să nu mergem dincolo de ceea ce a învățat și a exemplificat El. Iar dragostea nu cere să oferim casă, bani sau legitimare celui care vine ca propagator al unei învățături ce-L necinstește pe Hristos; a sprijini activ o asemenea lucrare înseamnă a participa la răul ei."
+    },
     {
       "bookId": "2-tesaloniceni",
       "chapter": 1,
@@ -519,6 +600,88 @@
       "rationale": "Copy-ul curent păstrează fără omisiune materială doctrina și aplicația dezvoltate în transcript pentru această unitate; nu introduce o teză străină sursei și rămâne potrivit pentru textul cititorului.",
       "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against exact exported transcript representation",
       "reviewedOn": "2026-08-10"
+    },
+    {
+      "bookId": "3-ioan",
+      "chapter": 1,
+      "unitId": "3-ioan-1-1-4-source-first",
+      "status": "approved-against-transcript",
+      "action": "keep",
+      "reviewedTeachingSha256": "sha256:15ff2e1d1b235349866948dc462efee4db2f8851dd6dce8ae0fb26405effa4df",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/bible",
+          "transcriptSourceUrl": "https://www.sermonindex.net/speakers/zac-poonen/through-the-bible-2-john-3-john-jude/",
+          "sourceRange": "Full Transcript — 3 John: prosperity greeting; support of true workers; no money from unbelievers; Diotrephes and Demetrius",
+          "transcriptSha256": "sha256:8b6b0c02ff17dce065d45f7a72d0672fb9a184bd88060e81485b2807e53826fd",
+          "evidenceSha256": "sha256:31e513774e317b1cc59aedfe6ca0c1afb69eb3c20ffcd8ba35d28bdf26cb1d20"
+        }
+      ],
+      "rationale": "Copy-ul curent păstrează corect faptul că urarea pentru sănătate și prosperare este un salut personal, nu o doctrină de bogăție și sănătate garantată, și leagă bucuria apostolică de umblarea în adevăr.",
+      "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against exact exported transcript representation",
+      "reviewedOn": "2026-08-10"
+    },
+    {
+      "bookId": "3-ioan",
+      "chapter": 1,
+      "unitId": "3-ioan-1-11-14-source-first",
+      "status": "approved-against-transcript",
+      "action": "keep",
+      "reviewedTeachingSha256": "sha256:80462ce8084c63fdcb2cf3a21c0954c7229f4026038387949dcc6d435c5b5b54",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/bible",
+          "transcriptSourceUrl": "https://www.sermonindex.net/speakers/zac-poonen/through-the-bible-2-john-3-john-jude/",
+          "sourceRange": "Full Transcript — 3 John: prosperity greeting; support of true workers; no money from unbelievers; Diotrephes and Demetrius",
+          "transcriptSha256": "sha256:8b6b0c02ff17dce065d45f7a72d0672fb9a184bd88060e81485b2807e53826fd",
+          "evidenceSha256": "sha256:31e513774e317b1cc59aedfe6ca0c1afb69eb3c20ffcd8ba35d28bdf26cb1d20"
+        }
+      ],
+      "rationale": "Copy-ul curent păstrează contrastul dintre Diotref și mărturia bună a lui Demetrius, precum și chemarea de a imita binele; nu există o omisiune semantică materială care să justifice rescrierea.",
+      "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against exact exported transcript representation",
+      "reviewedOn": "2026-08-10"
+    },
+    {
+      "bookId": "3-ioan",
+      "chapter": 1,
+      "unitId": "3-ioan-1-5-8-source-first",
+      "status": "approved-against-transcript",
+      "action": "rewrite",
+      "reviewedTeachingSha256": "sha256:59b713ccec276e0b8645e12fcbea9a0fe19790d9d2d3af5633d2f24089ba95e7",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/bible",
+          "transcriptSourceUrl": "https://www.sermonindex.net/speakers/zac-poonen/through-the-bible-2-john-3-john-jude/",
+          "sourceRange": "Full Transcript — 3 John: prosperity greeting; support of true workers; no money from unbelievers; Diotrephes and Demetrius",
+          "transcriptSha256": "sha256:8b6b0c02ff17dce065d45f7a72d0672fb9a184bd88060e81485b2807e53826fd",
+          "evidenceSha256": "sha256:31e513774e317b1cc59aedfe6ca0c1afb69eb3c20ffcd8ba35d28bdf26cb1d20"
+        }
+      ],
+      "rationale": "Copy-ul curent spune că lucrarea nu trebuie să devină dependentă de banii necredincioșilor, dar transcriptul este mult mai explicit: lucrătorii adevărați pleacă pentru Numele Domnului fără să ia nimic de la neamuri, iar credincioșii au privilegiul de a-i găzdui, susține și trimite mai departe inclusiv cu nevoile călătoriei. Această distincție este materială pentru fidelitatea sursei.",
+      "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against exact exported transcript representation",
+      "reviewedOn": "2026-08-10",
+      "revisedTeaching": "Gaiu lucrează cu credincioșie când îi primește pe frații care au plecat pentru Numele Domnului și îi trimite mai departe într-un mod vrednic de Dumnezeu, inclusiv ajutându-i cu nevoile călătoriei. Ei slujesc încrezându-se în Dumnezeu, iar sprijinul vine din părtășia credincioșilor, nu din colectarea banilor de la cei care nu-L cunosc pe Hristos. Ioan subliniază că acești lucrători nu iau nimic de la neamuri: lucrarea Evangheliei nu trebuie finanțată de oamenii cărora li se vestește tocmai chemarea de a se întoarce la Dumnezeu. A dărui pentru lucrarea Lui este un privilegiu al copiilor lui Dumnezeu, nu o taxă pusă înaintea necredincioșilor. Când îi susținem astfel pe slujitorii adevărului, devenim împreună-lucrători cu adevărul."
+    },
+    {
+      "bookId": "3-ioan",
+      "chapter": 1,
+      "unitId": "3-ioan-1-9-10-source-first",
+      "status": "approved-against-transcript",
+      "action": "rewrite",
+      "reviewedTeachingSha256": "sha256:084b1e6552043ac06d13340fb005429cba5e428f5c6db7ec94ed95f93970e8e3",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/bible",
+          "transcriptSourceUrl": "https://www.sermonindex.net/speakers/zac-poonen/through-the-bible-2-john-3-john-jude/",
+          "sourceRange": "Full Transcript — 3 John: prosperity greeting; support of true workers; no money from unbelievers; Diotrephes and Demetrius",
+          "transcriptSha256": "sha256:8b6b0c02ff17dce065d45f7a72d0672fb9a184bd88060e81485b2807e53826fd",
+          "evidenceSha256": "sha256:31e513774e317b1cc59aedfe6ca0c1afb69eb3c20ffcd8ba35d28bdf26cb1d20"
+        }
+      ],
+      "rationale": "Copy-ul curent surprinde controlul și iubirea de întâietate ale lui Diotref, dar transcriptul dezvoltă material procesul prin care un om poate începe smerit, apoi, pe măsură ce lucrarea crește, să refuze corectarea celor de la care a învățat. Sursa contrastează conducerea dictatorială cu prezbiterul care dă libertate în Domnul și cu credinciosul care rămâne smerit față de sfatul spiritual evlavios.",
+      "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against exact exported transcript representation",
+      "reviewedOn": "2026-08-10",
+      "revisedTeaching": "Diotref arată cum un om poate începe smerit și, pe măsură ce lucrarea lui crește, să ajungă să iubească întâietatea și să nu mai primească nici corectarea celui de la care odinioară a învățat. Faptul că Dumnezeu te folosește mai mult nu îți dă dreptul să te socotești deasupra sfatului unui frate evlavios; creșterea trebuie să ne facă mai smeriți, nu independenți de orice autoritate spirituală. Diotref vorbește rău, refuză frații, îi oprește pe alții să-i primească și îi scoate din biserică — acesta este spirit de dictator, nu de prezbiter. Un conducător după Hristos nu controlează fiecare decizie a oamenilor, ci le dă libertate în Domnul; iar credincioșii învață să se supună cu smerenie conducerii evlavioase. Când un lider transformă biserica într-un sistem de control personal, nu trebuie imitat sau legitimat."
     },
     {
       "bookId": "efeseni",
@@ -2333,6 +2496,111 @@
       "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against exact exported transcript representation",
       "reviewedOn": "2026-08-10",
       "revisedTeaching": "Cel care primește învățătura este îndemnat să împartă din bunurile sale cu cel care se ostenește să-l învețe. Îndemnul este adresat celui care dă, nu predicatorului ca instrument prin care să ceară bani. Sprijinul rămâne liber, iar slujitorul care trăiește din Evanghelie trebuie să-și pună încrederea în Dumnezeu, nu să preseze oamenii.\n\nLegea semănatului și seceratului ajunge în fiecare zonă ascunsă a vieții. Prin gânduri, cuvinte, fapte, atitudini, motive și ambiții semănăm fie în fire, fie în Duhul; vom culege potrivit seminței. Viața veșnică este aici și calitatea vieții lui Dumnezeu formată în noi. De aceea nu trebuie să obosim în facerea binelui, ci să folosim timpul de acum pentru a binecuvânta pe alții, începând cu familia credinței."
+    },
+    {
+      "bookId": "iuda",
+      "chapter": 1,
+      "unitId": "iuda-1-1-4-source-first",
+      "status": "approved-against-transcript",
+      "action": "rewrite",
+      "reviewedTeachingSha256": "sha256:074f4839c2ea99aa26a171073a2f3e93fd49c2b991d573b9c0ed7af0300f7546",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/bible",
+          "transcriptSourceUrl": "https://www.sermonindex.net/speakers/zac-poonen/through-the-bible-2-3-john-jude/",
+          "sourceRange": "Full Transcript — Jude: contend for the faith; grace and compromise; Cain/Balaam/Korah; keep yourselves in God's love; God keeps from falling",
+          "transcriptSha256": "sha256:2d86dcfdcdc6d769690ddbc5d0d3019a070055103557cfcf8b410ad946adea87",
+          "evidenceSha256": "sha256:78f2229daad84ec99c9be042c608f70d0f3b93feb9638c5cf113736c2ab2b904"
+        }
+      ],
+      "rationale": "Copy-ul curent păstrează chemarea de a lupta pentru credință și avertismentul privind harul transformat în permis pentru păcat, dar transcriptul adaugă material responsabilitatea veghetorilor spirituali: compromisul intră pe nesimțite când cei chemați să păzească turma nu rămân treji. Fidelitatea sursei cere păstrarea împreună a adevărului doctrinar, vegherii pastorale și refuzului compromisului moral.",
+      "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against exact exported transcript representation",
+      "reviewedOn": "2026-08-10",
+      "revisedTeaching": "Iuda voia inițial să scrie despre mântuirea comună, dar simte o constrângere mai urgentă: biserica trebuie să lupte pentru credința dată sfinților atunci când compromisul intră pe nesimțite. Oamenii s-au strecurat înăuntru deoarece cei chemați să vegheze nu au rămas treji spiritual; un prezbiter este și un păzitor al turmei, atent la învățătura și influența care intră în biserică. Pericolul descris aici este transformarea harului într-un permis pentru păcat: ideea că, fiindcă Dumnezeu iartă, păcatul poate fi tratat ușor sau consecințele lui spirituale pot fi ignorate. Harul adevărat nu micșorează standardul sfințeniei, ci ne aduce sub stăpânirea Domnului Isus. A lupta pentru credință înseamnă deci adevăr doctrinar, veghe pastorală și o viață care refuză compromisul."
+    },
+    {
+      "bookId": "iuda",
+      "chapter": 1,
+      "unitId": "iuda-1-11-16-source-first",
+      "status": "approved-against-transcript",
+      "action": "rewrite",
+      "reviewedTeachingSha256": "sha256:25b37bb1dbdcad41da03ad2a27aedc6d6bd1be855edc88d4856ab4155897f12c",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/bible",
+          "transcriptSourceUrl": "https://www.sermonindex.net/speakers/zac-poonen/through-the-bible-2-3-john-jude/",
+          "sourceRange": "Full Transcript — Jude: contend for the faith; grace and compromise; Cain/Balaam/Korah; keep yourselves in God's love; God keeps from falling",
+          "transcriptSha256": "sha256:2d86dcfdcdc6d769690ddbc5d0d3019a070055103557cfcf8b410ad946adea87",
+          "evidenceSha256": "sha256:78f2229daad84ec99c9be042c608f70d0f3b93feb9638c5cf113736c2ab2b904"
+        }
+      ],
+      "rationale": "Copy-ul curent păstrează Cain, Balaam și Core, dar transcriptul dezvoltă material sensurile lor practice — gelozia față de ungerea altuia, iubirea banilor și răzvrătirea împotriva unei autorități spirituale — și apoi îl pune pe Enoh ca exemplu pozitiv: un om care a umblat cu Dumnezeu și a vestit fără frică judecata asupra nelegiuirii. Omiterea lui Enoh pierde contrastul central al sursei.",
+      "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against exact exported transcript representation",
+      "reviewedOn": "2026-08-10",
+      "revisedTeaching": "Cain, Balaam și Core arată trei drumuri care distrug slujirea: gelozia față de omul peste care vezi focul lui Dumnezeu, iubirea banilor și răzvrătirea împotriva autorității spirituale. Gelozia descoperă lipsa dragostei; un părinte spiritual se bucură când un frate mai tânăr crește și chiar îl depășește, în loc să-l trateze ca pe o amenințare. Balaam arată că un om poate spune lucruri adevărate și totuși să fie corupt de câștig, iar Core avertizează împotriva ambiției care ajunge să disprețuiască o conducere prin care Dumnezeu te-a ajutat. În contrast, Enoh a umblat singur cu Dumnezeu într-o generație stricată și a vorbit fără frică despre venirea Domnului și judecata păcatului. Lupta pentru credință cere deci o inimă fără gelozie și iubire de bani, smerenie față de autoritatea lui Dumnezeu și curaj profetic împotriva nelegiuirii."
+    },
+    {
+      "bookId": "iuda",
+      "chapter": 1,
+      "unitId": "iuda-1-17-23-source-first",
+      "status": "approved-against-transcript",
+      "action": "rewrite",
+      "reviewedTeachingSha256": "sha256:ec13ce8fb9899dcba71b3e954cda686cddd8f90f520d5805dffca0b822b91ccf",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/bible",
+          "transcriptSourceUrl": "https://www.sermonindex.net/speakers/zac-poonen/through-the-bible-2-3-john-jude/",
+          "sourceRange": "Full Transcript — Jude: contend for the faith; grace and compromise; Cain/Balaam/Korah; keep yourselves in God's love; God keeps from falling",
+          "transcriptSha256": "sha256:2d86dcfdcdc6d769690ddbc5d0d3019a070055103557cfcf8b410ad946adea87",
+          "evidenceSha256": "sha256:78f2229daad84ec99c9be042c608f70d0f3b93feb9638c5cf113736c2ab2b904"
+        }
+      ],
+      "rationale": "Transcriptul explică expres «păstrați-vă în dragostea lui Dumnezeu» ca rămânerea în siguranța că Dumnezeu ne iubește chiar când am căzut și trebuie să ne întoarcem; această siguranță produce dragoste față de alții. Sursa leagă apoi restaurarea și evanghelizarea de mila care smulge din foc, dar și de grija ca păcatul celui ajutat să nu ne contamineze. Copy-ul anterior nu păstra suficient aceste conexiuni.",
+      "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against exact exported transcript representation",
+      "reviewedOn": "2026-08-10",
+      "revisedTeaching": "În mijlocul batjocoritorilor conduși de pofte, care produc dezbinări și pot vorbi despre lucruri spirituale fără viața Duhului, Iuda mută atenția asupra propriei zidiri: întărește-te în credință și roagă-te în Duhul Sfânt. A te păstra în dragostea lui Dumnezeu înseamnă să rămâi sigur de dragostea Lui chiar când ai căzut și trebuie să te întorci; tocmai această siguranță smerită te ridică și umple inima cu dragoste față de alții. De aceea restaurarea celor clătinați și evanghelizarea se fac cu milă, smulgând oameni din foc, dar cu o grijă severă ca păcatul lor să nu te contamineze. Poți intra aproape de oameni ca să-i ajuți fără să participi la bârfa, poftele sau obiceiurile lor. Lupta pentru credință unește rugăciunea, siguranța dragostei lui Dumnezeu, mila pentru cel căzut și o teamă sfântă de contaminarea păcatului."
+    },
+    {
+      "bookId": "iuda",
+      "chapter": 1,
+      "unitId": "iuda-1-24-25-source-first",
+      "status": "approved-against-transcript",
+      "action": "rewrite",
+      "reviewedTeachingSha256": "sha256:630fd80fa5fad421c2d2a6291d05f644758a88117620bba5be52a04b299a7672",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/bible",
+          "transcriptSourceUrl": "https://www.sermonindex.net/speakers/zac-poonen/through-the-bible-2-3-john-jude/",
+          "sourceRange": "Full Transcript — Jude: contend for the faith; grace and compromise; Cain/Balaam/Korah; keep yourselves in God's love; God keeps from falling",
+          "transcriptSha256": "sha256:2d86dcfdcdc6d769690ddbc5d0d3019a070055103557cfcf8b410ad946adea87",
+          "evidenceSha256": "sha256:78f2229daad84ec99c9be042c608f70d0f3b93feb9638c5cf113736c2ab2b904"
+        }
+      ],
+      "rationale": "Transcriptul leagă explicit versetele 21 și 24: partea credinciosului este să se păstreze în dragostea lui Dumnezeu, iar Dumnezeu este Cel care îl păzește de cădere. Sursa respinge încrederea în propria putere și leagă păzirea lui Dumnezeu de smerenie, zidirea în credință, rugăciunea în Duhul Sfânt și dependența de El. Copy-ul anterior păstra doar concluzia generală.",
+      "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against exact exported transcript representation",
+      "reviewedOn": "2026-08-10",
+      "revisedTeaching": "Finalul leagă două responsabilități care nu trebuie despărțite: noi ne păstrăm în dragostea lui Dumnezeu, iar El este Cel care ne păzește de cădere. Nu ne putem garanta prin propria tărie că nu vom cădea; partea noastră este să rămânem smeriți, să ne zidim în credință, să ne rugăm în Duhul Sfânt, să lucrăm cu seriozitate la mântuirea noastră și să refuzăm gelozia și aroganța. În această poziție de dependență, Dumnezeu poate să ne păzească de poticnire chiar în situațiile în care suntem aproape de păcat pentru a salva pe alții și, în cele din urmă, să ne așeze fără vină înaintea slavei Sale, cu mare bucurie. Siguranța nu vine din încrederea în noi, ci dintr-o viață care se păstrează în dragostea Lui și se sprijină pe puterea Lui."
+    },
+    {
+      "bookId": "iuda",
+      "chapter": 1,
+      "unitId": "iuda-1-5-10-source-first",
+      "status": "approved-against-transcript",
+      "action": "rewrite",
+      "reviewedTeachingSha256": "sha256:28877e29bdbe9eb0389bcd842e4a13a899519af5d948b8af514f9c1351fcb89a",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/bible",
+          "transcriptSourceUrl": "https://www.sermonindex.net/speakers/zac-poonen/through-the-bible-2-3-john-jude/",
+          "sourceRange": "Full Transcript — Jude: contend for the faith; grace and compromise; Cain/Balaam/Korah; keep yourselves in God's love; God keeps from falling",
+          "transcriptSha256": "sha256:2d86dcfdcdc6d769690ddbc5d0d3019a070055103557cfcf8b410ad946adea87",
+          "evidenceSha256": "sha256:78f2229daad84ec99c9be042c608f70d0f3b93feb9638c5cf113736c2ab2b904"
+        }
+      ],
+      "rationale": "Transcriptul formulează explicit avertismentul împotriva siguranței false: Domnul a salvat poporul din Egipt, dar cei care au ales necredința au pierit după aceea. Sursa leagă aceasta de îngerii căzuți, Sodoma și de disprețul arogant față de autoritate, observând că nici Mihail nu a folosit batjocură împotriva diavolului. Copy-ul anterior comprima aceste accente.",
+      "reviewer": "GPT-5.6 Sol manual sentence-level semantic review against exact exported transcript representation",
+      "reviewedOn": "2026-08-10",
+      "revisedTeaching": "Iuda nu vorbește despre oameni care n-au cunoscut niciodată izbăvirea: Domnul a salvat poporul din Egipt, dar cei care au ales necredința au pierit în pustiu. Un început real cu Dumnezeu nu este o garanție că putem trăi după fire fără consecințe; privilegiul trecut nu înlocuiește credincioșia prezentă. Îngerii care nu și-au păstrat locul și Sodoma și Gomora arată aceeași seriozitate a judecății. O altă marcă a oamenilor firești este disprețul față de autoritate. Chiar Mihail, în disputa cu diavolul, nu și-a permis batjocură arogantă, ci a lăsat mustrarea în mâna Domnului. Credinciosul se împotrivește răului cu fermitate, dar fără bravada și lipsa de respect a firii."
     }
   ]
 }
