@@ -1,0 +1,8 @@
+{
+  "status": "failure",
+  "reviewOutcome": "success",
+  "shapeOutcome": "failure",
+  "runId": "31384915667",
+  "reviewerSystem": "Ollama qwen3:4b local; thinking=true; chunk-size=10; selective-salvage; structured-output",
+  "diagnosticTail": "Traceback (most recent call last):\n  File \"/home/runner/work/Emanus/Emanus/scripts/nt_final_editorial_ollama_chunked_runner.py\", line 33, in <module>\n    raise SystemExit(main())\n  File \"/home/runner/work/Emanus/Emanus/scripts/nt_final_editorial_ollama_chunked_runner.py\", line 29, in main\n    return int(worker.main())\n  File \"/home/runner/work/Emanus/Emanus/scripts/nt_final_editorial_worker.py\", line 345, in main\n    result = call_model(payload, token)\n  File \"/home/runner/work/Emanus/Emanus/scripts/nt_final_editorial_ollama_chunked_runner.py\", line 26, in <lambda>\n    worker.call_model = lambda payload, token, retries=5: chunker.chunked_call_model(\n  File \"/home/runner/work/Emanus/Emanus/scripts/nt_final_editorial_copilot_chunked_runner.py\", line 213, in chunked_call_model\n    combined.extend(review_chunk_with_salvage(\n  File \"/home/runner/work/Emanus/Emanus/scripts/nt_final_editorial_copilot_chunked_runner.py\", line 109, in review_chunk_with_salvage\n    result = copilot_runner.copilot_call_model(_merge_payload(payload, partial), token, retries=2)\n  File \"/home/runner/work/Emanus/Emanus/scripts/nt_final_editorial_ollama_runner.py\", line 108, in ollama_call_model\n    raise RuntimeError(f'Ollama ({OLLAMA_MODEL}) a eșuat după {retries} încercări: {last}')\nRuntimeError: Ollama (qwen3:4b) a eșuat după 2 încercări: TimeoutError('timed out')\n"
+}
