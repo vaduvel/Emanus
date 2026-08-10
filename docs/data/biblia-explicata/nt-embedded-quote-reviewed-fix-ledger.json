@@ -1,7 +1,7 @@
 {
   "schema": "emanus-nt-embedded-quote-reviewed-fix-ledger-v2",
   "policy": "Every direct replacement is rejected unless its normalized wording exists in the same current Biblia Emanus chapter. A legacy quote-fix may be marked superseded only when the exact target unit carries reviewed-against-raw-transcript sourceFidelity; the fresh quote audit then evaluates the rewritten copy independently.",
-  "count": 13,
+  "count": 16,
   "fixes": [
     {
       "bookId": "matei",
@@ -124,6 +124,39 @@
       "verification": "superseded-by-raw-transcript-editorial-review",
       "sourceFidelityPolicy": "poonen-primary-research-only-where-source-is-thin",
       "note": "The old quote no longer exists because the complete unit was deliberately rewritten from pinned raw transcript evidence. The fresh embedded-quote audit validates the replacement unit independently."
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 8,
+      "field": "units[3].teaching",
+      "before": "Dar voi cine spuneți că sunt?",
+      "after": "Dar voi cine ziceți că sunt eu?",
+      "beforeSha256": "sha256:508c80aff9b2a538f59701023288973817b208a595949f06c69576961c6e2ff7",
+      "afterSha256": "sha256:ab9b79af18251010c089639e4095a30430a83dd44a0642aad9ab8cd67f02b695",
+      "verification": "reviewed-exact-same-chapter-biblia-emanus"
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 13,
+      "field": "units[0].teaching",
+      "before": "Să nu vă înșele cineva.",
+      "after": "Aveți grijă să nu vă rătăcească cineva!",
+      "beforeSha256": "sha256:c58e53259f3e414cedc916a8d6a8ce19e456671f8203a0f7526b891844063828",
+      "afterSha256": "sha256:e4fd860a4db26146ba5456a02a428fa2b8fa170c2feb2dff4f1082f1c2c5b1c9",
+      "verification": "reviewed-exact-same-chapter-biblia-emanus"
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 14,
+      "field": "units[0].teaching",
+      "before": "Ea a făcut ce a putut.",
+      "after": "Ea a făcut ce i-a stat în putere",
+      "beforeSha256": "sha256:82010c3e640449a8ca716264a2c51b76cb6e6b9fa15c637a26dde369fcf2e8c6",
+      "afterSha256": "sha256:114eec355788b7dcd5da24e4ee0fd96f79898f8842d731133b14ccd77daa973a",
+      "verification": "reviewed-exact-same-chapter-biblia-emanus"
     },
     {
       "bookId": "romani",

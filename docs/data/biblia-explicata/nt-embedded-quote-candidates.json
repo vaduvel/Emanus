@@ -1,8 +1,8 @@
 {
   "schema": "emanus-nt-embedded-quote-candidates-v1",
   "policy": "Diagnostic only. Candidate scores compare each unresolved quoted span with contiguous Biblia Emanus text from the same canonical chapter. This report never edits reader copy or clears a publication blocker by itself.",
-  "count": 68,
-  "strongCandidateCount": 3,
+  "count": 65,
+  "strongCandidateCount": 0,
   "findings": [
     {
       "bookId": "matei",
@@ -648,44 +648,6 @@
     {
       "bookId": "marcu",
       "canonicalBookId": "MRK",
-      "chapter": 8,
-      "field": "units[3].teaching",
-      "quote": "Dar voi cine spuneți că sunt?",
-      "wordCount": 6,
-      "best": {
-        "raw": "Dar voi cine ziceți că sunt",
-        "score": 0.85,
-        "lcsRatio": 0.8333,
-        "overlap": 0.8333,
-        "lengthRatio": 1,
-        "start": 544,
-        "width": 6
-      },
-      "alternatives": [
-        {
-          "raw": "zis: Dar voi cine ziceți că sunt",
-          "score": 0.7286,
-          "lcsRatio": 0.7143,
-          "overlap": 0.7143,
-          "lengthRatio": 0.8571,
-          "start": 543,
-          "width": 7
-        },
-        {
-          "raw": "Dar voi cine ziceți că sunt eu",
-          "score": 0.7286,
-          "lcsRatio": 0.7143,
-          "overlap": 0.7143,
-          "lengthRatio": 0.8571,
-          "start": 544,
-          "width": 7
-        }
-      ],
-      "bestMargin": 0.1214
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
       "chapter": 9,
       "field": "units[0].teaching",
       "quote": "Acesta este Fiul Meu preaiubit; pe El să-L ascultați.",
@@ -1139,44 +1101,6 @@
       "canonicalBookId": "MRK",
       "chapter": 13,
       "field": "units[0].teaching",
-      "quote": "Să nu vă înșele cineva.",
-      "wordCount": 5,
-      "best": {
-        "raw": "să nu vă rătăcească cineva",
-        "score": 0.82,
-        "lcsRatio": 0.8,
-        "overlap": 0.8,
-        "lengthRatio": 1,
-        "start": 90,
-        "width": 5
-      },
-      "alternatives": [
-        {
-          "raw": "grijă să nu vă rătăcească cineva",
-          "score": 0.6833,
-          "lcsRatio": 0.6667,
-          "overlap": 0.6667,
-          "lengthRatio": 0.8333,
-          "start": 89,
-          "width": 6
-        },
-        {
-          "raw": "să nu vă rătăcească cineva! Mulți",
-          "score": 0.6833,
-          "lcsRatio": 0.6667,
-          "overlap": 0.6667,
-          "lengthRatio": 0.8333,
-          "start": 90,
-          "width": 6
-        }
-      ],
-      "bestMargin": 0.1367
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "chapter": 13,
-      "field": "units[0].teaching",
       "quote": "Cine va răbda până la sfârșit va fi mântuit.",
       "wordCount": 9,
       "best": {
@@ -1285,44 +1209,6 @@
         }
       ],
       "bestMargin": 0.0133
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "chapter": 14,
-      "field": "units[0].teaching",
-      "quote": "Ea a făcut ce a putut.",
-      "wordCount": 6,
-      "best": {
-        "raw": "Ea a făcut ce i-a",
-        "score": 0.85,
-        "lcsRatio": 0.8333,
-        "overlap": 0.8333,
-        "lengthRatio": 1,
-        "start": 166,
-        "width": 6
-      },
-      "alternatives": [
-        {
-          "raw": "întotdeauna. Ea a făcut ce i-a",
-          "score": 0.7286,
-          "lcsRatio": 0.7143,
-          "overlap": 0.7143,
-          "lengthRatio": 0.8571,
-          "start": 165,
-          "width": 7
-        },
-        {
-          "raw": "Ea a făcut ce i-a stat",
-          "score": 0.7286,
-          "lcsRatio": 0.7143,
-          "overlap": 0.7143,
-          "lengthRatio": 0.8571,
-          "start": 166,
-          "width": 7
-        }
-      ],
-      "bestMargin": 0.1214
     },
     {
       "bookId": "marcu",
