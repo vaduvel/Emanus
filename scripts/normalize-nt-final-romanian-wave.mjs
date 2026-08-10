@@ -41,9 +41,9 @@ function fixBook(book, ledger) {
       for (const key of ["heading", "teaching", "forYourHeart"]) {
         if (typeof unit[key] === "string") unit[key] = fixString(unit[key], `${prefix}.units[${ui}].${key}`, ledger)
       }
-      for (let wi = 0; wi < (unit.words ?? []).length; wi += 1) {
-        if (typeof unit.words[wi]?.meaning === "string") unit.words[wi].meaning = fixString(unit.words[wi].meaning, `${prefix}.units[${ui}].words[${wi}].meaning`, ledger)
-      }
+      // words[].meaning is deliberately excluded here. Lexical Romanian is
+      // normalized inside the lexical review pipeline because each meaning is
+      // reviewId/meaningSha256-bound in the frozen source-backed ledger.
     }
   }
 }
@@ -64,11 +64,11 @@ for (const dir of dirs) {
   }
 }
 fs.writeFileSync(ledgerPath, JSON.stringify({
-  schema: "emanus-nt-final-romanian-wave-ledger-v1",
-  policy: "Final source-fidelity pass. Only corpus-mined, context-free Romanian diacritic restorations are automatic; ambiguous homographs remain excluded.",
+  schema: "emanus-nt-final-romanian-wave-ledger-v2",
+  policy: "Final reader-copy pass after source fidelity. Only corpus-mined, context-free Romanian diacritic restorations are automatic. Hash-bound words[].meaning is excluded and remains under the lexical review pipeline.",
   replacementClasses: REPLACEMENTS.size,
   filesChanged,
   count: ledger.length,
   fixes: ledger,
 }, null, 2) + "\n", "utf8")
-console.log(`NT final Romanian wave: ${ledger.length} safe fixes across ${filesChanged} source-generation files / ${REPLACEMENTS.size} classes.`)
+console.log(`NT final Romanian reader-copy wave: ${ledger.length} safe fixes across ${filesChanged} source-generation files / ${REPLACEMENTS.size} classes.`)
