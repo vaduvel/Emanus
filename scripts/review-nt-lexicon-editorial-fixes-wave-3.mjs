@@ -36,7 +36,7 @@ const UPDATE = [
   {
     bookId: "ioan", chapter: 13, ref: "Ioan 13:31-38",
     original: "ἐντολή καινή", originalAfter: "ἐντολὴν καινὴν",
-    before: "porunca noua. Porunca iubirii în măsura lui Hristos.",
+    before: "porunca noua. Porunca iubirii în masura lui Hristos.",
     after: "poruncă nouă; ἐντολή = poruncă, καινός = nou."
   },
   {
