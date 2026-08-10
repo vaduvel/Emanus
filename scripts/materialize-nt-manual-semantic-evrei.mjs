@@ -49,6 +49,21 @@ const book = JSON.parse(fs.readFileSync(BOOK, "utf8"))
 const coverage = JSON.parse(fs.readFileSync(COVER, "utf8"))
 const REVIEW = JSON.parse(fs.readFileSync(SPEC, "utf8"))
 
+// Preserve the reviewed meaning while using the explicit source concept required by the doctrine gate.
+const evreiTwo = REVIEW["evrei-2-10-18-source-first"]
+const oldWithoutSin = "în toate lucrurile, fără să păcătuiască,"
+const explicitWithoutSin = "în toate lucrurile, dar a rămas fără păcat și nu a păcătuit,"
+if (!evreiTwo || evreiTwo.action !== "rewrite" || typeof evreiTwo.revisedTeaching !== "string") {
+  fail("evrei-2-10-18-source-first reviewed rewrite missing")
+}
+if (evreiTwo.revisedTeaching.includes(oldWithoutSin)) {
+  evreiTwo.revisedTeaching = evreiTwo.revisedTeaching.replace(oldWithoutSin, explicitWithoutSin)
+  fs.writeFileSync(SPEC, JSON.stringify(REVIEW, null, 2) + "\n", "utf8")
+  console.log("Evrei 2 reviewed wording normalized to explicit «fără păcat» source concept.")
+} else if (!evreiTwo.revisedTeaching.includes("fără păcat")) {
+  fail("evrei-2-10-18-source-first wording drifted before doctrine normalization")
+}
+
 if (coverage.schema !== "emanus-nt-direct-transcript-coverage-v3") {
   fail(`expected coverage v3, got ${coverage.schema}`)
 }
