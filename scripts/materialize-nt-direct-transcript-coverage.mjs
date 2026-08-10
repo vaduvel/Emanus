@@ -45,9 +45,13 @@ function parseRange(title) {
   const bookId=bookFromTitle(title)
   if (!bookId) return null
   const s=String(title)
-  let m=s.match(/(?:ch\.?\s*)?(\d+)\s*:\s*(\d+)\s*(?:-|to)\s*(\d+)\s*:\s*(\d+)/i)
+  // Strict range parser: both endpoints must be explicit. Some catalogue titles
+  // repeat "Ch" before the second endpoint (for example Ch1:1-Ch2:21).
+  // Supporting that spelling is deterministic range parsing, not fuzzy matching.
+  const chapterPrefix = String.raw`(?:ch(?:apter)?\.?\s*)?`
+  let m=s.match(new RegExp(`${chapterPrefix}(\\d+)\\s*:\\s*(\\d+)\\s*(?:-|to)\\s*${chapterPrefix}(\\d+)\\s*:\\s*(\\d+)`, "i"))
   if (m) return {bookId,startChapter:+m[1],startVerse:+m[2],endChapter:+m[3],endVerse:+m[4]}
-  m=s.match(/(?:ch\.?\s*)?(\d+)\s*:\s*(\d+)\s*(?:-|to)\s*(\d+)(?!\s*:)/i)
+  m=s.match(new RegExp(`${chapterPrefix}(\\d+)\\s*:\\s*(\\d+)\\s*(?:-|to)\\s*(\\d+)(?!\\s*:)`, "i"))
   if (m) return {bookId,startChapter:+m[1],startVerse:+m[2],endChapter:+m[1],endVerse:+m[3]}
   return null
 }
