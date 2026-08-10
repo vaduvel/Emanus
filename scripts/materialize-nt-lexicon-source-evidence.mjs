@@ -11,6 +11,10 @@ const outputPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-lexic
 
 function fail(message) { console.error(`[NT lexicon source evidence] ${message}`); process.exit(1) }
 function sha256(value) { return crypto.createHash("sha256").update(value).digest("hex") }
+function gitBlobSha(buffer) {
+  const header = Buffer.from(`blob ${buffer.length}\0`, "utf8")
+  return crypto.createHash("sha1").update(header).update(buffer).digest("hex")
+}
 function arg(name) {
   const index = process.argv.indexOf(name)
   return index >= 0 ? process.argv[index + 1] : null
@@ -28,16 +32,31 @@ function greekTokens(value) {
     .map((match) => normalizeGreek(match[0]))
     .filter(Boolean)
 }
+function rawGithubUrl(source) {
+  const encodedPath = source.path.split("/").map(encodeURIComponent).join("/")
+  return `https://raw.githubusercontent.com/${source.repository}/${source.commitSha}/${encodedPath}`
+}
 
-const sourceFile = arg("--source-file")
-if (!sourceFile || !fs.existsSync(sourceFile)) fail("pass --source-file <pinned TBESG file>")
 if (!fs.existsSync(corpusDir) || !fs.existsSync(sourcesPath)) fail("final corpus/source registry missing")
-
 const registry = JSON.parse(fs.readFileSync(sourcesPath, "utf8"))
 const source = (registry.sources ?? []).find((entry) => entry.id === "stepbible-tbesg")
-if (!source?.commitSha || !source?.blobSha) fail("pinned stepbible-tbesg source metadata missing")
+if (!source?.repository || !source?.commitSha || !source?.path || !source?.blobSha) fail("pinned stepbible-tbesg source metadata missing")
 
-const rawSource = fs.readFileSync(sourceFile, "utf8")
+const sourceFile = arg("--source-file")
+let sourceBuffer
+if (sourceFile) {
+  if (!fs.existsSync(sourceFile)) fail(`source file missing: ${sourceFile}`)
+  sourceBuffer = fs.readFileSync(sourceFile)
+} else {
+  const url = rawGithubUrl(source)
+  const response = await fetch(url, { redirect: "follow" })
+  if (!response.ok) fail(`failed to fetch pinned TBESG: HTTP ${response.status}`)
+  sourceBuffer = Buffer.from(await response.arrayBuffer())
+}
+const actualBlobSha = gitBlobSha(sourceBuffer)
+if (actualBlobSha !== source.blobSha) fail(`TBESG blob mismatch: ${actualBlobSha} != ${source.blobSha}`)
+const rawSource = sourceBuffer.toString("utf8")
+
 const lines = rawSource.split(/\r?\n/u)
 const byGreekToken = new Map()
 for (let index = 0; index < lines.length; index += 1) {
@@ -97,17 +116,18 @@ const ambiguous = entries.filter((entry) => entry.candidateCount > 1).length
 const unmatched = entries.length - matched
 const output = {
   schema: "emanus-nt-lexicon-source-evidence-v1",
-  policy: "Diagnostic/source-review evidence only. The source file is pinned by commit and Git blob SHA. Candidates are exact Unicode-normalized Greek lemma-token matches in TBESG; a candidate never constitutes automatic approval of the Romanian gloss.",
+  policy: "Diagnostic/source-review evidence only. The source bytes are fetched from the pinned repository commit and rejected unless their computed Git blob SHA equals the registered blobSha. Candidates are exact Unicode-normalized Greek lemma-token matches in TBESG; a candidate never constitutes automatic approval of the Romanian gloss.",
   source: {
     id: source.id,
     repository: source.repository,
     commitSha: source.commitSha,
     path: source.path,
     blobSha: source.blobSha,
+    verifiedBlobSha: actualBlobSha,
     license: source.license,
   },
   counts: { entries: entries.length, matched, unique, ambiguous, unmatched },
   entries,
 }
 fs.writeFileSync(outputPath, JSON.stringify(output, null, 2) + "\n", "utf8")
-console.log(`NT lexicon source evidence: ${entries.length} entries / ${matched} matched / ${unique} unique / ${ambiguous} ambiguous / ${unmatched} unmatched.`)
+console.log(`NT lexicon source evidence: ${entries.length} entries / ${matched} matched / ${unique} unique / ${ambiguous} ambiguous / ${unmatched} unmatched / blob ${actualBlobSha}.`)
