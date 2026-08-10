@@ -1,7 +1,7 @@
 {
-  "schema": "emanus-nt-romanian-residual-fix-ledger-v1",
-  "policy": "exact reviewed grammatical constructions only; no bare ambiguous-token fallback",
-  "count": 19,
+  "schema": "emanus-nt-romanian-residual-fix-ledger-v2",
+  "policy": "exact reviewed grammatical constructions and exact corpus locations only; no bare ambiguous-token fallback",
+  "count": 30,
   "fixes": [
     {
       "location": "ioan.1.units[0].teaching",
@@ -46,6 +46,12 @@
       "after": "din moarte la viață"
     },
     {
+      "location": "ioan.5.units[1].teaching",
+      "rule": "location-reviewed",
+      "before": "viata",
+      "after": "viața"
+    },
+    {
       "location": "ioan.5.units[1].forYourHeart",
       "rule": "ioan-keep-alive",
       "before": "a te tine în viata",
@@ -76,6 +82,12 @@
       "after": "și viață pentru om"
     },
     {
+      "location": "ioan.9.historicalContext",
+      "rule": "location-reviewed",
+      "before": "credinta",
+      "after": "credință"
+    },
+    {
       "location": "ioan.9.prayer",
       "rule": "ioan-life-possessive",
       "before": "în viata noastră",
@@ -86,6 +98,12 @@
       "rule": "ioan-life-given",
       "before": "despre viata data cu belșug",
       "after": "despre viața dată cu belșug"
+    },
+    {
+      "location": "ioan.10.literaryContext",
+      "rule": "location-reviewed",
+      "before": "credinta",
+      "after": "credința"
     },
     {
       "location": "ioan.10.historicalContext",
@@ -100,6 +118,18 @@
       "after": "ți-ai dat viața"
     },
     {
+      "location": "ioan.10.units[0].teaching",
+      "rule": "location-reviewed",
+      "before": "viata",
+      "after": "viață"
+    },
+    {
+      "location": "ioan.10.units[0].words[0].meaning",
+      "rule": "location-reviewed",
+      "before": "viata",
+      "after": "viață"
+    },
+    {
       "location": "ioan.10.units[0].words[2].meaning",
       "rule": "ioan-life-given-generic",
       "before": "Viata data",
@@ -110,6 +140,42 @@
       "rule": "ioan-faith-coordinate",
       "before": "legătura dintre credinta și",
       "after": "legătura dintre credință și"
+    },
+    {
+      "location": "ioan.11.summary",
+      "rule": "location-reviewed",
+      "before": "Viata",
+      "after": "Viața"
+    },
+    {
+      "location": "ioan.11.prayer",
+      "rule": "location-reviewed",
+      "before": "Viata",
+      "after": "Viața"
+    },
+    {
+      "location": "ioan.11.units[0].heading",
+      "rule": "location-reviewed",
+      "before": "viata",
+      "after": "viața"
+    },
+    {
+      "location": "ioan.11.units[0].teaching",
+      "rule": "location-reviewed",
+      "before": "credinta",
+      "after": "credința"
+    },
+    {
+      "location": "ioan.11.units[0].teaching",
+      "rule": "location-reviewed",
+      "before": "viata",
+      "after": "viața"
+    },
+    {
+      "location": "ioan.11.units[0].teaching",
+      "rule": "location-reviewed",
+      "before": "viata",
+      "after": "viața"
     },
     {
       "location": "ioan.13.units[0].teaching",
