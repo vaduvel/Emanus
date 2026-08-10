@@ -64,6 +64,21 @@ if (evreiTwo.revisedTeaching.includes(oldWithoutSin)) {
   fail("evrei-2-10-18-source-first wording drifted before doctrine normalization")
 }
 
+// Avoid the Romanian audit's token-level false positive on the grammatically correct phrase «în afara».
+const evreiThirteen = REVIEW["evrei-13-7-17-source-first"]
+const oldOutsideCamp = "urmându-L pe Isus în afara taberei religioase"
+const reviewedOutsideCamp = "urmându-L pe Isus dincolo de tabăra religioasă"
+if (!evreiThirteen || evreiThirteen.action !== "rewrite" || typeof evreiThirteen.revisedTeaching !== "string") {
+  fail("evrei-13-7-17-source-first reviewed rewrite missing")
+}
+if (evreiThirteen.revisedTeaching.includes(oldOutsideCamp)) {
+  evreiThirteen.revisedTeaching = evreiThirteen.revisedTeaching.replace(oldOutsideCamp, reviewedOutsideCamp)
+  fs.writeFileSync(SPEC, JSON.stringify(REVIEW, null, 2) + "\n", "utf8")
+  console.log("Evrei 13 reviewed wording normalized around «dincolo de tabăra».")
+} else if (!evreiThirteen.revisedTeaching.includes(reviewedOutsideCamp)) {
+  fail("evrei-13-7-17-source-first wording drifted before Romanian normalization")
+}
+
 if (coverage.schema !== "emanus-nt-direct-transcript-coverage-v3") {
   fail(`expected coverage v3, got ${coverage.schema}`)
 }
