@@ -21,6 +21,7 @@ jobs:
           ref: agent/biblia-explicata-nt-integration-clean
           fetch-depth: 1
 
+      # This artifact freezes the exact transcript representation used by manual review.
       - name: Export exact 2 Timotei semantic transcript representation
         run: |
           set -euo pipefail
