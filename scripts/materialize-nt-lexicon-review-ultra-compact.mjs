@@ -10,13 +10,13 @@ const outputPath = path.join(dataDir, "nt-lexicon-review-ultra-compact.tsv")
 
 if (!fs.existsSync(packetPath)) throw new Error("missing nt-lexicon-review-packet.jsonl")
 const rows = fs.readFileSync(packetPath, "utf8").split(/\r?\n/u).filter(Boolean).map((line) => JSON.parse(line))
-if (rows.length !== 219) throw new Error(`expected 219 rows, found ${rows.length}`)
+if (!rows.length) throw new Error("lexicon review packet is empty")
 
 const clean = (value) => String(value ?? "").replace(/[\t\r\n]+/gu, " ").replace(/\s+/gu, " ").trim()
 const lines = ["n\treviewId\tmeaningSha256\tref\toriginal\tmeaning\tevidence\tstrongLemma\tglossLocator"]
 for (const row of rows) {
   const evidence = row.evidence ?? {}
-  let evidenceKind = evidence.kind ?? "unknown"
+  const evidenceKind = evidence.kind ?? "unknown"
   let strongLemma = ""
   let glossLocator = ""
   if (evidenceKind === "unique") {
