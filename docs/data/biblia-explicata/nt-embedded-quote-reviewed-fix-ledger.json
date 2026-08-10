@@ -1,6 +1,6 @@
 {
-  "schema": "emanus-nt-embedded-quote-reviewed-fix-ledger-v1",
-  "policy": "Every replacement was manually selected from the strong-candidate review batch and is rejected unless its normalized wording exists in the same current Biblia Emanus chapter. Candidate scores alone never authorize replacement.",
+  "schema": "emanus-nt-embedded-quote-reviewed-fix-ledger-v2",
+  "policy": "Every direct replacement is rejected unless its normalized wording exists in the same current Biblia Emanus chapter. A legacy quote-fix may be marked superseded only when the exact target unit carries reviewed-against-raw-transcript sourceFidelity; the fresh quote audit then evaluates the rewritten copy independently.",
   "count": 13,
   "fixes": [
     {
@@ -56,7 +56,9 @@
       "after": "Dacă vrei, poți să mă curățești",
       "beforeSha256": "sha256:a7b33e427fa28cffb2158f9eb3e2f69876bb8e704adf2b70dbe5ecdc7ca81563",
       "afterSha256": "sha256:0bd165c9285db6fd02c2bcd07d79052e48f08001ea0310fcb827540beb185003",
-      "verification": "reviewed-exact-same-chapter-biblia-emanus"
+      "verification": "superseded-by-raw-transcript-editorial-review",
+      "sourceFidelityPolicy": "poonen-primary-research-only-where-source-is-thin",
+      "note": "The old quote no longer exists because the complete unit was deliberately rewritten from pinned raw transcript evidence. The fresh embedded-quote audit validates the replacement unit independently."
     },
     {
       "bookId": "marcu",
