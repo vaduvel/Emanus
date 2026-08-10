@@ -63,6 +63,22 @@ const OPS = [
   ["ioan",12,"ioan-12-1-19","forYourHeart","cauta","caută",1],
   ["ioan",12,"ioan-12-20-36","forYourHeart","cauta","caută",1],
   ["ioan",12,"ioan-12-37-50","forYourHeart","cauta","caută",1],
+
+  // Final finite-verb sweep from contextual batches 03-05.
+  ["marcu",7,"marcu-7-14-23","teaching","declara","declară",1],
+  ["ioan",8,null,"literaryContext","continua","continuă",1],
+  ["ioan",9,null,"literaryContext","continua","continuă",1],
+  ["ioan",10,null,"literaryContext","continua","continuă",1],
+  ["ioan",8,"ioan-8-1-20","teaching","umbla","umblă",1],
+  ["ioan",10,"ioan-10-31-42","forYourHeart","arunca","aruncă",1],
+  ["ioan",5,"ioan-5-1-18","teaching","compara","compară",1],
+  ["ioan",7,"ioan-7-1-24","teaching","mira","miră",1],
+  ["ioan",3,"ioan-3-22-36","forYourHeart","creste","crește",1],
+  ["ioan",7,null,"literaryContext","creste","crește",1],
+  ["ioan",9,"ioan-9-35-41","teaching","creste","crește",1],
+  ["ioan",1,"ioan-1-14-18","teaching","mustra","mustră",1],
+  ["ioan",11,"ioan-11-28-46","heading","striga","strigă",1],
+  ["ioan",1,"ioan-1-14-18","teaching","suna","sună",1],
 ]
 
 function regexFor(token) {
@@ -96,7 +112,7 @@ function locate(bookId, chapterNumber, unitId, field) {
 }
 
 const ledger = []
-let changedFiles = new Set()
+const changedFiles = new Set()
 for (const [bookId, chapterNumber, unitId, field, before, after, expectedCount] of OPS) {
   const hits = locate(bookId, chapterNumber, unitId, field)
   if (hits.length !== 1) fail(`${bookId} ${chapterNumber} ${unitId ?? field}: expected one source target, found ${hits.length}`)
