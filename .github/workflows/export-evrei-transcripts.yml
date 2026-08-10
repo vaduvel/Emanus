@@ -68,79 +68,9 @@ jobs:
           cp docs/data/biblia-explicata/nt-final-source-first/19-evrei.json /tmp/evrei-transcripts/19-evrei.json
           cp docs/data/biblia-explicata/nt-direct-transcript-coverage.json /tmp/evrei-transcripts/nt-direct-transcript-coverage.json
 
-      - name: Recover exact Titus and Filimon source media
-        run: |
-          set -euo pipefail
-          mkdir -p /tmp/titus-filimon-source
-          python3 - <<'PY'
-          import hashlib
-          import html
-          import importlib.util
-          import json
-          import re
-          import urllib.parse
-          import urllib.request
-          from pathlib import Path
-
-          root=Path('.').resolve()
-          worker_path=root/'scripts/nt_semantic_copilot_worker.py'
-          spec=importlib.util.spec_from_file_location('emanus_titus_philemon',worker_path)
-          worker=importlib.util.module_from_spec(spec)
-          spec.loader.exec_module(worker)
-          out=Path('/tmp/titus-filimon-source')
-
-          cfc='https://www.cfcindia.com/through-the-bible/titus-philemon'
-          req=urllib.request.Request(cfc,headers={'User-Agent':'Emanus-Editorial-Research/1.0'})
-          with urllib.request.urlopen(req,timeout=60) as res:
-              final=res.geturl(); raw=res.read().decode('utf-8',errors='replace')
-          decoded=html.unescape(raw).replace('\\/','/')
-          candidates=[]
-          for pattern in [
-              r'https?://[^\"\'<>\s]+?\.mp3(?:\?[^\"\'<>\s]*)?',
-              r'(?:src|href)=[\"\']([^\"\']+?\.mp3(?:\?[^\"\']*)?)[\"\']',
-          ]:
-              for m in re.finditer(pattern,decoded,flags=re.I):
-                  value=m.group(1) if m.lastindex else m.group(0)
-                  value=urllib.parse.urljoin(final,value)
-                  if value not in candidates: candidates.append(value)
-          if not candidates: raise SystemExit('No official CFC MP3 found for Titus, Philemon')
-          print('TITUS_PHILEMON_AUDIO',json.dumps(candidates,indent=2))
-          (out/'cfc-source.json').write_text(json.dumps({'officialSourceUrl':cfc,'finalPageUrl':final,'audioCandidates':candidates},indent=2)+'\n',encoding='utf-8')
-
-          mirror='https://word4alltime.com/through-the-bible-titus-philemon-zac-poonen-transcript/'
-          req=urllib.request.Request(mirror,headers={'User-Agent':'Emanus-Editorial-Research/1.0'})
-          with urllib.request.urlopen(req,timeout=60) as res:
-              mirror_raw=res.read().decode('utf-8',errors='replace')
-          visible=worker.visible_text_from_html(mirror_raw)
-          marker='TRANSCRIPT:'
-          idx=visible.find(marker)
-          if idx<0: raise SystemExit('Word4AllTime transcript marker missing')
-          transcript=visible[idx+len(marker):].strip()
-          for end_marker in ['ALSO READ:','Subscribe','Related Posts']:
-              e=transcript.find('\n'+end_marker)
-              if e>=0: transcript=transcript[:e].strip()
-          low=transcript.lower()
-          required=['letter to titus','philemon','onesimus','receive him','charge that to my account']
-          missing=[x for x in required if x not in low]
-          if missing: raise SystemExit(f'full Titus/Philemon transcript markers missing: {missing}')
-          th='sha256:'+hashlib.sha256(transcript.encode()).hexdigest()
-          (out/'titus-philemon-word4alltime.txt').write_text(transcript+'\n',encoding='utf-8')
-          (out/'mirror-manifest.json').write_text(json.dumps({'url':mirror,'sha256':th,'words':len(transcript.split()),'requiredMarkers':required},indent=2)+'\n',encoding='utf-8')
-          print('TITUS_PHILEMON_MIRROR',th,len(transcript.split()))
-          PY
-          cp docs/data/biblia-explicata/nt-final-source-first/18-filimon.json /tmp/titus-filimon-source/18-filimon.json
-          cp docs/data/biblia-explicata/nt-final-source-first/17-tit.json /tmp/titus-filimon-source/17-tit.json
-
       - uses: actions/upload-artifact@v4
         with:
           name: evrei-full-transcripts
           path: /tmp/evrei-transcripts
-          if-no-files-found: error
-          retention-days: 1
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: titus-filimon-source-recovery
-          path: /tmp/titus-filimon-source
           if-no-files-found: error
           retention-days: 1
