@@ -1,0 +1,52 @@
+name: Switch Semantic Review To GitHub Models Once
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-nt-integration-clean
+    paths:
+      - .github/workflows/switch-semantic-to-github-models-once.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Patch recovery workflow
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('.github/workflows/nt-explanation-recovery.yml')
+          s=p.read_text(encoding='utf-8')
+          s=s.replace('permissions:\n  contents: write\n  copilot-requests: write\n','permissions:\n  contents: write\n  models: read\n',1)
+          install='''      - name: Install GitHub Copilot CLI for semantic review\n        run: npm install -g @github/copilot\n\n'''
+          s=s.replace(install,'',1)
+          s=s.replace('NT_SEMANTIC_COPILOT_MODEL: auto','NT_SEMANTIC_GITHUB_MODEL: openai/gpt-4.1')
+          s=s.replace('NT_SEMANTIC_COPILOT_TIMEOUT:', 'NT_SEMANTIC_COPILOT_TIMEOUT:')
+          s=s.replace('python3 scripts/nt_semantic_copilot_worker.py', 'python3 scripts/nt_semantic_github_models_worker.py')
+          if 'models: read' not in s or 'nt_semantic_github_models_worker.py' not in s or 'Install GitHub Copilot CLI' in s:
+              raise SystemExit('GitHub Models workflow patch incomplete')
+          p.write_text(s,encoding='utf-8')
+          PY
+      - name: Remove one-shot and commit
+        run: |
+          set -euo pipefail
+          rm .github/workflows/switch-semantic-to-github-models-once.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/workflows/nt-explanation-recovery.yml .github/workflows/switch-semantic-to-github-models-once.yml
+          git commit -m 'Use GitHub Models for NT semantic transcript review'
+          for attempt in 1 2 3; do
+            git fetch origin agent/biblia-explicata-nt-integration-clean
+            git rebase FETCH_HEAD
+            if git push origin HEAD:agent/biblia-explicata-nt-integration-clean; then exit 0; fi
+          done
+          exit 1
