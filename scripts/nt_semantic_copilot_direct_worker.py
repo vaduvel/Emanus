@@ -16,6 +16,9 @@ if spec is None or spec.loader is None:
     raise RuntimeError("Cannot load semantic base worker")
 base = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(base)
+# Explicitly avoid auto-selection: GPT-5 mini is currently a zero-multiplier paid-plan
+# Copilot model and remains sufficient for a two-pass transcript-grounded review.
+base.MODEL = "gpt-5-mini"
 original_load_rows = base.load_rows
 
 
