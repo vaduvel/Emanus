@@ -143,7 +143,7 @@ manifest.counts = {
 manifest.sourceFidelity = {
   status: "covered-with-tiered-evidence",
   pinnedLegacyCommit: PINNED_LEGACY_COMMIT,
-  rawTranscriptReviewedUnits,
+  rawTranscriptReviewedUnits: rawReviewedUnits,
   sourceDerivedReviewedUnits,
   totalUnits,
   policy: "raw-transcript-reviewed is stronger than source-derived-legacy. The latter must never be presented as raw transcript verification.",
