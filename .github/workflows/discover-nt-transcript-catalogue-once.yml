@@ -1,0 +1,88 @@
+name: Discover NT Transcript Catalogue Once
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-nt-integration-clean
+    paths:
+      - .github/workflows/discover-nt-transcript-catalogue-once.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Extract Zac Poonen NT transcript links
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import hashlib, html, json, re, urllib.request
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import urljoin
+
+          url='https://sermonindex.net/speakers/zac-poonen/'
+          req=urllib.request.Request(url,headers={'User-Agent':'Emanus-Editorial-Research/1.0'})
+          with urllib.request.urlopen(req,timeout=120) as r:
+              raw=r.read()
+          digest='sha256:'+hashlib.sha256(raw).hexdigest()
+          text=raw.decode('utf-8',errors='replace')
+
+          class A(HTMLParser):
+              def __init__(self): super().__init__(); self.href=None; self.buf=[]; self.items=[]
+              def handle_starttag(self,tag,attrs):
+                  if tag.lower()=='a':
+                      self.href=dict(attrs).get('href'); self.buf=[]
+              def handle_data(self,data):
+                  if self.href is not None: self.buf.append(data)
+              def handle_endtag(self,tag):
+                  if tag.lower()=='a' and self.href is not None:
+                      title=' '.join(''.join(self.buf).split())
+                      href=self.href
+                      if '/speakers/zac-poonen/' in href and href.rstrip('/') != '/speakers/zac-poonen':
+                          self.items.append((urljoin(url,href),title))
+                      self.href=None; self.buf=[]
+          p=A(); p.feed(text)
+          unique={}
+          for href,title in p.items:
+              if href not in unique or len(title)>len(unique[href]): unique[href]=title
+
+          keywords=re.compile(r'\b(?:matthew|mark|luke|john|acts|romans|corinthians|galatians|ephesians|philippians|colossians|thessalonians|timothy|titus|philemon|hebrews|james|peter|jude|revelation|through the bible)\b',re.I)
+          items=[{'url':href,'title':title} for href,title in unique.items() if keywords.search(title+' '+href)]
+          items.sort(key=lambda x:(x['title'].lower(),x['url']))
+          out={
+              'schema':'emanus-poonen-transcript-catalogue-v1',
+              'sourcePageUrl':url,
+              'sourcePageSha256':digest,
+              'policy':'Discovery catalogue only. SermonIndex is a transcript representation; official CFC pages/audio remain attribution authority. Every episode-to-transcript mapping requires range/title verification before semantic review.',
+              'allSpeakerLinks':len(unique),
+              'ntCandidateLinks':len(items),
+              'items':items,
+          }
+          path=Path('docs/data/biblia-explicata/nt-poonen-transcript-catalogue.json')
+          path.parent.mkdir(parents=True,exist_ok=True)
+          path.write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print('speaker links',len(unique),'NT candidates',len(items),'sha',digest)
+          PY
+      - name: Remove one-shot and commit catalogue
+        run: |
+          set -euo pipefail
+          rm .github/workflows/discover-nt-transcript-catalogue-once.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/biblia-explicata/nt-poonen-transcript-catalogue.json .github/workflows/discover-nt-transcript-catalogue-once.yml
+          git commit -m 'Catalogue Poonen NT transcript mirrors for fidelity recovery'
+          for attempt in 1 2 3; do
+            git fetch origin agent/biblia-explicata-nt-integration-clean
+            git rebase FETCH_HEAD
+            if git push origin HEAD:agent/biblia-explicata-nt-integration-clean; then exit 0; fi
+          done
+          exit 1
