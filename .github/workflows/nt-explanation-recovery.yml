@@ -152,6 +152,12 @@ jobs:
           set -euo pipefail
           node scripts/review-nt-lexicon-editorial-fixes.mjs
 
+      - name: Apply final Romanian reader-copy review
+        run: |
+          set -euo pipefail
+          node scripts/normalize-nt-final-romanian-wave.mjs
+          node scripts/normalize-nt-final-romanian-contextual.mjs
+
       - name: Materialize final NT corpus and reviewed quote fixes
         run: |
           set -euo pipefail
