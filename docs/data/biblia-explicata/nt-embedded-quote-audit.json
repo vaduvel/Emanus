@@ -2,25 +2,14 @@
   "schema": "emanus-nt-embedded-quote-audit-v2",
   "status": "manual-source-check-required",
   "policy": "Quoted spans of at least five words are checked against the exact current Biblia Emanus text in the same canonical book and chapter. Same-chapter exact matches clear automatically. A non-match that intends to quote Scripture must either be rewritten to exact BE wording or be explicitly reviewed as an exact biblical cross-reference to a named BE book/chapter. Only spans that do not claim to quote Scripture may use the hash-bound non-bible-quotation classification. Biblical paraphrases in quotation marks are never cleared merely by classification.",
-  "quotedFragments": 98,
-  "exactMatches": 32,
+  "quotedFragments": 97,
+  "exactMatches": 46,
   "reviewedNonBibleQuotes": 13,
   "reviewedCrossReferences": 0,
   "reviewLedgerStatus": "present",
   "reviewLedgerProblems": 0,
-  "count": 53,
+  "count": 38,
   "findings": [
-    {
-      "bookId": "matei",
-      "canonicalBookId": "MAT",
-      "book": "Matei",
-      "chapter": 2,
-      "field": "units[2].teaching",
-      "quote": "El va fi chemat Nazarinean",
-      "wordCount": 5,
-      "reviewId": "0d621de310c8109172956ca2061b2b6f725556d230188822b00171ec10477b04",
-      "quoteSha256": "sha256:f408da2b58e6838f3e1b02d19a2171ab87a5ba427b7f88bc0d5961b1aab4a74d"
-    },
     {
       "bookId": "matei",
       "canonicalBookId": "MAT",
@@ -31,17 +20,6 @@
       "wordCount": 6,
       "reviewId": "8985c777dee2b2d2dd81e2bb69b0d27209dba26c3cfcdfa47aa0f8d4001e64c5",
       "quoteSha256": "sha256:3e008963800492cb77ec4caf41801342bfb3181509cd7eca7212ffff5bea4b6c"
-    },
-    {
-      "bookId": "matei",
-      "canonicalBookId": "MAT",
-      "book": "Matei",
-      "chapter": 7,
-      "field": "units[3].teaching",
-      "quote": "nu v-am mai cunoscut",
-      "wordCount": 5,
-      "reviewId": "999b7c341df842bae2a2d6d5065c0bbbaac1072e4da91beff0dab7371650ec9c",
-      "quoteSha256": "sha256:874b1d61a32d4bbb66982450c59c5100f22af8968ee7efd7f6e33a1d264aa278"
     },
     {
       "bookId": "matei",
@@ -84,39 +62,6 @@
       "bookId": "matei",
       "canonicalBookId": "MAT",
       "book": "Matei",
-      "chapter": 19,
-      "field": "units[2].teaching",
-      "quote": "Cine poate atunci să fie mântuit?",
-      "wordCount": 6,
-      "reviewId": "6a8eca1e24c015ae9d4396f90d4ac84fdf8b976c9e2968b6e110227373115d5d",
-      "quoteSha256": "sha256:73ebcc8493ca89c09abb40fb43e419bb486e7931ed2193b913e462a557cb9239"
-    },
-    {
-      "bookId": "matei",
-      "canonicalBookId": "MAT",
-      "book": "Matei",
-      "chapter": 23,
-      "field": "units[0].teaching",
-      "quote": "faceți, dar nu faceți după faptele lor",
-      "wordCount": 7,
-      "reviewId": "94f2b7236d709434632693f8f94dfe85d3f078c0981ff353bc34f5bb8786ad0b",
-      "quoteSha256": "sha256:2b86cf8d2f52e9f8e7000c38660209c339a78218aeae5b3ff55bc4a12868538d"
-    },
-    {
-      "bookId": "matei",
-      "canonicalBookId": "MAT",
-      "book": "Matei",
-      "chapter": 24,
-      "field": "units[0].teaching",
-      "quote": "Băgați de seamă să nu vă înșele cineva.",
-      "wordCount": 8,
-      "reviewId": "c5d64f3a15f0fb9f56743bbc9ece05938e0c5745c1243488b01dc5de75d92aad",
-      "quoteSha256": "sha256:bf08a91ce155907cb41387c7482f0ef19860099abb9469f5ac1ac1f0c2ea2486"
-    },
-    {
-      "bookId": "matei",
-      "canonicalBookId": "MAT",
-      "book": "Matei",
       "chapter": 26,
       "field": "units[0].teaching",
       "quote": "Pe săraci îi aveți totdeauna",
@@ -134,17 +79,6 @@
       "wordCount": 9,
       "reviewId": "af6277df605ddae5fc794ad3030941af60e2472576da05910a70b27a1bc3a2b6",
       "quoteSha256": "sha256:0e047e6c2cf0de939f7d5dbe77c9c4daaf05e31b969dd634d87185ae6cea19bd"
-    },
-    {
-      "bookId": "matei",
-      "canonicalBookId": "MAT",
-      "book": "Matei",
-      "chapter": 28,
-      "field": "units[0].teaching",
-      "quote": "cu frică și cu mare bucurie",
-      "wordCount": 6,
-      "reviewId": "8644c72a7861e1d41bed914dc1a62439c36f587deaa9080b34c68cf32488ce31",
-      "quoteSha256": "sha256:31f4d9bbf1b0cda9564e16a9cba211341bcc51b9d2b303272284d46794eb4bae"
     },
     {
       "bookId": "marcu",
@@ -170,64 +104,6 @@
       "exactMatchElsewhere": [
         "MRK.4"
       ]
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "book": "Marcu",
-      "chapter": 5,
-      "field": "units[2].teaching",
-      "quote": "Nu te teme; crede numai.",
-      "wordCount": 5,
-      "reviewId": "09c3a811d2dc23aaa872d19a9abea2075fe8442645a6fbb8b6eec5b2e814449e",
-      "quoteSha256": "sha256:b838d4601c91fa5c943f022986d00b79a3f0a6deac88d8a4cb4e6e9a032f545d"
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "book": "Marcu",
-      "chapter": 6,
-      "field": "prayer",
-      "quote": "Îndrăzniți, Eu sunt, nu vă temeți!",
-      "wordCount": 6,
-      "reviewId": "c110dbc02ed2ee87939dac25e3abd17727df13f4fe17c45314bddec57a4902c6",
-      "quoteSha256": "sha256:05a3bf7fec490a9a500924d63894771f1bea2d68be3cb2c9aef1c1f929a60235"
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "book": "Marcu",
-      "chapter": 6,
-      "field": "units[4].teaching",
-      "quote": "Îndrăzniți! Eu sunt. Nu vă temeți!",
-      "wordCount": 6,
-      "reviewId": "5cc13e06c6c2c567adaea4557b943f000124a51c647fb4316be6709effca53a2",
-      "quoteSha256": "sha256:b56fa650410bb31cc5685f6458224250962c713f3c0c6f04c8d1af40a7978293"
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "book": "Marcu",
-      "chapter": 8,
-      "field": "units[0].teaching",
-      "quote": "Mi-e milă de mulțime.",
-      "wordCount": 5,
-      "reviewId": "4a824829ea33c8ed38f7750e05574b8f4a7d3a4645140c370095200e93691050",
-      "quoteSha256": "sha256:eea1c13cfa26bce19e777d37dd64d2c3b747c1d735f4748e95ed485cf0384b10",
-      "exactMatchElsewhere": [
-        "MAT.15"
-      ]
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "book": "Marcu",
-      "chapter": 9,
-      "field": "units[0].teaching",
-      "quote": "Acesta este Fiul Meu preaiubit; pe El să-L ascultați.",
-      "wordCount": 10,
-      "reviewId": "81890e13c4326da94d6dee57ef6456fa508a3dc8e32ff2a8cd4c8aef9fbae40c",
-      "quoteSha256": "sha256:77cc89d813aeaccc2015e600b234961003fbcaa8ff6052492c988408ddf48a99"
     },
     {
       "bookId": "marcu",
@@ -268,17 +144,6 @@
       "book": "Marcu",
       "chapter": 12,
       "field": "units[1].teaching",
-      "quote": "Dați cezarului ce este al cezarului și lui Dumnezeu ce este al lui Dumnezeu.",
-      "wordCount": 14,
-      "reviewId": "22d6be1422c9a075d711f7f9cfac415a0eaa739d01252f3f764356192d4bfdd4",
-      "quoteSha256": "sha256:60de6cd89cecfc187dfa8340442c865f5a39185ac04c0c39b6cbc8e3ea546dc6"
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "book": "Marcu",
-      "chapter": 12,
-      "field": "units[1].teaching",
       "quote": "nu mai este al lui",
       "wordCount": 5,
       "reviewId": "b1eea65e7a5367dcd0fde8d8b88d05ccd0ed9cc99890a33c20954ec5d8c151ce",
@@ -294,28 +159,6 @@
       "wordCount": 8,
       "reviewId": "fcd1171a27dbce777536ba055f1d2d7c8a86603ecb346dbc44393c52082d1909",
       "quoteSha256": "sha256:f491f0d0f8131b58cf4108cff4658477d47be733ad2436c8ee62b91064a580be"
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "book": "Marcu",
-      "chapter": 12,
-      "field": "units[1].teaching",
-      "quote": "Eu sunt Dumnezeul lui Avraam, Isaac și Iacov",
-      "wordCount": 8,
-      "reviewId": "ac92f4e7129cbb9bd5b495918675424863260b44c34a4d926e6be61a956759f0",
-      "quoteSha256": "sha256:aa967a60f54e2737fa846c268d5073b3de9542160a05ee98c9c02b1934d86838"
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "book": "Marcu",
-      "chapter": 13,
-      "field": "units[0].teaching",
-      "quote": "Cine va răbda până la sfârșit va fi mântuit.",
-      "wordCount": 9,
-      "reviewId": "727643ff421a8483a5ecc345b3bdc67e308a075c12aefbaafb9e6ab607677466",
-      "quoteSha256": "sha256:05028c0de86b5ac4ddea5611e9fd794fe8860e4454ec595fd4bd5b5ce3f2b36d"
     },
     {
       "bookId": "marcu",
@@ -366,17 +209,6 @@
       "exactMatchElsewhere": [
         "MAT.16"
       ]
-    },
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "book": "Marcu",
-      "chapter": 16,
-      "field": "units[0].teaching",
-      "quote": "spuneți ucenicilor Lui și lui Petru",
-      "wordCount": 6,
-      "reviewId": "3ed0cc54be6734640776b65aad1167cb3f81c879c12cff3164f8347b6381c2d7",
-      "quoteSha256": "sha256:48b496aa258d63a277c433f7d46b189d53d485b5718b8cda88f24a77d47ab226"
     },
     {
       "bookId": "marcu",
