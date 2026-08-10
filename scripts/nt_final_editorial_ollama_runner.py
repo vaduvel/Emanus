@@ -17,6 +17,36 @@ OLLAMA_MODEL = os.environ.get('NT_FINAL_OLLAMA_MODEL', 'qwen3:8b')
 OLLAMA_TIMEOUT = int(os.environ.get('NT_FINAL_OLLAMA_TIMEOUT', '900'))
 OLLAMA_CONTEXT = int(os.environ.get('NT_FINAL_OLLAMA_CONTEXT', '32768'))
 
+OUTPUT_SCHEMA = {
+    'type': 'object',
+    'properties': {
+        'verses': {
+            'type': 'array',
+            'items': {
+                'type': 'object',
+                'properties': {
+                    'reference': {'type': 'string'},
+                    'sourceAnchor': {'type': 'string'},
+                    'targetAnchor': {'type': 'string'},
+                    'sourceRationale': {'type': 'string'},
+                    'romanianRationale': {'type': 'string'},
+                    'semanticRationale': {'type': 'string'},
+                    'issue': {'type': 'string'},
+                },
+                'required': [
+                    'reference',
+                    'sourceAnchor',
+                    'targetAnchor',
+                    'sourceRationale',
+                    'romanianRationale',
+                    'semanticRationale',
+                ],
+            },
+        },
+    },
+    'required': ['verses'],
+}
+
 
 def load_worker():
     spec = importlib.util.spec_from_file_location('nt_final_editorial_worker_impl', WORKER_PATH)
@@ -36,7 +66,7 @@ def ollama_call_model(payload: dict[str, Any], token: str, retries: int = 2) -> 
         'model': OLLAMA_MODEL,
         'messages': messages,
         'stream': False,
-        'format': 'json',
+        'format': OUTPUT_SCHEMA,
         'think': False,
         'keep_alive': '15m',
         'options': {
