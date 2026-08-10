@@ -19,7 +19,7 @@ jobs:
       github.event_name != 'pull_request' ||
       github.event.pull_request.head.ref == 'agent/biblia-explicata-nt-integration-clean'
     runs-on: ubuntu-22.04
-    timeout-minutes: 15
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
         with:
@@ -116,29 +116,39 @@ jobs:
           with urllib.request.urlopen(req, timeout=60) as response:
               raw = response.read().decode('utf-8', errors='replace')
           Path('/tmp/unu-ioan-transcript/1-john-vbv-05-page.html').write_text(raw, encoding='utf-8')
-
           decoded = html.unescape(raw).replace('\\/', '/')
           candidates = []
-          patterns = [
+          for pattern in [
               r'https?://[^\"\'<>\s]+?\.mp3(?:\?[^\"\'<>\s]*)?',
               r'(?:src|href)=[\"\']([^\"\']+?\.mp3(?:\?[^\"\']*)?)[\"\']',
-          ]
-          for pattern in patterns:
+          ]:
               for match in re.finditer(pattern, decoded, flags=re.I):
                   value = match.group(1) if match.lastindex else match.group(0)
                   value = urllib.parse.urljoin(page, value)
                   if value not in candidates:
                       candidates.append(value)
-          if not candidates:
-              for line in decoded.splitlines():
-                  if 'audio' in line.lower() or '.mp3' in line.lower():
-                      print('AUDIO_HTML', line[:2000])
-              raise SystemExit('No MP3 source found in official CFC episode HTML')
-          print('OFFICIAL_AUDIO_CANDIDATES', json.dumps(candidates, indent=2))
+          expected = 'https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt23-1john-chapter-5-1-to-chapter-5-21.mp3'
+          if expected not in candidates:
+              raise SystemExit(f'Expected official audio not present in current episode HTML: {candidates}')
+          print('Verified official 1 Ioan 5 audio:', expected)
           Path('/tmp/unu-ioan-transcript/1-john-vbv-05-audio.json').write_text(json.dumps({
               'officialSourceUrl': page,
-              'audioCandidates': candidates,
+              'officialAudioUrl': expected,
           }, indent=2) + '\n', encoding='utf-8')
+          PY
+
+      - name: Transcribe official CFC 1 Ioan 5 audio
+        env:
+          NT_TRANSCRIPTION_MODEL: small.en
+        run: |
+          set -euo pipefail
+          python3 scripts/transcribe_nt_current_official_audio.py
+          cp docs/data/biblia-explicata/nt-official-transcripts/1-ioan-vbv-05.json /tmp/unu-ioan-transcript/1-ioan-vbv-05.json
+          python3 - <<'PY'
+          import json
+          p='/tmp/unu-ioan-transcript/1-ioan-vbv-05.json'
+          d=json.load(open(p, encoding='utf-8'))
+          print('VBV05 transcript', d['transcriptSha256'], 'words', d['wordCount'], 'audio', d['officialAudioSha256'])
           PY
 
       - uses: actions/upload-artifact@v4
