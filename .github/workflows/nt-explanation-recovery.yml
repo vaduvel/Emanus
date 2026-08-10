@@ -108,6 +108,30 @@ jobs:
           set -euo pipefail
           node scripts/review-nt-poonen-fidelity-marcu-13.mjs
 
+      - name: Repair Mark 14-16 review source syntax
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path("scripts/review-nt-poonen-fidelity-marcu-14-16.mjs")
+          source = path.read_text(encoding="utf-8")
+          replacements = {
+              "`textualStatus: double-bracketed`": "«textualStatus: double-bracketed»",
+              "`double-bracketed`": "«double-bracketed»",
+          }
+          changed = 0
+          for before, after in replacements.items():
+              count = source.count(before)
+              if count:
+                  source = source.replace(before, after)
+                  changed += count
+          if changed != 2:
+              raise SystemExit(f"Expected exactly 2 unsafe embedded backticks, repaired {changed}")
+          path.write_text(source, encoding="utf-8")
+          print(f"Repaired {changed} unsafe embedded backticks in Mark 14-16 review source.")
+          PY
+
       - name: Review Mark 14-16 against raw transcripts
         run: |
           set -euo pipefail
@@ -152,9 +176,10 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/review-nt-poonen-fidelity-marcu-14-16.mjs
           git add docs/data/biblia-explicata docs/biblia-explicata packages/shared/src/bible/generated/ntExplained packages/shared/src/bible/generated/ntExplained.ts packages/shared/src/bible/generated/ntExplainedBinding.ts packages/shared/src/bible/ntPublicationBible.ts
           if git diff --cached --quiet; then
-            echo "NT snapshots already current."
+            echo "NT snapshots and review sources already current."
             exit 0
           fi
           git commit -m "Materialize blocked NT review snapshots with canonical binding"
