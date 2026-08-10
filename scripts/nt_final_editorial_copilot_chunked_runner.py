@@ -4,13 +4,14 @@ from __future__ import annotations
 import importlib.util
 import json
 import os
+import re
 from pathlib import Path
-from typing import Any
+from typing import Any, Mapping
 
 ROOT = Path(__file__).resolve().parents[1]
 WORKER_PATH = ROOT / 'scripts' / 'nt_final_editorial_worker.py'
 COPILOT_RUNNER_PATH = ROOT / 'scripts' / 'nt_final_editorial_copilot_runner.py'
-CHUNK_SIZE = int(os.environ.get('NT_FINAL_CHUNK_SIZE', '5'))
+CHUNK_SIZE = int(os.environ.get('NT_FINAL_CHUNK_SIZE', '25'))
 CHUNK_ATTEMPTS = int(os.environ.get('NT_FINAL_CHUNK_ATTEMPTS', '4'))
 
 MATERIAL_CRITERION = '''
@@ -41,6 +42,138 @@ def load_module(path: Path, name: str):
 
 def _material_errors(errors: list[str]) -> list[str]:
     return [error for error in errors if 'modelul a semnalat problemă materială' in error]
+
+
+def _error_refs(errors: list[str]) -> set[str]:
+    refs: set[str] = set()
+    for error in errors:
+        match = re.match(r'^([1-3]?[A-Z]{2,3}\.\d+\.\d+):', error)
+        if match:
+            refs.add(match.group(1))
+    return refs
+
+
+def _build_payload(
+    messages: list[Any],
+    user_index: int,
+    user_content: str,
+    begin: int,
+    end: int,
+    rows: list[dict[str, Any]],
+    feedback: str,
+) -> dict[str, Any]:
+    rows_json = json.dumps(rows, ensure_ascii=False, separators=(',', ':'))
+    chunk_content = user_content[:begin] + rows_json + user_content[end:]
+    chunk_content += '\n\n' + MATERIAL_CRITERION
+    chunk_content += '\n\n' + ANCHOR_POLICY
+    if feedback:
+        chunk_content += (
+            '\n\nFEEDBACK DE VALIDARE PENTRU VERSETELE REFĂCUTE — repară exact aceste probleme, '
+            'fără să modifici sau să inventezi textul sursă:\n' + feedback
+        )
+    chunk_messages = [dict(item) if isinstance(item, dict) else item for item in messages]
+    chunk_messages[user_index] = dict(chunk_messages[user_index])
+    chunk_messages[user_index]['content'] = chunk_content
+    return {'messages': chunk_messages}
+
+
+def _merge_payload(original: Mapping[str, Any], replacement: Mapping[str, Any]) -> dict[str, Any]:
+    out = dict(original)
+    out.update(replacement)
+    return out
+
+
+def review_chunk_with_salvage(
+    worker,
+    copilot_runner,
+    payload: dict[str, Any],
+    token: str,
+    messages: list[Any],
+    user_index: int,
+    user_content: str,
+    begin: int,
+    end: int,
+    chunk: list[dict[str, Any]],
+    label: str,
+) -> list[dict[str, Any]]:
+    rows_by_ref = {row['reference']: row for row in chunk}
+    accepted: dict[str, dict[str, Any]] = {}
+    pending = list(chunk)
+    feedback = ''
+    material_counts: dict[str, int] = {}
+
+    for attempt in range(1, CHUNK_ATTEMPTS + 1):
+        if not pending:
+            break
+        partial = _build_payload(messages, user_index, user_content, begin, end, pending, feedback)
+        result = copilot_runner.copilot_call_model(_merge_payload(payload, partial), token, retries=2)
+        items = result.get('verses') if isinstance(result, dict) else None
+        if not isinstance(items, list):
+            feedback = f'rădăcina trebuie să conțină verses listă; așteptate {len(pending)} versete'
+            print(f'[nt-final-copilot] {label} retry {attempt}: {feedback}', flush=True)
+            continue
+
+        by_ref = {
+            item.get('reference'): dict(item)
+            for item in items
+            if isinstance(item, Mapping) and isinstance(item.get('reference'), str)
+        }
+        next_pending: list[dict[str, Any]] = []
+        errors_for_feedback: list[str] = []
+
+        for row in pending:
+            ref = row['reference']
+            item = by_ref.get(ref)
+            if item is None:
+                next_pending.append(row)
+                errors_for_feedback.append(f'{ref}: lipsă rezultat')
+                continue
+
+            _valid, errors = worker.validate_model_output({'verses': [item]}, [row])
+            if not errors:
+                accepted[ref] = item
+                continue
+
+            material = _material_errors(errors)
+            if material:
+                material_counts[ref] = material_counts.get(ref, 0) + 1
+                if material_counts[ref] >= 2:
+                    raise RuntimeError(
+                        f'{label}: problemă materială confirmată după re-evaluare pentru {ref}: '
+                        + '; '.join(material[:2])
+                    )
+                errors.append(
+                    f'{ref}: re-evaluează independent issue; păstrează-l dacă textul nu este defensabil din greacă'
+                )
+            next_pending.append(row)
+            errors_for_feedback.extend(errors)
+
+        newly_accepted = len(pending) - len(next_pending)
+        print(
+            f'[nt-final-copilot] {label} attempt {attempt}: '
+            f'{newly_accepted} noi valide, {len(next_pending)} de refăcut',
+            flush=True,
+        )
+        pending = next_pending
+        feedback = '; '.join(errors_for_feedback[:20])
+
+    if pending:
+        raise RuntimeError(
+            f'{label}: {len(pending)} versete încă invalide după {CHUNK_ATTEMPTS} încercări: {feedback}'
+        )
+
+    combined = [accepted[row['reference']] for row in chunk]
+    _validated, final_errors = worker.validate_model_output({'verses': combined}, chunk)
+    if final_errors:
+        # Singleton salvage cannot see duplicate rationales across different verses. If that
+        # rare case appears, surface it explicitly instead of silently accepting weak evidence.
+        refs = sorted(_error_refs(final_errors))
+        raise RuntimeError(
+            f'{label}: validarea combinată a eșuat după salvage'
+            + (f' pentru {refs}' if refs else '')
+            + ': ' + '; '.join(final_errors[:12])
+        )
+    return combined
 
 
 def chunked_call_model(worker, copilot_runner, payload: dict[str, Any], token: str, retries: int = 3) -> dict[str, Any]:
@@ -76,74 +209,21 @@ def chunked_call_model(worker, copilot_runner, payload: dict[str, Any], token: s
     combined: list[dict[str, Any]] = []
     for offset in range(0, len(rows), CHUNK_SIZE):
         chunk = rows[offset:offset + CHUNK_SIZE]
-        chunk_json = json.dumps(chunk, ensure_ascii=False, separators=(',', ':'))
-        local_feedback = ''
-        accepted: list[dict[str, Any]] | None = None
-
-        for attempt in range(1, CHUNK_ATTEMPTS + 1):
-            chunk_content = user_content[:begin] + chunk_json + user_content[end:]
-            chunk_content += '\n\n' + MATERIAL_CRITERION
-            chunk_content += '\n\n' + ANCHOR_POLICY
-            if local_feedback:
-                chunk_content += (
-                    '\n\nFEEDBACK DE VALIDARE PENTRU ACEST LOT — repară exact aceste probleme, '
-                    'fără să modifici sau să inventezi textul sursă:\n' + local_feedback
-                )
-
-            chunk_messages = [dict(item) if isinstance(item, dict) else item for item in messages]
-            chunk_messages[user_index] = dict(chunk_messages[user_index])
-            chunk_messages[user_index]['content'] = chunk_content
-            chunk_payload = dict(payload)
-            chunk_payload['messages'] = chunk_messages
-
-            result = copilot_runner.copilot_call_model(chunk_payload, token, retries=2)
-            verses = result.get('verses') if isinstance(result, dict) else None
-            if not isinstance(verses, list) or len(verses) != len(chunk):
-                errors = [
-                    f'lotul trebuie să aibă exact {len(chunk)} rezultate, primit '
-                    f'{len(verses) if isinstance(verses, list) else "non-list"}'
-                ]
-            else:
-                _validated, errors = worker.validate_model_output(result, chunk)
-
-            if not errors:
-                accepted = verses
-                print(
-                    f'[nt-final-copilot] chunk {offset + 1}-{offset + len(chunk)}/{len(rows)} '
-                    f'OK (attempt {attempt})',
-                    flush=True,
-                )
-                break
-
-            material = _material_errors(errors)
-            print(
-                f'[nt-final-copilot] chunk {offset + 1}-{offset + len(chunk)}/{len(rows)} '
-                f'validation retry {attempt}: {"; ".join(errors[:8])}',
-                flush=True,
-            )
-
-            # Un defect material nu trebuie "convins" să dispară prin retry-uri repetate.
-            # Îi permitem o singură re-evaluare independentă ca să separăm fals-pozitivele
-            # lexicale/stilistice de defectele reale; dacă persistă, workerul se oprește.
-            if material and attempt >= 2:
-                raise RuntimeError(
-                    f'Chunk {offset + 1}-{offset + len(chunk)}: problemă materială confirmată după re-evaluare: '
-                    + '; '.join(material[:4])
-                )
-
-            local_feedback = '; '.join(errors[:12])
-            if material:
-                local_feedback += (
-                    '; Re-evaluează independent marcajul issue conform criteriului material de mai sus. '
-                    'Nu retrage issue dacă textul chiar nu este defensabil din greaca furnizată.'
-                )
-
-        if accepted is None:
-            raise RuntimeError(
-                f'Chunk {offset + 1}-{offset + len(chunk)} invalid după {CHUNK_ATTEMPTS} încercări: '
-                + local_feedback
-            )
-        combined.extend(accepted)
+        label = f'chunk {offset + 1}-{offset + len(chunk)}/{len(rows)}'
+        combined.extend(review_chunk_with_salvage(
+            worker,
+            copilot_runner,
+            payload,
+            token,
+            messages,
+            user_index,
+            user_content,
+            begin,
+            end,
+            chunk,
+            label,
+        ))
+        print(f'[nt-final-copilot] {label} OK', flush=True)
 
     return {'verses': combined}
 
