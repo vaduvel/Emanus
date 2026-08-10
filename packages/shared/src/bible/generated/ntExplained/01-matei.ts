@@ -45,7 +45,7 @@ export const NT_BOOK_01: BibleBook = {
             "Rut 4:13-22",
             "Galateni 3:16"
           ],
-          "forYourHeart": "Poate privești în urmă și vezi o familie amestecată, greșeli, pierderi ori ani în care Dumnezeu părea tăcut. Genealogia aceasta nu spune că răul a fost bun; spune că răul nu a putut opri credincioșia lui Dumnezeu. Hristos nu Se rușinează să intre în istorii care au nevoie de răscumpărare."
+          "forYourHeart": "Poate privești în urmă și vezi o familie amestecată, greșeli, pierderi ori ani în care Dumnezeu părea tăcut. Genealogia aceasta nu spune că răul a fost bun; spune că răul nu a putut opri credincioșia lui Dumnezeu. Hristos nu Se rușinează să între în istorii care au nevoie de răscumpărare."
         },
         {
           "id": "matei-1-18-25",
@@ -733,7 +733,7 @@ export const NT_BOOK_01: BibleBook = {
           "ref": "Matei 7:13-14",
           "heading": "Poarta strâmtă",
           "text": "Intrați pe poarta cea strâmtă, căci largă este poarta și încăpătoare este calea care duce la pieire, și mulți sunt cei care intră pe ea. Căci strâmtă este poarta și îngustă este calea care duce la viață, și puțini sunt cei care o găsesc.",
-          "teaching": "Isus nu ascunde faptul că drumul uceniciei este strâmt. Poarta largă lasă omul cu toate stăpânirile lui și cere puțină împotrivire; poarta strâmtă trece prin Hristos și nu lasă mândria, păcatul apărat și autonomia să intre ca bagaj neatins.\n\nCalea strâmtă nu este mântuirea câștigată prin dificultate și nici o competiție în austeritate. Isus este poarta, iar harul este singura intrare. Tocmai harul ne scoate însă de pe calea largă a firii și ne așază într-o viață de urmare, pocăință și ascultare.",
+          "teaching": "Isus nu ascunde faptul că drumul uceniciei este strâmt. Poarta largă lasă omul cu toate stăpânirile lui și cere puțină împotrivire; poarta strâmtă trece prin Hristos și nu lasă mândria, păcatul apărat și autonomia să între ca bagaj neatins.\n\nCalea strâmtă nu este mântuirea câștigată prin dificultate și nici o competiție în austeritate. Isus este poarta, iar harul este singura intrare. Tocmai harul ne scoate însă de pe calea largă a firii și ne așază într-o viață de urmare, pocăință și ascultare.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -2321,7 +2321,7 @@ export const NT_BOOK_01: BibleBook = {
           "ref": "Matei 23:13-22",
           "heading": "Călăuze oarbe",
           "text": "Vai vouă, cărturari și farisei ipocriți! Voi închideți Împărăția cerurilor înaintea oamenilor; nici voi nu intrați și nici pe cei care vor să intre nu-i lăsați să intre. Vai vouă, cărturari și farisei ipocriți! Voi străbateți marea și uscatul ca să faceți un singur prozelit, iar când devine unul, îl faceți de două ori mai mult decât voi un fiu al Gheenei. Vai vouă, călăuze oarbe, care spuneți: «Dacă jură cineva pe Templu, nu înseamnă nimic; dar dacă jură pe aurul Templului, este obligat.» Nebuni și orbi! Ce este mai mare: aurul sau Templul care sfințește aurul? Și mai spuneți: «Dacă jură cineva pe altar, nu înseamnă nimic; dar dacă jură pe darul de pe el, este obligat.» Orbilor! Ce este mai mare: darul sau altarul care sfințește darul? Prin urmare, cine jură pe altar jură pe el și pe tot ce este deasupra lui; cine jură pe Templu jură pe el și pe Cel ce locuiește în el; iar cine jură pe cer jură pe tronul lui Dumnezeu și pe Cel ce șade pe el.",
-          "teaching": "Primul vai îi acuză că închid Împărăția: nu intră și îi împiedică pe cei care vor să intre. Zelul lor misionar nu vindecă problema; un convertit format în același sistem al aparenței devine și mai adânc legat de el. Activitatea religioasă nu dovedește automat adevărul.\n\nClasificarea jurămintelor permitea omului să pară solemn și totuși să-și păstreze o ieșire. Isus arată absurditatea: aurul nu sfințește templul, iar darul nu sfințește altarul. Dumnezeu, spre care indică toate, aude cuvântul rostit.\n\nO călăuză oarbă nu este doar cineva cu informație insuficientă, ci cel care își folosește sistemul pentru a evita ascultarea limpede. Integritatea nu caută formula prin care minciuna devine tehnic permisă.",
+          "teaching": "Primul vai îi acuză că închid Împărăția: nu intră și îi împiedică pe cei care vor să între. Zelul lor misionar nu vindecă problema; un convertit format în același sistem al aparenței devine și mai adânc legat de el. Activitatea religioasă nu dovedește automat adevărul.\n\nClasificarea jurămintelor permitea omului să pară solemn și totuși să-și păstreze o ieșire. Isus arată absurditatea: aurul nu sfințește templul, iar darul nu sfințește altarul. Dumnezeu, spre care indică toate, aude cuvântul rostit.\n\nO călăuză oarbă nu este doar cineva cu informație insuficientă, ci cel care își folosește sistemul pentru a evita ascultarea limpede. Integritatea nu caută formula prin care minciuna devine tehnic permisă.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [

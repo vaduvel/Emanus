@@ -29,7 +29,7 @@ export const NT_BOOK_12: BibleBook = {
             "1 Ioan 3:2-3",
             "1 Corinteni 3:5-7"
           ],
-          "forYourHeart": "Mulțumește-I lui Dumnezeu pentru lucrarea Lui într-un credincios din afara cercului tău apropiat și roagă-te să iubești întregul Trup al lui Hristos."
+          "forYourHeart": "Mulțumește-I lui Dumnezeu pentru lucrarea Lui într-un credincios din afară cercului tău apropiat și roagă-te să iubești întregul Trup al lui Hristos."
         },
         {
           "id": "coloseni-1-9-14",
@@ -123,7 +123,7 @@ export const NT_BOOK_12: BibleBook = {
           "ref": "Coloseni 2:4-7",
           "heading": "Primiți-L, umblați în El și revărsați mulțumire",
           "text": "Spun aceasta ca nimeni să nu vă înșele prin vorbe convingătoare. Căci, chiar dacă lipsesc cu trupul, totuși în duh sunt cu voi, bucurându-mă și văzând buna voastră rânduială și tăria credinței voastre în Hristos. Așadar, după cum l-ați primit pe Hristos Isus, Domnul, în el umblați, înrădăcinați și zidiți în el, întăriți în credință, așa cum ați fost învățați, prisosind în mulțumire.",
-          "teaching": "Argumentele convingătoare pot suna spiritual și totuși să îndepărteze de Hristos. Pavel se bucură de ordinea și statornicia credincioșilor, apoi îi cheamă să continue în același Hristos pe care L-au primit, nu să caute o etapă superioară în afara Lui.\n\nA fi înrădăcinat vorbește despre o viață ascunsă și stabilă în Hristos; a fi zidit vorbește despre creștere pe o temelie sigură. Credința se întărește prin adevărul primit și se revarsă în recunoștință. Nemulțumirea permanentă face sufletul vulnerabil la promisiunile spectaculoase ale învățătorilor care oferă «mai mult» decât Hristos.",
+          "teaching": "Argumentele convingătoare pot suna spiritual și totuși să îndepărteze de Hristos. Pavel se bucură de ordinea și statornicia credincioșilor, apoi îi cheamă să continue în același Hristos pe care L-au primit, nu să caute o etapă superioară în afară Lui.\n\nA fi înrădăcinat vorbește despre o viață ascunsă și stabilă în Hristos; a fi zidit vorbește despre creștere pe o temelie sigură. Credința se întărește prin adevărul primit și se revarsă în recunoștință. Nemulțumirea permanentă face sufletul vulnerabil la promisiunile spectaculoase ale învățătorilor care oferă «mai mult» decât Hristos.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -342,7 +342,7 @@ export const NT_BOOK_12: BibleBook = {
           "ref": "Coloseni 4:2-6",
           "heading": "Rugăciune perseverentă și cuvinte potrivite fiecăruia",
           "text": "Continuați cu stăruință în rugăciune, privind-o cu mulțumire, rugându-vă în același timp și pentru noi, ca Dumnezeu să ne deschidă o ușă pentru cuvânt, ca să vorbim misterul lui Hristos, pentru care sunt și legat, ca s-o pot dezvălui așa cum ar trebui să vorbesc. Umblați în înțelepciune față de cei de afară, răscumpărând timpul. Vorbirea voastră să fie întotdeauna cu har, dreasă cu sare, ca să știți cum trebuie să răspundeți fiecăruia.",
-          "teaching": "Pavel cere perseverență în rugăciune, veghe și mulțumire. Rugăciunea nu este o formulă ocazională, ci o dependență continuă de Dumnezeu. Chiar slujitorii maturi au nevoie de mijlocirea bisericii pentru uși deschise și pentru claritate în vestirea tainei lui Hristos.\n\nPerseverența în rugăciune nu înlocuiește acțiunea responsabilă. A veghea înseamnă și a răspunde lucid realității.\n\nFață de cei din afara comunității, purtarea trebuie să fie înțeleaptă, timpul folosit bine, iar vorbirea plină de har și «dreasă cu sare». Adevărul nu trebuie să fie insipid, dar nici agresiv; răspunsul este adaptat persoanei, nu rostit mecanic pentru a câștiga o dispută.",
+          "teaching": "Pavel cere perseverență în rugăciune, veghe și mulțumire. Rugăciunea nu este o formulă ocazională, ci o dependență continuă de Dumnezeu. Chiar slujitorii maturi au nevoie de mijlocirea bisericii pentru uși deschise și pentru claritate în vestirea tainei lui Hristos.\n\nPerseverența în rugăciune nu înlocuiește acțiunea responsabilă. A veghea înseamnă și a răspunde lucid realității.\n\nFață de cei din afară comunității, purtarea trebuie să fie înțeleaptă, timpul folosit bine, iar vorbirea plină de har și «dreasă cu sare». Adevărul nu trebuie să fie insipid, dar nici agresiv; răspunsul este adaptat persoanei, nu rostit mecanic pentru a câștiga o dispută.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [

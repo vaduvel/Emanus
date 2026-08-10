@@ -29,7 +29,7 @@ export const NT_BOOK_18: BibleBook = {
             "Coloseni 4:17",
             "Romani 16:5"
           ],
-          "forYourHeart": "Credința se vede și în felul în care rezolvi o rană din casă. Harul mărturisit în biserică trebuie să intre și în relațiile în care ai dreptate să fii supărat."
+          "forYourHeart": "Credința se vede și în felul în care rezolvi o rană din casă. Harul mărturisit în biserică trebuie să între și în relațiile în care ai dreptate să fii supărat."
         },
         {
           "id": "filimon-1-4-7",
