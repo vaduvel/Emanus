@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -17,7 +18,7 @@ if spec is None or spec.loader is None:
     raise RuntimeError("Cannot load semantic base worker")
 base = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(base)
-base.MODEL = "claude-haiku-4.5"
+base.MODEL = os.environ.get("NT_SEMANTIC_COPILOT_MODEL", "auto")
 original_load_rows = base.load_rows
 
 
