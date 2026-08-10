@@ -177,6 +177,7 @@ jobs:
           node scripts/materialize-nt-manual-semantic-1-ioan.mjs
           node scripts/materialize-nt-manual-semantic-2-petru.mjs
           node scripts/materialize-nt-manual-semantic-1-petru.mjs
+          node scripts/fix-nt-manual-semantic-1-petru-quote.mjs
           python3 scripts/merge_nt_semantic_review_artifacts.py \
             --input docs/data/biblia-explicata/nt-semantic-review-manual \
             --ledger docs/data/biblia-explicata/nt-semantic-review-ledger.json
