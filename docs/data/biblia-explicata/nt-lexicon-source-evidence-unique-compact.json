@@ -31,10 +31,15 @@
         "bookId": "ioan",
         "file": "64-Jn-morphgnt.txt",
         "blobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
+      },
+      {
+        "bookId": "efeseni",
+        "file": "70-Eph-morphgnt.txt",
+        "blobSha": "c506f4c4933b0c202f07742ca54aad26ff5495bc"
       }
     ]
   },
-  "count": 182,
+  "count": 195,
   "entries": [
     {
       "reviewId": "d75927928f88069a4dd6d24fb38bc0f630e1e643c2d28e8e4f7e9c6a6c53331f",
@@ -52,7 +57,7 @@
       "transliteration": "biblos genesis",
       "morphology": "G:N-F | G:N-F",
       "briefGloss": "book; origin",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -62,9 +67,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "βιβλοσ",
+            "inputToken": "βίβλος",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "βίβλος",
-            "normalizedLemma": "βιβλοσ",
             "occurrences": [
               {
                 "bcv": "010101",
@@ -77,9 +82,9 @@
             ]
           },
           {
-            "inputToken": "γενεσεωσ",
+            "inputToken": "γενέσεως",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "γένεσις",
-            "normalizedLemma": "γενεσισ",
             "occurrences": [
               {
                 "bcv": "010101",
@@ -110,7 +115,7 @@
       "transliteration": "Christos",
       "morphology": "N:N--T",
       "briefGloss": "Christ",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "e4eed847288063e8cc34ab28dce77dee6a6f4c16bb3f676bde2bb776200ad8ac",
@@ -128,7 +133,7 @@
       "transliteration": "Iēsous",
       "morphology": "N:N-M-P",
       "briefGloss": "Jesus / Joshua",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "6ec7535761a4cce359e2fe9d01e083ace706abf12ab57704843a42dc1decc989",
@@ -146,7 +151,7 @@
       "transliteration": "Emmanouēl",
       "morphology": "N:N--T",
       "briefGloss": "Immanuel",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "86ce0085657a93cccb8543ffb1af303361f03e374e4c056a058759ccc6da3594",
@@ -164,7 +169,7 @@
       "transliteration": "magos",
       "morphology": "G:N-M",
       "briefGloss": "sage",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -174,9 +179,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "μαγοι",
+            "inputToken": "μάγοι",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "μάγος",
-            "normalizedLemma": "μαγοσ",
             "occurrences": [
               {
                 "bcv": "010201",
@@ -207,7 +212,7 @@
       "transliteration": "proskuneō",
       "morphology": "G:V",
       "briefGloss": "to worship",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "85e8cecb1f12a89ac73eefaf6c92697047ec1569732bb90ecc0ab01a91b7152b",
@@ -225,7 +230,7 @@
       "transliteration": "metanoeō",
       "morphology": "G:V",
       "briefGloss": "to repent",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -235,9 +240,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "μετανοειτε",
+            "inputToken": "μετανοεῖτε",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "μετανοέω",
-            "normalizedLemma": "μετανοεω",
             "occurrences": [
               {
                 "bcv": "010302",
@@ -268,7 +273,7 @@
       "transliteration": "baptizō",
       "morphology": "G:V",
       "briefGloss": "to baptize",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "f8be3254b33eb7cef4e9fb199d5f4bbe76b6950de4e068dce3f81472656b71c7",
@@ -286,7 +291,7 @@
       "transliteration": "agapētos",
       "morphology": "G:A",
       "briefGloss": "beloved",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "b52ec9557d91f7fbe29757e5c3de9bb0d8df82d2af75b5766a624a2517d91c57",
@@ -304,7 +309,7 @@
       "transliteration": "peirazō",
       "morphology": "G:V",
       "briefGloss": "to test/tempt: tempt / to test/tempt: test / to test/tempt: try",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "13c90047002f3e322384b6b54fbf8b5e2ee6301c63b5434083a4088eb26548c8",
@@ -322,7 +327,7 @@
       "transliteration": "deute opisō egō",
       "morphology": "G:INJ | G:ADV | G:P-1",
       "briefGloss": "come; after; I/we",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -332,9 +337,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "δευτε",
+            "inputToken": "δεῦτε",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "δεῦτε",
-            "normalizedLemma": "δευτε",
             "occurrences": [
               {
                 "bcv": "010419",
@@ -347,9 +352,9 @@
             ]
           },
           {
-            "inputToken": "οπισω",
+            "inputToken": "ὀπίσω",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ὀπίσω",
-            "normalizedLemma": "οπισω",
             "occurrences": [
               {
                 "bcv": "010419",
@@ -363,8 +368,8 @@
           },
           {
             "inputToken": "μου",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ἐγώ",
-            "normalizedLemma": "εγω",
             "occurrences": [
               {
                 "bcv": "010419",
@@ -395,7 +400,7 @@
       "transliteration": "makarios",
       "morphology": "G:A",
       "briefGloss": "blessed",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -405,9 +410,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "μακαριοι",
+            "inputToken": "μακάριοι",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "μακάριος",
-            "normalizedLemma": "μακαριοσ",
             "occurrences": [
               {
                 "bcv": "010503",
@@ -487,6 +492,79 @@
       }
     },
     {
+      "reviewId": "f9a0e87bd5a3c11944128ad4b0f281acffea69ad2ffa9f50ac3091db745f33e5",
+      "bookId": "matei",
+      "chapter": 5,
+      "ref": "Matei 5:1-12",
+      "original": "πτωχοὶ τῷ πνεύματι",
+      "meaning": "săraci în duh; πτωχός = sărac/nevoiaș, πνεῦμα = duh/spirit.",
+      "meaningSha256": "sha256:46edf428b47fa36bd09b226768f3df1707571df45b6cf4463e29817a08210c1a",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 4567 + TBESG line 3702 + TBESG lines 4276-4277",
+      "strongId": "G4434 + G3588 + G4151",
+      "canonicalLemma": "πτωχός ὁ πνεῦμα",
+      "transliteration": "ptōchos ho pneuma",
+      "morphology": "G:N | G:T | G:N-N",
+      "briefGloss": "poor; the/this/who; spirit/breath: spirit / spirit/breath: breath",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "61-Mt-morphgnt.txt",
+        "fileBlobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "πτωχοὶ",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "πτωχός",
+            "occurrences": [
+              {
+                "bcv": "010503",
+                "word": "πτωχοὶ",
+                "normalizedWord": "πτωχοί",
+                "lemma": "πτωχός",
+                "pos": "A-",
+                "parsing": "----NPM-"
+              }
+            ]
+          },
+          {
+            "inputToken": "τῷ",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "ὁ",
+            "occurrences": [
+              {
+                "bcv": "010503",
+                "word": "τῷ",
+                "normalizedWord": "τῷ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----DSN-"
+              }
+            ]
+          },
+          {
+            "inputToken": "πνεύματι",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "πνεῦμα",
+            "occurrences": [
+              {
+                "bcv": "010503",
+                "word": "πνεύματι",
+                "normalizedWord": "πνεύματι",
+                "lemma": "πνεῦμα",
+                "pos": "N-",
+                "parsing": "----DSN-"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "reviewId": "2c4630d247a2b961447e3d2017a9e7427271e1951f58d74d3db2738579b36cec",
       "bookId": "matei",
       "chapter": 5,
@@ -502,7 +580,7 @@
       "transliteration": "plēroō",
       "morphology": "G:V",
       "briefGloss": "to fulfill",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "511e933ac45e206c59039dc45ec11419022e10e0db773cac4e7ad290abc974ea",
@@ -520,7 +598,7 @@
       "transliteration": "epithumeō",
       "morphology": "G:V",
       "briefGloss": "to long for",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "b1a68d3e53bac70fbe275da1dcdf5b97df3bd48e02d12a7d00936e180ea60bab",
@@ -538,7 +616,7 @@
       "transliteration": "teleios",
       "morphology": "G:A",
       "briefGloss": "perfect",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -548,9 +626,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "τελειοι",
+            "inputToken": "τέλειοι",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "τέλειος",
-            "normalizedLemma": "τελειοσ",
             "occurrences": [
               {
                 "bcv": "010548",
@@ -581,7 +659,7 @@
       "transliteration": "hagiazō",
       "morphology": "G:V",
       "briefGloss": "to sanctify",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -591,9 +669,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "αγιασθητω",
+            "inputToken": "ἁγιασθήτω",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ἁγιάζω",
-            "normalizedLemma": "αγιαζω",
             "occurrences": [
               {
                 "bcv": "010609",
@@ -624,7 +702,7 @@
       "transliteration": "epiousios",
       "morphology": "G:A",
       "briefGloss": "daily",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -634,9 +712,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "επιουσιον",
+            "inputToken": "ἐπιούσιον",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ἐπιούσιος",
-            "normalizedLemma": "επιουσιοσ",
             "occurrences": [
               {
                 "bcv": "010611",
@@ -667,7 +745,7 @@
       "transliteration": "merimnaō",
       "morphology": "G:V",
       "briefGloss": "to worry",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "5fe306d2e610e49ea90f1443e61b6ea7d36872b940d7acb64fa508e450e3af6a",
@@ -685,7 +763,7 @@
       "transliteration": "aiteō zēteō krouō",
       "morphology": "G:V | G:V | G:V",
       "briefGloss": "to ask; to seek; to knock",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -695,9 +773,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "αιτειτε",
+            "inputToken": "αἰτεῖτε",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "αἰτέω",
-            "normalizedLemma": "αιτεω",
             "occurrences": [
               {
                 "bcv": "010707",
@@ -710,9 +788,9 @@
             ]
           },
           {
-            "inputToken": "ζητειτε",
+            "inputToken": "ζητεῖτε",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ζητέω",
-            "normalizedLemma": "ζητεω",
             "occurrences": [
               {
                 "bcv": "010707",
@@ -725,9 +803,9 @@
             ]
           },
           {
-            "inputToken": "κρουετε",
+            "inputToken": "κρούετε",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "κρούω",
-            "normalizedLemma": "κρουω",
             "occurrences": [
               {
                 "bcv": "010707",
@@ -758,7 +836,7 @@
       "transliteration": "anomia",
       "morphology": "G:N-F",
       "briefGloss": "lawlessness",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "c6365fc025b624ddcd8a6e9c3cfd1794a5aeffe56761bf2927de03c5d3852dba",
@@ -776,7 +854,7 @@
       "transliteration": "katharizō",
       "morphology": "G:V",
       "briefGloss": "to clean",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "d93936c2301b1b4ee71a07d06b22bbd1c8e02fa096fa84cdf6c5f15a744fa0e0",
@@ -794,7 +872,7 @@
       "transliteration": "eleos",
       "morphology": "G:N-N",
       "briefGloss": "mercy",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "9f8e36d6169bfc8da7f57b9c1f696ebc4cc8a1ac6e9964560d111cfb6340e9b0",
@@ -812,7 +890,7 @@
       "transliteration": "tharseō",
       "morphology": "G:V",
       "briefGloss": "take heart",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -822,9 +900,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "θαρσει",
+            "inputToken": "θάρσει",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "θαρσέω",
-            "normalizedLemma": "θαρσεω",
             "occurrences": [
               {
                 "bcv": "010922",
@@ -855,7 +933,7 @@
       "transliteration": "apokaluptō",
       "morphology": "G:V",
       "briefGloss": "to reveal",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "7da3418d9c1ebe6a710f92c6ca1cfff8f09dcafb5db7301366424d0d1d14b925",
@@ -873,7 +951,7 @@
       "transliteration": "anapausis",
       "morphology": "G:N-F",
       "briefGloss": "rest",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "3bbcd6b2c1b301c69210e8a1054a01103369c92ab08fd6a4cfb3ec25a24b96a6",
@@ -891,7 +969,7 @@
       "transliteration": "zugos",
       "morphology": "G:N-M",
       "briefGloss": "yoke/scales",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "179cc2db422024fcec4cf1fcce74f100ec08ba812d247b49f92f98e186f7d787",
@@ -909,7 +987,7 @@
       "transliteration": "blasphēmia",
       "morphology": "G:N-F",
       "briefGloss": "blasphemy",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "065c8e7f748e01949fa6e39488221e2130291ba86c443b238fdfa63aafed5b61",
@@ -927,7 +1005,65 @@
       "transliteration": "parabolē",
       "morphology": "G:N-F",
       "briefGloss": "parable",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
+    },
+    {
+      "reviewId": "2cfd2b896e2e8e9f1815542531e21dbe4307bb8f85a0c2fb3ed2807b6f8ed6ab",
+      "bookId": "matei",
+      "chapter": 14,
+      "ref": "Matei 14:22-33",
+      "original": "ἐγώ εἰμι",
+      "meaning": "Eu sunt. Poate însemna «Eu sunt, nu altul» și poartă ecoul descoperirii dumnezeiești.",
+      "meaningSha256": "sha256:03be2007b851772065c933ac685b0103564faff6c6b89694cfc8961a5f228008",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 1605 + TBESG line 1650",
+      "strongId": "G1473 + G1510",
+      "canonicalLemma": "ἐγώ εἰμί",
+      "transliteration": "egō eimi",
+      "morphology": "G:P-1 | G:V",
+      "briefGloss": "I/we; to be",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "61-Mt-morphgnt.txt",
+        "fileBlobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "ἐγώ",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "ἐγώ",
+            "occurrences": [
+              {
+                "bcv": "011427",
+                "word": "ἐγώ",
+                "normalizedWord": "ἐγώ",
+                "lemma": "ἐγώ",
+                "pos": "RP",
+                "parsing": "----NS--"
+              }
+            ]
+          },
+          {
+            "inputToken": "εἰμι",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "εἰμί",
+            "occurrences": [
+              {
+                "bcv": "011427",
+                "word": "εἰμι",
+                "normalizedWord": "εἰμί",
+                "lemma": "εἰμί",
+                "pos": "V-",
+                "parsing": "1PAI-S--"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "reviewId": "18c4b83d880732e1dde81cab87782d35b5dec97de95671f8ef6d25c3f437312d",
@@ -945,7 +1081,7 @@
       "transliteration": "paradosis",
       "morphology": "G:N-F",
       "briefGloss": "tradition",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "6e934b0309eedee57330d19580058622c212ff5012a0a560d6fe93962f98bfa5",
@@ -963,7 +1099,7 @@
       "transliteration": "kurios uhios Daueid, Dauid, Dabid",
       "morphology": "G:N-M | G:N-M | N:N-M-P",
       "briefGloss": "lord: God / lord: master; son; David",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -973,9 +1109,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "κυριε",
+            "inputToken": "Κύριε",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "κύριος",
-            "normalizedLemma": "κυριοσ",
             "occurrences": [
               {
                 "bcv": "011522",
@@ -1004,9 +1140,9 @@
             ]
           },
           {
-            "inputToken": "υιοσ",
+            "inputToken": "υἱὸς",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "υἱός",
-            "normalizedLemma": "υιοσ",
             "occurrences": [
               {
                 "bcv": "011522",
@@ -1019,9 +1155,9 @@
             ]
           },
           {
-            "inputToken": "δαυιδ",
+            "inputToken": "Δαυίδ",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "Δαυίδ",
-            "normalizedLemma": "δαυιδ",
             "occurrences": [
               {
                 "bcv": "011522",
@@ -1052,7 +1188,7 @@
       "transliteration": "Petros petra",
       "morphology": "N:N-M-P | G:N-F",
       "briefGloss": "Peter; rock",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -1062,9 +1198,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "πετροσ",
+            "inputToken": "πέτρος",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "Πέτρος",
-            "normalizedLemma": "πετροσ",
             "occurrences": [
               {
                 "bcv": "011616",
@@ -1085,9 +1221,9 @@
             ]
           },
           {
-            "inputToken": "πετρα",
+            "inputToken": "πέτρα",
+            "resolution": "loose-surface-fallback",
             "lemma": "πέτρα",
-            "normalizedLemma": "πετρα",
             "occurrences": [
               {
                 "bcv": "011618",
@@ -1118,7 +1254,7 @@
       "transliteration": "ekklēsia",
       "morphology": "G:N-F",
       "briefGloss": "assembly",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "e3e784054c9e71e9e430b852ab89c801c8404a48f03acce89c34448289fe7be5",
@@ -1136,7 +1272,7 @@
       "transliteration": "aparneomai heautou",
       "morphology": "G:V | G:F-3",
       "briefGloss": "to deny; themself",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -1146,9 +1282,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "απαρνησασθω",
+            "inputToken": "ἀπαρνησάσθω",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ἀπαρνέομαι",
-            "normalizedLemma": "απαρνεομαι",
             "occurrences": [
               {
                 "bcv": "011624",
@@ -1161,9 +1297,9 @@
             ]
           },
           {
-            "inputToken": "εαυτον",
+            "inputToken": "ἑαυτόν",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ἑαυτοῦ",
-            "normalizedLemma": "εαυτου",
             "occurrences": [
               {
                 "bcv": "011624",
@@ -1194,7 +1330,7 @@
       "transliteration": "elegchō",
       "morphology": "G:V",
       "briefGloss": "to rebuke",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -1204,9 +1340,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "ελεγξον",
+            "inputToken": "ἔλεγξον",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ἐλέγχω",
-            "normalizedLemma": "ελεγχω",
             "occurrences": [
               {
                 "bcv": "011815",
@@ -1237,7 +1373,7 @@
       "transliteration": "murioi talanton",
       "morphology": "G:A | G:N-N",
       "briefGloss": "myriad; talent",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -1247,9 +1383,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "μυριων",
+            "inputToken": "μυρίων",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "μύριοι",
-            "normalizedLemma": "μυριοι",
             "occurrences": [
               {
                 "bcv": "011824",
@@ -1262,9 +1398,9 @@
             ]
           },
           {
-            "inputToken": "ταλαντων",
+            "inputToken": "ταλάντων",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "τάλαντον",
-            "normalizedLemma": "ταλαντον",
             "occurrences": [
               {
                 "bcv": "011824",
@@ -1295,7 +1431,7 @@
       "transliteration": "porneia",
       "morphology": "G:N-F",
       "briefGloss": "sexual sin",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "3b8ba710189727f5d043f32441dff532df1d85fef772f79a09b7e012bd188a80",
@@ -1313,7 +1449,7 @@
       "transliteration": "ophthalmos ponēros",
       "morphology": "G:N-M | G:A",
       "briefGloss": "eye; evil/bad",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -1323,9 +1459,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "οφθαλμοσ",
+            "inputToken": "ὀφθαλμός",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ὀφθαλμός",
-            "normalizedLemma": "οφθαλμοσ",
             "occurrences": [
               {
                 "bcv": "012015",
@@ -1338,9 +1474,9 @@
             ]
           },
           {
-            "inputToken": "πονηροσ",
+            "inputToken": "πονηρός",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "πονηρός",
-            "normalizedLemma": "πονηροσ",
             "occurrences": [
               {
                 "bcv": "012015",
@@ -1371,7 +1507,7 @@
       "transliteration": "lutron",
       "morphology": "G:N-N",
       "briefGloss": "ransom",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "54775064e5a10b14543330a4b024d358eed3413a33078ad7a0ce964ff00b882e",
@@ -1389,7 +1525,7 @@
       "transliteration": "hōsanna",
       "morphology": "H:INJ",
       "briefGloss": "Hosanna",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "dabe61095b009d96a95aa956541e6fd43ca9b15dd7326e50f3fb1a0b1db058c4",
@@ -1407,7 +1543,7 @@
       "transliteration": "diathēkē",
       "morphology": "G:N-F",
       "briefGloss": "covenant",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "cdca05ae955888dff6739a20ab9caa97dec0871b3ab1eae47e5c7002b0b11612",
@@ -1425,7 +1561,7 @@
       "transliteration": "mathēteuō",
       "morphology": "G:V",
       "briefGloss": "to disciple",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -1435,9 +1571,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "μαθητευσατε",
+            "inputToken": "μαθητεύσατε",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "μαθητεύω",
-            "normalizedLemma": "μαθητευω",
             "occurrences": [
               {
                 "bcv": "012819",
@@ -1468,7 +1604,7 @@
       "transliteration": "euangelion",
       "morphology": "G:N-N",
       "briefGloss": "gospel",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "e4f425366911143a65da752424c235a15ce25d3db86ed12b6d2fc9e3de6a4d8f",
@@ -1486,7 +1622,7 @@
       "transliteration": "metanoeō",
       "morphology": "G:V",
       "briefGloss": "to repent",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "ecb27309d70b6182e7204f8ee0d6092073724d6ea5bc7ef0cffe77fb34a6f9db",
@@ -1504,7 +1640,7 @@
       "transliteration": "baptizō",
       "morphology": "G:V",
       "briefGloss": "to baptize",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "a5016a950e24459b006a41babb44db9333ca9a6c3aa875a90bc09b19e53903de",
@@ -1522,7 +1658,7 @@
       "transliteration": "deute opisō egō",
       "morphology": "G:INJ | G:ADV | G:P-1",
       "briefGloss": "come; after; I/we",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -1532,9 +1668,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "δευτε",
+            "inputToken": "δεῦτε",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "δεῦτε",
-            "normalizedLemma": "δευτε",
             "occurrences": [
               {
                 "bcv": "020117",
@@ -1547,9 +1683,9 @@
             ]
           },
           {
-            "inputToken": "οπισω",
+            "inputToken": "ὀπίσω",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ὀπίσω",
-            "normalizedLemma": "οπισω",
             "occurrences": [
               {
                 "bcv": "020117",
@@ -1571,8 +1707,8 @@
           },
           {
             "inputToken": "μου",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ἐγώ",
-            "normalizedLemma": "εγω",
             "occurrences": [
               {
                 "bcv": "020117",
@@ -1603,7 +1739,7 @@
       "transliteration": "exousia",
       "morphology": "G:N-F",
       "briefGloss": "authority",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "52314782915afa1d76c115164228d2ac6554f78e245a2bbbf9c386d527912fcc",
@@ -1621,7 +1757,7 @@
       "transliteration": "orgē",
       "morphology": "G:N-F",
       "briefGloss": "wrath",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "3fbafc743a77e986e9fa3b79e9557ef75ec7235eef9b0d7aabf17872356343ee",
@@ -1639,7 +1775,7 @@
       "transliteration": "meta autos",
       "morphology": "G:PREP | G:P",
       "briefGloss": "with/after; it/s/he",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -1650,8 +1786,8 @@
         "tokens": [
           {
             "inputToken": "μετ",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "μετά",
-            "normalizedLemma": "μετα",
             "occurrences": [
               {
                 "bcv": "020314",
@@ -1664,9 +1800,9 @@
             ]
           },
           {
-            "inputToken": "αυτου",
+            "inputToken": "αὐτοῦ",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "αὐτός",
-            "normalizedLemma": "αυτοσ",
             "occurrences": [
               {
                 "bcv": "020314",
@@ -1697,7 +1833,7 @@
       "transliteration": "blasphēmeō",
       "morphology": "G:V",
       "briefGloss": "to blaspheme",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "147358b188a07be9e13114358966b5f80574dfde8756c6f47cd7b46899dc9656",
@@ -1715,7 +1851,7 @@
       "transliteration": "mustērion",
       "morphology": "G:N-N",
       "briefGloss": "mystery",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "3095d72c7c76fc2c98e06dfd2926aec023a74a46fcad3751a9cd1013a44359c5",
@@ -1733,7 +1869,7 @@
       "transliteration": "automatos",
       "morphology": "G:A",
       "briefGloss": "by itself",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -1743,9 +1879,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "αυτοματη",
+            "inputToken": "αὐτομάτη",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "αὐτόματος",
-            "normalizedLemma": "αυτοματοσ",
             "occurrences": [
               {
                 "bcv": "020428",
@@ -1759,24 +1895,6 @@
           }
         ]
       }
-    },
-    {
-      "reviewId": "8361775d5156eb7b35e394cc62d8813d4a540af8c0341ef19892870a7a60ee7a",
-      "bookId": "marcu",
-      "chapter": 5,
-      "ref": "Marcu 5:21-34",
-      "original": "σώζω",
-      "meaning": "mântuiesc, fac întreg, tămăduiesc. Cuvântul acoperă și sufletul, și trupul: mântuirea nu este doar despre lumea de dincolo.",
-      "meaningSha256": "sha256:7613f8df1dbd6c2e8feb18727b96076452a893ca9df998a95c6b3513ab19c976",
-      "sourceId": "stepbible-tbesg",
-      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
-      "sourceLocator": "TBESG line 5134",
-      "strongId": "G4982",
-      "canonicalLemma": "σῴζω",
-      "transliteration": "sōzō",
-      "morphology": "G:V",
-      "briefGloss": "to save",
-      "matchKind": "canonical-lemma-column-exact"
     },
     {
       "reviewId": "4728bb95ccc78b835e5ce456af8add4c4137a699ae43067d4a12a6c91126d20f",
@@ -1794,7 +1912,65 @@
       "transliteration": "katheudō",
       "morphology": "G:V",
       "briefGloss": "to sleep",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
+    },
+    {
+      "reviewId": "7a19343c84d092b395d91237d7e10f7e840593510e18e4670fc5533015cf25b6",
+      "bookId": "marcu",
+      "chapter": 6,
+      "ref": "Marcu 6:45-52",
+      "original": "ἐγώ εἰμι",
+      "meaning": "Eu sunt. În mijlocul fricii, Isus nu oferă întâi o explicație, ci propria Sa prezență.",
+      "meaningSha256": "sha256:218b3856d9c9553d9b177d99e95dabe1e2df1d77ca9c3cfd95dae3c008158b92",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 1605 + TBESG line 1650",
+      "strongId": "G1473 + G1510",
+      "canonicalLemma": "ἐγώ εἰμί",
+      "transliteration": "egō eimi",
+      "morphology": "G:P-1 | G:V",
+      "briefGloss": "I/we; to be",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "62-Mk-morphgnt.txt",
+        "fileBlobSha": "6bd9ce1627e12bd45434b0d18f875c89581d855f",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "ἐγώ",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "ἐγώ",
+            "occurrences": [
+              {
+                "bcv": "020650",
+                "word": "ἐγώ",
+                "normalizedWord": "ἐγώ",
+                "lemma": "ἐγώ",
+                "pos": "RP",
+                "parsing": "----NS--"
+              }
+            ]
+          },
+          {
+            "inputToken": "εἰμι",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "εἰμί",
+            "occurrences": [
+              {
+                "bcv": "020650",
+                "word": "εἰμι",
+                "normalizedWord": "εἰμί",
+                "lemma": "εἰμί",
+                "pos": "V-",
+                "parsing": "1PAI-S--"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "reviewId": "e7788d184a958570e5a9c6c3870a9c579ae0761675706f694da2913c66f18026",
@@ -1812,7 +1988,7 @@
       "transliteration": "zumē",
       "morphology": "G:N-F",
       "briefGloss": "leaven",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "bbb72f18822ebec923e339217f27bd0115a5e504818287f672a19bb6355b4ccd",
@@ -1830,7 +2006,7 @@
       "transliteration": "Christos",
       "morphology": "N:N--T",
       "briefGloss": "Christ",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "58bb1fb8f873156af4aace9209a14c32fa47bf4cc8b0241e937963e8f07b6b05",
@@ -1848,7 +2024,7 @@
       "transliteration": "psuchē",
       "morphology": "G:N-F",
       "briefGloss": "soul / soul: life / soul: myself / soul: person / soul: animal",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "f597533b98715880147d07a012d839b62657b759cfbd4c0a67ed5ddddc3085e1",
@@ -1866,7 +2042,7 @@
       "transliteration": "lutron",
       "morphology": "G:N-N",
       "briefGloss": "ransom",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "5619cea46d8445ae935625a6f4c4dd3fd7f7b4bed480f5cecf5e0d420fbd0726",
@@ -1884,7 +2060,7 @@
       "transliteration": "rhēma",
       "morphology": "G:N-N",
       "briefGloss": "declaration",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "0ce926d23837e306c2fe30b560653b868c94749868ce0075016000ca95033317",
@@ -1902,7 +2078,7 @@
       "transliteration": "logos",
       "morphology": "G:N-M",
       "briefGloss": "word",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "ab5cd5548504d388c5abcf41c625febd45e2648c7791321fdbd6a3eb6de56d05",
@@ -1920,7 +2096,7 @@
       "transliteration": "zōē",
       "morphology": "G:N-F",
       "briefGloss": "life",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "f2ba50f382130236184f4061393787a509ecdfe8beed7cb83d4dab1df4a8aeed",
@@ -1938,7 +2114,7 @@
       "transliteration": "phōs",
       "morphology": "G:N-N",
       "briefGloss": "light",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "50ff40f99aaa6456ed9d6f0c1a1cb2675818d300464135f020f58c8b8d4b4d85",
@@ -1956,7 +2132,7 @@
       "transliteration": "marturia",
       "morphology": "G:N-F",
       "briefGloss": "testimony",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "4f0456c57b8b1cfb43cdfff97cdcbbb1a8fc34afe6c6640fffc4c6e74dcdc98f",
@@ -1974,7 +2150,7 @@
       "transliteration": "teknon theos",
       "morphology": "G:N-N | G:N-M/F",
       "briefGloss": "child; God",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -1984,9 +2160,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "τεκνα",
+            "inputToken": "τέκνα",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "τέκνον",
-            "normalizedLemma": "τεκνον",
             "occurrences": [
               {
                 "bcv": "040112",
@@ -1999,9 +2175,9 @@
             ]
           },
           {
-            "inputToken": "θεου",
+            "inputToken": "θεοῦ",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "θεός",
-            "normalizedLemma": "θεοσ",
             "occurrences": [
               {
                 "bcv": "040106",
@@ -2048,7 +2224,7 @@
       "transliteration": "ek theos",
       "morphology": "G:PREP | G:N-M/F",
       "briefGloss": "out from; God",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -2058,9 +2234,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "εκ",
+            "inputToken": "ἐκ",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ἐκ",
-            "normalizedLemma": "εκ",
             "occurrences": [
               {
                 "bcv": "040113",
@@ -2097,9 +2273,9 @@
             ]
           },
           {
-            "inputToken": "θεου",
+            "inputToken": "θεοῦ",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "θεός",
-            "normalizedLemma": "θεοσ",
             "occurrences": [
               {
                 "bcv": "040106",
@@ -2146,7 +2322,32 @@
       "transliteration": "sarx",
       "morphology": "G:N-F",
       "briefGloss": "flesh",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "σὰρξ",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "σάρξ",
+            "occurrences": [
+              {
+                "bcv": "040114",
+                "word": "σὰρξ",
+                "normalizedWord": "σάρξ",
+                "lemma": "σάρξ",
+                "pos": "N-",
+                "parsing": "----NSF-"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "reviewId": "90a58a95c557dd22e274ebccd6c7e7e9669ac7edec7811344e963b05abe0388e",
@@ -2164,7 +2365,7 @@
       "transliteration": "skēnoō",
       "morphology": "G:V",
       "briefGloss": "to dwell",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -2174,9 +2375,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "εσκηνωσεν",
+            "inputToken": "ἐσκήνωσεν",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "σκηνόω",
-            "normalizedLemma": "σκηνοω",
             "occurrences": [
               {
                 "bcv": "040114",
@@ -2207,7 +2408,7 @@
       "transliteration": "monogenēs",
       "morphology": "G:A",
       "briefGloss": "unique",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "dc0ff6118f7a5da7490324e88ea0e9986a418138e8310ea2e9e471bfceeaa850",
@@ -2225,7 +2426,7 @@
       "transliteration": "amnos",
       "morphology": "G:N-M",
       "briefGloss": "lamb",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "a1ca5c56729348d593132a6056db25d43fe08c6691f93865c4e51726a9dfeb7b",
@@ -2243,7 +2444,7 @@
       "transliteration": "martureō",
       "morphology": "G:V",
       "briefGloss": "to testify",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "2c7d7a40c553a8d2dfc88bf50c9500a4c805d3e16ce31881a2b31a71d245db4f",
@@ -2261,7 +2462,7 @@
       "transliteration": "menō",
       "morphology": "G:V",
       "briefGloss": "to stay",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "5264c7c9cb821e2c2b1d6da5cb166a12ab4c26e15b039ce7cda0f1328f050391",
@@ -2279,7 +2480,7 @@
       "transliteration": "rhabbi",
       "morphology": "H:N",
       "briefGloss": "Rabbi",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "e08de8145f144fda8109f670599b70033b787d4e150efb1f9fc1f257389a00a8",
@@ -2297,7 +2498,136 @@
       "transliteration": "Messias",
       "morphology": "N:N--T",
       "briefGloss": "Messiah",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
+    },
+    {
+      "reviewId": "62f8c3432d846833d861c4ff55e62184880f4a459ba846dfded4742f19494a8a",
+      "bookId": "ioan",
+      "chapter": 1,
+      "ref": "Ioan 1:35-51",
+      "original": "υἱὸς τοῦ ἀνθρώπου",
+      "meaning": "Fiul omului. Nume prin care Domnul Isus vorbește despre sine cu smerenie și slava laolalta.",
+      "meaningSha256": "sha256:0e6a1a695269a10101137293b8df019e8dbd9e4d9d380a2e47261f6787f6b023",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 5362 + TBESG line 3702 + TBESG line 551",
+      "strongId": "G5207 + G3588 + G0444",
+      "canonicalLemma": "υἱός ὁ ἄνθρωπος",
+      "transliteration": "uhios ho anthrōpos",
+      "morphology": "G:N-M | G:T | G:N-M",
+      "briefGloss": "son; the/this/who; a human",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "υἱὸς",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "υἱός",
+            "occurrences": [
+              {
+                "bcv": "040142",
+                "word": "υἱὸς",
+                "normalizedWord": "υἱός",
+                "lemma": "υἱός",
+                "pos": "N-",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "040149",
+                "word": "υἱὸς",
+                "normalizedWord": "υἱός",
+                "lemma": "υἱός",
+                "pos": "N-",
+                "parsing": "----NSM-"
+              }
+            ]
+          },
+          {
+            "inputToken": "τοῦ",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "ὁ",
+            "occurrences": [
+              {
+                "bcv": "040136",
+                "word": "τοῦ",
+                "normalizedWord": "τοῦ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----GSM-"
+              },
+              {
+                "bcv": "040145",
+                "word": "τοῦ",
+                "normalizedWord": "τοῦ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----GSM-"
+              },
+              {
+                "bcv": "040148",
+                "word": "τοῦ",
+                "normalizedWord": "τοῦ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----GSN-"
+              },
+              {
+                "bcv": "040149",
+                "word": "τοῦ",
+                "normalizedWord": "τοῦ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----GSM-"
+              },
+              {
+                "bcv": "040149",
+                "word": "τοῦ",
+                "normalizedWord": "τοῦ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----GSM-"
+              },
+              {
+                "bcv": "040151",
+                "word": "τοῦ",
+                "normalizedWord": "τοῦ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----GSM-"
+              },
+              {
+                "bcv": "040151",
+                "word": "τοῦ",
+                "normalizedWord": "τοῦ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----GSM-"
+              }
+            ]
+          },
+          {
+            "inputToken": "ἀνθρώπου",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "ἄνθρωπος",
+            "occurrences": [
+              {
+                "bcv": "040151",
+                "word": "ἀνθρώπου",
+                "normalizedWord": "ἀνθρώπου",
+                "lemma": "ἄνθρωπος",
+                "pos": "N-",
+                "parsing": "----GSM-"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "reviewId": "dd68d65a5370ffea2236b4b4bdb20d9df7cb61b6d158cd3fe9c90e04eb3d3b1f",
@@ -2315,7 +2645,7 @@
       "transliteration": "sēmeion",
       "morphology": "G:N-N",
       "briefGloss": "sign",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "8d45264c5b70f9715c2e34a6b8c62ce9fd60d91f0cff9f8809524b828895a41f",
@@ -2333,7 +2663,7 @@
       "transliteration": "hōra",
       "morphology": "G:N-F",
       "briefGloss": "hour",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "85546929a6abcb410bfbb06c0085a90f19a7a19345fb9d34e99dae9a5f1257a8",
@@ -2351,7 +2681,7 @@
       "transliteration": "doxa",
       "morphology": "G:N-F",
       "briefGloss": "glory",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "012afb55d1d03c4b37b0d4b81aedb95bdbe905ed48a39058182a95d15c9b457b",
@@ -2369,7 +2699,7 @@
       "transliteration": "zēlos",
       "morphology": "G:N-M/N",
       "briefGloss": "zeal",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "0f78256134fee04cc4c1e601ecbdc56a9f6196c241d05623924ad2286e1a4ee2",
@@ -2387,7 +2717,7 @@
       "transliteration": "naos",
       "morphology": "G:N-M",
       "briefGloss": "temple",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "8200387887239ea91ad34348e36b1e10cbfe3a57ae1dc659d5400ca368baa071",
@@ -2405,7 +2735,7 @@
       "transliteration": "pisteuō",
       "morphology": "G:V",
       "briefGloss": "to trust (in)",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "190005914e77d347c517393e9531e5ce8a66939de95c7d4e2624a825fd939c16",
@@ -2423,7 +2753,7 @@
       "transliteration": "ginōskō",
       "morphology": "G:V",
       "briefGloss": "to know",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "254fb970aa7a78c6df37d7cf2d3ad3b6cc9dcf65d27c32e34b4575436b8b5fa0",
@@ -2441,7 +2771,7 @@
       "transliteration": "anōthen",
       "morphology": "G:ADV",
       "briefGloss": "from above/again",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "4ece62acf15b2be77a9a026fe390c6901043924c0726df1c7311b42fac8a819f",
@@ -2459,7 +2789,7 @@
       "transliteration": "pneuma",
       "morphology": "G:N-N",
       "briefGloss": "spirit/breath: spirit / spirit/breath: breath",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "a89e7b28cf436712439cfa047fe039a37fa84ae493a5e7d2edf9bb965daa3a51",
@@ -2477,7 +2807,7 @@
       "transliteration": "hupsoō",
       "morphology": "G:V",
       "briefGloss": "to lift up",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -2487,9 +2817,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "υψωθηναι",
+            "inputToken": "ὑψωθῆναι",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ὑψόω",
-            "normalizedLemma": "υψοω",
             "occurrences": [
               {
                 "bcv": "040314",
@@ -2520,7 +2850,7 @@
       "transliteration": "krisis",
       "morphology": "G:N-F",
       "briefGloss": "judgment",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "5800acb0e610da0917a4f92c07cba14c0e010819ad1025e1b585c3dcd90b6aca",
@@ -2538,7 +2868,7 @@
       "transliteration": "numphios",
       "morphology": "G:N-M",
       "briefGloss": "bridegroom",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "d4c0a6d4f3a0fcd3d79d1d03f759b1c87183b8f3ba7604eb4599917b4ee268d5",
@@ -2556,7 +2886,7 @@
       "transliteration": "menō",
       "morphology": "G:V",
       "briefGloss": "to stay",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -2566,9 +2896,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "μενει",
+            "inputToken": "μένει",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "μένω",
-            "normalizedLemma": "μενω",
             "occurrences": [
               {
                 "bcv": "040336",
@@ -2599,7 +2929,7 @@
       "transliteration": "dōrea",
       "morphology": "G:N-F",
       "briefGloss": "free gift",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "76eadd9fc3775ae5a48f33de378d0c5e785c3c3e02d5a88e1aeaa563fc377ce6",
@@ -2617,7 +2947,7 @@
       "transliteration": "hudōr, hudatos zaō",
       "morphology": "G:N-N | G:V",
       "briefGloss": "water; to live",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -2627,9 +2957,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "υδωρ",
+            "inputToken": "ὕδωρ",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ὕδωρ",
-            "normalizedLemma": "υδωρ",
             "occurrences": [
               {
                 "bcv": "040407",
@@ -2674,9 +3004,9 @@
             ]
           },
           {
-            "inputToken": "ζων",
+            "inputToken": "ζῶν",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ζάω",
-            "normalizedLemma": "ζαω",
             "occurrences": [
               {
                 "bcv": "040410",
@@ -2715,7 +3045,7 @@
       "transliteration": "proskuneō",
       "morphology": "G:V",
       "briefGloss": "to worship",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "772928f0106a504158b26e63a58c636c97e63364c3c7dbccd05cb892f54bd1b2",
@@ -2733,7 +3063,88 @@
       "transliteration": "marturia",
       "morphology": "G:N-F",
       "briefGloss": "testimony",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
+    },
+    {
+      "reviewId": "fea0cd992e1b0c8308c6ad516e27dd3912e3e3fff101cacef37057cc166353ad",
+      "bookId": "ioan",
+      "chapter": 4,
+      "ref": "Ioan 4:27-42",
+      "original": "σωτὴρ τοῦ κόσμου",
+      "meaning": "Mantuitorul lumii. Mărturisire larga despre intinderea mantuirii aduse de Fiul.",
+      "meaningSha256": "sha256:fc5f3dfa5a33659428c71d7a7946e7e3ea7e0265f37a9dbad8de7c6da6a1c8cc",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 5142 + TBESG line 3702 + TBESG line 3084",
+      "strongId": "G4990 + G3588 + G2889",
+      "canonicalLemma": "σωτήρ ὁ κόσμος",
+      "transliteration": "sōtēr ho kosmos",
+      "morphology": "G:N-M | G:T | G:N-M",
+      "briefGloss": "savior; the/this/who; world",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "σωτὴρ",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "σωτήρ",
+            "occurrences": [
+              {
+                "bcv": "040442",
+                "word": "σωτὴρ",
+                "normalizedWord": "σωτήρ",
+                "lemma": "σωτήρ",
+                "pos": "N-",
+                "parsing": "----NSM-"
+              }
+            ]
+          },
+          {
+            "inputToken": "τοῦ",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "ὁ",
+            "occurrences": [
+              {
+                "bcv": "040434",
+                "word": "τοῦ",
+                "normalizedWord": "τοῦ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----GSM-"
+              },
+              {
+                "bcv": "040442",
+                "word": "τοῦ",
+                "normalizedWord": "τοῦ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----GSM-"
+              }
+            ]
+          },
+          {
+            "inputToken": "κόσμου",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "κόσμος",
+            "occurrences": [
+              {
+                "bcv": "040442",
+                "word": "κόσμου",
+                "normalizedWord": "κόσμου",
+                "lemma": "κόσμος",
+                "pos": "N-",
+                "parsing": "----GSM-"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "reviewId": "1f0065a88a0d71ad24cf650e5dd64b2ace5b5b5c579a1420a3ccdf10d43fd705",
@@ -2751,7 +3162,7 @@
       "transliteration": "pisteuō",
       "morphology": "G:V",
       "briefGloss": "to trust (in)",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "99d6be88804965a37fa8fb304ca0a364191292032c62550f92fd601992166d4d",
@@ -2763,13 +3174,54 @@
       "meaningSha256": "sha256:76b90c151ac148b329b4428bce13bbfe1ff38a8a2da0190c7bf4572b3b0578c1",
       "sourceId": "stepbible-tbesg",
       "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
-      "sourceLocator": "TBESG line 10123",
-      "strongId": "G20489",
-      "canonicalLemma": "ζῆ",
-      "transliteration": "zē",
-      "morphology": "",
-      "briefGloss": "life",
-      "matchKind": "canonical-lemma-column-exact"
+      "sourceLocator": "TBESG line 2341",
+      "strongId": "G2198",
+      "canonicalLemma": "ζάω",
+      "transliteration": "zaō",
+      "morphology": "G:V",
+      "briefGloss": "to live",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "ζῇ",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "ζάω",
+            "occurrences": [
+              {
+                "bcv": "040450",
+                "word": "ζῇ",
+                "normalizedWord": "ζῇ",
+                "lemma": "ζάω",
+                "pos": "V-",
+                "parsing": "3PAI-S--"
+              },
+              {
+                "bcv": "040451",
+                "word": "ζῇ",
+                "normalizedWord": "ζῇ",
+                "lemma": "ζάω",
+                "pos": "V-",
+                "parsing": "3PAI-S--"
+              },
+              {
+                "bcv": "040453",
+                "word": "ζῇ",
+                "normalizedWord": "ζῇ",
+                "lemma": "ζάω",
+                "pos": "V-",
+                "parsing": "3PAI-S--"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "reviewId": "dca1917e723220882dbc86b635f838e178095fec9b8dc6d47017d13cb9e541d7",
@@ -2787,7 +3239,7 @@
       "transliteration": "sabbaton",
       "morphology": "G:N-N",
       "briefGloss": "Sabbath",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "dd22334513562d58e6e73f2391709ff96c12a3b48a67fb6cdbe611132ce65cfd",
@@ -2805,7 +3257,7 @@
       "transliteration": "krisis",
       "morphology": "G:N-F",
       "briefGloss": "judgment",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "e35150c04ed36dbeb225a554a1f4b432c2d0cba8a4ede2c16c16a1471c6161f9",
@@ -2823,7 +3275,7 @@
       "transliteration": "timaō",
       "morphology": "G:V",
       "briefGloss": "to honor",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -2833,9 +3285,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "τιμωσι",
+            "inputToken": "τιμῶσι",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "τιμάω",
-            "normalizedLemma": "τιμαω",
             "occurrences": [
               {
                 "bcv": "040523",
@@ -2874,7 +3326,7 @@
       "transliteration": "marturia",
       "morphology": "G:N-F",
       "briefGloss": "testimony",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "0b95e7771998194fa44419b85e3187bca075817875c1365fd6190b5d199f11cb",
@@ -2892,7 +3344,7 @@
       "transliteration": "doxa",
       "morphology": "G:N-F",
       "briefGloss": "glory",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "96a0e81cabebefce72540f5a09368a480c8069b5f42342717b8edbdacc10b5d5",
@@ -2910,7 +3362,242 @@
       "transliteration": "sēmeion",
       "morphology": "G:N-N",
       "briefGloss": "sign",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
+    },
+    {
+      "reviewId": "eba657b0c2c7c30a0dff03634df9ec17c9f33855fcd747c344ebf008905fd346",
+      "bookId": "ioan",
+      "chapter": 6,
+      "ref": "Ioan 6:1-21",
+      "original": "ἐγώ εἰμι",
+      "meaning": "Eu sunt. Formula grea de prezenta și autoritate rostita de Domnul.",
+      "meaningSha256": "sha256:2a50dfe54ef076249ecdb666027ba2a6d7dea1888b175f5f7e0cf94e93df8af6",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 1605 + TBESG line 1650",
+      "strongId": "G1473 + G1510",
+      "canonicalLemma": "ἐγώ εἰμί",
+      "transliteration": "egō eimi",
+      "morphology": "G:P-1 | G:V",
+      "briefGloss": "I/we; to be",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "ἐγώ",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "ἐγώ",
+            "occurrences": [
+              {
+                "bcv": "040620",
+                "word": "Ἐγώ",
+                "normalizedWord": "ἐγώ",
+                "lemma": "ἐγώ",
+                "pos": "RP",
+                "parsing": "----NS--"
+              }
+            ]
+          },
+          {
+            "inputToken": "εἰμι",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "εἰμί",
+            "occurrences": [
+              {
+                "bcv": "040620",
+                "word": "εἰμι",
+                "normalizedWord": "εἰμί",
+                "lemma": "εἰμί",
+                "pos": "V-",
+                "parsing": "1PAI-S--"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "reviewId": "44eb3846b3ef6c87398f19ecdfbeae08bfd1b0551bcb7d1d40947c0cc9ec5f32",
+      "bookId": "ioan",
+      "chapter": 6,
+      "ref": "Ioan 6:22-59",
+      "original": "ἄρτος τῆς ζωῆς",
+      "meaning": "Painea vieții. Hristos ca hrana adevărată și de neocolit a sufletului.",
+      "meaningSha256": "sha256:768357a0df643ff07bfcdc3ecd0787bf9a9d6510d40b1db1178bc55e6a1962a4",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 849 + TBESG line 3702 + TBESG line 2367",
+      "strongId": "G0740 + G3588 + G2222",
+      "canonicalLemma": "ἄρτος ὁ ζωή",
+      "transliteration": "artos ho zōē",
+      "morphology": "G:N-M | G:T | G:N-F",
+      "briefGloss": "bread; the/this/who; life",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "ἄρτος",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "ἄρτος",
+            "occurrences": [
+              {
+                "bcv": "040633",
+                "word": "ἄρτος",
+                "normalizedWord": "ἄρτος",
+                "lemma": "ἄρτος",
+                "pos": "N-",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "040635",
+                "word": "ἄρτος",
+                "normalizedWord": "ἄρτος",
+                "lemma": "ἄρτος",
+                "pos": "N-",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "040641",
+                "word": "ἄρτος",
+                "normalizedWord": "ἄρτος",
+                "lemma": "ἄρτος",
+                "pos": "N-",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "040648",
+                "word": "ἄρτος",
+                "normalizedWord": "ἄρτος",
+                "lemma": "ἄρτος",
+                "pos": "N-",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "040650",
+                "word": "ἄρτος",
+                "normalizedWord": "ἄρτος",
+                "lemma": "ἄρτος",
+                "pos": "N-",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "040651",
+                "word": "ἄρτος",
+                "normalizedWord": "ἄρτος",
+                "lemma": "ἄρτος",
+                "pos": "N-",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "040651",
+                "word": "ἄρτος",
+                "normalizedWord": "ἄρτος",
+                "lemma": "ἄρτος",
+                "pos": "N-",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "040658",
+                "word": "ἄρτος",
+                "normalizedWord": "ἄρτος",
+                "lemma": "ἄρτος",
+                "pos": "N-",
+                "parsing": "----NSM-"
+              }
+            ]
+          },
+          {
+            "inputToken": "τῆς",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "ὁ",
+            "occurrences": [
+              {
+                "bcv": "040622",
+                "word": "τῆς",
+                "normalizedWord": "τῆς",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----GSF-"
+              },
+              {
+                "bcv": "040625",
+                "word": "τῆς",
+                "normalizedWord": "τῆς",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----GSF-"
+              },
+              {
+                "bcv": "040635",
+                "word": "τῆς",
+                "normalizedWord": "τῆς",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----GSF-"
+              },
+              {
+                "bcv": "040648",
+                "word": "τῆς",
+                "normalizedWord": "τῆς",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----GSF-"
+              },
+              {
+                "bcv": "040651",
+                "word": "τῆς",
+                "normalizedWord": "τῆς",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----GSF-"
+              }
+            ]
+          },
+          {
+            "inputToken": "ζωῆς",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "ζωή",
+            "occurrences": [
+              {
+                "bcv": "040635",
+                "word": "ζωῆς",
+                "normalizedWord": "ζωῆς",
+                "lemma": "ζωή",
+                "pos": "N-",
+                "parsing": "----GSF-"
+              },
+              {
+                "bcv": "040648",
+                "word": "ζωῆς",
+                "normalizedWord": "ζωῆς",
+                "lemma": "ζωή",
+                "pos": "N-",
+                "parsing": "----GSF-"
+              },
+              {
+                "bcv": "040651",
+                "word": "ζωῆς",
+                "normalizedWord": "ζωῆς",
+                "lemma": "ζωή",
+                "pos": "N-",
+                "parsing": "----GSF-"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "reviewId": "124e103d13772b3d49ad388ba1efa338b4b693877f6ba991992edb06629ced37",
@@ -2928,7 +3615,7 @@
       "transliteration": "helkuō, helkō",
       "morphology": "G:V",
       "briefGloss": "to draw/persuade",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "887283aade34723a6b7b3868880d65ff2c3c54fa1f96fe35f00f09344ea7c97d",
@@ -2946,7 +3633,7 @@
       "transliteration": "menō",
       "morphology": "G:V",
       "briefGloss": "to stay",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "4bdd04a34278e1b7119772230f47914d79cd2888bb7388aa4aac27b53d41afc7",
@@ -2964,7 +3651,7 @@
       "transliteration": "rhēma zōē aiōnios",
       "morphology": "G:N-N | G:N-F | G:A",
       "briefGloss": "declaration; life; eternal",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -2974,9 +3661,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "ρηματα",
+            "inputToken": "ῥήματα",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ῥῆμα",
-            "normalizedLemma": "ρημα",
             "occurrences": [
               {
                 "bcv": "040663",
@@ -2997,9 +3684,9 @@
             ]
           },
           {
-            "inputToken": "ζωησ",
+            "inputToken": "ζωῆς",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ζωή",
-            "normalizedLemma": "ζωη",
             "occurrences": [
               {
                 "bcv": "040668",
@@ -3012,9 +3699,9 @@
             ]
           },
           {
-            "inputToken": "αιωνιου",
+            "inputToken": "αἰωνίου",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "αἰώνιος",
-            "normalizedLemma": "αιωνιοσ",
             "occurrences": [
               {
                 "bcv": "040668",
@@ -3045,7 +3732,7 @@
       "transliteration": "skandalizō",
       "morphology": "G:V",
       "briefGloss": "to cause to stumble",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "edfcd3dfcced8bf1796062642f4efba117b3f8d8bec2d42610a62b125436f64c",
@@ -3063,7 +3750,7 @@
       "transliteration": "kairos",
       "morphology": "G:N-M",
       "briefGloss": "time/right time",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "10132b51091fd6a292b52198fd43bd8b42de8f0c09789d2d762b34ac708a1d59",
@@ -3081,7 +3768,7 @@
       "transliteration": "doxa",
       "morphology": "G:N-F",
       "briefGloss": "glory",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "d353a04a697008e90e459dfb5296a2515b456381b628052a37af6af6da443620",
@@ -3099,7 +3786,7 @@
       "transliteration": "dipsaō",
       "morphology": "G:V",
       "briefGloss": "to thirst",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "e7daa3752f47c5538b77b050e182b9d4c76797ec4e1717df3f7e880d9fd85e39",
@@ -3117,7 +3804,7 @@
       "transliteration": "potamos hudōr, hudatos zaō",
       "morphology": "G:N-M | G:N-N | G:V",
       "briefGloss": "river; water; to live",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -3127,9 +3814,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "ποταμοι",
+            "inputToken": "ποταμοὶ",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ποταμός",
-            "normalizedLemma": "ποταμοσ",
             "occurrences": [
               {
                 "bcv": "040738",
@@ -3142,9 +3829,9 @@
             ]
           },
           {
-            "inputToken": "υδατοσ",
+            "inputToken": "ὕδατος",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ὕδωρ",
-            "normalizedLemma": "υδωρ",
             "occurrences": [
               {
                 "bcv": "040738",
@@ -3157,9 +3844,9 @@
             ]
           },
           {
-            "inputToken": "ζωντοσ",
+            "inputToken": "ζῶντος",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ζάω",
-            "normalizedLemma": "ζαω",
             "occurrences": [
               {
                 "bcv": "040738",
@@ -3190,7 +3877,7 @@
       "transliteration": "doxazō",
       "morphology": "G:V",
       "briefGloss": "to glorify",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -3200,9 +3887,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "εδοξασθη",
+            "inputToken": "ἐδοξάσθη",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "δοξάζω",
-            "normalizedLemma": "δοξαζω",
             "occurrences": [
               {
                 "bcv": "040739",
@@ -3233,7 +3920,7 @@
       "transliteration": "schisma",
       "morphology": "G:N-N",
       "briefGloss": "split",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "63f1e33c4abc7f8217bd40d8cb5f66024d41d597b7f82bf1737da83125b73bcf",
@@ -3251,7 +3938,88 @@
       "transliteration": "planaō",
       "morphology": "G:V",
       "briefGloss": "to lead astray",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
+    },
+    {
+      "reviewId": "fd36b10a216fbc1aa56a38834f0f2136529c7493779783af71c7dd92f80a6c1d",
+      "bookId": "ioan",
+      "chapter": 8,
+      "ref": "Ioan 8:1-20",
+      "original": "φῶς τοῦ κόσμου",
+      "meaning": "Lumina lumii. Hristos ca descoperire, călăuzire și viață pentru om.",
+      "meaningSha256": "sha256:bb9fb77dbef1730da707c9dee656ff135a36dd22f5702859aef4ce405f12b469",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 5623 + TBESG line 3702 + TBESG line 3084",
+      "strongId": "G5457 + G3588 + G2889",
+      "canonicalLemma": "φῶς ὁ κόσμος",
+      "transliteration": "phōs ho kosmos",
+      "morphology": "G:N-N | G:T | G:N-M",
+      "briefGloss": "light; the/this/who; world",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "φῶς",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "φῶς",
+            "occurrences": [
+              {
+                "bcv": "040812",
+                "word": "φῶς",
+                "normalizedWord": "φῶς",
+                "lemma": "φῶς",
+                "pos": "N-",
+                "parsing": "----NSN-"
+              },
+              {
+                "bcv": "040812",
+                "word": "φῶς",
+                "normalizedWord": "φῶς",
+                "lemma": "φῶς",
+                "pos": "N-",
+                "parsing": "----ASN-"
+              }
+            ]
+          },
+          {
+            "inputToken": "τοῦ",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "ὁ",
+            "occurrences": [
+              {
+                "bcv": "040812",
+                "word": "τοῦ",
+                "normalizedWord": "τοῦ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----GSM-"
+              }
+            ]
+          },
+          {
+            "inputToken": "κόσμου",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "κόσμος",
+            "occurrences": [
+              {
+                "bcv": "040812",
+                "word": "κόσμου",
+                "normalizedWord": "κόσμου",
+                "lemma": "κόσμος",
+                "pos": "N-",
+                "parsing": "----GSM-"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "reviewId": "c2f47583d5d7720955d68e4f962ef73aa03ab7b6297ee67cd75ca16efb862b2f",
@@ -3269,7 +4037,7 @@
       "transliteration": "marturia",
       "morphology": "G:N-F",
       "briefGloss": "testimony",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "0a465caf6f441894254053e76ad93f75f56a5609ac446f9cc5923cb01895c8ac",
@@ -3287,7 +4055,7 @@
       "transliteration": "alētheia",
       "morphology": "G:N-F",
       "briefGloss": "truth",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "ef35e181c2a5201ff6b3e09dedfe9a6b368094ecc58d7730ddbdfb0aa230f011",
@@ -3305,7 +4073,7 @@
       "transliteration": "eleutheroō",
       "morphology": "G:V",
       "briefGloss": "to set free",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "ea9ddbe7382015ae6df07065c63742b9acca4db91b2d14c01e6e0385c475716d",
@@ -3323,7 +4091,97 @@
       "transliteration": "menō",
       "morphology": "G:V",
       "briefGloss": "to stay",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
+    },
+    {
+      "reviewId": "d7b35eb9b262c225bcfcbfbb22b5352a8c3afc46ffbb9d04ac8c216b02f47f90",
+      "bookId": "ioan",
+      "chapter": 8,
+      "ref": "Ioan 8:48-59",
+      "original": "ἐγώ εἰμι",
+      "meaning": "Eu sunt. Formula de auto-descoperire cu greutate dumnezeiasca.",
+      "meaningSha256": "sha256:ba6116ed1b44b3989c27c7f5cc2aa6d54baf3ebfbafe1d4f8b9db9f779c0fd04",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 1605 + TBESG line 1650",
+      "strongId": "G1473 + G1510",
+      "canonicalLemma": "ἐγώ εἰμί",
+      "transliteration": "egō eimi",
+      "morphology": "G:P-1 | G:V",
+      "briefGloss": "I/we; to be",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "ἐγώ",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "ἐγώ",
+            "occurrences": [
+              {
+                "bcv": "040849",
+                "word": "Ἐγὼ",
+                "normalizedWord": "ἐγώ",
+                "lemma": "ἐγώ",
+                "pos": "RP",
+                "parsing": "----NS--"
+              },
+              {
+                "bcv": "040850",
+                "word": "ἐγὼ",
+                "normalizedWord": "ἐγώ",
+                "lemma": "ἐγώ",
+                "pos": "RP",
+                "parsing": "----NS--"
+              },
+              {
+                "bcv": "040854",
+                "word": "ἐγὼ",
+                "normalizedWord": "ἐγώ",
+                "lemma": "ἐγώ",
+                "pos": "RP",
+                "parsing": "----NS--"
+              },
+              {
+                "bcv": "040855",
+                "word": "ἐγὼ",
+                "normalizedWord": "ἐγώ",
+                "lemma": "ἐγώ",
+                "pos": "RP",
+                "parsing": "----NS--"
+              },
+              {
+                "bcv": "040858",
+                "word": "ἐγὼ",
+                "normalizedWord": "ἐγώ",
+                "lemma": "ἐγώ",
+                "pos": "RP",
+                "parsing": "----NS--"
+              }
+            ]
+          },
+          {
+            "inputToken": "εἰμι",
+            "resolution": "loose-surface-fallback",
+            "lemma": "εἰμί",
+            "occurrences": [
+              {
+                "bcv": "040858",
+                "word": "εἰμί",
+                "normalizedWord": "εἰμί",
+                "lemma": "εἰμί",
+                "pos": "V-",
+                "parsing": "1PAI-S--"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "reviewId": "eddacba61f5168ce6eb091887de710209fea877f32343fec88cc74f8354b9587",
@@ -3341,7 +4199,112 @@
       "transliteration": "tēreō",
       "morphology": "G:V",
       "briefGloss": "to keep: observe / to keep: guard / to keep: protect",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
+    },
+    {
+      "reviewId": "f9f14ada77c6378fe0f85dc9d4edcdfde0dabb3b1b8691afb09a730cb4fe3dd9",
+      "bookId": "ioan",
+      "chapter": 9,
+      "ref": "Ioan 9:1-12",
+      "original": "φῶς τοῦ κόσμου",
+      "meaning": "Lumina lumii. Hristos ca lumina care descoperă și vindeca.",
+      "meaningSha256": "sha256:37bd42e0d21ba323ef2513a40a055f2bc00bdf43fc13c2a8637f2b7fc0b87105",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 5623 + TBESG line 3702 + TBESG line 3084",
+      "strongId": "G5457 + G3588 + G2889",
+      "canonicalLemma": "φῶς ὁ κόσμος",
+      "transliteration": "phōs ho kosmos",
+      "morphology": "G:N-N | G:T | G:N-M",
+      "briefGloss": "light; the/this/who; world",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "φῶς",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "φῶς",
+            "occurrences": [
+              {
+                "bcv": "040905",
+                "word": "φῶς",
+                "normalizedWord": "φῶς",
+                "lemma": "φῶς",
+                "pos": "N-",
+                "parsing": "----NSN-"
+              }
+            ]
+          },
+          {
+            "inputToken": "τοῦ",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "ὁ",
+            "occurrences": [
+              {
+                "bcv": "040903",
+                "word": "τοῦ",
+                "normalizedWord": "τοῦ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----GSM-"
+              },
+              {
+                "bcv": "040904",
+                "word": "τοῦ",
+                "normalizedWord": "τοῦ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----GSM-"
+              },
+              {
+                "bcv": "040905",
+                "word": "τοῦ",
+                "normalizedWord": "τοῦ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----GSM-"
+              },
+              {
+                "bcv": "040906",
+                "word": "τοῦ",
+                "normalizedWord": "τοῦ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----GSN-"
+              },
+              {
+                "bcv": "040907",
+                "word": "τοῦ",
+                "normalizedWord": "τοῦ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----GSM-"
+              }
+            ]
+          },
+          {
+            "inputToken": "κόσμου",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "κόσμος",
+            "occurrences": [
+              {
+                "bcv": "040905",
+                "word": "κόσμου",
+                "normalizedWord": "κόσμου",
+                "lemma": "κόσμος",
+                "pos": "N-",
+                "parsing": "----GSM-"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "reviewId": "ba67384049462bc8d4033265027282714828c98643278c255a316f2afa245eac",
@@ -3359,7 +4322,7 @@
       "transliteration": "Silōam",
       "morphology": "N:N--L",
       "briefGloss": "Siloam",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "33b9d5a27edbd438d1207aacda669ee9e76139d304cc4f4240f33090bd4fec38",
@@ -3377,7 +4340,7 @@
       "transliteration": "sēmeion",
       "morphology": "G:N-N",
       "briefGloss": "sign",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -3387,9 +4350,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "σημεια",
+            "inputToken": "σημεῖα",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "σημεῖον",
-            "normalizedLemma": "σημειον",
             "occurrences": [
               {
                 "bcv": "040916",
@@ -3420,7 +4383,7 @@
       "transliteration": "sunagōgē",
       "morphology": "G:N-F",
       "briefGloss": "synagogue",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "75a05dc217b6023d54cb1d952f85406a09e84c2a387ef1abf40506eaeb511ff9",
@@ -3438,7 +4401,7 @@
       "transliteration": "proskuneō",
       "morphology": "G:V",
       "briefGloss": "to worship",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "76da8f072a1d78d90706e7d6bca00e68ad5f424d58ddb18330c65cbf4e95408f",
@@ -3456,7 +4419,7 @@
       "transliteration": "krima",
       "morphology": "G:N-N",
       "briefGloss": "judgment",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "c1e26f4907ff4b51c02a2634beff8514f0a03a3e49151167d6fb7f91b629b548",
@@ -3474,7 +4437,232 @@
       "transliteration": "thura",
       "morphology": "G:N-F",
       "briefGloss": "door",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
+    },
+    {
+      "reviewId": "d0acd3384c73a3db67f5682b5ddf943e0bae9645ee52987487c18de90fafa3a1",
+      "bookId": "ioan",
+      "chapter": 10,
+      "ref": "Ioan 10:1-18",
+      "original": "ποιμὴν ὁ καλός",
+      "meaning": "Pastorul cel bun. Pastor frumos, adevărat, vrednic și plin de jertfire.",
+      "meaningSha256": "sha256:eeaf30080b9f28740c048eedf813e7f199367105df20c2cee03c2129172e432e",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 4295 + TBESG line 3702 + TBESG lines 2759-2760",
+      "strongId": "G4166 + G3588 + G2570",
+      "canonicalLemma": "ποιμήν ὁ καλός",
+      "transliteration": "poimēn ho kalos",
+      "morphology": "G:N-M | G:T | G:A",
+      "briefGloss": "shepherd; the/this/who; good / Fair (Havens)",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "ποιμὴν",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "ποιμήν",
+            "occurrences": [
+              {
+                "bcv": "041011",
+                "word": "ποιμὴν",
+                "normalizedWord": "ποιμήν",
+                "lemma": "ποιμήν",
+                "pos": "N-",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041011",
+                "word": "ποιμὴν",
+                "normalizedWord": "ποιμήν",
+                "lemma": "ποιμήν",
+                "pos": "N-",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041014",
+                "word": "ποιμὴν",
+                "normalizedWord": "ποιμήν",
+                "lemma": "ποιμήν",
+                "pos": "N-",
+                "parsing": "----NSM-"
+              }
+            ]
+          },
+          {
+            "inputToken": "ὁ",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "ὁ",
+            "occurrences": [
+              {
+                "bcv": "041001",
+                "word": "ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041002",
+                "word": "ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041003",
+                "word": "ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041006",
+                "word": "ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041007",
+                "word": "ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041010",
+                "word": "ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041011",
+                "word": "ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041011",
+                "word": "ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041011",
+                "word": "ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041011",
+                "word": "ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041012",
+                "word": "ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041012",
+                "word": "ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041014",
+                "word": "ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041014",
+                "word": "ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041015",
+                "word": "ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041017",
+                "word": "ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              }
+            ]
+          },
+          {
+            "inputToken": "καλός",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "καλός",
+            "occurrences": [
+              {
+                "bcv": "041011",
+                "word": "καλός",
+                "normalizedWord": "καλός",
+                "lemma": "καλός",
+                "pos": "A-",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041011",
+                "word": "καλὸς",
+                "normalizedWord": "καλός",
+                "lemma": "καλός",
+                "pos": "A-",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041014",
+                "word": "καλός",
+                "normalizedWord": "καλός",
+                "lemma": "καλός",
+                "pos": "A-",
+                "parsing": "----NSM-"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "reviewId": "b8a5d292d974f989951520b9d58a615a0798415bdb9af513df291e4210777150",
@@ -3492,7 +4680,7 @@
       "transliteration": "perissos",
       "morphology": "G:A / G:ADV",
       "briefGloss": "excessive",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -3502,9 +4690,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "περισσον",
+            "inputToken": "περισσόν",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "περισσός",
-            "normalizedLemma": "περισσοσ",
             "occurrences": [
               {
                 "bcv": "041010",
@@ -3535,25 +4723,7 @@
       "transliteration": "harpazō",
       "morphology": "G:V",
       "briefGloss": "to seize",
-      "matchKind": "canonical-lemma-column-exact"
-    },
-    {
-      "reviewId": "8f3f0199eb5974764a6279f89da46aa240902a56f17314ca7718c1bc01befc3e",
-      "bookId": "ioan",
-      "chapter": 10,
-      "ref": "Ioan 10:19-30",
-      "original": "ἕν",
-      "meaning": "una. Unitate adanca intre Tatăl și Fiul.",
-      "meaningSha256": "sha256:e52aed88bddb3d3ebd01404454e7c5337ab48997008ab94e090d3f650176005b",
-      "sourceId": "stepbible-tbesg",
-      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
-      "sourceLocator": "TBESG line 1863",
-      "strongId": "G1722",
-      "canonicalLemma": "ἐν",
-      "transliteration": "en",
-      "morphology": "G:PREP",
-      "briefGloss": "in/on/among",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "aa278d5e725449498468fe167c681ec006bdb880e0896c83f5d75bd8611a95cd",
@@ -3571,7 +4741,7 @@
       "transliteration": "blasphēmia",
       "morphology": "G:N-F",
       "briefGloss": "blasphemy",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "889996b1570261283c5834a6cc83409c539cbfba6afe8f4558a36266f5ad1f2e",
@@ -3589,7 +4759,7 @@
       "transliteration": "anastasis",
       "morphology": "G:N-F",
       "briefGloss": "resurrection",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "ac0284208a0caf254f8d9957143b4c10d37291c9656426530ad484b17c7abde9",
@@ -3607,7 +4777,7 @@
       "transliteration": "zōē",
       "morphology": "G:N-F",
       "briefGloss": "life",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "fdd489b1a32642b543b30d771294aaf07ac1c4b349b41aab4b76aceac8e72f3f",
@@ -3625,7 +4795,7 @@
       "transliteration": "dakruō",
       "morphology": "G:V",
       "briefGloss": "to weep",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -3635,9 +4805,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "εδακρυσεν",
+            "inputToken": "ἐδάκρυσεν",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "δακρύω",
-            "normalizedLemma": "δακρυω",
             "occurrences": [
               {
                 "bcv": "041135",
@@ -3668,7 +4838,7 @@
       "transliteration": "krazō",
       "morphology": "G:V",
       "briefGloss": "to cry",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "ef69b776c4e8936168ff5a1960d6e56e9095e22a4a5ab52b8e3437d70766fe55",
@@ -3686,7 +4856,7 @@
       "transliteration": "sunedrion",
       "morphology": "G:N-N",
       "briefGloss": "council",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "9fad96255c3e1ac480e849155f0c8097781cf446ec84a95347139001fa2212e2",
@@ -3704,7 +4874,7 @@
       "transliteration": "hōsanna",
       "morphology": "H:INJ",
       "briefGloss": "Hosanna",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "54ac2888244c40d42bb20469824afcca42e4ba51ed3803cba4bd05560b73e70d",
@@ -3722,7 +4892,7 @@
       "transliteration": "doxa",
       "morphology": "G:N-F",
       "briefGloss": "glory",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "431daec0f335275957ba37453ffefd789e4c44c7240fbab409d2361bd6af1cc1",
@@ -3740,7 +4910,7 @@
       "transliteration": "hupsoō",
       "morphology": "G:V",
       "briefGloss": "to lift up",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -3750,9 +4920,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "υψωθω",
+            "inputToken": "ὑψωθῶ",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ὑψόω",
-            "normalizedLemma": "υψοω",
             "occurrences": [
               {
                 "bcv": "041232",
@@ -3783,7 +4953,7 @@
       "transliteration": "krisis",
       "morphology": "G:N-F",
       "briefGloss": "judgment",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "8d034ad349e1cb99b10ad17913fc2b44965be1ce0f4ac84654451e914d4da80d",
@@ -3801,7 +4971,7 @@
       "transliteration": "phōs",
       "morphology": "G:N-N",
       "briefGloss": "light",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "d139015bf97ca63cdbaa58fe4dea8843a25d363d4a7c2caf7d8085c8eebb11f0",
@@ -3819,7 +4989,7 @@
       "transliteration": "telos",
       "morphology": "G:N-N",
       "briefGloss": "goal/tax",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "ab52f6e69a1c63d3522b83b89af2ebd7caa6fc29e27eacbd91f61c061d5fe68e",
@@ -3837,7 +5007,7 @@
       "transliteration": "niptō",
       "morphology": "G:V",
       "briefGloss": "to wash",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "73a6e6cc5e43f0455f8080de799c00f114cc9f717ff3a2cdb972ccf50e77a013",
@@ -3855,7 +5025,7 @@
       "transliteration": "tarassō",
       "morphology": "G:V",
       "briefGloss": "to trouble",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -3865,9 +5035,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "εταραχθη",
+            "inputToken": "ἐταράχθη",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ταράσσω",
-            "normalizedLemma": "ταρασσω",
             "occurrences": [
               {
                 "bcv": "041321",
@@ -3898,7 +5068,7 @@
       "transliteration": "nux",
       "morphology": "G:N-F",
       "briefGloss": "night",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "4e9c44326467bca86653107c3787e0065fa3249c03a8261e658113e2499b02d2",
@@ -3916,7 +5086,7 @@
       "transliteration": "doxazō",
       "morphology": "G:V",
       "briefGloss": "to glorify",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "11aa26451d46d1daa51bb3bea3806006b0f132f22cab0fe2071e6b40c05629a0",
@@ -3934,7 +5104,7 @@
       "transliteration": "hodos",
       "morphology": "G:N-F",
       "briefGloss": "road",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "2d058a4e250270d621473ff6a578ca4e46f1632ae4acddcc0b6062e7818a91ae",
@@ -3952,7 +5122,7 @@
       "transliteration": "alētheia",
       "morphology": "G:N-F",
       "briefGloss": "truth",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "c22cb1360ac5af5d32051b2088222a6bc0c7edef2f685bbe5115f8b3d920f1b4",
@@ -3970,7 +5140,7 @@
       "transliteration": "zōē",
       "morphology": "G:N-F",
       "briefGloss": "life",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "d2d602bf86cc261b268500ecbf2acd7f468c666c45e639827630b745abfe9804",
@@ -3988,7 +5158,7 @@
       "transliteration": "paraklētos",
       "morphology": "G:N-M",
       "briefGloss": "counsellor",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "0af48c49a05f2344b0b8b35d2e50bb91e57ed9eceb6e23e057b84a6cd94822de",
@@ -4006,7 +5176,7 @@
       "transliteration": "menō",
       "morphology": "G:V",
       "briefGloss": "to stay",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "a1dbeee8b419e4b26bed4b896c217839ab23eadb44a25c970cfe947c1fd434c4",
@@ -4024,7 +5194,80 @@
       "transliteration": "eirēnē",
       "morphology": "G:N-F",
       "briefGloss": "peace",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
+    },
+    {
+      "reviewId": "f51b27e70764e4db28915017563cb81bf024a031004741cee4d43c08efb622fc",
+      "bookId": "ioan",
+      "chapter": 14,
+      "ref": "Ioan 14:27-31",
+      "original": "ἄρχων τοῦ κόσμου",
+      "meaning": "stăpânitorul lumii. Puterea întunericului aflată sub judecata lui Dumnezeu.",
+      "meaningSha256": "sha256:9ebd791f5cf48539112f3dd0e2bad6b122533d925892ec2fd72cec1035972c81",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 867 + TBESG line 3702 + TBESG line 3084",
+      "strongId": "G0758 + G3588 + G2889",
+      "canonicalLemma": "ἄρχων ὁ κόσμος",
+      "transliteration": "archōn ho kosmos",
+      "morphology": "G:N-M | G:T | G:N-M",
+      "briefGloss": "ruler; the/this/who; world",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "ἄρχων",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "ἄρχων",
+            "occurrences": [
+              {
+                "bcv": "041430",
+                "word": "ἄρχων",
+                "normalizedWord": "ἄρχων",
+                "lemma": "ἄρχων",
+                "pos": "N-",
+                "parsing": "----NSM-"
+              }
+            ]
+          },
+          {
+            "inputToken": "τοῦ",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "ὁ",
+            "occurrences": [
+              {
+                "bcv": "041430",
+                "word": "τοῦ",
+                "normalizedWord": "τοῦ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----GSM-"
+              }
+            ]
+          },
+          {
+            "inputToken": "κόσμου",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "κόσμος",
+            "occurrences": [
+              {
+                "bcv": "041430",
+                "word": "κόσμου",
+                "normalizedWord": "κόσμου",
+                "lemma": "κόσμος",
+                "pos": "N-",
+                "parsing": "----GSM-"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "reviewId": "49ee18e3191582a96794b01f5b0094632d751c178edc9752a87314c74c2eba4c",
@@ -4042,7 +5285,7 @@
       "transliteration": "menō",
       "morphology": "G:V",
       "briefGloss": "to stay",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "828a0657e95b016e8977957b07fd289ab35468b26a4185cf1eb519a140cb3b8e",
@@ -4060,7 +5303,7 @@
       "transliteration": "kathairō",
       "morphology": "G:V",
       "briefGloss": "to prune",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "8851679985551018dcce9ee6697297648931d6369136c94ba9a07c3befe4a675",
@@ -4078,7 +5321,7 @@
       "transliteration": "philos",
       "morphology": "G:A",
       "briefGloss": "friendly/friend",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -4088,9 +5331,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "φιλοι",
+            "inputToken": "φίλοι",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "φίλος",
-            "normalizedLemma": "φιλοσ",
             "occurrences": [
               {
                 "bcv": "041514",
@@ -4121,7 +5364,7 @@
       "transliteration": "kosmos",
       "morphology": "G:N-M",
       "briefGloss": "world",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "dc0705f07f7e0bf5710f4f522641c62fab8466cf89d0511b259886b4fed82e9a",
@@ -4139,7 +5382,7 @@
       "transliteration": "miseō",
       "morphology": "G:V",
       "briefGloss": "to hate",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "42f7fbc22d4334c968ec9af57989344e66d2c4ac750a9d4a455e67c355908e49",
@@ -4157,7 +5400,7 @@
       "transliteration": "martureō",
       "morphology": "G:V",
       "briefGloss": "to testify",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "5484072c08b57400615f33416578f04c8e0cffe81965bfbf693b5368a3afacce",
@@ -4175,7 +5418,7 @@
       "transliteration": "paraklētos",
       "morphology": "G:N-M",
       "briefGloss": "counsellor",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "4bf6501a626c4e88408591f65a340b8be023c9cc0376a027b281ae042adf4719",
@@ -4193,7 +5436,7 @@
       "transliteration": "elegchō",
       "morphology": "G:V",
       "briefGloss": "to rebuke",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "65f5853fa655d95e89020cabcf5a33f0cdd70ce430cd4345c89c4113da9eda9f",
@@ -4211,7 +5454,7 @@
       "transliteration": "lupē",
       "morphology": "G:N-F",
       "briefGloss": "grief",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "b9aeb4921b195d93e98fe229927d7b66fbfe4801aad0ddfb2783a24be7a85e8b",
@@ -4229,7 +5472,7 @@
       "transliteration": "chara",
       "morphology": "G:N-F",
       "briefGloss": "joy",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "0f6d266548f7872e6380bdda7f22cf4eb77f24fe883b7f02d969b2a8f99adbc4",
@@ -4247,7 +5490,7 @@
       "transliteration": "tharseō",
       "morphology": "G:V",
       "briefGloss": "take heart",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -4257,9 +5500,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "θαρσειτε",
+            "inputToken": "θαρσεῖτε",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "θαρσέω",
-            "normalizedLemma": "θαρσεω",
             "occurrences": [
               {
                 "bcv": "041633",
@@ -4290,7 +5533,7 @@
       "transliteration": "nikaō",
       "morphology": "G:V",
       "briefGloss": "to conquer",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -4300,9 +5543,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "νενικηκα",
+            "inputToken": "νενίκηκα",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "νικάω",
-            "normalizedLemma": "νικαω",
             "occurrences": [
               {
                 "bcv": "041633",
@@ -4333,7 +5576,7 @@
       "transliteration": "doxa",
       "morphology": "G:N-F",
       "briefGloss": "glory",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "a0c8e5b54ff9fa56974ac9c4274ecbab5fbbd59c501b954a42632227bd91aa23",
@@ -4351,7 +5594,7 @@
       "transliteration": "zōē aiōnios",
       "morphology": "G:N-F | G:A",
       "briefGloss": "life; eternal",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -4361,9 +5604,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "ζωη",
+            "inputToken": "ζωὴ",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ζωή",
-            "normalizedLemma": "ζωη",
             "occurrences": [
               {
                 "bcv": "041703",
@@ -4376,9 +5619,9 @@
             ]
           },
           {
-            "inputToken": "αιωνιοσ",
+            "inputToken": "αἰώνιος",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "αἰώνιος",
-            "normalizedLemma": "αιωνιοσ",
             "occurrences": [
               {
                 "bcv": "041703",
@@ -4409,7 +5652,7 @@
       "transliteration": "hagiazō",
       "morphology": "G:V",
       "briefGloss": "to sanctify",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "b7c3e5ecaa817b7aad65a5682319d8d0d3617b7d948cbadce5436fbabb2c9a6e",
@@ -4427,7 +5670,7 @@
       "transliteration": "alētheia",
       "morphology": "G:N-F",
       "briefGloss": "truth",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "cee41d3e7ee6918dec6e631a90c96b8c19dd710519c0fcc6b91279d951678167",
@@ -4445,7 +5688,97 @@
       "transliteration": "thelō",
       "morphology": "G:V",
       "briefGloss": "to will/desire",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
+    },
+    {
+      "reviewId": "0c3f5174c61bd6c2e1df836524cbae8789616055502639cd7ce4de8ac2606ad4",
+      "bookId": "ioan",
+      "chapter": 18,
+      "ref": "Ioan 18:1-14",
+      "original": "ἐγώ εἰμι",
+      "meaning": "Eu sunt. Auto-descoperirea Domnului plină de autoritate.",
+      "meaningSha256": "sha256:7cb64fc003455cf102a6a59d8db628b6062970b817cb02d0bac97c0a0a1a51bb",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 1605 + TBESG line 1650",
+      "strongId": "G1473 + G1510",
+      "canonicalLemma": "ἐγώ εἰμί",
+      "transliteration": "egō eimi",
+      "morphology": "G:P-1 | G:V",
+      "briefGloss": "I/we; to be",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "ἐγώ",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "ἐγώ",
+            "occurrences": [
+              {
+                "bcv": "041805",
+                "word": "Ἐγώ",
+                "normalizedWord": "ἐγώ",
+                "lemma": "ἐγώ",
+                "pos": "RP",
+                "parsing": "----NS--"
+              },
+              {
+                "bcv": "041806",
+                "word": "Ἐγώ",
+                "normalizedWord": "ἐγώ",
+                "lemma": "ἐγώ",
+                "pos": "RP",
+                "parsing": "----NS--"
+              },
+              {
+                "bcv": "041808",
+                "word": "ἐγώ",
+                "normalizedWord": "ἐγώ",
+                "lemma": "ἐγώ",
+                "pos": "RP",
+                "parsing": "----NS--"
+              }
+            ]
+          },
+          {
+            "inputToken": "εἰμι",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "εἰμί",
+            "occurrences": [
+              {
+                "bcv": "041805",
+                "word": "εἰμι",
+                "normalizedWord": "εἰμί",
+                "lemma": "εἰμί",
+                "pos": "V-",
+                "parsing": "1PAI-S--"
+              },
+              {
+                "bcv": "041806",
+                "word": "εἰμι",
+                "normalizedWord": "εἰμί",
+                "lemma": "εἰμί",
+                "pos": "V-",
+                "parsing": "1PAI-S--"
+              },
+              {
+                "bcv": "041808",
+                "word": "εἰμι",
+                "normalizedWord": "εἰμί",
+                "lemma": "εἰμί",
+                "pos": "V-",
+                "parsing": "1PAI-S--"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "reviewId": "fe0b85eae9a62f954890ed04a55d15e45af404e173a122f5163d60dcda39a3fa",
@@ -4463,7 +5796,7 @@
       "transliteration": "potērion",
       "morphology": "G:N-N",
       "briefGloss": "cup",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "a9b330094225de53c16aa4eb6625376e478d937610624281c583e7bded2c4640",
@@ -4481,7 +5814,7 @@
       "transliteration": "arneomai",
       "morphology": "G:V",
       "briefGloss": "to deny",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "fc851b78d6c850df79650c3fd7afa00a3a6b938e66d0d452fa2d5c6b8837e71f",
@@ -4499,7 +5832,7 @@
       "transliteration": "alētheia",
       "morphology": "G:N-F",
       "briefGloss": "truth",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "1d64081ef03a0163d06a66b94ad27bae19b2e8d8f7763b1ba1803be7b16bbbf0",
@@ -4517,7 +5850,7 @@
       "transliteration": "basileia",
       "morphology": "G:N-F",
       "briefGloss": "kingdom",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "708e41fdd1eb26dd53ace8f3290f052daf10b76833a5f352318b9482f6666c92",
@@ -4535,7 +5868,200 @@
       "transliteration": "alētheia",
       "morphology": "G:N-F",
       "briefGloss": "truth",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
+    },
+    {
+      "reviewId": "b6018ce0a0318dc90ae0df44699a19daaeae09e03e0653393397b34450f52ba0",
+      "bookId": "ioan",
+      "chapter": 19,
+      "ref": "Ioan 19:1-16",
+      "original": "ἴδε ὁ ἄνθρωπος",
+      "meaning": "Iată Omul. Prezentare publică a Domnului în umilința Sa.",
+      "meaningSha256": "sha256:f0dd1e5c4f1729113a895ffc7adb524bed4d7dbf2f294a9a97dc17f36fc0892d",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG line 2549 + TBESG line 3702 + TBESG line 551",
+      "strongId": "G2396 + G3588 + G0444",
+      "canonicalLemma": "ἴδε ὁ ἄνθρωπος",
+      "transliteration": "ide ho anthrōpos",
+      "morphology": "G:INJ | G:T | G:N-M",
+      "briefGloss": "look!; the/this/who; a human",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "ἴδε",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "ἴδε",
+            "occurrences": [
+              {
+                "bcv": "041904",
+                "word": "Ἴδε",
+                "normalizedWord": "ἴδε",
+                "lemma": "ἴδε",
+                "pos": "X-",
+                "parsing": "--------"
+              },
+              {
+                "bcv": "041914",
+                "word": "Ἴδε",
+                "normalizedWord": "ἴδε",
+                "lemma": "ἴδε",
+                "pos": "X-",
+                "parsing": "--------"
+              }
+            ]
+          },
+          {
+            "inputToken": "ὁ",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "ὁ",
+            "occurrences": [
+              {
+                "bcv": "041901",
+                "word": "ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041903",
+                "word": "ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041904",
+                "word": "ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041905",
+                "word": "ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041905",
+                "word": "ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041906",
+                "word": "ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041908",
+                "word": "ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041909",
+                "word": "ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041910",
+                "word": "ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041911",
+                "word": "ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041912",
+                "word": "ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041912",
+                "word": "ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041913",
+                "word": "Ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041914",
+                "word": "ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "041915",
+                "word": "ὁ",
+                "normalizedWord": "ὁ",
+                "lemma": "ὁ",
+                "pos": "RA",
+                "parsing": "----NSM-"
+              }
+            ]
+          },
+          {
+            "inputToken": "ἄνθρωπος",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "ἄνθρωπος",
+            "occurrences": [
+              {
+                "bcv": "041905",
+                "word": "ἄνθρωπος",
+                "normalizedWord": "ἄνθρωπος",
+                "lemma": "ἄνθρωπος",
+                "pos": "N-",
+                "parsing": "----NSM-"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "reviewId": "48559e9a7a18579ab1e456ebf36967f74533c7c8d7e02f1649628c0ee32da55d",
@@ -4553,7 +6079,7 @@
       "transliteration": "exousia",
       "morphology": "G:N-F",
       "briefGloss": "authority",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "9740b13f7d46c05592c3733e55a08a45b6ae0b15e7ec83e01f2e04a1b3dc9c19",
@@ -4571,7 +6097,7 @@
       "transliteration": "teleō",
       "morphology": "G:V",
       "briefGloss": "to finish",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -4581,9 +6107,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "τετελεσται",
+            "inputToken": "τετέλεσται",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "τελέω",
-            "normalizedLemma": "τελεω",
             "occurrences": [
               {
                 "bcv": "041928",
@@ -4622,7 +6148,7 @@
       "transliteration": "marturia",
       "morphology": "G:N-F",
       "briefGloss": "testimony",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "600df21c5280ce120ec99e88c1e6908ffda408b3e80ad52d94bd73110d625ce8",
@@ -4640,7 +6166,7 @@
       "transliteration": "ekkenteō",
       "morphology": "G:V",
       "briefGloss": "to pierce",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -4650,9 +6176,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "εξεκεντησαν",
+            "inputToken": "ἐξεκέντησαν",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ἐκκεντέω",
-            "normalizedLemma": "εκκεντεω",
             "occurrences": [
               {
                 "bcv": "041937",
@@ -4683,7 +6209,7 @@
       "transliteration": "anistēmi",
       "morphology": "G:V",
       "briefGloss": "to arise",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -4693,9 +6219,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "αναστηναι",
+            "inputToken": "ἀναστῆναι",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ἀνίστημι",
-            "normalizedLemma": "ανιστημι",
             "occurrences": [
               {
                 "bcv": "042009",
@@ -4726,7 +6252,7 @@
       "transliteration": "eirēnē su",
       "morphology": "G:N-F | G:P-2",
       "briefGloss": "peace; you",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -4736,9 +6262,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "ειρηνη",
+            "inputToken": "εἰρήνη",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "εἰρήνη",
-            "normalizedLemma": "ειρηνη",
             "occurrences": [
               {
                 "bcv": "042019",
@@ -4767,9 +6293,9 @@
             ]
           },
           {
-            "inputToken": "υμιν",
+            "inputToken": "ὑμῖν",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "σύ",
-            "normalizedLemma": "συ",
             "occurrences": [
               {
                 "bcv": "042019",
@@ -4816,7 +6342,7 @@
       "transliteration": "pisteuō",
       "morphology": "G:V",
       "briefGloss": "to trust (in)",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -4826,9 +6352,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "πιστευητε",
+            "inputToken": "πιστεύητε",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "πιστεύω",
-            "normalizedLemma": "πιστευω",
             "occurrences": [
               {
                 "bcv": "042031",
@@ -4859,7 +6385,7 @@
       "transliteration": "zōē echō",
       "morphology": "G:N-F | G:V",
       "briefGloss": "life; to have/be",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -4869,9 +6395,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "ζωην",
+            "inputToken": "ζωὴν",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ζωή",
-            "normalizedLemma": "ζωη",
             "occurrences": [
               {
                 "bcv": "042031",
@@ -4884,9 +6410,9 @@
             ]
           },
           {
-            "inputToken": "εχητε",
+            "inputToken": "ἔχητε",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ἔχω",
-            "normalizedLemma": "εχω",
             "occurrences": [
               {
                 "bcv": "042031",
@@ -4917,7 +6443,105 @@
       "transliteration": "phaneroō",
       "morphology": "G:V",
       "briefGloss": "to reveal",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
+    },
+    {
+      "reviewId": "013bec8c26da6fe001ee2d070352e8455f10427e91e87bf9cde676172063a091",
+      "bookId": "ioan",
+      "chapter": 21,
+      "ref": "Ioan 21:1-14",
+      "original": "κύριός ἐστιν",
+      "meaning": "Este Domnul. Recunoașterea identității lui Isus.",
+      "meaningSha256": "sha256:8e2a92e37b850c6de7f6b70b1baeead94c5faf389ee158aa3e9d6c3f354cfcbd",
+      "sourceId": "stepbible-tbesg",
+      "sourceBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "sourceLocator": "TBESG lines 3157-3158 + TBESG line 1650",
+      "strongId": "G2962 + G1510",
+      "canonicalLemma": "κύριος εἰμί",
+      "transliteration": "kurios eimi",
+      "morphology": "G:N-M | G:V",
+      "briefGloss": "lord: God / lord: master; to be",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
+      "morphgntEvidence": {
+        "sourceId": "morphgnt-sblgnt-6.12",
+        "repository": "morphgnt/sblgnt",
+        "ref": "6.12",
+        "file": "64-Jn-morphgnt.txt",
+        "fileBlobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9",
+        "license": "CC-BY-SA",
+        "tokens": [
+          {
+            "inputToken": "κύριός",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "κύριος",
+            "occurrences": [
+              {
+                "bcv": "042107",
+                "word": "κύριός",
+                "normalizedWord": "κύριος",
+                "lemma": "κύριος",
+                "pos": "N-",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "042107",
+                "word": "κύριός",
+                "normalizedWord": "κύριος",
+                "lemma": "κύριος",
+                "pos": "N-",
+                "parsing": "----NSM-"
+              },
+              {
+                "bcv": "042112",
+                "word": "κύριός",
+                "normalizedWord": "κύριος",
+                "lemma": "κύριος",
+                "pos": "N-",
+                "parsing": "----NSM-"
+              }
+            ]
+          },
+          {
+            "inputToken": "ἐστιν",
+            "resolution": "exact-diacritic-preserving-surface",
+            "lemma": "εἰμί",
+            "occurrences": [
+              {
+                "bcv": "042104",
+                "word": "ἐστιν",
+                "normalizedWord": "ἐστί(ν)",
+                "lemma": "εἰμί",
+                "pos": "V-",
+                "parsing": "3PAI-S--"
+              },
+              {
+                "bcv": "042107",
+                "word": "ἐστιν",
+                "normalizedWord": "ἐστί(ν)",
+                "lemma": "εἰμί",
+                "pos": "V-",
+                "parsing": "3PAI-S--"
+              },
+              {
+                "bcv": "042107",
+                "word": "ἐστιν",
+                "normalizedWord": "ἐστί(ν)",
+                "lemma": "εἰμί",
+                "pos": "V-",
+                "parsing": "3PAI-S--"
+              },
+              {
+                "bcv": "042112",
+                "word": "ἐστιν",
+                "normalizedWord": "ἐστί(ν)",
+                "lemma": "εἰμί",
+                "pos": "V-",
+                "parsing": "3PAI-S--"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "reviewId": "cef86caf678a0fb3598fea02dbd9d562090dccffe52aecdf775b972370fac27c",
@@ -4935,7 +6559,7 @@
       "transliteration": "agapaō phileō",
       "morphology": "G:V | G:V",
       "briefGloss": "to love; to love",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -4945,9 +6569,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "αγαπασ",
+            "inputToken": "ἀγαπᾷς",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ἀγαπάω",
-            "normalizedLemma": "αγαπαω",
             "occurrences": [
               {
                 "bcv": "042115",
@@ -4968,9 +6592,9 @@
             ]
           },
           {
-            "inputToken": "φιλεισ",
+            "inputToken": "φιλεῖς",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "φιλέω",
-            "normalizedLemma": "φιλεω",
             "occurrences": [
               {
                 "bcv": "042117",
@@ -5009,7 +6633,7 @@
       "transliteration": "boskō poimainō",
       "morphology": "G:V | G:V",
       "briefGloss": "to feed; to shepherd",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -5019,9 +6643,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "βοσκε",
+            "inputToken": "βόσκε",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "βόσκω",
-            "normalizedLemma": "βοσκω",
             "occurrences": [
               {
                 "bcv": "042115",
@@ -5042,9 +6666,9 @@
             ]
           },
           {
-            "inputToken": "ποιμαινε",
+            "inputToken": "ποίμαινε",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ποιμαίνω",
-            "normalizedLemma": "ποιμαινω",
             "occurrences": [
               {
                 "bcv": "042116",
@@ -5075,7 +6699,7 @@
       "transliteration": "akoloutheō egō",
       "morphology": "G:V | G:P-1",
       "briefGloss": "to follow; I/we",
-      "matchKind": "morphgnt-passage-form-to-lemma+canonical-lemma",
+      "matchKind": "morphgnt-passage-form-to-exact-lemma+canonical-lemma",
       "morphgntEvidence": {
         "sourceId": "morphgnt-sblgnt-6.12",
         "repository": "morphgnt/sblgnt",
@@ -5085,9 +6709,9 @@
         "license": "CC-BY-SA",
         "tokens": [
           {
-            "inputToken": "ακολουθει",
+            "inputToken": "ἀκολούθει",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ἀκολουθέω",
-            "normalizedLemma": "ακολουθεω",
             "occurrences": [
               {
                 "bcv": "042122",
@@ -5101,8 +6725,8 @@
           },
           {
             "inputToken": "μοι",
+            "resolution": "exact-diacritic-preserving-surface",
             "lemma": "ἐγώ",
-            "normalizedLemma": "εγω",
             "occurrences": [
               {
                 "bcv": "042122",
@@ -5133,7 +6757,7 @@
       "transliteration": "marturia",
       "morphology": "G:N-F",
       "briefGloss": "testimony",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "eb8fe96b1e09ebc7d2f9c9c6d170110b1b7f2b5316e57f886fd3e86e1b500aa3",
@@ -5151,7 +6775,7 @@
       "transliteration": "paideuō",
       "morphology": "G:V",
       "briefGloss": "to instruct",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "68c4e3ce907d429c44a08075c79f07645d0de44b3cc091c9d51bbe223a0da4bf",
@@ -5169,7 +6793,7 @@
       "transliteration": "palingenesia",
       "morphology": "G:N-F",
       "briefGloss": "regeneration",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     },
     {
       "reviewId": "14c652e5748bc9b4378c98f021bde85e939921a4355128577c36a24f5de8ff72",
@@ -5187,7 +6811,7 @@
       "transliteration": "Onēsimos",
       "morphology": "N:N-M-P",
       "briefGloss": "Onesimus",
-      "matchKind": "canonical-lemma-column-exact"
+      "matchKind": "canonical-lemma-diacritic-exact"
     }
   ]
 }
