@@ -1,0 +1,100 @@
+name: Probe SermonIndex API Once
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-nt-integration-clean
+    paths:
+      - .github/workflows/probe-sermonindex-api-once.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  probe:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Probe API
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, urllib.parse, urllib.request
+          from pathlib import Path
+
+          base = 'https://api.sermonindex.net'
+          urls = [
+              f'{base}/v1/contributors/slug/zac-poonen',
+              f'{base}/v1/sermons?limit=5',
+              f'{base}/openapi.json',
+              f'{base}/v1/openapi.json',
+              f'{base}/v1/api/openapi.json',
+          ]
+          results = []
+          contributor = None
+          def fetch(url):
+              req = urllib.request.Request(url, headers={'User-Agent':'Emanus-Editorial-Research/1.0'})
+              try:
+                  with urllib.request.urlopen(req, timeout=30) as res:
+                      body = res.read().decode('utf-8', errors='replace')
+                      try: parsed = json.loads(body)
+                      except Exception: parsed = body[:12000]
+                      return {'url':url,'status':res.status,'contentType':res.headers.get('content-type'),'body':parsed}
+              except Exception as e:
+                  return {'url':url,'error':repr(e)}
+          for u in urls:
+              item = fetch(u)
+              results.append(item)
+              if '/contributors/slug/' in u and isinstance(item.get('body'), dict):
+                  contributor = item['body']
+
+          ids = []
+          def walk(obj):
+              if isinstance(obj, dict):
+                  for k,v in obj.items():
+                      if k.lower() in ('id','contributor_id','contributorid') and isinstance(v,(str,int)):
+                          ids.append(str(v))
+                      walk(v)
+              elif isinstance(obj, list):
+                  for v in obj: walk(v)
+          walk(contributor)
+          cid = ids[0] if ids else None
+          variants = []
+          if cid:
+              variants += [
+                  ('contributor_id', cid), ('contributorId', cid), ('contributor', cid), ('speaker_id', cid)
+              ]
+          variants += [('search','Zac Poonen'),('query','Zac Poonen'),('speaker','Zac Poonen')]
+          for key,val in variants:
+              qs = urllib.parse.urlencode({key:val,'limit':5})
+              results.append(fetch(f'{base}/v1/sermons?{qs}'))
+
+          out = {
+              'schema':'emanus-sermonindex-api-probe-v1',
+              'purpose':'Transcript-mirror discovery only. Official CFC remains primary source.',
+              'contributorCandidateIds': sorted(set(ids)),
+              'results': results,
+          }
+          p = Path('docs/data/biblia-explicata/nt-sermonindex-api-probe.json')
+          p.parent.mkdir(parents=True, exist_ok=True)
+          p.write_text(json.dumps(out, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+          PY
+      - name: Commit probe and remove workflow
+        run: |
+          set -euo pipefail
+          rm .github/workflows/probe-sermonindex-api-once.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/biblia-explicata/nt-sermonindex-api-probe.json .github/workflows/probe-sermonindex-api-once.yml
+          git commit -m "Probe transcript mirror API for NT fidelity review"
+          for attempt in 1 2 3; do
+            git fetch origin agent/biblia-explicata-nt-integration-clean
+            git rebase FETCH_HEAD
+            if git push origin HEAD:agent/biblia-explicata-nt-integration-clean; then exit 0; fi
+          done
+          exit 1
