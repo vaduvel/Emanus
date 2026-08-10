@@ -42,52 +42,137 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": false
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": false
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
-      "theologicalNeutrality": "approved",
-      "copyrightSimilarity": "approved",
-      "additions": "approved",
-      "omissions": "approved",
       "meaning": "approved",
-      "romanianNaturalness": "approved"
+      "theologicalNeutrality": "approved",
+      "romanianNaturalness": "approved",
+      "copyrightSimilarity": "approved",
+      "omissions": "approved",
+      "additions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost redactat și confruntat direct cu SBLGNT 1.2 și aparatul critic fixat la commitul proiectului.",
+      "Cornilescu 1924, BTF și NTR nu au fost consultate în această rulare; consultedInBatch rămâne false. Nu s-a copiat o traducere românească."
     ]
   },
+  "verses": [
+    {
+      "number": 1,
+      "text": "Și am văzut în cer un alt semn, mare și uimitor: șapte îngeri având șapte plăgi, cele din urmă, pentru că prin ele se încheie mânia lui Dumnezeu."
+    },
+    {
+      "number": 2,
+      "text": "Și am văzut ceva ca o mare de sticlă amestecată cu foc și pe cei care biruiseră fiara, chipul ei și numărul numelui ei, stând pe marea de sticlă și având harpele lui Dumnezeu."
+    },
+    {
+      "number": 3,
+      "text": "Ei cântă cântarea lui Moise, slujitorul lui Dumnezeu, și cântarea Mielului, spunând: „Mari și uimitoare sunt lucrările Tale, Doamne Dumnezeule Atotputernic! Drepte și adevărate sunt căile Tale, Împărat al veacurilor!"
+    },
+    {
+      "number": 4,
+      "text": "Cine nu se va teme, Doamne, și nu va slăvi Numele Tău? Căci numai Tu ești sfânt. Toate neamurile vor veni și se vor închina înaintea Ta, pentru că faptele Tale drepte au fost arătate.”"
+    },
+    {
+      "number": 5,
+      "text": "După acestea am văzut că s-a deschis în cer templul cortului mărturiei."
+    },
+    {
+      "number": 6,
+      "text": "Din templu au ieșit cei șapte îngeri care aveau cele șapte plăgi, îmbrăcați în in curat și strălucitor și încinși la piept cu brâie de aur."
+    },
+    {
+      "number": 7,
+      "text": "Una dintre cele patru făpturi vii le-a dat celor șapte îngeri șapte cupe de aur pline de mânia lui Dumnezeu, Cel care trăiește în vecii vecilor."
+    },
+    {
+      "number": 8,
+      "text": "Templul s-a umplut de fum din slava lui Dumnezeu și din puterea Lui, iar nimeni nu putea să intre în templu până când nu aveau să se încheie cele șapte plăgi ale celor șapte îngeri."
+    }
+  ],
+  "editorialNotes": [
+    {
+      "verse": 2,
+      "term": "τοὺς νικῶντας ἐκ τοῦ θηρίου ... καὶ ἐκ τοῦ ἀριθμοῦ",
+      "decision": "„cei care biruiseră fiara, chipul ei și numărul numelui ei”",
+      "alternatives": [
+        "„cei care ieșiseră biruitori din lupta cu fiara...”"
+      ],
+      "reason": "νικάω cu ἐκ exprimă victoria în raport cu cele trei elemente; româna redă direct obiectele victoriei fără a adăuga o scenă de luptă absentă lexical.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sunt păstrate toate cele trei referințe: fiara, chipul și numărul numelui."
+    },
+    {
+      "verse": 3,
+      "term": "ὁ βασιλεὺς τῶν αἰώνων",
+      "decision": "„Împărat al veacurilor”",
+      "alternatives": [
+        "Treg/RP/NA28: ὁ βασιλεὺς τῶν ἐθνῶν, „Împărat al neamurilor”"
+      ],
+      "reason": "Textul principal SBLGNT selectează αἰώνων, în timp ce ceilalți martori enumerați în aparat au ἐθνῶν. Draftul vechi importase „neamurilor”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corpul urmează αἰώνων = „veacurilor”."
+    },
+    {
+      "verse": 4,
+      "term": "ὅτι μόνος ὅσιος",
+      "decision": "„Căci numai Tu ești sfânt”",
+      "alternatives": [
+        "RP: ἅγιος"
+      ],
+      "reason": "SBLGNT are ὅσιος; româna „sfânt” acoperă aici sensul de consacrat/cuvios fără a inventa o distincție terminologică rigidă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura critică este documentată chiar dacă româna naturală converge lexical cu lectura RP."
+    },
+    {
+      "verse": 6,
+      "term": "ἐνδεδυμένοι λίνον καθαρὸν λαμπρόν",
+      "decision": "„îmbrăcați în in curat și strălucitor”",
+      "alternatives": [
+        "WH/Treg: λίθον, „piatră”"
+      ],
+      "reason": "SBLGNT urmează aici lectura λίνον, sprijinită de NA28/RP; materialul este in, nu „piatră”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Substantivul selectat de textul principal este redat direct."
+    }
+  ],
+  "referenceNotes": [],
+  "alternateEndings": [],
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-10",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "GPT-5.6 Sol",
+      "runId": "emanus-nt-editorial-2026-08-10-rev-15-gpt56sol-934d",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 8,
       "reviewed": 8,
@@ -96,24 +181,24 @@
     },
     "sourceLanguage": {
       "language": "greacă koine",
-      "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
+      "text": "SBLGNT 1.2 + aparat critic; WH/Treg/NA28/RP ca martori suplimentari",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 8 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 8 versete din REV.15 au fost confruntate verset cu verset cu textul SBLGNT și variantele materiale din aparatul fixat."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Capitolul a fost rescris în română coerentă, cu diacritice și acorduri corecte.",
+        "REV.15.3 a fost corectat de la „Împărat al neamurilor” la lectura SBLGNT „Împărat al veacurilor”.",
+        "REV.15.6 păstrează lectura λίνον = „in”, iar formulările corupte din 15:3–4 și 15:8 au fost reparate."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Textul principal urmează SBLGNT și nu armonizează automat cu NA28/RP atunci când SBLGNT selectează altă lectură.",
+        "REV.15.3 păstrează „veacurilor” fără a schimba titlul în „neamurilor” doar pentru familiaritate.",
+        "Imaginile despre mânia lui Dumnezeu sunt traduse lexical, fără comentariu escatologic adăugat."
       ]
     },
     "omissionAddition": {
@@ -123,60 +208,13 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare românească proprie direct din SBLGNT și aparatul critic; traducerile românești declarate nu au fost consultate în această rulare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 285,
-        "secondary": 119,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5435114731748284,
-      "minimumScore": 0.5419631978011472
-    },
-    "textDigest": "sha256:cf981490c39b8f6c4248748a691cc7fbb28dcd69b9e5d3f14f9fc2fc38c14a0a",
-    "contentDigest": "sha256:a5d9610f132c42bfb2d903db9d2f2685696e9d8bb15e4fdce0bdf5f53ce73bd9"
-  },
-  "verses": [
-    {
-      "number": 1,
-      "text": "Am văzut un alt semn mare și minunat pe cer: șapte îngeri având cele șapte ultime plăgi, căci în ele mânia lui Dumnezeu s-a sfârșit."
-    },
-    {
-      "number": 2,
-      "text": "Am văzut ceva ca o mare de sticlă amestecată cu foc, și pe cei ce au biruit fiara, chipul și numărul numelui său, stând pe marea de sticlă, având harpe ale lui Dumnezeu."
-    },
-    {
-      "number": 3,
-      "text": "Ei au cântat cîntarea lui Moise, robul lui Dumnezeu, și cîntarea Mielului, și au zis:„ Mare și minunate sunt lucrările Tale, Doamne Dumnezeule, Cel Atotputernic! Drepte și adevărate sunt căile Tale, Împărate al neamurilor!"
-    },
-    {
-      "number": 4,
-      "text": "Cine nu s-ar teme de tine, Doamne, și să slăvească Numele Tău? Căci numai Tu ești sfânt; căci toate neamurile vor veni și se vor închina înaintea Ta, căci faptele Tale drepte au fost descoperite."
-    },
-    {
-      "number": 5,
-      "text": "După aceste lucruri m-am uitat, și s-a deschis Templul cortului mărturiei din cer."
-    },
-    {
-      "number": 6,
-      "text": "Și au ieșit cei șapte îngeri din templu, având cele șapte plăgi, îmbrăcați în in pur și alb și având piepturile lor încinse cu brâie de aur."
-    },
-    {
-      "number": 7,
-      "text": "Una dintre cele patru creaturi vii le-a dat celor șapte îngeri șapte boluri de aur pline de mânia lui Dumnezeu, care trăiește veșnic."
-    },
-    {
-      "number": 8,
-      "text": "Templul era plin de fum din slava lui Dumnezeu și din puterea lui. Nimeni nu putea să intre în templu până când cele șapte plăgi ale celor șapte îngeri nu vor fi terminate.”"
-    }
-  ],
-  "editorialNotes": [],
-  "referenceNotes": [],
-  "alternateEndings": []
+    "textDigest": "sha256:d837187870517abeeca2934464f289d7112a6f766c8b18fe2eab22ae3a53b55c",
+    "contentDigest": "sha256:f06283bc38acf7e6386aac1f8f5c50154f97a26a30ed54ee50d7e105819cbdc1"
+  }
 }
