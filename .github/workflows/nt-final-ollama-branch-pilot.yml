@@ -1,0 +1,122 @@
+name: NT Final Ollama Branch Pilot
+
+on:
+  push:
+    branches:
+      - codex/nt-ai-review-handoff
+    paths:
+      - .github/workflows/nt-final-ollama-branch-pilot.yml
+
+permissions:
+  contents: write
+
+jobs:
+  pilot:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 45
+    steps:
+      - name: Checkout review branch
+        uses: actions/checkout@v4
+        with:
+          ref: codex/nt-ai-review-handoff
+          fetch-depth: 0
+      - name: Record observable run id
+        env:
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          Path('docs/biblia-emanus/NT-OLLAMA-RUN.json').write_text(
+              json.dumps({'runId': os.environ['RUN_ID'], 'status': 'started'}, indent=2) + '\n',
+              encoding='utf-8'
+          )
+          PY
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add docs/biblia-emanus/NT-OLLAMA-RUN.json
+          git diff --cached --check
+          git commit -m 'docs(biblia): record local reviewer run id'
+          git push origin HEAD:codex/nt-ai-review-handoff
+      - name: Install Ollama
+        run: |
+          set -euo pipefail
+          curl -fsSL https://ollama.com/install.sh | sh
+          ollama --version
+      - name: Start Ollama and pull Qwen3 8B
+        run: |
+          set -euo pipefail
+          nohup ollama serve >/tmp/ollama.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:11434/api/tags >/dev/null; then break; fi
+            sleep 1
+          done
+          ollama pull qwen3:8b
+          ollama list
+      - id: review
+        name: Review MAT.1 locally
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NT_FINAL_OLLAMA_MODEL: qwen3:8b
+          NT_FINAL_OLLAMA_CONTEXT: '32768'
+          NT_FINAL_OLLAMA_TIMEOUT: '900'
+          NT_FINAL_CHUNK_SIZE: '10'
+          NT_FINAL_CHUNK_ATTEMPTS: '4'
+        run: |
+          set -euo pipefail
+          python3 scripts/nt_final_editorial_ollama_chunked_runner.py \
+            --book MAT \
+            --chapter 1 \
+            --consulted-on "$(date -u +%F)" \
+            --output /tmp/MAT.json 2>&1 | tee /tmp/nt-final-ollama-pilot.log
+      - id: shape
+        name: Validate pilot artifact
+        if: steps.review.outcome == 'success'
+        continue-on-error: true
+        run: |
+          python3 - <<'PY'
+          import json
+          data = json.load(open('/tmp/MAT.json', encoding='utf-8'))
+          assert data['book'] == 'MAT'
+          assert len(data['verses']) == 25
+          assert data['verses'][0]['reference'] == 'MAT.1.1'
+          assert data['verses'][-1]['reference'] == 'MAT.1.25'
+          print('[ollama-pilot] MAT.1 evidence:', len(data['verses']))
+          PY
+      - name: Persist local pilot result
+        if: always()
+        env:
+          REVIEW_OUTCOME: ${{ steps.review.outcome }}
+          SHAPE_OUTCOME: ${{ steps.shape.outcome }}
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          git pull --ff-only origin codex/nt-ai-review-handoff
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          p = Path('/tmp/nt-final-ollama-pilot.log')
+          log = p.read_text(encoding='utf-8', errors='replace')[-20000:] if p.exists() else ''
+          status = 'success' if os.environ.get('REVIEW_OUTCOME') == 'success' and os.environ.get('SHAPE_OUTCOME') == 'success' else 'failure'
+          result = {
+              'status': status,
+              'reviewOutcome': os.environ.get('REVIEW_OUTCOME'),
+              'shapeOutcome': os.environ.get('SHAPE_OUTCOME'),
+              'runId': os.environ.get('RUN_ID'),
+              'reviewerSystem': 'Ollama qwen3:8b local; chunk-size=10; selective-salvage; structured-output',
+              'diagnosticTail': log,
+          }
+          Path('docs/biblia-emanus/NT-FINAL-OLLAMA-PILOT.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          Path('docs/biblia-emanus/NT-OLLAMA-RUN.json').write_text(
+              json.dumps({'runId': os.environ['RUN_ID'], 'status': status}, indent=2) + '\n',
+              encoding='utf-8'
+          )
+          PY
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add docs/biblia-emanus/NT-FINAL-OLLAMA-PILOT.json docs/biblia-emanus/NT-OLLAMA-RUN.json
+          git diff --cached --check
+          git commit -m 'docs(biblia): record local Ollama final NT pilot'
+          git push origin HEAD:codex/nt-ai-review-handoff
