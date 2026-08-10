@@ -53,7 +53,39 @@ const RULES = [
   [/adevarata mărime/giu, "adevărata mărime", "ioan-true-greatness"],
 ]
 
+// Final reviewed cases are bound to exact corpus locations. This avoids a
+// global grammatical guess when the same ASCII token can mean two forms.
+const LOCATION_RULES = new Map([
+  ["ioan.5.units[1].teaching", [["viata", "viața"]]],
+  ["ioan.9.historicalContext", [["credinta", "credință"]]],
+  ["ioan.10.literaryContext", [["credinta", "credința"]]],
+  ["ioan.10.units[0].teaching", [["viata", "viață"]]],
+  ["ioan.10.units[0].words[0].meaning", [["viata", "viață"]]],
+  ["ioan.11.summary", [["viata", "viața"]]],
+  ["ioan.11.prayer", [["viata", "viața"]]],
+  ["ioan.11.units[0].heading", [["viata", "viața"]]],
+  ["ioan.11.units[0].teaching", [["credinta", "credința"], ["viata", "viața"]]],
+])
+
 const ledger = []
+function preserveCase(match, replacement) {
+  if (match === match.toUpperCase()) return replacement.toUpperCase()
+  if (match[0] === match[0].toUpperCase()) return replacement[0].toUpperCase() + replacement.slice(1)
+  return replacement
+}
+function replaceTokenAtLocation(value, location) {
+  let out = value
+  for (const [token, replacement] of LOCATION_RULES.get(location) ?? []) {
+    const escaped = token.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    const regex = new RegExp(`(?<![\\p{L}\\p{N}_])${escaped}(?![\\p{L}\\p{N}_])`, "giu")
+    out = out.replace(regex, (match) => {
+      const after = preserveCase(match, replacement)
+      if (after !== match) ledger.push({ location, rule: "location-reviewed", before: match, after })
+      return after
+    })
+  }
+  return out
+}
 function normalize(value, location) {
   if (typeof value !== "string" || !value) return value
   let out = value
@@ -63,7 +95,7 @@ function normalize(value, location) {
       return replacement
     })
   }
-  return out
+  return replaceTokenAtLocation(out, location)
 }
 function normalizeChapter(bookId, chapter) {
   const prefix = `${bookId}.${chapter.number}`
@@ -104,5 +136,5 @@ if (books !== manifest.counts?.books || chapters !== manifest.counts?.chapters |
 manifest.books = manifestBooks
 manifest.counts = { ...manifest.counts, romanianResidualFixes: ledger.length }
 fs.writeFileSync(manifestPath, stable(manifest), "utf8")
-fs.writeFileSync(ledgerPath, stable({ schema: "emanus-nt-romanian-residual-fix-ledger-v1", policy: "exact reviewed grammatical constructions only; no bare ambiguous-token fallback", count: ledger.length, fixes: ledger }), "utf8")
+fs.writeFileSync(ledgerPath, stable({ schema: "emanus-nt-romanian-residual-fix-ledger-v2", policy: "exact reviewed grammatical constructions and exact corpus locations only; no bare ambiguous-token fallback", count: ledger.length, fixes: ledger }), "utf8")
 console.log(`NT Romanian residual normalization: ${ledger.length} reviewed replacements.`)
