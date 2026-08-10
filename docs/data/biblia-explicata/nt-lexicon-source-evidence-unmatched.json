@@ -1,6 +1,6 @@
 {
-  "schema": "emanus-nt-lexicon-source-evidence-unmatched-v1",
-  "policy": "Entries with no exact normalized-lemma token match in the pinned TBESG snapshot. These require improved lemma resolution or another pinned lexical reference; they are not approvable from absence of evidence.",
+  "schema": "emanus-nt-lexicon-source-evidence-unmatched-v2",
+  "policy": "Entries with no exact normalized match in TBESG's canonical lemma column. These are commonly inflected or multi-word forms and require lemmatization or another pinned lexical reference; they are not approvable from absence of evidence.",
   "source": {
     "id": "stepbible-tbesg",
     "repository": "STEPBible/STEPBible-Data",
