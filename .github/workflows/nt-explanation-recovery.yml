@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: write
+  copilot-requests: write
 
 concurrency:
   group: nt-explanation-recovery-${{ github.ref }}
@@ -23,7 +24,7 @@ jobs:
       github.actor != 'github-actions[bot]' &&
       (github.event_name != 'pull_request' || github.event.pull_request.head.ref == 'agent/biblia-explicata-nt-integration-clean')
     runs-on: ubuntu-22.04
-    timeout-minutes: 45
+    timeout-minutes: 120
     env:
       LEGACY_NT_SOURCE_SHA: 3d305d2b894257a702acf00e2c6d41a7ab83ffde
     steps:
@@ -38,6 +39,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+
+      - name: Install GitHub Copilot CLI for semantic review
+        run: npm install -g @github/copilot
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
@@ -161,6 +165,31 @@ jobs:
       - name: Materialize final NT corpus and reviewed quote fixes
         run: |
           set -euo pipefail
+          node scripts/materialize-nt-final-source-first.mjs
+          node scripts/fix-nt-embedded-bible-quotes.mjs
+          node scripts/apply-nt-reviewed-be-quote-fixes.mjs
+
+      - name: Review currently transcript-addressable NT units semantically
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NT_SEMANTIC_COPILOT_MODEL: auto
+          NT_SEMANTIC_COPILOT_TIMEOUT: '300'
+          NT_SEMANTIC_BATCH_SIZE: '4'
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/semantic-review
+          for book in 2-tesaloniceni 2-timotei 1-ioan 2-ioan 3-ioan iuda; do
+            python3 scripts/nt_semantic_copilot_worker.py \
+              --book "$book" \
+              --reviewed-on "$(date -u +%F)" \
+              --output "/tmp/semantic-review/$book.json"
+          done
+          python3 scripts/merge_nt_semantic_review_artifacts.py \
+            --input /tmp/semantic-review \
+            --ledger docs/data/biblia-explicata/nt-semantic-review-ledger.json
+          node scripts/apply-nt-semantic-review-ledger.mjs
+          node scripts/normalize-nt-final-romanian-wave.mjs
+          node scripts/normalize-nt-final-romanian-contextual.mjs
           node scripts/materialize-nt-final-source-first.mjs
           node scripts/fix-nt-embedded-bible-quotes.mjs
           node scripts/apply-nt-reviewed-be-quote-fixes.mjs
