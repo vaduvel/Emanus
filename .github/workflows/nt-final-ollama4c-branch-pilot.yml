@@ -1,0 +1,86 @@
+name: NT Final Ollama4 Concise Pilot
+
+on:
+  push:
+    branches:
+      - codex/nt-ai-review-handoff
+    paths:
+      - .github/workflows/nt-final-ollama4c-branch-pilot.yml
+
+permissions:
+  contents: write
+
+jobs:
+  pilot:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: codex/nt-ai-review-handoff
+          fetch-depth: 0
+      - name: Record run id
+        env:
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          python3 - <<'PY'
+          import json,os
+          from pathlib import Path
+          Path('docs/biblia-emanus/NT-OLLAMA4C-RUN.json').write_text(json.dumps({'runId':os.environ['RUN_ID'],'status':'started'},indent=2)+'\n')
+          PY
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add docs/biblia-emanus/NT-OLLAMA4C-RUN.json
+          git commit -m 'docs(biblia): record concise local reviewer run id'
+          git push origin HEAD:codex/nt-ai-review-handoff
+      - name: Install and pull Qwen3 4B
+        run: |
+          curl -fsSL https://ollama.com/install.sh | sh
+          nohup ollama serve >/tmp/ollama.log 2>&1 &
+          for i in $(seq 1 30); do curl -fsS http://127.0.0.1:11434/api/tags >/dev/null && break || sleep 1; done
+          ollama pull qwen3:4b
+      - id: review
+        name: Review MAT.1 concise local
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NT_FINAL_OLLAMA_MODEL: qwen3:4b
+          NT_FINAL_OLLAMA_THINK: 'false'
+          NT_FINAL_OLLAMA_CONTEXT: '32768'
+          NT_FINAL_OLLAMA_MAX_PREDICT: '2600'
+          NT_FINAL_OLLAMA_TIMEOUT: '600'
+          NT_FINAL_CHUNK_SIZE: '10'
+          NT_FINAL_CHUNK_ATTEMPTS: '4'
+        run: |
+          python3 scripts/nt_final_editorial_ollama_chunked_runner.py --book MAT --chapter 1 --consulted-on "$(date -u +%F)" --output /tmp/MAT4C.json 2>&1 | tee /tmp/nt-final-ollama4c.log
+      - id: shape
+        if: steps.review.outcome == 'success'
+        continue-on-error: true
+        run: |
+          python3 - <<'PY'
+          import json
+          d=json.load(open('/tmp/MAT4C.json',encoding='utf-8'))
+          assert len(d['verses'])==25
+          PY
+      - name: Persist result
+        if: always()
+        env:
+          REVIEW_OUTCOME: ${{ steps.review.outcome }}
+          SHAPE_OUTCOME: ${{ steps.shape.outcome }}
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          git pull --ff-only origin codex/nt-ai-review-handoff
+          python3 - <<'PY'
+          import json,os
+          from pathlib import Path
+          p=Path('/tmp/nt-final-ollama4c.log'); log=p.read_text(encoding='utf-8',errors='replace')[-20000:] if p.exists() else ''
+          status='success' if os.environ.get('REVIEW_OUTCOME')=='success' and os.environ.get('SHAPE_OUTCOME')=='success' else 'failure'
+          out={'status':status,'reviewOutcome':os.environ.get('REVIEW_OUTCOME'),'shapeOutcome':os.environ.get('SHAPE_OUTCOME'),'runId':os.environ['RUN_ID'],'reviewerSystem':'Ollama qwen3:4b local; thinking=false; concise; chunk-size=10; selective-salvage; structured-output','diagnosticTail':log}
+          Path('docs/biblia-emanus/NT-FINAL-OLLAMA4C-PILOT.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          Path('docs/biblia-emanus/NT-OLLAMA4C-RUN.json').write_text(json.dumps({'runId':os.environ['RUN_ID'],'status':status},indent=2)+'\n')
+          PY
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add docs/biblia-emanus/NT-FINAL-OLLAMA4C-PILOT.json docs/biblia-emanus/NT-OLLAMA4C-RUN.json
+          git commit -m 'docs(biblia): record concise local final NT pilot'
+          git push origin HEAD:codex/nt-ai-review-handoff
