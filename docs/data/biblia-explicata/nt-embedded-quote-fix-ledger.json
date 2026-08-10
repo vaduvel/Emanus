@@ -2,7 +2,7 @@
   "schema": "emanus-nt-embedded-quote-fix-ledger-v1",
   "policy": "Only unique same-chapter Biblia Emanus candidates with <=1 token edit (<=2 for long quotes), >=0.88 sequence score and >=0.80 token overlap are replaced. Ambiguous/non-Bible quotations remain untouched and blocked for manual classification.",
   "fixed": 0,
-  "skipped": 74,
+  "skipped": 73,
   "fixes": [],
   "unresolvedCandidates": [
     {
@@ -507,13 +507,6 @@
       "chapter": 2,
       "field": "teaching",
       "quote": "nu lua, nu gusta, nu atinge",
-      "reason": "no-unique-high-confidence-same-chapter-match"
-    },
-    {
-      "bookId": "tit",
-      "chapter": 1,
-      "field": "teaching",
-      "quote": "ca să fie sănătoși în credință",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
     {

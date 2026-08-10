@@ -1,7 +1,7 @@
 {
   "schema": "emanus-nt-embedded-quote-reviewed-fix-wave-3-ledger-v1",
   "policy": "Exact reader quotations are aligned only to exact wording present in the current provisional Biblia Emanus chapter. Where the provisional Bible wording is corrupted or the explanation intentionally paraphrases a biblical idea, quotation marks are removed without changing the explanatory claim; these locations must be reconsidered when the final canonical text is frozen.",
-  "count": 35,
+  "count": 34,
   "changes": [
     {
       "bookId": "marcu",
@@ -156,17 +156,6 @@
       "action": "exact-be-rewrite",
       "beforeSha256": "sha256:53c7f618cd92c7a6d5e4b942f9567115914c67ce2c63b93ed37bdef8564fcab8",
       "afterSha256": "sha256:99e9eab9b042173515476ff30928552b9a18be5c30e8ebc2ec87c3061ea51a81"
-    },
-    {
-      "bookId": "tit",
-      "canonicalBookId": "TIT",
-      "chapter": 1,
-      "field": "units[2].teaching",
-      "before": "ca să fie sănătoși în credință",
-      "after": "pentru ca ei să fie sănătoși în credință",
-      "action": "exact-be-rewrite",
-      "beforeSha256": "sha256:fbb032a4ff97829066b87c343b7ed5be613165a57eb9181ee50dfd47a035f3b8",
-      "afterSha256": "sha256:dd3079b7a7a92768630cc008d0ab9dd94a02d30bdb719bb6373593c661c019af"
     },
     {
       "bookId": "filimon",
