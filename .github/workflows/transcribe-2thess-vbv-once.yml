@@ -1,0 +1,92 @@
+name: Transcribe 2 Thessalonians VBV Once
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-nt-integration-clean
+    paths:
+      - .github/workflows/transcribe-2thess-vbv-once.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  transcribe:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install transcription runtime
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg
+          python -m pip install --quiet faster-whisper==1.1.1
+      - name: Download and transcribe official CFC VBV audio
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/2thess
+          URL='https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt14-2thessalonians-chapter-1-1-to-chapter-3-18.mp3'
+          curl --fail --location --retry 4 --retry-delay 3 --user-agent 'Emanus-Editorial-Research/1.0' "$URL" -o /tmp/2thess/source.mp3
+          test -s /tmp/2thess/source.mp3
+          ffprobe -v error -show_entries format=duration,size -of json /tmp/2thess/source.mp3 > /tmp/2thess/audio-meta.json
+          python3 - <<'PY'
+          from faster_whisper import WhisperModel
+          from pathlib import Path
+          import hashlib, json
+
+          audio=Path('/tmp/2thess/source.mp3')
+          model=WhisperModel('small.en', device='cpu', compute_type='int8', cpu_threads=2)
+          segments, info = model.transcribe(str(audio), beam_size=1, best_of=1, vad_filter=True, condition_on_previous_text=True, language='en')
+          rows=[]
+          text=[]
+          for seg in segments:
+              t=' '.join(seg.text.split()).strip()
+              if not t: continue
+              rows.append({'start':round(seg.start,2),'end':round(seg.end,2),'text':t})
+              text.append(t)
+          transcript='\n'.join(text).strip()+'\n'
+          if len(transcript.split()) < 2000:
+              raise SystemExit(f'transcript unexpectedly short: {len(transcript.split())} words')
+          sha='sha256:'+hashlib.sha256(transcript.encode()).hexdigest()
+          out={
+            'schema':'emanus-nt-official-audio-transcript-v1',
+            'bookId':'2-tesaloniceni',
+            'officialSourceUrl':'https://www.cfcindia.com/verse-by-verse/2-Thessalonians',
+            'officialAudioUrl':'https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt14-2thessalonians-chapter-1-1-to-chapter-3-18.mp3',
+            'sourceRange':'2 Thessalonians 1:1-3:18',
+            'transcriptionModel':'faster-whisper small.en 1.1.1 / CTranslate2 int8 CPU',
+            'language':info.language,
+            'languageProbability':info.language_probability,
+            'transcriptSha256':sha,
+            'wordCount':len(transcript.split()),
+            'segmentCount':len(rows),
+            'segments':rows,
+          }
+          p=Path('docs/data/biblia-explicata/nt-official-transcripts/2-tesaloniceni-vbv.json')
+          p.parent.mkdir(parents=True,exist_ok=True)
+          p.write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(f'2 Thess VBV transcript: {out["wordCount"]} words / {len(rows)} segments / {sha}')
+          PY
+      - name: Commit transcript research artifact and remove one-shot
+        run: |
+          set -euo pipefail
+          rm .github/workflows/transcribe-2thess-vbv-once.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/data/biblia-explicata/nt-official-transcripts/2-tesaloniceni-vbv.json .github/workflows/transcribe-2thess-vbv-once.yml
+          git commit -m 'Transcribe official 2 Thessalonians VBV source for fidelity review'
+          for attempt in 1 2 3; do
+            git fetch origin agent/biblia-explicata-nt-integration-clean
+            git rebase FETCH_HEAD
+            if git push origin HEAD:agent/biblia-explicata-nt-integration-clean; then exit 0; fi
+          done
+          exit 1
