@@ -68,51 +68,9 @@ jobs:
           cp docs/data/biblia-explicata/nt-final-source-first/19-evrei.json /tmp/evrei-transcripts/19-evrei.json
           cp docs/data/biblia-explicata/nt-direct-transcript-coverage.json /tmp/evrei-transcripts/nt-direct-transcript-coverage.json
 
-      - name: Emit exact 1 Petru semantic review packet
-        run: |
-          set -euo pipefail
-          mkdir -p /tmp/unu-petru-review
-          node <<'NODE'
-          const fs = require('fs')
-          const crypto = require('crypto')
-          const book = JSON.parse(fs.readFileSync('docs/data/biblia-explicata/nt-final-source-first/21-1-petru.json','utf8'))
-          const sha = value => `sha256:${crypto.createHash('sha256').update(String(value)).digest('hex')}`
-          const snap = unit => JSON.stringify({
-            heading: String(unit.heading ?? ''),
-            teaching: String(unit.teaching ?? ''),
-            forYourHeart: String(unit.forYourHeart ?? ''),
-          })
-          const rows=[]
-          for (const chapter of book.chapters ?? []) {
-            for (const unit of chapter.units ?? []) {
-              rows.push({
-                chapter: chapter.number,
-                unitId: unit.id,
-                ref: unit.ref,
-                expectedCurrentSnapshotSha256: sha(snap(unit)),
-                heading: unit.heading,
-                teaching: unit.teaching,
-                forYourHeart: unit.forYourHeart ?? null,
-              })
-            }
-          }
-          if (rows.length !== 15) throw new Error(`expected 15 1 Petru units, got ${rows.length}`)
-          fs.writeFileSync('/tmp/unu-petru-review/1-petru-review-packet.json', JSON.stringify(rows,null,2)+'\n')
-          for (const row of rows) console.log('ONE_PETER_SNAPSHOT', row.unitId, row.expectedCurrentSnapshotSha256)
-          NODE
-          cp docs/data/biblia-explicata/nt-final-source-first/21-1-petru.json /tmp/unu-petru-review/21-1-petru.json
-          cp docs/data/biblia-explicata/nt-official-transcripts/2-petru-ttb.json /tmp/unu-petru-review/1-2-petru-official-transcript.json
-
       - uses: actions/upload-artifact@v4
         with:
           name: evrei-full-transcripts
           path: /tmp/evrei-transcripts
-          if-no-files-found: error
-          retention-days: 1
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: 1-petru-semantic-review-packet
-          path: /tmp/unu-petru-review
           if-no-files-found: error
           retention-days: 1
