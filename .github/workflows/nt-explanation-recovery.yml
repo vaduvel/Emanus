@@ -136,6 +136,11 @@ jobs:
           set -euo pipefail
           node scripts/review-nt-poonen-fidelity-marcu-14-16.mjs
 
+      - name: Normalize Romanian introduced by fidelity review
+        run: |
+          set -euo pipefail
+          node scripts/normalize-nt-fidelity-romanian.mjs
+
       - name: Apply tiered Poonen fidelity to recovered books
         run: |
           set -euo pipefail
