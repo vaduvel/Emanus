@@ -53,7 +53,7 @@ for (const [name,segs] of Object.entries(sections)) {
 if (sectionMeta.titus.words < 6500 || sectionMeta.filimon.words < 1300) fail(`section sizes suspicious: Titus ${sectionMeta.titus.words}, Filimon ${sectionMeta.filimon.words}`)
 const required={
   titus:["truth which is according to godliness","always elders","interested in money","hygienic doctrine","bad motive","workers at home","pilfering","godly authority","not gossiping","second warning"],
-  filimon:["rich man philh","take advantage of his authority","onesimus","charge it to my account","help poor people","social cause","build the church","brother"]
+  filimon:["rich man philh","takes advantage of his authority","onesimus","charge it to my account","help poor people","social cause","build the church","brother"]
 }
 for (const [name,phrases] of Object.entries(required)) {
   const normalized=sectionMeta[name].normalizedText
