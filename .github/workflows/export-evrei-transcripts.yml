@@ -68,6 +68,34 @@ jobs:
           cp docs/data/biblia-explicata/nt-final-source-first/19-evrei.json /tmp/evrei-transcripts/19-evrei.json
           cp docs/data/biblia-explicata/nt-direct-transcript-coverage.json /tmp/evrei-transcripts/nt-direct-transcript-coverage.json
 
+      - name: Diagnose embedded semantic review payload
+        run: |
+          node <<'NODE'
+          const fs = require('fs')
+          const zlib = require('zlib')
+          const src = fs.readFileSync('scripts/materialize-nt-manual-semantic-evrei.mjs','utf8')
+          const m = src.match(/const REVIEW=JSON\.parse\(zlib\.inflateSync\(Buffer\.from\("([A-Za-z0-9+/=]+)"/)
+          if (!m) throw new Error('embedded review payload not found')
+          const compressed = Buffer.from(m[1], 'base64')
+          let text
+          try {
+            text = zlib.inflateSync(compressed).toString('utf8')
+            console.log('STRICT_INFLATE_OK')
+          } catch (err) {
+            console.log('STRICT_INFLATE_ERROR', err.code, err.message)
+            text = zlib.inflateSync(compressed, { finishFlush: zlib.constants.Z_SYNC_FLUSH }).toString('utf8')
+          }
+          console.log('COMPRESSED_BYTES', compressed.length)
+          console.log('RECOVERED_CHARS', text.length)
+          console.log('UNITKEY_COUNT', (text.match(/"unitKey"/g)||[]).length)
+          console.log('ACTION_COUNT', (text.match(/"action"/g)||[]).length)
+          console.log('REWRITE_COUNT', (text.match(/"action":"rewrite"/g)||[]).length)
+          console.log('KEEP_COUNT', (text.match(/"action":"keep"/g)||[]).length)
+          console.log('---RECOVERED_TAIL_START---')
+          console.log(text.slice(-12000))
+          console.log('---RECOVERED_TAIL_END---')
+          NODE
+
       - uses: actions/upload-artifact@v4
         with:
           name: evrei-full-transcripts
