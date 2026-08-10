@@ -1,6 +1,7 @@
 name: NT Final Pilot Trigger
 
 # Temporary, non-publication pilot for PR #83. Remove after the pilot is observed.
+# Pilot generation: chunk-local validation + material-issue adjudication.
 on:
   push:
     branches:
@@ -35,8 +36,17 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
-          printf '%s\n' 'Return exactly this JSON object and nothing else: {"ok":true}' | \
-            copilot -s --no-ask-user --model auto --log-level error \
+          copilot \
+            -p 'Return exactly this JSON object and nothing else: {"ok":true}' \
+            -s \
+            --no-ask-user \
+            --no-custom-instructions \
+            --no-auto-update \
+            --no-remote \
+            --model auto \
+            --deny-tool=shell \
+            --deny-tool=write \
+            --log-level error \
             > /tmp/copilot-auto-probe.out 2> /tmp/copilot-auto-probe.err
           cat /tmp/copilot-auto-probe.out
       - name: Persist Copilot auto probe
@@ -74,6 +84,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NT_FINAL_COPILOT_MODEL: auto
           NT_FINAL_CHUNK_SIZE: '5'
+          NT_FINAL_CHUNK_ATTEMPTS: '4'
         run: |
           set -euo pipefail
           python3 scripts/nt_final_editorial_copilot_chunked_runner.py \
@@ -118,7 +129,7 @@ jobs:
               'shapeOutcome': os.environ.get('SHAPE_OUTCOME'),
               'runId': os.environ.get('RUN_ID'),
               'runAttempt': os.environ.get('RUN_ATTEMPT'),
-              'reviewerSystem': 'GitHub Copilot CLI auto; chunk-size=5',
+              'reviewerSystem': 'GitHub Copilot CLI auto; chunk-size=5; chunk-local-validation',
               'diagnosticTail': log,
           }
           Path('docs/biblia-emanus/NT-FINAL-PILOT.json').write_text(json.dumps(out, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
