@@ -1,0 +1,69 @@
+name: Patch Semantic Worker Transcript Representation Once
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-nt-integration-clean
+    paths:
+      - .github/workflows/patch-semantic-worker-transcript-representation-once.yml
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Patch worker
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('scripts/nt_semantic_copilot_worker.py')
+          s=p.read_text(encoding='utf-8')
+          old='''            recs = [by_id.get(str(a.get("evidenceId"))) for a in unit.get("sourceAnchors", [])]\n            transcript_recs = [r for r in recs if isinstance(r,dict) and transcript_url(str(r.get("sourceUrl") or ""))]\n            if not transcript_recs: continue\n'''
+          new='''            recs = [by_id.get(str(a.get("evidenceId"))) for a in unit.get("sourceAnchors", [])]\n            transcript_recs = []\n            for record in recs:\n                if not isinstance(record, dict):\n                    continue\n                represented = str(record.get("transcriptRepresentationUrl") or "")\n                original = str(record.get("sourceUrl") or "")\n                url = represented if transcript_url(represented) else (original if transcript_url(original) else "")\n                if url:\n                    transcript_recs.append({**record, "_transcriptUrl": url})\n            if not transcript_recs: continue\n'''
+          if old in s: s=s.replace(old,new,1)
+          elif new not in s: raise SystemExit('load_rows transcript block not found')
+
+          old='''        url=str(rec["sourceUrl"])\n        if url in seen: continue\n'''
+          new='''        url=str(rec.get("_transcriptUrl") or rec.get("transcriptRepresentationUrl") or rec["sourceUrl"])\n        if url in seen: continue\n'''
+          if old in s: s=s.replace(old,new,1)
+          elif new not in s: raise SystemExit('build_transcripts URL block not found')
+
+          old='''        official=str(rec.get("officialSeriesUrl") or "")\n        if not official.startswith("https://"): raise RuntimeError(f"transcript record lacks officialSeriesUrl: {url}")\n'''
+          new='''        official=str(rec.get("officialSeriesUrl") or "")\n        if not official.startswith("https://") and rec.get("transcriptRepresentationUrl"):\n            official=str(rec.get("sourceUrl") or "")\n        if not official.startswith("https://"): raise RuntimeError(f"transcript record lacks official source URL: {url}")\n'''
+          if old in s: s=s.replace(old,new,1)
+          elif new not in s: raise SystemExit('official URL block not found')
+
+          old='''        key=tuple(sorted({str(r["sourceUrl"]) for r in row["transcriptRecords"]})); groups.setdefault(key,[]).append(row)\n'''
+          new='''        key=tuple(sorted({str(r.get("_transcriptUrl") or r.get("transcriptRepresentationUrl") or r["sourceUrl"]) for r in row["transcriptRecords"]})); groups.setdefault(key,[]).append(row)\n'''
+          if old in s: s=s.replace(old,new,1)
+          elif new not in s: raise SystemExit('group key block not found')
+
+          old='''                    url = str(rec["sourceUrl"])\n                    transcript = transcript_cache[url]\n'''
+          # This block belonged to the older worker version; no-op if absent.
+          new='''                    url = str(rec.get("_transcriptUrl") or rec.get("transcriptRepresentationUrl") or rec["sourceUrl"])\n                    transcript = transcript_cache[url]\n'''
+          if old in s: s=s.replace(old,new,1)
+          p.write_text(s,encoding='utf-8')
+          PY
+          python3 -m py_compile scripts/nt_semantic_copilot_worker.py
+      - name: Remove one-shot and commit
+        run: |
+          set -euo pipefail
+          rm .github/workflows/patch-semantic-worker-transcript-representation-once.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/nt_semantic_copilot_worker.py .github/workflows/patch-semantic-worker-transcript-representation-once.yml
+          git commit -m 'Use exact transcript representations in semantic review'
+          for attempt in 1 2 3; do
+            git fetch origin agent/biblia-explicata-nt-integration-clean
+            git rebase FETCH_HEAD
+            if git push origin HEAD:agent/biblia-explicata-nt-integration-clean; then exit 0; fi
+          done
+          exit 1
