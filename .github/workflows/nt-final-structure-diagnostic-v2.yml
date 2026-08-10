@@ -1,0 +1,66 @@
+name: NT Final Structure Diagnostic v2
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - agent/biblia-explicata-nt-integration-clean
+    paths:
+      - .github/workflows/nt-final-structure-diagnostic-v2.yml
+
+permissions:
+  contents: write
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Repair Mark 14-16 source in diagnostic workspace
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          path = Path("scripts/review-nt-poonen-fidelity-marcu-14-16.mjs")
+          source = path.read_text(encoding="utf-8")
+          source = source.replace("`textualStatus: double-bracketed`", "«textualStatus: double-bracketed»")
+          source = source.replace("`double-bracketed`", "«double-bracketed»")
+          path.write_text(source, encoding="utf-8")
+          PY
+
+      - name: Reapply final Mark reviews and corpus materialization
+        run: |
+          set -euo pipefail
+          node scripts/review-nt-poonen-fidelity-marcu-13.mjs
+          node scripts/review-nt-poonen-fidelity-marcu-14-16.mjs
+          node scripts/materialize-nt-final-source-first.mjs
+          node scripts/fix-nt-embedded-bible-quotes.mjs
+          node scripts/apply-nt-reviewed-be-quote-fixes.mjs
+
+      - name: Persist structural gate diagnostic
+        run: |
+          set +e
+          mkdir -p docs/data/biblia-explicata
+          node scripts/check-nt-final-source-first.mjs > /tmp/nt-final-structure.log 2>&1
+          status=$?
+          {
+            echo "exit_status=$status"
+            echo "---"
+            tail -n 80 /tmp/nt-final-structure.log
+          } > docs/data/biblia-explicata/nt-final-structure-diagnostic.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/biblia-explicata/nt-final-structure-diagnostic.txt
+          git commit -m "Persist NT final structure diagnostic" || true
+          for attempt in 1 2 3; do
+            git fetch origin agent/biblia-explicata-nt-integration-clean
+            git rebase FETCH_HEAD || exit 1
+            git push origin HEAD:agent/biblia-explicata-nt-integration-clean && exit 0
+          done
+          exit 1
