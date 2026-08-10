@@ -1,17 +1,23 @@
 name: NT Final Editorial Approval
 
+# Canonical final-review workflow. Kept manual so evidence commits cannot recursively
+# trigger new editorial runs. The temporary main-branch trigger is used only while
+# validating the pipeline and will be removed afterwards.
 on:
-  push:
-    branches:
-      - codex/nt-ai-review-handoff
-  pull_request:
-    types: [edited, synchronize]
-    branches:
-      - main
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Review mode
+        required: true
+        default: pilot
+        type: choice
+        options:
+          - pilot
+          - full
 
 permissions:
   contents: write
-  models: read
+  copilot-requests: write
 
 concurrency:
   group: nt-final-editorial-${{ github.ref }}
@@ -19,7 +25,7 @@ concurrency:
 
 jobs:
   pilot:
-    if: github.event_name == 'push' || contains(github.event.pull_request.body || '', 'nt-final-editorial-trigger: pilot-mat1')
+    if: inputs.mode == 'pilot'
     runs-on: ubuntu-22.04
     timeout-minutes: 30
     steps:
@@ -28,22 +34,25 @@ jobs:
         with:
           ref: codex/nt-ai-review-handoff
           fetch-depth: 0
-      - id: review
-        name: Review MAT.1 against locked sources and external benchmarks
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install GitHub Copilot CLI
+        run: npm install -g @github/copilot
+      - name: Review MAT.1 with Copilot auto
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NT_FINAL_MODEL: openai/gpt-5
+          NT_FINAL_COPILOT_MODEL: auto
+          NT_FINAL_CHUNK_SIZE: '5'
+          NT_FINAL_CHUNK_ATTEMPTS: '4'
         run: |
           set -euo pipefail
-          python3 scripts/nt_final_editorial_worker.py \
+          python3 scripts/nt_final_editorial_copilot_chunked_runner.py \
             --book MAT \
             --chapter 1 \
             --consulted-on "$(date -u +%F)" \
-            --output /tmp/MAT.json 2>&1 | tee /tmp/nt-final-pilot.log
-      - id: shape
-        name: Validate pilot artifact shape
-        run: |
-          set -euo pipefail
+            --output /tmp/MAT.json
           python3 - <<'PY'
           import json
           data = json.load(open('/tmp/MAT.json', encoding='utf-8'))
@@ -54,52 +63,16 @@ jobs:
           print('[pilot] MAT.1 evidence:', len(data['verses']))
           PY
       - name: Upload pilot evidence
-        if: steps.review.outcome == 'success' && steps.shape.outcome == 'success'
         uses: actions/upload-artifact@v4
         with:
           name: nt-final-pilot-mat1
           path: /tmp/MAT.json
           retention-days: 1
-      - name: Persist pilot result on branch
-        if: always()
-        env:
-          REVIEW_OUTCOME: ${{ steps.review.outcome }}
-          SHAPE_OUTCOME: ${{ steps.shape.outcome }}
-          RUN_ID: ${{ github.run_id }}
-          RUN_ATTEMPT: ${{ github.run_attempt }}
-        run: |
-          set -euo pipefail
-          python3 - <<'PY'
-          import json, os
-          from pathlib import Path
-          log_path = Path('/tmp/nt-final-pilot.log')
-          log = log_path.read_text(encoding='utf-8', errors='replace')[-12000:] if log_path.exists() else ''
-          status = 'success' if os.environ.get('REVIEW_OUTCOME') == 'success' and os.environ.get('SHAPE_OUTCOME') == 'success' else 'failure'
-          out = {
-              'status': status,
-              'reviewOutcome': os.environ.get('REVIEW_OUTCOME'),
-              'shapeOutcome': os.environ.get('SHAPE_OUTCOME'),
-              'runId': os.environ.get('RUN_ID'),
-              'runAttempt': os.environ.get('RUN_ATTEMPT'),
-              'diagnosticTail': log,
-          }
-          Path('docs/biblia-emanus/NT-FINAL-PILOT.json').write_text(json.dumps(out, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-          PY
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add docs/biblia-emanus/NT-FINAL-PILOT.json
-          if git diff --cached --quiet; then
-            echo 'Pilot result unchanged.'
-          else
-            git diff --cached --check
-            git commit -m 'docs(biblia): record final NT editorial pilot result'
-            git push origin HEAD:codex/nt-ai-review-handoff
-          fi
 
   review-book:
-    if: github.event_name == 'pull_request' && contains(github.event.pull_request.body || '', 'nt-final-editorial-trigger: full-v1')
+    if: inputs.mode == 'full'
     runs-on: ubuntu-22.04
-    timeout-minutes: 180
+    timeout-minutes: 240
     strategy:
       fail-fast: false
       max-parallel: 3
@@ -138,13 +111,21 @@ jobs:
         with:
           ref: codex/nt-ai-review-handoff
           fetch-depth: 0
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install GitHub Copilot CLI
+        run: npm install -g @github/copilot
       - name: Review ${{ matrix.book }} verse by verse
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NT_FINAL_MODEL: openai/gpt-5
+          NT_FINAL_COPILOT_MODEL: auto
+          NT_FINAL_CHUNK_SIZE: '5'
+          NT_FINAL_CHUNK_ATTEMPTS: '4'
         run: |
           set -euo pipefail
-          python3 scripts/nt_final_editorial_worker.py \
+          python3 scripts/nt_final_editorial_copilot_chunked_runner.py \
             --book "${{ matrix.book }}" \
             --consulted-on "$(date -u +%F)" \
             --output "/tmp/${{ matrix.book }}.json"
@@ -156,7 +137,7 @@ jobs:
           retention-days: 1
 
   aggregate:
-    if: github.event_name == 'pull_request' && contains(github.event.pull_request.body || '', 'nt-final-editorial-trigger: full-v1')
+    if: inputs.mode == 'full'
     needs: review-book
     runs-on: ubuntu-22.04
     timeout-minutes: 30
@@ -179,7 +160,7 @@ jobs:
             --evidence-dir /tmp/nt-evidence \
             --approved-on "$(date -u +%F)" \
             --run-id "github-actions-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" \
-            --reviewer-system "GitHub Models openai/gpt-5"
+            --reviewer-system "GitHub Copilot CLI auto"
       - name: Rebuild non-approving review queue
         run: |
           set -euo pipefail
