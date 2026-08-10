@@ -2,9 +2,9 @@
   "schema": "emanus-nt-embedded-quote-audit-v1",
   "status": "manual-source-check-required",
   "policy": "Quoted spans of at least five words are checked against the exact current Biblia Emanus text in the same canonical book and chapter. A match elsewhere in the NT does not clear the finding. Non-matches must be replaced with BE wording, explicitly classified as non-Bible quotations, or removed before publication.",
-  "quotedFragments": 84,
-  "exactMatches": 27,
-  "count": 57,
+  "quotedFragments": 89,
+  "exactMatches": 28,
+  "count": 61,
   "findings": [
     {
       "bookId": "matei",
@@ -288,6 +288,42 @@
       "field": "units[3].teaching",
       "quote": "situația ta este prea rea",
       "wordCount": 5
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "book": "Marcu",
+      "chapter": 12,
+      "field": "units[1].teaching",
+      "quote": "Dați cezarului ce este al cezarului și lui Dumnezeu ce este al lui Dumnezeu.",
+      "wordCount": 14
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "book": "Marcu",
+      "chapter": 12,
+      "field": "units[1].teaching",
+      "quote": "nu mai este al lui",
+      "wordCount": 5
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "book": "Marcu",
+      "chapter": 12,
+      "field": "units[1].teaching",
+      "quote": "Dați lui Dumnezeu ce este al lui Dumnezeu",
+      "wordCount": 8
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "book": "Marcu",
+      "chapter": 12,
+      "field": "units[1].teaching",
+      "quote": "Eu sunt Dumnezeul lui Avraam, Isaac și Iacov",
+      "wordCount": 8
     },
     {
       "bookId": "marcu",

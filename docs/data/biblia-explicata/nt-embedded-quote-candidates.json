@@ -1,7 +1,7 @@
 {
   "schema": "emanus-nt-embedded-quote-candidates-v1",
   "policy": "Diagnostic only. Candidate scores compare each unresolved quoted span with contiguous Biblia Emanus text from the same canonical chapter. This report never edits reader copy or clears a publication blocker by itself.",
-  "count": 56,
+  "count": 60,
   "strongCandidateCount": 1,
   "findings": [
     {
@@ -981,6 +981,158 @@
       "best": null,
       "alternatives": [],
       "bestMargin": null
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 12,
+      "field": "units[1].teaching",
+      "quote": "Dați cezarului ce este al cezarului și lui Dumnezeu ce este al lui Dumnezeu.",
+      "wordCount": 14,
+      "best": {
+        "raw": "Cezarului ce este al Cezarului, iar lui Dumnezeu ce este al lui Dumnezeu! Și",
+        "score": 0.8964,
+        "lcsRatio": 0.8571,
+        "overlap": 0.9286,
+        "lengthRatio": 1,
+        "start": 369,
+        "width": 14
+      },
+      "alternatives": [
+        {
+          "raw": "Dați înapoi Cezarului ce este al Cezarului, iar lui Dumnezeu ce este al lui Dumnezeu",
+          "score": 0.8733,
+          "lcsRatio": 0.8667,
+          "overlap": 0.8667,
+          "lengthRatio": 0.9333,
+          "start": 367,
+          "width": 15
+        },
+        {
+          "raw": "Dați înapoi Cezarului ce este al Cezarului, iar lui Dumnezeu ce este al lui",
+          "score": 0.8714,
+          "lcsRatio": 0.8571,
+          "overlap": 0.8571,
+          "lengthRatio": 1,
+          "start": 367,
+          "width": 14
+        }
+      ],
+      "bestMargin": 0.0231
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 12,
+      "field": "units[1].teaching",
+      "quote": "nu mai este al lui",
+      "wordCount": 5,
+      "best": {
+        "raw": "este al Cezarului, iar lui",
+        "score": 0.64,
+        "lcsRatio": 0.6,
+        "overlap": 0.6,
+        "lengthRatio": 1,
+        "start": 371,
+        "width": 5
+      },
+      "alternatives": [
+        {
+          "raw": "Dumnezeu ce este al lui",
+          "score": 0.64,
+          "lcsRatio": 0.6,
+          "overlap": 0.6,
+          "lengthRatio": 1,
+          "start": 376,
+          "width": 5
+        },
+        {
+          "raw": "ce este al lui Dumnezeu",
+          "score": 0.64,
+          "lcsRatio": 0.6,
+          "overlap": 0.6,
+          "lengthRatio": 1,
+          "start": 377,
+          "width": 5
+        }
+      ],
+      "bestMargin": 0
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 12,
+      "field": "units[1].teaching",
+      "quote": "Dați lui Dumnezeu ce este al lui Dumnezeu",
+      "wordCount": 8,
+      "best": {
+        "raw": "iar lui Dumnezeu ce este al lui Dumnezeu",
+        "score": 0.8875,
+        "lcsRatio": 0.875,
+        "overlap": 0.875,
+        "lengthRatio": 1,
+        "start": 374,
+        "width": 8
+      },
+      "alternatives": [
+        {
+          "raw": "lui Dumnezeu ce este al lui Dumnezeu! Și",
+          "score": 0.8875,
+          "lcsRatio": 0.875,
+          "overlap": 0.875,
+          "lengthRatio": 1,
+          "start": 375,
+          "width": 8
+        },
+        {
+          "raw": "lui Dumnezeu ce este al lui Dumnezeu",
+          "score": 0.875,
+          "lcsRatio": 0.875,
+          "overlap": 0.875,
+          "lengthRatio": 0.875,
+          "start": 375,
+          "width": 7
+        }
+      ],
+      "bestMargin": 0
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 12,
+      "field": "units[1].teaching",
+      "quote": "Eu sunt Dumnezeul lui Avraam, Isaac și Iacov",
+      "wordCount": 8,
+      "best": {
+        "raw": "Eu sunt Dumnezeul lui Avraam, Dumnezeul lui Isaac și",
+        "score": 0.7889,
+        "lcsRatio": 0.7778,
+        "overlap": 0.7778,
+        "lengthRatio": 0.8889,
+        "start": 573,
+        "width": 9
+      },
+      "alternatives": [
+        {
+          "raw": "Eu sunt Dumnezeul lui Avraam, Dumnezeul lui Isaac",
+          "score": 0.775,
+          "lcsRatio": 0.75,
+          "overlap": 0.75,
+          "lengthRatio": 1,
+          "start": 573,
+          "width": 8
+        },
+        {
+          "raw": "sunt Dumnezeul lui Avraam, Dumnezeul lui Isaac și",
+          "score": 0.775,
+          "lcsRatio": 0.75,
+          "overlap": 0.75,
+          "lengthRatio": 1,
+          "start": 574,
+          "width": 8
+        }
+      ],
+      "bestMargin": 0.0139
     },
     {
       "bookId": "marcu",

@@ -2,7 +2,7 @@
   "schema": "emanus-nt-embedded-quote-fix-ledger-v1",
   "policy": "Only unique same-chapter Biblia Emanus candidates with <=1 token edit (<=2 for long quotes), >=0.88 sequence score and >=0.80 token overlap are replaced. Ambiguous/non-Bible quotations remain untouched and blocked for manual classification.",
   "fixed": 1,
-  "skipped": 63,
+  "skipped": 67,
   "fixes": [
     {
       "bookId": "marcu",
@@ -253,6 +253,34 @@
       "chapter": 10,
       "field": "teaching",
       "quote": "situația ta este prea rea",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "marcu",
+      "chapter": 12,
+      "field": "teaching",
+      "quote": "Dați cezarului ce este al cezarului și lui Dumnezeu ce este al lui Dumnezeu.",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "marcu",
+      "chapter": 12,
+      "field": "teaching",
+      "quote": "nu mai este al lui",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "marcu",
+      "chapter": 12,
+      "field": "teaching",
+      "quote": "Dați lui Dumnezeu ce este al lui Dumnezeu",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "marcu",
+      "chapter": 12,
+      "field": "teaching",
+      "quote": "Eu sunt Dumnezeul lui Avraam, Isaac și Iacov",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
     {
