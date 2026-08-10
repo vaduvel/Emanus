@@ -1,7 +1,7 @@
 name: NT Final Pilot Trigger
 
 # Temporary, non-publication pilot for PR #83. Remove after the pilot is observed.
-# Pilot generation: chunk-local validation + material-issue adjudication.
+# v3: 25-verse chunk with selective salvage of only invalid verses.
 on:
   push:
     branches:
@@ -16,7 +16,7 @@ permissions:
 jobs:
   pilot:
     runs-on: ubuntu-22.04
-    timeout-minutes: 30
+    timeout-minutes: 20
     steps:
       - name: Checkout NT review branch
         uses: actions/checkout@v4
@@ -77,13 +77,14 @@ jobs:
           git commit -m 'docs(biblia): record Copilot auto probe'
           git push origin HEAD:codex/nt-ai-review-handoff
       - id: review
-        name: Review MAT.1 in bounded Copilot chunks
+        name: Review MAT.1 with selective salvage
         if: steps.probe.outcome == 'success'
         continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NT_FINAL_COPILOT_MODEL: auto
-          NT_FINAL_CHUNK_SIZE: '5'
+          NT_FINAL_COPILOT_TIMEOUT: '300'
+          NT_FINAL_CHUNK_SIZE: '25'
           NT_FINAL_CHUNK_ATTEMPTS: '4'
         run: |
           set -euo pipefail
@@ -129,7 +130,7 @@ jobs:
               'shapeOutcome': os.environ.get('SHAPE_OUTCOME'),
               'runId': os.environ.get('RUN_ID'),
               'runAttempt': os.environ.get('RUN_ATTEMPT'),
-              'reviewerSystem': 'GitHub Copilot CLI auto; chunk-size=5; chunk-local-validation',
+              'reviewerSystem': 'GitHub Copilot CLI auto; chunk-size=25; selective-salvage-v3',
               'diagnosticTail': log,
           }
           Path('docs/biblia-emanus/NT-FINAL-PILOT.json').write_text(json.dumps(out, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
