@@ -331,21 +331,21 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
       {found.status !== "published" && <p className="bchead__flag">Scris, dar necitit încă de un om. Dacă vezi ceva greșit, spune-ne.</p>}
     </header>
 
-    <details className="bctx">
+    {found.literaryContext?.trim() && <details className="bctx">
       <summary>Unde suntem în carte</summary>
       <p>{found.literaryContext}</p>
-    </details>
-    <details className="bctx">
+    </details>}
+    {found.historicalContext?.trim() && <details className="bctx">
       <summary>Cum era pe atunci</summary>
       <p>{found.historicalContext}</p>
-    </details>
+    </details>}
 
     {found.units.map((u) => <Unit key={u.id} unit={u} />)}
 
-    <div className="bprayer">
+    {found.prayer?.trim() && <div className="bprayer">
       <p className="today__kicker">Rugăciune</p>
       {paragraphs(found.prayer).map((p, i) => <p key={i}>{p}</p>)}
-    </div>
+    </div>}
 
     <nav className="bnav" aria-label="Capitole">
       {prev !== undefined
