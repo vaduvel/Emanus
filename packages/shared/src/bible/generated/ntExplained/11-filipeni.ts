@@ -74,7 +74,7 @@ export const NT_BOOK_11: BibleBook = {
             "Galateni 2:20",
             "2 Corinteni 5:6-9"
           ],
-          "forYourHeart": "Completează sincer propoziția «Pentru mine, a trăi este…» și adu-I lui Dumnezeu tot ce concurează cu Hristos."
+          "forYourHeart": "Completează sincer propoziția Pentru mine, a trăi este… și adu-I lui Dumnezeu tot ce concurează cu Hristos."
         },
         {
           "id": "filipeni-1-27-30",
@@ -138,7 +138,7 @@ export const NT_BOOK_11: BibleBook = {
           "ref": "Filipeni 2:12-18",
           "heading": "Dumnezeu lucrează în voi",
           "text": "Astfel, preaiubiții mei, după cum ați ascultat întotdeauna, nu doar când eram eu de față, ci acum cu mult mai mult în absența mea, duceți până la capăt propria voastră mântuire, cu frică și cutremur, căci Dumnezeu este Cel care lucrează în voi și voința, și înfăptuirea, după buna lui plăcere. Faceți toate lucrurile fără murmurări și fără dispute, ca să deveniți fără vină și curați, copii ai lui Dumnezeu fără cusur, în mijlocul unei generații strâmbe și sucite, printre care străluciți ca niște luminători în lume, ținând sus cuvântul vieții, spre lauda mea în ziua lui Hristos, că n-am alergat în zadar și n-am muncit în zadar. Da, și dacă voi fi turnat pe jertfa și serviciul credinței voastre, mă bucur și mă voi bucura împreună cu voi toți. La fel, și voi să vă bucurați și să vă bucurați împreună cu mine.",
-          "teaching": "«Duceți până la capăt mântuirea» nu înseamnă că ne cumpărăm iertarea prin fapte. Dumnezeu este Cel care produce și voința, și înfăptuirea; credinciosul cooperează serios cu lucrarea harului, alegând ascultarea în viața de zi cu zi. Ascultarea se vede în eliberarea de cârtire și dispute egoiste, astfel încât copiii lui Dumnezeu să lumineze într-o lume întunecată.",
+          "teaching": "«duceți până la capăt propria voastră mântuire» nu înseamnă că ne cumpărăm iertarea prin fapte. Dumnezeu este Cel care produce și voința, și înfăptuirea; credinciosul cooperează serios cu lucrarea harului, alegând ascultarea în viața de zi cu zi. Ascultarea se vede în eliberarea de cârtire și dispute egoiste, astfel încât copiii lui Dumnezeu să lumineze într-o lume întunecată.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [

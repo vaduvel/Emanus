@@ -619,7 +619,7 @@ export const NT_BOOK_07: BibleBook = {
       "number": 11,
       "title": "1 Corinteni 11 — Ordine, demnitate și masa care ne face un singur trup",
       "summary": "Pavel vorbește despre reprezentarea ordinii lui Dumnezeu în adunare și corectează abuzurile de la Cina Domnului, unde diferențele sociale negau unitatea trupului.",
-      "literaryContext": "După principiul «totul pentru slava lui Dumnezeu», Pavel aplică ordinea lui Hristos la rugăciune, profeție și masa comună. Forma exterioară nu poate compensa egoismul care umilește pe alții.",
+      "literaryContext": "După principiul totul pentru slava lui Dumnezeu, Pavel aplică ordinea lui Hristos la rugăciune, profeție și masa comună. Forma exterioară nu poate compensa egoismul care umilește pe alții.",
       "historicalContext": "Acoperirea capului comunica onoare și relații sociale în lumea antică, iar mesele comunitare urmau adesea ierarhiile de clasă. La Corint, bogații mâncau înainte, iar săracii rămâneau flămânzi.",
       "units": [
         {
@@ -700,7 +700,7 @@ export const NT_BOOK_07: BibleBook = {
           "ref": "1 Corinteni 12:12-21",
           "heading": "Botezați de Duhul într-un singur trup",
           "text": "Căci, așa cum trupul este unul și are multe mădulare, iar toate mădularele trupului, deși sunt multe, sunt un singur trup, tot așa este și Hristos. Fiindcă toți am fost botezați într-un singur Duh într-un singur trup, fie iudei, fie greci, fie robi, fie liberi, și tuturor ni s-a dat să bem dintr-un singur Duh. Căci trupul nu este un singur membru, ci mai multe. Dacă piciorul ar zice: „Fiindcă nu sunt mână, nu sunt din trup”, nu de aceea nu este din trup. Și dacă urechea ar zice: „Fiindcă nu sunt ochi, nu sunt din trup”, nu de aceea nu este din trup. Dacă tot trupul ar fi ochi, unde ar fi auzul? Dacă totul ar fi auz, unde ar fi mirosul? Dar acum Dumnezeu a pus mădularele, pe fiecare dintre ele, în trup, așa cum a vrut. Dacă toate ar fi un singur mădular, unde ar fi trupul? Dar acum sunt mai multe membre, dar un singur corp. Ochiul nu poate spune mâinii: „N-am nevoie de tine”; sau, iarăși, capul nu poate spune picioarelor: „N-am nevoie de voi.”",
-          "teaching": "Originea, statutul și trecutul nu creează trupuri separate. Duhul îi unește pe credincioși cu Hristos și între ei, astfel încât diversitatea nu mai trebuie să producă rivalitate.\n\nMădularul care se simte inferior nu încetează să aparțină trupului, iar cel vizibil nu poate spune altuia «nu am nevoie de tine». Individualismul și cultul unui singur dar contrazic însăși imaginea trupului.",
+          "teaching": "Originea, statutul și trecutul nu creează trupuri separate. Duhul îi unește pe credincioși cu Hristos și între ei, astfel încât diversitatea nu mai trebuie să producă rivalitate.\n\nMădularul care se simte inferior nu încetează să aparțină trupului, iar cel vizibil nu poate spune altuia «N-am nevoie de tine». Individualismul și cultul unui singur dar contrazic însăși imaginea trupului.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -830,7 +830,7 @@ export const NT_BOOK_07: BibleBook = {
           "ref": "1 Corinteni 14:26-33",
           "heading": "Fiecare contribuție să slujească zidirii",
           "text": "Ce este atunci, fraților? Când vă adunați, fiecare dintre voi are un psalm, are o învățătură, are o revelație, are o altă limbă sau are o interpretare; să se facă toate lucrurile pentru a se zidi unii pe alții. Dacă vorbește cineva într-o limbă, să fie doi sau cel mult trei, și pe rând, iar unul să interpreteze. Dar dacă nu este nici un tîlcuitor, să tacă în adunare, și să vorbească lui însuși și lui Dumnezeu. Doi sau trei profeți să vorbească, iar ceilalți să judece. Dacă se descoperă ceva altuia care șade, cel dintâi să tacă. Căci puteți toți să profețiți, unul câte unul, ca toți să învețe și toți să fie încurajați. Și duhurile profeților sunt supuse profeților, fiindcă Dumnezeu nu este un Dumnezeu al neorânduielii, ci al păcii, ca în toate bisericile sfinților.",
-          "teaching": "Unul are o cântare, altul o învățătură sau o descoperire, dar participarea este limitată de ordine. Cei care vorbesc trebuie să lase loc altora, iar comunitatea să judece mesajul.\n\n«Duhurile prorocilor sunt supuse prorocilor» înseamnă că impulsul spiritual nu anulează autocontrolul. Haosul, întreruperea și presiunea nu pot fi justificate prin afirmația «Dumnezeu m-a făcut să spun».",
+          "teaching": "Unul are o cântare, altul o învățătură sau o descoperire, dar participarea este limitată de ordine. Cei care vorbesc trebuie să lase loc altora, iar comunitatea să judece mesajul.\n\n«duhurile profeților sunt supuse profeților» înseamnă că impulsul spiritual nu anulează autocontrolul. Haosul, întreruperea și presiunea nu pot fi justificate prin afirmația «Dumnezeu m-a făcut să spun».",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -1005,7 +1005,7 @@ export const NT_BOOK_07: BibleBook = {
           "ref": "1 Corinteni 16:13-24",
           "heading": "Tărie fără dragoste devine asprime",
           "text": "Vegheați, stați tari în credință, purtați-vă bărbătește, fiți tari. Lasă tot ce faci să fie făcut în dragoste. Vă îndemn, fraților: cunoașteți casa lui Stefana, că ea este pârga Ahaiei și că s-au rânduit pe ei înșiși pentru slujirea sfinților. să vă supuneți și voi unora ca aceștia și fiecăruia care lucrează împreună și se ostenește. Mă bucur de venirea lui Stefana, a lui Fortunat și a lui Ahaic, fiindcă ei au împlinit lipsa voastră, căci au odihnit duhul meu și pe al vostru. Așadar, recunoașteți-i pe unii ca aceștia. Vă salută bisericile Asiei. Acuila și Prisca vă salută mult în Domnul, împreună cu biserica din casa lor. Vă salută toți frații. Salutați-vă unii pe alții cu o sărutare sfântă. Salutarea este cu mâna mea, a lui Pavel. Dacă cineva nu iubește pe Domnul Isus Hristos, să fie blestemat. Harul Domnului Isus Hristos să fie cu voi. Dragostea mea să fie cu voi toți în Hristos Isus.",
-          "teaching": "«Vegheați, stați tari, fiți curajoși» este imediat echilibrat de «tot ce faci să fie făcut în dragoste». Maturitatea creștină unește fermitatea cu blândețea.\n\nCasa lui Ștefana se dedicase slujirii sfinților și trebuia recunoscută. Pavel încheie numind oameni, trimițând afecțiune și reafirmând dragostea lui chiar unei comunități pe care a corectat-o sever.",
+          "teaching": "«Vegheați, stați tari în credință, purtați-vă bărbătește, fiți tari» este imediat echilibrat de «tot ce faci să fie făcut în dragoste». Maturitatea creștină unește fermitatea cu blândețea.\n\nCasa lui Ștefana se dedicase slujirii sfinților și trebuia recunoscută. Pavel încheie numind oameni, trimițând afecțiune și reafirmând dragostea lui chiar unei comunități pe care a corectat-o sever.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
