@@ -168,6 +168,7 @@ jobs:
       - name: Apply frozen semantic transcript review ledger
         run: |
           set -euo pipefail
+          node scripts/fix-nt-semantic-ledger-embedded-quotes.mjs
           node scripts/apply-nt-semantic-review-ledger.mjs
 
       - name: Materialize final NT corpus and reviewed quote fixes
@@ -198,6 +199,7 @@ jobs:
           node scripts/audit-nt-embedded-bible-quotes.mjs
           node scripts/audit-nt-romanian-language.mjs
           node scripts/audit-nt-semantic-source-fidelity.mjs
+          node scripts/materialize-nt-direct-transcript-coverage.mjs
           node scripts/materialize-nt-lexicon-source-evidence.mjs
           node scripts/summarize-nt-lexicon-source-evidence.mjs
           node scripts/audit-nt-lexicon.mjs
