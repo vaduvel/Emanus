@@ -1,26 +1,14 @@
 {
   "schema": "emanus-nt-embedded-quote-audit-v2",
-  "status": "manual-source-check-required",
+  "status": "clean",
   "policy": "Quoted spans of at least five words are checked against the exact current Biblia Emanus text in the same canonical book and chapter. Same-chapter exact matches clear automatically. A non-match that intends to quote Scripture must either be rewritten to exact BE wording or be explicitly reviewed as an exact biblical cross-reference to a named BE book/chapter. Only spans that do not claim to quote Scripture may use the hash-bound non-bible-quotation classification. Biblical paraphrases in quotation marks are never cleared merely by classification.",
-  "quotedFragments": 76,
+  "quotedFragments": 75,
   "exactMatches": 60,
   "reviewedNonBibleQuotes": 13,
   "reviewedCrossReferences": 2,
   "reviewLedgerStatus": "present",
   "reviewLedgerProblems": 0,
-  "count": 1,
-  "findings": [
-    {
-      "bookId": "1-petru",
-      "canonicalBookId": "1PE",
-      "book": "1 Petru",
-      "chapter": 4,
-      "field": "units[0].teaching",
-      "quote": "mai bine sufăr decât să păcătuiesc",
-      "wordCount": 6,
-      "reviewId": "2d558bbb487866424f4148c91898268f428ddf148c2bfe14fa3cb5ccf88efa03",
-      "quoteSha256": "sha256:00f48f6446496cb5fe5764c48b413678980a3ebb62979dfa67fd38513619a7fd"
-    }
-  ],
+  "count": 0,
+  "findings": [],
   "ledgerProblems": []
 }

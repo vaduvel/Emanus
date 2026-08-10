@@ -2,7 +2,7 @@
   "schema": "emanus-nt-embedded-quote-fix-ledger-v1",
   "policy": "Only unique same-chapter Biblia Emanus candidates with <=1 token edit (<=2 for long quotes), >=0.88 sequence score and >=0.80 token overlap are replaced. Ambiguous/non-Bible quotations remain untouched and blocked for manual classification.",
   "fixed": 0,
-  "skipped": 75,
+  "skipped": 74,
   "fixes": [],
   "unresolvedCandidates": [
     {
@@ -521,13 +521,6 @@
       "chapter": 1,
       "field": "teaching",
       "quote": "Primește-l ca pe mine însumi",
-      "reason": "no-unique-high-confidence-same-chapter-match"
-    },
-    {
-      "bookId": "1-petru",
-      "chapter": 4,
-      "field": "teaching",
-      "quote": "mai bine sufăr decât să păcătuiesc",
       "reason": "no-unique-high-confidence-same-chapter-match"
     }
   ]
