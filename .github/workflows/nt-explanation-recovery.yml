@@ -151,8 +151,6 @@ jobs:
         run: |
           set -euo pipefail
           node scripts/review-nt-lexicon-editorial-fixes.mjs
-          node scripts/review-nt-lexicon-editorial-fixes-wave-2.mjs
-          node scripts/normalize-nt-lexicon-romanian.mjs
 
       - name: Materialize final NT corpus and reviewed quote fixes
         run: |
@@ -182,7 +180,6 @@ jobs:
           node scripts/audit-nt-romanian-language.mjs
           node scripts/materialize-nt-lexicon-source-evidence.mjs
           node scripts/summarize-nt-lexicon-source-evidence.mjs
-          node scripts/materialize-nt-lexicon-review-ledger.mjs
           node scripts/audit-nt-lexicon.mjs
 
       - name: Bind canonical Biblia Emanus NT text
