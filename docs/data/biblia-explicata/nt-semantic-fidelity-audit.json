@@ -6,9 +6,9 @@
     "books": 27,
     "units": 970,
     "rawTranscriptReviewed": 73,
-    "semanticTranscriptReviewed": 136,
-    "pendingSemanticReview": 761,
-    "staleSemanticReview": 1,
+    "semanticTranscriptReviewed": 137,
+    "pendingSemanticReview": 760,
+    "staleSemanticReview": 0,
     "malformedSemanticEvidence": 0
   },
   "byBook": {
@@ -147,8 +147,8 @@
     "1-ioan": {
       "units": 14,
       "rawTranscriptReviewed": 0,
-      "semanticTranscriptReviewed": 13,
-      "pendingSemanticReview": 1
+      "semanticTranscriptReviewed": 14,
+      "pendingSemanticReview": 0
     },
     "2-ioan": {
       "units": 4,
@@ -7235,17 +7235,6 @@
       "ref": "2 Petru 3:14-18",
       "currentReviewState": "reviewed-against-source-locators",
       "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-    },
-    {
-      "severity": "blocker",
-      "code": "semantic-transcript-review-stale",
-      "bookId": "1-ioan",
-      "chapter": 4,
-      "unitId": "1-ioan-4-7-21-source-first",
-      "ref": "1 Ioan 4:7-21",
-      "expectedReviewedTeachingSha256": "sha256:13c450f9bb0b752ade91d0fdc46843eaf74973e106ff4baa1a7d315688680f96",
-      "actualReviewedTeachingSha256": "sha256:f8bcf5deee8aea3a6c3d6dc5644e33b2b39a6e403d9d1b0015dc06c03476c1b0",
-      "message": "Teaching/application changed after semantic transcript approval."
     },
     {
       "severity": "blocker",
