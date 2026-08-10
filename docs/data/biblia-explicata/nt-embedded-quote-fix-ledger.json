@@ -1,20 +1,9 @@
 {
   "schema": "emanus-nt-embedded-quote-fix-ledger-v1",
   "policy": "Only unique same-chapter Biblia Emanus candidates with <=1 token edit (<=2 for long quotes), >=0.88 sequence score and >=0.80 token overlap are replaced. Ambiguous/non-Bible quotations remain untouched and blocked for manual classification.",
-  "fixed": 2,
-  "skipped": 76,
+  "fixed": 1,
+  "skipped": 66,
   "fixes": [
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "chapter": 5,
-      "field": "teaching",
-      "before": "Ce am eu a face cu Tine, Isuse, Fiul Dumnezeului celui Preaînalt?",
-      "after": "Ce am eu de-a face cu Tine, Isuse, Fiul Dumnezeului Celui Preaînalt",
-      "tokenDistance": 1,
-      "score": 0.9231,
-      "overlap": 0.9231
-    },
     {
       "bookId": "marcu",
       "canonicalBookId": "MRK",
@@ -165,77 +154,7 @@
       "bookId": "marcu",
       "chapter": 5,
       "field": "teaching",
-      "quote": "Duh necurat, ieși afară din omul acesta!",
-      "reason": "no-unique-high-confidence-same-chapter-match"
-    },
-    {
-      "bookId": "marcu",
-      "chapter": 5,
-      "field": "teaching",
-      "quote": "Du-te acasă la ai tăi și povestește-le tot ce ți-a făcut Domnul și cum a avut milă de tine",
-      "reason": "no-unique-high-confidence-same-chapter-match"
-    },
-    {
-      "bookId": "marcu",
-      "chapter": 5,
-      "field": "teaching",
-      "quote": "Fetița mea trage să moară; rogu-Te, vino de-Ți pune mâinile peste ea, ca să se facă sănătoasă și să trăiască",
-      "reason": "no-unique-high-confidence-same-chapter-match"
-    },
-    {
-      "bookId": "marcu",
-      "chapter": 5,
-      "field": "teaching",
-      "quote": "Dacă aș putea doar să mă ating de haina Lui, mă voi tămădui",
-      "reason": "no-unique-high-confidence-same-chapter-match"
-    },
-    {
-      "bookId": "marcu",
-      "chapter": 5,
-      "field": "teaching",
-      "quote": "Cine s-a atins de hainele Mele?",
-      "reason": "no-unique-high-confidence-same-chapter-match"
-    },
-    {
-      "bookId": "marcu",
-      "chapter": 5,
-      "field": "teaching",
-      "quote": "credința ta te-a mântuit; du-te în pace și fii tămăduită de boala ta",
-      "reason": "no-unique-high-confidence-same-chapter-match"
-    },
-    {
-      "bookId": "marcu",
-      "chapter": 5,
-      "field": "teaching",
-      "quote": "Fiica ta a murit; pentru ce mai superi pe Învățătorul?",
-      "reason": "no-unique-high-confidence-same-chapter-match"
-    },
-    {
-      "bookId": "marcu",
-      "chapter": 5,
-      "field": "teaching",
-      "quote": "Nu te teme, crede numai!",
-      "reason": "no-unique-high-confidence-same-chapter-match"
-    },
-    {
-      "bookId": "marcu",
-      "chapter": 5,
-      "field": "teaching",
-      "quote": "Pentru ce faceți atâta zarvă și pentru ce plângeți? Copila n-a murit, ci doarme",
-      "reason": "no-unique-high-confidence-same-chapter-match"
-    },
-    {
-      "bookId": "marcu",
-      "chapter": 5,
-      "field": "teaching",
-      "quote": "Fetițo, scoală-te îți zic!",
-      "reason": "no-unique-high-confidence-same-chapter-match"
-    },
-    {
-      "bookId": "marcu",
-      "chapter": 5,
-      "field": "forYourHeart",
-      "quote": "Nu te teme, crede numai!",
+      "quote": "Nu te teme; crede numai.",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
     {
