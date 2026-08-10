@@ -23,6 +23,7 @@ const CONFIG = [
 const sha = value => `sha256:${crypto.createHash("sha256").update(String(value)).digest("hex")}`
 const canon = value => Array.isArray(value) ? value.map(canon) : (value && typeof value === "object" ? Object.fromEntries(Object.keys(value).sort().map(k=>[k,canon(value[k])])) : value)
 const snap = (unit, teaching=unit.teaching, heart=unit.forYourHeart) => JSON.stringify({heading:String(unit.heading??""),teaching:String(teaching??""),forYourHeart:String(heart??"")})
+const markerNorm = value => String(value ?? "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim()
 const fail = msg => { console.error(`[Tit/Filimon semantic review] ${msg}`); process.exit(1) }
 
 if (!fs.existsSync(TRANSCRIPT_PATH)) fail("missing persisted Titus/Filimon transcript")
@@ -45,7 +46,7 @@ const sectionMeta = {}
 for (const [name,segs] of Object.entries(sections)) {
   const text=segs.map(s=>String(s.text??"").trim()).filter(Boolean).join("\n")+"\n"
   sectionMeta[name]={
-    text, sha256:sha(text), words:text.split(/\s+/).filter(Boolean).length,
+    text, normalizedText:markerNorm(text), sha256:sha(text), words:text.split(/\s+/).filter(Boolean).length,
     start:segs[0]?.start, end:segs.at(-1)?.end,
   }
 }
@@ -55,8 +56,11 @@ const required={
   filimon:["rich man philh","take advantage of his authority","onesimus","charge it to my account","help poor people","social cause","build the church","brother"]
 }
 for (const [name,phrases] of Object.entries(required)) {
-  const low=sectionMeta[name].text.toLowerCase()
-  for (const p of phrases) if (!low.includes(p)) fail(`${name} section missing reviewed phrase: ${p}`)
+  const normalized=sectionMeta[name].normalizedText
+  for (const p of phrases) {
+    const needle=markerNorm(p)
+    if (!normalized.includes(needle)) fail(`${name} section missing reviewed phrase after punctuation normalization: ${p}`)
+  }
 }
 
 fs.mkdirSync(OUTDIR,{recursive:true})
