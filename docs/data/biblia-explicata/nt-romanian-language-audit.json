@@ -2,87 +2,57 @@
   "schema": "emanus-nt-romanian-language-audit-v4",
   "status": "manual-edit-required",
   "policy": "Reader-facing Romanian must use standard diacritics. Deterministic and audit rules share one registry; context-sensitive forms are handled separately, and valid definite forms such as 'simpla citare' are not false positives.",
-  "count": 30,
-  "findingGroups": 25,
+  "count": 11,
+  "findingGroups": 10,
   "tokenSummary": [
     {
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 24,
-      "groups": 19,
+      "occurrences": 8,
+      "groups": 7,
       "samples": [
         {
           "bookId": "ioan",
-          "chapter": 1,
+          "chapter": 5,
+          "field": "units[1].teaching",
+          "context": "…ece doar candva, ci a trecut. Credinciosul nu asteapta viata ca pe un salariu de la capătul drumului; a intrat deja…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 10,
           "field": "units[0].teaching",
-          "context": "…a aminte la legătura dintre viața și lumina. În El era viata; nu doar darul vieții, ci izvorul ei. Și viața aceasta…"
+          "context": "…recere, alta scurtatura și alta poarta care sa duca la viata. Apoi vine mărturia despre Pastorul cel bun. Se cuvin…"
         },
         {
           "bookId": "ioan",
-          "chapter": 1,
-          "field": "units[3].teaching",
-          "context": "…Numai El poate sa dea omului nu doar apa din afara, ci viata dinlăuntru."
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 3,
-          "field": "units[1].teaching",
-          "context": "…ezeu, apoi darul Fiului, apoi chemarea credinței, apoi viata vesnica. Evanghelia nu începe cu ce aduci tu, ci cu ce…"
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 3,
-          "field": "units[2].teaching",
-          "context": "…oan, ci cu chemarea fata de Fiul: cine crede în El are viata vesnica. Cine Îl refuza nu rămâne neutru, ci sub mania…"
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 5,
-          "field": "units[1].teaching",
-          "context": "…ă lucruri pe care numai Dumnezeu le poate face: sa dea viata și sa judece. Și tocmai acestea sunt puse în mana Fiul…"
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 5,
-          "field": "units[1].forYourHeart",
-          "context": "…credința ta nu se sprijină pe taria ta de a te tine în viata, ci pe El. Și dacă El te-a trecut din moarte la viata,…"
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 6,
-          "field": "units[1].teaching",
-          "context": "…intr-o explicatie ingusta. Lucrul limpede este acesta: viata nu vine dintr-o apropiere exterioara de Isus, ci dintr…"
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 8,
+          "chapter": 10,
           "field": "units[0].words[0].meaning",
-          "context": "Lumina lumii. Hristos ca descoperire, călăuzire și viata pentru om."
+          "context": "…a, poarta. Hristos ca singura intrare spre mântuire și viata."
         },
         {
           "bookId": "ioan",
-          "chapter": 9,
-          "field": "prayer",
-          "context": "…i vindecat, sa mărturisim cu simplitate ce ai făcut în viata noastră. Fereste-ne de orbirea care se lauda ca vede.…"
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 10,
+          "chapter": 11,
           "field": "summary",
-          "context": "…bun, vorbește despre oile care-I cunosc glasul, despre viata data cu belșug și despre unitatea Lui cu Tatăl, starni…"
+          "context": "…plânge împreună cu ai Sai, Se descoperă ca Învierea și Viata, îl cheama pe Lazar afara din mormant și, prin acest s…"
         },
         {
           "bookId": "ioan",
-          "chapter": 10,
-          "field": "historicalContext",
-          "context": "…i era adanc inradacinata în Scriptura lui Israel și în viata de zi cu zi. Proorocii vorbisera despre pastorii rai ș…"
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 10,
+          "chapter": 11,
           "field": "prayer",
-          "context": "…ător, ci Usa oilor și Pastorul cel bun, care Ti-ai dat viata pentru noi. Invata-ne sa ascultam glasul Tău mai mult…"
+          "context": "Doamne Isuse, Iti mulțumim ca Tu esti Învierea și Viata și ca nici mormantul nu sta în afara puterii Tale. Cân…"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 11,
+          "field": "units[0].heading",
+          "context": "Eu sunt învierea și viata"
+        },
+        {
+          "bookId": "ioan",
+          "chapter": 11,
+          "field": "units[0].teaching",
+          "context": "…rin întârziere. Apoi vine marele Eu sunt: învierea și viata. Domnul nu spune doar ca poate invia, ci ca El Insusi…"
         }
       ]
     },
@@ -90,8 +60,8 @@
       "kind": "missing-diacritics",
       "token": "credinta",
       "expected": "credință / credința",
-      "occurrences": 4,
-      "groups": 4,
+      "occurrences": 3,
+      "groups": 3,
       "samples": [
         {
           "bookId": "ioan",
@@ -107,36 +77,9 @@
         },
         {
           "bookId": "ioan",
-          "chapter": 10,
-          "field": "units[1].teaching",
-          "context": "Sa luam bine seama la legătura dintre credinta și ascultarea glasului. Domnul nu spune doar ca oile L…"
-        },
-        {
-          "bookId": "ioan",
           "chapter": 11,
           "field": "units[0].teaching",
           "context": "…dar se sprijină pe cine este El. Asa se poarta adesea credinta sub apasarea durerii: nu vede încă iesirea, dar se ple…"
-        }
-      ]
-    },
-    {
-      "kind": "missing-diacritics",
-      "token": "adevarata",
-      "expected": "adevărată / adevărata",
-      "occurrences": 2,
-      "groups": 2,
-      "samples": [
-        {
-          "bookId": "ioan",
-          "chapter": 7,
-          "field": "prayer",
-          "context": "…ina la Mine, adu-ne și pe noi la Tine cu setea noastră adevarata. Da-ne Duhul Tău, ca în noi sa nu stea uscaciunea, ci…"
-        },
-        {
-          "bookId": "ioan",
-          "chapter": 13,
-          "field": "units[0].teaching",
-          "context": "…aini, Domnul Se incinge cu stergarul. Asta inseamna ca adevarata mărime nu se teme sa slujească. Omul mic fuge de sluji…"
         }
       ]
     }
@@ -145,101 +88,13 @@
     {
       "bookId": "ioan",
       "book": "Ioan",
-      "chapter": 1,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "viata",
-      "expected": "viață / viața",
-      "occurrences": 1,
-      "context": "…a aminte la legătura dintre viața și lumina. În El era viata; nu doar darul vieții, ci izvorul ei. Și viața aceasta…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 1,
-      "field": "units[3].teaching",
-      "kind": "missing-diacritics",
-      "token": "viata",
-      "expected": "viață / viața",
-      "occurrences": 1,
-      "context": "…Numai El poate sa dea omului nu doar apa din afara, ci viata dinlăuntru."
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 3,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "viata",
-      "expected": "viață / viața",
-      "occurrences": 1,
-      "context": "…ezeu, apoi darul Fiului, apoi chemarea credinței, apoi viata vesnica. Evanghelia nu începe cu ce aduci tu, ci cu ce…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 3,
-      "field": "units[2].teaching",
-      "kind": "missing-diacritics",
-      "token": "viata",
-      "expected": "viață / viața",
-      "occurrences": 1,
-      "context": "…oan, ci cu chemarea fata de Fiul: cine crede în El are viata vesnica. Cine Îl refuza nu rămâne neutru, ci sub mania…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
       "chapter": 5,
       "field": "units[1].teaching",
       "kind": "missing-diacritics",
       "token": "viata",
       "expected": "viață / viața",
-      "occurrences": 4,
-      "context": "…ă lucruri pe care numai Dumnezeu le poate face: sa dea viata și sa judece. Și tocmai acestea sunt puse în mana Fiul…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 5,
-      "field": "units[1].forYourHeart",
-      "kind": "missing-diacritics",
-      "token": "viata",
-      "expected": "viață / viața",
-      "occurrences": 2,
-      "context": "…credința ta nu se sprijină pe taria ta de a te tine în viata, ci pe El. Și dacă El te-a trecut din moarte la viata,…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 6,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "viata",
-      "expected": "viață / viața",
       "occurrences": 1,
-      "context": "…intr-o explicatie ingusta. Lucrul limpede este acesta: viata nu vine dintr-o apropiere exterioara de Isus, ci dintr…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 7,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "adevarata",
-      "expected": "adevărată / adevărata",
-      "occurrences": 1,
-      "context": "…ina la Mine, adu-ne și pe noi la Tine cu setea noastră adevarata. Da-ne Duhul Tău, ca în noi sa nu stea uscaciunea, ci…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 8,
-      "field": "units[0].words[0].meaning",
-      "kind": "missing-diacritics",
-      "token": "viata",
-      "expected": "viață / viața",
-      "occurrences": 1,
-      "context": "Lumina lumii. Hristos ca descoperire, călăuzire și viata pentru om."
+      "context": "…ece doar candva, ci a trecut. Credinciosul nu asteapta viata ca pe un salariu de la capătul drumului; a intrat deja…"
     },
     {
       "bookId": "ioan",
@@ -255,28 +110,6 @@
     {
       "bookId": "ioan",
       "book": "Ioan",
-      "chapter": 9,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "viata",
-      "expected": "viață / viața",
-      "occurrences": 1,
-      "context": "…i vindecat, sa mărturisim cu simplitate ce ai făcut în viata noastră. Fereste-ne de orbirea care se lauda ca vede.…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 10,
-      "field": "summary",
-      "kind": "missing-diacritics",
-      "token": "viata",
-      "expected": "viață / viața",
-      "occurrences": 1,
-      "context": "…bun, vorbește despre oile care-I cunosc glasul, despre viata data cu belșug și despre unitatea Lui cu Tatăl, starni…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
       "chapter": 10,
       "field": "literaryContext",
       "kind": "missing-diacritics",
@@ -284,28 +117,6 @@
       "expected": "credință / credința",
       "occurrences": 1,
       "context": "…aznicului Innoirii Templului, unde Domnul leaga iarasi credinta de lucrarile Sale și de ascultarea oilor. Totul culmin…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 10,
-      "field": "historicalContext",
-      "kind": "missing-diacritics",
-      "token": "viata",
-      "expected": "viață / viața",
-      "occurrences": 1,
-      "context": "…i era adanc inradacinata în Scriptura lui Israel și în viata de zi cu zi. Proorocii vorbisera despre pastorii rai ș…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 10,
-      "field": "prayer",
-      "kind": "missing-diacritics",
-      "token": "viata",
-      "expected": "viață / viața",
-      "occurrences": 1,
-      "context": "…ător, ci Usa oilor și Pastorul cel bun, care Ti-ai dat viata pentru noi. Invata-ne sa ascultam glasul Tău mai mult…"
     },
     {
       "bookId": "ioan",
@@ -328,28 +139,6 @@
       "expected": "viață / viața",
       "occurrences": 1,
       "context": "…a, poarta. Hristos ca singura intrare spre mântuire și viata."
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 10,
-      "field": "units[0].words[2].meaning",
-      "kind": "missing-diacritics",
-      "token": "viata",
-      "expected": "viață / viața",
-      "occurrences": 1,
-      "context": "din belșug. Viata data de Hristos nu este saraca, ci plina."
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 10,
-      "field": "units[1].teaching",
-      "kind": "missing-diacritics",
-      "token": "credinta",
-      "expected": "credință / credința",
-      "occurrences": 1,
-      "context": "Sa luam bine seama la legătura dintre credinta și ascultarea glasului. Domnul nu spune doar ca oile L…"
     },
     {
       "bookId": "ioan",
@@ -405,17 +194,6 @@
       "expected": "viață / viața",
       "occurrences": 2,
       "context": "…rin întârziere. Apoi vine marele Eu sunt: învierea și viata. Domnul nu spune doar ca poate invia, ci ca El Insusi…"
-    },
-    {
-      "bookId": "ioan",
-      "book": "Ioan",
-      "chapter": 13,
-      "field": "units[0].teaching",
-      "kind": "missing-diacritics",
-      "token": "adevarata",
-      "expected": "adevărată / adevărata",
-      "occurrences": 1,
-      "context": "…aini, Domnul Se incinge cu stergarul. Asta inseamna ca adevarata mărime nu se teme sa slujească. Omul mic fuge de sluji…"
     }
   ]
 }
