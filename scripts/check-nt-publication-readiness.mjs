@@ -11,6 +11,7 @@ const sourceEvidencePath = path.join(ROOT, "docs", "data", "biblia-explicata", "
 const editorialRawPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-subtle-editorial-refined-findings.json")
 const editorialDecisionsPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-subtle-editorial-decisions.json")
 const editorialTraceabilityPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-editorial-traceability-audit.json")
+const thinAuditPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-thin-unit-audit.json")
 const quoteAuditPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-embedded-quote-audit.json")
 const languageAuditPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-romanian-language-audit.json")
 const lexiconAuditPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-lexicon-audit.json")
@@ -18,7 +19,6 @@ const blockerReportPath = path.join(ROOT, "docs", "data", "biblia-explicata", "n
 
 function fail(message) { console.error(`[NT publication readiness] ${message}`); process.exit(1) }
 function readJson(file, label) { if (!fs.existsSync(file)) return { missing: true, label }; return JSON.parse(fs.readFileSync(file, "utf8")) }
-function wordCount(value) { return String(value ?? "").trim().split(/\s+/u).filter(Boolean).length }
 function pushBlocker(blockers, id, count, message, details = {}) { if (!count) return; blockers.push({ id, count, message, ...details }) }
 
 if (!fs.existsSync(corpusDir) || !fs.existsSync(manifestPath)) fail("final NT corpus/manifest missing")
@@ -28,6 +28,7 @@ const sourceEvidence = readJson(sourceEvidencePath, "source evidence")
 const editorialRaw = readJson(editorialRawPath, "editorial raw audit")
 const editorialDecisions = readJson(editorialDecisionsPath, "editorial decisions")
 const editorialTraceability = readJson(editorialTraceabilityPath, "editorial traceability audit")
+const thinAudit = readJson(thinAuditPath, "thin-unit audit")
 const quoteAudit = readJson(quoteAuditPath, "embedded quote audit")
 const languageAudit = readJson(languageAuditPath, "Romanian language audit")
 const lexiconAudit = readJson(lexiconAuditPath, "lexicon audit")
@@ -35,7 +36,6 @@ const lexiconAudit = readJson(lexiconAuditPath, "lexicon audit")
 const bindingByChapter = new Map((binding.chapters ?? []).map((entry) => [`${entry.bookId}.${entry.chapter}`, entry]))
 const evidenceById = new Map((sourceEvidence.records ?? []).map((entry) => [entry.id, entry]))
 const wholeChapterSummaries = []
-const thin = []
 const empty = []
 const missingAnchors = []
 const invalidAnchors = []
@@ -47,8 +47,6 @@ for (const file of fs.readdirSync(corpusDir).filter((name) => name.endsWith(".js
     const bound = bindingByChapter.get(`${book.bookId}.${chapter.number}`)
     for (const unit of chapter.units ?? []) {
       units += 1
-      const words = wordCount(unit.teaching)
-      if (words < 45) thin.push({ bookId: book.id, chapter: chapter.number, ref: unit.ref, words })
       if (typeof unit.heading !== "string" || !unit.heading.trim()) empty.push({ bookId: book.id, chapter: chapter.number, ref: unit.ref })
       const anchors = Array.isArray(unit.sourceAnchors) ? unit.sourceAnchors : []
       if (!anchors.length) {
@@ -109,7 +107,12 @@ if (editorialTraceability.missing) {
 }
 
 pushBlocker(blockers, "whole-chapter-summary-units", wholeChapterSummaries.length, `${wholeChapterSummaries.length} rebuilt chapters are still one whole-chapter unit.`, { examples: wholeChapterSummaries.slice(0, 20) })
-pushBlocker(blockers, "thin-explanation-units", thin.length, `${thin.length} explanation units are under 45 words.`, { examples: thin.slice(0, 20) })
+if (thinAudit.missing) {
+  pushBlocker(blockers, "thin-unit-audit-missing", 1, "Editorial sufficiency audit is missing.")
+} else if (thinAudit.status !== "clean") {
+  const thinCount = Number(thinAudit.count ?? thinAudit.findings?.length ?? 1)
+  pushBlocker(blockers, "thin-explanation-units", thinCount, `${thinCount} explanation units fail the editorial sufficiency gate.`, { policy: thinAudit.policy ?? null, thresholds: thinAudit.thresholds ?? null, examples: (thinAudit.findings ?? []).slice(0, 20) })
+}
 pushBlocker(blockers, "empty-unit-headings", empty.length, `${empty.length} explanation units have empty headings.`, { examples: empty.slice(0, 20) })
 pushBlocker(blockers, "missing-source-anchors", missingAnchors.length, `${missingAnchors.length}/${units} units lack sourceAnchors.`, { examples: missingAnchors.slice(0, 20) })
 pushBlocker(blockers, "invalid-source-anchors", invalidAnchors.length, `${invalidAnchors.length} source anchors do not match the evidence registry.`, { examples: invalidAnchors.slice(0, 20) })
@@ -120,7 +123,7 @@ for (const [audit, label, id] of [[quoteAudit, "embedded quote", "embedded-quote
 }
 
 const report = {
-  schema: "emanus-nt-publication-blockers-v2",
+  schema: "emanus-nt-publication-blockers-v3",
   status: blockers.length ? "blocked" : "clear",
   manifestStatus: manifest.status,
   manifestPublicationReady: manifest.publicationReady,
@@ -130,7 +133,8 @@ const report = {
     chapters: manifest.counts?.chapters ?? null,
     units,
     wholeChapterSummaryUnits: wholeChapterSummaries.length,
-    thinUnits: thin.length,
+    thinUnits: thinAudit.missing ? null : Number(thinAudit.count ?? null),
+    conciseUnitsAccepted: thinAudit.missing ? null : Number(thinAudit.conciseAccepted ?? 0),
     emptyHeadings: empty.length,
     missingSourceAnchors: missingAnchors.length,
     invalidSourceAnchors: invalidAnchors.length,
