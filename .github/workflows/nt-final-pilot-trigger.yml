@@ -30,7 +30,7 @@ jobs:
           NT_FINAL_MODEL: openai/gpt-5
         run: |
           set -euo pipefail
-          python3 scripts/nt_final_editorial_worker.py \
+          python3 scripts/nt_final_editorial_worker_runner.py \
             --book MAT \
             --chapter 1 \
             --consulted-on "$(date -u +%F)" \
