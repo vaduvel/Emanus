@@ -102,7 +102,10 @@ for (let fileIndex = 0; fileIndex < files.length; fileIndex += 1) {
       heading: unit.heading,
       text: passage(be, unit.verseStart, unit.verseEnd),
       teaching: unit.teaching,
+      ...(typeof unit.explanationKind === "string" && unit.explanationKind ? { explanationKind: unit.explanationKind } : {}),
+      ...(typeof unit.explanationSource === "string" && unit.explanationSource ? { explanationSource: unit.explanationSource } : {}),
       ...(Array.isArray(unit.words) && unit.words.length ? { words: unit.words } : {}),
+      ...(typeof unit.wordSource === "string" && unit.wordSource ? { wordSource: unit.wordSource } : {}),
       ...(Array.isArray(unit.crossRefs) && unit.crossRefs.length ? { crossRefs: unit.crossRefs } : {}),
       ...(typeof unit.forYourHeart === "string" && unit.forYourHeart.trim() ? { forYourHeart: unit.forYourHeart } : {}),
     }))
