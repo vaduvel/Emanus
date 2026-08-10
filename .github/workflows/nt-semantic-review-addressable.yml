@@ -6,12 +6,15 @@ on:
       - agent/biblia-explicata-nt-integration-clean
     paths:
       - .github/workflows/nt-semantic-review-addressable.yml
+      - scripts/nt_semantic_github_models_worker.py
+      - scripts/nt_semantic_github_models_direct_worker.py
       - scripts/nt_semantic_copilot_worker.py
+      - scripts/materialize-nt-direct-transcript-coverage.mjs
   workflow_dispatch:
 
 permissions:
   contents: write
-  copilot-requests: write
+  models: read
 
 concurrency:
   group: nt-semantic-addressable
@@ -21,17 +24,12 @@ jobs:
   review:
     strategy:
       fail-fast: false
-      max-parallel: 3
+      max-parallel: 1
       matrix:
         book:
-          - 2-tesaloniceni
-          - 2-timotei
-          - 1-ioan
-          - 2-ioan
-          - 3-ioan
-          - iuda
+          - galateni
     runs-on: ubuntu-22.04
-    timeout-minutes: 60
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
         with:
@@ -40,17 +38,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Install GitHub Copilot CLI
-        run: npm install -g @github/copilot
       - name: Review ${{ matrix.book }} against complete transcript content
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NT_SEMANTIC_COPILOT_MODEL: auto
+          NT_SEMANTIC_GITHUB_MODEL: openai/gpt-4.1
           NT_SEMANTIC_COPILOT_TIMEOUT: '300'
           NT_SEMANTIC_BATCH_SIZE: '4'
         run: |
           set -euo pipefail
-          python3 scripts/nt_semantic_copilot_worker.py \
+          python3 scripts/nt_semantic_github_models_direct_worker.py \
             --book '${{ matrix.book }}' \
             --reviewed-on "$(date -u +%F)" \
             --output '/tmp/${{ matrix.book }}.json'
@@ -83,8 +79,7 @@ jobs:
           import json
           from pathlib import Path
 
-          root = Path('.')
-          ledger_path = root / 'docs/data/biblia-explicata/nt-semantic-review-ledger.json'
+          ledger_path = Path('docs/data/biblia-explicata/nt-semantic-review-ledger.json')
           if ledger_path.exists():
               ledger = json.loads(ledger_path.read_text(encoding='utf-8'))
               if ledger.get('schema') != 'emanus-nt-semantic-review-ledger-v1':
@@ -125,7 +120,7 @@ jobs:
             echo 'Semantic ledger already current.'
             exit 0
           fi
-          git commit -m 'Review transcript-addressable NT units semantically'
+          git commit -m 'Review Galatians transcript-addressable units semantically'
           for attempt in 1 2 3; do
             git fetch origin agent/biblia-explicata-nt-integration-clean
             git rebase FETCH_HEAD
