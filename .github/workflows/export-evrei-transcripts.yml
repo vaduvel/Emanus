@@ -68,9 +68,60 @@ jobs:
           cp docs/data/biblia-explicata/nt-final-source-first/19-evrei.json /tmp/evrei-transcripts/19-evrei.json
           cp docs/data/biblia-explicata/nt-direct-transcript-coverage.json /tmp/evrei-transcripts/nt-direct-transcript-coverage.json
 
+      - name: Export exact 2 Petru semantic transcript representation
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/doi-petru-transcript
+          python3 - <<'PY'
+          import importlib.util
+          import json
+          from pathlib import Path
+
+          root = Path('.').resolve()
+          worker_path = root / 'scripts/nt_semantic_copilot_worker.py'
+          spec = importlib.util.spec_from_file_location('emanus_semantic_export_2peter', worker_path)
+          if spec is None or spec.loader is None:
+              raise SystemExit('Cannot load semantic worker extractor')
+          worker = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(worker)
+
+          url = 'https://www.sermonindex.net/sermons/Jhl38o2eZdnSzTZz'
+          text = worker.extract_transcript(url)
+          sha = worker.sha256(text)
+          lowered = text.lower()
+          required = [
+              'second epistle of peter',
+              'partakers of the divine nature',
+              'false prophets',
+              'balaam',
+              'day of the lord',
+          ]
+          missing = [phrase for phrase in required if phrase not in lowered]
+          if missing:
+              raise SystemExit(f'2 Petru transcript content markers missing: {missing}')
+          out = Path('/tmp/doi-petru-transcript')
+          (out / '1-2-peter.txt').write_text(text + '\n', encoding='utf-8')
+          (out / 'manifest.json').write_text(json.dumps({
+              'url': url,
+              'sha256': sha,
+              'words': len(text.split()),
+              'verifiedMarkers': required,
+          }, indent=2) + '\n', encoding='utf-8')
+          print('1-2-peter.txt', sha, len(text.split()))
+          PY
+          cp docs/data/biblia-explicata/nt-final-source-first/22-2-petru.json /tmp/doi-petru-transcript/22-2-petru.json
+          cp docs/data/biblia-explicata/nt-source-evidence.json /tmp/doi-petru-transcript/nt-source-evidence.json
+
       - uses: actions/upload-artifact@v4
         with:
           name: evrei-full-transcripts
           path: /tmp/evrei-transcripts
+          if-no-files-found: error
+          retention-days: 1
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: 2-petru-exact-transcript
+          path: /tmp/doi-petru-transcript
           if-no-files-found: error
           retention-days: 1
