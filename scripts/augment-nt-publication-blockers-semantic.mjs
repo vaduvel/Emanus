@@ -2,6 +2,7 @@
 
 import fs from "node:fs"
 import path from "node:path"
+import { execFileSync } from "node:child_process"
 
 await import("./materialize-nt-semantic-review-index.mjs")
 
@@ -15,6 +16,14 @@ function fail(message) {
 }
 if (!fs.existsSync(reportPath)) fail("base publication blocker report is missing")
 if (!fs.existsSync(semanticPath)) fail("semantic fidelity audit is missing")
+
+// The current manual-review packet is publication evidence, not a verdict. It
+// fetches the complete transcript transiently, stores only SHA/word-count, and
+// binds those bytes to the exact reader copy under review.
+execFileSync("python3", ["scripts/materialize_nt_manual_semantic_packet.py"], {
+  cwd: ROOT,
+  stdio: "inherit",
+})
 
 const report = JSON.parse(fs.readFileSync(reportPath, "utf8"))
 const semantic = JSON.parse(fs.readFileSync(semanticPath, "utf8"))
