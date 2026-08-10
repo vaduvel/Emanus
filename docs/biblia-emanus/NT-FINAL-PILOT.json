@@ -2,8 +2,8 @@
   "status": "failure",
   "reviewOutcome": "failure",
   "shapeOutcome": "skipped",
-  "runId": "31373506780",
+  "runId": "31373973233",
   "runAttempt": "1",
-  "reviewerSystem": "GitHub Copilot CLI gpt-5.4",
-  "diagnosticTail": "Traceback (most recent call last):\n  File \"/home/runner/work/Emanus/Emanus/scripts/nt_final_editorial_copilot_runner.py\", line 109, in <module>\n    raise SystemExit(main())\n  File \"/home/runner/work/Emanus/Emanus/scripts/nt_final_editorial_copilot_runner.py\", line 105, in main\n    return int(worker.main())\n  File \"/home/runner/work/Emanus/Emanus/scripts/nt_final_editorial_worker.py\", line 345, in main\n    result = call_model(payload, token)\n  File \"/home/runner/work/Emanus/Emanus/scripts/nt_final_editorial_copilot_runner.py\", line 99, in copilot_call_model\n    raise RuntimeError(f'Copilot CLI ({COPILOT_MODEL}) a eșuat după {retries} încercări: {last}')\nRuntimeError: Copilot CLI (gpt-5.4) a eșuat după 3 încercări: exit=1; stderr=Error: Model \"gpt-5.4\" from --model flag is not available.\n; stdout=\n"
+  "reviewerSystem": "GitHub Copilot CLI auto",
+  "diagnosticTail": "Traceback (most recent call last):\n  File \"/home/runner/work/Emanus/Emanus/scripts/nt_final_editorial_copilot_runner.py\", line 109, in <module>\n    raise SystemExit(main())\n  File \"/home/runner/work/Emanus/Emanus/scripts/nt_final_editorial_copilot_runner.py\", line 105, in main\n    return int(worker.main())\n  File \"/home/runner/work/Emanus/Emanus/scripts/nt_final_editorial_worker.py\", line 345, in main\n    result = call_model(payload, token)\n  File \"/home/runner/work/Emanus/Emanus/scripts/nt_final_editorial_copilot_runner.py\", line 99, in copilot_call_model\n    raise RuntimeError(f'Copilot CLI ({COPILOT_MODEL}) a eșuat după {retries} încercări: {last}')\nRuntimeError: Copilot CLI (auto) a eșuat după 3 încercări: JSONDecodeError('Invalid control character at: line 177 column 52 (char 17373)')\n"
 }
