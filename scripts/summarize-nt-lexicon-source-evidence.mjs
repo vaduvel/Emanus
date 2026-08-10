@@ -52,7 +52,7 @@ const ambiguous = entries
     meaning: entry.meaning,
     meaningSha256: entry.meaningSha256,
     candidateCount: entry.candidateCount,
-    candidates: entry.candidates.slice(0, 12).map((candidate) => ({
+    candidates: entry.candidates.slice(0, 16).map((candidate) => ({
       sourceId: candidate.sourceId,
       sourceBlobSha: candidate.sourceBlobSha,
       sourceLocator: candidate.sourceLocator,
@@ -66,35 +66,37 @@ const ambiguous = entries
     })),
   }))
 
-fs.writeFileSync(uniquePath, JSON.stringify({
-  schema: "emanus-nt-lexicon-source-evidence-unique-v3",
-  policy: "Review batch only. Each entry has exactly one TBESG Strong/lemma candidate after direct canonical-lemma matching or passage-bounded MorphGNT 6.12 lemmatization. Semantic agreement of the Romanian gloss still requires human review.",
-  source: evidence.source,
+const sourceMeta = {
+  primaryLexicalSource: evidence.source,
+  fallbackLexicalSource: evidence.fallbackLexicalSource ?? null,
   morphologySource: evidence.morphologySource,
+}
+
+fs.writeFileSync(uniquePath, JSON.stringify({
+  schema: "emanus-nt-lexicon-source-evidence-unique-v4",
+  policy: "Review batch only. Each entry has exactly one pinned lexical candidate. TBESG is primary; MorphGNT 6.12 may resolve the exact passage form to its lemma; TFLSJ is permitted only as a pinned fallback where TBESG has no adequate entry. Semantic agreement of the Romanian gloss still requires explicit human review.",
+  ...sourceMeta,
   count: unique.length,
   entries: unique,
 }, null, 2) + "\n", "utf8")
 fs.writeFileSync(uniqueCompactPath, JSON.stringify({
-  schema: "emanus-nt-lexicon-source-evidence-unique-compact-v2",
-  policy: "Compact human-review projection of TBESG candidates, retaining Strong ID, canonical lemma, morphology, brief gloss, pinned TBESG locator, meaning hash and MorphGNT passage-form lemmatization evidence when used.",
-  source: evidence.source,
-  morphologySource: evidence.morphologySource,
+  schema: "emanus-nt-lexicon-source-evidence-unique-compact-v3",
+  policy: "Compact human-review projection of the single pinned lexical candidate, retaining source id/blob/locator and, where available, Strong ID, canonical lemma, morphology, brief gloss and MorphGNT passage-form evidence. TFLSJ candidates are identified explicitly by sourceId rather than being represented as TBESG evidence.",
+  ...sourceMeta,
   count: uniqueCompact.length,
   entries: uniqueCompact,
 }, null, 2) + "\n", "utf8")
 fs.writeFileSync(unmatchedPath, JSON.stringify({
-  schema: "emanus-nt-lexicon-source-evidence-unmatched-v3",
-  policy: "Entries with no verified TBESG candidate even after passage-bounded MorphGNT 6.12 form-to-lemma resolution. These require manual lemmatization, correction of the original-language note, or another pinned lexical reference; they are not approvable from absence of evidence.",
-  source: evidence.source,
-  morphologySource: evidence.morphologySource,
+  schema: "emanus-nt-lexicon-source-evidence-unmatched-v4",
+  policy: "Entries with no verified pinned lexical candidate after diacritic-preserving TBESG lookup, passage-bounded MorphGNT 6.12 lemmatization, explicit-lemma resolution, and the pinned TFLSJ fallback. These remain unapprovable and block the frozen lexical ledger.",
+  ...sourceMeta,
   count: unmatched.length,
   entries: unmatched,
 }, null, 2) + "\n", "utf8")
 fs.writeFileSync(ambiguousPath, JSON.stringify({
-  schema: "emanus-nt-lexicon-source-evidence-ambiguous-index-v3",
-  policy: "Entries with multiple TBESG Strong/lemma candidates after direct or passage-bounded MorphGNT resolution. Candidate records are retained for sense disambiguation; no candidate is auto-selected.",
-  source: evidence.source,
-  morphologySource: evidence.morphologySource,
+  schema: "emanus-nt-lexicon-source-evidence-ambiguous-index-v4",
+  policy: "Entries with multiple pinned lexical candidates after diacritic-preserving form/lemma resolution. Candidate records are retained for explicit editorial sense selection; no candidate is auto-selected merely to satisfy publication gates.",
+  ...sourceMeta,
   count: ambiguous.length,
   entries: ambiguous,
 }, null, 2) + "\n", "utf8")
