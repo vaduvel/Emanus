@@ -1,7 +1,7 @@
 {
   "schema": "emanus-nt-embedded-quote-candidates-v1",
   "policy": "Diagnostic only. Candidate scores compare each unresolved quoted span with contiguous Biblia Emanus text from the same canonical chapter. This report never edits reader copy or clears a publication blocker by itself.",
-  "count": 51,
+  "count": 56,
   "strongCandidateCount": 1,
   "findings": [
     {
@@ -814,6 +814,169 @@
       "chapter": 9,
       "field": "units[3].teaching",
       "quote": "zidește? poate împiedica pe altul?",
+      "wordCount": 5,
+      "best": null,
+      "alternatives": [],
+      "bestMargin": null
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 10,
+      "field": "units[0].teaching",
+      "quote": "A lăsa pe tată și pe mamă",
+      "wordCount": 7,
+      "best": {
+        "raw": "i pe tatăl tău și pe mama",
+        "score": 0.6143,
+        "lcsRatio": 0.5714,
+        "overlap": 0.5714,
+        "lengthRatio": 1,
+        "start": 339,
+        "width": 7
+      },
+      "alternatives": [
+        {
+          "raw": "pe tatăl tău și pe mama ta",
+          "score": 0.6143,
+          "lcsRatio": 0.5714,
+          "overlap": 0.5714,
+          "lengthRatio": 1,
+          "start": 340,
+          "width": 7
+        },
+        {
+          "raw": "pe tatăl tău și pe mama",
+          "score": 0.6,
+          "lcsRatio": 0.5714,
+          "overlap": 0.5714,
+          "lengthRatio": 0.8571,
+          "start": 340,
+          "width": 6
+        }
+      ],
+      "bestMargin": 0
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 10,
+      "field": "units[0].forYourHeart",
+      "quote": "cât îmi este permis să rup?",
+      "wordCount": 6,
+      "best": {
+        "raw": "Copii, cât de greu este să",
+        "score": 0.55,
+        "lcsRatio": 0.5,
+        "overlap": 0.5,
+        "lengthRatio": 1,
+        "start": 454,
+        "width": 6
+      },
+      "alternatives": [
+        {
+          "raw": "cât de greu este să intri",
+          "score": 0.55,
+          "lcsRatio": 0.5,
+          "overlap": 0.5,
+          "lengthRatio": 1,
+          "start": 455,
+          "width": 6
+        },
+        {
+          "raw": "cât de greu este să",
+          "score": 0.5333,
+          "lcsRatio": 0.5,
+          "overlap": 0.5,
+          "lengthRatio": 0.8333,
+          "start": 455,
+          "width": 5
+        }
+      ],
+      "bestMargin": 0
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 10,
+      "field": "units[1].teaching",
+      "quote": "vinde tot, dă săracilor și urmează-Mă",
+      "wordCount": 7,
+      "best": {
+        "raw": "vinde tot ce ai și dă săracilor",
+        "score": 0.6643,
+        "lcsRatio": 0.5714,
+        "overlap": 0.7143,
+        "lengthRatio": 1,
+        "start": 381,
+        "width": 7
+      },
+      "alternatives": [
+        {
+          "raw": "te, vinde tot ce ai și dă săracilor",
+          "score": 0.5813,
+          "lcsRatio": 0.5,
+          "overlap": 0.625,
+          "lengthRatio": 0.875,
+          "start": 380,
+          "width": 8
+        },
+        {
+          "raw": "vinde tot ce ai și dă săracilor, iar",
+          "score": 0.5813,
+          "lcsRatio": 0.5,
+          "overlap": 0.625,
+          "lengthRatio": 0.875,
+          "start": 381,
+          "width": 8
+        }
+      ],
+      "bestMargin": 0.083
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 10,
+      "field": "units[3].teaching",
+      "quote": "Dumnezeu nu te mai ascultă",
+      "wordCount": 5,
+      "best": {
+        "raw": "singur trup. Astfel, nu mai",
+        "score": 0.46,
+        "lcsRatio": 0.4,
+        "overlap": 0.4,
+        "lengthRatio": 1,
+        "start": 127,
+        "width": 5
+      },
+      "alternatives": [
+        {
+          "raw": "trup. Astfel, nu mai sunt",
+          "score": 0.46,
+          "lcsRatio": 0.4,
+          "overlap": 0.4,
+          "lengthRatio": 1,
+          "start": 128,
+          "width": 5
+        },
+        {
+          "raw": "Astfel, nu mai sunt doi",
+          "score": 0.46,
+          "lcsRatio": 0.4,
+          "overlap": 0.4,
+          "lengthRatio": 1,
+          "start": 129,
+          "width": 5
+        }
+      ],
+      "bestMargin": 0
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 10,
+      "field": "units[3].teaching",
+      "quote": "situația ta este prea rea",
       "wordCount": 5,
       "best": null,
       "alternatives": [],

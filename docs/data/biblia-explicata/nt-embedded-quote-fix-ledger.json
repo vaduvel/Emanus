@@ -2,7 +2,7 @@
   "schema": "emanus-nt-embedded-quote-fix-ledger-v1",
   "policy": "Only unique same-chapter Biblia Emanus candidates with <=1 token edit (<=2 for long quotes), >=0.88 sequence score and >=0.80 token overlap are replaced. Ambiguous/non-Bible quotations remain untouched and blocked for manual classification.",
   "fixed": 1,
-  "skipped": 58,
+  "skipped": 63,
   "fixes": [
     {
       "bookId": "marcu",
@@ -218,6 +218,41 @@
       "chapter": 9,
       "field": "teaching",
       "quote": "zidește? poate împiedica pe altul?",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "marcu",
+      "chapter": 10,
+      "field": "teaching",
+      "quote": "A lăsa pe tată și pe mamă",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "marcu",
+      "chapter": 10,
+      "field": "forYourHeart",
+      "quote": "cât îmi este permis să rup?",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "marcu",
+      "chapter": 10,
+      "field": "teaching",
+      "quote": "vinde tot, dă săracilor și urmează-Mă",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "marcu",
+      "chapter": 10,
+      "field": "teaching",
+      "quote": "Dumnezeu nu te mai ascultă",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "marcu",
+      "chapter": 10,
+      "field": "teaching",
+      "quote": "situația ta este prea rea",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
     {

@@ -2,9 +2,9 @@
   "schema": "emanus-nt-embedded-quote-audit-v1",
   "status": "manual-source-check-required",
   "policy": "Quoted spans of at least five words are checked against the exact current Biblia Emanus text in the same canonical book and chapter. A match elsewhere in the NT does not clear the finding. Non-matches must be replaced with BE wording, explicitly classified as non-Bible quotations, or removed before publication.",
-  "quotedFragments": 78,
+  "quotedFragments": 83,
   "exactMatches": 26,
-  "count": 52,
+  "count": 57,
   "findings": [
     {
       "bookId": "matei",
@@ -242,6 +242,51 @@
       "chapter": 9,
       "field": "units[3].teaching",
       "quote": "zidește? poate împiedica pe altul?",
+      "wordCount": 5
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "book": "Marcu",
+      "chapter": 10,
+      "field": "units[0].teaching",
+      "quote": "A lăsa pe tată și pe mamă",
+      "wordCount": 7
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "book": "Marcu",
+      "chapter": 10,
+      "field": "units[0].forYourHeart",
+      "quote": "cât îmi este permis să rup?",
+      "wordCount": 6
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "book": "Marcu",
+      "chapter": 10,
+      "field": "units[1].teaching",
+      "quote": "vinde tot, dă săracilor și urmează-Mă",
+      "wordCount": 7
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "book": "Marcu",
+      "chapter": 10,
+      "field": "units[3].teaching",
+      "quote": "Dumnezeu nu te mai ascultă",
+      "wordCount": 5
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "book": "Marcu",
+      "chapter": 10,
+      "field": "units[3].teaching",
+      "quote": "situația ta este prea rea",
       "wordCount": 5
     },
     {
