@@ -98,6 +98,7 @@ jobs:
           set -euo pipefail
           node scripts/materialize-nt-final-source-first.mjs
           node scripts/fix-nt-embedded-bible-quotes.mjs
+          node scripts/apply-nt-reviewed-be-quote-fixes.mjs
           node scripts/check-nt-final-source-first.mjs
           node scripts/check-nt-poonen-doctrine.mjs
           node scripts/audit-nt-thin-units.mjs
