@@ -147,7 +147,7 @@ Expunerea subliniază și demnitatea femeii ca martor al învierii, păstrând �
 
 Reacția apostolilor este necredința. Maria vorbește — nu cred. Cei doi vorbesc — nu cred. Când Isus li Se arată, îi mustră pentru necredință și împietrirea inimii. Expunerea consideră necredința un păcat mult mai grav decât o tratăm adesea: anxietatea și refuzul de a ne sprijini pe promisiunile lui Dumnezeu nu sunt doar trăsături de temperament. Viața creștină, mântuirea și sfințirea sunt trăite prin credință.
 
-Există însă o chestiune textuală care trebuie spusă limpede. Marcu 16:9–20 este păstrat în multe manuscrise și în tradiția bisericească, dar lipsește din unele dintre cele mai vechi mărturii importante și SBLGNT îl marchează cu paranteze duble. Biblia Emanus păstrează integral aceste versete cu `textualStatus: double-bracketed` și păstrează separat și finalul scurt. Poonen expune versetele 9–20 ca parte a textului primit; această explicație păstrează fidel expunerea lui, dar nu ascunde starea critic-textuală și nu pretinde că predica rezolvă disputa manuscriselor.`,
+Există însă o chestiune textuală care trebuie spusă limpede. Marcu 16:9–20 este păstrat în multe manuscrise și în tradiția bisericească, dar lipsește din unele dintre cele mai vechi mărturii importante și SBLGNT îl marchează cu paranteze duble. Biblia Emanus păstrează integral aceste versete cu «textualStatus: double-bracketed» și păstrează separat și finalul scurt. Expunerea tratează versetele 9–20 ca parte a textului primit; această explicație păstrează fidel expunerea lui, dar nu ascunde starea critic-textuală și nu pretinde că predica rezolvă disputa manuscriselor.`,
     forYourHeart: "Nu lăsa slăbiciunea trecutului să te facă să crezi că nu mai poți fi martor. Dar nici nu transforma credința într-un motiv să ignori dovezile textuale; adevărul nu are nevoie de ascunderea complexității manuscriselor.",
   },
   {
@@ -162,11 +162,11 @@ Semnele enumerate — alungarea demonilor, limbi noi, protecția în fața șerp
 
 În același timp, predica respinge folosirea lor ca spectacol. Credinciosul nu caută oameni demonizați ca să demonstreze puterea, nu caută șerpi și nu bea otravă pentru a-L testa pe Dumnezeu. Pavel nu a căutat vipera din Fapte 28; a fost protejat când primejdia a apărut în cursul ascultării. Puterea lui Dumnezeu este pentru necesitatea misiunii, nu pentru magie religioasă.
 
-Poonen leagă alungarea demonilor de biruința lui Hristos la cruce și vorbirea în limbi de rugăciunea sau lauda în care duhul omului se exprimă dincolo de limitele minții. Aceste afirmații pneumatologice trebuie păstrate ca poziția sursei și cercetate separat în corpusul canonic, nu reduse la slogan și nici transformate în condiție universală că orice credincios trebuie să manifeste fiecare semn.
+Expunerea leagă alungarea demonilor de biruința lui Hristos la cruce și vorbirea în limbi de rugăciunea sau lauda în care duhul omului se exprimă dincolo de limitele minții. Aceste afirmații pneumatologice trebuie păstrate ca poziția sursei și cercetate separat în corpusul canonic, nu reduse la slogan și nici transformate în condiție universală că orice credincios trebuie să manifeste fiecare semn.
 
 Domnul Se înalță și Se așază la dreapta lui Dumnezeu, iar ucenicii pleacă să predice. Ultima propoziție păstrează echilibrul: «Domnul lucra împreună cu ei». Misiunea adevărată nu este omul care inventează un proiect și cere apoi binecuvântarea lui Dumnezeu; este cooperarea cu Domnul în lucrarea la care El trimite, prin puterea Duhului și sub autoritatea Cuvântului.
 
-Și aici rămâne aceeași notă critic-textuală: această secțiune 16:15–20 aparține finalului lung marcat `double-bracketed` în Biblia Emanus/SBLGNT. O explicăm fidel pentru că este parte a tradiției textuale și a corpusului de predici folosit, dar statutul manuscrisului este păstrat vizibil și nu este rezolvat prin autoritatea predicatorului.`,
+Și aici rămâne aceeași notă critic-textuală: această secțiune 16:15–20 aparține finalului lung marcat «double-bracketed» în Biblia Emanus/SBLGNT. O explicăm fidel pentru că este parte a tradiției textuale și a corpusului de predici folosit, dar statutul manuscrisului este păstrat vizibil și nu este rezolvat prin autoritatea predicatorului.`,
     forYourHeart: "Fii martor, nu magician. Mergi unde te trimite Domnul, fă ucenici, caută puterea Duhului și lasă semnele în mâna Lui. Credința adevărată nu Îl testează pe Dumnezeu și nu ascunde adevărul textual.",
   },
 ]
