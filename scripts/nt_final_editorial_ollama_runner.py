@@ -16,6 +16,7 @@ OLLAMA_URL = os.environ.get('NT_FINAL_OLLAMA_URL', 'http://127.0.0.1:11434/api/c
 OLLAMA_MODEL = os.environ.get('NT_FINAL_OLLAMA_MODEL', 'qwen3:8b')
 OLLAMA_TIMEOUT = int(os.environ.get('NT_FINAL_OLLAMA_TIMEOUT', '900'))
 OLLAMA_CONTEXT = int(os.environ.get('NT_FINAL_OLLAMA_CONTEXT', '32768'))
+OLLAMA_THINK = os.environ.get('NT_FINAL_OLLAMA_THINK', 'false').strip().lower() in {'1', 'true', 'yes', 'on'}
 
 OUTPUT_SCHEMA = {
     'type': 'object',
@@ -67,7 +68,7 @@ def ollama_call_model(payload: dict[str, Any], token: str, retries: int = 2) -> 
         'messages': messages,
         'stream': False,
         'format': OUTPUT_SCHEMA,
-        'think': False,
+        'think': OLLAMA_THINK,
         'keep_alive': '15m',
         'options': {
             'temperature': 0,
@@ -95,7 +96,8 @@ def ollama_call_model(payload: dict[str, Any], token: str, retries: int = 2) -> 
                 raise RuntimeError('Ollama nu a întors obiect JSON')
             usage = (
                 f"prompt={data.get('prompt_eval_count', '?')} "
-                f"completion={data.get('eval_count', '?')}"
+                f"completion={data.get('eval_count', '?')} "
+                f"think={'on' if OLLAMA_THINK else 'off'}"
             )
             print(f'[nt-final-ollama] {OLLAMA_MODEL} {usage}', flush=True)
             return result
