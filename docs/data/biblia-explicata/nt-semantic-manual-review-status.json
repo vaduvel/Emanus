@@ -2,21 +2,21 @@
   "schema": "emanus-nt-semantic-manual-review-status-v1",
   "status": "in_progress",
   "policy": "Manual semantic review is allowed only against complete transcript content with deterministic transcript SHA-256 evidence. Source locators or transcript addressability alone never count as reviewed.",
-  "currentBook": "filimon",
-  "currentBookUnits": 5,
+  "currentBook": "iacov",
+  "currentBookUnits": 15,
   "manualDecisionsFrozen": 0,
   "officialAudioSources": [
     {
-      "id": "titus-filimon-ttb",
-      "officialSourceUrl": "https://www.cfcindia.com/through-the-bible/titus-philemon",
-      "officialAudioUrl": "https://www.cfcindia.org/resources/en/study-series/through-the-bible/60-titus-and-philemon.mp3",
-      "sourceRange": "Titus 1:1-Philemon 1:25; semantic review target: complete Philemon section"
+      "id": "iacov-ttb",
+      "officialSourceUrl": "https://www.cfcindia.com/through-the-bible/james",
+      "officialAudioUrl": "https://www.cfcindia.org/resources/en/study-series/through-the-bible/65.james.mp3",
+      "sourceRange": "James 1:1-5:20"
     }
   ],
   "lastVerifiedCoverage": {
     "rawTranscriptReviewed": 73,
-    "directTranscriptAddressable": 426,
-    "pendingTranscriptRecovery": 471,
-    "note": "Semantic ledger is verified at 161 approved units after 1 Petru cleanup; total reviewed raw+semantic is 234/970 and 736 units remain pending semantic review."
+    "directTranscriptAddressable": 443,
+    "pendingTranscriptRecovery": 454,
+    "note": "Semantic ledger is verified at 178 approved units after Tit and Filimon; total reviewed raw+semantic is 251/970 and 719 units remain pending semantic review."
   }
 }
