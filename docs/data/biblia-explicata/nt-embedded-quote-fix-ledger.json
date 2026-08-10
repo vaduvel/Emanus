@@ -1,21 +1,9 @@
 {
   "schema": "emanus-nt-embedded-quote-fix-ledger-v1",
   "policy": "Only unique same-chapter Biblia Emanus candidates with <=1 token edit (<=2 for long quotes), >=0.88 sequence score and >=0.80 token overlap are replaced. Ambiguous/non-Bible quotations remain untouched and blocked for manual classification.",
-  "fixed": 1,
-  "skipped": 67,
-  "fixes": [
-    {
-      "bookId": "marcu",
-      "canonicalBookId": "MRK",
-      "chapter": 15,
-      "field": "teaching",
-      "before": "Dumnezeul Meu, Dumnezeul Meu, pentru ce M-ai părăsit?",
-      "after": "Dumnezeul Meu, Dumnezeul Meu, de ce M-ai părăsit",
-      "tokenDistance": 1,
-      "score": 0.8889,
-      "overlap": 0.8889
-    }
-  ],
+  "fixed": 0,
+  "skipped": 75,
+  "fixes": [],
   "unresolvedCandidates": [
     {
       "bookId": "matei",
@@ -285,6 +273,41 @@
     },
     {
       "bookId": "marcu",
+      "chapter": 13,
+      "field": "teaching",
+      "quote": "Să nu vă înșele cineva.",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "marcu",
+      "chapter": 13,
+      "field": "teaching",
+      "quote": "Cine va răbda până la sfârșit va fi mântuit.",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "marcu",
+      "chapter": 13,
+      "field": "teaching",
+      "quote": "Hristos este aici, în secret",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "marcu",
+      "chapter": 13,
+      "field": "teaching",
+      "quote": "Generația aceasta nu va trece...",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "marcu",
+      "chapter": 14,
+      "field": "teaching",
+      "quote": "Ea a făcut ce a putut.",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "marcu",
       "chapter": 14,
       "field": "teaching",
       "quote": "nu ce voiesc Eu, ci ce voiești Tu",
@@ -292,9 +315,30 @@
     },
     {
       "bookId": "marcu",
+      "chapter": 14,
+      "field": "teaching",
+      "quote": "Vegheați și rugați-vă ca să nu intrați în ispită.",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "marcu",
+      "chapter": 15,
+      "field": "teaching",
+      "quote": "dacă vrea cineva să vină după Mine",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "marcu",
       "chapter": 16,
       "field": "teaching",
-      "quote": "Isus din Nazaret, care a fost răstignit, a înviat; nu este aici",
+      "quote": "spuneți ucenicilor Lui și lui Petru",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "marcu",
+      "chapter": 16,
+      "field": "teaching",
+      "quote": "Cine crede și este botezat...",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
     {
