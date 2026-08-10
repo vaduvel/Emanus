@@ -165,10 +165,11 @@ jobs:
           node scripts/fix-nt-embedded-bible-quotes.mjs
           node scripts/apply-nt-reviewed-be-quote-fixes.mjs
 
-      - name: Verify final NT corpus structure
+      - name: Verify final NT corpus structure and optional UI
         run: |
           set -euo pipefail
           node scripts/check-nt-final-source-first.mjs
+          node scripts/check-nt-ui-optional-sections.mjs
 
       - name: Verify Poonen doctrine fidelity
         run: |
@@ -184,6 +185,7 @@ jobs:
           node scripts/summarize-nt-embedded-quote-candidates.mjs
           node scripts/audit-nt-embedded-bible-quotes.mjs
           node scripts/audit-nt-romanian-language.mjs
+          node scripts/audit-nt-semantic-source-fidelity.mjs
           node scripts/materialize-nt-lexicon-source-evidence.mjs
           node scripts/summarize-nt-lexicon-source-evidence.mjs
           node scripts/audit-nt-lexicon.mjs
@@ -193,6 +195,7 @@ jobs:
           set -euo pipefail
           node scripts/materialize-nt-canonical-binding.mjs
           node scripts/check-nt-publication-readiness.mjs
+          node scripts/augment-nt-publication-blockers-semantic.mjs
 
       - name: Materialize and verify Biblia Emanus NT runtime
         run: |
