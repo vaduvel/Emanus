@@ -16,6 +16,13 @@ const outputPath = path.join(dataDir, "nt-direct-transcript-coverage.json")
 function fail(message) { console.error(`[NT direct transcript coverage] ${message}`); process.exit(1) }
 function sha256(value) { return `sha256:${crypto.createHash("sha256").update(String(value)).digest("hex")}` }
 function point(chapter, verse) { return chapter * 1000 + verse }
+function canonical(value) {
+  if (Array.isArray(value)) return value.map(canonical)
+  if (value && typeof value === "object") {
+    return Object.fromEntries(Object.keys(value).sort().map((key) => [key, canonical(value[key])]))
+  }
+  return value
+}
 
 const BOOK_ALIASES = [
   ["1-corinteni", /(?:^|\()1\s*corinthians\)?/i], ["2-corinteni", /(?:^|\()2\s*corinthians\)?/i],
@@ -45,9 +52,6 @@ function parseRange(title) {
   const bookId=bookFromTitle(title)
   if (!bookId) return null
   const s=String(title)
-  // Strict range parser: both endpoints must be explicit. Some catalogue titles
-  // repeat "Ch" before the second endpoint (for example Ch1:1-Ch2:21).
-  // Supporting that spelling is deterministic range parsing, not fuzzy matching.
   const chapterPrefix = String.raw`(?:ch(?:apter)?\.?\s*)?`
   let m=s.match(new RegExp(`${chapterPrefix}(\\d+)\\s*:\\s*(\\d+)\\s*(?:-|to)\\s*${chapterPrefix}(\\d+)\\s*:\\s*(\\d+)`, "i"))
   if (m) return {bookId,startChapter:+m[1],startVerse:+m[2],endChapter:+m[3],endVerse:+m[4]}
@@ -94,6 +98,43 @@ function officialFromUnit(unit, evidenceById, source12, registryOfficialUrls) {
   if (unique.length) return {url:unique[0],resolution:"unit-anchor-pinned-official"}
   return null
 }
+function rangeDescriptor(range) {
+  return {
+    transcriptRepresentationUrl: range.url,
+    transcriptTitle: range.title,
+    transcriptRange: `${range.startChapter}:${range.startVerse}-${range.endChapter}:${range.endVerse}`,
+  }
+}
+function localCoverage(range, chapter, verseStart, verseEnd) {
+  if (range.startChapter > chapter || range.endChapter < chapter) return null
+  const start = range.startChapter === chapter ? range.startVerse : verseStart
+  const end = range.endChapter === chapter ? range.endVerse : verseEnd
+  const clippedStart = Math.max(verseStart, start)
+  const clippedEnd = Math.min(verseEnd, end)
+  if (clippedStart > clippedEnd) return null
+  return {range, start:clippedStart, end:clippedEnd}
+}
+function contiguousCover(ranges, bookId, chapter, verseStart, verseEnd) {
+  const available=ranges
+    .filter((range)=>range.bookId===bookId)
+    .map((range)=>localCoverage(range,chapter,verseStart,verseEnd))
+    .filter(Boolean)
+    .sort((a,b)=>a.start-b.start || b.end-a.end || a.range.url.localeCompare(b.range.url))
+  let cursor=verseStart
+  const selected=[]
+  while (cursor<=verseEnd) {
+    const options=available
+      .filter((item)=>item.start<=cursor && item.end>=cursor)
+      .sort((a,b)=>b.end-a.end || a.start-b.start || a.range.url.localeCompare(b.range.url))
+    if (!options.length) return null
+    const best=options[0]
+    if (!selected.some((item)=>item.range.url===best.range.url)) selected.push(best)
+    if (best.end < cursor) return null
+    cursor=best.end+1
+  }
+  if (selected.length<2) return null
+  return selected.map((item)=>item.range)
+}
 
 for (const p of [corpusDir,evidencePath,cataloguePath,source12Path]) if (!fs.existsSync(p)) fail(`missing ${path.relative(ROOT,p)}`)
 const evidence=JSON.parse(fs.readFileSync(evidencePath,"utf8"))
@@ -111,38 +152,61 @@ for (const item of catalogue.items??[]) {
 const entries=[]
 const byBook={}
 const officialResolutionCounts={}
-let pending=0,direct=0,raw=0,noOfficial=0
+let pending=0,direct=0,raw=0,noOfficial=0,multiRange=0
 for (const file of fs.readdirSync(corpusDir).filter((n)=>n.endsWith('.json')).sort()) {
   const book=JSON.parse(fs.readFileSync(path.join(corpusDir,file),'utf8'))
-  const counts={units:0,raw:0,directTranscript:0,pending:0,noOfficial:0}
+  const counts={units:0,raw:0,directTranscript:0,multiTranscript:0,pending:0,noOfficial:0}
   for (const chapter of book.chapters??[]) for (const unit of chapter.units??[]) {
     counts.units++
     if (unit.sourceFidelity?.reviewState==='reviewed-against-raw-transcript') {raw++;counts.raw++;continue}
     const us=point(chapter.number,unit.verseStart), ue=point(chapter.number,unit.verseEnd)
     const candidates=ranges.filter((r)=>r.bookId===book.id && r.startPoint<=us && r.endPoint>=ue)
       .sort((a,b)=>(a.endPoint-a.startPoint)-(b.endPoint-b.startPoint) || a.url.localeCompare(b.url))
-    if (!candidates.length) {pending++;counts.pending++;continue}
-    const best=candidates[0]
+    let selected=[]
+    let verification="catalogue-range-contains-entire-unit"
+    if (candidates.length) {
+      selected=[candidates[0]]
+    } else {
+      const chain=contiguousCover(ranges,book.id,chapter.number,unit.verseStart,unit.verseEnd)
+      if (!chain) {pending++;counts.pending++;continue}
+      selected=chain
+      verification="catalogue-contiguous-ranges-cover-entire-unit"
+    }
     unit.__bookId=book.id
     const official=officialFromUnit(unit,evidenceById,source12,registryOfficialUrls)
     delete unit.__bookId
     if (!official) {noOfficial++;counts.noOfficial++;pending++;counts.pending++;continue}
     officialResolutionCounts[official.resolution]=(officialResolutionCounts[official.resolution]??0)+1
-    const payload={bookId:book.id,chapter:chapter.number,unitId:unit.id,ref:unit.ref,officialSourceUrl:official.url,officialSourceResolution:official.resolution,transcriptRepresentationUrl:best.url,transcriptTitle:best.title,transcriptRange:`${best.startChapter}:${best.startVerse}-${best.endChapter}:${best.endVerse}`,verification:"catalogue-range-contains-entire-unit",catalogueSourcePageSha256:catalogue.sourcePageSha256}
-    entries.push({...payload,coverageEvidenceSha256:sha256(JSON.stringify(payload,Object.keys(payload).sort()))})
+    const representations=selected.map(rangeDescriptor)
+    const payload={
+      bookId:book.id,
+      chapter:chapter.number,
+      unitId:unit.id,
+      ref:unit.ref,
+      officialSourceUrl:official.url,
+      officialSourceResolution:official.resolution,
+      transcriptRepresentationUrl:representations[0].transcriptRepresentationUrl,
+      transcriptTitle:representations[0].transcriptTitle,
+      transcriptRange:representations[0].transcriptRange,
+      transcriptRepresentations:representations,
+      verification,
+      catalogueSourcePageSha256:catalogue.sourcePageSha256,
+    }
+    entries.push({...payload,coverageEvidenceSha256:sha256(JSON.stringify(canonical(payload)))})
     direct++;counts.directTranscript++
+    if (selected.length>1) {multiRange++;counts.multiTranscript++}
   }
   byBook[book.id]=counts
 }
 fs.writeFileSync(outputPath,JSON.stringify({
-  schema:"emanus-nt-direct-transcript-coverage-v2",
-  policy:"A direct transcript representation is assigned only when a parsed Verse-by-Verse transcript range for the same NT book contains the entire explanation unit range. The smallest containing range is selected deterministically. No fuzzy title match and no partial-range approval is allowed. Official attribution must already exist in unit evidence, the protected source registry, or a pinned per-book source registry; no official URL is invented.",
+  schema:"emanus-nt-direct-transcript-coverage-v3",
+  policy:"A direct transcript assignment is accepted only when either one parsed Verse-by-Verse range contains the entire explanation unit or a deterministic set of parsed ranges from the same NT book covers every verse of the unit continuously with no gap. Single-range coverage remains preferred. Multi-range coverage is used only when no single range contains the unit. No fuzzy title matching and no partial-range approval is allowed. Official attribution must already exist in unit evidence, the protected source registry, or a pinned per-book source registry; no official URL is invented.",
   catalogueSourcePageSha256:catalogue.sourcePageSha256,
-  counts:{units:raw+direct+pending,rawTranscriptReviewed:raw,directTranscriptAddressable:direct,pendingTranscriptRecovery:pending,noOfficialSource:noOfficial,parsedTranscriptRanges:ranges.length},
+  counts:{units:raw+direct+pending,rawTranscriptReviewed:raw,directTranscriptAddressable:direct,multiTranscriptAddressable:multiRange,pendingTranscriptRecovery:pending,noOfficialSource:noOfficial,parsedTranscriptRanges:ranges.length},
   officialResolutionCounts,
   pinnedBookRegistryOfficialUrls:Object.fromEntries([...registryOfficialUrls.entries()]),
   byBook,
   entries,
 },null,2)+"\n","utf8")
-console.log(`NT direct transcript coverage: ${raw} raw + ${direct} direct-range addressable; ${pending} pending; ${noOfficial} direct candidates lacked pinned official source.`)
+console.log(`NT direct transcript coverage: ${raw} raw + ${direct} direct addressable (${multiRange} contiguous multi-range); ${pending} pending; ${noOfficial} lacked pinned official source.`)
 console.log(`Official source resolution: ${JSON.stringify(officialResolutionCounts)}`)
