@@ -100,6 +100,47 @@ jobs:
           cp docs/data/biblia-explicata/nt-final-source-first/23-1-ioan.json /tmp/unu-ioan-transcript/23-1-ioan.json
           cp docs/data/biblia-explicata/nt-direct-transcript-coverage.json /tmp/unu-ioan-transcript/nt-direct-transcript-coverage.json
 
+      - name: Extract official CFC 1 Ioan 5 audio source
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import html
+          import json
+          import re
+          import urllib.parse
+          import urllib.request
+          from pathlib import Path
+
+          page = 'https://www.cfcindia.com/verse-by-verse/051john-chapter-51-to-chapter-521'
+          req = urllib.request.Request(page, headers={'User-Agent': 'Emanus-Editorial-Research/1.0'})
+          with urllib.request.urlopen(req, timeout=60) as response:
+              raw = response.read().decode('utf-8', errors='replace')
+          Path('/tmp/unu-ioan-transcript/1-john-vbv-05-page.html').write_text(raw, encoding='utf-8')
+
+          decoded = html.unescape(raw).replace('\\/', '/')
+          candidates = []
+          patterns = [
+              r'https?://[^\"\'<>\s]+?\.mp3(?:\?[^\"\'<>\s]*)?',
+              r'(?:src|href)=[\"\']([^\"\']+?\.mp3(?:\?[^\"\']*)?)[\"\']',
+          ]
+          for pattern in patterns:
+              for match in re.finditer(pattern, decoded, flags=re.I):
+                  value = match.group(1) if match.lastindex else match.group(0)
+                  value = urllib.parse.urljoin(page, value)
+                  if value not in candidates:
+                      candidates.append(value)
+          if not candidates:
+              for line in decoded.splitlines():
+                  if 'audio' in line.lower() or '.mp3' in line.lower():
+                      print('AUDIO_HTML', line[:2000])
+              raise SystemExit('No MP3 source found in official CFC episode HTML')
+          print('OFFICIAL_AUDIO_CANDIDATES', json.dumps(candidates, indent=2))
+          Path('/tmp/unu-ioan-transcript/1-john-vbv-05-audio.json').write_text(json.dumps({
+              'officialSourceUrl': page,
+              'audioCandidates': candidates,
+          }, indent=2) + '\n', encoding='utf-8')
+          PY
+
       - uses: actions/upload-artifact@v4
         with:
           name: evrei-full-transcripts
