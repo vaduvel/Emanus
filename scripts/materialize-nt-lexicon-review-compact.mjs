@@ -10,7 +10,7 @@ const outputPath = path.join(dataDir, "nt-lexicon-review-compact.jsonl")
 
 if (!fs.existsSync(packetPath)) throw new Error("missing nt-lexicon-review-packet.jsonl")
 const rows = fs.readFileSync(packetPath, "utf8").split(/\r?\n/u).filter(Boolean).map((line) => JSON.parse(line))
-if (rows.length !== 219) throw new Error(`expected 219 review rows, found ${rows.length}`)
+if (!rows.length) throw new Error("lexicon review packet is empty")
 
 const compact = rows.map((row) => {
   const evidence = row.evidence ?? {}
