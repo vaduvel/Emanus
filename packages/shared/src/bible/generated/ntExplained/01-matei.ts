@@ -29,13 +29,13 @@ export const NT_BOOK_01: BibleBook = {
               "original": "βίβλος γενέσεως",
               "transliteration": "biblos geneseos",
               "language": "greaca",
-              "meaning": "cartea neamului sau a obârșiei. Expresia face punte spre Geneza și deschide istoria unui nou început."
+              "meaning": "carte a obârșiei sau a genealogiei; literal, «carte» + «origine/naștere»."
             },
             {
               "original": "Χριστός",
               "transliteration": "Christos",
               "language": "greaca",
-              "meaning": "Unsul. Titlul grecesc corespunzător lui Mesia, Împăratul și Mântuitorul făgăduit."
+              "meaning": "Unsul; ca titlu, Mesia sau Hristosul."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -60,13 +60,13 @@ export const NT_BOOK_01: BibleBook = {
               "original": "Ἰησοῦς",
               "transliteration": "Iesous",
               "language": "greaca",
-              "meaning": "Isus, forma grecească a numelui Ieșua: Domnul mântuiește. Numele este legat chiar în text de mântuirea de păcate."
+              "meaning": "Isus; forma grecească a numelui Iosua/Ieșua."
             },
             {
               "original": "Ἐμμανουήλ",
               "transliteration": "Emmanouel",
               "language": "greaca",
-              "meaning": "Emanuil: Dumnezeu este cu noi."
+              "meaning": "Emanuil; nume transliterat, explicat în Matei 1:23 prin «Dumnezeu este cu noi»."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -104,7 +104,7 @@ export const NT_BOOK_01: BibleBook = {
               "original": "μάγοι",
               "transliteration": "magoi",
               "language": "greaca",
-              "meaning": "magi, învățați ai Răsăritului. Textul nu îi numește împărați și nu precizează numărul lor."
+              "meaning": "magi; înțelepți sau savanți."
             },
             {
               "original": "προσκυνέω",
@@ -180,13 +180,13 @@ export const NT_BOOK_01: BibleBook = {
               "original": "μετανοεῖτε",
               "transliteration": "metanoeite",
               "language": "greaca",
-              "meaning": "pocăiți-vă, schimbați-vă mintea și întoarceți-vă. Nu simplă emoție, ci schimbarea direcției."
+              "meaning": "pocăiți-vă; verbul μετανοέω înseamnă a se pocăi, a-și schimba gândirea."
             },
             {
               "original": "καρπός",
               "transliteration": "karpos",
               "language": "greaca",
-              "meaning": "rod. Dovada vizibilă că întoarcerea mărturisită este reală."
+              "meaning": "rod, fruct; figurat, rezultat."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -211,7 +211,7 @@ export const NT_BOOK_01: BibleBook = {
               "original": "βαπτίζω",
               "transliteration": "baptizo",
               "language": "greaca",
-              "meaning": "a cufunda, a scufunda; în uzul Noului Testament, a boteza. Câmpul lexical descrie sensul cuvântului; aplicația doctrinară a botezului rămâne în explicația pasajului."
+              "meaning": "a boteza; în uz literal, a cufunda sau a scufunda."
             },
             {
               "original": "ἀγαπητός",
@@ -296,7 +296,7 @@ export const NT_BOOK_01: BibleBook = {
               "original": "δεῦτε ὀπίσω μου",
               "transliteration": "deute opiso mou",
               "language": "greaca",
-              "meaning": "veniți după Mine. Chemare la apropiere, urmare și ascultare personală."
+              "meaning": "veniți după Mine; literal, «veniți» + «după/în urma» + «Mine»."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -350,13 +350,13 @@ export const NT_BOOK_01: BibleBook = {
               "original": "μακάριοι",
               "transliteration": "makarioi",
               "language": "greaca",
-              "meaning": "fericiți, binecuvântați, aflați sub bunăvoința lui Dumnezeu."
+              "meaning": "fericiți, binecuvântați."
             },
             {
               "original": "πτωχοὶ τῷ πνεύματι",
               "transliteration": "ptochoi to pneumati",
               "language": "greaca",
-              "meaning": "săraci în duh: cei care își recunosc nevoia deplină înaintea lui Dumnezeu."
+              "meaning": "săraci în duh; πτωχός = sărac/nevoiaș, πνεῦμα = duh/spirit."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -397,7 +397,7 @@ export const NT_BOOK_01: BibleBook = {
               "original": "πληρόω",
               "transliteration": "pleroo",
               "language": "greaca",
-              "meaning": "a împlini, a umple, a duce la ținta deplină."
+              "meaning": "a umple, a împlini, a aduce la deplinătate."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -438,7 +438,7 @@ export const NT_BOOK_01: BibleBook = {
               "original": "ἐπιθυμέω",
               "transliteration": "epithymeo",
               "language": "greaca",
-              "meaning": "a pofti, a dori cu intenție. Contextul vorbește despre privirea întreținută pentru posesie sexuală."
+              "meaning": "a dori, a pofti, a tânji după ceva."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -495,7 +495,7 @@ export const NT_BOOK_01: BibleBook = {
               "original": "τέλειοι",
               "transliteration": "teleioi",
               "language": "greaca",
-              "meaning": "maturi, întregi, ajunși la țintă. Aici, iubirea care nu rămâne fragmentată de favoritism."
+              "meaning": "desăvârșiți, compleți, maturi; ajunși la deplinătate."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -580,7 +580,7 @@ export const NT_BOOK_01: BibleBook = {
               "original": "ἐπιούσιον",
               "transliteration": "epiousion",
               "language": "greaca",
-              "meaning": "de fiecare zi sau necesar zilei; un cuvânt rar legat de dependența zilnică."
+              "meaning": "zilnic, pentru ziua de față sau necesar zilei; termen rar."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -662,7 +662,7 @@ export const NT_BOOK_01: BibleBook = {
               "original": "μεριμνάω",
               "transliteration": "merimnao",
               "language": "greaca",
-              "meaning": "a fi îngrijorat, tras în mai multe direcții de grijă."
+              "meaning": "a se îngrijora, a fi preocupat sau anxios."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -716,7 +716,7 @@ export const NT_BOOK_01: BibleBook = {
               "original": "αἰτεῖτε, ζητεῖτε, κρούετε",
               "transliteration": "aiteite, zeteite, krouete",
               "language": "greaca",
-              "meaning": "cereți, căutați, bateți: o chemare continuă la dependență și stăruință."
+              "meaning": "cereți, căutați, bateți; trei forme imperative ale verbelor αἰτέω, ζητέω și κρούω."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
@@ -757,13 +757,13 @@ export const NT_BOOK_01: BibleBook = {
               "original": "καρπός",
               "transliteration": "karpos",
               "language": "greaca",
-              "meaning": "rod, rezultatul vizibil și repetat al naturii unui pom."
+              "meaning": "rod, fruct; figurat, rezultat."
             },
             {
               "original": "ἀνομία",
               "transliteration": "anomia",
               "language": "greaca",
-              "meaning": "fărădelege, trăire care respinge voia și stăpânirea lui Dumnezeu."
+              "meaning": "fărădelege, nelegiuire; ceea ce este contrar legii."
             }
           ],
           "wordSource": "Independent lexical research; original-language glosses are not attributed to the sermon source unless the source explicitly discusses them",
