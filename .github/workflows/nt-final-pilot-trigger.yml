@@ -28,8 +28,46 @@ jobs:
           node-version: '22'
       - name: Install GitHub Copilot CLI
         run: npm install -g @github/copilot
+      - id: probe
+        name: Probe Copilot auto model
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          printf '%s\n' 'Return exactly this JSON object and nothing else: {"ok":true}' | \
+            copilot -s --no-ask-user --model auto --log-level error \
+            > /tmp/copilot-auto-probe.out 2> /tmp/copilot-auto-probe.err
+          cat /tmp/copilot-auto-probe.out
+      - name: Persist Copilot auto probe
+        if: always()
+        env:
+          PROBE_OUTCOME: ${{ steps.probe.outcome }}
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          stdout = Path('/tmp/copilot-auto-probe.out').read_text(encoding='utf-8', errors='replace')[-4000:] if Path('/tmp/copilot-auto-probe.out').exists() else ''
+          stderr = Path('/tmp/copilot-auto-probe.err').read_text(encoding='utf-8', errors='replace')[-4000:] if Path('/tmp/copilot-auto-probe.err').exists() else ''
+          payload = {
+              'outcome': os.environ.get('PROBE_OUTCOME'),
+              'runId': os.environ.get('RUN_ID'),
+              'stdout': stdout,
+              'stderr': stderr,
+          }
+          Path('docs/biblia-emanus/NT-COPILOT-AUTO-PROBE.json').write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          PY
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add docs/biblia-emanus/NT-COPILOT-AUTO-PROBE.json
+          git diff --cached --check
+          git commit -m 'docs(biblia): record Copilot auto probe'
+          git push origin HEAD:codex/nt-ai-review-handoff
       - id: review
         name: Review MAT.1 against locked sources and external benchmarks
+        if: steps.probe.outcome == 'success'
         continue-on-error: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -65,6 +103,7 @@ jobs:
           RUN_ATTEMPT: ${{ github.run_attempt }}
         run: |
           set -euo pipefail
+          git pull --ff-only origin codex/nt-ai-review-handoff
           python3 - <<'PY'
           import json, os
           from pathlib import Path
