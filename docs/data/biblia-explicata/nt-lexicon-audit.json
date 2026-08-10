@@ -1,8 +1,17 @@
 {
-  "schema": "emanus-nt-lexicon-audit-v2",
+  "schema": "emanus-nt-lexicon-audit-v3",
   "status": "manual-review-required",
-  "policy": "Automated rules catch known lexical/category errors, but publication is clean only after every current Greek/Hebrew entry is explicitly reviewed in nt-lexicon-review-ledger.json. Poonen/Emanus doctrinal conclusions remain in teaching, not disguised as uncontested lexical meaning.",
+  "policy": "Automated rules catch known lexical/category errors, but publication is clean only after every current Greek/Hebrew entry is explicitly reviewed against a pinned lexical source snapshot. Each approval must carry sourceId, exact sourceBlobSha and sourceLocator. Poonen/Emanus doctrinal conclusions remain in teaching, not disguised as uncontested lexical meaning.",
   "entries": 219,
+  "lexicalSources": [
+    {
+      "id": "stepbible-tbesg",
+      "repository": "STEPBible/STEPBible-Data",
+      "path": "Lexicons/TBESG - Translators Brief lexicon of Extended Strongs for Greek - STEPBible.org CC BY.txt",
+      "blobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+      "license": "CC BY 4.0"
+    }
+  ],
   "automatedFindingCount": 0,
   "reviewLedgerStatus": "missing",
   "reviewedEntries": 0,

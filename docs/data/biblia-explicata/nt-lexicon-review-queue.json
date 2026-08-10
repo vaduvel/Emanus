@@ -1,7 +1,10 @@
 {
-  "schema": "emanus-nt-lexicon-review-queue-v1",
-  "policy": "Every lexical entry must receive explicit lexical review. reviewId binds the book/chapter/unit/original/meaning snapshot; meaningSha256 prevents a stale approval from surviving an edit.",
+  "schema": "emanus-nt-lexicon-review-queue-v2",
+  "policy": "Every lexical entry must receive explicit lexical review. reviewId binds the book/chapter/unit/original/meaning snapshot; meaningSha256 prevents a stale approval from surviving an edit. Approval additionally requires a pinned sourceId/sourceBlobSha and a non-empty sourceLocator from nt-lexicon-review-sources.json.",
   "count": 219,
+  "allowedSourceIds": [
+    "stepbible-tbesg"
+  ],
   "entries": [
     {
       "reviewId": "934998666f2f4a94385490a94fda1c83f5a2f0aa2c20abbc45dc4be8d0ac04ff",
