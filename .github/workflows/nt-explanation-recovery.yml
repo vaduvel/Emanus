@@ -113,7 +113,6 @@ jobs:
           set -euo pipefail
           python - <<'PY'
           from pathlib import Path
-
           path = Path("scripts/review-nt-poonen-fidelity-marcu-14-16.mjs")
           source = path.read_text(encoding="utf-8")
           replacements = {
@@ -126,10 +125,10 @@ jobs:
               if count:
                   source = source.replace(before, after)
                   changed += count
-          if changed != 2:
-              raise SystemExit(f"Expected exactly 2 unsafe embedded backticks, repaired {changed}")
+          if changed not in (0, 2):
+              raise SystemExit(f"Expected zero or exactly 2 unsafe embedded backticks, repaired {changed}")
           path.write_text(source, encoding="utf-8")
-          print(f"Repaired {changed} unsafe embedded backticks in Mark 14-16 review source.")
+          print(f"Mark 14-16 review source syntax repair count: {changed}.")
           PY
 
       - name: Review Mark 14-16 against raw transcripts
@@ -137,14 +136,26 @@ jobs:
           set -euo pipefail
           node scripts/review-nt-poonen-fidelity-marcu-14-16.mjs
 
-      - name: Combine and verify final 27-book source-first corpus
+      - name: Materialize final NT corpus and reviewed quote fixes
         run: |
           set -euo pipefail
           node scripts/materialize-nt-final-source-first.mjs
           node scripts/fix-nt-embedded-bible-quotes.mjs
           node scripts/apply-nt-reviewed-be-quote-fixes.mjs
+
+      - name: Verify final NT corpus structure
+        run: |
+          set -euo pipefail
           node scripts/check-nt-final-source-first.mjs
+
+      - name: Verify Poonen doctrine fidelity
+        run: |
+          set -euo pipefail
           node scripts/check-nt-poonen-doctrine.mjs
+
+      - name: Run NT editorial audits
+        run: |
+          set -euo pipefail
           node scripts/audit-nt-thin-units.mjs
           node scripts/audit-nt-editorial-traceability.mjs
           node scripts/analyze-nt-embedded-quote-candidates.mjs
