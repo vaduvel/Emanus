@@ -40,6 +40,21 @@ const REVIEW = JSON.parse(fs.readFileSync(SPEC, "utf8"))
 if (book.id !== "2-timotei") fail(`expected 2-timotei book, got ${book.id}`)
 if (!REVIEW || Array.isArray(REVIEW) || typeof REVIEW !== "object") fail("semantic review spec must be an object keyed by unit id")
 
+// Preserve the transcript's explicit contrast: never lower the scriptural standard merely to retain a crowd.
+const chapterFour = REVIEW["2-timotei-4-1-5-source-first"]
+const oldCrowdWording = "Slujitorul nu coboară standardul pentru a păstra publicul"
+const transcriptCrowdWording = "Slujitorul nu coboară standardul pentru a păstra mulțimea"
+if (!chapterFour || chapterFour.action !== "rewrite" || typeof chapterFour.revisedTeaching !== "string") {
+  fail("2-timotei-4-1-5-source-first reviewed rewrite missing")
+}
+if (chapterFour.revisedTeaching.includes(oldCrowdWording)) {
+  chapterFour.revisedTeaching = chapterFour.revisedTeaching.replace(oldCrowdWording, transcriptCrowdWording)
+  fs.writeFileSync(SPEC, JSON.stringify(REVIEW, null, 2) + "\n", "utf8")
+  console.log("2 Timotei 4 reviewed wording restored to explicit transcript contrast: standard vs mulțime.")
+} else if (!chapterFour.revisedTeaching.includes(transcriptCrowdWording)) {
+  fail("2-timotei-4-1-5-source-first wording drifted before crowd-contrast normalization")
+}
+
 const ids = Object.keys(REVIEW)
 const rewriteCount = ids.filter((id) => REVIEW[id]?.action === "rewrite").length
 const keepCount = ids.filter((id) => REVIEW[id]?.action === "keep").length
