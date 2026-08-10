@@ -1,0 +1,90 @@
+name: Apply Galatians Manual Review Once
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-nt-integration-clean
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apply-galateni-manual-review-once
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Materialize and freeze reviewed Galatians decisions
+        run: |
+          set -euo pipefail
+          node scripts/materialize-nt-manual-semantic-galateni.mjs
+          python3 scripts/merge_nt_semantic_review_artifacts.py \
+            --input docs/data/biblia-explicata/nt-semantic-review-manual \
+            --ledger docs/data/biblia-explicata/nt-semantic-review-ledger.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          ledger = json.loads(Path('docs/data/biblia-explicata/nt-semantic-review-ledger.json').read_text(encoding='utf-8'))
+          gal = [d for d in ledger['decisions'] if d['bookId'] == 'galateni']
+          if len(ledger['decisions']) != 32 or len(gal) != 21:
+              raise SystemExit(f"Expected 32 total / 21 Galateni decisions, got {len(ledger['decisions'])} / {len(gal)}")
+          print('Frozen semantic ledger: 32 total / 21 Galateni.')
+          PY
+
+      - name: Replace exhausted external-model step with frozen manual review
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          path = Path('.github/workflows/nt-explanation-recovery.yml')
+          src = path.read_text(encoding='utf-8')
+          src = src.replace('  models: read\n  copilot-requests: write\n', '')
+          start = src.index('      - name: Install GitHub Copilot CLI for semantic review\n')
+          end = src.index('      - name: Apply frozen semantic transcript review ledger\n', start)
+          replacement = '''      - name: Materialize and merge frozen manual Galatians semantic review
+        run: |
+          set -euo pipefail
+          node scripts/materialize-nt-final-source-first.mjs
+          node scripts/materialize-nt-manual-semantic-galateni.mjs
+          python3 scripts/merge_nt_semantic_review_artifacts.py \\
+            --input docs/data/biblia-explicata/nt-semantic-review-manual \\
+            --ledger docs/data/biblia-explicata/nt-semantic-review-ledger.json
+
+'''
+          src = src[:start] + replacement + src[end:]
+          path.write_text(src, encoding='utf-8')
+          print('Recovery now uses frozen manual Galateni review; no external model call remains.')
+          PY
+          grep -q 'Materialize and merge frozen manual Galatians semantic review' .github/workflows/nt-explanation-recovery.yml
+          if grep -q 'Install GitHub Copilot CLI for semantic review' .github/workflows/nt-explanation-recovery.yml; then exit 1; fi
+          if grep -q 'nt_semantic_copilot_direct_worker.py' .github/workflows/nt-explanation-recovery.yml; then exit 1; fi
+
+      - name: Commit frozen review and remove one-shot workflow
+        run: |
+          set -euo pipefail
+          rm .github/workflows/apply-galateni-manual-review-once.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add .github/workflows/nt-explanation-recovery.yml
+          git add docs/data/biblia-explicata/nt-semantic-review-manual/09-galateni.json
+          git add docs/data/biblia-explicata/nt-semantic-review-ledger.json
+          git add -u .github/workflows/apply-galateni-manual-review-once.yml
+          git diff --cached --check
+          git commit -m 'Freeze Galatians semantic transcript review'
+          for attempt in 1 2 3; do
+            git fetch origin agent/biblia-explicata-nt-integration-clean
+            git rebase FETCH_HEAD
+            if git push origin HEAD:agent/biblia-explicata-nt-integration-clean; then exit 0; fi
+          done
+          exit 1
