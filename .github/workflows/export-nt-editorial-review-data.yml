@@ -1,0 +1,43 @@
+name: Export NT Editorial Review Data
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-nt-integration-clean
+    paths:
+      - .github/workflows/export-nt-editorial-review-data.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 1
+
+      - name: Collect review data
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/nt-editorial-review
+          cp docs/data/biblia-explicata/nt-lexicon-review-queue.json /tmp/nt-editorial-review/
+          cp docs/data/biblia-explicata/nt-lexicon-review-sources.json /tmp/nt-editorial-review/
+          cp docs/data/biblia-explicata/nt-lexicon-source-evidence-unique-compact.json /tmp/nt-editorial-review/
+          cp docs/data/biblia-explicata/nt-lexicon-source-evidence-ambiguous-index.json /tmp/nt-editorial-review/
+          cp docs/data/biblia-explicata/nt-lexicon-source-evidence-unmatched.json /tmp/nt-editorial-review/
+          cp docs/data/biblia-explicata/nt-final-source-first-manifest.json /tmp/nt-editorial-review/
+          cp docs/data/biblia-explicata/nt-publication-blockers.json /tmp/nt-editorial-review/
+          cp docs/data/biblia-explicata/nt-embedded-quote-audit.json /tmp/nt-editorial-review/ || true
+
+      - name: Upload review data
+        uses: actions/upload-artifact@v4
+        with:
+          name: nt-editorial-review-data
+          path: /tmp/nt-editorial-review
+          if-no-files-found: error
+          retention-days: 1
