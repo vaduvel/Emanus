@@ -3,7 +3,9 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import os
 import subprocess
+import sys
 from pathlib import Path
 from typing import Any
 
@@ -16,16 +18,16 @@ if spec is None or spec.loader is None:
     raise RuntimeError("Cannot load semantic base worker")
 base = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(base)
-# Explicitly avoid auto-selection: GPT-5 mini is currently a zero-multiplier paid-plan
-# Copilot model and remains sufficient for a two-pass transcript-grounded review.
-base.MODEL = "gpt-5-mini"
+# Never use Copilot's automatic model selector for publication review. The workflow
+# must name an explicit model so quota/model changes cannot silently alter the reviewer.
+base.MODEL = os.environ.get("NT_SEMANTIC_COPILOT_MODEL", "claude-haiku-4.5")
 original_load_rows = base.load_rows
 
 
 def ensure_direct() -> dict[str, Any]:
     subprocess.run(["node", "scripts/materialize-nt-direct-transcript-coverage.mjs"], cwd=ROOT, check=True)
     data = json.loads(DIRECT_PATH.read_text(encoding="utf-8"))
-    if data.get("schema") != "emanus-nt-direct-transcript-coverage-v1":
+    if data.get("schema") not in {"emanus-nt-direct-transcript-coverage-v1", "emanus-nt-direct-transcript-coverage-v2"}:
         raise RuntimeError("Unexpected direct transcript coverage schema")
     return data
 
@@ -89,5 +91,29 @@ def load_rows_with_direct(book_id: str) -> list[dict[str, Any]]:
 
 base.load_rows = load_rows_with_direct
 
+
+def requested_book(argv: list[str]) -> str | None:
+    if "--book" not in argv:
+        return None
+    index = argv.index("--book")
+    return argv[index + 1] if index + 1 < len(argv) else None
+
+
 if __name__ == "__main__":
+    book = requested_book(sys.argv)
+    if book:
+        ensure_direct()
+        hash_output = Path("/tmp") / f"semantic-transcript-hashes-{book}.json"
+        subprocess.run(
+            [
+                "python3",
+                "scripts/materialize_nt_transcript_hash_index.py",
+                "--book",
+                book,
+                "--output",
+                str(hash_output),
+            ],
+            cwd=ROOT,
+            check=True,
+        )
     raise SystemExit(base.main())
