@@ -1,6 +1,7 @@
 name: NT Final Fast Pilot
 
 # Temporary throughput pilot for PR #83. Remove after observation.
+# v2: exact short-anchor policy + one 25-verse chunk.
 on:
   push:
     branches:
@@ -36,7 +37,7 @@ jobs:
           NT_FINAL_COPILOT_MODEL: auto
           NT_FINAL_COPILOT_TIMEOUT: '300'
           NT_FINAL_CHUNK_SIZE: '25'
-          NT_FINAL_CHUNK_ATTEMPTS: '2'
+          NT_FINAL_CHUNK_ATTEMPTS: '3'
         run: |
           set -euo pipefail
           python3 scripts/nt_final_editorial_copilot_chunked_runner.py \
@@ -78,7 +79,7 @@ jobs:
               'reviewOutcome': os.environ.get('REVIEW_OUTCOME'),
               'shapeOutcome': os.environ.get('SHAPE_OUTCOME'),
               'runId': os.environ.get('RUN_ID'),
-              'reviewerSystem': 'GitHub Copilot CLI auto; chunk-size=25; one-request-throughput-pilot',
+              'reviewerSystem': 'GitHub Copilot CLI auto; chunk-size=25; short-anchor-policy-v2',
               'diagnosticTail': log,
           }
           Path('docs/biblia-emanus/NT-FINAL-FAST-PILOT.json').write_text(json.dumps(out, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
