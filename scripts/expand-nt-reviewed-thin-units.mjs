@@ -72,8 +72,8 @@ const PATCHES = new Map([
   }],
   ["2-corinteni-11-16-21", {
     ref: "2 Corinteni 11:16-21",
-    appendTeaching: "Ironia lui Pavel scoate la lumină contrastul: ei suportau dominația agresivă, în timp ce îl considerau slab pe apostolul care refuza să-i trateze astfel.",
-    basis: "2 Corinteni 11:19-21 — tolerarea celor dominatori și ironia despre slăbiciunea lui Pavel",
+    appendTeaching: "Ironia lui Pavel scoate la lumină contrastul: ei suportau dominația agresivă, în timp ce îl considerau slab pe apostolul care refuza să-i trateze astfel. Pavel spune că le vorbește spre rușine ca și cum el ar fi fost slab, apoi începe comparația cu cei pe care comunitatea îi tolera.",
+    basis: "2 Corinteni 11:19-21 — tolerarea celor dominatori, ironia despre slăbiciunea lui Pavel și începutul comparației",
   }],
   ["efeseni-6-1-4", {
     ref: "Efeseni 6:1-4",
