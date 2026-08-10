@@ -93,6 +93,7 @@ jobs:
           node scripts/normalize-nt-reviewed-romanian-residual.mjs
           node scripts/expand-nt-reviewed-thin-units.mjs
           node scripts/review-nt-poonen-fidelity.mjs
+          node scripts/review-nt-poonen-fidelity-marcu-3-4.mjs
 
       - name: Combine and verify final 27-book source-first corpus
         run: |
