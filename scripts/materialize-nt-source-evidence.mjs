@@ -160,3 +160,5 @@ const output = {
 fs.mkdirSync(path.dirname(outputPath), { recursive: true })
 fs.writeFileSync(outputPath, JSON.stringify(output, null, 2) + "\n", "utf8")
 console.log(`NT source evidence materialized: ${records.length} locator records (${recoveredEpisodeRecords} recovered-book episode records + ${recoveredOfficialGapRecords} direct official John/Titus records + ${recoveredSupportingRangeRecords} supporting transcript records).`)
+
+await import("./enrich-nt-source-evidence-transcripts.mjs")
