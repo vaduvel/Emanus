@@ -69,19 +69,35 @@ for (const cfg of CONFIG) {
   const bookPath=path.join(ROOT,"docs/data/biblia-explicata/nt-final-source-first",cfg.file)
   const specPath=path.join(ROOT,"docs/data/biblia-explicata/nt-semantic-review-spec",cfg.spec)
   if (!fs.existsSync(bookPath)||!fs.existsSync(specPath)) fail(`${cfg.bookId}: missing book/spec`)
-  const blob=execFileSync("git",["hash-object",bookPath],{cwd:ROOT,encoding:"utf8"}).trim()
-  if (blob !== cfg.expectedBlob) fail(`${cfg.bookId}: pre-review book blob drifted: ${blob} != ${cfg.expectedBlob}`)
-  const book=JSON.parse(fs.readFileSync(bookPath,"utf8")); const spec=JSON.parse(fs.readFileSync(specPath,"utf8"))
+  const book=JSON.parse(fs.readFileSync(bookPath,"utf8"))
+  const spec=JSON.parse(fs.readFileSync(specPath,"utf8"))
   if (spec.schema!=="emanus-manual-review-spec-v2"||spec.bookId!==cfg.bookId||spec.expectedBookGitBlobSha1!==cfg.expectedBlob) fail(`${cfg.bookId}: spec metadata drifted`)
-  const review=spec.decisions??{}; const ids=Object.keys(review)
+
+  let baseline
+  try {
+    baseline=JSON.parse(execFileSync("git",["cat-file","-p",cfg.expectedBlob],{cwd:ROOT,encoding:"utf8",maxBuffer:20*1024*1024}))
+  } catch (error) {
+    fail(`${cfg.bookId}: immutable pre-review blob ${cfg.expectedBlob} is unavailable: ${error.message}`)
+  }
+  if (baseline.id!==cfg.bookId) fail(`${cfg.bookId}: immutable baseline blob belongs to ${baseline.id}`)
+
+  const review=spec.decisions??{}
+  const ids=Object.keys(review)
   const rw=ids.filter(id=>review[id]?.action==="rewrite").length, kp=ids.filter(id=>review[id]?.action==="keep").length
   if(ids.length!==cfg.expected.total||rw!==cfg.expected.rewrite||kp!==cfg.expected.keep) fail(`${cfg.bookId}: expected ${cfg.expected.total} (${cfg.expected.rewrite}/${cfg.expected.keep}), got ${ids.length} (${rw}/${kp})`)
+
   const units=new Map(); for(const ch of book.chapters??[]) for(const unit of ch.units??[]) units.set(unit.id,{chapter:ch.number,unit})
-  if(units.size!==ids.length) fail(`${cfg.bookId}: unit count ${units.size} != ${ids.length}`)
+  const baselineUnits=new Map(); for(const ch of baseline.chapters??[]) for(const unit of ch.units??[]) baselineUnits.set(unit.id,{chapter:ch.number,unit})
+  if(units.size!==ids.length||baselineUnits.size!==ids.length) fail(`${cfg.bookId}: unit count drift; current=${units.size}, baseline=${baselineUnits.size}, reviewed=${ids.length}`)
+
   const meta=sectionMeta[cfg.section]
   const decisions=[]
   for(const id of ids){
-    const s=review[id], loc=units.get(id); if(!loc) fail(`${cfg.bookId}: missing ${id}`); if(loc.chapter!==s.chapter) fail(`${id}: chapter drift`)
+    const s=review[id], loc=units.get(id), base=baselineUnits.get(id)
+    if(!loc||!base) fail(`${cfg.bookId}: missing current/baseline ${id}`)
+    if(loc.chapter!==s.chapter||base.chapter!==s.chapter) fail(`${id}: chapter drift`)
+    const currentSnapshotSha=sha(snap(loc.unit)), baselineSnapshotSha=sha(snap(base.unit))
+    if(currentSnapshotSha!==baselineSnapshotSha) fail(`${id}: reader-copy snapshot drifted from reviewed immutable blob; ${currentSnapshotSha} != ${baselineSnapshotSha}`)
     if(!["keep","rewrite"].includes(s.action)||!String(s.rationale??"").trim()) fail(`${id}: invalid review decision`)
     const teaching=s.action==="rewrite"?s.revisedTeaching:loc.unit.teaching
     if(typeof teaching!=="string"||teaching.trim().length<80) fail(`${id}: final teaching too short`)
@@ -94,7 +110,7 @@ for (const cfg of CONFIG) {
   }
   fs.writeFileSync(path.join(OUTDIR,cfg.file),JSON.stringify({schema:"emanus-nt-semantic-review-book-v1",bookId:cfg.bookId,reviewMode:"manual-sentence-level-against-derived-book-segment-of-persisted-official-cfc-audio-transcript",decisions},null,2)+"\n")
   grand.push(...decisions)
-  console.log(`${cfg.bookId}: ${decisions.length} decisions (${rw} rewrite / ${kp} keep); section ${meta.words} words sha ${meta.sha256}`)
+  console.log(`${cfg.bookId}: ${decisions.length} decisions (${rw} rewrite / ${kp} keep); section ${meta.words} words sha ${meta.sha256}; reader copy bound to immutable blob ${cfg.expectedBlob}.`)
 }
 if(grand.length!==17||grand.filter(d=>d.action==="rewrite").length!==8||grand.filter(d=>d.action==="keep").length!==9) fail("batch totals drifted")
 console.log(`Tit+Filimon semantic batch: 17 decisions (8 rewrite / 9 keep).`)
