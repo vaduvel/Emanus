@@ -57,18 +57,35 @@ const actualBlobSha = gitBlobSha(sourceBuffer)
 if (actualBlobSha !== source.blobSha) fail(`TBESG blob mismatch: ${actualBlobSha} != ${source.blobSha}`)
 const rawSource = sourceBuffer.toString("utf8")
 
+// TBESG is tab-separated. Column 4 (zero-based index 3) is the canonical Greek
+// lemma field. Match ONLY there. Searching every Greek token in the whole raw
+// line creates false evidence when an inflected word merely appears inside the
+// definition/example text of an unrelated lemma.
 const lines = rawSource.split(/\r?\n/u)
-const byGreekToken = new Map()
+const byCanonicalLemma = new Map()
 for (let index = 0; index < lines.length; index += 1) {
   const rawLine = lines[index]
   if (!rawLine.trim()) continue
-  const tokens = new Set(greekTokens(rawLine))
-  for (const token of tokens) {
-    if (!byGreekToken.has(token)) byGreekToken.set(token, [])
-    byGreekToken.get(token).push({
+  const columns = rawLine.split("\t")
+  if (columns.length < 4) continue
+  const strongId = String(columns[0] ?? "").trim()
+  const lemmaField = String(columns[3] ?? "").trim()
+  const transliteration = String(columns[4] ?? "").trim()
+  const morphology = String(columns[5] ?? "").trim()
+  const briefGloss = String(columns[6] ?? "").trim()
+  const lemmaTokens = new Set(greekTokens(lemmaField))
+  for (const token of lemmaTokens) {
+    if (!byCanonicalLemma.has(token)) byCanonicalLemma.set(token, [])
+    byCanonicalLemma.get(token).push({
       lineNumber: index + 1,
+      strongId,
+      lemmaField,
+      transliteration,
+      morphology,
+      briefGloss,
       rawLine,
       lineSha256: `sha256:${sha256(rawLine)}`,
+      matchKind: "canonical-lemma-column-exact",
     })
   }
 }
@@ -82,7 +99,7 @@ for (const file of fs.readdirSync(corpusDir).filter((name) => name.endsWith(".js
         const meaning = String(word.meaning ?? "")
         const reviewId = sha256(`${book.id}\u0000${chapter.number}\u0000${unit.ref}\u0000${word.original}\u0000${meaning}`)
         const normalizedLemma = normalizeGreek(word.original)
-        const candidates = (byGreekToken.get(normalizedLemma) ?? [])
+        const candidates = (byCanonicalLemma.get(normalizedLemma) ?? [])
           .slice(0, 12)
           .map((candidate) => ({
             sourceId: source.id,
@@ -90,6 +107,12 @@ for (const file of fs.readdirSync(corpusDir).filter((name) => name.endsWith(".js
             sourceBlobSha: source.blobSha,
             sourceLocator: `TBESG line ${candidate.lineNumber}`,
             lineNumber: candidate.lineNumber,
+            strongId: candidate.strongId,
+            canonicalLemma: candidate.lemmaField,
+            transliteration: candidate.transliteration,
+            morphology: candidate.morphology,
+            briefGloss: candidate.briefGloss,
+            matchKind: candidate.matchKind,
             lineSha256: candidate.lineSha256,
             rawLine: candidate.rawLine,
           }))
@@ -115,8 +138,8 @@ const unique = entries.filter((entry) => entry.candidateCount === 1).length
 const ambiguous = entries.filter((entry) => entry.candidateCount > 1).length
 const unmatched = entries.length - matched
 const output = {
-  schema: "emanus-nt-lexicon-source-evidence-v1",
-  policy: "Diagnostic/source-review evidence only. The source bytes are fetched from the pinned repository commit and rejected unless their computed Git blob SHA equals the registered blobSha. Candidates are exact Unicode-normalized Greek lemma-token matches in TBESG; a candidate never constitutes automatic approval of the Romanian gloss.",
+  schema: "emanus-nt-lexicon-source-evidence-v2",
+  policy: "Diagnostic/source-review evidence only. The source bytes are fetched from the pinned repository commit and rejected unless their computed Git blob SHA equals the registered blobSha. A match is accepted only when the normalized Emanus form exactly matches a Greek token in TBESG's canonical lemma column; Greek words appearing only in definition/example text are ignored. A candidate never constitutes automatic approval of the Romanian gloss.",
   source: {
     id: source.id,
     repository: source.repository,
@@ -130,4 +153,4 @@ const output = {
   entries,
 }
 fs.writeFileSync(outputPath, JSON.stringify(output, null, 2) + "\n", "utf8")
-console.log(`NT lexicon source evidence: ${entries.length} entries / ${matched} matched / ${unique} unique / ${ambiguous} ambiguous / ${unmatched} unmatched / blob ${actualBlobSha}.`)
+console.log(`NT lexicon source evidence: ${entries.length} entries / ${matched} canonical-lemma matches / ${unique} unique / ${ambiguous} ambiguous / ${unmatched} unmatched / blob ${actualBlobSha}.`)
