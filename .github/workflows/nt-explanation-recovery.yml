@@ -102,7 +102,15 @@ jobs:
           node scripts/review-nt-poonen-fidelity-marcu-10.mjs
           node scripts/review-nt-poonen-fidelity-marcu-11.mjs
           node scripts/review-nt-poonen-fidelity-marcu-12.mjs
+
+      - name: Review Mark 13 against raw transcript
+        run: |
+          set -euo pipefail
           node scripts/review-nt-poonen-fidelity-marcu-13.mjs
+
+      - name: Review Mark 14-16 against raw transcripts
+        run: |
+          set -euo pipefail
           node scripts/review-nt-poonen-fidelity-marcu-14-16.mjs
 
       - name: Combine and verify final 27-book source-first corpus
