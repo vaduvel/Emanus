@@ -68,9 +68,50 @@ jobs:
           cp docs/data/biblia-explicata/nt-final-source-first/19-evrei.json /tmp/evrei-transcripts/19-evrei.json
           cp docs/data/biblia-explicata/nt-direct-transcript-coverage.json /tmp/evrei-transcripts/nt-direct-transcript-coverage.json
 
+      - name: Export exact 2 Ioan, 3 Ioan and Iuda transcript representation
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/ioan-iuda-transcript
+          python3 - <<'PY'
+          import importlib.util
+          import json
+          from pathlib import Path
+
+          root = Path('.').resolve()
+          worker_path = root / 'scripts/nt_semantic_copilot_worker.py'
+          spec = importlib.util.spec_from_file_location('emanus_semantic_export_john_jude', worker_path)
+          if spec is None or spec.loader is None:
+              raise SystemExit('Cannot load semantic worker extractor')
+          worker = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(worker)
+
+          url = 'https://www.sermonindex.net/speakers/zac-poonen/through-the-bible-2-john-3-john-jude/'
+          text = worker.extract_transcript(url)
+          sha = worker.sha256(text)
+          out = Path('/tmp/ioan-iuda-transcript')
+          (out / '2-john-3-john-jude.txt').write_text(text + '\n', encoding='utf-8')
+          (out / 'manifest.json').write_text(json.dumps({
+              'url': url,
+              'sha256': sha,
+              'words': len(text.split()),
+          }, indent=2) + '\n', encoding='utf-8')
+          print('2-john-3-john-jude.txt', sha, len(text.split()))
+          PY
+          cp docs/data/biblia-explicata/nt-final-source-first/24-2-ioan.json /tmp/ioan-iuda-transcript/24-2-ioan.json
+          cp docs/data/biblia-explicata/nt-final-source-first/25-3-ioan.json /tmp/ioan-iuda-transcript/25-3-ioan.json
+          cp docs/data/biblia-explicata/nt-final-source-first/26-iuda.json /tmp/ioan-iuda-transcript/26-iuda.json
+          cp docs/data/biblia-explicata/nt-direct-transcript-coverage.json /tmp/ioan-iuda-transcript/nt-direct-transcript-coverage.json
+
       - uses: actions/upload-artifact@v4
         with:
           name: evrei-full-transcripts
           path: /tmp/evrei-transcripts
+          if-no-files-found: error
+          retention-days: 1
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: 2-3-ioan-iuda-exact-transcript
+          path: /tmp/ioan-iuda-transcript
           if-no-files-found: error
           retention-days: 1
