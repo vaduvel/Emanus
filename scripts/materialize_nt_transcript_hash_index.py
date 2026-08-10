@@ -66,6 +66,7 @@ def main() -> int:
     direct = json.loads(DIRECT.read_text(encoding="utf-8")) if DIRECT.exists() else {"entries": []}
     evidence = json.loads(EVIDENCE.read_text(encoding="utf-8")) if EVIDENCE.exists() else {"records": []}
     targets: dict[str, dict] = {}
+    direct_urls_for_book: set[str] = set()
 
     for item in direct.get("entries", []):
         if args.book and item.get("bookId") != args.book:
@@ -73,6 +74,7 @@ def main() -> int:
         url = item.get("transcriptRepresentationUrl")
         if not isinstance(url, str) or not url.startswith("https://"):
             continue
+        direct_urls_for_book.add(url)
         row = targets.setdefault(url, {"transcriptUrl": url, "books": set(), "officialSourceUrls": set(), "sourceRanges": set(), "unitIds": set()})
         row["books"].add(item.get("bookId"))
         row["officialSourceUrls"].add(item.get("officialSourceUrl"))
@@ -82,6 +84,8 @@ def main() -> int:
     for rec in evidence.get("records", []):
         url = rec.get("transcriptRepresentationUrl")
         if not isinstance(url, str) or not url.startswith("https://"):
+            continue
+        if args.book and url not in direct_urls_for_book:
             continue
         row = targets.setdefault(url, {"transcriptUrl": url, "books": set(), "officialSourceUrls": set(), "sourceRanges": set(), "unitIds": set()})
         official = rec.get("officialSeriesUrl") or rec.get("sourceUrl")
@@ -93,16 +97,17 @@ def main() -> int:
     out = []
     for idx, (url, meta) in enumerate(sorted(targets.items()), 1):
         transcript, words = extract(url)
+        digest = sha256(transcript)
         out.append({
             "transcriptUrl": url,
-            "transcriptSha256": sha256(transcript),
+            "transcriptSha256": digest,
             "wordCount": words,
             "books": sorted(x for x in meta["books"] if x),
             "officialSourceUrls": sorted(x for x in meta["officialSourceUrls"] if x),
             "sourceRanges": sorted(x for x in meta["sourceRanges"] if x),
             "unitIds": sorted(x for x in meta["unitIds"] if x),
         })
-        print(f"hashed {idx}/{len(targets)}: {url} ({words} words)", flush=True)
+        print(f"TRANSCRIPT_HASH {idx}/{len(targets)} {digest} words={words} url={url}", flush=True)
 
     payload = {
         "schema": "emanus-nt-transcript-hash-index-v1",
