@@ -34,6 +34,7 @@ const uniqueCompact = unique.map((entry) => {
     morphology: candidate.morphology,
     briefGloss: candidate.briefGloss,
     matchKind: candidate.matchKind,
+    ...(candidate.morphgntEvidence ? { morphgntEvidence: candidate.morphgntEvidence } : {}),
   }
 })
 const unmatched = entries
@@ -51,44 +52,50 @@ const ambiguous = entries
     meaning: entry.meaning,
     meaningSha256: entry.meaningSha256,
     candidateCount: entry.candidateCount,
-    candidates: entry.candidates.slice(0, 6).map((candidate) => ({
+    candidates: entry.candidates.slice(0, 12).map((candidate) => ({
       sourceId: candidate.sourceId,
       sourceBlobSha: candidate.sourceBlobSha,
       sourceLocator: candidate.sourceLocator,
       strongId: candidate.strongId,
       canonicalLemma: candidate.canonicalLemma,
       briefGloss: candidate.briefGloss,
+      matchKind: candidate.matchKind,
       lineSha256: candidate.lineSha256,
       rawLine: candidate.rawLine,
+      ...(candidate.morphgntEvidence ? { morphgntEvidence: candidate.morphgntEvidence } : {}),
     })),
   }))
 
 fs.writeFileSync(uniquePath, JSON.stringify({
-  schema: "emanus-nt-lexicon-source-evidence-unique-v2",
-  policy: "Review batch only. Each entry has exactly one exact normalized match in TBESG's canonical lemma column; semantic agreement of the Romanian gloss still requires review.",
+  schema: "emanus-nt-lexicon-source-evidence-unique-v3",
+  policy: "Review batch only. Each entry has exactly one TBESG Strong/lemma candidate after direct canonical-lemma matching or passage-bounded MorphGNT 6.12 lemmatization. Semantic agreement of the Romanian gloss still requires human review.",
   source: evidence.source,
+  morphologySource: evidence.morphologySource,
   count: unique.length,
   entries: unique,
 }, null, 2) + "\n", "utf8")
 fs.writeFileSync(uniqueCompactPath, JSON.stringify({
-  schema: "emanus-nt-lexicon-source-evidence-unique-compact-v1",
-  policy: "Compact human-review projection of exact canonical-lemma TBESG matches. It intentionally omits long dictionary examples while retaining Strong ID, canonical lemma, morphology, brief gloss, pinned source locator and meaning hash.",
+  schema: "emanus-nt-lexicon-source-evidence-unique-compact-v2",
+  policy: "Compact human-review projection of TBESG candidates, retaining Strong ID, canonical lemma, morphology, brief gloss, pinned TBESG locator, meaning hash and MorphGNT passage-form lemmatization evidence when used.",
   source: evidence.source,
+  morphologySource: evidence.morphologySource,
   count: uniqueCompact.length,
   entries: uniqueCompact,
 }, null, 2) + "\n", "utf8")
 fs.writeFileSync(unmatchedPath, JSON.stringify({
-  schema: "emanus-nt-lexicon-source-evidence-unmatched-v2",
-  policy: "Entries with no exact normalized match in TBESG's canonical lemma column. These are commonly inflected or multi-word forms and require lemmatization or another pinned lexical reference; they are not approvable from absence of evidence.",
+  schema: "emanus-nt-lexicon-source-evidence-unmatched-v3",
+  policy: "Entries with no verified TBESG candidate even after passage-bounded MorphGNT 6.12 form-to-lemma resolution. These require manual lemmatization, correction of the original-language note, or another pinned lexical reference; they are not approvable from absence of evidence.",
   source: evidence.source,
+  morphologySource: evidence.morphologySource,
   count: unmatched.length,
   entries: unmatched,
 }, null, 2) + "\n", "utf8")
 fs.writeFileSync(ambiguousPath, JSON.stringify({
-  schema: "emanus-nt-lexicon-source-evidence-ambiguous-index-v2",
-  policy: "Entries with multiple exact TBESG canonical-lemma records. Candidate records are retained for Strong/sense disambiguation; no candidate is auto-selected.",
+  schema: "emanus-nt-lexicon-source-evidence-ambiguous-index-v3",
+  policy: "Entries with multiple TBESG Strong/lemma candidates after direct or passage-bounded MorphGNT resolution. Candidate records are retained for sense disambiguation; no candidate is auto-selected.",
   source: evidence.source,
+  morphologySource: evidence.morphologySource,
   count: ambiguous.length,
   entries: ambiguous,
 }, null, 2) + "\n", "utf8")
-console.log(`NT lexical review batches: ${unique.length} exact-lemma unique / ${ambiguous.length} ambiguous / ${unmatched.length} unmatched.`)
+console.log(`NT lexical review batches: ${unique.length} unique / ${ambiguous.length} ambiguous / ${unmatched.length} unmatched.`)
