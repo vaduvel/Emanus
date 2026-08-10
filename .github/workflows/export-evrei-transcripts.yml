@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   export:
@@ -25,7 +25,6 @@ jobs:
         with:
           ref: agent/biblia-explicata-nt-integration-clean
           fetch-depth: 1
-          persist-credentials: true
 
       - name: Export exact semantic transcript representations
         run: |
@@ -68,68 +67,6 @@ jobs:
           PY
           cp docs/data/biblia-explicata/nt-final-source-first/19-evrei.json /tmp/evrei-transcripts/19-evrei.json
           cp docs/data/biblia-explicata/nt-direct-transcript-coverage.json /tmp/evrei-transcripts/nt-direct-transcript-coverage.json
-
-      - name: Recover durable semantic review spec
-        run: |
-          set -euo pipefail
-          node <<'NODE'
-          const fs = require('fs')
-          const path = require('path')
-          const zlib = require('zlib')
-          const src = fs.readFileSync('scripts/materialize-nt-manual-semantic-evrei.mjs','utf8')
-          const m = src.match(/const REVIEW=JSON\.parse\(zlib\.inflateSync\(Buffer\.from\("([A-Za-z0-9+/=]+)"/)
-          if (!m) throw new Error('embedded review payload not found')
-          const compressed = Buffer.from(m[1], 'base64')
-          const partial = zlib.inflateSync(compressed, { finishFlush: zlib.constants.Z_SYNC_FLUSH }).toString('utf8')
-          const marker = ',"evrei-13-1-6-source-first"'
-          const cut = partial.indexOf(marker)
-          if (cut < 0) throw new Error('could not locate intact/corrupt boundary before Hebrews 13')
-          const recovered = JSON.parse(partial.slice(0, cut) + '}')
-          if (Object.keys(recovered).length !== 38) throw new Error(`expected 38 intact decisions, recovered ${Object.keys(recovered).length}`)
-          const keepRationale = 'Copy-ul curent păstrează fără omisiune materială doctrina și aplicația dezvoltate în transcript pentru această unitate; nu a fost adăugată cercetare străină sursei și nu există atribuire modernă în textul cititorului.'
-          const repaired = {
-            'evrei-13-1-6-source-first': {
-              chapter: 13,
-              expectedCurrentSnapshotSha256: 'sha256:262f733c6e29a83f98d6111e03b326bc607d5ee90ce2ec25fecc8496e3124ef1',
-              action: 'keep',
-              rationale: keepRationale,
-            },
-            'evrei-13-7-17-source-first': {
-              chapter: 13,
-              expectedCurrentSnapshotSha256: 'sha256:1f62e78dde43f360424217eda3a088c26c7b5f324ca56fa666b056bdf023197b',
-              action: 'rewrite',
-              rationale: 'Transcriptul dezvoltă material Evrei 13:7–17 în trei direcții pe care copy-ul anterior le comprima: rodul concret al conducătorilor și puterea neschimbată a lui Isus de a produce biruință asupra păcatului, ieșirea din tabăra religioasă prin punerea trupului și voii proprii pe altar, și jertfele Noului Legământ — laudă, mulțumire, facere de bine și împărțire — înainte de ascultarea de liderii evlavioși.',
-              revisedTeaching: 'Conducătorii care ne-au vestit Cuvântul nu sunt urmați pentru elocvență, ci după rodul pe care adevărul l-a produs în viața lor: smerenie, dragoste, curăție și eliberare de iubirea banilor. Le imităm credința deoarece Isus Hristos este același ieri, azi și în veci; ceea ce a lucrat în credincioșii de la început poate lucra și astăzi, inclusiv o viață de biruință asupra păcatului. Inima este întărită prin har, nu prin învățături și ritualuri care nu produc evlavie. Altarul Noului Legământ este calea crucii: urmându-L pe Isus în afara taberei religioase, ne punem trupul înaintea lui Dumnezeu ca jertfă vie și renunțăm la voia proprie ca să facem voia Lui, chiar cu prețul ocării. Prin Isus aducem continuu jertfa laudei și mulțumirii, facem bine și împărțim cu alții ceea ce avem. Iar față de conducătorii cu adevărat rânduiți de Dumnezeu, care veghează asupra sufletelor și vor da socoteală, răspundem cu ascultare și supunere în Domnul.',
-            },
-            'evrei-13-18-25-source-first': {
-              chapter: 13,
-              expectedCurrentSnapshotSha256: 'sha256:6a9117f8b2835bfb467513a0c3def797e3725705cb44a3af59f4e2cb4d344208',
-              action: 'keep',
-              rationale: keepRationale,
-            },
-          }
-          const review = {...recovered, ...repaired}
-          const values = Object.values(review)
-          const rewrites = values.filter(v => v.action === 'rewrite').length
-          const keeps = values.filter(v => v.action === 'keep').length
-          if (values.length !== 41 || rewrites !== 16 || keeps !== 25) {
-            throw new Error(`repaired count mismatch: ${values.length} decisions / ${rewrites} rewrite / ${keeps} keep`)
-          }
-          const out = 'docs/data/biblia-explicata/nt-semantic-review-spec/19-evrei.json'
-          fs.mkdirSync(path.dirname(out), {recursive: true})
-          fs.writeFileSync(out, JSON.stringify(review, null, 2) + '\n', 'utf8')
-          console.log(`Recovered durable Evrei spec: ${values.length} decisions (${rewrites} rewrite / ${keeps} keep).`)
-          NODE
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/data/biblia-explicata/nt-semantic-review-spec/19-evrei.json
-          if git diff --cached --quiet; then
-            echo "Durable Evrei semantic review spec already current."
-          else
-            git commit -m "Recover durable Evrei semantic review spec"
-            git pull --rebase origin agent/biblia-explicata-nt-integration-clean
-            git push origin HEAD:agent/biblia-explicata-nt-integration-clean
-          fi
 
       - uses: actions/upload-artifact@v4
         with:
