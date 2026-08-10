@@ -1,9 +1,21 @@
 {
   "schema": "emanus-nt-embedded-quote-fix-ledger-v1",
   "policy": "Only unique same-chapter Biblia Emanus candidates with <=1 token edit (<=2 for long quotes), >=0.88 sequence score and >=0.80 token overlap are replaced. Ambiguous/non-Bible quotations remain untouched and blocked for manual classification.",
-  "fixed": 0,
-  "skipped": 75,
-  "fixes": [],
+  "fixed": 1,
+  "skipped": 74,
+  "fixes": [
+    {
+      "bookId": "1-ioan",
+      "canonicalBookId": "1JN",
+      "chapter": 4,
+      "field": "teaching",
+      "before": "Cum este El, așa suntem și noi în lumea aceasta",
+      "after": "cum este el, așa suntem și noi în această",
+      "tokenDistance": 1,
+      "score": 0.9,
+      "overlap": 0.9
+    }
+  ],
   "unresolvedCandidates": [
     {
       "bookId": "matei",
@@ -521,13 +533,6 @@
       "chapter": 1,
       "field": "teaching",
       "quote": "Primește-l ca pe mine însumi",
-      "reason": "no-unique-high-confidence-same-chapter-match"
-    },
-    {
-      "bookId": "1-ioan",
-      "chapter": 1,
-      "field": "teaching",
-      "quote": "dacă zicem că nu avem păcat, ne înșelăm",
       "reason": "no-unique-high-confidence-same-chapter-match"
     }
   ]

@@ -1,7 +1,7 @@
 {
   "schema": "emanus-nt-embedded-quote-reviewed-fix-wave-3-ledger-v1",
   "policy": "Exact reader quotations are aligned only to exact wording present in the current provisional Biblia Emanus chapter. Where the provisional Bible wording is corrupted or the explanation intentionally paraphrases a biblical idea, quotation marks are removed without changing the explanatory claim; these locations must be reconsidered when the final canonical text is frozen.",
-  "count": 36,
+  "count": 35,
   "changes": [
     {
       "bookId": "marcu",
@@ -178,17 +178,6 @@
       "action": "exact-be-rewrite",
       "beforeSha256": "sha256:28930e23a726c42ce24f892ef73f265df5b97da12128bea4b7796368dead3b7b",
       "afterSha256": "sha256:f2d40e704760806b87e3f9ddecb6eefcd2abbc02c9555418617849c6bffad566"
-    },
-    {
-      "bookId": "1-ioan",
-      "canonicalBookId": "1JN",
-      "chapter": 1,
-      "field": "units[1].teaching",
-      "before": "dacă zicem că nu avem păcat, ne înșelăm",
-      "after": "Dacă spunem că nu avem păcat, ne amăgim pe noi înșine",
-      "action": "exact-be-rewrite",
-      "beforeSha256": "sha256:54ced7044f8eb35e44cce222a0aee489589e28c46fafaa0d1685dbc7f02f963e",
-      "afterSha256": "sha256:a8c61da2555b32d521957c9286d52f1349415199c3fc888338154a5a17935762"
     },
     {
       "bookId": "matei",

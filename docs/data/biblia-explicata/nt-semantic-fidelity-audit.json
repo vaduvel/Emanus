@@ -6,9 +6,9 @@
     "books": 27,
     "units": 970,
     "rawTranscriptReviewed": 73,
-    "semanticTranscriptReviewed": 123,
-    "pendingSemanticReview": 774,
-    "staleSemanticReview": 0,
+    "semanticTranscriptReviewed": 136,
+    "pendingSemanticReview": 761,
+    "staleSemanticReview": 1,
     "malformedSemanticEvidence": 0
   },
   "byBook": {
@@ -147,8 +147,8 @@
     "1-ioan": {
       "units": 14,
       "rawTranscriptReviewed": 0,
-      "semanticTranscriptReviewed": 0,
-      "pendingSemanticReview": 14
+      "semanticTranscriptReviewed": 13,
+      "pendingSemanticReview": 1
     },
     "2-ioan": {
       "units": 4,
@@ -7238,143 +7238,14 @@
     },
     {
       "severity": "blocker",
-      "code": "semantic-transcript-review-missing",
-      "bookId": "1-ioan",
-      "chapter": 1,
-      "unitId": "1-ioan-1-1-4-source-first",
-      "ref": "1 Ioan 1:1-4",
-      "currentReviewState": "reviewed-against-source-locators",
-      "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-    },
-    {
-      "severity": "blocker",
-      "code": "semantic-transcript-review-missing",
-      "bookId": "1-ioan",
-      "chapter": 1,
-      "unitId": "1-ioan-1-5-10-source-first",
-      "ref": "1 Ioan 1:5-10",
-      "currentReviewState": "reviewed-against-source-locators",
-      "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-    },
-    {
-      "severity": "blocker",
-      "code": "semantic-transcript-review-missing",
-      "bookId": "1-ioan",
-      "chapter": 2,
-      "unitId": "1-ioan-2-1-6-source-first",
-      "ref": "1 Ioan 2:1-6",
-      "currentReviewState": "reviewed-against-source-locators",
-      "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-    },
-    {
-      "severity": "blocker",
-      "code": "semantic-transcript-review-missing",
-      "bookId": "1-ioan",
-      "chapter": 2,
-      "unitId": "1-ioan-2-7-17-source-first",
-      "ref": "1 Ioan 2:7-17",
-      "currentReviewState": "reviewed-against-source-locators",
-      "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-    },
-    {
-      "severity": "blocker",
-      "code": "semantic-transcript-review-missing",
-      "bookId": "1-ioan",
-      "chapter": 2,
-      "unitId": "1-ioan-2-18-27-source-first",
-      "ref": "1 Ioan 2:18-27",
-      "currentReviewState": "reviewed-against-source-locators",
-      "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-    },
-    {
-      "severity": "blocker",
-      "code": "semantic-transcript-review-missing",
-      "bookId": "1-ioan",
-      "chapter": 2,
-      "unitId": "1-ioan-2-28-29-source-first",
-      "ref": "1 Ioan 2:28-29",
-      "currentReviewState": "reviewed-against-source-locators",
-      "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-    },
-    {
-      "severity": "blocker",
-      "code": "semantic-transcript-review-missing",
-      "bookId": "1-ioan",
-      "chapter": 3,
-      "unitId": "1-ioan-3-1-10-source-first",
-      "ref": "1 Ioan 3:1-10",
-      "currentReviewState": "reviewed-against-source-locators",
-      "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-    },
-    {
-      "severity": "blocker",
-      "code": "semantic-transcript-review-missing",
-      "bookId": "1-ioan",
-      "chapter": 3,
-      "unitId": "1-ioan-3-11-24-source-first",
-      "ref": "1 Ioan 3:11-24",
-      "currentReviewState": "reviewed-against-source-locators",
-      "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-    },
-    {
-      "severity": "blocker",
-      "code": "semantic-transcript-review-missing",
-      "bookId": "1-ioan",
-      "chapter": 4,
-      "unitId": "1-ioan-4-1-6-source-first",
-      "ref": "1 Ioan 4:1-6",
-      "currentReviewState": "reviewed-against-source-locators",
-      "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-    },
-    {
-      "severity": "blocker",
-      "code": "semantic-transcript-review-missing",
+      "code": "semantic-transcript-review-stale",
       "bookId": "1-ioan",
       "chapter": 4,
       "unitId": "1-ioan-4-7-21-source-first",
       "ref": "1 Ioan 4:7-21",
-      "currentReviewState": "reviewed-against-source-locators",
-      "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-    },
-    {
-      "severity": "blocker",
-      "code": "semantic-transcript-review-missing",
-      "bookId": "1-ioan",
-      "chapter": 5,
-      "unitId": "1-ioan-5-1-5-source-first",
-      "ref": "1 Ioan 5:1-5",
-      "currentReviewState": "reviewed-against-source-locators",
-      "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-    },
-    {
-      "severity": "blocker",
-      "code": "semantic-transcript-review-missing",
-      "bookId": "1-ioan",
-      "chapter": 5,
-      "unitId": "1-ioan-5-6-12-source-first",
-      "ref": "1 Ioan 5:6-12",
-      "currentReviewState": "reviewed-against-source-locators",
-      "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-    },
-    {
-      "severity": "blocker",
-      "code": "semantic-transcript-review-missing",
-      "bookId": "1-ioan",
-      "chapter": 5,
-      "unitId": "1-ioan-5-13-17-source-first",
-      "ref": "1 Ioan 5:13-17",
-      "currentReviewState": "reviewed-against-source-locators",
-      "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-    },
-    {
-      "severity": "blocker",
-      "code": "semantic-transcript-review-missing",
-      "bookId": "1-ioan",
-      "chapter": 5,
-      "unitId": "1-ioan-5-18-21-source-first",
-      "ref": "1 Ioan 5:18-21",
-      "currentReviewState": "reviewed-against-source-locators",
-      "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
+      "expectedReviewedTeachingSha256": "sha256:13c450f9bb0b752ade91d0fdc46843eaf74973e106ff4baa1a7d315688680f96",
+      "actualReviewedTeachingSha256": "sha256:f8bcf5deee8aea3a6c3d6dc5644e33b2b39a6e403d9d1b0015dc06c03476c1b0",
+      "message": "Teaching/application changed after semantic transcript approval."
     },
     {
       "severity": "blocker",
