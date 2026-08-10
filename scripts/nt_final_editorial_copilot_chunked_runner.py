@@ -21,6 +21,14 @@ CRITERIU IMPORTANT PENTRU `issue`:
 - dacă semnalezi `issue`, explică precis de ce lectura actuală nu este defensabilă din greaca furnizată.
 '''.strip()
 
+ANCHOR_POLICY = '''
+POLITICĂ DE ANCORE PENTRU VALIDARE DETERMINISTĂ:
+- `sourceAnchor` trebuie să fie SCURT: de regulă 1-4 cuvinte grecești consecutive, copiate caracter-cu-caracter din `greek`; evită semnele de aparat critic la marginea ancorei dacă poți alege aceleași cuvinte fără ele;
+- `targetAnchor` trebuie să fie SCURT: de regulă 2-6 cuvinte consecutive, copiate caracter-cu-caracter din `target`;
+- copiază apoi aceleași ancore LITERAL, fără schimbarea punctuației, diacriticelor, majusculelor sau formei cuvintelor, în justificările care le cer;
+- nu alege drept ancoră o propoziție întreagă dacă un fragment lexical mai scurt verifică aceeași decizie semantică.
+'''.strip()
+
 
 def load_module(path: Path, name: str):
     spec = importlib.util.spec_from_file_location(name, path)
@@ -75,6 +83,7 @@ def chunked_call_model(worker, copilot_runner, payload: dict[str, Any], token: s
         for attempt in range(1, CHUNK_ATTEMPTS + 1):
             chunk_content = user_content[:begin] + chunk_json + user_content[end:]
             chunk_content += '\n\n' + MATERIAL_CRITERION
+            chunk_content += '\n\n' + ANCHOR_POLICY
             if local_feedback:
                 chunk_content += (
                     '\n\nFEEDBACK DE VALIDARE PENTRU ACEST LOT — repară exact aceste probleme, '
