@@ -2,40 +2,35 @@
 
 import fs from "node:fs"
 import path from "node:path"
+import { UNAMBIGUOUS_ROMANIAN_DIACRITICS } from "./nt-romanian-diacritics.mjs"
 
 const ROOT = process.cwd()
 const corpusDir = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-final-source-first")
 const outputPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-romanian-language-audit.json")
 
-// These tokens are invalid in normal Romanian reader-facing prose without diacritics.
-// `expected` is guidance for a human editor, not an automatic replacement. Some forms
-// have more than one correct diacritized form depending on grammar (for example
-// `credinta` -> `credință` / `credința`, `arata` -> `arată` / `arăta`).
-const MISSING_DIACRITICS = new Map([
-  ["si", "și"], ["in", "în"], ["il", "îl / Îl"], ["isi", "își"], ["daca", "dacă"], ["fara", "fără"],
-  ["cuvant", "cuvânt"], ["cuvantul", "cuvântul"], ["tatal", "tatăl"], ["intai", "întâi"], ["dintai", "dintâi"], ["intaia", "întâia"],
-  ["invatator", "învățător"], ["invatatura", "învățătură"], ["imparatie", "împărăție"], ["imparatia", "împărăția"],
-  ["credinta", "credință / credința"], ["pacat", "păcat"], ["pacate", "păcate"], ["mantuire", "mântuire"], ["mantuit", "mântuit"],
-  ["incepe", "începe"], ["inceput", "început"], ["vesnic", "veșnic"], ["vesnicia", "veșnicia"], ["adevar", "adevăr"],
-  ["adevarat", "adevărat"], ["adevarata", "adevărată / adevărata"], ["nastere", "naștere"], ["nascut", "născut"], ["sange", "sânge"],
-  ["pamant", "pământ"], ["pamantesc", "pământesc"], ["ramane", "rămâne"], ["raman", "rămân"], ["raspuns", "răspuns"],
-  ["inainte", "înainte"], ["inapoi", "înapoi"], ["intelege", "înțelege"], ["intelegere", "înțelegere"],
-  ["marturisire", "mărturisire"], ["marturie", "mărturie"], ["marturia", "mărturia"], ["botezatorul", "botezătorul"],
-  ["fagaduise", "făgăduise"], ["fagaduit", "făgăduit"], ["fagaduinta", "făgăduință"], ["facut", "făcut"], ["facatorului", "Făcătorului"],
-  ["arata", "arată / arăta"], ["urmareste", "urmărește"], ["doua", "două"], ["miscari", "mișcări"], ["nouasprezece", "nouăsprezece"],
-  ["randul", "rândul"], ["randurile", "rândurile"], ["preoti", "preoți"], ["aseaza", "așază"], ["asteptau", "așteptau"],
-  ["asteptarea", "așteptarea"], ["ratiunii", "rațiunii"], ["raspicat", "răspicat"], ["capatul", "capătul"],
-  ["usurinta", "ușurință / ușurința"], ["aceeasi", "aceeași"], ["lasa", "lasă / lăsa"], ["inalte", "înalte"], ["decat", "decât"],
-  ["incurcatura", "încurcătură"], ["crestin", "creștin"], ["crestine", "creștine"], ["fapturii", "făpturii"],
-  ["legatura", "legătură / legătura"], ["vietii", "vieții"], ["viata", "viață / viața"], ["intuneric", "întuneric"], ["amandoua", "amândouă"],
-  ["inteles", "înțeles"], ["biruinta", "biruință / biruința"], ["simpla", "simplă / simpla"], ["daruieste", "dăruiește"], ["descopera", "descoperă"],
-  ["curata", "curată / curăță"], ["stapanire", "stăpânire"], ["stapanit", "stăpânit"], ["inviere", "înviere"], ["invierea", "învierea"],
+// Context-sensitive raw forms. Unlike the shared deterministic map, these can
+// have more than one correct Romanian result depending on grammar.
+const CONTEXTUAL_MISSING_DIACRITICS = new Map([
+  ["credinta", "credință / credința"],
+  ["adevarata", "adevărată / adevărata"],
+  ["arata", "arată / arăta"],
+  ["usurinta", "ușurință / ușurința"],
+  ["lasa", "lasă / lăsa"],
+  ["legatura", "legătură / legătura"],
+  ["viata", "viață / viața"],
+  ["biruinta", "biruință / biruința"],
+  ["curata", "curată / curăță"],
 ])
 
-const TYPO_PATTERNS = [
-  [/\bmangaie-re\b/giu, "mângâiere"],
-  [/\bmangaere\b/giu, "mângâiere"],
-  [/\bomensec\b/giu, "omenesc"],
+// `simpla` is special: the spelling is correct in definite pre-nominal uses
+// such as "simpla citare" / "simpla folosire". Flag only contexts that prove
+// the intended adjective is the diacritized `simplă`.
+const CONTEXTUAL_PATTERNS = [
+  {
+    token: "simpla",
+    expected: "simplă",
+    pattern: /\b(?:o|mai)\s+simpla\b|\b(?:schema|schemă|cauza|cauză|ordine|chemare|lumea)\s+simpla\b/giu,
+  },
 ]
 
 function fields(chapter) {
@@ -56,6 +51,12 @@ function contextFor(value, token) {
   const end = Math.min(value.length, match.index + match[0].length + 55)
   return `${start > 0 ? "…" : ""}${value.slice(start, end).replace(/\s+/g, " ").trim()}${end < value.length ? "…" : ""}`
 }
+function pushTokenFinding(findings, book, chapter, field, value, wrong, expected, kind = "missing-diacritics") {
+  const escaped = wrong.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+  const regex = new RegExp(`(?<![\\p{L}\\p{N}_])${escaped}(?![\\p{L}\\p{N}_])`, "giu")
+  const matches = value.match(regex)
+  if (matches?.length) findings.push({ bookId: book.id, book: book.name, chapter: chapter.number, field, kind, token: wrong, expected, occurrences: matches.length, context: contextFor(value, wrong) })
+}
 
 if (!fs.existsSync(corpusDir)) throw new Error("missing final NT corpus")
 const findings = []
@@ -63,15 +64,25 @@ for (const file of fs.readdirSync(corpusDir).filter((name) => name.endsWith(".js
   const book = JSON.parse(fs.readFileSync(path.join(corpusDir, file), "utf8"))
   for (const chapter of book.chapters ?? []) {
     for (const [field, value] of fields(chapter)) {
-      for (const [wrong, expected] of MISSING_DIACRITICS) {
-        const escaped = wrong.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
-        const regex = new RegExp(`(?<![\\p{L}\\p{N}_])${escaped}(?![\\p{L}\\p{N}_])`, "giu")
-        const matches = value.match(regex)
-        if (matches?.length) findings.push({ bookId: book.id, book: book.name, chapter: chapter.number, field, kind: "missing-diacritics", token: wrong, expected, occurrences: matches.length, context: contextFor(value, wrong) })
+      for (const [wrong, expected] of UNAMBIGUOUS_ROMANIAN_DIACRITICS) {
+        pushTokenFinding(findings, book, chapter, field, value, wrong, expected)
       }
-      for (const [pattern, expected] of TYPO_PATTERNS) {
-        const matches = value.match(pattern)
-        if (matches?.length) findings.push({ bookId: book.id, book: book.name, chapter: chapter.number, field, kind: "known-typo", token: matches[0], expected, occurrences: matches.length, context: contextFor(value, matches[0]) })
+      for (const [wrong, expected] of CONTEXTUAL_MISSING_DIACRITICS) {
+        pushTokenFinding(findings, book, chapter, field, value, wrong, expected)
+      }
+      for (const rule of CONTEXTUAL_PATTERNS) {
+        const matches = value.match(rule.pattern)
+        if (matches?.length) findings.push({
+          bookId: book.id,
+          book: book.name,
+          chapter: chapter.number,
+          field,
+          kind: "contextual-missing-diacritics",
+          token: rule.token,
+          expected: rule.expected,
+          occurrences: matches.length,
+          context: contextFor(value, rule.token),
+        })
       }
     }
   }
@@ -89,9 +100,9 @@ for (const finding of findings) {
 const tokenSummary = [...tokenSummaryMap.values()].sort((a, b) => b.occurrences - a.occurrences || a.token.localeCompare(b.token, "ro"))
 
 const report = {
-  schema: "emanus-nt-romanian-language-audit-v3",
+  schema: "emanus-nt-romanian-language-audit-v4",
   status: findings.length ? "manual-edit-required" : "clean",
-  policy: "Reader-facing Romanian must use standard diacritics. Audit contexts support deterministic grammar-aware review; automatic fixes remain limited to unambiguous forms or explicitly reviewed contextual rules.",
+  policy: "Reader-facing Romanian must use standard diacritics. Deterministic and audit rules share one registry; context-sensitive forms are handled separately, and valid definite forms such as 'simpla citare' are not false positives.",
   count: findings.reduce((sum, finding) => sum + finding.occurrences, 0),
   findingGroups: findings.length,
   tokenSummary,
