@@ -1,10 +1,11 @@
 {
   "schema": "emanus-nt-embedded-quote-audit-v2",
   "status": "manual-source-check-required",
-  "policy": "Quoted spans of at least five words are checked against the exact current Biblia Emanus text in the same canonical book and chapter. A match elsewhere in the NT does not clear the finding. Non-matches that intend to quote Scripture must be replaced with exact BE wording or rewritten without quotation marks. Only explicitly reviewed spans that do not claim to quote Scripture may be cleared by the hash-bound non-bible-quotation ledger classification.",
+  "policy": "Quoted spans of at least five words are checked against the exact current Biblia Emanus text in the same canonical book and chapter. Same-chapter exact matches clear automatically. A non-match that intends to quote Scripture must either be rewritten to exact BE wording or be explicitly reviewed as an exact biblical cross-reference to a named BE book/chapter. Only spans that do not claim to quote Scripture may use the hash-bound non-bible-quotation classification. Biblical paraphrases in quotation marks are never cleared merely by classification.",
   "quotedFragments": 98,
   "exactMatches": 32,
   "reviewedNonBibleQuotes": 0,
+  "reviewedCrossReferences": 0,
   "reviewLedgerStatus": "missing",
   "reviewLedgerProblems": 0,
   "count": 66,
