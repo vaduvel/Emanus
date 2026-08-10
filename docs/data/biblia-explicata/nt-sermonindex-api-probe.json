@@ -1,0 +1,39 @@
+{
+  "schema": "emanus-sermonindex-api-probe-v1",
+  "purpose": "Transcript-mirror discovery only. Official CFC remains primary source.",
+  "contributorCandidateIds": [],
+  "results": [
+    {
+      "url": "https://api.sermonindex.net/v1/contributors/slug/zac-poonen",
+      "error": "<HTTPError 404: 'Not Found'>"
+    },
+    {
+      "url": "https://api.sermonindex.net/v1/sermons?limit=5",
+      "error": "<HTTPError 404: 'Not Found'>"
+    },
+    {
+      "url": "https://api.sermonindex.net/openapi.json",
+      "error": "<HTTPError 404: 'Not Found'>"
+    },
+    {
+      "url": "https://api.sermonindex.net/v1/openapi.json",
+      "error": "<HTTPError 404: 'Not Found'>"
+    },
+    {
+      "url": "https://api.sermonindex.net/v1/api/openapi.json",
+      "error": "<HTTPError 404: 'Not Found'>"
+    },
+    {
+      "url": "https://api.sermonindex.net/v1/sermons?search=Zac+Poonen&limit=5",
+      "error": "<HTTPError 404: 'Not Found'>"
+    },
+    {
+      "url": "https://api.sermonindex.net/v1/sermons?query=Zac+Poonen&limit=5",
+      "error": "<HTTPError 404: 'Not Found'>"
+    },
+    {
+      "url": "https://api.sermonindex.net/v1/sermons?speaker=Zac+Poonen&limit=5",
+      "error": "<HTTPError 404: 'Not Found'>"
+    }
+  ]
+}
