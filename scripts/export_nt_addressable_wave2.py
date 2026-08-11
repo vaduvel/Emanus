@@ -50,6 +50,10 @@ REPO_OUT.mkdir(parents=True, exist_ok=True)
 
 by_url: dict[str, dict] = {}
 addressable_units: dict[str, set[str]] = defaultdict(set)
+allowed_verifications = {
+    "catalogue-range-contains-entire-unit",
+    "catalogue-contiguous-ranges-cover-entire-unit",
+}
 
 for entry in coverage.get("entries", []):
     book_id = entry.get("bookId")
@@ -75,18 +79,12 @@ for entry in coverage.get("entries", []):
     if not isinstance(official_url, str) or not official_url.startswith("https://"):
         fail(f"{unit_id}: official source URL missing")
     verification = entry.get("verification")
-    if verification not in {"catalogue-range-contains-entire-unit", "catalogue-multi-range-contiguous-covers-unit"}:
+    if verification not in allowed_verifications:
         fail(f"{unit_id}: unexpected direct coverage verification {verification}")
 
     addressable_units[book_id].add(unit_id)
     for url, title, transcript_range in urls:
-        slot = by_url.setdefault(
-            url,
-            {
-                "officialSourceUrls": set(),
-                "units": {},
-            },
-        )
+        slot = by_url.setdefault(url, {"officialSourceUrls": set(), "units": {}})
         slot["officialSourceUrls"].add(official_url)
         slot["units"][unit_id] = {
             "bookId": book_id,
@@ -132,16 +130,14 @@ for serial, url in enumerate(sorted(by_url), start=1):
     encoded = json.dumps(payload, ensure_ascii=False, indent=2) + "\n"
     (REPO_OUT / filename).write_text(encoded, encoding="utf-8")
     (ART_TRANSCRIPTS / filename).write_text(encoded, encoding="utf-8")
-    manifest.append(
-        {
-            "file": filename,
-            "transcriptUrl": url,
-            "transcriptSha256": transcript_sha,
-            "wordCount": len(text.split()),
-            "unitCount": len(units),
-            "books": sorted({unit["bookId"] for unit in units}),
-        }
-    )
+    manifest.append({
+        "file": filename,
+        "transcriptUrl": url,
+        "transcriptSha256": transcript_sha,
+        "wordCount": len(text.split()),
+        "unitCount": len(units),
+        "books": sorted({unit["bookId"] for unit in units}),
+    })
     print(filename, transcript_sha, len(text.split()), len(units))
 
 (ART_ROOT / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
