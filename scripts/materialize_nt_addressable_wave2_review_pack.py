@@ -12,6 +12,7 @@ FINAL = DATA / "nt-final-source-first"
 REPS = DATA / "nt-semantic-transcript-representations"
 COVERAGE = DATA / "nt-direct-transcript-coverage.json"
 OUT = DATA / "nt-addressable-wave2-review-pack"
+CHUNK_WORDS = 2200
 TARGETS = {
     "matei": {"file": "01-matei.json", "direct": 125},
     "apocalipsa": {"file": "27-apocalipsa.json", "direct": 53},
@@ -55,6 +56,7 @@ for book_id, cfg in TARGETS.items():
     by_id = {}
     for chapter in book.get("chapters", []):
         for unit in chapter.get("units", []):
+            snap = snapshot(unit)
             by_id[unit["id"]] = {
                 "bookId": book_id,
                 "chapter": int(chapter["number"]),
@@ -62,8 +64,8 @@ for book_id, cfg in TARGETS.items():
                 "ref": unit.get("ref"),
                 "verseStart": unit.get("verseStart"),
                 "verseEnd": unit.get("verseEnd"),
-                "snapshot": snapshot(unit),
-                "snapshotSha256": sha(json.dumps(snapshot(unit), ensure_ascii=False, separators=(",", ":"))),
+                "snapshot": snap,
+                "snapshotSha256": sha(json.dumps(snap, ensure_ascii=False, separators=(",", ":"))),
                 "sourceIds": unit.get("sourceIds", []),
                 "sourceAnchors": unit.get("sourceAnchors", []),
             }
@@ -87,7 +89,8 @@ for path in sorted(REPS.glob("*.json")):
     actual_sha = sha(text)
     if actual_sha != rep.get("transcriptSha256"):
         fail(f"{path.name}: transcript SHA mismatch")
-    if len(text.split()) != rep.get("wordCount"):
+    words = text.split()
+    if len(words) != rep.get("wordCount"):
         fail(f"{path.name}: wordCount mismatch")
     mapped = []
     for m in rep.get("units", []):
@@ -130,11 +133,13 @@ if OUT.exists():
     shutil.rmtree(OUT)
 OUT.mkdir(parents=True)
 index = {
-    "schema": "emanus-nt-addressable-wave2-review-pack-v1",
-    "policy": "Inspection-only artifact. Direct addressability and provenance do not create semantic approval. Every unit must be reviewed sentence-level against the complete transcript text in its pack before a keep/rewrite decision is frozen.",
+    "schema": "emanus-nt-addressable-wave2-review-pack-v2",
+    "policy": "Inspection-only artifact. Direct addressability and provenance do not create semantic approval. Each transcript is split deterministically into contiguous word chunks whose concatenation reproduces the complete persisted transcript representation.",
+    "chunkWords": CHUNK_WORDS,
     "targetUnits": len(units),
     "books": {},
     "representationFiles": 0,
+    "chunkFiles": 0,
 }
 
 for book_id, cfg in TARGETS.items():
@@ -148,14 +153,52 @@ for book_id, cfg in TARGETS.items():
     relevant.sort(key=lambda r: (str(r.get("transcriptUrl") or ""), r["sourceRepresentationFile"]))
     entries_out = []
     for i, record in enumerate(relevant, 1):
-        name = f"{i:02d}.json"
-        rel = f"{book_id}/{name}"
-        (book_dir / name).write_text(json.dumps(record, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        entries_out.append({
-            "file": rel,
+        rep_dir = book_dir / f"{i:02d}"
+        rep_dir.mkdir(parents=True)
+        words = record["text"].split()
+        chunks = []
+        rebuilt = []
+        for chunk_index, start in enumerate(range(0, len(words), CHUNK_WORDS), 1):
+            part = words[start:start + CHUNK_WORDS]
+            rebuilt.extend(part)
+            chunk_name = f"chunk-{chunk_index:02d}.json"
+            chunk_rel = f"{book_id}/{i:02d}/{chunk_name}"
+            chunk_obj = {
+                "schema": "emanus-nt-addressable-wave2-transcript-chunk-v1",
+                "bookId": book_id,
+                "representation": i,
+                "chunk": chunk_index,
+                "startWord": start + 1,
+                "endWord": start + len(part),
+                "transcriptSha256": record["transcriptSha256"],
+                "text": " ".join(part),
+            }
+            (rep_dir / chunk_name).write_text(json.dumps(chunk_obj, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            chunks.append({"file": chunk_rel, "startWord": start + 1, "endWord": start + len(part)})
+            index["chunkFiles"] += 1
+        if rebuilt != words:
+            fail(f"{book_id}/{i:02d}: chunk concatenation does not reproduce transcript words")
+
+        meta_name = "meta.json"
+        meta_rel = f"{book_id}/{i:02d}/{meta_name}"
+        meta = {
+            "schema": "emanus-nt-addressable-wave2-representation-meta-v1",
+            "bookId": book_id,
+            "representation": i,
+            "sourceRepresentationFile": record["sourceRepresentationFile"],
             "transcriptUrl": record["transcriptUrl"],
             "transcriptSha256": record["transcriptSha256"],
             "wordCount": record["wordCount"],
+            "chunks": chunks,
+            "units": record["units"],
+        }
+        (rep_dir / meta_name).write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        entries_out.append({
+            "metaFile": meta_rel,
+            "transcriptUrl": record["transcriptUrl"],
+            "transcriptSha256": record["transcriptSha256"],
+            "wordCount": record["wordCount"],
+            "chunks": chunks,
             "unitIds": [u["unitId"] for u in record["units"]],
         })
         index["representationFiles"] += 1
@@ -168,4 +211,7 @@ for book_id, cfg in TARGETS.items():
     }
 
 (OUT / "index.json").write_text(json.dumps(index, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-print(f"Addressable wave2 review pack: {len(units)} direct units / {index['representationFiles']} complete transcript files; no semantic approvals created.")
+print(
+    f"Addressable wave2 review pack v2: {len(units)} direct units / "
+    f"{index['representationFiles']} complete transcripts / {index['chunkFiles']} contiguous chunks; no semantic approvals created."
+)
