@@ -77,7 +77,8 @@ jobs:
 
   transcribe_1_timotei:
     if: >-
-      github.event_name == 'push' &&
+      github.event_name == 'pull_request' &&
+      github.event.pull_request.head.ref == 'agent/biblia-explicata-nt-integration-clean' &&
       github.actor != 'github-actions[bot]'
     strategy:
       fail-fast: false
@@ -113,7 +114,8 @@ jobs:
 
   persist_1_timotei:
     if: >-
-      github.event_name == 'push' &&
+      github.event_name == 'pull_request' &&
+      github.event.pull_request.head.ref == 'agent/biblia-explicata-nt-integration-clean' &&
       github.actor != 'github-actions[bot]'
     needs: transcribe_1_timotei
     runs-on: ubuntu-22.04
