@@ -50,23 +50,22 @@ const previous = ledger.decisions[index]
 
 if (same(previous, next)) {
   console.log(`Filimon semantic ledger quote rebind: ${UNIT_ID} already matches final quote-bound decision.`)
-  process.exit(0)
+} else {
+  const predecessorValid =
+    previous.status === "approved-against-transcript" &&
+    previous.action === "keep" &&
+    previous.reviewedTeachingSha256 === OLD_HASH &&
+    previous.rationale === "Copy-ul curent păstrează complet centrul transcriptului: primește-l ca pe mine, pune datoria în contul meu, paralela cu mijlocirea lui Hristos și contrastul dintre slujitorul care ajută financiar și cel care exploatează convertiții." &&
+    previous.reviewer === "GPT-5.6 Sol manual sentence-level semantic review against persisted official CFC audio transcript" &&
+    previous.reviewedOn === "2026-08-10" &&
+    Array.isArray(previous.transcriptEvidence) && previous.transcriptEvidence.length === 1 &&
+    previous.transcriptEvidence[0]?.transcriptSha256 === TRANSCRIPT_SHA &&
+    previous.transcriptEvidence[0]?.officialAudioSha256 === AUDIO_SHA &&
+    previous.transcriptEvidence[0]?.reviewedSectionWordCount === 1729
+
+  if (!predecessorValid) fail("existing ledger decision is not the exact allowed pre-quote-normalization predecessor")
+  ledger.decisions[index] = next
+  ledger.count = ledger.decisions.length
+  fs.writeFileSync(LEDGER, JSON.stringify(ledger, null, 2) + "\n", "utf8")
+  console.log(`Filimon semantic ledger quote rebind: replaced exact predecessor ${OLD_HASH} -> ${NEW_HASH}; ledger count ${ledger.count}.`)
 }
-
-const predecessorValid =
-  previous.status === "approved-against-transcript" &&
-  previous.action === "keep" &&
-  previous.reviewedTeachingSha256 === OLD_HASH &&
-  previous.rationale === "Copy-ul curent păstrează complet centrul transcriptului: primește-l ca pe mine, pune datoria în contul meu, paralela cu mijlocirea lui Hristos și contrastul dintre slujitorul care ajută financiar și cel care exploatează convertiții." &&
-  previous.reviewer === "GPT-5.6 Sol manual sentence-level semantic review against persisted official CFC audio transcript" &&
-  previous.reviewedOn === "2026-08-10" &&
-  Array.isArray(previous.transcriptEvidence) && previous.transcriptEvidence.length === 1 &&
-  previous.transcriptEvidence[0]?.transcriptSha256 === TRANSCRIPT_SHA &&
-  previous.transcriptEvidence[0]?.officialAudioSha256 === AUDIO_SHA &&
-  previous.transcriptEvidence[0]?.reviewedSectionWordCount === 1729
-
-if (!predecessorValid) fail("existing ledger decision is not the exact allowed pre-quote-normalization predecessor")
-ledger.decisions[index] = next
-ledger.count = ledger.decisions.length
-fs.writeFileSync(LEDGER, JSON.stringify(ledger, null, 2) + "\n", "utf8")
-console.log(`Filimon semantic ledger quote rebind: replaced exact predecessor ${OLD_HASH} -> ${NEW_HASH}; ledger count ${ledger.count}.`)
