@@ -8,6 +8,15 @@ const ROOT = process.cwd()
 const dir = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-audited-recovered-refined")
 const ledgerPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-romanian-fix-ledger.json")
 
+// Historical registry entries `in` and `doua` are NOT context-free:
+// - `in` is the Romanian noun for flax/linen (e.g. `în in curat`) as well as a
+//   raw spelling of the preposition `în`;
+// - `doua` is correct in the feminine ordinal `a doua`, but cardinal `două`
+//   needs the diacritic.
+// Keep the shared registry backwards-compatible for older artifacts, but never
+// apply these two entries in the automatic context-free pass.
+const CONTEXT_SENSITIVE_SHARED_KEYS = new Set(["in", "doua"])
+
 // Automatic Romanian edits are intentionally limited to context-free corruptions
 // and forms whose diacritized spelling is unambiguous in reader-facing Romanian.
 // Context-sensitive forms (credinta -> credință/credința, viata -> viață/viața,
@@ -24,6 +33,7 @@ function fixString(value, location, ledger) {
   if (typeof value !== "string" || !value) return value
   let out = value
   for (const [wrong, expected] of REPLACEMENTS) {
+    if (CONTEXT_SENSITIVE_SHARED_KEYS.has(wrong.toLowerCase())) continue
     const escaped = wrong.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
     const regex = new RegExp(`(?<![\\p{L}\\p{N}_])${escaped}(?![\\p{L}\\p{N}_])`, "giu")
     out = out.replace(regex, (match) => {
@@ -59,5 +69,5 @@ for (const file of fs.readdirSync(dir).filter((name) => name.endsWith(".json")).
   }
   if (ledger.length !== beforeCount) fs.writeFileSync(full, JSON.stringify(book, null, 2) + "\n", "utf8")
 }
-fs.writeFileSync(ledgerPath, JSON.stringify({ schema: "emanus-nt-romanian-fix-ledger-v5", policy: "context-free-corruptions-and-unambiguous-diacritics-only; shared registry; Unicode-aware token boundaries; context-sensitive inflections remain reviewed separately", count: ledger.length, fixes: ledger }, null, 2) + "\n", "utf8")
+fs.writeFileSync(ledgerPath, JSON.stringify({ schema: "emanus-nt-romanian-fix-ledger-v5", policy: "context-free-corruptions-and-unambiguous-diacritics-only; historical contextual homographs in/doua excluded from automatic pass; Unicode-aware token boundaries; context-sensitive inflections remain reviewed separately", count: ledger.length, fixes: ledger }, null, 2) + "\n", "utf8")
 console.log(`NT Romanian safe fixes applied: ${ledger.length}.`)
