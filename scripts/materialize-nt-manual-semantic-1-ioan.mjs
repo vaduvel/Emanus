@@ -12,6 +12,12 @@ await import("./fix-nt-1-timotei-materializer-marker.mjs")
 await import("./materialize-nt-manual-semantic-1-timotei.mjs")
 await import("./restore-nt-1-timotei-materializer-marker.mjs")
 
+const romansSnapshotFix = spawnSync("python3", ["scripts/fix_nt_addressable_wave1_romans_spec.py"], { stdio: "inherit" })
+if (romansSnapshotFix.status !== 0) {
+  console.error(`[Romans wave1 snapshot fix] exited with status ${romansSnapshotFix.status}`)
+  process.exit(romansSnapshotFix.status ?? 1)
+}
+
 const waveDiagnostic = spawnSync("python3", ["scripts/diagnose_nt_addressable_wave1_presemantic.py"], { stdio: "inherit" })
 if (waveDiagnostic.status === 0) {
   const addressableWave = spawnSync("python3", ["scripts/materialize_nt_manual_semantic_addressable_wave_1.py"], { stdio: "inherit" })
