@@ -75,55 +75,12 @@ jobs:
           if-no-files-found: error
           retention-days: 1
 
-  transcribe_1_timotei:
+  bulk_addressable_export:
     if: >-
-      github.event_name == 'pull_request' &&
-      github.event.pull_request.head.ref == 'agent/biblia-explicata-nt-integration-clean' &&
-      github.actor != 'github-actions[bot]'
-    strategy:
-      fail-fast: false
-      matrix:
-        source_id:
-          - 1-timotei-vbv-01
-          - 1-timotei-vbv-02
-          - 1-timotei-vbv-03
-          - 1-timotei-vbv-04
+      github.actor != 'github-actions[bot]' &&
+      (github.event_name != 'pull_request' || github.event.pull_request.head.ref == 'agent/biblia-explicata-nt-integration-clean')
     runs-on: ubuntu-22.04
-    timeout-minutes: 60
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: agent/biblia-explicata-nt-integration-clean
-          fetch-depth: 1
-
-      - name: Transcribe one official CFC VBV episode
-        env:
-          NT_TRANSCRIPTION_SOURCE_ID: ${{ matrix.source_id }}
-        run: |
-          set -euo pipefail
-          python3 - <<'PY'
-          import json
-          with open('docs/data/biblia-explicata/nt-semantic-manual-review-status.json', encoding='utf-8') as handle:
-              assert json.load(handle)['currentBook'] == '1-timotei'
-          PY
-          python3 scripts/transcribe_nt_current_official_audio.py
-          test -s "docs/data/biblia-explicata/nt-official-transcripts/${NT_TRANSCRIPTION_SOURCE_ID}.json"
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: transcript-${{ matrix.source_id }}
-          path: docs/data/biblia-explicata/nt-official-transcripts/${{ matrix.source_id }}.json
-          if-no-files-found: error
-          retention-days: 1
-
-  persist_1_timotei:
-    if: >-
-      github.event_name == 'pull_request' &&
-      github.event.pull_request.head.ref == 'agent/biblia-explicata-nt-integration-clean' &&
-      github.actor != 'github-actions[bot]'
-    needs: transcribe_1_timotei
-    runs-on: ubuntu-22.04
-    timeout-minutes: 10
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
         with:
@@ -131,52 +88,101 @@ jobs:
           fetch-depth: 0
           persist-credentials: true
 
-      - uses: actions/download-artifact@v4
-        with:
-          pattern: transcript-1-timotei-vbv-*
-          path: /tmp/1-timotei-transcripts
-          merge-multiple: true
-
-      - name: Persist exact four-part transcript set
+      - name: Extract exact addressable transcript representations
         run: |
           set -euo pipefail
-          target="docs/data/biblia-explicata/nt-official-transcripts"
-          mkdir -p "$target"
-          for id in 01 02 03 04; do
-            src="/tmp/1-timotei-transcripts/1-timotei-vbv-${id}.json"
-            test -s "$src"
-            cp "$src" "$target/1-timotei-vbv-${id}.json"
-          done
+          rm -rf /tmp/nt-semantic-bulk
+          mkdir -p /tmp/nt-semantic-bulk/transcripts /tmp/nt-semantic-bulk/books
+          mkdir -p docs/data/biblia-explicata/nt-semantic-transcript-representations
           python3 - <<'PY'
+          import importlib.util
           import json
+          import re
           from pathlib import Path
-          root = Path('docs/data/biblia-explicata/nt-official-transcripts')
-          expected = {
-              '1-timotei-vbv-01': '1 Timothy 1:1-2:9',
-              '1-timotei-vbv-02': '1 Timothy 2:8-4:2',
-              '1-timotei-vbv-03': '1 Timothy 4:3-5:13',
-              '1-timotei-vbv-04': '1 Timothy 5:11-6:21',
-          }
-          for source_id, source_range in expected.items():
-              p = root / f'{source_id}.json'
-              d = json.loads(p.read_text(encoding='utf-8'))
-              assert d['schema'] == 'emanus-nt-official-audio-transcript-v1'
-              assert d['bookId'] == '1-timotei'
-              assert d['sourceId'] == source_id
-              assert d['sourceRange'] == source_range
-              assert d['transcriptionModel'] == 'faster-whisper small.en / CTranslate2 int8 CPU'
-              assert d['wordCount'] >= 1500
-              assert len(d['segments']) == d['segmentCount']
-              assert d['transcriptSha256'].startswith('sha256:')
-              assert d['officialAudioSha256'].startswith('sha256:')
-              print(source_id, d['wordCount'], d['transcriptSha256'], d['officialAudioSha256'])
+
+          root = Path('.').resolve()
+          worker_path = root / 'scripts/nt_semantic_copilot_worker.py'
+          spec = importlib.util.spec_from_file_location('emanus_semantic_bulk', worker_path)
+          if spec is None or spec.loader is None:
+              raise SystemExit('Cannot load semantic transcript extractor')
+          worker = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(worker)
+
+          target_books = {'romani', '1-corinteni', '2-corinteni'}
+          index = json.loads((root / 'docs/data/biblia-explicata/nt-semantic-review-index.json').read_text(encoding='utf-8'))
+          out_repo = root / 'docs/data/biblia-explicata/nt-semantic-transcript-representations'
+          out_art = Path('/tmp/nt-semantic-bulk/transcripts')
+          manifest = []
+          seen = set()
+          serial = 0
+          for group in index.get('transcriptGroups', []):
+              units = [u for u in group.get('units', []) if u.get('bookId') in target_books]
+              if not units:
+                  continue
+              url = group['transcriptUrl']
+              if url in seen:
+                  continue
+              seen.add(url)
+              serial += 1
+              text = worker.extract_transcript(url)
+              sha = worker.sha256(text)
+              slug = re.sub(r'[^a-z0-9]+', '-', url.lower()).strip('-')[-100:]
+              filename = f'{serial:03d}-{slug}.json'
+              payload = {
+                  'schema': 'emanus-nt-semantic-transcript-representation-v1',
+                  'transcriptUrl': url,
+                  'transcriptSha256': sha,
+                  'wordCount': len(text.split()),
+                  'units': units,
+                  'text': text,
+              }
+              encoded = json.dumps(payload, ensure_ascii=False, indent=2) + '\n'
+              (out_repo / filename).write_text(encoded, encoding='utf-8')
+              (out_art / filename).write_text(encoded, encoding='utf-8')
+              manifest.append({
+                  'file': filename,
+                  'transcriptUrl': url,
+                  'transcriptSha256': sha,
+                  'wordCount': len(text.split()),
+                  'unitCount': len(units),
+                  'books': sorted({u['bookId'] for u in units}),
+              })
+              print(filename, sha, len(text.split()), len(units))
+          if not manifest:
+              raise SystemExit('No addressable transcript groups selected')
+          Path('/tmp/nt-semantic-bulk/manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          final_dir = root / 'docs/data/biblia-explicata/nt-final-source-first'
+          for p in sorted(final_dir.glob('*.json')):
+              data = json.loads(p.read_text(encoding='utf-8'))
+              if data.get('id') in target_books:
+                  (Path('/tmp/nt-semantic-bulk/books') / p.name).write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
           PY
+          cp docs/data/biblia-explicata/nt-semantic-review-index.json /tmp/nt-semantic-bulk/
+          cp docs/data/biblia-explicata/nt-semantic-review-ledger.json /tmp/nt-semantic-bulk/
+          cp docs/data/biblia-explicata/nt-direct-transcript-coverage.json /tmp/nt-semantic-bulk/
+          if test -f docs/data/biblia-explicata/nt-transcript-episode-mapping.json; then
+            cp docs/data/biblia-explicata/nt-transcript-episode-mapping.json /tmp/nt-semantic-bulk/
+          fi
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nt-semantic-bulk-addressable
+          path: /tmp/nt-semantic-bulk
+          if-no-files-found: error
+          retention-days: 1
+
+      - name: Persist exact transcript representations
+        run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/data/biblia-explicata/nt-official-transcripts/1-timotei-vbv-*.json
+          git add docs/data/biblia-explicata/nt-semantic-transcript-representations
           if git diff --cached --quiet; then
-            echo "1 Timotei transcript set already persisted."
+            echo "Addressable semantic transcript representations already current."
             exit 0
           fi
-          git commit -m "Persist 1 Timotei official VBV transcripts"
+          git commit -m "Persist addressable NT semantic transcript representations"
+          git fetch origin agent/biblia-explicata-nt-integration-clean
+          git rebase FETCH_HEAD
           git push origin HEAD:agent/biblia-explicata-nt-integration-clean
