@@ -71,12 +71,18 @@ function extractQuotes(value) {
 }
 function textFields(chapter) {
   const fields = [
-    [chapter, "summary"], [chapter, "literaryContext"], [chapter, "historicalContext"], [chapter, "prayer"],
+    { owner: chapter, key: "summary", unitId: null, fieldPath: "summary" },
+    { owner: chapter, key: "literaryContext", unitId: null, fieldPath: "literaryContext" },
+    { owner: chapter, key: "historicalContext", unitId: null, fieldPath: "historicalContext" },
+    { owner: chapter, key: "prayer", unitId: null, fieldPath: "prayer" },
   ]
-  for (const unit of chapter.units ?? []) {
-    fields.push([unit, "teaching"], [unit, "forYourHeart"])
+  for (const [index, unit] of (chapter.units ?? []).entries()) {
+    fields.push(
+      { owner: unit, key: "teaching", unitId: unit.id ?? null, fieldPath: `units[${index}].teaching` },
+      { owner: unit, key: "forYourHeart", unitId: unit.id ?? null, fieldPath: `units[${index}].forYourHeart` },
+    )
   }
-  return fields.filter(([owner, key]) => typeof owner?.[key] === "string" && owner[key].trim())
+  return fields.filter(({ owner, key }) => typeof owner?.[key] === "string" && owner[key].trim())
 }
 function bestCandidate(quote, rawChapter) {
   const q = words(quote)
@@ -127,14 +133,14 @@ for (const file of files) {
     const rawBe = beByChapter.get(`${book.bookId}.${chapter.number}`)
     if (!rawBe) fail(`missing BE ${book.bookId}.${chapter.number}`)
     const normalizedBe = words(rawBe).join(" ")
-    for (const [owner, key] of textFields(chapter)) {
+    for (const { owner, key, unitId, fieldPath } of textFields(chapter)) {
       let value = owner[key]
       for (const quote of extractQuotes(value)) {
         const normalizedQuote = words(quote).join(" ")
         if (normalizedBe.includes(normalizedQuote)) continue
         const candidate = bestCandidate(quote, rawBe)
         if (!candidate || candidate.raw === quote) {
-          skipped.push({ bookId: book.id, chapter: chapter.number, field: key, quote, reason: "no-unique-high-confidence-same-chapter-match" })
+          skipped.push({ bookId: book.id, chapter: chapter.number, field: key, fieldPath, unitId, quote, reason: "no-unique-high-confidence-same-chapter-match" })
           continue
         }
         if (!value.includes(quote)) continue
@@ -145,6 +151,8 @@ for (const file of files) {
           canonicalBookId: book.bookId,
           chapter: chapter.number,
           field: key,
+          fieldPath,
+          unitId,
           before: quote,
           after: candidate.raw,
           tokenDistance: candidate.distance,
@@ -158,7 +166,6 @@ for (const file of files) {
   if (changed) fs.writeFileSync(full, stable(book), "utf8")
 }
 
-// Rebind manifest book digests after deterministic reader-copy edits.
 for (const entry of manifest.books ?? []) {
   const file = files.find((name) => name.endsWith(`-${entry.id}.json`))
   if (!file) fail(`manifest book file missing for ${entry.id}`)
@@ -169,8 +176,8 @@ for (const entry of manifest.books ?? []) {
 }
 fs.writeFileSync(manifestPath, stable(manifest), "utf8")
 fs.writeFileSync(ledgerPath, stable({
-  schema: "emanus-nt-embedded-quote-fix-ledger-v1",
-  policy: "Only unique same-chapter Biblia Emanus candidates with <=1 token edit (<=2 for long quotes), >=0.88 sequence score and >=0.80 token overlap are replaced. Ambiguous/non-Bible quotations remain untouched and blocked for manual classification.",
+  schema: "emanus-nt-embedded-quote-fix-ledger-v2",
+  policy: "Only unique same-chapter Biblia Emanus candidates with <=1 token edit (<=2 for long quotes), >=0.88 sequence score and >=0.80 token overlap are replaced. Unit-level fixes record exact unitId and fieldPath so any semantic hash transition can be independently reversed and proven. Ambiguous/non-Bible quotations remain untouched and blocked for manual classification.",
   fixed: ledger.length,
   skipped: skipped.length,
   fixes: ledger,
