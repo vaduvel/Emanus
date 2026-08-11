@@ -1,0 +1,107 @@
+name: Transcribe Matthew Semantic Recovery Once
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-nt-integration-clean
+    paths:
+      - .github/workflows/transcribe-matei-semantic-recovery-once.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  transcribe:
+    name: Transcribe ${{ matrix.source_id }}
+    runs-on: ubuntu-22.04
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        source_id:
+          - matei-vbv-09
+          - matei-vbv-10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Transcribe exact official CFC audio
+        env:
+          NT_TRANSCRIPTION_SOURCE_ID: ${{ matrix.source_id }}
+          NT_TRANSCRIPTION_MODEL: small.en
+        run: |
+          set -euo pipefail
+          python3 scripts/transcribe_nt_current_official_audio.py
+          test -s "docs/data/biblia-explicata/nt-official-transcripts/${{ matrix.source_id }}.json"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: transcript-${{ matrix.source_id }}
+          path: docs/data/biblia-explicata/nt-official-transcripts/${{ matrix.source_id }}.json
+          if-no-files-found: error
+          retention-days: 1
+
+  persist:
+    name: Persist Matthew official transcripts
+    needs: transcribe
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 0
+          persist-credentials: true
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: transcript-matei-vbv-*
+          path: /tmp/matei-transcripts
+          merge-multiple: true
+
+      - name: Validate, commit and self-remove
+        run: |
+          set -euo pipefail
+          for id in matei-vbv-09 matei-vbv-10; do
+            test -s "/tmp/matei-transcripts/${id}.json"
+            cp "/tmp/matei-transcripts/${id}.json" "docs/data/biblia-explicata/nt-official-transcripts/${id}.json"
+            python3 - "$id" <<'PY'
+          import json, re, sys
+          from pathlib import Path
+          source_id = sys.argv[1]
+          p = Path('docs/data/biblia-explicata/nt-official-transcripts') / f'{source_id}.json'
+          d = json.loads(p.read_text(encoding='utf-8'))
+          assert d['schema'] == 'emanus-nt-official-audio-transcript-v1'
+          assert d['bookId'] == 'matei'
+          assert d['sourceId'] == source_id
+          assert re.fullmatch(r'sha256:[0-9a-f]{64}', d['officialAudioSha256'])
+          assert re.fullmatch(r'sha256:[0-9a-f]{64}', d['transcriptSha256'])
+          assert d['wordCount'] >= 1500
+          assert d['segmentCount'] == len(d['segments']) > 0
+          print(source_id, d['wordCount'], d['transcriptSha256'], d['officialAudioSha256'])
+          PY
+          done
+
+          git rm .github/workflows/transcribe-matei-semantic-recovery-once.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/biblia-explicata/nt-official-transcripts/matei-vbv-09.json \
+                  docs/data/biblia-explicata/nt-official-transcripts/matei-vbv-10.json
+          git commit -m "Persist official Matthew VBV 09 and 10 transcripts"
+
+          for attempt in 1 2 3 4; do
+            git fetch origin agent/biblia-explicata-nt-integration-clean
+            if git rebase FETCH_HEAD && git push origin HEAD:agent/biblia-explicata-nt-integration-clean; then
+              exit 0
+            fi
+            git rebase --abort || true
+            echo "Transcript persistence raced with branch update; retrying ($attempt/4)."
+          done
+          exit 1
