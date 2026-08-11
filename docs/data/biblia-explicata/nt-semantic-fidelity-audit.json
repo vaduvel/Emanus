@@ -6,9 +6,9 @@
     "books": 27,
     "units": 970,
     "rawTranscriptReviewed": 73,
-    "semanticTranscriptReviewed": 192,
-    "pendingSemanticReview": 705,
-    "staleSemanticReview": 1,
+    "semanticTranscriptReviewed": 193,
+    "pendingSemanticReview": 704,
+    "staleSemanticReview": 0,
     "malformedSemanticEvidence": 0
   },
   "byBook": {
@@ -117,8 +117,8 @@
     "filimon": {
       "units": 5,
       "rawTranscriptReviewed": 0,
-      "semanticTranscriptReviewed": 4,
-      "pendingSemanticReview": 1
+      "semanticTranscriptReviewed": 5,
+      "pendingSemanticReview": 0
     },
     "evrei": {
       "units": 41,
@@ -6675,17 +6675,6 @@
       "ref": "1 Timotei 6:20-21",
       "currentReviewState": "reviewed-against-source-locators",
       "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-    },
-    {
-      "severity": "blocker",
-      "code": "semantic-transcript-review-stale",
-      "bookId": "filimon",
-      "chapter": 1,
-      "unitId": "filimon-1-17-22",
-      "ref": "Filimon 1:17-22",
-      "expectedReviewedTeachingSha256": "sha256:3a901e6f948310f95206ee9d68651a45f7b6a64410c591602c75b73ba563087c",
-      "actualReviewedTeachingSha256": "sha256:27719248fe98b8dec8cf584ad7b8a9cb06c14b137f09bc0b0635f3db6cf3bf20",
-      "message": "Teaching/application changed after semantic transcript approval."
     },
     {
       "severity": "blocker",

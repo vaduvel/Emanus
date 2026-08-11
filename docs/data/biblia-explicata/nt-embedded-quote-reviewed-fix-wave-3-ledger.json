@@ -1,7 +1,7 @@
 {
   "schema": "emanus-nt-embedded-quote-reviewed-fix-wave-3-ledger-v1",
   "policy": "Exact reader quotations are aligned only to exact wording present in the current provisional Biblia Emanus chapter. Where the provisional Bible wording is corrupted or the explanation intentionally paraphrases a biblical idea, quotation marks are removed without changing the explanatory claim; these locations must be reconsidered when the final canonical text is frozen.",
-  "count": 34,
+  "count": 33,
   "changes": [
     {
       "bookId": "marcu",
@@ -156,17 +156,6 @@
       "action": "exact-be-rewrite",
       "beforeSha256": "sha256:53c7f618cd92c7a6d5e4b942f9567115914c67ce2c63b93ed37bdef8564fcab8",
       "afterSha256": "sha256:99e9eab9b042173515476ff30928552b9a18be5c30e8ebc2ec87c3061ea51a81"
-    },
-    {
-      "bookId": "filimon",
-      "canonicalBookId": "PHM",
-      "chapter": 1,
-      "field": "units[3].teaching",
-      "before": "Primește-l ca pe mine însumi",
-      "after": "primește-l așa cum m-ai primi pe mine",
-      "action": "exact-be-rewrite",
-      "beforeSha256": "sha256:28930e23a726c42ce24f892ef73f265df5b97da12128bea4b7796368dead3b7b",
-      "afterSha256": "sha256:f2d40e704760806b87e3f9ddecb6eefcd2abbc02c9555418617849c6bffad566"
     },
     {
       "bookId": "matei",
