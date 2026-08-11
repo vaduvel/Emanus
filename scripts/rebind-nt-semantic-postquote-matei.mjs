@@ -11,7 +11,7 @@ const LEDGERS = [
   path.join(ROOT, "docs", "data", "biblia-explicata", "nt-embedded-quote-reviewed-fix-wave-2-ledger.json"),
 ]
 const OUT = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-semantic-postquote-rebind-matei.json")
-const EXPECTED_REBINDS = 7
+const EXPECTED_REBINDS = 3
 
 function fail(message) {
   console.error(`[Matei semantic post-quote rebind] ${message}`)
@@ -91,7 +91,6 @@ for (const [groupKey, ops] of groups) {
     teaching: String(unit.teaching ?? ""),
     forYourHeart: String(unit.forYourHeart ?? ""),
   }
-  // Reconstruct the manually reviewed pre-quote snapshot by reversing only ledger-proven operations.
   for (const op of [...ops].reverse()) {
     const text = reconstructed[op.key]
     const afterCount = text.split(op.after).length - 1
