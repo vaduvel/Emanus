@@ -23,6 +23,12 @@ if (wave2UnitFiles.status !== 0) {
   process.exit(wave2UnitFiles.status ?? 1)
 }
 
+const mateiDirectReview = spawnSync("python3", ["scripts/materialize_nt_manual_semantic_matei_direct.py"], { stdio: "inherit" })
+if (mateiDirectReview.status !== 0) {
+  console.error(`[Matei direct semantic review] exited with status ${mateiDirectReview.status}`)
+  process.exit(mateiDirectReview.status ?? 1)
+}
+
 const twoCorRomanianFix = spawnSync("python3", ["scripts/fix_nt_addressable_wave1_2cor_romanian.py"], { stdio: "inherit" })
 if (twoCorRomanianFix.status !== 0) {
   console.error(`[2 Corinthians wave1 Romanian fix] exited with status ${twoCorRomanianFix.status}`)
