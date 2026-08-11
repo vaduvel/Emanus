@@ -18,6 +18,12 @@ if (romansSnapshotFix.status !== 0) {
   process.exit(romansSnapshotFix.status ?? 1)
 }
 
+const oneCorQuoteSnapshotFix = spawnSync("python3", ["scripts/fix_nt_addressable_wave1_1cor_quote_snapshots.py"], { stdio: "inherit" })
+if (oneCorQuoteSnapshotFix.status !== 0) {
+  console.error(`[1 Corinthians wave1 quote snapshot fix] exited with status ${oneCorQuoteSnapshotFix.status}`)
+  process.exit(oneCorQuoteSnapshotFix.status ?? 1)
+}
+
 const waveDiagnostic = spawnSync("python3", ["scripts/diagnose_nt_addressable_wave1_presemantic.py"], { stdio: "inherit" })
 if (waveDiagnostic.status === 0) {
   const addressableWave = spawnSync("python3", ["scripts/materialize_nt_manual_semantic_addressable_wave_1.py"], { stdio: "inherit" })
