@@ -29,15 +29,18 @@ transcript.sourceRange = NEW_RANGE
 fs.writeFileSync(transcriptPath, JSON.stringify(transcript, null, 2) + "\n", "utf8")
 
 const status = JSON.parse(fs.readFileSync(statusPath, "utf8"))
-if (status.currentBook !== "1-timotei") fail(`currentBook drifted: ${status.currentBook}`)
-const matches = (status.officialAudioSources ?? []).filter((s) => s.id === "1-timotei-vbv-03")
-if (matches.length !== 1) fail(`expected one status source 1-timotei-vbv-03, found ${matches.length}`)
-if (![OLD_RANGE, NEW_RANGE].includes(matches[0].sourceRange)) fail(`unexpected status sourceRange: ${matches[0].sourceRange}`)
-matches[0].sourceRange = NEW_RANGE
-status.manualDecisionsFrozen = 22
-status.lastVerifiedCoverage = {
-  ...(status.lastVerifiedCoverage ?? {}),
-  note: "Iacov is closed at 15/15 semantic decisions (7 material rewrites / 8 keep). Filimon remains 5/5 semantically valid after the fail-closed final Biblia Emanus quote rebind. 1 Timotei has four persisted official CFC Verse-by-Verse transcripts covering 1:1-6:21 and 22 frozen manual semantic decisions awaiting hash-bound materialization."
+if (status.currentBook === "1-timotei") {
+  const matches = (status.officialAudioSources ?? []).filter((s) => s.id === "1-timotei-vbv-03")
+  if (matches.length !== 1) fail(`expected one status source 1-timotei-vbv-03, found ${matches.length}`)
+  if (![OLD_RANGE, NEW_RANGE].includes(matches[0].sourceRange)) fail(`unexpected status sourceRange: ${matches[0].sourceRange}`)
+  matches[0].sourceRange = NEW_RANGE
+  status.manualDecisionsFrozen = 22
+  status.lastVerifiedCoverage = {
+    ...(status.lastVerifiedCoverage ?? {}),
+    note: "Iacov is closed at 15/15 semantic decisions (7 material rewrites / 8 keep). Filimon remains 5/5 semantically valid after the fail-closed final Biblia Emanus quote rebind. 1 Timotei has four persisted official CFC Verse-by-Verse transcripts covering 1:1-6:21 and 22 frozen manual semantic decisions awaiting hash-bound materialization."
+  }
+  fs.writeFileSync(statusPath, JSON.stringify(status, null, 2) + "\n", "utf8")
+  console.log(`1 Timotei transcript range fix: ${OLD_RANGE} -> ${NEW_RANGE}; transcript SHA unchanged ${TRANSCRIPT_SHA}; active status kept at 22 decisions.`)
+} else {
+  console.log(`1 Timotei transcript range fix: ${OLD_RANGE} -> ${NEW_RANGE}; transcript SHA unchanged ${TRANSCRIPT_SHA}; active semantic book is ${status.currentBook ?? "<none>"}, so its status was left untouched.`)
 }
-fs.writeFileSync(statusPath, JSON.stringify(status, null, 2) + "\n", "utf8")
-console.log(`1 Timotei transcript range fix: ${OLD_RANGE} -> ${NEW_RANGE}; transcript SHA unchanged ${TRANSCRIPT_SHA}; 22 decisions frozen.`)
