@@ -13,15 +13,23 @@ const ledgerPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-roman
 //   raw spelling of the preposition `în`;
 // - `doua` is correct in the feminine ordinal `a doua`, but cardinal `două`
 //   needs the diacritic.
-// Keep the shared registry backwards-compatible for older artifacts, but never
-// apply these two entries in the automatic context-free pass.
 const CONTEXT_SENSITIVE_SHARED_KEYS = new Set(["in", "doua"])
 
-// Automatic Romanian edits are intentionally limited to context-free corruptions
-// and forms whose diacritized spelling is unambiguous in reader-facing Romanian.
-// Context-sensitive forms (credinta -> credință/credința, viata -> viață/viața,
-// curata -> curată/curăță, arata -> arată/arăta etc.) remain in the reviewed
-// contextual normalizer and publication audit.
+// This is the same conservative predicate used by the final audit. It catches
+// the preposition `in` but deliberately leaves demonstrated linen/flax noun
+// contexts such as `în in curat`, `de in`, and `din in` untouched.
+const PREPOSITION_IN = /(?<!\bîn\s)(?<!\bde\s)(?<!\bdin\s)\bin\b/giu
+
+// Exact corpus phrases for the five remaining `viata` tokens. They are kept
+// explicit because `viata` can mean either indefinite `viață` or definite
+// `viața`; a global replacement would be linguistically unsafe.
+const VIATA_CONTEXTUAL = [
+  ["In El era viata", "În El era viața"],
+  ["are viata in Sine", "are viața în Sine"],
+  ["in viata, ci pe El", "în viață, ci pe El"],
+  ["in viata noastră", "în viața noastră"],
+  ["in viata de zi cu zi", "în viața de zi cu zi"],
+]
 
 function fail(message) { console.error(`[NT Romanian fixes] ${message}`); process.exit(1) }
 function preserveCase(match, replacement) {
@@ -38,9 +46,24 @@ function fixString(value, location, ledger) {
     const regex = new RegExp(`(?<![\\p{L}\\p{N}_])${escaped}(?![\\p{L}\\p{N}_])`, "giu")
     out = out.replace(regex, (match) => {
       const replacement = preserveCase(match, expected)
-      ledger.push({ location, before: match, after: replacement })
+      ledger.push({ location, kind: "context-free", before: match, after: replacement })
       return replacement
     })
+  }
+
+  out = out.replace(PREPOSITION_IN, (match) => {
+    const replacement = preserveCase(match, "în")
+    ledger.push({ location, kind: "contextual-preposition-in", before: match, after: replacement })
+    return replacement
+  })
+
+  for (const [before, after] of VIATA_CONTEXTUAL) {
+    const count = out.split(before).length - 1
+    if (!count) continue
+    out = out.split(before).join(after)
+    for (let index = 0; index < count; index += 1) {
+      ledger.push({ location, kind: "contextual-viata", before, after })
+    }
   }
   return out
 }
@@ -69,5 +92,14 @@ for (const file of fs.readdirSync(dir).filter((name) => name.endsWith(".json")).
   }
   if (ledger.length !== beforeCount) fs.writeFileSync(full, JSON.stringify(book, null, 2) + "\n", "utf8")
 }
-fs.writeFileSync(ledgerPath, JSON.stringify({ schema: "emanus-nt-romanian-fix-ledger-v5", policy: "context-free-corruptions-and-unambiguous-diacritics-only; historical contextual homographs in/doua excluded from automatic pass; Unicode-aware token boundaries; context-sensitive inflections remain reviewed separately", count: ledger.length, fixes: ledger }, null, 2) + "\n", "utf8")
-console.log(`NT Romanian safe fixes applied: ${ledger.length}.`)
+const prepositionCount = ledger.filter((item) => item.kind === "contextual-preposition-in").length
+const viataCount = ledger.filter((item) => item.kind === "contextual-viata").length
+fs.writeFileSync(ledgerPath, JSON.stringify({
+  schema: "emanus-nt-romanian-fix-ledger-v6",
+  policy: "Context-free fixes plus explicit contextual handling for the Romanian in/în homograph and the five audited viata inflections; Unicode-aware boundaries; demonstrated flax/linen noun contexts remain untouched.",
+  count: ledger.length,
+  contextualPrepositionIn: prepositionCount,
+  contextualViata: viataCount,
+  fixes: ledger,
+}, null, 2) + "\n", "utf8")
+console.log(`NT Romanian fixes applied: ${ledger.length}; contextual preposition in=${prepositionCount}; contextual viata=${viataCount}.`)
