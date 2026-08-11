@@ -13,6 +13,22 @@ function fail(message) {
   console.error(`[NT lexicon editorial fixes wave 3] ${message}`)
   process.exit(1)
 }
+function stripDiacritics(value) {
+  return String(value)
+    .normalize("NFD")
+    .replace(/\p{M}/gu, "")
+    .replace(/[șş]/gu, "s")
+    .replace(/[țţ]/gu, "t")
+    .normalize("NFC")
+}
+function exactOrDiacriticsOnly(current, expected, label) {
+  if (current === expected) return expected
+  if (stripDiacritics(current) !== stripDiacritics(expected)) {
+    fail(`${label}: current meaning changed by more than diacritics: ${current}`)
+  }
+  console.log(`LEXICON_WAVE3_PRECONDITION ${label}: ${JSON.stringify(current)} -> ${JSON.stringify(expected)}`)
+  return expected
+}
 
 const UPDATE = [
   {
@@ -88,11 +104,13 @@ function targets(op) {
 
 let updated = 0
 let removed = 0
+let reconciled = 0
 for (const op of UPDATE) {
   const hits = targets(op)
   if (hits.length !== 1) fail(`${op.ref} ${op.original}: expected exactly one target, found ${hits.length}`)
   const hit = hits[0]
-  if (hit.word.meaning !== op.before) fail(`${op.ref} ${op.original}: current meaning changed unexpectedly: ${hit.word.meaning}`)
+  const exactBefore = exactOrDiacriticsOnly(hit.word.meaning, op.before, `${op.ref} ${op.original}`)
+  if (hit.word.meaning !== exactBefore) reconciled += 1
   hit.word.original = op.originalAfter
   hit.word.meaning = op.after
   fs.writeFileSync(hit.file, JSON.stringify(hit.book, null, 2) + "\n", "utf8")
@@ -102,10 +120,11 @@ for (const op of REMOVE) {
   const hits = targets(op)
   if (hits.length !== 1) fail(`${op.ref} ${op.original}: expected exactly one removal target, found ${hits.length}`)
   const hit = hits[0]
-  if (hit.word.meaning !== op.meaning) fail(`${op.ref} ${op.original}: current removal meaning changed unexpectedly: ${hit.word.meaning}`)
+  const exactMeaning = exactOrDiacriticsOnly(hit.word.meaning, op.meaning, `${op.ref} ${op.original} removal`)
+  if (hit.word.meaning !== exactMeaning) reconciled += 1
   hit.unit.words.splice(hit.index, 1)
   fs.writeFileSync(hit.file, JSON.stringify(hit.book, null, 2) + "\n", "utf8")
   removed += 1
 }
 
-console.log(`NT lexicon editorial fixes wave 3: ${updated} exact passage-form notes aligned / ${removed} text-critical lexical note deferred to final canonical freeze.`)
+console.log(`NT lexicon editorial fixes wave 3: ${updated} exact passage-form notes aligned / ${removed} text-critical lexical note deferred to final canonical freeze; ${reconciled} diacritics-only preconditions reconciled.`)
