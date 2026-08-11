@@ -15,6 +15,9 @@ FINAL = DATA / "nt-final-source-first"
 SPECS = DATA / "nt-semantic-review-spec"
 OUT = DATA / "nt-addressable-wave1-presemantic-diagnostic.json"
 MATERIALIZER = ROOT / "scripts/materialize_nt_manual_semantic_addressable_wave_1.py"
+TWO_COR_UNIT = "2-corinteni-6-14-18"
+TWO_COR_OLD = "În căsătorie, credinciosul nu trebuie să intre deliberat într-o legătură în care partenerul nu Îi aparține lui Hristos; chiar și între credincioși, o inimă hotărâtă pentru Dumnezeu are nevoie de un partener care dorește aceeași direcție."
+TWO_COR_NEW = "În căsătorie, credinciosul nu trebuie să aleagă deliberat o legătură cu un partener care nu Îi aparține lui Hristos; chiar și între credincioși, o inimă hotărâtă pentru Dumnezeu are nevoie de un partener care dorește aceeași direcție."
 
 
 def fail(message: str) -> None:
@@ -56,6 +59,25 @@ def without_snapshot_hashes(doc: dict) -> dict:
         if not isinstance(item, dict):
             fail("review decision is not an object")
         item.pop("expectedCurrentSnapshotSha256", None)
+
+    # One post-review Romanian wording change is allowed only as this exact,
+    # semantics-preserving sentence replacement. Normalize both the frozen seed
+    # and persisted spec to the same canonical reviewed wording before comparing.
+    if clone.get("bookId") == "2-corinteni":
+        item = decisions.get(TWO_COR_UNIT)
+        if not isinstance(item, dict) or item.get("action") != "rewrite":
+            fail("2 Corinthians normalized target decision missing")
+        teaching = item.get("revisedTeaching")
+        if not isinstance(teaching, str):
+            fail("2 Corinthians normalized target revisedTeaching missing")
+        old_count = teaching.count(TWO_COR_OLD)
+        new_count = teaching.count(TWO_COR_NEW)
+        if old_count == 1 and new_count == 0:
+            item["revisedTeaching"] = teaching.replace(TWO_COR_OLD, TWO_COR_NEW)
+        elif old_count == 0 and new_count == 1:
+            pass
+        else:
+            fail(f"unexpected 2 Corinthians Romanian normalization state old={old_count} new={new_count}")
     return clone
 
 
@@ -64,16 +86,17 @@ books_cfg = literal_assignment("BOOKS")
 SPECS.mkdir(parents=True, exist_ok=True)
 
 # 1/2 Corinthians are seeded in the materializer. Their reviewed actions,
-# rationales and rewrites are immutable. Snapshot hashes are intentionally
-# excluded here because three exact Bible-quote normalizations were reconciled
-# separately and are proven against the current corpus below.
+# rationales and rewrites are immutable except for the single explicit Romanian
+# sentence normalization above. Snapshot hashes are excluded here because four
+# exact Bible-quote normalizations were reconciled separately and are proven
+# against the current corpus below.
 for filename, encoded in seeds.items():
     target = SPECS / filename
     seed_obj = json.loads(gzip.decompress(base64.b64decode(encoded)).decode("utf-8"))
     if target.exists():
         existing = json.loads(target.read_text(encoding="utf-8"))
         if without_snapshot_hashes(existing) != without_snapshot_hashes(seed_obj):
-            fail(f"{filename}: reviewed semantic content differs from frozen seed beyond snapshot hashes")
+            fail(f"{filename}: reviewed semantic content differs from frozen seed beyond approved snapshot/wording normalizations")
     else:
         target.write_text(json.dumps(seed_obj, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
@@ -122,7 +145,7 @@ for book_id, cfg in books_cfg.items():
 
 report = {
     "schema": "emanus-nt-addressable-wave1-presemantic-diagnostic-v2",
-    "policy": "Frozen semantic content is checked against reviewed seeds independently of exact reconciled snapshot hashes; every current snapshot must then match its stored hash before approval.",
+    "policy": "Frozen semantic content is checked against reviewed seeds independently of exact reconciled snapshot hashes; one exact Romanian wording normalization is explicitly whitelisted; every current snapshot must match its stored hash before approval.",
     "reviewedUnits": sum(cfg["units"] for cfg in books_cfg.values()),
     "driftCount": len(findings),
     "findings": findings,
