@@ -1,8 +1,8 @@
 {
   "schema": "emanus-nt-embedded-quote-candidates-v1",
   "policy": "Diagnostic only. Candidate scores compare each unresolved quoted span with contiguous Biblia Emanus text from the same canonical chapter. This report never edits reader copy or clears a publication blocker by itself.",
-  "count": 68,
-  "strongCandidateCount": 6,
+  "count": 70,
+  "strongCandidateCount": 7,
   "findings": [
     {
       "bookId": "matei",
@@ -1677,6 +1677,82 @@
       "best": null,
       "alternatives": [],
       "bestMargin": null
+    },
+    {
+      "bookId": "apocalipsa",
+      "canonicalBookId": "REV",
+      "chapter": 14,
+      "field": "units[1].teaching",
+      "quote": "Fericiți cei care mor în Domnul",
+      "wordCount": 6,
+      "best": {
+        "raw": "de morții care mor în Domnul",
+        "score": 0.7,
+        "lcsRatio": 0.6667,
+        "overlap": 0.6667,
+        "lengthRatio": 1,
+        "start": 358,
+        "width": 6
+      },
+      "alternatives": [
+        {
+          "raw": "morții care mor în Domnul! Da",
+          "score": 0.7,
+          "lcsRatio": 0.6667,
+          "overlap": 0.6667,
+          "lengthRatio": 1,
+          "start": 359,
+          "width": 6
+        },
+        {
+          "raw": "care mor în Domnul! Da, spune",
+          "score": 0.7,
+          "lcsRatio": 0.6667,
+          "overlap": 0.6667,
+          "lengthRatio": 1,
+          "start": 360,
+          "width": 6
+        }
+      ],
+      "bestMargin": 0
+    },
+    {
+      "bookId": "apocalipsa",
+      "canonicalBookId": "REV",
+      "chapter": 19,
+      "field": "units[0].teaching",
+      "quote": "Mărturia lui Isus este duhul profeției",
+      "wordCount": 6,
+      "best": {
+        "raw": "mărturia lui Isus este Spiritul Profeției",
+        "score": 0.85,
+        "lcsRatio": 0.8333,
+        "overlap": 0.8333,
+        "lengthRatio": 1,
+        "start": 255,
+        "width": 6
+      },
+      "alternatives": [
+        {
+          "raw": "căci mărturia lui Isus este Spiritul Profeției",
+          "score": 0.7286,
+          "lcsRatio": 0.7143,
+          "overlap": 0.7143,
+          "lengthRatio": 0.8571,
+          "start": 254,
+          "width": 7
+        },
+        {
+          "raw": "mărturia lui Isus este Spiritul Profeției. Am",
+          "score": 0.7286,
+          "lcsRatio": 0.7143,
+          "overlap": 0.7143,
+          "lengthRatio": 0.8571,
+          "start": 255,
+          "width": 7
+        }
+      ],
+      "bestMargin": 0.1214
     }
   ]
 }

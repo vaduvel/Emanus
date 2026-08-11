@@ -4,7 +4,7 @@
   "manifestStatus": "in_review",
   "manifestPublicationReady": false,
   "counts": {
-    "blockerClasses": 3,
+    "blockerClasses": 4,
     "books": 27,
     "chapters": 260,
     "units": 970,
@@ -17,12 +17,12 @@
     "rawEditorialFindings": 96,
     "editorialClassificationUnresolved": 0,
     "editorialSourceTraceabilityPending": 0,
-    "embeddedQuoteFindings": 53,
-    "romanianLanguageFindings": 0,
+    "embeddedQuoteFindings": 55,
+    "romanianLanguageFindings": 6,
     "lexiconFindings": 0,
-    "semanticFidelityPending": 340,
+    "semanticFidelityPending": 336,
     "rawTranscriptReviewed": 73,
-    "semanticTranscriptReviewed": 557,
+    "semanticTranscriptReviewed": 561,
     "staleSemanticReview": 0
   },
   "blockers": [
@@ -35,58 +35,24 @@
     },
     {
       "id": "embedded-quote-audit",
-      "count": 53,
+      "count": 55,
       "message": "embedded quote audit is manual-source-check-required.",
       "status": "manual-source-check-required"
     },
     {
+      "id": "romanian-language-audit",
+      "count": 6,
+      "message": "Romanian language audit is manual-edit-required.",
+      "status": "manual-edit-required"
+    },
+    {
       "id": "semantic-source-fidelity-pending",
-      "count": 340,
-      "message": "340/970 explanation units still lack hash-bound semantic review against transcript content.",
+      "count": 336,
+      "message": "336/970 explanation units still lack hash-bound semantic review against transcript content.",
       "rawTranscriptReviewed": 73,
-      "semanticTranscriptReviewed": 557,
+      "semanticTranscriptReviewed": 561,
       "staleSemanticReview": 0,
       "examples": [
-        {
-          "severity": "blocker",
-          "code": "semantic-transcript-review-missing",
-          "bookId": "matei",
-          "chapter": 6,
-          "unitId": "matei-6-16-18",
-          "ref": "Matei 6:16-18",
-          "currentReviewState": "reviewed-against-source-derived-legacy",
-          "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-        },
-        {
-          "severity": "blocker",
-          "code": "semantic-transcript-review-missing",
-          "bookId": "matei",
-          "chapter": 6,
-          "unitId": "matei-6-19-24",
-          "ref": "Matei 6:19-24",
-          "currentReviewState": "reviewed-against-source-derived-legacy",
-          "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-        },
-        {
-          "severity": "blocker",
-          "code": "semantic-transcript-review-missing",
-          "bookId": "matei",
-          "chapter": 6,
-          "unitId": "matei-6-25-34",
-          "ref": "Matei 6:25-34",
-          "currentReviewState": "reviewed-against-source-derived-legacy",
-          "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-        },
-        {
-          "severity": "blocker",
-          "code": "semantic-transcript-review-missing",
-          "bookId": "matei",
-          "chapter": 7,
-          "unitId": "matei-7-1-5",
-          "ref": "Matei 7:1-5",
-          "currentReviewState": "reviewed-against-source-derived-legacy",
-          "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-        },
         {
           "severity": "blocker",
           "code": "semantic-transcript-review-missing",
@@ -244,6 +210,46 @@
           "chapter": 3,
           "unitId": "luca-3-23-38",
           "ref": "Luca 3:23-38",
+          "currentReviewState": "reviewed-against-source-derived-legacy",
+          "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
+        },
+        {
+          "severity": "blocker",
+          "code": "semantic-transcript-review-missing",
+          "bookId": "luca",
+          "chapter": 4,
+          "unitId": "luca-4-1-13",
+          "ref": "Luca 4:1-13",
+          "currentReviewState": "reviewed-against-source-derived-legacy",
+          "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
+        },
+        {
+          "severity": "blocker",
+          "code": "semantic-transcript-review-missing",
+          "bookId": "luca",
+          "chapter": 4,
+          "unitId": "luca-4-14-19",
+          "ref": "Luca 4:14-19",
+          "currentReviewState": "reviewed-against-source-derived-legacy",
+          "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
+        },
+        {
+          "severity": "blocker",
+          "code": "semantic-transcript-review-missing",
+          "bookId": "luca",
+          "chapter": 4,
+          "unitId": "luca-4-20-30",
+          "ref": "Luca 4:20-30",
+          "currentReviewState": "reviewed-against-source-derived-legacy",
+          "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
+        },
+        {
+          "severity": "blocker",
+          "code": "semantic-transcript-review-missing",
+          "bookId": "luca",
+          "chapter": 4,
+          "unitId": "luca-4-31-37",
+          "ref": "Luca 4:31-37",
           "currentReviewState": "reviewed-against-source-derived-legacy",
           "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
         }

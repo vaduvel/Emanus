@@ -18,7 +18,7 @@
     "blockers": 0,
     "reviewFindings": 0,
     "infoFindings": 0,
-    "reviewedExceptions": 29
+    "reviewedExceptions": 30
   },
   "sourceFidelity": {
     "reviewed-against-source-derived-legacy": 689,
@@ -227,7 +227,7 @@
       "wave": "wave-2-reader-copy",
       "code": "ai-meta-leak",
       "location": "Ioan 10:19-30 [ioan-10-19-30].forYourHeart",
-      "excerpt": "Când te temi ca ai sa cazi din mâna lui Dumnezeu, adu-ți aminte ca Domnul nu te tine cu degetele firii tale, ci cu mâna Lui. Și nimeni nu este mai tare decât El.",
+      "excerpt": "Când te temi ca ai sa cazi din mana lui Dumnezeu, adu-ți aminte ca Domnul nu te tine cu degetele firii tale, ci cu mana Lui. Și nimeni nu este mai tare decât El.",
       "disposition": "false-positive-romanian-ai-verb",
       "rationale": "The case-insensitive raw scanner matched Romanian «ai» (verb a avea), not the uppercase AI acronym or AI-product metadata. No reader-facing AI attribution is present."
     },
@@ -260,6 +260,14 @@
       "code": "ai-meta-leak",
       "location": "2 Corinteni 1:12-22 [2-corinteni-1-12-22].teaching",
       "excerpt": "Pavel își apără purtarea prin mărturia unei conștiințe curate: a lucrat în simplitate și sinceritate înaintea lui Dumnezeu, nu prin diplomație, șiretenie sau înțelepciune firească. De aceea cuvântul lui nu trebuie să fie un joc de da și nu ",
+      "disposition": "false-positive-romanian-ai-verb",
+      "rationale": "The case-insensitive raw scanner matched Romanian «ai» (verb a avea), not the uppercase AI acronym or AI-product metadata. No reader-facing AI attribution is present."
+    },
+    {
+      "wave": "wave-2-reader-copy",
+      "code": "ai-meta-leak",
+      "location": "Apocalipsa 6:9-17 [apocalipsa-6-9-17-source-first].teaching",
+      "excerpt": "Pecetea a cincea arată oameni uciși pentru Cuvântul lui Dumnezeu și pentru mărturia pe care au ținut-o fără compromis. Ei nu au fost oameni care au spus numai ceea ce plăcea mulțimii; fidelitatea față de adevăr le-a costat viața. Strigătul ",
       "disposition": "false-positive-romanian-ai-verb",
       "rationale": "The case-insensitive raw scanner matched Romanian «ai» (verb a avea), not the uppercase AI acronym or AI-product metadata. No reader-facing AI attribution is present."
     }

@@ -1,8 +1,8 @@
 {
   "schema": "emanus-nt-embedded-quote-strong-candidates-v1",
   "policy": "Review batch only. Strong same-chapter Biblia Emanus candidates are diagnostic, not automatic replacements. Each decision must confirm that the quoted span is intended as Scripture and that the selected BE wording is the correct local passage.",
-  "sourceCount": 68,
-  "count": 6,
+  "sourceCount": 70,
+  "count": 7,
   "entries": [
     {
       "reviewId": "da7b7c5297155d31a1eb4cc475dbc4eec769d6a7f4e2259349cba34e2cc98e18",
@@ -243,6 +243,46 @@
         }
       ],
       "bestMargin": 0.0929
+    },
+    {
+      "reviewId": "cfc00791ae0290b364153b90e38d9d4ddf6e166491c19c982557ba2dc04488ac",
+      "quoteSha256": "sha256:777b87751ccf24f15139fe10490c5ed0de387748e6d4440e0538925970992128",
+      "bookId": "apocalipsa",
+      "canonicalBookId": "REV",
+      "chapter": 19,
+      "field": "units[0].teaching",
+      "quote": "Mărturia lui Isus este duhul profeției",
+      "wordCount": 6,
+      "best": {
+        "raw": "mărturia lui Isus este Spiritul Profeției",
+        "score": 0.85,
+        "lcsRatio": 0.8333,
+        "overlap": 0.8333,
+        "lengthRatio": 1,
+        "start": 255,
+        "width": 6
+      },
+      "alternatives": [
+        {
+          "raw": "căci mărturia lui Isus este Spiritul Profeției",
+          "score": 0.7286,
+          "lcsRatio": 0.7143,
+          "overlap": 0.7143,
+          "lengthRatio": 0.8571,
+          "start": 254,
+          "width": 7
+        },
+        {
+          "raw": "mărturia lui Isus este Spiritul Profeției. Am",
+          "score": 0.7286,
+          "lcsRatio": 0.7143,
+          "overlap": 0.7143,
+          "lengthRatio": 0.8571,
+          "start": 255,
+          "width": 7
+        }
+      ],
+      "bestMargin": 0.1214
     }
   ]
 }

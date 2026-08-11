@@ -1,9 +1,131 @@
 {
   "schema": "emanus-nt-romanian-language-audit-v4",
-  "status": "clean",
+  "status": "manual-edit-required",
   "policy": "Reader-facing Romanian must use standard diacritics. Deterministic and audit rules share one registry; context-sensitive forms are handled separately, and valid definite forms such as 'simpla citare' are not false positives.",
-  "count": 0,
-  "findingGroups": 0,
-  "tokenSummary": [],
-  "findings": []
+  "count": 6,
+  "findingGroups": 6,
+  "tokenSummary": [
+    {
+      "kind": "missing-diacritics",
+      "token": "doua",
+      "expected": "două",
+      "occurrences": 4,
+      "groups": 4,
+      "samples": [
+        {
+          "bookId": "apocalipsa",
+          "chapter": 10,
+          "field": "units[0].teaching",
+          "context": "…ne. Dumnezeu va duce prima la împlinire și va judeca a doua. Pregătirea pentru acel final înseamnă să trăim acum î…"
+        },
+        {
+          "bookId": "apocalipsa",
+          "chapter": 13,
+          "field": "units[1].teaching",
+          "context": "A doua fiară arată blând ca un miel, dar vorbește ca balaurul…"
+        },
+        {
+          "bookId": "apocalipsa",
+          "chapter": 20,
+          "field": "units[0].teaching",
+          "context": "…re au parte de ea sunt «fericiți și sfinți»; moartea a doua nu are putere asupra lor. Pasajul o deosebește de învi…"
+        },
+        {
+          "bookId": "apocalipsa",
+          "chapter": 20,
+          "field": "units[2].teaching",
+          "context": "…a morților sunt ele însele aruncate în iazul de foc. A doua moarte închide istoria păcatului. Isus a vorbit serios…"
+        }
+      ]
+    },
+    {
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 2,
+      "groups": 2,
+      "samples": [
+        {
+          "bookId": "apocalipsa",
+          "chapter": 15,
+          "field": "units[1].teaching",
+          "context": "Îngerii care aduc ultimele plăgi sunt îmbrăcați în in curat și strălucitor, imagine a dreptății. Judecata lu…"
+        },
+        {
+          "bookId": "apocalipsa",
+          "chapter": 19,
+          "field": "units[1].teaching",
+          "context": "…iași Persoane. Cei care Îl însoțesc sunt îmbrăcați în in curat: accentul este pe puritate, nu pe măreția lumii.…"
+        }
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "bookId": "apocalipsa",
+      "book": "Apocalipsa",
+      "chapter": 10,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "doua",
+      "expected": "două",
+      "occurrences": 1,
+      "context": "…ne. Dumnezeu va duce prima la împlinire și va judeca a doua. Pregătirea pentru acel final înseamnă să trăim acum î…"
+    },
+    {
+      "bookId": "apocalipsa",
+      "book": "Apocalipsa",
+      "chapter": 13,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "doua",
+      "expected": "două",
+      "occurrences": 1,
+      "context": "A doua fiară arată blând ca un miel, dar vorbește ca balaurul…"
+    },
+    {
+      "bookId": "apocalipsa",
+      "book": "Apocalipsa",
+      "chapter": 15,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1,
+      "context": "Îngerii care aduc ultimele plăgi sunt îmbrăcați în in curat și strălucitor, imagine a dreptății. Judecata lu…"
+    },
+    {
+      "bookId": "apocalipsa",
+      "book": "Apocalipsa",
+      "chapter": 19,
+      "field": "units[1].teaching",
+      "kind": "missing-diacritics",
+      "token": "in",
+      "expected": "în",
+      "occurrences": 1,
+      "context": "…iași Persoane. Cei care Îl însoțesc sunt îmbrăcați în in curat: accentul este pe puritate, nu pe măreția lumii.…"
+    },
+    {
+      "bookId": "apocalipsa",
+      "book": "Apocalipsa",
+      "chapter": 20,
+      "field": "units[0].teaching",
+      "kind": "missing-diacritics",
+      "token": "doua",
+      "expected": "două",
+      "occurrences": 1,
+      "context": "…re au parte de ea sunt «fericiți și sfinți»; moartea a doua nu are putere asupra lor. Pasajul o deosebește de învi…"
+    },
+    {
+      "bookId": "apocalipsa",
+      "book": "Apocalipsa",
+      "chapter": 20,
+      "field": "units[2].teaching",
+      "kind": "missing-diacritics",
+      "token": "doua",
+      "expected": "două",
+      "occurrences": 1,
+      "context": "…a morților sunt ele însele aruncate în iazul de foc. A doua moarte închide istoria păcatului. Isus a vorbit serios…"
+    }
+  ]
 }

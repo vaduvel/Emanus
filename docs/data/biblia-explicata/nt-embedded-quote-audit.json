@@ -2,13 +2,13 @@
   "schema": "emanus-nt-embedded-quote-audit-v2",
   "status": "manual-source-check-required",
   "policy": "Quoted spans of at least five words are checked against the exact current Biblia Emanus text in the same canonical book and chapter. Same-chapter exact matches clear automatically. A non-match that intends to quote Scripture must either be rewritten to exact BE wording or be explicitly reviewed as an exact biblical cross-reference to a named BE book/chapter. Only spans that do not claim to quote Scripture may use the hash-bound non-bible-quotation classification. Biblical paraphrases in quotation marks are never cleared merely by classification.",
-  "quotedFragments": 130,
+  "quotedFragments": 132,
   "exactMatches": 62,
   "reviewedNonBibleQuotes": 13,
   "reviewedCrossReferences": 2,
   "reviewLedgerStatus": "present",
   "reviewLedgerProblems": 0,
-  "count": 53,
+  "count": 55,
   "findings": [
     {
       "bookId": "matei",
@@ -617,6 +617,28 @@
       "wordCount": 9,
       "reviewId": "863174242e8130679ce5d0676166cc80084ce77e5712b22c4542203a89f01a85",
       "quoteSha256": "sha256:ed13eeeded92e8d7502102ef11c55542c921608d4733a41ed6c725ae24fb9897"
+    },
+    {
+      "bookId": "apocalipsa",
+      "canonicalBookId": "REV",
+      "book": "Apocalipsa",
+      "chapter": 14,
+      "field": "units[1].teaching",
+      "quote": "Fericiți cei care mor în Domnul",
+      "wordCount": 6,
+      "reviewId": "0d5090fb4a17a2fc6674da72ef8a48c356576f4e16f234989d4ca15f58323983",
+      "quoteSha256": "sha256:4b38af26d4e1b085a0caa59e578383b295fe9431f6719cb067aad8d70d34c788"
+    },
+    {
+      "bookId": "apocalipsa",
+      "canonicalBookId": "REV",
+      "book": "Apocalipsa",
+      "chapter": 19,
+      "field": "units[0].teaching",
+      "quote": "Mărturia lui Isus este duhul profeției",
+      "wordCount": 6,
+      "reviewId": "cfc00791ae0290b364153b90e38d9d4ddf6e166491c19c982557ba2dc04488ac",
+      "quoteSha256": "sha256:777b87751ccf24f15139fe10490c5ed0de387748e6d4440e0538925970992128"
     }
   ],
   "ledgerProblems": []
