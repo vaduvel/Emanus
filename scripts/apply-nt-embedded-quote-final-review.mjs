@@ -8,6 +8,7 @@ const ROOT = process.cwd()
 const DATA = path.join(ROOT, "docs", "data", "biblia-explicata")
 const REVIEW = path.join(DATA, "nt-embedded-quote-final-review.json")
 const CORPUS = path.join(DATA, "nt-final-source-first")
+const MANIFEST = path.join(DATA, "nt-final-source-first-manifest.json")
 const OUT = path.join(DATA, "nt-semantic-postquote-rebind-final-review.json")
 
 function fail(message) {
@@ -158,10 +159,23 @@ for (const op of review.unquotes) {
   })
 }
 
+const renderedBooks = new Map()
 for (const { full, data } of cache.values()) {
-  fs.writeFileSync(full, JSON.stringify(data, null, 2) + "\n", "utf8")
+  const rendered = JSON.stringify(data, null, 2) + "\n"
+  fs.writeFileSync(full, rendered, "utf8")
+  renderedBooks.set(data.id, rendered)
 }
 if (reviewPresent) {
+  const manifest = JSON.parse(fs.readFileSync(MANIFEST, "utf8"))
+  if (manifest.schema !== "emanus-nt-final-source-first-manifest-v1" || !Array.isArray(manifest.books)) {
+    fail("unexpected final source-first manifest schema")
+  }
+  for (const [bookId, rendered] of renderedBooks) {
+    const entry = manifest.books.find((item) => item.id === bookId)
+    if (!entry) fail(`manifest book missing: ${bookId}`)
+    entry.sha256 = sha(rendered).slice("sha256:".length)
+  }
+  fs.writeFileSync(MANIFEST, JSON.stringify(manifest, null, 2) + "\n", "utf8")
   fs.writeFileSync(OUT, JSON.stringify({
     schema: "emanus-nt-semantic-postquote-rebind-final-review-v1",
     policy: "Only quotation wrappers are removed. Wording is byte-preserved. For transcript-approved units, the pre-unquote semantic hash must equal the exact current snapshot and is moved only to the exact wrapper-only result.",

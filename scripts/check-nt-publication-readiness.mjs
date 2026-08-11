@@ -15,6 +15,7 @@ const thinAuditPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-th
 const quoteAuditPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-embedded-quote-audit.json")
 const languageAuditPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-romanian-language-audit.json")
 const lexiconAuditPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-lexicon-audit.json")
+const semanticAuditPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-semantic-fidelity-audit.json")
 const blockerReportPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-publication-blockers.json")
 
 function fail(message) { console.error(`[NT publication readiness] ${message}`); process.exit(1) }
@@ -32,6 +33,7 @@ const thinAudit = readJson(thinAuditPath, "thin-unit audit")
 const quoteAudit = readJson(quoteAuditPath, "embedded quote audit")
 const languageAudit = readJson(languageAuditPath, "Romanian language audit")
 const lexiconAudit = readJson(lexiconAuditPath, "lexicon audit")
+const semanticAudit = readJson(semanticAuditPath, "semantic fidelity audit")
 
 const bindingByChapter = new Map((binding.chapters ?? []).map((entry) => [`${entry.bookId}.${entry.chapter}`, entry]))
 const evidenceById = new Map((sourceEvidence.records ?? []).map((entry) => [entry.id, entry]))
@@ -121,6 +123,17 @@ for (const [audit, label, id] of [[quoteAudit, "embedded quote", "embedded-quote
   if (audit.missing) pushBlocker(blockers, `${id}-missing`, 1, `${label} audit is missing.`)
   else if (audit.status !== "clean") pushBlocker(blockers, id, Number(audit.count ?? audit.findings?.length ?? 1), `${label} audit is ${audit.status ?? "unresolved"}.`, { status: audit.status })
 }
+if (semanticAudit.missing) {
+  pushBlocker(blockers, "semantic-fidelity-audit-missing", 1, "Semantic fidelity audit is missing.")
+} else {
+  const pending = Number(semanticAudit.counts?.pendingSemanticReview ?? 0)
+  pushBlocker(blockers, "semantic-source-fidelity-pending", pending, `${pending}/${semanticAudit.counts?.units ?? units} explanation units still lack hash-bound semantic review against transcript content.`, {
+    rawTranscriptReviewed: Number(semanticAudit.counts?.rawTranscriptReviewed ?? 0),
+    semanticTranscriptReviewed: Number(semanticAudit.counts?.semanticTranscriptReviewed ?? 0),
+    staleSemanticReview: Number(semanticAudit.counts?.staleSemanticReview ?? 0),
+    examples: (semanticAudit.findings ?? []).slice(0, 20),
+  })
+}
 
 const report = {
   schema: "emanus-nt-publication-blockers-v3",
@@ -144,6 +157,10 @@ const report = {
     embeddedQuoteFindings: quoteAudit.count ?? null,
     romanianLanguageFindings: languageAudit.count ?? null,
     lexiconFindings: lexiconAudit.count ?? null,
+    semanticFidelityPending: semanticAudit.missing ? null : Number(semanticAudit.counts?.pendingSemanticReview ?? 0),
+    rawTranscriptReviewed: semanticAudit.missing ? null : Number(semanticAudit.counts?.rawTranscriptReviewed ?? 0),
+    semanticTranscriptReviewed: semanticAudit.missing ? null : Number(semanticAudit.counts?.semanticTranscriptReviewed ?? 0),
+    staleSemanticReview: semanticAudit.missing ? null : Number(semanticAudit.counts?.staleSemanticReview ?? 0),
   },
   blockers,
 }

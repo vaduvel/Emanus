@@ -4,7 +4,7 @@
   "manifestStatus": "in_review",
   "manifestPublicationReady": false,
   "counts": {
-    "blockerClasses": 4,
+    "blockerClasses": 1,
     "books": 27,
     "chapters": 260,
     "units": 970,
@@ -17,8 +17,8 @@
     "rawEditorialFindings": 96,
     "editorialClassificationUnresolved": 0,
     "editorialSourceTraceabilityPending": 0,
-    "embeddedQuoteFindings": 55,
-    "romanianLanguageFindings": 589,
+    "embeddedQuoteFindings": 0,
+    "romanianLanguageFindings": 0,
     "lexiconFindings": 0,
     "semanticFidelityPending": 336,
     "rawTranscriptReviewed": 73,
@@ -26,25 +26,6 @@
     "staleSemanticReview": 0
   },
   "blockers": [
-    {
-      "id": "canonical-text-not-final",
-      "count": 1,
-      "message": "Canonical text is provisional, not final.",
-      "canonicalTextVersion": "BE-NT-PROVISIONAL-2026-08-09",
-      "corpusSha256": "c65e31515638ec7082836d5d7cd3fa675827cd868eba61b2946fd4240687f412"
-    },
-    {
-      "id": "embedded-quote-audit",
-      "count": 55,
-      "message": "embedded quote audit is manual-source-check-required.",
-      "status": "manual-source-check-required"
-    },
-    {
-      "id": "romanian-language-audit",
-      "count": 589,
-      "message": "Romanian language audit is manual-edit-required.",
-      "status": "manual-edit-required"
-    },
     {
       "id": "semantic-source-fidelity-pending",
       "count": 336,

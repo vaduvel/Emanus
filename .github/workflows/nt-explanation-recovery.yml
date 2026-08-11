@@ -195,6 +195,7 @@ jobs:
           node scripts/materialize-nt-final-source-first.mjs
           node scripts/fix-nt-embedded-bible-quotes.mjs
           node scripts/apply-nt-reviewed-be-quote-fixes.mjs
+          node scripts/normalize-nt-final-reader-diacritics.mjs
 
       - name: Verify final NT corpus structure and optional UI
         run: |
