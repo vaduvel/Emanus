@@ -2,7 +2,7 @@
   "schema": "emanus-nt-embedded-quote-fix-ledger-v2",
   "policy": "Only unique same-chapter Biblia Emanus candidates with <=1 token edit (<=2 for long quotes), >=0.88 sequence score and >=0.80 token overlap are replaced. Unit-level fixes record exact unitId and fieldPath so any semantic hash transition can be independently reversed and proven. Ambiguous/non-Bible quotations remain untouched and blocked for manual classification.",
   "fixed": 4,
-  "skipped": 115,
+  "skipped": 117,
   "fixes": [
     {
       "bookId": "matei",
@@ -1091,6 +1091,24 @@
       "fieldPath": "units[4].teaching",
       "unitId": "coloseni-2-20-23",
       "quote": "nu lua, nu gusta, nu atinge",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "apocalipsa",
+      "chapter": 14,
+      "field": "teaching",
+      "fieldPath": "units[1].teaching",
+      "unitId": "apocalipsa-14-6-13-source-first",
+      "quote": "Fericiți cei care mor în Domnul",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "apocalipsa",
+      "chapter": 19,
+      "field": "teaching",
+      "fieldPath": "units[0].teaching",
+      "unitId": "apocalipsa-19-1-10-source-first",
+      "quote": "Mărturia lui Isus este duhul profeției",
       "reason": "no-unique-high-confidence-same-chapter-match"
     }
   ]
