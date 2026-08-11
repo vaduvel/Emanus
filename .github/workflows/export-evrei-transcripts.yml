@@ -108,7 +108,7 @@ jobs:
           worker = importlib.util.module_from_spec(spec)
           spec.loader.exec_module(worker)
 
-          target_books = {'romani', '1-corinteni', '2-corinteni'}
+          target_books = {'matei', 'apocalipsa'}
           index = json.loads((root / 'docs/data/biblia-explicata/nt-semantic-review-index.json').read_text(encoding='utf-8'))
           out_repo = root / 'docs/data/biblia-explicata/nt-semantic-transcript-representations'
           out_art = Path('/tmp/nt-semantic-bulk/transcripts')
@@ -127,7 +127,7 @@ jobs:
               text = worker.extract_transcript(url)
               sha = worker.sha256(text)
               slug = re.sub(r'[^a-z0-9]+', '-', url.lower()).strip('-')[-100:]
-              filename = f'{serial:03d}-{slug}.json'
+              filename = f'wave2-{serial:03d}-{slug}.json'
               payload = {
                   'schema': 'emanus-nt-semantic-transcript-representation-v1',
                   'transcriptUrl': url,
@@ -167,7 +167,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: nt-semantic-bulk-addressable
+          name: nt-semantic-bulk-addressable-wave2
           path: /tmp/nt-semantic-bulk
           if-no-files-found: error
           retention-days: 1
@@ -182,7 +182,7 @@ jobs:
             echo "Addressable semantic transcript representations already current."
             exit 0
           fi
-          git commit -m "Persist addressable NT semantic transcript representations"
+          git commit -m "Persist Matei and Revelation semantic transcript representations"
           git fetch origin agent/biblia-explicata-nt-integration-clean
           git rebase FETCH_HEAD
           git push origin HEAD:agent/biblia-explicata-nt-integration-clean
