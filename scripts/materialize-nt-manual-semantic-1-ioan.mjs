@@ -12,6 +12,12 @@ await import("./fix-nt-1-timotei-materializer-marker.mjs")
 await import("./materialize-nt-manual-semantic-1-timotei.mjs")
 await import("./restore-nt-1-timotei-materializer-marker.mjs")
 
+const wave2ReviewPack = spawnSync("python3", ["scripts/materialize_nt_addressable_wave2_review_pack.py"], { stdio: "inherit" })
+if (wave2ReviewPack.status !== 0) {
+  console.error(`[addressable semantic wave 2 review pack] exited with status ${wave2ReviewPack.status}`)
+  process.exit(wave2ReviewPack.status ?? 1)
+}
+
 const twoCorRomanianFix = spawnSync("python3", ["scripts/fix_nt_addressable_wave1_2cor_romanian.py"], { stdio: "inherit" })
 if (twoCorRomanianFix.status !== 0) {
   console.error(`[2 Corinthians wave1 Romanian fix] exited with status ${twoCorRomanianFix.status}`)
