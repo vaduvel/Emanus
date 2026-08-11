@@ -49,13 +49,7 @@ def need_sources(status: dict) -> list[dict]:
 
 
 def ensure_runtime() -> None:
-    """Install Whisper into an isolated target and prove this interpreter can import it.
-
-    The GitHub runner previously completed a dynamic pip call but the next import still
-    could not resolve faster_whisper. A fixed --target plus an explicit sys.path entry
-    removes dependence on runner/user-site behaviour and fails before any editorial
-    artifact is written if the runtime is unusable.
-    """
+    """Install Whisper into an isolated target and prove this interpreter can import it."""
     PY_DEPS.mkdir(parents=True, exist_ok=True)
     marker = PY_DEPS / ".faster-whisper-1.1.1"
     if not marker.exists():
@@ -98,17 +92,13 @@ def download(url: str, target: Path) -> None:
         raise RuntimeError(f"Downloaded audio is unexpectedly small: {target.stat().st_size} bytes")
 
 
-def transcribe(source: dict, book_id: str) -> dict:
-    from faster_whisper import WhisperModel
-
+def transcribe(source: dict, book_id: str, model, model_name: str) -> dict:
     source_id = str(source["id"])
     work = Path("/tmp/emanus-nt-transcription")
     work.mkdir(parents=True, exist_ok=True)
     audio = work / f"{source_id}.mp3"
     download(str(source["officialAudioUrl"]), audio)
 
-    model_name = os.environ.get("NT_TRANSCRIPTION_MODEL", "small.en")
-    model = WhisperModel(model_name, device="cpu", compute_type="int8", cpu_threads=2)
     segments, info = model.transcribe(
         str(audio),
         language="en",
@@ -157,10 +147,25 @@ def main() -> int:
     if not pending:
         print(f"Official audio transcription: current book {book_id or '<none>'} already current / no sources configured.")
         return 0
+
     ensure_runtime()
+    from faster_whisper import WhisperModel
+
     OUT_DIR.mkdir(parents=True, exist_ok=True)
+    model_name = os.environ.get("NT_TRANSCRIPTION_MODEL", "small.en")
+    detected_cpu = os.cpu_count() or 2
+    cpu_threads = int(os.environ.get("NT_TRANSCRIPTION_CPU_THREADS", str(min(8, max(2, detected_cpu)))))
+    if cpu_threads < 1:
+        raise RuntimeError(f"NT_TRANSCRIPTION_CPU_THREADS must be >= 1, got {cpu_threads}")
+    model = WhisperModel(model_name, device="cpu", compute_type="int8", cpu_threads=cpu_threads)
+    print(
+        f"Whisper model ready once for {len(pending)} pending source(s): "
+        f"model={model_name} cpu_threads={cpu_threads} detected_cpu={detected_cpu}",
+        flush=True,
+    )
+
     for index, source in enumerate(pending, 1):
-        result = transcribe(source, book_id)
+        result = transcribe(source, book_id, model, model_name)
         target = OUT_DIR / f"{source['id']}.json"
         target.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         print(
