@@ -169,6 +169,7 @@ jobs:
         run: |
           set -euo pipefail
           node scripts/materialize-nt-final-source-first.mjs
+          python3 scripts/materialize_nt_manual_semantic_matei_recovery.py
           node scripts/materialize-nt-manual-semantic-galateni.mjs
           node scripts/materialize-nt-manual-semantic-efeseni.mjs
           node scripts/materialize-nt-manual-semantic-evrei.mjs
