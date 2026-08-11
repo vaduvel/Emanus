@@ -29,8 +29,14 @@ try {
 }
 
 const books = publication.PUBLICATION_BIBLE_BOOKS
-if (!Array.isArray(books) || books.length !== 39) {
-  throw new Error(`[Bible reader] se așteptau 39 de cărți VT, găsite ${books?.length ?? 0}.`)
+if (!Array.isArray(books) || books.length !== 66) {
+  throw new Error(`[Bible reader] se așteptau 66 de cărți, găsite ${books?.length ?? 0}.`)
+}
+
+const otBooks = books.filter((book) => book.testament === "vt")
+const ntBooks = books.filter((book) => book.testament === "nt")
+if (otBooks.length !== 39 || ntBooks.length !== 27) {
+  throw new Error(`[Bible reader] canon incomplet: VT ${otBooks.length}/39, NT ${ntBooks.length}/27.`)
 }
 
 const needs = JSON.parse(await readFile(needsFile, "utf8"))
@@ -41,7 +47,7 @@ const catalogBooks = []
 const needResults = Object.fromEntries(needs.map((need) => [need.id, []]))
 
 for (const book of books) {
-  if (book.testament !== "vt" || book.translation !== "Biblia Emanus") {
+  if (book.translation !== publication.BIBLIA_EMANUS_TRANSLATION) {
     throw new Error(`[Bible reader] ${book.name} nu este legată de textul publicat Biblia Emanus.`)
   }
 
@@ -83,11 +89,11 @@ for (const book of books) {
 
 await writeJson(path.join(outputDir, "catalog.json"), {
   schemaVersion: 1,
-  translation: "Biblia Emanus",
+  translation: publication.BIBLIA_EMANUS_TRANSLATION,
   bookCount: books.length,
   chapterCount: books.reduce((total, book) => total + book.chapters.length, 0),
   books: catalogBooks,
 })
 await writeJson(path.join(outputDir, "needs.json"), { schemaVersion: 1, results: needResults })
 
-console.log(`[Bible reader] materializate ${books.length} cărți în ${path.relative(root, outputDir)}.`)
+console.log(`[Bible reader] materializate ${books.length} cărți (VT 39 + NT 27) în ${path.relative(root, outputDir)}.`)

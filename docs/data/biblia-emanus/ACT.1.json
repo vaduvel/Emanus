@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparat; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 26,
       "reviewed": 26,
@@ -98,14 +96,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 26 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 26 de versete din ACT.1 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost corectate formulările corupte din relatarea despre Iuda, numele proprii și construcțiile narative.",
+        "Au fost păstrate persoanele, raporturile de timp și referenții din discursul despre martorul învierii.",
+        "Variantele SBLGNT/TR nu au fost transformate automat în adaosuri în textul românesc."
       ]
     },
     "theologicalContext": {
@@ -123,29 +121,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 720,
-        "primary": 239,
-        "secondary": 48,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5075266817973916,
-      "minimumScore": 0.6309563052154472
-    },
-    "textDigest": "sha256:0091772cd6fb05fae752604ac25779db40aa4787b265171b874a724fb4ea39a6",
-    "contentDigest": "sha256:f89b341c1b8308aad99bcf537c686b06eccca9fa35559ae0aa36e69b352ace00"
+    "textDigest": "sha256:1f177562540e555f8c6851a589c9208098122b12a8dd9e324bbfea7431c49d8c",
+    "contentDigest": "sha256:b856d6721ff14aaed579e79d7aab75292c92f0e50e299f819ce105fc5fe24393",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "În prima mea scriere, Teofile, am vorbit despre toate câte a început Isus să facă și să învețe,"
+      "text": "În prima mea scriere, Teofile, am vorbit despre tot ce a început Isus să facă și despre tot ce a început să-i învețe pe alții,"
     },
     {
       "number": 2,
@@ -153,35 +146,35 @@
     },
     {
       "number": 3,
-      "text": "După suferința Sa, li S-a înfățișat viu, cu multe dovezi convingătoare, arătându-li-Se timp de patruzeci de zile și vorbind despre Împărăția lui Dumnezeu."
+      "text": "După ce a suferit, li S-a înfățișat viu, prin multe dovezi convingătoare, arătându-li-Se timp de patruzeci de zile și vorbind despre Împărăția lui Dumnezeu."
     },
     {
       "number": 4,
-      "text": "Pe când era împreună cu ei, le-a poruncit: Să nu plecați din Ierusalim, ci să așteptați promisiunea Tatălui, despre care ați auzit de la Mine,"
+      "text": "Pe când era împreună cu ei, le-a poruncit să nu plece din Ierusalim, ci să aștepte promisiunea Tatălui, despre care ați auzit de la Mine,"
     },
     {
       "number": 5,
-      "text": "căci Ioan a botezat cu apă, dar voi veți fi botezați în Duhul Sfânt nu după multe zile."
+      "text": "căci Ioan a botezat cu apă, dar voi veți fi botezați cu Duhul Sfânt în numai câteva zile."
     },
     {
       "number": 6,
-      "text": "De aceea, după ce s-au adunat, l-au întrebat, Doamne, acum restaurezi împărăția lui Israel?"
+      "text": "Așadar, cei care se adunaseră L-au întrebat: Doamne, acum îi vei reda lui Israel împărăția?"
     },
     {
       "number": 7,
-      "text": "El le-a zis: Nu vă revine vouă să cunoașteți vremurile sau momentele pe care Tatăl le-a așezat sub propria Sa autoritate,"
+      "text": "El le-a spus: Nu ține de voi să cunoașteți vremurile sau perioadele pe care Tatăl le-a stabilit prin propria Sa autoritate,"
     },
     {
       "number": 8,
-      "text": "ci veți primi putere când Duhul Sfânt va veni peste voi și veți fi martorii Mei în Ierusalim, în toată Iudeea și Samaria și până la marginea pământului."
+      "text": "ci veți primi putere când Duhul Sfânt va veni peste voi și Îmi veți fi martori în Ierusalim, în toată Iudeea și Samaria și până la capătul pământului."
     },
     {
       "number": 9,
-      "text": "După ce a spus acestea, a fost înălțat în timp ce ei priveau, iar un nor L-a luat dinaintea ochilor lor."
+      "text": "După ce a spus acestea, a fost înălțat sub privirile lor, iar un nor L-a primit și L-a luat din vederea lor."
     },
     {
       "number": 10,
-      "text": "Și, pe când priveau țintă spre cer în timp ce El Se ducea, iată că doi bărbați în haine albe au stat lângă ei"
+      "text": "Pe când priveau țintă spre cer, în timp ce El Se ducea, iată că doi bărbați în haine albe au stat lângă ei"
     },
     {
       "number": 11,
@@ -189,11 +182,11 @@
     },
     {
       "number": 12,
-      "text": "Apoi s-au întors la Ierusalim de pe muntele numit Olivet, care este aproape de Ierusalim, la o călătorie de o zi de Sabat."
+      "text": "Atunci s-au întors la Ierusalim de la muntele numit al Măslinilor, aflat lângă Ierusalim, la depărtarea unui drum îngăduit în zi de Sabat."
     },
     {
       "number": 13,
-      "text": "Când au intrat în cetate, s-au urcat în camera de sus unde stăteau: Petru, Ioan, Iacov și Andrei, Filip și Toma, Bartolomeu și Matei, Iacov al lui Alfeu, Simon Zelotul și Iuda al lui Iacov."
+      "text": "Când au intrat, s-au urcat în camera de sus unde stăteau: Petru, Ioan, Iacov și Andrei, Filip și Toma, Bartolomeu și Matei, Iacov, fiul lui Alfeu, Simon Zelotul și Iuda, fiul lui Iacov."
     },
     {
       "number": 14,
@@ -209,23 +202,23 @@
     },
     {
       "number": 17,
-      "text": "Căci el a fost numărat cu noi-a primit partea în acest minister."
+      "text": "Căci el fusese numărat împreună cu noi și primise partea lui în această slujire."
     },
     {
       "number": 18,
-      "text": "Omul acesta a căpătat un ogor cu răsplata pentru răutatea lui, și i-a căzut cu capul înainte, i s-a deschis trupul și toate intestinele i s-au spart."
+      "text": "Omul acesta a dobândit un ogor cu răsplata nedreptății; căzând cu capul înainte, i s-a rupt trupul în două și toate măruntaiele i s-au vărsat."
     },
     {
       "number": 19,
-      "text": "Lucrul acesta a ajuns cunoscut tuturor locuitorilor Ierusalimului, așa că ogorul acela a fost numit, în limba lor, Hacheldamah, adică Ogorul Sângelui."
+      "text": "Faptul a ajuns cunoscut tuturor locuitorilor Ierusalimului, așa că ogorul acela a fost numit, în limba lor, Hacheldamah, adică Ogorul Sângelui."
     },
     {
       "number": 20,
-      "text": "Căci este scris în cartea Psalmilor: Locuința lui să rămână pustie și nimeni să nu locuiască în ea! și: Slujba lui de supraveghere s-o ia altul!"
+      "text": "Căci este scris în cartea Psalmilor: «Locuința lui să rămână pustie și nimeni să nu locuiască în ea!» și: «Slujba lui de supraveghere s-o ia altul!»"
     },
     {
       "number": 21,
-      "text": "Așadar, dintre bărbații care ne-au însoțit în tot timpul în care Domnul Isus a umblat printre noi,"
+      "text": "Așadar, dintre bărbații care ne-au însoțit în tot timpul în care Domnul Isus a intrat și a ieșit printre noi,"
     },
     {
       "number": 22,
@@ -233,19 +226,19 @@
     },
     {
       "number": 23,
-      "text": "Ei au înaintat doi: Iosif i-a numit pe Barsaba, care se numea și Iust și Matthias."
+      "text": "Au pus înainte doi: pe Iosif, numit Barsaba, căruia i se mai spunea Iust, și pe Matia."
     },
     {
       "number": 24,
-      "text": "Apoi s-au rugat și au zis: Tu, Doamne, care cunoști inimile tuturor, arată-ne pe care dintre acești doi l-ai ales"
+      "text": "Apoi s-au rugat și au spus: Tu, Doamne, care cunoști inimile tuturor, arată pe care dintre acești doi l-ai ales"
     },
     {
       "number": 25,
-      "text": "să ia locul acestei slujiri și apostolii, de la care Iuda s-a abătut ca să meargă la locul său."
+      "text": "ca să ia locul acestei slujiri și al acestei apostolii, de la care Iuda s-a abătut ca să meargă la locul lui."
     },
     {
       "number": 26,
-      "text": "Au tras la sorți pentru ei, sorțul a căzut pe Matia și el a fost numărat împreună cu cei unsprezece apostoli."
+      "text": "Au tras la sorți pentru ei, iar sorțul a căzut pe Matia; el a fost numărat împreună cu cei unsprezece apostoli."
     }
   ],
   "editorialNotes": [
@@ -286,6 +279,60 @@
       "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "«Slujbă de supraveghere» păstrează funcția termenului fără a introduce un titlu eclezial ulterior."
+    },
+    {
+      "verse": 1,
+      "term": "revizie finală: ποιεῖν τε καὶ διδάσκειν",
+      "decision": "În prima mea scriere, Teofile, am vorbit despre tot ce a început Isus să facă și despre tot ce a început să-i învețe pe alții,",
+      "reason": "Pronumele „le” leagă atât „să facă”, cât și „să învețe” de „toate lucrurile”, rezultând ideea improprie că Isus învață lucrurile, deși al doilea infinitiv grec desemnează activitatea de a da învățătură. Deși ποιεῖν τε καὶ διδάσκειν înseamnă „a face și a da învățătură”, să le facă și să le învețe sugerează impropriu că Isus învață lucrurile.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 5,
+      "term": "revizie finală: οὐ μετὰ πολλὰς ταύτας ἡμέρας",
+      "decision": "căci Ioan a botezat cu apă, dar voi veți fi botezați cu Duhul Sfânt în numai câteva zile.",
+      "reason": "Construcția temporală „nu după multe zile” este un calc neidiomatic; în română, apropierea evenimentului trebuie exprimată printr-o formulare precum „în câteva zile”. Sensul apropiat temporal din οὐ μετὰ πολλὰς ταύτας ἡμέρας este recognoscibil în nu după multe zile, dar exprimarea românească rămâne neidiomatică.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 6,
+      "term": "revizie finală: ἀποκαθιστάνεις τὴν βασιλείαν τῷ Ἰσραήλ",
+      "decision": "Așadar, cei care se adunaseră L-au întrebat: Doamne, acum îi vei reda lui Israel împărăția?",
+      "reason": "Prepoziția „pentru” atenuează raportul de restituire către Israel exprimat de dativul grec și poate sugera doar că împărăția ar fi restaurată în beneficiul lui. Dativul de beneficiar sau destinatar din ἀποκαθιστάνεις τὴν βασιλείαν τῷ Ἰσραήλ este redat imprecis prin vei restaura împărăția pentru Israel.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 7,
+      "term": "revizie finală: ἔθετο ἐν τῇ ἰδίᾳ ἐξουσίᾳ",
+      "decision": "El le-a spus: Nu ține de voi să cunoașteți vremurile sau perioadele pe care Tatăl le-a stabilit prin propria Sa autoritate,",
+      "reason": "Textul românesc transformă autoritatea Tatălui din cadrul sau temeiul stabilirii vremurilor în obiectul sub care acestea ar fi fost puse; începutul „Nu vă aparține vouă” este, de asemenea, nefiresc. Raportul dintre stabilire și autoritate din ἔθετο ἐν τῇ ἰδίᾳ ἐξουσίᾳ este modificat de le-a pus sub propria autoritate.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 9,
+      "term": "revizie finală: νεφέλη ὑπέλαβεν αὐτὸν",
+      "decision": "După ce a spus acestea, a fost înălțat sub privirile lor, iar un nor L-a primit și L-a luat din vederea lor.",
+      "reason": "Verbul „a ascuns” redă numai rezultatul vizual, în timp ce grecescul ὑπέλαβεν atribuie norului acțiunea de a-L primi sau prelua pe Isus. Acțiunea de preluare din νεφέλη ὑπέλαβεν αὐτὸν este redusă în un nor L-a ascuns la simplul efect vizual asupra martorilor.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 12,
+      "term": "revizie finală: σαββάτου ἔχον ὁδόν",
+      "decision": "Atunci s-au întors la Ierusalim de la muntele numit al Măslinilor, aflat lângă Ierusalim, la depărtarea unui drum îngăduit în zi de Sabat.",
+      "reason": "Sintagma românească poate indica eronat durata unei călătorii de o zi, în locul distanței limitate care putea fi parcursă în ziua de Sabat. Măsura de distanță desemnată prin σαββάτου ἔχον ὁδόν nu este comunicată suficient de clar de la o călătorie de o zi de Sabat.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
     }
   ],
   "referenceNotes": [],

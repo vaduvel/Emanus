@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparat; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 47,
       "reviewed": 47,
@@ -98,14 +96,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 47 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 47 de versete din ACT.2 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost corectate numele regiunilor, formulările citatului din Ioel și construcțiile narative ale predicii lui Petru.",
+        "Au fost păstrate persoanele, diatezele și raporturile verbale ale pasajelor despre înviere, botez și comunitate.",
+        "Lecturile mai lungi ale Textus Receptus din 2:30–31 nu au fost introduse în textul principal."
       ]
     },
     "theologicalContext": {
@@ -123,24 +121,19 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 720,
-        "primary": 239,
-        "secondary": 48,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5075266817973916,
-      "minimumScore": 0.6309563052154472
-    },
-    "textDigest": "sha256:1c3f451d42dd866e74e82b70ed90ca779de2ba781201666b4ad67673477cff36",
-    "contentDigest": "sha256:d497b68dd3b0de455bd47ed619bbc3a181806b204abc672e1445bbbebc500f7b"
+    "textDigest": "sha256:9ee9f1afc8917538d40b6e813cc4534cbf68d91513146075a72e8cd1dc1f86d3",
+    "contentDigest": "sha256:67219dbc6be92c6e858ac30c81502f40e85fd3e059f830e419d7dafa7b386b67",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
@@ -149,19 +142,19 @@
     },
     {
       "number": 2,
-      "text": "Dintr-o dată a venit din cer un sunet ca graba unui vânt puternic, și a umplut toată casa unde stăteau."
+      "text": "Dintr-odată, din cer a venit un sunet ca al unei rafale năvalnice și a umplut toată casa unde ședeau."
     },
     {
       "number": 3,
-      "text": "Li s-au arătat niște limbi care se împărțeau, ca de foc, și s-a așezat câte una peste fiecare dintre ei."
+      "text": "Li s-au arătat limbi ca de foc, despărțite între ele, și câte una s-a așezat peste fiecare dintre ei."
     },
     {
       "number": 4,
-      "text": "Toți au fost umpluți de Duhul Sfânt și au început să vorbească în alte limbi, după cum le dădea Duhul să rostească."
+      "text": "Toți au fost umpluți de Duhul Sfânt și au început să vorbească în alte limbi, după cum Duhul le dădea să rostească."
     },
     {
       "number": 5,
-      "text": "În Ierusalim locuiau iudei, bărbați evlavioși din fiecare neam de sub cer."
+      "text": "În Ierusalim locuiau iudei, bărbați evlavioși din toate neamurile de sub cer."
     },
     {
       "number": 6,
@@ -169,7 +162,7 @@
     },
     {
       "number": 7,
-      "text": "Erau uimiți și se minunau, zicând: Iată, nu sunt oare galileeni toți aceștia care vorbesc?"
+      "text": "Erau uimiți și se minunau, spunând: Iată, nu sunt galileeni toți aceștia care vorbesc?"
     },
     {
       "number": 8,
@@ -177,15 +170,15 @@
     },
     {
       "number": 9,
-      "text": "Parți, mezi și elamiți, locuitori ai Mesopotamiei, ai Iudeei și Capadociei, ai Pontului și Asiei,"
+      "text": "Parți, mezi și elamiți, locuitori ai Mesopotamiei, Iudeei și Capadociei, Pontului și Asiei,"
     },
     {
       "number": 10,
-      "text": "Phrygia, Pamphylia, Egipt, părțile din Libia din jurul Cyrene, vizitatori din Roma, atât evrei cât și prozeliți,"
+      "text": "Frigia și Pamfilia, Egiptul și părțile Libiei dinspre Cirene, vizitatori din Roma,"
     },
     {
       "number": 11,
-      "text": "Cretanii și arabii îi auzim vorbind în limbile noastre lucrările mărețe ale lui Dumnezeu!"
+      "text": "atât iudei, cât și prozeliți, cretani și arabi — îi auzim vorbind în limbile noastre despre lucrările mărețe ale lui Dumnezeu!"
     },
     {
       "number": 12,
@@ -209,11 +202,11 @@
     },
     {
       "number": 17,
-      "text": "În zilele de pe urmă, spune Dumnezeu, voi turna din Duhul Meu peste orice carne. Fiii și fiicele voastre vor profeți, tinerii voștri vor vedea vedenii, iar bătrânii voștri vor visa vise."
+      "text": "În zilele de pe urmă, spune Dumnezeu, voi turna din Duhul Meu peste orice făptură; fiii și fiicele voastre vor profeți, tinerii voștri vor vedea vedenii, iar bătrânii voștri vor visa vise."
     },
     {
       "number": 18,
-      "text": "Chiar și peste robii Mei și peste roabele Mele voi turna din Duhul Meu în zilele acelea și vor profeți."
+      "text": "Chiar și peste robii Mei și peste roabele Mele voi turna din Duhul Meu în zilele acelea, iar ei vor profeți."
     },
     {
       "number": 19,
@@ -221,51 +214,51 @@
     },
     {
       "number": 20,
-      "text": "Soarele va fi transformat în întuneric, și luna în sânge, înainte ca ziua cea mare și glorioasă a Domnului să vină."
+      "text": "Soarele va fi prefăcut în întuneric și luna în sânge, înainte să vină ziua cea mare și strălucită a Domnului."
     },
     {
       "number": 21,
-      "text": "Și oricine va chema Numele DOMNULUI va fi salvat."
+      "text": "Și oricine va chema Numele Domnului va fi mântuit."
     },
     {
       "number": 22,
-      "text": "Bărbați israeliți, ascultați cuvintele acestea! Pe Isus Nazarineanul, bărbat atestat de Dumnezeu înaintea voastră prin lucrări puternice, minuni și semne pe care Dumnezeu le-a făcut prin El în mijlocul vostru, după cum voi înșivă știți,"
+      "text": "Bărbați israeliți, ascultați aceste cuvinte: Isus Nazarineanul a fost un om confirmat înaintea voastră de Dumnezeu prin lucrări puternice, minuni și semne pe care Dumnezeu le-a făcut prin El în mijlocul vostru, după cum voi înșivă știți."
     },
     {
       "number": 23,
-      "text": "pe Acesta, dat după planul hotărât și preștiința lui Dumnezeu, voi L-ați omorât, țintuindu-L prin mâna celor fără lege."
+      "text": "Pe Acesta, dat după planul hotărât și preștiința lui Dumnezeu, voi L-ați omorât, răstignindu-L prin mâna celor fără lege."
     },
     {
       "number": 24,
-      "text": "Dar Dumnezeu L-a înviat, dezlegând durerile morții, pentru că nu era posibil să fie ținut de ea."
+      "text": "Dar Dumnezeu L-a înviat, dezlegând durerile morții, pentru că era cu neputință ca El să fie ținut de ea."
     },
     {
       "number": 25,
-      "text": "Căci David spune despre El: Îl vedeam mereu pe DOMNUL înaintea mea, fiindcă este la dreapta mea, ca să nu mă clatin."
+      "text": "Căci David spune despre El: Îl vedeam mereu pe Domnul înaintea mea, fiindcă este la dreapta mea, ca să nu mă clatin."
     },
     {
       "number": 26,
-      "text": "De aceea mi s-a bucurat inima și mi s-a veselit limba; mai mult, chiar și carnea mea se va odihni în speranță,"
+      "text": "De aceea inima mi s-a bucurat și limba mi s-a veselit; mai mult, chiar și trupul meu va locui în speranță,"
     },
     {
       "number": 27,
-      "text": "pentru că nu-mi vei părăsi sufletul în Locuința morților și nu-i vei îngădui Sfântului Tău să vadă putrezirea."
+      "text": "fiindcă nu-mi vei părăsi sufletul în Locuința morților și nu vei îngădui ca Sfântul Tău să vadă putrezirea."
     },
     {
       "number": 28,
-      "text": "Mi-ai făcut cunoscute căile vieții și mă vei umple de bucurie în prezența Ta."
+      "text": "Mi-ai făcut cunoscute căile vieții; mă vei umple de bucurie înaintea feței Tale."
     },
     {
       "number": 29,
-      "text": "Fraților, îmi este îngăduit să vă vorbesc deschis despre patriarhul David: a murit, a fost înmormântat, iar mormântul lui este printre noi până în ziua aceasta."
+      "text": "Fraților, îmi este îngăduit să vă vorbesc deschis despre patriarhul David: el a murit și a fost înmormântat, iar mormântul lui este printre noi până în ziua aceasta."
     },
     {
       "number": 30,
-      "text": "De aceea, fiind un profet, și știind că Dumnezeu jurase cu jurămînt că din rodul trupului său, potrivit cărnii, va ridica pe Hristos ca să șadă pe scaunul lui de domnie,"
+      "text": "Fiind, așadar, profet și știind că Dumnezeu îi făcuse un jurământ că va așeza pe tronul lui un urmaș din propriul său trup,"
     },
     {
       "number": 31,
-      "text": "El a prevăzut acest lucru, a vorbit despre învierea lui Hristos, că sufletul său nu a fost lăsat în Hades, iar carnea lui nu a văzut descompunerea."
+      "text": "el a văzut mai dinainte și a vorbit despre învierea lui Hristos: că nu a fost părăsit în Locuința morților și că trupul Lui nu a văzut putrezirea."
     },
     {
       "number": 32,
@@ -273,39 +266,39 @@
     },
     {
       "number": 33,
-      "text": "De aceea, fiind înălțat prin dreapta lui Dumnezeu, și primind de la Tatăl făgăduința Duhului Sfânt, el a vărsat ce vedeți și auziți voi acum."
+      "text": "Așadar, fiind înălțat la dreapta lui Dumnezeu și primind de la Tatăl promisiunea Duhului Sfânt, El a turnat ceea ce vedeți și auziți acum."
     },
     {
       "number": 34,
-      "text": "Căci David nu s-a urcat în ceruri, ci el însuși spune: DOMNUL I-a zis Domnului meu: Șezi la dreapta Mea"
+      "text": "Căci David nu s-a urcat în ceruri, ci el însuși spune: Domnul i-a spus Domnului meu: Șezi la dreapta Mea"
     },
     {
       "number": 35,
-      "text": "până îi voi pune pe dușmanii Tăi așternut picioarelor Tale!"
+      "text": "până voi face din dușmanii Tăi un suport pentru picioarele Tale."
     },
     {
       "number": 36,
-      "text": "Să știe deci cu certitudine toată casa lui Israel că Dumnezeu L-a făcut și Domn, și Hristos pe acest Isus pe care voi L-ați răstignit."
+      "text": "Să știe, așadar, cu certitudine toată casa lui Israel că Dumnezeu L-a făcut și Domn, și Hristos pe acest Isus pe care voi L-ați răstignit."
     },
     {
       "number": 37,
-      "text": "Când au auzit acestea, au fost străpunși în inimă și le-au zis lui Petru și celorlalți apostoli: Fraților, ce să facem?"
+      "text": "Când au auzit acestea, au fost străpunși în inimă și le-au spus lui Petru și celorlalți apostoli: Fraților, ce să facem?"
     },
     {
       "number": 38,
-      "text": "Petru le-a răspuns: Pocăiți-vă și fiecare dintre voi să fie botezat în Numele lui Isus Hristos spre iertarea păcatelor voastre; și veți primi darul Duhului Sfânt."
+      "text": "Petru le-a spus: Pocăiți-vă, iar fiecare dintre voi să fie botezat în Numele lui Isus Hristos spre iertarea păcatelor voastre; și veți primi darul Duhului Sfânt."
     },
     {
       "number": 39,
-      "text": "Căci făgăduința este pentru voi și pentru copiii voștri și pentru toți cei ce sunt departe, chiar și pentru toți cei pe care Domnul Dumnezeul nostru îi va chema."
+      "text": "Căci promisiunea este pentru voi, pentru copiii voștri și pentru toți cei de departe, pentru oricâți va chema Domnul Dumnezeul nostru."
     },
     {
       "number": 40,
-      "text": "Și, prin multe alte cuvinte, mărturisea stăruitor și îi îndemna, zicând: Lăsați-vă salvați de această generație strâmbă!"
+      "text": "Prin multe alte cuvinte, mărturisea stăruitor și îi îndemna, spunând: Fiți mântuiți de generația aceasta strâmbă!"
     },
     {
       "number": 41,
-      "text": "Cei care au primit cuvântul lui au fost botezați și în ziua aceea li s-au adăugat aproape trei mii de persoane."
+      "text": "Cei care au primit cuvântul lui au fost botezați, iar în ziua aceea li s-au adăugat aproape trei mii de suflete."
     },
     {
       "number": 42,
@@ -313,7 +306,7 @@
     },
     {
       "number": 43,
-      "text": "Frica a venit peste fiecare suflet, și multe minuni și semne au fost făcute prin apostoli."
+      "text": "O teamă a cuprins fiecare suflet, iar prin apostoli se făceau multe minuni și semne."
     },
     {
       "number": 44,
@@ -325,26 +318,26 @@
     },
     {
       "number": 46,
-      "text": "În fiecare zi stăruiau într-un cuget în Templu, frângeau pâinea în case și își luau hrana cu bucurie și sinceritate a inimii,"
+      "text": "Zi de zi stăruiau într-un singur cuget în Templu, frângeau pâinea prin case și își luau hrana cu bucurie și cu inimă sinceră,"
     },
     {
       "number": 47,
-      "text": "lăudându-L pe Dumnezeu și bucurându-se de bunăvoința întregului popor. Iar Domnul îi adăuga zilnic laolaltă pe cei care erau salvați."
+      "text": "lăudându-L pe Dumnezeu și având bunăvoința întregului popor. Iar Domnul îi adăuga zi de zi obștii pe cei care erau mântuiți."
     }
   ],
   "editorialNotes": [
     {
       "verse": 17,
       "term": "πᾶσαν σάρκα",
-      "decision": "orice carne",
+      "decision": "orice făptură",
       "alternatives": [
         "orice făptură",
         "toți oamenii"
       ],
-      "reason": "Citatul din Ioel păstrează imaginea grecească a «cărnii» pentru omenirea asupra căreia este revărsat Duhul.",
+      "reason": "Citatul din Ioel folosește «carne» pentru omenirea asupra căreia este revărsat Duhul; «orice făptură» redă idiomatic referentul universal fără a-l restrânge.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Redarea literal-semantică păstrează metafora citatului fără a restrânge ori explica suplimentar referentul."
+      "resolutionReason": "Redarea românească păstrează referentul universal al citatului fără a-l restrânge ori explica confesional."
     },
     {
       "verse": 24,
@@ -374,14 +367,59 @@
     {
       "verse": 40,
       "term": "Σώθητε",
-      "decision": "Lăsați-vă salvați",
+      "decision": "Fiți mântuiți",
       "alternatives": [
         "Salvați-vă"
       ],
       "reason": "Imperativul aorist pasiv arată primirea salvării, nu o formă activă prin care ascultătorii s-ar salva singuri.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Construcția reflexiv-pasivă românească păstrează diateza și forța îndemnului."
+      "resolutionReason": "Imperativul pasiv este redat natural în română, păstrând diateza și forța îndemnului."
+    },
+    {
+      "verse": 2,
+      "term": "revizie finală: ὥσπερ φερομένης πνοῆς βιαίας",
+      "decision": "Dintr-odată, din cer a venit un sunet ca al unei rafale năvalnice și a umplut toată casa unde ședeau.",
+      "reason": "Sintagma „suflări puternice de vânt” este nenaturală și redundantă, iar sensul dinamic al participiului φερομένης, care descrie suflarea venind năvalnic, rămâne neexprimat. Redarea ὥσπερ φερομένης πνοῆς βιαίας prin ca al unei suflări puternice de vânt păstrează intensitatea, dar estompează componenta de năvălire.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 30,
+      "term": "revizie finală: ἐκ καρποῦ τῆς ὀσφύος",
+      "decision": "Fiind, așadar, profet și știind că Dumnezeu îi făcuse un jurământ că va așeza pe tronul lui un urmaș din propriul său trup,",
+      "reason": "Sintagma „pe unul din rodul coapselor sale” este material nefirească în română, deoarece „unul din” cere o mulțime numărabilă, pe când „rodul” este aici o metaforă colectivă pentru descendență. Deși pe unul din rodul coapselor sale urmărește imaginea din ἐκ καρποῦ τῆς ὀσφύος, raportul intern al expresiei românești nu identifică firesc un urmaș biologic.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 35,
+      "term": "revizie finală: θῶ τοὺς ἐχθρούς σου ὑποπόδιον τῶν ποδῶν σου",
+      "decision": "până voi face din dușmanii Tăi un suport pentru picioarele Tale.",
+      "reason": "Substantivul „așternut” nu redă precis sensul lui ὑποπόδιον, un suport ori un scăunel pentru picioare, și produce o imagine românească diferită. Imaginea regală din θῶ τοὺς ἐχθρούς σου ὑποπόδιον τῶν ποδῶν σου este slăbită de îi voi pune pe dușmanii Tăi așternut pentru picioarele Tale, deoarece așternut nu denumește suportul intenționat.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 46,
+      "term": "revizie finală: ἐν ἀγαλλιάσει καὶ ἀφελότητι καρδίας",
+      "decision": "Zi de zi stăruiau într-un singur cuget în Templu, frângeau pâinea prin case și își luau hrana cu bucurie și cu inimă sinceră,",
+      "reason": "„Curăție de inimă” nu redă suficient de precis ἀφελότης, care indică aici simplitatea, sinceritatea și lipsa duplicității, nu în primul rând puritatea morală. În timp ce ἐν ἀγαλλιάσει καὶ ἀφελότητι καρδίας accentuează sinceritatea necomplicată, cu bucurie și curăție de inimă deplasează sensul spre puritate morală.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 47,
+      "term": "revizie finală: ἐπὶ τὸ αὐτό",
+      "decision": "lăudându-L pe Dumnezeu și având bunăvoința întregului popor. Iar Domnul îi adăuga zi de zi obștii pe cei care erau mântuiți.",
+      "reason": "Sintagma „îi adăuga zilnic laolaltă” este material nefirească și lasă neexprimat raportul dintre cei adăugați și comunitatea la care sunt alăturați. Ideea comunitară din ἐπὶ τὸ αὐτό rămâne insuficient articulată în îi adăuga zilnic laolaltă, unde raportul de apartenență este sintactic neclar.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
     }
   ],
   "referenceNotes": [],

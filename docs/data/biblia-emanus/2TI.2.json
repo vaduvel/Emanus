@@ -42,21 +42,38 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
+    "batchConsultation": {
+      "recordedIn": "NT-AI-REVIEW-BATCH-2026-08-07-2TI.2.md",
+      "consultedBenchmarkIds": [
+        "CORNILESCU-1924",
+        "BTF"
+      ],
+      "unconsultedConfiguredBenchmarkIds": [
+        "NTR"
+      ],
+      "additionalAuxiliarySources": [
+        "WEBP-2TI",
+        "biblia-libera/2TI.usfm"
+      ]
+    },
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
@@ -68,26 +85,22 @@
       "meaning": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "SBLGNT, aparatul și TR au fost confruntate direct; WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost folosite numai pentru control semantic și stilistic.",
+      "NTR rămâne listată ca etalon extern configurat de schema corpusului, însă nu a fost consultată în acest lot.",
+      "Textul a fost redactat independent din sursele fixate, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-07",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 26,
       "reviewed": 26,
@@ -98,14 +111,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 26 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost rescrise toate cele 26 de versete pentru a elimina propozițiile corupte, calcurile englezești, acordurile greșite și punctuația defectuoasă.",
+        "Au fost păstrate singularul adresării către Timotei, raporturile dintre versetele 8–10 și 24–26, precum și ambiguitatea de referent din 2:26.",
+        "Lecturile SBLGNT din 2:3, 2:7, 2:12–14, 2:19, 2:21 și 2:25 au fost confruntate cu aparatul și cu TR; nu sunt importate automat lecturi tradiționale."
       ]
     },
     "theologicalContext": {
@@ -123,132 +136,249 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare editorială AI din SBLGNT, verificată cu WEBP; etaloanele românești au fost folosite doar pentru comparație, fără copierea unei traduceri românești"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 208,
-        "secondary": 58,
-        "fixed": 1
-      },
-      "minimumSemantic": 0.588175458584589,
-      "minimumScore": 0.553468476771151
-    },
-    "textDigest": "sha256:7c7484b32a3d0ffbe6eaa08798ba374b8a19bbc78db74316311b3aaf48e55ec0",
-    "contentDigest": "sha256:30baf1419a01dab0f082004f33f1541b3433d02a5298851ed13c9a174fa0647b"
+    "textDigest": "sha256:2a9d64d8852612fee9d240203e5df8dd3c9d445b1749e914d0c1f1a6def2ec44",
+    "contentDigest": "sha256:cfd4257a64cf5055b5c975807ea73b12aabe7d2521240afd6ad84660a037ce26",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "De aceea, copila mea, fii întărită în harul care este în Hristos Isus."
+      "text": "Tu, așadar, copilul meu, întărește-te în harul care este în Hristos Isus."
     },
     {
       "number": 2,
-      "text": "Lucrurile pe care le-ați auzit de la mine printre mulți martori, săvârșiți aceleași lucruri oamenilor credincioși care vor putea să-i învețe și pe alții."
+      "text": "Iar ceea ce ai auzit de la mine în prezența multor martori, încredințează unor oameni de încredere, care vor fi în stare să-i învețe și pe alții."
     },
     {
       "number": 3,
-      "text": "Prin urmare, trebuie să îndurați greutățile ca un bun soldat al lui Hristos Isus."
+      "text": "Îndură-ți partea de suferință, ca un bun soldat al lui Hristos Isus."
     },
     {
       "number": 4,
-      "text": "Niciun soldat de serviciu nu se amestecă în treburile vieții, ca să-i placă celui care l-a înscris ca soldat."
+      "text": "Niciun soldat nu se lasă prins în treburile vieții, ca să-i placă celui care l-a înrolat."
     },
     {
       "number": 5,
-      "text": "De asemenea, dacă cineva concurează în atletism, el nu este încoronat dacă nu a concurat de reguli."
+      "text": "Dacă cineva participă la o competiție, nu primește cununa decât dacă respectă regulile."
     },
     {
       "number": 6,
-      "text": "Fermierul care muncește trebuie să fie primul care obține o parte din recolte."
+      "text": "Fermierul care se ostenește trebuie să fie primul care primește o parte din roade."
     },
     {
       "number": 7,
-      "text": "Gândiți-vă la ceea ce vă spun, și Domnul să vă dea pricepere în toate lucrurile."
+      "text": "Gândește-te la ce spun, căci Domnul îți va da înțelegere în toate."
     },
     {
       "number": 8,
-      "text": "Adu-Ți aminte de Isus Hristos, înviat din morți, din sămânța lui David, după Evanghelia Mea,"
+      "text": "Adu-ți aminte de Isus Hristos, înviat dintre morți, descendent al lui David, potrivit Evangheliei mele,"
     },
     {
       "number": 9,
-      "text": "în care sufăr din greu până în punctul de lanțuri ca un criminal. Dar cuvântul lui Dumnezeu nu este legat."
+      "text": "pentru care îndur suferințe până la lanțuri, ca un răufăcător. Dar cuvântul lui Dumnezeu nu este înlănțuit."
     },
     {
       "number": 10,
-      "text": "De aceea, eu îndur toate lucrurile pentru cei aleși, ca și ei să poată obține salvarea care este în Hristos Isus cu slavă veșnică."
+      "text": "De aceea îndur totul pentru cei aleși, ca și ei să dobândească mântuirea care este în Hristos Isus, împreună cu slava veșnică."
     },
     {
       "number": 11,
-      "text": "Această vorbă este demnă de încredere: Căci dacă vom muri împreună cu el, vom locui și noi cu el."
+      "text": "Vrednic de încredere este cuvântul: căci, dacă am murit împreună cu El, vom și trăi împreună cu El;"
     },
     {
       "number": 12,
-      "text": "Dacă vom răbda, vom împărăți și noi cu El; dacă îl vom tăgădui, ne va tăgădui și El."
+      "text": "dacă îndurăm, vom domni împreună cu El; dacă Îl vom tăgădui, ne va tăgădui și El;"
     },
     {
       "number": 13,
-      "text": "Dacă suntem tăgăduitori, el rămâne credincios, căci el nu se poate tăgădui pe sine însuși."
+      "text": "dacă suntem necredincioși, El rămâne credincios; nu Se poate tăgădui pe Sine."
     },
     {
       "number": 14,
-      "text": "Amintește-le de aceste lucruri, ațâțându-le înaintea Domnului că ei nu se ceartă despre cuvinte fără folos, pentru a-i preîntâmpina pe cei care aud."
+      "text": "Amintește-le aceste lucruri și avertizează-i solemn înaintea Domnului să nu se angajeze în certuri de cuvinte; ele nu folosesc la nimic, ci duc la ruinarea celor care ascultă."
     },
     {
       "number": 15,
-      "text": "Dați dovadă de sârguință pentru a vă prezenta aprobați de Dumnezeu, un muncitor care nu trebuie să fie rușinat, care să se ocupe în mod corespunzător de Cuvântul Adevărului."
+      "text": "Străduiește-te să te înfățișezi înaintea lui Dumnezeu ca unul încercat, ca un lucrător care nu are de ce să se rușineze și care mânuiește corect cuvântul adevărului."
     },
     {
       "number": 16,
-      "text": "Ferește-te de vorbăria goală, căci ea va merge mai departe în netrebnicie,"
+      "text": "Ferește-te însă de vorbăriile goale și profane, căci cei care le rostesc vor înainta tot mai mult în neevlavie,"
     },
     {
       "number": 17,
-      "text": "cuvintele acelea vor mistui ca gangrena, din care fac parte Imeneu Filet:"
+      "text": "iar vorbirea lor se va răspândi ca o cangrenă; dintre ei sunt Imeneu și Filet,"
     },
     {
       "number": 18,
-      "text": "oamenii care au greșit cu privire la adevăr, spunând că învierea a trecut deja, și răstoarnă credința unora."
+      "text": "care s-au abătut de la adevăr, spunând că învierea a avut deja loc și răsturnând credința unora."
     },
     {
       "number": 19,
-      "text": "Totuși, temelia tare a lui Dumnezeu stă în picioare, având pecetea aceasta: Domnul cunoaște pe cei ce sunt ai Lui„Oricine rostește Numele Domnului să se abată de la nedreptate”."
+      "text": "Totuși, temelia trainică a lui Dumnezeu stă neclintită, purtând pecetea aceasta: „Domnul îi cunoaște pe cei care sunt ai Lui” și: „Oricine rostește numele Domnului să se îndepărteze de nedreptate”."
     },
     {
       "number": 20,
-      "text": "Acum, într'o casă mare, nu sunt numai vase de aur și de argint, ci și de lemn și de lut; unele sunt pentru cinste și altele pentru dezonoare."
+      "text": "Într-o casă mare nu sunt doar vase de aur și de argint, ci și de lemn și de lut; unele sunt pentru cinste, iar altele pentru dezonoare."
     },
     {
       "number": 21,
-      "text": "Prin urmare, dacă cineva se curăță de acestea, el va fi un vas pentru onoare, sfințit și potrivit pentru uzul stăpânului, pregătit pentru orice lucrare bună."
+      "text": "Așadar, dacă cineva se curăță de acestea, va fi un vas pentru cinste, sfințit, folositor stăpânului și pregătit pentru orice lucrare bună."
     },
     {
       "number": 22,
-      "text": "Fugi de poftele tinereții; dar urmărește dreptatea, credința, dragostea și pacea cu cei ce cheamă pe Domnul dintr-o inimă curată."
+      "text": "Fugi de poftele tinereții și urmărește dreptatea, credința, dragostea și pacea împreună cu cei care Îl cheamă pe Domnul dintr-o inimă curată."
     },
     {
       "number": 23,
-      "text": "Dar refuzați întrebările nechibzuite și neștiutoare, știind că ele generează certuri."
+      "text": "Evită însă întrebările nesăbuite și lipsite de învățătură, știind că ele nasc certuri."
     },
     {
       "number": 24,
-      "text": "Slujitorul Domnului nu trebuie să se certe, ci să fie blând cu toți, capabil să învețe, răbdător,"
+      "text": "Robul Domnului nu trebuie să se certe, ci să fie blând cu toți, capabil să-i învețe pe alții și răbdător în fața răului,"
     },
     {
       "number": 25,
-      "text": "cu blândețe îndrepta pe cei care i se împotriveau. Poate că Dumnezeu le va da pocăința care va duce la deplină a adevărului,"
+      "text": "corectându-i cu blândețe pe cei care se împotrivesc, poate că Dumnezeu le va da pocăința ca să ajungă la cunoașterea deplină a adevărului"
     },
     {
       "number": 26,
-      "text": "și ei se pot recupera din lațurile diavolului, după ce au fost luați captivi de el ca să facă voia Lui."
+      "text": "și să-și vină în fire, scăpând din cursa diavolului, după ce au fost luați captivi de el ca să împlinească voia lui."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 3,
+      "term": "variante textuale SBLGNT/TR: συγκακοπάθησον / Σὺ οὖν κακοπάθησον; Χριστοῦ Ἰησοῦ / Ἰησοῦ Χριστοῦ",
+      "decision": "„Îndură-ți partea de suferință, ca un bun soldat al lui Hristos Isus.”",
+      "alternatives": [
+        "TR-2TI din snapshot adaugă adresa explicită „Tu, deci”, are κακοπάθησον și inversează numele în „Isus Hristos”."
+      ],
+      "reason": "SBLGNT are verbul compus συγκακοπάθησον, care cere împărtășirea suferinței, fără pronumele inițiale ale TR, și are ordinea „Hristos Isus”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TI, aparatul și TR-2TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 7,
+      "term": "variante textuale SBLGNT/TR: ὃ / ἃ; δώσει / δῴη",
+      "decision": "„Gândește-te la ce spun, căci Domnul îți va da înțelegere în toate.”",
+      "alternatives": [
+        "TR-2TI din snapshot are pluralul ἃ și optativul δῴη, „Domnul să-ți dea”."
+      ],
+      "reason": "SBLGNT are pronumele singular ὃ și viitorul indicativ δώσει; româna păstrează „ce” și promisiunea „îți va da”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TI, aparatul și TR-2TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 12,
+      "term": "variantă textuală SBLGNT/TR: ἀρνησόμεθα / ἀρνούμεθα",
+      "decision": "„dacă Îl vom tăgădui”",
+      "alternatives": [
+        "TR-2TI din snapshot are prezentul „dacă Îl tăgăduim”."
+      ],
+      "reason": "Viitorul SBLGNT este redat prin forma românească „vom tăgădui”; el nu este armonizat cu prezentul din TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TI, aparatul și TR-2TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 13,
+      "term": "variantă de aparat: fără γάρ / + γάρ",
+      "decision": "A doua propoziție nu începe cu „căci”.",
+      "alternatives": [
+        "WH, Treg și NA28 adaugă γάρ înainte de „nu se poate tăgădui pe Sine”."
+      ],
+      "reason": "Textul SBLGNT și martorul TR din snapshot omit γάρ; punctuația românească păstrează propoziția fără o legătură cauzală adăugată.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TI, aparatul și TR-2TI au fost confruntate direct; lectura principală este consemnată explicit."
+    },
+    {
+      "verse": 14,
+      "term": "variante de aparat: κυρίου / θεοῦ; ἐπʼ / εἰς",
+      "decision": "„înaintea Domnului ... certuri de cuvinte ... nu folosesc la nimic”",
+      "alternatives": [
+        "WH, Treg și NA28 au „Dumnezeu” în loc de „Domnul”, iar TR-2TI are εἰς în loc de ἐπʼ."
+      ],
+      "reason": "SBLGNT are κυρίου și redă lipsa de folos drept consecință a certurilor de cuvinte; diferența de prepoziție nu cere o formulare românească suplimentară.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TI, aparatul și TR-2TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 15,
+      "term": "ὀρθοτομοῦντα τὸν λόγον τῆς ἀληθείας",
+      "decision": "„care mânuiește corect cuvântul adevărului”",
+      "alternatives": [
+        "„care trasează drept cuvântul adevărului”",
+        "„care expune corect cuvântul adevărului”"
+      ],
+      "reason": "ὀρθοτομέω are imaginea unei tăieri ori traseu drept; redarea aleasă exprimă tratarea corectă a mesajului fără a introduce o teorie despre împărțirea pasajelor sau a persoanelor.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TI și contextul sintactic al versetului au fost confruntate direct; decizia păstrează imaginea fără glosă doctrinară."
+    },
+    {
+      "verse": 19,
+      "term": "lectură SBLGNT/TR: τὸ ὄνομα κυρίου / τὸ ὄνομα Χριστοῦ",
+      "decision": "„Oricine rostește numele Domnului”",
+      "alternatives": [
+        "TR-2TI din snapshot citește „numele lui Hristos”."
+      ],
+      "reason": "SBLGNT are κυρίου în al doilea citat al peceții; româna păstrează „Domnului”, fără substituirea cu „Hristos” din martorul tradițional.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TI și TR-2TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 24,
+      "term": "δοῦλον κυρίου",
+      "decision": "„Robul Domnului”",
+      "alternatives": [
+        "„slujitorul Domnului”"
+      ],
+      "reason": "δοῦλος este redat „rob”, conform glosarului normativ; contextul nu oferă un motiv pentru atenuarea automată la „slujitor”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TI și glosarul editorial au fost confruntate direct; decizia păstrează forța lexicală a termenului."
+    },
+    {
+      "verse": 25,
+      "term": "variantă textuală SBLGNT/TR: δώῃ / δῷ",
+      "decision": "„poate că Dumnezeu le va da pocăința”",
+      "alternatives": [
+        "TR-2TI din snapshot are forma δῷ."
+      ],
+      "reason": "Ambele lecturi păstrează caracterul posibil, introdus de μήποτε; româna nu transformă darul pocăinței într-o certitudine declarativă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TI, aparatul și TR-2TI au fost confruntate direct; redarea păstrează valoarea potențială a construcției."
+    },
+    {
+      "verse": 26,
+      "term": "αὐτοῦ … ἐκείνου",
+      "decision": "„de el ... voia lui”, cu pronumele necapitalizat",
+      "alternatives": [
+        "Referentul lui ἐκείνου poate fi citit din context fie ca diavolul, fie ca Dumnezeu; textul nu stabilește unul dintre ei."
+      ],
+      "reason": "Cele două pronume pot avea antecedente distincte. Româna păstrează formularea necapitalizată și nu introduce o identificare teologică în corpul versetului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-2TI, contextul 2:24–26 și construcția pronominală au fost confruntate direct; ambiguitatea este păstrată intenționat."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

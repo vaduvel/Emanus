@@ -39,9 +39,17 @@
       "critical-issues-resolved",
       "audit-text-digest",
       "nt-versification-integrity",
-      "critical-apparatus-coverage"
+      "critical-apparatus-coverage",
+      "nt-editorial-evidence-register"
     ],
-    "policyDocument": "../../biblia-emanus/AUTOMATED-PUBLICATION.md"
+    "policyDocument": "../../biblia-emanus/AUTOMATED-PUBLICATION.md",
+    "newTestamentEditorialApproval": {
+      "required": true,
+      "registry": "../../biblia-emanus/NT-EDITORIAL-APPROVAL.json",
+      "schema": "../../biblia-emanus/NT-EDITORIAL-APPROVAL.schema.json",
+      "reviewerType": "ai",
+      "method": "verse-by-verse-source-and-romanian-benchmark"
+    }
   },
   "sources": {
     "english": {

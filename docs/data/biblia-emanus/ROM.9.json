@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparat; Textus Receptus a fost consultat numai ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 33,
       "reviewed": 33,
@@ -98,22 +96,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 33 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 33 de versete din ROM.9 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost reparate sintaxa, ortografia și formulările calchiate care mascau sensul textului grec.",
+        "Sunt păstrate numai alegerile românești care redau natural persoana, numărul, aspectul verbal și referentul din SBLGNT.",
+        "ROM.9.28 urmează forma concisă SBLGNT, fără completări tradiționale."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
         "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Termenii teologici și ambiguitățile sintactice sunt redați lexical, fără glosare confesionale în corpul versetului.",
+        "Etaloanele românești au fost consultate numai pentru verificare, după confruntarea directă cu sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -123,24 +121,19 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 709,
-        "primary": 137,
-        "secondary": 24,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.41000612643816675,
-      "minimumScore": 0.5818865265537531
-    },
-    "textDigest": "sha256:3b0a6a813ccd9cf1c2503236d2f16cf62691b704f327a31b518459c01bafb5bb",
-    "contentDigest": "sha256:b20c29379226787bc7a92954a4cc276c94e2476095cb7eb1b63fc821bba0d1c7"
+    "textDigest": "sha256:b3a65f960e07d1a1617c49785097f7ac766b9c4e103712fdafe4f946be27e742",
+    "contentDigest": "sha256:ff1132b68179de0d2f9a8df0db34a8d957f83d061b9fa19fa49a6c36ababe5a9",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
@@ -165,11 +158,11 @@
     },
     {
       "number": 6,
-      "text": "Dar nu este ca și cum Cuvântul lui Dumnezeu a ajuns la nimic, căci ei nu sunt tot Israelul care este al lui Israel."
+      "text": "Dar nu este ca și cum Cuvântul lui Dumnezeu ar fi eșuat, căci nu toți cei care se trag din Israel sunt Israel."
     },
     {
       "number": 7,
-      "text": "și nici nu sunt toți copii pentru că sunt sămânța lui Avraam, ci: „În Isaac îți va fi numită sămânța.”"
+      "text": "Nici nu sunt toți copii prin faptul că sunt sămânța lui Avraam, ci: „Prin Isaac va fi desemnată sămânța ta.”"
     },
     {
       "number": 8,
@@ -181,15 +174,15 @@
     },
     {
       "number": 10,
-      "text": "Și nu numai atât, ci și Rebeca, după ce a rămas însărcinată de la unul singur, Isaac, tatăl nostru."
+      "text": "Și nu numai atât, ci și Rebeca, care a rămas însărcinată printr-un singur bărbat, Isaac, tatăl nostru,"
     },
     {
       "number": 11,
-      "text": "Căci nu s-a născut încă, nici n-a făcut ceva bun, nici rău, pentruca scopul lui Dumnezeu, potrivit cu alegerea, să nu fie al lucrărilor, ci al celui ce cheamă,"
+      "text": "Căci, deși copiii nu se născuseră încă și nu făcuseră nimic bun sau rău, pentru ca scopul lui Dumnezeu potrivit alegerii să rămână,"
     },
     {
       "number": 12,
-      "text": "nu din fapte, ci din Cel care cheamă, i s-a spus: „Cel mai mare îi va sluji celui mai mic”;"
+      "text": "nu prin fapte, ci prin Cel care cheamă, i s-a spus: „Cel mai mare îi va sluji celui mai mic”;"
     },
     {
       "number": 13,
@@ -221,7 +214,7 @@
     },
     {
       "number": 20,
-      "text": "Dimpotrivă, omule, cine ești tu să-I răspunzi lui Dumnezeu? Oare lucrul plăsmuit îi va spune celui ce l-a plăsmuit: „De ce m-ai făcut astfel?”"
+      "text": "Dimpotrivă, omule, cine ești tu să-L contrazici pe Dumnezeu? Oare lucrul plăsmuit îi va spune celui ce l-a plăsmuit: „De ce m-ai făcut astfel?”"
     },
     {
       "number": 21,
@@ -253,7 +246,7 @@
     },
     {
       "number": 28,
-      "text": "Căci el va isprăvi lucrarea o va scurta în dreptate, pentru că Domnul va face o lucrare scurtă pe pământ.”"
+      "text": "Căci Domnul va duce la capăt și va grăbi împlinirea cuvântului pe pământ.”"
     },
     {
       "number": 29,
@@ -265,11 +258,11 @@
     },
     {
       "number": 31,
-      "text": "dar Israel, urmărind o lege a dreptății, nu a ajuns la lege."
+      "text": "dar Israel, urmărind o lege a dreptății, nu a ajuns la această lege."
     },
     {
       "number": 32,
-      "text": "De ce? Pentru că n-au căutat-o prin credință, ci așa cum era prin fapte ale legii; s-au poticnit de piatra de poticnire,"
+      "text": "De ce? Pentru că nu au căutat-o prin credință, ci ca și cum ar fi fost prin fapte; s-au poticnit de piatra de poticnire,"
     },
     {
       "number": 33,
@@ -285,6 +278,78 @@
       "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "Au fost verificate sintaxa, punctuația SBLGNT și lectura identică din TR; alternativa de punctuație rămâne o chestiune exegetică, dar nu schimbă textul grecesc adoptat."
+    },
+    {
+      "verse": 7,
+      "term": "revizie finală: Ἐν Ἰσαὰκ κληθήσεταί σοι σπέρμα",
+      "decision": "Nici nu sunt toți copii prin faptul că sunt sămânța lui Avraam, ci: „Prin Isaac va fi desemnată sămânța ta.”",
+      "reason": "Citatul este redat printr-o construcție românească nefirească și ambiguă, care poate sugera simpla atribuire a unui nume seminței, nu desemnarea descendenței prin Isaac. Deși În Isaac îți va fi numită sămânța încearcă să urmeze literal Ἐν Ἰσαὰκ κληθήσεταί σοι σπέρμα, nu exprimă natural desemnarea liniei de descendență.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 10,
+      "term": "revizie finală: ἐξ ἑνὸς κοίτην ἔχουσα",
+      "decision": "Și nu numai atât, ci și Rebeca, care a rămas însărcinată printr-un singur bărbat, Isaac, tatăl nostru.",
+      "reason": "Prepoziția „de la” produce o construcție românească nefirească pentru indicarea bărbatului prin care Rebeca a rămas însărcinată. Sensul reproductiv al expresiei ἐξ ἑνὸς κοίτην ἔχουσα este recognoscibil în a rămas însărcinată de la unul singur, dar relația este formulată defectuos în română.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 11,
+      "term": "revizie finală: ἵνα ἡ κατʼ ἐκλογὴν πρόθεσις τοῦ θεοῦ μένῃ",
+      "decision": "Căci, deși copiii nu se născuseră încă și nu făcuseră nimic bun sau rău, pentru ca scopul lui Dumnezeu potrivit alegerii să rămână,",
+      "reason": "Targetul adaugă la versetul 11 propoziția „nu prin fapte, ci prin Cel care cheamă”, care apare în textul grec furnizat pentru versetul 12. După ἵνα ἡ κατʼ ἐκλογὴν πρόθεσις τοῦ θεοῦ μένῃ, targetul adaugă nu prin fapte, ci prin Cel care cheamă din începutul versetului grec următor.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 12,
+      "term": "revizie finală: οὐκ ἐξ ἔργων ἀλλʼ ἐκ τοῦ καλοῦντος",
+      "decision": "nu prin fapte, ci prin Cel care cheamă, i s-a spus: „Cel mai mare îi va sluji celui mai mic”; ",
+      "reason": "Este omisă propoziția greacă inițială „οὐκ ἐξ ἔργων ἀλλʼ ἐκ τοῦ καλοῦντος”, mutată nejustificat în targetul versetului precedent. Înainte de i s-a spus, textul οὐκ ἐξ ἔργων ἀλλʼ ἐκ τοῦ καλοῦντος cere exprimarea contrastului dintre fapte și chemarea divină.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 20,
+      "term": "revizie finală: ὁ ἀνταποκρινόμενος τῷ θεῷ",
+      "decision": "Dimpotrivă, omule, cine ești tu să-L contrazici pe Dumnezeu? Oare lucrul plăsmuit îi va spune celui ce l-a plăsmuit: „De ce m-ai făcut astfel?”",
+      "reason": "Verbul „a răspunde” nu exprimă suficient nuanța de replică împotrivitoare sau contrazicere prezentă în ἀνταποκρίνομαι. Prin să-I răspunzi lui Dumnezeu, sensul polemic al expresiei ὁ ἀνταποκρινόμενος τῷ θεῷ este slăbit în mod material.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 28,
+      "term": "revizie finală: συντέμνων ποιήσει κύριος",
+      "decision": "„Căci Domnul va duce la capăt și va grăbi împlinirea cuvântului pe pământ.”",
+      "reason": "Sintagma „va scurta cuvântul” calchiază verbul grec și sugerează reducerea lungimii unui enunț, deși contextul exprimă încheierea grabnică a împlinirii lui. Redarea va împlini și va scurta cuvântul nu transmite suficient de clar că συντέμνων ποιήσει κύριος descrie ducerea hotărârii la îndeplinire fără prelungire.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 10,
+      "term": "revizie finală: Ῥεβέκκα ἐξ ἑνὸς κοίτην ἔχουσα",
+      "decision": "Și nu numai atât, ci și Rebeca, care a rămas însărcinată printr-un singur bărbat, Isaac, tatăl nostru,",
+      "reason": "Punctul final închide artificial o construcție fără predicat principal, deși unitatea începută cu Rebeca continuă sintactic până la „i s-a spus” din versetul 12. Deși Ῥεβέκκα ἐξ ἑνὸς κοίτην ἔχουσα corespunde semantic cu „Rebeca, care a rămas însărcinată printr-un singur bărbat”, punctul rupe legătura sintactică dusă până la verbul din versetul 12.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 28,
+      "term": "revizie finală: delimitarea discursului direct",
+      "decision": "Căci Domnul va duce la capăt și va grăbi împlinirea cuvântului pe pământ.”",
+      "reason": "Corectarea afectează numai ghilimelele și păstrează integral conținutul lexical al versetului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Limita citatului a fost corectată în contextul discursului continuu."
     }
   ],
   "referenceNotes": [],

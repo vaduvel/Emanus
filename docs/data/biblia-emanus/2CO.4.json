@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparat; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 18,
       "reviewed": 18,
@@ -98,22 +96,21 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 18 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 18 versete din 2CO.4 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost reparate calcurile, acordurile și relațiile sintactice care mascau sensul textului grec.",
+        "Lectura principală SBLGNT este urmată fără importarea automată a adaosurilor din martorul TR."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Textul principal urmează SBLGNT.",
+        "Termenii teologici sunt redați lexical, fără glosarea confesională a ambiguităților.",
+        "Etaloanele românești au fost folosite numai pentru verificare."
       ]
     },
     "omissionAddition": {
@@ -123,57 +120,52 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 327,
-        "primary": 189,
-        "secondary": 45,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.33174470430626646,
-      "minimumScore": 0.5090738739653641
-    },
-    "textDigest": "sha256:e718b05ad4dcecd52630c62cf4c72974ec23a3d9465ec9cb5ff122a461ca2582",
-    "contentDigest": "sha256:4d4868e70141b27d2461da2547ee8a84a5154ba79429454c306441bacc1266fd"
+    "textDigest": "sha256:bd9f6b68ae4de791c3ff4b6bae657532ad630c36b2718e4998762c6f48ff9bcd",
+    "contentDigest": "sha256:d5c09f6be59c272113147fdca8d09172767fab098a0983fdc5474d1373bac1d2",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Prin urmare, văzând că avem acest minister, chiar dacă am obținut îndurare, nu leșinăm."
+      "text": "De aceea, având această slujire, după îndurarea pe care am primit-o, nu ne descurajăm."
     },
     {
       "number": 2,
-      "text": "Dar noi am renunțat la lucrurile ascunse ale rușinii, nu umblând în viclenie, nici mânuind cu înșelăciune cuvântul lui Dumnezeu, ci prin manifestarea adevărului, lăudându-ne pentru fiecare om în fața conștiinței lui Dumnezeu."
+      "text": "Ci am lepădat lucrurile ascunse și rușinoase; nu umblăm cu viclenie și nu falsificăm cuvântul lui Dumnezeu, ci, prin arătarea adevărului, ne recomandăm înaintea lui Dumnezeu conștiinței fiecărui om."
     },
     {
       "number": 3,
-      "text": "Chiar dacă vestea noastră bună este voalată, este voalată în cei care mor,"
+      "text": "Dar, chiar dacă Evanghelia noastră este acoperită, ea este acoperită în rândul celor care pier,"
     },
     {
       "number": 4,
-      "text": "în care dumnezeul veacului acestuia a orbit mințile celor necredincioși, ca să nu strălucească asupra lor lumina Evangheliei slavei lui Hristos, care este chipul lui Dumnezeu."
+      "text": "printre aceștia, dumnezeul acestui veac a orbit mințile celor necredincioși, ca să nu le strălucească lumina Evangheliei slavei lui Hristos, care este chipul lui Dumnezeu."
     },
     {
       "number": 5,
-      "text": "Căci nu pe noi înșine ne propovăduim, ci pe Isus Hristos ca Domn, iar pe noi înșine ca robi ai voștri pentru Isus."
+      "text": "Căci nu ne propovăduim pe noi înșine, ci pe Hristos Isus ca Domn, iar pe noi înșine ca robi ai voștri de dragul lui Isus."
     },
     {
       "number": 6,
-      "text": "Pentru că Dumnezeu, care a zis: „Din întuneric va străluci lumina”, El a strălucit în inimile noastre pentru luminarea cunoașterii slavei lui Dumnezeu pe fața lui Hristos."
+      "text": "Căci Dumnezeu, care a zis: „Din întuneric va străluci lumină”, a strălucit în inimile noastre, pentru iluminarea cunoașterii slavei lui Dumnezeu pe fața lui Hristos."
     },
     {
       "number": 7,
-      "text": "Dar avem comoara aceasta în vase de lut, pentru ca puterea care întrece orice măsură să fie a lui Dumnezeu și nu de la noi."
+      "text": "Dar avem comoara aceasta în vase de lut, pentru ca puterea care întrece orice măsură să fie de la Dumnezeu, și nu de la noi."
     },
     {
       "number": 8,
-      "text": "Suntem apăsați în toate, dar nu striviți; nedumeriți, dar nu fără ieșire;"
+      "text": "Suntem apăsați din toate părțile, dar nu striviți; nedumeriți, dar nu deznădăjduiți;"
     },
     {
       "number": 9,
@@ -181,15 +173,15 @@
     },
     {
       "number": 10,
-      "text": "Purtând întotdeauna în trup moartea Domnului Isus, pentru ca viața lui Isus să poată fi revelată și în trupul nostru."
+      "text": "purtând întotdeauna în trup moartea lui Isus, pentru ca și viața lui Isus să se arate în trupul nostru."
     },
     {
       "number": 11,
-      "text": "Căci noi, cei vii, suntem dați mereu la moarte din pricina lui Isus, pentru ca și viața lui Isus să se arate în carnea noastră muritoare."
+      "text": "Căci noi, cei vii, suntem dați neîncetat morții de dragul lui Isus, pentru ca și viața lui Isus să se arate în carnea noastră muritoare."
     },
     {
       "number": 12,
-      "text": "Așa că în noi lucrează moartea, iar în voi viața."
+      "text": "Astfel, moartea lucrează în noi, iar viața în voi."
     },
     {
       "number": 13,
@@ -197,26 +189,72 @@
     },
     {
       "number": 14,
-      "text": "știind că Cel care l-a înviat pe Domnul Isus ne va învia și pe noi împreună cu Isus și ne va înfățișa împreună cu voi."
+      "text": "știind că Cel care L-a înviat pe Isus ne va învia și pe noi împreună cu Isus și ne va înfățișa împreună cu voi."
     },
     {
       "number": 15,
-      "text": "Căci toate sunt pentru voi, pentru ca harul, înmulțindu-se prin tot mai mulți, să facă mulțumirea să prisosească spre slava lui Dumnezeu."
+      "text": "Căci toate sunt pentru voi, pentru ca harul, sporind printr-un număr din ce în ce mai mare de oameni, să facă mulțumirea să prisosească spre slava lui Dumnezeu."
     },
     {
       "number": 16,
-      "text": "De aceea nu ne pierdem curajul; ci, chiar dacă omul nostru dinafară se strică, totuși cel dinăuntru se înnoiește zi de zi."
+      "text": "De aceea nu ne descurajăm; ci, chiar dacă omul nostru din afară se trece, omul nostru dinăuntru se înnoiește zi de zi."
     },
     {
       "number": 17,
-      "text": "Pentru necazul nostru de lumină, care este pentru moment, lucrează pentru noi din ce în ce mai mult o greutate eternă a gloriei,"
+      "text": "Căci necazul nostru ușor de o clipă lucrează pentru noi, dincolo de orice măsură, o greutate veșnică de slavă,"
     },
     {
       "number": 18,
-      "text": "pentru că nu privim la lucrurile care se văd, ci la cele care nu se văd; fiindcă lucrurile care se văd sunt vremelnice, dar cele care nu se văd sunt veșnice."
+      "text": "întrucât nu ne uităm la cele văzute, ci la cele nevăzute; căci cele văzute sunt trecătoare, dar cele nevăzute sunt veșnice."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 3,
+      "term": "revizie finală: ἐν τοῖς ἀπολλυμένοις",
+      "decision": "Iar dacă Evanghelia noastră este acoperită, este acoperită între cei care pier,",
+      "reason": "Prepoziția „pentru” transformă apartenența la grup exprimată prin ἐν într-un raport de destinație sau beneficiu. Sintagma ἐν τοῖς ἀπολλυμένοις cere sensul „între cei care pier”, pe când pentru cei care pier schimbă material raportul prepozițional.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 4,
+      "term": "revizie finală: ἐν οἷς ὁ θεὸς τοῦ αἰῶνος τούτου",
+      "decision": "printre aceștia, dumnezeul acestui veac a orbit mințile celor necredincioși, ca să nu le strălucească lumina Evangheliei slavei lui Hristos, care este chipul lui Dumnezeu.",
+      "reason": "Începutul versetului transformă pronumele anaforic prepozițional „în mijlocul cărora” într-o nouă sintagmă cu „pentru”, alterând raportul sintactic cu versetul anterior. Construcția ἐν οἷς ὁ θεὸς τοῦ αἰῶνος τούτου înseamnă „printre aceștia”, nu pentru cei necredincioși ca nou complement al versetului precedent.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 6,
+      "term": "revizie finală: λάμψει",
+      "decision": "Căci Dumnezeu, care a zis: „Din întuneric va străluci lumină”, a strălucit în inimile noastre, pentru iluminarea cunoașterii slavei lui Dumnezeu pe fața lui Hristos.",
+      "reason": "Citatul schimbă indicativul viitor λάμψει, „va străluci”, într-un conjunctiv cu valoare de poruncă. Indicativul viitor λάμψει nu corespunde gramatical cu să strălucească, deoarece traducerea schimbă afirmația profetică într-un imperativ.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 15,
+      "term": "revizie finală: διὰ τῶν πλειόνων",
+      "decision": "Căci toate sunt pentru voi, pentru ca harul, sporind printr-un număr din ce în ce mai mare de oameni, să facă mulțumirea să prisosească spre slava lui Dumnezeu.",
+      "reason": "„Prin cei mai mulți” este nefiresc și poate denumi majoritatea unui grup, în loc să exprime extinderea harului printr-un număr crescând de persoane. Sintagma διὰ τῶν πλειόνων exprimă creșterea numărului beneficiarilor, pe când prin cei mai mulți sugerează imprecis un grup majoritar deja delimitat.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 3,
+      "term": "revizie finală: εἰ δὲ καὶ ἔστιν κεκαλυμμένον",
+      "decision": "Dar, chiar dacă Evanghelia noastră este acoperită, ea este acoperită în rândul celor care pier,",
+      "reason": "Este omisă valoarea concesivă „chiar” din formula grecească εἰ δὲ καὶ, astfel încât propoziția românească exprimă o condiție simplă în locul sensului „chiar dacă”. Între εἰ δὲ καὶ ἔστιν κεκαλυμμένον și Iar dacă Evanghelia noastră este acoperită există o corespondență incompletă, deoarece nu este redată valoarea concesivă a lui καὶ.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

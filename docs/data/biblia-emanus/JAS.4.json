@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "theologicalNeutrality": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Revizie semantică direct din snapshotul fixat SBLGNT 1.2 și aparat; TR numai martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă auxiliare. NTR nu a fost consultată."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 17,
       "reviewed": 17,
@@ -98,22 +96,18 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 17 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 17 versete au fost confruntate direct cu SBLGNT/aparat; TR a fost doar martor."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Textul a fost refăcut în română firească după greacă, eliminând calcurile și coruperile."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Termenii teologici și metaforele au fost redați lexical și contextual, fără glosare confesională."
       ]
     },
     "omissionAddition": {
@@ -123,96 +117,149 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT; etaloanele numai pentru verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 316,
-        "secondary": 95,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5922586297890594,
-      "minimumScore": 0.5759312754780807
-    },
-    "textDigest": "sha256:667d3a1be39f6f78adbcfa7b1277bbc61ed2b71c170ad5bdf3416a7db30e5336",
-    "contentDigest": "sha256:db9864e72d2d2e426645b16a29ceabc3caca29db7508f00322addecd8e872289"
+    "textDigest": "sha256:bcb0d530454f00645f47e0084afedbdf6ac9f3caed73a585198c7dee04f9a1ea",
+    "contentDigest": "sha256:c17a591c10cc29fc9917c09ac780c7f5bb3330d7faebf960dab9713d79b1745a",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "De unde vin războaiele și luptele dintre voi? Nu vin ei din plăcerile voastre care războiesc în mădularele voastre?"
+      "text": "De unde vin luptele și certurile dintre voi? Nu de aici, din plăcerile voastre care se războiesc în mădularele voastre?"
     },
     {
       "number": 2,
-      "text": "Tu poftești, și nu ai. Tu ucizi și râvnești, și nu poți obține. Tu lupți și faci război. Tu nu ai, pentru că nu întrebi."
+      "text": "Poftiți și nu aveți; ucideți și invidiați și nu puteți dobândi; vă certați și vă luptați. Nu aveți pentru că nu cereți."
     },
     {
       "number": 3,
-      "text": "Tu întrebi, și nu primi, pentru că te întrebi cu motive greșite, astfel încât s-ar putea cheltui pe plăcerile tale."
+      "text": "Cereți și nu primiți, pentru că cereți rău, ca să risipiți în plăcerile voastre."
     },
     {
       "number": 4,
-      "text": "Voi adulteri și adultere, nu știți că prietenia cu lumea este ostilitate față de Dumnezeu? Prin urmare, oricine dorește să fie un prieten al lumii se face dușman al lui Dumnezeu."
+      "text": "Adulterelor, nu știți că prietenia cu lumea este vrăjmășie față de Dumnezeu? Așadar, cine vrea să fie prieten cu lumea se face vrăjmaș al lui Dumnezeu."
     },
     {
       "number": 5,
-      "text": "Sau credeți că Scriptura spune în zadar: Duhul care locuiește în noi tânjește după gelozie„?"
+      "text": "Sau credeți că Scriptura vorbește în zadar? Duhul pe care L-a făcut să locuiască în noi tânjește cu gelozie."
     },
     {
       "number": 6,
-      "text": "Dar el dă mai mult har. De aceea se spune: Dumnezeu se împotrivește celor mândri, dar dă har celor smeriți.”"
+      "text": "Dar El dă un har și mai mare. De aceea spune: „Dumnezeu Se împotrivește celor mândri, dar celor smeriți le dă har.”"
     },
     {
       "number": 7,
-      "text": "Supuneți-vă deci lui Dumnezeu, împotriviți-vă diavolului, el va fugi de la voi."
+      "text": "Supuneți-vă deci lui Dumnezeu; împotriviți-vă diavolului, iar el va fugi de la voi."
     },
     {
       "number": 8,
-      "text": "Apropiați-vă de Dumnezeu, și El se va apropia de voi. Curățați-vă mâinile, păcătoșilor! Purificați-vă inimile, voi cei curați la minte!"
+      "text": "Apropiați-vă de Dumnezeu și El Se va apropia de voi. Curățați-vă mâinile, păcătoșilor, și curățiți-vă inimile, voi cei cu inima împărțită!"
     },
     {
       "number": 9,
-      "text": "Lamentați-vă, jeliți-vă și plângeți-vă, râsetele voastre să se transforme în doliu și bucuria voastră în tristețe."
+      "text": "Întristați-vă, jeliți și plângeți! Râsul vostru să se prefacă în jale și bucuria voastră în mâhnire."
     },
     {
       "number": 10,
-      "text": "Umiliți-vă înaintea Domnului, și El vă va înălța."
+      "text": "Smeriți-vă înaintea Domnului și El vă va înălța."
     },
     {
       "number": 11,
-      "text": "Să nu vorbiți unii împotriva altora, fraților. Cine vorbește împotriva fratelui său și judecă pe fratele său, vorbește împotriva legii și judecă legea. Dar dacă judecați legea, nu sunteți un împlinitor al legii, ci un judecător."
+      "text": "Nu vă vorbiți de rău unii pe alții, fraților. Cine îl vorbește de rău pe fratele său sau îl judecă pe fratele său vorbește de rău legea și judecă legea. Iar dacă judeci legea, nu ești împlinitor al legii, ci judecător."
     },
     {
       "number": 12,
-      "text": "Numai unul este cel care dă legea, care este capabil să salveze și să distrugă. Dar cine ești tu să judeci pe altul?"
+      "text": "Unul singur este Dătătorul Legii și Judecătorul, Cel care poate să mântuiască și să nimicească. Dar cine ești tu, care îl judeci pe aproapele tău?"
     },
     {
       "number": 13,
-      "text": "Veniți acum, voi care ziceți: Astăzi sau mâine să mergem în cetatea aceasta să petrecem un an acolo, făcând nego făcând profit.„"
+      "text": "Veniți acum, voi care spuneți: „Astăzi sau mâine vom merge în cutare cetate, vom petrece acolo un an, vom face negoț și vom câștiga”,"
     },
     {
       "number": 14,
-      "text": "Voi nici măcar nu știți ce va fi mâine. Ce este viața voastră? Sunteți un abur care se arată pentru puțin timp și apoi dispare."
+      "text": "voi, care nu știți ce va fi mâine! Ce este viața voastră? Sunteți un abur care se arată pentru puțin timp și apoi dispare."
     },
     {
       "number": 15,
-      "text": "Căci ar trebui să spuneți: Dacă Domnul vrea, amândoi vom trăi și vom face așa sau așa."
+      "text": "În loc să spuneți: „Dacă Domnul va voi, vom trăi și vom face aceasta sau aceea.”"
     },
     {
       "number": 16,
-      "text": "Dar acum vă lăudați cu lăudăronia voastră, căci orice laudă de felul acesta este rea."
+      "text": "Dar acum vă lăudați cu pretențiile voastre trufașe. Orice laudă de felul acesta este rea."
     },
     {
       "number": 17,
-      "text": "Dar pentru cel ce știe să facă binele și să nu-l facă, este păcat pentru el.”"
+      "text": "Așadar, cine știe să facă binele și nu-l face săvârșește păcat."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 4,
+      "term": "μοιχαλίδες",
+      "decision": "„Adulterelor”",
+      "alternatives": [
+        "„oameni necredincioși”"
+      ],
+      "reason": "Metafora conjugală a textului grec este păstrată, fără neutralizare interpretativă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Verificat direct în SBLGNT 1.2 și aparatul fixat."
+    },
+    {
+      "verse": 5,
+      "term": "πρὸς φθόνον ἐπιποθεῖ τὸ πνεῦμα",
+      "decision": "„Duhul ... tânjește cu gelozie”",
+      "alternatives": [
+        "„duhul ... poftește spre invidie”"
+      ],
+      "reason": "Sintaxa este dificilă și disputată; formularea păstrează deliberat tensiunea lexicală fără a o transforma într-o afirmație dogmatică suplimentară.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Verificat direct în SBLGNT 1.2 și aparatul fixat."
+    },
+    {
+      "verse": 8,
+      "term": "δίψυχοι",
+      "decision": "„voi cei cu inima împărțită”",
+      "alternatives": [
+        "„cei cu suflet dublu”"
+      ],
+      "reason": "Aceeași decizie lexicală ca în 1:8.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Verificat direct în SBLGNT 1.2 și aparatul fixat."
+    },
+    {
+      "verse": 12,
+      "term": "νομοθέτης καὶ κριτής",
+      "decision": "„Dătătorul Legii și Judecătorul”",
+      "alternatives": [
+        "„Dătătorul Legii”"
+      ],
+      "reason": "Ambele substantive ale textului principal sunt păstrate.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Verificat direct în SBLGNT 1.2 și aparatul fixat."
+    },
+    {
+      "verse": 16,
+      "term": "revizie finală: ἐν ταῖς ἀλαζονείαις ὑμῶν",
+      "decision": "Dar acum vă lăudați cu pretențiile voastre trufașe. Orice laudă de felul acesta este rea.",
+      "reason": "Redarea în aroganțele voastre nu comunică suficient de precis ideea de pretenții trufașe exprimată prin ἐν ταῖς ἀλαζονείαις ὑμῶν.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

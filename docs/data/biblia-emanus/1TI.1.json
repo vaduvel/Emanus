@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -69,25 +72,21 @@
     },
     "observations": [
       "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost redactat prin revizie directă din SBLGNT; WEBP și etaloanele românești au fost consultate auxiliar, fără stocarea unei traduceri românești protejate.",
+      "Câmpurile consultedInBatch disting etaloanele efectiv confruntate în acest lot de cele configurate în schema corpusului; NTR nu a fost consultată."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 20,
       "reviewed": 20,
@@ -98,7 +97,7 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 20 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
@@ -123,108 +122,185 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare prin revizie directă din SBLGNT, cu WEBP și etaloanele românești numai ca verificare auxiliară; fără copierea unei traduceri românești protejate"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 208,
-        "secondary": 58,
-        "fixed": 1
-      },
-      "minimumSemantic": 0.588175458584589,
-      "minimumScore": 0.553468476771151
-    },
-    "textDigest": "sha256:6af0820d7076534565d8ae45ba84109f4ee64fe1e54eec668669bd72d4d1329c",
-    "contentDigest": "sha256:139e1ce2b707395ffd660b871e2c2d851c05fe35d0128a285aaabd54eac1257b"
+    "textDigest": "sha256:17fcd2253ac2bc47dd840a83275a94d592ced28cfa56086d39446ee9b67f0d58",
+    "contentDigest": "sha256:b37ea74ae07fd9402b1a2cc4cb927c78928ba3a3a4f3bda942b95ad9ecc683c6",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Pavel, apostol al lui Isus Hristos, după porunca lui Dumnezeu, Mântuitorul nostru, și Domnul Isus Hristos, nădejdea noastră,"
+      "text": "Pavel, apostol al lui Hristos Isus, prin porunca lui Dumnezeu, Mântuitorul nostru, și a lui Hristos Isus, speranța noastră,"
     },
     {
       "number": 2,
-      "text": "către Timotei, adevăratul meu copil în credință: Har, îndurare și pace de la Dumnezeu Tatăl nostru și Hristos Isus, Domnul nostru."
+      "text": "către Timotei, adevăratul meu copil în credință: har, îndurare și pace de la Dumnezeu Tatăl și de la Hristos Isus, Domnul nostru."
     },
     {
       "number": 3,
-      "text": "Așa cum v-am îndemnat când mergeam în Macedonia, stați în Efes ca să porunciți anumitor oameni să nu predea o altă doctrină,"
+      "text": "Așa cum te-am îndemnat, când plecam spre Macedonia, să rămâi în Efes, ca să le poruncești unora să nu dea o învățătură diferită,"
     },
     {
       "number": 4,
-      "text": "și să nu acordăm atenție miturilor și genealogiilor nesfârșite, care cauzează dispute mai degrabă decât lui Dumnezeu administrația, care este în credință."
+      "text": "și să nu dea atenție miturilor și genealogiilor fără sfârșit, care duc mai degrabă la speculații decât la planul lui Dumnezeu care se desfășoară prin credință."
     },
     {
       "number": 5,
-      "text": "Dar scopul acestei porunci este iubirea dintr-o inimă curată, o conștiință bună și o credință sinceră,"
+      "text": "Dar scopul acestei porunci este dragostea dintr-o inimă curată, o conștiință bună și o credință sinceră,"
     },
     {
       "number": 6,
-      "text": "din care unele lucruri, după ce au ratat semnul, s-au abătut la vorbe deșarte,"
+      "text": "Unii au ratat aceste lucruri și s-au abătut spre vorbărie deșartă,"
     },
     {
       "number": 7,
-      "text": "dorind să fie învățători ai legii, deși nu înțeleg nici ceea ce spun, nici ceea ce afirmă cu tărie."
+      "text": "dorind să fie învățători ai Legii, fără să înțeleagă nici ce spun, nici lucrurile despre care fac afirmații hotărâte."
     },
     {
       "number": 8,
-      "text": "Dar știm că legea este bună dacă o persoană o folosește în mod legal,"
+      "text": "Știm însă că Legea este bună, dacă cineva o folosește cum se cuvine,"
     },
     {
       "number": 9,
-      "text": "nd aceasta, că legea nu este făcută pentru cel drept, ci pentru cel fără de lege și nesupus, pentru cei neevlavi și păcătoși, pentru nesfânt și profan, pentrui de ta șii de mame, pentrui de oameni,"
+      "text": "având în vedere aceasta: Legea nu este dată pentru cel drept, ci pentru cei fărădelege și nesupuși, pentru cei neevlavioși și păcătoși, pentru cei nesfinți și profani, pentru ucigașii de tați și de mame, pentru ucigași,"
     },
     {
       "number": 10,
-      "text": "pentru cei imorali sexual, pentru homosexuali, pentru negustorii de sclavi, pentru mincinoși, pentru sperjuri, și pentru orice altceva contrar doctrinei sănătoase,"
+      "text": "pentru cei desfrânați, pentru bărbații care au relații sexuale cu bărbați, pentru răpitorii de oameni, pentru mincinoși, pentru cei care jură strâmb și pentru orice altceva contrar învățăturii sănătoase,"
     },
     {
       "number": 11,
-      "text": "potrivit cu Vestea Bună a slavei binecuvântatului Dumnezeu, care mi-a fost încredințată."
+      "text": "potrivit Evangheliei slavei Dumnezeului binecuvântat, care mi-a fost încredințată."
     },
     {
       "number": 12,
-      "text": "Îi mulțumesc celui ce m-a ajutat, Hristos Isus, Domnul nostru, pentru că m-a socotit credincios, numindu-mă în slujba Domnului nostru,"
+      "text": "Îi mulțumesc lui Hristos Isus, Domnul nostru, care m-a întărit, fiindcă m-a socotit credincios și m-a pus în slujire,"
     },
     {
       "number": 13,
-      "text": "Deși obișnuiam să fiu un blasfemator, un persecutor și un insolent, totuși am obținut îndurare pentru că am făcut-o ignorant în necredință."
+      "text": "deși mai înainte eram hulitor, persecutor și om violent. Dar mi s-a arătat îndurare, fiindcă am acționat din neștiință, în necredință."
     },
     {
       "number": 14,
-      "text": "Harul Domnului nostru s-a înmulțit nespus de mult cu credința dragostea care este în Hristos Isus."
+      "text": "Harul Domnului nostru a prisosit peste măsură, împreună cu credința și dragostea care sunt în Hristos Isus."
     },
     {
       "number": 15,
-      "text": "Proverbul este credincios și demn de orice acceptare, că Hristos Isus a venit în lume pentru a salva păcătoșii, dintre care eu sunt cel mai mare."
+      "text": "Vrednic de crezare este cuvântul și demn de toată primirea: Hristos Isus a venit în lume ca să mântuiască păcătoșii, dintre care eu sunt cel dintâi."
     },
     {
       "number": 16,
-      "text": "Totuși, pentru această cauză am obținut îndurare, pentru ca în mine, mai întâi, Isus Hristos să-și arate toată răbdarea pentru un exemplu al celor care urmau să creadă în el pentru viața veșnică."
+      "text": "Dar pentru aceasta mi s-a arătat îndurare, ca, în mine, cel dintâi, Hristos Isus să-Și arate întreaga răbdare, ca exemplu pentru cei care urmau să creadă în El pentru viața veșnică."
     },
     {
       "number": 17,
-      "text": "Acum, pentru Regele veșnic, nemuritor, invizibil, pentru Dumnezeu care singur este înțelept, să fie onoare și glorie pentru totdeauna și pentru totdeauna. Amin."
+      "text": "Iar Regelui veacurilor, nepieritor, nevăzut, singurului Dumnezeu, cinste și slavă în vecii vecilor! Amin."
     },
     {
       "number": 18,
-      "text": "Îți dau această învățătură, copilul meu Timotei, după proorociile care ți-au fost date mai înainte, ca prin ele să duci un război bun,"
+      "text": "Această poruncă ți-o încredințez, copilul meu Timotei, potrivit profețiilor rostite mai înainte cu privire la tine, ca, în temeiul lor, să duci lupta cea bună,"
     },
     {
       "number": 19,
-      "text": "Credința și o bună conștiință, pe care unii dintre ei le-au îndepărtat, au făcut un naufragiu cu privire la credință,"
+      "text": "păstrând credința și o conștiință bună. Unii au lepădat-o pe aceasta și au naufragiat în ce privește credința,"
     },
     {
       "number": 20,
-      "text": "despre care sunt Hymenaeus și Alexandru, pe care i-am dat lui Satan, ca să nu fie învățați să hulească."
+      "text": "Dintre aceștia sunt Imeneu și Alexandru, pe care i-am dat pe mâna Satanei, ca, prin disciplinare, să învețe să nu hulească."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "variante textuale SBLGNT/TR: Χριστοῦ Ἰησοῦ / Ἰησοῦ Χριστοῦ; Χριστοῦ Ἰησοῦ / Κυρίου Ἰησοῦ Χριστοῦ",
+      "decision": "„Hristos Isus” în ambele ocurențe, fără „Domnul” înaintea celei de-a doua",
+      "alternatives": [
+        "TR-1TI din snapshot are „Isus Hristos” în prima ocurență și „Domnul Isus Hristos” în a doua."
+      ],
+      "reason": "Textul principal urmează ordinea numelui și omiterea lui Κύριος din SBLGNT.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TI, aparatul și TR-1TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 2,
+      "term": "variantă textuală SBLGNT/TR: πατρὸς / πατρὸς ἡμῶν",
+      "decision": "„Dumnezeu Tatăl”",
+      "alternatives": [
+        "TR-1TI din snapshot adaugă „nostru” după „Tatăl”."
+      ],
+      "reason": "SBLGNT nu are ἡμῶν după πατρὸς; româna nu adaugă posesivul din TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TI, aparatul și TR-1TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 4,
+      "term": "variante textuale SBLGNT/TR: ἐκζητήσεις / ζητήσεις; οἰκονομίαν / οἰκοδομίαν",
+      "decision": "„speculații” și „planul lui Dumnezeu”",
+      "alternatives": [
+        "TR-1TI din snapshot are ζητήσεις și οἰκοδομίαν, cu accent pe întrebări și edificare."
+      ],
+      "reason": "SBLGNT citește ἐκζητήσεις și οἰκονομίαν; textul redă discuții speculative în contrast cu planul lui Dumnezeu, fără a înlocui termenul cu lectura TR despre edificare.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TI, aparatul și TR-1TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 16,
+      "term": "variante textuale SBLGNT/TR: Χριστὸς Ἰησοῦς / Ἰησοῦς Χριστός; ἅπασαν / πᾶσαν",
+      "decision": "„Hristos Isus” și „întreaga răbdare”",
+      "alternatives": [
+        "TR-1TI din snapshot inversează ordinea numelui și are πᾶσαν."
+      ],
+      "reason": "SBLGNT are Χριστὸς Ἰησοῦς și forma intensificată ἅπασαν; româna păstrează numele și redă totalitatea răbdării.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TI, aparatul și TR-1TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 17,
+      "term": "variantă textuală SBLGNT/TR: μόνῳ θεῷ / μόνῳ σοφῷ θεῷ",
+      "decision": "„singurului Dumnezeu”",
+      "alternatives": [
+        "TR-1TI din snapshot adaugă σοφῷ: „singurului Dumnezeu înțelept”."
+      ],
+      "reason": "SBLGNT are numai μόνῳ θεῷ; adjectivul suplimentar din TR nu este introdus în textul principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TI, aparatul și TR-1TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 20,
+      "term": "παιδευθῶσι",
+      "decision": "„să fie disciplinați să nu hulească”",
+      "alternatives": [
+        "„să fie învățați să nu hulească”"
+      ],
+      "reason": "Verbul παιδεύω redă aici corectarea disciplinară, nu doar transmiterea unei învățături; formularea păstrează scopul exprimat prin ἵνα.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TI și sensul contextual al verbului au fost confruntate direct; româna redă funcția corectivă fără explicație doctrinară suplimentară."
+    },
+    {
+      "verse": 20,
+      "term": "revizie finală: ἵνα παιδευθῶσι μὴ βλασφημεῖν",
+      "decision": "Dintre aceștia sunt Imeneu și Alexandru, pe care i-am dat pe mâna Satanei, ca, prin disciplinare, să învețe să nu hulească.",
+      "reason": "Deși ca să fie disciplinați să nu hulească încearcă să redea ἵνα παιδευθῶσι μὴ βλασφημεῖν, construcția românească nu marchează clar faptul că disciplinarea trebuie să-i învețe să înceteze hulirea.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

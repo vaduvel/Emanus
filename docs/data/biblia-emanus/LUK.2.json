@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparat; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 52,
       "reviewed": 52,
@@ -98,14 +96,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 52 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 52 de versete din LUK.2 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost reparate acordurile, formulările calchiate și referenții care mascau sensul textului grec.",
+        "Sunt păstrate persoana, numărul, negările și relațiile sintactice din textul principal SBLGNT într-o română firească.",
+        "LUK.2.33 păstrează formularea SBLGNT «tatăl și mama lui», fără a substitui lectura RP «Iosif»."
       ]
     },
     "theologicalContext": {
@@ -123,24 +121,19 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 246,
-        "primary": 575,
-        "secondary": 329,
-        "fixed": 1
-      },
-      "minimumSemantic": 0.4739268246110474,
-      "minimumScore": 0.4668938388149379
-    },
-    "textDigest": "sha256:6c77967baf9464ade5d15400bd2eb08997e99db886c4d750933eaba3b68af4c5",
-    "contentDigest": "sha256:1fdf4856acd5891e452b6e7561c76a2974ba9e93e6f3b51f1abd074f8892dd8e"
+    "textDigest": "sha256:f9d388b35d5ba0a8d87f9f2afb6ff4d623ed92383925f557554b78e850714c6a",
+    "contentDigest": "sha256:f1d7d14c6f701a17879a3cd271bd3392a674e357c05919d5343d24250f466c94",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
@@ -173,11 +166,11 @@
     },
     {
       "number": 8,
-      "text": "Și în același ținut erau păstori stând afară și păzind străjile nopții peste turma lor."
+      "text": "Și în același ținut erau niște păstori care stăteau afară și vegheau noaptea asupra turmei lor."
     },
     {
       "number": 9,
-      "text": "Și iată, un înger al Domnului li s-a arătat, iar slava Domnului a strălucit în jurul lor; și s-au înfricoșat foarte tare."
+      "text": "Un înger al Domnului a stat lângă ei, iar slava Domnului a strălucit în jurul lor; și s-au înfricoșat foarte tare."
     },
     {
       "number": 10,
@@ -193,11 +186,11 @@
     },
     {
       "number": 13,
-      "text": "Dintr-o dată, a fost cu îngerul o mulțime de oștiri cerești lăudându-L pe Dumnezeu și spunând:"
+      "text": "Dintr-o dată, împreună cu îngerul a apărut o mulțime din oastea cerească, lăudându-L pe Dumnezeu și spunând:"
     },
     {
       "number": 14,
-      "text": "Slavă lui Dumnezeu în cele preaînalte și pe pământ pace între oamenii bunăvoinței Lui."
+      "text": "Slavă lui Dumnezeu în cele preaînalte și pe pământ pace între oamenii în care Își găsește plăcerea."
     },
     {
       "number": 15,
@@ -205,7 +198,7 @@
     },
     {
       "number": 16,
-      "text": "Și au venit în grabă și i-au găsit pe Maria și pe Iosif și pruncul culcat în iesle."
+      "text": "Și au venit în grabă și i-au găsit pe Maria, pe Iosif și pe pruncul culcat în iesle."
     },
     {
       "number": 17,
@@ -213,7 +206,7 @@
     },
     {
       "number": 18,
-      "text": "Toți cei care l-au auzit s-au întrebat ce li s-a vorbit prin păstori."
+      "text": "Toți cei care au auzit s-au minunat de cele spuse lor de păstori."
     },
     {
       "number": 19,
@@ -233,11 +226,11 @@
     },
     {
       "number": 23,
-      "text": "după cum este scris în Legea Domnului: Orice parte bărbătească ce deschide pântecele va fi numită sfântă pentru Domnul,"
+      "text": "după cum este scris în Legea Domnului: Orice copil de sex bărbătesc care deschide pântecele va fi numit sfânt pentru Domnul,"
     },
     {
       "number": 24,
-      "text": "și ca să aducă jertfă după ce este spus în Legea Domnului: O pereche de turturele sau doi pui de porumbel."
+      "text": "și ca să aducă jertfă potrivit cu ceea ce este spus în Legea Domnului: O pereche de turturele sau doi pui de porumbel."
     },
     {
       "number": 25,
@@ -269,11 +262,11 @@
     },
     {
       "number": 32,
-      "text": "lumină spre descoperirea neamurilor și slava poporului Tău Israel."
+      "text": "o lumină pentru revelația destinată neamurilor și pentru slava poporului Tău Israel."
     },
     {
       "number": 33,
-      "text": "Iosif și mama lui se mirau de lucrurile care se vorbeau despre el."
+      "text": "Tatăl și mama Lui se mirau de lucrurile care se vorbeau despre El."
     },
     {
       "number": 34,
@@ -281,15 +274,15 @@
     },
     {
       "number": 35,
-      "text": "iar prin sufletul tău însuți va trece o sabie, ca să fie descoperite gândurile din multe inimi."
+      "text": "iar o sabie va trece chiar prin sufletul tău, ca să fie descoperite gândurile din multe inimi."
     },
     {
       "number": 36,
-      "text": "A fost o Ana, o profetesă, fiica lui Phanuel, din tribul lui Așer (Era de o vârstă mare, trăind cu un soț șapte ani de la fecioria ei,"
+      "text": "Era și Ana, o profetesă, fiica lui Fanuel, din tribul lui Așer. Era foarte înaintată în vârstă; trăise cu soțul ei șapte ani după fecioria ei,"
     },
     {
       "number": 37,
-      "text": "și ea era văduvă până la vârsta de optzeci și patru de ani. Nu se depărta de templu, slujind cu posturi și rugăciuni noapte și zi."
+      "text": "și era văduvă, în vârstă de optzeci și patru de ani. Nu se depărta de templu, slujind noapte și zi cu posturi și rugăciuni."
     },
     {
       "number": 38,
@@ -317,7 +310,7 @@
     },
     {
       "number": 44,
-      "text": "Dar, crezând că este în alaiul de călătorie, au mers drum de o zi și Îl căutau printre rude și cunoscuți."
+      "text": "Dar, crezând că este în grupul de călători, au mers cale de o zi și Îl căutau printre rude și cunoscuți."
     },
     {
       "number": 45,
@@ -333,7 +326,7 @@
     },
     {
       "number": 48,
-      "text": "Și când L-au văzut, au rămas uluiți; iar mama Lui I-a spus: Copile, de ce ne-ai făcut astfel? Iată, tatăl tău și eu Te căutam îndurerați."
+      "text": "Și, când L-au văzut, au rămas uluiți, iar mama Lui I-a spus: „Copile, de ce ai procedat așa cu noi? Iată, tatăl Tău și eu Te căutam îndurerați.”"
     },
     {
       "number": 49,
@@ -356,7 +349,7 @@
     {
       "verse": 14,
       "term": "εὐδοκίας",
-      "decision": "Textul principal urmează lectura critică «ἐν ἀνθρώποις εὐδοκίας» și redă: «pace între oamenii bunăvoinței Lui».",
+      "decision": "Textul principal urmează lectura critică «ἐν ἀνθρώποις εὐδοκίας» și redă: «pace între oamenii în care Își găsește plăcerea».",
       "alternatives": [
         "pace, bunăvoință între oameni",
         "pace între oamenii plăcuți Lui"
@@ -365,6 +358,108 @@
       "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "Lectura critică a fost păstrată în textul principal, iar efectul semantic al variantei TR a fost documentat fără armonizare la tradiția receptă."
+    },
+    {
+      "verse": 33,
+      "term": "ὁ πατὴρ αὐτοῦ καὶ ἡ μήτηρ",
+      "decision": "„Tatăl și mama Lui”",
+      "alternatives": [
+        "„Iosif și mama Lui”"
+      ],
+      "reason": "SBLGNT citește expresia familială generală; aparatul consemnează numele «Iosif» drept lectură RP.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul principal urmează lectura SBLGNT, fără substituirea automată a lecturii Textus Receptus."
+    },
+    {
+      "verse": 8,
+      "term": "revizie finală: φυλάσσοντες φυλακὰς τῆς νυκτὸς",
+      "decision": "Și în același ținut erau niște păstori care stăteau afară și vegheau noaptea asupra turmei lor.",
+      "reason": "Expresia „păzind străjile nopții” este un calc nefiresc și sugerează greșit că străjile sunt păzite; greaca descrie vegherea nocturnă asupra turmei. Redarea lui φυλάσσοντες φυλακὰς τῆς νυκτὸς prin păzind străjile nopții peste turma lor reproduce mecanic idiomul și tulbură raportul semantic românesc.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 13,
+      "term": "revizie finală: πλῆθος στρατιᾶς",
+      "decision": "Dintr-o dată, împreună cu îngerul a apărut o mulțime din oastea cerească, lăudându-L pe Dumnezeu și spunând:",
+      "reason": "Pluralul „oștiri” modifică singularul colectiv στρατιᾶς și prezintă mai multe oștiri, în locul unei mulțimi din oastea cerească. Sintagma πλῆθος στρατιᾶς nu este redată precis prin o mulțime de oștiri cerești, deoarece singularul colectiv στρατιᾶς devine plural.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 16,
+      "term": "revizie finală: τὸ βρέφος κείμενον ἐν τῇ φάτνῃ",
+      "decision": "Și au venit în grabă și i-au găsit pe Maria, pe Iosif și pe pruncul culcat în iesle.",
+      "reason": "Lipsa prepoziției „pe” înaintea lui „pruncul”, în seria obiectelor directe personale introduse după „i-au găsit”, produce o coordonare românească defectuoasă. Deși τὸ βρέφος κείμενον ἐν τῇ φάτνῃ corespunde lexical cu și pruncul culcat în iesle, raportul sintactic de obiect direct nu este exprimat corect.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 18,
+      "term": "revizie finală: τῶν λαληθέντων ὑπὸ τῶν ποιμένων πρὸς αὐτούς",
+      "decision": "Toți cei care au auzit s-au minunat de cele spuse lor de păstori.",
+      "reason": "Este omis complementul πρὸς αὐτούς: textul grec spune că lucrurile au fost rostite de păstori către cei care le-au auzit, nu doar că proveneau de la păstori. Redarea lui τῶν λαληθέντων ὑπὸ τῶν ποιμένων πρὸς αὐτούς prin cele spuse de păstori pierde complementul πρὸς αὐτούς, care precizează destinatarii.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 23,
+      "term": "revizie finală: Πᾶν ἄρσεν διανοῖγον μήτραν",
+      "decision": "după cum este scris în Legea Domnului: Orice copil de sex bărbătesc care deschide pântecele va fi numit sfânt pentru Domnul,",
+      "reason": "Sintagma „Orice parte bărbătească” este referențial improprie și nenaturală: ἄρσεν denumește o ființă de sex masculin, aici copilul care deschide pântecele, nu o „parte”. Redarea lui Πᾶν ἄρσεν διανοῖγον μήτραν prin Orice parte bărbătească ce deschide pântecele păstrează ideea generală, dar o exprimă lexical și referențial impropriu.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 24,
+      "term": "revizie finală: κατὰ τὸ εἰρημένον",
+      "decision": "și ca să aducă jertfă potrivit cu ceea ce este spus în Legea Domnului: O pereche de turturele sau doi pui de porumbel.",
+      "reason": "„După ce este spus” exprimă în română o relație temporală, în timp ce κατὰ τὸ εἰρημένον înseamnă conformitate cu ceea ce prescrie Legea. Construcția κατὰ τὸ εἰρημένον nu este redată precis prin după ce este spus în Legea Domnului, deoarece raportul normativ devine aparent temporal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 32,
+      "term": "revizie finală: φῶς εἰς ἀποκάλυψιν ἐθνῶν",
+      "decision": "o lumină pentru revelația destinată neamurilor și pentru slava poporului Tău Israel.",
+      "reason": "Genitivul „neamurilor” este legat ambiguu de „descoperirea”, astfel încât formularea poate însemna descoperirea neamurilor, nu revelația oferită lor. Relația de destinație din φῶς εἰς ἀποκάλυψιν ἐθνῶν nu este comunicată suficient de clar prin lumină spre descoperirea neamurilor.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 35,
+      "term": "revizie finală: τὴν ψυχὴν διελεύσεται ῥομφαία",
+      "decision": "iar o sabie va trece chiar prin sufletul tău, ca să fie descoperite gândurile din multe inimi.",
+      "reason": "Pronumele de întărire „însuți” are formă masculină, deși adresarea este către Maria; dezacordul face construcția românească incorectă. Imaginea din τὴν ψυχὴν διελεύσεται ῥομφαία este recognoscibilă în prin sufletul tău însuți va trece o sabie, dar marcarea emfatică este gramatical greșită.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 44,
+      "term": "revizie finală: εἶναι ἐν τῇ συνοδίᾳ",
+      "decision": "Dar, crezând că este în grupul de călători, au mers cale de o zi și Îl căutau printre rude și cunoscuți.",
+      "reason": "Substantivul „alai” sugerează în româna curentă o procesiune sau suită ceremonială, nu grupul obișnuit de călători desemnat de συνοδία; și construcția „au mers drum de o zi” este nefirească. Sensul neutru de grup călător din εἶναι ἐν τῇ συνοδίᾳ este deformat stilistic și lexical prin este în alaiul de călătorie.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 48,
+      "term": "revizie finală: τί ἐποίησας ἡμῖν οὕτως",
+      "decision": "Și, când L-au văzut, au rămas uluiți, iar mama Lui I-a spus: „Copile, de ce ai procedat așa cu noi? Iată, tatăl Tău și eu Te căutam îndurerați.”",
+      "reason": "Construcția „ne-ai făcut astfel” nu exprimă natural sensul „ai procedat astfel față de noi” și poate fi înțeleasă greșit ca o transformare a părinților. Relația personală exprimată prin τί ἐποίησας ἡμῖν οὕτως nu este redată clar de de ce ne-ai făcut astfel, care folosește impropriu verbul românesc.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
     }
   ],
   "referenceNotes": [],

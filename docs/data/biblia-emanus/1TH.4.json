@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -69,25 +72,21 @@
     },
     "observations": [
       "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost redactat prin revizie directă din SBLGNT; WEBP și etaloanele românești au fost consultate auxiliar, fără stocarea unei traduceri românești protejate.",
+      "Câmpurile consultedInBatch disting etaloanele efectiv confruntate în acest lot de cele configurate în schema corpusului; NTR nu a fost consultată."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 18,
       "reviewed": 18,
@@ -98,14 +97,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 18 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Toate cele 18 versete au fost confruntate semantic cu SBLGNT 1.2, aparatul și TR ca martor.",
+        "Au fost reverificate ambiguitățile lexicale, persoanele, negările și structura argumentului.",
+        "Formulările românești au fost comparate auxiliar cu WEBP, BTF, Cornilescu 1924 și Biblia Liberă, fără copiere."
       ]
     },
     "theologicalContext": {
@@ -123,100 +122,168 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "revizie AI directă din SBLGNT, cu WEBP și etaloanele românești numai ca verificare auxiliară; fără copierea unei traduceri românești protejate"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 162,
-        "primary": 138,
-        "secondary": 35,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.4993764885473809,
-      "minimumScore": 0.5987788757926972
-    },
-    "textDigest": "sha256:1b9504e7fd22194e85099a2e115fb449d0b9c29d491b5358ea4931c0308e2ef2",
-    "contentDigest": "sha256:88bf353c1c8b87a738741c94fb94fac9d2d177ed7aff917db379eb34c10fe3d5"
+    "textDigest": "sha256:a12438dfedcc4de8b7c2feb299bff58f3956e610bd1b4f62021d487d9bcbba24",
+    "contentDigest": "sha256:3db90de2e9a04b806d70ec2c598a037e6867a7345bbfaec1a71121ede064c8f9",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "În cele din urmă, fraților, vă implorăm și vă îndemnăm în Domnul Isus, ca, pe măsură ce ați primit de la noi cum trebuie să umblați și să fiți plăcuți lui Dumnezeu, să aveți din ce în ce mai mult."
+      "text": "În cele din urmă, fraților, vă rugăm și vă îndemnăm în Domnul Isus ca, după cum ați primit de la noi cum trebuie să umblați și să-I fiți plăcuți lui Dumnezeu, așa cum și umblați, să sporiți tot mai mult."
     },
     {
       "number": 2,
-      "text": "Pentru că știi ce instrucțiuni ți-am dat prin Domnul Isus."
+      "text": "Căci știți ce porunci v-am dat prin Domnul Isus."
     },
     {
       "number": 3,
-      "text": "Căci aceasta este voia lui Dumnezeu: sfințirea voastră, că vă abțineți de la imoralitatea sexuală,"
+      "text": "Căci aceasta este voia lui Dumnezeu: sfințirea voastră, și anume să vă abțineți de la imoralitate sexuală,"
     },
     {
       "number": 4,
-      "text": "că fiecare dintre voi știe cum să-și controleze propriul corp în sfințire și onoare,"
+      "text": "ca fiecare dintre voi să știe să-și stăpânească trupul în sfințenie și cinste,"
     },
     {
       "number": 5,
-      "text": "nu în pasiunea poftei, ca neamurile care nu cunosc pe Dumnezeu,"
+      "text": "nu în patima poftei, ca neamurile care nu-L cunosc pe Dumnezeu,"
     },
     {
       "number": 6,
-      "text": "ca nimeni să nu profite de un frate sau o soră nedrept în această privință, pentru că Domnul este răzbunător în toate aceste lucruri, așa cum v-am avertizat și am mărturisit."
+      "text": "ca nimeni să nu treacă peste hotar și să nu-l nedreptățească pe fratele său în această privință, deoarece Domnul este răzbunător pentru toate acestea, așa cum v-am spus mai dinainte și v-am avertizat."
     },
     {
       "number": 7,
-      "text": "Căci Dumnezeu nu ne-a chemat pentru necurăție, ci pentru sfințire."
+      "text": "Căci Dumnezeu nu ne-a chemat la necurăție, ci la sfințire."
     },
     {
       "number": 8,
-      "text": "Prin urmare, cel care respinge acest lucru nu îl respinge pe om, ci pe Dumnezeu, care-a dat și Duhul Sfânt."
+      "text": "Prin urmare, cel care respinge nu respinge un om, ci pe Dumnezeu, care vă dă și Duhul Său cel Sfânt."
     },
     {
       "number": 9,
-      "text": "Dar cu privire la dragostea frățească, nu aveți nevoie ca cineva să vă scrie; căci voi înșivă sunteți învățați de Dumnezeu să vă iubiți unii pe alții,"
+      "text": "În ce privește dragostea frățească, nu este nevoie să vă scriem, deoarece voi înșivă sunteți învățați de Dumnezeu să vă iubiți unii pe alții,"
     },
     {
       "number": 10,
-      "text": "Voi faceți lucrul acesta față de toți frații din toată Macedonia. Dar noi vă îndemnăm, fraților, să vă bucurați din ce în ce mai mult."
+      "text": "căci, într-adevăr, îi iubiți pe toți frații din întreaga Macedonie. Dar vă îndemnăm, fraților, să sporiți tot mai mult,"
     },
     {
       "number": 11,
-      "text": "și să-ți faci ambiția de a duce o viață liniștită, de a-ți face treaba și de a lucra cu propriile mâini, așa cum ți-am poruncit,"
+      "text": "și să vă străduiți să duceți o viață liniștită, să vă vedeți de treburile voastre și să lucrați cu mâinile voastre, așa cum v-am poruncit,"
     },
     {
       "number": 12,
-      "text": "ca să umbli cum trebuie spre cei de afară, și să nu ai nevoie de nimic."
+      "text": "pentru ca să vă purtați cum se cuvine față de cei din afară și să nu depindeți de nimeni."
     },
     {
       "number": 13,
-      "text": "Dar noi nu vrem ca voi să fiți neștiutori, fraților, cu privire la cei care au adormit, ca să nu vă întristați ca ceilalți, care nu au nici o speranță."
+      "text": "Nu vrem însă, fraților, să rămâneți neștiutori cu privire la cei adormiți, ca să nu vă întristați ca ceilalți, care nu au speranță."
     },
     {
       "number": 14,
-      "text": "Căci dacă credem că Isus a murit și a înviat din nou, tot așa Dumnezeu îi va aduce cu noi pe cei care au adormit în Isus."
+      "text": "Căci, dacă credem că Isus a murit și a înviat, tot așa, prin Isus, Dumnezeu îi va aduce împreună cu Isus pe cei care au adormit."
     },
     {
       "number": 15,
-      "text": "Pentru aceasta vă spunem prin cuvântul Domnului, că noi cei vii, care am rămas până la venirea Domnului, nu vom preceda nicidecum pe cei adormi."
+      "text": "Căci vă spunem aceasta prin cuvântul Domnului: noi, cei vii, care vom rămâne până la venirea Domnului, nu le vom lua nicidecum înainte celor adormiți,"
     },
     {
       "number": 16,
-      "text": "Căci Domnul însuși va coborî din cer cu un strigăt, cu glasul arhanghelului și cu trîmbița lui Dumnezeu. Cei morți în Hristos vor învia primii,"
+      "text": "Căci Domnul însuși va coborî din cer cu un strigăt de poruncă, cu glas de arhanghel și cu trâmbița lui Dumnezeu, iar cei morți în Hristos vor învia mai întâi,"
     },
     {
       "number": 17,
-      "text": "Atunci noi, cei vii, care am mai rămas, vom fi prinși împreună cu ei în nori, ca să-L întâlnim pe Domnul în aer, așa că vom fi cu Domnul pentru totdeauna."
+      "text": "apoi noi, cei vii, care vom rămâne, vom fi răpiți împreună cu ei în nori, ca să-L întâmpinăm pe Domnul în aer; și astfel vom fi pentru totdeauna cu Domnul."
     },
     {
       "number": 18,
-      "text": "Așadar, mângâieți-vă unii pe alții cu aceste cuvinte."
+      "text": "Așadar, mângâiați-vă unii pe alții cu aceste cuvinte."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "variante textuale SBLGNT/TR: ἵνα … καθὼς καὶ περιπατεῖτε / omiterea lor",
+      "decision": "„și așa umblați deja”",
+      "alternatives": [
+        "TR-1TH din snapshot omite legătura ἵνα înainte de comparație și afirmația că destinatarii umblă deja astfel."
+      ],
+      "reason": "SBLGNT păstrează atât scopul îndemnului, cât și afirmația actuală despre umblarea destinatarilor; româna redă explicit ambele elemente.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TH, aparatul și TR-1TH au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 4,
+      "term": "σκεῦος",
+      "decision": "„trupul”",
+      "alternatives": [
+        "Literal, termenul este „vas”; în tradiția de interpretare a primit și sensul de „soție”."
+      ],
+      "reason": "În succesiunea despre sfințire și patima poftei, „trupul” oferă în română sensul coerent al stăpânirii de sine fără a introduce o persoană care nu este numită în text.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TH și contextul imediat au fost confruntate direct; formularea este o decizie de traducere documentată, nu un adaos doctrinar."
+    },
+    {
+      "verse": 8,
+      "term": "variante textuale SBLGNT/TR: καὶ διδόντα … εἰς ὑμᾶς / δόντα … εἰς ἡμᾶς",
+      "decision": "„care vă dă și Duhul Său cel Sfânt”",
+      "alternatives": [
+        "TR-1TH din snapshot are aoristul „a dat” și destinatarul „nouă”."
+      ],
+      "reason": "SBLGNT are participiul prezent, adverbul „și” și destinatarul „voi”; textul românesc nu mută darul Duhului la autorii scrisorii și nu îl transformă într-un act trecut.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TH, aparatul și TR-1TH au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 11,
+      "term": "variantă textuală SBLGNT/TR: ταῖς χερσὶν ὑμῶν / ταῖς ἰδίαις χερσὶν ὑμῶν",
+      "decision": "„cu mâinile voastre”",
+      "alternatives": [
+        "TR-1TH din snapshot adaugă accentul „propriile”."
+      ],
+      "reason": "SBLGNT cere lucrul cu mâinile destinatarilor, fără accentul posesiv suplimentar al TR; româna păstrează lectura mai scurtă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TH, aparatul și TR-1TH au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 13,
+      "term": "variantă textuală SBLGNT/TR: κοιμωμένων / κεκοιμημένων",
+      "decision": "„cei adormiți”",
+      "alternatives": [
+        "TR-1TH din snapshot folosește participiul perfect, cu accent pe cei care au adormit."
+      ],
+      "reason": "SBLGNT folosește participiul prezent ca desemnare a celor adormiți; construcția adjectivală românească păstrează metafora fără a importa o nuanță aspectuală suplimentară.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TH, aparatul și TR-1TH au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 14,
+      "term": "atașarea sintactică a expresiei διὰ τοῦ Ἰησοῦ",
+      "decision": "„prin Isus, Dumnezeu îi va aduce împreună cu Isus”",
+      "alternatives": [
+        "Expresia poate fi legată și de participiul κοιμηθέντας, ca „cei care au adormit prin Isus”."
+      ],
+      "reason": "Redactarea păstrează pe Dumnezeu ca subiect al aducerii și exprimă mijlocirea prin Isus; numele repetat elimină ambiguitatea românească a pronumelui, fără a introduce o afirmație care lipsește din greacă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TH, WEBP și etaloanele auxiliare au fost confruntate direct; alegerea sintactică este consemnată pentru verificare ulterioară."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

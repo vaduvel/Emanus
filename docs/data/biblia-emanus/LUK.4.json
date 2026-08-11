@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparat; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 44,
       "reviewed": 44,
@@ -98,14 +96,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 44 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 44 de versete din LUK.4 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost reparate adaosurile receptului, acordurile și pronumele care deformau referentul sau sensul versetelor.",
+        "LUK.4.4 nu importă completarea TR, LUK.4.8 nu importă formula «Înapoia Mea, Satano», iar LUK.4.44 urmează lectura SBLGNT «Iudeea».",
+        "Formulările rămân română proprie, după confruntare directă cu sursele fixate."
       ]
     },
     "theologicalContext": {
@@ -123,24 +121,19 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 246,
-        "primary": 575,
-        "secondary": 329,
-        "fixed": 1
-      },
-      "minimumSemantic": 0.4739268246110474,
-      "minimumScore": 0.4668938388149379
-    },
-    "textDigest": "sha256:31c62b990b3c013dfa8ebc7656dd72952017018ce3390e64056a9cc5cd11cec7",
-    "contentDigest": "sha256:bdac9c83e6ef47194d165d25076159fc50a5215e3826719ad67aff1e85ed183e"
+    "textDigest": "sha256:7928d9bba48101cb0e7a54290db062f90da5aa31a5a6b3f508feb90a80f32452",
+    "contentDigest": "sha256:996969be1604f60122aca6003a976f56f8debc22f16be9ba417359bc0bc43839",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
@@ -157,11 +150,11 @@
     },
     {
       "number": 4,
-      "text": "Isus i-a răspuns: Este scris: ‘Omul nu va trăi numai cu pâine, ci cu orice cuvânt al lui Dumnezeu.’"
+      "text": "Isus i-a răspuns: Este scris: «Omul nu va trăi numai cu pâine.»"
     },
     {
       "number": 5,
-      "text": "Diavolul, care l-a condus pe un munte înalt, i-a arătat toate regatele lumii într-un moment de timp."
+      "text": "L-a dus sus și I-a arătat într-o clipă toate împărățiile lumii."
     },
     {
       "number": 6,
@@ -173,7 +166,7 @@
     },
     {
       "number": 8,
-      "text": "Isus i-a răspuns: Înapoia Mea, Satano! Căci este scris: Domnului Dumnezeului tău să te închini numai Lui să-I sluj!"
+      "text": "Isus i-a răspuns: Este scris: «Domnului Dumnezeului tău să te închini și numai Lui să-I slujești.»"
     },
     {
       "number": 9,
@@ -201,7 +194,7 @@
     },
     {
       "number": 15,
-      "text": "El propovăduia în sinagogile lor, fiind glorificat de toți."
+      "text": "El dădea învățătură în sinagogile lor și era glorificat de toți."
     },
     {
       "number": 16,
@@ -217,11 +210,11 @@
     },
     {
       "number": 19,
-      "text": "și să proclame anul acceptabil al Domnului."
+      "text": "și să proclam anul bunăvoinței Domnului."
     },
     {
       "number": 20,
-      "text": "A închis cartea, a dat-o înapoi slujitorului, și s-a așezat jos. Ochii tuturor celor din sinagogă s-au atașat de el."
+      "text": "A închis sulul, l-a dat înapoi slujitorului și S-a așezat. Ochii tuturor celor din sinagogă erau ațintiți asupra Lui."
     },
     {
       "number": 21,
@@ -273,11 +266,11 @@
     },
     {
       "number": 33,
-      "text": "În sinagogă era un om care avea un duh de demon necurat și a strigat cu glas tare:"
+      "text": "În sinagogă era un om care avea duhul unui demon necurat și a strigat cu glas tare:"
     },
     {
       "number": 34,
-      "text": "„ Ce avem noi de a face cu voi, Isus din Nazaret? Ați venit să ne nimiciți? Știu cine sunteți: Sfîntul lui Dumnezeu!"
+      "text": "Ha! Ce avem noi de-a face cu Tine, Isuse Nazarineanule? Ai venit să ne nimicești? Știu cine ești: Sfântul lui Dumnezeu!"
     },
     {
       "number": 35,
@@ -293,7 +286,7 @@
     },
     {
       "number": 38,
-      "text": "Ridicându-Se din sinagogă, a intrat în casa lui Simon. Soacra lui Simon era prinsă de febră mare, și ei L-au rugat pentru ea."
+      "text": "S-a ridicat, a plecat din sinagogă și a intrat în casa lui Simon. Soacra lui Simon era prinsă de o febră mare, iar ei L-au rugat pentru ea."
     },
     {
       "number": 39,
@@ -317,7 +310,7 @@
     },
     {
       "number": 44,
-      "text": "El predica în sinagogile Galileii.”"
+      "text": "El predica în sinagogile Iudeei."
     }
   ],
   "editorialNotes": [
@@ -380,6 +373,51 @@
       "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "Lectura critică este păstrată, iar varianta tradițională rămâne explicit documentată."
+    },
+    {
+      "verse": 15,
+      "term": "revizie finală: αὐτὸς ἐδίδασκεν",
+      "decision": "El dădea învățătură în sinagogile lor și era glorificat de toți.",
+      "reason": "Verbul „propovăduia” schimbă activitatea exprimată de ἐδίδασκεν, care înseamnă că Isus îi învăța sau le dădea învățătură, nu doar că proclama un mesaj. Între αὐτὸς ἐδίδασκεν și El propovăduia există o deplasare lexicală materială, deoarece învățarea este înlocuită cu proclamarea.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 19,
+      "term": "revizie finală: ἐνιαυτὸν κυρίου δεκτόν",
+      "decision": "și să proclam anul bunăvoinței Domnului.",
+      "reason": "Compusul „bine-primit” este nefiresc aici și face ambiguă direcția favorii, în timp ce δεκτόν descrie anul bunăvoinței sau favorului acordat de Domnul. Relația dintre ἐνιαυτὸν κυρίου δεκτόν și anul bine-primit al Domnului este imprecisă, deoarece sensul favorabil al lui δεκτόν rămâne obscur.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 33,
+      "term": "revizie finală: πνεῦμα δαιμονίου ἀκαθάρτου",
+      "decision": "În sinagogă era un om care avea duhul unui demon necurat și a strigat cu glas tare:",
+      "reason": "Construcția „un duh de demon necurat” este un calc nominal nefiresc și face relația dintre „duh” și „demon” mai puțin clară decât genitivul grecesc. Deși un duh de demon necurat urmărește elementele din πνεῦμα δαιμονίου ἀκαθάρτου, relația de apartenență dintre substantive nu este exprimată natural.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 34,
+      "term": "revizie finală: Ἔα, τί ἡμῖν καὶ σοί",
+      "decision": "Ha! Ce avem noi de-a face cu Tine, Isuse Nazarineanule? Ai venit să ne nimicești? Știu cine ești: Sfântul lui Dumnezeu!",
+      "reason": "Interjecția Ἔα este omisă, iar locuțiunea „a avea de-a face” este scrisă incorect fără cratimă. Redarea Ce avem noi de a face cu Tine acoperă întrebarea idiomatică din Ἔα, τί ἡμῖν καὶ σοί, însă omite interjecția inițială.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 38,
+      "term": "revizie finală: ἀπὸ τῆς συναγωγῆς",
+      "decision": "S-a ridicat, a plecat din sinagogă și a intrat în casa lui Simon. Soacra lui Simon era prinsă de o febră mare, iar ei L-au rugat pentru ea.",
+      "reason": "Participiul „Ridicându-Se din sinagogă” este un calc nefiresc și poate sugera ridicarea fizică din clădire, nu plecarea de la sinagogă. Punctul de plecare indicat de ἀπὸ τῆς συναγωγῆς este doar aproximativ redat prin Ridicându-Se din sinagogă, care nu exprimă natural plecarea.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
     }
   ],
   "referenceNotes": [],

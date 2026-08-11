@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparat; Textus Receptus a fost consultat numai ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 21,
       "reviewed": 21,
@@ -98,22 +96,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 21 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 21 de versete din ROM.12 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost reparate calcurile și formulările nefirești, păstrând structura exhortativă a textului grec.",
+        "ROM.12.2 distinge `αἰών` («veacul acesta») de «lume», iar `δοκιμάζειν` este redat prin «a deosebi».",
+        "Adresarea, coordonarea și imperativele sunt păstrate fără amplificări confesionale."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
         "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Termenii teologici și ambiguitățile sintactice sunt redați lexical, fără glosare confesionale în corpul versetului.",
+        "Etaloanele românești au fost consultate numai pentru verificare, după confruntarea directă cu sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -123,24 +121,19 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 709,
-        "primary": 137,
-        "secondary": 24,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.41000612643816675,
-      "minimumScore": 0.5818865265537531
-    },
-    "textDigest": "sha256:019a6bf2b6e58c19117115501a15080ddd7bc1da74e4e13ed846337af7055ab3",
-    "contentDigest": "sha256:37ffaef96aba3517f4ccb596efc68e3c791dc8ad7b11b3a966137dca0defd032"
+    "textDigest": "sha256:823cf1aa11f8065bfb023f1c945dee28a7c7c90b6595de9d1b0e8b4d0d9f62d7",
+    "contentDigest": "sha256:e7bcd08064a836719265f490e37d4cbf313cbd3a7c2079af7f3cc137cbffbf79",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
@@ -149,7 +142,7 @@
     },
     {
       "number": 2,
-      "text": "Nu vă conformați acestei lumi, ci transformați-vă prin înnoirea minții voastre, ca să puteți dovedi care este voința bună, plăcută și perfectă a lui Dumnezeu."
+      "text": "Nu vă conformați veacului acestuia, ci transformați-vă prin înnoirea minții, ca să puteți deosebi care este voința bună, plăcută și desăvârșită a lui Dumnezeu."
     },
     {
       "number": 3,
@@ -181,7 +174,7 @@
     },
     {
       "number": 10,
-      "text": "În dragoste față de frați, fiți plini de tandră afecțiune unii față de alții; în onoare, preferați unii pe alții,"
+      "text": "În dragoste frățească, fiți devotați unii altora; în onoare, dați întâietate unii altora,"
     },
     {
       "number": 11,
@@ -193,7 +186,7 @@
     },
     {
       "number": 13,
-      "text": "Luați parte la nevoile sfinților; urmăriți cu stăruință ospitalitatea."
+      "text": "Contribuiți la acoperirea nevoilor sfinților; căutați stăruitor să oferiți ospitalitate."
     },
     {
       "number": 14,
@@ -205,7 +198,7 @@
     },
     {
       "number": 16,
-      "text": "Fiți de aceeași părere unii față de alții. Nu vă îndreptați mintea spre lucruri înalte, ci asociați-vă cu cei smeriți. Nu fiți înțelepți în convingerile voastre."
+      "text": "Fiți de aceeași părere unii față de alții. Nu vă îndreptați mintea spre lucruri înalte, ci asociați-vă cu cei smeriți. Nu vă socotiți înțelepți în propriii ochi."
     },
     {
       "number": 17,
@@ -217,7 +210,7 @@
     },
     {
       "number": 19,
-      "text": "Nu vă răzbunați singuri, preaiubiților, ci faceți loc mâniei, căci este scris: „A Mea este răzbunarea; Eu voi răsplăti”, spune DOMNUL."
+      "text": "Nu vă răzbunați singuri, preaiubiților, ci lăsați loc mâniei, căci este scris: „A Mea este răzbunarea; Eu voi răsplăti”, spune Domnul."
     },
     {
       "number": 20,
@@ -228,7 +221,26 @@
       "text": "Nu te lăsa învins de rău, ci învinge răul prin bine."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 13,
+      "term": "revizie finală: ταῖς χρείαις τῶν ἁγίων κοινωνοῦντες",
+      "decision": "Contribuiți la acoperirea nevoilor sfinților; căutați stăruitor să oferiți ospitalitate.",
+      "reason": "Expresia „Luați parte la nevoile sfinților” are un raport semantic neclar în română: poate însemna participarea la lipsurile lor, în locul contribuției concrete la acoperirea acelor nevoi. Sensul activ al lui ταῖς χρείαις τῶν ἁγίων κοινωνοῦντες nu este redat suficient de precis prin Luați parte la nevoile sfinților, care estompează contribuția materială.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 16,
+      "term": "revizie finală: μὴ γίνεσθε φρόνιμοι παρʼ ἑαυτοῖς",
+      "decision": "Fiți de aceeași părere unii față de alții. Nu vă îndreptați mintea spre lucruri înalte, ci asociați-vă cu cei smeriți. Nu vă socotiți înțelepți în propriii ochi.",
+      "reason": "„În convingerile voastre” redă greșit locuțiunea παρʼ ἑαυτοῖς, care se referă la propria apreciere sau la propriii ochi, nu la convingerile doctrinare ori personale. Sintagma μὴ γίνεσθε φρόνιμοι παρʼ ἑαυτοῖς vizează înțelepciunea atribuită propriei persoane, pe când Nu fiți înțelepți în convingerile voastre introduce greșit noțiunea de convingeri.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

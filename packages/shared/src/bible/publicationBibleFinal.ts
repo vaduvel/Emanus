@@ -1,6 +1,10 @@
 import type { BibleBook } from "./types.js"
 import { PUBLICATION_BIBLE_BOOKS as BASE_PUBLICATION_BIBLE_BOOKS } from "./publicationBible.js"
 import { bindBookToPublishedEmanusText } from "./publishedEmanusBinding.js"
+import {
+  BIBLIA_EMANUS_NT_BOOKS,
+  BIBLIA_EMANUS_NT_RUNTIME_GATE,
+} from "./bibliaEmanusNtCatalog.generated.js"
 
 export { BIBLIA_EMANUS_TRANSLATION } from "./types.js"
 export {
@@ -11,12 +15,26 @@ export {
 } from "./generated/publishedEmanusOtText.js"
 
 /**
- * Catalogul final pentru reader. Explicațiile vin din stratul editorial existent,
- * iar orice carte VT este legată aici de textul publicat Biblia Emanus.
+ * Catalogul final pentru reader. VT păstrează explicațiile existente și este
+ * legat de textul BE publicat; NT intră cu textul canonic final, fără a inventa
+ * explicații înainte de rebinding-ul corpusului explicativ separat.
  */
-export const PUBLICATION_BIBLE_BOOKS: BibleBook[] = BASE_PUBLICATION_BIBLE_BOOKS.map(
-  bindBookToPublishedEmanusText,
-)
+const OLD_TESTAMENT_BOOKS = BASE_PUBLICATION_BIBLE_BOOKS.map(bindBookToPublishedEmanusText)
+
+if (BIBLIA_EMANUS_NT_RUNTIME_GATE.status !== "approved") {
+  throw new Error("[Biblia Emanus] Noul Testament nu a trecut poarta finală de publicare.")
+}
+
+export const PUBLICATION_BIBLE_BOOKS: BibleBook[] = [
+  ...OLD_TESTAMENT_BOOKS,
+  ...BIBLIA_EMANUS_NT_BOOKS,
+].sort((a, b) => a.order - b.order)
+
+if (PUBLICATION_BIBLE_BOOKS.length !== 66) {
+  throw new Error(`[Biblia Emanus] catalog incomplet: ${PUBLICATION_BIBLE_BOOKS.length}/66 cărți.`)
+}
+
+export { BIBLIA_EMANUS_NT_RUNTIME_GATE }
 
 export function findPublicationBook(id: string): BibleBook | undefined {
   return PUBLICATION_BIBLE_BOOKS.find((book) => book.id === id)

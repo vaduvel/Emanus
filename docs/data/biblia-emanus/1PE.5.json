@@ -42,21 +42,38 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
+    "batchConsultation": {
+      "recordedIn": "NT-AI-REVIEW-BATCH-2026-08-07-1PE.5.md",
+      "consultedBenchmarkIds": [
+        "CORNILESCU-1924",
+        "BTF"
+      ],
+      "unconsultedConfiguredBenchmarkIds": [
+        "NTR"
+      ],
+      "additionalAuxiliarySources": [
+        "WEBP-1PE",
+        "BIBLIA-LIBERA-1PE"
+      ]
+    },
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
@@ -69,25 +86,21 @@
     },
     "observations": [
       "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost redactat prin revizie directă din SBLGNT; WEBP și etaloanele românești au fost consultate auxiliar, fără stocarea unei traduceri românești protejate.",
+      "Câmpurile consultedInBatch disting etaloanele efectiv confruntate în acest lot de cele configurate în schema corpusului; NTR nu a fost consultată."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 14,
       "reviewed": 14,
@@ -98,12 +111,12 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 14 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
+        "Toate cele 14 versete au fost reverificate față de SBLGNT, aparat și martorul TR; nu a fost necesară o corecție a textului românesc.",
         "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
         "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
       ]
@@ -123,84 +136,185 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare prin revizie directă din SBLGNT, cu WEBP și etaloanele românești numai ca verificare auxiliară; fără copierea unei traduceri românești protejate"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 257,
-        "secondary": 66,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5467158590753175,
-      "minimumScore": 0.5694259949565413
-    },
-    "textDigest": "sha256:aab33effe7cc999c84ff4d5bbdf220ae1ff3c8bb86ee72d33e21c85c9e715b08",
-    "contentDigest": "sha256:8bbfd05b7294a6abfa30bd9b2d8493a4d65ad7f5e0c0eb34e6e41d2cb3fd61a9"
+    "textDigest": "sha256:685d14959384d362be152b436cfac9938e7aabe29ec8cfc6b2a4d404526245b1",
+    "contentDigest": "sha256:7e11b908483f6bc12d719cb1db9d669c734cd76e1076a2f7e2bed085bd5eb91d",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "De aceea, îi îndemn pe bătrânii din mijlocul vostru, ca pe un bătrîn și ca pe un martor al suferințelor lui Hristos, și care vor lua parte și la slava care va fi descoperită."
+      "text": "Așadar, pe bătrânii dintre voi îi îndemn eu, care sunt un bătrân ca și voi, martor al suferințelor lui Hristos și părtaș la slava care urmează să fie descoperită:"
     },
     {
       "number": 2,
-      "text": "păstoriți turma lui Dumnezeu care este printre voi, care exercită supravegherea, nu sub constrângere, ci în mod voluntar; nu pentru câștig necinstit, ci de bunăvoie;"
+      "text": "păstoriți turma lui Dumnezeu care este printre voi, vegheând asupra ei nu din constrângere, ci de bunăvoie, după voia lui Dumnezeu; nu pentru câștig rușinos, ci cu râvnă;"
     },
     {
       "number": 3,
-      "text": "nu ca un domnitor peste cei care v-au fost încredințați, ci ca niște exemple pentru turmă."
+      "text": "nu stăpânind peste cei încredințați vouă, ci devenind exemple pentru turmă."
     },
     {
       "number": 4,
-      "text": "Când Păstorul șef va fi descoperit, vei primi coroana gloriei care nu dispare."
+      "text": "Și, când se va arăta Păstorul suprem, veți primi cununa neveștejită a slavei."
     },
     {
       "number": 5,
-      "text": "În mod asemănător, voi cei tineri, fiți supuși bătrânului. Da, voi toți îmbrăcați-vă cu umilință și supuneți-vă unii altora; pentru că Dumnezeu se împotrivește celor mândri, dar dă har celor umili."
+      "text": "Tot așa, cei mai tineri, supuneți-vă bătrânilor. Iar voi toți, îmbrăcați-vă unul față de altul cu smerenie, căci „Dumnezeu li se împotrivește celor mândri, dar le dă har celor smeriți.”"
     },
     {
       "number": 6,
-      "text": "Smeriți-vă, dar, sub mâna tare a lui Dumnezeu, ca să vă înalțe la timpul cuvenit."
+      "text": "Smeriți-vă, deci, sub mâna puternică a lui Dumnezeu, pentru ca el să vă înalțe la vremea potrivită,"
     },
     {
       "number": 7,
-      "text": "toate grijile tale asupra lui, pentru că el are grijă de tine."
+      "text": "aruncând asupra lui toate îngrijorările voastre, fiindcă el se îngrijește de voi."
     },
     {
       "number": 8,
-      "text": "Fiți treji și stăpâniți de sine! Aveți grijă! Adversarul vostru, diavolul, umblă în jur ca un leu care răcnește, căutând pe cine poate mânca."
+      "text": "Fiți treji, vegheați! Potrivnicul vostru, diavolul, umblă ca un leu care răcnește, căutând pe cine să devoreze."
     },
     {
       "number": 9,
-      "text": "Țineți-l ferm în credința voastră, știind că frații voștri care sunt în lume trec prin aceleași suferințe."
+      "text": "Împotriviți-vă lui, tari în credință, știind că aceleași suferințe sunt îndurate de frații voștri din lume."
     },
     {
       "number": 10,
-      "text": "Dar Dumnezeul întregului har, care v-a chemat la slava Sa veșnică prin Hristos Isus, după ce ați suferit timp, să vă desăvârească, să vă întărească să vă așeze."
+      "text": "Iar Dumnezeul oricărui har, care v-a chemat la slava sa veșnică în Hristos, după ce veți suferi puțină vreme, el însuși vă va desăvârși, vă va întări, vă va face puternici și vă va întemeia."
     },
     {
       "number": 11,
-      "text": "Pentru el să fie gloria și puterea pentru totdeauna. Amin."
+      "text": "A lui să fie puterea în vecii vecilor! Amin."
     },
     {
       "number": 12,
-      "text": "Prin Silvanus, fratele nostru credincios, așa cum îl consider, v-am scris pe scurt, îndemnând și mărturisind că acesta este adevăratul har al lui Dumnezeu în care stați."
+      "text": "Prin Silvanus, pe care îl socotesc un frate credincios, v-am scris pe scurt, îndemnându-vă și mărturisind că acesta este adevăratul har al lui Dumnezeu; rămâneți tari în el!"
     },
     {
       "number": 13,
-      "text": "Ea, care este în Babilon, aleasă împreună cu tine, te salută. La fel Marcu, fiul meu."
+      "text": "Vă salută cea aleasă împreună cu voi, care este în Babilon, și Marcu, fiul meu."
     },
     {
       "number": 14,
-      "text": "Salutați-vă unii pe alții cu un sărut de dragoste. Pace tuturor celor ce sunteți în Hristos Isus. Amin."
+      "text": "Salutați-vă unii pe alții cu o sărutare de dragoste. Pace vouă tuturor, celor ce sunteți în Hristos."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "variantă textuală SBLGNT/TR: οὖν / τοὺς",
+      "decision": "„Așadar, pe bătrânii dintre voi îi îndemn”",
+      "alternatives": [
+        "TR-1PE din snapshot începe cu articolul τοὺς, fără οὖν."
+      ],
+      "reason": "SBLGNT are particula inferențială οὖν; ea este redată prin „Așadar”, fără a introduce articolul tradiției receptă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1PE și TR-1PE au fost confruntate direct; textul urmează lectura SBLGNT."
+    },
+    {
+      "verse": 2,
+      "term": "variantă textuală SBLGNT/TR: κατὰ θεόν / omis",
+      "decision": "„de bunăvoie, după voia lui Dumnezeu”",
+      "alternatives": [
+        "TR-1PE din snapshot omite κατὰ θεόν."
+      ],
+      "reason": "SBLGNT include expresia κατὰ θεόν; româna îi păstrează sensul fără a transforma supravegherea într-un titlu eclezial.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1PE și TR-1PE au fost confruntate direct; textul principal păstrează adaosul SBLGNT."
+    },
+    {
+      "verse": 5,
+      "term": "variantă textuală SBLGNT/TR: ἀλλήλοις / ἀλλήλοις ὑποτασσόμενοι",
+      "decision": "„îmbrăcați-vă unul față de altul cu smerenie”",
+      "alternatives": [
+        "TR-1PE din snapshot adaugă „supunându-vă unii altora”."
+      ],
+      "reason": "SBLGNT leagă ἀλλήλοις de porunca de a se îmbrăca cu smerenie; nu este introdusă în corp lectura suplimentară din TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1PE și TR-1PE au fost confruntate direct; formularea românească urmează sintaxa SBLGNT."
+    },
+    {
+      "verse": 8,
+      "term": "variantă textuală SBLGNT/TR: τινα … καταπιεῖν / τίνα … καταπίῃ",
+      "decision": "„căutând pe cine să devoreze”",
+      "alternatives": [
+        "TR-1PE din snapshot are pronumele interogativ și conjunctivul „pe cine să devoreze”."
+      ],
+      "reason": "SBLGNT are pronumele nehotărât τινα și infinitivul καταπιεῖν; româna redă construcția firește, fără să pretindă o diferență de sens pe care contextul nu o susține.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1PE, aparatul și TR-1PE au fost confruntate direct; textul principal păstrează construcția SBLGNT."
+    },
+    {
+      "verse": 10,
+      "term": "variantă textuală SBLGNT/TR: ὑμᾶς … ἐν Χριστῷ … καταρτίσει / ἡμᾶς … ἐν Χριστῷ Ἰησοῦ … καταρτίσαι",
+      "decision": "„la slava sa veșnică în Hristos”",
+      "alternatives": [
+        "TR-1PE din snapshot citește „ne-a chemat … în Hristos Isus” și folosește forme optative pentru îndemnul final."
+      ],
+      "reason": "SBLGNT are „v-a chemat”, se oprește la Χριστῷ și folosește viitoare; româna nu completează tacit persoana, numele ori modul verbal cu lectura TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1PE și TR-1PE au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 11,
+      "term": "variantă textuală SBLGNT/TR: αὐτῷ τὸ κράτος / αὐτῷ ἡ δόξα καὶ τὸ κράτος",
+      "decision": "„A lui să fie puterea în vecii vecilor!”",
+      "alternatives": [
+        "TR-1PE din snapshot adaugă „slava și”."
+      ],
+      "reason": "SBLGNT atribuie aici numai κράτος; româna nu introduce „slava” din lectura TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1PE și TR-1PE au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 12,
+      "term": "variantă textuală SBLGNT/TR: στῆτε / ἑστήκατε",
+      "decision": "„rămâneți tari în el!”",
+      "alternatives": [
+        "TR-1PE din snapshot are perfectul „ați stat”."
+      ],
+      "reason": "SBLGNT are imperativul aorist στῆτε; româna redă îndemnul de a rămâne tari în harul lui Dumnezeu.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1PE și TR-1PE au fost confruntate direct; formularea păstrează valoarea imperativă a SBLGNT."
+    },
+    {
+      "verse": 14,
+      "term": "variantă textuală SBLGNT/TR: Χριστῷ / Χριστῷ Ἰησοῦ ἀμήν",
+      "decision": "„Pace vouă tuturor, celor ce sunteți în Hristos.”",
+      "alternatives": [
+        "TR-1PE din snapshot adaugă „Isus. Amin”."
+      ],
+      "reason": "SBLGNT se încheie cu „în Hristos”; completarea tradiției receptă este consemnată, nu introdusă în textul principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1PE și TR-1PE au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 4,
+      "term": "revizie finală: τὸν ἀμαράντινον τῆς δόξης στέφανον",
+      "decision": "Și, când se va arăta Păstorul suprem, veți primi cununa neveștejită a slavei.",
+      "reason": "Deși τὸν ἀμαράντινον τῆς δόξης στέφανον spune neechivoc că este neveștejită cununa, cununa slavei care nu se veștejește nu păstrează limpede raportul sintactic.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

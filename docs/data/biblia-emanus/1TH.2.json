@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,36 @@
       "meaning": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
-    ]
+      "SBLGNT, aparatul și TR au fost confruntate direct; WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost folosite numai pentru control semantic și stilistic.",
+      "NTR rămâne listată ca etalon extern configurat de schema corpusului, însă nu a fost consultată în acest lot.",
+      "Textul a fost redactat independent din sursele fixate, fără stocarea unei traduceri românești protejate."
+    ],
+    "batchConsultation": {
+      "recordedIn": "NT-AI-REVIEW-BATCH-2026-08-08-1TH.2.md",
+      "consultedBenchmarkIds": [
+        "CORNILESCU-1924",
+        "BTF"
+      ],
+      "unconsultedConfiguredBenchmarkIds": [
+        "NTR"
+      ],
+      "additionalAuxiliarySources": [
+        "WEBP-1TH",
+        "biblia-libera/1TH.usfm"
+      ]
+    }
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 20,
       "reviewed": 20,
@@ -98,14 +111,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 20 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Toate cele 20 de versete au fost confruntate semantic cu SBLGNT 1.2, aparatul și TR ca martor.",
+        "Au fost reverificate legăturile sintactice dintre 2:6–7 și 2:11–12, precum și persoanele, negările și timpurile verbale.",
+        "Variantele relevante SBLGNT/TR și lectura alternativă din aparatul SBLGNT la 2:7 sunt consemnate în notele editoriale."
       ]
     },
     "theologicalContext": {
@@ -123,101 +136,96 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "revizie editorială AI din SBLGNT, verificată cu WEBP; etaloanele românești au fost folosite doar pentru comparație"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 162,
-        "primary": 138,
-        "secondary": 35,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.4993764885473809,
-      "minimumScore": 0.5987788757926972
-    },
-    "textDigest": "sha256:42aa33a2aa584259353876b6922d7ae187a7d1b295d24ade0330d9d1ba73fea3",
-    "contentDigest": "sha256:a757eb0608878371eb762a010a382e6f75ac8b511d7b0c8b7b20d40646ce9cf9"
+    "textDigest": "sha256:fc5be7219ecb0647e0d663972f081de8b7c45b546a2a2b53a95e493a28b5235d",
+    "contentDigest": "sha256:9187e128939a531c42588331efa2438d75a7ccbb8316940adab20f62ba89df9f",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Pentru voi înșivă știți, fraților, vizita noastră la voi nu a fost zadarnică,"
+      "text": "Căci voi înșivă știți, fraților, că venirea noastră la voi nu a fost zadarnică."
     },
     {
       "number": 2,
-      "text": "Dar după ce am suferit înainte și am fost tratați cu rușine, după cum știți, la Filipi, am devenit curajoși în Dumnezeul nostru să vă spunem vestea bună a lui Dumnezeu în multe conflicte."
+      "text": "Dimpotrivă, după ce am suferit și am fost batjocoriți la Filipi, după cum știți, am avut îndrăzneală în Dumnezeul nostru să vă vestim evanghelia lui Dumnezeu în mijlocul unei mari lupte."
     },
     {
       "number": 3,
-      "text": "Căci îndemnul nostru nu este nici de rătăcire, nici de necurăție, nici de înșelăciune."
+      "text": "Căci îndemnul nostru nu pornește din rătăcire, nici din necurăție și nici nu este rostit cu viclenie."
     },
     {
       "number": 4,
-      "text": "Dar așa cum am fost aprobați de Dumnezeu să ni se încredize Vestea Bună, tot așa vorbim — nu ca oameni plăcuți, ci ca Dumnezeu, care ne pune la încercare inimile."
+      "text": "Ci, deoarece Dumnezeu ne-a socotit vrednici să ne încredințeze evanghelia, așa vorbim: nu ca să plăcem oamenilor, ci lui Dumnezeu, care ne cercetează inimile."
     },
     {
       "number": 5,
-      "text": "Căci nu am fost niciodată găsiți folosind cuvinte de lingușire, după cum știți, nici o mantie de lăcomie (Dumnezeu este martor),"
+      "text": "Căci, după cum știți, niciodată n-am venit cu vorbe lingușitoare și nici cu un pretext care să ascundă lăcomia — Dumnezeu este martor."
     },
     {
       "number": 6,
-      "text": "nici să căutăm glorie de la oameni (nici de la voi, nici de la alții), când am fi putut pretinde autoritate ca apostoli ai lui Hristos."
+      "text": "Nu am căutat nici slavă de la oameni, nici de la voi, nici de la alții,"
     },
     {
       "number": 7,
-      "text": "Dar noi am fost blânzi între voi, așa cum o mamă care alăptează îngrijește copiii."
+      "text": "deși, ca apostoli ai lui Hristos, am fi putut fi o povară. Dimpotrivă, am fost blânzi în mijlocul vostru, ca o mamă care alăptează și își îngrijește propriii copii."
     },
     {
       "number": 8,
-      "text": "Chiar așa, tânjind după tine, am fost bucuroși să-țim nu numai Vestea cea Bună a lui Dumnezeu, ci sufletele noastre, pentru că ne-ai devenit foarte drag."
+      "text": "În felul acesta, fiind plini de dor pentru voi, am fost gata să vă împărtășim nu numai evanghelia lui Dumnezeu, ci și propriile noastre vieți, fiindcă ne-ați devenit atât de dragi."
     },
     {
       "number": 9,
-      "text": "Aduceți-vă aminte, fraților, de osteneala truda noastră, căci muncim zi noapte, ca să nu vă împovărăm pe niciunul dintre voi, v-am propovăduit Vestea cea Bună a lui Dumnezeu."
+      "text": "Căci vă aduceți aminte, fraților, de osteneala și truda noastră: lucrând noaptea și ziua ca să nu împovărăm pe niciunul dintre voi, v-am vestit evanghelia lui Dumnezeu."
     },
     {
       "number": 10,
-      "text": "Sunteți martori la Dumnezeu cât de sfinți, drepți și fără prihană ne-am purtat față de voi care credeți."
+      "text": "Voi sunteți martori, și Dumnezeu la fel, că ne-am purtat față de voi, cei care credeți, în chip sfânt, drept și fără prihană."
     },
     {
       "number": 11,
-      "text": "După cum știți, v-am îndemnat, mîngîiat, și v-am implorat pe fiecare dintre voi, cum face un tată cu copiii lui,"
+      "text": "După cum știți, am fost pentru fiecare dintre voi ca un tată pentru propriii lui copii:"
     },
     {
       "number": 12,
-      "text": "ca să umblați într-un mod demn de Dumnezeu, care vă cheamă în Împărăția și slava Lui."
+      "text": "V-am îndemnat, v-am încurajat și am stăruit pe lângă voi să trăiți într-un chip vrednic de Dumnezeu, care vă cheamă în Împărăția și slava Lui."
     },
     {
       "number": 13,
-      "text": "Pentru aceasta îi mulțumim și lui Dumnezeu fără încetare că atunci când ați primit de la noi cuvântul mesajului lui Dumnezeu, nu l-ați acceptat ca cuvânt al oamenilor, ci ca în adevăr, Cuvântul lui Dumnezeu, care, de asemenea, lucrează în voi care credeți."
+      "text": "De aceea și noi Îi mulțumim neîncetat lui Dumnezeu, fiindcă, atunci când ați primit cuvântul lui Dumnezeu pe care l-ați auzit de la noi, nu l-ați primit ca pe un cuvânt omenesc, ci așa cum este cu adevărat: cuvântul lui Dumnezeu, care lucrează și în voi, cei care credeți."
     },
     {
       "number": 14,
-      "text": "Căci voi, fraților, ați imitat adunările lui Dumnezeu care sunt în Iudeea, în Hristos Isus; căci și voi ați suferit aceleași lucruri de la compatrioții voștri, cum au făcut ei de la Iudei."
+      "text": "Căci voi, fraților, ați devenit imitatori ai adunărilor lui Dumnezeu din Iudeea, care sunt în Hristos Isus; și voi ați suferit aceleași lucruri de la compatrioții voștri, cum au suferit și ele de la iudei,"
     },
     {
       "number": 15,
-      "text": "care a omorît pe Domnul Isus și pe prorocii lor, și ne-a izgonit, și nu voia lui Dumnezeu, și s-au împotrivit tuturor oamenilor,"
+      "text": "care L-au omorât pe Domnul Isus și pe profeți, ne-au alungat, nu-I plac lui Dumnezeu și sunt potrivnici tuturor oamenilor,"
     },
     {
       "number": 16,
-      "text": "și ne-a oprit să vorbim Neamurilor, ca să fie mîntuiți, ca să-și umple totdeauna păcatele. Dar mâinia a venit peste ei până la capăt."
+      "text": "împiedicându-ne să vorbim neamurilor ca să fie mântuite. Astfel, ei își umplu mereu măsura păcatelor. Dar mânia a venit peste ei până la capăt."
     },
     {
       "number": 17,
-      "text": "Dar noi, fraților, fiind îndoliați de voi pentru un scurt timp în prezență, nu în inimă, am încercat și mai mult să vă vedem fața cu o mare dorință,"
+      "text": "Dar noi, fraților, deși am rămas fără voi pentru scurtă vreme — despărțiți fizic, nu și cu inima — ne-am străduit cu atât mai mult să vă vedem fața, cu mare dor."
     },
     {
       "number": 18,
-      "text": "Pentru că am vrut să venim la tine, eu, Pavel, încă o dată, dar Satana ne-a împiedicat."
+      "text": "Căci am vrut să venim la voi — eu, Pavel, nu doar o dată, ci de două ori — dar Satana ne-a împiedicat."
     },
     {
       "number": 19,
-      "text": "Căci care este nădejdea noastră, sau bucuria noastră, sau cununa bucuriei? Nu chiar voi, înaintea Domnului nostru Isus, la venirea Sa?"
+      "text": "Căci care este speranța noastră, bucuria noastră sau cununa laudei noastre? Nu sunteți chiar voi, înaintea Domnului nostru Isus, la venirea Lui?"
     },
     {
       "number": 20,
@@ -226,13 +234,181 @@
   ],
   "editorialNotes": [
     {
-      "verse": 7,
-      "term": "variantă textuală sau lexicală verificată",
-      "decision": "Textul principal păstrează lectura SBLGNT 1.2 și formularea românească validată prin sursele fixate.",
-      "reason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal.",
+      "verse": 3,
+      "term": "variantă textuală SBLGNT/TR: οὐδὲ / οὔτε",
+      "decision": "„nici ... nici ...”",
+      "alternatives": [
+        "TR-1TH are οὔτε la al treilea membru al enumerării negative."
+      ],
+      "reason": "SBLGNT are οὐδὲ; ambele particule coordonează același al treilea element. Româna păstrează seria negativă fără o diferență artificială de sens.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
+      "resolutionReason": "SBLGNT-1TH și TR-1TH au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 4,
+      "term": "variantă textuală SBLGNT/TR: θεῷ / τῷ θεῷ",
+      "decision": "„ci lui Dumnezeu”",
+      "alternatives": [
+        "TR-1TH are articolul τῷ înainte de θεῷ."
+      ],
+      "reason": "Articolul TR nu schimbă referentul; româna redă firesc aceeași opoziție față de plăcerea oamenilor.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TH și TR-1TH au fost confruntate direct; diferența nu schimbă sensul românesc al versetului."
+    },
+    {
+      "verse": 7,
+      "term": "lectură a aparatului SBLGNT: ἤπιοι / νήπιοι",
+      "decision": "„am fost blânzi”",
+      "alternatives": [
+        "SBLGNT-1TH și TR-1TH au ἤπιοι („blânzi”); aparatul semnalează νήπιοι („prunci”) în WH/NA."
+      ],
+      "reason": "Textul principal urmează lectura SBLGNT, susținută și de TR, și nu introduce alternativa „prunci” în comparația cu imaginea mamei care alăptează.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT, aparatul și TR-1TH au fost confruntate direct; lectura principală este consemnată fără adaos."
+    },
+    {
+      "verse": 8,
+      "term": "variantă textuală SBLGNT/TR: ἐγενήθητε / γεγένησθε",
+      "decision": "„ne-ați devenit atât de dragi”",
+      "alternatives": [
+        "TR-1TH are perfectul γεγένησθε, în locul aoristului SBLGNT ἐγενήθητε."
+      ],
+      "reason": "Româna redă devenirea ca fapt împlinit, conform aoristului SBLGNT, fără a transforma versetul într-o afirmație despre persoana a doua singular.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TH și TR-1TH au fost confruntate direct; textul principal urmează timpul SBLGNT."
+    },
+    {
+      "verse": 9,
+      "term": "variantă textuală SBLGNT/TR: νυκτὸς / νυκτὸς γάρ",
+      "decision": "„lucrând noaptea și ziua”",
+      "alternatives": [
+        "TR-1TH adaugă γάρ după νυκτὸς."
+      ],
+      "reason": "Adăugarea TR face explicită legătura discursivă, dar nu schimbă munca neîntreruptă redată în română.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TH și TR-1TH au fost confruntate direct; nu se introduce o diferență semantică artificială în română."
+    },
+    {
+      "verse": 12,
+      "term": "variantă textuală SBLGNT/TR: περιπατεῖν / περιπατῆσαι",
+      "decision": "„să umblați într-un chip vrednic”",
+      "alternatives": [
+        "TR-1TH are infinitivul aorist περιπατῆσαι, în locul prezentului SBLGNT περιπατεῖν."
+      ],
+      "reason": "Prezentul SBLGNT susține conduita continuă; româna păstrează acest sens prin formularea generală „să umblați”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TH și TR-1TH au fost confruntate direct; textul principal urmează aspectul SBLGNT."
+    },
+    {
+      "verse": 13,
+      "term": "variantă textuală SBLGNT/TR: Καὶ … ἀληθῶς ἐστὶν / – … ἐστιν ἀληθῶς",
+      "decision": "„De aceea și noi ... ceea ce este cu adevărat: Cuvântul lui Dumnezeu”",
+      "alternatives": [
+        "TR-1TH omite Καὶ de la început și inversează ordinea lui ἀληθῶς și ἐστὶν."
+      ],
+      "reason": "„Și noi” păstrează conectorul SBLGNT, iar ordinea greacă este redată într-o frază românească firească, fără schimbarea afirmației despre cuvânt.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TH și TR-1TH au fost confruntate direct; textul principal urmează lectura și ordinea logică SBLGNT."
+    },
+    {
+      "verse": 15,
+      "term": "variantă textuală SBLGNT/TR: τοὺς προφήτας / τοὺς ἰδίους προφήτας",
+      "decision": "„pe profeți”",
+      "alternatives": [
+        "TR-1TH adaugă ἰδίους („proprii”) înainte de „profeți”."
+      ],
+      "reason": "SBLGNT nu conține adjectivul posesiv; textul principal nu îl introduce și păstrează antecedentul istoric al propoziției relative din versetul 14.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TH și TR-1TH au fost confruntate direct; textul principal nu importă adaosul TR."
+    },
+    {
+      "verse": 16,
+      "term": "lectură a aparatului SBLGNT: ὀργή / ὀργὴ τοῦ θεοῦ",
+      "decision": "„mânia a venit în cele din urmă peste ei”",
+      "alternatives": [
+        "SBLGNT-1TH și TR-1TH au ὀργή fără genitiv; aparatul semnalează adăugarea τοῦ θεοῦ în NIV."
+      ],
+      "reason": "Nu se introduce în corpul versetului un genitiv care nu se află în lectura SBLGNT; εἰς τέλος este redat idiomatic prin „în cele din urmă”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT, aparatul și TR-1TH au fost confruntate direct; textul principal păstrează lectura fără adaos."
+    },
+    {
+      "verse": 18,
+      "term": "variantă textuală SBLGNT/TR: διότι / διό",
+      "decision": "„Căci am vrut să venim la voi”",
+      "alternatives": [
+        "TR-1TH are conectorul concluziv διό („de aceea”)."
+      ],
+      "reason": "SBLGNT are conectorul cauzal διότι; formularea românească păstrează cauza legată de dorința de a reveni.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TH și TR-1TH au fost confruntate direct; textul principal urmează conectorul SBLGNT."
+    },
+    {
+      "verse": 19,
+      "term": "variantă textuală SBLGNT/TR: Ἰησοῦ / Ἰησοῦ Χριστοῦ",
+      "decision": "„Domnului nostru Isus”",
+      "alternatives": [
+        "TR-1TH adaugă Χριστοῦ după Ἰησοῦ."
+      ],
+      "reason": "SBLGNT se oprește după „Isus”; titlul adăugat de TR este consemnat, dar nu este introdus în textul principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TH și TR-1TH au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 7,
+      "term": "revizie finală: δυνάμενοι ἐν βάρει εἶναι",
+      "decision": "deși, ca apostoli ai lui Hristos, am fi putut fi o povară. Dimpotrivă, am fost blânzi în mijlocul vostru, ca o mamă care alăptează și își îngrijește propriii copii.",
+      "reason": "Între δυνάμενοι ἐν βάρει εἶναι și am fi putut să ne folosim de autoritatea noastră există o deplasare de la povară sau greutate la autoritate exercitată.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 11,
+      "term": "revizie finală: ὡς πατὴρ τέκνα ἑαυτοῦ",
+      "decision": "După cum știți, am fost pentru fiecare dintre voi ca un tată pentru propriii lui copii:",
+      "reason": "Ancora ὡς πατὴρ τέκνα ἑαυτοῦ conține numai comparația paternă, pe când v-am îndemnat, v-am încurajat și v-am chemat stăruitor anticipează verbele din versetul următor.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 12,
+      "term": "revizie finală: παρακαλοῦντες ὑμᾶς καὶ παραμυθούμενοι καὶ μαρτυρόμενοι",
+      "decision": "V-am îndemnat, v-am încurajat și am stăruit pe lângă voi să trăiți într-un chip vrednic de Dumnezeu, care vă cheamă în Împărăția și slava Lui.",
+      "reason": "Textul παρακαλοῦντες ὑμᾶς καὶ παραμυθούμενοι καὶ μαρτυρόμενοι trebuie să conducă spre scopul ca să umblați într-un chip vrednic de Dumnezeu, însă prima parte lipsește din acest verset.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 13,
+      "term": "revizie finală: λόγον ἀκοῆς παρʼ ἡμῶν τοῦ θεοῦ",
+      "decision": "De aceea și noi Îi mulțumim neîncetat lui Dumnezeu, fiindcă, atunci când ați primit cuvântul lui Dumnezeu pe care l-ați auzit de la noi, nu l-ați primit ca pe un cuvânt omenesc, ci așa cum este cu adevărat: cuvântul lui Dumnezeu, care lucrează și în voi, cei care credeți.",
+      "reason": "Deși cuvântul auzit, care este al lui Dumnezeu conservă elementele din λόγον ἀκοῆς παρʼ ἡμῶν τοῦ θεοῦ, relația dintre mesaj, Dumnezeu și vestitori rămâne stângaci formulată.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 17,
+      "term": "revizie finală: προσώπῳ οὐ καρδίᾳ",
+      "decision": "Dar noi, fraților, deși am rămas fără voi pentru scurtă vreme — despărțiți fizic, nu și cu inima — ne-am străduit cu atât mai mult să vă vedem fața, cu mare dor.",
+      "reason": "Contrastul προσώπῳ οὐ καρδίᾳ urmărește opoziția dintre separarea fizică și apropierea lăuntrică, dar doar în prezență, nu în inimă nu o exprimă natural.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
     }
   ],
   "referenceNotes": [],

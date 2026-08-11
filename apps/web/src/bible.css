@@ -243,6 +243,32 @@
   line-height: 1.75;
 }
 
+.bverses {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 4px 0 12px;
+}
+
+.bverse {
+  display: grid;
+  grid-template-columns: 2.25rem minmax(0, 1fr);
+  gap: 10px;
+  margin: 0;
+  padding: 8px 0;
+  font-size: 1.04rem;
+  line-height: 1.72;
+}
+
+.bverse__number {
+  color: var(--muted, #64748b);
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  padding-top: 0.26rem;
+  text-align: right;
+}
+
 .bunit__teaching p {
   margin: 0 0 12px;
   line-height: 1.72;

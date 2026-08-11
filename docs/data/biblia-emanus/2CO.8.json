@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,22 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "SBLGNT 1.2 și aparatul au fost confruntate direct; TR a fost folosit numai ca martor de variante.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au servit drept comparații auxiliare; NTR nu a fost consultată.",
+      "Textul românesc a fost redactat independent, fără stocarea sau copierea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 24,
       "reviewed": 24,
@@ -98,22 +97,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 24 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 24 de versete din 2CO.8 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost corectate frazele calchiate sau corupte, inclusiv construcțiile din versetele 7, 14, 15, 20–22 și 24.",
+        "Persoanele, raporturile dintre participanți și relația dintre dărnicie, egalitate și slujire au fost păstrate în fiecare verset.",
+        "Lectura principală SBLGNT este urmată la 2CO.8.19 și 2CO.8.24, fără adaptarea automată la martorul tradițional."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
         "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Termenii teologici și ambiguitățile sintactice sunt redați lexical, fără glosare confesionale în corpul versetului.",
+        "Etaloanele românești au fost consultate numai pentru verificare, după confruntarea directă cu sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -123,24 +122,19 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 327,
-        "primary": 189,
-        "secondary": 45,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.33174470430626646,
-      "minimumScore": 0.5090738739653641
-    },
-    "textDigest": "sha256:9787e6eea683a67dbb85dcd02315bf7cecfa3fd3f0a1d07241e01f239f5ec49a",
-    "contentDigest": "sha256:aad35cec3acc69e0e5ca2825a91e47852ab5135298aaf291b85057761f18ab81"
+    "textDigest": "sha256:6afe6b56cfe7a7dd8480230edfcb93f87676915a4b6d356c1125aa4a5ea92e27",
+    "contentDigest": "sha256:4440c49e95ce572fab709eb1ba5559d8410551a3c4458090c27ecc1773e20495",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
@@ -149,15 +143,15 @@
     },
     {
       "number": 2,
-      "text": "că, în multă încercare de necaz, belșugul bucuriei lor și sărăcia lor adâncă au prisosit în bogăția generozității lor."
+      "text": "că, în marea încercare adusă de necaz, belșugul bucuriei lor și sărăcia lor nespus de adâncă au făcut să se reverse o bogăție de generozitate din partea lor."
     },
     {
       "number": 3,
-      "text": "Căci, după puterea lor, mărturisesc, da și dincolo de puterea lor, au dat de bună voie,"
+      "text": "Căci, după puterea lor — mărturisesc — și chiar dincolo de puterea lor, au dat de bunăvoie,"
     },
     {
       "number": 4,
-      "text": "rugându-ne cu multă stăruință pentru harul de a lua parte la slujirea pentru sfinți."
+      "text": "rugându-ne cu multă stăruință să le acordăm privilegiul de a lua parte la slujirea pentru sfinți."
     },
     {
       "number": 5,
@@ -169,11 +163,11 @@
     },
     {
       "number": 7,
-      "text": "Dar, după cum prisosiți în toate: în credință și în vorbire și în cunoaștere și în toată râvna și în dragostea pe care, de la noi, o aveți în voi, vedeți să prisosiți și în harul acesta."
+      "text": "Dar, după cum prisosiți în toate: în credință, în vorbire, în cunoaștere, în toată râvna și în dragostea noastră pentru voi, vedeți să prisosiți și în harul acesta."
     },
     {
       "number": 8,
-      "text": "Nu spun aceasta ca o poruncă, ci ca să încerc, prin râvna altora, și sinceritatea dragostei voastre."
+      "text": "Nu spun aceasta ca o poruncă, ci ca să pun la probă, prin râvna altora, autenticitatea dragostei voastre."
     },
     {
       "number": 9,
@@ -181,7 +175,7 @@
     },
     {
       "number": 10,
-      "text": "Vă dau un sfat în acest sens: este bine pentru voi care ați fost primii care ați început acum un an, nu numai să faceți, ci și să fiți dispuși."
+      "text": "Iată sfatul meu în această privință: lucrul acesta vă este de folos vouă, care încă de anul trecut ați început nu numai să faceți, ci și să doriți."
     },
     {
       "number": 11,
@@ -189,19 +183,19 @@
     },
     {
       "number": 12,
-      "text": "Căci dacă disponibilitatea este acolo, este acceptabilă în funcție de ceea ce aveți, nu în funcție de ceea ce nu aveți."
+      "text": "Căci, dacă există bunăvoință, ea este bine primită potrivit cu ceea ce are cineva, nu cu ceea ce nu are."
     },
     {
       "number": 13,
-      "text": "Căci aceasta nu este pentru ca alții să fie ușurați și voi mâhniți,"
+      "text": "Căci nu este vorba ca alții să aibă ușurare, iar voi să fiți împovărați, ci să existe echitate."
     },
     {
       "number": 14,
-      "text": "dar pentru egalitate: abundența voastră, în acest moment, le dă lipsă, pentru ca abundența lor să devină și ea o sursă pentru lipsa voastră, ca să existe egalitate."
+      "text": "ci pentru egalitate: abundența voastră, în acest moment, să suplinească lipsa lor, pentru ca abundența lor să suplinească și ea lipsa voastră, ca să existe egalitate."
     },
     {
       "number": 15,
-      "text": "După cum este scris, cel care a adunat mult a rămas nimic peste, și cel care a adunat puțin nu a avut nici o lipsă."
+      "text": "După cum este scris: «Cel care a adunat mult n-a avut nimic de prisos, iar cel care a adunat puțin n-a avut lipsă.»"
     },
     {
       "number": 16,
@@ -209,7 +203,7 @@
     },
     {
       "number": 17,
-      "text": "Căci el a acceptat îndemnul nostru, dar fiind foarte sincer, el a ieșit la voi de bună voie."
+      "text": "Căci a primit îndemnul, iar, fiind și mai plin de râvnă, a plecat de bunăvoie spre voi."
     },
     {
       "number": 18,
@@ -217,19 +211,19 @@
     },
     {
       "number": 19,
-      "text": "Și nu numai atât, ci a și fost ales de biserici ca tovarăș de drum al nostru în acest har care este slujit de noi spre slava Domnului însuși și spre arătarea bunăvoinței noastre."
+      "text": "Și nu numai atât, ci a fost ales de biserici ca tovarăș de drum al nostru în această lucrare a harului, slujită de noi spre slava Domnului Însuși și spre arătarea râvnei noastre."
     },
     {
       "number": 20,
-      "text": "Noi evităm aceasta, pentru ca orice om să ne învinovățească cu privire la această abundență care este administrată de noi."
+      "text": "Luăm această măsură de precauție, pentru ca nimeni să nu ne învinovățească cu privire la această dărnicie bogată, administrată de noi."
     },
     {
       "number": 21,
-      "text": "Având în vedere lucrurile onorabile, nu numai în ochii Domnului, ci și în ochii oamenilor."
+      "text": "Căci avem grijă de ceea ce este onorabil, nu numai înaintea Domnului, ci și înaintea oamenilor."
     },
     {
       "number": 22,
-      "text": "Noi l-am trimis cu ei pe fratele nostru pe care l-am dovedit de multe ori sincer în multe lucruri, dar acum mult mai sincer, din cauza marii încrederi pe care o are în tine."
+      "text": "Am trimis împreună cu ei pe fratele nostru, pe care l-am dovedit de multe ori sârguincios în multe privințe, iar acum cu mult mai sârguincios, datorită marii încrederi pe care o are în voi."
     },
     {
       "number": 23,
@@ -237,10 +231,101 @@
     },
     {
       "number": 24,
-      "text": "De aceea arătați dovada iubirii voastre înaintea adunărilor și a laudelor noastre pentru voi."
+      "text": "De aceea arătați-le, înaintea bisericilor, dovada dragostei voastre și temeiul laudei noastre cu privire la voi."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 19,
+      "term": "σὺν τῇ χάριτι ... αὐτοῦ τοῦ κυρίου",
+      "decision": "redat prin «în această lucrare a harului ... spre slava Domnului Însuși»",
+      "reason": "Aparatul notează diferențe de prepoziție și de pronume; formularea urmărește lectura SBLGNT și păstrează legătura lucrării cu slava Domnului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul principal este redat fără a importa automat lectura alternativă."
+    },
+    {
+      "verse": 24,
+      "term": "ἐνδεικνύμενοι",
+      "decision": "redat prin imperativul «arătați-le»",
+      "reason": "Aparatul consemnează forma imperativă ἐνδείξασθε în WH/RP; SBLGNT/Treg/NA28 au participiul. Româna cere o formulare finită, iar contextul îndemnului justifică imperativul idiomatic.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Decizia păstrează funcția exhortativă a frazei și consemnează variația de formă."
+    },
+    {
+      "verse": 2,
+      "term": "revizie finală: ἡ κατὰ βάθους πτωχεία αὐτῶν",
+      "decision": "că, în marea încercare adusă de necaz, belșugul bucuriei lor și sărăcia lor nespus de adâncă au făcut să se reverse o bogăție de generozitate din partea lor.",
+      "reason": "Construcția „în multă încercare de necaz” este un calc nefiresc, iar „au prisosit în bogăția” exprimă neclar rezultatul indicat de εἰς. Relația dintre ἡ κατὰ βάθους πτωχεία αὐτῶν și sărăcia lor adâncă este corectă lexical, dar ansamblul românesc redă stângaci paradoxul abundenței născute din încercare.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 3,
+      "term": "revizie finală: κατὰ δύναμιν",
+      "decision": "Căci, după puterea lor — mărturisesc — și chiar dincolo de puterea lor, au dat de bunăvoie,",
+      "reason": "Secvența „da și dincolo de puterea lor” este un calc sintactic nefiresc și perturbă raportul dintre măsura obișnuită și depășirea ei. Echivalarea lui κατὰ δύναμιν prin după puterea lor păstrează limita capacității, însă legătura coordonatoare care urmează trebuie exprimată idiomatic.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 4,
+      "term": "revizie finală: τὴν κοινωνίαν τῆς διακονίας",
+      "decision": "rugându-ne cu multă stăruință să le acordăm privilegiul de a lua parte la slujirea pentru sfinți.",
+      "reason": "„Părtășia slujirii” nu exprimă natural și neechivoc participarea la slujire, iar coordonarea cu „harul” rămâne obscură în română. Sensul participativ din τὴν κοινωνίαν τῆς διακονίας este redat insuficient de limpede prin părtășia slujirii, care are o relație sintactică ambiguă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 10,
+      "term": "revizie finală: οὐ μόνον τὸ ποιῆσαι ἀλλὰ καὶ τὸ θέλειν προενήρξασθε",
+      "decision": "Iată sfatul meu în această privință: lucrul acesta vă este de folos vouă, care încă de anul trecut ați început nu numai să faceți, ci și să doriți.",
+      "reason": "„Ați fost primii” introduce o comparație cu alte persoane, în timp ce προενήρξασθε indică începerea anterioară, încă din anul precedent. Formularea ați fost primii care ați început acum un an atribuie lui προενήρξασθε din οὐ μόνον τὸ ποιῆσαι ἀλλὰ καὶ τὸ θέλειν προενήρξασθε sensul nejustificat de „cei dintâi”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 12,
+      "term": "revizie finală: ἡ προθυμία πρόκειται",
+      "decision": "Căci, dacă există bunăvoință, ea este bine primită potrivit cu ceea ce are cineva, nu cu ceea ce nu are.",
+      "reason": "„Disponibilitatea este acolo” este un calc nenatural; contextul cere afirmarea existenței bunăvoinței, nu localizarea abstractă a disponibilității. Deși disponibilitatea este acolo urmărește sensul lui ἡ προθυμία πρόκειται, locuțiunea rezultată este idiomatic improprie și obscurizează condiția.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 13,
+      "term": "revizie finală: ὑμῖν θλῖψις",
+      "decision": "Căci nu este vorba ca alții să aibă ușurare, iar voi să fiți împovărați,",
+      "reason": "„Mâhniți” redă greșit θλῖψις în acest context, unde contrastul cu ușurarea altora privește împovărarea sau strâmtorarea corintenilor. Sensul contextual al lui ὑμῖν θλῖψις nu este păstrat de voi mâhniți, deoarece presiunea materială devine o simplă stare emoțională.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 17,
+      "term": "revizie finală: σπουδαιότερος δὲ ὑπάρχων",
+      "decision": "Căci a primit îndemnul, iar, fiind și mai plin de râvnă, a plecat de bunăvoie spre voi.",
+      "reason": "Traducerea pierde valoarea comparativă a lui σπουδαιότερος, prezentând doar râvnă intensă, nu o râvnă mai mare. Textul fiind plin de râvnă redă ideea de zel din σπουδαιότερος δὲ ὑπάρχων, însă omite sporirea marcată de comparativ.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 13,
+      "term": "revizie finală: ἀλλʼ ἐξ ἰσότητος",
+      "decision": "Căci nu este vorba ca alții să aibă ușurare, iar voi să fiți împovărați, ci să existe echitate.",
+      "reason": "Finalul adversativ ἀλλʼ ἐξ ἰσότητος este omis, astfel încât versetul nu mai exprimă scopul pozitiv al echității și rămâne sintactic suspendat prin virgula finală. După iar voi să fiți împovărați, segmentul ἀλλʼ ἐξ ἰσότητος cere exprimarea contrastului referitor la echitate, care lipsește din textul românesc.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react"
 import { ArrowLeft, ArrowRight, BookOpen, Bookmark, BookmarkCheck, HelpCircle, Search, Send } from "lucide-react"
-import type { BibleBook, BibleChapter, BibleStatus, BibleUnit } from "@emanus/shared/bible-types"
+import type { BibleBook, BibleChapter, BibleStatus, BibleUnit, BibleVerse } from "@emanus/shared/bible-types"
 import { BIBLE_TRANSLATION } from "@emanus/shared/bible-types"
 import needs from "../data/bible-needs.json"
 import {
@@ -173,7 +173,11 @@ function Book({ book, query }: { book: ListedBook; query: string }) {
     return available.filter((c) => {
       const hay = plat(`${c.number} ${c.title} ${c.summary}`)
       if (hay.includes(plat(q))) return true
-      return isFullChapter(c) && c.units.some((u) => plat(`${u.heading} ${u.ref} ${u.text}`).includes(plat(q)))
+      return isFullChapter(c) && (
+        c.units.some((u) => plat(`${u.heading} ${u.ref} ${u.text}`).includes(plat(q)))
+        || c.verses?.some((verse) => plat(`${verse.number} ${verse.text}`).includes(plat(q)))
+        || false
+      )
     })
   }, [book, q])
   const showChapters = expanded || q.length > 0
@@ -248,9 +252,9 @@ export function Bible() {
 
     <header className="bible__head">
       <BookOpen size={22} strokeWidth={1.7} aria-hidden />
-      <h1>Biblia explicată</h1>
+      <h1>Biblia Emanus</h1>
     </header>
-    <p className="bible__intro">Textul întreg, așa cum este scris, și lângă el explicația verset cu verset. Nu ca să treci peste Scriptură, ci ca să nu rămâi în fața ei fără să înțelegi.</p>
+    <p className="bible__intro">Textul complet al Bibliei Emanus. Acolo unde stratul explicativ este finalizat, îl găsești separat de Scriptură, ca textul biblic să rămână întreg și neamestecat.</p>
 
     {last && <button type="button" className="tile bible__resume" onClick={() => navigate(`/biblia/${last.bookId}/${last.chapter}`)}>
       <span className="today__kicker">Unde ai rămas</span>
@@ -267,7 +271,7 @@ export function Bible() {
         value={query}
         placeholder="Caută un capitol, un nume, o vorbă"
         onChange={(e) => setQuery(e.currentTarget.value)}
-        aria-label="Caută în Biblia explicată"
+        aria-label="Caută în Biblia Emanus"
       />
     </label>
 
@@ -276,7 +280,7 @@ export function Bible() {
     {loadError && <p className="muted">Biblia Emanus nu s-a putut încărca. Verifică legătura și încearcă din nou.</p>}
     {listedBooks.map((b) => <Book key={b.id} book={b} query={query} />)}
 
-    <p className="muted bible__note">Traducerea este indicată separat pentru fiecare carte. Explicațiile sunt scrise pentru Emanus.</p>
+    <p className="muted bible__note">Biblia Emanus (BE) · Traducere originală Emanus</p>
   </section>
 }
 
@@ -344,6 +348,15 @@ function Unit({ unit }: { unit: BibleUnit }) {
   </article>
 }
 
+function VerseText({ verses }: { verses: BibleVerse[] }) {
+  return <div className="bverses" aria-label="Text biblic">
+    {verses.map((verse) => <p key={verse.number} className="bverse">
+      <span className="bverse__number" aria-label={`Versetul ${verse.number}`}>{verse.number}</span>
+      <span>{verse.text}</span>
+    </p>)}
+  </div>
+}
+
 export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapter: number }) {
   const [book, setBook] = useState<BibleBook | null>(null)
   const [failed, setFailed] = useState(false)
@@ -396,25 +409,39 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
     <header className="bchead">
       <p className="today__kicker">{book.name} {found.number}</p>
       <h1>{found.title}</h1>
-      <p className="bchead__sum">{found.summary}</p>
+      {found.summary && <p className="bchead__sum">{found.summary}</p>}
       {SHOW_EDITORIAL && found.status !== "published" && <p className="bchead__flag">Scris, dar necitit încă de un om. Dacă vezi ceva greșit, spune-ne.</p>}
     </header>
 
-    <details className="bctx">
+    {found.literaryContext && <details className="bctx">
       <summary>Unde suntem în carte</summary>
       <p>{found.literaryContext}</p>
-    </details>
-    <details className="bctx">
+    </details>}
+    {found.historicalContext && <details className="bctx">
       <summary>Cum era pe atunci</summary>
       <p>{found.historicalContext}</p>
-    </details>
+    </details>}
 
     {found.units.map((u) => <Unit key={u.id} unit={u} />)}
+    {found.verses && found.verses.length > 0 && <VerseText verses={found.verses} />}
 
-    <div className="bprayer">
+    {found.textualNotes && found.textualNotes.length > 0 && <details className="bctx">
+      <summary>Note textuale</summary>
+      {found.textualNotes.map((note, index) => <p key={`${note.verse}-${index}`}>
+        <strong>v. {note.verse}:</strong> {note.note}
+      </p>)}
+    </details>}
+
+    {found.alternateEndings?.map((ending, index) => <details className="bctx" key={`${ending.status}-${index}`}>
+      <summary>{ending.status}</summary>
+      <p>{ending.text}</p>
+      {ending.sourceNote && <p className="muted">{ending.sourceNote}</p>}
+    </details>)}
+
+    {found.prayer && <div className="bprayer">
       <p className="today__kicker">Rugăciune</p>
       {paragraphs(found.prayer).map((p, i) => <p key={i}>{p}</p>)}
-    </div>
+    </div>}
 
     <nav className="bnav" aria-label="Capitole">
       {prev !== undefined

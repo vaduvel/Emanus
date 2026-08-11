@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,22 @@
       "romanianNaturalness": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "SBLGNT 1.2 și aparatul au fost confruntate direct; TR a fost folosit numai ca martor de variante.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au servit drept comparații auxiliare; NTR nu a fost consultată.",
+      "Textul românesc a fost redactat independent, fără stocarea sau copierea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 11,
       "reviewed": 11,
@@ -98,14 +97,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 11 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 11 versete din REV.4 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost corectate toate frazele corupte, calchiate sau cu diacritice eronate din capitol.",
+        "Descrierea tronului, făpturilor vii, acțiunile și doxologia au fost confruntate verset cu verset.",
+        "Lecturile SBLGNT sunt urmate fără importarea automată a adaosurilor martorului tradițional."
       ]
     },
     "theologicalContext": {
@@ -123,69 +122,64 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 285,
-        "secondary": 119,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5435114731748284,
-      "minimumScore": 0.5419631978011472
-    },
-    "textDigest": "sha256:f6a99295e770ce20f400af128eb6cc995e294757e2dda0bc594aa41bf786d8c0",
-    "contentDigest": "sha256:42cca2d27af86deba03c6b16f91983db256d443cc9d55517cecab939091a96fc"
+    "textDigest": "sha256:f913be5e711ef4d514c5dfc3758baed8a64c6888c59420dea4f75e4ce7c45576",
+    "contentDigest": "sha256:2723fdf1b65d378308326780349e9a1c6c1e99861ba5dd70ade9b7917755ce6a",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "După aceste lucruri, m-am uitat am văzut o ușă deschisă în cer; primul glas pe care l-am auzit, ca o trâmbiță care vorbea cu mine, a fost unul care a spus: Suie-te aici-ți voi arăta lucrurile care trebuie să se întâmple după aceasta.„"
+      "text": "După acestea m-am uitat și, iată, era o ușă deschisă în cer. Glasul dintâi, pe care îl auzisem ca pe o trâmbiță vorbind cu mine, spunea: „Urcă-te aici și îți voi arăta cele care trebuie să se întâmple după acestea.”"
     },
     {
       "number": 2,
-      "text": "Imediat am fost în Duhul. Iată, a fost un tron stabilit în cer, și unul șezând pe tron"
+      "text": "Îndată am fost în Duhul și, iată, un tron era așezat în cer, iar pe tron ședea Cineva."
     },
     {
       "number": 3,
-      "text": "Era un curcubeu în jurul tronului, ca un smarald la care să te uiți."
+      "text": "Cel care ședea era la vedere asemenea unei pietre de iaspis și sardiu; în jurul tronului era un curcubeu, la vedere asemenea smaraldului."
     },
     {
       "number": 4,
-      "text": "În jurul tronului erau douăzeci și patru de tronuri. Pe tronuri stăteau douăzeci și patru de bătrâni, îmbrăca în veșminte albe, cu coroane de aur pe cap."
+      "text": "În jurul tronului erau douăzeci și patru de tronuri; pe aceste tronuri ședeau douăzeci și patru de bătrâni, îmbrăcați în haine albe și având pe capete cununi de aur."
     },
     {
       "number": 5,
-      "text": "Din scaunul de domnie ies fulgere, sunete și tuneturi. Erau șapte lămpi de foc aprinse înaintea scaunului său de domnie, care sunt cele șapte Duhuri ale lui Dumnezeu."
+      "text": "Din tron ieșeau fulgere, glasuri și tunete. Înaintea tronului ardeau șapte făclii de foc, care sunt cele șapte duhuri ale lui Dumnezeu."
     },
     {
       "number": 6,
-      "text": "Înainte de tron era ceva ca o mare de sticlă, similară cu cristalul. În mijlocul tronului, și în jurul tronului erau patru creaturi vii pline de ochi înainte și în spate."
+      "text": "Înaintea tronului era ca o mare de sticlă, asemenea cristalului. În mijlocul tronului și în jurul tronului erau patru făpturi vii, pline de ochi înainte și înapoi."
     },
     {
       "number": 7,
-      "text": "Prima creatură era ca un leu, a doua creatură ca un vițel, a treia creatură avea o față ca un om, iar a patra era ca un vultur zburător."
+      "text": "Cea dintâi făptură vie era asemenea unui leu, a doua asemenea unui vițel, a treia avea fața ca a unui om, iar a patra era asemenea unui vultur în zbor."
     },
     {
       "number": 8,
-      "text": "Cele patru făpturi vii, fiecare dintre ele având șase aripi, sunt pline de ochi în jurul și în interior. Ei nu au odihnă zi și noapte, spunând, Sfânt, sfânt, sfânt este Domnul Dumnezeu, Cel Atotputernic, care a fost și cine este și cine urmează să vină!"
+      "text": "Fiecare dintre cele patru făpturi vii avea câte șase aripi și era plină de ochi de jur împrejur și pe dinăuntru. Zi și noapte nu încetează să spună: „Sfânt, sfânt, sfânt este Domnul Dumnezeu, Cel Atotputernic, Cel care era, care este și care vine!”"
     },
     {
       "number": 9,
-      "text": "Când creaturile vii dau glorie, onoare și mulțumire celui care stă pe tron, celui ce trăiește veșnic și veșnic,"
+      "text": "Când făpturile vii dau slavă, cinste și mulțumire Celui care șade pe tron, Celui care trăiește în vecii vecilor,"
     },
     {
       "number": 10,
-      "text": "Cei douăzeci și patru de bătrâni cad înaintea Celui ce șade pe scaunul de domnie și se închină Celui ce trăiește veșnic și totdeauna, și își aruncă cununele înaintea scaunului de domnie, zicând:"
+      "text": "cei douăzeci și patru de bătrâni cad înaintea Celui care șade pe tron, se închină Celui care trăiește în vecii vecilor și își aruncă cununile înaintea tronului, spunând:"
     },
     {
       "number": 11,
-      "text": "Vrednic Tu, Domnul și Dumnezeul nostru, Cel Sfânt, să slava, cinstea și puterea, căci Tu ai creat toate lucrurile și, din dorința Ta, ele au existat și au fost create!”"
+      "text": "„Vrednic ești Tu, Domnul și Dumnezeul nostru, să primești slava, cinstea și puterea, căci Tu ai creat toate lucrurile și, prin voia Ta, ele au existat și au fost create.”"
     }
   ],
   "editorialNotes": [],

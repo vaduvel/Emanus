@@ -40,24 +40,28 @@
     "translationsConsulted": [
       {
         "id": "BTF",
+        "consultedInBatch": true,
         "family": "fidela",
         "mode": "comparison-only",
         "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "BIBLIA-LIBERA",
+        "consultedInBatch": true,
         "family": "libera",
         "mode": "comparison-only",
         "referenceUrl": "https://ebible.org/ronbl/"
       },
       {
         "id": "CORNILESCU-1924",
+        "consultedInBatch": true,
         "family": "cornilescu",
         "mode": "comparison-only",
         "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
       },
       {
         "id": "NTR",
+        "consultedInBatch": false,
         "family": "biblica",
         "mode": "comparison-only",
         "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
@@ -74,26 +78,22 @@
       "additions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "SBLGNT 1.2 și aparatul au fost sursa principală; TR a fost martor de variante.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost comparate auxiliar; NTR nu a fost consultată.",
+      "Textul românesc a fost redactat independent, fără stocarea sau copierea unui text românesc protejat."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 2,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 54,
       "reviewed": 54,
@@ -104,14 +104,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 54 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 54 de versete au fost confruntate direct cu SBLGNT 1.2 și aparatul său; TR a fost verificat numai ca martor textual, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă ca repere auxiliare."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Textul a fost revizuit verset cu verset pentru sens, sintaxă și română firească.",
+        "Au fost reparate frazele corupte din 4:42, 4:43, 4:51 și punctuația dialogului.",
+        "Lecturile SBL din 4:1 și 4:42 sunt păstrate fără adaosurile TR."
       ]
     },
     "theologicalContext": {
@@ -129,24 +129,19 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și WEBP; BTF, Cornilescu 1924 și Biblia Liberă au fost consultate numai pentru comparație, fără copiere."
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 223,
-        "primary": 345,
-        "secondary": 311,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5828511837833763,
-      "minimumScore": 0.5708264730944187
-    },
-    "textDigest": "sha256:25e3e4ed54f18df482e415d67b1db19413876653adfc84d90aa5b694cc5d3bd8",
-    "contentDigest": "sha256:827ff95240a3c38fd6933fdfe20c6ccf69701b9b600aa72a0ad3bcc1ab5dd1c2"
+    "textDigest": "sha256:cf6ae7e5b39f3d02b36ee929993b305ef0a1c8f051f5fe73ec55458ecaecceef",
+    "contentDigest": "sha256:b982e5a449cbf17d15742b4b20d46392b4eeef8842886811af1619875560826e",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 2,
+      "result": "approved"
+    }
   },
   "verses": [
     {
@@ -175,7 +170,7 @@
     },
     {
       "number": 7,
-      "text": "O femeie din Samaria a venit să scoată apă. Isus i-a zis:„ Dă-mi să beau."
+      "text": "O femeie din Samaria a venit să scoată apă. Isus i-a zis: „Dă-mi să beau.”"
     },
     {
       "number": 8,
@@ -195,7 +190,7 @@
     },
     {
       "number": 12,
-      "text": "Ești tu mai mare decât tatăl nostru Iacov, care ne-a dat fântâna și a băut din ea el însuși, și fiii lui, și turmele lui?"
+      "text": "Doar nu ești tu mai mare decât tatăl nostru Iacov, care ne-a dat fântâna și a băut din ea el însuși, împreună cu fiii și turmele lui?"
     },
     {
       "number": 13,
@@ -207,11 +202,11 @@
     },
     {
       "number": 15,
-      "text": "Femeia îi zice: Domnule, dă-mi această apă, ca să nu mai însetez și nici să nu mai vin pe aici să scot."
+      "text": "Femeia îi zice: Domnule, dă-mi această apă, ca să nu mai însetez și nici să nu mai vin aici să scot apă."
     },
     {
       "number": 16,
-      "text": "Isus i-a spus: Du-te, sună-ți soțul și vino aici."
+      "text": "Isus i-a spus: Du-te, cheamă-ți soțul și vino aici."
     },
     {
       "number": 17,
@@ -235,7 +230,7 @@
     },
     {
       "number": 22,
-      "text": "Voi vă închinați la ceea ce nu cunoașteți; noi ne închinăm la ceea ce cunoaștem, pentru că mântuirea este din iudei."
+      "text": "Voi vă închinați la ceea ce nu cunoașteți; noi ne închinăm la ceea ce cunoaștem, pentru că mântuirea își are originea în poporul iudeu."
     },
     {
       "number": 23,
@@ -299,7 +294,7 @@
     },
     {
       "number": 38,
-      "text": "Eu v-am trimis să secerați ceea ce voi nu ați muncit; alții au muncit, iar voi ați intrat în munca lor."
+      "text": "Eu v-am trimis să secerați recolta pentru care nu voi ați trudit; alții au trudit, iar voi ați intrat în truda lor."
     },
     {
       "number": 39,
@@ -315,11 +310,11 @@
     },
     {
       "number": 42,
-      "text": "Ei i-au zis femeii: Noi credem acum, nu din pricina vorbelor tale; căci am auzit pentru noi înșine știm că acesta este într-adevăr Hristosul, Mântuitorul lumii."
+      "text": "Ei i-au zis femeii: Acum nu mai credem doar din pricina vorbelor tale, căci noi înșine am auzit și știm că acesta este cu adevărat Mântuitorul lumii."
     },
     {
       "number": 43,
-      "text": "După cele două zile, a ieșit de acolo s-a dus în Galileea."
+      "text": "După cele două zile, a plecat de acolo în Galileea."
     },
     {
       "number": 44,
@@ -331,11 +326,11 @@
     },
     {
       "number": 46,
-      "text": "Isus a venit din nou în Cana Galileii, unde a prefăcut apa în vin. Era un nobil al cărui fiu era bolnav la Capernaum."
+      "text": "Isus a venit din nou în Cana Galileii, unde a prefăcut apa în vin. Era un funcționar regal al cărui fiu era bolnav la Capernaum."
     },
     {
       "number": 47,
-      "text": "Când a auzit că Isus ieșise din Iudeea în Galileea, s-a dus la el și l-a implorat să coboare și să vindece pe fiul său, căci era la moarte."
+      "text": "Când a auzit că Isus venise din Iudeea în Galileea, s-a dus la El și L-a rugat să coboare și să-i vindece fiul, căci acesta era pe moarte."
     },
     {
       "number": 48,
@@ -343,7 +338,7 @@
     },
     {
       "number": 49,
-      "text": "Nobilul i-a spus, domnule, coboară înainte ca copilul meu să moară."
+      "text": "Funcționarul regal I-a spus: „Doamne, coboară înainte să-mi moară copilul!”"
     },
     {
       "number": 50,
@@ -351,11 +346,11 @@
     },
     {
       "number": 51,
-      "text": "În timp ce mergea în jos, servitorii săi l-au întâlnit și a raportat, spunând copilul tău trăiește!"
+      "text": "Pe când cobora, slujitorii lui l-au întâlnit și i-au spus că fiul lui trăiește."
     },
     {
       "number": 52,
-      "text": "Așadar, i-a întrebat la ce ceas a început să-i fie mai bine. Ei i-au zis: Ieri, pe la ceasul al șaptelea, l-a lăsat febra."
+      "text": "Așadar, i-a întrebat la ce ceas a început să-i fie mai bine. Ei i-au zis: Ieri, la ceasul al șaptelea, l-a lăsat febra."
     },
     {
       "number": 53,
@@ -363,7 +358,7 @@
     },
     {
       "number": 54,
-      "text": "Acesta a fost iarăși al doilea semn pe care l-a făcut Isus după ce a venit din Iudeea în Galileea.”"
+      "text": "Acesta a fost al doilea semn pe care l-a făcut Isus după ce a venit din Iudeea în Galileea."
     }
   ],
   "editorialNotes": [
@@ -398,6 +393,60 @@
       "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "Diferența a fost păstrată transparent în auditul capitolului; textul românesc redă lectura critică fără comprimare de sens și fără adaos tradițional."
+    },
+    {
+      "verse": 12,
+      "term": "revizie finală: μὴ σὺ μείζων εἶ τοῦ πατρὸς ἡμῶν Ἰακώβ",
+      "decision": "Doar nu ești tu mai mare decât tatăl nostru Iacov, care ne-a dat fântâna și a băut din ea el însuși, împreună cu fiii și turmele lui?",
+      "reason": "Întrebarea neutră nu redă orientarea spre un răspuns negativ pe care particula grecească μὴ o imprimă replicii femeii. Prin Ești tu mai mare decât tatăl nostru Iacov se păstrează comparația din μὴ σὺ μείζων εἶ τοῦ πατρὸς ἡμῶν Ἰακώβ, însă se pierde nuanța retorică a lui μὴ.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 15,
+      "term": "revizie finală: ἵνα μὴ διψῶ μηδὲ ⸀διέρχωμαι ἐνθάδε ἀντλεῖν",
+      "decision": "Femeia îi zice: Domnule, dă-mi această apă, ca să nu mai însetez și nici să nu mai vin aici să scot apă.",
+      "reason": "Locuțiunea „pe aici” sugerează trecerea prin împrejurimi, în timp ce ἐνθάδε indică venirea în locul concret al fântânii. În ἵνα μὴ διψῶ μηδὲ ⸀διέρχωμαι ἐνθάδε ἀντλεῖν, ἐνθάδε înseamnă aici, pe când ca să nu mai însetez și nici să nu mai vin pe aici să scot introduce o nuanță locativă diferită.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 22,
+      "term": "revizie finală: ἡ σωτηρία ἐκ τῶν Ἰουδαίων ἐστίν",
+      "decision": "Voi vă închinați la ceea ce nu cunoașteți; noi ne închinăm la ceea ce cunoaștem, pentru că mântuirea își are originea între iudei.",
+      "reason": "Construcția „este din iudei” este nefirească în română și poate fi înțeleasă ca indicând componența mântuirii, nu originea ei istorică. Deși mântuirea este din iudei urmărește îndeaproape ἡ σωτηρία ἐκ τῶν Ἰουδαίων ἐστίν, româna nu exprimă natural raportul de origine marcat de ἐκ.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 38,
+      "term": "revizie finală: ὃ οὐχ ὑμεῖς κεκοπιάκατε",
+      "decision": "Eu v-am trimis să secerați recolta pentru care nu voi ați trudit; alții au trudit, iar voi ați intrat în truda lor.",
+      "reason": "Construcția „ceea ce voi nu ați muncit” este sintactic nefirească și denaturează raportul dintre recolta secerată și truda care a produs-o. Relația din ὃ οὐχ ὑμεῖς κεκοπιάκατε cere ideea unei recolte pentru care nu s-a trudit, pe când ceea ce voi nu ați muncit îi atribuie greșit verbului un obiect direct.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 52,
+      "term": "revizie finală: ὥραν ἑβδόμην",
+      "decision": "Așadar, i-a întrebat la ce ceas a început să-i fie mai bine. Ei i-au zis: Ieri, la ceasul al șaptelea, l-a lăsat febra.",
+      "reason": "Locuțiunea „pe la” introduce nejustificat aproximația, deși greaca indică precis ceasul al șaptelea, iar identificarea exactă a momentului susține concluzia din versetul următor. Reperul exact ὥραν ἑβδόμην devine aproximativ prin pe la ceasul al șaptelea, slăbind corespondența temporală importantă pentru relatare.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 22,
+      "term": "revizie finală: ἡ σωτηρία ἐκ τῶν Ἰουδαίων ἐστίν",
+      "decision": "Voi vă închinați la ceea ce nu cunoașteți; noi ne închinăm la ceea ce cunoaștem, pentru că mântuirea își are originea în poporul iudeu.",
+      "reason": "Prepoziția „între” exprimă predominant localizarea printre iudei și nu redă suficient de precis valoarea de proveniență a construcției grecești ἐκ τῶν Ἰουδαίων. Față de sursa exprimată prin ἡ σωτηρία ἐκ τῶν Ἰουδαίων ἐστίν, formularea mântuirea își are originea între iudei introduce o localizare improprie.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
     }
   ],
   "referenceNotes": [],

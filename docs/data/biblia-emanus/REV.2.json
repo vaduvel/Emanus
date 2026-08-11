@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,22 @@
       "romanianNaturalness": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "SBLGNT 1.2 și aparatul au fost confruntate direct; TR a fost folosit numai ca martor de variante.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au servit drept comparații auxiliare; NTR nu a fost consultată.",
+      "Textul românesc a fost redactat independent, fără stocarea sau copierea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 29,
       "reviewed": 29,
@@ -98,14 +97,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 29 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 29 de versete din REV.2 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost corectate toate frazele corupte, calchiate sau cu diacritice eronate din capitol.",
+        "Adresarea la singular, poruncile, negările și imaginile fiecăreia dintre cele patru biserici sunt păstrate.",
+        "Lecturile SBLGNT sunt urmate fără importarea automată a adaosurilor martorului tradițional."
       ]
     },
     "theologicalContext": {
@@ -123,144 +122,158 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 285,
-        "secondary": 119,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5435114731748284,
-      "minimumScore": 0.5419631978011472
-    },
-    "textDigest": "sha256:fed18c35705c13bccdfc2602c483b9cd7ebeb6bda0dd3139c31d92d555ba1847",
-    "contentDigest": "sha256:15eea6c7cd9e5ec580dbb90d51ca6db3ebdfa7dbe1e1d404cdebe93c0e3b2c79"
+    "textDigest": "sha256:856ce327726c8452d6b9de0f05371a483deba64510a8a11040e48d5577fc6684",
+    "contentDigest": "sha256:d16cb0f57001869c27e06f3d5f423d29e97a008e8b08a579ba7d43955feefd8d",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Îngerului adunării din Efes scrie-i: Cel care ține cele stele în mâna dreaptă, cel care umblă printre cele lămpi de aur, îi spune următoarele:"
+      "text": "Îngerului bisericii din Efes scrie-i: Așa spune Cel care ține cele șapte stele în mâna Sa dreaptă, Cel care umblă în mijlocul celor șapte sfeșnice de aur:"
     },
     {
       "number": 2,
-      "text": "Îți cunosc lucrările, truda și perseverența, și că nu poți tolera oamenii răi, și i-ai testat pe cei care se numesc apostoli, și nu sunt, și i-ai găsit falși."
+      "text": "Îți cunosc lucrările, truda și răbdarea statornică; știu că nu-i poți suporta pe cei răi, că i-ai pus la încercare pe cei care se numesc apostoli, dar nu sunt, și i-ai găsit mincinoși."
     },
     {
       "number": 3,
-      "text": "Ai perseverență și au îndurat pentru numele meu sake, și nu au crescut obosit."
+      "text": "Ai răbdare statornică; ai îndurat pentru Numele Meu și nu ai obosit."
     },
     {
       "number": 4,
-      "text": "Dar am asta împotriva ta, că ți-ai părăsit prima iubire."
+      "text": "Dar am împotriva ta faptul că ți-ai părăsit dragostea dintâi."
     },
     {
       "number": 5,
-      "text": "De aceea amintește-ți de unde ai căzut, și pocăiește-te și fă primele lucrări; sau altfel voi veni la tine rapid, și va muta lampa ta sta din locul său, dacă nu te pocăiești."
+      "text": "Adu-ți aminte, deci, de unde ai căzut; pocăiește-te și fă lucrările de la început. Iar dacă nu, vin la tine și îți voi muta sfeșnicul din locul lui, dacă nu te pocăiești."
     },
     {
       "number": 6,
-      "text": "Dar ai aceasta, că urăști lucrările nicolaiților, pe care și eu le urăsc."
+      "text": "Ai însă aceasta: urăști faptele nicolaiților, pe care și Eu le urăsc."
     },
     {
       "number": 7,
-      "text": "Cine are ureche, să audă ce spune Bisericilor Duhul. Celui ce biruie, voi da să mănânce din pomul vieții, care este în Paradisul Dumnezeului meu."
+      "text": "Cine are ureche să audă ce spune Duhul bisericilor. Celui care biruie îi voi da să mănânce din pomul vieții, care este în paradisul lui Dumnezeu."
     },
     {
       "number": 8,
-      "text": "Îngerului adunării din Smirna scrie-i: Cel dintâi și cel de pe urmă, care a murit și a înviat, îi spun aceste lucruri:"
+      "text": "Îngerului bisericii din Smirna scrie-i: Așa spune Cel dintâi și Cel de pe urmă, Cel care a fost mort și a revenit la viață:"
     },
     {
       "number": 9,
-      "text": "Vă cunosc faptele, opresiunea și sărăcia (dar sunteți bogați) și blasfemia celor care spun că sunt iudei, și nu sunt, ci sunt o sinagogă a Satanei."
+      "text": "Îți cunosc necazul și sărăcia — dar ești bogat — și blasfemia celor care spun despre ei că sunt iudei, dar nu sunt, ci sunt o sinagogă a Satanei."
     },
     {
       "number": 10,
-      "text": "Nu vă fie frică de lucrurile pe care sunteți pe cale să sufere. Iată, diavolul este pe cale de a arunca unii dintre voi în închisoare, ca să puteți fi testate; și veți avea opresiune timp de zece zile. Fii credincios până la moarte, și vă voi da coroana vieții."
+      "text": "Nu te teme de cele pe care urmează să le suferi. Iată, diavolul urmează să arunce în închisoare pe unii dintre voi, ca să fiți puși la încercare, și veți avea necaz timp de zece zile. Fii credincios până la moarte și îți voi da cununa vieții."
     },
     {
       "number": 11,
-      "text": "Cine are ureche, să audă ce zice Bisericilor Duhul. Cel ce biruie, nu va fi vătămat de moartea a doua."
+      "text": "Cine are ureche să audă ce spune Duhul bisericilor. Cel care biruie nu va fi nicidecum vătămat de moartea a doua."
     },
     {
       "number": 12,
-      "text": "Îngerului adunării din Pergam scrie-i: Cine are sabia ascuțită cu două tăiuri îi spune următoarele:"
+      "text": "Îngerului bisericii din Pergam scrie-i: Așa spune Cel care are sabia ascuțită cu două tăișuri:"
     },
     {
       "number": 13,
-      "text": "Știu lucrările tale și unde locuiești, unde Satana este tronul. Tu ții ferm la numele meu, și nu mi-ai negat credința în zilele lui Antipa, martorul meu credincios, care a fost ucis printre voi, unde Satana locuiește."
+      "text": "Știu unde locuiești: acolo unde este tronul Satanei. Totuși, ții cu tărie Numele Meu și nu ți-ai lepădat credința în Mine nici în zilele lui Antipa, martorul Meu credincios, care a fost ucis la voi, unde locuiește Satan."
     },
     {
       "number": 14,
-      "text": "Dar am câteva lucruri împotriva ta, pentru că ai acolo pe cineva care ține învățătura lui Balaam, care l-a învățat pe Balac să arunce o piatră de poticnire înaintea copiilor lui Israel, să mănânce lucruri jertfite idolilor, și să comită imoralitate sexuală."
+      "text": "Dar am câteva lucruri împotriva ta: ai acolo pe unii care țin învățătura lui Balaam, cel care îl învăța pe Balac să pună o piedică înaintea fiilor lui Israel, ca să mănânce jertfele idolilor și să se dedea desfrâului."
     },
     {
       "number": 15,
-      "text": "Deci, de asemenea, aveți, de asemenea, unii care dețin la învățătura Nicolaitanilor."
+      "text": "Tot așa, ai și tu pe unii care țin învățătura nicolaiților."
     },
     {
       "number": 16,
-      "text": "Pocăiți-vă, altfel vin la voi repede și voi face război împotriva lor cu sabia gurii mele."
+      "text": "Pocăiește-te deci! Altfel, vin la tine curând și voi lupta împotriva lor cu sabia gurii Mele."
     },
     {
       "number": 17,
-      "text": "Cine are ureche, să audă ce spune Bisericilor Duhul. Celui ce biruie, îi voi da din mana ascunsă, și îi voi da o piatră albă, și pe piatră un nume nou scris pe care nimeni nu-l cunoaște decât cel care o primește."
+      "text": "Cine are ureche să audă ce spune Duhul bisericilor. Celui care biruie îi voi da din mana ascunsă; îi voi da și o pietricică albă, iar pe pietricică este scris un nume nou, pe care nimeni nu-l cunoaște, decât cel care îl primește."
     },
     {
       "number": 18,
-      "text": "Îngerului adunării din Tiatira scrie-i: Fiul lui Dumnezeu, care are ochii ca o flacără de foc, și picioarele lui sunt ca arama lustruită, spune aceste lucruri:"
+      "text": "Îngerului bisericii din Tiatira scrie-i: Așa spune Fiul lui Dumnezeu, care are ochii ca o flacără de foc și picioarele asemenea aramei lustruite:"
     },
     {
       "number": 19,
-      "text": "Stiu ca lucrarile tale, dragostea ta, credinta, serviciul, perseverenta pacienta, si ca ultimele tale lucrari sunt mai mult decat primele."
+      "text": "Îți cunosc lucrările, dragostea, credința, slujirea și răbdarea statornică; știu că lucrările tale de pe urmă sunt mai multe decât cele dintâi."
     },
     {
       "number": 20,
-      "text": "Dar am acest lucru împotriva ta, că tolerezi femeia ta Izabela, care se numește o profetesă. Ea învață și seduce slujitorii mei să comită imoralitate sexuală și să mănânce lucruri sacrificate idolilor."
+      "text": "Dar am împotriva ta că o tolerezi pe femeia Izabela, care se numește profetesă; ea îi învață și îi amăgește pe slujitorii Mei să se dedea desfrâului și să mănânce jertfe ale idolilor."
     },
     {
       "number": 21,
-      "text": "I-am dat timp să se pocăiască, dar refuză să se pocăiască de imoralitatea ei sexuală."
+      "text": "I-am dat timp să se pocăiască, dar nu vrea să se pocăiască de desfrâul ei."
     },
     {
       "number": 22,
-      "text": "Iată, o voi arunca pe ea și pe cei care comit adulter cu ea într-un pat de mare opresiune, dacă nu se pocăiesc de faptele ei."
+      "text": "Iată, o arunc într-un pat, iar pe cei care comit adulter cu ea îi arunc într-un necaz mare, dacă nu se pocăiesc de faptele ei."
     },
     {
       "number": 23,
-      "text": "Voi ucide copiii ei cu moartea, și toate adunările vor ști că eu sunt cel care cercetează mintea și inimile. Voi da la fiecare dintre voi în funcție de faptele voastre."
+      "text": "Pe copiii ei îi voi omorî cu moartea; toate bisericile vor cunoaște că Eu sunt Cel care cercetează adâncul ființei și inimile, iar fiecăruia dintre voi îi voi da după faptele voastre."
     },
     {
       "number": 24,
-      "text": "Dar vă spun vouă și celorlalți în Tiatira, atâția câți nu au această doctrină și care nu au cunoscut adâncimile lui Satan, precum spun ei, nu voi pune peste voi nicio altă povară."
+      "text": "Dar vouă, celorlalți din Tiatira, tuturor celor care nu țin această învățătură și care n-au cunoscut, cum spun ei, adâncimile Satanei, vă spun: nu pun peste voi nicio altă povară."
     },
     {
       "number": 25,
-      "text": "Cu toate acestea, țineți cu tărie ceea ce până voi veni."
+      "text": "Numai țineți cu tărie ce aveți până voi veni."
     },
     {
       "number": 26,
-      "text": "Cel care învinge, și cel care ține lucrările mele până la sfârșit, îi voi da autoritate asupra națiunilor."
+      "text": "Celui care biruie și păzește până la sfârșit lucrările Mele îi voi da autoritate peste neamuri;"
     },
     {
       "number": 27,
-      "text": "El îi va conduce cu o tijă de fier, zdrobindu-i ca niște oale de lut, așa cum am primit și eu de la Tatăl meu;"
+      "text": "el le va păstori cu un toiag de fier, ca pe niște vase de lut care se sfărâmă,"
     },
     {
       "number": 28,
-      "text": "iar eu îi voi da steaua matinală."
+      "text": "după cum și Eu am primit de la Tatăl Meu; și îi voi da steaua de dimineață."
     },
     {
       "number": 29,
-      "text": "Cine are ureche, să audă ce spune Bisericilor Duhul."
+      "text": "Cine are ureche, să audă ce spune Duhul bisericilor."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 10,
+      "term": "revizie finală: ἐξ ὑμῶν εἰς φυλακὴν",
+      "decision": "Nu te teme de cele pe care urmează să le suferi. Iată, diavolul urmează să arunce în închisoare pe unii dintre voi, ca să fiți puși la încercare, și veți avea necaz timp de zece zile. Fii credincios până la moarte și îți voi da cununa vieții.",
+      "reason": "Construcția românească omite obiectul direct al verbului „să arunce”; trebuie precizat că numai unii dintre destinatari vor fi aruncați în închisoare. Deși ἐξ ὑμῶν εἰς φυλακὴν presupune un grup selectat dintre destinatari, urmează să arunce dintre voi în închisoare nu furnizează în română obiectul direct necesar.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 29,
+      "term": "revizie finală: ὁ ἔχων οὖς ἀκουσάτω",
+      "decision": "Cine are ureche, să audă ce spune Duhul bisericilor.",
+      "reason": "Lipsa virgulei după „ureche” estompează raportul sintactic dintre identificarea ascultătorului și îndemnul distinct exprimat de imperativul ἀκουσάτω. Structura imperativă din ὁ ἔχων οὖς ἀκουσάτω nu este delimitată suficient în Cine are ureche să audă, deoarece lipsește pauza sintactică înaintea conjunctivului hortativ.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

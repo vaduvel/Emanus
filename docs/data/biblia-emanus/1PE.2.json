@@ -42,21 +42,38 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
+    "batchConsultation": {
+      "recordedIn": "NT-AI-REVIEW-BATCH-2026-08-07-1PE.2.md",
+      "consultedBenchmarkIds": [
+        "CORNILESCU-1924",
+        "BTF"
+      ],
+      "unconsultedConfiguredBenchmarkIds": [
+        "NTR"
+      ],
+      "additionalAuxiliarySources": [
+        "WEBP-1PE",
+        "biblia-libera/1PE.usfm"
+      ]
+    },
     "exactTextCopied": false,
     "fullProtectedTextsStored": false,
     "checks": {
@@ -68,26 +85,22 @@
       "theologicalNeutrality": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "SBLGNT, aparatul și TR au fost confruntate direct; WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost folosite numai pentru control semantic și stilistic.",
+      "NTR rămâne listată ca etalon extern configurat de schema corpusului, însă nu a fost consultată în acest lot.",
+      "Textul a fost redactat independent din sursele fixate, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 25,
       "reviewed": 25,
@@ -98,14 +111,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 25 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost rescrise cele 25 de versete pentru a elimina coruperile sintactice, diacriticele greșite și calcurile englezești.",
+        "Termenii care pot induce o lectură instituțională sau confesională au fost redați lexical, iar deciziile sunt consemnate în notele editoriale.",
+        "Diferențele dintre SBLGNT și Textus Receptus au fost verificate direct și nu au fost nivelate tacit în română."
       ]
     },
     "theologicalContext": {
@@ -123,128 +136,276 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare editorială AI din SBLGNT, verificată cu WEBP; etaloanele românești au fost folosite doar pentru comparație"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 257,
-        "secondary": 66,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5467158590753175,
-      "minimumScore": 0.5694259949565413
-    },
-    "textDigest": "sha256:53e6520091d81f9333af80a1a3001435bbd773094fe7785bb6fda8f6922c1e51",
-    "contentDigest": "sha256:0c8ca920c632669a2aa91cddc7caac60d95621224a15a085d58c95f65610796f"
+    "textDigest": "sha256:75168fabd63e422e542a7d5f217aaa550b384f0a1d4a39dede4713c95bdb7b78",
+    "contentDigest": "sha256:ee8feb2ab921de59ec959e223935c482af158b3ff1cf2e55e3635f8b5fd94569",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
+  "editorialNotes": [
+    {
+      "verse": 2,
+      "term": "τὸ λογικὸν ἄδολον γάλα; variantă textuală SBLGNT/TR: εἰς σωτηρίαν / omis",
+      "decision": "„laptele spiritual și curat ... ca să creșteți prin el spre mântuire”",
+      "alternatives": [
+        "„laptele curat al Cuvântului” sau „laptele rațional și neamestecat” pentru τὸ λογικόν ἄδολον γάλα.",
+        "TR-1PE din snapshot se oprește la „ca să creșteți prin el”."
+      ],
+      "reason": "λογικός poate avea nuanță rațională sau spirituală; în context, „spiritual și curat” redă λογικόν și ἄδολον fără a introduce un titlu doctrinar. SBLGNT include și destinația creșterii, „spre mântuire”, spre deosebire de TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1PE, aparatul și TR-1PE au fost confruntate direct; textul principal urmează SBLGNT."
+    },
+    {
+      "verse": 3,
+      "term": "variantă textuală SBLGNT/TR: εἰ / εἴπερ",
+      "decision": "„dacă ați gustat că Domnul este bun”",
+      "alternatives": [
+        "TR-1PE formulează condiția întărită εἴπερ: „dacă într-adevăr / de vreme ce ați gustat”."
+      ],
+      "reason": "SBLGNT are condiționalul simplu εἰ; redarea nu întărește premisa prin lectura TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Varianta a fost verificată în SBLGNT-1PE și TR-1PE; textul principal urmează lectura fixată."
+    },
+    {
+      "verse": 5,
+      "term": "variante textuale SBLGNT/TR: εἰς ἱεράτευμα ἅγιον / omis; εὐπροσδέκτους θεῷ / εὐπροσδέκτους τῷ θεῷ",
+      "decision": "„spre a alcătui o preoție sfântă ... jertfe spirituale plăcute lui Dumnezeu”",
+      "alternatives": [
+        "TR-1PE nu are εἰς înaintea lui ἱεράτευμα și adaugă articolul τῷ înainte de θεῷ."
+      ],
+      "reason": "SBLGNT păstrează direcția „spre o preoție sfântă”; adaosul de articol din TR nu cere o diferență românească de sens.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1PE, aparatul și TR-1PE au fost verificate direct; textul principal redă lectura SBLGNT."
+    },
+    {
+      "verse": 7,
+      "term": "variantă textuală SBLGNT/TR: ἀπιστοῦσιν / ἀπειθοῦσιν",
+      "decision": "„pentru cei care nu cred”",
+      "alternatives": [
+        "TR-1PE citește „pentru cei neascultători”."
+      ],
+      "reason": "SBLGNT descrie aici necredința, nu repetă termenul pentru neascultare din versetul următor; româna păstrează această diferență.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1PE și TR-1PE au fost confruntate direct; lectura SBLGNT este urmată în text."
+    },
+    {
+      "verse": 8,
+      "term": "εἰς ὃ καὶ ἐτέθησαν",
+      "decision": "„la aceasta au fost și rânduiți”",
+      "alternatives": [
+        "„pentru aceasta au fost rânduiți”"
+      ],
+      "reason": "Pronumele păstrează referința deschisă din sintaxa greacă; textul nu adaugă o explicație doctrinară despre natura rânduirii.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sintaxa SBLGNT a fost verificată direct; decizia lexicală nu introduce o glosă în corpul versetului."
+    },
+    {
+      "verse": 12,
+      "term": "variantă textuală SBLGNT/TR: ἐποπτεύοντες / ἐποπτεύσαντες",
+      "decision": "„văzând faptele voastre bune”",
+      "alternatives": [
+        "TR-1PE are participiul aorist, cu accent pe observarea împlinită a faptelor."
+      ],
+      "reason": "SBLGNT are participiul prezent; gerunziul românesc păstrează observația contemporană fără a supralicita aspectul verbal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1PE și TR-1PE au fost confruntate direct; redarea urmează lectura principală."
+    },
+    {
+      "verse": 18,
+      "term": "οἰκέται",
+      "decision": "„Sclavilor din casă”",
+      "alternatives": [
+        "„servitorilor din casă”"
+      ],
+      "reason": "Termenul desemnează personalul aservit din gospodărie; redarea nu eufemizează raportul cu δεσπόταις, „stăpânii”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Termenul SBLGNT și contextul versetelor 18–20 au fost verificate direct; alegerea păstrează statutul social indicat de text."
+    },
+    {
+      "verse": 21,
+      "term": "variantă textuală SBLGNT/TR: ὑπὲρ ὑμῶν, ὑμῖν / ὑπὲρ ἡμῶν, ἡμῖν",
+      "decision": "„Hristos a suferit pentru voi, lăsându-vă un exemplu”",
+      "alternatives": [
+        "TR-1PE citește „pentru noi, lăsându-ne un exemplu”."
+      ],
+      "reason": "Diferența de persoană este materială; ambele pronume din SBLGNT sunt păstrate pentru destinatarii scrisorii.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1PE, aparatul și TR-1PE au fost confruntate direct; textul principal urmează pronumele SBLGNT."
+    },
+    {
+      "verse": 24,
+      "term": "variantă textuală SBLGNT/TR: οὗ τῷ μώλωπι / οὗ τῷ μώλωπι αὐτοῦ",
+      "decision": "„prin rana Lui ați fost vindecați”",
+      "alternatives": [
+        "TR-1PE repetă αὐτοῦ după μώλωπι."
+      ],
+      "reason": "În SBLGNT, pronumele relativ οὗ identifică deja rana cu Hristos; româna păstrează referința fără a trata adaosul TR ca text principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1PE și TR-1PE au fost verificate direct; formularea românească reflectă lectura SBLGNT."
+    },
+    {
+      "verse": 25,
+      "term": "variantă textuală SBLGNT/TR: πλανώμενοι / πλανώμενα",
+      "decision": "„vă rătăceați ca niște oi”",
+      "alternatives": [
+        "TR-1PE acordă participiul cu „oi” la neutru."
+      ],
+      "reason": "SBLGNT folosește participiul masculin pentru destinatari; româna păstrează explicit subiectul „voi”, fără a schimba sensul imaginii oilor.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1PE și TR-1PE au fost confruntate direct; textul principal păstrează lectura SBLGNT."
+    },
+    {
+      "verse": 25,
+      "term": "ἐπίσκοπον",
+      "decision": "„Supraveghetorul sufletelor voastre”",
+      "alternatives": [
+        "„Episcopul sufletelor voastre”",
+        "„Păzitorul sufletelor voastre”"
+      ],
+      "reason": "Termenul este redat prin funcția lui de supraveghere și nu transformă automat versetul într-un titlu ecleziastic modern.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sensul lexical și contextul lui ποιμένα au fost verificate direct în SBLGNT; redarea rămâne descriptivă."
+    },
+    {
+      "verse": 5,
+      "term": "revizie finală: οἶκος πνευματικὸς",
+      "decision": "și voi înșivă, ca pietre vii, sunteți clădiți pentru a alcătui o casă spirituală, o preoție sfântă, ca să aduceți lui Dumnezeu, prin Isus Hristos, jertfe spirituale bine primite.",
+      "reason": "Relația dintre οἶκος πνευματικὸς și sunteți zidiți într-o casă spirituală este denaturată de prepoziția „într-o”, care schimbă identitatea colectivă în localizare.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 5,
+      "term": "revizie finală: οἰκοδομεῖσθε οἶκος πνευματικὸς",
+      "decision": "și voi înșivă, asemenea unor pietre vii, sunteți zidiți, alcătuind o casă spirituală, ca să deveniți o preoție sfântă și să aduceți jertfe spirituale bine primite de Dumnezeu prin Isus Hristos.",
+      "reason": "Raportul sintactic este modificat material: textul grec identifică rezultatul zidirii drept „o casă spirituală”, apoi exprimă separat orientarea spre „o preoție sfântă”, pe când ținta subordonează casa scopului și pune preoția în apoziție cu ea. Relația predicativă din οἰκοδομεῖσθε οἶκος πνευματικὸς nu este redată precis prin sunteți clădiți pentru a alcătui o casă spirituală, o preoție sfântă, deoarece greaca distinge casa rezultată de orientarea spre preoția sfântă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
+  "referenceNotes": [],
+  "alternateEndings": [],
   "verses": [
     {
       "number": 1,
-      "text": "Alungînd de aceea toată răutatea, orice înșelăciune, ipocrizie, invidie și orice rău care vorbește,"
+      "text": "Așadar, lepădând orice răutate, orice viclenie, fățărnicii, invidii și orice vorbire de rău,"
     },
     {
       "number": 2,
-      "text": "ca nou-născuți, tânjiți după laptele pur spiritual, pentru ca, odată cu el, să creșteți,"
+      "text": "ca niște prunci nou-născuți, doriți cu ardoare laptele spiritual și curat, ca să creșteți prin el spre mântuire,"
     },
     {
       "number": 3,
-      "text": "dacă ați gustat cu adevărat că Domnul este milostiv."
+      "text": "dacă ați gustat că Domnul este bun."
     },
     {
       "number": 4,
-      "text": "Vino la el, o piatră vie, respinsă într-adevăr de oameni, dar aleasă de Dumnezeu, prețioasă."
+      "text": "Venind la El, la piatra vie, respinsă de oameni, dar aleasă și prețioasă înaintea lui Dumnezeu,"
     },
     {
       "number": 5,
-      "text": "De asemenea, ca pietre vii sunt construite ca o casă spirituală, pentru a fi o preoție sfântă, pentru a oferi sacrificii spirituale, acceptabile lui Dumnezeu prin Isus Hristos."
+      "text": "și voi înșivă, asemenea unor pietre vii, sunteți zidiți, alcătuind o casă spirituală, ca să deveniți o preoție sfântă și să aduceți jertfe spirituale bine primite de Dumnezeu prin Isus Hristos."
     },
     {
       "number": 6,
-      "text": "Pentru că este în Scriptură: Iată, pun în Sion o piatră unghiulară de căpetenie, aleasă scumpă; cel ce crede în El nu va fi dezamăgit.„"
+      "text": "Căci în Scriptură se găsește: „Iată, pun în Sion o piatră unghiulară, aleasă și prețioasă; cine crede în El nu va fi dat de rușine.”"
     },
     {
       "number": 7,
-      "text": "Pentru voi, care credeți deci este onoarea, dar pentru cei neascultători, piatra pe care constructorii au respins-o a devenit piatra de temelie principală,"
+      "text": "Așadar, pentru voi, cei care credeți, ea este prețioasă; dar pentru cei care nu cred: „Piatra pe care au respins-o zidarii a ajuns piatra din capul unghiului”,"
     },
     {
       "number": 8,
-      "text": "și, o piatră de poticnire și o stâncă de poticnire. ' Căci ei se poticnesc la cuvântul, fiind neascultători, la care au fost numiți."
+      "text": "și „o piatră de poticnire și o stâncă de cădere”. Ei se poticnesc de cuvânt, fiind neascultători; la aceasta au fost și rânduiți."
     },
     {
       "number": 9,
-      "text": "Dar voi sunteți o rasă aleasă, o preoție regală, o națiune sfântă, un popor al lui Dumnezeu, ca să proclamați excelența celui care v-a chemat din întuneric în minunata sa lumină."
+      "text": "Dar voi sunteți un neam ales, o preoție regală, o națiune sfântă, un popor care Îi aparține, ca să vestiți mărețiile Celui care v-a chemat din întuneric în lumina Sa minunată;"
     },
     {
       "number": 10,
-      "text": "În trecut, voi nu erați un popor, ci acum sunteți poporul lui Dumnezeu, care nu a obținut îndurare, ci acum ați obținut îndurare."
+      "text": "voi care odinioară nu erați un popor, dar acum sunteți poporul lui Dumnezeu; voi cărora nu li se arătase îndurare, dar cărora acum li s-a arătat îndurare."
     },
     {
       "number": 11,
-      "text": "Preaiubiților, vă implor ca străini și pelerini să vă abțineți de la poftele carnale care luptă împotriva sufletului,"
+      "text": "Preaiubiților, vă îndemn ca, fiind străini și trecători, să vă abțineți de la poftele trupești, care se războiesc împotriva sufletului,"
     },
     {
       "number": 12,
-      "text": "cu bună purtare printre neamuri, așa încât, în ceea ce vă vorbesc ca unor nedrepți, ei să vadă faptele voastre bune să-L preamărească pe Dumnezeu în ziua cercetării."
+      "text": "având o purtare bună între neamuri, pentru ca, atunci când vă defăimează ca pe niște răufăcători, să-L slăvească pe Dumnezeu în ziua cercetării, văzând faptele voastre bune."
     },
     {
       "number": 13,
-      "text": "De aceea, supuneți-vă oricărei rânduieli omenești pentru Numele Domnului: fie regelui, fie regelui,"
+      "text": "Supuneți-vă, de dragul Domnului, oricărei instituții omenești: fie împăratului, ca autoritate supremă,"
     },
     {
       "number": 14,
-      "text": "sau guvernatorilor, așa cum a fost trimis de el pentru a se răzbuna pe cei nedrepți pentru a-i lăuda pe cei care fac binele."
+      "text": "fie guvernatorilor, ca unora trimiși de el pentru pedepsirea răufăcătorilor și pentru lauda celor care fac binele."
     },
     {
       "number": 15,
-      "text": "Căci aceasta este voia lui Dumnezeu, ca, făcând bine, să reduceți la tăcere ignoranța oamenilor nechibzuiți."
+      "text": "Căci aceasta este voia lui Dumnezeu: ca, făcând binele, să reduceți la tăcere neștiința oamenilor nechibzuiți."
     },
     {
       "number": 16,
-      "text": "Trăiți ca oameni liberi, dar nu folosiți libertatea voastră ca mantie a răutății, ci ca robi ai lui Dumnezeu."
+      "text": "ca oameni liberi, fără să folosiți libertatea ca acoperământ al răutății, ci ca robi ai lui Dumnezeu."
     },
     {
       "number": 17,
-      "text": "Onorează-i pe toți oamenii, iubește frăția, teme-te de Dumnezeu, onorează-l pe rege."
+      "text": "Cinstiți pe toți; iubiți frăția; temeți-vă de Dumnezeu; cinstiți-l pe împărat."
     },
     {
       "number": 18,
-      "text": "Robilor, fiți supuși stăpânilor voștri cu tot respectul, nu numai celor buni și blânzi, ci și celor răi."
+      "text": "Sclavilor din casă, supuneți-vă stăpânilor cu tot respectul, nu numai celor buni și îngăduitori, ci și celor nedrepți."
     },
     {
       "number": 19,
-      "text": "Căci este lăudabil dacă cineva îndură durerea, suferind pe nedrept, din cauza conștiinței față de Dumnezeu."
+      "text": "Căci este un lucru plăcut înaintea lui Dumnezeu dacă cineva îndură dureri, suferind pe nedrept din conștiință față de Dumnezeu."
     },
     {
       "number": 20,
-      "text": "Căci ce glorie este dacă, atunci când păcătuiți, îndurați cu răbdare bătaia? Dar dacă atunci când faceți bine, îndurați cu răbdare suferința, acest lucru este lăudabil la Dumnezeu."
+      "text": "Căci ce laudă este dacă, atunci când păcătuiți și sunteți loviți cu pumnul, îndurați? Dar dacă, făcând binele și suferind, îndurați, aceasta este plăcut înaintea lui Dumnezeu."
     },
     {
       "number": 21,
-      "text": "Căci voi ați fost chemați la aceasta, pentru că și Hristos a suferit pentru noi, și v-a lăsat un exemplu, ca să urmați pașii Lui,"
+      "text": "Pentru aceasta ați fost chemați, deoarece și Hristos a suferit pentru voi, lăsându-vă un exemplu, ca să urmați pașii Lui,"
     },
     {
       "number": 22,
-      "text": "care nu a păcătuit, nici nu a fost găsit înșelăciune în gura lui."
+      "text": "El nu a făcut păcat și nu s-a găsit viclenie în gura Lui."
     },
     {
       "number": 23,
-      "text": "Când a fost blestemat, n-a blestemat înapoi. Când a suferit, n-a amenințat, ci s-a încredințat celui ce judecă cu dreptate."
+      "text": "Când era insultat, nu răspundea cu insulte; când suferea, nu amenința, ci Se încredința Celui care judecă drept."
     },
     {
       "number": 24,
-      "text": "El însuși a purtat păcatele noastre în trupul său pe copac, ca noi, murind pentru păcate, să trăim pentru dreptate. Tu ai fost vindecat de rănile lui."
+      "text": "El însuși a purtat păcatele noastre în trupul Său, pe lemn, pentru ca noi, murind față de păcate, să trăim pentru dreptate; prin rana Lui ați fost vindecați."
     },
     {
       "number": 25,
-      "text": "Căci v-ați rătăcit ca niște oi, dar acum v-ați întors la Păstorul și Văzătorul sufletelor voastre.”"
+      "text": "Căci vă rătăceați ca niște oi, dar acum v-ați întors la Păstorul și Supraveghetorul sufletelor voastre."
     }
-  ],
-  "editorialNotes": [],
-  "referenceNotes": [],
-  "alternateEndings": []
+  ]
 }

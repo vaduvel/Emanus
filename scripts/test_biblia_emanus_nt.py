@@ -638,6 +638,7 @@ class BibliaEmanusNewTestamentTests(unittest.TestCase):
                 },
                 source_data,
                 "fixture-engine",
+                editorial_approved=True,
             )
             self.assertEqual(sealed["audit"]["schemaVersion"], 2)
             self.assertEqual(sealed["audit"]["sourceSnapshotSha256"], expected_hashes["nt"])

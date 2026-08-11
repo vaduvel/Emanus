@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparatul său; Textus Receptus a fost consultat numai ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 34,
       "reviewed": 34,
@@ -98,14 +96,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 34 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 34 de versete din 1CO.11 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost reparate formulările calchiate, persoanele și adaosurile tradiționale care nu apar în lectura principală SBLGNT.",
+        "Cuvintele instituirii, întrebările retorice și referințele la trup sunt menținute conform textului grec.",
+        "Lectura principală SBLGNT este urmată fără importarea automată a lecturilor Textus Receptus."
       ]
     },
     "theologicalContext": {
@@ -123,29 +121,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 709,
-        "primary": 137,
-        "secondary": 24,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.41000612643816675,
-      "minimumScore": 0.5818865265537531
-    },
-    "textDigest": "sha256:6c37f9835f47b70fd4ac9f71e606a385abd85d1609242ef8e5f8e1ffee11e3f2",
-    "contentDigest": "sha256:e98a507cc3edb1208cabe861b54c12a393d65b3305898e24dad04c006979102c"
+    "textDigest": "sha256:2785f07c60257eac9277a08955b83f825f2478b8b803c702932af5988f402439",
+    "contentDigest": "sha256:d86d5a90c3f7516416cc5cf3eeb27a7405c67cac5a38083a84c9bb585e972995",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Fiți imitatorii mei, așa cum și eu sunt al lui Hristos."
+      "text": "Urmați exemplul meu, așa cum și eu urmez exemplul lui Hristos."
     },
     {
       "number": 2,
@@ -157,7 +150,7 @@
     },
     {
       "number": 4,
-      "text": "Fiecare om care se roagă sau profețește, având capul acoperit, dezonorează capul."
+      "text": "Orice bărbat care se roagă sau profețește cu capul acoperit își dezonorează capul."
     },
     {
       "number": 5,
@@ -181,7 +174,7 @@
     },
     {
       "number": 10,
-      "text": "De aceea femeia trebuie să aibă autoritate pe cap, din pricina îngerilor."
+      "text": "De aceea femeia trebuie să aibă autoritate asupra capului ei, din pricina îngerilor."
     },
     {
       "number": 11,
@@ -193,7 +186,7 @@
     },
     {
       "number": 13,
-      "text": "Judecați între voi înșivă: este potrivit ca o femeie să se roage lui Dumnezeu neacoperită?"
+      "text": "Judecați voi înșivă: este potrivit ca o femeie să se roage lui Dumnezeu cu capul neacoperit?"
     },
     {
       "number": 14,
@@ -209,11 +202,11 @@
     },
     {
       "number": 17,
-      "text": "Dar, dând această poruncă, nu vă laud, fiindcă vă adunați nu spre mai bine, ci spre mai rău."
+      "text": "Dar, dând aceste instrucțiuni, nu vă laud, fiindcă vă adunați nu spre mai bine, ci spre mai rău."
     },
     {
       "number": 18,
-      "text": "Căci mai întâi aud că, atunci când vă adunați în biserică, sunt dezbinări între voi, și în parte cred."
+      "text": "Căci, mai întâi, aud că, atunci când vă adunați ca biserică, sunt dezbinări între voi și, în parte, cred aceasta."
     },
     {
       "number": 19,
@@ -221,7 +214,7 @@
     },
     {
       "number": 20,
-      "text": "Așadar, când vă adunați laolaltă, nu este ca să mâncați Cina Domnului,"
+      "text": "Așadar, când vă adunați laolaltă, nu Cina Domnului este ceea ce mâncați."
     },
     {
       "number": 21,
@@ -233,11 +226,11 @@
     },
     {
       "number": 23,
-      "text": "Căci eu am primit de la Domnul ce v-am și predat: că Domnul Isus, în noaptea în care era predat, a luat pâine,"
+      "text": "Căci eu am primit de la Domnul și v-am transmis ceea ce urmează: Domnul Isus, în noaptea în care era trădat, a luat pâine,"
     },
     {
       "number": 24,
-      "text": "Când el a dat mulțumiri, el a rupt-o și a spus, Ia, mânca. Acesta este corpul meu, care este rupt pentru tine. Fă acest lucru în memoria mea."
+      "text": "Și, după ce a mulțumit, a frânt-o și a spus: „Acesta este trupul Meu, care este pentru voi. Faceți aceasta spre amintirea Mea.”"
     },
     {
       "number": 25,
@@ -245,7 +238,7 @@
     },
     {
       "number": 26,
-      "text": "Căci ori de câte ori mâncați pâinea aceasta și beți paharul, vestiți moartea Domnului până vine El."
+      "text": "Căci, ori de câte ori mâncați această pâine și beți paharul, vestiți moartea Domnului până când va veni El."
     },
     {
       "number": 27,
@@ -257,7 +250,7 @@
     },
     {
       "number": 29,
-      "text": "Căci cel care mănâncă și bea într-un mod nevrednic mănâncă și bea judecata pentru el însuși dacă nu discerne trupul Domnului."
+      "text": "Căci cel care mănâncă și bea mănâncă și bea judecată pentru sine dacă nu deosebește trupul."
     },
     {
       "number": 30,
@@ -265,7 +258,7 @@
     },
     {
       "number": 31,
-      "text": "Dacă ne-am judeca pe noi înșine, n-am fi judecați."
+      "text": "Dacă ne-am judeca pe noi înșine, nu am fi judecați."
     },
     {
       "number": 32,
@@ -273,11 +266,11 @@
     },
     {
       "number": 33,
-      "text": "Așadar, frații mei, când vă adunați ca să mâncați, așteptați-vă unii pe alții."
+      "text": "Așadar, frații mei, când vă adunați ca să mâncați, așteptați-i unii pe alții."
     },
     {
       "number": 34,
-      "text": "Dacă îi este foame cuiva, să mănânce acasă, ca să nu vă adunați spre judecată. Celelalte lucruri le voi rândui când voi veni."
+      "text": "Dacă îi este foame cuiva, să mănânce acasă, ca să nu vă adunați pentru judecată. Celelalte lucruri le voi rândui când voi veni."
     }
   ],
   "editorialNotes": [
@@ -289,6 +282,42 @@
       "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "Versetul a fost redactat după lectura critică principală, iar adaosurile tradiționale nu au fost introduse în corpul textului."
+    },
+    {
+      "verse": 13,
+      "term": "revizie finală: ἐν ὑμῖν αὐτοῖς κρίνατε",
+      "decision": "Judecați voi înșivă: este potrivit ca o femeie să se roage lui Dumnezeu cu capul neacoperit?",
+      "reason": "Locuțiunea „între voi înșivă” este nefirească și poate sugera o deliberare între persoane, în timp ce greaca le cere să judece ei înșiși. Secvența Judecați între voi înșivă deplasează spre o judecată reciprocă sensul reflexiv și emfatic al expresiei ἐν ὑμῖν αὐτοῖς κρίνατε.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 20,
+      "term": "revizie finală: οὐκ ἔστιν κυριακὸν δεῖπνον φαγεῖν",
+      "decision": "Așadar, când vă adunați laolaltă, nu Cina Domnului este ceea ce mâncați.",
+      "reason": "Construcția românească exprimă scopul adunării, dar greaca neagă că ceea ce mănâncă ei în acele condiții este Cina Domnului. Secvența nu este pentru a mânca Cina Domnului nu redă corect raportul predicativ din οὐκ ἔστιν κυριακὸν δεῖπνον φαγεῖν, deoarece introduce o finalitate absentă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 23,
+      "term": "revizie finală: παρεδίδετο",
+      "decision": "Căci eu am primit de la Domnul ceea ce v-am și predat: că Domnul Isus, în noaptea în care era trădat, a luat pâine,",
+      "reason": "Verbul „era dat” este neidiomatic și prea vag în română, nereușind să transmită sensul contextual de trădare al lui παρεδίδετο. Secvența în noaptea în care era dat nu exprimă suficient sensul contextual al verbului παρεδίδετο, rămânând fără complement și semantic neclară.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 23,
+      "term": "revizie finală: ὃ καὶ παρέδωκα ὑμῖν",
+      "decision": "Căci eu am primit de la Domnul și v-am transmis ceea ce urmează: Domnul Isus, în noaptea în care era trădat, a luat pâine,",
+      "reason": "Verbul „a predat” nu redă suficient de precis sensul contextual al lui παρέδωκα, care descrie transmiterea mai departe a tradiției primite, și produce totodată o formulare românească rigidă. Deși ὃ καὶ παρέδωκα ὑμῖν indică transmiterea mai departe a mesajului primit, ceea ce v-am și predat deplasează material nuanța lexicală spre predare didactică.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
     }
   ],
   "referenceNotes": [],

@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -69,25 +72,21 @@
     },
     "observations": [
       "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate.",
+      "Câmpurile consultedInBatch disting etaloanele efectiv confruntate în acest lot de cele configurate în schema corpusului; NTR nu a fost consultată."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 25,
       "reviewed": 25,
@@ -98,7 +97,7 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 25 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar sursele auxiliare declarate în jurnalul lotului au fost consultate pentru sens și română. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
@@ -139,112 +138,235 @@
       "minimumSemantic": 0.588175458584589,
       "minimumScore": 0.553468476771151
     },
-    "textDigest": "sha256:d441bcec74fcc64df84625d5622c5224a4518f1848bf992fcca2063144304df4",
-    "contentDigest": "sha256:acb5ff2c34da1b9f20a2c4f160434fea1fe6b8a28807952d58bb28402dac64b8"
+    "textDigest": "sha256:c8e164d284ace4c6156c9de76fc7b59e2f996d1eee830f6aa19ae7ab747dd470",
+    "contentDigest": "sha256:2ff02abe0c06409beb105b6c09fdf3965857ed282ccb58f46fa3a7a13efb4d98",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Pavel, prizonier al lui Hristos Isus, și Timotei, fratele nostru, lui Filimon, preaiubitul nostru colaborator,"
+      "text": "Pavel, prizonier al lui Hristos Isus, și Timotei, fratele nostru, către preaiubitul Filimon, împreună-lucrătorul nostru,"
     },
     {
       "number": 2,
-      "text": "către iubita Apphia, către Arhip, tovarășul nostru soldat, către adunarea din casa ta:"
+      "text": "către sora Apfia, către Arhip, camaradul nostru de luptă, și către adunarea din casa ta:"
     },
     {
       "number": 3,
-      "text": "Har vouă și pace de la Dumnezeu Tatăl nostru și Domnul Isus Hristos."
+      "text": "Har și pace vouă, de la Dumnezeu, Tatăl nostru, și de la Domnul Isus Hristos."
     },
     {
       "number": 4,
-      "text": "Îi mulțumesc întotdeauna lui Dumnezeu că te-am menționat în rugăciunile mele,"
+      "text": "Îi mulțumesc întotdeauna Dumnezeului meu, amintindu-mi de tine în rugăciunile mele,"
     },
     {
       "number": 5,
-      "text": "auzind de dragostea ta și de credința pe care o ai față de Domnul Isus și față de toți sfinții,"
+      "text": "fiindcă am auzit de dragostea și credința pe care le ai față de Domnul Isus și față de toți sfinții,"
     },
     {
       "number": 6,
-      "text": "pentru ca părtășia credinței voastre să devină eficientă în cunoașterea oricărui lucru bun care este în noi în Hristos Isus."
+      "text": "pentru ca părtășia credinței tale să devină lucrătoare prin cunoașterea deplină a fiecărui lucru bun care este în noi, în vederea lui Hristos."
     },
     {
       "number": 7,
-      "text": "Căci noi avem multă bucurie și mângâiere în dragostea Ta, pentru că inimile sfinților au fost înviorate prin tine, frate."
+      "text": "Căci am avut multă bucurie și mângâiere datorită dragostei tale, fiindcă inimile sfinților au fost înviorate prin tine, frate."
     },
     {
       "number": 8,
-      "text": "De aceea, deși am toată îndrăzneala în Hristos să vă poruncesc ceea ce este potrivit,"
+      "text": "De aceea, deși am multă îndrăzneală în Hristos să-ți poruncesc ceea ce se cuvine,"
     },
     {
       "number": 9,
-      "text": "Totuși, din dragoste, prefer să apelez la voi, fiind unul ca Pavel, cel în vîrstă, dar și prizonier al lui Isus Hristos."
+      "text": "totuși, din dragoste, îți fac mai degrabă o rugăminte, eu, Pavel, un om în vârstă, iar acum și prizonier al lui Hristos Isus:"
     },
     {
       "number": 10,
-      "text": "Fac apel la tine pentru copilul meu Onisim, pe care l-am devenit tatăl în lanțurile mele,"
+      "text": "Te rog pentru fiul meu, Onisim, pe care l-am născut pe când eram în lanțuri,"
     },
     {
       "number": 11,
-      "text": "care odată a fost inutil pentru tine, dar acum este util pentru tine și pentru mine."
+      "text": "care odinioară îți era nefolositor, dar acum este folositor atât ție, cât și mie."
     },
     {
       "number": 12,
-      "text": "Eu îl trimit înapoi. Prin urmare, să-l primească, adică, propria mea inimă,"
+      "text": "Ți l-am trimis înapoi, pe el, adică propria mea inimă."
     },
     {
       "number": 13,
-      "text": "Pe care voiam s-o țin cu mine, ca să mă slujească în lanțurile mele pentru Evanghelie."
+      "text": "Aș fi vrut să-l țin lângă mine, ca să-mi slujească în locul tău, cât sunt în lanțuri pentru Evanghelie."
     },
     {
       "number": 14,
-      "text": "Dar am fost dispus să nu fac nimic fără consimțământul tău, că bunătatea ta nu ar fi ca de necesitate, ci de liber arbitru."
+      "text": "Dar n-am vrut să fac nimic fără consimțământul tău, ca binele pe care îl faci să nu fie impus, ci liber ales."
     },
     {
       "number": 15,
-      "text": "Căci poate că a fost despărțit de tine pentru o vreme, ca să-l ai pentru totdeauna,"
+      "text": "Căci poate că tocmai de aceea a fost despărțit de tine pentru o vreme, ca să-l ai înapoi pentru totdeauna,"
     },
     {
       "number": 16,
-      "text": "nu mai mult ca un sclav, ci mai mult decât un sclav, un frate iubit în mod special pentru mine, ci cât de mult mai degrabă pentru tine, atât în carne, cât și în Domnul."
+      "text": "nu mai ca rob, ci mai mult decât un rob: un frate iubit, mai ales pentru mine, dar cu atât mai mult pentru tine, atât în relațiile omenești, cât și în Domnul."
     },
     {
       "number": 17,
-      "text": "Dacă mă consideri partener, primește-l așa cum m-ai primi pe mine."
+      "text": "Așadar, dacă mă socotești partener, primește-l cum m-ai primi pe mine."
     },
     {
       "number": 18,
-      "text": "Dar dacă te-a nedreptățit sau îți datorează ceva, pune asta în contul meu."
+      "text": "Dar dacă ți-a făcut vreo nedreptate sau îți datorează ceva, trece aceasta în contul meu."
     },
     {
       "number": 19,
-      "text": "Eu, Pavel, scriu aceasta cu mâna mea: o voi răsplăti (să nu-ți mai spun că îmi ești dator și mie în afară de tine însuți)."
+      "text": "Eu, Pavel, am scris cu mâna mea: eu voi plăti, ca să nu-ți spun că îmi datorezi chiar propria ta persoană."
     },
     {
       "number": 20,
-      "text": "Da, frate, lasă-mă să am bucurie de la tine în Domnul. Împrospătează-mi inima în Domnul."
+      "text": "Da, frate, fă-mi acest bine în Domnul; înviorează-mi inima în Hristos."
     },
     {
       "number": 21,
-      "text": "Având încredere în ascultarea ta, îți scriu, știind că vei face chiar mai mult decât ceea ce spun."
+      "text": "Încredințat de ascultarea ta, îți scriu, știind că vei face chiar mai mult decât îți spun."
     },
     {
       "number": 22,
-      "text": "De asemenea, pregătiți o cameră de oaspeți pentru mine, pentru că sper că prin rugăciunile voastre voi fi restaurat la tine."
+      "text": "Totodată, pregătește-mi un loc de găzduire, căci sper că, prin rugăciunile voastre, vă voi fi dăruit."
     },
     {
       "number": 23,
-      "text": "Epafras, tovarășul meu prizonier în Hristos Isus, te salută,"
+      "text": "Epafras, tovarășul meu de închisoare în Hristos Isus, te salută,"
     },
     {
       "number": 24,
-      "text": "ca Marcu, Aristarh, Demas Luca, tovarășii mei de slujbă."
+      "text": "la fel și Marcu, Aristarh, Dima și Luca, împreună-lucrătorii mei."
     },
     {
       "number": 25,
-      "text": "Harul Domnului nostru Isus Hristos să fie cu duhul vostru. Amin."
+      "text": "Harul Domnului Isus Hristos să fie cu duhul vostru."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 2,
+      "term": "variantă textuală SBLGNT/TR: ἀδελφῇ / ἀγαπητῇ",
+      "decision": "„sora Apfia”",
+      "alternatives": [
+        "TR-PHM din snapshot citește „preaiubita Apfia”."
+      ],
+      "reason": "SBLGNT este lectura principală fixată; statutul de soră este păstrat fără înlocuirea cu apelativul TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-PHM și TR-PHM au fost confruntate direct; textul principal urmează SBLGNT."
+    },
+    {
+      "verse": 6,
+      "term": "variantă textuală SBLGNT/TR: τοῦ ἐν ἡμῖν εἰς Χριστόν / τοῦ ἐν ὑμῖν εἰς Χριστὸν Ἰησοῦν",
+      "decision": "„fiecărui lucru bun care este în noi, în vederea lui Hristos”",
+      "alternatives": [
+        "TR-PHM din snapshot citește „în voi” și „Hristos Isus”."
+      ],
+      "reason": "SBLGNT păstrează „în noi” și numele „Hristos”; redarea evită atât pronumele, cât și adaosul numelui din TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-PHM și TR-PHM au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 7,
+      "term": "variantă textuală SBLGNT/TR: ἔσχον / ἔχομεν",
+      "decision": "„am avut multă bucurie și mângâiere”",
+      "alternatives": [
+        "TR-PHM din snapshot citește prezentul plural „avem”."
+      ],
+      "reason": "SBLGNT are aoristul la persoana întâi singular; româna păstrează persoana și timpul lecturii principale.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-PHM și TR-PHM au fost confruntate direct; textul principal urmează SBLGNT."
+    },
+    {
+      "verse": 9,
+      "term": "variantă textuală SBLGNT/TR: Χριστοῦ Ἰησοῦ / κυρίου Ἰησοῦ Χριστοῦ",
+      "decision": "„prizonier al lui Hristos Isus”",
+      "alternatives": [
+        "TR-PHM din snapshot adaugă „Domnul” și are ordinea „Isus Hristos”."
+      ],
+      "reason": "Textul principal păstrează numele și ordinea SBLGNT, fără adaosul tradițional.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-PHM și TR-PHM au fost confruntate direct; textul principal urmează SBLGNT."
+    },
+    {
+      "verse": 10,
+      "term": "variantă textuală SBLGNT/TR: ἐν τοῖς δεσμοῖς / ἐν τοῖς δεσμοῖς μου",
+      "decision": "„pe când eram în lanțuri”",
+      "alternatives": [
+        "TR-PHM din snapshot adaugă pronumele „mele”."
+      ],
+      "reason": "SBLGNT nu are pronumele posesiv; româna nu îl introduce în mod redundant.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-PHM și TR-PHM au fost confruntate direct; textul principal urmează SBLGNT."
+    },
+    {
+      "verse": 12,
+      "term": "variantă textuală SBLGNT/TR: lipsa imperativului πρόσλαβου",
+      "decision": "„Ți l-am trimis înapoi, pe el, adică propria mea inimă.”",
+      "alternatives": [
+        "TR-PHM din snapshot adaugă porunca de a-l primi."
+      ],
+      "reason": "SBLGNT relatează trimiterea lui Onisim fără imperativul suplimentar; textul principal nu adaugă porunca TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-PHM și TR-PHM au fost confruntate direct; textul principal urmează SBLGNT."
+    },
+    {
+      "verse": 20,
+      "term": "variantă textuală SBLGNT/TR: ἐν Χριστῷ / ἐν κυρίῳ",
+      "decision": "„înviorează-mi inima în Hristos”",
+      "alternatives": [
+        "TR-PHM din snapshot citește „în Domnul”."
+      ],
+      "reason": "SBLGNT este lectura principală fixată; numele „Hristos” este păstrat explicit.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-PHM și TR-PHM au fost confruntate direct; textul principal urmează SBLGNT."
+    },
+    {
+      "verse": 23,
+      "term": "variantă textuală SBLGNT/TR: Ἀσπάζεταί / Ἀσπάζονται",
+      "decision": "„Epafras … te salută”",
+      "alternatives": [
+        "TR-PHM din snapshot are formula de salut la plural."
+      ],
+      "reason": "SBLGNT are verbul la singular și îl identifică pe Epafras ca subiect al salutului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-PHM și TR-PHM au fost confruntate direct; textul principal urmează SBLGNT."
+    },
+    {
+      "verse": 25,
+      "term": "variantă textuală SBLGNT/TR: κυρίου Ἰησοῦ Χριστοῦ / κυρίου ἡμῶν Ἰησοῦ Χριστοῦ, fără ἀμήν",
+      "decision": "„Harul Domnului Isus Hristos să fie cu duhul vostru.”",
+      "alternatives": [
+        "TR-PHM din snapshot adaugă „nostru” și „Amin”."
+      ],
+      "reason": "SBLGNT nu conține aceste adaosuri; textul principal păstrează doxologia scurtă a lecturii fixate.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-PHM și TR-PHM au fost confruntate direct; textul principal urmează SBLGNT."
+    },
+    {
+      "verse": 16,
+      "term": "revizie finală: καὶ ἐν σαρκὶ καὶ ἐν κυρίῳ",
+      "decision": "nu mai ca rob, ci mai mult decât un rob: un frate iubit, mai ales pentru mine, dar cu atât mai mult pentru tine, atât în relațiile omenești, cât și în Domnul.",
+      "reason": "Expresia contrastează sfera relației omenești cu relația în Domnul; «în carne» era un calc românesc opac.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

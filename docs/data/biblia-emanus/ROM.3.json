@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,88 +71,18 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
-  },
-  "audit": {
-    "schemaVersion": 2,
-    "completedOn": "2026-08-05",
-    "engineVersion": "3.0.0",
-    "reviewLevel": "ai-complete",
-    "reviewAgent": {
-      "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
-      "method": "verse-by-verse-source-and-benchmark"
-    },
-    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
-    "verseCoverage": {
-      "expected": 31,
-      "reviewed": 31,
-      "continuous": true,
-      "verseNumbersSha256": "sha256:45e43a625e025e8dd0ee6a503bc681e88cfdffc149007a62b49ec44e0ded441a"
-    },
-    "sourceLanguage": {
-      "language": "greacă koine",
-      "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "approved",
-      "scope": "Au fost confruntate toate cele 31 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
-    },
-    "romanianLanguage": {
-      "result": "approved",
-      "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
-      ]
-    },
-    "theologicalContext": {
-      "result": "approved",
-      "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
-      ]
-    },
-    "omissionAddition": {
-      "result": "approved",
-      "omissions": 0,
-      "additions": 0
-    },
-    "copyrightDistance": {
-      "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
-    },
-    "criticalIssues": {
-      "result": "approved",
-      "open": 0
-    },
-    "modelEvidence": {
-      "selected": {
-        "existing": 709,
-        "primary": 137,
-        "secondary": 24,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.41000612643816675,
-      "minimumScore": 0.5818865265537531
-    },
-    "textDigest": "sha256:a78c438d9ec46a180f25f8a91f5037f0d55bfa8c5bd76ebe83c4f488f4f8e51a",
-    "contentDigest": "sha256:56be085b680cd6c1a2ac6eeab11b97dbeab9a49c7525e45ce11cb2660657c261"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Atunci ce avantaj are evreul, sau care este profitul circumciziei?"
+      "text": "Atunci ce avantaj are evreul, sau care este folosul circumciziei?"
     },
     {
       "number": 2,
-      "text": "Este mare, în toate privințele. Mai întâi, fiindcă lor le-au fost încredințate cuvintele lui Dumnezeu."
+      "text": "Este mare, în toate privințele. Mai întâi, pentru că lor le-au fost încredințate cuvintele lui Dumnezeu."
     },
     {
       "number": 3,
@@ -157,11 +90,11 @@
     },
     {
       "number": 4,
-      "text": "Nicidecum! Dimpotrivă, Dumnezeu să fie găsit adevărat, iar orice om, mincinos, după cum este scris: „Ca să fii găsit drept în cuvintele Tale și să biruiești când ești judecat.”"
+      "text": "Nicidecum! Dimpotrivă, Dumnezeu să fie găsit adevărat, iar orice om mincinos, după cum este scris: „Ca să fii găsit drept în cuvintele Tale și să biruiești când ești judecat.”"
     },
     {
       "number": 5,
-      "text": "Dar, dacă nedreptatea noastră scoate în evidență dreptatea lui Dumnezeu, ce vom spune? Oare este nedrept Dumnezeu când aduce mânia? Vorbesc în felul oamenilor."
+      "text": "Dar, dacă nedreptatea noastră pune în lumină dreptatea lui Dumnezeu, ce vom spune? Oare este nedrept Dumnezeu când aduce mânia? Vorbesc omenește."
     },
     {
       "number": 6,
@@ -173,15 +106,15 @@
     },
     {
       "number": 8,
-      "text": "Și de ce să nu spunem: „Să facem cele rele ca să vină cele bune”, așa cum suntem defăimați și cum susțin unii că spunem? Condamnarea lor este dreaptă."
+      "text": "Și de ce să nu spunem, așa cum suntem defăimați și cum susțin unii că spunem: „Să facem cele rele ca să vină cele bune”? Condamnarea lor este dreaptă."
     },
     {
       "number": 9,
-      "text": "Atunci ce? Suntem noi mai buni decât ei? Nu, în nici un caz. Pentru că am avertizat înainte atât evreii, cât și grecii că toți sunt sub păcat."
+      "text": "Atunci ce? Suntem noi mai presus? Nicidecum! Căci mai înainte am adus acuzația că atât iudeii, cât și grecii sunt cu toții sub păcat,"
     },
     {
       "number": 10,
-      "text": "după cum este scris: „Nu este niciun drept, nici măcar unul;"
+      "text": "după cum este scris: „Nu există niciun om drept, nici măcar unul;"
     },
     {
       "number": 11,
@@ -193,7 +126,7 @@
     },
     {
       "number": 13,
-      "text": "Gâtul lor este un mormânt deschis; cu limbile lor au înșelat; venin de vipere este sub buzele lor;"
+      "text": "Gâtul lor este un mormânt deschis; cu limbile lor înșală; venin de vipere este sub buzele lor;"
     },
     {
       "number": 14,
@@ -205,11 +138,11 @@
     },
     {
       "number": 16,
-      "text": "Distrugerea și mizeria sunt în căile lor."
+      "text": "distrugerea și nenorocirea sunt pe căile lor;"
     },
     {
       "number": 17,
-      "text": "și n-au cunoscut calea păcii."
+      "text": "iar calea păcii n-au cunoscut-o."
     },
     {
       "number": 18,
@@ -221,7 +154,7 @@
     },
     {
       "number": 20,
-      "text": "Căci nicio făptură nu va fi îndreptățită înaintea Lui prin faptele Legii, fiindcă prin Lege vine cunoașterea păcatului."
+      "text": "Căci nicio ființă omenească nu va fi îndreptățită înaintea Lui prin faptele Legii, fiindcă prin Lege vine cunoașterea păcatului."
     },
     {
       "number": 21,
@@ -241,11 +174,11 @@
     },
     {
       "number": 25,
-      "text": "pe care Dumnezeu l-a trimis să fie o jertfă ispășitoare prin credința în sângele Său, pentru o demonstrație a neprihănirii Lui, prin trecerea păcatelor anterioare, în Dumnezeu."
+      "text": "pe care Dumnezeu L-a rânduit ca mijloc de ispășire, prin credința în sângele Lui, pentru arătarea dreptății Sale, din cauza trecerii cu vederea a păcatelor săvârșite mai înainte,"
     },
     {
       "number": 26,
-      "text": "în îngăduința lui Dumnezeu, ca dovadă a dreptății Sale în vremea de acum, astfel încât El să fie drept și să-l îndreptățească pe cel ce are credință în Isus."
+      "text": "în îngăduința lui Dumnezeu, pentru arătarea dreptății Sale în vremea de acum, ca El să fie drept și să-l îndreptățească pe cel care are credință în Isus."
     },
     {
       "number": 27,
@@ -257,11 +190,11 @@
     },
     {
       "number": 29,
-      "text": "Sau este El numai Dumnezeul iudeilor? Nu este și al neamurilor? Da, și al neamurilor,"
+      "text": "Sau este Dumnezeu numai al iudeilor? Nu este și al neamurilor? Da, și al neamurilor,"
     },
     {
       "number": 30,
-      "text": "de vreme ce este un singur Dumnezeu, care îi va îndreptăți pe cei circumciși din credință și pe cei necircumciși prin credință."
+      "text": "de vreme ce este un singur Dumnezeu, care-i va îndreptăți pe cei circumciși prin credință și pe cei necircumciși prin credință."
     },
     {
       "number": 31,
@@ -270,36 +203,179 @@
   ],
   "editorialNotes": [
     {
-      "verse": 22,
-      "term": "πίστεως Ἰησοῦ Χριστοῦ",
-      "decision": "Genitivul este redat în text «credința în Isus Hristos»; alternativa lexical posibilă «credincioșia lui Isus Hristos» rămâne consemnată în motivare.",
-      "reason": "În argumentul imediat, εἰς πάντας τοὺς πιστεύοντας din același verset și τὸν ἐκ πίστεως Ἰησοῦ din 3:26 susțin redarea obiectivă, fără ca forma genitivului să fie simplificată ca neproblematică.",
+      "verse": 1,
+      "term": "τίς ἡ ὠφέλεια τῆς περιτομῆς",
+      "decision": "care este folosul circumciziei?",
+      "reason": "ὠφέλεια exprimă folos/avantaj; «profitul circumciziei» era un calc comercial nenatural în română.",
+      "alternatives": [
+        "care este avantajul circumciziei?"
+      ],
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Alegerea contextuală este explicită, iar alternativa reală nu a fost eliminată din audit."
+      "resolutionReason": "«Folosul» este idiomatic și păstrează sensul lexical."
+    },
+    {
+      "verse": 9,
+      "term": "προεχόμεθα; οὐ πάντως",
+      "decision": "Suntem noi mai presus? Nicidecum!",
+      "reason": "Întrebarea privește avantajul/superioritatea iudeilor în argumentul imediat; «mai presus» păstrează sensul fără formularea rigidă «în avantaj».",
+      "alternatives": [
+        "Suntem noi mai buni? Nicidecum!"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Redarea este naturală și păstrează ambiguitatea lexicală a verbului."
+    },
+    {
+      "verse": 20,
+      "term": "οὐ δικαιωθήσεται πᾶσα σὰρξ",
+      "decision": "nicio ființă omenească nu va fi îndreptățită",
+      "reason": "πᾶσα σάρξ este idiom antropologic aici; «făptură» putea sugera întregul domeniu creat, mai larg decât argumentul despre oameni.",
+      "alternatives": [
+        "nicio carne nu va fi îndreptățită",
+        "niciun om nu va fi îndreptățit"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Redarea precizează referentul uman fără a schimba afirmația."
+    },
+    {
+      "verse": 22,
+      "term": "εἰς πάντας τοὺς πιστεύοντας",
+      "decision": "pentru toți cei care cred",
+      "reason": "SBLGNT nu include extinderea RP/TR καὶ ἐπὶ πάντας; textul românesc urmează lectura critică.",
+      "alternatives": [
+        "pentru toți și peste toți cei care cred"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Adaosul tradițional rămâne documentat, nu introdus în textul principal."
+    },
+    {
+      "verse": 22,
+      "term": "πίστεως Ἰησοῦ Χριστοῦ",
+      "decision": "credința în Isus Hristos",
+      "reason": "Genitivul poate fi discutat ca obiectiv sau subiectiv; în context, εἰς πάντας τοὺς πιστεύοντας și 3:26 susțin redarea obiectivă, fără a pretinde că alternativa lexicală nu există.",
+      "alternatives": [
+        "credincioșia lui Isus Hristos"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Alegerea contextuală este explicită și alternativa reală rămâne consemnată."
+    },
+    {
+      "verse": 25,
+      "term": "ἱλαστήριον",
+      "decision": "mijloc de ispășire",
+      "reason": "Termenul poate desemna mijlocul sau locul ispășirii; referentul personal și contextul sângelui susțin aici redarea funcțională «mijloc de ispășire».",
+      "alternatives": [
+        "jertfă de ispășire",
+        "loc al ispășirii"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul a fost aliniat cu decizia editorială documentată, fără impunerea unei teorii confesionale."
     },
     {
       "verse": 25,
       "term": "διὰ πίστεως ἐν τῷ αὐτοῦ αἵματι",
       "decision": "prin credința în sângele Lui",
-      "reason": "Sintaxa permite legarea lui ἐν τῷ αἵματι de credință sau de actul ispășitor prezentat de Dumnezeu; textul urmează lectura tradițională, iar alternativa rămâne documentată.",
+      "reason": "Construcția permite legarea expresiei despre sânge de credință sau de actul ispășitor; textul păstrează lectura tradițională, iar alternativa de segmentare rămâne documentată.",
       "alternatives": [
         "prin credință, prin sângele Lui"
       ],
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Lectura aleasă este posibilă gramatical și coerentă contextual, fără a ascunde cealaltă segmentare."
+      "resolutionReason": "Lectura este posibilă gramatical și coerentă contextual."
+    },
+    {
+      "verse": 9,
+      "term": "revizie finală: προῃτιασάμεθα γὰρ",
+      "decision": "Atunci ce? Suntem noi mai presus? Nicidecum! Căci mai înainte am adus acuzația că atât iudeii, cât și grecii sunt cu toții sub păcat,",
+      "reason": "Verbul προῃτιασάμεθα înseamnă „am acuzat mai înainte”, nu doar „am arătat”; traducerea pierde caracterul acuzator al afirmației. Între προῃτιασάμεθα γὰρ și Căci am arătat mai înainte există o slăbire semantică, deoarece sensul juridic de acuzare dispare.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 10,
+      "term": "revizie finală: Οὐκ ἔστιν δίκαιος οὐδὲ εἷς",
+      "decision": "după cum este scris: „Nu există niciun om drept, nici măcar unul;",
+      "reason": "Substantivizarea „niciun drept” este material ambiguă în română și poate fi înțeleasă ca negarea unui drept juridic, deși δίκαιος desemnează aici o persoană dreaptă. Deși Οὐκ ἔστιν δίκαιος οὐδὲ εἷς vizează o persoană dreaptă, Nu este niciun drept nu identifică neechivoc referentul uman.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
     },
     {
       "verse": 25,
-      "term": "ἱλαστήριον",
-      "decision": "Termenul este redat «mijloc de ispășire».",
-      "reason": "Substantivul poate desemna un mijloc ori un loc al ispășirii; aici referentul personal ὃν și construcția cu sângele susțin «mijloc», păstrând legătura cultică fără a insera o teorie doctrinară.",
+      "term": "revizie finală: διὰ τὴν πάρεσιν τῶν προγεγονότων ἁμαρτημάτων",
+      "decision": "pe care Dumnezeu L-a rânduit ca mijloc de ispășire, prin credința în sângele Lui, pentru arătarea dreptății Sale, din cauza trecerii cu vederea a păcatelor săvârșite mai înainte,",
+      "reason": "Prepoziția διά urmată de acuzativ exprimă aici cauza; „prin trecerea cu vederea” o transformă într-un mijloc și modifică raportul sintactic cu arătarea dreptății. Între διὰ τὴν πάρεσιν τῶν προγεγονότων ἁμαρτημάτων și prin trecerea cu vederea a păcatelor săvârșite mai înainte se pierde valoarea cauzală a prepoziției.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Redarea respectă glosarul normativ și păstrează în motivare domeniul semantic alternativ."
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
     }
   ],
   "referenceNotes": [],
-  "alternateEndings": []
+  "alternateEndings": [],
+  "audit": {
+    "schemaVersion": 2,
+    "completedOn": "2026-08-11",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "Codex / GPT-5.6 Sol",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "verseCoverage": {
+      "expected": 31,
+      "reviewed": 31,
+      "continuous": true,
+      "verseNumbersSha256": "sha256:45e43a625e025e8dd0ee6a503bc681e88cfdffc149007a62b49ec44e0ded441a"
+    },
+    "sourceLanguage": {
+      "language": "greacă koine",
+      "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
+      "result": "approved",
+      "scope": "Toate cele 31 de versete din ROM.3 au fost reverificate verset cu verset față de SBLGNT 1.2 și aparatul critic; Textus Receptus a fost folosit numai ca martor textual, iar etaloanele românești declarate numai comparativ."
+    },
+    "romanianLanguage": {
+      "result": "approved",
+      "changesApplied": [
+        "ROM.3.1 și ROM.3.9 au fost netezite pentru română naturală fără pierdere semantică.",
+        "ROM.3.20 a fost precizat antropologic pentru πᾶσα σάρξ.",
+        "ROM.3.25 a fost aliniat cu decizia editorială asupra lui ἱλαστήριον și cu segmentarea documentată a expresiei despre credință și sânge."
+      ]
+    },
+    "theologicalContext": {
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat extensii din Textus Receptus.",
+        "Ambiguitățile reale din πίστεως Ἰησοῦ Χριστοῦ și ἱλαστήριον sunt documentate, nu rezolvate prin glosare confesională în corpul textului.",
+        "Terminologia δικαιόω este păstrată consecvent în familia «a îndreptăți»."
+      ]
+    },
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "redactare editorială independentă din SBLGNT, verificată comparativ cu sursele auxiliare declarate; fără copiere de text românesc protejat"
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    },
+    "textDigest": "sha256:10c19ceb0d18dc1ba7d79e6d91870e2ac764eaee47cc48b4db8d9db3b25da28f",
+    "contentDigest": "sha256:a3891a7fbb86afc380bf56df675dca1fdf9bb1ce6ff258ad4d93754937a1c695"
+  }
 }

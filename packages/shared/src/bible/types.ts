@@ -12,6 +12,46 @@ export type OriginalLanguage = "ebraica" | "aramaica" | "greaca"
 
 export type BibleExplanationKind = "exposition" | "textual-overview"
 
+/** Un verset publicat fără comentariu Emanus atașat. */
+export interface BibleVerse {
+  number: number
+  text: string
+  textualStatus?: string
+}
+
+export type BibleTextualNoteKind = "absent-from-critical-main-text" | "textual-variant"
+
+/** Aparatul textual rămâne separat de textul canonic. */
+export interface BibleTextualNote {
+  verse: number
+  kind: BibleTextualNoteKind
+  note: string
+  traditionalReading?: string
+  reason?: string
+}
+
+export interface BibleAlternateEnding {
+  status: string
+  text: string
+  sourceNote?: string
+}
+
+export type BibliaEmanusNtRuntimeGate =
+  | { status: "withheld"; reason: string; approval: null }
+  | {
+      status: "approved"
+      reason: string
+      approval: {
+        releaseId: string
+        approvedAt: string
+        approvedBy: string[]
+        corpusSha256: string
+        editorialCorpusDigest: string
+        evidence: Array<{ kind: string; path: string; sha256: string }>
+        reviewScope: { books: 27; chapters: 260; verses: 7941 }
+      }
+    }
+
 /** Un cuvant din limba originala, explicat pe intelesul cititorului. */
 export interface WordStudy {
   original: string
@@ -54,6 +94,10 @@ export interface BibleChapter {
   literaryContext: string
   historicalContext: string
   units: BibleUnit[]
+  /** Text simplu pentru cărțile care așteaptă încă stratul explicativ final. */
+  verses?: BibleVerse[]
+  textualNotes?: BibleTextualNote[]
+  alternateEndings?: BibleAlternateEnding[]
   prayer: string
   status: BibleStatus
 }
@@ -69,7 +113,7 @@ export interface BibleBook {
   chapters: BibleChapter[]
 }
 
-export const BIBLIA_EMANUS_TRANSLATION = "Biblia Emanus"
+export const BIBLIA_EMANUS_TRANSLATION = "Biblia Emanus (BE) · Traducere originală Emanus"
 
 /** Traducerea afisata. Editia originala 1924 este in domeniul public. */
 export const BIBLE_TRANSLATION = "Cornilescu 1924, editia originala"

@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "theologicalNeutrality": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Revizie semantică direct din snapshotul fixat SBLGNT 1.2 și aparat; TR numai martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă auxiliare. NTR nu a fost consultată."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 20,
       "reviewed": 20,
@@ -98,22 +96,18 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 20 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 20 versete au fost confruntate direct cu SBLGNT/aparat; TR a fost doar martor."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Textul a fost refăcut în română firească după greacă, eliminând calcurile și coruperile."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Termenii teologici și metaforele au fost redați lexical și contextual, fără glosare confesională."
       ]
     },
     "omissionAddition": {
@@ -123,108 +117,173 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT; etaloanele numai pentru verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 316,
-        "secondary": 95,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5922586297890594,
-      "minimumScore": 0.5759312754780807
-    },
-    "textDigest": "sha256:eed16f4ce7f29327aa408329c65d157ab52deb421730abd2ceab6a58a9cb29d3",
-    "contentDigest": "sha256:c70f6248bb539aad64722142e7b54d510771a10fabeef2873a453e06ca22fb3e"
+    "textDigest": "sha256:c5322ecc6786e6b83fda735740775ce012e39558a3cdafe2119b7ea8bee9f208",
+    "contentDigest": "sha256:b7daa112d28ce20771be59b41488d1d36f41f3cc42b02ffe151d46e86ccc545a",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Veniți acum, lor, plângeți url pentru nenorocirile care vin peste voi."
+      "text": "Veniți acum, bogaților! Plângeți și tânguiți-vă din pricina nenorocirilor care vin peste voi."
     },
     {
       "number": 2,
-      "text": "Bogățiile tale sunt corupte și hainele tale sunt mâncate de molii."
+      "text": "Bogățiile voastre au putrezit, iar hainele voastre au fost mâncate de molii."
     },
     {
       "number": 3,
-      "text": "Aurul și argintul tău sunt corodate, și corodarea lor va fi o mărturie împotriva ta și va mânca carnea ta ca focul. Tu ți-ai pus comoara în zilele din urmă."
+      "text": "Aurul și argintul vostru au ruginit; rugina lor va fi mărturie împotriva voastră și vă va mânca trupurile ca focul. Ați strâns comori în zilele din urmă."
     },
     {
       "number": 4,
-      "text": "Iată, plata lucrătorilor care v-au secerat câmpurile, plată care a fost oprită de voi prin înșelăciune, strigă; și strigătele secerătorilor au intrat în urechile Domnului sabaot."
+      "text": "Iată, plata lucrătorilor care v-au secerat ogoarele, reținută de voi, strigă, iar strigătele secerătorilor au ajuns la urechile Domnului Oștirilor."
     },
     {
       "number": 5,
-      "text": "Ați trăit în lux pe pământ și v-ați luat plăcerea, v-ați hrănit inimile ca într-o zi de măcel."
+      "text": "Ați trăit pe pământ în lux și desfătare; v-ați îngrășat inimile într-o zi de măcel."
     },
     {
       "number": 6,
-      "text": "L-ai osândit l-ai ucis pe cel drept. El nu ți se împotrivește."
+      "text": "L-ați condamnat și l-ați ucis pe cel drept; el nu vi se împotrivește."
     },
     {
       "number": 7,
-      "text": "Fiți deci răbdători, fraților, până la venirea Domnului. Iată că fermierul așteaptă rodul prețios al pământului, fiind răbdători peste el, până când primește ploaia timpurie și târzie."
+      "text": "Fiți deci răbdători, fraților, până la venirea Domnului. Iată, agricultorul așteaptă rodul prețios al pământului și are răbdare pentru el până primește ploaia timpurie și târzie."
     },
     {
       "number": 8,
-      "text": "Fiți răbdători, întăriți-vă inimile, căci venirea Domnului este aproape."
+      "text": "Fiți și voi răbdători; întăriți-vă inimile, pentru că venirea Domnului s-a apropiat."
     },
     {
       "number": 9,
-      "text": "Să nu cârtiți, fraților, unii împotriva altora, ca să nu fiți judecați. Iată, judecătorul stă la ușă."
+      "text": "Nu vă plângeți unii împotriva altora, fraților, ca să nu fiți judecați. Iată, Judecătorul stă la uși."
     },
     {
       "number": 10,
-      "text": "Să luăm, fraților, ca exemplu de suferință și perseverență, profeții care au vorbit în numele Domnului."
+      "text": "Fraților, luați-i ca exemplu de suferință și răbdare pe profeții care au vorbit în Numele Domnului."
     },
     {
       "number": 11,
-      "text": "Iată, noi îi numim binecuvântați pe cei răbdați. Voi ați auzit de perseverența lui Iov și l-ați văzut pe Domnul la sfârșit și cum Domnul este plin de compasiune și îndurare."
+      "text": "Iată, îi numim fericiți pe cei care au răbdat. Ați auzit de răbdarea lui Iov și ați văzut deznodământul dat de Domnul, pentru că Domnul este plin de compasiune și milostiv."
     },
     {
       "number": 12,
-      "text": "Dar mai presus de toate, frații mei, să nu jur nici pe cer, nici pe pământ, nici prin orice alt jurământ; cida„-ul vostru să fieda”nu„-ul vostru, nu”, ca să nu cădeți în ipocrizie."
+      "text": "Mai presus de toate, frații mei, să nu jurați nici pe cer, nici pe pământ, nici cu vreun alt jurământ. Ci „da”-ul vostru să fie „da”, iar „nu”-ul vostru „nu”, ca să nu cădeți sub judecată."
     },
     {
       "number": 13,
-      "text": "Este cineva dintre voi care suferă? Să se roage. Este cineva vesel? Să cânte laude."
+      "text": "Suferă cineva dintre voi? Să se roage. Este cineva voios? Să cânte laude."
     },
     {
       "number": 14,
-      "text": "Este vreunul dintre voi bolnav? Să cheme pe bătrânii adunării, și să se roage pentru el, ungîndu-l cu untdelemn în Numele Domnului."
+      "text": "Este cineva bolnav între voi? Să-i cheme pe prezbiterii bisericii, iar ei să se roage pentru el, ungându-l cu untdelemn în Numele Domnului."
     },
     {
       "number": 15,
-      "text": "și rugăciunea credinței îl va vindeca pe cel bolnav, și Domnul îl va ridica. Dacă a păcătuit, va fi iertat."
+      "text": "Rugăciunea credinței îl va izbăvi pe cel bolnav, iar Domnul îl va ridica; și, dacă a săvârșit păcate, îi vor fi iertate."
     },
     {
       "number": 16,
-      "text": "Mărturisiți-vă păcatele unii altora și rugați-vă unii pentru alții, ca să fiți vindecați. Rugăciunea insistentă a unei persoane drepte este foarte eficientă."
+      "text": "Mărturisiți-vă deci păcatele unii altora și rugați-vă unii pentru alții, ca să fiți vindecați. Rugăciunea unui om drept are mare putere în lucrarea ei."
     },
     {
       "number": 17,
-      "text": "Ilie era un om cu o natură ca a noastră, și s-a rugat sincer să nu plouă, și n-a plouat pe pământ timp de trei ani și șase luni."
+      "text": "Ilie era un om supus acelorași slăbiciuni ca noi și s-a rugat stăruitor să nu plouă; și n-a plouat pe pământ trei ani și șase luni."
     },
     {
       "number": 18,
-      "text": "El s-a rugat din nou, și cerul a dat ploaie, și pământul i-a dat rodul."
+      "text": "Apoi s-a rugat din nou, iar cerul a dat ploaie și pământul și-a produs rodul."
     },
     {
       "number": 19,
-      "text": "Fraților, dacă vreunul dintre voi rătăcește de la adevăr și cineva îl întoarce înapoi,"
+      "text": "Frații mei, dacă vreunul dintre voi rătăcește de la adevăr și cineva îl întoarce,"
     },
     {
       "number": 20,
-      "text": "Să știe că cel care întoarce un păcătos de la eroarea căii sale va salva un suflet de la moarte și va acoperi o mulțime de păcate."
+      "text": "să știe că acela care întoarce un păcătos de la rătăcirea căii lui îi va salva sufletul de la moarte și va acoperi o mulțime de păcate."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 4,
+      "term": "κύριος σαβαώθ",
+      "decision": "„Domnul Oștirilor”",
+      "alternatives": [
+        "„Domnul Sabaot”"
+      ],
+      "reason": "Titlul semitic este redat semantic în română, fără pierderea referentului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Verificat direct în SBLGNT 1.2 și aparatul fixat."
+    },
+    {
+      "verse": 11,
+      "term": "τὸ τέλος κυρίου",
+      "decision": "„deznodământul dat de Domnul”",
+      "alternatives": [
+        "„sfârșitul Domnului”"
+      ],
+      "reason": "Genitivul este redat contextual ca rezultatul/deznodământul lucrării Domnului în istoria lui Iov.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Verificat direct în SBLGNT 1.2 și aparatul fixat."
+    },
+    {
+      "verse": 12,
+      "term": "ἵνα μὴ ὑπὸ κρίσιν πέσητε",
+      "decision": "„ca să nu cădeți sub judecată”",
+      "alternatives": [
+        "„sub condamnare”"
+      ],
+      "reason": "κρίσις este păstrat ca judecată, fără substituirea cu „ipocrizie”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Verificat direct în SBLGNT 1.2 și aparatul fixat."
+    },
+    {
+      "verse": 15,
+      "term": "σώσει τὸν κάμνοντα",
+      "decision": "„îl va izbăvi pe cel bolnav”",
+      "alternatives": [
+        "„îl va mântui pe cel bolnav”"
+      ],
+      "reason": "σῴζω este redat contextual în cadrul bolii și al ridicării de către Domnul.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Verificat direct în SBLGNT 1.2 și aparatul fixat."
+    },
+    {
+      "verse": 20,
+      "term": "σώσει ψυχὴν αὐτοῦ ἐκ θανάτου",
+      "decision": "„îi va salva sufletul de la moarte”",
+      "alternatives": [
+        "„va salva un suflet”"
+      ],
+      "reason": "Pronumele textului principal este păstrat în relație cu păcătosul întors din rătăcire.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Verificat direct în SBLGNT 1.2 și aparatul fixat."
+    },
+    {
+      "verse": 13,
+      "term": "revizie finală: εὐθυμεῖ τις; ψαλλέτω",
+      "decision": "Suferă cineva dintre voi? Să se roage. Este cineva voios? Să cânte laude.",
+      "reason": "Starea de voioșie din εὐθυμεῖ τις; ψαλλέτω nu este transmisă precis de Este cineva cu inimă bună?, care schimbă trăsătura vizată.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

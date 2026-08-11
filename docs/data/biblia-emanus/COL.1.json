@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "meaning": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost redactat prin revizie directă din SBLGNT; WEBP, Cornilescu 1924, BTF și Biblia Liberă au fost consultate auxiliar pentru sens și română, fără stocarea unei traduceri românești protejate.",
+      "Câmpurile consultedInBatch disting etaloanele efectiv confruntate în acest lot de cele configurate în schema corpusului; NTR nu a fost consultată."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 29,
       "reviewed": 29,
@@ -98,14 +96,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 29 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost rescrise toate cele 29 de versete pentru a elimina acordurile rupte, persoanele greșite și calcurile englezești.",
+        "Formulele cristologice și termenii administrativi au fost redați în română naturală, cu sensul lor contextual păstrat.",
+        "Locurile cu variante textuale urmează SBLGNT și nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -123,24 +121,19 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare prin revizie directă din SBLGNT, cu WEBP și etaloanele românești numai ca verificare auxiliară; fără copierea unei traduceri românești protejate"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 162,
-        "primary": 138,
-        "secondary": 35,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.4993764885473809,
-      "minimumScore": 0.5987788757926972
-    },
-    "textDigest": "sha256:b04ce0c0feb1f5ff9c82ce3869e00dba72ee0accdf22e79f16b107725e8c3ae6",
-    "contentDigest": "sha256:6b9d8256bc2a1a54a8779f2bf41256d225b523d02c49b53b8215d66eed246157"
+    "textDigest": "sha256:4bd1e7564e90252dad7cf837cd63c5de82097fc2ed7eaaebc93b8010fc0e1cd9",
+    "contentDigest": "sha256:093f5ac5bd6b65d8049c1f4ad176a7a8817ee4a4caa7e7e789f9be9b5ee6ffe4",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
@@ -149,162 +142,237 @@
     },
     {
       "number": 2,
-      "text": "către sfinții și frații credincioși în Hristos care sunt în Colose: har vouă și pace de la Dumnezeu, Tatăl nostru."
+      "text": "către sfinții din Colose și frații credincioși în Hristos: har vouă și pace de la Dumnezeu, Tatăl nostru."
     },
     {
       "number": 3,
-      "text": "Îi mulțumim lui Dumnezeu, Tatăl Domnului nostru Isus Hristos, rugându-ne întotdeauna pentru voi,"
+      "text": "Îi mulțumim întotdeauna lui Dumnezeu, Tatăl Domnului nostru Isus Hristos, când ne rugăm pentru voi,"
     },
     {
       "number": 4,
-      "text": "deoarece am auzit despre credința voastră în Hristos Isus și despre dragostea pe care o aveți pentru toți sfinții,"
+      "text": "fiindcă am auzit despre credința voastră în Hristos Isus și despre dragostea pe care o aveți pentru toți sfinții,"
     },
     {
       "number": 5,
-      "text": "din cauza speranței care vă este păstrată în ceruri, despre care ați auzit mai înainte în cuvântul adevărului evangheliei,"
+      "text": "datorită speranței păstrate pentru voi în ceruri, despre care ați auzit mai înainte prin mesajul adevărului, adică Evanghelia,"
     },
     {
       "number": 6,
-      "text": "care a ajuns la voi, așa cum este în toată lumea, aducând rod și crescând, așa cum face și între voi, din ziua în care ați auzit și ați cunoscut harul lui Dumnezeu în adevăr;"
+      "text": "care a ajuns la voi și, așa cum face în toată lumea, aduce rod și crește și între voi, din ziua în care ați auzit-o și ați cunoscut cu adevărat harul lui Dumnezeu,"
     },
     {
       "number": 7,
-      "text": "așa cum ați învățat de la Epafra, iubitul nostru împreună-rob, care este un slujitor credincios al lui Hristos pentru noi,"
+      "text": "așa cum ați învățat de la Epafra, iubitul nostru împreună-slujitor, care este pentru noi un slujitor credincios al lui Hristos,"
     },
     {
       "number": 8,
-      "text": "el ne-a făcut cunoscut și dragostea voastră în Duhul."
+      "text": "El ne-a făcut cunoscută și dragostea voastră în Duhul."
     },
     {
       "number": 9,
-      "text": "De aceea și noi, din ziua în care am auzit, nu încetăm să ne rugăm pentru voi și să cerem ca să fiți umpluți de cunoașterea deplină a voii lui în toată înțelepciunea și priceperea spirituală,"
+      "text": "De aceea și noi, din ziua în care am auzit, nu încetăm să ne rugăm pentru voi și să cerem ca să fiți umpluți de cunoașterea deplină a voii Lui, în toată înțelepciunea și priceperea spirituală,"
     },
     {
       "number": 10,
-      "text": "ca să umblați într-un mod vrednic de Domnul, spre a-I fi plăcuți în toate, aducând rod în orice lucrare bună și crescând în cunoașterea lui Dumnezeu,"
+      "text": "pentru a umbla într-un mod vrednic de Domnul, ca să-I fiți plăcuți în toate, aducând rod în orice lucrare bună și crescând în cunoașterea lui Dumnezeu,"
     },
     {
       "number": 11,
-      "text": "întăriți cu toată puterea, după tăria slavei lui, pentru toată răbdarea și îndelunga-răbdare, cu bucurie,"
+      "text": "întăriți cu toată puterea, potrivit tăriei slavei Lui, pentru toată statornicia și răbdarea îndelungată, cu bucurie,"
     },
     {
       "number": 12,
-      "text": "aducând mulțumiri Tatălui, care v-a făcut vrednici pentru partea moștenirii sfinților în lumină."
+      "text": "aducând mulțumiri Tatălui, care v-a făcut vrednici să aveți parte de moștenirea sfinților în lumină."
     },
     {
       "number": 13,
-      "text": "El ne-a smuls de sub autoritatea întunericului și ne-a strămutat în împărăția Fiului dragostei lui,"
+      "text": "El ne-a scăpat de sub stăpânirea întunericului și ne-a mutat în împărăția Fiului Său preaiubit,"
     },
     {
       "number": 14,
-      "text": "în care avem răscumpărarea, iertarea păcatelor."
+      "text": "în care avem răscumpărarea: iertarea păcatelor."
     },
     {
       "number": 15,
-      "text": "El este chipul Dumnezeului nevăzut, întâiul născut al întregii creații,"
+      "text": "El este chipul Dumnezeului nevăzut, întâiul născut peste întreaga creație,"
     },
     {
       "number": 16,
-      "text": "pentru că în el au fost create toate: cele din ceruri și cele de pe pământ, cele văzute și cele nevăzute, fie tronuri, fie domnii, fie căpetenii, fie autorități. Toate au fost create prin el și pentru el."
+      "text": "căci în El au fost create toate — în ceruri și pe pământ, cele văzute și cele nevăzute, fie tronuri, fie domnii, fie stăpâniri, fie autorități. Toate au fost create prin El și pentru El."
     },
     {
       "number": 17,
-      "text": "El este înainte de toate și toate se țin împreună în el,"
+      "text": "El este mai înainte de toate, iar în El toate se țin împreună,"
     },
     {
       "number": 18,
-      "text": "și el este capul trupului, al bisericii. El este începutul, întâiul născut dintre cei morți, pentru ca el să aibă întâietatea în toate,"
+      "text": "El este capul trupului, al bisericii. El este începutul, întâiul născut dintre cei morți, pentru ca El să aibă întâietatea în toate,"
     },
     {
       "number": 19,
-      "text": "pentru că în el a binevoit să locuiască toată plinătatea"
+      "text": "căci Dumnezeu a binevoit ca toată plinătatea să locuiască în El"
     },
     {
       "number": 20,
-      "text": "și, prin el, să împace toate cu sine, făcând pace prin sângele crucii lui, prin el, fie cele de pe pământ, fie cele din ceruri."
+      "text": "și, prin El, să împace toate cu Sine, făcând pace prin sângele crucii Lui — prin El, fie cele de pe pământ, fie cele din ceruri."
     },
     {
       "number": 21,
-      "text": "Tu, fiind în trecut înstrăinat și dușmani în mintea ta în faptele tale rele,"
+      "text": "Și pe voi, care odinioară erați înstrăinați și vrăjmași în mintea voastră, prin faptele voastre rele —"
     },
     {
       "number": 22,
-      "text": "dar acum ați fost împăcați în trupul cărnii lui prin moarte, ca să vă înfățișeze sfinți, fără pată și fără vină înaintea lui,"
+      "text": "dar acum ați fost împăcați prin moarte, în trupul cărnii Lui, ca să vă înfățișeze înaintea Lui sfinți, fără pată și fără vină,"
     },
     {
       "number": 23,
-      "text": "dacă, într-adevăr, rămâneți în credință, întemeiați și statornici, fără să vă lăsați mutați de la speranța evangheliei pe care ați auzit-o, care a fost proclamată în toată creația de sub cer și al cărei slujitor am devenit eu, Pavel."
+      "text": "dacă, într-adevăr, rămâneți în credință, întemeiați și neclintiți, fără să vă lăsați clintiți de la speranța Evangheliei pe care ați auzit-o, care a fost vestită în toată creația de sub cer și al cărei slujitor am devenit eu, Pavel."
     },
     {
       "number": 24,
-      "text": "Acum mă bucur în suferințele pentru voi și completez în carnea mea ceea ce mai lipsește necazurilor lui Hristos, pentru trupul lui, care este biserica,"
+      "text": "Acum mă bucur în suferințele mele pentru voi și, în trupul meu, completez ceea ce lipsește necazurilor lui Hristos, pentru trupul Lui, care este biserica,"
     },
     {
       "number": 25,
-      "text": "al cărei slujitor am devenit, potrivit administrării lui Dumnezeu care mi-a fost dată pentru voi, ca să împlinesc cuvântul lui Dumnezeu,"
+      "text": "al cărei slujitor am devenit, potrivit însărcinării primite de la Dumnezeu pentru voi, ca să fac cunoscut pe deplin cuvântul lui Dumnezeu:"
     },
     {
       "number": 26,
-      "text": "misterul ascuns din veacuri și din generații, dar acum a fost descoperit sfinților lui,"
+      "text": "taina ținută ascunsă de-a lungul veacurilor și generațiilor, dar acum descoperită sfinților Lui,"
     },
     {
       "number": 27,
-      "text": "cărora Dumnezeu a vrut să le facă cunoscut care este bogăția slavei acestui mister printre neamuri, care este Hristos în voi, speranța slavei."
+      "text": "cărora Dumnezeu a vrut să le facă cunoscută bogăția slavei acestei taine printre neamuri: Hristos în voi, speranța slavei."
     },
     {
       "number": 28,
-      "text": "Pe el îl vestim noi, avertizând pe orice om și învățând pe orice om în toată înțelepciunea, ca să înfățișăm pe orice om desăvârșit în Hristos."
+      "text": "Pe El Îl vestim, avertizând pe fiecare om și învățând pe fiecare om cu toată înțelepciunea, ca să înfățișăm pe fiecare om desăvârșit în Hristos."
     },
     {
       "number": 29,
-      "text": "Pentru aceasta și muncesc, luptându-mă după lucrarea lui, care lucrează în mine cu putere."
+      "text": "Pentru aceasta muncesc și eu, luptându-mă potrivit lucrării Lui, care lucrează în mine cu putere."
     }
   ],
   "editorialNotes": [
     {
-      "verse": 2,
-      "term": "καὶ κυρίου Ἰησοῦ Χριστοῦ",
-      "decision": "Formula de salut urmează lectura SBL și se încheie cu „de la Dumnezeu, Tatăl nostru”.",
-      "reason": "SBL nu include adaosul TR „și Domnul Isus Hristos”; formula scurtă este păstrată în textul principal, fără completare armonizatoare.",
+      "verse": 1,
+      "term": "variantă textuală SBLGNT/TR: Χριστοῦ Ἰησοῦ / Ἰησοῦ Χριστοῦ",
+      "decision": "„Hristos Isus”",
+      "alternatives": [
+        "TR-COL din snapshot inversează ordinea numelui: „Isus Hristos”."
+      ],
+      "reason": "Textul principal păstrează ordinea numelui din SBLGNT.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Adaosul tradițional este documentat ca martor TR, dar nu este introdus în lectura principală SBL."
+      "resolutionReason": "SBLGNT-COL, aparatul și TR-COL au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 2,
+      "term": "variantă textuală SBLGNT/TR: ἡμῶν / ἡμῶν καὶ κυρίου Ἰησοῦ Χριστοῦ",
+      "decision": "Salutul se încheie cu „de la Dumnezeu, Tatăl nostru”.",
+      "alternatives": [
+        "TR-COL din snapshot adaugă „și de la Domnul Isus Hristos”."
+      ],
+      "reason": "SBLGNT nu are adaosul salutului din TR; acesta nu este importat în română.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-COL, aparatul și TR-COL au fost confruntate direct; textul principal urmează lectura SBLGNT."
     },
     {
       "verse": 7,
-      "term": "ὑπὲρ ἡμῶν / ὑπὲρ ὑμῶν",
-      "decision": "Versetul urmează lectura SBL „pentru noi”.",
-      "reason": "Diferența schimbă direcția slujirii lui Epafra: SBL îl descrie ca slujitor credincios al lui Hristos pentru Pavel și colaboratorii lui, iar TR ca slujitor pentru coloseni.",
+      "term": "variantă textuală SBLGNT/TR: ὑπὲρ ἡμῶν / ὑπὲρ ὑμῶν",
+      "decision": "Epafra este „pentru noi un slujitor credincios al lui Hristos”.",
+      "alternatives": [
+        "TR-COL din snapshot are „pentru voi”."
+      ],
+      "reason": "Diferența schimbă referentul slujirii lui Epafra; SBLGNT are persoana întâi plural, redată explicit în română.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Referentul a fost păstrat conform SBL și nu a fost armonizat după WEB sau TR."
+      "resolutionReason": "SBLGNT-COL, aparatul și TR-COL au fost confruntate direct; textul principal urmează lectura SBLGNT."
     },
     {
       "verse": 12,
-      "term": "ὑμᾶς / ἡμᾶς",
-      "decision": "Textul principal spune „v-a făcut vrednici”.",
-      "reason": "SBL trece direct la adresarea către destinatari în 1:12, în timp ce TR păstrează persoana întâi plural; diferența a fost redată explicit în română.",
+      "term": "variantă textuală SBLGNT/TR: ὑμᾶς / ἡμᾶς",
+      "decision": "„v-a făcut vrednici”",
+      "alternatives": [
+        "TR-COL din snapshot are persoana întâi plural: „ne-a făcut vrednici”."
+      ],
+      "reason": "SBLGNT trece la destinatarii coloseni prin ὑμᾶς; persoana a doua este păstrată.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Pronumele a fost păstrat conform lecturii SBL a versetului."
+      "resolutionReason": "SBLGNT-COL, aparatul și TR-COL au fost confruntate direct; textul principal urmează lectura SBLGNT."
     },
     {
       "verse": 14,
-      "term": "ἀπολύτρωσιν / διὰ τοῦ αἵματος αὐτοῦ",
-      "decision": "Versetul urmează lectura SBL: „în care avem răscumpărarea, iertarea păcatelor”.",
-      "reason": "TR adaugă „prin sângele lui”, dar SBL nu are această expresie în 1:14; ea rămâne explicită mai jos, în 1:20, și nu a fost importată aici.",
+      "term": "variantă textuală SBLGNT/TR: ἀπολύτρωσιν, τὴν ἄφεσιν τῶν ἁμαρτιῶν / adaosul διὰ τοῦ αἵματος αὐτοῦ",
+      "decision": "„răscumpărarea: iertarea păcatelor”",
+      "alternatives": [
+        "TR-COL din snapshot adaugă „prin sângele Lui”."
+      ],
+      "reason": "SBLGNT nu are expresia despre sânge în acest verset; ea nu este adăugată, deși sângele crucii rămâne explicit în 1:20.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Adaosul TR a fost documentat și exclus din textul principal pentru a respecta lectura SBL."
+      "resolutionReason": "SBLGNT-COL, aparatul și TR-COL au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 15,
+      "term": "πρωτότοκος πάσης κτίσεως",
+      "decision": "„întâiul născut peste întreaga creație”",
+      "alternatives": [
+        "„Al întregii creații” poate fi citit în română ca relație partitivă, deși contextul următor afirmă creația tuturor lucrurilor în El, prin El și pentru El."
+      ],
+      "reason": "Prepoziția „peste” redă relația de întâietate în context fără a introduce în corpul versetului o explicație confesională suplimentară.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Ancoră verificată direct în SBLGNT-COL 1:15–17; redactarea păstrează termenul πρωτότοκος și contextul lui imediat."
+    },
+    {
+      "verse": 19,
+      "term": "εὐδόκησεν πᾶν τὸ πλήρωμα κατοικῆσαι",
+      "decision": "„Dumnezeu a binevoit ca toată plinătatea să locuiască în El”",
+      "alternatives": [
+        "Construcția poate fi redată și cu „toată plinătatea a binevoit să locuiască în El”; subiectul lui εὐδόκησεν nu este exprimat lexical."
+      ],
+      "reason": "Contextul imediat al lui 1:12–20 susține, ca lectură contextuală, redarea lui Dumnezeu drept subiect subînțeles; formularea face româna inteligibilă fără a introduce o doctrină suplimentară în corpul versetului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-COL 1:19–20, aparatul și martorii auxiliari au fost confruntate direct; alegerea de redactare este consemnată pentru registrul final."
+    },
+    {
+      "verse": 20,
+      "term": "lectură încadrată în SBLGNT: [διʼ αὐτοῦ] înainte de enumerarea cerului și pământului",
+      "decision": "Este păstrată repetarea „prin El” după pacea făcută prin sângele crucii.",
+      "alternatives": [
+        "Aparatul indică o tradiție care omite repetarea; SBLGNT o păstrează între semne de incertitudine editorială."
+      ],
+      "reason": "Textul principal urmează forma tipărită în SBLGNT, fără a ascunde caracterul marcat al repetării.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-COL 1:20 și aparatul au fost confruntate direct; decizia este consemnată pentru registrul final."
     },
     {
       "verse": 22,
-      "term": "ἀποκατηλλάγητε ἐν τῷ σώματι τῆς σαρκὸς αὐτοῦ",
-      "decision": "Versetul este redat: „dar acum ați fost împăcați în trupul cărnii lui prin moarte”.",
-      "reason": "SBL are verbul la pasiv în 1:22 și păstrează explicit combinația σώματι / σαρκὸς; româna a menținut atât pasivul, cât și distincția dintre „trup” și „carne”.",
+      "term": "variantă textuală SBLGNT/WH-NA/TR: ἀποκατηλλάγητε / ἀποκατήλλαξεν",
+      "decision": "„ați fost împăcați”",
+      "alternatives": [
+        "WH, NA28 și TR-COL au activul „v-a împăcat”."
+      ],
+      "reason": "SBLGNT tipărește pasivul ἀποκατηλλάγητε; româna păstrează această voce și explicitarea trupului cărnii Lui prin moarte.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Formularea păstrează lectura SBL și diferența terminologică cerută de contextul cristologic."
+      "resolutionReason": "SBLGNT-COL 1:22, aparatul și TR-COL au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 28,
+      "term": "variantă textuală SBLGNT/TR: Χριστῷ / Χριστῷ Ἰησοῦ",
+      "decision": "„desăvârșit în Hristos”",
+      "alternatives": [
+        "TR-COL din snapshot adaugă „Isus” după „Hristos”."
+      ],
+      "reason": "SBLGNT are numai Χριστῷ; adaosul TR nu este introdus în finalul versetului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-COL, aparatul și TR-COL au fost confruntate direct; textul principal urmează lectura SBLGNT."
     }
   ],
   "referenceNotes": [],

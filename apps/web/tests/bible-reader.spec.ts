@@ -18,7 +18,7 @@ test.beforeEach(async ({ page }) => {
   }, journey)
 })
 
-test("catalogul și un capitol folosesc Biblia Emanus fără a încărca tot VT-ul", async ({ page }) => {
+test("catalogul complet și un capitol VT folosesc Biblia Emanus fără încărcare eager", async ({ page }) => {
   const pageErrors: string[] = []
   const loadedBooks: string[] = []
   page.on("pageerror", (error) => pageErrors.push(error.message))
@@ -28,9 +28,9 @@ test("catalogul și un capitol folosesc Biblia Emanus fără a încărca tot VT-
   })
 
   await page.goto("/#/biblia")
-  await expect(page.getByRole("heading", { name: "Biblia explicată" })).toBeVisible()
+  await expect(page.getByRole("heading", { name: "Biblia Emanus" })).toBeVisible()
   await expect(page.locator(".bbook__name", { hasText: "Geneza" })).toBeVisible()
-  await expect(page.getByText("Biblia Emanus", { exact: true }).first()).toBeVisible()
+  await expect(page.getByText("Biblia Emanus (BE) · Traducere originală Emanus", { exact: true }).first()).toBeVisible()
   expect(loadedBooks).toEqual([])
   const eagerBibleChunks = await page.evaluate(() => performance.getEntriesByType("resource")
     .map((entry) => entry.name)
@@ -41,7 +41,7 @@ test("catalogul și un capitol folosesc Biblia Emanus fără a încărca tot VT-
 
   await expect(page.getByText("Geneza 1:1", { exact: true })).toBeVisible()
   await expect(page.getByText("La început, Dumnezeu a creat cerurile și pământul.", { exact: true })).toBeVisible()
-  await expect(page.getByText("Biblia Emanus", { exact: true }).last()).toBeVisible()
+  await expect(page.getByText("Biblia Emanus (BE) · Traducere originală Emanus", { exact: true }).last()).toBeVisible()
   expect(loadedBooks).toEqual(["geneza"])
   expect(pageErrors).toEqual([])
 })
@@ -62,7 +62,7 @@ test("intrarea după nevoie folosește indexul ușor și deschide pasajul comple
   await firstPassage.click()
   await expect(page).toHaveURL(/#\/biblia\/[^/]+\/\d+$/u)
   await expect(page.locator(".bunit__text").first()).toBeVisible()
-  await expect(page.getByText("Biblia Emanus", { exact: true }).last()).toBeVisible()
+  await expect(page.getByText("Biblia Emanus (BE) · Traducere originală Emanus", { exact: true }).last()).toBeVisible()
   expect(loadedBooks).toHaveLength(1)
 })
 
@@ -74,9 +74,19 @@ test("căutarea în text încarcă corpusul complet numai la cererea utilizatoru
   })
 
   await page.goto("/#/biblia")
-  const search = page.getByRole("searchbox", { name: "Caută în Biblia explicată" })
+  const search = page.getByRole("searchbox", { name: "Caută în Biblia Emanus" })
   await search.fill("Melhisedec")
 
   await expect(page.getByRole("button", { name: /14 Geneza 14/u })).toBeVisible({ timeout: 15_000 })
-  expect(loadedBooks.size).toBe(39)
+  expect(loadedBooks.size).toBe(66)
+})
+
+test("Noul Testament final este accesibil ca text canonic separat de explicație", async ({ page }) => {
+  await page.goto("/#/biblia/matei/1")
+
+  await expect(page.getByRole("heading", { name: "Matei 1" })).toBeVisible()
+  await expect(page.locator(".bverse")).toHaveCount(25)
+  await expect(page.getByText("Cartea genealogiei lui Isus Hristos, fiul lui David, fiul lui Avraam.", { exact: true })).toBeVisible()
+  await expect(page.getByText("Biblia Emanus (BE) · Traducere originală Emanus", { exact: true }).last()).toBeVisible()
+  await expect(page.locator(".bunit__teaching")).toHaveCount(0)
 })

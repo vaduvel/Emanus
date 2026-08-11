@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -69,25 +72,21 @@
     },
     "observations": [
       "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost redactat prin revizie directă din SBLGNT; WEBP și etaloanele românești au fost consultate auxiliar, fără stocarea unei traduceri românești protejate.",
+      "Câmpurile consultedInBatch disting etaloanele efectiv confruntate în acest lot de cele configurate în schema corpusului; NTR nu a fost consultată."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 13,
       "reviewed": 13,
@@ -98,14 +97,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 13 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Toate cele 13 versete au fost confruntate semantic cu SBLGNT 1.2, aparatul și TR ca martor.",
+        "Au fost reverificate persoanele, negările, timpurile verbale și relațiile dintre fraze.",
+        "Formulările românești au fost comparate auxiliar cu WEBP, BTF, Cornilescu 1924 și Biblia Liberă, fără copiere."
       ]
     },
     "theologicalContext": {
@@ -123,80 +122,121 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "revizie AI directă din SBLGNT, cu WEBP și etaloanele românești numai ca verificare auxiliară; fără copierea unei traduceri românești protejate"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 162,
-        "primary": 138,
-        "secondary": 35,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.4993764885473809,
-      "minimumScore": 0.5987788757926972
-    },
-    "textDigest": "sha256:16d2d917d3d20c7c16c34d1e77e4fbb68aacd886c936eea65855cd03e5ab15c2",
-    "contentDigest": "sha256:9a2f02554b9e00917b761552d89d57ed4c753aabfc6f345b4229f64692aa862f"
+    "textDigest": "sha256:b3a0d7ff5fc0da4dfa019c9c271dd5d5ef0fc7ff6461a7c4c10493474b0ed87b",
+    "contentDigest": "sha256:fea1b5c5d0fdaf2b22b0e68e9e68df9c149505ef3fe66b2fa34142e336feb655",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Prin urmare, când nu am mai putut suporta, ne-am gândit că e bine să fim lăsați în urmă la Atena singuri,"
+      "text": "De aceea, nemaiputând răbda, am socotit că este bine să rămânem singuri în Atena,"
     },
     {
       "number": 2,
-      "text": "a trimis pe Timotei, fratele nostru slujitorul lui Dumnezeu, întru vestea cea bună a lui Hristos, ca să vă întărească să vă mângâie în credința voastră,"
+      "text": "și l-am trimis pe Timotei, fratele nostru și împreună-lucrător al lui Dumnezeu în evanghelia lui Hristos, ca să vă întărească și să vă încurajeze în credința voastră,"
     },
     {
       "number": 3,
-      "text": "că nimeni nu va fi mișcat de aceste necazuri, căci știți că suntem numiți în această misiune."
+      "text": "pentru ca nimeni să nu fie clătinat de aceste necazuri. Căci voi înșivă știți că pentru aceasta suntem rânduiți."
     },
     {
       "number": 4,
-      "text": "Cu siguranță, când am fost cu voi, v-am spus dinainte că trebuie să suferim suferință, așa cum s-a întâmplat, și știți."
+      "text": "Căci și când eram la voi, v-am spus mai dinainte că vom avea de suferit, așa cum s-a și întâmplat, după cum știți."
     },
     {
       "number": 5,
-      "text": "De aceea, și eu, când n-am mai putut s-o suport, am trimes să vă cunosc credința, de teamă că v-ar fi ispitit ispititorul, și că lucrul nostru ar fi fost zadarnic."
+      "text": "De aceea, și eu, nemaiputând răbda, l-am trimis ca să aflu despre credința voastră, de teamă ca nu cumva ispititorul să vă fi ispitit, iar osteneala noastră să fi ajuns zadarnică."
     },
     {
       "number": 6,
-      "text": "Dar Timotei tocmai a venit acum la noi de la voi, și ne-a adus vești bune despre credința și dragostea voastră, și că aveți amintiri frumoase despre noi mereu, dorind să ne vedeți, așa cum și noi dorim să vă vedem."
+      "text": "Dar acum Timotei a venit la noi de la voi și ne-a adus vestea bună despre credința și dragostea voastră, și despre faptul că păstrați mereu o amintire bună despre noi, dorind să ne vedeți, așa cum și noi dorim să vă vedem."
     },
     {
       "number": 7,
-      "text": "Din această cauză, fraților, am fost mângâiați de voi în toate necazurile și necazurile noastre prin credința voastră."
+      "text": "De aceea, fraților, am fost mângâiați cu privire la voi în tot necazul și strâmtorarea noastră, prin credința voastră."
     },
     {
       "number": 8,
-      "text": "Pentru că acum trăim, dacă stai ferm în Domnul."
+      "text": "Căci acum trăim, dacă voi stați tari în Domnul."
     },
     {
       "number": 9,
-      "text": "Pentru ce mulțămiri putem da din nou lui Dumnezeu pentru voi, pentru toată bucuria cu care ne bucurăm pentru voi, înaintea Dumnezeului nostru,"
+      "text": "Căci ce mulțumire am putea să-I aducem lui Dumnezeu pentru voi, pentru toată bucuria cu care ne bucurăm din pricina voastră înaintea Dumnezeului nostru,"
     },
     {
       "number": 10,
-      "text": "Zi și noapte rugându-ne să-ți vedem fața și să desăvârșim ceea ce lipsește din credința ta?"
+      "text": "rugându-ne peste măsură zi și noapte să vă vedem fața și să împlinim lipsurile credinței voastre?"
     },
     {
       "number": 11,
-      "text": "Acum fie ca Dumnezeul nostru și Tatăl nostru însuși și Domnul nostru Isus Hristos, să ne îndrepte calea către voi."
+      "text": "Însuși Dumnezeul și Tatăl nostru și Domnul nostru Isus să ne îndrepte calea spre voi;"
     },
     {
       "number": 12,
-      "text": "Fie ca Domnul să vă facă să creșteți și să fiți plini de iubire unii față de alții și față de toți oamenii, așa cum facem și noi cu voi,"
+      "text": "Iar Domnul să vă facă să creșteți și să prisosiți în dragoste unii față de alții și față de toți, cum și noi față de voi,"
     },
     {
       "number": 13,
-      "text": "El vă va întări inimile fără prihană în sfințenie înaintea Dumnezeului și Tatălui nostru, la venirea Domnului nostru Isus cu toți sfinții Lui."
+      "text": "ca să vă întărească inimile, fără vină în sfințenie înaintea Dumnezeului și Tatălui nostru, la venirea Domnului nostru Isus cu toți sfinții lui."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 2,
+      "term": "variante textuale SBLGNT/TR: συνεργὸν τοῦ θεοῦ / διάκονον τοῦ θεοῦ καὶ συνεργὸν ἡμῶν; ὑπὲρ / ὑμᾶς περὶ",
+      "decision": "„împreună-lucrător al lui Dumnezeu”",
+      "alternatives": [
+        "TR-1TH din snapshot citește „slujitor al lui Dumnezeu și împreună-lucrător al nostru”."
+      ],
+      "reason": "SBLGNT îl numește pe Timotei împreună-lucrător al lui Dumnezeu și formulează încurajarea cu privire la credință; nu sunt introduse cele două descrieri suplimentare ale TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TH, aparatul și TR-1TH au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 11,
+      "term": "variantă textuală SBLGNT/TR: Ἰησοῦς / Ἰησοῦς Χριστός",
+      "decision": "„Domnul nostru Isus”",
+      "alternatives": [
+        "TR-1TH din snapshot adaugă „Hristos”."
+      ],
+      "reason": "SBLGNT se oprește la Ἰησοῦς; completarea tradiției receptă este consemnată, nu introdusă în textul principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TH și TR-1TH au fost confruntate direct; formularea urmează lectura SBLGNT."
+    },
+    {
+      "verse": 13,
+      "term": "variantă textuală SBLGNT/TR: Ἰησοῦ … αὐτοῦ / Ἰησοῦ Χριστοῦ … αὐτοῦ",
+      "decision": "„Domnului nostru Isus cu toți sfinții lui”",
+      "alternatives": [
+        "TR-1TH din snapshot adaugă „Hristos”; NA28 menționează și adaosul „Amin” în alți martori."
+      ],
+      "reason": "SBLGNT are numai Ἰησοῦ și se încheie cu αὐτοῦ; româna nu completează numele ori doxologia fără suportul textului principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TH, aparatul și TR-1TH au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 5,
+      "term": "revizie finală: ἔπεμψα εἰς τὸ γνῶναι",
+      "decision": "De aceea, și eu, nemaiputând răbda, l-am trimis ca să aflu despre credința voastră, de teamă ca nu cumva ispititorul să vă fi ispitit, iar osteneala noastră să fi ajuns zadarnică.",
+      "reason": "Deși am trimis ca să aflu urmărește scopul exprimat de ἔπεμψα εἰς τὸ γνῶναι, lipsa destinatarului trimiterii produce o elipsă românească neclară.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

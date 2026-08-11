@@ -126,6 +126,33 @@ class BibliaEmanusValidatorTests(unittest.TestCase):
                 validator.DATA_DIR / "GEN.27.json", changed, self.source_data
             )
 
+    def test_critical_text_is_not_padded_with_received_text_expansion(self) -> None:
+        data = validator.load_json(validator.DATA_DIR / "MAT.27.json")
+        self.assertEqual(
+            validator.validate_pinned_benchmark_comparison(
+                validator.DATA_DIR / "MAT.27.json", data, self.source_data
+            ),
+            66,
+        )
+
+    def test_source_faithful_nt_idiom_does_not_require_benchmark_copying(self) -> None:
+        data = validator.load_json(validator.DATA_DIR / "MRK.7.json")
+        self.assertEqual(
+            validator.validate_pinned_benchmark_comparison(
+                validator.DATA_DIR / "MRK.7.json", data, self.source_data
+            ),
+            36,
+        )
+
+    def test_critical_text_ellipsis_is_measured_against_greek(self) -> None:
+        data = validator.load_json(validator.DATA_DIR / "LUK.20.json")
+        self.assertEqual(
+            validator.validate_pinned_benchmark_comparison(
+                validator.DATA_DIR / "LUK.20.json", data, self.source_data
+            ),
+            47,
+        )
+
     def test_seal_cannot_invent_missing_semantic_audit(self) -> None:
         with self.assertRaisesRegex(validator.ValidationError, "nu are audit semantic AI"):
             seal.seal_chapter(
@@ -134,6 +161,35 @@ class BibliaEmanusValidatorTests(unittest.TestCase):
                 self.source_data,
                 "agent-test",
             )
+
+    def test_published_nt_requires_individual_editorial_register(self) -> None:
+        editorial_gate = seal.load_editorial_gate()
+        bound_source_data = editorial_gate.bind_source_reference_mapper(
+            self.source_data,
+            lambda lock_id, book_id, chapter, verse: validator.source_references_for_target(
+                lock_id, book_id, chapter, verse, self.source_data["rules"]
+            ),
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            missing_registry = Path(directory) / "NT-EDITORIAL-APPROVAL.json"
+            with self.assertRaisesRegex(
+                editorial_gate.EditorialGateError,
+                "metadatele de audit AI la nivel de capitol nu sunt suficiente",
+            ):
+                editorial_gate.validate_nt_editorial_approval(
+                    validator.DATA_DIR,
+                    bound_source_data,
+                    self.ledger,
+                    approval_path=missing_registry,
+                )
+
+    def test_manifest_allows_a_traced_ai_nt_reviewer_type(self) -> None:
+        self.assertEqual(
+            self.manifest["automatedPublicationGate"]["newTestamentEditorialApproval"]["reviewerType"],
+            "ai",
+        )
+        paths = validator.validate_manifest(self.manifest)
+        self.assertEqual(paths["sourceLock"], validator.DATA_DIR / "source-lock.json")
 
     def test_seal_preserves_compact_json_style(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

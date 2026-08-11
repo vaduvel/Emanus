@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "additions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparat; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 17,
       "reviewed": 17,
@@ -98,22 +96,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 17 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 17 versete din MAT.3 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost reparate repetiția coruptă dintre MAT.3.1–2, acordurile și marcarea discursului direct.",
+        "Au fost păstrate numărul plural al imperativelor, relațiile sintactice și formulările din citatele sursei.",
+        "Sunt păstrate numai alegerile românești care redau natural persoana, numărul, aspectul verbal și referentul din textul principal SBLGNT."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
         "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Termenii teologici și ambiguitățile sintactice sunt redați lexical, fără glosare confesionale în corpul versetului.",
+        "Etaloanele românești au fost consultate numai pentru verificare, după confruntarea directă cu sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -123,37 +121,32 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 741,
-        "primary": 228,
-        "secondary": 102,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.4037089233135842,
-      "minimumScore": 0.5165308313030281
-    },
-    "textDigest": "sha256:bbf8ac75c7a5afcb644eeadc0a0042561c56dc8829bcdb53e73109234e40af14",
-    "contentDigest": "sha256:cbb25a5322f38048f962ed1fc7f265019116863fc4df4f7978d331356922e3f4"
+    "textDigest": "sha256:c2bf536214462cbc9c027d26ebd96a2a81f97d7b1c2da8f51bd51abfa757f232",
+    "contentDigest": "sha256:72099a7fd733a61118c8ee29b03aa44db553d1f97348987c6936149221f247cd",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Pe vremea aceea, Ioan Botezătorul a venit, propovăduind în pustia Iudeei, și a zis:"
+      "text": "În zilele acelea a venit Ioan Botezătorul, predicând în pustia Iudeei"
     },
     {
       "number": 2,
-      "text": "și spunând: Pocăiți-vă, căci Împărăția cerurilor s-a apropiat!"
+      "text": "și spunând: „Pocăiți-vă, căci Împărăția cerurilor s-a apropiat!”"
     },
     {
       "number": 3,
-      "text": "El este cel despre care s-a vorbit prin profetul Isaia, care spune: Glasul celui ce strigă în pustie: Pregătiți calea Domnului, faceți-I cărările drepte!"
+      "text": "Căci acesta este cel despre care s-a vorbit prin profetul Isaia: „Glasul celui care strigă în pustie: «Pregătiți calea Domnului, faceți-I drepte cărările!»”"
     },
     {
       "number": 4,
@@ -161,7 +154,7 @@
     },
     {
       "number": 5,
-      "text": "Atunci oameni din Ierusalim, toată Iudeea, și toată regiunea din jurul Iordanului au ieșit la el."
+      "text": "Atunci Ierusalimul, toată Iudeea și întreaga regiune din jurul Iordanului ieșeau la el."
     },
     {
       "number": 6,
@@ -169,27 +162,27 @@
     },
     {
       "number": 7,
-      "text": "Dar, când i-a văzut pe mulți dintre farisei și saduchei venind la botezul lui, le-a spus: Pui de vipere, cine v-a arătat cum să fugiți de mânia care vine?"
+      "text": "Dar, când i-a văzut pe mulți dintre farisei și saduchei venind la botezul lui, le-a spus: „Pui de vipere, cine v-a arătat că trebuie să fugiți de mânia care vine?”"
     },
     {
       "number": 8,
-      "text": "De aceea, produce rod demn de pocăință!"
+      "text": "Aduceți deci rod vrednic de pocăință!"
     },
     {
       "number": 9,
-      "text": "și să nu vă gândiți să spuneți în voi înșivă: Îl avem ca tată pe Avraam! Căci vă spun că Dumnezeu poate să-i ridice lui Avraam copii chiar și din pietrele acestea."
+      "text": "Și să nu vă gândiți să spuneți în voi înșivă: «Îl avem ca tată pe Avraam!» Căci vă spun că Dumnezeu poate să-i ridice lui Avraam copii chiar și din pietrele acestea."
     },
     {
       "number": 10,
-      "text": "Securea este deja așezată la rădăcina pomilor; de aceea, orice pom care nu face rod bun este tăiat și aruncat în foc."
+      "text": "Securea stă deja la rădăcina pomilor; de aceea, orice pom care nu face rod bun este tăiat și aruncat în foc."
     },
     {
       "number": 11,
-      "text": "Eu vă botez în apă pentru pocăință, dar Cel care vine după mine este mai puternic decât mine, iar eu nu sunt vrednic să-I duc sandalele. El vă va boteza în Duhul Sfânt și în foc."
+      "text": "Eu vă botez în apă, spre pocăință, dar Cel care vine după mine este mai puternic decât mine, iar eu nu sunt vrednic să-I port încălțămintea. El vă va boteza în Duhul Sfânt și în foc."
     },
     {
       "number": 12,
-      "text": "Furculița lui este în mâna lui și își va curăți cu desăvârșire aria; își va aduna grâul în hambar, dar pleava va arde cu foc de nestins."
+      "text": "Lopata de vânturat este în mâna Lui; El Își va curăți pe deplin aria, Își va aduna grâul în hambar, iar pleava o va arde cu foc de nestins."
     },
     {
       "number": 13,
@@ -197,11 +190,11 @@
     },
     {
       "number": 14,
-      "text": "Dar Ioan încerca să-L oprească, spunând: Eu am nevoie să fiu botezat de Tine, și Tu vii la mine?"
+      "text": "Dar Ioan încerca să-L oprească, spunând: „Eu am nevoie să fiu botezat de Tine, și Tu vii la mine?”"
     },
     {
       "number": 15,
-      "text": "Isus i-a răspuns: Lasă acum, căci așa se cuvine să împlinim tot ce este drept. Atunci Ioan L-a lăsat."
+      "text": "Isus i-a răspuns: „Lasă acum, căci așa se cuvine să împlinim toată dreptatea.” Atunci Ioan L-a lăsat."
     },
     {
       "number": 16,
@@ -209,10 +202,62 @@
     },
     {
       "number": 17,
-      "text": "Și iată că un glas din ceruri a spus: Acesta este Fiul Meu preaiubit, în care Îmi găsesc plăcerea."
+      "text": "Și iată că un glas din ceruri a spus: „Acesta este Fiul Meu preaiubit, în care Îmi găsesc plăcerea.”"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 8,
+      "term": "ποιήσατε ... καρπόν",
+      "decision": "„Aduceți deci rod vrednic de pocăință”",
+      "alternatives": [
+        "„produce rod”"
+      ],
+      "reason": "Imperativul este plural; traducerea păstrează adresarea către grupul fariseilor și saducheilor.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Numărul gramatical și metafora rodului sunt redate fără reducerea la singular."
+    },
+    {
+      "verse": 11,
+      "term": "ἐν πνεύματι ἁγίῳ καὶ πυρί",
+      "decision": "„în Duhul Sfânt și în foc”",
+      "alternatives": [
+        "omiterea lui „și în foc” în anumiți martori"
+      ],
+      "reason": "SBLGNT include explicit ambele complemente în lectura principală.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul românesc urmează lectura principală consemnată de aparat."
+    },
+    {
+      "verse": 3,
+      "term": "revizie finală: οὗτος γάρ ἐστιν ὁ ῥηθεὶς",
+      "decision": "Căci acesta este cel despre care s-a vorbit prin profetul Isaia: „Glasul celui care strigă în pustie: «Pregătiți calea Domnului, faceți-I drepte cărările!»”",
+      "reason": "Conectorul explicativ γάρ este omis, astfel încât identificarea lui Ioan nu mai este prezentată explicit drept justificare a afirmației precedente. Deși Acesta este cel despre care s-a vorbit acoperă nucleul lui οὗτος γάρ ἐστιν ὁ ῥηθεὶς, omite contribuția argumentativă a particulei γάρ.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 5,
+      "term": "revizie finală: τότε ἐξεπορεύετο πρὸς αὐτὸν Ἱεροσόλυμα",
+      "decision": "Atunci Ierusalimul, toată Iudeea și întreaga regiune din jurul Iordanului ieșeau la el.",
+      "reason": "Adjectivul „întreg” extinde nejustificat afirmația la totalitatea Ierusalimului, iar „se duceau” atenuează componenta de ieșire exprimată de ἐξεπορεύετο. Față de τότε ἐξεπορεύετο πρὸς αὐτὸν Ἱεροσόλυμα, formularea Atunci Ierusalimul întreg adaugă ideea de totalitate și nu păstrează explicit sensul de ieșire.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 7,
+      "term": "revizie finală: τίς ὑπέδειξεν ὑμῖν φυγεῖν",
+      "decision": "Dar, când i-a văzut pe mulți dintre farisei și saduchei venind la botezul lui, le-a spus: „Pui de vipere, cine v-a arătat că trebuie să fugiți de mânia care vine?”",
+      "reason": "Adverbul „cum” schimbă raportul sintactic și sugerează că cineva le-a explicat metoda fugii, în timp ce greaca întreabă cine le-a indicat sau le-a arătat că trebuie să fugă. Construcția cine v-a arătat cum să fugiți transformă complementul de acțiune din τίς ὑπέδειξεν ὑμῖν φυγεῖν într-o întrebare despre modalitate.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

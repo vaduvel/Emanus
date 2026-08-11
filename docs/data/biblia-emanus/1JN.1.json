@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "theologicalNeutrality": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost redactat prin revizie directă din SBLGNT; WEBP, Cornilescu 1924, BTF și Biblia Liberă au fost consultate auxiliar pentru sens și română, fără stocarea unei traduceri românești protejate.",
+      "Câmpurile consultedInBatch disting etaloanele efectiv confruntate în acest lot de cele configurate în schema corpusului; NTR nu a fost consultată."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 10,
       "reviewed": 10,
@@ -98,14 +96,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 10 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 10 versete din 1JN.1 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual. WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost confruntate auxiliar; NTR nu a fost consultată."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Prologul a fost reverificat pentru verbele de percepție, manifestarea vieții și legăturile sintactice; în 1:1 a fost reparată coordonarea românească a obiectului lui ἐψηλάφησαν.",
+        "În 1:6, expresia ποιεῖν τὴν ἀλήθειαν rămâne redată prin „nu trăim potrivit adevărului”, pentru a păstra valoarea practică a verbului.",
+        "În 1:7, textul principal păstrează „Isus”, fără adaosul „Hristos” din TR."
       ]
     },
     "theologicalContext": {
@@ -113,7 +111,7 @@
       "principles": [
         "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
         "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Etaloanele românești au fost consultate numai pentru verificare, după confruntarea directă cu sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -123,68 +121,100 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 257,
-        "secondary": 66,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5467158590753175,
-      "minimumScore": 0.5694259949565413
-    },
-    "textDigest": "sha256:8139ff73bbb8b318357c7d1a25d0438c806d1d2fe07fca151c744291e11f45fc",
-    "contentDigest": "sha256:150627739d7f176305a978d1725e428b7247cc6ea201c1b6f7228f663d7d5dec"
+    "textDigest": "sha256:e8d3491d52209b5a29f24afc90a8178d4f9b40b8b30044368745f1a36f5ba87a",
+    "contentDigest": "sha256:f59a7ab0178d5889ed0706faf963b2dbf31b00387b596e17407b173944740196",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Ce a fost de la început, ce am auzit, ce am văzut cu ochii noștri, ce am văzut, și ce ne-au atins mâinile, despre Cuvântul vieții"
+      "text": "Ceea ce era de la început, ceea ce am auzit, ceea ce am văzut cu ochii noștri, ceea ce am privit și ceea ce au atins mâinile noastre, despre Cuvântul vieții—"
     },
     {
       "number": 2,
-      "text": "(Și viața a fost revelată, și am văzut, și mărturisim, și vă vestim viața, viața veșnică, care era cu Tatăl, și care a fost revelată nouă);"
+      "text": "(și viața s-a arătat, iar noi am văzut-o, depunem mărturie și vă vestim viața veșnică, care era cu Tatăl și ni s-a arătat);"
     },
     {
       "number": 3,
-      "text": "ce am văzut și auzit, vă vestim, ca să aveți și voi părtășie cu noi. Da, și părtășia noastră este cu Tatăl și cu Fiul Său, Isus Hristos."
+      "text": "Ceea ce am văzut și am auzit vă vestim și vouă, pentru ca și voi să aveți părtășie cu noi; iar părtășia noastră este cu Tatăl și cu Fiul său, Isus Hristos."
     },
     {
       "number": 4,
-      "text": "Și vă scriem aceste lucruri, pentru ca bucuria noastră să se împlinească."
+      "text": "Iar noi scriem aceste lucruri pentru ca bucuria noastră să fie deplină."
     },
     {
       "number": 5,
-      "text": "Acesta este mesajul pe care l-am auzit de la el și vă anunțăm că Dumnezeu este lumină, și în el nu este întuneric deloc."
+      "text": "Și acesta este mesajul pe care l-am auzit de la el și pe care vi-l vestim: Dumnezeu este lumină și nu este deloc întuneric în el."
     },
     {
       "number": 6,
-      "text": "Dacă spunem că avem părtășie cu el și umblăm în întuneric, mințim și nu spunem adevărul."
+      "text": "Dacă spunem că avem părtășie cu el, dar umblăm în întuneric, mințim și nu trăim potrivit adevărului."
     },
     {
       "number": 7,
-      "text": "Dar dacă umblăm în lumină așa cum este el în lumină, avem părtășie unii cu alții, și sângele lui Isus Hristos, Fiul său, ne curățește de orice păcat."
+      "text": "Dar dacă umblăm în lumină, așa cum el este în lumină, avem părtășie unii cu alții, iar sângele lui Isus, Fiul său, ne curăță de orice păcat."
     },
     {
       "number": 8,
-      "text": "Dacă spunem că nu avem păcat, ne amăgim pe noi înșine, și adevărul nu este în noi."
+      "text": "Dacă spunem că nu avem păcat, ne înșelăm singuri, iar adevărul nu este în noi."
     },
     {
       "number": 9,
-      "text": "Dacă ne mărturisim păcatele, El este credincios drept ca să ne ierte păcatele să ne curețe de orice nelegiuire."
+      "text": "Dacă ne mărturisim păcatele, el este credincios și drept, ca să ne ierte păcatele și să ne curățească de orice nedreptate."
     },
     {
       "number": 10,
       "text": "Dacă spunem că nu am păcătuit, îl facem mincinos, iar cuvântul lui nu este în noi."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 3,
+      "term": "variantă textuală SBLGNT/TR: καὶ ὑμῖν / ὑμῖν",
+      "decision": "„vă vestim și vouă”",
+      "alternatives": [
+        "TR-1JN din snapshot omite particula καὶ: „vă vestim vouă”."
+      ],
+      "reason": "SBLGNT adaugă καὶ înaintea lui ὑμῖν; româna păstrează particula prin „și vouă”, fără a omite accentul adăugat de lectura principală.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1JN, aparatul și TR-1JN au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 4,
+      "term": "variantă textuală SBLGNT/TR: γράφομεν ἡμεῖς … χαρὰ ἡμῶν / γράφομεν ὑμῖν … χαρὰ ὑμῶν",
+      "decision": "„noi scriem aceste lucruri … bucuria noastră”",
+      "alternatives": [
+        "TR-1JN din snapshot citește „vă scriem” și „bucuria voastră”."
+      ],
+      "reason": "SBLGNT pune accentul pe subiectul „noi” și are pronumele ἡμῶν; româna nu introduce destinatarul sau bucuria „voastră” din lectura TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1JN și TR-1JN au fost confruntate direct; persoanele gramaticale ale lecturii SBLGNT sunt păstrate în textul principal."
+    },
+    {
+      "verse": 7,
+      "term": "variantă textuală SBLGNT/TR: Ἰησοῦ / Ἰησοῦ Χριστοῦ",
+      "decision": "„sângele lui Isus, Fiul său”",
+      "alternatives": [
+        "TR-1JN din snapshot adaugă „Hristos” după „Isus”."
+      ],
+      "reason": "SBLGNT are numai numele Ἰησοῦ; adaosul Χριστοῦ din TR este consemnat, nu introdus în corpul versetului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1JN, aparatul și TR-1JN au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -69,25 +72,21 @@
     },
     "observations": [
       "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate.",
+      "Câmpurile consultedInBatch disting etaloanele efectiv confruntate în acest lot de cele configurate în schema corpusului; NTR nu a fost consultată."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 15,
       "reviewed": 15,
@@ -98,7 +97,7 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 15 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar sursele auxiliare declarate în jurnalul lotului au fost consultate pentru sens și română. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
@@ -139,72 +138,99 @@
       "minimumSemantic": 0.588175458584589,
       "minimumScore": 0.553468476771151
     },
-    "textDigest": "sha256:5fe97ad1b7a501d4461214077d1e80cc2ccd9c8332069cc7b4a5d702823ee430",
-    "contentDigest": "sha256:b5afc70c538a784902bd9baaa4d0169c52683327ca71f124d649f10228866174"
+    "textDigest": "sha256:117439cadf87aca519a8bce54297d8fa25d64aba58adaa47ee40d0073173b7bc",
+    "contentDigest": "sha256:8ebb744114c3ae58e675edcff2a756408cda7b7a9bcbf825357065153ff02e71",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Amintește-le să fie supuși conducătorilor și autorităților, să fie ascultători, să fie pregătiți pentru orice lucrare bună,"
+      "text": "Amintește-le să se supună stăpânirilor și autorităților, să asculte și să fie gata pentru orice faptă bună,"
     },
     {
       "number": 2,
-      "text": "să nu vorbească de rău pe nimeni, să nu fie certăreți, să fie blânzi, arătând toată umilința de toți oamenii."
+      "text": "să nu vorbească de rău pe nimeni, să nu fie certăreți, ci blânzi, arătând toată blândețea față de toți oamenii."
     },
     {
       "number": 3,
-      "text": "Căci am fost odată nesăbuiți, neascultători, înșelați, servind diferite pofte și plăceri, trăind în răutate și invidie, urîndu-ne unii pe alții."
+      "text": "Căci și noi eram odinioară nesăbuiți, neascultători, rătăciți, robi ai feluritelor pofte și plăceri, trăind în răutate și invidie, fiind vrednici de ură și urându-ne unii pe alții."
     },
     {
       "number": 4,
-      "text": "Dar când a apărut bunătatea lui Dumnezeu Mântuitorul nostru și dragostea sa față de omenire,"
+      "text": "Dar când s-au arătat bunătatea și dragostea față de oameni ale lui Dumnezeu, Mântuitorul nostru,"
     },
     {
       "number": 5,
-      "text": "nu prin fapte de dreptate pe care le-am făcut noi înșine, ci prin mila Lui, El ne-a mântuit prin spălarea regenerării și înnoirii prin Duhul Sfânt,"
+      "text": "nu pentru faptele de dreptate săvârșite de noi, ci după îndurarea Lui, ne-a mântuit prin spălarea nașterii din nou și prin înnoirea Duhului Sfânt,"
     },
     {
       "number": 6,
-      "text": "pe care l-a vărsat peste noi din belșug, prin Isus Hristos, Mântuitorul nostru,"
+      "text": "pe care l-a revărsat peste noi din belșug prin Isus Hristos, Mântuitorul nostru,"
     },
     {
       "number": 7,
-      "text": "ca fiind îndreptățiți prin harul Său, am putea fi făcuți moștenitori conform speranței vieții veșnice."
+      "text": "pentru ca, fiind îndreptățiți prin harul Lui, să devenim moștenitori potrivit speranței vieții veșnice."
     },
     {
       "number": 8,
-      "text": "Această vorbă este fidelă, și cu privire la aceste lucruri doresc să insistați cu încredere, pentru ca cei ce au crezut pe Dumnezeu să fie atenți să păstreze fapte bune; aceste lucruri sunt bune și profitabile pentru oameni;"
+      "text": "Vrednic de încredere este cuvântul; vreau să stăruiești asupra acestor lucruri, ca cei care au crezut în Dumnezeu să se îngrijească să se ocupe de fapte bune. Acestea sunt bune și folositoare oamenilor."
     },
     {
       "number": 9,
-      "text": "Feriți-vă de întrebările nechibzuite, de genealogiile, certurile și disputele privitoare la Lege, căci ele sunt nefolositoare și zadarnice."
+      "text": "Dar ferește-te de controverse nechibzuite, de genealogii, de certuri și de dispute despre Lege, căci sunt nefolositoare și zadarnice."
     },
     {
       "number": 10,
-      "text": "După prima și a doua avertizare, evită-l pe omul care provoacă dezbinări,"
+      "text": "După prima și a doua avertizare, îndepărtează-te de omul care provoacă dezbinări,"
     },
     {
       "number": 11,
-      "text": "știind că un astfel de om este pervertit și păcătos, fiind autocondamnat."
+      "text": "știind că un astfel de om s-a abătut și păcătuiește, osândindu-se singur."
     },
     {
       "number": 12,
-      "text": "Când voi trimite la tine pe Artemas, sau pe Tihic, fii sârguincios să vii la mine la Nicopole, căci m-am hotărât să iernez acolo."
+      "text": "Când îl voi trimite la tine pe Artema sau pe Tihic, grăbește-te să vii la mine în Nicopole, căci am hotărât să iernez acolo."
     },
     {
       "number": 13,
-      "text": "Trimiteți-i repede pe Zenas, avocatul, pe Apolo, în călătoria lor, ca să nu le lipsească nimic."
+      "text": "Trimite-i cu grijă pe Zenas, juristul, și pe Apolo în călătoria lor, ca să nu le lipsească nimic."
     },
     {
       "number": 14,
-      "text": "Să învețe și poporul nostru să păstreze lucrări bune pentru a satisface necesitățile necesare, ca să nu fie neroditori."
+      "text": "Ai noștri să învețe și ei să se ocupe de fapte bune pentru nevoile urgente, ca să nu fie neroditori."
     },
     {
       "number": 15,
-      "text": "Salutați-i pe toți cei ce sunt cu mine! Salutați-i pe cei ce ne iubesc în credință! Harul să fie cu voi toți! Amin!"
+      "text": "Toți cei care sunt cu mine te salută. Salută-i pe cei care ne iubesc în credință. Harul să fie cu voi toți."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 10,
+      "term": "αἱρετικὸν ἄνθρωπον",
+      "decision": "Textul principal redă expresia prin „omul care provoacă dezbinări”.",
+      "alternatives": [
+        "om eretic"
+      ],
+      "reason": "În context, αἱρετικὸν este legat de avertizări și de producerea separării; redarea nu introduce retroactiv o categorie confesională ulterioară în verset.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Decizia urmează sensul contextual al termenului grec și păstrează măsura procedurală a două avertizări."
+    },
+    {
+      "verse": 3,
+      "term": "revizie finală: στυγητοί, μισοῦντες ἀλλήλους",
+      "decision": "Căci și noi eram odinioară nesăbuiți, neascultători, rătăciți, robi ai feluritelor pofte și plăceri, trăind în răutate și invidie, fiind vrednici de ură și urându-ne unii pe alții.",
+      "reason": "στυγητοί descrie persoane detestabile sau vrednice de ură; vechiul pasiv le prezenta doar ca obiecte ale urii altora.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

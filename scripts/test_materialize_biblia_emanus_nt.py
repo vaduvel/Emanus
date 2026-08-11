@@ -120,6 +120,19 @@ class BibliaEmanusNtMaterializerTests(unittest.TestCase):
             ):
                 materializer.build_payload(root, versification)
 
+    def test_current_published_nt_materializes_completely(self) -> None:
+        payload = materializer.build_payload()
+        self.assertEqual(len(payload), 27)
+        self.assertEqual(sum(len(chapters) for chapters in payload.values()), 260)
+        self.assertEqual(
+            sum(
+                len(chapter["verses"])
+                for chapters in payload.values()
+                for chapter in chapters.values()
+            ),
+            7941,
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "theologicalNeutrality": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Toate cele 14 versete au fost revizuite semantic direct față de snapshotul fixat SBLGNT 1.2 și aparatul lui; rezultatul automat „0 probleme” nu a fost folosit drept verdict semantic.",
+      "TR a fost folosit numai ca martor textual. WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată; textul românesc a fost redactat independent."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 14,
       "reviewed": 14,
@@ -98,22 +96,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 14 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 14 versete au fost confruntate direct cu SBLGNT/aparat din snapshotul fixat; TR a fost folosit numai ca martor, iar WEBP/BTF/Cornilescu 1924/Biblia Liberă ca auxiliare."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost eliminate calcurile englezești, acordurile defectuoase și punctuația coruptă din candidatul anterior.",
+        "Terminologia preoțească și pedagogică a fost uniformizată într-o română naturală fără parafraze doctrinare.",
+        "Citatele din Psalmii 2 și 110 au fost redate coerent după textul grec fixat."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "γεννάω din 5:5 este redat lexical prin „a naște”, nu prin parafraza engleză „a deveni Tată”.",
+        "τελειόω din 5:9 este păstrat ca limbaj al aducerii la desăvârșire în argumentul preoțesc, fără a sugera corectarea unei imperfecțiuni morale.",
+        "La 5:12 textul principal urmează lectura SBLGNT τινὰ și οὐ; variantele aparatului nu sunt importate automat."
       ]
     },
     "omissionAddition": {
@@ -123,84 +121,154 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT/aparat și verificări auxiliare fixate; fără copierea unei traduceri românești"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 316,
-        "secondary": 95,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5922586297890594,
-      "minimumScore": 0.5759312754780807
-    },
-    "textDigest": "sha256:838905caa0cadcf6a617af9a31fb9c58e5534e151ec7e5015b1a71f493038a26",
-    "contentDigest": "sha256:fd2241afd74dda29b0ab0d956e48f106e316dfc585194e12c0c8e193474ab542"
+    "textDigest": "sha256:93791113b21d710ca15ffdd4726a9524ec3eea712a4392744e7865a3471405fb",
+    "contentDigest": "sha256:0c7ec2dbf6f74e7564b1eab01c8be000daa3b5c9230f8f79eca9359c54f13ac6",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Căci fiecare mare preot, luat din mijlocul oamenilor, este numit pentru oameni în lucrurile privitoare la Dumnezeu, ca să aducă daruri și jertfe pentru păcate."
+      "text": "Căci orice mare preot, luat dintre oameni, este pus pentru oameni în lucrurile privitoare la Dumnezeu, ca să aducă daruri și jertfe pentru păcate."
     },
     {
       "number": 2,
-      "text": "Marele preot se poate purta cu blândețe cu cei neștiutori și rătăciți, pentru că el însuși este și el înconjurat de slăbiciune."
+      "text": "El poate să se poarte cu măsură față de cei neștiutori și rătăciți, fiindcă și el este înconjurat de slăbiciune."
     },
     {
       "number": 3,
-      "text": "Din acest motiv, el trebuie să ofere sacrificii pentru păcate atât pentru popor, cât și pentru el însuși."
+      "text": "Din cauza acestei slăbiciuni, este dator să aducă jertfe pentru păcate atât pentru popor, cât și pentru sine."
     },
     {
       "number": 4,
-      "text": "Nimeni nu ia această onoare pe sine, dar el este numit de Dumnezeu, la fel ca Aaron a fost."
+      "text": "Nimeni nu-și ia singur această cinste, ci o primește când este chemat de Dumnezeu, așa cum a fost și Aaron."
     },
     {
       "number": 5,
-      "text": "Tot așa Hristos nu S-a slăvit pe Sine ca să Se facă Mare Preot, ci El I-a zis: Tu ești Fiul Meu; astăzi am devenit Tatăl Tău.„"
+      "text": "Tot astfel, nici Hristos nu S-a glorificat pe Sine ca să devină Mare Preot, ci Cel care I-a spus: „Tu ești Fiul Meu; Eu astăzi Te-am născut.”"
     },
     {
       "number": 6,
-      "text": "După cum mai spune și în alt loc, ești preot pentru totdeauna, după ordinul lui Melchizedek."
+      "text": "după cum spune și în alt loc: „Tu ești preot pentru totdeauna, după rânduiala lui Melhisedec.”"
     },
     {
       "number": 7,
-      "text": "El, în zilele cărnii sale, a adus rugăciuni și cereri cu strigăte puternice și lacrimi celui ce a putut să-l salveze de la moarte, și a fost ascultat din pricina fricii lui sfinte,"
+      "text": "În zilele vieții Sale în trup, El a adus, cu strigăt puternic și lacrimi, rugăciuni și cereri către Cel care putea să-L salveze din moarte și a fost ascultat datorită evlaviei Sale."
     },
     {
       "number": 8,
-      "text": "deși era Fiu, totuși a învățat ascultarea prin lucrurile pe care le-a suferit."
+      "text": "Deși era Fiu, a învățat ascultarea din ceea ce a suferit."
     },
     {
       "number": 9,
-      "text": "După ce a fost făcut desăvârșit, El a devenit pentru toți cei care ascultă de El autorul mântuirii veșnice."
+      "text": "Și, fiind făcut desăvârșit, a devenit pentru toți cei care ascultă de El autorul mântuirii veșnice,"
     },
     {
       "number": 10,
-      "text": "numit de Dumnezeu mare preot după ordinul lui Melchizedek."
+      "text": "fiind numit de Dumnezeu Mare Preot după rânduiala lui Melhisedec."
     },
     {
       "number": 11,
-      "text": "Despre el avem multe cuvinte de spus, și greu de interpretat, văzând că ai devenit plictisitor de auz."
+      "text": "Despre aceasta avem multe de spus și este greu de explicat, fiindcă ați devenit greoi la auz."
     },
     {
       "number": 12,
-      "text": "Căci, deși până acum ar trebui să fiți învățători, din nou trebuie să aveți pe cineva care să vă învețe rudimentele primelor principii ale revelațiilor lui Dumnezeu. Ați ajuns să aveți nevoie de lapte și nu de hrană solidă."
+      "text": "Căci, deși după atâta vreme ar fi trebuit să fiți învățători, aveți din nou nevoie ca cineva să vă învețe elementele de început ale cuvintelor lui Dumnezeu; ați ajuns să aveți nevoie de lapte, nu de hrană tare."
     },
     {
       "number": 13,
-      "text": "Căci oricine trăiește cu lapte nu are experiență în cuvântul dreptății, căci este un prunc."
+      "text": "Căci oricine se hrănește cu lapte este nepriceput în cuvântul dreptății, fiindcă este copil."
     },
     {
       "number": 14,
-      "text": "Dar hrana solidă este pentru cei care sunt maturi, care, din motive de utilizare, își exercită simțurile pentru a discerne binele și răul.”"
+      "text": "Dar hrana tare este pentru cei maturi, ale căror simțuri, prin deprindere, sunt antrenate să deosebească binele de rău."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 2,
+      "term": "μετριοπαθεῖν",
+      "decision": "„să se poarte cu măsură”",
+      "alternatives": [
+        "„să fie blând”",
+        "„să aibă îngăduință”"
+      ],
+      "reason": "Verbul descrie o atitudine moderată și cumpătată față de cei neștiutori și rătăciți; formularea evită îngustarea sensului la o singură emoție.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Verbul descrie o atitudine moderată și cumpătată față de cei neștiutori și rătăciți; formularea evită îngustarea sensului la o singură emoție."
+    },
+    {
+      "verse": 3,
+      "term": "διʼ αὐτὴν",
+      "decision": "„din cauza acestei slăbiciuni”",
+      "alternatives": [
+        "TR: διὰ ταύτην"
+      ],
+      "reason": "Referentul este slăbiciunea din versetul precedent; SBLGNT păstrează αὐτήν, iar TR are demonstrativul ταύτην. Sensul referențial este făcut explicit fără importarea formei TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Referentul este slăbiciunea din versetul precedent; SBLGNT păstrează αὐτήν, iar TR are demonstrativul ταύτην. Sensul referențial este făcut explicit fără importarea formei TR."
+    },
+    {
+      "verse": 5,
+      "term": "ἐγὼ σήμερον γεγέννηκά σε",
+      "decision": "„Eu astăzi Te-am născut”",
+      "alternatives": [
+        "„astăzi am devenit Tatăl Tău”"
+      ],
+      "reason": "Perfectul lui γεννάω este redat lexical; parafraza engleză auxiliară nu este folosită ca text principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Perfectul lui γεννάω este redat lexical; parafraza engleză auxiliară nu este folosită ca text principal."
+    },
+    {
+      "verse": 7,
+      "term": "εἰσακουσθεὶς ἀπὸ τῆς εὐλαβείας",
+      "decision": "„a fost ascultat datorită evlaviei Sale”",
+      "alternatives": [
+        "„din cauza fricii Sale”",
+        "„datorită respectului Său reverențios”"
+      ],
+      "reason": "εὐλάβεια exprimă reverență/evlavie; formularea aleasă păstrează sensul fără a sugera că rugăciunea a fost ascultată din teamă servilă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "εὐλάβεια exprimă reverență/evlavie; formularea aleasă păstrează sensul fără a sugera că rugăciunea a fost ascultată din teamă servilă."
+    },
+    {
+      "verse": 9,
+      "term": "τελειωθεὶς … αἴτιος σωτηρίας αἰωνίου",
+      "decision": "„fiind făcut desăvârșit … autorul mântuirii veșnice”",
+      "alternatives": [
+        "„desăvârșindu-Se … cauza mântuirii”"
+      ],
+      "reason": "τελειόω este păstrat în registrul argumentului preoțesc, iar αἴτιος este redat prin „autorul”, fără a adăuga o teorie externă despre mecanismul mântuirii.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "τελειόω este păstrat în registrul argumentului preoțesc, iar αἴτιος este redat prin „autorul”, fără a adăuga o teorie externă despre mecanismul mântuirii."
+    },
+    {
+      "verse": 12,
+      "term": "τινὰ … οὐ στερεᾶς τροφῆς",
+      "decision": "„ca cineva să vă învețe … lapte, nu hrană tare”",
+      "alternatives": [
+        "Treg/RP: τίνα; Treg/NA28/RP: καὶ οὐ"
+      ],
+      "reason": "SBLGNT urmează aici τινὰ și simplul οὐ; textul românesc păstrează un subiect nedefinit „cineva” și opoziția directă fără adaosul conjunctiv din ceilalți martori.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT urmează aici τινὰ și simplul οὐ; textul românesc păstrează un subiect nedefinit „cineva” și opoziția directă fără adaosul conjunctiv din ceilalți martori."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

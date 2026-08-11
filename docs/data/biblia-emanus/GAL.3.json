@@ -74,12 +74,12 @@
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -98,14 +98,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 29 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 29 de versete au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; TR a fost consultat numai ca martor textual, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă ca repere auxiliare. NTR nu a fost consultată."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost reparate numărul, acordul, sintaxa și calchierile care schimbau sensul grecesc.",
+        "Adaosurile și lecturile secundare din TR/RP nu au fost introduse în textul principal.",
+        "Formulările românești au fost redactate propriu și confruntate ulterior cu reperele auxiliare."
       ]
     },
     "theologicalContext": {
@@ -139,13 +139,13 @@
       "minimumSemantic": 0.33174470430626646,
       "minimumScore": 0.5090738739653641
     },
-    "textDigest": "sha256:9ad3e409be6a03833d172101849dde7ab66815b5cacfbc9c0db1a9a2e9b00e9e",
-    "contentDigest": "sha256:6c7c66fb9f49cf08c30feea1dc307f32752334a059d9693c6c2aa446f58cd856"
+    "textDigest": "sha256:655a54ae07f9829981b717e020b696322a274c86ecb574b81aec2bac3ed9411a",
+    "contentDigest": "sha256:f5e3fca53025421184a3c8fc96a4d77372fae87534dd0ed15ef964639d745995"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Galateni nesăbuiți, cine v-a vrăjit să nu ascultați adevărul, înaintea căror ochi Isus Hristos a fost descris deschis printre voi ca fiind crucificat?"
+      "text": "Galateni nesăbuiți, cine v-a vrăjit? Înaintea ochilor voștri, Isus Hristos a fost înfățișat clar ca răstignit."
     },
     {
       "number": 2,
@@ -153,15 +153,15 @@
     },
     {
       "number": 3,
-      "text": "Sunteți așa de fără minte? După ce ați început prin Duhul, acum sunteți desăvârșiți prin carne?"
+      "text": "Sunteți atât de lipsiți de înțelegere? După ce ați început prin Duhul, acum ajungeți la desăvârșire prin firea omenească?"
     },
     {
       "number": 4,
-      "text": "Ai suferit în zadar atât de multe lucruri, dacă este într-adevăr în zadar?"
+      "text": "Ați suferit atâtea în zadar? Dacă într-adevăr este în zadar!"
     },
     {
       "number": 5,
-      "text": "Așadar, cel care vă dă Duhul și lucrează puteri între voi o face din fapte ale Legii sau din auzirea credinței?"
+      "text": "Așadar, cel care vă dă Duhul și săvârșește fapte de putere între voi o face din fapte ale Legii sau din auzirea credinței?"
     },
     {
       "number": 6,
@@ -173,7 +173,7 @@
     },
     {
       "number": 8,
-      "text": "Scriptura, care prevedea că Dumnezeu îi va justifica pe Neamuri prin credință, a predicat Evanghelia dinainte lui Avraam, spunând: În voi toate națiunile vor fi binecuvântate."
+      "text": "Scriptura, prevăzând că Dumnezeu îi va socoti drepți pe neamuri prin credință, i-a vestit dinainte Evanghelia lui Avraam, spunând: «În tine vor fi binecuvântate toate națiunile»."
     },
     {
       "number": 9,
@@ -185,7 +185,7 @@
     },
     {
       "number": 11,
-      "text": "Iar că nimeni nu este îndreptățit înaintea lui Dumnezeu în Lege este limpede, pentru că „Cel drept va trăi din credință”,"
+      "text": "Iar faptul că nimeni nu este socotit drept înaintea lui Dumnezeu prin Lege este limpede, pentru că «cel drept va trăi din credință»."
     },
     {
       "number": 12,
@@ -201,7 +201,7 @@
     },
     {
       "number": 15,
-      "text": "Fraților, vorbind despre termeni umani, deși este doar un legământ al omului, totuși, când a fost confirmat, nimeni nu îl anulează sau îl adaugă."
+      "text": "Fraților, vorbesc în termeni omenești: chiar și un legământ omenesc, odată confirmat, nimeni nu-l anulează și nici nu-i adaugă prevederi."
     },
     {
       "number": 16,
@@ -209,7 +209,7 @@
     },
     {
       "number": 17,
-      "text": "Acum spun aceasta: Un legământ confirmat dinainte de Dumnezeu în Hristos, Legea, care a venit patru sute treizeci de ani mai târziu, nu anulează, astfel încât să facă promisiunea fără efect."
+      "text": "Iată ce spun: un legământ întărit mai dinainte de Dumnezeu nu este desființat de Legea venită patru sute treizeci de ani mai târziu, astfel încât promisiunea să fie anulată."
     },
     {
       "number": 18,
@@ -221,11 +221,11 @@
     },
     {
       "number": 20,
-      "text": "Iar mijlocitorul nu este al unuia singur, dar Dumnezeu este unul."
+      "text": "Mijlocitorul însă nu este pentru unul singur, iar Dumnezeu este unul."
     },
     {
       "number": 21,
-      "text": "Este, deci, Legea împotriva promisiunilor lui Dumnezeu? Nicidecum! Căci dacă ar fi fost dată o lege care poate să dea viață, atunci dreptatea ar fi fost într-adevăr din Lege."
+      "text": "Este, deci, Legea împotriva promisiunilor lui Dumnezeu? Nicidecum! Căci dacă ar fi fost dată o lege care să poată da viață, atunci dreptatea ar fi fost într-adevăr din Lege."
     },
     {
       "number": 22,
@@ -233,7 +233,7 @@
     },
     {
       "number": 23,
-      "text": "Dar înainte să vină credința, eram păziți sub Lege, închiși pentru credința care urma să fie descoperită."
+      "text": "Dar înainte să vină credința, eram păziți sub Lege, ținuți închiși în așteptarea credinței care urma să fie descoperită."
     },
     {
       "number": 24,
@@ -245,7 +245,7 @@
     },
     {
       "number": 26,
-      "text": "Căci voi toți sunteți copiii lui Dumnezeu, prin credința în Hristos Isus."
+      "text": "Căci toți sunteți fii ai lui Dumnezeu prin credința în Hristos Isus."
     },
     {
       "number": 27,
@@ -269,6 +269,87 @@
       "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "Decizia păstrează cursul argumentului din Galateni 3 și este consecventă cu tratamentul genitivelor similare din 2:16 și 2:20."
+    },
+    {
+      "verse": 1,
+      "term": "τίς ὑμᾶς ἐβάσκανεν; ... προεγράφη ἐσταυρωμένος",
+      "decision": "A fost eliminată propoziția «să nu ascultați adevărul», absentă din SBLGNT; «înaintea ochilor» redă idiomul κατʼ ὀφθαλμούς.",
+      "reason": "Aparatul marchează adaosul ca lectură RP, nu ca text critic SBLGNT.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul urmează SBLGNT fără adaosul martorului TR/RP."
+    },
+    {
+      "verse": 17,
+      "term": "διαθήκην ... ὁ ... νόμος οὐκ ἀκυροῖ",
+      "decision": "Legea este redată ca subiect care nu desființează legământul întărit anterior de Dumnezeu; nu s-a importat adaosul RP «în Hristos».",
+      "reason": "Aparatul indică adaosul εἰς Χριστόν numai în RP.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sintaxa și cronologia din SBLGNT sunt păstrate explicit."
+    },
+    {
+      "verse": 26,
+      "term": "υἱοὶ θεοῦ",
+      "decision": "Termenul este redat «fii ai lui Dumnezeu», nu «copii», pentru a păstra lexical υἱοί și paralela cu 3:7, 4:5-7.",
+      "reason": "Este o alegere lexicală de acuratețe, nu o variantă textuală.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Acordul de gen și număr al sursei este reflectat în română."
+    },
+    {
+      "verse": 3,
+      "term": "revizie finală: πνεύματι νῦν σαρκὶ ἐπιτελεῖσθε",
+      "decision": "Sunteți atât de fără minte? După ce ați început prin Duhul, acum sunteți duși la desăvârșire prin carne?",
+      "reason": "Expresia acum sfârșiți prin carne nu redă suficient valoarea de aducere la împlinire a verbului din πνεύματι νῦν σαρκὶ ἐπιτελεῖσθε.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 5,
+      "term": "revizie finală: ἐνεργῶν δυνάμεις ἐν ὑμῖν",
+      "decision": "Așadar, cel care vă dă Duhul și săvârșește fapte de putere între voi o face din fapte ale Legii sau din auzirea credinței?",
+      "reason": "Formularea lucrează puteri între voi calchiază lexical ἐνεργῶν δυνάμεις ἐν ὑμῖν, dar nu îi comunică natural sensul de fapte puternice.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 15,
+      "term": "revizie finală: οὐδεὶς ἀθετεῖ ἢ ἐπιδιατάσσεται",
+      "decision": "Fraților, vorbesc în termeni omenești: chiar și un legământ omenesc, odată confirmat, nimeni nu-l anulează și nici nu-i adaugă prevederi.",
+      "reason": "Formularea nimeni nu îl anulează sau îl adaugă redă primul verb din οὐδεὶς ἀθετεῖ ἢ ἐπιδιατάσσεται, dar denaturează sensul celui de-al doilea.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 21,
+      "term": "revizie finală: ὁ δυνάμενος ζῳοποιῆσαι",
+      "decision": "Este, deci, Legea împotriva promisiunilor lui Dumnezeu? Nicidecum! Căci dacă ar fi fost dată o lege care să poată da viață, atunci dreptatea ar fi fost într-adevăr din Lege.",
+      "reason": "Deși o lege care poate să dea viață identifică posibilitatea din ὁ δυνάμενος ζῳοποιῆσαι, modul verbal românesc nu susține corect cadrul ipotetic.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 23,
+      "term": "revizie finală: συγκλειόμενοι εἰς τὴν μέλλουσαν πίστιν",
+      "decision": "Dar înainte să vină credința, eram păziți sub Lege, ținuți închiși în așteptarea credinței care urma să fie descoperită.",
+      "reason": "Redarea închiși pentru credința care urma să fie descoperită nu exprimă clar orientarea prospectivă a lui συγκλειόμενοι εἰς τὴν μέλλουσαν πίστιν.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 3,
+      "term": "revizie finală: νῦν σαρκὶ ἐπιτελεῖσθε",
+      "decision": "Sunteți atât de lipsiți de înțelegere? După ce ați început prin Duhul, acum ajungeți la desăvârșire prin firea omenească?",
+      "reason": "Deși νῦν σαρκὶ ἐπιτελεῖσθε corespunde structural cu acum sunteți duși la desăvârșire prin carne, substantivul românesc concret nu exprimă limpede aici recurgerea la firea sau puterea omenească.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
     }
   ],
   "referenceNotes": [],

@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparatul local; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 20,
       "reviewed": 20,
@@ -98,14 +96,13 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 20 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 20 de versete din 1CO.6 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost corectate formulările românești corupte din v. 1–8, acordurile și construcțiile interogative.",
+        "În v. 20 s-a păstrat forma scurtă SBLGNT, fără adaosul TR despre duh."
       ]
     },
     "theologicalContext": {
@@ -123,69 +120,64 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 709,
-        "primary": 137,
-        "secondary": 24,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.41000612643816675,
-      "minimumScore": 0.5818865265537531
-    },
-    "textDigest": "sha256:cf1c93a43858108ab107e0c5c2a45f97421994699d6a868d071f1c94f2ebe25c",
-    "contentDigest": "sha256:1fd505c6ea5253623694b77dbf12bb17b170b51885edfe997cf7d46e29efba0c"
+    "textDigest": "sha256:5643bdfe79f79dd7979641f455246b3678188d950503f4e17f38954cfe807714",
+    "contentDigest": "sha256:b42ee7c87684f7dc54980c051316f4028027a45eb4b74844d2f11139e6aff183",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Îndrăzniți pe vreunul dintre voi, care are o problemă împotriva aproapelui său, să meargă la lege înaintea celor nedrepți, și nu înaintea sfinților?"
+      "text": "Îndrăznește vreunul dintre voi, când are o pricină împotriva altuia, să se judece înaintea celor nedrepți, și nu înaintea sfinților?"
     },
     {
       "number": 2,
-      "text": "Sau nu știți că sfinții vor judeca lumea? Iar dacă lumea este judecată de voi, sunteți nevrednici de cele mai mici procese?"
+      "text": "Sau nu știți că sfinții vor judeca lumea? Și, dacă lumea este judecată prin voi, sunteți voi nevrednici să judecați cele mai mici pricini?"
     },
     {
       "number": 3,
-      "text": "Nu știți că noi vom judeca pe îngeri? Cu cât mai mult lucrurile care țin de viața aceasta?"
+      "text": "Nu știți că vom judeca îngeri? Cu atât mai mult lucrurile vieții acesteia!"
     },
     {
       "number": 4,
-      "text": "Dacă trebuie să judecați lucrurile privitoare la această, îi puneți voi să judece pe cei care nu au nici o socoteală în adunare?"
+      "text": "Așadar, când aveți de judecat lucruri ale vieții acesteia, îi așezați judecători pe cei fără trecere în adunare?"
     },
     {
       "number": 5,
-      "text": "O spun ca să vă fie rușine. Chiar nu este între voi niciun înțelept care să poată judeca între un frate și altul?"
+      "text": "O spun spre rușinea voastră. Chiar nu este între voi niciun om înțelept, care să poată judeca între frați?"
     },
     {
       "number": 6,
-      "text": "Dar un frate se judecă cu alt frate, și aceasta înaintea necredincioșilor!"
+      "text": "Dar un frate se judecă cu un frate, și aceasta înaintea necredincioșilor!"
     },
     {
       "number": 7,
-      "text": "Prin urmare, este deja cu totul un defect în voi că aveți procese unul cu altul. De ce nu mai degrabă să fie nedreptățit? De ce nu mai degrabă să fie fraudat?"
+      "text": "Deja este o înfrângere deplină pentru voi faptul că aveți procese unii cu alții. De ce nu suferiți mai degrabă nedreptatea? De ce nu vă lăsați mai degrabă păgubiți?"
     },
     {
       "number": 8,
-      "text": "Dar voi înșivă nedreptățiți și înșelați, și încă pe frați!"
+      "text": "Dar voi înșivă faceți nedreptate și păgubiți, și aceasta unor frați!"
     },
     {
       "number": 9,
-      "text": "Sau nu știți că cei nedrepți nu vor moșteni Împărăția lui Dumnezeu? Nu vă înșelați: nici cei imorali sexual, nici idolatrii, nici adulterii, nici efeminații, nici bărbații care se culcă cu bărbați,"
+      "text": "Sau nu știți că cei nedrepți nu vor moșteni Împărăția lui Dumnezeu? Nu vă înșelați: nici cei imorali sexual, nici idolatrii, nici adulterii, nici partenerii pasivi în relații sexuale între bărbați, nici bărbații care se culcă cu bărbați,"
     },
     {
       "number": 10,
-      "text": "nici hoții, nici lacomii, nici bețivii, nici batjocoritorii, nici răpitorii nu vor moșteni Împărăția lui Dumnezeu."
+      "text": "nici hoții, nici lacomii, nici bețivii, nici batjocoritorii, nici cei care îi jecmănesc pe alții nu vor moșteni Împărăția lui Dumnezeu."
     },
     {
       "number": 11,
-      "text": "Și așa erați unii dintre voi. Dar ați fost spălați, dar ați fost sfințiți, dar ați fost îndreptățiți în numele Domnului Isus și prin Duhul Dumnezeului nostru."
+      "text": "Și așa erau unii dintre voi. Dar ați fost spălați, ați fost sfințiți, ați fost îndreptățiți în Numele Domnului Isus și prin Duhul Dumnezeului nostru."
     },
     {
       "number": 12,
@@ -193,19 +185,19 @@
     },
     {
       "number": 13,
-      "text": "Mâncărurile sunt pentru pântece și pântecele pentru mâncăruri, dar Dumnezeu le va nimici și pe unul, și pe celelalte. Trupul însă nu este pentru imoralitate sexuală, ci pentru Domnul, iar Domnul pentru trup."
+      "text": "Mâncărurile sunt pentru stomac, iar stomacul pentru mâncăruri, dar Dumnezeu le va nimici și pe unul, și pe celelalte. Trupul însă nu este pentru imoralitate sexuală, ci pentru Domnul, iar Domnul este pentru trup."
     },
     {
       "number": 14,
-      "text": "Iar Dumnezeu, care L-a înviat pe Domnul, ne va învia și pe noi prin puterea Lui."
+      "text": "Iar Dumnezeu L-a înviat pe Domnul și ne va învia și pe noi prin puterea Sa."
     },
     {
       "number": 15,
-      "text": "Nu știți că trupurile voastre sunt mădulare ale lui Hristos? Voi lua atunci mădularele lui Hristos și le voi face mădulare ale unei prostituate? Nicidecum!"
+      "text": "Nu știți că trupurile voastre sunt mădulare ale lui Hristos? Să iau atunci mădularele lui Hristos și să le fac mădulare ale unei prostituate? Nicidecum!"
     },
     {
       "number": 16,
-      "text": "Sau nu știți că cel ce se lipește de o prostituată este un singur trup cu ea? Căci „cei doi”, zice El, „vor fi un singur trup”."
+      "text": "Sau nu știți că cel care se lipește de o prostituată este un singur trup cu ea? Căci, spune Scriptura: „Cei doi vor fi un singur trup.”"
     },
     {
       "number": 17,
@@ -213,7 +205,7 @@
     },
     {
       "number": 18,
-      "text": "Fugiți de imoralitatea sexuală! Orice păcat pe care-l face omul este în afara trupului, dar cel ce se dedă imoralității sexuale păcătuiește împotriva propriului trup."
+      "text": "Fugiți de imoralitatea sexuală! Orice alt păcat pe care-l face omul este în afara trupului, dar cel care se dedă imoralității sexuale păcătuiește împotriva propriului trup."
     },
     {
       "number": 19,
@@ -221,10 +213,41 @@
     },
     {
       "number": 20,
-      "text": "căci voi ați fost cumpărați cu un preț. De aceea, slăviți pe Dumnezeu în trupul vostru și în duhul vostru, care este Dumnezeu."
+      "text": "Căci ați fost cumpărați cu un preț. Așadar, slăviți-L pe Dumnezeu în trupul vostru."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 20,
+      "term": "ἐν τῷ σώματι ὑμῶν",
+      "decision": "«slăviți-L pe Dumnezeu în trupul vostru»",
+      "reason": "SBLGNT se încheie cu trupul; extinderea despre duh este lectura TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul critic este urmat fără completări din martorul suplimentar.",
+      "alternatives": [
+        "«în trupul și în duhul vostru, care sunt ale lui Dumnezeu»"
+      ]
+    },
+    {
+      "verse": 9,
+      "term": "revizie finală: οὔτε μαλακοὶ οὔτε ἀρσενοκοῖται",
+      "decision": "Sau nu știți că cei nedrepți nu vor moșteni Împărăția lui Dumnezeu? Nu vă înșelați: nici cei imorali sexual, nici idolatrii, nici adulterii, nici partenerii pasivi în relații sexuale între bărbați, nici bărbații care se culcă cu bărbați,",
+      "reason": "„Bărbații efeminați” exprimă în româna contemporană o trăsătură de prezentare sau comportament, pe când μαλακοί, în această listă sexuală, îi indică mai precis pe bărbații care asumă rolul pasiv în acte sexuale cu alți bărbați. În acest context, bărbații efeminați nu delimitează sensul sexual al lui μαλακοί din οὔτε μαλακοὶ οὔτε ἀρσενοκοῖται și poate include greșit orice bărbat perceput drept efeminat.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 10,
+      "term": "revizie finală: οὐ λοίδοροι, οὐχ ἅρπαγες",
+      "decision": "nici hoții, nici lacomii, nici bețivii, nici batjocoritorii, nici cei care îi jecmănesc pe alții nu vor moșteni Împărăția lui Dumnezeu.",
+      "reason": "Substantivul „răpitorii” este înțeles în româna actuală mai ales ca desemnând persoane care sechestrează oameni, în timp ce ἅρπαγες se referă aici la jefuitori sau la cei care îi jecmănesc pe alții. Redarea nici batjocoritorii, nici răpitorii păstrează sensul lui λοίδοροι, însă „răpitorii” nu comunică natural exploatarea rapace exprimată de οὐ λοίδοροι, οὐχ ἅρπαγες.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

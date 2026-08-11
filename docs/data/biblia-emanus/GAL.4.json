@@ -74,12 +74,12 @@
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -98,14 +98,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 31 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 31 de versete au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; TR a fost consultat numai ca martor textual, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă ca repere auxiliare. NTR nu a fost consultată."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost reparate numărul, acordul, sintaxa și calchierile care schimbau sensul grecesc.",
+        "Lecturile SBLGNT pentru 4:6, 4:7 și 4:28 sunt păstrate față de variantele TR/RP.",
+        "Formulările românești au fost redactate propriu și confruntate ulterior cu reperele auxiliare."
       ]
     },
     "theologicalContext": {
@@ -139,8 +139,8 @@
       "minimumSemantic": 0.33174470430626646,
       "minimumScore": 0.5090738739653641
     },
-    "textDigest": "sha256:e8766ab86dbb007069113c9731993d197be26807148c8864e8046bbefad33749",
-    "contentDigest": "sha256:7c7ab48f441e8e74d17533d10c89ac9bff1848b6efd6240992d484f0c8353219"
+    "textDigest": "sha256:05dd9bbdbe0e6df1ff583b5daf58ac2c0bbfee1e0a14d8a11153275621e02133",
+    "contentDigest": "sha256:35931360534d91a47856d3dc36e84803de65c124c2c9aaa11193a93d41e1c4c0"
   },
   "verses": [
     {
@@ -161,23 +161,23 @@
     },
     {
       "number": 5,
-      "text": "ca să răscumpere pe cei ce erau sub Lege, ca să putem primi adopția ca copii."
+      "text": "ca să-i răscumpere pe cei de sub Lege, pentru ca noi să primim înfierea."
     },
     {
       "number": 6,
-      "text": "Și pentru că sunteți copii, Dumnezeu a trimis Duhul Fiului Său în inimile voastre, plângând, Abba, Tată!"
+      "text": "Și, pentru că sunteți fii, Dumnezeu a trimis în inimile noastre Duhul Fiului Său, care strigă: «Avva, Tată!»"
     },
     {
       "number": 7,
-      "text": "Deci, nu mai ești un rob, ci un fiu; și dacă un fiu, atunci un moștenitor al lui Dumnezeu prin Hristos."
+      "text": "Așadar, nu mai ești rob, ci fiu; iar dacă ești fiu, ești și moștenitor prin Dumnezeu."
     },
     {
       "number": 8,
-      "text": "Dar atunci, neștiindu-l pe Dumnezeu, erați robiți celor care prin fire nu sunt dumnezei;"
+      "text": "Dar atunci, neștiindu-L pe Dumnezeu, erați robi ai celor care prin fire nu sunt dumnezei;"
     },
     {
       "number": 9,
-      "text": "Dar acum că ai ajuns să-L cunoști pe Dumnezeu, sau mai degrabă să fii cunoscut de Dumnezeu, de ce te întorci la cei slabi și mizerabili principii elementare, la care dorești să fii din nou în robie?"
+      "text": "Dar acum, după ce L-ați cunoscut pe Dumnezeu — sau, mai degrabă, după ce ați fost cunoscuți de Dumnezeu — cum de vă întoarceți din nou la elementele slabe și sărăcăcioase, cărora vreți iarăși să le slujiți?"
     },
     {
       "number": 10,
@@ -189,23 +189,23 @@
     },
     {
       "number": 12,
-      "text": "Fiți ca mine, pentru că și eu am devenit ca voi, fraților, vă rog. Cu nimic nu m-ați nedreptățit."
+      "text": "Deveniți ca mine, pentru că și eu am devenit ca voi, fraților, vă rog. Nu mi-ați făcut nicio nedreptate."
     },
     {
       "number": 13,
-      "text": "Dar știi că din cauza slăbiciunii trupești ți-am predicat pentru prima dată vestea bună."
+      "text": "Știți că, din pricina unei slăbiciuni a trupului, v-am vestit Evanghelia pentru prima dată."
     },
     {
       "number": 14,
-      "text": "și încercarea voastră din cauza cărnii mele n-ați disprețuit-o și nici n-ați respins-o cu scârbă, ci m-ați primit ca pe un înger al lui Dumnezeu, ca pe Hristos Isus."
+      "text": "și nu ați disprețuit, nici nu ați respins cu scârbă încercarea pe care trupul meu o constituia pentru voi, ci m-ați primit ca pe un înger al lui Dumnezeu, ca pe Hristos Isus."
     },
     {
       "number": 15,
-      "text": "Care a fost binecuvântarea de care v-ați bucurat? Pentru că vă mărturisesc că, dacă este posibil, v-ați fi scos ochii și mi i-ați fi dat."
+      "text": "Unde este, deci, fericirea voastră? Vă mărturisesc că, dacă ar fi fost posibil, v-ați fi scos ochii și mi i-ați fi dat."
     },
     {
       "number": 16,
-      "text": "Deci, am devenit dușmanul tău spunându-ți adevărul?"
+      "text": "Așadar, am devenit dușmanul vostru spunându-vă adevărul?"
     },
     {
       "number": 17,
@@ -213,7 +213,7 @@
     },
     {
       "number": 18,
-      "text": "Dar este întotdeauna bine să fie zelos într-o cauză bună, și nu numai atunci când eu sunt prezent cu tine."
+      "text": "Este bine să se arate întotdeauna zel față de voi pentru o cauză bună, nu doar când sunt prezent la voi."
     },
     {
       "number": 19,
@@ -233,11 +233,11 @@
     },
     {
       "number": 23,
-      "text": "Totuși, fiul robului s-a născut potrivit cărnii, dar fiul de către femeia liberă s-a născut prin promisiune."
+      "text": "Totuși, cel din femeia roabă s-a născut potrivit cărnii, iar cel din femeia liberă s-a născut prin promisiune."
     },
     {
       "number": 24,
-      "text": "Aceste lucruri conțin o alegorie, pentru că acestea sunt două legăminte. Unul este de la Muntele Sinai, care poartă copii la robie, care este Agar."
+      "text": "Acestea sunt o alegorie: ele reprezintă două legăminte. Unul este de la muntele Sinai, care naște pentru robie; acesta este Agar."
     },
     {
       "number": 25,
@@ -245,7 +245,7 @@
     },
     {
       "number": 26,
-      "text": "dar Ierusalimul de sus este liber și ea este mama noastră."
+      "text": "dar Ierusalimul de sus este liber, iar el ne este mamă."
     },
     {
       "number": 27,
@@ -253,11 +253,11 @@
     },
     {
       "number": 28,
-      "text": "Acum noi, frații, așa cum a fost Isaac, suntem copii ai promisiunii."
+      "text": "Iar voi, fraților, sunteți, ca Isaac, copii ai promisiunii."
     },
     {
       "number": 29,
-      "text": "Dar, ca atunci, cel care s-a născut conform cărnii l-a persecutat pe cel care s-a născut conform Duhului, așa este și acum."
+      "text": "Dar, așa cum atunci cel născut potrivit cărnii îl persecuta pe cel născut potrivit Duhului, tot astfel se petrece și acum."
     },
     {
       "number": 30,
@@ -265,7 +265,7 @@
     },
     {
       "number": 31,
-      "text": "Așadar, fraților, nu suntem copiii unui rob, ci ai femeii libere."
+      "text": "Așadar, fraților, nu suntem copii ai roabei, ci ai femeii libere."
     }
   ],
   "editorialNotes": [
@@ -286,6 +286,96 @@
       "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "Persoana a doua a fost păstrată pentru a menține continuitatea retorică a adresării din contextul imediat."
+    },
+    {
+      "verse": 7,
+      "term": "κληρονόμος διὰ θεοῦ",
+      "decision": "«moștenitor prin Dumnezeu» urmează lectura SBLGNT; nu este introdusă formularea RP «prin Hristos».",
+      "reason": "Aparatul consemnează θεοῦ διὰ Χριστοῦ ca lectură RP, iar SBLGNT are διὰ θεοῦ.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul principal păstrează martorul critic fără armonizare confesională."
+    },
+    {
+      "verse": 9,
+      "term": "γνόντες ... γνωσθέντες ὑπὸ θεοῦ",
+      "decision": "Persoana plurală este păstrată («ați cunoscut», «ați fost cunoscuți»), iar στοιχεῖα este redat «elemente», nu «principii». ",
+      "reason": "Adresarea către comunitate este plurală; termenul poate desemna elemente/puteri elementare, fără a decide o identificare teologică suplimentară.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Formularea respectă morfologia și ambiguitatea controlată a sursei."
+    },
+    {
+      "verse": 15,
+      "term": "ποῦ οὖν ὁ μακαρισμὸς ὑμῶν",
+      "decision": "Întrebarea este redată «Unde este, deci, fericirea voastră?», nu «Care a fost binecuvântarea».",
+      "reason": "ποῦ cere «unde», iar μακαρισμός indică fericire/declarație de binecuvântare; contextul este o mustrare despre schimbarea atitudinii galatenilor.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "S-a corectat calchierea care schimba întrebarea și timpul discursului."
+    },
+    {
+      "verse": 31,
+      "term": "οὐκ ἐσμὲν παιδίσκης τέκνα",
+      "decision": "«copii ai roabei» păstrează substantivul și genul sursei; nu «copiii unui rob».",
+      "reason": "παιδίσκη este feminin («roabă/slujnică»), iar τέκνα este neutru plural («copii»).",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "A fost reparată eroarea de gen și referință din textul anterior."
+    },
+    {
+      "verse": 8,
+      "term": "revizie finală: ἐδουλεύσατε τοῖς",
+      "decision": "Dar atunci, neștiindu-L pe Dumnezeu, erați robi ai celor care prin fire nu sunt dumnezei;",
+      "reason": "Deși ἐδουλεύσατε τοῖς indică supunerea față de acele entități, erați robiți celor îi atribuie acesteia o construcție românească defectuoasă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 14,
+      "term": "revizie finală: τὸν πειρασμὸν",
+      "decision": "și nu ați disprețuit, nici nu ați respins cu scârbă încercarea pe care trupul meu o constituia pentru voi, ci m-ați primit ca pe un înger al lui Dumnezeu, ca pe Hristos Isus.",
+      "reason": "Sensul contextual al lui τὸν πειρασμὸν nu este comunicat suficient de limpede prin încercarea voastră din cauza cărnii mele, din cauza posesivului ambiguu.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 18,
+      "term": "revizie finală: ζηλοῦσθαι ἐν καλῷ πάντοτε",
+      "decision": "Este bine să se arate întotdeauna zel față de voi pentru o cauză bună, nu doar când sunt prezent la voi.",
+      "reason": "Pasivul din ζηλοῦσθαι ἐν καλῷ πάντοτε nu este păstrat de să fii zelos întotdeauna pentru o cauză bună, care atribuie zelul galatenilor înșiși.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 23,
+      "term": "revizie finală: ἐκ τῆς παιδίσκης",
+      "decision": "Totuși, cel din femeia roabă s-a născut potrivit cărnii, iar cel din femeia liberă s-a născut prin promisiune.",
+      "reason": "Referința feminină din ἐκ τῆς παιδίσκης este redată eronat prin fiul robului, care îl desemnează pe tată drept rob.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 26,
+      "term": "revizie finală: ἥτις ἐστὶν",
+      "decision": "dar Ierusalimul de sus este liber, iar el ne este mamă.",
+      "reason": "Relația explicativă exprimată prin ἥτις ἐστὶν este redată coordonat prin și ea este mama noastră, dar pronumele ales produce un dezacord gramatical în română.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 29,
+      "term": "revizie finală: ὁ κατὰ σάρκα γεννηθεὶς ἐδίωκε",
+      "decision": "Dar, așa cum atunci cel născut potrivit cărnii îl persecuta pe cel născut potrivit Duhului, tot astfel se petrece și acum.",
+      "reason": "Deși ὁ κατὰ σάρκα γεννηθεὶς ἐδίωκε și cel care s-a născut conform cărnii l-a persecutat identifică aceiași participanți, aspectul imperfectului grec nu este păstrat.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
     }
   ],
   "referenceNotes": [],

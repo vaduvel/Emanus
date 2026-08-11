@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,18 +71,18 @@
       "additions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Toate cele 34 de unități principale ale capitolului au fost reverificate față de SBLGNT 1.2 și aparatul critic; numărul tradițional 11 este păstrat separat ca notă de referință din Textus Receptus.",
+      "BTF și Cornilescu 1924 au fost consultate ca repere auxiliare. Biblia Liberă ronbl este fixată în snapshot, dar textul ei din ZIP nu a putut fi materializat în această rulare; NTR nu a fost consultată. Nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-09",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -98,22 +101,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 34 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Au fost confruntate toate cele 34 de unități principale din MAT.18 cu SBLGNT 1.2 și aparatul critic. Textus Receptus a fost folosit numai ca martor textual, inclusiv pentru lectura tradițională numerotată 18:11."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "MAT.18.13, 17, 19, 25 și 34: au fost reparate calcuri, sintaxă și terminologie românească nefirească.",
+        "MAT.18.11, 14, 15, 26, 28 și 35: diferențele materiale dintre SBLGNT și tradiția receptă au fost separate în note, fără a importa automat extensii RP/TR.",
+        "MAT.18.18 și 22: au fost documentate explicit construcția perifrastică de legare/dezlegare și ambiguitatea numerică a expresiei ἑβδομηκοντάκις ἑπτά."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Textul principal urmează SBLGNT 1.2; lectura tradițională MAT.18.11 nu este introdusă ca verset principal.",
+        "Discursul despre poticnire, disciplina comunității, legare/dezlegare și iertare este redat lexical, fără glosă confesională în corpul versetului.",
+        "Ambiguitatea numerică din MAT.18.22 este documentată editorial, iar textul păstrează formularea literală fără a construi o doctrină din calcul."
       ]
     },
     "omissionAddition": {
@@ -123,24 +126,14 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare românească independentă din SBLGNT/WEBP; BTF și Cornilescu 1924 au fost folosite numai comparativ, fără copiere de text"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 741,
-        "primary": 228,
-        "secondary": 102,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.4037089233135842,
-      "minimumScore": 0.5165308313030281
-    },
-    "textDigest": "sha256:39316a606b702f4c77762919544382cc02faef2508478cee2a81ec8a3b8597f6",
-    "contentDigest": "sha256:27d0e2ebaad8c463d466a55cd6a00c2f45c825c49ea3b7bf4441d27f5b0b2cfe"
+    "textDigest": "sha256:8a7e5150fc772e047f3cf5ed23fe3ff6a5f5527ad84cb1bb45a355768b700800",
+    "contentDigest": "sha256:d356095b1fca4b3d004e9bb9a4270eb0897c6fab2969d81df0445a8559237129"
   },
   "verses": [
     {
@@ -149,15 +142,15 @@
     },
     {
       "number": 2,
-      "text": "Isus a chemat la El un copilaș și l-a așezat în mijlocul lor."
+      "text": "Chemând la El un copilaș, l-a așezat în mijlocul lor"
     },
     {
       "number": 3,
-      "text": "Apoi a spus: „Adevărat vă spun: dacă nu vă întoarceți și nu deveniți precum copilașii, nicidecum nu veți intra în Împărăția cerurilor."
+      "text": "și a spus: „Adevărat vă spun: dacă nu vă întoarceți și nu deveniți precum copilașii, nicidecum nu veți intra în Împărăția cerurilor."
     },
     {
       "number": 4,
-      "text": "Prin urmare, oricine se smerește ca acest copilaș, acela este cel mai mare în Împărăția cerurilor."
+      "text": "Așadar, oricine se smerește ca acest copilaș, acela este cel mai mare în Împărăția cerurilor."
     },
     {
       "number": 5,
@@ -165,19 +158,19 @@
     },
     {
       "number": 6,
-      "text": "Dar oricine îl face să cadă pe unul dintre acești micuți care cred în Mine, ar fi mai bine pentru el să i se atârne de gât o piatră de moară învârtită de măgar și să fie scufundat în adâncul mării."
+      "text": "Dar oricine îl face să se poticnească pe unul dintre acești micuți care cred în Mine, ar fi mai bine pentru el să i se atârne de gât o piatră mare de moară, învârtită de măgar, și să fie scufundat în largul mării."
     },
     {
       "number": 7,
-      "text": "Vai de lume din cauza prilejurilor de cădere! Căci este inevitabil să vină asemenea prilejuri, dar vai de omul prin care vine prilejul de cădere!"
+      "text": "Vai de lume din cauza prilejurilor de poticnire! Căci este inevitabil să vină prilejuri de poticnire, dar vai de omul prin care vine prilejul!"
     },
     {
       "number": 8,
-      "text": "Dacă mâna sau piciorul tău te face să cazi, taie-l și aruncă-l de la tine. Este mai bine pentru tine să intri în viață infirm sau șchiop decât să ai două mâini ori două picioare și să fii aruncat în focul veșnic."
+      "text": "Dacă mâna sau piciorul tău te face să te poticnești, taie-l și aruncă-l de la tine. Este mai bine pentru tine să intri în viață infirm sau șchiop decât să ai două mâini ori două picioare și să fii aruncat în focul veșnic."
     },
     {
       "number": 9,
-      "text": "Și dacă ochiul tău te face să cazi, scoate-l și aruncă-l de la tine. Este mai bine pentru tine să intri în viață cu un singur ochi decât să ai doi ochi și să fii aruncat în Gheena focului."
+      "text": "Și dacă ochiul tău te face să te poticnești, scoate-l și aruncă-l de la tine. Este mai bine pentru tine să intri în viață cu un singur ochi decât să ai doi ochi și să fii aruncat în Gheena focului."
     },
     {
       "number": 10,
@@ -185,11 +178,11 @@
     },
     {
       "number": 12,
-      "text": "Ce credeți? Dacă un om are o sută de oi și una dintre ele se rătăcește, nu le lasă el pe cele nouăzeci și nouă pe munți și se duce s-o caute pe cea rătăcită?"
+      "text": "Ce credeți? Dacă un om are o sută de oi și una dintre ele se rătăcește, nu le va lăsa pe cele nouăzeci și nouă pe munți și nu se va duce s-o caute pe cea rătăcită?"
     },
     {
       "number": 13,
-      "text": "Dacă el o găsește, cel mai sigur vă spun, el se bucură de ea mai mult decât peste nouăzeci și nouă care nu s-au rătăcit."
+      "text": "Și dacă ajunge s-o găsească, adevărat vă spun că se bucură de ea mai mult decât de cele nouăzeci și nouă care nu s-au rătăcit."
     },
     {
       "number": 14,
@@ -201,19 +194,19 @@
     },
     {
       "number": 16,
-      "text": "Dar dacă nu te ascultă, mai ia cu tine unul sau doi, pentru ca orice vorbă să fie stabilită pe mărturia a doi sau trei martori."
+      "text": "Dar dacă nu te ascultă, mai ia cu tine unul sau doi, pentru ca orice lucru să fie stabilit prin mărturia a doi sau trei martori."
     },
     {
       "number": 17,
-      "text": "Dacă refuză să-i asculte, spune bisericii; iar dacă refuză să asculte și de biserică, să fie pentru tine ca un neam și ca un colector de taxe."
+      "text": "Dacă refuză să-i asculte, spune bisericii; iar dacă refuză să asculte și de biserică, să fie pentru tine ca un om dintre neamuri și ca un vameș."
     },
     {
       "number": 18,
-      "text": "Adevărat vă spun: toate câte le veți lega pe pământ vor fi fost legate în cer, iar toate câte le veți dezlega pe pământ vor fi fost dezlegate în cer."
+      "text": "Adevărat vă spun: orice veți lega pe pământ va fi fost legat în cer și orice veți dezlega pe pământ va fi fost dezlegat în cer."
     },
     {
       "number": 19,
-      "text": "Din nou vă spun adevărat: dacă doi dintre voi se înțeleg pe pământ cu privire la orice lucru pe care îl vor cere, le va fi dat de Tatăl Meu care este în ceruri."
+      "text": "Din nou, adevărat vă spun: dacă doi dintre voi se înțeleg pe pământ cu privire la orice lucru pe care îl vor cere, le va fi dat de Tatăl Meu care este în ceruri."
     },
     {
       "number": 20,
@@ -237,11 +230,11 @@
     },
     {
       "number": 25,
-      "text": "Dar pentru că el nu a putut plăti, domnul său i-a poruncit să fie vândut, cu soția sa, copiii lui, și tot ceea ce el a avut, și plata să fie făcută."
+      "text": "Fiindcă nu avea cu ce să plătească, stăpânul lui a poruncit să fie vândut împreună cu soția, copiii și tot ce avea, iar datoria să fie plătită."
     },
     {
       "number": 26,
-      "text": "Atunci robul a căzut înaintea lui, i s-a închinat și a zis: «Ai răbdare cu mine și îți voi plăti tot!»"
+      "text": "Atunci robul a căzut înaintea lui și i s-a închinat, spunând: «Ai răbdare cu mine și îți voi plăti tot!»"
     },
     {
       "number": 27,
@@ -273,14 +266,75 @@
     },
     {
       "number": 34,
-      "text": "Domnul său s-a mâniat și l-a dat pe mâna chinuitorilor până când avea să plătească tot ce i se cuvenea."
+      "text": "Stăpânul lui s-a mâniat și l-a dat pe mâna chinuitorilor până avea să plătească tot ce datora."
     },
     {
       "number": 35,
       "text": "Tot așa vă va face și Tatăl Meu ceresc dacă fiecare dintre voi nu-l iartă din inimă pe fratele său.”"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 14,
+      "term": "τοῦ πατρὸς ὑμῶν / WH-Treg: τοῦ πατρός μου",
+      "decision": "Textul principal păstrează „Tatălui vostru”.",
+      "alternatives": [
+        "Tatălui Meu"
+      ],
+      "reason": "SBLGNT urmează aici lectura ὑμῶν, susținută de NA28/RP; WH/Treg au μου.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "A fost urmat pronumele textului principal SBLGNT."
+    },
+    {
+      "verse": 15,
+      "term": "ἁμαρτήσῃ εἰς σὲ / WH omite εἰς σὲ",
+      "decision": "Textul principal păstrează „păcătuiește împotriva ta”.",
+      "alternatives": [
+        "Dacă fratele tău păcătuiește, du-te..."
+      ],
+      "reason": "Expresia εἰς σὲ este prezentă în SBLGNT/Treg/NA28/RP, deși WH o omite.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "A fost urmată lectura SBLGNT."
+    },
+    {
+      "verse": 18,
+      "term": "ἔσται δεδεμένα / ἔσται λελυμένα",
+      "decision": "Construcțiile perfecte perifrastice sunt redate „va fi fost legat” și „va fi fost dezlegat”.",
+      "alternatives": [
+        "va fi legat / va fi dezlegat"
+      ],
+      "reason": "Participiul perfect cu ἔσται păstrează o stare rezultată anterioară/realizată în raport cu viitorul; româna explicită evită pierderea aspectului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Aspectul grec a fost păstrat fără a adăuga o explicație doctrinară."
+    },
+    {
+      "verse": 22,
+      "term": "ἕως ἑβδομηκοντάκις ἑπτά",
+      "decision": "Textul principal păstrează formularea literală „până la șaptezeci de ori câte șapte”.",
+      "alternatives": [
+        "până la șaptezeci și șapte de ori"
+      ],
+      "reason": "Expresia greacă este discutată numeric în tradiția de traducere; alegerea literală nu închide în corpul textului alternativa „șaptezeci și șapte”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Ambiguitatea este documentată fără a modifica mesajul despre iertarea repetată."
+    },
+    {
+      "verse": 35,
+      "term": "ἀπὸ τῶν καρδιῶν ὑμῶν / RP adaugă τὰ παραπτώματα αὐτῶν",
+      "decision": "Textul principal se încheie cu iertarea fratelui „din inimă”, fără adaosul „greșelile lui”.",
+      "alternatives": [
+        "dacă nu-i iartă din inimă fratelui său greșelile lui"
+      ],
+      "reason": "Extensia τὰ παραπτώματα αὐτῶν apare în RP, nu în SBLGNT/WH/Treg/NA28.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Adaosul recept nu a fost importat în textul principal."
+    }
+  ],
   "referenceNotes": [
     {
       "number": 11,

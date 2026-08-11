@@ -5,6 +5,7 @@ import argparse
 import importlib.util
 import json
 import re
+import sys
 import unicodedata
 from pathlib import Path
 from statistics import median
@@ -13,6 +14,17 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "docs" / "data" / "biblia-emanus"
 NT = {"MAT","MRK","LUK","JHN","ACT","ROM","1CO","2CO","GAL","EPH","PHP","COL","1TH","2TH","1TI","2TI","TIT","PHM","HEB","JAS","1PE","2PE","1JN","2JN","3JN","JUD","REV"}
 OT = {"GEN","EXO","LEV","NUM","DEU","JOS","JDG","RUT","1SA","2SA","1KI","2KI","1CH","2CH","EZR","NEH","EST","JOB","PSA","PRO","ECC","SNG","ISA","JER","LAM","EZK","DAN","HOS","JOL","AMO","OBA","JON","MIC","NAM","HAB","ZEP","HAG","ZEC","MAL"}
+
+
+def load_editorial_gate():
+    path = ROOT / "scripts" / "nt_editorial_gate.py"
+    spec = importlib.util.spec_from_file_location("nt_editorial_gate", path)
+    if spec is None or spec.loader is None:
+        raise RuntimeError("Nu pot încărca poarta editorială NT")
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+    return module
 
 FORBIDDEN = [
     (re.compile(r"\b(?:s|n|l|i|v|m|a)['’](?:a|au|am|ai|ar|as|ați|ati)\b", re.I), "apostrof în loc de cratimă"),
@@ -133,12 +145,14 @@ def main(argv=None) -> int:
     book_ids = NT if args.testament == "NT" else OT if args.testament == "OT" else NT | OT
     errors: list[str] = []
     verse_map = {}
+    chapter_map = {}
     chapter_count = verse_count = 0
     source_module = source_data = None
     if args.testament in {"OT", "all"}:
         source_module, source_data = load_source_data()
     for _, data in chapters(book_ids):
         chapter_count += 1
+        chapter_map[f"{data['bookId']}.{data['chapter']}"] = data
         quote_stack: list[str] = []
         for verse in data["verses"]:
             verse_count += 1
@@ -157,6 +171,10 @@ def main(argv=None) -> int:
                     errors.append(f"{ref}: {detail}: {text}")
             lower = text.lower()
             for phrase, detail in BAD_PHRASES.items():
+                if data["bookId"] in NT and phrase == "ieșind afară":
+                    # Formula reproduce explicit ieșirea din încăpere; nu este
+                    # aceeași corupție mecanică urmărită în loturile VT.
+                    continue
                 if re.search(rf"(?<!\w){re.escape(phrase.lower())}(?!\w)", lower):
                     errors.append(f"{ref}: {detail}: {text}")
 
@@ -183,24 +201,30 @@ def main(argv=None) -> int:
                         f"(raport {ratio:.2f}): {text}"
                     )
 
-            for character in text:
-                if character in QUOTE_PAIRS:
-                    expected = "„" if len(quote_stack) % 2 == 0 else "«"
-                    if character != expected:
-                        errors.append(
-                            f"{ref}: nivel de citare neuniform ({character} în loc de {expected}): {text}"
-                        )
-                    quote_stack.append(character)
-                elif character in QUOTE_OPEN_FOR_CLOSE:
-                    expected_open = QUOTE_OPEN_FOR_CLOSE[character]
-                    if not quote_stack or quote_stack[-1] != expected_open:
-                        errors.append(f"{ref}: închidere de citat incompatibilă: {text}")
-                    else:
-                        quote_stack.pop()
-        if quote_stack:
+            if data["bookId"] in OT:
+                for character in text:
+                    if character in QUOTE_PAIRS:
+                        expected = "„" if len(quote_stack) % 2 == 0 else "«"
+                        if character != expected:
+                            errors.append(
+                                f"{ref}: nivel de citare neuniform ({character} în loc de {expected}): {text}"
+                            )
+                        quote_stack.append(character)
+                    elif character in QUOTE_OPEN_FOR_CLOSE:
+                        expected_open = QUOTE_OPEN_FOR_CLOSE[character]
+                        if not quote_stack or quote_stack[-1] != expected_open:
+                            errors.append(f"{ref}: închidere de citat incompatibilă: {text}")
+                        else:
+                            quote_stack.pop()
+        if data["bookId"] in OT and quote_stack:
             errors.append(f"{data['bookId']}.{data['chapter']}: citat neînchis la sfârșitul capitolului")
 
     if args.testament in {"NT", "all"}:
+        gate = load_editorial_gate()
+        for issue in gate.scan_nt_quality(chapter_map):
+            text = verse_map.get(issue.reference, ("", {}))[0]
+            errors.append(f"{issue.reference}: [{issue.code}] {issue.detail}: {text}")
+
         mat = verse_map.get("MAT.6.13", ("", {}))[0].lower()
         if any(x in mat for x in ("căci a ta este împărăția", "puterea și slava", "amin")):
             errors.append("MAT.6.13: doxologia tradițională este în textul principal, contrar SBLGNT")

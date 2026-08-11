@@ -74,20 +74,15 @@
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 40,
       "reviewed": 40,
@@ -98,7 +93,7 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 40 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 40 de versete din 1CO.14 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
@@ -129,18 +124,13 @@
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 709,
-        "primary": 137,
-        "secondary": 24,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.41000612643816675,
-      "minimumScore": 0.5818865265537531
-    },
-    "textDigest": "sha256:b538bc620c03c2c2c13b4330144aa6ffb971496e1b29df09860a4039a65499c5",
-    "contentDigest": "sha256:c2564ad94e4b6534904c3ac18704ab96d377a5eacb39052cda2d2638e94b4164"
+    "textDigest": "sha256:2860a6d26bdd2db5171e4897f4d26dc34b783ccd5eace573a1a39dd5c97ab0fe",
+    "contentDigest": "sha256:bd5ddfac4852e99aea9c83b06b5a949aaf6d826919e1e36646a8583f64ad5afa",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
@@ -149,7 +139,7 @@
     },
     {
       "number": 2,
-      "text": "Căci cel care vorbește într-o limbă nu vorbește oamenilor, ci lui Dumnezeu; pentru că nimeni nu-l înțelege, ci în duh spune taine."
+      "text": "Căci cel care vorbește într-o limbă nu le vorbește oamenilor, ci lui Dumnezeu; pentru că nimeni nu-l înțelege, iar în duh spune taine."
     },
     {
       "number": 3,
@@ -161,7 +151,7 @@
     },
     {
       "number": 5,
-      "text": "Acum doresc ca toți să vorbiți cu alte limbi, dar și mai mult ca să profețiți; căci El este mai mare, care proorocește decât cel ce vorbește cu alte limbi, dacă nu interpretează, ca adunarea să fie zidită."
+      "text": "Doresc ca toți să vorbiți în limbi, dar și mai mult să profețiți; căci cel care profețește este mai mare decât cel care vorbește în limbi, dacă acesta nu interpretează, ca biserica să fie zidită."
     },
     {
       "number": 6,
@@ -169,7 +159,7 @@
     },
     {
       "number": 7,
-      "text": "Tot așa și lucrurile neînsuflețite care dau sunet, fie fluier, fie liră, dacă nu dau deosebire sunetelor, cum se va cunoaște ce se cântă la fluier sau la liră?"
+      "text": "Tot așa și lucrurile neînsuflețite care produc sunete, fie fluierul, fie lira: dacă nu produc sunete distincte, cum se va recunoaște ce se cântă la fluier sau la liră?"
     },
     {
       "number": 8,
@@ -181,11 +171,11 @@
     },
     {
       "number": 10,
-      "text": "Există, ar putea fi, atât de multe tipuri de limbi din lume, și nici unul dintre ele nu este fără sens."
+      "text": "Sunt, poate, atât de multe feluri de sunete în lume și niciunul nu este fără înțeles."
     },
     {
       "number": 11,
-      "text": "Dacă atunci nu știu sensul limbii, aș fi pentru cel care vorbește un străin, și cel care vorbește ar fi un străin pentru mine."
+      "text": "Dacă nu cunosc înțelesul sunetului, voi fi un străin pentru cel care vorbește, iar cel care vorbește va fi un străin pentru mine."
     },
     {
       "number": 12,
@@ -201,7 +191,7 @@
     },
     {
       "number": 15,
-      "text": "Ce este deci? Mă voi ruga cu duhul, dar mă voi ruga și cu mintea; voi cânta cu duhul, dar voi cânta și cu mintea."
+      "text": "Așadar, cum voi proceda? Mă voi ruga cu duhul, dar mă voi ruga și cu mintea; voi cânta cu duhul, dar voi cânta și cu mintea."
     },
     {
       "number": 16,
@@ -209,7 +199,7 @@
     },
     {
       "number": 17,
-      "text": "Pentru tine, cu siguranță, mulțumește bine, dar cealaltă persoană nu este construită."
+      "text": "Tu, într-adevăr, mulțumești bine, dar celălalt nu este zidit."
     },
     {
       "number": 18,
@@ -241,11 +231,11 @@
     },
     {
       "number": 25,
-      "text": "Și astfel secretele inimii sale sunt dezvăluite. Astfel, el va cădea cu fața la pământ și se va închina lui Dumnezeu, declarând că Dumnezeu este printre voi."
+      "text": "Tainele inimii sale ies la lumină și astfel, căzând cu fața la pământ, se va închina lui Dumnezeu, vestind că Dumnezeu este cu adevărat printre voi."
     },
     {
       "number": 26,
-      "text": "Ce este atunci, fraților? Când vă adunați, fiecare dintre voi are un psalm, are o învățătură, are o revelație, are o altă limbă sau are o interpretare; să se facă toate lucrurile pentru a se zidi unii pe alții."
+      "text": "Cum stau deci lucrurile, fraților? Când vă adunați, fiecare are un psalm, o învățătură, o descoperire, o vorbire într-o limbă ori o interpretare; toate să se facă pentru zidire."
     },
     {
       "number": 27,
@@ -253,11 +243,11 @@
     },
     {
       "number": 28,
-      "text": "Dar dacă nu este nici un tîlcuitor, să tacă în adunare, și să vorbească lui însuși și lui Dumnezeu."
+      "text": "Dar, dacă nu există interpret, să tacă în biserică și să-și vorbească sieși și lui Dumnezeu."
     },
     {
       "number": 29,
-      "text": "Doi sau trei profeți să vorbească, iar ceilalți să judece."
+      "text": "Doi sau trei profeți să vorbească, iar ceilalți să evalueze."
     },
     {
       "number": 30,
@@ -273,11 +263,11 @@
     },
     {
       "number": 33,
-      "text": "fiindcă Dumnezeu nu este un Dumnezeu al neorânduielii, ci al păcii, ca în toate bisericile sfinților."
+      "text": "căci Dumnezeu nu este un Dumnezeu al neorânduielii, ci al păcii, ca în toate bisericile sfinților."
     },
     {
       "number": 34,
-      "text": "Femeile să tacă în biserici, căci nu le este îngăduit să vorbească; ci să se supună, așa cum spune și Legea."
+      "text": "Femeile să tacă în biserici, căci nu le este îngăduit să vorbească, ci să se supună, așa cum spune și Legea."
     },
     {
       "number": 35,
@@ -289,11 +279,11 @@
     },
     {
       "number": 37,
-      "text": "Dacă cineva crede că este profet sau spiritual, să recunoască faptul că ceea ce vă scriu este poruncă a Domnului."
+      "text": "Dacă cineva se consideră profet sau om spiritual, să recunoască faptul că lucrurile pe care vi le scriu sunt ale Domnului."
     },
     {
       "number": 38,
-      "text": "Dar dacă cineva este ignorant, să fie ignorant."
+      "text": "Dar cine nu recunoaște lucrul acesta rămâne, la rândul lui, nerecunoscut."
     },
     {
       "number": 39,
@@ -301,7 +291,7 @@
     },
     {
       "number": 40,
-      "text": "Fie ca toate lucrurile să fie făcute decent și în ordine."
+      "text": "Dar toate să se facă în mod cuviincios și cu ordine."
     }
   ],
   "editorialNotes": [
@@ -313,6 +303,105 @@
       "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "Textul principal urmează lectura critică fără posesivul tradițional, iar motivarea notei păstrează transparentă diferența față de TR."
+    },
+    {
+      "verse": 2,
+      "term": "revizie finală: πνεύματι δὲ λαλεῖ μυστήρια",
+      "decision": "Căci cel care vorbește într-o limbă nu le vorbește oamenilor, ci lui Dumnezeu; pentru că nimeni nu-l înțelege, iar în duh spune taine.",
+      "reason": "Conjuncția „ci” creează un raport adversativ impropriu între faptul că nimeni nu înțelege și faptul că vorbitorul spune taine în duh. Deși πνεύματι δὲ λαλεῖ μυστήρια susține ideea redată de ci în duh spune taine, valoarea continuativă a lui δὲ nu justifică această opoziție românească.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 7,
+      "term": "revizie finală: διαστολὴν τοῖς φθόγγοις",
+      "decision": "Tot așa și lucrurile neînsuflețite care produc sunete, fie fluierul, fie lira: dacă nu produc sunete distincte, cum se va recunoaște ce se cântă la fluier sau la liră?",
+      "reason": "Locuțiunea „dau deosebire sunetelor” este o construcție românească defectuoasă și obscurizează ideea producerii unor sunete distincte. Ideea muzicală din διαστολὴν τοῖς φθόγγοις poate fi dedusă din dacă nu dau deosebire sunetelor, dar formularea românească nu o comunică natural.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 15,
+      "term": "revizie finală: τί οὖν ἐστιν",
+      "decision": "Așadar, cum voi proceda? Mă voi ruga cu duhul, dar mă voi ruga și cu mintea; voi cânta cu duhul, dar voi cânta și cu mintea.",
+      "reason": "Întrebarea introductivă este un calc sintactic neclar; în context, ea trebuie să introducă deliberarea despre modul în care va proceda vorbitorul. Funcția deliberativă a lui τί οὖν ἐστιν nu este comunicată natural de Ce este deci?, care pare să ceară identificarea unui obiect nenumit.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 25,
+      "term": "revizie finală: καὶ οὕτως πεσὼν ἐπὶ πρόσωπον",
+      "decision": "Tainele inimii sale ies la lumină și astfel, căzând cu fața la pământ, se va închina lui Dumnezeu, vestind că Dumnezeu este cu adevărat printre voi.",
+      "reason": "Adverbul „astfel” este legat de descoperirea tainelor, deși în greacă introduce reacția consecutivă a omului: căderea cu fața la pământ și închinarea. Legătura consecutivă din καὶ οὕτως πεσὼν ἐπὶ πρόσωπον este deplasată în Astfel se descoperă tainele inimii sale, schimbând domeniul sintactic al adverbului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 26,
+      "term": "revizie finală: Τί οὖν ἐστιν, ἀδελφοί",
+      "decision": "Cum stau deci lucrurile, fraților? Când vă adunați, fiecare are un psalm, o învățătură, o descoperire, o vorbire într-o limbă ori o interpretare; toate să se facă pentru zidire.",
+      "reason": "Întrebarea introductivă „Ce este deci, fraților?” este o calchiere eliptică și nu constituie o formulare românească naturală sau suficient de clară în context. Întrebarea Τί οὖν ἐστιν, ἀδελφοί cere o concluzie practică, pe când Ce este deci, fraților nu exprimă suficient de clar această funcție în română.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 28,
+      "term": "revizie finală: ἑαυτῷ δὲ λαλείτω καὶ τῷ θεῷ",
+      "decision": "Dar, dacă nu există interpret, să tacă în biserică și să-și vorbească sieși și lui Dumnezeu.",
+      "reason": "Dativul accentuat „sieși” este folosit fără cliticul reflexiv cerut în această construcție, astfel încât exprimarea românească este material nenaturală. Structura ἑαυτῷ δὲ λαλείτω καὶ τῷ θεῷ cere o relație reflexivă explicită, iar să vorbească sieși și lui Dumnezeu o redă semantic, dar defectuos sintactic.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 33,
+      "term": "revizie finală: ὡς ἐν πάσαις ταῖς ἐκκλησίαις τῶν ἁγίων",
+      "decision": "căci Dumnezeu nu este un Dumnezeu al neorânduielii, ci al păcii, ca în toate bisericile sfinților.",
+      "reason": "Este omisă integral comparația finală „ca în toate bisericile sfinților”, prezentă în câmpul grec al versetului. Deși Dumnezeu nu este un Dumnezeu al neorânduielii, ci al păcii redă opoziția centrală, ὡς ἐν πάσαις ταῖς ἐκκλησίαις τῶν ἁγίων nu are corespondent în acest verset.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 34,
+      "term": "revizie finală: ἐν ταῖς ἐκκλησίαις σιγάτωσαν",
+      "decision": "Femeile să tacă în biserici, căci nu le este îngăduit să vorbească, ci să se supună, așa cum spune și Legea.",
+      "reason": "Versetul începe cu o propoziție comparativă care nu apare în câmpul său grec, ci aparține textului grec furnizat pentru versetul 33. În timp ce ἐν ταῖς ἐκκλησίαις σιγάτωσαν privește locul tăcerii, Ca în toate bisericile sfinților importă nejustificat comparația din versetul precedent.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 37,
+      "term": "revizie finală: κυρίου ⸀ἐστίν",
+      "decision": "Dacă cineva se consideră profet sau om spiritual, să recunoască faptul că lucrurile pe care vi le scriu sunt ale Domnului.",
+      "reason": "Substantivul „poruncă” nu are corespondent în textul grec furnizat, care spune numai că cele scrise „sunt ale Domnului”. Față de afirmația generală κυρίου ⸀ἐστίν, formularea este poruncă a Domnului adaugă nejustificat noțiunea explicită de poruncă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 38,
+      "term": "revizie finală: ἀγνοεῖ, ⸀ἀγνοεῖται",
+      "decision": "Dar cine nu recunoaște lucrul acesta rămâne, la rândul lui, nerecunoscut.",
+      "reason": "Indicativul prezent pasiv „ἀγνοεῖται” este redat prin viitorul „nu va fi recunoscut”, schimbând profilul temporal al afirmației grecești. Relația reciprocă din ἀγνοεῖ, ⸀ἀγνοεῖται este recognoscibilă în nici el nu va fi recunoscut, însă valoarea prezentă devine nejustificat viitoare.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 40,
+      "term": "revizie finală: δὲ εὐσχημόνως καὶ κατὰ τάξιν",
+      "decision": "Dar toate să se facă în mod cuviincios și cu ordine.",
+      "reason": "Conectorul „δὲ”, care leagă contrastiv concluzia de interdicția precedentă, nu este reprezentat în textul românesc. Cerințele din δὲ εὐσχημόνως καὶ κατὰ τάξιν apar în în mod cuviincios și cu ordine, însă contrastul introdus de δὲ este omis.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
     }
   ],
   "referenceNotes": [],
