@@ -38,15 +38,18 @@ function bookPath(bookId) {
 }
 
 // The review artifact is produced independently. Until it exists there is
-// intentionally nothing to apply; this keeps the normal pipeline usable while
-// the two-pass quote review is running. Once present, every operation below is
-// mandatory and fail-closed.
-if (!fs.existsSync(REVIEW)) {
+// intentionally nothing to apply. This module is imported from a larger
+// orchestrator, so a missing optional artifact must be a true no-op rather
+// than process.exit(0), which would terminate the parent before semantic hash
+// consistency and manifest-digest regeneration can run.
+const reviewPresent = fs.existsSync(REVIEW)
+if (!reviewPresent) {
   console.log("Final embedded quote review artifact not present; no final-review unquotes to apply.")
-  process.exit(0)
 }
+const review = reviewPresent
+  ? JSON.parse(fs.readFileSync(REVIEW, "utf8"))
+  : { schema: "emanus-nt-embedded-quote-final-review-v1", unquoteCount: 0, unquotes: [] }
 
-const review = JSON.parse(fs.readFileSync(REVIEW, "utf8"))
 if (review.schema !== "emanus-nt-embedded-quote-final-review-v1" || !Array.isArray(review.unquotes)) {
   fail("unexpected review artifact schema")
 }
@@ -158,12 +161,14 @@ for (const op of review.unquotes) {
 for (const { full, data } of cache.values()) {
   fs.writeFileSync(full, JSON.stringify(data, null, 2) + "\n", "utf8")
 }
-fs.writeFileSync(OUT, JSON.stringify({
-  schema: "emanus-nt-semantic-postquote-rebind-final-review-v1",
-  policy: "Only quotation wrappers are removed. Wording is byte-preserved. For transcript-approved units, the pre-unquote semantic hash must equal the exact current snapshot and is moved only to the exact wrapper-only result.",
-  appliedCount: applied.length,
-  semanticRebindCount: semanticRebinds.length,
-  applied,
-  semanticRebinds,
-}, null, 2) + "\n", "utf8")
-console.log(`Final embedded quote review applied: ${applied.length} exact unquotes; ${semanticRebinds.length} semantic hash rebinds.`)
+if (reviewPresent) {
+  fs.writeFileSync(OUT, JSON.stringify({
+    schema: "emanus-nt-semantic-postquote-rebind-final-review-v1",
+    policy: "Only quotation wrappers are removed. Wording is byte-preserved. For transcript-approved units, the pre-unquote semantic hash must equal the exact current snapshot and is moved only to the exact wrapper-only result.",
+    appliedCount: applied.length,
+    semanticRebindCount: semanticRebinds.length,
+    applied,
+    semanticRebinds,
+  }, null, 2) + "\n", "utf8")
+  console.log(`Final embedded quote review applied: ${applied.length} exact unquotes; ${semanticRebinds.length} semantic hash rebinds.`)
+}
