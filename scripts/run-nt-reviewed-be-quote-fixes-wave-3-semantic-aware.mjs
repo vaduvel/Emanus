@@ -10,6 +10,7 @@ const wavePath = path.join(ROOT, "scripts", "apply-nt-reviewed-be-quote-fixes-wa
 const guards = [
   {
     label: "1 Ioan 1:8",
+    kind: "exact",
     bookFile: "23-1-ioan.json",
     chapter: 1,
     unitIndex: 1,
@@ -19,6 +20,7 @@ const guards = [
   },
   {
     label: "Tit 1:13",
+    kind: "exact",
     bookFile: "17-tit.json",
     chapter: 1,
     unitIndex: 2,
@@ -28,12 +30,53 @@ const guards = [
   },
   {
     label: "Filimon 17",
+    kind: "exact",
     bookFile: "18-filimon.json",
     chapter: 1,
     unitIndex: 3,
     unitId: "filimon-1-17-22",
     obsoleteBefore: "Primește-l ca pe mine însumi",
     fixLine: '  { bookId: "filimon", canonicalBookId: "PHM", chapter: 1, field: "units[3].teaching", before: "Primește-l ca pe mine însumi", after: "primește-l așa cum m-ai primi pe mine" }',
+  },
+  {
+    label: "Matei 11:1-15 paraphrase wrapper",
+    kind: "unquote",
+    bookFile: "01-matei.json",
+    chapter: 11,
+    unitIndex: 0,
+    unitId: "matei-11-1-15",
+    quote: "Ferice de acela pentru care Eu nu voi fi un prilej de poticnire",
+    fixLine: '  { bookId: "matei", canonicalBookId: "MAT", chapter: 11, field: "units[0].teaching", quote: "Ferice de acela pentru care Eu nu voi fi un prilej de poticnire" }',
+  },
+  {
+    label: "Matei 14:22-33 paraphrase wrapper",
+    kind: "unquote",
+    bookFile: "01-matei.json",
+    chapter: 14,
+    unitIndex: 2,
+    unitId: "matei-14-22-33",
+    quote: "Eu sunt; nu vă temeți",
+    fixLine: '  { bookId: "matei", canonicalBookId: "MAT", chapter: 14, field: "units[2].teaching", quote: "Eu sunt; nu vă temeți" }',
+  },
+  {
+    label: "Matei 26:1-16 paraphrase wrapper",
+    kind: "unquote",
+    bookFile: "01-matei.json",
+    chapter: 26,
+    unitIndex: 0,
+    unitId: "matei-26-1-16",
+    quote: "Pe săraci îi aveți totdeauna",
+    fixLine: '  { bookId: "matei", canonicalBookId: "MAT", chapter: 26, field: "units[0].teaching", quote: "Pe săraci îi aveți totdeauna" }',
+  },
+  {
+    label: "Matei 26:31-46 paraphrase wrapper",
+    kind: "unquote",
+    bookFile: "01-matei.json",
+    chapter: 26,
+    unitIndex: 2,
+    unitId: "matei-26-31-46",
+    quote: "Duhul este plin de râvnă, dar carnea este neputincioasă",
+    fixLine: '  { bookId: "matei", canonicalBookId: "MAT", chapter: 26, field: "units[2].teaching", quote: "Duhul este plin de râvnă, dar carnea este neputincioasă" }',
   },
 ]
 
@@ -50,11 +93,14 @@ for (const guard of guards) {
   const unit = chapter?.units?.[guard.unitIndex]
   const semantic = unit?.sourceFidelity?.semanticReview
   const teaching = String(unit?.teaching ?? "")
+  const targetAbsent = guard.kind === "exact"
+    ? !teaching.includes(guard.obsoleteBefore)
+    : ![`„${guard.quote}”`, `«${guard.quote}»`, `"${guard.quote}"`].some((form) => teaching.includes(form))
   const semanticSupersedesLegacyFix =
     unit?.id === guard.unitId &&
     semantic?.status === "approved-against-transcript" &&
-    typeof semantic?.reviewedTeachingSha256 === "string" &&
-    !teaching.includes(guard.obsoleteBefore)
+    /^sha256:[0-9a-f]{64}$/i.test(String(semantic?.reviewedTeachingSha256 ?? "")) &&
+    targetAbsent
 
   if (!semanticSupersedesLegacyFix) continue
 
@@ -71,7 +117,7 @@ for (const guard of guards) {
     throw new Error(`${guard.label} legacy wave-3 quote fix changed unexpectedly; refusing to bypass it`)
   }
   superseded.push(guard.label)
-  console.log(`NT reviewed BE quote fixes wave 3: ${guard.label} legacy exact-fix superseded by approved transcript-semantic reader copy.`)
+  console.log(`NT reviewed BE quote fixes wave 3: ${guard.label} legacy quote operation superseded by approved hash-bound transcript-semantic reader copy.`)
 }
 
 try {
