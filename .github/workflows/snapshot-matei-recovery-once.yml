@@ -1,0 +1,74 @@
+name: Freeze Matthew Recovery Snapshots Once
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-nt-integration-clean
+    paths:
+      - .github/workflows/snapshot-matei-recovery-once.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Freeze exact pre-edit units and hashes
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+
+          root = Path('docs/data/biblia-explicata')
+          book = json.loads((root / 'nt-final-source-first/01-matei.json').read_text(encoding='utf-8'))
+          targets = ['matei-6-16-18','matei-6-19-24','matei-6-25-34','matei-7-1-5']
+          units = {}
+          for chapter in book['chapters']:
+              for unit in chapter['units']:
+                  if unit['id'] in targets:
+                      payload = {
+                          'heading': str(unit.get('heading') or ''),
+                          'teaching': str(unit.get('teaching') or ''),
+                          'forYourHeart': str(unit.get('forYourHeart') or ''),
+                      }
+                      compact = json.dumps(payload, ensure_ascii=False, separators=(',', ':'))
+                      units[unit['id']] = {
+                          'chapter': int(chapter['number']),
+                          'ref': unit.get('ref'),
+                          'snapshotSha256': 'sha256:' + hashlib.sha256(compact.encode('utf-8')).hexdigest(),
+                          'snapshot': payload,
+                      }
+          assert set(units) == set(targets), (set(targets) - set(units))
+          out = {
+              'schema': 'emanus-nt-matei-semantic-recovery-snapshots-v1',
+              'bookId': 'matei',
+              'policy': 'Exact pre-edit reader snapshots for the four Matthew source-recovery units. These hashes are evidence-binding inputs, not semantic approval.',
+              'units': units,
+          }
+          p = root / 'nt-semantic-review-work/01-matei-wave2-recovery-snapshots.json'
+          p.write_text(json.dumps(out, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          for k,v in units.items(): print(k, v['snapshotSha256'])
+          PY
+
+          git rm .github/workflows/snapshot-matei-recovery-once.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/biblia-explicata/nt-semantic-review-work/01-matei-wave2-recovery-snapshots.json
+          git commit -m "Freeze Matthew semantic recovery snapshots"
+          for attempt in 1 2 3 4; do
+            git fetch origin agent/biblia-explicata-nt-integration-clean
+            if git rebase FETCH_HEAD && git push origin HEAD:agent/biblia-explicata-nt-integration-clean; then exit 0; fi
+            git rebase --abort || true
+            echo "Snapshot persistence raced with branch update; retrying ($attempt/4)."
+          done
+          exit 1
