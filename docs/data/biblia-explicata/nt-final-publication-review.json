@@ -18,7 +18,7 @@
     "blockers": 0,
     "reviewFindings": 0,
     "infoFindings": 0,
-    "reviewedExceptions": 28
+    "reviewedExceptions": 29
   },
   "sourceFidelity": {
     "reviewed-against-source-derived-legacy": 689,
@@ -252,6 +252,14 @@
       "code": "ai-meta-leak",
       "location": "Ioan 13:31-38 [ioan-13-31-38].forYourHeart",
       "excerpt": "Poate ca ai cuvinte mari despre ce ai face pentru Domnul. Nu dispretui râvna, dar nici nu te sprijini pe ea. Cere-I în schimb să-ți dea dragostea care rămâne și smerenia care știe ca fără El cazi repede.",
+      "disposition": "false-positive-romanian-ai-verb",
+      "rationale": "The case-insensitive raw scanner matched Romanian «ai» (verb a avea), not the uppercase AI acronym or AI-product metadata. No reader-facing AI attribution is present."
+    },
+    {
+      "wave": "wave-2-reader-copy",
+      "code": "ai-meta-leak",
+      "location": "2 Corinteni 1:12-22 [2-corinteni-1-12-22].teaching",
+      "excerpt": "Pavel își apără purtarea prin mărturia unei conștiințe curate: a lucrat în simplitate și sinceritate înaintea lui Dumnezeu, nu prin diplomație, șiretenie sau înțelepciune firească. De aceea cuvântul lui nu trebuie să fie un joc de da și nu ",
       "disposition": "false-positive-romanian-ai-verb",
       "rationale": "The case-insensitive raw scanner matched Romanian «ai» (verb a avea), not the uppercase AI acronym or AI-product metadata. No reader-facing AI attribution is present."
     }
