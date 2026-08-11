@@ -163,8 +163,9 @@ def _git(*args: str, check: bool = True) -> subprocess.CompletedProcess:
 def persist_recovery_transcripts(source_ids: list[str], book_id: str) -> None:
     """Persist freshly generated transcripts before recovery can be cancelled by a later push.
 
-    This runs only inside the permanent NT Explanation Recovery workflow. One-shot
-    transcription workflows intentionally keep their own artifact/persist strategy.
+    The recovery job has many deterministic working-tree changes by the time Whisper runs.
+    We commit only transcript files, then rebase with --autostash so those unrelated generated
+    changes are preserved locally while the transcript commit can be pushed safely.
     """
     if os.environ.get("GITHUB_ACTIONS") != "true" or os.environ.get("GITHUB_WORKFLOW") != RECOVERY_WORKFLOW:
         return
@@ -190,7 +191,7 @@ def persist_recovery_transcripts(source_ids: list[str], book_id: str) -> None:
             print(fetch.stdout, flush=True)
             time.sleep(attempt)
             continue
-        rebase = _git("rebase", "FETCH_HEAD", check=False)
+        rebase = _git("rebase", "--autostash", "FETCH_HEAD", check=False)
         if rebase.returncode != 0:
             print(rebase.stdout, flush=True)
             _git("rebase", "--abort", check=False)
@@ -201,7 +202,7 @@ def persist_recovery_transcripts(source_ids: list[str], book_id: str) -> None:
         if push.returncode == 0:
             print(
                 f"Official transcript persistence: committed {len(paths)} source(s) immediately after Whisper; "
-                "a successor recovery run may replace this run via concurrency.",
+                "deterministic recovery changes were preserved through autostash.",
                 flush=True,
             )
             return
