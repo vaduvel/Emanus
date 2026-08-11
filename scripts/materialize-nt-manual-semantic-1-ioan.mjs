@@ -12,6 +12,12 @@ await import("./fix-nt-1-timotei-materializer-marker.mjs")
 await import("./materialize-nt-manual-semantic-1-timotei.mjs")
 await import("./restore-nt-1-timotei-materializer-marker.mjs")
 
+const twoCorRomanianFix = spawnSync("python3", ["scripts/fix_nt_addressable_wave1_2cor_romanian.py"], { stdio: "inherit" })
+if (twoCorRomanianFix.status !== 0) {
+  console.error(`[2 Corinthians wave1 Romanian fix] exited with status ${twoCorRomanianFix.status}`)
+  process.exit(twoCorRomanianFix.status ?? 1)
+}
+
 const romansQuoteSnapshotFix = spawnSync("python3", ["scripts/fix_nt_addressable_wave1_romans_quote_snapshot.py"], { stdio: "inherit" })
 if (romansQuoteSnapshotFix.status !== 0) {
   console.error(`[Romans wave1 quote snapshot fix] exited with status ${romansQuoteSnapshotFix.status}`)
