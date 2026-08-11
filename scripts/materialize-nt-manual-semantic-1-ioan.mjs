@@ -23,6 +23,8 @@ if (wave2UnitFiles.status !== 0) {
   process.exit(wave2UnitFiles.status ?? 1)
 }
 
+await import("./materialize-nt-manual-semantic-apocalipsa.mjs")
+
 const mateiRomanianFix = spawnSync("python3", ["scripts/fix_nt_matei_direct_romanian.py"], { stdio: "inherit" })
 if (mateiRomanianFix.status !== 0) {
   console.error(`[Matei reviewed Romanian normalization] exited with status ${mateiRomanianFix.status}`)
