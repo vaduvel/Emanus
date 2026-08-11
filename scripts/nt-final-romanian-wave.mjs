@@ -139,7 +139,9 @@ export const FINAL_ROMANIAN_SAFE_REPLACEMENTS = new Map([
   ["suprafata", "suprafața"],
   ["forta", "forța"],
   ["usa", "ușa"],
-  ["mana", "mâna"],
+  // "mana" is deliberately excluded: Romanian "mana" can mean biblical manna
+  // (e.g. "mana ascunsă" in Apocalipsa 2:17), while "mâna" means "the hand".
+  // It therefore belongs to contextual review, not this context-free safe map.
   ["randuiala", "rânduiala"],
   ["masura", "măsura"],
   ["impotriva", "împotriva"],
