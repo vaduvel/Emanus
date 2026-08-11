@@ -1,0 +1,144 @@
+name: Transcribe Philippians Semantic Sources Once
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-nt-integration-clean
+    paths:
+      - .github/workflows/transcribe-filipeni-semantic-once.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  transcribe:
+    name: Transcribe ${{ matrix.id }}
+    runs-on: ubuntu-22.04
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - id: filipeni-vbv-01
+            source_url: https://www.cfcindia.com/verse-by-verse/01phiippians-chapter-11-to-chapter-27
+            audio_url: https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt11-philippians-chapter-1-1-to-chapter-2-7.mp3
+            source_range: Philippians 1:1-2:7
+          - id: filipeni-vbv-02
+            source_url: https://www.cfcindia.com/verse-by-verse/02philippians-chapter-25-to-chapter-230
+            audio_url: https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt11-philippians-chapter-2-5-to-chapter-2-30.mp3
+            source_range: Philippians 2:5-2:30
+          - id: filipeni-vbv-03
+            source_url: https://www.cfcindia.com/verse-by-verse/03philippians-chapter-31-to-chapter-319
+            audio_url: https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt11-philippians-chapter-3-1-to-chapter-3-19.mp3
+            source_range: Philippians 3:1-3:19
+          - id: filipeni-vbv-04
+            source_url: https://www.cfcindia.com/verse-by-verse/04philippians-chapter-317-to-chapter-423
+            audio_url: https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt11-philippians-chapter-3-17-to-chapter-4-23.mp3
+            source_range: Philippians 3:17-4:23
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Configure isolated exact source
+        env:
+          SOURCE_ID: ${{ matrix.id }}
+          SOURCE_URL: ${{ matrix.source_url }}
+          AUDIO_URL: ${{ matrix.audio_url }}
+          SOURCE_RANGE: ${{ matrix.source_range }}
+        run: |
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          p = Path('docs/data/biblia-explicata/nt-semantic-manual-review-status.json')
+          d = json.loads(p.read_text(encoding='utf-8'))
+          d['currentBook'] = 'filipeni'
+          d['currentBookUnits'] = 19
+          d['manualDecisionsFrozen'] = 0
+          d['officialAudioSources'] = [{
+              'id': os.environ['SOURCE_ID'],
+              'officialSourceUrl': os.environ['SOURCE_URL'],
+              'officialAudioUrl': os.environ['AUDIO_URL'],
+              'sourceRange': os.environ['SOURCE_RANGE'] + '; semantic target: complete covered Philippians units',
+          }]
+          p.write_text(json.dumps(d, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          PY
+
+      - name: Transcribe official CFC episode
+        env:
+          NT_TRANSCRIPTION_SOURCE_ID: ${{ matrix.id }}
+          NT_TRANSCRIPTION_MODEL: small.en
+        run: |
+          set -euo pipefail
+          python3 scripts/transcribe_nt_current_official_audio.py
+          test -s "docs/data/biblia-explicata/nt-official-transcripts/${{ matrix.id }}.json"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: transcript-${{ matrix.id }}
+          path: docs/data/biblia-explicata/nt-official-transcripts/${{ matrix.id }}.json
+          if-no-files-found: error
+          retention-days: 1
+
+  persist:
+    name: Persist Philippians official transcripts
+    needs: transcribe
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 0
+          persist-credentials: true
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: transcript-filipeni-vbv-*
+          path: /tmp/filipeni-transcripts
+          merge-multiple: true
+
+      - name: Validate, persist and self-remove
+        run: |
+          set -euo pipefail
+          for n in 01 02 03 04; do
+            id="filipeni-vbv-${n}"
+            test -s "/tmp/filipeni-transcripts/${id}.json"
+            cp "/tmp/filipeni-transcripts/${id}.json" "docs/data/biblia-explicata/nt-official-transcripts/${id}.json"
+            python3 - "$id" <<'PY'
+          import json, re, sys
+          from pathlib import Path
+          source_id = sys.argv[1]
+          p = Path('docs/data/biblia-explicata/nt-official-transcripts') / f'{source_id}.json'
+          d = json.loads(p.read_text(encoding='utf-8'))
+          assert d['schema'] == 'emanus-nt-official-audio-transcript-v1'
+          assert d['bookId'] == 'filipeni'
+          assert d['sourceId'] == source_id
+          assert re.fullmatch(r'sha256:[0-9a-f]{64}', d['officialAudioSha256'])
+          assert re.fullmatch(r'sha256:[0-9a-f]{64}', d['transcriptSha256'])
+          assert d['wordCount'] >= 1500
+          assert d['segmentCount'] == len(d['segments']) > 0
+          print(source_id, d['wordCount'], d['transcriptSha256'])
+          PY
+          done
+
+          git rm .github/workflows/transcribe-filipeni-semantic-once.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/biblia-explicata/nt-official-transcripts/filipeni-vbv-*.json
+          git commit -m "Persist official Philippians VBV transcripts"
+          for attempt in 1 2 3 4; do
+            git fetch origin agent/biblia-explicata-nt-integration-clean
+            if git rebase FETCH_HEAD && git push origin HEAD:agent/biblia-explicata-nt-integration-clean; then
+              exit 0
+            fi
+            git rebase --abort || true
+            echo "Philippians transcript persistence raced with branch update; retrying ($attempt/4)."
+          done
+          exit 1
