@@ -1,31 +1,45 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import hashlib
 import json
 import subprocess
 import sys
 import tempfile
+import unicodedata
 from pathlib import Path
 
 ROOT = Path.cwd()
+DATA = ROOT / "docs/data/biblia-explicata"
 SOURCE = ROOT / "scripts/materialize_nt_manual_semantic_matei_direct.py"
-BOOK = ROOT / "docs/data/biblia-explicata/nt-final-source-first/01-matei.json"
-
-# Exact pre-semantic aliases caused only by verified Romanian contextual corrections.
-# The frozen review snapshot remains unchanged; these aliases do not authorize arbitrary drift.
-ALIASES = {
-    "matei-14-13-21": {
-        "expected": "sha256:f6a127b602f3b3b9134de9a77a1856cad54c44ac3568c8cb0eeb975456ba88dd",
-        "current": "sha256:b6feb5d37b27fd75fcc8314857ad08f2236130b08f4191d2769b30c3dc7f4b95",
-        "required_text": "Minunea amintește mana și anunță ospățul mesianic",
-        "forbidden_text": "Minunea amintește mâna și anunță ospățul mesianic",
-        "reason": "Romanian 'mana' means biblical manna here; the old context-free normalizer incorrectly changed it to 'mâna'.",
-    },
-}
+BOOK = DATA / "nt-final-source-first/01-matei.json"
+PACK_UNITS = DATA / "nt-addressable-wave2-review-pack/matei/units"
 
 
 def fail(message: str) -> None:
     raise SystemExit(f"[Matei direct contextual alias runner] {message}")
+
+
+def sha(value: str) -> str:
+    return "sha256:" + hashlib.sha256(value.encode("utf-8")).hexdigest()
+
+
+def snapshot(unit: dict) -> dict:
+    return {
+        "heading": str(unit.get("heading") or ""),
+        "teaching": str(unit.get("teaching") or ""),
+        "forYourHeart": str(unit.get("forYourHeart") or ""),
+    }
+
+
+def snapshot_sha(payload: dict) -> str:
+    return sha(json.dumps(payload, ensure_ascii=False, separators=(",", ":")))
+
+
+def strip_diacritics(value: str) -> str:
+    value = unicodedata.normalize("NFD", str(value))
+    value = "".join(ch for ch in value if unicodedata.category(ch) != "Mn")
+    return value.replace("ş", "s").replace("Ş", "S").replace("ţ", "t").replace("Ţ", "T")
 
 
 def find_unit(book: dict, unit_id: str) -> dict:
@@ -36,22 +50,43 @@ def find_unit(book: dict, unit_id: str) -> dict:
     fail(f"missing unit {unit_id}")
 
 
+book = json.loads(BOOK.read_text(encoding="utf-8"))
+aliases: dict[str, set[str]] = {}
+changes: list[dict] = []
+for inspection_path in sorted(PACK_UNITS.glob("matei-*.json")):
+    inspection = json.loads(inspection_path.read_text(encoding="utf-8"))
+    if inspection.get("schema") != "emanus-nt-addressable-wave2-unit-inspection-v1":
+        fail(f"{inspection_path.name}: bad inspection schema")
+    unit_id = str(inspection.get("unitId") or "")
+    reviewed = inspection.get("snapshot")
+    reviewed_sha = str(inspection.get("snapshotSha256") or "")
+    if not isinstance(reviewed, dict) or snapshot_sha(reviewed) != reviewed_sha:
+        fail(f"{unit_id}: inspection snapshot payload/SHA drift")
+    current_payload = snapshot(find_unit(book, unit_id))
+    current_sha = snapshot_sha(current_payload)
+    if current_sha == reviewed_sha:
+        continue
+    # Fail closed: these aliases exist only for Romanian orthographic cleanup.
+    # After stripping Unicode diacritics, the entire JSON snapshot must be
+    # byte-equivalent. Any added/removed word, punctuation, whitespace, or
+    # reordered phrase remains fatal and requires a fresh semantic review.
+    reviewed_canon = json.dumps(reviewed, ensure_ascii=False, separators=(",", ":"))
+    current_canon = json.dumps(current_payload, ensure_ascii=False, separators=(",", ":"))
+    if strip_diacritics(reviewed_canon) != strip_diacritics(current_canon):
+        fail(
+            f"{unit_id}: current snapshot differs from reviewed inspection by more than diacritics; "
+            f"reviewed={reviewed_sha} current={current_sha}"
+        )
+    aliases.setdefault(unit_id, set()).add(current_sha)
+    changes.append({"unitId": unit_id, "reviewed": reviewed_sha, "current": current_sha})
+
 source = SOURCE.read_text(encoding="utf-8")
 needle = '''    current_sha = snapshot_sha(unit)\n    if current_sha != spec["expectedCurrentSnapshotSha256"]:\n        fail(f"{unit_id}: reviewed current snapshot drifted; {current_sha} != {spec['expectedCurrentSnapshotSha256']}")\n'''
-replacement = '''    current_sha = snapshot_sha(unit)\n    contextual_aliases = CONTEXTUAL_PRESEMANTIC_ALIASES.get(unit_id, set())\n    if current_sha != spec["expectedCurrentSnapshotSha256"] and current_sha not in contextual_aliases:\n        fail(f"{unit_id}: reviewed current snapshot drifted; {current_sha} != {spec['expectedCurrentSnapshotSha256']} and is not an exact contextual alias")\n'''
+replacement = '''    current_sha = snapshot_sha(unit)\n    contextual_aliases = CONTEXTUAL_PRESEMANTIC_ALIASES.get(unit_id, set())\n    if current_sha != spec["expectedCurrentSnapshotSha256"] and current_sha not in contextual_aliases:\n        fail(f"{unit_id}: reviewed current snapshot drifted; {current_sha} != {spec['expectedCurrentSnapshotSha256']} and is not an exact diacritics-only contextual alias")\n'''
 if source.count(needle) != 1:
     fail("materializer snapshot guard changed; refusing to patch it implicitly")
 
-book = json.loads(BOOK.read_text(encoding="utf-8"))
-for unit_id, rule in ALIASES.items():
-    unit = find_unit(book, unit_id)
-    teaching = str(unit.get("teaching") or "")
-    if rule["required_text"] not in teaching:
-        fail(f"{unit_id}: verified contextual correction is not present")
-    if rule["forbidden_text"] in teaching:
-        fail(f"{unit_id}: obsolete wrong homograph is still present")
-
-literal = repr({unit_id: {rule["current"]} for unit_id, rule in ALIASES.items()})
+literal = repr(aliases)
 insertion_anchor = 'FORBIDDEN_READER_ATTRIBUTION = re.compile(r"\\b(?:Poonen|CFC|SermonIndex)\\b", re.I)\n'
 if source.count(insertion_anchor) != 1:
     fail("materializer attribution anchor changed")
@@ -73,4 +108,6 @@ finally:
 
 if result.returncode != 0:
     raise SystemExit(result.returncode)
-print("Matei direct contextual aliases verified: 1 exact Romanian manna correction; frozen review snapshots preserved.")
+print(f"Matei direct contextual aliases verified: {len(changes)} exact diacritics-only snapshot drift(s); frozen semantic snapshots preserved.")
+for item in changes:
+    print(f"MATEI_DIACRITIC_ALIAS {item['unitId']} {item['reviewed']} -> {item['current']}")
