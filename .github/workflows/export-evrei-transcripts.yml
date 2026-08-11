@@ -68,48 +68,9 @@ jobs:
           cp docs/data/biblia-explicata/nt-final-source-first/19-evrei.json /tmp/evrei-transcripts/19-evrei.json
           cp docs/data/biblia-explicata/nt-direct-transcript-coverage.json /tmp/evrei-transcripts/nt-direct-transcript-coverage.json
 
-      - name: Recover exact Iacov source media
-        run: |
-          set -euo pipefail
-          mkdir -p /tmp/iacov-source
-          python3 - <<'PY'
-          import html
-          import json
-          import re
-          import urllib.parse
-          import urllib.request
-          from pathlib import Path
-
-          page='https://www.cfcindia.com/through-the-bible/james'
-          req=urllib.request.Request(page,headers={'User-Agent':'Emanus-Editorial-Research/1.0'})
-          with urllib.request.urlopen(req,timeout=60) as res:
-              final=res.geturl(); raw=res.read().decode('utf-8',errors='replace')
-          decoded=html.unescape(raw).replace('\\/','/')
-          candidates=[]
-          for pattern in [
-              r'https?://[^\"\'<>\s]+?\.mp3(?:\?[^\"\'<>\s]*)?',
-              r'(?:src|href)=[\"\']([^\"\']+?\.mp3(?:\?[^\"\']*)?)[\"\']',
-          ]:
-              for m in re.finditer(pattern,decoded,flags=re.I):
-                  value=m.group(1) if m.lastindex else m.group(0)
-                  value=urllib.parse.urljoin(final,value)
-                  if value not in candidates: candidates.append(value)
-          if not candidates: raise SystemExit('No official CFC MP3 found for James')
-          print('JAMES_AUDIO',json.dumps(candidates,indent=2))
-          Path('/tmp/iacov-source/cfc-source.json').write_text(json.dumps({'officialSourceUrl':page,'finalPageUrl':final,'audioCandidates':candidates},indent=2)+'\n',encoding='utf-8')
-          PY
-          cp docs/data/biblia-explicata/nt-final-source-first/20-iacov.json /tmp/iacov-source/20-iacov.json
-
       - uses: actions/upload-artifact@v4
         with:
           name: evrei-full-transcripts
           path: /tmp/evrei-transcripts
-          if-no-files-found: error
-          retention-days: 1
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: iacov-source-recovery
-          path: /tmp/iacov-source
           if-no-files-found: error
           retention-days: 1
