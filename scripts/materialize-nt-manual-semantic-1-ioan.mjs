@@ -23,6 +23,11 @@ if (wave2UnitFiles.status !== 0) {
   process.exit(wave2UnitFiles.status ?? 1)
 }
 
+const mateiDirectCountFix = spawnSync("python3", ["scripts/fix_nt_matei_direct_review_counts.py"], { stdio: "inherit" })
+if (mateiDirectCountFix.status !== 0) {
+  console.error(`[Matei direct semantic review totals] exited with status ${mateiDirectCountFix.status}`)
+  process.exit(mateiDirectCountFix.status ?? 1)
+}
 const mateiDirectReview = spawnSync("python3", ["scripts/materialize_nt_manual_semantic_matei_direct.py"], { stdio: "inherit" })
 if (mateiDirectReview.status !== 0) {
   console.error(`[Matei direct semantic review] exited with status ${mateiDirectReview.status}`)
