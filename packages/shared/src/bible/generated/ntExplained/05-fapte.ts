@@ -1164,7 +1164,7 @@ export const NT_BOOK_05: BibleBook = {
       "number": 18,
       "title": "Fapte 18 — Nu te teme, căci Eu sunt cu tine",
       "summary": "În Corint, Pavel lucrează cu Aquila și Priscila, primește încurajarea Domnului și rămâne să învețe Cuvântul. Mai târziu, un cuplu matur îl ajută discret pe Apolo să înțeleagă mai exact calea lui Dumnezeu.",
-      "literaryContext": "Capitolul încheie a două călătorie și începe tranziția spre a treia. Dumnezeu zidește lucrarea prin echipe, muncă obișnuită, perseverență și corectare smerită.",
+      "literaryContext": "Capitolul încheie a doua călătorie și începe tranziția spre a treia. Dumnezeu zidește lucrarea prin echipe, muncă obișnuită, perseverență și corectare smerită.",
       "historicalContext": "Corintul era un oraș comercial prosper și cunoscut pentru imoralitate. Meseria de făcător de corturi îi permitea lui Pavel să se întrețină, iar sinagoga oferea cadrul inițial al mărturiei.",
       "units": [
         {

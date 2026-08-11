@@ -164,7 +164,7 @@ export const NT_BOOK_01: BibleBook = {
       "number": 3,
       "title": "Matei 3 — Pocăiți-vă: Împărăția s-a apropiat",
       "summary": "Ioan Botezătorul pregătește calea Domnului chemând la pocăință și la roade vrednice de ea. Isus intră în Iordan, este mărturisit de Tatăl și uns de Duhul Sfânt.",
-      "literaryContext": "După anii tăcuți din Nazaret, glasul lui Ioan deschide lucrarea publică. Prima jumătate pregătește poporul, iar a două Îl arată pe Cel pentru care s-a făcut pregătirea. Apa lui Ioan arată mărturisirea și întoarcerea; Cel ce vine aduce Duhul Sfânt și judecata dreaptă.",
+      "literaryContext": "După anii tăcuți din Nazaret, glasul lui Ioan deschide lucrarea publică. Prima jumătate pregătește poporul, iar a doua Îl arată pe Cel pentru care s-a făcut pregătirea. Apa lui Ioan arată mărturisirea și întoarcerea; Cel ce vine aduce Duhul Sfânt și judecata dreaptă.",
       "historicalContext": "Pustiul Iudeii purta amintirea exodului și a prorocilor. Botezul lui Ioan nu era spălarea obișnuită repetată, ci un semn public al pocăinței în vederea venirii lui Mesia. Fariseii puneau accent pe curăție și tradiție, iar saducheii erau legați de conducerea preoțească; Ioan nu le atacă eticheta, ci siguranța fără rod.",
       "units": [
         {
@@ -1587,7 +1587,7 @@ export const NT_BOOK_01: BibleBook = {
       "number": 15,
       "title": "Matei 15 — Inima, credința și pâinea pentru neamuri",
       "summary": "Isus demască tradiția care anulează porunca, arată că necurăția izvorăște din inimă, laudă credința unei femei canaanite și hrănește o nouă mulțime.",
-      "literaryContext": "Capitolul merge din disputa cu liderii de la Ierusalim spre ținutul Tirului și Sidonului, apoi într-un loc pustiu. Granițele curatului și necuratului sunt reașezate în jurul inimii și al lui Isus. Femeia dintre neamuri anticipează masa deschisă mai larg, iar a două hrănire arată că mila nu s-a epuizat.",
+      "literaryContext": "Capitolul merge din disputa cu liderii de la Ierusalim spre ținutul Tirului și Sidonului, apoi într-un loc pustiu. Granițele curatului și necuratului sunt reașezate în jurul inimii și al lui Isus. Femeia dintre neamuri anticipează masa deschisă mai larg, iar a doua hrănire arată că mila nu s-a epuizat.",
       "historicalContext": "«Dat lui Dumnezeu» putea fi folosit ca formulă prin care bunurile erau declarate dedicate și retrase de la sprijinirea părinților. Spălarea mâinilor din controversă era rituală, nu o discuție despre igienă. Canaanita poartă numele vechilor dușmani ai Israelului, iar Tirul și Sidonul erau teritorii dintre neamuri.",
       "units": [
         {
