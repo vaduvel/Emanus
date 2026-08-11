@@ -2,42 +2,24 @@
   "schema": "emanus-nt-semantic-manual-review-status-v1",
   "status": "in_progress",
   "policy": "Manual semantic review is allowed only against complete transcript content with deterministic transcript SHA-256 evidence. Source locators or transcript addressability alone never count as reviewed.",
-  "currentBook": "1-timotei",
-  "currentBookUnits": 22,
-  "manualDecisionsFrozen": 22,
+  "currentBook": "apocalipsa",
+  "currentBookUnits": 54,
+  "manualDecisionsFrozen": 53,
   "officialAudioSources": [
     {
-      "id": "1-timotei-vbv-01",
-      "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/1-Timothy",
-      "officialAudioUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt15-1timothy-chapter-1-1-to-chapter-2-9.mp3",
-      "sourceRange": "1 Timothy 1:1-2:9"
-    },
-    {
-      "id": "1-timotei-vbv-02",
-      "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/1-Timothy",
-      "officialAudioUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt15-1timothy-chapter-2-8-to-chapter-4-2.mp3",
-      "sourceRange": "1 Timothy 2:8-4:2"
-    },
-    {
-      "id": "1-timotei-vbv-03",
-      "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/1-Timothy",
-      "officialAudioUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt15-1timothy-chapter-4-3-to-chapter-5-13.mp3",
-      "sourceRange": "1 Timothy 4:1-5:13"
-    },
-    {
-      "id": "1-timotei-vbv-04",
-      "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/1-Timothy",
-      "officialAudioUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt15-1timothy-chapter-5-11-to-chapter-6-21.mp3",
-      "sourceRange": "1 Timothy 5:11-6:21"
+      "id": "apocalipsa-vbv-07",
+      "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/07revelation-chapter-79-to-chapter-107",
+      "officialAudioUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt27-revelation-chapter-7-9-to-chapter-10-7.mp3",
+      "sourceRange": "Revelation 7:9-10:7; semantic recovery target: Revelation 10:1-7"
     }
   ],
   "lastVerifiedCoverage": {
     "rawTranscriptReviewed": 73,
-    "semanticTranscriptReviewed": 193,
-    "totalReviewedRawPlusSemantic": 266,
-    "pendingSemanticReview": 704,
+    "semanticTranscriptReviewed": 503,
+    "totalReviewedRawPlusSemantic": 576,
+    "pendingSemanticReview": 394,
     "staleSemanticReview": 0,
     "malformedSemanticEvidence": 0,
-    "note": "Iacov is closed at 15/15 semantic decisions (7 material rewrites / 8 keep). Filimon remains 5/5 semantically valid after the fail-closed final Biblia Emanus quote rebind. 1 Timotei has four persisted official CFC Verse-by-Verse transcripts covering 1:1-6:21 and 22 frozen manual semantic decisions awaiting hash-bound materialization."
+    "note": "Matei direct review is durably integrated at 125/125 direct units with final semantic hash consistency 503/503 globally. Revelation has 52 valid direct-addressable units manually frozen plus Revelation 21:9-21 recovered from complete persisted representation 10. Revelation 10:1-7 is the only remaining Revelation unit awaiting complete official CFC episode-07 audio transcription before the book can be frozen into the semantic ledger."
   }
 }
