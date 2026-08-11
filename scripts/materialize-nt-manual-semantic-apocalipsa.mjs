@@ -142,10 +142,17 @@ for (const [unitId, spec] of specs.entries()) {
   if (!finalLocated || !sourceLocated) fail(`${unitId}: missing from current corpus`)
   if (finalLocated.chapter !== spec.chapter || sourceLocated.chapter !== spec.chapter) fail(`${unitId}: chapter drift`)
 
-  const finalPreHash = sha(snap(finalLocated.unit))
-  const sourcePreHash = sha(snap(sourceLocated.unit))
-  if (finalPreHash !== spec.expectedCurrentSnapshotSha256) fail(`${unitId}: final reviewed snapshot drifted; ${finalPreHash} != ${spec.expectedCurrentSnapshotSha256}`)
-  if (sourcePreHash !== spec.expectedCurrentSnapshotSha256) fail(`${unitId}: source-first reviewed snapshot drifted; ${sourcePreHash} != ${spec.expectedCurrentSnapshotSha256}`)
+  const teaching = spec.action === "rewrite" ? spec.revisedTeaching : finalLocated.unit.teaching
+  const forYourHeart = Object.prototype.hasOwnProperty.call(spec, "revisedForYourHeart")
+    ? spec.revisedForYourHeart
+    : finalLocated.unit.forYourHeart
+  const expectedFinalHash = sha(snap(finalLocated.unit, teaching, forYourHeart))
+  const finalCurrentHash = sha(snap(finalLocated.unit))
+  const sourceCurrentHash = sha(snap(sourceLocated.unit))
+  const allowedHashes = new Set([spec.expectedCurrentSnapshotSha256, expectedFinalHash])
+  if (!allowedHashes.has(finalCurrentHash)) fail(`${unitId}: final snapshot is neither reviewed pre-edit nor exact approved result; ${finalCurrentHash}`)
+  if (!allowedHashes.has(sourceCurrentHash)) fail(`${unitId}: source-first snapshot is neither reviewed pre-edit nor exact approved result; ${sourceCurrentHash}`)
+  if (finalCurrentHash !== sourceCurrentHash) fail(`${unitId}: final/source-first semantic snapshot mismatch; ${finalCurrentHash} != ${sourceCurrentHash}`)
 
   let transcriptEvidence
   const inspectionPath = path.join(PACK, "units", `${unitId}.json`)
@@ -174,10 +181,6 @@ for (const [unitId, spec] of specs.entries()) {
     recoveredApproved += 1
   }
 
-  const teaching = spec.action === "rewrite" ? spec.revisedTeaching : finalLocated.unit.teaching
-  const forYourHeart = Object.prototype.hasOwnProperty.call(spec, "revisedForYourHeart")
-    ? spec.revisedForYourHeart
-    : finalLocated.unit.forYourHeart
   if (typeof teaching !== "string" || teaching.trim().length < 80) fail(`${unitId}: final teaching too short`)
   if (/\b(?:Poonen|CFC|SermonIndex)\b/i.test(teaching)) fail(`${unitId}: source attribution leaked into reader copy`)
 
@@ -187,7 +190,7 @@ for (const [unitId, spec] of specs.entries()) {
     unitId,
     status: "approved-against-transcript",
     action: spec.action,
-    reviewedTeachingSha256: sha(snap(finalLocated.unit, teaching, forYourHeart)),
+    reviewedTeachingSha256: expectedFinalHash,
     transcriptEvidence,
     rationale: spec.rationale,
     reviewer: REVIEWER,
