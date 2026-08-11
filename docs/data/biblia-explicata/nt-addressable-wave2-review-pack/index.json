@@ -1,6 +1,7 @@
 {
-  "schema": "emanus-nt-addressable-wave2-review-pack-v1",
-  "policy": "Inspection-only artifact. Direct addressability and provenance do not create semantic approval. Every unit must be reviewed sentence-level against the complete transcript text in its pack before a keep/rewrite decision is frozen.",
+  "schema": "emanus-nt-addressable-wave2-review-pack-v2",
+  "policy": "Inspection-only artifact. Direct addressability and provenance do not create semantic approval. Each transcript is split deterministically into contiguous word chunks whose concatenation reproduces the complete persisted transcript representation.",
+  "chunkWords": 2200,
   "targetUnits": 178,
   "books": {
     "matei": {
@@ -13,10 +14,37 @@
       ],
       "representations": [
         {
-          "file": "matei/01.json",
+          "metaFile": "matei/01/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/matthew-ch1024-1124/",
           "transcriptSha256": "sha256:c39bc1ad7490d8c66f74edd82fdd9a484f415ff7a035606c900226aafc4300e0",
           "wordCount": 8829,
+          "chunks": [
+            {
+              "file": "matei/01/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "matei/01/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "matei/01/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "matei/01/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8800
+            },
+            {
+              "file": "matei/01/chunk-05.json",
+              "startWord": 8801,
+              "endWord": 8829
+            }
+          ],
           "unitIds": [
             "matei-10-24-33",
             "matei-10-34-39",
@@ -26,10 +54,32 @@
           ]
         },
         {
-          "file": "matei/02.json",
+          "metaFile": "matei/02/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/matthew-ch11-222/",
           "transcriptSha256": "sha256:5b0ed32e7492d98b201459710bdb2bf0aeaa0da67ece8ea0b28ac488fa1162e5",
           "wordCount": 7987,
+          "chunks": [
+            {
+              "file": "matei/02/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "matei/02/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "matei/02/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "matei/02/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 7987
+            }
+          ],
           "unitIds": [
             "matei-1-1-17",
             "matei-1-18-25",
@@ -39,10 +89,37 @@
           ]
         },
         {
-          "file": "matei/03.json",
+          "metaFile": "matei/03/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/matthew-ch1125-1230/",
           "transcriptSha256": "sha256:e7ff8be8243787180578d38d1c9c8bd1015e092c95b066bbc7f15bdf8a98b196",
           "wordCount": 8901,
+          "chunks": [
+            {
+              "file": "matei/03/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "matei/03/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "matei/03/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "matei/03/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8800
+            },
+            {
+              "file": "matei/03/chunk-05.json",
+              "startWord": 8801,
+              "endWord": 8901
+            }
+          ],
           "unitIds": [
             "matei-11-25-27",
             "matei-11-28-30",
@@ -52,10 +129,32 @@
           ]
         },
         {
-          "file": "matei/04.json",
+          "metaFile": "matei/04/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/matthew-ch1231-1313/",
           "transcriptSha256": "sha256:05a3e5aa96977714fceef8c40c46f0f684521375663a5f708d0cca422d26ceea",
           "wordCount": 8758,
+          "chunks": [
+            {
+              "file": "matei/04/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "matei/04/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "matei/04/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "matei/04/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8758
+            }
+          ],
           "unitIds": [
             "matei-12-22-32",
             "matei-12-33-37",
@@ -65,10 +164,32 @@
           ]
         },
         {
-          "file": "matei/05.json",
+          "metaFile": "matei/05/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/matthew-ch1314-43/",
           "transcriptSha256": "sha256:80a4179c15a32b8d462bf055598ee7bd79f47b73314701b623de222676598dc3",
           "wordCount": 8438,
+          "chunks": [
+            {
+              "file": "matei/05/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "matei/05/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "matei/05/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "matei/05/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8438
+            }
+          ],
           "unitIds": [
             "matei-13-1-23",
             "matei-13-24-30",
@@ -77,10 +198,37 @@
           ]
         },
         {
-          "file": "matei/06.json",
+          "metaFile": "matei/06/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/matthew-ch1344-1421/",
           "transcriptSha256": "sha256:bea8d775507f775a8acbaa0d4fa7718520fde5af963d2d1c48bb8fe1bc1d5359",
           "wordCount": 9216,
+          "chunks": [
+            {
+              "file": "matei/06/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "matei/06/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "matei/06/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "matei/06/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8800
+            },
+            {
+              "file": "matei/06/chunk-05.json",
+              "startWord": 8801,
+              "endWord": 9216
+            }
+          ],
           "unitIds": [
             "matei-13-44-46",
             "matei-13-47-52",
@@ -90,10 +238,37 @@
           ]
         },
         {
-          "file": "matei/07.json",
+          "metaFile": "matei/07/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/matthew-ch1422-1612/",
           "transcriptSha256": "sha256:a4f70c8bb9ad4f332150caae64ff8f64f844d8ef58634d86b2ac9b6723c41aaa",
           "wordCount": 8859,
+          "chunks": [
+            {
+              "file": "matei/07/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "matei/07/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "matei/07/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "matei/07/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8800
+            },
+            {
+              "file": "matei/07/chunk-05.json",
+              "startWord": 8801,
+              "endWord": 8859
+            }
+          ],
           "unitIds": [
             "matei-14-22-33",
             "matei-14-34-36",
@@ -104,10 +279,32 @@
           ]
         },
         {
-          "file": "matei/08.json",
+          "metaFile": "matei/08/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/matthew-ch1613-178/",
           "transcriptSha256": "sha256:fa8ba422b2d97d5cf07e96e3bd90b514fb6a4ee24dc97afe5922c9b8ff41f0f6",
           "wordCount": 7164,
+          "chunks": [
+            {
+              "file": "matei/08/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "matei/08/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "matei/08/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "matei/08/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 7164
+            }
+          ],
           "unitIds": [
             "matei-16-13-20",
             "matei-16-21-23",
@@ -116,10 +313,32 @@
           ]
         },
         {
-          "file": "matei/09.json",
+          "metaFile": "matei/09/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/matthew-ch179-1820/",
           "transcriptSha256": "sha256:fc62834f14298d740fc52adc2225ad5b7aee1a439a097fdfbe17291c519aa1bb",
           "wordCount": 7295,
+          "chunks": [
+            {
+              "file": "matei/09/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "matei/09/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "matei/09/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "matei/09/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 7295
+            }
+          ],
           "unitIds": [
             "matei-17-1-13",
             "matei-17-14-21",
@@ -131,10 +350,32 @@
           ]
         },
         {
-          "file": "matei/10.json",
+          "metaFile": "matei/10/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/matthew-ch1821-1930/",
           "transcriptSha256": "sha256:d432389492b0345e6b09af21553b571b157a4afe9ca81425347aff33cab32fd5",
           "wordCount": 7719,
+          "chunks": [
+            {
+              "file": "matei/10/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "matei/10/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "matei/10/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "matei/10/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 7719
+            }
+          ],
           "unitIds": [
             "matei-18-21-35",
             "matei-19-1-12",
@@ -144,10 +385,32 @@
           ]
         },
         {
-          "file": "matei/11.json",
+          "metaFile": "matei/11/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/matthew-ch201-2122/",
           "transcriptSha256": "sha256:0f6e70e6081483b8d53370bac6b0949fd2313d742751a2c017e760fbb665e089",
           "wordCount": 7894,
+          "chunks": [
+            {
+              "file": "matei/11/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "matei/11/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "matei/11/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "matei/11/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 7894
+            }
+          ],
           "unitIds": [
             "matei-20-1-16",
             "matei-20-17-28",
@@ -158,10 +421,32 @@
           ]
         },
         {
-          "file": "matei/12.json",
+          "metaFile": "matei/12/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/matthew-ch2123-236/",
           "transcriptSha256": "sha256:995146e7bfb5c5739c76b0e056ea45a3488231a7dc26584b8e92310b57c0f294",
           "wordCount": 7644,
+          "chunks": [
+            {
+              "file": "matei/12/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "matei/12/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "matei/12/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "matei/12/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 7644
+            }
+          ],
           "unitIds": [
             "matei-21-23-32",
             "matei-21-33-46",
@@ -174,10 +459,32 @@
           ]
         },
         {
-          "file": "matei/13.json",
+          "metaFile": "matei/13/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/matthew-ch223-47/",
           "transcriptSha256": "sha256:8bdb6074312edb4298e2a6c5901daf14fc4c608f40088ccb487afa52dd9831d9",
           "wordCount": 8477,
+          "chunks": [
+            {
+              "file": "matei/13/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "matei/13/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "matei/13/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "matei/13/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8477
+            }
+          ],
           "unitIds": [
             "matei-2-19-23",
             "matei-3-1-12",
@@ -186,10 +493,32 @@
           ]
         },
         {
-          "file": "matei/14.json",
+          "metaFile": "matei/14/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/matthew-ch237-2411/",
           "transcriptSha256": "sha256:7653f1a0aa0b0919b25757a2758dcfc95157a54514495c88cf59783d039fe818",
           "wordCount": 7631,
+          "chunks": [
+            {
+              "file": "matei/14/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "matei/14/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "matei/14/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "matei/14/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 7631
+            }
+          ],
           "unitIds": [
             "matei-23-1-12",
             "matei-23-13-22",
@@ -200,10 +529,37 @@
           ]
         },
         {
-          "file": "matei/15.json",
+          "metaFile": "matei/15/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/matthew-ch2412-2513/",
           "transcriptSha256": "sha256:1b482cc9a829766a8becb926c59cae9e70ffa9e84389433db21f4e72f3e23325",
           "wordCount": 8984,
+          "chunks": [
+            {
+              "file": "matei/15/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "matei/15/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "matei/15/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "matei/15/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8800
+            },
+            {
+              "file": "matei/15/chunk-05.json",
+              "startWord": 8801,
+              "endWord": 8984
+            }
+          ],
           "unitIds": [
             "matei-24-1-14",
             "matei-24-15-28",
@@ -214,10 +570,37 @@
           ]
         },
         {
-          "file": "matei/16.json",
+          "metaFile": "matei/16/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/matthew-ch2514-2632/",
           "transcriptSha256": "sha256:9bf6e136415a8c8866a14a167849b59e20e88d51fcac7660a60e0d6eed1e60be",
           "wordCount": 9387,
+          "chunks": [
+            {
+              "file": "matei/16/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "matei/16/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "matei/16/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "matei/16/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8800
+            },
+            {
+              "file": "matei/16/chunk-05.json",
+              "startWord": 8801,
+              "endWord": 9387
+            }
+          ],
           "unitIds": [
             "matei-25-14-30",
             "matei-25-31-46",
@@ -227,10 +610,37 @@
           ]
         },
         {
-          "file": "matei/17.json",
+          "metaFile": "matei/17/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/matthew-ch2633-2731/",
           "transcriptSha256": "sha256:52f8e06b9cb498f307f1771f4e6ba703ea72ab3e0341ae24e7a17ec7bcff631c",
           "wordCount": 8996,
+          "chunks": [
+            {
+              "file": "matei/17/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "matei/17/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "matei/17/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "matei/17/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8800
+            },
+            {
+              "file": "matei/17/chunk-05.json",
+              "startWord": 8801,
+              "endWord": 8996
+            }
+          ],
           "unitIds": [
             "matei-26-31-46",
             "matei-26-47-56",
@@ -242,10 +652,37 @@
           ]
         },
         {
-          "file": "matei/18.json",
+          "metaFile": "matei/18/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/matthew-ch2732-2820/",
           "transcriptSha256": "sha256:4f1995b7940681d8ed0f00f1a059de3dadebf6b5ba1370bc5e083386b9cc1fdb",
           "wordCount": 9685,
+          "chunks": [
+            {
+              "file": "matei/18/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "matei/18/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "matei/18/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "matei/18/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8800
+            },
+            {
+              "file": "matei/18/chunk-05.json",
+              "startWord": 8801,
+              "endWord": 9685
+            }
+          ],
           "unitIds": [
             "matei-27-27-44",
             "matei-27-45-56",
@@ -257,10 +694,32 @@
           ]
         },
         {
-          "file": "matei/19.json",
+          "metaFile": "matei/19/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/matthew-ch48-55/",
           "transcriptSha256": "sha256:901bc75da7fec75bd39c1ff588666fbed5981fed056797e5ffe87d8b85a75309",
           "wordCount": 8389,
+          "chunks": [
+            {
+              "file": "matei/19/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "matei/19/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "matei/19/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "matei/19/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8389
+            }
+          ],
           "unitIds": [
             "matei-4-1-11",
             "matei-4-12-17",
@@ -270,10 +729,32 @@
           ]
         },
         {
-          "file": "matei/20.json",
+          "metaFile": "matei/20/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/matthew-ch521-48/",
           "transcriptSha256": "sha256:5f918381906dcc19b25639dc554a8334c57d99571c6b701fd8e0e6f77decac0c",
           "wordCount": 8388,
+          "chunks": [
+            {
+              "file": "matei/20/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "matei/20/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "matei/20/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "matei/20/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8388
+            }
+          ],
           "unitIds": [
             "matei-5-21-26",
             "matei-5-27-32",
@@ -283,10 +764,32 @@
           ]
         },
         {
-          "file": "matei/21.json",
+          "metaFile": "matei/21/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/matthew-ch56-520/",
           "transcriptSha256": "sha256:0a857d9c39e9dc8c18f95f42ddd6b4406b1b9b3a05fa9a3f408f73d6ab479bd9",
           "wordCount": 8193,
+          "chunks": [
+            {
+              "file": "matei/21/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "matei/21/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "matei/21/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "matei/21/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8193
+            }
+          ],
           "unitIds": [
             "matei-5-1-12",
             "matei-5-13-16",
@@ -294,10 +797,32 @@
           ]
         },
         {
-          "file": "matei/22.json",
+          "metaFile": "matei/22/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/matthew-ch61-615/",
           "transcriptSha256": "sha256:ae2a3340441eb6c17e52b37516e52b77d5dcb2d89b9c16a148573b830ecca349",
           "wordCount": 8707,
+          "chunks": [
+            {
+              "file": "matei/22/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "matei/22/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "matei/22/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "matei/22/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8707
+            }
+          ],
           "unitIds": [
             "matei-6-1-4",
             "matei-6-14-15",
@@ -306,10 +831,32 @@
           ]
         },
         {
-          "file": "matei/23.json",
+          "metaFile": "matei/23/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/matthew-ch76-29/",
           "transcriptSha256": "sha256:0354e605767ade4d66b380b554a539998dbdd2f2a21c19f24d09de4451327f13",
           "wordCount": 8572,
+          "chunks": [
+            {
+              "file": "matei/23/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "matei/23/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "matei/23/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "matei/23/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8572
+            }
+          ],
           "unitIds": [
             "matei-7-13-14",
             "matei-7-15-23",
@@ -318,10 +865,37 @@
           ]
         },
         {
-          "file": "matei/24.json",
+          "metaFile": "matei/24/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/matthew-ch81-913/",
           "transcriptSha256": "sha256:2be469e61878ca265708d8f6591e29aa85f5fa0c7b70314a508505f7e451f371",
           "wordCount": 8925,
+          "chunks": [
+            {
+              "file": "matei/24/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "matei/24/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "matei/24/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "matei/24/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8800
+            },
+            {
+              "file": "matei/24/chunk-05.json",
+              "startWord": 8801,
+              "endWord": 8925
+            }
+          ],
           "unitIds": [
             "matei-8-1-4",
             "matei-8-14-17",
@@ -334,10 +908,37 @@
           ]
         },
         {
-          "file": "matei/25.json",
+          "metaFile": "matei/25/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/matthew-ch914-1023/",
           "transcriptSha256": "sha256:d38e2c91df931f3c001d839fc10a4d15498d8ea14d35e5db2c084a65e5177452",
           "wordCount": 8823,
+          "chunks": [
+            {
+              "file": "matei/25/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "matei/25/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "matei/25/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "matei/25/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8800
+            },
+            {
+              "file": "matei/25/chunk-05.json",
+              "startWord": 8801,
+              "endWord": 8823
+            }
+          ],
           "unitIds": [
             "matei-10-1-15",
             "matei-10-16-23",
@@ -356,10 +957,32 @@
       ],
       "representations": [
         {
-          "file": "apocalipsa/01.json",
+          "metaFile": "apocalipsa/01/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/revelation-revelation-107-1115/",
           "transcriptSha256": "sha256:650c7c84dd44565bb069d891c48e9252920c26e6c06cb7592527f06a01228313",
           "wordCount": 8661,
+          "chunks": [
+            {
+              "file": "apocalipsa/01/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "apocalipsa/01/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "apocalipsa/01/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "apocalipsa/01/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8661
+            }
+          ],
           "unitIds": [
             "apocalipsa-10-8-11-source-first",
             "apocalipsa-11-1-14-source-first",
@@ -367,20 +990,74 @@
           ]
         },
         {
-          "file": "apocalipsa/02.json",
+          "metaFile": "apocalipsa/02/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/revelation-revelation-11-18/",
           "transcriptSha256": "sha256:68a6109ca3a37ff056bc2505bc7bdd56806c8bb6341ddf44ab2976570d46ee40",
           "wordCount": 9399,
+          "chunks": [
+            {
+              "file": "apocalipsa/02/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "apocalipsa/02/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "apocalipsa/02/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "apocalipsa/02/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8800
+            },
+            {
+              "file": "apocalipsa/02/chunk-05.json",
+              "startWord": 8801,
+              "endWord": 9399
+            }
+          ],
           "unitIds": [
             "apocalipsa-1-1-8-source-first",
             "apocalipsa-1-9-20-source-first"
           ]
         },
         {
-          "file": "apocalipsa/03.json",
+          "metaFile": "apocalipsa/03/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/revelation-revelation-1116-1217/",
           "transcriptSha256": "sha256:432f27255a157674e1f2d310742c720f9f7c57422e14018990a282fc082ce837",
           "wordCount": 8959,
+          "chunks": [
+            {
+              "file": "apocalipsa/03/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "apocalipsa/03/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "apocalipsa/03/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "apocalipsa/03/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8800
+            },
+            {
+              "file": "apocalipsa/03/chunk-05.json",
+              "startWord": 8801,
+              "endWord": 8959
+            }
+          ],
           "unitIds": [
             "apocalipsa-11-15-19-source-first",
             "apocalipsa-12-1-6-source-first",
@@ -389,10 +1066,37 @@
           ]
         },
         {
-          "file": "apocalipsa/04.json",
+          "metaFile": "apocalipsa/04/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/revelation-revelation-119-229/",
           "transcriptSha256": "sha256:29ce42c967edf23acae7ed96e78f955113e7a4b9f18eded1cf40c667a061e439",
           "wordCount": 9548,
+          "chunks": [
+            {
+              "file": "apocalipsa/04/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "apocalipsa/04/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "apocalipsa/04/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "apocalipsa/04/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8800
+            },
+            {
+              "file": "apocalipsa/04/chunk-05.json",
+              "startWord": 8801,
+              "endWord": 9548
+            }
+          ],
           "unitIds": [
             "apocalipsa-1-9-20-source-first",
             "apocalipsa-2-1-7-source-first",
@@ -402,20 +1106,74 @@
           ]
         },
         {
-          "file": "apocalipsa/05.json",
+          "metaFile": "apocalipsa/05/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/revelation-revelation-131-13/",
           "transcriptSha256": "sha256:2921829fe0bf474268db181e9e572c585afa6621871f4d9a53b7c01e7325f922",
           "wordCount": 8891,
+          "chunks": [
+            {
+              "file": "apocalipsa/05/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "apocalipsa/05/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "apocalipsa/05/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "apocalipsa/05/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8800
+            },
+            {
+              "file": "apocalipsa/05/chunk-05.json",
+              "startWord": 8801,
+              "endWord": 8891
+            }
+          ],
           "unitIds": [
             "apocalipsa-13-1-10-source-first",
             "apocalipsa-13-11-18-source-first"
           ]
         },
         {
-          "file": "apocalipsa/06.json",
+          "metaFile": "apocalipsa/06/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/revelation-revelation-1314-1412/",
           "transcriptSha256": "sha256:a7eaec90bca9e44de7d41024cd6b42715b53a46f5ed7ac5eedbc5b52ad06f1d1",
           "wordCount": 8956,
+          "chunks": [
+            {
+              "file": "apocalipsa/06/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "apocalipsa/06/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "apocalipsa/06/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "apocalipsa/06/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8800
+            },
+            {
+              "file": "apocalipsa/06/chunk-05.json",
+              "startWord": 8801,
+              "endWord": 8956
+            }
+          ],
           "unitIds": [
             "apocalipsa-13-11-18-source-first",
             "apocalipsa-14-1-5-source-first",
@@ -423,10 +1181,37 @@
           ]
         },
         {
-          "file": "apocalipsa/07.json",
+          "metaFile": "apocalipsa/07/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/revelation-revelation-1413-1618/",
           "transcriptSha256": "sha256:e386a65b802562a77a2496995ebe54f64c0a6dd3ad964c4e35ee3138320cb4b0",
           "wordCount": 9584,
+          "chunks": [
+            {
+              "file": "apocalipsa/07/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "apocalipsa/07/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "apocalipsa/07/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "apocalipsa/07/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8800
+            },
+            {
+              "file": "apocalipsa/07/chunk-05.json",
+              "startWord": 8801,
+              "endWord": 9584
+            }
+          ],
           "unitIds": [
             "apocalipsa-14-14-20-source-first",
             "apocalipsa-14-6-13-source-first",
@@ -437,10 +1222,32 @@
           ]
         },
         {
-          "file": "apocalipsa/08.json",
+          "metaFile": "apocalipsa/08/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/revelation-revelation-1616-1820/",
           "transcriptSha256": "sha256:08a2093563c8a6816944eeee0aa91fb3fa86abb8b8ad89cea56fa70afc4a71d8",
           "wordCount": 8713,
+          "chunks": [
+            {
+              "file": "apocalipsa/08/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "apocalipsa/08/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "apocalipsa/08/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "apocalipsa/08/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8713
+            }
+          ],
           "unitIds": [
             "apocalipsa-16-17-21-source-first",
             "apocalipsa-17-1-6-source-first",
@@ -450,10 +1257,37 @@
           ]
         },
         {
-          "file": "apocalipsa/09.json",
+          "metaFile": "apocalipsa/09/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/revelation-revelation-1821-206/",
           "transcriptSha256": "sha256:db63d28b79095b3e8314b32caa6e27ed16b8db3d07ea8a5d69dd58a8db7902a2",
           "wordCount": 9489,
+          "chunks": [
+            {
+              "file": "apocalipsa/09/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "apocalipsa/09/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "apocalipsa/09/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "apocalipsa/09/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8800
+            },
+            {
+              "file": "apocalipsa/09/chunk-05.json",
+              "startWord": 8801,
+              "endWord": 9489
+            }
+          ],
           "unitIds": [
             "apocalipsa-18-21-24-source-first",
             "apocalipsa-19-1-10-source-first",
@@ -462,10 +1296,37 @@
           ]
         },
         {
-          "file": "apocalipsa/10.json",
+          "metaFile": "apocalipsa/10/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/revelation-revelation-204-2117/",
           "transcriptSha256": "sha256:72aa9c0fb7a2f7e43c541a20a1d4efb8ca0abef42eaf2dfde9b57c83e2b412c7",
           "wordCount": 9720,
+          "chunks": [
+            {
+              "file": "apocalipsa/10/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "apocalipsa/10/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "apocalipsa/10/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "apocalipsa/10/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8800
+            },
+            {
+              "file": "apocalipsa/10/chunk-05.json",
+              "startWord": 8801,
+              "endWord": 9720
+            }
+          ],
           "unitIds": [
             "apocalipsa-20-11-15-source-first",
             "apocalipsa-20-7-10-source-first",
@@ -473,10 +1334,37 @@
           ]
         },
         {
-          "file": "apocalipsa/11.json",
+          "metaFile": "apocalipsa/11/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/revelation-revelation-2122-2221/",
           "transcriptSha256": "sha256:d187d74ebd384d4cf661c1992d2dec355c3bfd07c8aa3e2e7ab7e072618fd09a",
           "wordCount": 9492,
+          "chunks": [
+            {
+              "file": "apocalipsa/11/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "apocalipsa/11/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "apocalipsa/11/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "apocalipsa/11/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8800
+            },
+            {
+              "file": "apocalipsa/11/chunk-05.json",
+              "startWord": 8801,
+              "endWord": 9492
+            }
+          ],
           "unitIds": [
             "apocalipsa-21-22-27-source-first",
             "apocalipsa-22-1-5-source-first",
@@ -485,10 +1373,37 @@
           ]
         },
         {
-          "file": "apocalipsa/12.json",
+          "metaFile": "apocalipsa/12/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/revelation-revelation-220-322/",
           "transcriptSha256": "sha256:efe874693df384e6083fa7654d22dcf21fa1a95a10d2c010ed4e0be932df2971",
           "wordCount": 9463,
+          "chunks": [
+            {
+              "file": "apocalipsa/12/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "apocalipsa/12/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "apocalipsa/12/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "apocalipsa/12/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8800
+            },
+            {
+              "file": "apocalipsa/12/chunk-05.json",
+              "startWord": 8801,
+              "endWord": 9463
+            }
+          ],
           "unitIds": [
             "apocalipsa-3-1-6-source-first",
             "apocalipsa-3-14-22-source-first",
@@ -496,10 +1411,37 @@
           ]
         },
         {
-          "file": "apocalipsa/13.json",
+          "metaFile": "apocalipsa/13/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/revelation-revelation-41-514/",
           "transcriptSha256": "sha256:69fbdab5eb74b5398ad54fbed9c1d771aef23807212c7a80984f48d60ef69172",
           "wordCount": 8852,
+          "chunks": [
+            {
+              "file": "apocalipsa/13/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "apocalipsa/13/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "apocalipsa/13/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "apocalipsa/13/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8800
+            },
+            {
+              "file": "apocalipsa/13/chunk-05.json",
+              "startWord": 8801,
+              "endWord": 8852
+            }
+          ],
           "unitIds": [
             "apocalipsa-4-1-6-source-first",
             "apocalipsa-4-7-11-source-first",
@@ -508,29 +1450,105 @@
           ]
         },
         {
-          "file": "apocalipsa/14.json",
+          "metaFile": "apocalipsa/14/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/revelation-revelation-61-17/",
           "transcriptSha256": "sha256:212aeb64cf71a8c17be712540094b6332d7beb117a7bb7bd218e393a7d15c1f1",
           "wordCount": 9026,
+          "chunks": [
+            {
+              "file": "apocalipsa/14/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "apocalipsa/14/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "apocalipsa/14/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "apocalipsa/14/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8800
+            },
+            {
+              "file": "apocalipsa/14/chunk-05.json",
+              "startWord": 8801,
+              "endWord": 9026
+            }
+          ],
           "unitIds": [
             "apocalipsa-6-1-8-source-first",
             "apocalipsa-6-9-17-source-first"
           ]
         },
         {
-          "file": "apocalipsa/15.json",
+          "metaFile": "apocalipsa/15/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/revelation-revelation-71-10/",
           "transcriptSha256": "sha256:8b7995ca712286762929be27510e6e5282081e57f62f76e2325006132d29098a",
           "wordCount": 9150,
+          "chunks": [
+            {
+              "file": "apocalipsa/15/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "apocalipsa/15/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "apocalipsa/15/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "apocalipsa/15/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8800
+            },
+            {
+              "file": "apocalipsa/15/chunk-05.json",
+              "startWord": 8801,
+              "endWord": 9150
+            }
+          ],
           "unitIds": [
             "apocalipsa-7-1-8-source-first"
           ]
         },
         {
-          "file": "apocalipsa/16.json",
+          "metaFile": "apocalipsa/16/meta.json",
           "transcriptUrl": "https://sermonindex.net/speakers/zac-poonen/revelation-revelation-79-107/",
           "transcriptSha256": "sha256:c55f92897bea1f9a7d1f18271cfcd729b924f9612b8d548c8b687e6e84c2b8e5",
           "wordCount": 8637,
+          "chunks": [
+            {
+              "file": "apocalipsa/16/chunk-01.json",
+              "startWord": 1,
+              "endWord": 2200
+            },
+            {
+              "file": "apocalipsa/16/chunk-02.json",
+              "startWord": 2201,
+              "endWord": 4400
+            },
+            {
+              "file": "apocalipsa/16/chunk-03.json",
+              "startWord": 4401,
+              "endWord": 6600
+            },
+            {
+              "file": "apocalipsa/16/chunk-04.json",
+              "startWord": 6601,
+              "endWord": 8637
+            }
+          ],
           "unitIds": [
             "apocalipsa-10-1-7-source-first",
             "apocalipsa-7-9-17-source-first",
@@ -543,5 +1561,6 @@
       ]
     }
   },
-  "representationFiles": 41
+  "representationFiles": 41,
+  "chunkFiles": 187
 }
