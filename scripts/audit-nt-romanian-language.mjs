@@ -8,6 +8,10 @@ const ROOT = process.cwd()
 const corpusDir = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-final-source-first")
 const outputPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-romanian-language-audit.json")
 
+// `in` and `doua` remain historical entries in the shared registry but are
+// genuine Romanian contextual homographs. Never audit them as context-free.
+const CONTEXT_SENSITIVE_SHARED_KEYS = new Set(["in", "doua"])
+
 // Context-sensitive raw forms. Unlike the shared deterministic map, these can
 // have more than one correct Romanian result depending on grammar.
 const CONTEXTUAL_MISSING_DIACRITICS = new Map([
@@ -22,14 +26,25 @@ const CONTEXTUAL_MISSING_DIACRITICS = new Map([
   ["curata", "curată / curăță"],
 ])
 
-// `simpla` is special: the spelling is correct in definite pre-nominal uses
-// such as "simpla citare" / "simpla folosire". Flag only contexts that prove
-// the intended adjective is the diacritized `simplă`.
+// Contextual homographs and definite/pre-nominal forms are flagged only where
+// local syntax proves the diacritized reading.
 const CONTEXTUAL_PATTERNS = [
   {
     token: "simpla",
     expected: "simplă",
     pattern: /\b(?:o|mai)\s+simpla\b|\b(?:schema|schemă|cauza|cauză|ordine|chemare|lumea)\s+simpla\b/giu,
+  },
+  {
+    token: "doua",
+    expected: "două (cardinal); «a doua» is the correct feminine ordinal",
+    // Do not flag the correct ordinal form `a doua` / `de-a doua`.
+    pattern: /(?<!\ba\s)\bdoua\b/giu,
+  },
+  {
+    token: "in",
+    expected: "în (preposition); «in» is the correct noun for flax/linen",
+    // Do not flag clear noun uses such as `în in curat`, `de in`, `din in`.
+    pattern: /(?<!\bîn\s)(?<!\bde\s)(?<!\bdin\s)\bin\b/giu,
   },
 ]
 
@@ -65,6 +80,7 @@ for (const file of fs.readdirSync(corpusDir).filter((name) => name.endsWith(".js
   for (const chapter of book.chapters ?? []) {
     for (const [field, value] of fields(chapter)) {
       for (const [wrong, expected] of UNAMBIGUOUS_ROMANIAN_DIACRITICS) {
+        if (CONTEXT_SENSITIVE_SHARED_KEYS.has(wrong.toLowerCase())) continue
         pushTokenFinding(findings, book, chapter, field, value, wrong, expected)
       }
       for (const [wrong, expected] of CONTEXTUAL_MISSING_DIACRITICS) {
@@ -102,7 +118,7 @@ const tokenSummary = [...tokenSummaryMap.values()].sort((a, b) => b.occurrences 
 const report = {
   schema: "emanus-nt-romanian-language-audit-v4",
   status: findings.length ? "manual-edit-required" : "clean",
-  policy: "Reader-facing Romanian must use standard diacritics. Deterministic and audit rules share one registry; context-sensitive forms are handled separately, and valid definite forms such as 'simpla citare' are not false positives.",
+  policy: "Reader-facing Romanian must use standard diacritics. Deterministic rules are context-free; genuine homographs such as ordinal «a doua» versus cardinal «două» and noun «in» versus preposition «în» are audited contextually rather than globally.",
   count: findings.reduce((sum, finding) => sum + finding.occurrences, 0),
   findingGroups: findings.length,
   tokenSummary,
