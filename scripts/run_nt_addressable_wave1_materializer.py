@@ -28,9 +28,27 @@ NEW_SEED = '''    if target.exists():
                 if not isinstance(decision, dict):
                     fail(f"{filename}: invalid reviewed decision")
                 decision.pop("expectedCurrentSnapshotSha256", None)
+            if clone.get("bookId") == "2-corinteni":
+                unit_id = "2-corinteni-6-14-18"
+                old = "În căsătorie, credinciosul nu trebuie să intre deliberat într-o legătură în care partenerul nu Îi aparține lui Hristos; chiar și între credincioși, o inimă hotărâtă pentru Dumnezeu are nevoie de un partener care dorește aceeași direcție."
+                new = "În căsătorie, credinciosul nu trebuie să aleagă deliberat o legătură cu un partener care nu Îi aparține lui Hristos; chiar și între credincioși, o inimă hotărâtă pentru Dumnezeu are nevoie de un partener care dorește aceeași direcție."
+                item = decisions.get(unit_id)
+                if not isinstance(item, dict) or item.get("action") != "rewrite":
+                    fail(f"{filename}: normalized 2 Corinthians review target missing")
+                teaching = item.get("revisedTeaching")
+                if not isinstance(teaching, str):
+                    fail(f"{filename}: normalized 2 Corinthians revisedTeaching missing")
+                old_count = teaching.count(old)
+                new_count = teaching.count(new)
+                if old_count == 1 and new_count == 0:
+                    item["revisedTeaching"] = teaching.replace(old, new)
+                elif old_count == 0 and new_count == 1:
+                    pass
+                else:
+                    fail(f"{filename}: unexpected 2 Corinthians normalization state old={old_count} new={new_count}")
             return clone
         if _without_snapshot_hashes(existing) != _without_snapshot_hashes(seed_obj):
-            fail(f"{filename}: persisted semantic review differs from frozen seed beyond snapshot hashes")
+            fail(f"{filename}: persisted semantic review differs from frozen seed beyond approved snapshot/wording normalizations")
     else:
         target.write_text(json.dumps(seed_obj, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
         print(f"addressable semantic wave 1: materialized frozen spec {filename}")
