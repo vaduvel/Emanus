@@ -2,21 +2,42 @@
   "schema": "emanus-nt-semantic-manual-review-status-v1",
   "status": "in_progress",
   "policy": "Manual semantic review is allowed only against complete transcript content with deterministic transcript SHA-256 evidence. Source locators or transcript addressability alone never count as reviewed.",
-  "currentBook": "iacov",
-  "currentBookUnits": 15,
+  "currentBook": "1-timotei",
+  "currentBookUnits": 22,
   "manualDecisionsFrozen": 0,
   "officialAudioSources": [
     {
-      "id": "iacov-ttb",
-      "officialSourceUrl": "https://www.cfcindia.com/through-the-bible/james",
-      "officialAudioUrl": "https://www.cfcindia.org/resources/en/study-series/through-the-bible/65.james.mp3",
-      "sourceRange": "James 1:1-5:20"
+      "id": "1-timotei-vbv-01",
+      "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/1-Timothy",
+      "officialAudioUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt15-1timothy-chapter-1-1-to-chapter-2-9.mp3",
+      "sourceRange": "1 Timothy 1:1-2:9"
+    },
+    {
+      "id": "1-timotei-vbv-02",
+      "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/1-Timothy",
+      "officialAudioUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt15-1timothy-chapter-2-8-to-chapter-4-2.mp3",
+      "sourceRange": "1 Timothy 2:8-4:2"
+    },
+    {
+      "id": "1-timotei-vbv-03",
+      "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/1-Timothy",
+      "officialAudioUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt15-1timothy-chapter-4-3-to-chapter-5-13.mp3",
+      "sourceRange": "1 Timothy 4:3-5:13"
+    },
+    {
+      "id": "1-timotei-vbv-04",
+      "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/1-Timothy",
+      "officialAudioUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt15-1timothy-chapter-5-11-to-chapter-6-21.mp3",
+      "sourceRange": "1 Timothy 5:11-6:21"
     }
   ],
   "lastVerifiedCoverage": {
     "rawTranscriptReviewed": 73,
-    "directTranscriptAddressable": 443,
-    "pendingTranscriptRecovery": 454,
-    "note": "Semantic ledger is verified at 178 approved units after Tit and Filimon; total reviewed raw+semantic is 251/970 and 719 units remain pending semantic review."
+    "semanticTranscriptReviewed": 193,
+    "totalReviewedRawPlusSemantic": 266,
+    "pendingSemanticReview": 704,
+    "staleSemanticReview": 0,
+    "malformedSemanticEvidence": 0,
+    "note": "Iacov is closed at 15/15 semantic decisions (7 material rewrites / 8 keep). Filimon quote metadata is rebound fail-closed to the final Biblia Emanus quote, leaving 5/5 semantic decisions valid. Next target is 1 Timotei with four official CFC Verse-by-Verse audio episodes covering 1:1-6:21."
   }
 }
