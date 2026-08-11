@@ -16,6 +16,7 @@ DATA = ROOT / "docs/data/biblia-explicata"
 STATUS = DATA / "nt-semantic-manual-review-status.json"
 OUT_DIR = DATA / "nt-official-transcripts"
 PY_DEPS = Path("/tmp/emanus-nt-python")
+RUNTIME_MARKER = ".faster-whisper-1.1.1-runtime-v2"
 RECOVERY_WORKFLOW = "NT Explanation Recovery"
 RECOVERY_BRANCH = "agent/biblia-explicata-nt-integration-clean"
 
@@ -63,7 +64,7 @@ def need_sources(status: dict) -> list[dict]:
 def ensure_runtime() -> None:
     """Install Whisper into an isolated target and prove this interpreter can import it."""
     PY_DEPS.mkdir(parents=True, exist_ok=True)
-    marker = PY_DEPS / ".faster-whisper-1.1.1"
+    marker = PY_DEPS / RUNTIME_MARKER
     if not marker.exists():
         subprocess.run(
             [
@@ -73,18 +74,21 @@ def ensure_runtime() -> None:
                 "install",
                 "--disable-pip-version-check",
                 "--quiet",
+                "--upgrade",
                 "--target",
                 str(PY_DEPS),
                 "faster-whisper==1.1.1",
+                "requests==2.32.3",
             ],
             check=True,
         )
-        marker.write_text("faster-whisper==1.1.1\n", encoding="utf-8")
+        marker.write_text("faster-whisper==1.1.1\nrequests==2.32.3\n", encoding="utf-8")
 
     deps = str(PY_DEPS)
     if deps not in sys.path:
         sys.path.insert(0, deps)
     importlib.invalidate_caches()
+    importlib.import_module("requests")
     module = importlib.import_module("faster_whisper")
     module_path = getattr(module, "__file__", None)
     if not module_path:
