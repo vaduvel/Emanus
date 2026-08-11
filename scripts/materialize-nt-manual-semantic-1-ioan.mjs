@@ -35,9 +35,9 @@ if (mateiDirectCountFix.status !== 0) {
   console.error(`[Matei direct semantic review totals] exited with status ${mateiDirectCountFix.status}`)
   process.exit(mateiDirectCountFix.status ?? 1)
 }
-const mateiDirectReview = spawnSync("python3", ["scripts/materialize_nt_manual_semantic_matei_direct.py"], { stdio: "inherit" })
+const mateiDirectReview = spawnSync("python3", ["scripts/run_nt_matei_direct_with_contextual_aliases.py"], { stdio: "inherit" })
 if (mateiDirectReview.status !== 0) {
-  console.error(`[Matei direct semantic review] exited with status ${mateiDirectReview.status}`)
+  console.error(`[Matei direct semantic review] contextual alias runner exited with status ${mateiDirectReview.status}`)
   process.exit(mateiDirectReview.status ?? 1)
 }
 
