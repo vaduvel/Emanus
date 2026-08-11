@@ -8,7 +8,8 @@ TARGET = ROOT / "scripts/materialize_nt_manual_semantic_addressable_wave_1.py"
 if not TARGET.exists():
     raise SystemExit("[wave1 materializer launcher] target materializer missing")
 source = TARGET.read_text(encoding="utf-8")
-OLD = '''    if target.exists():
+
+OLD_SEED = '''    if target.exists():
         existing = json.loads(target.read_text(encoding="utf-8"))
         if existing != seed_obj:
             fail(f"{filename}: persisted spec differs from frozen reviewed seed")
@@ -16,7 +17,7 @@ OLD = '''    if target.exists():
         target.write_text(json.dumps(seed_obj, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
         print(f"addressable semantic wave 1: materialized frozen spec {filename}")
 '''
-NEW = '''    if target.exists():
+NEW_SEED = '''    if target.exists():
         existing = json.loads(target.read_text(encoding="utf-8"))
         def _without_snapshot_hashes(doc):
             clone = json.loads(json.dumps(doc, ensure_ascii=False))
@@ -34,9 +35,20 @@ NEW = '''    if target.exists():
         target.write_text(json.dumps(seed_obj, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
         print(f"addressable semantic wave 1: materialized frozen spec {filename}")
 '''
-count = source.count(OLD)
-if count != 1:
-    raise SystemExit(f"[wave1 materializer launcher] expected exactly one legacy seed block, found {count}")
-patched = source.replace(OLD, NEW)
+seed_count = source.count(OLD_SEED)
+if seed_count != 1:
+    raise SystemExit(f"[wave1 materializer launcher] expected exactly one legacy seed block, found {seed_count}")
+source = source.replace(OLD_SEED, NEW_SEED)
+
+# The original Python helper used str(None) for an absent forYourHeart field,
+# while the JS semantic ledger and the reviewed snapshot convention canonicalize
+# absence as an empty string. Patch only this serialization defect in-memory.
+OLD_HEART = '        "forYourHeart": str(unit.get("forYourHeart") if for_your_heart is None else for_your_heart or ""),\n'
+NEW_HEART = '        "forYourHeart": str((unit.get("forYourHeart") if for_your_heart is None else for_your_heart) or ""),\n'
+heart_count = source.count(OLD_HEART)
+if heart_count != 1:
+    raise SystemExit(f"[wave1 materializer launcher] expected exactly one legacy forYourHeart serializer, found {heart_count}")
+source = source.replace(OLD_HEART, NEW_HEART)
+
 namespace = {"__name__": "__main__", "__file__": str(TARGET)}
-exec(compile(patched, str(TARGET), "exec"), namespace, namespace)
+exec(compile(source, str(TARGET), "exec"), namespace, namespace)
