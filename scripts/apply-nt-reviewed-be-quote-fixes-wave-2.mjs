@@ -27,10 +27,10 @@ function resolveField(chapter, field) {
   if (match) {
     const unit = chapter.units?.[Number(match[1])]
     if (!unit) fail(`missing ${field}`)
-    return { owner: unit, key: match[2] }
+    return { owner: unit, key: match[2], unit }
   }
   if (!["title", "summary", "literaryContext", "historicalContext", "prayer"].includes(field)) fail(`unsupported field ${field}`)
-  return { owner: chapter, key: field }
+  return { owner: chapter, key: field, unit: null }
 }
 
 const FIXES = [
@@ -71,10 +71,25 @@ for (const fix of FIXES) {
   const beText = norm((be.verses ?? []).map((verse) => verse.text).join(" "))
   if (!beText.includes(norm(fix.after))) fail(`${fix.bookId} ${fix.chapter} ${fix.field}: reviewed replacement is not exact same-chapter BE wording: ${fix.after}`)
 
-  const { owner, key } = resolveField(chapter, fix.field)
+  const { owner, key, unit } = resolveField(chapter, fix.field)
   const value = owner[key]
   if (typeof value !== "string") fail(`${fix.bookId} ${fix.chapter} ${fix.field}: target not string`)
   const occurrences = value.split(fix.before).length - 1
+  const semanticReviewed = unit?.sourceFidelity?.semanticReview?.status === "approved-against-transcript"
+  const rawReviewed = unit?.sourceFidelity?.reviewState === "reviewed-against-raw-transcript"
+
+  if (occurrences === 0 && (semanticReviewed || rawReviewed)) {
+    ledger.push({
+      ...fix,
+      beforeSha256: `sha256:${sha256(fix.before)}`,
+      afterSha256: `sha256:${sha256(fix.after)}`,
+      verification: semanticReviewed ? "superseded-by-hash-bound-semantic-transcript-review" : "superseded-by-raw-transcript-editorial-review",
+      ...(semanticReviewed ? { reviewedTeachingSha256: unit.sourceFidelity.semanticReview.reviewedTeachingSha256 } : {}),
+      note: "The legacy quote target no longer exists in the exact transcript-reviewed unit. No replacement is applied; the downstream embedded-quote audit validates the reviewed copy independently.",
+    })
+    continue
+  }
+
   if (occurrences !== 1) fail(`${fix.bookId} ${fix.chapter} ${fix.field}: expected exactly one old quote, found ${occurrences}`)
 
   owner[key] = value.replace(fix.before, fix.after)
@@ -98,7 +113,7 @@ for (const entry of manifest.books ?? []) {
 fs.writeFileSync(manifestPath, stable(manifest), "utf8")
 fs.writeFileSync(ledgerPath, stable({
   schema: "emanus-nt-embedded-quote-reviewed-fix-wave-2-ledger-v1",
-  policy: "Every replacement is fail-closed against exact normalized wording present in the same current provisional Biblia Emanus chapter. These reader-copy quotations must be rechecked when the final canonical text is frozen.",
+  policy: "Every direct replacement is fail-closed against exact normalized wording present in the same current provisional Biblia Emanus chapter. A legacy target may be skipped only when the exact unit is already bound to transcript review; all such reader-copy quotations are still rechecked by the downstream embedded-quote audit and again when the final canonical text is frozen.",
   count: ledger.length,
   fixes: ledger,
 }), "utf8")
