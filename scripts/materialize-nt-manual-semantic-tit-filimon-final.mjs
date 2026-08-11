@@ -13,7 +13,7 @@ const FULL_SHA="sha256:af8d35fbf3fc44322e5172c6a1e5041b387280eb0a6b08a978d629731
 const REVIEWER="GPT-5.6 Sol manual sentence-level semantic review against persisted official CFC audio transcript"
 const CONFIG=[
   {bookId:"tit",file:"17-tit.json",spec:"17-tit.json",section:"titus",expected:{total:12,rewrite:8,keep:4}},
-  {bookId:"filimon",file:"18-filimon.json",spec:"18-filimon.json",section:"filimon",expected:{total:5,rewrite:0,keep:5}},
+  {bookId:"filimon",file:"18-filimon.json",spec:"18-filimon.json",section:"filimon",expected:{total:5,rewrite:1,keep:4}},
 ]
 const sha=v=>`sha256:${crypto.createHash("sha256").update(String(v)).digest("hex")}`
 const snap=(u,t=u.teaching,h=u.forYourHeart)=>JSON.stringify({heading:String(u.heading??""),teaching:String(t??""),forYourHeart:String(h??"")})
@@ -83,5 +83,5 @@ for(const cfg of CONFIG){
   all.push(...decisions)
   console.log(`${cfg.bookId}: ${decisions.length} decisions (${rw} rewrite / ${kp} keep); section=${sec.words} words sha=${sec.sha}.`)
 }
-if(all.length!==17||all.filter(d=>d.action==="rewrite").length!==8||all.filter(d=>d.action==="keep").length!==9) fail("batch totals drifted")
-console.log("Tit+Filimon final semantic batch: 17 decisions (8 rewrite / 9 keep).")
+if(all.length!==17||all.filter(d=>d.action==="rewrite").length!==9||all.filter(d=>d.action==="keep").length!==8) fail("batch totals drifted")
+console.log("Tit+Filimon final semantic batch: 17 decisions (9 rewrite / 8 keep).")
