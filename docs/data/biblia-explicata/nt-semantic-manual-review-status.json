@@ -2,24 +2,30 @@
   "schema": "emanus-nt-semantic-manual-review-status-v1",
   "status": "in_progress",
   "policy": "Manual semantic review is allowed only against complete transcript content with deterministic transcript SHA-256 evidence. Source locators or transcript addressability alone never count as reviewed.",
-  "currentBook": "apocalipsa",
-  "currentBookUnits": 54,
-  "manualDecisionsFrozen": 53,
+  "currentBook": "matei",
+  "currentBookUnits": 129,
+  "manualDecisionsFrozen": 125,
   "officialAudioSources": [
     {
-      "id": "apocalipsa-vbv-07",
-      "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/07revelation-chapter-79-to-chapter-107",
-      "officialAudioUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt27-revelation-chapter-7-9-to-chapter-10-7.mp3",
-      "sourceRange": "Revelation 7:9-10:7; semantic recovery target: Revelation 10:1-7"
+      "id": "matei-vbv-09",
+      "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/09matthew-chapter-69-to-chapter-624",
+      "officialAudioUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt01-matthew-chapter-6-9-to-chapter-6-24.mp3",
+      "sourceRange": "Matthew 6:9-6:24; semantic recovery targets: Matthew 6:16-18 and 6:19-24"
+    },
+    {
+      "id": "matei-vbv-10",
+      "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/10matthew-chapter-625-to-chapter-712",
+      "officialAudioUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt01-matthew-chapter-6-25-to-chapter-7-12.mp3",
+      "sourceRange": "Matthew 6:25-7:12; semantic recovery targets: Matthew 6:25-34 and 7:1-5"
     }
   ],
   "lastVerifiedCoverage": {
     "rawTranscriptReviewed": 73,
-    "semanticTranscriptReviewed": 503,
-    "totalReviewedRawPlusSemantic": 576,
-    "pendingSemanticReview": 394,
+    "semanticTranscriptReviewed": 557,
+    "totalReviewedRawPlusSemantic": 630,
+    "pendingSemanticReview": 340,
     "staleSemanticReview": 0,
     "malformedSemanticEvidence": 0,
-    "note": "Matei direct review is durably integrated at 125/125 direct units with final semantic hash consistency 503/503 globally. Revelation has 52 valid direct-addressable units manually frozen plus Revelation 21:9-21 recovered from complete persisted representation 10. Revelation 10:1-7 is the only remaining Revelation unit awaiting complete official CFC episode-07 audio transcription before the book can be frozen into the semantic ledger."
+    "note": "Revelation is durably complete at 54/54 semantic transcript-reviewed units (42 rewrite / 12 keep). Matthew has 125/129 units already semantic transcript-reviewed through the direct-addressable wave. The only four remaining Matthew units are 6:16-18, 6:19-24, 6:25-34 and 7:1-5, now configured for exact official CFC VBV episodes 09 and 10."
   }
 }
