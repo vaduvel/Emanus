@@ -77,14 +77,17 @@ for (const fix of FIXES) {
   if (typeof value !== "string") fail(`${fix.bookId} ${fix.chapter} ${fix.field}: target not string`)
   const occurrences = value.split(fix.before).length - 1
 
-  if (occurrences === 0 && unit?.sourceFidelity?.reviewState === "reviewed-against-raw-transcript") {
+  const rawReviewed = unit?.sourceFidelity?.reviewState === "reviewed-against-raw-transcript"
+  const semanticReviewed = unit?.sourceFidelity?.semanticReview?.status === "approved-against-transcript"
+  if (occurrences === 0 && (rawReviewed || semanticReviewed)) {
     ledger.push({
       ...fix,
       beforeSha256: `sha256:${sha256(fix.before)}`,
       afterSha256: `sha256:${sha256(fix.after)}`,
-      verification: "superseded-by-raw-transcript-editorial-review",
-      sourceFidelityPolicy: unit.sourceFidelity.policy,
-      note: "The old quote no longer exists because the complete unit was deliberately rewritten from pinned raw transcript evidence. The fresh embedded-quote audit validates the replacement unit independently.",
+      verification: rawReviewed ? "superseded-by-raw-transcript-editorial-review" : "superseded-by-hash-bound-semantic-transcript-review",
+      ...(rawReviewed ? { sourceFidelityPolicy: unit.sourceFidelity.policy } : {}),
+      ...(semanticReviewed ? { reviewedTeachingSha256: unit.sourceFidelity.semanticReview.reviewedTeachingSha256 } : {}),
+      note: "The old quote no longer exists because the exact target unit was deliberately reviewed against transcript evidence. The fresh embedded-quote audit validates the reviewed copy independently.",
     })
     continue
   }
@@ -111,7 +114,7 @@ for (const entry of manifest.books ?? []) {
 fs.writeFileSync(manifestPath, stable(manifest), "utf8")
 fs.writeFileSync(ledgerPath, stable({
   schema: "emanus-nt-embedded-quote-reviewed-fix-ledger-v2",
-  policy: "Every direct replacement is rejected unless its normalized wording exists in the same current Biblia Emanus chapter. A legacy quote-fix may be marked superseded only when the exact target unit carries reviewed-against-raw-transcript sourceFidelity; the fresh quote audit then evaluates the rewritten copy independently.",
+  policy: "Every direct replacement is rejected unless its normalized wording exists in the same current Biblia Emanus chapter. A legacy quote-fix may be marked superseded only when the exact target unit is already bound either to pinned raw transcript review or to an approved hash-bound semantic transcript review; the fresh quote audit then evaluates the reviewed copy independently.",
   count: ledger.length,
   fixes: ledger,
 }), "utf8")
