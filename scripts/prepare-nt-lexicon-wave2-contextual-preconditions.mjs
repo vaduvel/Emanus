@@ -30,8 +30,8 @@ const FIXES = [
     ref: "Ioan 5:19-30",
     original: "ζωὴ ἐν ἑαυτῷ",
     before: "viata in Sine. Viață neîmprumutată, proprie dumnezeirii.",
-    after: "viata în Sine. Viață neîmprumutată, proprie dumnezeirii.",
-    rationale: "Standalone `in` is the Romanian preposition in the exact phrase `viața în Sine`; the lexical wave will perform the separately reviewed final wording replacement.",
+    after: "viață în Sine. Viață neîmprumutată, proprie dumnezeirii.",
+    rationale: "The exact approved wave-2 precondition requires both contextual Romanian restorations here: `viata` is the noun `viață`, and `in` is the preposition `în`. The lexical wave then applies the separately reviewed final lexical wording.",
   },
 ]
 
