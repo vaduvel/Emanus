@@ -22,7 +22,15 @@ const approvedReaderReplacements = [
   },
 ]
 
+// Romanian `doua` is contextual, not globally corrupt. The feminine ordinal
+// is correctly written `a doua` (including compounds such as `de-a doua`),
+// while the cardinal is `două`. The fidelity pass therefore repairs only a
+// standalone cardinal occurrence that is not immediately governed by `a`.
+const CARDINAL_DOUA = /(?<!\ba\s)\bdoua\b/gu
+const ORDINAL_A_DOUA = /\ba\s+doua\b/gu
+
 let romanianReplacements = 0
+let preservedOrdinals = 0
 let sourceAttributionReplacements = 0
 const touched = []
 
@@ -31,11 +39,14 @@ function visit(value, key, trace) {
     if (!readerKeys.has(key)) return value
     let next = value
 
-    const douaCount = [...next.matchAll(/\bdoua\b/gu)].length
-    if (douaCount) {
-      next = next.replace(/\bdoua\b/gu, "două")
-      romanianReplacements += douaCount
-      touched.push({ trace, kind: "romanian-diacritic", count: douaCount })
+    const ordinalCount = [...next.matchAll(ORDINAL_A_DOUA)].length
+    if (ordinalCount) preservedOrdinals += ordinalCount
+
+    const cardinalCount = [...next.matchAll(CARDINAL_DOUA)].length
+    if (cardinalCount) {
+      next = next.replace(CARDINAL_DOUA, "două")
+      romanianReplacements += cardinalCount
+      touched.push({ trace, kind: "romanian-diacritic-cardinal-doua", count: cardinalCount })
     }
 
     for (const replacement of approvedReaderReplacements) {
@@ -70,6 +81,9 @@ for (const file of fs.readdirSync(corpusDir).filter((name) => name.endsWith(".js
   }
 }
 
-if (romanianReplacements !== 3) fail(`expected exactly 3 post-fidelity 'doua' reader-copy fixes, found ${romanianReplacements}`)
+// This count is intentionally fail-closed against the reviewed corpus. The
+// earlier context-free pass used to hide the ordinal/cardinal distinction;
+// after making that pass safe, exactly the same 3 true cardinal repairs remain.
+if (romanianReplacements !== 3) fail(`expected exactly 3 post-fidelity cardinal 'doua' fixes, found ${romanianReplacements}; preserved ordinals=${preservedOrdinals}`)
 if (sourceAttributionReplacements !== 1) fail(`expected exactly 1 approved reader-source attribution rewrite, found ${sourceAttributionReplacements}`)
-console.log(`NT fidelity reader normalization: ${romanianReplacements} Romanian fixes + ${sourceAttributionReplacements} source-attribution rewrite; no forbidden modern source names remain.`)
+console.log(`NT fidelity reader normalization: ${romanianReplacements} cardinal Romanian fixes; ${preservedOrdinals} correct 'a doua' ordinals preserved; ${sourceAttributionReplacements} source-attribution rewrite; no forbidden modern source names remain.`)
