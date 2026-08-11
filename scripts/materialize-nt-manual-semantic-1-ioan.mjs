@@ -17,6 +17,11 @@ if (wave2ReviewPack.status !== 0) {
   console.error(`[addressable semantic wave 2 review pack] exited with status ${wave2ReviewPack.status}`)
   process.exit(wave2ReviewPack.status ?? 1)
 }
+const wave2UnitFiles = spawnSync("python3", ["scripts/materialize_nt_addressable_wave2_unit_review_files.py"], { stdio: "inherit" })
+if (wave2UnitFiles.status !== 0) {
+  console.error(`[addressable semantic wave 2 unit files] exited with status ${wave2UnitFiles.status}`)
+  process.exit(wave2UnitFiles.status ?? 1)
+}
 
 const twoCorRomanianFix = spawnSync("python3", ["scripts/fix_nt_addressable_wave1_2cor_romanian.py"], { stdio: "inherit" })
 if (twoCorRomanianFix.status !== 0) {
