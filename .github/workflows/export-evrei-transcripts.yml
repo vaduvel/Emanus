@@ -88,82 +88,10 @@ jobs:
           fetch-depth: 0
           persist-credentials: true
 
-      - name: Extract exact addressable transcript representations
+      - name: Extract exact Matei and Revelation transcript representations
         run: |
           set -euo pipefail
-          rm -rf /tmp/nt-semantic-bulk
-          mkdir -p /tmp/nt-semantic-bulk/transcripts /tmp/nt-semantic-bulk/books
-          mkdir -p docs/data/biblia-explicata/nt-semantic-transcript-representations
-          python3 - <<'PY'
-          import importlib.util
-          import json
-          import re
-          from pathlib import Path
-
-          root = Path('.').resolve()
-          worker_path = root / 'scripts/nt_semantic_copilot_worker.py'
-          spec = importlib.util.spec_from_file_location('emanus_semantic_bulk', worker_path)
-          if spec is None or spec.loader is None:
-              raise SystemExit('Cannot load semantic transcript extractor')
-          worker = importlib.util.module_from_spec(spec)
-          spec.loader.exec_module(worker)
-
-          target_books = {'matei', 'apocalipsa'}
-          index = json.loads((root / 'docs/data/biblia-explicata/nt-semantic-review-index.json').read_text(encoding='utf-8'))
-          out_repo = root / 'docs/data/biblia-explicata/nt-semantic-transcript-representations'
-          out_art = Path('/tmp/nt-semantic-bulk/transcripts')
-          manifest = []
-          seen = set()
-          serial = 0
-          for group in index.get('transcriptGroups', []):
-              units = [u for u in group.get('units', []) if u.get('bookId') in target_books]
-              if not units:
-                  continue
-              url = group['transcriptUrl']
-              if url in seen:
-                  continue
-              seen.add(url)
-              serial += 1
-              text = worker.extract_transcript(url)
-              sha = worker.sha256(text)
-              slug = re.sub(r'[^a-z0-9]+', '-', url.lower()).strip('-')[-100:]
-              filename = f'wave2-{serial:03d}-{slug}.json'
-              payload = {
-                  'schema': 'emanus-nt-semantic-transcript-representation-v1',
-                  'transcriptUrl': url,
-                  'transcriptSha256': sha,
-                  'wordCount': len(text.split()),
-                  'units': units,
-                  'text': text,
-              }
-              encoded = json.dumps(payload, ensure_ascii=False, indent=2) + '\n'
-              (out_repo / filename).write_text(encoded, encoding='utf-8')
-              (out_art / filename).write_text(encoded, encoding='utf-8')
-              manifest.append({
-                  'file': filename,
-                  'transcriptUrl': url,
-                  'transcriptSha256': sha,
-                  'wordCount': len(text.split()),
-                  'unitCount': len(units),
-                  'books': sorted({u['bookId'] for u in units}),
-              })
-              print(filename, sha, len(text.split()), len(units))
-          if not manifest:
-              raise SystemExit('No addressable transcript groups selected')
-          Path('/tmp/nt-semantic-bulk/manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-
-          final_dir = root / 'docs/data/biblia-explicata/nt-final-source-first'
-          for p in sorted(final_dir.glob('*.json')):
-              data = json.loads(p.read_text(encoding='utf-8'))
-              if data.get('id') in target_books:
-                  (Path('/tmp/nt-semantic-bulk/books') / p.name).write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-          PY
-          cp docs/data/biblia-explicata/nt-semantic-review-index.json /tmp/nt-semantic-bulk/
-          cp docs/data/biblia-explicata/nt-semantic-review-ledger.json /tmp/nt-semantic-bulk/
-          cp docs/data/biblia-explicata/nt-direct-transcript-coverage.json /tmp/nt-semantic-bulk/
-          if test -f docs/data/biblia-explicata/nt-transcript-episode-mapping.json; then
-            cp docs/data/biblia-explicata/nt-transcript-episode-mapping.json /tmp/nt-semantic-bulk/
-          fi
+          python3 scripts/export_nt_addressable_wave2.py
 
       - uses: actions/upload-artifact@v4
         with:
@@ -179,7 +107,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/data/biblia-explicata/nt-semantic-transcript-representations
           if git diff --cached --quiet; then
-            echo "Addressable semantic transcript representations already current."
+            echo "Matei/Revelation semantic transcript representations already current."
             exit 0
           fi
           git commit -m "Persist Matei and Revelation semantic transcript representations"
