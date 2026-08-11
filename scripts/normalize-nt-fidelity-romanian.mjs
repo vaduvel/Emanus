@@ -81,9 +81,12 @@ for (const file of fs.readdirSync(corpusDir).filter((name) => name.endsWith(".js
   }
 }
 
-// This count is intentionally fail-closed against the reviewed corpus. The
-// earlier context-free pass used to hide the ordinal/cardinal distinction;
-// after making that pass safe, exactly the same 3 true cardinal repairs remain.
-if (romanianReplacements !== 3) fail(`expected exactly 3 post-fidelity cardinal 'doua' fixes, found ${romanianReplacements}; preserved ordinals=${preservedOrdinals}`)
+// Fail closed on the exact current corpus partition. Before the context-free
+// fixer was corrected, most cardinals were already changed upstream and this
+// stage saw only 3 residues. With the homograph handled correctly, the corpus
+// exposes all 21 raw `doua` tokens here: 12 true cardinals + 9 correct feminine
+// ordinals `a doua`. These counts are now the deterministic invariant.
+if (romanianReplacements !== 12) fail(`expected exactly 12 post-fidelity cardinal 'doua' fixes, found ${romanianReplacements}; preserved ordinals=${preservedOrdinals}`)
+if (preservedOrdinals !== 9) fail(`expected exactly 9 correct 'a doua' ordinals to be preserved, found ${preservedOrdinals}`)
 if (sourceAttributionReplacements !== 1) fail(`expected exactly 1 approved reader-source attribution rewrite, found ${sourceAttributionReplacements}`)
 console.log(`NT fidelity reader normalization: ${romanianReplacements} cardinal Romanian fixes; ${preservedOrdinals} correct 'a doua' ordinals preserved; ${sourceAttributionReplacements} source-attribution rewrite; no forbidden modern source names remain.`)
