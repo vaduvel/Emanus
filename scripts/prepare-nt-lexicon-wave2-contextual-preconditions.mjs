@@ -24,6 +24,15 @@ const FIXES = [
     after: "slava. Frumusetea și greutatea dumnezeiasca aratate în Fiul.",
     rationale: "Standalone `in` is the Romanian preposition in this exact lexical sentence, not the noun `in` (flax).",
   },
+  {
+    bookId: "ioan",
+    chapter: 5,
+    ref: "Ioan 5:19-30",
+    original: "ζωὴ ἐν ἑαυτῷ",
+    before: "viata in Sine. Viață neîmprumutată, proprie dumnezeirii.",
+    after: "viata în Sine. Viață neîmprumutată, proprie dumnezeirii.",
+    rationale: "Standalone `in` is the Romanian preposition in the exact phrase `viața în Sine`; the lexical wave will perform the separately reviewed final wording replacement.",
+  },
 ]
 
 function findTargets(op) {
