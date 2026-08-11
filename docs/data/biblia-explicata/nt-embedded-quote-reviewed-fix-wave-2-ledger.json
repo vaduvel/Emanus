@@ -1,6 +1,6 @@
 {
   "schema": "emanus-nt-embedded-quote-reviewed-fix-wave-2-ledger-v1",
-  "policy": "Every replacement is fail-closed against exact normalized wording present in the same current provisional Biblia Emanus chapter. These reader-copy quotations must be rechecked when the final canonical text is frozen.",
+  "policy": "Every direct replacement is fail-closed against exact normalized wording present in the same current provisional Biblia Emanus chapter. A legacy target may be skipped only when the exact unit is already bound to transcript review; all such reader-copy quotations are still rechecked by the downstream embedded-quote audit and again when the final canonical text is frozen.",
   "count": 15,
   "fixes": [
     {
@@ -23,7 +23,9 @@
       "after": "Niciodată nu v-am cunoscut",
       "beforeSha256": "sha256:874b1d61a32d4bbb66982450c59c5100f22af8968ee7efd7f6e33a1d264aa278",
       "afterSha256": "sha256:8352ddf914959737682651985052c69ac2dc4e07fbe1dd2d43ef2b6eaf2ee807",
-      "verification": "reviewed-exact-same-chapter-biblia-emanus"
+      "verification": "superseded-by-hash-bound-semantic-transcript-review",
+      "reviewedTeachingSha256": "sha256:0c886c2257134cedbc22331e5207b74194927a4ec8e6d3988a0c00b6a753b4d2",
+      "note": "The legacy quote target no longer exists in the exact transcript-reviewed unit. No replacement is applied; the downstream embedded-quote audit validates the reviewed copy independently."
     },
     {
       "bookId": "matei",
@@ -45,7 +47,9 @@
       "after": "faceți, dar nu faceți faptele lor",
       "beforeSha256": "sha256:2b86cf8d2f52e9f8e7000c38660209c339a78218aeae5b3ff55bc4a12868538d",
       "afterSha256": "sha256:40c092e2add9409507badaa39d33e7b110df481f5e86a336eb137f31add79543",
-      "verification": "reviewed-exact-same-chapter-biblia-emanus"
+      "verification": "superseded-by-hash-bound-semantic-transcript-review",
+      "reviewedTeachingSha256": "sha256:1d51f3951b8f351d6d474c0cecc44131adcaa851116cdb04a65e83fe3b024730",
+      "note": "The legacy quote target no longer exists in the exact transcript-reviewed unit. No replacement is applied; the downstream embedded-quote audit validates the reviewed copy independently."
     },
     {
       "bookId": "matei",
@@ -56,7 +60,9 @@
       "after": "Vedeți să nu vă rătăcească cineva",
       "beforeSha256": "sha256:bf08a91ce155907cb41387c7482f0ef19860099abb9469f5ac1ac1f0c2ea2486",
       "afterSha256": "sha256:764ef003c3b0068048a4c7b6739ddc086a4e96c31429d361421408db0eba5679",
-      "verification": "reviewed-exact-same-chapter-biblia-emanus"
+      "verification": "superseded-by-hash-bound-semantic-transcript-review",
+      "reviewedTeachingSha256": "sha256:a4b1739c08594ef9c71926c1d17af3d5ab102c2c21e0f703b52be7c90e6d5366",
+      "note": "The legacy quote target no longer exists in the exact transcript-reviewed unit. No replacement is applied; the downstream embedded-quote audit validates the reviewed copy independently."
     },
     {
       "bookId": "matei",

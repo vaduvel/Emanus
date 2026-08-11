@@ -1,7 +1,248 @@
 {
   "schema": "emanus-nt-embedded-quote-strong-candidates-v1",
   "policy": "Review batch only. Strong same-chapter Biblia Emanus candidates are diagnostic, not automatic replacements. Each decision must confirm that the quoted span is intended as Scripture and that the selected BE wording is the correct local passage.",
-  "sourceCount": 15,
-  "count": 0,
-  "entries": []
+  "sourceCount": 68,
+  "count": 6,
+  "entries": [
+    {
+      "reviewId": "da7b7c5297155d31a1eb4cc475dbc4eec769d6a7f4e2259349cba34e2cc98e18",
+      "quoteSha256": "sha256:e545e50e791c3d6a70e0e844b5ca869c168a3b92ddc61cecf7a359aa24a28e6d",
+      "bookId": "matei",
+      "canonicalBookId": "MAT",
+      "chapter": 16,
+      "field": "units[3].teaching",
+      "quote": "dacă voiește cineva să vină după Mine",
+      "wordCount": 7,
+      "best": {
+        "raw": "Dacă vrea cineva să vină după Mine",
+        "score": 0.8714,
+        "lcsRatio": 0.8571,
+        "overlap": 0.8571,
+        "lengthRatio": 1,
+        "start": 476,
+        "width": 7
+      },
+      "alternatives": [
+        {
+          "raw": "Săi: „Dacă vrea cineva să vină după Mine",
+          "score": 0.7625,
+          "lcsRatio": 0.75,
+          "overlap": 0.75,
+          "lengthRatio": 0.875,
+          "start": 475,
+          "width": 8
+        },
+        {
+          "raw": "Dacă vrea cineva să vină după Mine, să",
+          "score": 0.7625,
+          "lcsRatio": 0.75,
+          "overlap": 0.75,
+          "lengthRatio": 0.875,
+          "start": 476,
+          "width": 8
+        }
+      ],
+      "bestMargin": 0.1089
+    },
+    {
+      "reviewId": "f62034ff74dd114df76ed4044b57442519335f9d9630ad39e6379849424df769",
+      "quoteSha256": "sha256:e9b63e9b633b98a74de5d36662e41606a92f8f9952d3c311c11ad320df2487bc",
+      "bookId": "matei",
+      "canonicalBookId": "MAT",
+      "chapter": 18,
+      "field": "units[1].teaching",
+      "quote": "Nu disprețuiți pe niciunul dintre acești micuți.",
+      "wordCount": 7,
+      "best": {
+        "raw": "nu disprețuiți pe vreunul dintre acești micuți",
+        "score": 0.8714,
+        "lcsRatio": 0.8571,
+        "overlap": 0.8571,
+        "lengthRatio": 1,
+        "start": 240,
+        "width": 7
+      },
+      "alternatives": [
+        {
+          "raw": "să nu disprețuiți pe vreunul dintre acești micuți",
+          "score": 0.7625,
+          "lcsRatio": 0.75,
+          "overlap": 0.75,
+          "lengthRatio": 0.875,
+          "start": 239,
+          "width": 8
+        },
+        {
+          "raw": "nu disprețuiți pe vreunul dintre acești micuți; căci",
+          "score": 0.7625,
+          "lcsRatio": 0.75,
+          "overlap": 0.75,
+          "lengthRatio": 0.875,
+          "start": 240,
+          "width": 8
+        }
+      ],
+      "bestMargin": 0.1089
+    },
+    {
+      "reviewId": "555cb962ea264b0151ae2df5180f554358ace9447a47ed81601005252a53aabf",
+      "quoteSha256": "sha256:87f0afa952f10cfebb2ad4268b43a066cbec7dc438de3c69e405f6eb0b37facb",
+      "bookId": "matei",
+      "canonicalBookId": "MAT",
+      "chapter": 18,
+      "field": "units[3].teaching",
+      "quote": "de șaptezeci de ori câte șapte",
+      "wordCount": 6,
+      "best": {
+        "raw": "șaptezeci de ori câte șapte. De",
+        "score": 0.9083,
+        "lcsRatio": 0.8333,
+        "overlap": 1,
+        "lengthRatio": 1,
+        "start": 547,
+        "width": 6
+      },
+      "alternatives": [
+        {
+          "raw": "la șaptezeci de ori câte șapte",
+          "score": 0.85,
+          "lcsRatio": 0.8333,
+          "overlap": 0.8333,
+          "lengthRatio": 1,
+          "start": 546,
+          "width": 6
+        },
+        {
+          "raw": "șaptezeci de ori câte șapte",
+          "score": 0.8333,
+          "lcsRatio": 0.8333,
+          "overlap": 0.8333,
+          "lengthRatio": 0.8333,
+          "start": 547,
+          "width": 5
+        }
+      ],
+      "bestMargin": 0.0583
+    },
+    {
+      "reviewId": "d0976eb8175e277c2cd3e98beac6c8d334412dfaef0e9250b037598603157d70",
+      "quoteSha256": "sha256:f1841f5dc127c53ed9beb1692d9489fac62d28e4841c9aedb288ceca781050c6",
+      "bookId": "matei",
+      "canonicalBookId": "MAT",
+      "chapter": 22,
+      "field": "units[0].teaching",
+      "quote": "Mulți sunt chemați, puțini aleși",
+      "wordCount": 5,
+      "best": {
+        "raw": "mulți sunt chemați, dar puțini",
+        "score": 0.82,
+        "lcsRatio": 0.8,
+        "overlap": 0.8,
+        "lengthRatio": 1,
+        "start": 261,
+        "width": 5
+      },
+      "alternatives": [
+        {
+          "raw": "mulți sunt chemați, dar puțini sunt aleși",
+          "score": 0.7143,
+          "lcsRatio": 0.7143,
+          "overlap": 0.7143,
+          "lengthRatio": 0.7143,
+          "start": 261,
+          "width": 7
+        },
+        {
+          "raw": "chemați, dar puțini sunt aleși",
+          "score": 0.71,
+          "lcsRatio": 0.6,
+          "overlap": 0.8,
+          "lengthRatio": 1,
+          "start": 263,
+          "width": 5
+        }
+      ],
+      "bestMargin": 0.1057
+    },
+    {
+      "reviewId": "da5858e1249e09e6c4dad730135d63d9f99ea1afa3e9140dc487e42d940dd064",
+      "quoteSha256": "sha256:8dedc8c70eb009fce9edc84ccbaaf2429ff9ab7614c4bfcf9380cb279a2e4b52",
+      "bookId": "matei",
+      "canonicalBookId": "MAT",
+      "chapter": 27,
+      "field": "units[2].teaching",
+      "quote": "dacă ești Fiul lui Dumnezeu, salvează-Te.",
+      "wordCount": 7,
+      "best": {
+        "raw": "dacă ești Fiul lui Dumnezeu, coboară-te",
+        "score": 0.8714,
+        "lcsRatio": 0.8571,
+        "overlap": 0.8571,
+        "lengthRatio": 1,
+        "start": 748,
+        "width": 7
+      },
+      "alternatives": [
+        {
+          "raw": "însuți; dacă ești Fiul lui Dumnezeu, coboară-te",
+          "score": 0.7625,
+          "lcsRatio": 0.75,
+          "overlap": 0.75,
+          "lengthRatio": 0.875,
+          "start": 747,
+          "width": 8
+        },
+        {
+          "raw": "dacă ești Fiul lui Dumnezeu, coboară-te de",
+          "score": 0.7625,
+          "lcsRatio": 0.75,
+          "overlap": 0.75,
+          "lengthRatio": 0.875,
+          "start": 748,
+          "width": 8
+        }
+      ],
+      "bestMargin": 0.1089
+    },
+    {
+      "reviewId": "7b54983b029bc2d1a387cdc2c68980960cd9a8baeb7dbb41f7a5dc4aaf1fe279",
+      "quoteSha256": "sha256:4ef0f50b054b96a650ae3a0777d303665373a8326a5fbda73efee77a227af7bb",
+      "bookId": "matei",
+      "canonicalBookId": "MAT",
+      "chapter": 27,
+      "field": "units[3].teaching",
+      "quote": "Cu adevărat acesta era Fiul lui Dumnezeu.",
+      "wordCount": 7,
+      "best": {
+        "raw": "Adevărat, acesta a fost Fiul lui Dumnezeu",
+        "score": 0.7429,
+        "lcsRatio": 0.7143,
+        "overlap": 0.7143,
+        "lengthRatio": 1,
+        "start": 1030,
+        "width": 7
+      },
+      "alternatives": [
+        {
+          "raw": "spunând: Adevărat, acesta a fost Fiul lui Dumnezeu",
+          "score": 0.65,
+          "lcsRatio": 0.625,
+          "overlap": 0.625,
+          "lengthRatio": 0.875,
+          "start": 1029,
+          "width": 8
+        },
+        {
+          "raw": "Adevărat, acesta a fost Fiul lui Dumnezeu! Multe",
+          "score": 0.65,
+          "lcsRatio": 0.625,
+          "overlap": 0.625,
+          "lengthRatio": 0.875,
+          "start": 1030,
+          "width": 8
+        }
+      ],
+      "bestMargin": 0.0929
+    }
+  ]
 }

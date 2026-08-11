@@ -1,0 +1,55 @@
+{
+  "schema": "emanus-nt-semantic-postquote-rebind-matei-v1",
+  "policy": "No reader text is changed here. A semantic hash may move from its manually reviewed pre-quote snapshot to final reader copy only when inverse application of the exact, same-chapter Biblia Emanus quote-fix ledger operations reconstructs the original reviewed hash byte-for-byte.",
+  "count": 3,
+  "changes": [
+    {
+      "bookId": "matei",
+      "chapter": 2,
+      "unitId": "matei-2-19-23",
+      "action": "rebind-after-ledger-proven-exact-biblia-emanus-quote-normalization",
+      "preQuoteSemanticSha256": "sha256:c6b8bd4a973c774fb5a1c1f4bae0026230a04a15174a408c47bcfff349f2ab93",
+      "finalQuoteNormalizedSha256": "sha256:82fe0ed6b47e6c84b49a205d7b1b5379c84173b17cfd59a71376781b5df986cc",
+      "operations": [
+        {
+          "ledger": "nt-embedded-quote-reviewed-fix-wave-2-ledger.json",
+          "field": "units[2].teaching",
+          "before": "El va fi chemat Nazarinean",
+          "after": "Va fi numit Nazarinean"
+        }
+      ]
+    },
+    {
+      "bookId": "matei",
+      "chapter": 19,
+      "unitId": "matei-19-16-26",
+      "action": "rebind-after-ledger-proven-exact-biblia-emanus-quote-normalization",
+      "preQuoteSemanticSha256": "sha256:cbcd0ecea171509319c55027e1b1d617ea4148074271237651450d3269bea772",
+      "finalQuoteNormalizedSha256": "sha256:bac7cf69939ede5fb22cf87a42b5739a8a12468c24af385de5ceb1dbadcccf9a",
+      "operations": [
+        {
+          "ledger": "nt-embedded-quote-reviewed-fix-wave-2-ledger.json",
+          "field": "units[2].teaching",
+          "before": "Cine poate atunci să fie mântuit?",
+          "after": "Atunci cine poate fi mântuit?"
+        }
+      ]
+    },
+    {
+      "bookId": "matei",
+      "chapter": 28,
+      "unitId": "matei-28-1-10",
+      "action": "rebind-after-ledger-proven-exact-biblia-emanus-quote-normalization",
+      "preQuoteSemanticSha256": "sha256:065e056c9e3ce0de4ad3020c22a94dfda747c4f2bca5f78481bcf5de9d4ecf80",
+      "finalQuoteNormalizedSha256": "sha256:b64c77ab2869b626ee7cf930f08eb6081259f26a9c45e9367d4e2cd9eb49ae5e",
+      "operations": [
+        {
+          "ledger": "nt-embedded-quote-reviewed-fix-wave-2-ledger.json",
+          "field": "units[0].teaching",
+          "before": "cu frică și cu mare bucurie",
+          "after": "cu frică și bucurie mare"
+        }
+      ]
+    }
+  ]
+}

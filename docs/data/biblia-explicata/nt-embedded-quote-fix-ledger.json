@@ -1,14 +1,69 @@
 {
-  "schema": "emanus-nt-embedded-quote-fix-ledger-v1",
-  "policy": "Only unique same-chapter Biblia Emanus candidates with <=1 token edit (<=2 for long quotes), >=0.88 sequence score and >=0.80 token overlap are replaced. Ambiguous/non-Bible quotations remain untouched and blocked for manual classification.",
-  "fixed": 0,
-  "skipped": 72,
-  "fixes": [],
+  "schema": "emanus-nt-embedded-quote-fix-ledger-v2",
+  "policy": "Only unique same-chapter Biblia Emanus candidates with <=1 token edit (<=2 for long quotes), >=0.88 sequence score and >=0.80 token overlap are replaced. Unit-level fixes record exact unitId and fieldPath so any semantic hash transition can be independently reversed and proven. Ambiguous/non-Bible quotations remain untouched and blocked for manual classification.",
+  "fixed": 4,
+  "skipped": 115,
+  "fixes": [
+    {
+      "bookId": "matei",
+      "canonicalBookId": "MAT",
+      "chapter": 8,
+      "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "matei-8-14-17",
+      "before": "El a luat neputințele noastre și a purtat bolile noastre",
+      "after": "El a luat slăbiciunile noastre și a purtat bolile noastre",
+      "tokenDistance": 1,
+      "score": 0.9,
+      "overlap": 0.9
+    },
+    {
+      "bookId": "matei",
+      "canonicalBookId": "MAT",
+      "chapter": 15,
+      "field": "teaching",
+      "fieldPath": "units[0].teaching",
+      "unitId": "matei-15-1-20",
+      "before": "Orice plantă pe care n-a sădit-o Tatăl Meu va fi smulsă.",
+      "after": "Orice plantă pe care n-a sădit-o Tatăl Meu ceresc va fi smulsă",
+      "tokenDistance": 1,
+      "score": 0.9286,
+      "overlap": 0.9286
+    },
+    {
+      "bookId": "matei",
+      "canonicalBookId": "MAT",
+      "chapter": 17,
+      "field": "teaching",
+      "fieldPath": "units[1].teaching",
+      "unitId": "matei-17-14-21",
+      "before": "l-am adus la ucenicii Tăi și n-au putut.",
+      "after": "L-am adus la ucenicii Tăi, dar n-au putut",
+      "tokenDistance": 1,
+      "score": 0.9,
+      "overlap": 0.9
+    },
+    {
+      "bookId": "matei",
+      "canonicalBookId": "MAT",
+      "chapter": 27,
+      "field": "teaching",
+      "fieldPath": "units[3].teaching",
+      "unitId": "matei-27-45-56",
+      "before": "Dumnezeul Meu, Dumnezeul Meu, pentru ce M-ai părăsit?",
+      "after": "Dumnezeul meu, Dumnezeul meu, de ce m-ai părăsit",
+      "tokenDistance": 1,
+      "score": 0.8889,
+      "overlap": 0.8889
+    }
+  ],
   "unresolvedCandidates": [
     {
       "bookId": "matei",
       "chapter": 2,
       "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "matei-2-19-23",
       "quote": "El va fi chemat Nazarinean",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -16,27 +71,152 @@
       "bookId": "matei",
       "chapter": 5,
       "field": "literaryContext",
+      "fieldPath": "literaryContext",
+      "unitId": null,
       "quote": "ați auzit... dar Eu vă spun",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 6,
+      "field": "teaching",
+      "fieldPath": "units[0].teaching",
+      "unitId": "matei-6-1-4",
+      "quote": "Să nu știe stânga ce face dreapta",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 6,
+      "field": "teaching",
+      "fieldPath": "units[3].teaching",
+      "unitId": "matei-6-14-15",
+      "quote": "Doamne, las această datorie în mâna Ta și vreau să iert așa cum am fost iertat.",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
     {
       "bookId": "matei",
       "chapter": 7,
       "field": "teaching",
-      "quote": "nu v-am mai cunoscut",
+      "fieldPath": "units[4].teaching",
+      "unitId": "matei-7-24-29",
+      "quote": "nu voia mea, ci a Ta",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 8,
+      "field": "teaching",
+      "fieldPath": "units[1].teaching",
+      "unitId": "matei-8-5-13",
+      "quote": "și eu sunt om sub autoritate",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 9,
+      "field": "teaching",
+      "fieldPath": "units[1].teaching",
+      "unitId": "matei-9-9-13",
+      "quote": "Nu cei sănătoși au nevoie de doctor",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 9,
+      "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "matei-9-14-17",
+      "quote": "dacă Mă iubiți, păziți poruncile Mele",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 9,
+      "field": "teaching",
+      "fieldPath": "units[4].teaching",
+      "unitId": "matei-9-27-34",
+      "quote": "Credeți că pot face lucrul acesta?",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 9,
+      "field": "teaching",
+      "fieldPath": "units[5].teaching",
+      "unitId": "matei-9-35-38",
+      "quote": "vedeți lipsa, deci abandonați-vă imediat locul de muncă și declarați-vă slujitori",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 10,
+      "field": "teaching",
+      "fieldPath": "units[1].teaching",
+      "unitId": "matei-10-16-23",
+      "quote": "Cine va răbda până la sfârșit",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
     {
       "bookId": "matei",
       "chapter": 11,
       "field": "teaching",
-      "quote": "Ferice de acela pentru care Eu nu voi fi un prilej de poticnire",
+      "fieldPath": "units[2].teaching",
+      "unitId": "matei-11-25-27",
+      "quote": "Doamne, fără Tine nu pot vedea lucrurile spirituale; nu mă pot sprijini pe experiența sau inteligența mea.",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 12,
+      "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "matei-12-22-32",
+      "quote": "Cine nu este cu Mine este împotriva Mea; cine nu strânge cu Mine risipește.",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 12,
+      "field": "teaching",
+      "fieldPath": "units[3].teaching",
+      "unitId": "matei-12-33-37",
+      "quote": "faceți fructele să arate mai bine",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 12,
+      "field": "teaching",
+      "fieldPath": "units[4].teaching",
+      "unitId": "matei-12-38-45",
+      "quote": "nu mă mai gândesc la rău",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 13,
+      "field": "teaching",
+      "fieldPath": "units[3].teaching",
+      "unitId": "matei-13-36-43",
+      "quote": "Cine are urechi să audă",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 13,
+      "field": "teaching",
+      "fieldPath": "units[4].teaching",
+      "unitId": "matei-13-44-46",
+      "quote": "aceasta este a mea și Tu nu ai drept asupra ei",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
     {
       "bookId": "matei",
       "chapter": 14,
       "field": "literaryContext",
+      "fieldPath": "literaryContext",
+      "unitId": null,
       "quote": "Cu adevărat, Tu ești Fiul lui Dumnezeu.",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -44,13 +224,35 @@
       "bookId": "matei",
       "chapter": 14,
       "field": "teaching",
-      "quote": "Eu sunt; nu vă temeți",
+      "fieldPath": "units[2].teaching",
+      "unitId": "matei-14-22-33",
+      "quote": "Îndrăzniți, Eu sunt; nu vă temeți.",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 14,
+      "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "matei-14-22-33",
+      "quote": "legea Duhului de viață în Hristos Isus",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 15,
+      "field": "teaching",
+      "fieldPath": "units[1].teaching",
+      "unitId": "matei-15-21-28",
+      "quote": "chiar și o fărâmă din mila Ta este suficientă pentru nevoia mea.",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
     {
       "bookId": "matei",
       "chapter": 16,
       "field": "historicalContext",
+      "fieldPath": "historicalContext",
+      "unitId": null,
       "quote": "a lega și a dezlega",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -58,69 +260,341 @@
       "bookId": "matei",
       "chapter": 16,
       "field": "teaching",
-      "quote": "voi cine ziceți că sunt?",
+      "fieldPath": "units[1].teaching",
+      "unitId": "matei-16-13-20",
+      "quote": "Doamne, dă-mi lumină ca adevărul să ajungă dincolo de informație și să devină viață.",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 16,
+      "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "matei-16-21-23",
+      "quote": "nu te gândești la lucrurile lui Dumnezeu, ci la lucrurile oamenilor.",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 16,
+      "field": "teaching",
+      "fieldPath": "units[3].teaching",
+      "unitId": "matei-16-24-28",
+      "quote": "dacă voiește cineva să vină după Mine",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 16,
+      "field": "teaching",
+      "fieldPath": "units[3].teaching",
+      "unitId": "matei-16-24-28",
+      "quote": "Dacă Mă iubiți, păziți poruncile Mele.",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 16,
+      "field": "teaching",
+      "fieldPath": "units[3].teaching",
+      "unitId": "matei-16-24-28",
+      "quote": "nu voia mea, ci a Ta.",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
     {
       "bookId": "matei",
       "chapter": 17,
       "field": "teaching",
-      "quote": "sculați-vă, nu vă temeți",
+      "fieldPath": "units[0].teaching",
+      "unitId": "matei-17-1-13",
+      "quote": "Acesta este Fiul Meu preaiubit; de El să ascultați.",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 17,
+      "field": "teaching",
+      "fieldPath": "units[3].teaching",
+      "unitId": "matei-17-24-27",
+      "quote": "îl ajută aceasta pe celălalt să-L vadă pe Hristos sau îi creează o poticnire inutilă?",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 18,
+      "field": "teaching",
+      "fieldPath": "units[1].teaching",
+      "unitId": "matei-18-6-14",
+      "quote": "Nu disprețuiți pe niciunul dintre acești micuți.",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 18,
+      "field": "teaching",
+      "fieldPath": "units[3].teaching",
+      "unitId": "matei-18-21-35",
+      "quote": "de șaptezeci de ori câte șapte",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
     {
       "bookId": "matei",
       "chapter": 19,
       "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "matei-19-16-26",
       "quote": "Cine poate atunci să fie mântuit?",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 20,
+      "field": "teaching",
+      "fieldPath": "units[0].teaching",
+      "unitId": "matei-20-1-16",
+      "quote": "Noi am lăsat totul; ce vom primi?",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 20,
+      "field": "teaching",
+      "fieldPath": "units[0].teaching",
+      "unitId": "matei-20-1-16",
+      "quote": "mergeți și voi în vie",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 20,
+      "field": "teaching",
+      "fieldPath": "units[0].teaching",
+      "unitId": "matei-20-1-16",
+      "quote": "Doamne, am dat atât, am lucrat atâția ani, deci ce îmi dai?",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 20,
+      "field": "teaching",
+      "fieldPath": "units[0].teaching",
+      "unitId": "matei-20-1-16",
+      "quote": "nu merit locul acesta; după cât m-ai iertat și mi-ai dat, vreau să Te slujesc din iubire.",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 20,
+      "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "matei-20-29-34",
+      "quote": "Ce vreți să vă fac?",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 21,
+      "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "matei-21-18-22",
+      "quote": "Tot ce cereți cu credință",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 22,
+      "field": "teaching",
+      "fieldPath": "units[0].teaching",
+      "unitId": "matei-22-1-14",
+      "quote": "viața mea este suficient de bună; nu am nevoie de ceea ce îmi dai Tu.",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 22,
+      "field": "teaching",
+      "fieldPath": "units[0].teaching",
+      "unitId": "matei-22-1-14",
+      "quote": "Mulți sunt chemați, puțini aleși",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
     {
       "bookId": "matei",
       "chapter": 23,
       "field": "teaching",
-      "quote": "faceți, dar nu faceți după faptele lor",
+      "fieldPath": "units[0].teaching",
+      "unitId": "matei-23-1-12",
+      "quote": "Cine se înalță va fi smerit, iar cine se smerește va fi înălțat.",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
     {
       "bookId": "matei",
       "chapter": 24,
       "field": "teaching",
-      "quote": "Băgați de seamă să nu vă înșele cineva.",
+      "fieldPath": "units[0].teaching",
+      "unitId": "matei-24-1-14",
+      "quote": "Cine va răbda până la sfârșit va fi mântuit",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 24,
+      "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "matei-24-29-35",
+      "quote": "îndată după necazul acelor zile",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
     {
       "bookId": "matei",
       "chapter": 25,
       "field": "teaching",
-      "quote": "Acești foarte neînsemnați frați ai Mei",
+      "fieldPath": "units[1].teaching",
+      "unitId": "matei-25-14-30",
+      "quote": "Celui ce are i se va da",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
     {
       "bookId": "matei",
       "chapter": 26,
       "field": "teaching",
-      "quote": "Pe săraci îi aveți totdeauna",
+      "fieldPath": "units[0].teaching",
+      "unitId": "matei-26-1-16",
+      "quote": "la cine să mergem? Tu ai cuvintele vieții.",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
     {
       "bookId": "matei",
       "chapter": 26,
       "field": "teaching",
-      "quote": "Duhul este plin de râvnă, dar carnea este neputincioasă",
+      "fieldPath": "units[1].teaching",
+      "unitId": "matei-26-17-30",
+      "quote": "nu cumva sunt eu, Doamne?",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 26,
+      "field": "teaching",
+      "fieldPath": "units[1].teaching",
+      "unitId": "matei-26-17-30",
+      "quote": "am venit nu să fac voia Mea, ci voia Celui ce M-a trimis",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 26,
+      "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "matei-26-31-46",
+      "quote": "chiar dacă toți se vor poticni, eu nu.",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 26,
+      "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "matei-26-31-46",
+      "quote": "Dacă este cu putință, depărtează de la Mine paharul",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 26,
+      "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "matei-26-31-46",
+      "quote": "totuși, nu cum voiesc Eu, ci cum voiești Tu.",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 26,
+      "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "matei-26-31-46",
+      "quote": "Duhul este plin de râvnă, dar carnea este neputincioasă.",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 26,
+      "field": "teaching",
+      "fieldPath": "units[4].teaching",
+      "unitId": "matei-26-57-68",
+      "quote": "ce vrea Tatăl să spun și ce vrea să las în mâna Lui?",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 26,
+      "field": "teaching",
+      "fieldPath": "units[5].teaching",
+      "unitId": "matei-26-69-75",
+      "quote": "chiar dacă toți, eu nu",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 26,
+      "field": "teaching",
+      "fieldPath": "units[5].teaching",
+      "unitId": "matei-26-69-75",
+      "quote": "Fericiți cei ce plâng, căci ei vor fi mângâiați.",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 27,
+      "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "matei-27-27-44",
+      "quote": "dacă ești Fiul lui Dumnezeu, salvează-Te.",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 27,
+      "field": "teaching",
+      "fieldPath": "units[3].teaching",
+      "unitId": "matei-27-45-56",
+      "quote": "Cu adevărat acesta era Fiul lui Dumnezeu.",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
     {
       "bookId": "matei",
       "chapter": 28,
       "field": "teaching",
+      "fieldPath": "units[0].teaching",
+      "unitId": "matei-28-1-10",
       "quote": "cu frică și cu mare bucurie",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 28,
+      "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "matei-28-16-20",
+      "quote": "Toată autoritatea Mi-a fost dată în cer și pe pământ.",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "matei",
+      "chapter": 28,
+      "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "matei-28-16-20",
+      "quote": "învățați-i să păzească tot ce v-am poruncit.",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
     {
       "bookId": "marcu",
       "chapter": 1,
       "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "marcu-1-9-11",
       "quote": "nu am nevoie de aceasta",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -128,6 +602,8 @@
       "bookId": "marcu",
       "chapter": 4,
       "field": "teaching",
+      "fieldPath": "units[7].teaching",
+      "unitId": "marcu-4-35-41",
       "quote": "de ce vă este frică?",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -135,6 +611,8 @@
       "bookId": "marcu",
       "chapter": 5,
       "field": "literaryContext",
+      "fieldPath": "literaryContext",
+      "unitId": null,
       "quote": "Cine este Acesta de Îl ascultă chiar și vântul și marea?",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -142,6 +620,8 @@
       "bookId": "marcu",
       "chapter": 5,
       "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "marcu-5-35-43",
       "quote": "Nu te teme; crede numai.",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -149,6 +629,8 @@
       "bookId": "marcu",
       "chapter": 6,
       "field": "prayer",
+      "fieldPath": "prayer",
+      "unitId": null,
       "quote": "Îndrăzniți, Eu sunt, nu vă temeți!",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -156,6 +638,8 @@
       "bookId": "marcu",
       "chapter": 6,
       "field": "teaching",
+      "fieldPath": "units[4].teaching",
+      "unitId": "marcu-6-45-52",
       "quote": "Îndrăzniți! Eu sunt. Nu vă temeți!",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -163,6 +647,8 @@
       "bookId": "marcu",
       "chapter": 8,
       "field": "teaching",
+      "fieldPath": "units[0].teaching",
+      "unitId": "marcu-8-1-10",
       "quote": "Mi-e milă de mulțime.",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -170,6 +656,8 @@
       "bookId": "marcu",
       "chapter": 8,
       "field": "teaching",
+      "fieldPath": "units[3].teaching",
+      "unitId": "marcu-8-27-30",
       "quote": "Dar voi cine spuneți că sunt?",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -177,6 +665,8 @@
       "bookId": "marcu",
       "chapter": 9,
       "field": "teaching",
+      "fieldPath": "units[0].teaching",
+      "unitId": "marcu-9-1-13",
       "quote": "Acesta este Fiul Meu preaiubit; pe El să-L ascultați.",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -184,6 +674,8 @@
       "bookId": "marcu",
       "chapter": 9,
       "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "marcu-9-30-37",
       "quote": "Nu pot de la mine; depind de Tatăl.",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -191,6 +683,8 @@
       "bookId": "marcu",
       "chapter": 9,
       "field": "teaching",
+      "fieldPath": "units[3].teaching",
+      "unitId": "marcu-9-38-50",
       "quote": "nu ne urma pe noi",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -198,6 +692,8 @@
       "bookId": "marcu",
       "chapter": 9,
       "field": "teaching",
+      "fieldPath": "units[3].teaching",
+      "unitId": "marcu-9-38-50",
       "quote": "am dreptul să fac aceasta?",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -205,6 +701,8 @@
       "bookId": "marcu",
       "chapter": 9,
       "field": "teaching",
+      "fieldPath": "units[3].teaching",
+      "unitId": "marcu-9-38-50",
       "quote": "zidește? poate împiedica pe altul?",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -212,6 +710,8 @@
       "bookId": "marcu",
       "chapter": 10,
       "field": "teaching",
+      "fieldPath": "units[0].teaching",
+      "unitId": "marcu-10-1-12",
       "quote": "A lăsa pe tată și pe mamă",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -219,6 +719,8 @@
       "bookId": "marcu",
       "chapter": 10,
       "field": "forYourHeart",
+      "fieldPath": "units[0].forYourHeart",
+      "unitId": "marcu-10-1-12",
       "quote": "cât îmi este permis să rup?",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -226,6 +728,8 @@
       "bookId": "marcu",
       "chapter": 10,
       "field": "teaching",
+      "fieldPath": "units[1].teaching",
+      "unitId": "marcu-10-13-31",
       "quote": "vinde tot, dă săracilor și urmează-Mă",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -233,6 +737,8 @@
       "bookId": "marcu",
       "chapter": 10,
       "field": "teaching",
+      "fieldPath": "units[3].teaching",
+      "unitId": "marcu-10-46-52",
       "quote": "Dumnezeu nu te mai ascultă",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -240,6 +746,8 @@
       "bookId": "marcu",
       "chapter": 10,
       "field": "teaching",
+      "fieldPath": "units[3].teaching",
+      "unitId": "marcu-10-46-52",
       "quote": "situația ta este prea rea",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -247,6 +755,8 @@
       "bookId": "marcu",
       "chapter": 12,
       "field": "teaching",
+      "fieldPath": "units[1].teaching",
+      "unitId": "marcu-12-13-27",
       "quote": "Dați cezarului ce este al cezarului și lui Dumnezeu ce este al lui Dumnezeu.",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -254,6 +764,8 @@
       "bookId": "marcu",
       "chapter": 12,
       "field": "teaching",
+      "fieldPath": "units[1].teaching",
+      "unitId": "marcu-12-13-27",
       "quote": "nu mai este al lui",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -261,6 +773,8 @@
       "bookId": "marcu",
       "chapter": 12,
       "field": "teaching",
+      "fieldPath": "units[1].teaching",
+      "unitId": "marcu-12-13-27",
       "quote": "Dați lui Dumnezeu ce este al lui Dumnezeu",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -268,6 +782,8 @@
       "bookId": "marcu",
       "chapter": 12,
       "field": "teaching",
+      "fieldPath": "units[1].teaching",
+      "unitId": "marcu-12-13-27",
       "quote": "Eu sunt Dumnezeul lui Avraam, Isaac și Iacov",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -275,6 +791,8 @@
       "bookId": "marcu",
       "chapter": 13,
       "field": "teaching",
+      "fieldPath": "units[0].teaching",
+      "unitId": "marcu-13-1-13",
       "quote": "Să nu vă înșele cineva.",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -282,6 +800,8 @@
       "bookId": "marcu",
       "chapter": 13,
       "field": "teaching",
+      "fieldPath": "units[0].teaching",
+      "unitId": "marcu-13-1-13",
       "quote": "Cine va răbda până la sfârșit va fi mântuit.",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -289,6 +809,8 @@
       "bookId": "marcu",
       "chapter": 13,
       "field": "teaching",
+      "fieldPath": "units[1].teaching",
+      "unitId": "marcu-13-14-27",
       "quote": "Hristos este aici, în secret",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -296,6 +818,8 @@
       "bookId": "marcu",
       "chapter": 13,
       "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "marcu-13-28-37",
       "quote": "Generația aceasta nu va trece...",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -303,6 +827,8 @@
       "bookId": "marcu",
       "chapter": 14,
       "field": "teaching",
+      "fieldPath": "units[0].teaching",
+      "unitId": "marcu-14-1-11",
       "quote": "Ea a făcut ce a putut.",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -310,6 +836,8 @@
       "bookId": "marcu",
       "chapter": 14,
       "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "marcu-14-32-52",
       "quote": "nu ce voiesc Eu, ci ce voiești Tu",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -317,6 +845,8 @@
       "bookId": "marcu",
       "chapter": 14,
       "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "marcu-14-32-52",
       "quote": "Vegheați și rugați-vă ca să nu intrați în ispită.",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -324,6 +854,8 @@
       "bookId": "marcu",
       "chapter": 15,
       "field": "teaching",
+      "fieldPath": "units[1].teaching",
+      "unitId": "marcu-15-16-32",
       "quote": "dacă vrea cineva să vină după Mine",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -331,6 +863,8 @@
       "bookId": "marcu",
       "chapter": 16,
       "field": "teaching",
+      "fieldPath": "units[0].teaching",
+      "unitId": "marcu-16-1-8",
       "quote": "spuneți ucenicilor Lui și lui Petru",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -338,6 +872,8 @@
       "bookId": "marcu",
       "chapter": 16,
       "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "marcu-16-15-20",
       "quote": "Cine crede și este botezat...",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -345,6 +881,8 @@
       "bookId": "luca",
       "chapter": 1,
       "field": "forYourHeart",
+      "fieldPath": "units[2].forYourHeart",
+      "unitId": "luca-1-26-38",
       "quote": "Sunt al Domnului; fie-mi după cuvântul Tău",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -352,6 +890,8 @@
       "bookId": "luca",
       "chapter": 3,
       "field": "forYourHeart",
+      "fieldPath": "units[2].forYourHeart",
+      "unitId": "luca-3-15-20",
       "quote": "El trebuie să crească, iar eu să mă micșorez",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -359,6 +899,8 @@
       "bookId": "luca",
       "chapter": 7,
       "field": "forYourHeart",
+      "fieldPath": "units[0].forYourHeart",
+      "unitId": "luca-7-1-10",
       "quote": "Cuvântul Tău este suficient; voia Ta este bună",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -366,6 +908,8 @@
       "bookId": "luca",
       "chapter": 7,
       "field": "teaching",
+      "fieldPath": "units[3].teaching",
+      "unitId": "luca-7-36-50",
       "quote": "sunt cel mai mare păcătos",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -373,6 +917,8 @@
       "bookId": "luca",
       "chapter": 8,
       "field": "teaching",
+      "fieldPath": "units[4].teaching",
+      "unitId": "luca-8-49-56",
       "quote": "Nu mai supăra pe Învățătorul",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -380,6 +926,8 @@
       "bookId": "luca",
       "chapter": 9,
       "field": "teaching",
+      "fieldPath": "units[0].teaching",
+      "unitId": "luca-9-1-17",
       "quote": "Dați-le voi să mănânce",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -387,6 +935,8 @@
       "bookId": "luca",
       "chapter": 9,
       "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "luca-9-28-36",
       "quote": "Acesta este Fiul Meu ales; de El să ascultați",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -394,6 +944,8 @@
       "bookId": "luca",
       "chapter": 17,
       "field": "teaching",
+      "fieldPath": "units[3].teaching",
+      "unitId": "luca-17-26-37",
       "quote": "Unul va fi luat și altul lăsat",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -401,6 +953,8 @@
       "bookId": "luca",
       "chapter": 23,
       "field": "teaching",
+      "fieldPath": "units[1].teaching",
+      "unitId": "luca-23-26-43",
       "quote": "astăzi vei fi cu Mine în rai",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -408,6 +962,8 @@
       "bookId": "fapte",
       "chapter": 1,
       "field": "forYourHeart",
+      "fieldPath": "units[1].forYourHeart",
+      "unitId": "fapte-1-6-11",
       "quote": "trăiesc astăzi ca martor al lui Isus prin puterea Duhului?",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -415,6 +971,8 @@
       "bookId": "fapte",
       "chapter": 18,
       "field": "teaching",
+      "fieldPath": "units[0].teaching",
+      "unitId": "fapte-18-1-11",
       "quote": "Nu te teme... Eu sunt cu tine",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -422,6 +980,8 @@
       "bookId": "fapte",
       "chapter": 24,
       "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "fapte-24-22-27",
       "quote": "Acum pleacă; te voi chema când voi avea timp.",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -429,6 +989,8 @@
       "bookId": "romani",
       "chapter": 11,
       "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "romani-11-17-24",
       "quote": "Stai prin credință; nu te îngâmfa, ci teme-te.",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -436,6 +998,8 @@
       "bookId": "1-corinteni",
       "chapter": 10,
       "field": "forYourHeart",
+      "fieldPath": "units[3].forYourHeart",
+      "unitId": "1-corinteni-10-23-33",
       "quote": "Îl slăvește pe Dumnezeu și îl ajută pe aproapele?",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -443,6 +1007,8 @@
       "bookId": "1-corinteni",
       "chapter": 11,
       "field": "literaryContext",
+      "fieldPath": "literaryContext",
+      "unitId": null,
       "quote": "totul pentru slava lui Dumnezeu",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -450,6 +1016,8 @@
       "bookId": "1-corinteni",
       "chapter": 12,
       "field": "teaching",
+      "fieldPath": "units[1].teaching",
+      "unitId": "1-corinteni-12-12-21",
       "quote": "nu am nevoie de tine",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -457,6 +1025,8 @@
       "bookId": "1-corinteni",
       "chapter": 14,
       "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "1-corinteni-14-26-33",
       "quote": "Duhurile prorocilor sunt supuse prorocilor",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -464,6 +1034,8 @@
       "bookId": "1-corinteni",
       "chapter": 14,
       "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "1-corinteni-14-26-33",
       "quote": "Dumnezeu m-a făcut să spun",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -471,6 +1043,8 @@
       "bookId": "1-corinteni",
       "chapter": 16,
       "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "1-corinteni-16-13-24",
       "quote": "Vegheați, stați tari, fiți curajoși",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -478,6 +1052,8 @@
       "bookId": "1-corinteni",
       "chapter": 16,
       "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "1-corinteni-16-13-24",
       "quote": "tot ce faceți să fie făcut în dragoste",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -485,6 +1061,8 @@
       "bookId": "2-corinteni",
       "chapter": 13,
       "field": "teaching",
+      "fieldPath": "units[1].teaching",
+      "unitId": "2-corinteni-13-5-10",
       "quote": "dovedește-ne că ești apostol",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -492,6 +1070,8 @@
       "bookId": "filipeni",
       "chapter": 2,
       "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "filipeni-2-12-18",
       "quote": "Duceți până la capăt mântuirea",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -499,6 +1079,8 @@
       "bookId": "coloseni",
       "chapter": 1,
       "field": "teaching",
+      "fieldPath": "units[4].teaching",
+      "unitId": "coloseni-1-24-29",
       "quote": "Hristos în voi, nădejdea slavei",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
@@ -506,6 +1088,8 @@
       "bookId": "coloseni",
       "chapter": 2,
       "field": "teaching",
+      "fieldPath": "units[4].teaching",
+      "unitId": "coloseni-2-20-23",
       "quote": "nu lua, nu gusta, nu atinge",
       "reason": "no-unique-high-confidence-same-chapter-match"
     }

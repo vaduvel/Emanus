@@ -1,6 +1,6 @@
 {
   "schema": "emanus-nt-embedded-quote-reviewed-fix-ledger-v2",
-  "policy": "Every direct replacement is rejected unless its normalized wording exists in the same current Biblia Emanus chapter. A legacy quote-fix may be marked superseded only when the exact target unit carries reviewed-against-raw-transcript sourceFidelity; the fresh quote audit then evaluates the rewritten copy independently.",
+  "policy": "Every direct replacement is rejected unless its normalized wording exists in the same current Biblia Emanus chapter. A legacy quote-fix may be marked superseded only when the exact target unit is already bound either to pinned raw transcript review or to an approved hash-bound semantic transcript review; the fresh quote audit then evaluates the reviewed copy independently.",
   "count": 16,
   "fixes": [
     {
@@ -23,7 +23,9 @@
       "after": "voi cine spuneți că sunt",
       "beforeSha256": "sha256:be591a705e1d345a658926b44a1cea0da47ae3e23a70b098547346f83b8a7742",
       "afterSha256": "sha256:3b654c37e6588d7471ddc6e6c5d4a0ed575cd39d35b340e7dd4c71943dfa6a21",
-      "verification": "reviewed-exact-same-chapter-biblia-emanus"
+      "verification": "superseded-by-hash-bound-semantic-transcript-review",
+      "reviewedTeachingSha256": "sha256:48a34ee368b7fe5b56d6b532cf03347573be7dd2074b4576eed6bd4364491baf",
+      "note": "The old quote no longer exists because the exact target unit was deliberately reviewed against transcript evidence. The fresh embedded-quote audit validates the reviewed copy independently."
     },
     {
       "bookId": "matei",
@@ -34,7 +36,9 @@
       "after": "Ridicați-vă și nu vă temeți",
       "beforeSha256": "sha256:1e4c5c290e9737857d6886248b9b720bb23067d8a335c86452d97118b6a99480",
       "afterSha256": "sha256:034faedf621dfda64ac14c449fe6e68452bd1bd11439e1bfa4013ad7495e8090",
-      "verification": "reviewed-exact-same-chapter-biblia-emanus"
+      "verification": "superseded-by-hash-bound-semantic-transcript-review",
+      "reviewedTeachingSha256": "sha256:6239bd8e3446d60aa3f7d7dd1e34b5faa8b78d91574e0f07ed61540c7884c7d3",
+      "note": "The old quote no longer exists because the exact target unit was deliberately reviewed against transcript evidence. The fresh embedded-quote audit validates the reviewed copy independently."
     },
     {
       "bookId": "matei",
@@ -45,7 +49,9 @@
       "after": "acești foarte mici frați ai Mei",
       "beforeSha256": "sha256:025f14e80ce8d30b6f41a82516a37f67f4e3e9188fae17a722077c2c695c32a2",
       "afterSha256": "sha256:61da6b370c4f2feaf20aa400ed6bc5fa4d7ad7dbf15b212d1ee1c904e32d8698",
-      "verification": "reviewed-exact-same-chapter-biblia-emanus"
+      "verification": "superseded-by-hash-bound-semantic-transcript-review",
+      "reviewedTeachingSha256": "sha256:8074767e73c97670dfbc6a100b86a10f66747b50e7245cca2425fa125f949b3e",
+      "note": "The old quote no longer exists because the exact target unit was deliberately reviewed against transcript evidence. The fresh embedded-quote audit validates the reviewed copy independently."
     },
     {
       "bookId": "marcu",
@@ -58,7 +64,7 @@
       "afterSha256": "sha256:0bd165c9285db6fd02c2bcd07d79052e48f08001ea0310fcb827540beb185003",
       "verification": "superseded-by-raw-transcript-editorial-review",
       "sourceFidelityPolicy": "poonen-primary-research-only-where-source-is-thin",
-      "note": "The old quote no longer exists because the complete unit was deliberately rewritten from pinned raw transcript evidence. The fresh embedded-quote audit validates the replacement unit independently."
+      "note": "The old quote no longer exists because the exact target unit was deliberately reviewed against transcript evidence. The fresh embedded-quote audit validates the reviewed copy independently."
     },
     {
       "bookId": "marcu",
@@ -71,7 +77,7 @@
       "afterSha256": "sha256:345cbbf0ccf77dcae7a0405ebc33e4557a14e412ad022e5fc3de43d6ba20ecdc",
       "verification": "superseded-by-raw-transcript-editorial-review",
       "sourceFidelityPolicy": "poonen-primary-research-only-where-source-is-thin",
-      "note": "The old quote no longer exists because the complete unit was deliberately rewritten from pinned raw transcript evidence. The fresh embedded-quote audit validates the replacement unit independently."
+      "note": "The old quote no longer exists because the exact target unit was deliberately reviewed against transcript evidence. The fresh embedded-quote audit validates the reviewed copy independently."
     },
     {
       "bookId": "marcu",
@@ -84,7 +90,7 @@
       "afterSha256": "sha256:1a3ee2288e61daed1b5dcb0711f66bef004e725e819402946ce002abb3810aae",
       "verification": "superseded-by-raw-transcript-editorial-review",
       "sourceFidelityPolicy": "poonen-primary-research-only-where-source-is-thin",
-      "note": "The old quote no longer exists because the complete unit was deliberately rewritten from pinned raw transcript evidence. The fresh embedded-quote audit validates the replacement unit independently."
+      "note": "The old quote no longer exists because the exact target unit was deliberately reviewed against transcript evidence. The fresh embedded-quote audit validates the reviewed copy independently."
     },
     {
       "bookId": "marcu",
@@ -97,7 +103,7 @@
       "afterSha256": "sha256:fc8867e87cf6bf8620cdb59eacc9d5b8d7ee702dd2bc1599c399ef1c5511c926",
       "verification": "superseded-by-raw-transcript-editorial-review",
       "sourceFidelityPolicy": "poonen-primary-research-only-where-source-is-thin",
-      "note": "The old quote no longer exists because the complete unit was deliberately rewritten from pinned raw transcript evidence. The fresh embedded-quote audit validates the replacement unit independently."
+      "note": "The old quote no longer exists because the exact target unit was deliberately reviewed against transcript evidence. The fresh embedded-quote audit validates the reviewed copy independently."
     },
     {
       "bookId": "marcu",
@@ -110,7 +116,7 @@
       "afterSha256": "sha256:b0df210353cbf9b02eb5c0414ad67a66deea24615f582af1aa28cedd6967b21d",
       "verification": "superseded-by-raw-transcript-editorial-review",
       "sourceFidelityPolicy": "poonen-primary-research-only-where-source-is-thin",
-      "note": "The old quote no longer exists because the complete unit was deliberately rewritten from pinned raw transcript evidence. The fresh embedded-quote audit validates the replacement unit independently."
+      "note": "The old quote no longer exists because the exact target unit was deliberately reviewed against transcript evidence. The fresh embedded-quote audit validates the reviewed copy independently."
     },
     {
       "bookId": "marcu",
@@ -123,7 +129,7 @@
       "afterSha256": "sha256:ddbfb37788816429dc49e2f847aca812696ce32093598469a1311ee980f0b5f6",
       "verification": "superseded-by-raw-transcript-editorial-review",
       "sourceFidelityPolicy": "poonen-primary-research-only-where-source-is-thin",
-      "note": "The old quote no longer exists because the complete unit was deliberately rewritten from pinned raw transcript evidence. The fresh embedded-quote audit validates the replacement unit independently."
+      "note": "The old quote no longer exists because the exact target unit was deliberately reviewed against transcript evidence. The fresh embedded-quote audit validates the reviewed copy independently."
     },
     {
       "bookId": "marcu",

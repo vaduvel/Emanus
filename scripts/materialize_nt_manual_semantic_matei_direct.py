@@ -20,8 +20,8 @@ EXPECTED_FILES = [
     *[f"01-matei-wave2-wip-{i:02d}.json" for i in range(2, 23)],
 ]
 EXPECTED_DECISIONS = 125
-EXPECTED_REWRITES = 90
-EXPECTED_KEEPS = 35
+EXPECTED_REWRITES = 89
+EXPECTED_KEEPS = 36
 FORBIDDEN_READER_ATTRIBUTION = re.compile(r"\b(?:Poonen|CFC|SermonIndex)\b", re.I)
 
 
@@ -191,10 +191,22 @@ for unit_id in sorted(reviews, key=lambda x: (reviews[x]["chapter"], units[x][1]
                 expected_start = chunk["endWord"] + 1
             if len(words) != meta.get("wordCount"):
                 fail(f"representation {rep_no}: reconstructed word count {len(words)} != {meta.get('wordCount')}")
-            reconstructed = " ".join(words)
-            if sha(reconstructed) != meta.get("transcriptSha256"):
-                # The representation generator hashes its normalized split/join text. Fail closed if that invariant changes.
-                fail(f"representation {rep_no}: reconstructed transcript SHA drifted")
+            source_rep_file = meta.get("sourceRepresentationFile")
+            if not isinstance(source_rep_file, str) or not source_rep_file:
+                fail(f"representation {rep_no}: sourceRepresentationFile missing")
+            source_rep = load(DATA / "nt-semantic-transcript-representations" / source_rep_file)
+            source_text = str(source_rep.get("text") or "")
+            if not source_text:
+                fail(f"representation {rep_no}: persistent source representation text missing")
+            if source_rep.get("transcriptSha256") != meta.get("transcriptSha256"):
+                fail(f"representation {rep_no}: persistent source representation SHA metadata drift")
+            if sha(source_text) != meta.get("transcriptSha256"):
+                fail(f"representation {rep_no}: persistent source representation text SHA drift")
+            source_words = source_text.split()
+            if len(source_words) != meta.get("wordCount"):
+                fail(f"representation {rep_no}: persistent source word count drift")
+            if words != source_words:
+                fail(f"representation {rep_no}: chunk sequence no longer reproduces persistent source words")
             representation_cache[rep_no] = meta
         meta = representation_cache[rep_no]
         if transcript_ref.get("transcriptUrl") != meta.get("transcriptUrl"):

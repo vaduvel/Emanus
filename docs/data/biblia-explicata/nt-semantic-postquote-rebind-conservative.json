@@ -1,0 +1,68 @@
+{
+  "schema": "emanus-nt-semantic-postquote-rebind-conservative-v1",
+  "policy": "No reader copy is changed here. A semantic hash is rebound only when reversing the exact unit-level conservative Biblia Emanus quote-fix ledger operations recreates the manually reviewed pre-quote snapshot hash byte-for-byte.",
+  "conservativeFixes": 4,
+  "semanticRebinds": 4,
+  "changes": [
+    {
+      "bookId": "matei",
+      "chapter": 8,
+      "unitId": "matei-8-14-17",
+      "action": "rebind-after-reversible-conservative-same-chapter-biblia-emanus-quote-fix",
+      "preQuoteSemanticSha256": "sha256:953b4abfac236a974a596c60c2530e3d9ca4082bd6a1f7577f5af50210013516",
+      "finalQuoteNormalizedSha256": "sha256:7cb825d4795e0c392bbfc818685c46c8d017c4c2b1c050b4d8dd1a831c2209c1",
+      "operations": [
+        {
+          "fieldPath": "units[2].teaching",
+          "before": "El a luat neputințele noastre și a purtat bolile noastre",
+          "after": "El a luat slăbiciunile noastre și a purtat bolile noastre"
+        }
+      ]
+    },
+    {
+      "bookId": "matei",
+      "chapter": 15,
+      "unitId": "matei-15-1-20",
+      "action": "rebind-after-reversible-conservative-same-chapter-biblia-emanus-quote-fix",
+      "preQuoteSemanticSha256": "sha256:7e20b56eb1984227f900b1b3c22fffacd272fd98b2395290a04c693c42bd43bf",
+      "finalQuoteNormalizedSha256": "sha256:a411367964c070aef740f2e8ab014a345b544781181b4a2050fb14b873b7dfed",
+      "operations": [
+        {
+          "fieldPath": "units[0].teaching",
+          "before": "Orice plantă pe care n-a sădit-o Tatăl Meu va fi smulsă.",
+          "after": "Orice plantă pe care n-a sădit-o Tatăl Meu ceresc va fi smulsă"
+        }
+      ]
+    },
+    {
+      "bookId": "matei",
+      "chapter": 17,
+      "unitId": "matei-17-14-21",
+      "action": "rebind-after-reversible-conservative-same-chapter-biblia-emanus-quote-fix",
+      "preQuoteSemanticSha256": "sha256:1331b08256d781faa5cb86606c50fe67afaf916f9cc4b4a010dbea033ac85ea1",
+      "finalQuoteNormalizedSha256": "sha256:5ca602b942c9a032020ef9ae524499161c67d8924a89efcab0b201fa9c478ace",
+      "operations": [
+        {
+          "fieldPath": "units[1].teaching",
+          "before": "l-am adus la ucenicii Tăi și n-au putut.",
+          "after": "L-am adus la ucenicii Tăi, dar n-au putut"
+        }
+      ]
+    },
+    {
+      "bookId": "matei",
+      "chapter": 27,
+      "unitId": "matei-27-45-56",
+      "action": "rebind-after-reversible-conservative-same-chapter-biblia-emanus-quote-fix",
+      "preQuoteSemanticSha256": "sha256:1dfe31eb33a862e69aa4bc3499391a8d4a633a4138da0ebfedf70238464b5466",
+      "finalQuoteNormalizedSha256": "sha256:2ca41370bd0d6baa6abd3d4da9d0f8fa51c870cebb9e419a8dbfe15349a55e7e",
+      "operations": [
+        {
+          "fieldPath": "units[3].teaching",
+          "before": "Dumnezeul Meu, Dumnezeul Meu, pentru ce M-ai părăsit?",
+          "after": "Dumnezeul meu, Dumnezeul meu, de ce m-ai părăsit"
+        }
+      ]
+    }
+  ]
+}
