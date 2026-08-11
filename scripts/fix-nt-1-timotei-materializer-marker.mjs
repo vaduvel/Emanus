@@ -35,4 +35,19 @@ for (const replacement of REPLACEMENTS) {
     process.exit(1)
   }
 }
+
+const OLD_SOURCE_ID = "vbv-1timothy"
+const REAL_SOURCE_ID = "vbv-1-tim"
+const oldSourceIdCount = source.split(OLD_SOURCE_ID).length - 1
+const realSourceIdCount = source.split(REAL_SOURCE_ID).length - 1
+if (oldSourceIdCount === 4 && realSourceIdCount === 0) {
+  source = source.split(OLD_SOURCE_ID).join(REAL_SOURCE_ID)
+  console.log(`1 Timotei marker fix: aligned 4 provenance checks to exact regenerated sourceId ${REAL_SOURCE_ID}.`)
+} else if (oldSourceIdCount === 0 && realSourceIdCount === 4) {
+  console.log(`1 Timotei marker fix: provenance sourceId already aligned to ${REAL_SOURCE_ID}.`)
+} else {
+  console.error(`[1 Timotei marker fix] unexpected provenance sourceId state old=${oldSourceIdCount} real=${realSourceIdCount}`)
+  process.exit(1)
+}
+
 fs.writeFileSync(TARGET, source, "utf8")
