@@ -92,3 +92,5 @@ jobs:
             echo "Complete Revelation review push raced with another update; retrying ($attempt/3)."
           done
           exit 1
+
+# retrigger after idempotence guard
