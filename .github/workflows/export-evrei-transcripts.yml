@@ -101,7 +101,11 @@ jobs:
           NT_TRANSCRIPTION_SOURCE_ID: ${{ matrix.source_id }}
         run: |
           set -euo pipefail
-          test "$(node -p \"require('./docs/data/biblia-explicata/nt-semantic-manual-review-status.json').currentBook\")" = "1-timotei"
+          python3 - <<'PY'
+          import json
+          with open('docs/data/biblia-explicata/nt-semantic-manual-review-status.json', encoding='utf-8') as handle:
+              assert json.load(handle)['currentBook'] == '1-timotei'
+          PY
           python3 scripts/transcribe_nt_current_official_audio.py
           test -s "docs/data/biblia-explicata/nt-official-transcripts/${NT_TRANSCRIPTION_SOURCE_ID}.json"
 
