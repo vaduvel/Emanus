@@ -14,34 +14,23 @@ permissions:
 
 jobs:
   transcribe:
-    name: Transcribe ${{ matrix.id }}
+    name: Transcribe and persist ${{ matrix.id }}
     runs-on: ubuntu-22.04
-    timeout-minutes: 45
+    timeout-minutes: 60
     strategy:
       fail-fast: false
       matrix:
         include:
-          - id: coloseni-vbv-01
-            source_url: https://www.cfcindia.com/verse-by-verse/01colossians-chapter-11-to-chapter-125
-            audio_url: https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt12-colossians-chapter-1-1-to-chapter-1-25.mp3
-            source_range: Colossians 1:1-1:25
-          - id: coloseni-vbv-02
-            source_url: https://www.cfcindia.com/verse-by-verse/02colossians-chapter-125-to-chapter-218
-            audio_url: https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt12-colossians-chapter-1-25-to-chapter-2-18.mp3
-            source_range: Colossians 1:25-2:18
-          - id: coloseni-vbv-03
-            source_url: https://www.cfcindia.com/verse-by-verse/03colossians-chapter-218-to-chapter-313
-            audio_url: https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt12-colossians-chapter-2-18-to-chapter-3-13.mp3
-            source_range: Colossians 2:18-3:13
-          - id: coloseni-vbv-04
-            source_url: https://www.cfcindia.com/verse-by-verse/04colossians-chapter-314-to-chapter-418
-            audio_url: https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt12-colossians-chapter-3-14-to-chapter-4-18.mp3
-            source_range: Colossians 3:14-4:18
+          - { id: coloseni-vbv-01, source_url: https://www.cfcindia.com/verse-by-verse/01colossians-chapter-11-to-chapter-125, audio_url: https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt12-colossians-chapter-1-1-to-chapter-1-25.mp3, source_range: 'Colossians 1:1-1:25' }
+          - { id: coloseni-vbv-02, source_url: https://www.cfcindia.com/verse-by-verse/02colossians-chapter-125-to-chapter-218, audio_url: https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt12-colossians-chapter-1-25-to-chapter-2-18.mp3, source_range: 'Colossians 1:25-2:18' }
+          - { id: coloseni-vbv-03, source_url: https://www.cfcindia.com/verse-by-verse/03colossians-chapter-218-to-chapter-313, audio_url: https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt12-colossians-chapter-2-18-to-chapter-3-13.mp3, source_range: 'Colossians 2:18-3:13' }
+          - { id: coloseni-vbv-04, source_url: https://www.cfcindia.com/verse-by-verse/04colossians-chapter-314-to-chapter-418, audio_url: https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt12-colossians-chapter-3-14-to-chapter-4-18.mp3, source_range: 'Colossians 3:14-4:18' }
     steps:
       - uses: actions/checkout@v4
         with:
           ref: agent/biblia-explicata-nt-integration-clean
-          fetch-depth: 1
+          fetch-depth: 0
+          persist-credentials: true
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
@@ -57,18 +46,11 @@ jobs:
           from pathlib import Path
           p = Path('docs/data/biblia-explicata/nt-semantic-manual-review-status.json')
           d = json.loads(p.read_text(encoding='utf-8'))
-          d['currentBook'] = 'coloseni'
-          d['currentBookUnits'] = 22
-          d['manualDecisionsFrozen'] = 0
-          d['officialAudioSources'] = [{
-              'id': os.environ['SOURCE_ID'],
-              'officialSourceUrl': os.environ['SOURCE_URL'],
-              'officialAudioUrl': os.environ['AUDIO_URL'],
-              'sourceRange': os.environ['SOURCE_RANGE'] + '; semantic target: complete covered Colossians units',
-          }]
-          p.write_text(json.dumps(d, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          d['currentBook']='coloseni'; d['currentBookUnits']=22; d['manualDecisionsFrozen']=0
+          d['officialAudioSources']=[{'id':os.environ['SOURCE_ID'],'officialSourceUrl':os.environ['SOURCE_URL'],'officialAudioUrl':os.environ['AUDIO_URL'],'sourceRange':os.environ['SOURCE_RANGE']}]
+          p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
           PY
-      - name: Transcribe official CFC episode
+      - name: Transcribe exact official audio
         env:
           NT_TRANSCRIPTION_SOURCE_ID: ${{ matrix.id }}
           NT_TRANSCRIPTION_MODEL: small.en
@@ -76,59 +58,55 @@ jobs:
           set -euo pipefail
           python3 scripts/transcribe_nt_current_official_audio.py
           test -s "docs/data/biblia-explicata/nt-official-transcripts/${{ matrix.id }}.json"
-      - uses: actions/upload-artifact@v4
-        with:
-          name: transcript-${{ matrix.id }}
-          path: docs/data/biblia-explicata/nt-official-transcripts/${{ matrix.id }}.json
-          if-no-files-found: error
-          retention-days: 1
+      - name: Validate and persist this exact transcript
+        env:
+          SOURCE_ID: ${{ matrix.id }}
+          SOURCE_URL: ${{ matrix.source_url }}
+          AUDIO_URL: ${{ matrix.audio_url }}
+          SOURCE_RANGE: ${{ matrix.source_range }}
+        run: |
+          set -euo pipefail
+          python3 - "$SOURCE_ID" "$SOURCE_URL" "$AUDIO_URL" "$SOURCE_RANGE" <<'PY'
+          import hashlib,json,re,sys
+          from pathlib import Path
+          sid,surl,aurl,srange=sys.argv[1:]
+          p=Path('docs/data/biblia-explicata/nt-official-transcripts')/f'{sid}.json'; d=json.loads(p.read_text(encoding='utf-8'))
+          assert d['schema']=='emanus-nt-official-audio-transcript-v1' and d['bookId']=='coloseni' and d['sourceId']==sid
+          assert d['officialSourceUrl']==surl and d['officialAudioUrl']==aurl and d['sourceRange']==srange
+          assert re.fullmatch(r'sha256:[0-9a-f]{64}',d['officialAudioSha256']) and re.fullmatch(r'sha256:[0-9a-f]{64}',d['transcriptSha256'])
+          assert d['wordCount']>=1500 and d['segmentCount']==len(d['segments'])>0
+          text='\n'.join(' '.join(str(s.get('text') or '').split()).strip() for s in d['segments']).strip()+'\n'
+          assert len(text.split())==d['wordCount'] and 'sha256:'+hashlib.sha256(text.encode()).hexdigest()==d['transcriptSha256']
+          print(sid,d['wordCount'],d['transcriptSha256'])
+          PY
+          git restore docs/data/biblia-explicata/nt-semantic-manual-review-status.json
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "docs/data/biblia-explicata/nt-official-transcripts/${SOURCE_ID}.json"
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Persist official Colossians transcript ${SOURCE_ID}"
+          for attempt in 1 2 3 4 5 6; do
+            git fetch origin agent/biblia-explicata-nt-integration-clean
+            if git rebase FETCH_HEAD && git push origin HEAD:agent/biblia-explicata-nt-integration-clean; then exit 0; fi
+            git rebase --abort || true; sleep "$attempt"
+          done
+          exit 1
 
-  persist:
-    name: Persist Colossians official transcripts
+  cleanup:
     needs: transcribe
     runs-on: ubuntu-22.04
-    timeout-minutes: 15
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with:
           ref: agent/biblia-explicata-nt-integration-clean
           fetch-depth: 0
           persist-credentials: true
-      - uses: actions/download-artifact@v4
-        with:
-          pattern: transcript-coloseni-vbv-*
-          path: /tmp/coloseni-transcripts
-          merge-multiple: true
-      - name: Validate, persist and self-remove
-        run: |
+      - run: |
           set -euo pipefail
-          for n in 01 02 03 04; do
-            id="coloseni-vbv-${n}"
-            test -s "/tmp/coloseni-transcripts/${id}.json"
-            cp "/tmp/coloseni-transcripts/${id}.json" "docs/data/biblia-explicata/nt-official-transcripts/${id}.json"
-            python3 - "$id" <<'PY'
-          import json, re, sys
-          from pathlib import Path
-          source_id = sys.argv[1]
-          p = Path('docs/data/biblia-explicata/nt-official-transcripts') / f'{source_id}.json'
-          d = json.loads(p.read_text(encoding='utf-8'))
-          assert d['schema'] == 'emanus-nt-official-audio-transcript-v1'
-          assert d['bookId'] == 'coloseni' and d['sourceId'] == source_id
-          assert re.fullmatch(r'sha256:[0-9a-f]{64}', d['officialAudioSha256'])
-          assert re.fullmatch(r'sha256:[0-9a-f]{64}', d['transcriptSha256'])
-          assert d['wordCount'] >= 1500 and d['segmentCount'] == len(d['segments']) > 0
-          print(source_id, d['wordCount'], d['transcriptSha256'])
-          PY
-          done
+          git fetch origin agent/biblia-explicata-nt-integration-clean; git reset --hard origin/agent/biblia-explicata-nt-integration-clean
+          for n in 01 02 03 04; do test -s "docs/data/biblia-explicata/nt-official-transcripts/coloseni-vbv-${n}.json"; done
           git rm .github/workflows/transcribe-coloseni-semantic-once.yml
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/data/biblia-explicata/nt-official-transcripts/coloseni-vbv-*.json
-          git commit -m "Persist official Colossians VBV transcripts"
-          for attempt in 1 2 3 4; do
-            git fetch origin agent/biblia-explicata-nt-integration-clean
-            if git rebase FETCH_HEAD && git push origin HEAD:agent/biblia-explicata-nt-integration-clean; then exit 0; fi
-            git rebase --abort || true
-            echo "Colossians transcript persistence raced with branch update; retrying ($attempt/4)."
-          done
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Remove completed Colossians transcript workflow"
+          for attempt in 1 2 3 4; do git fetch origin agent/biblia-explicata-nt-integration-clean; if git rebase FETCH_HEAD && git push origin HEAD:agent/biblia-explicata-nt-integration-clean; then exit 0; fi; git rebase --abort || true; sleep "$attempt"; done
           exit 1
