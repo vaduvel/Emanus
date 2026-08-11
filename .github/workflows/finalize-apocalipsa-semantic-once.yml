@@ -1,0 +1,96 @@
+name: Finalize Revelation Semantic Review Once
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-nt-integration-clean
+    paths:
+      - .github/workflows/finalize-apocalipsa-semantic-once.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 0
+          persist-credentials: true
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Freeze and apply Revelation semantic decisions
+        run: |
+          set -euo pipefail
+          node scripts/materialize-nt-final-source-first.mjs
+          node scripts/materialize-nt-manual-semantic-apocalipsa.mjs
+          python3 scripts/merge_nt_semantic_review_artifacts.py \
+            --input docs/data/biblia-explicata/nt-semantic-review-manual \
+            --ledger docs/data/biblia-explicata/nt-semantic-review-ledger.json
+          node scripts/fix-nt-semantic-ledger-embedded-quotes.mjs
+          node scripts/apply-nt-semantic-review-ledger.mjs
+          node scripts/materialize-nt-final-source-first.mjs
+          node scripts/fix-nt-embedded-bible-quotes.mjs
+          node scripts/apply-nt-reviewed-be-quote-fixes.mjs
+          node scripts/check-nt-final-source-first.mjs
+          node scripts/audit-nt-semantic-source-fidelity.mjs
+          node scripts/materialize-nt-direct-transcript-coverage.mjs
+          node scripts/materialize-nt-canonical-binding.mjs
+          node scripts/check-nt-publication-readiness.mjs
+          node scripts/augment-nt-publication-blockers-semantic.mjs
+          git diff --check
+
+      - name: Assert fail-closed Revelation state
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          data = Path('docs/data/biblia-explicata')
+          manual = json.loads((data / 'nt-semantic-review-manual/27-apocalipsa.json').read_text(encoding='utf-8'))
+          coverage = manual.get('coverage', {})
+          expected_pending = ['apocalipsa-10-1-7-source-first']
+          assert coverage.get('bookUnits') == 54, coverage
+          assert coverage.get('approvedUnits') == 53, coverage
+          assert coverage.get('directApprovedUnits') == 52, coverage
+          assert coverage.get('recoveredApprovedUnits') == 1, coverage
+          assert coverage.get('rewrite') == 41, coverage
+          assert coverage.get('keep') == 12, coverage
+          assert coverage.get('sourceRecoveryPending') == expected_pending, coverage
+
+          audit = json.loads((data / 'nt-semantic-fidelity-audit.json').read_text(encoding='utf-8'))
+          rev = audit.get('byBook', {}).get('apocalipsa', {})
+          assert rev.get('units') == 54, rev
+          assert rev.get('semanticTranscriptReviewed') == 53, rev
+          assert rev.get('pendingSemanticReview') == 1, rev
+          pending = [f for f in audit.get('findings', []) if f.get('bookId') == 'apocalipsa']
+          assert len(pending) == 1, pending
+          assert pending[0].get('unitId') == expected_pending[0], pending
+          print('Apocalipsa fail-closed semantic state: 53/54 approved; only 10:1-7 remains recovery-pending.')
+          PY
+
+      - name: Remove one-shot workflow and commit frozen artifacts
+        run: |
+          set -euo pipefail
+          git rm .github/workflows/finalize-apocalipsa-semantic-once.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/biblia-explicata
+          git commit -m "Freeze Revelation semantic review at 53 of 54 units"
+          for attempt in 1 2 3; do
+            git fetch origin agent/biblia-explicata-nt-integration-clean
+            git rebase FETCH_HEAD
+            if git push origin HEAD:agent/biblia-explicata-nt-integration-clean; then
+              exit 0
+            fi
+            echo "Revelation semantic freeze push raced with another branch update; retrying ($attempt/3)."
+          done
+          exit 1
