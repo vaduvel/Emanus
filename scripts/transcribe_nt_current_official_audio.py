@@ -31,6 +31,15 @@ def file_sha256(path: Path) -> str:
 
 def need_sources(status: dict) -> list[dict]:
     sources = status.get("officialAudioSources") or []
+    only_source_id = os.environ.get("NT_TRANSCRIPTION_SOURCE_ID", "").strip()
+    if only_source_id:
+        matches = [source for source in sources if str(source.get("id") or "").strip() == only_source_id]
+        if len(matches) != 1:
+            raise RuntimeError(
+                f"NT_TRANSCRIPTION_SOURCE_ID={only_source_id!r} must match exactly one configured source; found {len(matches)}"
+            )
+        sources = matches
+
     pending = []
     for source in sources:
         source_id = str(source.get("id") or "").strip()
