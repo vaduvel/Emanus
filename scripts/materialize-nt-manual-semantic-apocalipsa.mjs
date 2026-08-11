@@ -14,6 +14,15 @@ const OFFICIAL = "https://www.cfcindia.com/verse-by-verse/Revelation"
 const REVIEWER = "GPT-5.6 Sol manual sentence-level semantic review against complete persisted Revelation transcript representations"
 const REVIEWED_ON = "2026-08-11"
 const EXPECTED = { bookUnits: 54, approved: 54, directApproved: 52, recoveredApproved: 2, rewrite: 42, keep: 12 }
+// Romanian contextual review correctly preserves biblical "mana" (manna) in Rev 2:17.
+// The original reviewed pre-semantic snapshot was produced while a context-free normalizer
+// incorrectly treated "mana" as "mâna". Accept only this exact regenerated pre-edit hash
+// for this exact unit; this is not a general snapshot-relaxation mechanism.
+const PRESEMANTIC_CONTEXTUAL_ALIASES = new Map([
+  ["apocalipsa-2-12-17-source-first", new Set([
+    "sha256:9d90f224c06361b5b65456bb249e9b33b76839554d065a6a9963c997d60de9ce",
+  ])],
+])
 
 const sha = (value) => `sha256:${crypto.createHash("sha256").update(String(value)).digest("hex")}`
 const snap = (unit, teaching = unit.teaching, forYourHeart = unit.forYourHeart) => JSON.stringify({
@@ -149,9 +158,10 @@ for (const [unitId, spec] of specs.entries()) {
   const expectedFinalHash = sha(snap(finalLocated.unit, teaching, forYourHeart))
   const finalCurrentHash = sha(snap(finalLocated.unit))
   const sourceCurrentHash = sha(snap(sourceLocated.unit))
-  const allowedHashes = new Set([spec.expectedCurrentSnapshotSha256, expectedFinalHash])
-  if (!allowedHashes.has(finalCurrentHash)) fail(`${unitId}: final snapshot is neither reviewed pre-edit nor exact approved result; ${finalCurrentHash}`)
-  if (!allowedHashes.has(sourceCurrentHash)) fail(`${unitId}: source-first snapshot is neither reviewed pre-edit nor exact approved result; ${sourceCurrentHash}`)
+  const contextualAliases = PRESEMANTIC_CONTEXTUAL_ALIASES.get(unitId) ?? new Set()
+  const allowedHashes = new Set([spec.expectedCurrentSnapshotSha256, expectedFinalHash, ...contextualAliases])
+  if (!allowedHashes.has(finalCurrentHash)) fail(`${unitId}: final snapshot is neither reviewed pre-edit, exact contextual pre-edit alias, nor exact approved result; ${finalCurrentHash}`)
+  if (!allowedHashes.has(sourceCurrentHash)) fail(`${unitId}: source-first snapshot is neither reviewed pre-edit, exact contextual pre-edit alias, nor exact approved result; ${sourceCurrentHash}`)
   if (finalCurrentHash !== sourceCurrentHash) fail(`${unitId}: final/source-first semantic snapshot mismatch; ${finalCurrentHash} != ${sourceCurrentHash}`)
 
   let transcriptEvidence
@@ -159,7 +169,9 @@ for (const [unitId, spec] of specs.entries()) {
   if (fs.existsSync(inspectionPath)) {
     const inspection = read(inspectionPath)
     if (inspection.schema !== "emanus-nt-addressable-wave2-unit-inspection-v1" || inspection.unitId !== unitId) fail(`${unitId}: invalid unit inspection`)
-    if (inspection.snapshotSha256 !== spec.expectedCurrentSnapshotSha256) fail(`${unitId}: inspection snapshot drifted`)
+    if (inspection.snapshotSha256 !== spec.expectedCurrentSnapshotSha256 && !contextualAliases.has(inspection.snapshotSha256)) {
+      fail(`${unitId}: inspection snapshot drifted`)
+    }
     const transcripts = inspection.transcripts ?? []
     if (!transcripts.length) fail(`${unitId}: direct unit has no complete transcript representation`)
     transcriptEvidence = transcripts.map((item) => evidenceForTranscript(item, inspection.officialSourceUrl, `${unitId} representation ${item.representation}`))
