@@ -1,0 +1,125 @@
+name: Transcribe 1 Thessalonians Semantic Sources Once
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-nt-integration-clean
+    paths:
+      - .github/workflows/transcribe-1-tesaloniceni-semantic-once.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  transcribe:
+    name: Transcribe ${{ matrix.id }}
+    runs-on: ubuntu-22.04
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - id: 1-tesaloniceni-vbv-01
+            source_url: https://www.cfcindia.com/verse-by-verse/011thessalonians-chapter-11-to-chapter-313
+            audio_url: https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt13-1thessalonians-chapter-1-1-to-chapter-3-13.mp3
+            source_range: 1 Thessalonians 1:1-3:13
+          - id: 1-tesaloniceni-vbv-02
+            source_url: https://www.cfcindia.com/verse-by-verse/021thessalonians-chapter-312-to-chapter-528
+            audio_url: https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt13-1thessalonians-chapter-3-12-to-chapter-5-28.mp3
+            source_range: 1 Thessalonians 3:12-5:28
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Configure isolated exact source
+        env:
+          SOURCE_ID: ${{ matrix.id }}
+          SOURCE_URL: ${{ matrix.source_url }}
+          AUDIO_URL: ${{ matrix.audio_url }}
+          SOURCE_RANGE: ${{ matrix.source_range }}
+        run: |
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          p = Path('docs/data/biblia-explicata/nt-semantic-manual-review-status.json')
+          d = json.loads(p.read_text(encoding='utf-8'))
+          d['currentBook'] = '1-tesaloniceni'
+          d['currentBookUnits'] = 23
+          d['manualDecisionsFrozen'] = 0
+          d['officialAudioSources'] = [{
+              'id': os.environ['SOURCE_ID'],
+              'officialSourceUrl': os.environ['SOURCE_URL'],
+              'officialAudioUrl': os.environ['AUDIO_URL'],
+              'sourceRange': os.environ['SOURCE_RANGE'] + '; semantic target: complete covered 1 Thessalonians units',
+          }]
+          p.write_text(json.dumps(d, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          PY
+      - name: Transcribe official CFC episode
+        env:
+          NT_TRANSCRIPTION_SOURCE_ID: ${{ matrix.id }}
+          NT_TRANSCRIPTION_MODEL: small.en
+        run: |
+          set -euo pipefail
+          python3 scripts/transcribe_nt_current_official_audio.py
+          test -s "docs/data/biblia-explicata/nt-official-transcripts/${{ matrix.id }}.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: transcript-${{ matrix.id }}
+          path: docs/data/biblia-explicata/nt-official-transcripts/${{ matrix.id }}.json
+          if-no-files-found: error
+          retention-days: 1
+
+  persist:
+    name: Persist 1 Thessalonians official transcripts
+    needs: transcribe
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: transcript-1-tesaloniceni-vbv-*
+          path: /tmp/1tes-transcripts
+          merge-multiple: true
+      - name: Validate, persist and self-remove
+        run: |
+          set -euo pipefail
+          for n in 01 02; do
+            id="1-tesaloniceni-vbv-${n}"
+            test -s "/tmp/1tes-transcripts/${id}.json"
+            cp "/tmp/1tes-transcripts/${id}.json" "docs/data/biblia-explicata/nt-official-transcripts/${id}.json"
+            python3 - "$id" <<'PY'
+          import json, re, sys
+          from pathlib import Path
+          source_id = sys.argv[1]
+          p = Path('docs/data/biblia-explicata/nt-official-transcripts') / f'{source_id}.json'
+          d = json.loads(p.read_text(encoding='utf-8'))
+          assert d['schema'] == 'emanus-nt-official-audio-transcript-v1'
+          assert d['bookId'] == '1-tesaloniceni' and d['sourceId'] == source_id
+          assert re.fullmatch(r'sha256:[0-9a-f]{64}', d['officialAudioSha256'])
+          assert re.fullmatch(r'sha256:[0-9a-f]{64}', d['transcriptSha256'])
+          assert d['wordCount'] >= 1500 and d['segmentCount'] == len(d['segments']) > 0
+          print(source_id, d['wordCount'], d['transcriptSha256'])
+          PY
+          done
+          git rm .github/workflows/transcribe-1-tesaloniceni-semantic-once.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/biblia-explicata/nt-official-transcripts/1-tesaloniceni-vbv-*.json
+          git commit -m "Persist official 1 Thessalonians VBV transcripts"
+          for attempt in 1 2 3 4; do
+            git fetch origin agent/biblia-explicata-nt-integration-clean
+            if git rebase FETCH_HEAD && git push origin HEAD:agent/biblia-explicata-nt-integration-clean; then exit 0; fi
+            git rebase --abort || true
+            echo "1 Thessalonians transcript persistence raced with branch update; retrying ($attempt/4)."
+          done
+          exit 1
