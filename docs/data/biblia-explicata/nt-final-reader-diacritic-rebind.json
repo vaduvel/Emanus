@@ -1,22 +1,24 @@
 {
   "schema": "emanus-nt-final-reader-diacritic-rebind-v2",
   "policy": "Fail-closed post-ledger restoration of Romanian diacritics. Every automatic field change must remain byte-identical after stripping Romanian diacritics; words and punctuation cannot change in this stage.",
-  "appliedCount": 244,
+  "appliedCount": 492,
   "totals": {
     "in": 0,
     "viata": 0,
     "credinta": 0,
-    "afara": 0,
-    "readerSafe": 244
+    "afara": 4,
+    "readerSafe": 488
   },
   "changedBooks": [
+    "1-tesaloniceni",
     "apocalipsa",
+    "coloseni",
     "fapte",
     "ioan",
     "marcu"
   ],
-  "operationCount": 88,
-  "semanticRebindCount": 8,
+  "operationCount": 155,
+  "semanticRebindCount": 20,
   "operations": [
     {
       "bookId": "marcu",
@@ -1337,6 +1339,1011 @@
       },
       "beforeSha256": "sha256:71192978528b66b594822f8e998ac381a9a78f9fdc743d350d3e39b349c5694b",
       "afterSha256": "sha256:4e23d96a97c1a6150093e7552ea89dfcf57dec1440eca48edebd396548a4e7bd"
+    },
+    {
+      "bookId": "marcu",
+      "chapter": 16,
+      "field": "historicalContext",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 1
+      },
+      "beforeSha256": "sha256:c4bf82aefbd9b185b13cbb33c383dd46d8c39428a382a94855d2e3f8ffd98ef3",
+      "afterSha256": "sha256:25f7a33d151492e54231a0cbabd57dd4690987baf53edbab54ea34b12f2a870a"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 1,
+      "field": "historicalContext",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 1
+      },
+      "beforeSha256": "sha256:e90659894ccf356e83cdba8f6ab816bad9e17df00e7e0579131310d558bd38d3",
+      "afterSha256": "sha256:ff9a3dfe510d565c51fb4db167ec2a0a559956d0f1435a41be5581d0348fa1ff"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 1,
+      "field": "prayer",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 7
+      },
+      "beforeSha256": "sha256:f7a727aac3b48d68b21dfc00967fcfcd797c6f61da92ba025f099cf03c82fedd",
+      "afterSha256": "sha256:238dad174ea9a93fe24dfdc1431ad48c777a9c15d2c7c223f7d4a61265f420bb"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 2,
+      "field": "summary",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 2
+      },
+      "beforeSha256": "sha256:712bef6813665429e445d099a3a707fc028fc24eb3734db6703ac5de633b31b7",
+      "afterSha256": "sha256:13c40bfc53631beebef08282d3ca2bb5e88049122c52725a1b25c786972df1a9"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 2,
+      "field": "literaryContext",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 3
+      },
+      "beforeSha256": "sha256:553e366b6df6d77f9c2e0a973ea9d24d58556b36f8ed0282609627504f8d633e",
+      "afterSha256": "sha256:1eccf30b5311cfeb8d09630d1bcd71ec6d6b14b7b4c5d2e3e15a4294d9c99885"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 2,
+      "field": "historicalContext",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 4
+      },
+      "beforeSha256": "sha256:acf4c16d0bfc0ec7e80375e152e44f6bd5ce9b4ba5990073eb8be37526064926",
+      "afterSha256": "sha256:7ba6242f2ab5a65f29b78beae22d222fe78ab64c112ea27748f91719ee24e6e0"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 2,
+      "field": "prayer",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 5
+      },
+      "beforeSha256": "sha256:1ec5506cd56bacb110cd7d6cc570fb9fd13326b0a8d270fe292156f3f8727a4e",
+      "afterSha256": "sha256:40ddfa19788c15bd4c1196a0706c1c9f1aa7af6c3cdb206378d9cbe802e2b943"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 3,
+      "field": "summary",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 1
+      },
+      "beforeSha256": "sha256:88484687fb56c4edcea0bff085d07f4f612714169507db137fb5e811501005e3",
+      "afterSha256": "sha256:b62fe687983bf4cd277f01304cab1f0617e3a630f1dcfc0aca8a870616204dd2"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 3,
+      "field": "literaryContext",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 6
+      },
+      "beforeSha256": "sha256:76a9aa218d723fac2853e8791c2111ae55495f77c11106b3218f1b866f722dbe",
+      "afterSha256": "sha256:11b8eaeb4a4bc8ab9f71d8f7acdd5a17fcab66e1d497c94348f7a959a75babbd"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 3,
+      "field": "historicalContext",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 6
+      },
+      "beforeSha256": "sha256:fb4d02a966a07b888a4228ee5df6d11a52b8f0350655b05dab0aabebb945c0e3",
+      "afterSha256": "sha256:96a34a304713a18f52ec51d1276c5e8a4c9ea5c66b8e4c168dcbe75bf6914b3d"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 3,
+      "field": "prayer",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 5
+      },
+      "beforeSha256": "sha256:8b7dd0269eef1b6bc597817db5bad25f39654cb29fb02974c57e064a06188781",
+      "afterSha256": "sha256:c8cee2d96e6fe6d772b59fe0f08a2d93060f8f937ea1af53e79f93866c07253f"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 4,
+      "field": "title",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 1
+      },
+      "beforeSha256": "sha256:c670d3bb50235775467a0cc0af22db65ffd0a951e7e6134431920164fbb1dfb9",
+      "afterSha256": "sha256:e1d1f6608ec7e936d4331f5144f6f4976c79bc7979f5df23019f68df172ccaa3"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 4,
+      "field": "summary",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 3
+      },
+      "beforeSha256": "sha256:c67cccab9c74ce5b1e2f21be9b7ecf2535fdfb510c9c455159e341985acfa30b",
+      "afterSha256": "sha256:95ba668b69ff0ef685cfdd272c6d82257680a56694f7c04fb5b92beb927f2f0e"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 4,
+      "field": "literaryContext",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 9
+      },
+      "beforeSha256": "sha256:097847efb11884899f6d3436f1338bf8ea1291936949cf310359ef14b23a622d",
+      "afterSha256": "sha256:01f116c8a02cea3cc4e459c048ef83b1d1dd2d1dbabfe724b522324b3c3cc13f"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 4,
+      "field": "historicalContext",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 8
+      },
+      "beforeSha256": "sha256:0bffc346217be6bbb17593d141e9fb4f31b670ca3307b1b496b140b8f29eeeef",
+      "afterSha256": "sha256:f75d1d5710dfff09f7a4d34f401e61972dd0096864f7b05ac8a3869859707703"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 4,
+      "field": "prayer",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 5
+      },
+      "beforeSha256": "sha256:402d0032f8992bec74bb30bbacc1272413dc2d4f0ede066bf70c2c7f624643ae",
+      "afterSha256": "sha256:1b4bba2a14e869b65167f8a2d360a079bde41c35b16dde1084c208a9c8a3fab9"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 4,
+      "field": "units[1].heading",
+      "unitId": "ioan-4-27-42",
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 1
+      },
+      "beforeSha256": "sha256:252aca541339c2b56a10b40ab3e5e5d07ec2a68897f65fc9725ae147d7c329bc",
+      "afterSha256": "sha256:a182444c5a58206ec7162994d2c06ad9bdc69480d8039cc6422e1f36d4c51347"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 5,
+      "field": "summary",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 1
+      },
+      "beforeSha256": "sha256:632dd39d36bd24a996776baeafa329fd0f60230a62a1f79703cbb50802496c0b",
+      "afterSha256": "sha256:85ca62674f55c14b516f1f46e5b773182c148311e9ba39c4fe5ecce1cfec661d"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 5,
+      "field": "literaryContext",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 5
+      },
+      "beforeSha256": "sha256:a32bfa6503e498857cc4c3f7e47c053f03a78ee6de2179ae0a7d54e8ec61006b",
+      "afterSha256": "sha256:29d1c4440d8b014a559b9eb2e969b5dce421213491e0418568a9f9e2bb913800"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 5,
+      "field": "historicalContext",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 9
+      },
+      "beforeSha256": "sha256:0b74bf0a0fbbd0f57bf8b2fd3864b0671e5e8b17285c8c89679d199159afa6ba",
+      "afterSha256": "sha256:ff156c6056d9b84cb39ccf356ddfba5c164cc2a1f1b21ddd3ac803a897aee836"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 5,
+      "field": "prayer",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 4
+      },
+      "beforeSha256": "sha256:309415d00e76fba43dbcf3e021a638193199ac729903c8f7f09204b7db8bd26c",
+      "afterSha256": "sha256:41691c32688f58fa1864a674497550632cb48c5797d88a29ee17ff80f20a7a9a"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 6,
+      "field": "summary",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 3
+      },
+      "beforeSha256": "sha256:cf3bb174249ecdf42e017d00bd3bbf2bc376e98531995682170af3f3b9a3a42a",
+      "afterSha256": "sha256:0dba484e4708d9ff7c42eb5cda0bcb051bef1c0751ef3c59a1ddbc0b5e283df3"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 6,
+      "field": "literaryContext",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 2
+      },
+      "beforeSha256": "sha256:7d2bc2ad5f23cd077febf0bf926d39c340c46c47a750de9ad8fc4f790392011c",
+      "afterSha256": "sha256:9594a73c7c6c4ffa3e065bc03ea4ffeb9a3c09337c96c67c634a7abdbb1c0d46"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 6,
+      "field": "historicalContext",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 7
+      },
+      "beforeSha256": "sha256:84ae91588e360ddad1c13ee132c632d77b9d1b1e2860e2e6250fc441ba6ba6e9",
+      "afterSha256": "sha256:deaebd5630c1e53d4c01902704d43428981f7e90034611a7fbf28c175b7ff9b8"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 6,
+      "field": "prayer",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 6
+      },
+      "beforeSha256": "sha256:605b9c86b0279f53926d5000feba9bf1bdb6339b0545371880a4b74854b8d888",
+      "afterSha256": "sha256:c895de6fe24afa3a8c7b474fafe2c3b6f0427eb53c9551e278eb08f486660e2d"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 7,
+      "field": "literaryContext",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 2
+      },
+      "beforeSha256": "sha256:b840fbd8beb0076cdbb5af1033f44a43d19d885adfc121dd210aca6ae0b77d11",
+      "afterSha256": "sha256:d5a58466be7e11610e4437978da33e34e0a623b1252e2e94a2bae0eafd5a50a9"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 7,
+      "field": "historicalContext",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 5
+      },
+      "beforeSha256": "sha256:6046273b11c29e6c1f8025071aab31ddb62c56d9a972dd68a6650cf8f7101fb2",
+      "afterSha256": "sha256:876114280b5de94850b99bd43b9c2b8dbe0d46720eac7f936d31bcbbc848d028"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 7,
+      "field": "prayer",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 7
+      },
+      "beforeSha256": "sha256:f681aa0b9f6ec9d3d1356b7b74b6607d904f6c0ddf69feaf9a3d2b4db9b494f5",
+      "afterSha256": "sha256:008c3a614fb2e5edc87123dc5984e19f8da7ae625cd473a4e9478e9bedd3d098"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 7,
+      "field": "units[1].heading",
+      "unitId": "ioan-7-25-39",
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 1
+      },
+      "beforeSha256": "sha256:ef0316816051d014cc54a9b7b573a0a07811ac6398d31b08d7f435e63a1fb589",
+      "afterSha256": "sha256:507c57fe87da3ec42cdcff1825b8ff0fd0562e9f9bb7d3249d14f32cdf4882d4"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 8,
+      "field": "summary",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 2
+      },
+      "beforeSha256": "sha256:bae0bc9aaf001fea6634b31fef055068b6ef26983a80e00f9dd5ee06b0a4b13b",
+      "afterSha256": "sha256:4e2144b6aabfcf15ec98bff235a499e768392d44888ca38fbcd4d00421a5e324"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 8,
+      "field": "literaryContext",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 6
+      },
+      "beforeSha256": "sha256:8f991267723b7ed97bdecf438cc70562a57edb7dcf10489a82b8b6ce4e56a19a",
+      "afterSha256": "sha256:ae0dbf7fb7ca0d740cd7ca826de0688eff83292addfb9b253030be5af7e536ad"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 8,
+      "field": "historicalContext",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 9
+      },
+      "beforeSha256": "sha256:6752489515c1679d9686151b97bc0aa328263bacb161482a2180a89ab974015c",
+      "afterSha256": "sha256:e214a5919d9a84285eda34581d5242c596784e2c0c89030200d6504beadd90e1"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 8,
+      "field": "prayer",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 6
+      },
+      "beforeSha256": "sha256:8b9eb7ace5f85927ff837233dedb7e34709c2cdeb523b9de2e1306db4b468d69",
+      "afterSha256": "sha256:b6de6f4067eef7a9aa6e0bb152be512294b0306badb9fff008581908de28fce5"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 8,
+      "field": "units[2].heading",
+      "unitId": "ioan-8-48-59",
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 1
+      },
+      "beforeSha256": "sha256:6ce0f7698cd11827b7f2f9c4c8c9dd9a53562e2808552299d77dbd612b010072",
+      "afterSha256": "sha256:193fe92a3a223133cdd52c3136b07a4dbd5acb72fc324f2e1eaf4a1a74457587"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 8,
+      "field": "units[2].teaching",
+      "unitId": "ioan-8-48-59",
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 1
+      },
+      "beforeSha256": "sha256:33046402e2d8f0b3698a872e8c5615e950535cfc6ea44cabebd45d5262b05ce4",
+      "afterSha256": "sha256:55cbfa27cc25d0505694718ac00925714804bf21bd2c19af9bd3bc03c33c62c5"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 9,
+      "field": "summary",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 2
+      },
+      "beforeSha256": "sha256:72f33f21981b6328fa245c60a85f71daea45fe2f22b362505370ebf8fdfdb284",
+      "afterSha256": "sha256:581d392fd729be36ac35a594065818d78af30a68323b2555c0ecf5b182e1dbb0"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 9,
+      "field": "literaryContext",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 5
+      },
+      "beforeSha256": "sha256:b3b81e22fee678926134dcb7b9f042f74ae68da5a11eb9169ff972bd68954134",
+      "afterSha256": "sha256:80ba9298fd59a87187de9e7b52822714b3e3dbe28baecbe5701f7684111feeda"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 9,
+      "field": "historicalContext",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 7
+      },
+      "beforeSha256": "sha256:dd5fcd3d12f638e07772b47a9ef553cc92f47e328c4ef7c1c3afd9a258c6d781",
+      "afterSha256": "sha256:f06234d4f6861deec5c432a2e89002a6ce5cbb8a2ca716d4c8d295519c3cec43"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 9,
+      "field": "prayer",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 2
+      },
+      "beforeSha256": "sha256:6c67133153ff09a7b3db1f3fd13103e58150aefda48f181ae8c3551b9f506481",
+      "afterSha256": "sha256:c43b32331b908db760b182304f70732c68880f0ac420e7238fdc6ef8f545813d"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 10,
+      "field": "title",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 1
+      },
+      "beforeSha256": "sha256:ae4667ad866517d0657b3b588d16224392234796d31536c45275234e59ca5f4c",
+      "afterSha256": "sha256:e1de7ab8a3dcd0eb444542098e8fe0f8e4f9d8af8d7f095f098deadba031e2be"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 10,
+      "field": "summary",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 2
+      },
+      "beforeSha256": "sha256:4c8277e0848ebce858d31a488154a5870ac0977bd3ea3017e2b10b0c679716f8",
+      "afterSha256": "sha256:31617264750b0f735d031682858a40ca73e850accd446aa9c66e4a8543cc297a"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 10,
+      "field": "literaryContext",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 6
+      },
+      "beforeSha256": "sha256:42bb5d3d963165919f633dbcdffbe09bbbce0b95232d764e15946ed50043a1b6",
+      "afterSha256": "sha256:0452f9cb50c0eea981d25380dc3ac5a7f6563564d9253784e761a28ef324f252"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 10,
+      "field": "historicalContext",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 6
+      },
+      "beforeSha256": "sha256:4978b5c8e404e4d957fdac219515dff9eb2d082d77100a997c94d85e2150c2a6",
+      "afterSha256": "sha256:c02dc514fab1c6e329a693b78401b31dae35f234ef650a4b03ced882acd5d9f9"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 10,
+      "field": "prayer",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 4
+      },
+      "beforeSha256": "sha256:103f63152260032f21213fd6a7ea78417445484c00071280418efa448c641cf2",
+      "afterSha256": "sha256:59fc1a21dd8727158065ea8c152d2bbf6aa40097a7d800693cc9afed836af7c0"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 10,
+      "field": "units[0].heading",
+      "unitId": "ioan-10-1-18",
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 1
+      },
+      "beforeSha256": "sha256:9928591ba048facc0b9cee84f37f7ec909b89fe812f3a379427a6fba0b4588c3",
+      "afterSha256": "sha256:df715ce2833a98552daef0d118f075db9e4a9804d07058a82809a00a82815dec"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 10,
+      "field": "units[1].teaching",
+      "unitId": "ioan-10-19-30",
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 1,
+        "readerSafe": 0
+      },
+      "beforeSha256": "sha256:cc14fe0e3e6775f6e50aea929ddd93612256dc1bcd16b78a79219588aec0f696",
+      "afterSha256": "sha256:70fe8e392f854474fa10b16ab70f70820037516d2193259aedb671fe81969cfa"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 11,
+      "field": "title",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 1
+      },
+      "beforeSha256": "sha256:d25fae0db3f9d5440e094d1e633f84fc411effa3fd1871cc898749d50b6c6f62",
+      "afterSha256": "sha256:4544c6a8e0da46c9f5a0cfc4331eb7b56423435fbb2e31845870a995fb4d362c"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 11,
+      "field": "summary",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 4
+      },
+      "beforeSha256": "sha256:e76073fed0d88a8dab7eecf1c589b338131b6d1eed864bc73edc9f960820d24c",
+      "afterSha256": "sha256:158788c74430cd09008a688464420988ff95c253d350b908d473d6cf8168d33e"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 11,
+      "field": "literaryContext",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 7
+      },
+      "beforeSha256": "sha256:39938174c9fc384c207d588ae37b51c242f6b6d58b16fc45ccd04d703416d468",
+      "afterSha256": "sha256:be1ee6cb038f738cd0e8aa60dbec2433ed6e934ca21b10caefe91bd0c9de2370"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 11,
+      "field": "historicalContext",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 5
+      },
+      "beforeSha256": "sha256:13581c624da22ccfd91144582896a75c97efeedaae48c2237062cfb9e9ef1872",
+      "afterSha256": "sha256:30ff65fab8a040ecb1998f9df5ddee857804e7e57c2fbca68001861e98c3fbf1"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 11,
+      "field": "prayer",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 4
+      },
+      "beforeSha256": "sha256:55deb35ffc031bb17e32405d5b693c7013eab856f978204d6b298e2947c8061e",
+      "afterSha256": "sha256:e384e9ddb9a4a4276f20f94cac62f3ae34417650a2b02743aa497e571d6f5271"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 12,
+      "field": "summary",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 3
+      },
+      "beforeSha256": "sha256:8a55fa77badee54d8d47e3d60e3ddce7a9343a763853f69875fd9d14ec7e31b0",
+      "afterSha256": "sha256:51dbfcd57918f786e0a897f59390efdd19fd5678051799809b9e9c8905579f03"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 12,
+      "field": "literaryContext",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 4
+      },
+      "beforeSha256": "sha256:2e3d408ebfa3e89b435be89a71068b121d8a5a3c5d2b572e755f57aff0b51bb5",
+      "afterSha256": "sha256:88735ccf159a99e6a3004724122e28c7d4c2942c7c2af5b44817680bea643021"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 12,
+      "field": "historicalContext",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 4
+      },
+      "beforeSha256": "sha256:2b1acd3d196a1ac7b20c573a593d4c458ca13b55a95c8e5d04c8234003ed038b",
+      "afterSha256": "sha256:e32ce2850d219a504d9049ad1e839a0aa7d067787e5553737138283a4208a648"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 12,
+      "field": "prayer",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 2
+      },
+      "beforeSha256": "sha256:9d24ebeef55c3ad4de9eb242e70a995dbf3337d80a7a9c5f4b0936ff2a801104",
+      "afterSha256": "sha256:76fc3a63fefd02ef2923b2a1d86009d43d06a01ce5b7b2ab4a67c8cc1e7a1b56"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 13,
+      "field": "title",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 3
+      },
+      "beforeSha256": "sha256:88f72b43dd2b24b53859a2f2201465021b2f2f629b5825c78a53b394d36ad47b",
+      "afterSha256": "sha256:faf61f771f6faf069c5c1f23a265bdc9c3e15805c4afc940064218d60b72b906"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 13,
+      "field": "summary",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 1
+      },
+      "beforeSha256": "sha256:6502bc8f28bcfd66d6a8f5b6b8829ec2907fb71348d8dc1c811b39ba7ef741a6",
+      "afterSha256": "sha256:70b7df58c8cb2689cf6635a2f1b31382b34cfcfa7f3f38eecb07d69b1816d276"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 13,
+      "field": "literaryContext",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 5
+      },
+      "beforeSha256": "sha256:7ca56171bdc92d3a2a4c9b3d630d92520aff84e88ada38133d32e8f3716ebd0f",
+      "afterSha256": "sha256:c427c895d2f9fd3eba55d171eaa41c094f785ffa3e82f1e5c6c8cde3e71e3519"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 13,
+      "field": "historicalContext",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 13
+      },
+      "beforeSha256": "sha256:27dc3a58b7f2b8d5caf61630596e84c8b4d708451cefa39febb2ccec0c102418",
+      "afterSha256": "sha256:0a6c179f33989b52dfd9acb1631e6ac0c967b8ebd1f713e5292816a79de7ebdc"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 13,
+      "field": "prayer",
+      "unitId": null,
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 3
+      },
+      "beforeSha256": "sha256:729b0b63b4cc0ad889e9410b6cb470e34431798ba7de62d5d4a1e0b1ceae37eb",
+      "afterSha256": "sha256:4e23d96a97c1a6150093e7552ea89dfcf57dec1440eca48edebd396548a4e7bd"
+    },
+    {
+      "bookId": "fapte",
+      "chapter": 16,
+      "field": "units[0].teaching",
+      "unitId": "fapte-16-1-10",
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 1
+      },
+      "beforeSha256": "sha256:be22c2e8740e5a1d1df80f285b7ae8422693549e68fd9cccec3fe6c9f67c20e7",
+      "afterSha256": "sha256:065fcf22751177b90e0ccd7a191d55e488eadb72fdec07f3d63b6e073195cb48"
+    },
+    {
+      "bookId": "fapte",
+      "chapter": 19,
+      "field": "units[2].teaching",
+      "unitId": "fapte-19-21-41",
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 1
+      },
+      "beforeSha256": "sha256:77cf913c24c8ce6a491b483191dfbfcb3ad30d4ffc5af8c52885748f1676754f",
+      "afterSha256": "sha256:77c46d693f719951b2ec0a4a82463bb019ae38f1701538e77c134b7f7a6f13d8"
+    },
+    {
+      "bookId": "coloseni",
+      "chapter": 1,
+      "field": "units[0].forYourHeart",
+      "unitId": "coloseni-1-1-8",
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 1,
+        "readerSafe": 0
+      },
+      "beforeSha256": "sha256:e55af8fd1e05eda06ef299b9c779b2a8b987f8b0686d90c3ff5fa7d9171b82fe",
+      "afterSha256": "sha256:d283b18a68f0c9d2cc9b3924dddbd9eb22ea19bd1b50e192b50e2dbd02a59265"
+    },
+    {
+      "bookId": "coloseni",
+      "chapter": 4,
+      "field": "units[1].teaching",
+      "unitId": "coloseni-4-2-6",
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 1,
+        "readerSafe": 0
+      },
+      "beforeSha256": "sha256:4e3943b83cfa7dba60b23e54b87215969f65ec952068d7005d6c13d008cc8662",
+      "afterSha256": "sha256:7a54076fc844dd4bccd6383b7608b9243181455030166cd8a2f69e3c1b799f0e"
+    },
+    {
+      "bookId": "1-tesaloniceni",
+      "chapter": 4,
+      "field": "units[2].teaching",
+      "unitId": "1-tesaloniceni-4-9-12",
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 1,
+        "readerSafe": 0
+      },
+      "beforeSha256": "sha256:28ed70cb509d7f5e1c5880bb24a082f8a5c62233d12295ff70a3fb71536f8ff3",
+      "afterSha256": "sha256:565660cfcae3e4a94f7226b920f7a8ce36acf31d4dd33cf2e52f0c757e97329c"
+    },
+    {
+      "bookId": "apocalipsa",
+      "chapter": 11,
+      "field": "units[0].teaching",
+      "unitId": "apocalipsa-11-1-14-source-first",
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 1
+      },
+      "beforeSha256": "sha256:b7ed4a102bc84705b061ca47d6dfcddd0689bec4531c24e5d76551d1fa22c507",
+      "afterSha256": "sha256:14dbed584aee75cb4fc6f78b57f7ad7ebe20f59af120f60e6ed52ec523a2bdcf"
+    },
+    {
+      "bookId": "apocalipsa",
+      "chapter": 17,
+      "field": "units[1].teaching",
+      "unitId": "apocalipsa-17-7-18-source-first",
+      "counts": {
+        "in": 0,
+        "viata": 0,
+        "credinta": 0,
+        "afara": 0,
+        "readerSafe": 1
+      },
+      "beforeSha256": "sha256:feef93c2fe85fa24344b33e9aeaad07faa6e614d0d08bff35712a1986807bf6c",
+      "afterSha256": "sha256:fe6e4b0fa26e71199758362f589ac772caa0f66ab73103b76b901591f9500dfc"
     }
   ],
   "semanticRebinds": [
@@ -1386,6 +2393,102 @@
       "unitId": "fapte-19-21-41",
       "beforeSha256": "sha256:0f0c738f724710ed71b3a2812ff151e15e2ee069a548d66fbd8f35f738b90eec",
       "afterSha256": "sha256:f7c4c0f78569c4ec140998e2fdbe0679b1dc15de58b372877553250ccbb9064a",
+      "policy": "Romanian diacritics only; words and punctuation are otherwise byte-identical."
+    },
+    {
+      "bookId": "apocalipsa",
+      "chapter": 11,
+      "unitId": "apocalipsa-11-1-14-source-first",
+      "beforeSha256": "sha256:5d70f3d860fc5f7d5b37f75518d7d43c4d24f93fc88aecfae48a5d677347bc9c",
+      "afterSha256": "sha256:f8368334a3fd9e9ad1416acb112fc9b5ea979101bf95527a1ac27f785431d441",
+      "policy": "Romanian diacritics only; words and punctuation are otherwise byte-identical."
+    },
+    {
+      "bookId": "apocalipsa",
+      "chapter": 17,
+      "unitId": "apocalipsa-17-7-18-source-first",
+      "beforeSha256": "sha256:b7bfcd5a0650c788d23c53fe45b8f5e6516781a339bc319880da1553f05c754e",
+      "afterSha256": "sha256:eaaf3e3acc1273fdac4b9d65edda1d2effd218660b179648b0d9f4065ef18ce4",
+      "policy": "Romanian diacritics only; words and punctuation are otherwise byte-identical."
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 4,
+      "unitId": "ioan-4-27-42",
+      "beforeSha256": "sha256:9c07a0b74e0539f2bca7e8d596d5297e35c892141b6962296069768ba5572298",
+      "afterSha256": "sha256:d8a329417e3c00573bf8e4bd80b2392203777d9c0b62f3885fe14350f8672103",
+      "policy": "Romanian diacritics only; words and punctuation are otherwise byte-identical."
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 7,
+      "unitId": "ioan-7-25-39",
+      "beforeSha256": "sha256:2483051063890aae957705f504056c325d51b416fdd189d98ef68c920cb55a31",
+      "afterSha256": "sha256:6c3bbfddeeeb8f6bca716e4ce17689989d2068b979f456457c3d6c72b446bcf2",
+      "policy": "Romanian diacritics only; words and punctuation are otherwise byte-identical."
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 8,
+      "unitId": "ioan-8-48-59",
+      "beforeSha256": "sha256:2d5084ba9bd207585ed1478b8d999f30bf1e4e7c72679e2cef6c51da30fd51fb",
+      "afterSha256": "sha256:89ad33dd3f42884e045b769a5944bfbd72c5b5f5cca437727bb2d4734dbe8c55",
+      "policy": "Romanian diacritics only; words and punctuation are otherwise byte-identical."
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 10,
+      "unitId": "ioan-10-1-18",
+      "beforeSha256": "sha256:3a571c4380541cbac742ec924d717324b6400a2a52f03f13015ee758db939361",
+      "afterSha256": "sha256:703fd48a20746c3edc07d745db48127a58b7cd3c89aa02bf9e6120532eb5ec90",
+      "policy": "Romanian diacritics only; words and punctuation are otherwise byte-identical."
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 10,
+      "unitId": "ioan-10-19-30",
+      "beforeSha256": "sha256:ef43fb82edf91479c346d948525d142a1328410ac8b514e27230068f78e2b272",
+      "afterSha256": "sha256:6db8000e3e9131de7a117d00e9554affa94b85244471ebc2e31bb0b18b045070",
+      "policy": "Romanian diacritics only; words and punctuation are otherwise byte-identical."
+    },
+    {
+      "bookId": "fapte",
+      "chapter": 16,
+      "unitId": "fapte-16-1-10",
+      "beforeSha256": "sha256:082cd0a05777b2fca8133cf8d7eeedaa2a25363d25ec73da068cd2d74df947f8",
+      "afterSha256": "sha256:16c4cb3210cc2a5f047797e5ecd744161ba13fe1499ff78e680f3f7648b0de64",
+      "policy": "Romanian diacritics only; words and punctuation are otherwise byte-identical."
+    },
+    {
+      "bookId": "fapte",
+      "chapter": 19,
+      "unitId": "fapte-19-21-41",
+      "beforeSha256": "sha256:0f0c738f724710ed71b3a2812ff151e15e2ee069a548d66fbd8f35f738b90eec",
+      "afterSha256": "sha256:f7c4c0f78569c4ec140998e2fdbe0679b1dc15de58b372877553250ccbb9064a",
+      "policy": "Romanian diacritics only; words and punctuation are otherwise byte-identical."
+    },
+    {
+      "bookId": "coloseni",
+      "chapter": 1,
+      "unitId": "coloseni-1-1-8",
+      "beforeSha256": "sha256:d11c010e80e576fd1a880d3b2ecba2a27a63623e2c69c5a42aeb341d38f41a0a",
+      "afterSha256": "sha256:d6627ab4dfbada0054931e26596271bb162b140939ccbb9436d50556d8d43afb",
+      "policy": "Romanian diacritics only; words and punctuation are otherwise byte-identical."
+    },
+    {
+      "bookId": "coloseni",
+      "chapter": 4,
+      "unitId": "coloseni-4-2-6",
+      "beforeSha256": "sha256:379829926bfb38d9b16a4109b46b888eda6fb920e0c0b4cf797ee6914268d71e",
+      "afterSha256": "sha256:5a2147ea221849647388e6f52c5f8dd4d199d3de6bb48683151a08ea6e38b0e9",
+      "policy": "Romanian diacritics only; words and punctuation are otherwise byte-identical."
+    },
+    {
+      "bookId": "1-tesaloniceni",
+      "chapter": 4,
+      "unitId": "1-tesaloniceni-4-9-12",
+      "beforeSha256": "sha256:6c41b5cc0f4afbd384c0296a9c8409c2944f0c14b8dddd86507232f77aaca630",
+      "afterSha256": "sha256:c0727423f74a526b269504f7db4fa61fe671a08a00e1493fdf30e9811090d68a",
       "policy": "Romanian diacritics only; words and punctuation are otherwise byte-identical."
     },
     {

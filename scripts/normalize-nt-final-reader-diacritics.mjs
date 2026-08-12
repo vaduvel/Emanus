@@ -16,6 +16,9 @@ const OUT = path.join(DATA, "nt-final-reader-diacritic-rebind.json")
 // must be reviewed before this script is allowed to write.
 const EXPECTED_INITIAL_STATES = [
   { in: 101, viata: 2, credinta: 0, afara: 4 },
+  // Source-first materialization may already have consumed the two purely
+  // diacritic-only groups; the remaining run is still deterministic.
+  { in: 0, viata: 0, credinta: 0, afara: 4 },
 ]
 // JavaScript's `\b` is ASCII-only even with the Unicode flag. Using it here
 // also matched the `in` inside Romanian words such as `pocăință` and `puțin`.
@@ -80,6 +83,23 @@ function replaceAndCount(value, pattern, replacer) {
 function tokenPattern(token) {
   const escaped = token.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
   return new RegExp(`(?<![\\p{L}\\p{N}_])${escaped}(?![\\p{L}\\p{N}_])`, "giu")
+}
+function reconcileManifestDigests() {
+  if (!fs.existsSync(MANIFEST)) fail("missing final source-first manifest")
+  const manifest = JSON.parse(fs.readFileSync(MANIFEST, "utf8"))
+  if (manifest.schema !== "emanus-nt-final-source-first-manifest-v1" || !Array.isArray(manifest.books)) {
+    fail("unexpected final source-first manifest schema")
+  }
+
+  for (const file of fs.readdirSync(CORPUS).filter((name) => name.endsWith(".json")).sort()) {
+    const full = path.join(CORPUS, file)
+    const book = JSON.parse(fs.readFileSync(full, "utf8"))
+    const entry = manifest.books.find((item) => item.id === book.id)
+    if (!entry) fail(`manifest book missing: ${book.id}`)
+    entry.sha256 = crypto.createHash("sha256").update(fs.readFileSync(full)).digest("hex")
+  }
+
+  fs.writeFileSync(MANIFEST, JSON.stringify(manifest, null, 2) + "\n", "utf8")
 }
 
 if (!fs.existsSync(CORPUS)) fail("missing final NT corpus")
@@ -200,19 +220,10 @@ if (appliedCount) {
 }
 
 if (appliedCount) {
-  const manifest = JSON.parse(fs.readFileSync(MANIFEST, "utf8"))
-  if (manifest.schema !== "emanus-nt-final-source-first-manifest-v1" || !Array.isArray(manifest.books)) {
-    fail("unexpected final source-first manifest schema")
-  }
-  for (const [bookId, { rendered }] of changedBooks) {
-    const entry = manifest.books.find((item) => item.id === bookId)
-    if (!entry) fail(`manifest book missing: ${bookId}`)
-    entry.sha256 = sha(rendered).slice("sha256:".length)
-  }
   for (const { full, rendered } of changedBooks.values()) {
     fs.writeFileSync(full, rendered, "utf8")
   }
-  fs.writeFileSync(MANIFEST, JSON.stringify(manifest, null, 2) + "\n", "utf8")
+  reconcileManifestDigests()
   const priorTotals = previous?.schema === "emanus-nt-final-reader-diacritic-rebind-v2"
     ? previous.totals ?? {}
     : {}
@@ -246,5 +257,9 @@ if (appliedCount) {
   }, null, 2) + "\n", "utf8")
   console.log(`NT final reader diacritics: ${appliedCount} repairs in ${operations.length} fields; ${semanticRebinds.length} semantic hash rebinds.`)
 } else {
+  // A rerun may have no text changes while a previous partial repro still has
+  // stale manifest digests. Reconcile bookkeeping from the actual corpus;
+  // this never changes reader-facing text.
+  reconcileManifestDigests()
   console.log("NT final reader diacritics: already applied; 0 residual repairs.")
 }

@@ -33,7 +33,12 @@ for(const id of ids){
  const spec=REVIEW[id], located=units.get(id), u=located.unit
  if(located.chapter!==spec.chapter) fail(`${id}: chapter drift`)
  const current=sha(snap(u))
- if(current!==spec.expectedCurrentSnapshotSha256) fail(`${id}: reviewed pre-edit snapshot drifted; ${current} != ${spec.expectedCurrentSnapshotSha256}`)
+ const approvedTeaching=spec.action==="rewrite"?spec.revisedTeaching:u.teaching
+ const approvedHeart=Object.prototype.hasOwnProperty.call(spec,"revisedForYourHeart")?spec.revisedForYourHeart:u.forYourHeart
+ const approved=sha(snap(u,approvedTeaching,approvedHeart))
+ const snapshotMatchesOriginal=current===spec.expectedCurrentSnapshotSha256
+ const snapshotMatchesFrozenRewrite=spec.action==="rewrite"&&current===approved
+ if(!snapshotMatchesOriginal&&!snapshotMatchesFrozenRewrite) fail(`${id}: reviewed snapshot drifted; ${current} is neither original ${spec.expectedCurrentSnapshotSha256} nor frozen rewrite ${approved}`)
  const cov=covs.get(id)
  if(!cov||cov.officialSourceUrl!==OFFICIAL) fail(`${id}: source coverage drifted`)
  if(!["catalogue-range-contains-entire-unit","catalogue-contiguous-ranges-cover-entire-unit"].includes(cov.verification)) fail(`${id}: unsupported coverage`)

@@ -15,10 +15,11 @@ const ledgerPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-roman
 //   needs the diacritic.
 const CONTEXT_SENSITIVE_SHARED_KEYS = new Set(["in", "doua"])
 
-// This is the same conservative predicate used by the final audit. It catches
-// the preposition `in` but deliberately leaves demonstrated linen/flax noun
-// contexts such as `în in curat`, `de in`, and `din in` untouched.
-const PREPOSITION_IN = /(?<!\bîn\s)(?<!\bde\s)(?<!\bdin\s)\bin\b/giu
+// JavaScript's `\b` is ASCII-oriented and sees a false word boundary between
+// Romanian letters and `in`, so it can corrupt `aparțin` into `aparțîn`.
+// Use Unicode-aware letter/number boundaries and preserve the demonstrated
+// linen/flax noun contexts such as `în in curat`, `de in`, and `din in`.
+const PREPOSITION_IN = /(?<!în\s)(?<!de\s)(?<!din\s)(?<![\p{L}\p{N}_])in(?![\p{L}\p{N}_])/giu
 
 // Exact corpus phrases for the five remaining `viata` tokens. They are kept
 // explicit because `viata` can mean either indefinite `viață` or definite

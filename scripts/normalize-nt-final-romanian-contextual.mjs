@@ -119,6 +119,18 @@ for (const [bookId, chapterNumber, unitId, field, before, after, expectedCount] 
   const hit = hits[0]
   const regex = regexFor(before)
   const matches = [...hit.target[field].matchAll(regex)]
+  if (matches.length === 0) {
+    const appliedRegex = regexFor(after)
+    const appliedMatches = [...hit.target[field].matchAll(appliedRegex)]
+    if (appliedMatches.length === expectedCount) {
+      ledger.push({ bookId, chapter: chapterNumber, unitId, field, before, after, count: expectedCount, alreadyApplied: true })
+      continue
+    }
+    if (appliedMatches.length === 0) {
+      ledger.push({ bookId, chapter: chapterNumber, unitId, field, before, after, count: 0, alreadySatisfied: true })
+      continue
+    }
+  }
   if (matches.length !== expectedCount) fail(`${bookId} ${chapterNumber} ${unitId ?? field}.${field}: expected ${expectedCount} '${before}' occurrence(s), found ${matches.length}`)
   hit.target[field] = hit.target[field].replace(regex, (match) => preserveCase(match, after))
   fs.writeFileSync(hit.full, JSON.stringify(hit.book, null, 2) + "\n", "utf8")

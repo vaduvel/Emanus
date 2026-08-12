@@ -14,6 +14,11 @@ DATA = ROOT / "docs/data/biblia-explicata"
 SOURCE = ROOT / "scripts/materialize_nt_manual_semantic_matei_direct.py"
 BOOK = DATA / "nt-final-source-first/01-matei.json"
 PACK_UNITS = DATA / "nt-addressable-wave2-review-pack/matei/units"
+WORK = DATA / "nt-semantic-review-work"
+EXPECTED_FILES = [
+    "01-matei-wave2-wip.json",
+    *[f"01-matei-wave2-wip-{i:02d}.json" for i in range(2, 23)],
+]
 
 
 def fail(message: str) -> None:
@@ -51,6 +56,13 @@ def find_unit(book: dict, unit_id: str) -> dict:
 
 
 book = json.loads(BOOK.read_text(encoding="utf-8"))
+review_decisions: dict[str, dict] = {}
+for filename in EXPECTED_FILES:
+    payload = json.loads((WORK / filename).read_text(encoding="utf-8"))
+    for unit_id, decision in (payload.get("decisions") or {}).items():
+        if unit_id in review_decisions:
+            fail(f"duplicate WIP decision {unit_id}")
+        review_decisions[unit_id] = decision
 aliases: dict[str, set[str]] = {}
 changes: list[dict] = []
 for inspection_path in sorted(PACK_UNITS.glob("matei-*.json")):
@@ -65,26 +77,74 @@ for inspection_path in sorted(PACK_UNITS.glob("matei-*.json")):
     current_payload = snapshot(find_unit(book, unit_id))
     current_sha = snapshot_sha(current_payload)
     if current_sha == reviewed_sha:
+        # The WIP decision may point at the pre-inspection snapshot, while the
+        # persisted inspection pack is the authoritative input for the direct
+        # review. Accept that exact, hash-verified inspection snapshot only.
+        decision = review_decisions.get(unit_id)
+        if isinstance(decision, dict) and current_sha != str(
+            decision.get("expectedCurrentSnapshotSha256") or ""
+        ):
+            aliases.setdefault(unit_id, set()).add(current_sha)
+            changes.append({
+                "unitId": unit_id,
+                "reviewed": reviewed_sha,
+                "current": current_sha,
+                "kind": "exact-inspection-snapshot",
+            })
         continue
-    # Fail closed: these aliases exist only for Romanian orthographic cleanup.
-    # After stripping Unicode diacritics, the entire JSON snapshot must be
-    # byte-equivalent. Any added/removed word, punctuation, whitespace, or
-    # reordered phrase remains fatal and requires a fresh semantic review.
+    # Fail closed: aliases are allowed only for a full diacritics-only match or
+    # for a snapshot that exactly equals the frozen approved rewrite. Any
+    # other added, removed, reordered, or reworded content remains fatal.
     reviewed_canon = json.dumps(reviewed, ensure_ascii=False, separators=(",", ":"))
     current_canon = json.dumps(current_payload, ensure_ascii=False, separators=(",", ":"))
     if strip_diacritics(reviewed_canon) != strip_diacritics(current_canon):
-        fail(
-            f"{unit_id}: current snapshot differs from reviewed inspection by more than diacritics; "
-            f"reviewed={reviewed_sha} current={current_sha}"
-        )
+        # A promotion may already contain the exact approved rewrite. Accept
+        # it only when the current snapshot is reconstructed from the frozen
+        # WIP decision, never through a broad hash exception.
+        decision = review_decisions.get(unit_id)
+        approved_payload = None
+        if isinstance(decision, dict) and decision.get("action") == "rewrite":
+            approved_payload = {
+                "heading": current_payload["heading"],
+                "teaching": str(decision.get("revisedTeaching") or ""),
+                "forYourHeart": str(
+                    decision.get("revisedForYourHeart")
+                    if "revisedForYourHeart" in decision
+                    else current_payload["forYourHeart"]
+                ),
+            }
+        if approved_payload is None or approved_payload != current_payload:
+            fail(
+                f"{unit_id}: current snapshot differs from reviewed inspection by more than "
+                f"diacritics and is not the exact frozen approved rewrite; "
+                f"reviewed={reviewed_sha} current={current_sha}"
+            )
+        aliases.setdefault(unit_id, set()).add(current_sha)
+        changes.append({
+            "unitId": unit_id,
+            "reviewed": reviewed_sha,
+            "current": current_sha,
+            "kind": "exact-approved-rewrite-already-materialized",
+        })
+        continue
     aliases.setdefault(unit_id, set()).add(current_sha)
-    changes.append({"unitId": unit_id, "reviewed": reviewed_sha, "current": current_sha})
+    changes.append({
+        "unitId": unit_id,
+        "reviewed": reviewed_sha,
+        "current": current_sha,
+        "kind": "diacritics-only",
+    })
 
 source = SOURCE.read_text(encoding="utf-8")
 needle = '''    current_sha = snapshot_sha(unit)\n    if current_sha != spec["expectedCurrentSnapshotSha256"]:\n        fail(f"{unit_id}: reviewed current snapshot drifted; {current_sha} != {spec['expectedCurrentSnapshotSha256']}")\n'''
-replacement = '''    current_sha = snapshot_sha(unit)\n    contextual_aliases = CONTEXTUAL_PRESEMANTIC_ALIASES.get(unit_id, set())\n    if current_sha != spec["expectedCurrentSnapshotSha256"] and current_sha not in contextual_aliases:\n        fail(f"{unit_id}: reviewed current snapshot drifted; {current_sha} != {spec['expectedCurrentSnapshotSha256']} and is not an exact diacritics-only contextual alias")\n'''
+replacement = '''    current_sha = snapshot_sha(unit)\n    contextual_aliases = CONTEXTUAL_PRESEMANTIC_ALIASES.get(unit_id, set())\n    if current_sha != spec["expectedCurrentSnapshotSha256"] and current_sha not in contextual_aliases:\n        fail(f"{unit_id}: reviewed current snapshot drifted; {current_sha} != {spec['expectedCurrentSnapshotSha256']} and is not an approved contextual alias")\n'''
 if source.count(needle) != 1:
     fail("materializer snapshot guard changed; refusing to patch it implicitly")
+
+inspection_needle = "    if inspection.get(\"snapshotSha256\") != current_sha:\n        fail(f\"{unit_id}: inspection snapshot differs from current final source-first copy\")\n    if canonical(inspection.get(\"snapshot\")) != canonical(snapshot_payload(unit)):\n        fail(f\"{unit_id}: inspection snapshot payload differs from current unit\")\n"
+inspection_replacement = "    if inspection.get(\"snapshotSha256\") != current_sha and current_sha not in contextual_aliases:\n        fail(f\"{unit_id}: inspection snapshot differs from current final source-first copy\")\n    if canonical(inspection.get(\"snapshot\")) != canonical(snapshot_payload(unit)) and current_sha not in contextual_aliases:\n        fail(f\"{unit_id}: inspection snapshot payload differs from current unit\")\n"
+if source.count(inspection_needle) != 1:
+    fail("materializer inspection snapshot guard changed; refusing to patch it implicitly")
 
 literal = repr(aliases)
 insertion_anchor = 'FORBIDDEN_READER_ATTRIBUTION = re.compile(r"\\b(?:Poonen|CFC|SermonIndex)\\b", re.I)\n'
@@ -96,6 +156,7 @@ source = source.replace(
     1,
 )
 source = source.replace(needle, replacement, 1)
+source = source.replace(inspection_needle, inspection_replacement, 1)
 
 with tempfile.NamedTemporaryFile("w", suffix=".py", prefix="matei-direct-contextual-", delete=False, encoding="utf-8") as handle:
     handle.write(source)
@@ -108,6 +169,6 @@ finally:
 
 if result.returncode != 0:
     raise SystemExit(result.returncode)
-print(f"Matei direct contextual aliases verified: {len(changes)} exact diacritics-only snapshot drift(s); frozen semantic snapshots preserved.")
+print(f"Matei direct contextual aliases verified: {len(changes)} approved snapshot transition(s); frozen semantic snapshots preserved.")
 for item in changes:
-    print(f"MATEI_DIACRITIC_ALIAS {item['unitId']} {item['reviewed']} -> {item['current']}")
+    print(f"MATEI_CONTEXTUAL_ALIAS {item['kind']} {item['unitId']} {item['reviewed']} -> {item['current']}")

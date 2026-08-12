@@ -121,8 +121,15 @@ for (const id of ids) {
 
   if (located.chapter !== spec.chapter) fail(`${id}: chapter drift`)
   const current = sha(snap(unit))
-  if (current !== spec.expectedCurrentSnapshotSha256) {
-    fail(`${id}: reviewed pre-edit snapshot drifted; ${current} != ${spec.expectedCurrentSnapshotSha256}`)
+  const approvedTeaching = spec.action === "rewrite" ? spec.revisedTeaching : unit.teaching
+  const approvedHeart = Object.prototype.hasOwnProperty.call(spec, "revisedForYourHeart")
+    ? spec.revisedForYourHeart
+    : unit.forYourHeart
+  const approved = sha(snap(unit, approvedTeaching, approvedHeart))
+  const snapshotMatchesOriginal = current === spec.expectedCurrentSnapshotSha256
+  const snapshotMatchesFrozenRewrite = spec.action === "rewrite" && current === approved
+  if (!snapshotMatchesOriginal && !snapshotMatchesFrozenRewrite) {
+    fail(`${id}: reviewed snapshot drifted; ${current} is neither original ${spec.expectedCurrentSnapshotSha256} nor frozen rewrite ${approved}`)
   }
 
   const cov = coverageByUnit.get(id)

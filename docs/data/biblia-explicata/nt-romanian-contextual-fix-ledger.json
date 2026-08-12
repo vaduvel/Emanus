@@ -1,7 +1,7 @@
 {
   "schema": "emanus-nt-romanian-contextual-fix-ledger-v2",
   "policy": "only explicitly reviewed grammatical contexts; unresolved ambiguous forms remain audit blockers",
-  "count": 193,
+  "count": 196,
   "fixes": [
     {
       "location": "ioan.1.summary",
@@ -599,9 +599,21 @@
     },
     {
       "location": "ioan.5.units[1].forYourHeart",
+      "rule": "lexical-indefinite-viata",
+      "before": "viata în Sine",
+      "after": "viață în Sine"
+    },
+    {
+      "location": "ioan.5.units[1].forYourHeart",
       "rule": "possessive-definite-credinta-reviewed",
       "before": "credinta ta",
       "after": "credința ta"
+    },
+    {
+      "location": "ioan.5.units[1].words[0].meaning",
+      "rule": "lexical-indefinite-viata",
+      "before": "viata în Sine",
+      "after": "viață în Sine"
     },
     {
       "location": "ioan.5.units[1].words[0].meaning",
@@ -1118,6 +1130,12 @@
       "rule": "present-arata",
       "before": "arata",
       "after": "arată"
+    },
+    {
+      "location": "ioan.12.units[2].teaching",
+      "rule": "subject-definite-credinta-reviewed",
+      "before": "Credinta în Hristos",
+      "after": "Credința în Hristos"
     },
     {
       "location": "ioan.13.summary",
