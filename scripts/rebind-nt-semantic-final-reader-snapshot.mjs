@@ -56,7 +56,12 @@ const ledger = readJson(SEMANTIC_LEDGER)
 const decisions = new Map((ledger.decisions ?? []).map((item) => [item.unitId, item]))
 const wave3 = readJson(WAVE3)
 const wave3Changes = wave3.changes ?? []
-const previousDiacritics = readJson(DIACRITICS)
+// This artifact is temporary provenance from an earlier normalization pass. A clean
+// checkout may not contain it when all target units are already rebound; do not make
+// publication depend on an untracked intermediate file.
+const previousDiacritics = fs.existsSync(DIACRITICS)
+  ? readJson(DIACRITICS)
+  : { schema: "absent-intermediate-artifact", operations: [] }
 const diacriticOperations = previousDiacritics.operations ?? []
 const touched = new Map()
 const changes = []

@@ -10,8 +10,48 @@ permissions:
   contents: write
 
 jobs:
+  preflight:
+    runs-on: ubuntu-22.04
+    outputs:
+      enabled: ${{ steps.sources.outputs.enabled }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 1
+
+      - name: Check that the four sources are configured
+        id: sources
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          expected = {
+              '1-timotei-vbv-01',
+              '1-timotei-vbv-02',
+              '1-timotei-vbv-03',
+              '1-timotei-vbv-04',
+          }
+          status = json.loads(Path('docs/data/biblia-explicata/nt-semantic-manual-review-status.json').read_text(encoding='utf-8'))
+          configured = {
+              str(source.get('id'))
+              for source in status.get('officialAudioSources', [])
+              if isinstance(source, dict)
+          }
+          enabled = expected <= configured
+          print(f'Configured 1 Timotei sources: {sorted(configured & expected)}')
+          print(f'Transcription enabled: {enabled}')
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as output:
+              output.write(f"enabled={'true' if enabled else 'false'}\n")
+          PY
+
   transcribe:
-    if: github.actor != 'github-actions[bot]'
+    needs: preflight
+    if: github.actor != 'github-actions[bot]' && needs.preflight.outputs.enabled == 'true'
     strategy:
       fail-fast: false
       matrix:
@@ -44,8 +84,8 @@ jobs:
           retention-days: 1
 
   persist:
-    if: github.actor != 'github-actions[bot]'
-    needs: transcribe
+    needs: [preflight, transcribe]
+    if: github.actor != 'github-actions[bot]' && needs.preflight.outputs.enabled == 'true' && needs.transcribe.result == 'success'
     runs-on: ubuntu-22.04
     timeout-minutes: 10
     steps:
