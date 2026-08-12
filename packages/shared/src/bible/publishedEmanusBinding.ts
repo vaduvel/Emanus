@@ -37,6 +37,7 @@ export function bindBookToPublishedEmanusText(book: BibleBook): BibleBook {
     return {
       ...chapter,
       status: "published" as const,
+      verses: verses.map((text, index) => ({ number: index + 1, text })),
       units: chapter.units.map((unit) => {
         const [verseStart, verseEnd] = parseVerseRange(unit)
         if (verseEnd > verses.length) {

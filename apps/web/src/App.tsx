@@ -46,8 +46,8 @@ export default function App() {
   else if (route.name === "doors" || !hasStarted()) screen = <main className="app route-anim"><HelpButton /><Doors /></main>
   else if (route.name === "lesson") screen = <main className="app route-anim"><HelpButton /><LessonView lessonId={route.id} /></main>
   else if (route.name === "library") screen = <main className="app route-anim app--tabbed"><HelpButton /><Library /><Tabs active="today" /></main>
-  else if (route.name === "bible") screen = <main className="app route-anim app--tabbed"><HelpButton /><Bible /><Tabs active="bible" /></main>
-  else if (route.name === "bibleChapter") screen = <main key={`${route.bookId}-${route.chapter}`} className="app route-anim app--tabbed"><HelpButton /><BibleChapterScreen bookId={route.bookId} chapter={route.chapter} /><Tabs active="bible" /></main>
+  else if (route.name === "bible") screen = <main className="app route-anim app--tabbed app--bible"><Bible /><Tabs active="bible" /></main>
+  else if (route.name === "bibleChapter") screen = <main key={`${route.bookId}-${route.chapter}`} className="app route-anim app--tabbed app--bible"><BibleChapterScreen bookId={route.bookId} chapter={route.chapter} /><Tabs active="bible" /></main>
   else if (route.name === "ask") screen = <main key={route.despre ?? "ask"} className="app route-anim app--tabbed"><HelpButton /><Ask despre={route.despre} /><Tabs active="ask" /></main>
   else if (route.name === "pathend") screen = <main className="app route-anim app--tabbed"><HelpButton /><PathEnd /><Tabs active="today" /></main>
   else if (route.name === "devotional") screen = <main className="app route-anim app--tabbed"><HelpButton /><Devotional /><Tabs active="today" /></main>
