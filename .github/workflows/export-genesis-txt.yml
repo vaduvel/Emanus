@@ -1,0 +1,67 @@
+name: Export Genesis TXT
+
+on:
+  push:
+    branches:
+      - temp/genesis-txt-export
+    paths:
+      - .github/workflows/export-genesis-txt.yml
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build TTS-ready Genesis TXT
+        run: |
+          python3 - <<'PY'
+          import json
+          import re
+          from pathlib import Path
+
+          src = Path('packages/shared/src/bible/generated/publishedEmanusOtText/geneza.ts')
+          text = src.read_text(encoding='utf-8')
+          chapters = {}
+          for line in text.splitlines():
+              m = re.match(r'^\s*(\d+):\s*(\[.*\]),?\s*$', line)
+              if not m:
+                  continue
+              chapter = int(m.group(1))
+              chapters[chapter] = json.loads(m.group(2))
+
+          assert sorted(chapters) == list(range(1, 51)), sorted(chapters)
+          verse_count = sum(len(v) for v in chapters.values())
+          assert verse_count == 1533, verse_count
+
+          out = []
+          out.append('GENEZA')
+          out.append('Biblia Emanus (BE)')
+          out.append('')
+          for chapter in range(1, 51):
+              out.append(f'CAPITOLUL {chapter}')
+              out.append('')
+              out.extend(chapters[chapter])
+              out.append('')
+
+          target = Path('Geneza_Biblia_Emanus_TTS.txt')
+          target.write_text('\n'.join(out).rstrip() + '\n', encoding='utf-8')
+          print(f'Created {target}: 50 chapters, {verse_count} verses, {target.stat().st_size} bytes')
+          PY
+
+      - name: Verify output
+        run: |
+          test -s Geneza_Biblia_Emanus_TTS.txt
+          grep -q '^CAPITOLUL 50$' Geneza_Biblia_Emanus_TTS.txt
+          sha256sum Geneza_Biblia_Emanus_TTS.txt
+
+      - name: Upload Genesis TXT
+        uses: actions/upload-artifact@v4
+        with:
+          name: geneza-biblia-emanus-tts
+          path: Geneza_Biblia_Emanus_TTS.txt
+          retention-days: 1
