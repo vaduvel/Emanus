@@ -45,7 +45,7 @@ export const NT_BOOK_21: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-petru-2",
@@ -85,7 +85,7 @@ export const NT_BOOK_21: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-petru-3",
@@ -125,7 +125,7 @@ export const NT_BOOK_21: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-petru-4",
@@ -165,7 +165,7 @@ export const NT_BOOK_21: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-petru-5",
@@ -205,7 +205,7 @@ export const NT_BOOK_21: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     }
   ]
 }

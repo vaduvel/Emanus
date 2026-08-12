@@ -54,7 +54,7 @@ export const NT_BOOK_20: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "iacov-2",
@@ -85,7 +85,7 @@ export const NT_BOOK_20: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "iacov-3",
@@ -116,7 +116,7 @@ export const NT_BOOK_20: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "iacov-4",
@@ -156,7 +156,7 @@ export const NT_BOOK_20: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "iacov-5",
@@ -205,7 +205,7 @@ export const NT_BOOK_20: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     }
   ]
 }

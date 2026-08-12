@@ -40,6 +40,10 @@ function getBook(files, bookId, canonicalBookId) {
   if (book.bookId !== canonicalBookId) fail(`${bookId}: canonical book mismatch`)
   return { full, book }
 }
+function isApprovedSemanticUnit(owner) {
+  const review = owner?.sourceFidelity?.semanticReview
+  return review?.status === "approved-against-transcript" && /^sha256:[0-9a-f]{64}$/i.test(String(review?.reviewedTeachingSha256 ?? ""))
+}
 function exactFix(files, fix, ledger) {
   const { full, book } = getBook(files, fix.bookId, fix.canonicalBookId)
   const chapter = book.chapters?.find((item) => item.number === fix.chapter)
@@ -52,6 +56,10 @@ function exactFix(files, fix, ledger) {
   const { owner, key } = resolveField(chapter, fix.field)
   const value = owner[key]
   const occurrences = typeof value === "string" ? value.split(fix.before).length - 1 : 0
+  if (occurrences === 0 && typeof value === "string" && value.includes(fix.after) && isApprovedSemanticUnit(owner)) {
+    ledger.push({ ...fix, action: "exact-be-rewrite-already-applied" })
+    return
+  }
   if (occurrences !== 1) fail(`${fix.bookId} ${fix.chapter} ${fix.field}: expected one exact-fix target, found ${occurrences}`)
   owner[key] = value.replace(fix.before, fix.after)
   fs.writeFileSync(full, stable(book), "utf8")
@@ -74,6 +82,10 @@ function unquote(files, item, ledger) {
       found += count
     }
   }
+  if (found === 0 && isApprovedSemanticUnit(owner) && !forms.some((form) => value.includes(form))) {
+    ledger.push({ ...item, action: "remove-quotation-marks-from-paraphrase-already-applied" })
+    return
+  }
   if (found !== 1) fail(`${item.bookId} ${item.chapter} ${item.field}: expected exactly one quoted paraphrase wrapper for '${item.quote}', found ${found}`)
   owner[key] = next
   fs.writeFileSync(full, stable(book), "utf8")
@@ -89,24 +101,16 @@ const EXACT_FIXES = [
   { bookId: "luca", canonicalBookId: "LUK", chapter: 9, field: "units[2].teaching", before: "Acesta este Fiul Meu ales; de El să ascultați", after: "Acesta este Fiul Meu preaiubit. Ascultați-L!" },
   { bookId: "luca", canonicalBookId: "LUK", chapter: 17, field: "units[3].teaching", before: "Unul va fi luat și altul lăsat", after: "unul va fi luat și celălalt va rămâne" },
   { bookId: "luca", canonicalBookId: "LUK", chapter: 23, field: "units[1].teaching", before: "astăzi vei fi cu Mine în rai", after: "astăzi vei fi cu Mine în Paradis" },
-  { bookId: "fapte", canonicalBookId: "ACT", chapter: 24, field: "units[2].teaching", before: "Acum pleacă; te voi chema când voi avea timp.", after: "Deocamdată du-te; când voi găsi un prilej, te voi chema." },
   { bookId: "1-corinteni", canonicalBookId: "1CO", chapter: 12, field: "units[1].teaching", before: "nu am nevoie de tine", after: "N-am nevoie de tine" },
   { bookId: "1-corinteni", canonicalBookId: "1CO", chapter: 14, field: "units[2].teaching", before: "Duhurile prorocilor sunt supuse prorocilor", after: "duhurile profeților sunt supuse profeților" },
   { bookId: "1-corinteni", canonicalBookId: "1CO", chapter: 16, field: "units[2].teaching", before: "Vegheați, stați tari, fiți curajoși", after: "Vegheați, stați tari în credință, purtați-vă bărbătește, fiți tari" },
   { bookId: "filipeni", canonicalBookId: "PHP", chapter: 2, field: "units[2].teaching", before: "Duceți până la capăt mântuirea", after: "duceți până la capăt propria voastră mântuire" },
   { bookId: "coloseni", canonicalBookId: "COL", chapter: 2, field: "units[4].teaching", before: "nu lua, nu gusta, nu atinge", after: "Nu atinge, nu gusta, nu pipăi" },
-  { bookId: "tit", canonicalBookId: "TIT", chapter: 1, field: "units[2].teaching", before: "ca să fie sănătoși în credință", after: "pentru ca ei să fie sănătoși în credință" },
-  { bookId: "filimon", canonicalBookId: "PHM", chapter: 1, field: "units[3].teaching", before: "Primește-l ca pe mine însumi", after: "primește-l așa cum m-ai primi pe mine" },
-  { bookId: "1-ioan", canonicalBookId: "1JN", chapter: 1, field: "units[1].teaching", before: "dacă zicem că nu avem păcat, ne înșelăm", after: "Dacă spunem că nu avem păcat, ne amăgim pe noi înșine" }
 ]
 
 const UNQUOTES = [
   { bookId: "matei", canonicalBookId: "MAT", chapter: 5, field: "literaryContext", quote: "ați auzit... dar Eu vă spun" },
-  { bookId: "matei", canonicalBookId: "MAT", chapter: 11, field: "units[0].teaching", quote: "Ferice de acela pentru care Eu nu voi fi un prilej de poticnire" },
-  { bookId: "matei", canonicalBookId: "MAT", chapter: 14, field: "units[2].teaching", quote: "Eu sunt; nu vă temeți" },
   { bookId: "matei", canonicalBookId: "MAT", chapter: 16, field: "historicalContext", quote: "a lega și a dezlega" },
-  { bookId: "matei", canonicalBookId: "MAT", chapter: 26, field: "units[0].teaching", quote: "Pe săraci îi aveți totdeauna" },
-  { bookId: "matei", canonicalBookId: "MAT", chapter: 26, field: "units[2].teaching", quote: "Duhul este plin de râvnă, dar carnea este neputincioasă" },
   { bookId: "marcu", canonicalBookId: "MRK", chapter: 9, field: "units[3].teaching", quote: "nu ne urma pe noi" },
   { bookId: "marcu", canonicalBookId: "MRK", chapter: 10, field: "units[0].teaching", quote: "A lăsa pe tată și pe mamă" },
   { bookId: "marcu", canonicalBookId: "MRK", chapter: 12, field: "units[1].teaching", quote: "nu mai este al lui" },

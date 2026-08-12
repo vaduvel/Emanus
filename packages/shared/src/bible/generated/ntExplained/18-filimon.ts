@@ -103,7 +103,7 @@ export const NT_BOOK_18: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, Îți mulțumim că ne-ai primit înaintea Tatălui și ai pus datoria noastră în socoteala Ta. Dă-ne duhul lui Pavel: să nu folosim autoritatea pentru noi înșine, să mijlocim pentru cel slab și să fim gata să purtăm un cost real. Dă-ne curajul lui Onisim de a ne întoarce și harul lui Filimon de a primi un frate schimbat de Evanghelie. Fă din biserica Ta o familie în care adevărul, răspunderea și iertarea se întâlnesc. Amin.",
-      "status": "in_review"
+      "status": "published"
     }
   ]
 }

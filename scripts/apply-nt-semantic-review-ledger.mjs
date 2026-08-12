@@ -57,6 +57,10 @@ for (const decision of ledger.decisions) {
 
   if (decision.action === "rewrite") {
     if (typeof decision.revisedTeaching !== "string" || !decision.revisedTeaching.trim()) fail(`${decision.unitId}: rewrite lacks revisedTeaching`)
+    if (Object.prototype.hasOwnProperty.call(decision, "revisedHeading")) {
+      if (typeof decision.revisedHeading !== "string" || !decision.revisedHeading.trim()) fail(`${decision.unitId}: invalid revisedHeading`)
+      unit.heading = decision.revisedHeading
+    }
     unit.teaching = decision.revisedTeaching
     if (Object.prototype.hasOwnProperty.call(decision, "revisedForYourHeart")) {
       if (decision.revisedForYourHeart !== null && typeof decision.revisedForYourHeart !== "string") fail(`${decision.unitId}: invalid revisedForYourHeart`)
@@ -66,6 +70,11 @@ for (const decision of ledger.decisions) {
     rewritten += 1
   } else if (decision.action !== "keep") {
     fail(`${decision.unitId}: action must be keep or rewrite`)
+  }
+
+  if (decision.action === "keep" && Object.prototype.hasOwnProperty.call(decision, "revisedHeading")) {
+    if (typeof decision.revisedHeading !== "string" || !decision.revisedHeading.trim()) fail(`${decision.unitId}: invalid revisedHeading`)
+    unit.heading = decision.revisedHeading
   }
 
   const currentHash = sha256(snapshot(unit))

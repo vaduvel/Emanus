@@ -1,8 +1,8 @@
 {
   "schema": "emanus-nt-semantic-postquote-rebind-conservative-v1",
   "policy": "No reader copy is changed here. A semantic hash is rebound only when reversing the exact unit-level conservative Biblia Emanus quote-fix ledger operations recreates the manually reviewed pre-quote snapshot hash byte-for-byte.",
-  "conservativeFixes": 4,
-  "semanticRebinds": 4,
+  "conservativeFixes": 5,
+  "semanticRebinds": 5,
   "changes": [
     {
       "bookId": "matei",
@@ -61,6 +61,21 @@
           "fieldPath": "units[3].teaching",
           "before": "Dumnezeul Meu, Dumnezeul Meu, pentru ce M-ai părăsit?",
           "after": "Dumnezeul meu, Dumnezeul meu, de ce m-ai părăsit"
+        }
+      ]
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 1,
+      "unitId": "ioan-1-19-34",
+      "action": "rebind-after-reversible-conservative-same-chapter-biblia-emanus-quote-fix",
+      "preQuoteSemanticSha256": "sha256:a5285883a30bce3a1a1b4ccecaf5d2b1fbb560b76e953d557ad2fd4a6dabf39f",
+      "finalQuoteNormalizedSha256": "sha256:c07d4e6090e777966d89d3bc76dc3961fd404eeb70348faa4b7a13cfd98e5b02",
+      "operations": [
+        {
+          "fieldPath": "units[3].teaching",
+          "before": "Iată Mielul lui Dumnezeu, care ridică păcatul lumii!",
+          "after": "Iată Mielul lui Dumnezeu, Cel care ridică păcatul lumii"
         }
       ]
     }

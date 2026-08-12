@@ -21,7 +21,7 @@ export const NT_BOOK_13: BibleBook = {
           "ref": "1 Tesaloniceni 1:1-3",
           "heading": "Har, pace și cele trei roade ale vieții noi",
           "text": "Pavel, Silvan și Timotei, către adunarea Tesalonicenilor în Dumnezeu Tatăl și Domnul Isus Hristos: Har vouă și pace de la Dumnezeu Tatăl nostru și Domnul Isus Hristos. Îi mulțumim întotdeauna lui Dumnezeu pentru voi toți, menționându-vă în rugăciunile noastre, amintindu-vă fără încetare lucrarea voastră de credință și de muncă a iubirii și perseverenței speranței în Domnul nostru Isus Hristos, înaintea Dumnezeului și Tatălui nostru.",
-          "teaching": "Pavel, Silvan și Timotei se adresează bisericii ca unei comunități aflate în Dumnezeu Tatăl și în Domnul Isus Hristos. Identitatea lor nu se sprijină pe statut social, vechime sau performanță, ci pe harul care îi așază în Hristos și produce pace.\n\nExplicația subliniază triada practică: credința adevărată lucrează, dragostea adevărată se ostenește, iar nădejdea adevărată rabdă. Credința nu este doar acord intelectual, dragostea nu este doar sentiment, iar nădejdea nu este optimism; fiecare devine vizibilă în alegeri, sacrificiu și perseverență.",
+          "teaching": "Pavel, Silvan și Timotei îi văd pe credincioși ca biserică aflată în Dumnezeu Tatăl și în Domnul Isus Hristos. Harul lui Dumnezeu aduce iertare și ajutor, iar pacea Lui eliberează inima de neliniște. De aceea apostolii Îi mulțumesc lui Dumnezeu pentru ei și îi pomenesc în rugăciune înaintea Tatălui.\n\nCredința lor producea lucrare, dragostea îi făcea să se ostenească, iar speranța așezată în Domnul Isus Hristos le dădea statornicie. Aceste roade erau trăite înaintea lui Dumnezeu, nu pentru aprecierea oamenilor. Credința care nu lucrează, dragostea care nu se sacrifică și speranța care nu rabdă rămân doar cuvinte.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -36,7 +36,7 @@ export const NT_BOOK_13: BibleBook = {
           "ref": "1 Tesaloniceni 1:4-5",
           "heading": "Alegerea cunoscută prin puterea Evangheliei",
           "text": "Știm, frați iubiți de Dumnezeu, că sunteți aleși, că Vestea cea Bună a venit la voi nu numai prin cuvânt, ci prin putere, prin Duhul Sfânt cu multă. Știți ce fel de oameni ne-am arătat a fi printre voi pentru voi.",
-          "teaching": "Pavel nu speculează despre alegerea lui Dumnezeu într-un mod rece. El o recunoaște prin felul în care Evanghelia a venit nu numai prin cuvinte, ci cu putere, cu Duhul Sfânt și cu o convingere adâncă ce a schimbat viața ascultătorilor. Puterea spirituală nu se măsoară prin volum, spectacol sau presiune emoțională. Mesagerii au trăit între oameni într-un fel care confirma mesajul.",
+          "teaching": "Pavel știe că frații sunt iubiți și aleși de Dumnezeu fiindcă Evanghelia nu a rămas pentru ei o simplă explicație. Dumnezeu i-a căutat mai întâi, iar mesajul a venit cu putere, cu Duhul Sfânt și cu convingere deplină, schimbându-le viața.\n\nCuvintele nu sunt suficiente dacă puterea Duhului și o viață care confirmă mesajul lipsesc. Apostolii trăiseră între tesaloniceni într-un fel cunoscut de ei; caracterul mesagerilor nu contrazicea Evanghelia vestită. Alegerea lui Dumnezeu nu este prilej de mândrie, ci chemare la o viață în care lucrarea Lui devine vizibilă.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -44,14 +44,14 @@ export const NT_BOOK_13: BibleBook = {
             "2 Corinteni 4:2",
             "Galateni 5:22-23"
           ],
-          "forYourHeart": "Caută roada concretă a Evangheliei în caracter, nu doar intensitatea unei experiențe religioase."
+          "forYourHeart": "Nu te opri la cuvinte sau la intensitatea unei experiențe. Caută lucrarea Duhului Sfânt în ascultare, caracter și schimbarea concretă a vieții."
         },
         {
           "id": "1-tesaloniceni-1-6-8",
           "ref": "1 Tesaloniceni 1:6-8",
           "heading": "Cuvântul primit în necaz, cu bucuria Duhului",
           "text": "Voi ați devenit imitatori ai noștri și ai Domnului, după ce ați primit cuvântul într-o mare nenorocire, cu bucuria Duhului Sfânt, astfel încât ați devenit un exemplu pentru toți cei care cred în Macedonia și în Ahaia. Căci de la voi cuvântul Domnului a fost declarat, nu numai în Macedonia și Ahaia, ci și în toate locurile credința voastră față de Dumnezeu a ieșit, ca să nu spunem nimic.",
-          "teaching": "Tesalonicenii au devenit imitatori ai apostolilor și ai Domnului deoarece au primit Cuvântul în mijlocul necazului, dar cu bucuria dată de Duhul Sfânt. Imitarea creștină nu înseamnă copierea personalității unui lider, ci urmarea credinței și caracterului care Îl reflectă pe Isus.\n\nViața lor a devenit un model, iar mesajul Domnului a răsunat dincolo de cetate. Mărturia cea mai puternică nu este publicitatea despre sine, ci o comunitate schimbată care rămâne smerită și credincioasă sub presiune.",
+          "teaching": "Tesalonicenii i-au urmat pe apostoli în măsura în care aceștia Îl urmau pe Domnul. Ei au primit Cuvântul în necaz, cu bucuria pe care o dă Duhul Sfânt. Necazul nu a anulat adevărul Evangheliei, iar bucuria lor nu depindea de împrejurări ușoare.\n\nAstfel au devenit un exemplu pentru ceilalți credincioși. De la ei a răsunat Cuvântul Domnului, iar vestea credinței lor s-a răspândit. Mărturia creștină cuprinde deopotrivă o viață care Îl reflectă pe Hristos și o Evanghelie rostită limpede; nici tăcerea fără mesaj, nici vorbirea fără caracter nu împlinesc chemarea.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -59,14 +59,14 @@ export const NT_BOOK_13: BibleBook = {
             "1 Corinteni 11:1",
             "1 Petru 2:19-23"
           ],
-          "forYourHeart": "Urmează exemplul oamenilor care te conduc spre caracterul lui Hristos, nu spre dependență de persoana lor."
+          "forYourHeart": "Primește Cuvântul chiar când ascultarea costă și lasă-l să se vadă atât în caracterul tău, cât și în mărturisirea limpede a Evangheliei."
         },
         {
           "id": "1-tesaloniceni-1-9-10",
           "ref": "1 Tesaloniceni 1:9-10",
           "heading": "Întorși de la idoli ca să slujim și să așteptăm",
           "text": "Căci ei înșiși spun despre noi ce fel de primire am avut de la voi și cum v-ați întors la Dumnezeu de la idoli pentru a sluji unui Dumnezeu viu și adevărat, să pe Fiul Său din cer, pe care L-a înviat din morți: pe Isus, care ne izbăvește de mânia viitoare.",
-          "teaching": "Convertirea tesalonicenilor avea două direcții: s-au întors de la idoli și s-au întors spre Dumnezeu ca să-I slujească. Un idol poate fi o imagine religioasă, dar și banii, reputația, confortul, succesul, o relație sau propria voință. Pocăința reală schimbă stăpânul vieții.\n\nEi Îl așteptau pe Fiul lui Dumnezeu din cer, pe Isus înviat, Cel care ne scapă de mânia viitoare. Așteptarea nu este pasivitate, panică sau calcularea datelor, ci slujire fidelă în prezent. Venirea Domnului produce curăție, perseverență și speranță, nu frică exploatată de predicatori sau teorii care domină viața.",
+          "teaching": "Convertirea lor putea fi văzută: s-au întors la Dumnezeu, au părăsit idolii și au început să-I slujească Dumnezeului viu și adevărat. Pocăința nu înseamnă doar regret, ci ruperea loialității față de orice rival al lui Dumnezeu și punerea vieții la dispoziția Lui.\n\nÎn același timp, Îl așteptau din cer pe Fiul lui Dumnezeu, pe Isus, pe care Tatăl L-a înviat dintre cei morți și care ne scapă de mânia viitoare. Întoarcerea arată credința, slujirea arată dragostea, iar așteptarea arată speranța. Cine Îl așteaptă pe Hristos nu calculează date, ci se curăță de idoli, slujește și rămâne credincios.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -78,7 +78,7 @@ export const NT_BOOK_13: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, fă ca credința mea să lucreze, dragostea mea să se ostenească și nădejdea mea să rabde. Întoarce-mă de la orice idol, păzește-mă de manipulare și ajută-mă să Te slujesc cu bucurie până la venirea Ta. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-tesaloniceni-2",
@@ -124,7 +124,7 @@ export const NT_BOOK_13: BibleBook = {
           "ref": "1 Tesaloniceni 2:9-12",
           "heading": "Muncă, exemplu și îndemn părintesc",
           "text": "Aduceți-vă aminte, fraților, de osteneala truda noastră, căci muncim zi noapte, ca să nu vă împovărăm pe niciunul dintre voi, v-am propovăduit Vestea cea Bună a lui Dumnezeu. Sunteți martori la Dumnezeu cât de sfinți, drepți și fără prihană ne-am purtat față de voi care credeți. După cum știți, v-am îndemnat, mîngîiat, și v-am implorat pe fiecare dintre voi, cum face un tată cu copiii lui, ca să umblați într-un mod demn de Dumnezeu, care vă cheamă în Împărăția și slava Lui.",
-          "teaching": "Apostolii au muncit zi și noapte ca să nu fie o povară, deși slujitorii Evangheliei pot primi sprijin legitim. Pavel amintește conduita lor sfântă, dreaptă și fără reproș, nu ca laudă de sine, ci ca dovadă că mesajul era susținut de viață.\n\nCa un tată, el a îndemnat, a încurajat și a chemat pe fiecare la o umblare vrednică de Dumnezeu.",
+          "teaching": "Pavel le amintește osteneala apostolilor: au lucrat noaptea și ziua pentru a nu fi o povară nimănui în timp ce vesteau Evanghelia. Viața lor înaintea credincioșilor fusese sfântă, dreaptă și fără reproș. Mesajul nu era separat de felul în care trăiau.\n\nEi s-au purtat și ca un tată cu copiii săi: l-au îndemnat, încurajat și chemat pe fiecare să umble într-un fel vrednic de Dumnezeu, care îi cheamă în Împărăția și slava Sa. Adevărata îndrumare unește exemplul personal, încurajarea și chemarea directă la ascultare.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -132,14 +132,14 @@ export const NT_BOOK_13: BibleBook = {
             "1 Corinteni 9:7-14",
             "Efeseni 4:1"
           ],
-          "forYourHeart": "Lasă exemplul tău zilnic să susțină lucrurile pe care le ceri altora."
+          "forYourHeart": "Lasă exemplul tău zilnic să susțină lucrurile pe care le ceri altora și cheamă-i la ascultare prin adevăr, încurajare și o viață fără prefăcătorie."
         },
         {
           "id": "1-tesaloniceni-2-13-16",
           "ref": "1 Tesaloniceni 2:13-16",
           "heading": "Cuvântul care lucrează și suferința pentru credință",
           "text": "Pentru aceasta îi mulțumim și lui Dumnezeu fără încetare că atunci când ați primit de la noi cuvântul mesajului lui Dumnezeu, nu l-ați acceptat ca cuvânt al oamenilor, ci ca în adevăr, Cuvântul lui Dumnezeu, care, de asemenea, lucrează în voi care credeți. Căci voi, fraților, ați imitat adunările lui Dumnezeu care sunt în Iudeea, în Hristos Isus; căci și voi ați suferit aceleași lucruri de la compatrioții voștri, cum au făcut ei de la Iudei. care a omorît pe Domnul Isus și pe prorocii lor, și ne-a izgonit, și nu voia lui Dumnezeu, și s-au împotrivit tuturor oamenilor, și ne-a oprit să vorbim Neamurilor, ca să fie mîntuiți, ca să-și umple totdeauna păcatele. Dar mâinia a venit peste ei până la capăt.",
-          "teaching": "Tesalonicenii au primit mesajul nu ca simplu cuvânt omenesc, ci ca adevărul lui Dumnezeu, care lucrează în cei ce cred. Cuvântul viu nu doar informează, ci confruntă, mângâie și modelează ascultarea. Pavel compară suferința lor cu cea a bisericilor din Iudeea și descrie opoziția unor conducători care Îl respinseseră pe Hristos și persecutaseră mesagerii.",
+          "teaching": "Tesalonicenii au primit mesajul apostolic nu ca pe o opinie omenească, ci ca pe Cuvântul lui Dumnezeu, iar acest Cuvânt lucrează în cei care cred. Primirea lui se vede în ascultare și în statornicie, nu doar în acord intelectual.\n\nEi au suferit din partea celor din jur, așa cum bisericile din Iudeea suferiseră din partea împotrivitorilor lor. Pavel condamnă opoziția care Îl respinge pe Hristos, îi prigonește pe mesagerii Lui și împiedică vestirea mântuirii altora. A deține Scripturile sau o identitate religioasă nu scutește pe nimeni de judecată când adevărul este respins, păcatul este umplut, iar altora li se închide calea spre Evanghelie.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -154,7 +154,7 @@ export const NT_BOOK_13: BibleBook = {
           "ref": "1 Tesaloniceni 2:17-20",
           "heading": "Dorul pentru comunitate și coroana bucuriei",
           "text": "Dar noi, fraților, fiind îndoliați de voi pentru un scurt timp în prezență, nu în inimă, am încercat și mai mult să vă vedem fața cu o mare dorință, Pentru că am vrut să venim la tine, eu, Pavel, încă o dată, dar Satana ne-a împiedicat. Căci care este nădejdea noastră, sau bucuria noastră, sau cununa bucuriei? Nu chiar voi, înaintea Domnului nostru Isus, la venirea Sa? Căci voi sunteți slava și bucuria noastră.",
-          "teaching": "Despărțit cu trupul, dar nu cu inima, Pavel a dorit intens să îi revadă. El recunoaște împiedicarea spirituală fără a transforma fiecare obstacol într-o obsesie despre demoni sau într-o scuză pentru lipsa de responsabilitate.\n\nCredincioșii erau nădejdea, bucuria și coroana lui înaintea Domnului. Răsplata slujitorului nu este o platformă mare, ci oameni care rămân credincioși lui Hristos. Un lider sănătos se bucură când oamenii cresc în dependență de Domnul, nu când devin dependenți de el.",
+          "teaching": "Pavel fusese despărțit de tesaloniceni cu trupul, nu cu inima, și făcuse încercări repetate să îi revadă. El spune direct că Satana i-a împiedicat, dar această împiedicare nu a anulat lucrarea lui Dumnezeu: legătura a rămas, iar mai târziu Timotei a putut ajunge la ei.\n\nLa venirea Domnului Isus, bucuria și coroana apostolului nu vor fi renumele sau platforma lui, ci oamenii care stau credincioși înaintea lui Hristos. Slujirea adevărată poartă povara maturizării altora și se bucură când ei sunt pregătiți pentru Domnul.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -162,11 +162,11 @@ export const NT_BOOK_13: BibleBook = {
             "3 Ioan 4",
             "1 Corinteni 3:6-9"
           ],
-          "forYourHeart": "Investește într-o persoană astfel încât ea să Îl urmeze mai profund pe Hristos, nu să te admire mai mult pe tine."
+          "forYourHeart": "Poartă în rugăciune și slujire maturizarea unei persoane, ca ea să stea credincioasă înaintea lui Hristos, nu ca să depindă de tine."
         }
       ],
       "prayer": "Doamne, curăță motivele slujirii mele. Păzește-mă de lingușire, lăcomie, control și căutarea gloriei. Dă-mi tandrețe, integritate și curaj ca să îi ajut pe oameni să umble vrednic de Tine. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-tesaloniceni-3",
@@ -182,7 +182,7 @@ export const NT_BOOK_13: BibleBook = {
           "ref": "1 Tesaloniceni 3:1-5",
           "heading": "Timotei trimis să întărească o credință încercată",
           "text": "Prin urmare, când nu am mai putut suporta, ne-am gândit că e bine să fim lăsați în urmă la Atena singuri, a trimis pe Timotei, fratele nostru slujitorul lui Dumnezeu, întru vestea cea bună a lui Hristos, ca să vă întărească să vă mângâie în credința voastră, că nimeni nu va fi mișcat de aceste necazuri, căci știți că suntem numiți în această misiune. Cu siguranță, când am fost cu voi, v-am spus dinainte că trebuie să suferim suferință, așa cum s-a întâmplat, și știți. De aceea, și eu, când n-am mai putut s-o suport, am trimes să vă cunosc credința, de teamă că v-ar fi ispitit ispititorul, și că lucrul nostru ar fi fost zadarnic.",
-          "teaching": "Pavel preferă să rămână singur la Atena și îl trimite pe Timotei pentru binele tesalonicenilor. Slujirea matură renunță la confortul propriu pentru a întări pe altcineva. Timotei nu este trimis să îi facă dependenți de Pavel, ci să îi întărească și să îi încurajeze în credință.\n\nNecazurile nu dovedeau că Evanghelia era falsă; ucenicii fuseseră avertizați că vor întâmpina opoziție.\n\nPavel se teme ca ispititorul să nu le fi slăbit credința. Grija lui nu devine control sau supraveghere obsesivă; el caută informație printr-un frate de încredere și lasă lucrarea în mâna lui Dumnezeu.",
+          "teaching": "Pavel a ales să rămână singur la Atena și l-a trimis pe Timotei ca să îi întărească și să îi încurajeze în credință. Binele bisericii a cântărit mai mult decât confortul lui. Timotei, deși mai tânăr, era lucrătorul prin care Dumnezeu putea sluji nevoii lor.\n\nNecazurile nu dovedeau că Evanghelia eșuase. Credincioșii fuseseră avertizați că vor trece prin suferință, iar încercarea putea să le clatine perspectiva și să dea ispititorului loc să le slăbească credința. De aceea Pavel nu presupune că totul este bine, ci caută să afle starea credinței lor și trimite ajutor concret.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -197,7 +197,7 @@ export const NT_BOOK_13: BibleBook = {
           "ref": "1 Tesaloniceni 3:6-10",
           "heading": "Vestea credinței și bucuria păstorului",
           "text": "Dar Timotei tocmai a venit acum la noi de la voi, și ne-a adus vești bune despre credința și dragostea voastră, și că aveți amintiri frumoase despre noi mereu, dorind să ne vedeți, așa cum și noi dorim să vă vedem. Din această cauză, fraților, am fost mângâiați de voi în toate necazurile și necazurile noastre prin credința voastră. Pentru că acum trăim, dacă stai ferm în Domnul. Pentru ce mulțămiri putem da din nou lui Dumnezeu pentru voi, pentru toată bucuria cu care ne bucurăm pentru voi, înaintea Dumnezeului nostru, Zi și noapte rugându-ne să-ți vedem fața și să desăvârșim ceea ce lipsește din credința ta?",
-          "teaching": "Timotei aduce vestea bună a credinței și dragostei lor, precum și a dorului reciproc. Pavel este mângâiat în propriile necazuri deoarece ei stau tari în Domnul. Bucuria lui arată cât de profund își legase inima de maturitatea lor spirituală.\n\nEl spune că trăiește dacă ei rămân statornici, dar aceasta nu este șantaj emoțional. Pavel Îi mulțumește lui Dumnezeu și se roagă să completeze ce lipsește credinței lor. Un slujitor sănătos poate iubi intens fără să pună asupra oamenilor responsabilitatea pentru starea lui emoțională.",
+          "teaching": "Timotei s-a întors cu vestea bună că tesalonicenii rămâneau în credință și dragoste și că păstrau o amintire bună despre apostoli. În propriul necaz, Pavel a fost mângâiat pentru că ei stăteau tari în Domnul. În trupul lui Hristos, statornicia unui credincios îi întărește și pe ceilalți.\n\nPavel Îi mulțumește lui Dumnezeu pentru bucuria primită prin ei și se roagă stăruitor să îi revadă, ca să completeze ceea ce încă lipsea credinței lor. Dragostea pastorală nu ignoră lipsurile, dar nici nu începe cu reproșul; mulțumește pentru lucrarea lui Dumnezeu, se bucură de roade și slujește următorului pas de maturizare.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -212,7 +212,7 @@ export const NT_BOOK_13: BibleBook = {
           "ref": "1 Tesaloniceni 3:11-13",
           "heading": "Drumul deschis, dragostea înmulțită și inima întărită",
           "text": "Acum fie ca Dumnezeul nostru și Tatăl nostru însuși și Domnul nostru Isus Hristos, să ne îndrepte calea către voi. Fie ca Domnul să vă facă să creșteți și să fiți plini de iubire unii față de alții și față de toți oamenii, așa cum facem și noi cu voi, El vă va întări inimile fără prihană în sfințenie înaintea Dumnezeului și Tatălui nostru, la venirea Domnului nostru Isus cu toți sfinții Lui.",
-          "teaching": "Pavel cere ca Dumnezeu Tatăl și Domnul Isus să îi deschidă drumul. Planificarea și efortul rămân importante, dar slujitorul recunoaște că numai Dumnezeu poate crea ocazii și poate uni oamenii la timpul potrivit.\n\nRugăciunea centrală este ca dragostea lor să crească și să se reverse unii spre alții și spre toți. Sfințenia nu este austeritate rece, ci o inimă întărită prin dragoste. Ținta este să fie fără reproș înaintea lui Dumnezeu la venirea Domnului Isus cu sfinții Săi.\n\nAșteptarea venirii nu fixează date și nu alimentează panică. Ea cheamă la dragoste mai largă, caracter curat și fidelitate în responsabilitățile de azi.",
+          "teaching": "Pavel se roagă ca Dumnezeu Tatăl și Domnul Isus să îi deschidă drumul spre tesaloniceni. El nu își pune încrederea în simpla dorință sau în puterea proprie, ci în Dumnezeu, care poate înlătura piedicile și poate conduce lucrarea.\n\nApoi cere ca Domnul să le înmulțească și să le facă să prisosească dragostea unii față de alții și față de toți oamenii. Această dragoste întărește inima în sfințenie, astfel încât credincioșii să fie fără reproș înaintea lui Dumnezeu la venirea Domnului Isus cu toți sfinții Săi. Pregătirea pentru venirea Lui se vede în dragoste care crește și în sfințenie reală.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -224,7 +224,7 @@ export const NT_BOOK_13: BibleBook = {
         }
       ],
       "prayer": "Tată, întărește-mi credința în încercare și lărgește-mi dragostea. Ajută-mă să sprijin oamenii fără control, să caut ajutor când există pericol și să trăiesc curat în lumina venirii lui Isus. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-tesaloniceni-4",
@@ -240,7 +240,7 @@ export const NT_BOOK_13: BibleBook = {
           "ref": "1 Tesaloniceni 4:1-2",
           "heading": "Să prisosim în umblarea care Îi place lui Dumnezeu",
           "text": "În cele din urmă, fraților, vă implorăm și vă îndemnăm în Domnul Isus, ca, pe măsură ce ați primit de la noi cum trebuie să umblați și să fiți plăcuți lui Dumnezeu, să aveți din ce în ce mai mult. Pentru că știi ce instrucțiuni ți-am dat prin Domnul Isus.",
-          "teaching": "Tesalonicenii învățaseră cum să trăiască înaintea lui Dumnezeu, iar Pavel îi cheamă să crească tot mai mult. Viața creștină nu este o diplomă primită la convertire, ci o umblare continuă în care ascultarea se adâncește.\n\nPoruncile sunt date prin Domnul Isus, nu ca preferințe personale ale unui lider. Învățătura biblică trebuie transmisă cu autoritatea Scripturii și cu smerenie, fără a transforma opiniile, tradițiile sau gusturile omenești în condiții ale acceptării lui Dumnezeu.",
+          "teaching": "Pavel îi roagă și îi îndeamnă în Domnul Isus să trăiască așa cum învățaseră, ca să-I placă lui Dumnezeu, și să crească tot mai mult în această umblare. Convertirea este începutul; ucenicul continuă să învețe ascultarea și nu se mulțumește cu măsura la care a ajuns.\n\nÎndemnurile apostolice nu sunt simple preferințe omenești: ele au fost date prin autoritatea Domnului Isus. De aceea dragostea pentru Hristos nu poate fi despărțită de ascultarea poruncilor Lui, iar creșterea adevărată se măsoară printr-o viață care Îi place lui Dumnezeu.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -255,7 +255,7 @@ export const NT_BOOK_13: BibleBook = {
           "ref": "1 Tesaloniceni 4:3-8",
           "heading": "Voia lui Dumnezeu: sfințirea și respectarea trupului",
           "text": "Căci aceasta este voia lui Dumnezeu: sfințirea voastră, că vă abțineți de la imoralitatea sexuală, că fiecare dintre voi știe cum să-și controleze propriul corp în sfințire și onoare, nu în pasiunea poftei, ca neamurile care nu cunosc pe Dumnezeu, ca nimeni să nu profite de un frate sau o soră nedrept în această privință, pentru că Domnul este răzbunător în toate aceste lucruri, așa cum v-am avertizat și am mărturisit. Căci Dumnezeu nu ne-a chemat pentru necurăție, ci pentru sfințire. Prin urmare, cel care respinge acest lucru nu îl respinge pe om, ci pe Dumnezeu, care-a dat și Duhul Sfânt.",
-          "teaching": "Sfințirea include despărțirea de imoralitatea sexuală și învățarea stăpânirii propriului trup în sfințenie și cinste. Explicația accentuează că dorința nu trebuie lăsată să conducă, iar curăția începe în inimă, în privire și în felul în care îl tratăm pe celălalt. Nimeni nu trebuie să încalce drepturile sau să profite de fratele ori sora sa. A respinge această chemare înseamnă a-L respinge pe Dumnezeu, care dă Duhul Sfânt.",
+          "teaching": "Voia lui Dumnezeu este sfințirea, nu o slujire care ascunde o viață necurată. Credinciosul trebuie să se despartă de orice imoralitate sexuală și să învețe să-și stăpânească trupul în sfințenie și cinste, nu în patimi ca omul care nu Îl cunoaște pe Dumnezeu.\n\nCurăția începe la rădăcină: în privire, gând și poftă. Isus numește adulter și pofta cultivată în inimă; faptul că oamenii nu o văd nu o ascunde de Dumnezeu. Ea trebuie tăiată, nu doar împiedicate consecințele ei exterioare. Nimeni nu are voie să poftească, să înșele ori să profite de alt om în această privință.\n\nAvertizarea este solemnă: Domnul judecă și răzbună asemenea păcate. Dumnezeu nu ne-a chemat la necurăție, ci la sfințire. Cine respinge această poruncă nu respinge un om, ci pe Dumnezeu, care ne dă Duhul Sfânt tocmai pentru o viață sfântă. Harul și sângele lui Hristos nu sunt permisiune pentru păcat repetat fără pocăință.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -269,7 +269,7 @@ export const NT_BOOK_13: BibleBook = {
           "ref": "1 Tesaloniceni 4:9-12",
           "heading": "Dragoste frățească, viață liniștită și muncă responsabilă",
           "text": "Dar cu privire la dragostea frățească, nu aveți nevoie ca cineva să vă scrie; căci voi înșivă sunteți învățați de Dumnezeu să vă iubiți unii pe alții, Voi faceți lucrul acesta față de toți frații din toată Macedonia. Dar noi vă îndemnăm, fraților, să vă bucurați din ce în ce mai mult. și să-ți faci ambiția de a duce o viață liniștită, de a-ți face treaba și de a lucra cu propriile mâini, așa cum ți-am poruncit, ca să umbli cum trebuie spre cei de afară, și să nu ai nevoie de nimic.",
-          "teaching": "Credincioșii fuseseră învățați de Dumnezeu să se iubească, iar această dragoste se vedea deja în Macedonia. Totuși, Pavel îi îndeamnă să crească, deoarece dragostea matură nu se mulțumește cu reputația bună din trecut.\n\nEi trebuie să caute o viață liniștită, să se ocupe de responsabilitățile lor și să lucreze cu mâinile, pentru o mărturie demnă și pentru a nu depinde inutil de alții. Aceasta nu condamnă persoanele bolnave, cu dizabilități, îngrijitorii sau pe cei lipsiți temporar de muncă. Comunitatea trebuie să ajute vulnerabilitatea reală, iar angajatorii nu pot folosi textul pentru exploatare sau salarii nedrepte.",
+          "teaching": "Dumnezeu Însuși îi învățase să se iubească, iar tesalonicenii arătau această dragoste față de frații din Macedonia. Totuși, Pavel îi cheamă să prisosească și mai mult. Dragostea și sfințenia nu pot fi despărțite: Duhul ne îndeamnă să iubim, nu să păstrăm amărăciune, neiertare sau răzbunare.\n\nAceeași viață se vede practic prin dorința de a trăi liniștit, de a nu ne amesteca în treburile altora și de a lucra cu propriile mâini. Scopul este o purtare demnă înaintea celor din afară bisericii și o viață care nu trăiește din dependență provocată de lene sau din exploatarea Evangheliei. Munca cinstită și dragostea față de toți fac mesajul credibil.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -295,7 +295,7 @@ export const NT_BOOK_13: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, sfințește-mi trupul, relațiile și munca. Fă-mă atent la demnitatea și siguranța celorlalți. În durere, ancorează-mă în învierea Ta și ajută-mă să îi mângâi pe oameni cu speranță adevărată. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-tesaloniceni-5",
@@ -311,7 +311,7 @@ export const NT_BOOK_13: BibleBook = {
           "ref": "1 Tesaloniceni 5:1-5",
           "heading": "Ziua Domnului și identitatea fiilor luminii",
           "text": "Dar cu privire la timp și la anotimpuri, fraților, nu aveți nevoie să vi se scrie nimic. Căci voi înșivă știți bine că ziua Domnului vine ca un hoț noaptea. Căci atunci când ei spun: Pace și siguranță, atunci distrugerea bruscă va veni peste ei, ca durerile de naștere pe o femeie gravidă. Atunci ei nu vor scăpa în nici un fel. Dar voi, fraților, nu în întuneric, ca ziua să vă cuprindă ca un hoț. Voi toți sunteți fii ai luminii și ai zilei. Noi nu aparținem nopții, nici întunericului.",
-          "teaching": "Pavel spune că nu este nevoie de calcule suplimentare despre timpuri și perioade. Ziua Domnului va veni neașteptat, ca un hoț în noapte, iar promisiunile omenești de pace și siguranță nu pot anula judecata lui Dumnezeu.\n\nCredincioșii nu aparțin întunericului, ci luminii și zilei. Siguranța lor nu vine din descifrarea unui calendar secret, ci din relația cu Hristos și dintr-o viață care poate fi adusă la lumină. Textul nu fixează date și nu alimentează panică, conspirații sau retragerea iresponsabilă din familie și societate.",
+          "teaching": "Nu ni s-a dat să cunoaștem ziua sau ora revenirii Domnului. Ziua Domnului va veni asupra lumii ca un hoț noaptea; când oamenii spun «pace și siguranță», distrugerea și judecata vor veni pe neașteptate și nu vor putea fi evitate.\n\nCredincioșii însă nu sunt în întuneric, ca ziua aceea să îi surprindă nepregătiți. Ei sunt fii ai luminii și ai zilei. Diferența nu este cunoașterea unui calendar ascuns, ci o viață care umblă în lumină, își curăță păcatul mărturisit și rămâne pregătită pentru Domnul. A căuta date acolo unde Dumnezeu le-a ascuns este neascultare, nu maturitate profetică.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -326,7 +326,7 @@ export const NT_BOOK_13: BibleBook = {
           "ref": "1 Tesaloniceni 5:6-11",
           "heading": "Treji, îmbrăcați cu credință, dragoste și nădejde",
           "text": "Așa că să nu dormim, ca ceilalți, ci să privim și să fim treji. Pentru cei ce dorm, dorm noaptea, și cei beți se îmbată noaptea. Dar din moment ce aparținem zilei, să fim treji, punându-ne platoșa credinței și a iubirii, și pentru o cască, speranța mântuirii. Căci Dumnezeu nu ne-a făcut să ne mâniem, ci să obținem mântuirea prin Domnul nostru Isus Hristos, care a murit pentru noi, că, fie că ne trezim sau dormim, ar trebui să trăim împreună cu el. De aceea, îndemnați-vă unii pe alții, și zidiți-vă unii pe alții, cum faceți și voi.",
-          "teaching": "A fi treaz înseamnă luciditate spirituală și autocontrol, nu anxietate continuă. Pavel folosește din nou credința, dragostea și nădejdea: platoșa protejează inima, iar speranța mântuirii protejează mintea.\n\nDumnezeu nu ne-a destinat mâniei, ci dobândirii mântuirii prin Isus, care a murit pentru noi. Fie că suntem vii, fie că am murit înainte de venirea Lui, ținta este să trăim împreună cu El. De aceea comunitatea se încurajează și se zidește, nu se terorizează cu scenarii apocaliptice.",
+          "teaching": "Fiind ai zilei, credincioșii nu trebuie să doarmă spiritual, ci să vegheze și să fie treji, serioși și stăpâni pe ei. Somnul spiritual înseamnă să trăiești pentru lumea trecătoare ca și cum realitatea veșnică nu ar exista. Vegherea se vede în curățirea vieții și în disponibilitatea de a-L întâlni pe Domnul.\n\nPlatoșa credinței și a dragostei păzește inima, iar coiful speranței mântuirii păzește mintea. Dumnezeu nu ne-a rânduit pentru mânie, ci pentru dobândirea mântuirii prin Domnul Isus Hristos, care a murit pentru noi ca să trăim împreună cu El. Tocmai de aceea nu ne adormim cu siguranță falsă, ci ne încurajăm și ne zidim unii pe alții în credincioșie.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -334,14 +334,14 @@ export const NT_BOOK_13: BibleBook = {
             "Efeseni 6:13-17",
             "Evrei 10:24-25"
           ],
-          "forYourHeart": "Înlocuiește o sursă de teamă escatologică cu un act concret de credință, dragoste sau încurajare."
+          "forYourHeart": "Privește unde ai devenit neatent față de realitatea veșnică. Curăță acel loc și întărește astăzi pe cineva prin credință, dragoste și speranța mântuirii."
         },
         {
           "id": "1-tesaloniceni-5-12-15",
           "ref": "1 Tesaloniceni 5:12-15",
           "heading": "Respect pentru slujire, pace și răbdare față de fiecare",
           "text": "Dar vă implorăm, fraților, să-i cunoașteți pe cei ce lucrează printre voi, și să fiți peste voi în Domnul și să vă sfătuim, să-i respectați să-i onorați din dragoste pentru munca lor. Fiți în pace între voi. Vă îndemnăm, fraților: Încurajați pe cei slabi, încurajați-i pe cei slabi, sprijiniți-i pe cei slabi, fiți răbdători față de toți. Vezi ca nimeni să nu întoarcă rău pentru rău nimănui, ci să urmeze întotdeauna ceea ce este bine unii pentru alții și pentru toți.",
-          "teaching": "Comunitatea trebuie să recunoască osteneala celor care lucrează, conduc și avertizează în Domnul și să îi prețuiască în dragoste.\n\nPavel cere pace, avertizarea celor dezordonați, încurajarea celor descurajați, sprijinirea celor slabi și răbdare față de toți. Situații diferite cer răspunsuri diferite; cel vulnerabil nu trebuie tratat ca rebel, iar cel care rănește nu trebuie protejat printr-o interpretare greșită a răbdării.\n\nNimeni nu trebuie să răsplătească răul cu rău. Căutarea binelui nu exclude limitele, protecția, consecințele legale sau raportarea faptelor periculoase.",
+          "teaching": "Biserica trebuie să recunoască osteneala celor care lucrează, conduc și mustră în Domnul și să îi prețuiască foarte mult, în dragoste, pentru lucrarea lor. În același timp, credincioșii sunt chemați să trăiască în pace unii cu alții.\n\nRăspunsul nu este identic pentru fiecare: cei neorânduiți trebuie avertizați, cei descurajați încurajați, cei slabi sprijiniți, iar față de toți trebuie arătată răbdare. Discernământul nu confundă răzvrătirea cu slăbiciunea și nici slăbiciunea cu răzvrătirea.\n\nNimeni nu are voie să întoarcă rău pentru rău. Răzbunarea Îi aparține lui Dumnezeu. Credinciosul caută în mod activ binele fraților și binele tuturor oamenilor, inclusiv al celui care i-a făcut rău.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -349,7 +349,7 @@ export const NT_BOOK_13: BibleBook = {
             "1 Petru 5:2-3",
             "Romani 12:17-21"
           ],
-          "forYourHeart": "Răspunde unei persoane după nevoia reală: avertizare, încurajare, ajutor sau răbdare, fără să tolerezi răul."
+          "forYourHeart": "Răspunde unei persoane după nevoia ei reală: avertizează neorânduiala, încurajează descurajarea, sprijină slăbiciunea și refuză să răsplătești răul cu rău."
         },
         {
           "id": "1-tesaloniceni-5-16-18",
@@ -371,7 +371,7 @@ export const NT_BOOK_13: BibleBook = {
           "ref": "1 Tesaloniceni 5:19-22",
           "heading": "Nu stingeți Duhul, dar cercetați toate lucrurile",
           "text": "Nu stingeți Duhul. Nu disprețui profețiile. Testați toate lucrurile, și țineți ferm ceea ce este bun. Abține-te de la orice formă de rău.",
-          "teaching": "Comunitatea nu trebuie să disprețuiască profețiile sau să sufoce lucrarea Duhului din cinism. În același timp, nimic nu este acceptat automat doar pentru că cineva spune «Dumnezeu mi-a vorbit». Pavel poruncește testarea tuturor lucrurilor și păstrarea a ceea ce este bun.\n\nProfețiile trebuie cercetate prin Scriptură, caracterul lui Hristos, roada produsă și discernământ comunitar. Credinciosul se ferește de orice formă a răului, inclusiv de manipularea spirituală.",
+          "teaching": "Nu stingeți lucrarea Duhului și nu disprețuiți mesajele profetice. Cinismul care respinge orice lucrare spirituală nu este discernământ. Dar nici acceptarea automată a oricărei afirmații supranaturale nu este credință.\n\nPavel poruncește: cercetați toate lucrurile. Un mesaj profetic nu are aceeași autoritate cu Scriptura și trebuie verificat; ceea ce este bun se păstrează, iar ceea ce este rău se respinge. Duhul Sfânt nu ne cere credulitate, ci o inimă deschisă și un discernământ supus Cuvântului lui Dumnezeu.\n\nCredinciosul se depărtează de orice formă a răului și evită purtarea care îi poate împiedica pe alții să primească mărturia despre Hristos.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -379,7 +379,7 @@ export const NT_BOOK_13: BibleBook = {
             "1 Ioan 4:1",
             "Deuteronom 18:20-22"
           ],
-          "forYourHeart": "Testează o afirmație spirituală importantă înainte de a acționa: este biblică, adevărată, sigură și în acord cu roada lui Hristos?"
+          "forYourHeart": "Nu respinge o afirmație spirituală doar din cinism și nu o accepta doar pentru că este prezentată ca profeție. Cerceteaz-o prin Scriptură, păstrează binele și respinge răul."
         },
         {
           "id": "1-tesaloniceni-5-23-24",
@@ -413,7 +413,7 @@ export const NT_BOOK_13: BibleBook = {
         }
       ],
       "prayer": "Dumnezeul păcii, păstrează-mă treaz fără teamă, bucuros fără negarea durerii și deschis Duhului fără credulitate. Dă-mi discernământ, răbdare și curajul de a proteja pe cei vulnerabili. Sfințește-mă deplin prin harul lui Isus. Amin.",
-      "status": "in_review"
+      "status": "published"
     }
   ]
 }

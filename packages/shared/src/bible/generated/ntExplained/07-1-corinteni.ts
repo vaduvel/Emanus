@@ -78,7 +78,7 @@ export const NT_BOOK_07: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, păzește-mă de spiritul de partidă și de încrederea în puterea mea. Fă crucea Ta centrul vieții mele și împlinește în mine sfințirea pe care ai început-o. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-corinteni-2",
@@ -136,7 +136,7 @@ export const NT_BOOK_07: BibleBook = {
         }
       ],
       "prayer": "Tată, eliberează-mă de înțelepciunea care se laudă cu omul. Descoperă-mi prin Duhul adâncimile crucii și formează în mine mintea lui Hristos. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-corinteni-3",
@@ -194,7 +194,7 @@ export const NT_BOOK_07: BibleBook = {
         }
       ],
       "prayer": "Doamne, fă-mă matur în caracter, nu doar informat. Ajută-mă să construiesc pe Hristos cu motive curate și să păzesc unitatea templului Tău. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-corinteni-4",
@@ -252,7 +252,7 @@ export const NT_BOOK_07: BibleBook = {
         }
       ],
       "prayer": "Tată, fă-mă un administrator credincios. Eliberează-mă de nevoia de aplauze și dă-mi dragostea curajoasă care spune adevărul fără să domine. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-corinteni-5",
@@ -295,7 +295,7 @@ export const NT_BOOK_07: BibleBook = {
         }
       ],
       "prayer": "Dumnezeule sfânt și plin de iubire, păzește-ne de toleranța falsă și de cruzimea religioasă. Dă-ne curaj să protejăm, să confruntăm drept și să restaurăm pe cel pocăit. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-corinteni-6",
@@ -351,7 +351,7 @@ export const NT_BOOK_07: BibleBook = {
         }
       ],
       "prayer": "Doamne, curăță-mi motivele în conflicte și fă-mă liber de orice stăpânire a poftei. Învață-mă să Te slăvesc cu trupul și să trăiesc ca unul cumpărat cu sângele Tău. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-corinteni-7",
@@ -423,7 +423,7 @@ export const NT_BOOK_07: BibleBook = {
         }
       ],
       "prayer": "Tată, dă-ne curăție, respect și credincioșie în relații. Ajută-ne să trăim căsătoria sau celibatul ca daruri puse la dispoziția Domnului. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-corinteni-8",
@@ -466,7 +466,7 @@ export const NT_BOOK_07: BibleBook = {
         }
       ],
       "prayer": "Doamne, păzește-mă de cunoașterea care mă umflă. Fă ca libertatea mea să fie condusă de dragostea care zidește și de grija pentru conștiința aproapelui. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-corinteni-9",
@@ -538,7 +538,7 @@ export const NT_BOOK_07: BibleBook = {
         }
       ],
       "prayer": "Doamne, eliberează-mă de pretenții și de iubirea câștigului. Fă-mă slujitor al oamenilor, disciplinat în trup și liber să renunț la drepturi pentru Evanghelie. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-corinteni-10",
@@ -611,7 +611,7 @@ export const NT_BOOK_07: BibleBook = {
         }
       ],
       "prayer": "Dumnezeule credincios, păzește-mă de încrederea în experiențe și de idolii ascunși. Arată-mi ieșirea din ispită și fă ca tot ce fac să urmărească slava Ta. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-corinteni-11",
@@ -669,7 +669,7 @@ export const NT_BOOK_07: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, fă ca ordinea, rugăciunea și masa noastră să arate caracterul Tău. Vindecă disprețul, adu împăcare și învață-ne să discernem trupul Tău. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-corinteni-12",
@@ -727,7 +727,7 @@ export const NT_BOOK_07: BibleBook = {
         }
       ],
       "prayer": "Duhule Sfânt, Înalță-L pe Isus în noi. Arată-mi darul primit pentru folosul comun și învață-mă să prețuiesc fiecare mădular al trupului. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-corinteni-13",
@@ -784,7 +784,7 @@ export const NT_BOOK_07: BibleBook = {
         }
       ],
       "prayer": "Dumnezeule al dragostei, curăță-mi slujirea de egoism. Fă-mă răbdător, bun, iubitor de adevăr și smerit în ceea ce cunosc doar în parte. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-corinteni-14",
@@ -856,7 +856,7 @@ export const NT_BOOK_07: BibleBook = {
         }
       ],
       "prayer": "Doamne, dă-ne dragoste și daruri care zidesc. Păstrează-ne adunările vii, clare și ordonate, cu spațiu pentru fiecare glas pe care Tu îl folosești. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-corinteni-15",
@@ -959,7 +959,7 @@ export const NT_BOOK_07: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse înviat, întărește-mi credința și eliberează-mă de frica morții. Fă-mă statornic, sfânt și plin de speranță, știind că lucrarea în Tine nu este zadarnică. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-corinteni-16",
@@ -1017,7 +1017,7 @@ export const NT_BOOK_07: BibleBook = {
         }
       ],
       "prayer": "Tată, învață-mă să dăruiesc cu ordine, să recunosc ușile Tale și să lucrez fără control. Fă-mă tare în adevăr și deplin în dragoste. Amin.",
-      "status": "in_review"
+      "status": "published"
     }
   ]
 }

@@ -198,7 +198,7 @@ export const NT_BOOK_02: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, Fiul lui Dumnezeu, Îți mulțumim că ai intrat în lume ca să vestești vestea bună și că ai lăsat pilda ascultării în lucrurile mărunte. Întoarce-ne de la păcat și dă-ne credința care ascultă îndată, ca pescarii de la mare. Învață-ne să ne întâlnim cu Tatăl înainte de a ne întâlni cu oamenii, și păzește-ne de mândria faptelor mari. Fie ca viața noastră să vestească nu minunile noastre, ci mântuirea Ta. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "marcu-2",
@@ -271,7 +271,7 @@ export const NT_BOOK_02: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, Îți mulțumim că ierți, chemi și vindeci. Dă-ne credința care trece de acoperiș, smerenia bolnavului care cere Doctorul și curajul de a lăsa viața veche. Păzește-ne de reguli fără inimă și odihnește-ne sub domnia Ta. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "marcu-3",
@@ -391,7 +391,7 @@ export const NT_BOOK_02: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, Tu ai vindecat mâna uscată și ai văzut inima împietrită; caută la noi și dezgheață-ne inima. Îți mulțumim că ne-ai chemat să fim cu Tine înainte de a ne trimite la lucrare. Păzește-ne de glasurile mincinoase și de gândul de a pune binele Tău pe seama răului. Învață-ne să facem voia Tatălui, ca să fim cu adevărat frații Tăi, și dă-ne iubirea care nu se teme să fie numită nebună de lume. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "marcu-4",
@@ -543,7 +543,7 @@ export const NT_BOOK_02: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, Stăpâne al mării și al inimilor, Îți mulțumim că ne semeni Cuvântul și că nu Te lași de noi nici când pământul inimii noastre este aspru. Lucrează-ne inima, ca să primim Cuvântul și să aducem rod: treizeci, șaizeci, o sută. Dă-ne urechi care ascultă și o lumină pe care să n-o ascundem, și fă-ne credincioși în puținul pe care ni l-ai dat, ca să primim din belșug de la Tine. Învață-ne să ne odihnim în lucrarea Ta și să nu disprețuim începuturile mici. Și, când se stârnește furtuna, dă-ne credința care Te cunoaște în corabie și știe că Tu ești Cel pe care vântul și marea Îl ascultă. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "marcu-5",
@@ -629,7 +629,7 @@ export const NT_BOOK_02: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, Fiul Dumnezeului celui Preaînalt, Tu ești Domn peste duhurile necurate, peste boală și peste moarte. Îți mulțumim că nu întorci spatele niciunei nevoi: ai stat în drum pentru femeia din mulțime, ai mers cu Iair, ai sculat copila. Dă-ne credința care se atinge de Tine, curajul care crede când veștile sunt rele și smerenia celui eliberat, care vestește mila Ta. Păzește-ne să nu punem nimic în locul Tău — nici turma, nici frica, nici o formulă — și dă-ne nădejdea care privește moartea cu ochii Tăi, pentru că Tu ai înviat. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "marcu-6",
@@ -743,7 +743,7 @@ export const NT_BOOK_02: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, păzește-ne de necredința care se obișnuiește cu Tine și de conștiința care ascultă fără să se pocăiască. Învață-ne să slujim în părtășie, dependenți de puterea Ta, și să ne odihnim la Tine fără vină. Primește puținul nostru, binecuvântează-l și frânge mândria din noi, ca oamenii flămânzi să fie hrăniți. Când vântul ne stă împotrivă, fă-ne să auzim glasul Tău: «Prindeți curaj! Eu sunt. Nu vă temeți!». Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "marcu-7",
@@ -816,7 +816,7 @@ export const NT_BOOK_02: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, curăță-ne de fățărnicie și de tradiția care ocolește ascultarea. Întărește-ne inima prin har, dă-ne smerenia femeii care s-a încrezut în bunătatea Ta și spune peste noi «Efata»: deschide-ne urechile și dezleagă-ne limba pentru adevăr. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "marcu-8",
@@ -932,7 +932,7 @@ export const NT_BOOK_02: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, Tu ești Hristosul, Fiul Dumnezeului celui viu. Mulțumim că nu ne-ai lăsat în părerile oamenilor, ci ne-ai chemat să Te cunoaștem prin descoperirea Tatălui. Întoarce-ne de la stăpânirea de sine și învață-ne calea crucii: să nu ne rușinăm de Tine, Cel care nu Te-ai rușinat să mori pentru noi. Dă-ne ochi care văd deslușit și inimă care Își aduce aminte de lucrările Tale. Ține-ne în urma Ta, nu înaintea Ta, până în ziua venirii Tale în slavă. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "marcu-9",
@@ -1005,7 +1005,7 @@ export const NT_BOOK_02: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, deschide-ne ochii spre slava Ta și ține-ne pe calea crucii. Ajută necredinței noastre, fă-ne oameni ai rugăciunii și eliberează-ne de ambiția de a fi cei dintâi. Dă-ne hotărâre împotriva păcatului, blândețe față de oameni și sare în noi înșine, ca să trăim în curăție și pace. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "marcu-10",
@@ -1087,7 +1087,7 @@ export const NT_BOOK_02: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, păzește legămintele noastre, eliberează-ne de idolii pe care nu-i putem lăsa și dă-ne mâinile goale ale copilului. Vindecă ambiția din noi și fă-ne slujitori după chipul Tău. Deschide-ne ochii ca lui Bartimeu și ține-ne pe urmele Tale până la cruce și înviere. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "marcu-11",
@@ -1146,7 +1146,7 @@ export const NT_BOOK_02: BibleBook = {
         }
       ],
       "prayer": "Împărate Isuse, intră în toate încăperile vieții noastre și curăță ce a luat locul rugăciunii. Fă-ne roditori, învață-ne credința supusă voii Tale și eliberează-ne de neiertare. Păzește-ne să nu ascundem neascultarea sub întrebări și fă din noi o casă în care Tatăl este căutat. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "marcu-12",
@@ -1220,7 +1220,7 @@ export const NT_BOOK_02: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, Piatra din capul unghiului, primește rodul vieții noastre. Ajută-ne să-Ți dăm ceea ce poartă chipul Tău, să credem puterea învierii și să Te iubim cu omul întreg. Curăță-ne de dorința de cinste și dă-ne inima văduvei, împreună cu grija Ta pentru cei slabi. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "marcu-13",
@@ -1278,7 +1278,7 @@ export const NT_BOOK_02: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, păzește-ne de înșelare, panică și curiozitate fără ascultare. Dă-ne cuvânt prin Duhul Sfânt când trebuie să mărturisim, statornicie în necaz și ochi ațintiți spre venirea Ta. Găsește-ne veghetori și credincioși în lucrarea încredințată. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "marcu-14",
@@ -1352,7 +1352,7 @@ export const NT_BOOK_02: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, primește dragostea noastră și păzește-ne de iubirea banilor și de încrederea în sine. Îți mulțumim pentru trupul dat și sângele Legământului. Învață-ne rugăciunea din Ghetsimani și caută-ne prin har când ne lepădăm. Fă-ne să mărturisim adevărul lângă Tine. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "marcu-15",
@@ -1425,7 +1425,7 @@ export const NT_BOOK_02: BibleBook = {
         }
       ],
       "prayer": "Împărate răstignit, Îți mulțumim că ai luat locul vinovatului și ai rămas pe cruce pentru noi. Prin sângele Tău, perdeaua s-a rupt și avem intrare la Tatăl. Dă-ne curajul lui Iosif și statornicia femeilor, ca să rămânem lângă Tine și în întuneric. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "marcu-16",
@@ -1434,7 +1434,7 @@ export const NT_BOOK_02: BibleBook = {
       "title": "Marcu 16 — A înviat, nu este aici",
       "summary": "Femeile găsesc piatra răsturnată și aud vestea învierii, împreună cu chemarea adresată ucenicilor și lui Petru. În încheierea lungă, Isus Se arată martorilor, trimite Evanghelia în toată lumea și Se înalță, iar ucenicii pleacă să propovăduiască.",
       "literaryContext": "Piatra capitolului 15 nu poate ține închisă viața. Frica și necredința martorilor sunt întâmpinate de veste, mustrare și trimitere. Evanghelia începută în 1:1 nu se încheie la mormânt, ci continuă prin martorii însoțiți de Domnul.",
-      "historicalContext": "Cele mai timpurii manuscrise nu sunt toate identice la finalul cărții: unele se încheie la 16:8, iar altele păstrează 16:9–20. Finalul lung este tratat ca variantă textuală marcată, fără a altera numerotarea și politica critică a textului principal.",
+      "historicalContext": "Cele mai timpurii manuscrise nu sunt toate identice la finalul cărții: unele se încheie la 16:8, iar altele păstrează 16:9–20. Finalul lung este tratat ca variantă textuală marcată, fără a altera numerotarea și politică critică a textului principal.",
       "units": [
         {
           "id": "marcu-16-1-8",
@@ -1484,7 +1484,7 @@ export const NT_BOOK_02: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, Cel răstignit și înviat, Îți mulțumim că piatra nu Te-a putut ține și că harul Tău îi cheamă pe nume pe cei căzuți. Biruie necredința noastră, păzește-ne de încercarea nechibzuită a lui Dumnezeu și trimite-ne cu Evanghelia. Lucrează împreună cu noi până când orice făptură va auzi. Amin.",
-      "status": "in_review"
+      "status": "published"
     }
   ]
 }

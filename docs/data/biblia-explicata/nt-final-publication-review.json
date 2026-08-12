@@ -18,7 +18,7 @@
     "blockers": 0,
     "reviewFindings": 0,
     "infoFindings": 0,
-    "reviewedExceptions": 30
+    "reviewedExceptions": 22
   },
   "sourceFidelity": {
     "reviewed-against-source-derived-legacy": 689,
@@ -206,70 +206,6 @@
       "value": "3 Ioan 5-8",
       "disposition": "accepted-valid-biblical-reference-syntax",
       "rationale": "Reviewed parser exception. The reference uses a valid compact Bible-reference form: single-chapter-book verse range, whole chapter, comma-separated verses, or a cross-chapter range."
-    },
-    {
-      "wave": "wave-2-reader-copy",
-      "code": "ai-meta-leak",
-      "location": "ioan 4.prayer",
-      "excerpt": "Doamne Isuse, Îți mulțumim ca ai trecut și prin Samaria, și pe la fantana, și pe la ușa celui cu fiu bolnav. Tu nu ocolesti nici locurile, nici oamenii pe care ceilalți ii ocolesc.\n\nDă-ne apa vie care sa curateasca in noi setea după lucruri",
-      "disposition": "false-positive-romanian-ai-verb",
-      "rationale": "The case-insensitive raw scanner matched Romanian «ai» (verb a avea), not the uppercase AI acronym or AI-product metadata. No reader-facing AI attribution is present."
-    },
-    {
-      "wave": "wave-2-reader-copy",
-      "code": "ai-meta-leak",
-      "location": "Ioan 6:60-71 [ioan-6-60-71].forYourHeart",
-      "excerpt": "Vor fi clipe când nu vei înțelege tot ce spune Domnul, dar întrebarea rămâne: la cine sa te duci? Credința matură nu înseamnă ca toate au devenit usoare, ci ca ai ajuns sa știi ca viața nu este in alta parte.",
-      "disposition": "false-positive-romanian-ai-verb",
-      "rationale": "The case-insensitive raw scanner matched Romanian «ai» (verb a avea), not the uppercase AI acronym or AI-product metadata. No reader-facing AI attribution is present."
-    },
-    {
-      "wave": "wave-2-reader-copy",
-      "code": "ai-meta-leak",
-      "location": "Ioan 10:19-30 [ioan-10-19-30].forYourHeart",
-      "excerpt": "Când te temi ca ai sa cazi din mana lui Dumnezeu, adu-ți aminte ca Domnul nu te tine cu degetele firii tale, ci cu mana Lui. Și nimeni nu este mai tare decât El.",
-      "disposition": "false-positive-romanian-ai-verb",
-      "rationale": "The case-insensitive raw scanner matched Romanian «ai» (verb a avea), not the uppercase AI acronym or AI-product metadata. No reader-facing AI attribution is present."
-    },
-    {
-      "wave": "wave-2-reader-copy",
-      "code": "ai-meta-leak",
-      "location": "ioan 12.prayer",
-      "excerpt": "Doamne Isuse, Îți mulțumim ca ai mers spre ceasul Tău fără sa Te dai înapoi și ca ai arătat ca slava Ta trece prin jertfa. Învață-ne sa pretuim închinarea curată mai mult decât socotelile inimii interesate.\n\nDă-ne har sa Te vedem cu adevăra",
-      "disposition": "false-positive-romanian-ai-verb",
-      "rationale": "The case-insensitive raw scanner matched Romanian «ai» (verb a avea), not the uppercase AI acronym or AI-product metadata. No reader-facing AI attribution is present."
-    },
-    {
-      "wave": "wave-2-reader-copy",
-      "code": "ai-meta-leak",
-      "location": "ioan 13.prayer",
-      "excerpt": "Doamne Isuse, Îți mulțumim ca ai iubit pe ai Tai pana la capăt și ca ai coborât cu stergarul in locul in care nimeni nu ar fi vrut sa stea. Spala-ne și pe noi iarăși de praful drumului și de mândria noastră.\n\nFerește-ne de noaptea lui Iuda ",
-      "disposition": "false-positive-romanian-ai-verb",
-      "rationale": "The case-insensitive raw scanner matched Romanian «ai» (verb a avea), not the uppercase AI acronym or AI-product metadata. No reader-facing AI attribution is present."
-    },
-    {
-      "wave": "wave-2-reader-copy",
-      "code": "ai-meta-leak",
-      "location": "Ioan 13:31-38 [ioan-13-31-38].forYourHeart",
-      "excerpt": "Poate ca ai cuvinte mari despre ce ai face pentru Domnul. Nu dispretui râvna, dar nici nu te sprijini pe ea. Cere-I in schimb să-ți dea dragostea care rămâne și smerenia care știe ca fără El cazi repede.",
-      "disposition": "false-positive-romanian-ai-verb",
-      "rationale": "The case-insensitive raw scanner matched Romanian «ai» (verb a avea), not the uppercase AI acronym or AI-product metadata. No reader-facing AI attribution is present."
-    },
-    {
-      "wave": "wave-2-reader-copy",
-      "code": "ai-meta-leak",
-      "location": "2 Corinteni 1:12-22 [2-corinteni-1-12-22].teaching",
-      "excerpt": "Pavel își apără purtarea prin mărturia unei conștiințe curate: a lucrat în simplitate și sinceritate înaintea lui Dumnezeu, nu prin diplomație, șiretenie sau înțelepciune firească. De aceea cuvântul lui nu trebuie să fie un joc de da și nu ",
-      "disposition": "false-positive-romanian-ai-verb",
-      "rationale": "The case-insensitive raw scanner matched Romanian «ai» (verb a avea), not the uppercase AI acronym or AI-product metadata. No reader-facing AI attribution is present."
-    },
-    {
-      "wave": "wave-2-reader-copy",
-      "code": "ai-meta-leak",
-      "location": "Apocalipsa 6:9-17 [apocalipsa-6-9-17-source-first].teaching",
-      "excerpt": "Pecetea a cincea arată oameni uciși pentru Cuvântul lui Dumnezeu și pentru mărturia pe care au ținut-o fără compromis. Ei nu au fost oameni care au spus numai ceea ce plăcea mulțimii; fidelitatea față de adevăr le-a costat viața. Strigătul ",
-      "disposition": "false-positive-romanian-ai-verb",
-      "rationale": "The case-insensitive raw scanner matched Romanian «ai» (verb a avea), not the uppercase AI acronym or AI-product metadata. No reader-facing AI attribution is present."
     }
   ]
 }

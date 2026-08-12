@@ -45,7 +45,7 @@ export const NT_BOOK_22: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "2-petru-2",
@@ -85,7 +85,7 @@ export const NT_BOOK_22: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "2-petru-3",
@@ -125,7 +125,7 @@ export const NT_BOOK_22: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     }
   ]
 }

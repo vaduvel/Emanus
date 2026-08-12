@@ -63,7 +63,7 @@ export const NT_BOOK_26: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     }
   ]
 }

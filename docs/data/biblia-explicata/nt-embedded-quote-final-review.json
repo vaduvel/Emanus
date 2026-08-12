@@ -1,9 +1,9 @@
 {
   "schema": "emanus-nt-embedded-quote-final-review-v1",
   "policy": "Direct contextual review. Exact cross-references are ledger-bound to BE chapters; editorial quotations are classified non-Bible; biblical paraphrases are resolved only by removing quotation wrappers without changing wording. Every operation is quote-SHA and location bound.",
-  "sourceAuditCount": 55,
+  "sourceAuditCount": 66,
   "classificationsAdded": 14,
-  "unquoteCount": 41,
+  "unquoteCount": 52,
   "unquotes": [
     {
       "reviewId": "d7f3bd360a75c990628e847465238aebba7c81926cca463efc2569c89ca49a2c",
@@ -496,6 +496,138 @@
       "quote": "Mărturia lui Isus este duhul profeției",
       "action": "unquote-biblical-paraphrase-without-wording-change",
       "rationale": "Fragmentul redă sau rezumă Scriptura în context, dar nu este text BE exact în capitolul explicat și nu îndeplinește regula strictă pentru o trimitere exactă; se elimină exclusiv ghilimelele."
+    },
+    {
+      "reviewId": "acf1fdd54441e8a0a0fa15e4f6700d05215b8a9caeecd7e7bcf0738a0dbc009c",
+      "quoteSha256": "sha256:631106adb12e59f1f5063153d4740c9c6338fdfe7269ec2abd04e755cfd6221c",
+      "bookId": "ioan",
+      "canonicalBookId": "JHN",
+      "chapter": 2,
+      "field": "units[0].teaching",
+      "unitId": "ioan-2-1-12",
+      "quote": "Să faceți orice vă va spune",
+      "action": "unquote-biblical-paraphrase-without-wording-change",
+      "rationale": "Fragmentul redă Scriptura în context, dar nu este identic cu textul Biblia Emanus curent; se elimină exclusiv ghilimelele, fără schimbarea formulării."
+    },
+    {
+      "reviewId": "e1e3055fce92fb498311f0287c7ed7d49f8c2a4f116533ed655861787fc786ab",
+      "quoteSha256": "sha256:8a6efe6e9bcedc8688b4b2e3b608a5c478dac5b75786720822f824e52e8a65b3",
+      "bookId": "ioan",
+      "canonicalBookId": "JHN",
+      "chapter": 3,
+      "field": "units[2].teaching",
+      "unitId": "ioan-3-22-36",
+      "quote": "El trebuie să crească, iar eu să mă micșorez",
+      "action": "unquote-biblical-paraphrase-without-wording-change",
+      "rationale": "Fragmentul redă Scriptura în context, dar nu este identic cu textul Biblia Emanus curent; se elimină exclusiv ghilimelele, fără schimbarea formulării."
+    },
+    {
+      "reviewId": "d80e770eb7b6da9533e13e7ec14862499690df8629dad6f056565e707cfebaa4",
+      "quoteSha256": "sha256:0684f3f08fb9958f979183d01e629d5f4cc0ab56b8374f15c387f6891ed456e5",
+      "bookId": "ioan",
+      "canonicalBookId": "JHN",
+      "chapter": 8,
+      "field": "units[0].teaching",
+      "unitId": "ioan-8-1-20",
+      "quote": "Du-te și să nu mai păcătuiești",
+      "action": "unquote-biblical-paraphrase-without-wording-change",
+      "rationale": "Fragmentul redă Scriptura în context, dar nu este identic cu textul Biblia Emanus curent; se elimină exclusiv ghilimelele, fără schimbarea formulării."
+    },
+    {
+      "reviewId": "69cd48e95366a7eae0f8867d99d348038f0dceae8fd35626c309d34cc81b0fde",
+      "quoteSha256": "sha256:840d38a046f02f3fbc51881378cfee6fe995731be49a0c220a4b2713261ea79d",
+      "bookId": "ioan",
+      "canonicalBookId": "JHN",
+      "chapter": 8,
+      "field": "units[2].teaching",
+      "unitId": "ioan-8-48-59",
+      "quote": "Mai înainte ca Avraam să se nască, Eu sunt",
+      "action": "unquote-biblical-paraphrase-without-wording-change",
+      "rationale": "Fragmentul redă Scriptura în context, dar nu este identic cu textul Biblia Emanus curent; se elimină exclusiv ghilimelele, fără schimbarea formulării."
+    },
+    {
+      "reviewId": "d1515aa37a3cff04b1be307d2f1974c2fecf150bfc1ada044b0cab665de4568b",
+      "quoteSha256": "sha256:ac0fb120af1d30d7c34a0a27b97eb2a82e0b0aa76a4688c74ababa5d7a4c1805",
+      "bookId": "ioan",
+      "canonicalBookId": "JHN",
+      "chapter": 9,
+      "field": "units[1].teaching",
+      "unitId": "ioan-9-13-34",
+      "quote": "Eram orb, iar acum văd",
+      "action": "unquote-biblical-paraphrase-without-wording-change",
+      "rationale": "Fragmentul redă Scriptura în context, dar nu este identic cu textul Biblia Emanus curent; se elimină exclusiv ghilimelele, fără schimbarea formulării."
+    },
+    {
+      "reviewId": "81a167a1770fd20c571b5558bbf4d2ec5f39e9a0444a70951f21a58341bcb027",
+      "quoteSha256": "sha256:6104d1f31279ba06e08e6f3a6e635a3a4a4fd63fcca8e3f769827ab738cb9b85",
+      "bookId": "ioan",
+      "canonicalBookId": "JHN",
+      "chapter": 21,
+      "field": "units[2].teaching",
+      "unitId": "ioan-21-20-25",
+      "quote": "Ce-ți pasă ție? Tu urmează-Mă",
+      "action": "unquote-biblical-paraphrase-without-wording-change",
+      "rationale": "Fragmentul redă Scriptura în context, dar nu este identic cu textul Biblia Emanus curent; se elimină exclusiv ghilimelele, fără schimbarea formulării."
+    },
+    {
+      "reviewId": "9556c81b8f9a8f2a6d29ba7499e29b364dbbf19a4127d017608f2342aa3a1c03",
+      "quoteSha256": "sha256:19af07815bd7b600e185ad3d929e87b471260ffab826988c3c1080ac9db1f482",
+      "bookId": "fapte",
+      "canonicalBookId": "ACT",
+      "chapter": 3,
+      "field": "units[0].teaching",
+      "unitId": "fapte-3-1-10",
+      "quote": "În Numele lui Isus Hristos din Nazaret, ridică-te și umblă.",
+      "action": "unquote-biblical-paraphrase-without-wording-change",
+      "rationale": "Fragmentul redă Scriptura în context, dar nu este identic cu textul Biblia Emanus curent; se elimină exclusiv ghilimelele, fără schimbarea formulării."
+    },
+    {
+      "reviewId": "d68422d5aa3aded7341e954fc2487554903de51ecdd74c31b69c9798676d4e3e",
+      "quoteSha256": "sha256:ecc4db51630f2ab4f9c906a8ffe3414e1c5515c3f1021bdcd899f3861a221d6f",
+      "bookId": "fapte",
+      "canonicalBookId": "ACT",
+      "chapter": 5,
+      "field": "units[2].teaching",
+      "unitId": "fapte-5-17-32",
+      "quote": "Trebuie să ascultăm mai mult de Dumnezeu decât de oameni.",
+      "action": "unquote-biblical-paraphrase-without-wording-change",
+      "rationale": "Fragmentul redă Scriptura în context, dar nu este identic cu textul Biblia Emanus curent; se elimină exclusiv ghilimelele, fără schimbarea formulării."
+    },
+    {
+      "reviewId": "26683b1a96868c75160873d6f28674d4fb7ccc21b533d615299954242752c1bb",
+      "quoteSha256": "sha256:370283c032b5f3c8347092af2fc1cf000f5e6e13afccdfb66e8e6583faf0b09e",
+      "bookId": "fapte",
+      "canonicalBookId": "ACT",
+      "chapter": 16,
+      "field": "units[3].teaching",
+      "unitId": "fapte-16-25-40",
+      "quote": "Ce trebuie să fac ca să fiu mântuit?",
+      "action": "unquote-biblical-paraphrase-without-wording-change",
+      "rationale": "Fragmentul redă Scriptura în context, dar nu este identic cu textul Biblia Emanus curent; se elimină exclusiv ghilimelele, fără schimbarea formulării."
+    },
+    {
+      "reviewId": "1c741b881010a8c09a6a03238ac61611b1b56571ebc854062f8427f946788855",
+      "quoteSha256": "sha256:c2e00d8d1337387289a1366993102b6618e7e9345a3a7f79af890b7a9a4cab11",
+      "bookId": "filipeni",
+      "canonicalBookId": "PHP",
+      "chapter": 4,
+      "field": "units[1].teaching",
+      "unitId": "filipeni-4-4-9",
+      "quote": "Bucurați-vă întotdeauna în Domnul",
+      "action": "unquote-biblical-paraphrase-without-wording-change",
+      "rationale": "Fragmentul redă Scriptura în context, dar nu este identic cu textul Biblia Emanus curent; se elimină exclusiv ghilimelele, fără schimbarea formulării."
+    },
+    {
+      "reviewId": "3cdf13d17b58f3295cc02fd6042b2cfed209c4a778e2268cfa037f8d7ba8bf46",
+      "quoteSha256": "sha256:0ca6a8a20b5d647007d8795c930dc1de73df1aea27bd33cbde39539df254989c",
+      "bookId": "filipeni",
+      "canonicalBookId": "PHP",
+      "chapter": 4,
+      "field": "units[2].teaching",
+      "unitId": "filipeni-4-10-13",
+      "quote": "Pot toate lucrurile prin Hristos, care mă întărește",
+      "action": "unquote-biblical-paraphrase-without-wording-change",
+      "rationale": "Fragmentul redă Scriptura în context, dar nu este identic cu textul Biblia Emanus curent; se elimină exclusiv ghilimelele, fără schimbarea formulării."
     }
   ]
 }

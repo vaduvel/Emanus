@@ -78,7 +78,7 @@ export const NT_BOOK_09: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, păstrează-mă în Evanghelia harului și eliberează-mă de dorința de a plăcea oamenilor. Descoperă-Te inimii mele și fă din viața mea o mărturie care Îl slăvește pe Tatăl. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "galateni-2",
@@ -136,7 +136,7 @@ export const NT_BOOK_09: BibleBook = {
         }
       ],
       "prayer": "Tată, păzește libertatea Evangheliei în mine. Eliberează-mă de teama de oameni, de ipocrizie și de orice încercare de a mă justifica singur. Fă ca Hristos să trăiască în mine. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "galateni-3",
@@ -209,7 +209,7 @@ export const NT_BOOK_09: BibleBook = {
         }
       ],
       "prayer": "Dumnezeule al promisiunii, păstrează-mă în credință și dependență de Duhul. Mulțumesc că Hristos a purtat blestemul meu. Învață-mă să trăiesc ca moștenitor și să-i primesc pe ceilalți ca egali în El. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "galateni-4",
@@ -267,7 +267,7 @@ export const NT_BOOK_09: BibleBook = {
         }
       ],
       "prayer": "Ava, Tată, mulțumesc că m-ai primit ca fiu prin Hristos. Păzește-mă de ritualism, robie și încredere în fire. Formează chipul lui Hristos în mine prin Duhul Tău. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "galateni-5",
@@ -340,7 +340,7 @@ export const NT_BOOK_09: BibleBook = {
         }
       ],
       "prayer": "Duhule Sfânt, condu-mă în libertatea lui Hristos. Pune la moarte faptele firii și umple-mă cu dragoste, bucurie, pace, răbdare, bunătate, credincioșie, blândețe și înfrânare. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "galateni-6",
@@ -398,7 +398,7 @@ export const NT_BOOK_09: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, fă-mă blând cu cei căzuți, credincios în purtarea poverilor și perseverent în facerea binelui. Păzește-mă de lauda omenească și fă din mine o nouă creație care se laudă numai în crucea Ta. Amin.",
-      "status": "in_review"
+      "status": "published"
     }
   ]
 }

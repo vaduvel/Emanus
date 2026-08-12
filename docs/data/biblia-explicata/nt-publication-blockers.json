@@ -1,16 +1,16 @@
 {
   "schema": "emanus-nt-publication-blockers-v3",
-  "status": "blocked",
-  "manifestStatus": "in_review",
-  "manifestPublicationReady": false,
+  "status": "clear",
+  "manifestStatus": "published",
+  "manifestPublicationReady": true,
   "counts": {
-    "blockerClasses": 1,
+    "blockerClasses": 0,
     "books": 27,
     "chapters": 260,
     "units": 970,
     "wholeChapterSummaryUnits": 0,
     "thinUnits": 0,
-    "conciseUnitsAccepted": 20,
+    "conciseUnitsAccepted": 19,
     "emptyHeadings": 0,
     "missingSourceAnchors": 0,
     "invalidSourceAnchors": 0,
@@ -20,226 +20,10 @@
     "embeddedQuoteFindings": 0,
     "romanianLanguageFindings": 0,
     "lexiconFindings": 0,
-    "semanticFidelityPending": 336,
+    "semanticFidelityPending": 0,
     "rawTranscriptReviewed": 73,
-    "semanticTranscriptReviewed": 561,
+    "semanticTranscriptReviewed": 897,
     "staleSemanticReview": 0
   },
-  "blockers": [
-    {
-      "id": "semantic-source-fidelity-pending",
-      "count": 336,
-      "message": "336/970 explanation units still lack hash-bound semantic review against transcript content.",
-      "rawTranscriptReviewed": 73,
-      "semanticTranscriptReviewed": 561,
-      "staleSemanticReview": 0,
-      "examples": [
-        {
-          "severity": "blocker",
-          "code": "semantic-transcript-review-missing",
-          "bookId": "luca",
-          "chapter": 1,
-          "unitId": "luca-1-1-4",
-          "ref": "Luca 1:1-4",
-          "currentReviewState": "reviewed-against-source-derived-legacy",
-          "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-        },
-        {
-          "severity": "blocker",
-          "code": "semantic-transcript-review-missing",
-          "bookId": "luca",
-          "chapter": 1,
-          "unitId": "luca-1-5-25",
-          "ref": "Luca 1:5-25",
-          "currentReviewState": "reviewed-against-source-derived-legacy",
-          "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-        },
-        {
-          "severity": "blocker",
-          "code": "semantic-transcript-review-missing",
-          "bookId": "luca",
-          "chapter": 1,
-          "unitId": "luca-1-26-38",
-          "ref": "Luca 1:26-38",
-          "currentReviewState": "reviewed-against-source-derived-legacy",
-          "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-        },
-        {
-          "severity": "blocker",
-          "code": "semantic-transcript-review-missing",
-          "bookId": "luca",
-          "chapter": 1,
-          "unitId": "luca-1-39-56",
-          "ref": "Luca 1:39-56",
-          "currentReviewState": "reviewed-against-source-derived-legacy",
-          "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-        },
-        {
-          "severity": "blocker",
-          "code": "semantic-transcript-review-missing",
-          "bookId": "luca",
-          "chapter": 1,
-          "unitId": "luca-1-57-66",
-          "ref": "Luca 1:57-66",
-          "currentReviewState": "reviewed-against-source-derived-legacy",
-          "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-        },
-        {
-          "severity": "blocker",
-          "code": "semantic-transcript-review-missing",
-          "bookId": "luca",
-          "chapter": 1,
-          "unitId": "luca-1-67-80",
-          "ref": "Luca 1:67-80",
-          "currentReviewState": "reviewed-against-source-derived-legacy",
-          "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-        },
-        {
-          "severity": "blocker",
-          "code": "semantic-transcript-review-missing",
-          "bookId": "luca",
-          "chapter": 2,
-          "unitId": "luca-2-1-7",
-          "ref": "Luca 2:1-7",
-          "currentReviewState": "reviewed-against-source-derived-legacy",
-          "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-        },
-        {
-          "severity": "blocker",
-          "code": "semantic-transcript-review-missing",
-          "bookId": "luca",
-          "chapter": 2,
-          "unitId": "luca-2-8-20",
-          "ref": "Luca 2:8-20",
-          "currentReviewState": "reviewed-against-source-derived-legacy",
-          "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-        },
-        {
-          "severity": "blocker",
-          "code": "semantic-transcript-review-missing",
-          "bookId": "luca",
-          "chapter": 2,
-          "unitId": "luca-2-21-38",
-          "ref": "Luca 2:21-38",
-          "currentReviewState": "reviewed-against-source-derived-legacy",
-          "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-        },
-        {
-          "severity": "blocker",
-          "code": "semantic-transcript-review-missing",
-          "bookId": "luca",
-          "chapter": 2,
-          "unitId": "luca-2-39-40",
-          "ref": "Luca 2:39-40",
-          "currentReviewState": "reviewed-against-source-derived-legacy",
-          "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-        },
-        {
-          "severity": "blocker",
-          "code": "semantic-transcript-review-missing",
-          "bookId": "luca",
-          "chapter": 2,
-          "unitId": "luca-2-41-52",
-          "ref": "Luca 2:41-52",
-          "currentReviewState": "reviewed-against-source-derived-legacy",
-          "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-        },
-        {
-          "severity": "blocker",
-          "code": "semantic-transcript-review-missing",
-          "bookId": "luca",
-          "chapter": 3,
-          "unitId": "luca-3-1-6",
-          "ref": "Luca 3:1-6",
-          "currentReviewState": "reviewed-against-source-derived-legacy",
-          "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-        },
-        {
-          "severity": "blocker",
-          "code": "semantic-transcript-review-missing",
-          "bookId": "luca",
-          "chapter": 3,
-          "unitId": "luca-3-7-14",
-          "ref": "Luca 3:7-14",
-          "currentReviewState": "reviewed-against-source-derived-legacy",
-          "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-        },
-        {
-          "severity": "blocker",
-          "code": "semantic-transcript-review-missing",
-          "bookId": "luca",
-          "chapter": 3,
-          "unitId": "luca-3-15-20",
-          "ref": "Luca 3:15-20",
-          "currentReviewState": "reviewed-against-source-derived-legacy",
-          "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-        },
-        {
-          "severity": "blocker",
-          "code": "semantic-transcript-review-missing",
-          "bookId": "luca",
-          "chapter": 3,
-          "unitId": "luca-3-21-22",
-          "ref": "Luca 3:21-22",
-          "currentReviewState": "reviewed-against-source-derived-legacy",
-          "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-        },
-        {
-          "severity": "blocker",
-          "code": "semantic-transcript-review-missing",
-          "bookId": "luca",
-          "chapter": 3,
-          "unitId": "luca-3-23-38",
-          "ref": "Luca 3:23-38",
-          "currentReviewState": "reviewed-against-source-derived-legacy",
-          "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-        },
-        {
-          "severity": "blocker",
-          "code": "semantic-transcript-review-missing",
-          "bookId": "luca",
-          "chapter": 4,
-          "unitId": "luca-4-1-13",
-          "ref": "Luca 4:1-13",
-          "currentReviewState": "reviewed-against-source-derived-legacy",
-          "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-        },
-        {
-          "severity": "blocker",
-          "code": "semantic-transcript-review-missing",
-          "bookId": "luca",
-          "chapter": 4,
-          "unitId": "luca-4-14-19",
-          "ref": "Luca 4:14-19",
-          "currentReviewState": "reviewed-against-source-derived-legacy",
-          "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-        },
-        {
-          "severity": "blocker",
-          "code": "semantic-transcript-review-missing",
-          "bookId": "luca",
-          "chapter": 4,
-          "unitId": "luca-4-20-30",
-          "ref": "Luca 4:20-30",
-          "currentReviewState": "reviewed-against-source-derived-legacy",
-          "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-        },
-        {
-          "severity": "blocker",
-          "code": "semantic-transcript-review-missing",
-          "bookId": "luca",
-          "chapter": 4,
-          "unitId": "luca-4-31-37",
-          "ref": "Luca 4:31-37",
-          "currentReviewState": "reviewed-against-source-derived-legacy",
-          "message": "Source provenance/locator evidence exists, but sentence-level semantic fidelity has not been approved against transcript content."
-        }
-      ]
-    }
-  ],
-  "semanticFidelityAudit": {
-    "schema": "emanus-nt-semantic-source-fidelity-audit-v1",
-    "status": "blocked",
-    "policy": "Source anchors and source-derived legacy provenance are necessary but do not prove semantic fidelity. Publication requires either direct raw-transcript review or a hash-bound approved-against-transcript semantic review containing transcript evidence for the current reader teaching/application snapshot."
-  }
+  "blockers": []
 }

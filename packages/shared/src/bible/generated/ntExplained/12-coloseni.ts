@@ -51,7 +51,7 @@ export const NT_BOOK_12: BibleBook = {
           "ref": "Coloseni 1:15-20",
           "heading": "Creatorul tuturor și Capul Bisericii",
           "text": "El este chipul Dumnezeului nevăzut, întâiul născut al întregii creații, pentru că în el au fost create toate: cele din ceruri și cele de pe pământ, cele văzute și cele nevăzute, fie tronuri, fie domnii, fie căpetenii, fie autorități. Toate au fost create prin el și pentru el. El este înainte de toate și toate se țin împreună în el, și el este capul trupului, al bisericii. El este începutul, întâiul născut dintre cei morți, pentru ca el să aibă întâietatea în toate, pentru că în el a binevoit să locuiască toată plinătatea și, prin el, să împace toate cu sine, făcând pace prin sângele crucii lui, prin el, fie cele de pe pământ, fie cele din ceruri.",
-          "teaching": "Hristos face cunoscut Dumnezeul nevăzut. Expresia «întâiul născut» nu Îl așază între lucrurile create, deoarece textul spune că toate au fost create în El, prin El și pentru El. El exista înainte de toate și susține întreaga creație.\n\nAcelași Hristos este Capul Trupului, Biserica, și întâiul în noua creație, pentru ca El să aibă întâietatea în toate. Plinătatea lui Dumnezeu locuiește în El, iar pacea cu Dumnezeu nu se obține prin performanță religioasă, ci prin sângele crucii. Împăcarea nu declară răul bun; ea înlătură vrăjmășia și ne readuce sub domnia dreaptă a lui Dumnezeu.",
+          "teaching": "Hristos Îl face cunoscut pe Dumnezeul nevăzut. Expresia «întâiul născut al întregii creații» arată întâietatea și rangul Lui, nu că El ar face parte dintre lucrurile create, fiindcă toate lucrurile din cer și de pe pământ au fost create în El, prin El și pentru El. El este înainte de toate și toate se țin prin El.\n\nAcelași Hristos este Capul Trupului, Biserica, și începutul noii creații, pentru ca El să aibă întâietatea în toate. Toată plinătatea locuiește în El, iar Dumnezeu aduce împăcarea și pacea prin sângele crucii Lui.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -66,7 +66,7 @@ export const NT_BOOK_12: BibleBook = {
           "ref": "Coloseni 1:21-23",
           "heading": "Împăcați pentru a fi prezentați sfinți și statornici",
           "text": "Tu, fiind în trecut înstrăinat și dușmani în mintea ta în faptele tale rele, dar acum ați fost împăcați în trupul cărnii lui prin moarte, ca să vă înfățișeze sfinți, fără pată și fără vină înaintea lui, dacă, într-adevăr, rămâneți în credință, întemeiați și statornici, fără să vă lăsați mutați de la speranța evangheliei pe care ați auzit-o, care a fost proclamată în toată creația de sub cer și al cărei slujitor am devenit eu, Pavel.",
-          "teaching": "Păcatul ne înstrăinase de Dumnezeu și făcuse mintea ostilă față de El, dar moartea reală a lui Hristos în trup deschide împăcarea. Scopul este mai mult decât anularea vinei: Dumnezeu lucrează să ne prezinte sfinți, fără pată și fără acuzație înaintea Lui.\n\nPavel leagă această speranță de continuarea statornică în credință. Nu este o chemare la panică, ci la o credință vie care rămâne în Hristos și nu abandonează speranța Evangheliei. Slujitorul nu manipulează oamenii prin frică, ci îi ajută să rămână ancorați în persoana și lucrarea lui Hristos.",
+          "teaching": "Păcatul îi înstrăinase de Dumnezeu și le făcuse mintea ostilă, lucru arătat prin faptele rele. Hristos i-a împăcat prin moartea Lui reală în trup, cu scopul de a-i prezenta înaintea lui Dumnezeu sfinți, fără pată și fără acuzație.\n\nPavel nu desprinde această speranță de continuarea în credință. Credincioșii sunt chemați să rămână întemeiați și statornici, fără să se lase mutați de la speranța Evangheliei pe care au auzit-o. Împăcarea primită prin Hristos conduce la o viață care rămâne în El.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -81,7 +81,7 @@ export const NT_BOOK_12: BibleBook = {
           "ref": "Coloseni 1:24-29",
           "heading": "Hristos în voi și slujirea pentru maturitatea fiecăruia",
           "text": "Acum mă bucur în suferințele pentru voi și completez în carnea mea ceea ce mai lipsește necazurilor lui Hristos, pentru trupul lui, care este biserica, al cărei slujitor am devenit, potrivit administrării lui Dumnezeu care mi-a fost dată pentru voi, ca să împlinesc cuvântul lui Dumnezeu, misterul ascuns din veacuri și din generații, dar acum a fost descoperit sfinților lui, cărora Dumnezeu a vrut să le facă cunoscut care este bogăția slavei acestui mister printre neamuri, care este Hristos în voi, speranța slavei. Pe el îl vestim noi, avertizând pe orice om și învățând pe orice om în toată înțelepciunea, ca să înfățișăm pe orice om desăvârșit în Hristos. Pentru aceasta și muncesc, luptându-mă după lucrarea lui, care lucrează în mine cu putere.",
-          "teaching": "Suferințele lui Pavel pentru Biserică nu completează jertfa ispășitoare a lui Hristos, care este deplină. Ele descriu prețul personal al slujirii, al lepădării de sine, al rugăciunii și al purtării poverilor altora pentru zidirea Trupului.\n\nO asemenea chemare vine de la Dumnezeu și nu îi oferă liderului control nelimitat asupra altora.\n\nTaina descoperită acum este «Hristos în voi, speranța slavei». Pavel vestește, avertizează și învață cu înțelepciune pentru a prezenta fiecare om matur în Hristos. El lucrează din greu, dar recunoaște că energia eficientă vine de la Dumnezeu, nu din ambiție, talent sau presiune exercitată asupra oamenilor.",
+          "teaching": "Suferințele lui Pavel pentru Biserică nu completează jertfa ispășitoare a lui Hristos, care este deplină. Ele arată partea de suferință, lepădare de sine și purtare a poverilor pe care un slujitor o primește pentru zidirea Trupului lui Hristos. Pavel își împlinește slujba primită de la Dumnezeu vestind întregul Cuvânt.\n\nTaina ascunsă generațiilor trecute și descoperită acum este «Hristos în voi, speranța slavei». De aceea Pavel Îl vestește pe Hristos, avertizează și învață pe fiecare om cu înțelepciune, pentru ca fiecare să fie prezentat matur în Hristos. El trudește, dar puterea care lucrează în el vine de la Dumnezeu.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -92,7 +92,7 @@ export const NT_BOOK_12: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, ocupă primul loc în toate. Umple-mă cu înțelepciune spirituală, putere pentru răbdare și dragoste pentru întregul Tău Trup. Fă reală în mine taina prezenței Tale și folosește-mă pentru maturizarea altora, cu smerenie și adevăr. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "coloseni-2",
@@ -108,7 +108,7 @@ export const NT_BOOK_12: BibleBook = {
           "ref": "Coloseni 2:1-3",
           "heading": "Inimi unite în dragoste și bogăția cunoașterii lui Hristos",
           "text": "Căci vreau să știți cât de mare luptă duc pentru voi, pentru cei din Laodiceea și pentru toți câți nu mi-au văzut fața în persoană, pentru ca inimile lor să fie încurajate, ei fiind strâns uniți în dragoste și ajungând la toată bogăția convingerii depline a înțelegerii, spre cunoașterea deplină a misterului lui Dumnezeu: Hristos, în care sunt ascunse toate comorile înțelepciunii și ale cunoașterii.",
-          "teaching": "Pavel îi poartă în rugăciune și luptă chiar pe credincioșii pe care nu i-a întâlnit. Scopul nu este dependența lor de personalitatea lui, ci întărirea inimilor, unirea în dragoste și o convingere deplină cu privire la taina lui Dumnezeu, Hristos.\n\nÎn El sunt ascunse toate comorile înțelepciunii și cunoașterii. Adevărul spiritual nu este produs doar de inteligență sau explicații strălucite; avem nevoie de descoperirea Duhului într-o inimă smerită. Aceasta nu disprețuiește gândirea, studiul ori întrebările sincere, ci refuză să le transforme într-un substitut pentru ascultare și dependență de Dumnezeu.",
+          "teaching": "Pavel luptă în rugăciune pentru credincioșii din Colose, Laodiceea și pentru mulți pe care nu i-a văzut față în față. El dorește ca inimile lor să fie întărite, să fie uniți în dragoste și să ajungă la bogăția convingerii depline și la cunoașterea tainei lui Dumnezeu, care este Hristos.\n\nÎn Hristos sunt ascunse toate comorile înțelepciunii și cunoașterii. Această cunoaștere nu este produsă doar de inteligență omenească; avem nevoie ca Duhul Sfânt să deschidă adevărul într-o inimă smerită și ascultătoare.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -123,7 +123,7 @@ export const NT_BOOK_12: BibleBook = {
           "ref": "Coloseni 2:4-7",
           "heading": "Primiți-L, umblați în El și revărsați mulțumire",
           "text": "Spun aceasta ca nimeni să nu vă înșele prin vorbe convingătoare. Căci, chiar dacă lipsesc cu trupul, totuși în duh sunt cu voi, bucurându-mă și văzând buna voastră rânduială și tăria credinței voastre în Hristos. Așadar, după cum l-ați primit pe Hristos Isus, Domnul, în el umblați, înrădăcinați și zidiți în el, întăriți în credință, așa cum ați fost învățați, prisosind în mulțumire.",
-          "teaching": "Argumentele convingătoare pot suna spiritual și totuși să îndepărteze de Hristos. Pavel se bucură de ordinea și statornicia credincioșilor, apoi îi cheamă să continue în același Hristos pe care L-au primit, nu să caute o etapă superioară în afară Lui.\n\nA fi înrădăcinat vorbește despre o viață ascunsă și stabilă în Hristos; a fi zidit vorbește despre creștere pe o temelie sigură. Credința se întărește prin adevărul primit și se revarsă în recunoștință. Nemulțumirea permanentă face sufletul vulnerabil la promisiunile spectaculoase ale învățătorilor care oferă «mai mult» decât Hristos.",
+          "teaching": "Pavel avertizează că vorbirea convingătoare poate amăgi. El se bucură însă de ordinea și statornicia credinței lor în Hristos. Așa cum L-au primit pe Hristos Isus ca Domn, tot așa trebuie să continue să umble în El, fără să se abată spre altă temelie.\n\nA fi înrădăcinat în Hristos vorbește despre stabilitatea unei vieți ascunse în El, iar a fi zidit în El vorbește despre creșterea pe o temelie sigură. Credința se întărește potrivit adevărului primit și se revarsă în mulțumire. Recunoștința păzește inima de nemulțumirea care o face ușor de amăgit.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -138,7 +138,7 @@ export const NT_BOOK_12: BibleBook = {
           "ref": "Coloseni 2:8-15",
           "heading": "Plinătatea, crucea și libertatea în Hristos",
           "text": "Vedeți ca nu cumva să fie cineva care vă duce pradă prin filozofie și amăgire goală, după tradiția oamenilor, după elementele lumii și nu după Hristos; Căci în El locuiește trupește toată plinătatea Dumnezeirii, și voi sunteți împliniți în el, care este capul oricărei căpetenii și autorități, în care ați fost și circumciși cu o circumcizie nefăcută de mâini, în dezbrăcarea trupului cărnii, în circumcizia lui Hristos, fiind îngropați împreună cu el în botez, în care ați și fost ridicați împreună cu el prin credința în lucrarea lui Dumnezeu, care l-a înviat dintre cei morți. Pe voi, care erați morți în fărădelegile voastre și în necircumcizia cărnii voastre, v-a făcut vii împreună cu el, iertându-ne toate fărădelegile, ștergând înscrisul cu rânduieli care era împotriva noastră și ne era potrivnic; l-a înlăturat din mijloc, pironindu-l pe cruce; dezbrăcând căpeteniile și autoritățile, le-a făcut de rușine pe față, triumfând asupra lor în el.",
-          "teaching": "Pavel avertizează asupra filozofiei și tradiției omenești atunci când acestea sunt construite după principiile lumii și nu după Hristos. Nu este o interdicție a educației, cercetării sau raționamentului sănătos; problema apare când un sistem Îl reduce pe Hristos, justifică mândria sau pretinde să ofere viață fără cruce. Toată plinătatea dumnezeirii locuiește trupește în Hristos, iar credincioșii sunt făcuți deplini în El. Circumcizia spirituală indică judecarea omului vechi prin cruce, iar botezul mărturisește unirea cu moartea și învierea Lui prin credință. Nici ritualul exterior, nici efortul omului nu înlocuiesc lucrarea lui Dumnezeu. Dumnezeu ne-a făcut vii, a iertat greșelile și a șters documentul datoriei care ne condamna. Prin cruce, Hristos a dezarmat puterile spirituale.",
+          "teaching": "Pavel avertizează asupra filozofiei goale și a tradiției omenești întemeiate pe principiile lumii, nu pe Hristos. Toată plinătatea dumnezeirii locuiește trupește în Hristos, iar credincioșii au primit plinătatea în El, Capul oricărei stăpâniri și autorități.\n\nCircumcizia făcută fără mâini arată dezbrăcarea omului vechi prin lucrarea lui Hristos. În botez este mărturisită unirea cu moartea și învierea Lui prin credința în lucrarea lui Dumnezeu. Pe când eram morți în greșeli, Dumnezeu ne-a făcut vii împreună cu Hristos, ne-a iertat și a șters zapisul care ne condamna. Prin cruce, Hristos a dezarmat stăpânirile și autoritățile și a biruit asupra lor.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -180,7 +180,7 @@ export const NT_BOOK_12: BibleBook = {
         }
       ],
       "prayer": "Tată, păstrează-mă în Hristos, înrădăcinat și plin de mulțumire. Ferește-mă de argumente seducătoare, legalism, experiențe neverificate și disciplină fără viață. Fă reală în mine puterea crucii și creșterea care vine de la Cap. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "coloseni-3",
@@ -196,7 +196,7 @@ export const NT_BOOK_12: BibleBook = {
           "ref": "Coloseni 3:1-4",
           "heading": "Înviați cu Hristos și orientați spre lucrurile de sus",
           "text": "Dacă deci ați fost ridicați împreună cu Hristos, căutați lucrurile de sus, unde este Hristos, așezat la dreapta lui Dumnezeu. Gândește-te la lucrurile de sus, nu la cele de pe pământ. căci ați murit, și viața voastră este ascunsă împreună cu Hristos în Dumnezeu. Când Hristos, viața noastră, va fi revelată, atunci și voi veți fi revelați cu El în glorie.",
-          "teaching": "Viața creștină nu crește prin intelectualism, ritualism, vedenii sau asprime față de trup, ci prin legătura vie cu Hristos, Capul. Fiind înviați împreună cu El, credincioșii sunt chemați să caute realitățile împărăției și să privească viața din perspectiva lui Dumnezeu.\n\nA avea mintea la lucrurile de sus nu înseamnă neglijarea familiei, muncii, sănătății sau responsabilităților civice. Înseamnă că interesele pământești sunt evaluate sub domnia lui Hristos, iar identitatea adevărată rămâne ascunsă cu El în Dumnezeu până când va fi arătată în slavă.",
+          "teaching": "Fiind înviați împreună cu Hristos, credincioșii sunt chemați să caute lucrurile de sus, unde Hristos șade la dreapta lui Dumnezeu, și să-și așeze mintea asupra lor. Familia, munca și treburile pământești necesare sunt împlinite cu responsabilitate, dar nu devin centrul care stăpânește mintea; după ce le-a împlinit, credinciosul se întoarce cu inima la Hristos.\n\nAm murit, iar viața noastră adevărată este ascunsă cu Hristos în Dumnezeu. Când Hristos, viața noastră, Se va arăta, ne vom arăta și noi împreună cu El în slavă.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -219,14 +219,14 @@ export const NT_BOOK_12: BibleBook = {
             "Galateni 5:16-24",
             "1 Corinteni 6:18-20"
           ],
-          "forYourHeart": "Numește dorința care încearcă să conducă în locul lui Dumnezeu și alege un pas concret de adevăr, limită sănătoasă și ascultare prin Duhul."
+          "forYourHeart": "Numește înaintea lui Dumnezeu dorința păcătoasă care încearcă să-I ia locul și taie astăzi calea concretă prin care o hrănești. Ascultă de Dumnezeu prin puterea Duhului."
         },
         {
           "id": "coloseni-3-8-11",
           "ref": "Coloseni 3:8-11",
           "heading": "Lăsați minciuna și îmbrăcați omul nou",
           "text": "Dar acum trebuie să le pui pe toate deoparte: mânie, mânie, răutate, calomnie și vorbe rușinoase din gura ta. Nu vă mințiți unii pe alții, după ce v-ați dezbrăcat de omul vechi împreună cu faptele lui și v-ați îmbrăcat cu omul nou, care se înnoiește spre cunoaștere după chipul celui care l-a creat, unde nu mai este grec și iudeu, circumcizie și necircumcizie, barbar, scit, rob, liber, ci Hristos este totul și în toți.",
-          "teaching": "Mânia păstrată, răutatea, defăimarea, vorbirea degradantă și minciuna aparțin omului vechi. Explicația acordă o atenție deosebită limbii: vorbele dezvăluie inima, iar ipocrizia spirituală oprește creșterea. A spune adevărul înseamnă să nu construim o imagine religioasă mai înaltă decât realitatea.\n\nOmul nou este reînnoit după chipul Creatorului. În această nouă umanitate, originea etnică, ritualul, cultura, educația și poziția socială nu stabilesc valoarea. Hristos este totul și în toți; de aceea rasismul, antisemitismul, disprețul de clasă și superioritatea culturală contrazic direct viața nouă.",
+          "teaching": "Mânia, furia, răutatea, defăimarea, vorbirea rușinoasă și minciuna aparțin omului vechi și trebuie lepădate. Cuvintele descoperă ce este în inimă, iar omul care vrea să crească spiritual nu poate păstra o imagine religioasă falsă înaintea altora. El trebuie să spună adevărul și să se dezbrace de omul vechi cu practicile lui.\n\nOmul nou este reînnoit după chipul Creatorului. În această viață nouă, originea, ritualul, cultura, educația și poziția socială nu dau nimănui o valoare mai mare înaintea lui Dumnezeu. Hristos este totul și în toți, iar orice atitudine de superioritate față de alt om contrazice omul nou.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -241,7 +241,7 @@ export const NT_BOOK_12: BibleBook = {
           "ref": "Coloseni 3:12-14",
           "heading": "Compasiune, răbdare, iertare și dragoste din inimă",
           "text": "Îmbrăcați-vă deci, ca aleși ai lui Dumnezeu, sfinți și iubiți, cu adâncă compasiune, bunătate, smerenie, blândețe, îndelungă-răbdare, să vă purtați unii cu alții, și să vă iertați unii pe alții, dacă cineva are vreo plângere împotriva vreunuia; așa cum v-a iertat Hristos, așa faceți și voi. Și peste toate acestea, îmbrăcați dragostea, care este legătura desăvârșirii.",
-          "teaching": "Cei aleși și iubiți de Dumnezeu se îmbracă în compasiune, bunătate, smerenie, blândețe și răbdare. Diversitatea Trupului face inevitabile neînțelegerile și rănirile, iar amintirea iertării primite de la Domnul ne dă putere să nu trăim din resentiment.\n\nIertarea creștină nu înseamnă negarea răului, reconciliere automată sau acces nelimitat acordat celui care continuă să abuzeze. Dragostea leagă virtuțile într-o unitate care izvorăște din natura lui Dumnezeu, nu doar din politețe exterioară.",
+          "teaching": "Ca aleși ai lui Dumnezeu, sfinți și iubiți, credincioșii sunt chemați să se îmbrace cu milă, bunătate, smerenie, blândețe și îndelungă răbdare. În Trupul lui Hristos apar nemulțumiri și răni, de aceea trebuie să ne purtăm unii pe alții și să ne iertăm, așa cum ne-a iertat Domnul.\n\nPeste toate acestea trebuie îmbrăcată dragostea, care este legătura desăvârșirii. Nu este doar politețe exterioară sau comportament învățat, ci dragoste din inimă, primită din natura lui Dumnezeu și arătată concret față de ceilalți.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -271,7 +271,7 @@ export const NT_BOOK_12: BibleBook = {
           "ref": "Coloseni 3:18-19",
           "heading": "Soția și soțul sub autoritatea Domnului",
           "text": "Soțiilor, fiți supuse soților voștri, așa cum se cuvine în Domnul. Bărbaților, iubiți-vă soțiile și nu fiți aspri cu ele.",
-          "teaching": "Supunerea soției este limitată de expresia «cum se cuvine în Domnul» și nu transformă soțul într-un stăpân al conștiinței. Soțul este chemat să iubească și să nu fie aspru, urmând grija lui Hristos pentru Trup, nu modelele de dominație ale culturii.\n\nAdevărata ordine a familiei se recunoaște prin dragoste jertfitoare, libertate morală și protecție.",
+          "teaching": "Soțiile sunt chemate să se supună soților lor așa cum se cuvine în Domnul. Egalitatea bărbatului și a femeii înaintea lui Dumnezeu nu șterge responsabilitățile diferite din familie. Soțul este capul familiei, dar nu este chemat să fie tiran sau dictator.\n\nSoților li se poruncește să-și iubească soțiile și să nu fie amărâți împotriva lor. Conducerea lor trebuie să se vadă în grijă, considerație și purtarea responsabilă a nevoilor familiei, după modelul grijii lui Hristos pentru Trupul Său.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -286,7 +286,7 @@ export const NT_BOOK_12: BibleBook = {
           "ref": "Coloseni 3:20-21",
           "heading": "Copii ascultători și părinți care nu zdrobesc curajul",
           "text": "Copii, ascultați de părinții voștri în toate, căci aceasta este plăcută în Domnul. Taților, nu vă întărâtați copiii, ca să nu se descurajeze.",
-          "teaching": "Ascultarea copiilor este plăcută Domnului, iar Isus Însuși a trăit în supunere în familie. Totuși, ascultarea nu se extinde la porunci păcătoase, sexuale, violente sau nesigure.\n\nPărinții, în special tații menționați de Pavel, nu trebuie să provoace, să umilească sau să descurajeze copiii. Disciplina sănătoasă este clară și consecventă, dar niciodată crudă.",
+          "teaching": "Copiii sunt chemați să asculte de părinții lor în toate, fiindcă aceasta Îi este plăcut Domnului. Isus Însuși a trăit în supunere față de părinții Săi și a arătat frumusețea ascultării. Neascultarea nu trebuie ignorată, iar părinții au răspunderea să o corecteze.\n\nÎn același timp, părinții, și în mod deosebit tații, nu trebuie să-și provoace, irite sau descurajeze copiii. Corectarea fără bunătate și pedepsirea excesivă pot zdrobi duhul copilului. Disciplina trebuie să unească fermitatea cu grija, astfel încât copilul să nu-și piardă curajul.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -300,7 +300,7 @@ export const NT_BOOK_12: BibleBook = {
           "ref": "Coloseni 3:22-25",
           "heading": "Munca făcută înaintea Domnului, nu pentru ochii oamenilor",
           "text": "Robilor, ascultați în toate de stăpânii voștri pământești, nu cu slujire de ochii lor, ca unii care caută să placă oamenilor, ci cu sinceritate a inimii, temându-vă de Domnul. Orice faceți, lucrați din suflet, ca pentru Domnul și nu ca pentru oameni, știind că de la Domnul veți primi răsplata moștenirii. Domnului Hristos îi slujiți. Căci cel care face nedreptate va primi înapoi pentru nedreptatea pe care a făcut-o, și nu există părtinire.",
-          "teaching": "Pavel se adresează sclavilor dintr-o societate care îi trata ca proprietate, fără să numească sclavia idealul lui Dumnezeu. Principiul spiritual este integritatea: munca să fie făcută din inimă înaintea Domnului, nu doar când privește superiorul, iar răsplata finală să fie căutată la Hristos.\n\nCredinciosul poate cere contracte corecte, plată, odihnă, protecție și intervenția legii. Dumnezeu nu favorizează persoanele și va judeca nedreptatea indiferent de poziția celui care o comite.",
+          "teaching": "Slujitorii sunt chemați să asculte în toate de stăpânii lor pământești, nu doar când sunt priviți și nu pentru a câștiga aprobarea oamenilor, ci cu sinceritate de inimă și cu frică de Domnul. Același principiu se aplică muncii zilnice: ceea ce facem trebuie făcut din inimă, ca pentru Domnul, nu doar pentru oameni.\n\nRăsplata adevărată vine de la Domnul Hristos, pe care Îl slujim chiar în lucrările obișnuite. Cel care face nedreptate va primi după nedreptatea făcută, iar Dumnezeu nu judecă după poziția sau rangul omului.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -311,7 +311,7 @@ export const NT_BOOK_12: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, orientează-mi mintea spre împărăția Ta și fă vizibilă viața Ta în dorințele, cuvintele și relațiile mele. Îmbracă-mă în adevăr, compasiune, dragoste și mulțumire. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "coloseni-4",
@@ -327,7 +327,7 @@ export const NT_BOOK_12: BibleBook = {
           "ref": "Coloseni 4:1-1",
           "heading": "Autoritatea pământească răspunde Stăpânului din cer",
           "text": "Stăpânilor, dați robilor ceea ce este drept și echitabil, știind că și voi aveți un Stăpân în cer.",
-          "teaching": "Celor care aveau putere asupra sclavilor li se cere dreptate și echitate, deoarece și ei au un Stăpân în cer. Explicația aplică principiul relațiilor de muncă: credința unui angajator se vede în felul în care plătește, ascultă, corectează și poartă greșelile celor aflați sub autoritatea lui.\n\nTraficul, munca forțată, confiscarea documentelor, amenințările și exploatarea sunt rele și trebuie oprite.",
+          "teaching": "Stăpânilor li se poruncește să le dea slujitorilor ceea ce este drept și echitabil, știind că și ei au un Stăpân în cer. Autoritatea pământească nu este absolută, ci răspunde înaintea lui Dumnezeu pentru felul în care îi tratează pe cei aflați sub ea.\n\nÎn relațiile de muncă, această poruncă cere plată dreaptă, bunătate, considerație și o purtare care arată că angajatorul se știe el însuși slujitor al lui Dumnezeu. Omul aflat sub autoritatea noastră trebuie tratat așa cum dorim să ne trateze Stăpânul din cer.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -335,14 +335,14 @@ export const NT_BOOK_12: BibleBook = {
             "Efeseni 6:9",
             "Iacov 5:4"
           ],
-          "forYourHeart": "Verifică o relație în care ai putere: este celălalt tratat corect, plătit cinstit, ascultat și liber să semnaleze o problemă fără represalii?"
+          "forYourHeart": "Privește relația în care ai autoritate și îndreaptă concret ceea ce nu este drept, echitabil, bun sau atent față de omul aflat sub răspunderea ta."
         },
         {
           "id": "coloseni-4-2-6",
           "ref": "Coloseni 4:2-6",
           "heading": "Rugăciune perseverentă și cuvinte potrivite fiecăruia",
           "text": "Continuați cu stăruință în rugăciune, privind-o cu mulțumire, rugându-vă în același timp și pentru noi, ca Dumnezeu să ne deschidă o ușă pentru cuvânt, ca să vorbim misterul lui Hristos, pentru care sunt și legat, ca s-o pot dezvălui așa cum ar trebui să vorbesc. Umblați în înțelepciune față de cei de afară, răscumpărând timpul. Vorbirea voastră să fie întotdeauna cu har, dreasă cu sare, ca să știți cum trebuie să răspundeți fiecăruia.",
-          "teaching": "Pavel cere perseverență în rugăciune, veghe și mulțumire. Rugăciunea nu este o formulă ocazională, ci o dependență continuă de Dumnezeu. Chiar slujitorii maturi au nevoie de mijlocirea bisericii pentru uși deschise și pentru claritate în vestirea tainei lui Hristos.\n\nPerseverența în rugăciune nu înlocuiește acțiunea responsabilă. A veghea înseamnă și a răspunde lucid realității.\n\nFață de cei din afară comunității, purtarea trebuie să fie înțeleaptă, timpul folosit bine, iar vorbirea plină de har și «dreasă cu sare». Adevărul nu trebuie să fie insipid, dar nici agresiv; răspunsul este adaptat persoanei, nu rostit mecanic pentru a câștiga o dispută.",
+          "teaching": "Credincioșii sunt chemați să stăruiască în rugăciune, să vegheze în ea și să mulțumească. Chiar și un slujitor matur precum Pavel cere rugăciunea bisericii, pentru ca Dumnezeu să deschidă o ușă Cuvântului și pentru ca taina lui Hristos să fie vestită limpede, chiar în mijlocul împotrivirii.\n\nFață de cei din afară comunității, purtarea trebuie să fie înțeleaptă, iar timpul folosit bine. Vorbirea trebuie să fie întotdeauna cu har, dreasă cu sare, vie și potrivită. Nu răspundem mecanic sau necuviincios, ci învățăm cum să răspundem fiecărei persoane care se află înaintea noastră.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -357,7 +357,7 @@ export const NT_BOOK_12: BibleBook = {
           "ref": "Coloseni 4:7-9",
           "heading": "Tihic și Onisim — frați de încredere, nu instrumente",
           "text": "Toate cele privitoare la mine vi le va face cunoscute Tihic, iubitul frate, slujitorul credincios și împreună-rob în Domnul, Îl trimit la voi pentru acest scop, ca să vă cunoască circumstanțele și să vă mângâie inimile, împreună cu Onesim, fratele credincios și iubit, care este dintre ai voștri. Ei vă vor face cunoscut tot ce este aici.",
-          "teaching": "Tihic este numit frate iubit, slujitor credincios și împreună-rob în Domnul. Pavel îl trimite nu doar să transmită informații, ci să încurajeze inimile. Lucrarea sănătoasă combină adevărul, transparența și grija personală, fără cultul secretului sau al liderului inaccesibil.\n\nOnisim, cunoscut din scrisoarea către Filimon, este prezentat drept frate credincios și iubit, unul dintre ei. Evanghelia îi restituie demnitatea de persoană și frate, nu îl reduce la trecutul sau statutul său juridic. Nicio comunitate creștină nu poate trata oamenii ca proprietate, forță de muncă dispensabilă sau proiect de imagine.",
+          "teaching": "Tihic este numit frate iubit, slujitor credincios și împreună-rob în Domnul. Pavel îl trimite ca să le facă cunoscute împrejurările lui și să le încurajeze inimile. Slujirea credincioasă nu transmite doar informații, ci caută și întărirea celor care le primesc.\n\nÎmpreună cu el este trimis Onisim, frate credincios și iubit, unul dintre ei. Deși fusese un rob fugar și un om nefolositor, întâlnirea cu Hristos îl schimbase. Pavel îl prezintă prin ceea ce devenise în Domnul și arată că un credincios tânăr trebuie primit și încurajat în viața lui nouă.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -372,7 +372,7 @@ export const NT_BOOK_12: BibleBook = {
           "ref": "Coloseni 4:10-18",
           "heading": "O echipă imperfectă, rugăciune ascunsă și chemare dusă la capăt",
           "text": "Vă salută Aristarh, împreună-prizonierul meu, și Marcu, vărul lui Barnaba, cu privire la care ați primit porunci: dacă vine la voi, primiți-l, și Isus, cel numit Iustus. Aceștia sunt singurii dintre cei tăiați împrejur care sunt împreună-lucrători pentru împărăția lui Dumnezeu; ei mi-au fost o mângâiere. Vă salută Epafra, care este dintre ai voștri, rob al lui Hristos, luptându-se totdeauna pentru voi în rugăciuni, ca să stați desăvârșiți și pe deplin încredințați în toată voia lui Dumnezeu. Căci îi dau mărturie că are multă osteneală pentru voi, pentru cei din Laodiceea și pentru cei din Ierapole. Vă salută Luca, doctorul iubit, și Dima. Salutați-i pe frații care se află în Laodiceea, împreună cu nimfa și adunarea din casa lui. Și când epistola aceasta va fi citită între voi, faceți să fie citită și în biserica laodiceenilor, iar voi să citiți și epistola din Laodiceea. Și spuneți-i lui Arhip: „Vezi slujirea pe care ai primit-o în Domnul, ca s-o împlinești.” Salutarea este cu mâna mea, a lui Pavel. Amintiți-vă de lanțurile mele. Harul să fie cu voi.",
-          "teaching": "Salutările arată o echipă reală: Aristarh suferă alături de Pavel, Marcu este restaurat după un eșec, Iust este o încurajare, iar Epafra luptă în rugăciune pentru maturitatea bisericilor. Istoria lui Marcu oferă speranță celui care a căzut, s-a pocăit și poate deveni din nou folositor.\n\nLuca, Dima, Nimfa și comunitatea din casa ei amintesc diversitatea slujirii. Intimitatea părtășiei nu trebuie folosită pentru control sau ascunderea răului.\n\nScrisorile trebuiau citite și schimbate între biserici, iar Arhip este chemat să ia seama la slujba primită în Domnul și să o împlinească. Chemarea vine de la Hristos și se verifică prin adevăr, caracter și slujirea oamenilor; ea nu acordă putere nelimitată. Pavel încheie cerând să fie amintite lanțurile lui și dorind harul, sursa oricărei statornicii.",
+          "teaching": "Salutările arată o echipă reală de slujitori. Aristarh suferă alături de Pavel, Marcu este din nou primit după eșecul trecut, iar Iust îi este o încurajare. Restaurarea lui Marcu arată că un om care a căzut poate deveni din nou folositor. Epafra luptă stăruitor în rugăciune pentru ca credincioșii să stea maturi și deplin încredințați în toată voia lui Dumnezeu.\n\nLuca, Dima, Nimfa și biserica din casa ei arată că lucrarea este purtată de oameni diferiți. Scrisorile trebuiau citite și schimbate între biserici, iar Arhip primește porunca să ia seama la slujba primită în Domnul și să o împlinească. Pavel încheie cerând să le fie amintite lanțurile și lăsându-i sub harul lui Dumnezeu.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -380,11 +380,11 @@ export const NT_BOOK_12: BibleBook = {
             "2 Timotei 4:11",
             "Romani 16:3-5"
           ],
-          "forYourHeart": "Împlinește următorul pas clar din slujba ta și încurajează un om pocăit care are nevoie de o cale responsabilă spre restaurare."
+          "forYourHeart": "Împlinește următorul pas clar din slujba pe care ai primit-o în Domnul și roagă-te stăruitor pentru maturitatea unui credincios sau a unei comunități."
         }
       ],
       "prayer": "Tată ceresc, fă-mă drept când am autoritate, perseverent în rugăciune și plin de har în vorbire. Învață-mă să prețuiesc fiecare colaborator, să protejez oamenii vulnerabili și să duc la capăt slujba primită de la Hristos. Harul Tău să rămână cu noi. Amin.",
-      "status": "in_review"
+      "status": "published"
     }
   ]
 }

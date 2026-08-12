@@ -1,0 +1,235 @@
+{
+  "schema": "emanus-nt-semantic-final-reader-snapshot-rebind-v1",
+  "policy": "The base semantic review remains bound to its reviewed pre-edit snapshot. This artifact permits only documented final-reader transitions already recorded in the exact BE quote-fix ledger and, where present, the prior diacritic rebind artifact. No text is changed by this script.",
+  "count": 11,
+  "changes": [
+    {
+      "bookId": "luca",
+      "chapter": 1,
+      "unitId": "luca-1-26-38",
+      "action": "rebind-final-reader-snapshot",
+      "beforeSha256": "sha256:bd5ff6a8ed28de49df7d68cd8ceb62ef82f6661e9a5d5742a083083a5e6e9caa",
+      "afterSha256": "sha256:32850fd9a3b330101d15eeeffb9cc1a5cf0e59fed49d31023837e1cf20cce5b2",
+      "reason": "reviewed-wave3-exact-biblia-emanus-normalization",
+      "wave3Evidence": [
+        {
+          "field": "units[2].forYourHeart",
+          "action": "exact-be-rewrite",
+          "beforeSha256": "sha256:62268733da9172a0a086fd5b8d12daa50402d26cce27e44f6b6a4c5ebc8de537",
+          "afterSha256": "sha256:8dcd914d859ed475a87f47c08671edc65147e0870277c8c68c422be72cd59a5d",
+          "quoteSha256": null
+        }
+      ]
+    },
+    {
+      "bookId": "luca",
+      "chapter": 3,
+      "unitId": "luca-3-15-20",
+      "action": "rebind-final-reader-snapshot",
+      "beforeSha256": "sha256:76ddfa151ea035ea2421a729fc3cc5d672da5b11d32cd0d54c3580017e90a2eb",
+      "afterSha256": "sha256:ecb5895acba3e9e896c4aa106a4f7eca82093c03af0a91b6b9aaf9f2b2d9fa70",
+      "reason": "reviewed-final-unquote-normalization",
+      "wave3Evidence": [
+        {
+          "field": "units[2].forYourHeart",
+          "action": "remove-quotation-marks-from-paraphrase",
+          "beforeSha256": null,
+          "afterSha256": null,
+          "quoteSha256": "sha256:8a6efe6e9bcedc8688b4b2e3b608a5c478dac5b75786720822f824e52e8a65b3"
+        }
+      ]
+    },
+    {
+      "bookId": "luca",
+      "chapter": 7,
+      "unitId": "luca-7-36-50",
+      "action": "rebind-final-reader-snapshot",
+      "beforeSha256": "sha256:9cbc7b7e156d8ad146280cf9db8e247d29c56cf420b64946ba47c5c43819e687",
+      "afterSha256": "sha256:0054c21e9a874a2bc4cbb7ab101f5adb04661e8c83a180e38ed8024553533171",
+      "reason": "reviewed-final-unquote-plus-diacritic-normalization",
+      "wave3Evidence": [
+        {
+          "field": "units[3].teaching",
+          "action": "remove-quotation-marks-from-paraphrase",
+          "beforeSha256": null,
+          "afterSha256": null,
+          "quoteSha256": "sha256:354184ac20857a2c0127a967981d72d40c710e076ff333aa5da2fa1272d88e34"
+        }
+      ],
+      "diacriticEvidence": {
+        "field": "units[3].teaching",
+        "beforeSha256": "sha256:e3263844bd77dd74ee348d73f111e4f135b830171567ae5c885cd19aa325dd0e",
+        "afterSha256": "sha256:e170395fc366dc8b42083a32524a29fceb08735cc0aae0a0aac9fdea29b2ff3f",
+        "counts": {
+          "in": 1,
+          "viata": 0,
+          "credinta": 0
+        }
+      }
+    },
+    {
+      "bookId": "luca",
+      "chapter": 8,
+      "unitId": "luca-8-49-56",
+      "action": "rebind-final-reader-snapshot",
+      "beforeSha256": "sha256:0f200bce65895f3528eb6633ab5cd0dca65a13e6dcafd505c1930e3805b213cc",
+      "afterSha256": "sha256:21c42c777b1449f3dadc3842eac868b202c8249d61acc737d3353be13007e0e7",
+      "reason": "reviewed-final-unquote-normalization",
+      "wave3Evidence": [
+        {
+          "field": "units[4].teaching",
+          "action": "remove-quotation-marks-from-paraphrase",
+          "beforeSha256": null,
+          "afterSha256": null,
+          "quoteSha256": "sha256:9a4f80dbe2b011c6c90602c77a95b2b72e90d8b8ba50f6e40261600973122576"
+        }
+      ]
+    },
+    {
+      "bookId": "luca",
+      "chapter": 9,
+      "unitId": "luca-9-1-17",
+      "action": "rebind-final-reader-snapshot",
+      "beforeSha256": "sha256:89db1d7096a68bdf2acccfd62284a42373e56059ffe6d99139ecb31afaadf162",
+      "afterSha256": "sha256:cf4c64ef43937c05e36bce3ae6d1b81cf98a6ec05ad438f450ba71e9f2b91ff0",
+      "reason": "reviewed-final-unquote-plus-diacritic-normalization",
+      "wave3Evidence": [
+        {
+          "field": "units[0].teaching",
+          "action": "remove-quotation-marks-from-paraphrase",
+          "beforeSha256": null,
+          "afterSha256": null,
+          "quoteSha256": "sha256:1134df98ae09cccbf7acb5a50e2a986db57c8e9e96968caf918908187b25297b"
+        }
+      ],
+      "diacriticEvidence": {
+        "field": "units[0].teaching",
+        "beforeSha256": "sha256:7231f9f95077cef81941088c8613e0676a2b17e4d384958e2411853fb1efcc74",
+        "afterSha256": "sha256:50cbabfd70f4988ad4f8479a249a4862ebda39252e2513bd490a7017d575a3ce",
+        "counts": {
+          "in": 1,
+          "viata": 0,
+          "credinta": 0
+        }
+      }
+    },
+    {
+      "bookId": "luca",
+      "chapter": 9,
+      "unitId": "luca-9-28-36",
+      "action": "rebind-final-reader-snapshot",
+      "beforeSha256": "sha256:154a410d8624aba24dbe0a009d2749b581a8f9b8dcedf52b40ca259fac766c59",
+      "afterSha256": "sha256:63cd82ab0e57d36c96ad4b7fec38444fbd16047a2e8df3efa8c4e93df02292e7",
+      "reason": "reviewed-wave3-exact-biblia-emanus-normalization",
+      "wave3Evidence": [
+        {
+          "field": "units[2].teaching",
+          "action": "exact-be-rewrite",
+          "beforeSha256": "sha256:b356fe08fba0bf0190847e144403ef4ac6533517063f3689c9727855195bdec6",
+          "afterSha256": "sha256:a634c58a7f3fc7aa5038ab13393cd197e5a9a7988636d6ddb0826cde4cfa45c0",
+          "quoteSha256": null
+        }
+      ]
+    },
+    {
+      "bookId": "luca",
+      "chapter": 17,
+      "unitId": "luca-17-26-37",
+      "action": "rebind-final-reader-snapshot",
+      "beforeSha256": "sha256:2272d16110521fad35e65fdead6a3fe1214317c4e65d053e2a670465efbbc9ee",
+      "afterSha256": "sha256:59b656355ca45fcb54a6c25a1b9d2a965e3295ca95343ba0152d3dcdd2aab177",
+      "reason": "reviewed-wave3-exact-biblia-emanus-normalization",
+      "wave3Evidence": [
+        {
+          "field": "units[3].teaching",
+          "action": "exact-be-rewrite",
+          "beforeSha256": "sha256:c42cfaa1845b78e8e2a46b179ec3a4e02a35b74c5a60bb507af2ea2873d5dc02",
+          "afterSha256": "sha256:fab248faed1b0c10eae8653091dd12b7f85ecbfd83ecce5792527aa4291609fd",
+          "quoteSha256": null
+        }
+      ]
+    },
+    {
+      "bookId": "luca",
+      "chapter": 23,
+      "unitId": "luca-23-26-43",
+      "action": "rebind-final-reader-snapshot",
+      "beforeSha256": "sha256:4d746d82896ffec3735764b7b38f62f5dbd76df757216d74ed0e5af1305e22b2",
+      "afterSha256": "sha256:efcd7fc7fed9b0c0b8e998577059bb39081b8db9b517cb8f86c68e01831ca495",
+      "reason": "reviewed-wave3-exact-biblia-emanus-plus-diacritic-normalization",
+      "wave3Evidence": [
+        {
+          "field": "units[1].teaching",
+          "action": "exact-be-rewrite",
+          "beforeSha256": "sha256:2f1ee1e546036725e45423bb9505ed76b12b122d7233e819c47332b3bb7fafb4",
+          "afterSha256": "sha256:0ee30c26d82dbef14bc66ec4aeb773a21e0ceea4c3c5f3e9352a602a0f20109d",
+          "quoteSha256": null
+        }
+      ],
+      "diacriticEvidence": {
+        "field": "units[1].teaching",
+        "beforeSha256": "sha256:7fcc26d8ebf3527cb14af7f5a45db4c52b050b3abbe247affba39007b42930cb",
+        "afterSha256": "sha256:1434829634996f07e944cd46c3f58bd683ba5462ff27a9de7ed6943954fb4dbc",
+        "counts": {
+          "in": 1,
+          "viata": 0,
+          "credinta": 0
+        }
+      }
+    },
+    {
+      "bookId": "fapte",
+      "chapter": 18,
+      "unitId": "fapte-18-1-11",
+      "action": "rebind-final-reader-snapshot",
+      "beforeSha256": "sha256:6f3a95b738698c7cb572a7ba5cad8937bf647455e0105d70720565ffc62e9c0f",
+      "afterSha256": "sha256:42af5656f759ecb214129e21a6d4a7dfe66e0a59e9f069098e9fab33c54bbd93",
+      "reason": "reviewed-final-unquote-normalization",
+      "wave3Evidence": [
+        {
+          "field": "units[0].teaching",
+          "action": "remove-quotation-marks-from-paraphrase",
+          "beforeSha256": null,
+          "afterSha256": null,
+          "quoteSha256": "sha256:4b41688e26e71ef188df1532b3be7ce70e168fac68bad29cfc77a6d36b8c80db"
+        }
+      ]
+    },
+    {
+      "bookId": "filipeni",
+      "chapter": 1,
+      "unitId": "filipeni-1-19-26",
+      "action": "rebind-final-reader-snapshot",
+      "beforeSha256": "sha256:f005a5d43c454193d96978b1c2dd0e95d76ecf20983e2f588616c4e9ff307b78",
+      "afterSha256": "sha256:106bfcf40666ac7200a87a6ab7ee09e3f16644474c10431ac72e256c7bbaf83e",
+      "reason": "reviewed-final-unquote-normalization",
+      "wave3Evidence": [
+        {
+          "field": "units[3].forYourHeart",
+          "action": "remove-quotation-marks-from-paraphrase",
+          "beforeSha256": null,
+          "afterSha256": null,
+          "quoteSha256": "sha256:2b7e1c8cfd38e0b99458ae2e18ae04d266d9cf4d121ffa56367ebda93040e76f"
+        }
+      ]
+    },
+    {
+      "bookId": "coloseni",
+      "chapter": 2,
+      "unitId": "coloseni-2-20-23",
+      "action": "rebind-final-reader-snapshot",
+      "beforeSha256": "sha256:160b29594c033b496a8c0fbec904f99cd622c40d13c792b16bdededf28591398",
+      "afterSha256": "sha256:1bddc08c29b2cdb537244261e0eee16ecb4362ba4d0f5e2e6a1068e91ca23b0d",
+      "reason": "reviewed-wave3-exact-biblia-emanus-normalization",
+      "wave3Evidence": [
+        {
+          "field": "units[4].teaching",
+          "action": "exact-be-rewrite",
+          "beforeSha256": "sha256:53c7f618cd92c7a6d5e4b942f9567115914c67ce2c63b93ed37bdef8564fcab8",
+          "afterSha256": "sha256:99e9eab9b042173515476ff30928552b9a18be5c30e8ebc2ec87c3061ea51a81",
+          "quoteSha256": null
+        }
+      ]
+    }
+  ]
+}

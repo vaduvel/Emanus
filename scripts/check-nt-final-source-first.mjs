@@ -73,7 +73,10 @@ function inspectBe(bookId, chapter) {
 
 if (!fs.existsSync(dir) || !fs.existsSync(manifestPath)) fail("final corpus missing")
 const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8"))
-if (manifest.status !== "in_review" || manifest.publicationReady !== false) fail("final corpus must remain in_review before release review")
+const published = manifest.status === "published" && manifest.publicationReady === true
+const prePublication = manifest.status === "in_review" && manifest.publicationReady === false
+if (!published && !prePublication) fail(`invalid final corpus publication state: ${manifest.status}/${manifest.publicationReady}`)
+const expectedStatus = published ? "published" : "in_review"
 if (manifest.genericCompletionAllowed !== false || manifest.legacyBibleTextAllowed !== false) fail("manifest must reject generic completion and legacy Bible text")
 for (const key of ["books", "chapters"]) if (manifest.counts?.[key] !== EXPECTED[key]) fail(`manifest ${key} ${manifest.counts?.[key]}/${EXPECTED[key]}`)
 if (!Number.isInteger(manifest.counts?.units) || manifest.counts.units < EXPECTED.chapters) fail(`manifest units invalid: ${manifest.counts?.units}`)
@@ -96,7 +99,7 @@ for (let bookIndex = 0; bookIndex < CANON.length; bookIndex += 1) {
   if (seenIds.has(book.id)) fail(`duplicate book ${book.id}`)
   seenIds.add(book.id)
   if (book.schema !== "emanus-nt-final-source-first-v1" || book.id !== expectedId || book.bookId !== expectedBookId || book.order !== 40 + bookIndex) fail(`${expectedFile}: canonical metadata invalid`)
-  if (book.status !== "in_review" || book.publicationReady !== false) fail(`${expectedFile}: publication state invalid`)
+  if (book.status !== expectedStatus || book.publicationReady !== published) fail(`${expectedFile}: publication state invalid`)
   if (!["audited-recovered-poonen", "rebuilt-poonen-source-first"].includes(book.sourceClass)) fail(`${expectedFile}: invalid sourceClass`)
   if (!Array.isArray(book.chapters) || book.chapters.length !== expectedChapters) fail(`${expectedFile}: chapters ${book.chapters?.length ?? 0}/${expectedChapters}`)
   const manifestBook = manifest.books.find((entry) => entry.id === book.id)
@@ -105,7 +108,7 @@ for (let bookIndex = 0; bookIndex < CANON.length; bookIndex += 1) {
   for (let chapterIndex = 0; chapterIndex < book.chapters.length; chapterIndex += 1) {
     const chapter = book.chapters[chapterIndex]
     chapters += 1
-    if (chapter.number !== chapterIndex + 1 || chapter.status !== "in_review") fail(`${book.id} ${chapterIndex + 1}: chapter state/number invalid`)
+    if (chapter.number !== chapterIndex + 1 || chapter.status !== expectedStatus) fail(`${book.id} ${chapterIndex + 1}: chapter state/number invalid`)
     if (chapter.finalSourceClass !== book.sourceClass) fail(`${book.id} ${chapter.number}: final source class mismatch`)
     const binding = chapter.emanusTextBinding
     const canonical = inspectBe(book.bookId, chapter.number)
@@ -138,4 +141,4 @@ if (chapters !== EXPECTED.chapters || units !== manifest.counts.units || verseEn
 }
 console.log(`NT final source-first gate OK: ${files.length} books / ${chapters} chapters / ${units} explanation units.`)
 console.log(`Biblia Emanus binding OK: ${verseEntries} verse entries / ${criticalReferenceSlots} resolved critical-number slots.`)
-console.log("No generic completion, legacy Bible text, modern-source attribution, or relativizing reader copy detected.")
+console.log(`Publication state: ${expectedStatus}. No generic completion, legacy Bible text, modern-source attribution, or relativizing reader copy detected.`)

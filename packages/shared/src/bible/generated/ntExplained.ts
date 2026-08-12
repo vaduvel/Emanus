@@ -29,7 +29,7 @@ import { NT_BOOK_27 } from "./ntExplained/27-apocalipsa.js"
 
 export const NT_EXPLAINED_BOOKS: BibleBook[] = [NT_BOOK_01, NT_BOOK_02, NT_BOOK_03, NT_BOOK_04, NT_BOOK_05, NT_BOOK_06, NT_BOOK_07, NT_BOOK_08, NT_BOOK_09, NT_BOOK_10, NT_BOOK_11, NT_BOOK_12, NT_BOOK_13, NT_BOOK_14, NT_BOOK_15, NT_BOOK_16, NT_BOOK_17, NT_BOOK_18, NT_BOOK_19, NT_BOOK_20, NT_BOOK_21, NT_BOOK_22, NT_BOOK_23, NT_BOOK_24, NT_BOOK_25, NT_BOOK_26, NT_BOOK_27]
 export const NT_EXPLAINED_TRANSLATION = "Biblia Emanus"
-export const NT_EXPLAINED_STATUS = "in_review" as const
+export const NT_EXPLAINED_STATUS = "published" as const
 
 export function findNtExplainedBook(id: string): BibleBook | undefined {
   return NT_EXPLAINED_BOOKS.find((book) => book.id === id)

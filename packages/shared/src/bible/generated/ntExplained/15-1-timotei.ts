@@ -54,7 +54,7 @@ export const NT_BOOK_15: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-timotei-2",
@@ -94,7 +94,7 @@ export const NT_BOOK_15: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-timotei-3",
@@ -134,7 +134,7 @@ export const NT_BOOK_15: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-timotei-4",
@@ -174,7 +174,7 @@ export const NT_BOOK_15: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-timotei-5",
@@ -223,7 +223,7 @@ export const NT_BOOK_15: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-timotei-6",
@@ -281,7 +281,7 @@ export const NT_BOOK_15: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     }
   ]
 }

@@ -44,7 +44,7 @@ const CONTEXTUAL_PATTERNS = [
     token: "in",
     expected: "în (preposition); «in» is the correct noun for flax/linen",
     // Do not flag clear noun uses such as `în in curat`, `de in`, `din in`.
-    pattern: /(?<!\bîn\s)(?<!\bde\s)(?<!\bdin\s)\bin\b/giu,
+    pattern: /(?<!în\s)(?<!de\s)(?<!din\s)(?<![\p{L}\p{N}_])in(?![\p{L}\p{N}_])/giu,
   },
 ]
 

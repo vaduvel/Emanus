@@ -1,7 +1,7 @@
 {
   "schema": "emanus-nt-embedded-quote-reviewed-fix-wave-3-ledger-v1",
   "policy": "Exact reader quotations are aligned only to exact wording present in the current provisional Biblia Emanus chapter. Where the provisional Bible wording is corrupted or the explanation intentionally paraphrases a biblical idea, quotation marks are removed without changing the explanatory claim; these locations must be reconsidered when the final canonical text is frozen.",
-  "count": 29,
+  "count": 27,
   "changes": [
     {
       "bookId": "marcu",
@@ -92,17 +92,6 @@
       "afterSha256": "sha256:0ee30c26d82dbef14bc66ec4aeb773a21e0ceea4c3c5f3e9352a602a0f20109d"
     },
     {
-      "bookId": "fapte",
-      "canonicalBookId": "ACT",
-      "chapter": 24,
-      "field": "units[2].teaching",
-      "before": "Acum pleacă; te voi chema când voi avea timp.",
-      "after": "Deocamdată du-te; când voi găsi un prilej, te voi chema.",
-      "action": "exact-be-rewrite",
-      "beforeSha256": "sha256:8c4a478a6522c083746b9646ec46582858683d22cae7e22932213fb3f908010c",
-      "afterSha256": "sha256:a7e6ba57f071a1cf1d699ed90ba5c840432773d41919f73ad7eaf72c78ef4942"
-    },
-    {
       "bookId": "1-corinteni",
       "canonicalBookId": "1CO",
       "chapter": 12,
@@ -134,17 +123,6 @@
       "action": "exact-be-rewrite",
       "beforeSha256": "sha256:b72439076730960139632b790aace9d3034996e4b012c0be4dc9c37155ab5a05",
       "afterSha256": "sha256:0386f2dfcd083b9f0d5b85247f076123506b26dd0dbf75e987660ee09947ab31"
-    },
-    {
-      "bookId": "filipeni",
-      "canonicalBookId": "PHP",
-      "chapter": 2,
-      "field": "units[2].teaching",
-      "before": "Duceți până la capăt mântuirea",
-      "after": "duceți până la capăt propria voastră mântuire",
-      "action": "exact-be-rewrite",
-      "beforeSha256": "sha256:7537c59ac93aacf6c61f34d1b52b32512c52868d6f6b9551ac705168979f8d48",
-      "afterSha256": "sha256:1d4ba86ca7177ed2e83ec2b3ad44708841e7038bd28eb7ba409c92ae25cfc08d"
     },
     {
       "bookId": "coloseni",

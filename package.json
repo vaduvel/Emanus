@@ -28,6 +28,8 @@
     "materialize:biblia-emanus-nt": "python3 scripts/materialize-biblia-emanus-nt.py",
     "check:biblia-emanus-nt-materialized": "python3 scripts/materialize-biblia-emanus-nt.py --check",
     "materialize:nt-explained-runtime": "node scripts/materialize-nt-publication-runtime.mjs",
+    "promote:nt-explained": "node scripts/promote-nt-final-publication.mjs",
+    "check:nt-explained-runtime": "node scripts/check-nt-publication-runtime.mjs",
     "check:nt-explained-recovery": "node scripts/check-nt-explanation-recovery.mjs",
     "check:nt-source-first": "node scripts/check-nt-source-first.mjs",
     "check:nt-audited-recovered": "node scripts/check-nt-audited-recovered.mjs",

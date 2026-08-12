@@ -36,7 +36,7 @@ export const NT_BOOK_19: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "evrei-2",
@@ -76,7 +76,7 @@ export const NT_BOOK_19: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "evrei-3",
@@ -107,7 +107,7 @@ export const NT_BOOK_19: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "evrei-4",
@@ -147,7 +147,7 @@ export const NT_BOOK_19: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "evrei-5",
@@ -187,7 +187,7 @@ export const NT_BOOK_19: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "evrei-6",
@@ -227,7 +227,7 @@ export const NT_BOOK_19: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "evrei-7",
@@ -267,7 +267,7 @@ export const NT_BOOK_19: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "evrei-8",
@@ -298,7 +298,7 @@ export const NT_BOOK_19: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "evrei-9",
@@ -347,7 +347,7 @@ export const NT_BOOK_19: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "evrei-10",
@@ -405,7 +405,7 @@ export const NT_BOOK_19: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "evrei-11",
@@ -454,7 +454,7 @@ export const NT_BOOK_19: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "evrei-12",
@@ -503,7 +503,7 @@ export const NT_BOOK_19: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "evrei-13",
@@ -543,7 +543,7 @@ export const NT_BOOK_19: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     }
   ]
 }

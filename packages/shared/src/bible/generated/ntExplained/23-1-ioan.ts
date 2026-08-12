@@ -36,7 +36,7 @@ export const NT_BOOK_23: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-ioan-2",
@@ -85,7 +85,7 @@ export const NT_BOOK_23: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-ioan-3",
@@ -116,7 +116,7 @@ export const NT_BOOK_23: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-ioan-4",
@@ -147,7 +147,7 @@ export const NT_BOOK_23: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "1-ioan-5",
@@ -196,7 +196,7 @@ export const NT_BOOK_23: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     }
   ]
 }

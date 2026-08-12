@@ -21,7 +21,7 @@ export const NT_BOOK_11: BibleBook = {
           "ref": "Filipeni 1:1-2",
           "heading": "Robi ai lui Hristos și sfinți prin har",
           "text": "Pavel și Timotei, robi ai lui Hristos Isus, către toți sfinții în Hristos Isus care sunt în Filipi, împreună cu supraveghetorii și diaconii: har vouă și pace de la Dumnezeu, Tatăl nostru, și de la Domnul Isus Hristos.",
-          "teaching": "Pavel și Timotei se prezintă ca oameni care Îi aparțin lui Hristos, nu ca personalități care cer privilegii. Explicația subliniază că slujirea adevărată renunță la revendicarea recompensei și caută voia Stăpânului din dragoste.\n\nLiderii, prezbiterii și diaconii rămân slujitori ai comunității, fără drept asupra conștiinței, trupului, banilor sau libertății altuia.",
+          "teaching": "Pavel și Timotei se prezintă ca robi ai lui Hristos Isus. Titlul nu revendică prestigiu, ci arată apartenență deplină: robul nu își negociază timpul, răsplata sau ascultarea, ci caută voia Stăpânului. Slujirea creștină nu este o carieră pentru privilegii, ci o viață pusă la dispoziția lui Hristos din dragoste.\n\nScrisoarea se adresează tuturor sfinților în Hristos Isus, împreună cu supraveghetorii și diaconii. Sfințenia nu desemnează o elită spirituală, iar conducătorii sunt enumerați înăuntrul comunității, ca slujitori. Harul și pacea vin de la Dumnezeu Tatăl și de la Domnul Isus Hristos.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -29,7 +29,7 @@ export const NT_BOOK_11: BibleBook = {
             "Romani 12:1",
             "1 Petru 5:2-3"
           ],
-          "forYourHeart": "Întreabă-te ce drept personal te împiedică să-I slujești lui Hristos cu bucurie, fără să cedezi însă controlul vieții tale unui om."
+          "forYourHeart": "Întreabă-te ce drept personal te împiedică să-I slujești lui Hristos cu bucurie și adu-I dorința ta de răsplată, prestigiu sau control."
         },
         {
           "id": "filipeni-1-3-11",
@@ -66,7 +66,7 @@ export const NT_BOOK_11: BibleBook = {
           "ref": "Filipeni 1:19-26",
           "heading": "Pentru mine, a trăi este Hristos",
           "text": "fiindcă știu că aceasta se va întoarce spre izbăvirea mea, prin rugăciunea voastră și prin sprijinul Duhului lui Isus Hristos, după așteptarea mea stăruitoare și speranța mea că în nimic nu voi fi făcut de rușine, ci, cu toată îndrăzneala, ca întotdeauna, și acum Hristos va fi preamărit în trupul meu, fie prin viață, fie prin moarte. Căci pentru mine a trăi este Hristos și a muri, câștig. Dar dacă trăiesc în carne, acest lucru va aduce rod din munca mea; totuși nu știu ce voi alege. Sunt strâns din amândouă părțile: am dorința să plec și să fiu cu Hristos, căci aceasta este cu mult mai bine, Totuși, a rămâne în carne este mai necesar pentru binele tău. Și, încredințat de aceasta, știu că voi rămâne și voi continua cu voi toți, pentru înaintarea și bucuria credinței voastre, pentru ca lauda voastră în Hristos Isus să prisosească în mine, prin venirea mea din nou la voi.",
-          "teaching": "Pavel dorește ca Hristos să fie mărit în trupul lui, fie prin viață, fie prin moarte. «A trăi este Hristos» înseamnă că interesul lui Isus, caracterul Lui și binele oamenilor devin centrul alegerilor, nu conservarea reputației sau a confortului personal.\n\nMoartea este câștig pentru cel unit cu Hristos, dar Pavel nu își grăbește plecarea și nu disprețuiește viața. El vede rostul de a rămâne pentru creșterea altora. Textul nu oferă justificare sinuciderii; viața este primită și păstrată ca responsabilitate înaintea lui Dumnezeu.",
+          "teaching": "Pavel așteaptă ca, prin rugăciunile credincioșilor și ajutorul Duhului lui Isus Hristos, să nu fie făcut de rușine, ci Hristos să fie preamărit în trupul lui, fie prin viață, fie prin moarte. „A trăi este Hristos” înseamnă că viața lui nu mai este orientată spre sine, ci spre interesele și caracterul lui Hristos.\n\nPentru Pavel, plecarea și prezența cu Hristos ar fi câștig; totuși, rămânerea în trup este mai necesară pentru progresul și bucuria credincioșilor. El nu își alege binele în izolare, ci primește viața și slujirea ca pe o responsabilitate față de ceilalți.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -81,7 +81,7 @@ export const NT_BOOK_11: BibleBook = {
           "ref": "Filipeni 1:27-30",
           "heading": "O singură inimă",
           "text": "Numai purtați-vă ca cetățeni în chip vrednic de Evanghelia lui Hristos, pentru ca, fie că vin și vă văd, fie că lipsesc, să aud despre voi că stați tari într-un singur duh, luptând împreună, cu un singur suflet, pentru credința Evangheliei, și fără să vă lăsați înspăimântați în nimic de potrivnici; aceasta este pentru ei un semn de pieire, dar pentru voi de izbăvire, și aceasta de la Dumnezeu, fiindcă vouă v-a fost dăruit, pentru Hristos, nu numai să credeți în el, ci și să suferiți pentru el, având același conflict pe care l-ai văzut în mine și acum auzi este în mine.",
-          "teaching": "O purtare vrednică de Evanghelie înseamnă statornicie comună, colaborare și curaj. Biserica nu este chemată la individualism spiritual, ci la o unitate în care oamenii luptă împreună pentru credință fără rivalitate și fără frică de opoziție.\n\nSuferința pentru Hristos poate însoți credincioșia, dar nu orice suferință este o cruce pe care cineva trebuie să o accepte pasiv.",
+          "teaching": "Pavel cere o purtare vrednică de Evanghelia lui Hristos: credincioșii să stea tari într-un singur duh, să lupte împreună cu un singur suflet pentru credința Evangheliei și să nu se lase înspăimântați de împotrivitori. Chemarea nu este la individualism sau rivalitate, ci la statornicie și lucrare comună.\n\nCredința în Hristos le-a fost dăruită, iar împreună cu ea poate veni și suferința pentru El. Pavel nu prezintă opoziția drept semn că Dumnezeu i-a abandonat, ci drept o luptă pe care și el o purta. Suferința numită aici este suferința pentru Hristos, nu orice durere întâlnită în viață.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -92,7 +92,7 @@ export const NT_BOOK_11: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, fii centrul vieții mele. Umple-mă de recunoștință, dragoste cu discernământ și curaj curat. Folosește chiar limitele mele pentru înaintarea Evangheliei și păzește-mă de egoism, rivalitate și frică. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "filipeni-2",
@@ -108,7 +108,7 @@ export const NT_BOOK_11: BibleBook = {
           "ref": "Filipeni 2:1-4",
           "heading": "Unitate prin smerenie, nu prin control",
           "text": "Dacă deci este vreo încurajare în Hristos, dacă este vreo mângâiere a dragostei, dacă este vreo părtășie a Duhului, dacă este vreo afecțiune adâncă și vreo îndurare, faceți-mi bucuria deplină: să gândiți același lucru, având aceeași dragoste, uniți în suflet, gândind una, nefăcând nimic din ambiție egoistă sau din slavă deșartă, ci, în smerenie, considerându-i pe alții mai presus de voi înșivă, Fiecare dintre voi să privească nu numai la lucrurile lui, ci la lucrurile altora.",
-          "teaching": "Părtășia Duhului produce aceeași dragoste și aceeași direcție, nu uniformitate forțată. Pavel atacă ambiția egoistă și slava deșartă, chemând fiecare credincios să observe nevoile altora și să nu se considere centrul comunității.\n\nUnitatea descrisă aici nu șterge persoanele, ci mută centrul de greutate de la interesul propriu la grija concretă pentru ceilalți.",
+          "teaching": "Pavel își întemeiază apelul pe încurajarea în Hristos, mângâierea dragostei și părtășia Duhului. El cere aceeași gândire, aceeași dragoste, un singur suflet și un singur scop. Unitatea aceasta se vede când ambiția egoistă și slava deșartă sunt lepădate, iar smerenia îl face pe fiecare să-i socotească pe ceilalți mai presus de sine.\n\nCredinciosul nu privește numai la interesele lui, ci și la ale celorlalți. Pavel nu poruncește nepăsare față de propriile responsabilități, ci distruge egoismul care face din interesul personal centrul tuturor alegerilor. Smerenia caută în mod concret binele celuilalt.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -116,14 +116,14 @@ export const NT_BOOK_11: BibleBook = {
             "Galateni 5:13",
             "1 Petru 5:5-6"
           ],
-          "forYourHeart": "Alege astăzi un bine concret pe care îl poți urmări pentru altcineva fără să-ți abandonezi limitele sănătoase."
+          "forYourHeart": "Alege astăzi un interes concret al altei persoane pe care îl poți sluji fără rivalitate și fără să cauți recunoaștere."
         },
         {
           "id": "filipeni-2-5-11",
           "ref": "Filipeni 2:5-11",
           "heading": "Coborârea și înălțarea lui Hristos",
           "text": "Să fie în voi gândul acesta care a fost și în Hristos Isus, El, fiind în forma lui Dumnezeu, nu a considerat că a fi egal cu Dumnezeu este ceva de care să profite, ci S-a golit pe Sine, luând formă de rob, făcându-Se în asemănarea oamenilor. Și, fiind găsit la înfățișare ca un om, Și fiind găsit în formă umană, el s-a umilit, devenind ascultător până la moarte, da, moartea crucii. De aceea și Dumnezeu l-a înălțat mai presus de toate și i-a dăruit numele care este mai presus de orice nume, pentru ca, în numele lui Isus, orice genunchi să se plece, al celor cerești, al celor pământești și al celor de sub pământ, și orice limbă să mărturisească că Isus Hristos este Domnul, spre slava lui Dumnezeu Tatăl.",
-          "teaching": "Hristos, deși era în chipul lui Dumnezeu, nu a folosit poziția Sa pentru avantaj propriu. El S-a golit luând chip de rob și S-a smerit până la moartea crucii. Explicația vede aici opusul profund al căutării de sine: Isus a coborât pentru binele altora.\n\nTatăl L-a înălțat și I-a dat Numele mai presus de orice nume. Adevărata autoritate trece prin ascultare și slujire, nu prin manipulare. Nimeni nu poate invoca smerenia lui Isus ca să oblige o victimă să rămână în pericol; crucea este dăruirea voluntară a lui Hristos, nu permisiunea acordată abuzatorului.",
+          "teaching": "Credincioșii sunt chemați să aibă în ei felul de gândire al lui Hristos Isus. Deși era în chipul lui Dumnezeu, El nu a folosit egalitatea cu Dumnezeu pentru avantaj propriu, ci S-a golit luând chip de rob și devenind asemenea oamenilor. S-a smerit și S-a făcut ascultător până la moarte, și încă moarte de cruce.\n\nDe aceea Dumnezeu L-a înălțat foarte sus și I-a dăruit Numele mai presus de orice nume. Orice genunchi se va pleca și orice limbă va mărturisi că Isus Hristos este Domnul, spre slava lui Dumnezeu Tatăl. Calea lui Hristos este opusul egoismului și al mândriei: El a coborât în ascultare, iar Tatăl L-a înălțat.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -138,7 +138,7 @@ export const NT_BOOK_11: BibleBook = {
           "ref": "Filipeni 2:12-18",
           "heading": "Dumnezeu lucrează în voi",
           "text": "Astfel, preaiubiții mei, după cum ați ascultat întotdeauna, nu doar când eram eu de față, ci acum cu mult mai mult în absența mea, duceți până la capăt propria voastră mântuire, cu frică și cutremur, căci Dumnezeu este Cel care lucrează în voi și voința, și înfăptuirea, după buna lui plăcere. Faceți toate lucrurile fără murmurări și fără dispute, ca să deveniți fără vină și curați, copii ai lui Dumnezeu fără cusur, în mijlocul unei generații strâmbe și sucite, printre care străluciți ca niște luminători în lume, ținând sus cuvântul vieții, spre lauda mea în ziua lui Hristos, că n-am alergat în zadar și n-am muncit în zadar. Da, și dacă voi fi turnat pe jertfa și serviciul credinței voastre, mă bucur și mă voi bucura împreună cu voi toți. La fel, și voi să vă bucurați și să vă bucurați împreună cu mine.",
-          "teaching": "«duceți până la capăt propria voastră mântuire» nu înseamnă că ne cumpărăm iertarea prin fapte. Dumnezeu este Cel care produce și voința, și înfăptuirea; credinciosul cooperează serios cu lucrarea harului, alegând ascultarea în viața de zi cu zi. Ascultarea se vede în eliberarea de cârtire și dispute egoiste, astfel încât copiii lui Dumnezeu să lumineze într-o lume întunecată.",
+          "teaching": "Pavel îi cheamă pe credincioși să-și ducă până la capăt mântuirea cu frică și cutremur, nu bizuindu-se pe puterea lor, deoarece Dumnezeu este Cel care lucrează în ei atât voința, cât și înfăptuirea, după buna Lui plăcere. Ei trebuie să răspundă prin ascultare și să lase lucrarea lui Dumnezeu să-i elibereze de egoism și mândrie.\n\nTotul trebuie făcut fără cârtiri și dispute, pentru ca ei să fie fără vină și curați, copii ai lui Dumnezeu care strălucesc într-o generație strâmbă, ținând sus Cuvântul vieții. Pavel însuși este gata să fie turnat ca o jertfă peste slujirea credinței lor și se bucură împreună cu ei.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -168,7 +168,7 @@ export const NT_BOOK_11: BibleBook = {
           "ref": "Filipeni 2:25-30",
           "heading": "Epafrodit — frate, lucrător și slujitor încercat",
           "text": "Am socotit însă necesar să vi-l trimit pe Epafrodit, fratele meu, împreună-lucrătorul meu și tovarășul meu de luptă, dar trimisul vostru și slujitorul nevoii mele, fiindcă el tânjea după voi toți și era neliniștit pentru că ați auzit că s-a îmbolnăvit. Căci, într-adevăr, s-a îmbolnăvit aproape de moarte, dar Dumnezeu a avut milă de el, și nu doar de el, ci și de mine, ca să nu am întristare peste întristare. De aceea l-am trimis cu și mai mare grabă, ca, văzându-l din nou, să vă bucurați, iar eu să fiu mai puțin întristat. Așadar, primiți-l în Domnul cu toată bucuria și țineți-i în cinste pe astfel de oameni, fiindcă, pentru lucrarea lui Hristos, s-a apropiat până la moarte, riscându-și viața, ca să împlinească lipsa slujirii voastre față de mine.",
-          "teaching": "Epafrodit este numit frate, împreună-lucrător și împreună-ostaș. El nu căuta propria onoare și era preocupat că biserica aflase despre boala lui. Pavel cere ca asemenea oameni să fie prețuiți pentru caracterul lor asemănător lui Hristos, nu doar pentru darurile lor publice.\n\nFaptul că și-a riscat viața în slujire nu transformă neglijarea sănătății într-o virtute universală. Curajul nu înseamnă ignorarea limitelor trupului.",
+          "teaching": "Epafrodit este numit fratele, împreună-lucrătorul și împreună-ostașul lui Pavel, precum și trimisul filipenilor pentru nevoile lui. El tânjea după credincioși și era mâhnit fiindcă auziseră că fusese bolnav. Fusese aproape de moarte, dar Dumnezeu a avut milă de el și de Pavel.\n\nPavel îl trimite înapoi pentru ca biserica să se bucure și cere să fie primit în Domnul cu toată bucuria. Oameni ca el trebuie ținuți la mare cinste, fiindcă și-a riscat viața pentru lucrarea lui Hristos și a împlinit slujirea pe care filipenii nu o puteau face de la distanță. Cinstea este legată de caracter și de slujirea jertfitoare, nu de talent public.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -176,11 +176,11 @@ export const NT_BOOK_11: BibleBook = {
             "Coloseni 4:7-9",
             "Iacov 5:14-16"
           ],
-          "forYourHeart": "Cinstește discret o persoană care slujește cu credincioșie și amintește-i că îngrijirea sănătății nu este lipsă de credință."
+          "forYourHeart": "Cinstește discret o persoană care a slujit cu credincioșie și mulțumește-I lui Dumnezeu pentru caracterul ei dovedit."
         }
       ],
       "prayer": "Doamne Isuse, pune în mine gândul Tău smerit. Eliberează-mă de ambiție, cârtire și căutarea folosului propriu. Lucrează în mine voința și puterea de a asculta și fă-mă un slujitor care caută sincer binele altora. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "filipeni-3",
@@ -196,7 +196,7 @@ export const NT_BOOK_11: BibleBook = {
           "ref": "Filipeni 3:1-6",
           "heading": "Fără încredere în firea pământească",
           "text": "Încolo, frații mei, bucurați-vă în Domnul. Să vă scriu aceleași lucruri nu-mi este greu, iar pentru voi este sigur. Păziți-vă de câini; păziți-vă de lucrătorii răi; păziți-vă de circumcizia falsă. Căci noi suntem circumcizia, cei care ne închinăm lui Dumnezeu prin Duhul și ne lăudăm în Hristos Isus, și nu ne încredem în carne, deși eu aș putea avea încredere și în carne. Dacă altcineva crede că poate să se încreadă în carne, eu și mai mult: circumcis a opta zi, din neamul lui Israel, din tribul lui Beniamin, evreu dintre evrei; în ce privește Legea, fariseu; în ce privește zelul, persecutând biserica; în ce privește dreptatea care este în Lege, ajuns fără vină.",
-          "teaching": "Pavel repetă avertismentul pentru siguranța bisericii: adevărata închinare este prin Duhul lui Dumnezeu, lauda este în Hristos, iar încrederea nu se așază în origine, ritual, educație sau performanță morală. El însuși putea prezenta un dosar religios impresionant, dar nu îl folosește ca merit înaintea lui Dumnezeu. Pavel însuși era evreu și critică o temelie falsă a mântuirii, nu valoarea unei etnii.",
+          "teaching": "Pavel repetă avertismentul pentru siguranța bisericii și îi numește direct pe cei care puneau încrederea mântuirii în circumcizie. Adevărata circumcizie este poporul care se închină prin Duhul lui Dumnezeu, se laudă în Hristos Isus și nu își pune încrederea în firea pământească.\n\nDacă cineva ar fi putut invoca merite religioase, Pavel avea un dosar impresionant: circumcis a opta zi, din Israel, din seminția lui Beniamin, evreu din evrei, fariseu în privința Legii, prigonitor din râvnă și fără vină după dreptatea Legii. Nici originea, nici ritualul, nici zelul și nici disciplina morală nu pot deveni temelia laudei înaintea lui Dumnezeu. Lauda credinciosului este numai în Hristos.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -211,7 +211,7 @@ export const NT_BOOK_11: BibleBook = {
           "ref": "Filipeni 3:7-11",
           "heading": "Câștigul suprem: cunoașterea lui Hristos",
           "text": "Dar lucrurile care îmi erau câștiguri, pe acestea le-am socotit pierdere din pricina lui Hristos. Ba mai mult, chiar socotesc toate lucrurile pierdere din pricina valorii nespus mai mari a cunoașterii lui Hristos Isus, Domnul meu, pentru care am fost lipsit de toate și le socotesc gunoaie, ca să-l câștig pe Hristos și să fiu găsit în el, neavând dreptatea mea, cea din Lege, ci pe aceea care este prin credința în Hristos, dreptatea din Dumnezeu pe baza credinței, ca să-l cunosc pe el și puterea învierii lui și părtășia suferințelor lui, fiind făcut asemenea morții lui, dacă, cumva, voi ajunge la învierea dintre cei morți.",
-          "teaching": "Tot ce Pavel numise cândva câștig devine pierdere în comparație cu valoarea cunoașterii lui Hristos. Dreptatea lui nu mai este construită prin Lege și realizare personală, ci primită prin credință, din unirea cu Hristos.\n\nEl dorește puterea învierii și părtășia suferințelor lui Hristos, fiind făcut asemenea morții Lui. Explicația accentuează moartea zilnică față de egoism și păcat, nu căutarea durerii de dragul durerii. Suferința nu trebuie provocată, romantizată sau folosită pentru a împiedica o persoană să caute protecție și ajutor.",
+          "teaching": "Lucrurile pe care Pavel le socotise câștig le consideră acum pierdere din cauza lui Hristos. Mai mult, socotește toate lucrurile pierdere față de valoarea nespus de mare a cunoașterii lui Hristos Isus, Domnul său. El renunță la orice merit propriu ca să-L câștige pe Hristos și să fie găsit în El.\n\nDreptatea lui nu mai vine din Lege, ci prin credința în Hristos, de la Dumnezeu. Pavel vrea să-L cunoască pe Hristos, puterea învierii Lui și părtășia suferințelor Lui, fiind făcut asemenea morții Sale, ca să ajungă la învierea dintre cei morți. Cunoașterea lui Hristos nu este informație religioasă, ci o viață în care egoismul și păcatul sunt date morții, iar puterea învierii lucrează ascultare.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -241,7 +241,7 @@ export const NT_BOOK_11: BibleBook = {
           "ref": "Filipeni 3:17-21",
           "heading": "Exemple vrednice și cetățenie cerească",
           "text": "Fraților, fiți imitatori împreună cu mine, și observați-i pe cei care merg pe acest drum, așa cum ne aveți pe noi ca exemplu. Căci mulți umblă, despre care vă spuneam adesea, iar acum vă spun și plângând, că sunt dușmanii crucii lui Hristos, al căror sfârșit este pieirea, al căror dumnezeu este pântecele și a căror slavă este în rușinea lor, cei care gândesc cele pământești. Căci cetățenia noastră este în ceruri, de unde îl și așteptăm pe Mântuitorul, pe Domnul Isus Hristos, care va transforma trupul stării noastre umilite, făcându-l asemenea trupului slavei lui, potrivit lucrării puterii prin care poate să-și supună și toate lucrurile.",
-          "teaching": "Pavel îi cheamă pe credincioși să observe oameni a căror viață confirmă mesajul. Autoritatea spirituală nu vine doar din elocvență sau doctrină formulată corect, ci dintr-o umblare care trece prin cruce. El îi avertizează cu lacrimi pe cei dominați de pofte, rușine și lucruri pământești. Cetățenia cerească nu ne face nepăsători față de responsabilitățile de pe pământ. Așteptăm venirea Mântuitorului, Care va transforma trupul nostru smerit.",
+          "teaching": "Pavel îi cheamă pe credincioși să-l urmeze și să-i observe pe cei care umblă după exemplul primit. Viața trebuie să confirme mesajul. Mulți umblă ca vrăjmași ai crucii lui Hristos: sfârșitul lor este pierzarea, dumnezeul lor este pântecele, se laudă cu rușinea lor și își așază gândirea în lucrurile pământești.\n\nCetățenia credincioșilor este în ceruri, de unde Îl așteaptă pe Domnul Isus Hristos ca Mântuitor. El va transforma trupul stării lor smerite și îl va face asemenea trupului slavei Sale, prin puterea cu care Își poate supune toate lucrurile. Speranța nu este în satisfacerea poftelor, ci în venirea și puterea lui Hristos.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -249,11 +249,11 @@ export const NT_BOOK_11: BibleBook = {
             "1 Petru 5:3",
             "1 Ioan 3:2-3"
           ],
-          "forYourHeart": "Urmează exemple al căror caracter îl face vizibil pe Hristos și tratează-ți trupul cu disciplină, recunoștință și grijă."
+          "forYourHeart": "Privește la oamenii pe care îi urmezi: alege exemple a căror viață trece prin cruce și îți îndreaptă speranța spre venirea lui Hristos."
         }
       ],
       "prayer": "Doamne Isuse, eliberează-mă de încrederea în meritele mele. Vreau să Te cunosc, să trăiesc prin puterea învierii Tale și să mor față de egoism. Păstrează-mi conștiința curată și ochii ațintiți spre chemarea Ta. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "filipeni-4",
@@ -283,7 +283,7 @@ export const NT_BOOK_11: BibleBook = {
           "ref": "Filipeni 4:4-9",
           "heading": "Bucurie, rugăciune și o minte păzită",
           "text": "Bucurați-vă în Domnul întotdeauna; iarăși voi spune: Bucurați-vă. Blândețea voastră să fie cunoscută tuturor oamenilor. Domnul este aproape. Nu vă îngrijorați de nimic, ci, în toate, prin rugăciune și cerere, cu mulțumire, să fie făcute cunoscute lui Dumnezeu cererile voastre, și pacea lui Dumnezeu, care întrece orice minte, vă va păzi inimile și gândurile în Hristos Isus. Încolo, fraților, tot ce este adevărat, tot ce este vrednic de cinste, tot ce este drept, tot ce este curat, tot ce este vrednic de iubit, tot ce este de bun nume, dacă este vreo virtute și dacă este vreo laudă, la acestea gândiți-vă. Cele pe care le-ați și învățat, și primit, și auzit, și văzut în mine, pe acestea faceți-le; și Dumnezeul păcii va fi cu voi.",
-          "teaching": "Bucuria este «în Domnul», de aceea nu depinde complet de ceea ce primim sau pierdem. Blândețea devine vizibilă, iar îngrijorarea este adusă în rugăciune prin cereri concrete și mulțumire. Pacea lui Dumnezeu păzește apoi inima și mintea ca o garnizoană.\n\nPavel cheamă credincioșii să aleagă deliberat ceea ce este adevărat, vrednic, drept, curat și folositor. O tulburare de anxietate nu este dovadă automată de necredință, iar ajutorul profesionist poate fi primit ca parte a grijii lui Dumnezeu.",
+          "teaching": "Pavel poruncește: Bucurați-vă întotdeauna în Domnul; apoi repetă chemarea. Bucuria este în Domnul, nu în stabilitatea împrejurărilor. Blândețea trebuie să fie cunoscută de toți, iar apropierea Domnului schimbă felul în care credinciosul își poartă grijile.\n\nÎn loc să lase îngrijorarea să-i conducă inima, credinciosul aduce orice lucru înaintea lui Dumnezeu prin rugăciune, cerere și mulțumire. Pacea lui Dumnezeu, care întrece orice pricepere, păzește inima și gândurile în Hristos Isus. Mintea este apoi îndreptată deliberat spre ce este adevărat, vrednic, drept, curat, plăcut, cu nume bun, virtuos și demn de laudă. Ceea ce filipenii au învățat, primit, auzit și văzut la Pavel trebuie pus în practică, iar Dumnezeul păcii va fi cu ei.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -298,7 +298,7 @@ export const NT_BOOK_11: BibleBook = {
           "ref": "Filipeni 4:10-13",
           "heading": "Pot face toate lucrurile prin Hristos",
           "text": "M-am bucurat însă foarte mult în Domnul că, în sfârșit, a înflorit din nou grija voastră pentru mine; la aceasta vă gândeați și înainte, dar vă lipsea prilejul. Nu spun aceasta din lipsă, căci eu am învățat să fiu mulțumit în starea în care sunt. Știu și să fiu smerit, știu și să am din belșug; în orice împrejurare și în toate am învățat taina și a sațului, și a foamei, și a belșugului, și a lipsei. Eu pot totul în Hristos, care mă întărește.",
-          "teaching": "Pavel se bucură de grija filipenilor, dar explică faptul că a învățat mulțumirea atât în lipsă, cât și în belșug. Secretul nu este stoicismul, ci puterea lui Hristos care îl face liber față de controlul împrejurărilor materiale.\n\n«Pot totul în Hristos» nu promite succes în orice ambiție aleasă de noi. În context, Pavel spune că poate rămâne credincios, pașnic și mulțumit când are mult sau puțin. Textul nu trebuie folosit pentru a cere performanțe imposibile, a ignora limitele sau a învinovăți bolnavii și săracii.",
+          "teaching": "Pavel se bucură în Domnul că grija filipenilor pentru el a înflorit din nou, dar precizează că nu vorbește din lipsă. El a învățat să fie mulțumit în orice stare: știe să trăiască smerit și știe să aibă din belșug; a învățat taina de a fi sătul și flămând, de a avea belșug și de a duce lipsă.\n\nPot toate lucrurile prin Hristos, care mă întărește vorbește în acest context despre puterea de a rămâne credincios și mulțumit în toate aceste împrejurări. Versetul nu promite împlinirea oricărei ambiții alese de om. Hristos îl întărește pe credincios ca lipsa sau belșugul să nu-i devină stăpân.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -313,7 +313,7 @@ export const NT_BOOK_11: BibleBook = {
           "ref": "Filipeni 4:14-20",
           "heading": "Dărnicie fără manipulare",
           "text": "Totuși, bine ați făcut că ați luat parte la necazul meu. Știți și voi, filipenilor, că la începutul Evangheliei, când am ieșit din Macedonia, nicio biserică n-a avut părtășie cu mine în ce privește darea și primirea, în afară de voi singuri, căci chiar și în Tesalonic mi-ați trimis o dată și încă o dată pentru nevoia mea. Nu că aș căuta darul, dar caut fructul care crește în contul tău. Dar le am pe toate și prisosesc; sunt plin, după ce am primit de la Epafrodit cele trimise de voi, o mireasmă plăcută, o jertfă primită, bine-plăcută lui Dumnezeu. Iar Dumnezeul meu va împlini orice nevoie a voastră, potrivit bogăției lui în slavă, în Hristos Isus. Iar lui Dumnezeu și Tatăl nostru să-i fie slava în vecii vecilor. Amin.",
-          "teaching": "Filipenii participaseră la lucrare prin dărnicie, iar Pavel primește darul cu recunoștință. Totuși, el precizează că nu urmărește darul, ci rodul spiritual al dătătorilor. Slujitorul nu creează presiune, nu exagerează nevoi și nu condiționează binecuvântarea de plata către el.\n\nDarul este numit o jertfă plăcută lui Dumnezeu, iar promisiunea că Dumnezeu va împlini nevoile este așezată în cadrul generozității și al încrederii, nu al unei scheme de îmbogățire. Dărnicia trebuie să fie liberă, transparentă și responsabilă, fără a pune în pericol hrana, locuința, tratamentul sau persoanele aflate în întreținere.",
+          "teaching": "Deși învățase mulțumirea, Pavel le spune filipenilor că au făcut bine împărtășind necazul lui. La începutul Evangheliei, nicio altă biserică nu intrase cu el în această părtășie de dare și primire, iar ei îi trimiseseră ajutor de mai multe ori.\n\nPavel nu caută darul, ci rodul care se adună în folosul lor. Darurile primite prin Epafrodit sunt numite un miros plăcut, o jertfă primită și plăcută lui Dumnezeu. În acest cadru al părtășiei și dărniciei, el afirmă că Dumnezeul lui va împlini orice nevoie a lor, după bogățiile Sale în slavă, în Hristos Isus. Dărnicia este închinare și participare la lucrarea Evangheliei, nu o cumpărare a favorului lui Dumnezeu și nici o metodă de îmbogățire.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -340,7 +340,7 @@ export const NT_BOOK_11: BibleBook = {
         }
       ],
       "prayer": "Dumnezeul păcii, învață-mă să mă bucur în Tine, să-mi aduc grijile în rugăciune și să-mi păzesc gândurile. Dă-mi mulțumire în lipsă și belșug, sinceritate în împăcare și o inimă generoasă, liberă de iubirea banilor. Amin.",
-      "status": "in_review"
+      "status": "published"
     }
   ]
 }

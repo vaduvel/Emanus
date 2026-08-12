@@ -120,7 +120,7 @@ export const NT_BOOK_03: BibleBook = {
         }
       ],
       "prayer": "Doamne, fă-mă disponibil ca Maria și credincios Cuvântului Tău. Umple-mă cu Duhul Sfânt ca să se formeze caracterul lui Isus în mine. Izbăvește-mă de păcat și învață-mă să-Ți slujesc din dragoste, fără frica osândei. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "luca-2",
@@ -136,7 +136,7 @@ export const NT_BOOK_03: BibleBook = {
           "ref": "Luca 2:1-7",
           "heading": "Nu era loc pentru ei",
           "text": "Și s-a întâmplat în zilele acelea că a ieșit un decret de la Cezar Augustus, să fie înregistrată toată lumea locuită. Aceasta a fost prima înscriere făcută când Quirinius a fost guvernator al Siriei. Toți s-au dus să se înscrie, fiecare în orașul lui. Și Iosif s-a suit și el din Galileea, din cetatea Nazaret, în Iudeea, în cetatea lui David, care se numește Betleem, pentru că era din casa și din familia lui David, ca să se înregistreze împreună cu Maria, cea logodită cu el, fiind însărcinată. Și, pe când erau ei acolo, s-au împlinit zilele ca ea să nască, și L-a născut pe fiul ei, cel întâi născut, L-a înfășat și L-a culcat într-o iesle, pentru că nu era loc pentru ei în locul de găzduire.",
-          "teaching": "Un ordin dat de un împărat păgân devine, fără ca el să știe, instrumentul prin care făgăduința despre Betleem se împlinește. Dumnezeu rămâne suveran chiar când evenimentele par pur administrative sau incomode.\n\nExplicația subliniază că Dumnezeu ar fi putut păstra cu ușurință o cameră liberă, dar a îngăduit ca Fiul Său să Se nască într-un loc foarte smerit. Mesajul este o judecată asupra valorilor lumii: măreția lui Dumnezeu nu are nevoie de lux, poziție sau aparență.\n\nMaria nu este prezentată murmurând împotriva lui Iosif sau a împrejurărilor. Slujirea începe cu acceptarea providenței lui Dumnezeu, chiar când locul primit nu este cel pe care l-am fi ales.",
+          "teaching": "Un ordin dat de un împărat păgân devine, fără ca el să știe, instrumentul prin care făgăduința despre Betleem se împlinește. Dumnezeu rămâne suveran chiar când evenimentele par pur administrative sau incomode.\n\nExplicația subliniază că Dumnezeu ar fi putut păstra cu ușurință o cameră liberă, dar a îngăduit ca Fiul Său să Se nască într-un loc foarte smerit. Mesajul este o judecată asupra valorilor lumii: măreția lui Dumnezeu nu are nevoie de lux, poziție sau aparență.\n\nSlujirea începe cu acceptarea providenței lui Dumnezeu, chiar când locul primit nu este cel pe care l-am fi ales.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -166,7 +166,7 @@ export const NT_BOOK_03: BibleBook = {
           "ref": "Luca 2:21-38",
           "heading": "O rămășiță care aștepta mângâierea",
           "text": "Și când s-au împlinit opt zile ca El să fie circumcis, I s-a pus numele Isus, numele dat de înger înainte să fi fost zămislit în pântece. Și când s-au împlinit zilele curățirii lor, după Legea lui Moise, L-au suit la Ierusalim ca să-L înfățișeze înaintea Domnului, după cum este scris în Legea Domnului: Orice parte bărbătească ce deschide pântecele va fi numită sfântă pentru Domnul, și ca să aducă jertfă după ce este spus în Legea Domnului: O pereche de turturele sau doi pui de porumbel. Și iată, era în Ierusalim un om cu numele Simeon; și omul acesta era drept și evlavios, așteptând mângâierea lui Israel, și Duhul Sfânt era peste el. Și îi fusese descoperit de Duhul Sfânt că nu va vedea moartea înainte să-L vadă pe Hristosul Domnului. Și a venit în Duhul în templu; și când părinții au adus înăuntru copilul Isus, ca să facă pentru El după obiceiul Legii, el L-a luat în brațe, L-a binecuvântat pe Dumnezeu și a spus: Acum îl lași pe robul Tău să plece, Stăpâne, după cuvântul Tău, în pace, căci ochii mei au văzut mântuirea Ta, pe care ai pregătit-o înaintea feței tuturor popoarelor, lumină spre descoperirea neamurilor și slava poporului Tău Israel. Iosif și mama lui se mirau de lucrurile care se vorbeau despre el. Și Simeon i-a binecuvântat și i-a spus Mariei, mama Lui: Iată, Acesta este pus pentru căderea și ridicarea multora în Israel și ca semn împotriva căruia se va vorbi, iar prin sufletul tău însuți va trece o sabie, ca să fie descoperite gândurile din multe inimi. A fost o Ana, o profetesă, fiica lui Phanuel, din tribul lui Așer (Era de o vârstă mare, trăind cu un soț șapte ani de la fecioria ei, și ea era văduvă până la vârsta de optzeci și patru de ani. Nu se depărta de templu, slujind cu posturi și rugăciuni noapte și zi. Și chiar în ceasul acela, venind și ea, Îi aducea mulțumire lui Dumnezeu și vorbea despre El tuturor celor care așteptau răscumpărarea Ierusalimului.",
-          "teaching": "Simeon era un om peste care era Duhul Sfânt, iar Ana Îi slujea lui Dumnezeu prin rugăciune și post. Ei recunosc Pruncul pe care conducătorii religioși nu Îl recunosc. Cunoașterea Scripturii fără ascultare și viață cu Dumnezeu nu garantează discernământ spiritual.\n\nExplicația pune alături păstorii, magii, Simeon și Ana ca oameni foarte diferiți, dar pregătiți pentru venirea lui Hristos. Dumnezeu Își formează o rămășiță nu prin statut comun, ci prin foame după El, curăție și disponibilitate.\n\nSimeon spune că Isus va descoperi gândurile multor inimi și va fi un semn împotriva căruia se va vorbi. Lucrarea adevărată a lui Hristos nu caută doar aplauze; ea aduce la lumină mândria, gelozia și împotrivirea ascunse în inima religioasă.\n\nMaria primește și avertizarea că o sabie îi va străpunge sufletul. Chemarea privilegiată nu o scutește de suferință. A fi aproape de planul lui Dumnezeu poate însemna să porți durere fără să pierzi credința.",
+          "teaching": "Simeon era un om peste care era Duhul Sfânt, iar Ana Îi slujea lui Dumnezeu prin rugăciune și post. Cunoașterea Scripturii fără ascultare și viață cu Dumnezeu nu garantează discernământ spiritual.\n\nExplicația pune alături păstorii, magii, Simeon și Ana ca oameni foarte diferiți, dar pregătiți pentru venirea lui Hristos. Dumnezeu Își formează o rămășiță nu prin statut comun, ci prin foame după El, curăție și disponibilitate.\n\nSimeon spune că Isus va descoperi gândurile multor inimi și va fi un semn împotriva căruia se va vorbi. Lucrarea adevărată a lui Hristos nu caută doar aplauze; ea aduce la lumină mândria, gelozia și împotrivirea ascunse în inima religioasă.\n\nMaria primește și avertizarea că o sabie îi va străpunge sufletul. Chemarea privilegiată nu o scutește de suferință. A fi aproape de planul lui Dumnezeu poate însemna să porți durere fără să pierzi credința.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -210,7 +210,7 @@ export const NT_BOOK_03: BibleBook = {
         }
       ],
       "prayer": "Tată, eliberează-mă de iubirea prestigiului și fă-mă asemenea Fiului Tău, smerit și disponibil să slujească de jos. Dă-mi o inimă trează ca a celor care L-au recunoscut și sârguință în Cuvânt, în ascultare și în anii ascunși. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "luca-3",
@@ -302,7 +302,7 @@ export const NT_BOOK_03: BibleBook = {
         }
       ],
       "prayer": "Doamne, dă-mi o pocăință care produce rod, o inimă smerită care Îl arată pe Hristos și o viață de rugăciune deschisă lucrării Duhului Sfânt. Învață-mă să mor față de voia proprie, să caut aprobarea Ta mai mult decât rezultatele vizibile și să trăiesc în ascultare. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "luca-4",
@@ -392,7 +392,7 @@ export const NT_BOOK_03: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, învață-mă să biruiesc ispita prin Cuvânt, să nu folosesc darurile pentru mine și să nu compromit adevărul pentru succes. Umple-mă cu Duhul Sfânt ca să slujesc oamenilor cu milă, discernământ și smerenie. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "luca-5",
@@ -481,7 +481,7 @@ export const NT_BOOK_03: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, dă-mi credința care ascultă la cuvântul Tău, smerenia care nu se laudă și disciplina de a mă retrage la rugăciune. Fă-mă un om al Noului Legământ, plin de adevăr, milă și părtășie cu trupul Tău. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "luca-6",
@@ -572,7 +572,7 @@ export const NT_BOOK_03: BibleBook = {
         }
       ],
       "prayer": "Tată, fă-mă asemenea lui Isus. Eliberează-mă de legalism, de iubirea aprobării și de dorința de răzbunare. Dă-mi milă, limite înțelepte, discernământ smerit și puterea de a pune în practică fiecare cuvânt pe care mi-l arăți. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "luca-7",
@@ -646,7 +646,7 @@ export const NT_BOOK_03: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, dă-mi credința și smerenia centurionului, compasiunea inimii Tale și statornicia de a nu mă poticni când nu înțeleg planul Tău. Ajută-mă să văd cât de mult am fost iertat și să Te iubesc printr-o viață întreagă de recunoștință. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "luca-8",
@@ -739,7 +739,7 @@ export const NT_BOOK_03: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, dă-mi o inimă care păstrează Cuvântul și rodește cu răbdare. Fii pacea mea în furtună, eliberează-mă de orice robie și învață-mă să privesc fiecare persoană cu demnitate. Dă-mi credință sinceră, milă și discernământ. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "luca-9",
@@ -832,7 +832,7 @@ export const NT_BOOK_03: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, dă-mi putere pentru slujire și smerenie ca să nu folosesc darurile pentru mine. Învață-mă să-mi iau crucea în fiecare zi, să Te ascult mai presus de orice om și să rămân dependent de rugăciune. Păzește-mă de exclusivism, răzbunare și întoarcere înapoi. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "luca-10",
@@ -909,7 +909,7 @@ export const NT_BOOK_03: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, păzește-mă să nu caut succesul, puterea sau reputația mai mult decât părtășia cu Tine. Fă-mă smerit, gata să văd omul rănit și să plătesc costul milei. Învață-mă să aleg partea cea bună și să slujesc din ascultarea Cuvântului Tău. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "luca-11",
@@ -1002,7 +1002,7 @@ export const NT_BOOK_03: BibleBook = {
         }
       ],
       "prayer": "Tată, sfințește Numele Tău în viața mea. Învață-mă să cer, să caut și să bat cu motive curate și umple-mă cu Duhul Sfânt pentru sfințenie și slujire. Curăță-mi interiorul, ochiul și motivele și fă-mă un ascultător al Cuvântului, nu doar un cunoscător. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "luca-12",
@@ -1111,7 +1111,7 @@ export const NT_BOOK_03: BibleBook = {
         }
       ],
       "prayer": "Tată, curăță-mă de ipocrizie, frica oamenilor și lăcomie. Ajută-mă să caut Împărăția, să-mi încredințez grijile Ție și să administrez cu credincioșie tot ce mi-ai dat. Ține candela mea aprinsă și viața mea gata pentru venirea Domnului Isus. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "luca-13",
@@ -1188,7 +1188,7 @@ export const NT_BOOK_03: BibleBook = {
         }
       ],
       "prayer": "Doamne, păzește-mă să nu judec suferința altuia și dă-mi pocăință cu rod. Fă-mă milos, curajos și atent la omul legat. Ajută-mă să intru pe ușa îngustă și să primesc adăpostul Tău, fără amânare. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "luca-14",
@@ -1281,7 +1281,7 @@ export const NT_BOOK_03: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, eliberează-mă de căutarea onoarei și fă-mă generos cu cei care nu mă pot răsplăti. Păzește-mă de scuze și dă-mi o ucenicie socotită, întreagă și sigură pentru cei vulnerabili. Tu să ai primul loc în toate. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "luca-15",
@@ -1342,7 +1342,7 @@ export const NT_BOOK_03: BibleBook = {
         }
       ],
       "prayer": "Tată, dă-mi inima Ta pentru cel pierdut și curajul de a mă întoarce când eu sunt cel rătăcit. Eliberează-mă de duhul de rob, comparație și merit. Fă-mă să primesc harul cu adevăr și să mă bucur când fratele mort în păcat se întoarce la viață. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "luca-16",
@@ -1403,7 +1403,7 @@ export const NT_BOOK_03: BibleBook = {
         }
       ],
       "prayer": "Doamne, recunosc că tot ce am Îți aparține. Fă-mă credincios în bani și liber de iubirea lor. Deschide-mi ochii spre omul de la poartă și dă-mi o credință care ascultă Scriptura și se vede în milă, dreptate și generozitate. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "luca-17",
@@ -1480,7 +1480,7 @@ export const NT_BOOK_03: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, fă-mă sigur pentru cei mici, gata să spun adevărul și să iert fără să ascund răul. Dă-mi credință smerită, o inimă mulțumitoare și o viață în care Împărăția Ta domnește. Dezleagă-mă de tot ce m-ar face să privesc înapoi. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "luca-18",
@@ -1573,7 +1573,7 @@ export const NT_BOOK_03: BibleBook = {
         }
       ],
       "prayer": "Doamne, învață-mă să mă rog fără descurajare, să vin fără merit și să primesc Împărăția ca un copil. Eliberează-mă de iubirea banilor și deschide-mi ochii spre calea crucii. Dă-mi credință smerită și perseverentă. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "luca-19",
@@ -1650,7 +1650,7 @@ export const NT_BOOK_03: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, intră în casa și în banii mei ca la Zacheu și fă pocăința concretă. Ajută-mă să folosesc fidel tot ce mi-ai încredințat până Te întorci. Primește lauda mea, curăță-mi motivele și fă din viața mea o casă de rugăciune. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "luca-20",
@@ -1743,7 +1743,7 @@ export const NT_BOOK_03: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, fă-mă sincer față de lumina primită și smerit înaintea autorității Tale. Ajută-mă să administrez ce Îți aparține, să fiu corect în obligații și să cunosc Scriptura împreună cu puterea Duhului. Păzește-mă de religia care caută onoare și exploatează. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "luca-21",
@@ -1820,7 +1820,7 @@ export const NT_BOOK_03: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, dă-mi o inimă liberă și sinceră în dărnicie. Păzește-mă de înșelare, panică și speculații. Fă-mă curajos în mărturie, răbdător în încercare și înțelept în protejarea vieții. Ține-mă treaz și în rugăciune până la venirea Ta. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "luca-22",
@@ -1916,7 +1916,7 @@ export const NT_BOOK_03: BibleBook = {
           "ref": "Luca 22:54-62",
           "heading": "Domnul S-a întors și S-a uitat la Petru",
           "text": "L-au luat și l-au dus și l-au dus în casa marelui preot. Dar Petru l-a urmat de la distanță. După ce au aprins un foc în mijlocul cur și s-au așezat împreună, Petru s-a așezat între ei. O servitoare l-a văzut în timp ce stătea în lumină, privindu-l cu, a spus: Și omul acesta era cu el. El s-a lepădat de Isus, zicând: Femeie, nu-L cunosc. După timp, cineva l-a văzut a zis: Și tu ești unul dintre ei! Dar Petru a răspuns: Omule, eu nu sunt! După aproximativ o oră, un altul a afirmat cu încredere, spunând, Adevărat acest om a fost, de asemenea, cu el, pentru că el este un galilean! Iar Petru a spus: Omule, nu știu ce spui. Și imediat, pe când el încă vorbea, a cântat cocoșul. Domnul s-a întors și s-a uitat la Petru. Apoi Petru și-a amintit cuvântul Domnului, cum i-a spus el, Înainte ca cocoșul să cânte, îmi vei nega de trei ori. A ieșit afară și a plâns amarnic.",
-          "teaching": "Petru Îl urmează de departe, intră în curte și, sub presiunea unor întrebări simple, Îl neagă de trei ori. Căderea lui nu vine din lipsa sincerității declarației anterioare, ci din necunoașterea propriei slăbiciuni și lipsa vegherii.\n\nCântatul cocoșului și privirea lui Isus îi aduc aminte de cuvânt. Privirea nu îl conduce la sinucidere, ci la plâns amar și, mai târziu, întoarcere. Mustrarea Domnului deschide drumul pocăinței, nu îl închide.\n\nPetru și Iuda nu trebuie comparați superficial ca și cum un anumit tip de păcat ar fi automat iertabil și altul nu. Diferența decisivă este răspunsul la lumină: Petru se întoarce spre Domnul; Iuda rămâne singur cu deznădejdea.",
+          "teaching": "Petru Îl urmează de departe, intră în curte și, sub presiunea unor întrebări simple, Îl neagă de trei ori. Căderea lui nu vine din lipsa sincerității declarației anterioare, ci din necunoașterea propriei slăbiciuni și lipsa vegherii.\n\nCântatul cocoșului și privirea lui Isus îi aduc aminte de cuvânt. Mustrarea Domnului deschide drumul pocăinței, nu îl închide.\n\nPetru și Iuda nu trebuie comparați superficial ca și cum un anumit tip de păcat ar fi automat iertabil și altul nu. Diferența decisivă este răspunsul la lumină: Petru se întoarce spre Domnul; Iuda rămâne singur cu deznădejdea.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -1945,7 +1945,7 @@ export const NT_BOOK_03: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, fă-mă om al noului legământ, smerit și gata să slujească. Păzește-mi credința în încercare și supune voia mea Tatălui. Oprește în mine violența, mândria și deznădejdea și învață-mă să mă întorc repede când cad. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "luca-23",
@@ -1993,7 +1993,7 @@ export const NT_BOOK_03: BibleBook = {
           "ref": "Luca 23:44-46",
           "heading": "Tată, în mâinile Tale Îmi încredințez duhul",
           "text": "Era acum pe la ceasul al șaselea, și până la ceasul al nouălea, a trecut peste toată țara. Soarele s-a întunecat, și vălul Templului s-a rupt în două. Isus, strigând cu glas tare, a zis: Tată, în mâinile Tale îmi încrediz duhul! După ce a spus aceste cuvinte,-a dat ultima suflare.",
-          "teaching": "Întunericul acoperă țara, iar perdeaua templului se rupe. Drumul spre prezența lui Dumnezeu este deschis prin moartea lui Isus, nu prin rangul religios sau meritul omului.\n\nUltimele cuvinte din Luca sunt o rugăciune de încredere. Isus Își încredințează duhul Tatălui și moare conștient, după ce a împlinit lucrarea primită.\n\nMoartea Lui nu trebuie romantizată ca model pentru auto-vătămare. A-ți încredința viața Tatălui înseamnă și a primi mijloacele prin care El o păzește.",
+          "teaching": "Întunericul acoperă țara, iar perdeaua templului se rupe. Drumul spre prezența lui Dumnezeu este deschis prin moartea lui Isus, nu prin rangul religios sau meritul omului.\n\nUltimele cuvinte din Luca sunt o rugăciune de încredere. Isus Își încredințează duhul Tatălui și moare conștient, după ce a împlinit lucrarea primită.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -2022,7 +2022,7 @@ export const NT_BOOK_03: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, Îți mulțumesc că ai luat locul celui vinovat și ai rămas pe cruce pentru mântuirea mea. Dă-mi curaj pentru adevăr, o inimă care iartă fără să ascundă răul și încredere în Tatăl. Fă-mă credincios în suferință, doliu și așteptare. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "luca-24",
@@ -2099,7 +2099,7 @@ export const NT_BOOK_03: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse înviat, deschide-mi Scripturile și mintea, aprinde-mi inima și întoarce-mă din dezamăgire spre mărturie. Îți mulțumesc pentru cruce, înviere și iertare. Îmbracă-mă cu puterea Duhului Sfânt și fă-mă un martor smerit, plin de adevăr, bucurie și ascultare. Amin.",
-      "status": "in_review"
+      "status": "published"
     }
   ]
 }

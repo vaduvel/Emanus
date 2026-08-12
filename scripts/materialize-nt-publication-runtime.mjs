@@ -6,6 +6,7 @@ import crypto from "node:crypto"
 
 const ROOT = process.cwd()
 const corpusDir = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-final-source-first")
+const finalManifestPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-final-source-first-manifest.json")
 const beDir = path.join(ROOT, "docs", "data", "biblia-emanus")
 const bindingPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-canonical-binding.json")
 const generatedDir = path.join(ROOT, "packages", "shared", "src", "bible", "generated", "ntExplained")
@@ -44,10 +45,14 @@ function canonicalPayload(be) {
 }
 
 if (!fs.existsSync(bindingPath)) fail("missing nt-canonical-binding.json; run materialize-nt-canonical-binding.mjs first")
+if (!fs.existsSync(finalManifestPath)) fail("missing nt-final-source-first-manifest.json")
 const canonicalBinding = JSON.parse(fs.readFileSync(bindingPath, "utf8"))
+const finalManifest = JSON.parse(fs.readFileSync(finalManifestPath, "utf8"))
 if (canonicalBinding.schema !== "emanus-nt-canonical-binding-v1") fail("invalid canonical binding schema")
 if (canonicalBinding.counts?.books !== EXPECTED.books || canonicalBinding.counts?.chapters !== EXPECTED.chapters || canonicalBinding.counts?.verseEntries !== EXPECTED.verseEntries) fail("canonical binding totals mismatch")
 if (!canonicalBinding.canonicalTextVersion || !canonicalBinding.corpusSha256) fail("canonical binding version/hash missing")
+if (!["in_review", "published"].includes(finalManifest.status) || typeof finalManifest.publicationReady !== "boolean") fail("invalid final source-first publication state")
+const runtimeStatus = finalManifest.status === "published" && finalManifest.publicationReady === true ? "published" : "in_review"
 const bindingByChapter = new Map(canonicalBinding.chapters.map((entry) => [`${entry.bookId}.${entry.chapter}`, entry]))
 
 function loadBe(bookId, chapter) {
@@ -86,6 +91,7 @@ const bookIdentifiers = []
 for (let fileIndex = 0; fileIndex < files.length; fileIndex += 1) {
   const file = files[fileIndex]
   const book = JSON.parse(fs.readFileSync(path.join(corpusDir, file), "utf8"))
+  if (book.status !== runtimeStatus || book.publicationReady !== (runtimeStatus === "published")) fail(`${file}: source-first state does not match manifest`)
   const variable = ident(fileIndex + 1)
   const moduleName = file.replace(/\.json$/, ".ts")
   const importName = moduleName.replace(/\.ts$/, ".js")
@@ -119,7 +125,7 @@ for (let fileIndex = 0; fileIndex < files.length; fileIndex += 1) {
       historicalContext: chapter.historicalContext ?? "",
       units,
       prayer: chapter.prayer ?? "",
-      status: "in_review",
+      status: runtimeStatus,
     }
   })
 
@@ -142,7 +148,7 @@ if (totalChapters !== EXPECTED.chapters || totalVerseEntries !== EXPECTED.verseE
 indexLines.push("")
 indexLines.push(`export const NT_EXPLAINED_BOOKS: BibleBook[] = [${bookIdentifiers.join(", ")}]`)
 indexLines.push(`export const NT_EXPLAINED_TRANSLATION = "Biblia Emanus"`)
-indexLines.push(`export const NT_EXPLAINED_STATUS = "in_review" as const`)
+indexLines.push(`export const NT_EXPLAINED_STATUS = "${runtimeStatus}" as const`)
 indexLines.push("")
 indexLines.push(`export function findNtExplainedBook(id: string): BibleBook | undefined {`)
 indexLines.push(`  return NT_EXPLAINED_BOOKS.find((book) => book.id === id)`)

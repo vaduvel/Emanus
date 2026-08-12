@@ -65,7 +65,8 @@ const explanationKindCounts = {}
 const metaPatterns = [
   ["source-name-leak", /\b(?:Zac\s+Poonen|Poonen|CFC|Christian Fellowship|SermonIndex|RCCV)\b/i],
   ["internal-provenance-leak", /\b(?:source[- ]first|source locator|sourceIds?|evidenceSha|raw transcript|transcriere brută|legacy branch|pinned legacy|reviewed-against|editorial ledger)\b/i],
-  ["ai-meta-leak", /\b(?:ChatGPT|OpenAI|model de limbaj|ca (?:un )?AI)\b/i],
+  // Keep the acronym case-sensitive: Romanian "ca ai..." is ordinary prose.
+  ["ai-meta-leak", /\b(?:ChatGPT|OpenAI|model de limbaj|ca (?:un )?AI)\b/],
   ["placeholder", /\b(?:TODO|TBD|FIXME|LOREM|PLACEHOLDER)\b/i],
   ["url-in-reader-copy", /https?:\/\//i],
   ["mojibake", /(?:�|Ã.|Â.|â€|\uFFFD)/u],
@@ -77,7 +78,9 @@ const allowedKinds = new Set(["exposition", "canonical-exegesis", "textual-overv
 for (const file of files) {
   const full = path.join(corpusDir, file)
   const book = JSON.parse(fs.readFileSync(full, "utf8"))
-  if (book.status !== "in_review" || book.publicationReady !== false) add(findings, "wave-1-coherence", "blocker", "book-publication-state", book.id, "Final review corpus must remain in_review/false until canonical freeze.")
+  const manifestPublished = manifest.status === "published" && manifest.publicationReady === true
+  const expectedStatus = manifestPublished ? "published" : "in_review"
+  if (book.status !== expectedStatus || book.publicationReady !== manifestPublished) add(findings, "wave-1-coherence", "blocker", "book-publication-state", book.id, `Final corpus publication state must match manifest (${expectedStatus}).`)
   for (const chapter of book.chapters ?? []) {
     const chapterLoc = `${book.id} ${chapter.number}`
     chapters.push({ book, chapter, location: chapterLoc })

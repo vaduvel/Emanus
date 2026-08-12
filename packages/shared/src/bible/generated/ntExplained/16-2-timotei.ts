@@ -45,7 +45,7 @@ export const NT_BOOK_16: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "2-timotei-2",
@@ -94,7 +94,7 @@ export const NT_BOOK_16: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "2-timotei-3",
@@ -134,7 +134,7 @@ export const NT_BOOK_16: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "2-timotei-4",
@@ -183,7 +183,7 @@ export const NT_BOOK_16: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     }
   ]
 }

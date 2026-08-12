@@ -54,7 +54,7 @@ export const NT_BOOK_06: BibleBook = {
         }
       ],
       "prayer": "Doamne, fă-mă un rob bucuros al lui Isus și dă-mi credința care ascultă. Păzește-mă de nerecunoștință, de idolii inimii și de judecarea altora. Lasă puterea Evangheliei să-mi transforme gândirea, trupul și relațiile. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "romani-2",
@@ -103,7 +103,7 @@ export const NT_BOOK_06: BibleBook = {
         }
       ],
       "prayer": "Dumnezeule, scapă-mă de duhul care îi judecă pe alții și lasă bunătatea Ta să mă conducă la pocăință. Scrie voia Ta în inima mea și fă ca mărturisirea mea să fie susținută de o viață ascultătoare. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "romani-3",
@@ -152,7 +152,7 @@ export const NT_BOOK_06: BibleBook = {
         }
       ],
       "prayer": "Tată, închide orice laudă din mine și ajută-mă să mă odihnesc în lucrarea deplină a lui Hristos. Fă-mă recunoscător pentru justificarea gratuită și dă-mi o ascultare care izvorăște din har. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "romani-4",
@@ -201,7 +201,7 @@ export const NT_BOOK_06: BibleBook = {
         }
       ],
       "prayer": "Doamne, învață-mă să Te cred când împrejurările par imposibile. Ferește-mă de încrederea în semne, tradiții sau merite și fă credința mea vie, recunoscătoare și ascultătoare. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "romani-5",
@@ -250,7 +250,7 @@ export const NT_BOOK_06: BibleBook = {
         }
       ],
       "prayer": "Tată, Îți mulțumesc pentru pacea cu Tine și pentru dragostea dovedită la cruce. Folosește încercările ca să formezi caracterul lui Hristos și fă harul Tău să domnească în viața mea. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "romani-6",
@@ -299,7 +299,7 @@ export const NT_BOOK_06: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, Îți mulțumesc că m-ai unit cu moartea și învierea Ta. Ajută-mă să refuz domnia păcatului și să-Ți ofer trupul, mintea, timpul și voința mea ca unelte ale dreptății. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "romani-7",
@@ -348,7 +348,7 @@ export const NT_BOOK_06: BibleBook = {
         }
       ],
       "prayer": "Tată, Îți mulțumesc că Legea Ta este bună și că mi-ai arătat neputința firii. Eliberează-mă de slujirea legalistă și unește-mă tot mai adânc cu Hristos, ca să slujesc în noutatea Duhului. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "romani-8",
@@ -415,7 +415,7 @@ export const NT_BOOK_06: BibleBook = {
         }
       ],
       "prayer": "Ava, Tată, Îți mulțumesc că nu mai sunt sub condamnare. Îndreaptă-mi mintea spre Duhul, omoară faptele firii și folosește chiar slăbiciunile și încercările ca să mă faci asemenea lui Isus. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "romani-9",
@@ -473,7 +473,7 @@ export const NT_BOOK_06: BibleBook = {
         }
       ],
       "prayer": "Dumnezeule suveran și milostiv, dă-mi inima lui Pavel pentru cei pierduți. Smerește-mă înaintea înțelepciunii Tale, păzește-mă de speculații crude și fă-mă să mă încred numai în Hristos. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "romani-10",
@@ -522,7 +522,7 @@ export const NT_BOOK_06: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, scapă-mă de zelul fără adevăr și de încercarea de a-mi stabili propria dreptate. Pune Cuvântul Tău în inima și gura mea și fă-mă un martor smerit al harului pentru orice om. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "romani-11",
@@ -580,7 +580,7 @@ export const NT_BOOK_06: BibleBook = {
         }
       ],
       "prayer": "Dumnezeule credincios, păzește-mă de mândrie și dispreț. Ajută-mă să stau numai prin credință, să mă bucur de mila Ta și să închei orice studiu al planului Tău în închinare. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "romani-12",
@@ -629,7 +629,7 @@ export const NT_BOOK_06: BibleBook = {
         }
       ],
       "prayer": "Doamne, în vederea milei Tale îți ofer trupul și viața mea. Înnoiește-mi mintea, așază-mă smerit în trupul lui Hristos și dă-mi dragoste sinceră care nu răzbună răul, ci îl biruie prin bine. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "romani-13",
@@ -669,7 +669,7 @@ export const NT_BOOK_06: BibleBook = {
         }
       ],
       "prayer": "Doamne, dă-mi o conștiință curată în relația cu autoritățile și curaj să Te ascult mai presus de orice om. Ajută-mă să-mi plătesc datoriile, să iubesc fără să fac rău și să trăiesc treaz, îmbrăcat cu Hristos. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "romani-14",
@@ -718,7 +718,7 @@ export const NT_BOOK_06: BibleBook = {
         }
       ],
       "prayer": "Stăpâne, păzește-mă de dispreț, judecată și controlul conștiinței altora. Învață-mă să folosesc libertatea în dragoste, să urmăresc pacea și să-i primesc pe cei pe care Tu i-ai primit. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "romani-15",
@@ -776,7 +776,7 @@ export const NT_BOOK_06: BibleBook = {
         }
       ],
       "prayer": "Dumnezeul răbdării și al nădejdii, învață-mă să port slăbiciunile altora și să-i primesc cum m-a primit Hristos. Umple-mă cu bucurie și pace, folosește-mă în misiunea Ta și fă-mă credincios în rugăciune. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "romani-16",
@@ -825,7 +825,7 @@ export const NT_BOOK_06: BibleBook = {
         }
       ],
       "prayer": "Dumnezeul păcii, fă-mă un împreună-lucrător credincios, capabil să-i cinstesc pe ceilalți și să păzesc unitatea fără naivitate. Întărește-mă prin Evanghelie pentru ascultarea credinței și pune răul sub picioarele Bisericii Tale. Amin.",
-      "status": "in_review"
+      "status": "published"
     }
   ]
 }

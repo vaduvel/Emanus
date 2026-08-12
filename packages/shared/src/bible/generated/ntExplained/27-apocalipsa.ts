@@ -36,7 +36,7 @@ export const NT_BOOK_27: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "apocalipsa-2",
@@ -85,7 +85,7 @@ export const NT_BOOK_27: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "apocalipsa-3",
@@ -125,7 +125,7 @@ export const NT_BOOK_27: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "apocalipsa-4",
@@ -156,7 +156,7 @@ export const NT_BOOK_27: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "apocalipsa-5",
@@ -187,7 +187,7 @@ export const NT_BOOK_27: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "apocalipsa-6",
@@ -218,7 +218,7 @@ export const NT_BOOK_27: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "apocalipsa-7",
@@ -249,7 +249,7 @@ export const NT_BOOK_27: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "apocalipsa-8",
@@ -280,7 +280,7 @@ export const NT_BOOK_27: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "apocalipsa-9",
@@ -311,7 +311,7 @@ export const NT_BOOK_27: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "apocalipsa-10",
@@ -342,7 +342,7 @@ export const NT_BOOK_27: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "apocalipsa-11",
@@ -358,7 +358,7 @@ export const NT_BOOK_27: BibleBook = {
           "ref": "Apocalipsa 11:1-14",
           "heading": "Dumnezeu păstrează o mărturie profetică în mijlocul persecuției",
           "text": "Mi s-a dat o trestie ca un toiag. Cineva a zis: Scoală-te măsoară templul lui Dumnezeu, altarul pe cei ce se închină în el. Lăsați curtea care este în afara templului, și nu o măsurați, căci a fost dată neamurilor; ei vor călca cetatea sfântă sub picioare patruzeci și două de luni. Voi da putere celor doi martori ai mei, și vor profeți o mie două sute șaizeci de zile, îmbrăcați în sac. Aceștia sunt cei doi măslini și cele două candele stau în picioare, în picioare înaintea Domnului pământului. Dacă cineva dorește să le facă rău, focul iese din gura lor și devorează dușmanii lor. Dacă cineva dorește să le facă rău, el trebuie să fie ucis în acest fel. Aceștia au putere să închidă cerul, ca să nu plouă în zilele profeției lor; și au putere asupra apelor, să le schimbe în sânge și să lovească pământul cu toate plăgile, de câte ori voiesc. După ce își vor termina mărturia, fiara care iese din abis va face război cu ei, îi va birui și îi va omorî. Trupurile lor moarte vor fi pe strada cetății celei mari, numită spiritual, Sodoma și Egipt, unde și Domnul lor a fost răstignit. Din mijlocul popoarelor, triburilor, limbilor și națiunilor, oamenii se vor uita la trupurile lor moarte timp de trei zile și jumătate, și nu vor permite ca trupurile lor moarte să fie puse într-un mormânt. Cei ce locuiesc pe pământ se vor bucura de ei, și se vor bucura; își vor da daruri unii altora, pentru că acești doi profeți i-au chinuit pe cei ce locuiesc pe pământ. După cele trei zile și jumătate, suflarea de viață de la Dumnezeu a intrat în ei, și ei s-au așezat pe picioarele lor. O mare teamă a căzut peste cei ce i-au văzut. Am auzit un glas puternic din cer, care le zicea: Suiți-vă aici! Ei s-au suit la cer într-un nor, vrăjmașii lor i-au văzut. În ziua aceea a fost un cutremur mare, și o zecime din cetate a căzut. Șapte mii de oameni au fost uciși în cutremur, iar ceilalți au fost îngroziți și au dat slavă Dumnezeului cerurilor. Al doilea vai este trecut. Iată, al treilea vai vine repede.",
-          "teaching": "Măsurarea templului are în această explicație două niveluri. În planul literal, pasajul privește din nou spre Ierusalim, spre o perioadă finală de apăsare și spre doi martori pe care Dumnezeu îi ridică înainte de venirea lui Hristos. În aplicația pentru Biserică, Dumnezeu nu măsoară simpla apartenență exterioară, ci pe cei care intră în sanctuar, trăiesc înaintea feței Lui și se lasă judecați de Cuvânt. Curtea din afară avertizează împotriva unei credințe doar de nume, călduțe și mulțumite cu exteriorul.\n\nCei doi martori sunt prezentați ca profeți reali ai vremii de pe urmă, slujind în duhul fermității văzute la Moise și Ilie. Totuși, aceasta nu dă creștinului de acum dreptul să ceară foc peste vrăjmași. Isus a arătat că spiritul Noului Legământ nu caută nimicirea celui care respinge mesajul, ci iartă și cheamă la mântuire. Lecția pentru slujitorul de astăzi este curajul, simplitatea, smerenia și refuzul compromisului: să întrebe cine este de partea Domnului și să rămână de partea Cuvântului chiar când tradiția sau lumea merg în direcția opusă.\n\nFiara îi poate omorî numai după ce și-au terminat mărturia. Siguranța slujitorului nu este promisiunea că va evita suferința sau moartea, ci că nimeni nu poate scurta lucrarea pe care Dumnezeu i-a rânduit-o cât timp el umblă în ascultare. După batjocură și moarte, Dumnezeu îi ridică și îi cheamă sus. Adevărata îndreptățire publică poate să nu vină în timpul vieții; Dumnezeu Își va confirma slujitorii la înviere. De aceea credinciosul poate refuza goana după vindicare și aprobarea oamenilor, rămânând credincios până când mărturia lui este încheiată.",
+          "teaching": "Măsurarea templului are în această explicație două niveluri. În planul literal, pasajul privește din nou spre Ierusalim, spre o perioadă finală de apăsare și spre doi martori pe care Dumnezeu îi ridică înainte de venirea lui Hristos. În aplicația pentru Biserică, Dumnezeu nu măsoară simpla apartenență exterioară, ci pe cei care intră în sanctuar, trăiesc înaintea feței Lui și se lasă judecați de Cuvânt. Curtea din afară avertizează împotriva unei credințe doar de nume, călduțe și mulțumite cu exteriorul.\n\nCei doi martori sunt prezentați ca profeți reali ai vremii de pe urmă, slujind în duhul fermității văzute la Moise și Ilie. Totuși, aceasta nu dă creștinului de acum dreptul să ceară foc peste vrăjmași. Isus a arătat că spiritul Noului Legământ nu caută nimicirea celui care respinge mesajul, ci iartă și cheamă la mântuire. Lecția pentru slujitorul de astăzi este curajul, simplitatea, smerenia și refuzul compromisului: să întrebe cine este de partea Domnului și să rămână de partea Cuvântului chiar când tradiția sau lumea merg în direcția opusă.\n\nFiara îi poate omorî numai după ce și-au terminat mărturia. Siguranța slujitorului nu este promisiunea că va evita suferința sau moartea, ci că nimeni nu poate scurtă lucrarea pe care Dumnezeu i-a rânduit-o cât timp el umblă în ascultare. După batjocură și moarte, Dumnezeu îi ridică și îi cheamă sus. Adevărata îndreptățire publică poate să nu vină în timpul vieții; Dumnezeu Își va confirma slujitorii la înviere. De aceea credinciosul poate refuza goana după vindicare și aprobarea oamenilor, rămânând credincios până când mărturia lui este încheiată.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-locator-primary+canonical-research"
         },
@@ -373,7 +373,7 @@ export const NT_BOOK_27: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "apocalipsa-12",
@@ -413,7 +413,7 @@ export const NT_BOOK_27: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "apocalipsa-13",
@@ -444,7 +444,7 @@ export const NT_BOOK_27: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "apocalipsa-14",
@@ -469,7 +469,7 @@ export const NT_BOOK_27: BibleBook = {
           "ref": "Apocalipsa 14:6-13",
           "heading": "Evanghelia, căderea Babilonului și avertismentul împotriva închinării la fiară",
           "text": "Am văzut un înger zburând în mijlocul cerului, având o veste bună eternă pentru a le vesti celor care locuiesc pe pământ până la orice națiune, trib, limbă și popor. El a zis cu glas tare: Temeți-vă de Domnul dați-I slavă, căci a venit ceasul judecății Lui; închin-vă Celui ce a făcut cerurile, pământul, marea izvoarele apelor! A urmat un al doilea înger, care a zis: A căzut Babilonul cel mare, care a făcut ca toate neamurile să bea din vinul mâniei curviei ei. Un alt înger, al treilea, i-a urmat, și i-a zis cu glas mare:„ Dacă cineva se închină fiarei și chipului său, și primește un semn pe frunte sau pe mână, El va bea, de asemenea, din vinul mâiniei lui Dumnezeu, care este pregătit neamestecat în paharul mâiniei Lui. El va fi chinuit cu foc și sulf în prezența sfinților îngeri și în prezența Mielului. Fumul osândei lor se ridică pentru totdeauna și pentru totdeauna. Ei nu au odihnă zi și noapte, cei ce se închină fiarei și chipului său, și oricine primește semnul numelui său. Iată perseverența sfinților, aceia care păzesc poruncile lui Dumnezeu și credința lui Isus. Am auzit un glas din cer spunând: Scrie: Ferice de acum încolo de morții care mor în Domnul! Da, spune Duhul, ca să se odihnească de ostenelile lor, căci faptele lor urmează cu ei.",
-          "teaching": "Mesajul numit aici Evanghelie veșnică spune: teme-te de Dumnezeu, dă-I Lui gloria și închină-te Creatorului. Harul nu anulează frica sfântă și ascultarea. A da glorie lui Dumnezeu înseamnă și să ne judecăm pe noi înșine acum, pentru că judecata începe cu casa Lui înainte să ajungă la lume. Dumnezeu preferă să lucreze în har și mântuire; judecata vine după o răbdare îndelungată. Tocmai de aceea pocăința de astăzi este veste bună, nu o umilire de evitat.\n\nAl doilea mesaj anunță căderea Babilonului, creștinătatea infidelă care poartă limbaj religios, dar trăiește pentru lume, prestigiu și pofte. Al treilea avertizează că cine alege închinarea fiarei și sistemul ei alege și sfârșitul acelui sistem. Mila și dreptatea nu pot fi separate: omul care refuză constant mila față de alții nu trebuie să presupună că poate trata judecata lui Dumnezeu ca pe ceva ireal. De aceea sfinții sunt descriși prin perseverență, credință în Isus și ascultare obișnuită de poruncile lui Dumnezeu.\n\n«Fericiți cei care mor în Domnul» adaugă o perspectivă asupra vieții ascunse. Faptele lor îi urmează: există bine făcut fără publicitate, rugăciune, slujire și jertfă pe care oamenii nu le-au văzut, dar Dumnezeu le va aduce la lumină. Este trist dacă tot binele nostru a mers înaintea noastră sub forma reputației și nu rămâne nimic ascuns pentru ziua când El deschide cărțile. Ucenicul trăiește pentru ochii Tatălui, nu pentru aplauzele publicului.",
+          "teaching": "Mesajul numit aici Evanghelie veșnică spune: teme-te de Dumnezeu, dă-I Lui gloria și închină-te Creatorului. Harul nu anulează frica sfântă și ascultarea. A da glorie lui Dumnezeu înseamnă și să ne judecăm pe noi înșine acum, pentru că judecata începe cu casa Lui înainte să ajungă la lume. Dumnezeu preferă să lucreze în har și mântuire; judecata vine după o răbdare îndelungată. Tocmai de aceea pocăința de astăzi este veste bună, nu o umilire de evitat.\n\nAl doilea mesaj anunță căderea Babilonului, creștinătatea infidelă care poartă limbaj religios, dar trăiește pentru lume, prestigiu și pofte. Al treilea avertizează că cine alege închinarea fiarei și sistemul ei alege și sfârșitul acelui sistem. Mila și dreptatea nu pot fi separate: omul care refuză constant mila față de alții nu trebuie să presupună că poate trata judecata lui Dumnezeu ca pe ceva ireal. De aceea sfinții sunt descriși prin perseverență, credință în Isus și ascultare obișnuită de poruncile lui Dumnezeu.\n\nFericiți cei care mor în Domnul adaugă o perspectivă asupra vieții ascunse. Faptele lor îi urmează: există bine făcut fără publicitate, rugăciune, slujire și jertfă pe care oamenii nu le-au văzut, dar Dumnezeu le va aduce la lumină. Este trist dacă tot binele nostru a mers înaintea noastră sub forma reputației și nu rămâne nimic ascuns pentru ziua când El deschide cărțile. Ucenicul trăiește pentru ochii Tatălui, nu pentru aplauzele publicului.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-locator-primary+canonical-research"
         },
@@ -484,7 +484,7 @@ export const NT_BOOK_27: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "apocalipsa-15",
@@ -515,7 +515,7 @@ export const NT_BOOK_27: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "apocalipsa-16",
@@ -555,7 +555,7 @@ export const NT_BOOK_27: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "apocalipsa-17",
@@ -580,13 +580,13 @@ export const NT_BOOK_27: BibleBook = {
           "ref": "Apocalipsa 17:7-18",
           "heading": "Puterea politică folosește Babilonul și în cele din urmă se întoarce împotriva lui",
           "text": "Îngerul mi-a zis: De ce te miri? Îți voi spune taina femeii a fiarei care o poartă, care are cele capete cele zece coarne. Fiara pe care ați văzut-o era, și nu este; și este pe cale să iasă din abis și să meargă în distrugere. Cei care locuiesc pe pământ și ale căror nume nu au fost scrise în cartea vieții de la temelia lumii se vor minuna când vor vedea că fiara era, și nu este, și va fi prezentă. Și aici este mintea care are înțelepciune. Cele șapte capete sunt șapte munți pe care șade femeia. Ei sunt șapte împărați. Cinci au căzut, unul este, iar celălalt nu a venit încă; când vine el, trebuie să mai continue puțin. Fiara care a fost, și nu este, este el însuși o optime, și este din cei șapte; și el merge la nimicire. Cele zece coarne pe care le-ați văzut sunt zece împărați care încă nu au primit nici o împărăție, dar ei primesc autoritate ca regi cu fiara timp de o oră. Acestea au o singură minte, și dau puterea și autoritatea lor fiarei. Aceștia vor lupta împotriva Mielului, și Mielul îi va birui, căci El este Domnul domnilor și Împăratul împăraților; și cei ce sunt cu el sunt chemați, aleși și credincioși. El mi-a zis: Apele pe care le-ai văzut, unde stă prostituata, sunt popoare, mi, neamuri limbi. Cele zece coarne pe care le-ai văzut, ele și fiara vor urî pe prostituată, o vor face pustie, o vor dezbrăca goală, îi vor mânca carnea și o vor arde cu totul cu foc. Căci Dumnezeu a pus în inimile lor să facă ceea ce are în minte, să fie dintr-o singură minte și să dea împărăția lor fiarei, până ce cuvintele lui Dumnezeu vor fi împlinite. Femeia pe care ai văzut-o este cetatea cea mare, care domnește peste împărații pământului.„”",
-          "teaching": "Îngerul explică legătura dintre femeie, fiară, capete și coarne și arată o alianță temporară între sistemul religios corupt și puterile politice ale lumii. Aceste puteri vor da autoritate fiarei și vor lupta împotriva Mielului, dar Mielul îi va birui pentru că este Domnul domnilor și Regele regilor. În cele din urmă, aceleași puteri vor urî prostituata și o vor distruge. Babilonul își imaginează că poate folosi politica pentru propria măreție, dar sfârșește folosit și aruncat. Cei cu Mielul sunt descriși ca chemați, aleși și credincioși; loialitatea lor nu este față de alianțele lumii.",
+          "teaching": "Îngerul explică legătura dintre femeie, fiară, capete și coarne și arată o alianță temporară între sistemul religios corupt și puterile politice ale lumii. Aceste puteri vor da autoritate fiarei și vor lupta împotriva Mielului, dar Mielul îi va birui pentru că este Domnul domnilor și Regele regilor. În cele din urmă, aceleași puteri vor urî prostituata și o vor distruge. Babilonul își imaginează că poate folosi politică pentru propria măreție, dar sfârșește folosit și aruncat. Cei cu Mielul sunt descriși ca chemați, aleși și credincioși; loialitatea lor nu este față de alianțele lumii.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-locator-primary+canonical-research"
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "apocalipsa-18",
@@ -626,7 +626,7 @@ export const NT_BOOK_27: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "apocalipsa-19",
@@ -642,7 +642,7 @@ export const NT_BOOK_27: BibleBook = {
           "ref": "Apocalipsa 19:1-10",
           "heading": "Cerul spune Aleluia pentru judecata Babilonului și pentru nunta Mielului",
           "text": "După aceste lucruri, am auzit ceva ca un glas puternic al unei marimi în cer, spunând: Aleluia! Mântuirea, puterea slava sunt ale Dumnezeului nostru! Pentru că adevărate și drepte sunt judecățile lui, pentru că el a judecat curva cea mare care corupea pământul cu curvia ei și a răzbunat sângele robilor săi din mâna ei. Al doilea a zis: Aleluia! Fumul ei se ridică în sus pentru totdeauna. Cei douăzeci și patru de bătrâni și cele patru creaturi vii au căzut jos și s-au închinat lui Dumnezeu, care stă pe tron, spunând: Amin! Aleluia! Un glas a venit de la tron a zis: Lăudați pe Dumnezeul nostru, toți robii Lui, voi care vă temeți de El, cei mici cei mari! Am auzit ceva ca glasul unei mulțimi mari și ca glasul multor ape și ca glasul tunetelor puternice, zicând: Aleluia! Căci Domnul Dumnezeul nostru, Cel Atotputernic, împărăț! Să ne bucurăm să ne veselim nespus, să-i dăm slavă. Căci a venit nunta Mielului, nevasta lui s-a pregătit. I s-a dat să se îmbrace în in strălucitor, curat, fin, pentru că inul fin sunt faptele drepte ale sfinților. El mi-a zis: Scrie: Ferice de cei poftiți la ospățul de nuntă al Mielului! El mi-a zis: Acestea sunt adevăratele cuvinte ale lui Dumnezeu! M-am aruncat înaintea picioarelor lui ca să mă închin lui. El mi-a zis: Iată, nu face aceasta! Eu sunt un împreună-slujitor cu tine cu frații tăi care țin mărturia lui Isus. Închină-te lui Dumnezeu, căci mărturia lui Isus este Spiritul Profeției.",
-          "teaching": "Cerul spune «Aleluia» pentru că judecata lui Dumnezeu asupra Babilonului este adevărată și dreaptă. Bucuria cerului nu este cruzime față de oameni, ci acord cu dreptatea lui Dumnezeu când un sistem care a corupt, înșelat și persecutat este înlăturat. Același cer se bucură când păcătosul se pocăiește, când credinciosul biruie și când Mireasa este gata. Dumnezeu iubește mântuirea și sfințenia și, tocmai de aceea, nu va lăsa răul să domnească fără sfârșit.\n\nDespre Mireasă se spune că «s-a pregătit». Pregătirea nu este merit omenesc independent de har, dar nici pasivitate religioasă. Dumnezeu îi dă inul curat, iar ea răspunde lucrării Lui prin pocăință, curățire, ascultare și fapte drepte făcute în puterea Duhului. Nădejdea venirii lui Hristos îl face pe om să urmărească puritatea, să judece păcatul din propria viață și să lucreze mântuirea primită cu teamă de Dumnezeu. Rochia nu este reputația religioasă, ci caracterul și faptele pe care harul le-a produs în viața ascunsă.\n\nCând Ioan cade înaintea îngerului, acesta îl oprește imediat: «Închină-te lui Dumnezeu». Adevăratul slujitor nu cultivă dependență de personalitatea lui și nu îi face pe oameni să trăiască din fiecare cuvânt al lui; îi îndreaptă spre Hristos și spre Cuvânt. «Mărturia lui Isus este duhul profeției»: profeția autentică Îl pune pe Isus în centru și poartă aceeași mărturie de sfințenie, adevăr, cruce și ascultare pe care a purtat-o El. Mireasa se pregătește ascultând această voce, nu admirând mesagerul.",
+          "teaching": "Cerul spune «Aleluia» pentru că judecata lui Dumnezeu asupra Babilonului este adevărată și dreaptă. Bucuria cerului nu este cruzime față de oameni, ci acord cu dreptatea lui Dumnezeu când un sistem care a corupt, înșelat și persecutat este înlăturat. Același cer se bucură când păcătosul se pocăiește, când credinciosul biruie și când Mireasa este gata. Dumnezeu iubește mântuirea și sfințenia și, tocmai de aceea, nu va lăsa răul să domnească fără sfârșit.\n\nDespre Mireasă se spune că «s-a pregătit». Pregătirea nu este merit omenesc independent de har, dar nici pasivitate religioasă. Dumnezeu îi dă inul curat, iar ea răspunde lucrării Lui prin pocăință, curățire, ascultare și fapte drepte făcute în puterea Duhului. Nădejdea venirii lui Hristos îl face pe om să urmărească puritatea, să judece păcatul din propria viață și să lucreze mântuirea primită cu teamă de Dumnezeu. Rochia nu este reputația religioasă, ci caracterul și faptele pe care harul le-a produs în viața ascunsă.\n\nCând Ioan cade înaintea îngerului, acesta îl oprește imediat: «Închină-te lui Dumnezeu». Adevăratul slujitor nu cultivă dependență de personalitatea lui și nu îi face pe oameni să trăiască din fiecare cuvânt al lui; îi îndreaptă spre Hristos și spre Cuvânt. Mărturia lui Isus este duhul profeției: profeția autentică Îl pune pe Isus în centru și poartă aceeași mărturie de sfințenie, adevăr, cruce și ascultare pe care a purtat-o El. Mireasa se pregătește ascultând această voce, nu admirând mesagerul.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-locator-primary+canonical-research"
         },
@@ -657,7 +657,7 @@ export const NT_BOOK_27: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "apocalipsa-20",
@@ -697,7 +697,7 @@ export const NT_BOOK_27: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "apocalipsa-21",
@@ -737,7 +737,7 @@ export const NT_BOOK_27: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "apocalipsa-22",
@@ -777,7 +777,7 @@ export const NT_BOOK_27: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     }
   ]
 }

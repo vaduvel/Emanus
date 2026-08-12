@@ -1,0 +1,511 @@
+{
+  "schema": "emanus-nt-semantic-review-book-v1",
+  "bookId": "filipeni",
+  "reviewMode": "manual-unit-by-unit-exact-persisted-official-audio-transcript-review",
+  "coverage": {
+    "bookUnits": 19,
+    "approvedUnits": 19,
+    "rewrite": 13,
+    "keep": 6,
+    "officialTranscriptSources": [
+      "filipeni-vbv-01",
+      "filipeni-vbv-02",
+      "filipeni-vbv-03",
+      "filipeni-vbv-04"
+    ]
+  },
+  "decisions": [
+    {
+      "bookId": "filipeni",
+      "chapter": 1,
+      "unitId": "filipeni-1-1-2",
+      "status": "approved-against-transcript",
+      "action": "rewrite",
+      "reviewedPreEditSnapshotSha256": "sha256:fe0011615583f0af0f97ab229473c183a5b7ddc12bb825fd77002a1b93320714",
+      "reviewedTeachingSha256": "sha256:dc0ad07a64c73aa2f6caf7463665613a379d13e4c9d91c5a243f49a1b5f75063",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/01phiippians-chapter-11-to-chapter-27",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt11-philippians-chapter-1-1-to-chapter-2-7.mp3",
+          "sourceRange": "Filipeni 1:1-2; exact persisted official audio transcript filipeni-vbv-01; Philippians 1:1-2:7; coverage set filipeni-vbv-01; relevant interval 00:00:03-00:09:53",
+          "transcriptSha256": "sha256:069c81216f65fe90e875de97eb9e378016a2bae70b0996582976f70cc50409d5",
+          "evidenceSha256": "sha256:10838e754bc073ac04e26e32a4504e39652fdc80e7c28bc020d58f8694b1dbc5",
+          "officialAudioSha256": "sha256:05efbb5fba36933ee3a432d674a6ac2178721c88ab7194db114d292a060b3f53",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "wordCount": 13089,
+          "sourceId": "filipeni-vbv-01"
+        }
+      ],
+      "rationale": "Miezul despre robia voluntară față de Hristos este susținut, însă forma curentă conține o greșeală de diacritică și adaugă o listă modernă despre drepturile liderilor care nu apare în intervalul oficial. Rescrierea păstrează direct apartenența, slujirea fără privilegii, sfinții, supraveghetorii, diaconii, harul și pacea.",
+      "reviewer": "manual Codex editorial review against exact persisted official audio transcript and Scripture",
+      "reviewedOn": "2026-08-11",
+      "revisedTeaching": "Pavel și Timotei se prezintă ca robi ai lui Hristos Isus. Titlul nu revendică prestigiu, ci arată apartenență deplină: robul nu își negociază timpul, răsplata sau ascultarea, ci caută voia Stăpânului. Slujirea creștină nu este o carieră pentru privilegii, ci o viață pusă la dispoziția lui Hristos din dragoste.\n\nScrisoarea se adresează tuturor sfinților în Hristos Isus, împreună cu supraveghetorii și diaconii. Sfințenia nu desemnează o elită spirituală, iar conducătorii sunt enumerați înăuntrul comunității, ca slujitori. Harul și pacea vin de la Dumnezeu Tatăl și de la Domnul Isus Hristos.",
+      "revisedForYourHeart": "Întreabă-te ce drept personal te împiedică să-I slujești lui Hristos cu bucurie și adu-I dorința ta de răsplată, prestigiu sau control."
+    },
+    {
+      "bookId": "filipeni",
+      "chapter": 1,
+      "unitId": "filipeni-1-3-11",
+      "status": "approved-against-transcript",
+      "action": "keep",
+      "reviewedPreEditSnapshotSha256": "sha256:c2fb09f97d36b6621eabac867773012fbb5dad65c7d3fe085d74e608d4268254",
+      "reviewedTeachingSha256": "sha256:c2fb09f97d36b6621eabac867773012fbb5dad65c7d3fe085d74e608d4268254",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/01phiippians-chapter-11-to-chapter-27",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt11-philippians-chapter-1-1-to-chapter-2-7.mp3",
+          "sourceRange": "Filipeni 1:3-11; exact persisted official audio transcript filipeni-vbv-01; Philippians 1:1-2:7; coverage set filipeni-vbv-01; relevant interval 00:09:53-00:30:08",
+          "transcriptSha256": "sha256:069c81216f65fe90e875de97eb9e378016a2bae70b0996582976f70cc50409d5",
+          "evidenceSha256": "sha256:783a81fbc977db44e1ed6b64d93f3f6a5fd7f22f78fd8dab1f0be1f761832bcb",
+          "officialAudioSha256": "sha256:05efbb5fba36933ee3a432d674a6ac2178721c88ab7194db114d292a060b3f53",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "wordCount": 13089,
+          "sourceId": "filipeni-vbv-01"
+        }
+      ],
+      "rationale": "Unitatea păstrează toate axele materiale ale intervalului: mulțumirea și bucuria lui Pavel, părtășia în Evanghelie, încrederea că Dumnezeu Își va duce lucrarea la capăt și rugăciunea pentru dragoste unită cu cunoaștere, discernământ și roada dreptății. Nu conține nume moderne sau adaosuri doctrinare materiale.",
+      "reviewer": "manual Codex editorial review against exact persisted official audio transcript and Scripture",
+      "reviewedOn": "2026-08-11"
+    },
+    {
+      "bookId": "filipeni",
+      "chapter": 1,
+      "unitId": "filipeni-1-12-18",
+      "status": "approved-against-transcript",
+      "action": "keep",
+      "reviewedPreEditSnapshotSha256": "sha256:6f739f24a70804716185a2945d5f2aca369ff42e82b36f1bebb64d300961c523",
+      "reviewedTeachingSha256": "sha256:6f739f24a70804716185a2945d5f2aca369ff42e82b36f1bebb64d300961c523",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/01phiippians-chapter-11-to-chapter-27",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt11-philippians-chapter-1-1-to-chapter-2-7.mp3",
+          "sourceRange": "Filipeni 1:12-18; exact persisted official audio transcript filipeni-vbv-01; Philippians 1:1-2:7; coverage set filipeni-vbv-01; relevant interval 00:30:08-00:40:50",
+          "transcriptSha256": "sha256:069c81216f65fe90e875de97eb9e378016a2bae70b0996582976f70cc50409d5",
+          "evidenceSha256": "sha256:0931aafc9d22d2d456f304731219255a4a40e88c2c86e3f9dd9abb5df407c362",
+          "officialAudioSha256": "sha256:05efbb5fba36933ee3a432d674a6ac2178721c88ab7194db114d292a060b3f53",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "wordCount": 13089,
+          "sourceId": "filipeni-vbv-01"
+        }
+      ],
+      "rationale": "Întemnițarea folosită pentru înaintarea Evangheliei, curajul fraților și contrastul dintre predicarea din dragoste și predicarea din rivalitate sunt redate fidel. Bucuria pentru proclamarea lui Hristos nu este confundată cu aprobarea motivelor egoiste.",
+      "reviewer": "manual Codex editorial review against exact persisted official audio transcript and Scripture",
+      "reviewedOn": "2026-08-11"
+    },
+    {
+      "bookId": "filipeni",
+      "chapter": 1,
+      "unitId": "filipeni-1-19-26",
+      "status": "approved-against-transcript",
+      "action": "rewrite",
+      "reviewedPreEditSnapshotSha256": "sha256:cf441a1c802ece0edbac80052c17a4fee870566e4a1835d24a289ce01c56c2e9",
+      "reviewedTeachingSha256": "sha256:f005a5d43c454193d96978b1c2dd0e95d76ecf20983e2f588616c4e9ff307b78",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/01phiippians-chapter-11-to-chapter-27",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt11-philippians-chapter-1-1-to-chapter-2-7.mp3",
+          "sourceRange": "Filipeni 1:19-26; exact persisted official audio transcript filipeni-vbv-01; Philippians 1:1-2:7; coverage set filipeni-vbv-01; relevant interval 00:40:39-00:50:17",
+          "transcriptSha256": "sha256:069c81216f65fe90e875de97eb9e378016a2bae70b0996582976f70cc50409d5",
+          "evidenceSha256": "sha256:dc4df7bbe0ad306d57f031c82958203d8cdf10f9ab8f425a1fd1b89bd243ea41",
+          "officialAudioSha256": "sha256:05efbb5fba36933ee3a432d674a6ac2178721c88ab7194db114d292a060b3f53",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "wordCount": 13089,
+          "sourceId": "filipeni-vbv-01"
+        }
+      ],
+      "rationale": "Afirmațiile despre Hristos preamărit în trup, câștigul de a fi cu El și rămânerea pentru progresul altora sunt susținute. Paragraful curent introduce însă o aplicație explicită despre sinucidere pe care episodul nu o tratează; aceasta este eliminată fără a slăbi responsabilitatea vieții trăite pentru Hristos și pentru binele altora.",
+      "reviewer": "manual Codex editorial review against exact persisted official audio transcript and Scripture",
+      "reviewedOn": "2026-08-11",
+      "revisedTeaching": "Pavel așteaptă ca, prin rugăciunile credincioșilor și ajutorul Duhului lui Isus Hristos, să nu fie făcut de rușine, ci Hristos să fie preamărit în trupul lui, fie prin viață, fie prin moarte. „A trăi este Hristos” înseamnă că viața lui nu mai este orientată spre sine, ci spre interesele și caracterul lui Hristos.\n\nPentru Pavel, plecarea și prezența cu Hristos ar fi câștig; totuși, rămânerea în trup este mai necesară pentru progresul și bucuria credincioșilor. El nu își alege binele în izolare, ci primește viața și slujirea ca pe o responsabilitate față de ceilalți."
+    },
+    {
+      "bookId": "filipeni",
+      "chapter": 1,
+      "unitId": "filipeni-1-27-30",
+      "status": "approved-against-transcript",
+      "action": "rewrite",
+      "reviewedPreEditSnapshotSha256": "sha256:9ddde7748683e06367662d4ee11fab097533801550f75d49dea7b8963f204048",
+      "reviewedTeachingSha256": "sha256:00ded65261de605abe74f15fc87b041db00240804fd33d397cdb7c83bb6a6ab3",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/01phiippians-chapter-11-to-chapter-27",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt11-philippians-chapter-1-1-to-chapter-2-7.mp3",
+          "sourceRange": "Filipeni 1:27-30; exact persisted official audio transcript filipeni-vbv-01; Philippians 1:1-2:7; coverage set filipeni-vbv-01; relevant interval 00:50:05-01:00:20",
+          "transcriptSha256": "sha256:069c81216f65fe90e875de97eb9e378016a2bae70b0996582976f70cc50409d5",
+          "evidenceSha256": "sha256:8645383aceccebc6120d8080237fc58ffcee5c9d7e1b71850fe20b994724c02e",
+          "officialAudioSha256": "sha256:05efbb5fba36933ee3a432d674a6ac2178721c88ab7194db114d292a060b3f53",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "wordCount": 13089,
+          "sourceId": "filipeni-vbv-01"
+        }
+      ],
+      "rationale": "Unitatea, curajul și lupta comună sunt fidele, dar ultima propoziție curentă introduce o regulă pastorală despre acceptarea pasivă a suferinței, absentă din episod. Rescrierea păstrează distincția cerută chiar de pasaj: este vorba despre suferința pentru Hristos, dăruită împreună cu privilegiul credinței.",
+      "reviewer": "manual Codex editorial review against exact persisted official audio transcript and Scripture",
+      "reviewedOn": "2026-08-11",
+      "revisedTeaching": "Pavel cere o purtare vrednică de Evanghelia lui Hristos: credincioșii să stea tari într-un singur duh, să lupte împreună cu un singur suflet pentru credința Evangheliei și să nu se lase înspăimântați de împotrivitori. Chemarea nu este la individualism sau rivalitate, ci la statornicie și lucrare comună.\n\nCredința în Hristos le-a fost dăruită, iar împreună cu ea poate veni și suferința pentru El. Pavel nu prezintă opoziția drept semn că Dumnezeu i-a abandonat, ci drept o luptă pe care și el o purta. Suferința numită aici este suferința pentru Hristos, nu orice durere întâlnită în viață."
+    },
+    {
+      "bookId": "filipeni",
+      "chapter": 2,
+      "unitId": "filipeni-2-1-4",
+      "status": "approved-against-transcript",
+      "action": "rewrite",
+      "reviewedPreEditSnapshotSha256": "sha256:dcb937c16fa96c66c5a04f00df0a5eeb74069a2934059bc93e765e72e18aff54",
+      "reviewedTeachingSha256": "sha256:3e6809e000e51549e0fa42e7106c4b274c02d9583085bc626a5284f33a59be7b",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/01phiippians-chapter-11-to-chapter-27",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt11-philippians-chapter-1-1-to-chapter-2-7.mp3",
+          "sourceRange": "Filipeni 2:1-4; exact persisted official audio transcript filipeni-vbv-01; Philippians 1:1-2:7; coverage set filipeni-vbv-01; relevant interval 01:00:14-01:10:24",
+          "transcriptSha256": "sha256:069c81216f65fe90e875de97eb9e378016a2bae70b0996582976f70cc50409d5",
+          "evidenceSha256": "sha256:f9f684f4041596058124ebef094b209dd45d0525d2dada42f2937a00305e1c65",
+          "officialAudioSha256": "sha256:05efbb5fba36933ee3a432d674a6ac2178721c88ab7194db114d292a060b3f53",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "wordCount": 13089,
+          "sourceId": "filipeni-vbv-01"
+        }
+      ],
+      "rationale": "Textul curent surprinde smerenia, dar introduce opoziția modernă față de „uniformitate forțată” și formula despre „limite sănătoase”, care nu sunt axele intervalului oficial. Rescrierea redă aceleași gânduri, dragostea, scopul comun, renunțarea la ambiție și grija nu numai pentru propriile interese.",
+      "reviewer": "manual Codex editorial review against exact persisted official audio transcript and Scripture",
+      "reviewedOn": "2026-08-11",
+      "revisedTeaching": "Pavel își întemeiază apelul pe încurajarea în Hristos, mângâierea dragostei și părtășia Duhului. El cere aceeași gândire, aceeași dragoste, un singur suflet și un singur scop. Unitatea aceasta se vede când ambiția egoistă și slava deșartă sunt lepădate, iar smerenia îl face pe fiecare să-i socotească pe ceilalți mai presus de sine.\n\nCredinciosul nu privește numai la interesele lui, ci și la ale celorlalți. Pavel nu poruncește nepăsare față de propriile responsabilități, ci distruge egoismul care face din interesul personal centrul tuturor alegerilor. Smerenia caută în mod concret binele celuilalt.",
+      "revisedForYourHeart": "Alege astăzi un interes concret al altei persoane pe care îl poți sluji fără rivalitate și fără să cauți recunoaștere."
+    },
+    {
+      "bookId": "filipeni",
+      "chapter": 2,
+      "unitId": "filipeni-2-5-11",
+      "status": "approved-against-transcript",
+      "action": "rewrite",
+      "reviewedPreEditSnapshotSha256": "sha256:df23fc21336339da0b0f0130733491fafa9eca490ce0326ac99caba6d661ea53",
+      "reviewedTeachingSha256": "sha256:2ae42f657d5b7139b0e01196a311a8e3b5c64aef1d44a4d60a2a1f0db5af3dc9",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/02philippians-chapter-25-to-chapter-230",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt11-philippians-chapter-2-5-to-chapter-2-30.mp3",
+          "sourceRange": "Filipeni 2:5-11; exact persisted official audio transcript filipeni-vbv-02; Philippians 2:5-2:30; coverage set filipeni-vbv-02; relevant interval 00:00:03-00:20:50",
+          "transcriptSha256": "sha256:05cae39f4220e3492bc050a1f310d61b116e7273becfe0df4eb6b44a5b3d5190",
+          "evidenceSha256": "sha256:f343ddea7ab586e20b8f17f3b4546679e929f8f128ef86a6d396e8d4b53153a6",
+          "officialAudioSha256": "sha256:e9e09ba7086bccb1d543398b01e115e0939bbb29522c62f385ce75570e6bbc09",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "wordCount": 13625,
+          "sourceId": "filipeni-vbv-02"
+        }
+      ],
+      "rationale": "Coborârea, ascultarea și înălțarea lui Hristos sunt corecte în forma curentă. Ultimele propoziții mută însă unitatea într-un scenariu modern despre victimă și abuzator, netratat de episod. Rescrierea restaurează integral mișcarea pasajului de la smerirea voluntară a Fiului la domnia Lui universal mărturisită.",
+      "reviewer": "manual Codex editorial review against exact persisted official audio transcript and Scripture",
+      "reviewedOn": "2026-08-11",
+      "revisedTeaching": "Credincioșii sunt chemați să aibă în ei felul de gândire al lui Hristos Isus. Deși era în chipul lui Dumnezeu, El nu a folosit egalitatea cu Dumnezeu pentru avantaj propriu, ci S-a golit luând chip de rob și devenind asemenea oamenilor. S-a smerit și S-a făcut ascultător până la moarte, și încă moarte de cruce.\n\nDe aceea Dumnezeu L-a înălțat foarte sus și I-a dăruit Numele mai presus de orice nume. Orice genunchi se va pleca și orice limbă va mărturisi că Isus Hristos este Domnul, spre slava lui Dumnezeu Tatăl. Calea lui Hristos este opusul egoismului și al mândriei: El a coborât în ascultare, iar Tatăl L-a înălțat."
+    },
+    {
+      "bookId": "filipeni",
+      "chapter": 2,
+      "unitId": "filipeni-2-12-18",
+      "status": "approved-against-transcript",
+      "action": "rewrite",
+      "reviewedPreEditSnapshotSha256": "sha256:a32152439ec8f04c09c3eb99344f34f7c6e91e2014f3f2643413c948fa68b13b",
+      "reviewedTeachingSha256": "sha256:a560e9125aba766784b84bc7375a16202b45f265456e1f8ab98b24ffc7ed594f",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/02philippians-chapter-25-to-chapter-230",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt11-philippians-chapter-2-5-to-chapter-2-30.mp3",
+          "sourceRange": "Filipeni 2:12-18; exact persisted official audio transcript filipeni-vbv-02; Philippians 2:5-2:30; coverage set filipeni-vbv-02; relevant interval 00:20:41-01:01:37",
+          "transcriptSha256": "sha256:05cae39f4220e3492bc050a1f310d61b116e7273becfe0df4eb6b44a5b3d5190",
+          "evidenceSha256": "sha256:70acf06cb998066f183ec8d65ee0527c8687ed6997723f7c22622741adf62b13",
+          "officialAudioSha256": "sha256:e9e09ba7086bccb1d543398b01e115e0939bbb29522c62f385ce75570e6bbc09",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "wordCount": 13625,
+          "sourceId": "filipeni-vbv-02"
+        }
+      ],
+      "rationale": "Forma curentă este doctrinar sănătoasă, dar începe cu o apărare despre cumpărarea iertării și omite exemplul material al lui Pavel turnat ca jertfă. Rescrierea urmează progresia episodului: Dumnezeu lucrează, omul ascultă, cârtirea este lepădată, Cuvântul vieții este ținut sus, iar slujirea lui Pavel devine exemplu.",
+      "reviewer": "manual Codex editorial review against exact persisted official audio transcript and Scripture",
+      "reviewedOn": "2026-08-11",
+      "revisedTeaching": "Pavel îi cheamă pe credincioși să-și ducă până la capăt mântuirea cu frică și cutremur, nu bizuindu-se pe puterea lor, deoarece Dumnezeu este Cel care lucrează în ei atât voința, cât și înfăptuirea, după buna Lui plăcere. Ei trebuie să răspundă prin ascultare și să lase lucrarea lui Dumnezeu să-i elibereze de egoism și mândrie.\n\nTotul trebuie făcut fără cârtiri și dispute, pentru ca ei să fie fără vină și curați, copii ai lui Dumnezeu care strălucesc într-o generație strâmbă, ținând sus Cuvântul vieții. Pavel însuși este gata să fie turnat ca o jertfă peste slujirea credinței lor și se bucură împreună cu ei."
+    },
+    {
+      "bookId": "filipeni",
+      "chapter": 2,
+      "unitId": "filipeni-2-19-24",
+      "status": "approved-against-transcript",
+      "action": "keep",
+      "reviewedPreEditSnapshotSha256": "sha256:ece11b5c73cbfa88189f176d5a9322a5bd4ad39efcce5dc2a56baafadd762a94",
+      "reviewedTeachingSha256": "sha256:ece11b5c73cbfa88189f176d5a9322a5bd4ad39efcce5dc2a56baafadd762a94",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/02philippians-chapter-25-to-chapter-230",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt11-philippians-chapter-2-5-to-chapter-2-30.mp3",
+          "sourceRange": "Filipeni 2:19-24; exact persisted official audio transcript filipeni-vbv-02; Philippians 2:5-2:30; coverage set filipeni-vbv-02; relevant interval 01:01:37-01:12:11",
+          "transcriptSha256": "sha256:05cae39f4220e3492bc050a1f310d61b116e7273becfe0df4eb6b44a5b3d5190",
+          "evidenceSha256": "sha256:0a7701842509c570de431b56dd740716d031de725dca6b3d58b51c258948201a",
+          "officialAudioSha256": "sha256:e9e09ba7086bccb1d543398b01e115e0939bbb29522c62f385ce75570e6bbc09",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "wordCount": 13625,
+          "sourceId": "filipeni-vbv-02"
+        }
+      ],
+      "rationale": "Grija sinceră a lui Timotei, contrastul cu cei care își caută propriile interese și caracterul lui încercat în slujirea Evangheliei sunt toate afirmate explicit în episod. Reader copy rămâne concentrat și fără adaosuri moderne materiale.",
+      "reviewer": "manual Codex editorial review against exact persisted official audio transcript and Scripture",
+      "reviewedOn": "2026-08-11"
+    },
+    {
+      "bookId": "filipeni",
+      "chapter": 2,
+      "unitId": "filipeni-2-25-30",
+      "status": "approved-against-transcript",
+      "action": "rewrite",
+      "reviewedPreEditSnapshotSha256": "sha256:c4469359e5dbce320955f2fcd02a42ab94104767c9ce9f8b524e3178e6f19e28",
+      "reviewedTeachingSha256": "sha256:c097c795b5cd9447c9d48e59385afc18173c056f143eaade65f644776d46a059",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/02philippians-chapter-25-to-chapter-230",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt11-philippians-chapter-2-5-to-chapter-2-30.mp3",
+          "sourceRange": "Filipeni 2:25-30; exact persisted official audio transcript filipeni-vbv-02; Philippians 2:5-2:30; coverage set filipeni-vbv-02; relevant interval 01:11:45-01:21:54",
+          "transcriptSha256": "sha256:05cae39f4220e3492bc050a1f310d61b116e7273becfe0df4eb6b44a5b3d5190",
+          "evidenceSha256": "sha256:cee77a8823c417ce80273392291608b729d5200c82fafe7cdd21ed03ce54e14e",
+          "officialAudioSha256": "sha256:e9e09ba7086bccb1d543398b01e115e0939bbb29522c62f385ce75570e6bbc09",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "wordCount": 13625,
+          "sourceId": "filipeni-vbv-02"
+        }
+      ],
+      "rationale": "Titlurile, boala, grija lui Epafrodit și cinstirea slujirii lui sunt susținute. Forma curentă adaugă o lecție generală despre îngrijirea sănătății și limitele trupului pe care episodul nu o dezvoltă. Rescrierea păstrează fără diluare riscul asumat pentru lucrarea lui Hristos și motivul biblic al cinstirii.",
+      "reviewer": "manual Codex editorial review against exact persisted official audio transcript and Scripture",
+      "reviewedOn": "2026-08-11",
+      "revisedTeaching": "Epafrodit este numit fratele, împreună-lucrătorul și împreună-ostașul lui Pavel, precum și trimisul filipenilor pentru nevoile lui. El tânjea după credincioși și era mâhnit fiindcă auziseră că fusese bolnav. Fusese aproape de moarte, dar Dumnezeu a avut milă de el și de Pavel.\n\nPavel îl trimite înapoi pentru ca biserica să se bucure și cere să fie primit în Domnul cu toată bucuria. Oameni ca el trebuie ținuți la mare cinste, fiindcă și-a riscat viața pentru lucrarea lui Hristos și a împlinit slujirea pe care filipenii nu o puteau face de la distanță. Cinstea este legată de caracter și de slujirea jertfitoare, nu de talent public.",
+      "revisedForYourHeart": "Cinstește discret o persoană care a slujit cu credincioșie și mulțumește-I lui Dumnezeu pentru caracterul ei dovedit."
+    },
+    {
+      "bookId": "filipeni",
+      "chapter": 3,
+      "unitId": "filipeni-3-1-6",
+      "status": "approved-against-transcript",
+      "action": "rewrite",
+      "reviewedPreEditSnapshotSha256": "sha256:3b207698a3c9c64cd87bde200bf06e353776c2f5bd9a3e7aad43d435aaf07239",
+      "reviewedTeachingSha256": "sha256:cabf85cf73bf93d84ddd9f9f9417dfc74e7e5496b22eed455b525f2f7db2c43d",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/03philippians-chapter-31-to-chapter-319",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt11-philippians-chapter-3-1-to-chapter-3-19.mp3",
+          "sourceRange": "Filipeni 3:1-6; exact persisted official audio transcript filipeni-vbv-03; Philippians 3:1-3:19; coverage set filipeni-vbv-03; relevant interval 00:00:03-00:29:15",
+          "transcriptSha256": "sha256:5ad22d71111290a81d095dc377e1faa10bd24fd72325767b7ccba4ea0fe03f55",
+          "evidenceSha256": "sha256:c75f8874540f1ddf33b0cfc0649f6209a715ec4198d29497a06a74bef41cb67c",
+          "officialAudioSha256": "sha256:fdcf328b5380116c8cf65938e68b744eb7e81ba44a3f9faab771bb34a51f0996",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "wordCount": 12668,
+          "sourceId": "filipeni-vbv-03"
+        }
+      ],
+      "rationale": "Concluzia fără încredere în firea pământească este corectă, dar forma curentă adaugă o apărare modernă despre valoarea etniei și rezumă prea generic lista deliberat concretă a lui Pavel. Rescrierea păstrează avertismentul aspru, adevărata închinare prin Duhul și toate meritele religioase pe care Pavel refuză să se sprijine.",
+      "reviewer": "manual Codex editorial review against exact persisted official audio transcript and Scripture",
+      "reviewedOn": "2026-08-11",
+      "revisedTeaching": "Pavel repetă avertismentul pentru siguranța bisericii și îi numește direct pe cei care puneau încrederea mântuirii în circumcizie. Adevărata circumcizie este poporul care se închină prin Duhul lui Dumnezeu, se laudă în Hristos Isus și nu își pune încrederea în firea pământească.\n\nDacă cineva ar fi putut invoca merite religioase, Pavel avea un dosar impresionant: circumcis a opta zi, din Israel, din seminția lui Beniamin, evreu din evrei, fariseu în privința Legii, prigonitor din râvnă și fără vină după dreptatea Legii. Nici originea, nici ritualul, nici zelul și nici disciplina morală nu pot deveni temelia laudei înaintea lui Dumnezeu. Lauda credinciosului este numai în Hristos."
+    },
+    {
+      "bookId": "filipeni",
+      "chapter": 3,
+      "unitId": "filipeni-3-7-11",
+      "status": "approved-against-transcript",
+      "action": "rewrite",
+      "reviewedPreEditSnapshotSha256": "sha256:9975fe4b823864e11fd9af72f0ac047a708b7eeaaf571abcffc2c806d70ca3be",
+      "reviewedTeachingSha256": "sha256:d7d758e78fe9c315e52264864f21ba3067ac523f76973f50347e281b9e65cb9d",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/03philippians-chapter-31-to-chapter-319",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt11-philippians-chapter-3-1-to-chapter-3-19.mp3",
+          "sourceRange": "Filipeni 3:7-11; exact persisted official audio transcript filipeni-vbv-03; Philippians 3:1-3:19; coverage set filipeni-vbv-03; relevant interval 00:19:26-00:58:49",
+          "transcriptSha256": "sha256:5ad22d71111290a81d095dc377e1faa10bd24fd72325767b7ccba4ea0fe03f55",
+          "evidenceSha256": "sha256:2cb80f2e4194ce4f70e3661c32417f1457166248c86db2b868f7c8389b353850",
+          "officialAudioSha256": "sha256:fdcf328b5380116c8cf65938e68b744eb7e81ba44a3f9faab771bb34a51f0996",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "wordCount": 12668,
+          "sourceId": "filipeni-vbv-03"
+        }
+      ],
+      "rationale": "Pierderile, dreptatea prin credință și cunoașterea lui Hristos sunt bine orientate. Finalul curent adaugă reguli moderne despre provocarea durerii, romantizare și căutarea protecției, absente din episod. Rescrierea păstrează direct părtășia suferințelor și conformarea cu moartea lui Hristos, explicate ca moarte față de egoism și păcat.",
+      "reviewer": "manual Codex editorial review against exact persisted official audio transcript and Scripture",
+      "reviewedOn": "2026-08-11",
+      "revisedTeaching": "Lucrurile pe care Pavel le socotise câștig le consideră acum pierdere din cauza lui Hristos. Mai mult, socotește toate lucrurile pierdere față de valoarea nespus de mare a cunoașterii lui Hristos Isus, Domnul său. El renunță la orice merit propriu ca să-L câștige pe Hristos și să fie găsit în El.\n\nDreptatea lui nu mai vine din Lege, ci prin credința în Hristos, de la Dumnezeu. Pavel vrea să-L cunoască pe Hristos, puterea învierii Lui și părtășia suferințelor Lui, fiind făcut asemenea morții Sale, ca să ajungă la învierea dintre cei morți. Cunoașterea lui Hristos nu este informație religioasă, ci o viață în care egoismul și păcatul sunt date morții, iar puterea învierii lucrează ascultare."
+    },
+    {
+      "bookId": "filipeni",
+      "chapter": 3,
+      "unitId": "filipeni-3-12-16",
+      "status": "approved-against-transcript",
+      "action": "keep",
+      "reviewedPreEditSnapshotSha256": "sha256:85212f097ae20e887808c0a3a338e853ad7bacab1becb0175784fcf30a08d7e8",
+      "reviewedTeachingSha256": "sha256:85212f097ae20e887808c0a3a338e853ad7bacab1becb0175784fcf30a08d7e8",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/03philippians-chapter-31-to-chapter-319",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt11-philippians-chapter-3-1-to-chapter-3-19.mp3",
+          "sourceRange": "Filipeni 3:12-16; exact persisted official audio transcript filipeni-vbv-03; Philippians 3:1-3:19; coverage set filipeni-vbv-03; relevant interval 00:54:36-01:08:46",
+          "transcriptSha256": "sha256:5ad22d71111290a81d095dc377e1faa10bd24fd72325767b7ccba4ea0fe03f55",
+          "evidenceSha256": "sha256:aa26270fe7711b94f38694834f5c1f06b6315bb6f519ecf400245db4c3ad34a1",
+          "officialAudioSha256": "sha256:fdcf328b5380116c8cf65938e68b744eb7e81ba44a3f9faab771bb34a51f0996",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "wordCount": 12668,
+          "sourceId": "filipeni-vbv-03"
+        }
+      ],
+      "rationale": "Unitatea redă faptul că Pavel nu ajunsese la desăvârșirea finală, continua să alerge spre asemănarea cu Hristos, lăsa în urmă atât eșecurile, cât și realizările și trăia potrivit luminii deja primite. Aplicația despre refuzul stagnării este susținută de episod.",
+      "reviewer": "manual Codex editorial review against exact persisted official audio transcript and Scripture",
+      "reviewedOn": "2026-08-11"
+    },
+    {
+      "bookId": "filipeni",
+      "chapter": 3,
+      "unitId": "filipeni-3-17-21",
+      "status": "approved-against-transcript",
+      "action": "rewrite",
+      "reviewedPreEditSnapshotSha256": "sha256:71f39c0b2100ba8f752d7130d3e075478696b1acc3e31b1c9ec8753deff2f1cf",
+      "reviewedTeachingSha256": "sha256:9e982a3039232255509987e30b44c5283b42b0d2131bd2b99c83b824717377d3",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/04philippians-chapter-317-to-chapter-423",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt11-philippians-chapter-3-17-to-chapter-4-23.mp3",
+          "sourceRange": "Filipeni 3:17-21; exact persisted official audio transcript filipeni-vbv-04; Philippians 3:17-4:23; coverage set filipeni-vbv-04; relevant interval 00:00:03-00:20:07",
+          "transcriptSha256": "sha256:969f77d8631ef570c0c65f9662d349d4b73e48ca08bf15d17165667f200d533a",
+          "evidenceSha256": "sha256:268cc677913355a3c5428022ec4e9cdbbe39450650ae7e69d1a5c1aa7eca1648",
+          "officialAudioSha256": "sha256:28270fec4b5f6e3782a9a582bd5bc38ed0e6003672c1d21aa715422898a77dca",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "wordCount": 13275,
+          "sourceId": "filipeni-vbv-04"
+        }
+      ],
+      "rationale": "Avertismentul despre pofte și așteptarea transformării trupului sunt susținute. Forma curentă introduce aplicații moderne despre responsabilități civice și îngrijirea trupului care nu sunt dezvoltate în interval. Rescrierea redă termenii direcți ai pasajului: exemple de urmat, vrăjmașii crucii, mintea pământească, cetățenia cerească și transformarea la venirea lui Hristos.",
+      "reviewer": "manual Codex editorial review against exact persisted official audio transcript and Scripture",
+      "reviewedOn": "2026-08-11",
+      "revisedTeaching": "Pavel îi cheamă pe credincioși să-l urmeze și să-i observe pe cei care umblă după exemplul primit. Viața trebuie să confirme mesajul. Mulți umblă ca vrăjmași ai crucii lui Hristos: sfârșitul lor este pierzarea, dumnezeul lor este pântecele, se laudă cu rușinea lor și își așază gândirea în lucrurile pământești.\n\nCetățenia credincioșilor este în ceruri, de unde Îl așteaptă pe Domnul Isus Hristos ca Mântuitor. El va transforma trupul stării lor smerite și îl va face asemenea trupului slavei Sale, prin puterea cu care Își poate supune toate lucrurile. Speranța nu este în satisfacerea poftelor, ci în venirea și puterea lui Hristos.",
+      "revisedForYourHeart": "Privește la oamenii pe care îi urmezi: alege exemple a căror viață trece prin cruce și îți îndreaptă speranța spre venirea lui Hristos."
+    },
+    {
+      "bookId": "filipeni",
+      "chapter": 4,
+      "unitId": "filipeni-4-1-3",
+      "status": "approved-against-transcript",
+      "action": "keep",
+      "reviewedPreEditSnapshotSha256": "sha256:20f9dda75eddfca4c766300704f02f153db5f810dae49807950dc4355cd8076b",
+      "reviewedTeachingSha256": "sha256:20f9dda75eddfca4c766300704f02f153db5f810dae49807950dc4355cd8076b",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/04philippians-chapter-317-to-chapter-423",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt11-philippians-chapter-3-17-to-chapter-4-23.mp3",
+          "sourceRange": "Filipeni 4:1-3; exact persisted official audio transcript filipeni-vbv-04; Philippians 3:17-4:23; coverage set filipeni-vbv-04; relevant interval 00:20:10-00:30:11",
+          "transcriptSha256": "sha256:969f77d8631ef570c0c65f9662d349d4b73e48ca08bf15d17165667f200d533a",
+          "evidenceSha256": "sha256:3f4f33f8deafce28ed74709297c4e7e9987cc03714280b5a48b9f4d958b8fc29",
+          "officialAudioSha256": "sha256:28270fec4b5f6e3782a9a582bd5bc38ed0e6003672c1d21aa715422898a77dca",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "wordCount": 13275,
+          "sourceId": "filipeni-vbv-04"
+        }
+      ],
+      "rationale": "Chemarea de a sta tari, conflictul dintre Evodia și Sintichia și implicarea unui colaborator matur în împăcare sunt prezentate fără minimalizare și fără adaosuri. Unitatea este scurtă, dar acoperă complet centrul pasajului.",
+      "reviewer": "manual Codex editorial review against exact persisted official audio transcript and Scripture",
+      "reviewedOn": "2026-08-11"
+    },
+    {
+      "bookId": "filipeni",
+      "chapter": 4,
+      "unitId": "filipeni-4-4-9",
+      "status": "approved-against-transcript",
+      "action": "rewrite",
+      "reviewedPreEditSnapshotSha256": "sha256:2270931bed7e478533215806f052297fd6b42e85037971b1f676b2e742642855",
+      "reviewedTeachingSha256": "sha256:cc7cb1e8d395d33d2943f69ee9885cc40c2e418f7c4fc01364ab06f3e003a95b",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/04philippians-chapter-317-to-chapter-423",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt11-philippians-chapter-3-17-to-chapter-4-23.mp3",
+          "sourceRange": "Filipeni 4:4-9; exact persisted official audio transcript filipeni-vbv-04; Philippians 3:17-4:23; coverage set filipeni-vbv-04; relevant interval 00:30:15-01:00:39",
+          "transcriptSha256": "sha256:969f77d8631ef570c0c65f9662d349d4b73e48ca08bf15d17165667f200d533a",
+          "evidenceSha256": "sha256:f95ed271348251c09ba3392f18e1803caa1c9967fa3f32bac9710bc32f3ff69a",
+          "officialAudioSha256": "sha256:28270fec4b5f6e3782a9a582bd5bc38ed0e6003672c1d21aa715422898a77dca",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "wordCount": 13275,
+          "sourceId": "filipeni-vbv-04"
+        }
+      ],
+      "rationale": "Bucuria, rugăciunea, mulțumirea, pacea și disciplina gândurilor sunt fidele. Ultimele propoziții curente introduc un diagnostic clinic și ajutor profesionist, teme pe care episodul nu le tratează. Rescrierea nu inventează un verdict medical și nu repetă excesele predicatorului, ci păstrează porunca și promisiunea exactă a pasajului.",
+      "reviewer": "manual Codex editorial review against exact persisted official audio transcript and Scripture",
+      "reviewedOn": "2026-08-11",
+      "revisedTeaching": "Pavel poruncește: „Bucurați-vă întotdeauna în Domnul”; apoi repetă chemarea. Bucuria este în Domnul, nu în stabilitatea împrejurărilor. Blândețea trebuie să fie cunoscută de toți, iar apropierea Domnului schimbă felul în care credinciosul își poartă grijile.\n\nÎn loc să lase îngrijorarea să-i conducă inima, credinciosul aduce orice lucru înaintea lui Dumnezeu prin rugăciune, cerere și mulțumire. Pacea lui Dumnezeu, care întrece orice pricepere, păzește inima și gândurile în Hristos Isus. Mintea este apoi îndreptată deliberat spre ce este adevărat, vrednic, drept, curat, plăcut, cu nume bun, virtuos și demn de laudă. Ceea ce filipenii au învățat, primit, auzit și văzut la Pavel trebuie pus în practică, iar Dumnezeul păcii va fi cu ei."
+    },
+    {
+      "bookId": "filipeni",
+      "chapter": 4,
+      "unitId": "filipeni-4-10-13",
+      "status": "approved-against-transcript",
+      "action": "rewrite",
+      "reviewedPreEditSnapshotSha256": "sha256:5a97fce3d76140bc47b82831cbced3eff0bae002c01dd74fd40724cdf7191848",
+      "reviewedTeachingSha256": "sha256:b7d60d4f9739c398fd7a6cd94d81686c5f287e95030c4cfd23d06253113357e5",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/04philippians-chapter-317-to-chapter-423",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt11-philippians-chapter-3-17-to-chapter-4-23.mp3",
+          "sourceRange": "Filipeni 4:10-13; exact persisted official audio transcript filipeni-vbv-04; Philippians 3:17-4:23; coverage set filipeni-vbv-04; relevant interval 01:00:39-01:10:52",
+          "transcriptSha256": "sha256:969f77d8631ef570c0c65f9662d349d4b73e48ca08bf15d17165667f200d533a",
+          "evidenceSha256": "sha256:b4fc71b7fddb2e9f14b420a83fdcac9947ec780fc75ece54b04227f456439b0a",
+          "officialAudioSha256": "sha256:28270fec4b5f6e3782a9a582bd5bc38ed0e6003672c1d21aa715422898a77dca",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "wordCount": 13275,
+          "sourceId": "filipeni-vbv-04"
+        }
+      ],
+      "rationale": "Contextul mulțumirii în lipsă și belșug este corect, dar forma curentă are o greșeală de diacritică și adaugă scenarii despre performanțe imposibile, limite, boală și sărăcie, absente din episod. Rescrierea păstrează corecția necesară a folosirii versetului și o leagă strict de mulțumirea întărită de Hristos.",
+      "reviewer": "manual Codex editorial review against exact persisted official audio transcript and Scripture",
+      "reviewedOn": "2026-08-11",
+      "revisedTeaching": "Pavel se bucură în Domnul că grija filipenilor pentru el a înflorit din nou, dar precizează că nu vorbește din lipsă. El a învățat să fie mulțumit în orice stare: știe să trăiască smerit și știe să aibă din belșug; a învățat taina de a fi sătul și flămând, de a avea belșug și de a duce lipsă.\n\n„Pot toate lucrurile prin Hristos, care mă întărește” vorbește în acest context despre puterea de a rămâne credincios și mulțumit în toate aceste împrejurări. Versetul nu promite împlinirea oricărei ambiții alese de om. Hristos îl întărește pe credincios ca lipsa sau belșugul să nu-i devină stăpân."
+    },
+    {
+      "bookId": "filipeni",
+      "chapter": 4,
+      "unitId": "filipeni-4-14-20",
+      "status": "approved-against-transcript",
+      "action": "rewrite",
+      "reviewedPreEditSnapshotSha256": "sha256:d13f3bb30c50a67f78de83323cf2a66c10c5b828ad8ca578797a7ca656bb40d7",
+      "reviewedTeachingSha256": "sha256:14f536330a9d433d7070761f94fb987678d6d9563844feec9bfe1d87b417ea04",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/04philippians-chapter-317-to-chapter-423",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt11-philippians-chapter-3-17-to-chapter-4-23.mp3",
+          "sourceRange": "Filipeni 4:14-20; exact persisted official audio transcript filipeni-vbv-04; Philippians 3:17-4:23; coverage set filipeni-vbv-04; relevant interval 01:10:52-01:19:59",
+          "transcriptSha256": "sha256:969f77d8631ef570c0c65f9662d349d4b73e48ca08bf15d17165667f200d533a",
+          "evidenceSha256": "sha256:35b9dfa263624df92233d339a1e2f45b42e025db61a6ed2a272566170fda857c",
+          "officialAudioSha256": "sha256:28270fec4b5f6e3782a9a582bd5bc38ed0e6003672c1d21aa715422898a77dca",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "wordCount": 13275,
+          "sourceId": "filipeni-vbv-04"
+        }
+      ],
+      "rationale": "Părtășia financiară, lipsa interesului lui Pavel pentru câștig, jertfa plăcută și promisiunea nevoilor sunt susținute. Forma curentă adaugă un cod financiar modern detaliat despre presiune, transparență, locuință, tratament și întreținuți. Rescrierea păstrează avertismentul biblic împotriva câștigului și a tranzacției religioase, fără reguli neprovenite din sursă.",
+      "reviewer": "manual Codex editorial review against exact persisted official audio transcript and Scripture",
+      "reviewedOn": "2026-08-11",
+      "revisedTeaching": "Deși învățase mulțumirea, Pavel le spune filipenilor că au făcut bine împărtășind necazul lui. La începutul Evangheliei, nicio altă biserică nu intrase cu el în această părtășie de dare și primire, iar ei îi trimiseseră ajutor de mai multe ori.\n\nPavel nu caută darul, ci rodul care se adună în folosul lor. Darurile primite prin Epafrodit sunt numite un miros plăcut, o jertfă primită și plăcută lui Dumnezeu. În acest cadru al părtășiei și dărniciei, el afirmă că Dumnezeul lui va împlini orice nevoie a lor, după bogățiile Sale în slavă, în Hristos Isus. Dărnicia este închinare și participare la lucrarea Evangheliei, nu o cumpărare a favorului lui Dumnezeu și nici o metodă de îmbogățire."
+    },
+    {
+      "bookId": "filipeni",
+      "chapter": 4,
+      "unitId": "filipeni-4-21-23",
+      "status": "approved-against-transcript",
+      "action": "keep",
+      "reviewedPreEditSnapshotSha256": "sha256:dcf20d8c3c9f3dd49b37e9624b659b5525627f2c94df42b8ab9eda94c24125d1",
+      "reviewedTeachingSha256": "sha256:dcf20d8c3c9f3dd49b37e9624b659b5525627f2c94df42b8ab9eda94c24125d1",
+      "transcriptEvidence": [
+        {
+          "officialSourceUrl": "https://www.cfcindia.com/verse-by-verse/04philippians-chapter-317-to-chapter-423",
+          "transcriptSourceUrl": "https://www.cfcindia.org/resources/en/study-series/verse-by-verse/nt11-philippians-chapter-3-17-to-chapter-4-23.mp3",
+          "sourceRange": "Filipeni 4:21-23; exact persisted official audio transcript filipeni-vbv-04; Philippians 3:17-4:23; coverage set filipeni-vbv-04; relevant interval 01:20:00-01:21:01",
+          "transcriptSha256": "sha256:969f77d8631ef570c0c65f9662d349d4b73e48ca08bf15d17165667f200d533a",
+          "evidenceSha256": "sha256:fd02078adb4fa64bb4353b849535a8a0ccd8bea0248e3fe4fff602d01ab8ef21",
+          "officialAudioSha256": "sha256:28270fec4b5f6e3782a9a582bd5bc38ed0e6003672c1d21aa715422898a77dca",
+          "transcriptionModel": "faster-whisper small.en / CTranslate2 int8 CPU",
+          "wordCount": 13275,
+          "sourceId": "filipeni-vbv-04"
+        }
+      ],
+      "rationale": "Salutul către sfinți, prezența credincioșilor în casa Cezarului și harul final sunt redate fidel. Legătura dintre lanțurile lui Pavel și pătrunderea Evangheliei în acel mediu este susținută de ansamblul episoadelor, fără nume moderne în reader copy.",
+      "reviewer": "manual Codex editorial review against exact persisted official audio transcript and Scripture",
+      "reviewedOn": "2026-08-11"
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 {
   "schema": "emanus-nt-embedded-quote-fix-ledger-v2",
   "policy": "Only unique same-chapter Biblia Emanus candidates with <=1 token edit (<=2 for long quotes), >=0.88 sequence score and >=0.80 token overlap are replaced. Unit-level fixes record exact unitId and fieldPath so any semantic hash transition can be independently reversed and proven. Ambiguous/non-Bible quotations remain untouched and blocked for manual classification.",
-  "fixed": 4,
-  "skipped": 117,
+  "fixed": 5,
+  "skipped": 125,
   "fixes": [
     {
       "bookId": "matei",
@@ -52,6 +52,19 @@
       "unitId": "matei-27-45-56",
       "before": "Dumnezeul Meu, Dumnezeul Meu, pentru ce M-ai părăsit?",
       "after": "Dumnezeul meu, Dumnezeul meu, de ce m-ai părăsit",
+      "tokenDistance": 1,
+      "score": 0.8889,
+      "overlap": 0.8889
+    },
+    {
+      "bookId": "ioan",
+      "canonicalBookId": "JHN",
+      "chapter": 1,
+      "field": "teaching",
+      "fieldPath": "units[3].teaching",
+      "unitId": "ioan-1-19-34",
+      "before": "Iată Mielul lui Dumnezeu, care ridică păcatul lumii!",
+      "after": "Iată Mielul lui Dumnezeu, Cel care ridică păcatul lumii",
       "tokenDistance": 1,
       "score": 0.8889,
       "overlap": 0.8889
@@ -959,6 +972,60 @@
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
     {
+      "bookId": "ioan",
+      "chapter": 2,
+      "field": "teaching",
+      "fieldPath": "units[0].teaching",
+      "unitId": "ioan-2-1-12",
+      "quote": "Să faceți orice vă va spune",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 3,
+      "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "ioan-3-22-36",
+      "quote": "El trebuie să crească, iar eu să mă micșorez",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 8,
+      "field": "teaching",
+      "fieldPath": "units[0].teaching",
+      "unitId": "ioan-8-1-20",
+      "quote": "Du-te și să nu mai păcătuiești",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 8,
+      "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "ioan-8-48-59",
+      "quote": "Mai înainte ca Avraam să se nască, Eu sunt",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 9,
+      "field": "teaching",
+      "fieldPath": "units[1].teaching",
+      "unitId": "ioan-9-13-34",
+      "quote": "Eram orb, iar acum văd",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "ioan",
+      "chapter": 21,
+      "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "ioan-21-20-25",
+      "quote": "Ce-ți pasă ție? Tu urmează-Mă",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
       "bookId": "fapte",
       "chapter": 1,
       "field": "forYourHeart",
@@ -969,20 +1036,38 @@
     },
     {
       "bookId": "fapte",
+      "chapter": 3,
+      "field": "teaching",
+      "fieldPath": "units[0].teaching",
+      "unitId": "fapte-3-1-10",
+      "quote": "În Numele lui Isus Hristos din Nazaret, ridică-te și umblă.",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "fapte",
+      "chapter": 5,
+      "field": "teaching",
+      "fieldPath": "units[2].teaching",
+      "unitId": "fapte-5-17-32",
+      "quote": "Trebuie să ascultăm mai mult de Dumnezeu decât de oameni.",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "fapte",
+      "chapter": 16,
+      "field": "teaching",
+      "fieldPath": "units[3].teaching",
+      "unitId": "fapte-16-25-40",
+      "quote": "Ce trebuie să fac ca să fiu mântuit?",
+      "reason": "no-unique-high-confidence-same-chapter-match"
+    },
+    {
+      "bookId": "fapte",
       "chapter": 18,
       "field": "teaching",
       "fieldPath": "units[0].teaching",
       "unitId": "fapte-18-1-11",
       "quote": "Nu te teme... Eu sunt cu tine",
-      "reason": "no-unique-high-confidence-same-chapter-match"
-    },
-    {
-      "bookId": "fapte",
-      "chapter": 24,
-      "field": "teaching",
-      "fieldPath": "units[2].teaching",
-      "unitId": "fapte-24-22-27",
-      "quote": "Acum pleacă; te voi chema când voi avea timp.",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
     {
@@ -1068,20 +1153,20 @@
     },
     {
       "bookId": "filipeni",
-      "chapter": 2,
+      "chapter": 4,
       "field": "teaching",
-      "fieldPath": "units[2].teaching",
-      "unitId": "filipeni-2-12-18",
-      "quote": "Duceți până la capăt mântuirea",
+      "fieldPath": "units[1].teaching",
+      "unitId": "filipeni-4-4-9",
+      "quote": "Bucurați-vă întotdeauna în Domnul",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
     {
-      "bookId": "coloseni",
-      "chapter": 1,
+      "bookId": "filipeni",
+      "chapter": 4,
       "field": "teaching",
-      "fieldPath": "units[4].teaching",
-      "unitId": "coloseni-1-24-29",
-      "quote": "Hristos în voi, nădejdea slavei",
+      "fieldPath": "units[2].teaching",
+      "unitId": "filipeni-4-10-13",
+      "quote": "Pot toate lucrurile prin Hristos, care mă întărește",
       "reason": "no-unique-high-confidence-same-chapter-match"
     },
     {

@@ -50,6 +50,8 @@ if (!reviewPresent) {
 const review = reviewPresent
   ? JSON.parse(fs.readFileSync(REVIEW, "utf8"))
   : { schema: "emanus-nt-embedded-quote-final-review-v1", unquoteCount: 0, unquotes: [] }
+const priorOutput = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, "utf8")) : null
+const priorSemanticRebinds = new Map((priorOutput?.semanticRebinds ?? []).map((item) => [item.reviewId, item]))
 
 if (review.schema !== "emanus-nt-embedded-quote-final-review-v1" || !Array.isArray(review.unquotes)) {
   fail("unexpected review artifact schema")
@@ -145,6 +147,9 @@ for (const op of review.unquotes) {
       })
     } else if (semantic.reviewedTeachingSha256 !== semanticAfter) {
       fail(`${op.reviewId}: already-unquoted semantic copy is not hash-bound`)
+    } else {
+      const prior = priorSemanticRebinds.get(op.reviewId)
+      if (prior) semanticRebinds.push(prior)
     }
   }
 

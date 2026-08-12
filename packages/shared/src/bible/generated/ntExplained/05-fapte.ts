@@ -66,7 +66,7 @@ export const NT_BOOK_05: BibleBook = {
           "ref": "Fapte 1:15-26",
           "heading": "O mărturie despre înviere",
           "text": "În zilele acelea, Petru s-a ridicat în mijlocul fraților — numărul persoanelor adunate era de aproape o sută douăzeci — și a zis: Fraților, trebuia să se împlinească Scriptura pe care Duhul Sfânt a spus-o mai dinainte prin gura lui David despre Iuda, cel care a ajuns călăuza celor ce L-au prins pe Isus. Căci el a fost numărat cu noi-a primit partea în acest minister. Omul acesta a căpătat un ogor cu răsplata pentru răutatea lui, și i-a căzut cu capul înainte, i s-a deschis trupul și toate intestinele i s-au spart. Lucrul acesta a ajuns cunoscut tuturor locuitorilor Ierusalimului, așa că ogorul acela a fost numit, în limba lor, Hacheldamah, adică Ogorul Sângelui. Căci este scris în cartea Psalmilor: Locuința lui să rămână pustie și nimeni să nu locuiască în ea! și: Slujba lui de supraveghere s-o ia altul! Așadar, dintre bărbații care ne-au însoțit în tot timpul în care Domnul Isus a umblat printre noi, începând de la botezul lui Ioan până în ziua când a fost înălțat de la noi, trebuie ca unul dintre ei să devină împreună cu noi martor al învierii Lui. Ei au înaintat doi: Iosif i-a numit pe Barsaba, care se numea și Iust și Matthias. Apoi s-au rugat și au zis: Tu, Doamne, care cunoști inimile tuturor, arată-ne pe care dintre acești doi l-ai ales să ia locul acestei slujiri și apostolii, de la care Iuda s-a abătut ca să meargă la locul său. Au tras la sorți pentru ei, sorțul a căzut pe Matia și el a fost numărat împreună cu cei unsprezece apostoli.",
-          "teaching": "Petru arată din Scriptură că locul rămas gol trebuia ocupat de un martor al învierii. Comunitatea se roagă Celui care cunoaște inimile și cere călăuzire.\n\nTragerea la sorți apare aici înainte de revărsarea Duhului și nu mai devine metoda normală a Bisericii după Cincizecime. În Noul Legământ, Dumnezeu călăuzește prin Duhul, Scriptură și discernământul comunității.\n\nMoartea lui Iuda este prezentată ca avertisment despre iubirea banilor și împietrire, nu ca permisiune de a specula asupra fiecărui om care moare prin sinucidere.",
+          "teaching": "Petru arată din Scriptură că locul rămas gol trebuia ocupat de un om care umblase cu Isus și putea mărturisi învierea Lui. Comunitatea se roagă Celui care cunoaște inimile și Îi cere să arate pe cine a ales.\n\nIuda este un avertisment aspru: apropierea exterioară de Isus nu înlocuiește o inimă curată, iar iubirea banilor și împietrirea duc la ruină. Tragerea la sorți aparține momentului de dinaintea revărsării Duhului Sfânt; după Cincizecime, Biserica este călăuzită prin Duhul, Scriptură și discernământ în rugăciune.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -78,7 +78,7 @@ export const NT_BOOK_05: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, fă ca viața mea să susțină cuvintele mele. Umple-mă cu Duhul Sfânt, păzește-mă de curiozități fără rod și unește-mă cu frații mei în rugăciune. Fă-mă un martor credincios al învierii Tale. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "fapte-2",
@@ -139,7 +139,7 @@ export const NT_BOOK_05: BibleBook = {
           "ref": "Fapte 2:37-47",
           "heading": "Pocăință, botez și o comunitate nouă",
           "text": "Când au auzit acestea, au fost străpunși în inimă și le-au zis lui Petru și celorlalți apostoli: Fraților, ce să facem? Petru le-a răspuns: Pocăiți-vă și fiecare dintre voi să fie botezat în Numele lui Isus Hristos spre iertarea păcatelor voastre; și veți primi darul Duhului Sfânt. Căci făgăduința este pentru voi și pentru copiii voștri și pentru toți cei ce sunt departe, chiar și pentru toți cei pe care Domnul Dumnezeul nostru îi va chema. Și, prin multe alte cuvinte, mărturisea stăruitor și îi îndemna, zicând: Lăsați-vă salvați de această generație strâmbă! Cei care au primit cuvântul lui au fost botezați și în ziua aceea li s-au adăugat aproape trei mii de persoane. Ei stăruiau în învățătura apostolilor, în părtășie, în frângerea pâinii și în rugăciuni. Frica a venit peste fiecare suflet, și multe minuni și semne au fost făcute prin apostoli. Toți cei care credeau erau împreună și aveau toate lucrurile în comun. Își vindeau proprietățile și bunurile și le împărțeau tuturor, după cum avea nevoie fiecare. În fiecare zi stăruiau într-un cuget în Templu, frângeau pâinea în case și își luau hrana cu bucurie și sinceritate a inimii, lăudându-L pe Dumnezeu și bucurându-se de bunăvoința întregului popor. Iar Domnul îi adăuga zilnic laolaltă pe cei care erau salvați.",
-          "teaching": "Cei străpunși în inimă nu primesc doar informații, ci răspund prin pocăință, botez și primirea darului Duhului Sfânt. Făgăduința este pentru ei, pentru copiii lor și pentru cei de departe pe care îi cheamă Domnul.\n\nViața rezultată este concretă: învățătura apostolilor, părtășie, frângerea pâinii, rugăciune și împărțirea bunurilor. Dărnicia este liberă, nu confiscare religioasă; capitolul nu autorizează liderii să constrângă oamenii să renunțe la proprietate.",
+          "teaching": "Cei care aud sunt străpunși în inimă și întreabă ce trebuie să facă. Petru nu le oferă o emoție religioasă, ci le poruncește să se pocăiască și să fie botezați în Numele lui Isus Hristos. Botezul urmează răspunsului personal la Cuvânt, iar darul Duhului Sfânt nu este rezervat unei elite.\n\nCei care primesc Cuvântul stăruie în învățătura apostolilor, părtășie, frângerea pâinii și rugăciuni. Își împart bunurile de bunăvoie, poartă nevoile unii altora și Îl laudă pe Dumnezeu. Viața Duhului produce o comunitate adevărată, nu doar adunări și declarații.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -147,11 +147,11 @@ export const NT_BOOK_05: BibleBook = {
             "Evrei 10:24-25",
             "2 Corinteni 9:7"
           ],
-          "forYourHeart": "Întreabă-te dacă pocăința ta a produs o viață nouă de adevăr, rugăciune, părtășie și grijă față de cei în nevoie."
+          "forYourHeart": "Nu te opri la faptul că ai auzit mesajul. Pocăiește-te de păcatul pe care Dumnezeu ți-l arată, ascultă de El și intră într-o viață reală de învățătură, rugăciune și părtășie."
         }
       ],
       "prayer": "Tată, Îți mulțumesc pentru făgăduința Duhului. Descoperă-mi slava lui Isus răstignit și înviat, dă-mi o pocăință adevărată și așază-mă într-o părtășie în care iubirea devine faptă. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "fapte-3",
@@ -167,7 +167,7 @@ export const NT_BOOK_05: BibleBook = {
           "ref": "Fapte 3:1-10",
           "heading": "Nu argint, ci Numele lui Isus",
           "text": "Petru și Ioan urcau la Templu pentru ceasul rugăciunii, ceasul al nouălea. Era adus un bărbat olog din pântecele mamei lui, pe care îl așezau în fiecare zi la poarta Templului numită Frumoasă, ca să ceară milostenie de la cei care intrau în Templu. Când i-a văzut pe Petru și pe Ioan gata să intre în Templu, le-a cerut să primească milostenie. Petru, împreună cu Ioan, și-a ațintit privirea spre el și i-a zis: Uită-te la noi! El i-a ascultat, așteptându-se să primească ceva de la ei. Dar Petru i-a zis: Argint și aur nu am, însă ceea ce am îți dau: în Numele lui Isus Hristos Nazarineanul, umblă! L-a apucat de mâna dreaptă și l-a ridicat. Îndată i s-au întărit tălpile și gleznele; a sărit în picioare și a început să umble. A intrat cu ei în Templu, umblând, sărind și lăudându-L pe Dumnezeu. Toți oamenii l-au văzut umblând și lăudându-L pe Dumnezeu. Ei l-au recunoscut, că el a fost cel care a folosit pentru a sta cerșit pentru daruri pentru nevoiași la Poarta Frumoasa a templului. Ei au fost umpluti de mirare și uimire la ceea ce sa întâmplat cu el.",
-          "teaching": "Petru și Ioan nu au bani de oferit, dar Îl cunosc pe Isus și acționează în autoritatea Lui. Omul nu este manipulat prin promisiuni; el este chemat să privească și primește o vindecare pe care numai Dumnezeu o poate face.\n\nSemnul nu devine o formulă garantată pentru fiecare boală.",
+          "teaching": "Petru și Ioan nu îi oferă omului ceea ce cerea, ci ceea ce nu putea obține singur. Petru nu pretinde putere proprie: În Numele lui Isus Hristos din Nazaret, ridică-te și umblă. Omul este întărit pe loc, intră în Templu umblând, sărind și lăudându-L pe Dumnezeu.\n\nSemnul nu construiește reputația apostolilor, ci Îl arată pe Isus viu și lucrător. Ucenicul nu folosește darul lui Dumnezeu pentru faimă sau bani; el dă ceea ce a primit și conduce atenția oamenilor spre Domnul.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -197,7 +197,7 @@ export const NT_BOOK_05: BibleBook = {
           "ref": "Fapte 3:17-26",
           "heading": "Pocăiți-vă și întoarceți-vă",
           "text": "Acum, fraților, știu că ați făcut acest lucru din ignoranță, așa cum au făcut și conducătorii voștri. Dar Dumnezeu a împlinit astfel ceea ce vestise mai dinainte prin gura tuturor profeților: Hristosul Său avea să sufere. Pocăiți-vă deci, și întoarceți-vă iarăși, ca păcatele voastre să fie șterse, ca să vină timpuri de înviorare din prezența Domnului, ca să trimită pe Isus Hristos, care a fost rânduit pentru voi mai înainte, Cerul trebuie să-L primească până la vremurile restaurării tuturor lucrurilor despre care Dumnezeu a vorbit prin gura sfinților Săi profeți din vechime. Moise a spus: Domnul Dumnezeul vostru vă va ridica dintre frații voștri un Profet ca mine. De El să ascultați în toate câte vă va spune. Fiecare suflet care nu va asculta de profetul acela va fi nimicit în întregime din mijlocul poporului. Și toți profeții, de la Samuel și cei care au urmat, oricâți au vorbit, au vestit și ei zilele acestea. Voi sunteți fiii profeților și ai legământului pe care Dumnezeu l-a încheiat cu părinții voștri, spunându-i lui Avraam: În urmașul tău vor fi binecuvântate toate familiile pământului. Pentru voi mai întâi, ridicându-L pe Slujitorul Său, Dumnezeu L-a trimis să vă binecuvânteze, întorcându-l pe fiecare dintre voi de la faptele lui rele.",
-          "teaching": "Petru nu micșorează păcatul, dar recunoaște ignoranța lor și deschide ușa harului. Pocăința înseamnă întoarcere reală, pentru ca păcatele să fie șterse și viața să fie înviorată de prezența Domnului.\n\nIsus este Robul trimis mai întâi ca să-i binecuvânteze întorcându-i pe oameni de la fărădelegile lor. Binecuvântarea Evangheliei nu este în primul rând confort exterior, ci eliberare de păcat și restaurare sub stăpânirea lui Dumnezeu.",
+          "teaching": "Petru recunoaște neștiința lor, dar nu o transformă în scuză. Dumnezeu a împlinit prin suferințele lui Hristos ceea ce vestise prin profeți, iar răspunsul cerut este limpede: pocăiți-vă și întoarceți-vă, pentru ca păcatele să fie șterse.\n\nIsus este Profetul promis, iar refuzul ascultării are consecințe. Binecuvântarea legământului nu înseamnă confirmarea omului în vechea viață, ci faptul că Dumnezeu Îl trimite pe Robul Său ca să-l întoarcă pe fiecare de la răutățile lui.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -209,7 +209,7 @@ export const NT_BOOK_05: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, păzește-mă să nu caut slava care Îți aparține. Dă-mi credință în Numele Tău, compasiune pentru cei care suferă și o pocăință care aduce înviorare din prezența Ta. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "fapte-4",
@@ -282,7 +282,7 @@ export const NT_BOOK_05: BibleBook = {
         }
       ],
       "prayer": "Stăpâne, umple-mă cu Duhul Sfânt ca să vorbesc despre Isus fără mândrie și fără frică. Dă-mi înțelepciune în fața presiunii și o inimă deschisă față de nevoile fraților mei. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "fapte-5",
@@ -313,7 +313,7 @@ export const NT_BOOK_05: BibleBook = {
           "ref": "Fapte 5:12-16",
           "heading": "Semne care Îl indică pe Dumnezeu",
           "text": "Prin mâinile apostolilor se făceau multe semne și minuni în popor. Toți erau într-un cuget în Porticul lui Solomon. Nici unul dintre ceilalți nu a îndrăznit să li se alăture; totuși, poporul i-a onorat. Și tot mai mulți credincioși în Domnul li se adăugau, mulțimi de bărbați și de femei, așa încât îi scoteau pe bolnavi chiar și pe străzi și îi așezau pe paturi mici și pe tărgi, pentru ca, atunci când venea Petru, măcar umbra lui să cadă peste vreunul dintre ei. Mulțimea s-a strâns din cetățile din jurul Ierusalimului, aducînd pe oameni bolnavi și pe cei chinuiți de duhuri necurate, și toți au fost vindecați.",
-          "teaching": "Mulți sunt vindecați, iar oamenii recunosc o lucrare puternică. Apostolii rămân împreună și nu folosesc semnele ca să ridice vedete rivale. Rugăciunea pentru vindecare poate merge împreună cu medicină, evaluare competentă și sprijin practic.\n\nPasajul leagă minunile de creșterea numărului celor care cred în Domnul; semnul nu este scopul final, ci slujește mărturiei.",
+          "teaching": "Prin mâinile apostolilor se fac multe semne și minuni, iar credincioșii stau împreună. Tot mai mulți bărbați și femei cred în Domnul. Puterea nu este prezentată ca proprietatea unor vedete religioase, ci ca lucrarea lui Dumnezeu care Își confirmă Cuvântul și îi îndreaptă pe oameni spre Isus.\n\nChiar și bolnavii aduși din cetățile din jur sunt vindecați. Relatarea cere să-I dăm lui Dumnezeu gloria și să nu transformăm darurile Duhului în faimă, bani sau control asupra oamenilor.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -328,7 +328,7 @@ export const NT_BOOK_05: BibleBook = {
           "ref": "Fapte 5:17-32",
           "heading": "Ascultați de Dumnezeu",
           "text": "Dar marele preot s-a sculat, și toți cei ce erau cu el (care este secta Saducheilor) s-au umplut de gelozie. au pus mâna pe apostoli și i-au aruncat în închisoarea publică. Însă, în timpul nopții, un înger al Domnului a deschis ușile închisorii, i-a scos afară și le-a zis: „Duceți-vă, stați în Templu și spuneți poporului toate cuvintele Vieții acesteia!” Când au auzit ei lucrul acesta, au intrat în Templu, în zori, și au învățat. Dar marele preot și cei ce erau cu el au venit și au chemat sfetnicii, împreună cu tot Senatul copiilor lui Israel, și au trimes la închisoare să-i aducă. Dar ofițerii care au venit nu i-au găsit în închisoare. S-au întors și au raportat, zicând: „Am găsit temnița încuiată în deplină siguranță și pe paznici stând la uși, dar, când am deschis, n-am găsit pe nimeni înăuntru.” Când au auzit aceste cuvinte, căpetenia Templului și marii preoți erau nedumeriți cu privire la ei și se întrebau ce avea să urmeze. Dar a venit cineva și le-a dat de veste: „Iată, bărbații pe care i-ați pus în închisoare sunt în Templu, stau și învață poporul!” Atunci căpitanul s-a dus cu ofițerii, și i-a adus fără violență, pentru că se temeau că poporul îi va omorî cu pietre. După ce i-au adus, i-au pus înaintea consiliului. Marele preot i-a întrebat: zicând: „V-am poruncit cu strictețe să nu învățați în Numele acesta și iată că ați umplut Ierusalimul cu învățătura voastră și vreți să aduceți peste noi sângele Omului acestuia!” Petru și apostolii au răspuns: „Trebuie să ascultăm de Dumnezeu mai mult decât de oameni. Dumnezeul părinților noștri L-a înviat pe Isus, pe care voi L-ați omorât, atârnându-L pe lemn. Pe El L-a înălțat Dumnezeu la dreapta Sa ca Prinț și Salvator, ca să-i dea lui Israel pocăință și iertarea păcatelor. Noi suntem martorii Lui pentru aceste lucruri; la fel este Duhul Sfânt, pe care Dumnezeu L-a dat celor ce ascultă de El.”",
-          "teaching": "Îngerul îi scoate din închisoare și îi trimite din nou să vestească toate cuvintele vieții. Când sunt confruntați, Petru spune limpede că ascultarea de Dumnezeu are întâietate.\n\nMărturia lor rămâne centrată pe moartea, învierea și înălțarea lui Isus, precum și pe pocăință și iertare. Duhul Sfânt este dat celor care Îl ascultă, nu celor care caută doar o experiență fără supunere.",
+          "teaching": "Gelozia religioasă îi aruncă pe apostoli în închisoare, dar îngerul Domnului îi eliberează și îi trimite înapoi să vestească în Templu toate cuvintele acestei Vieți. Ei nu fug de chemare și nu negociază adevărul pentru siguranță.\n\nCând autoritățile le cer tăcere, Petru răspunde: Trebuie să ascultăm mai mult de Dumnezeu decât de oameni. El numește păcatul conducătorilor, vestește învierea și înălțarea lui Isus și spune direct că Dumnezeu dă pocăință și iertarea păcatelor. Duhul Sfânt este dat celor care ascultă de Dumnezeu.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -343,7 +343,7 @@ export const NT_BOOK_05: BibleBook = {
           "ref": "Fapte 5:33-42",
           "heading": "Bucurie sub ocară",
           "text": "Dar când au auzit lucrul acesta, au fost tăiați la inimă, și au fost hotărîți să-i omoare. Dar în Sinedriu s-a ridicat un fariseu numit Gamaliel, învățător al Legii, prețuit de tot poporul, și a poruncit ca oamenii să fie scoși afară pentru puțin timp. Apoi le-a zis: „Bărbați israeliți, luați seama la voi înșivă cu privire la ce sunteți pe cale să le faceți acestor oameni! Căci, înainte de zilele acestea, s-a ridicat Teuda, spunând despre sine că este cineva, și i s-au alăturat aproape patru sute de bărbați. El a fost omorât, iar toți cei care îl ascultau au fost împrăștiați și au ajuns la nimic. După el s-a ridicat Iuda Galileeanul, în zilele recensământului, și a atras popor după el. A pierit și el, iar toți cei care îl ascultau au fost risipiți. Acum vă spun, retrageți-vă de la acești oameni și lăsați-i în pace, căci dacă acest sfat sau această lucrare este a oamenilor, ea va fi răsturnată. Dar dacă este de la Dumnezeu, nu vei putea să-l răstoarne, și v-ar fi găsit chiar să lupte împotriva lui Dumnezeu! Ei au fost de acord cu el. Chemînd pe apostoli, i-au bătut și le-au poruncit să nu vorbească în numele lui Isus, și să-i lase să plece. De aceea, ei au plecat de la prezența consiliului, bucurîndu-se că erau socotiți vrednici să sufere de rușine pentru numele lui Isus. Și, în fiecare zi, în Templu și din casă în casă, nu încetau să învețe și să vestească Evanghelia despre Hristos Isus.”",
-          "teaching": "Sfatul lui Gamaliel îi oprește temporar pe conducători de la ucidere. Apostolii sunt bătuți, dar pleacă bucuroși că au fost socotiți vrednici să sufere pentru Nume și continuă să învețe.\n\nDumnezeu poate da bucurie și curaj în suferință, iar credinciosul poate totodată apela la autorități, se poate retrage și poate pune limite.",
+          "teaching": "Sfatul lui Gamaliel îi oprește pe conducători de la omor, dar apostolii sunt bătuți și li se poruncește să nu mai vorbească în Numele lui Isus. Ei pleacă bucurându-se că au fost socotiți vrednici să sufere rușine pentru Numele Lui.\n\nBătaia nu îi face să tacă. În fiecare zi, în Templu și din casă în casă, continuă să învețe și să vestească faptul că Isus este Hristosul. Ascultarea lor nu depinde de aprobarea oamenilor, iar suferința pentru adevăr nu le schimbă mesajul.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -355,7 +355,7 @@ export const NT_BOOK_05: BibleBook = {
         }
       ],
       "prayer": "Doamne, curăță-mă de ipocrizie și de iubirea reputației. Fă-mă ascultător, curajos și smerit. Învață-mă să sufăr fără ură și să caut protecția potrivită fără să-mi neg credința. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "fapte-6",
@@ -371,7 +371,7 @@ export const NT_BOOK_05: BibleBook = {
           "ref": "Fapte 6:1-7",
           "heading": "O plângere ascultată, nu ascunsă",
           "text": "În zilele acelea, când numărul ucenicilor se înmulțea, eleniștii au început să murmure împotriva evreilor, pentru că văduvele lor erau trecute cu vederea la împărțirea zilnică. Atunci cei doisprezece au chemat mulțimea ucenicilor și au zis: „Nu este potrivit să lăsăm Cuvântul lui Dumnezeu ca să slujim la mese. De aceea, alegeți dintre voi, fraților, șapte oameni de istorisire bună, plini de Duhul Sfânt și de înțelepciune, pe care îi putem numi peste această afacere. Iar noi vom stărui în rugăciune și în slujirea Cuvântului.” Cuvântul acesta a plăcut întregii mulțimi și l-au ales pe Ștefan, bărbat plin de credință și de Duh Sfânt, pe Filip, Prohor, Nicanor, Timon, Parmena și Nicolae, un prozelit din Antiohia. Pe care i-au pus înaintea apostolilor, după ce s-au rugat, și-au pus mâinile pe ei. Cuvântul lui Dumnezeu creștea, numărul ucenicilor se înmulțea foarte mult în Ierusalim și o mare mulțime de preoți se supunea credinței.",
-          "teaching": "Plângerea văduvelor eleniste este luată în serios. Conducătorii nu o numesc lipsă de spiritualitate și nu protejează imaginea organizației; caută o soluție dreaptă și transparentă.\n\nPentru o slujire aparent administrativă sunt aleși oameni cu mărturie bună, plini de Duh și de înțelepciune. Caracterul este important și când sarcina pare practică.",
+          "teaching": "Văduvele eleniste erau neglijate la împărțirea zilnică, iar problema trebuia îndreptată. Totuși, murmurarea nu este semn de maturitate spirituală. Apostolii nu abandonează rugăciunea și slujirea Cuvântului pentru a administra mesele, ci cer comunității să aleagă șapte bărbați cu reputație bună, plini de Duhul Sfânt și de înțelepciune.\n\nDelegarea nu disprețuiește nevoia materială și nici nu confundă chemările. Nevoia este rezolvată de oameni potriviți, iar apostolii stăruie în lucrarea primită de la Dumnezeu. Rezultatul este că se răspândește Cuvântul și se înmulțește mult numărul ucenicilor, nu doar al celor care se declară convertiți.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -379,7 +379,7 @@ export const NT_BOOK_05: BibleBook = {
             "1 Timotei 3:8-13",
             "Iacov 1:27"
           ],
-          "forYourHeart": "Ascultă plângerea celui vulnerabil și caută dreptatea fără să transformi problema într-o luptă pentru prestigiu."
+          "forYourHeart": "Nu transforma o nedreptate reală în murmurare, dar nici nu o ascunde. Spune adevărul, caută o rezolvare prin oameni maturi și nu lăsa presiunea urgentului să înlocuiască rugăciunea și Cuvântul."
         },
         {
           "id": "fapte-6-8-15",
@@ -398,7 +398,7 @@ export const NT_BOOK_05: BibleBook = {
         }
       ],
       "prayer": "Doamne, dă-ne conducători care ascultă, împart responsabilitatea și protejează pe cei uitați. Umple-mă cu Duh, înțelepciune și har, ca să păstrez o față liniștită când sunt înțeles greșit. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "fapte-7",
@@ -474,7 +474,7 @@ export const NT_BOOK_05: BibleBook = {
           "ref": "Fapte 7:44-53",
           "heading": "Cel Preaînalt nu locuiește în clădiri făcute de mâini",
           "text": "Părinții noștri aveau în pustiu Cortul Mărturiei, așa cum poruncise Cel care îi vorbea lui Moise să-l facă după modelul pe care îl văzuse. Părinții noștri l-au primit și l-au adus cu Iosua când au luat în stăpânire țara neamurilor pe care Dumnezeu le-a alungat dinaintea părinților noștri, până în zilele lui David. David a găsit har înaintea lui Dumnezeu și a cerut să găsească un lăcaș pentru Dumnezeul lui Iacov. Dar Solomon I-a zidit o casă. Totuși, Cel Preaînalt nu locuiește în lucruri făcute de mâini, după cum spune profetul: Cerul este tronul Meu, iar pământul este așternutul picioarelor Mele. Ce fel de casă Îmi veți zidi, spune DOMNUL, sau care este locul odihnei Mele? Nu a făcut mâna mea toate aceste lucruri? Oameni încăpățânați, cu inimile și urechile necircumcise! Voi vă împotriviți întotdeauna Duhului Sfânt; cum au făcut părinții voștri, așa faceți și voi. Pe care dintre profeți nu i-au persecutat părinții voștri? I-au omorât pe cei care au vestit mai dinainte venirea Celui Drept, ai cărui trădători și ucigași ați devenit voi acum, voi, care ați primit Legea prin rânduieli date de îngeri, dar n-ați păzit-o!",
-          "teaching": "Cortul și templul au avut un rol, dar nu Îl pot cuprinde pe Dumnezeu. Ștefan confruntă religia care onorează clădirea și respinge glasul Duhului.\n\nExplicația subliniază că împotrivirea față de Duhul apare adesea sub forma atașamentului la tradiție, rang și sisteme. Semnul circumciziei exterioare nu înlocuiește o inimă tăiată de pocăință.",
+          "teaching": "Cortul mărturiei și apoi Templul au avut locul lor, dar Cel Preaînalt nu locuiește în clădiri făcute de mâini omenești. Ștefan refuză falsa siguranță religioasă și arată că un loc sfânt nu poate înlocui o inimă ascultătoare.\n\nEl îi numește tari la cerbice, netăiați împrejur în inimă și urechi și împotrivitori Duhului Sfânt. Părinții lor i-au persecutat pe profeți, iar ei L-au trădat și ucis pe Cel Drept. Au primit Legea, dar nu au păzit-o. Pocăința începe când omul nu se mai ascunde după tradiție, clădire sau moștenire, ci primește verdictul lui Dumnezeu asupra propriei neascultări.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -501,7 +501,7 @@ export const NT_BOOK_05: BibleBook = {
         }
       ],
       "prayer": "Dumnezeule al slavei, scoate-mă din încrederea în locuri, tradiții și puterea mea. Dă-mi o inimă care ascultă Duhul, răbdare în pregătire și ochi ațintiți spre Isus când sunt respins. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "fapte-8",
@@ -532,7 +532,7 @@ export const NT_BOOK_05: BibleBook = {
           "ref": "Fapte 8:9-25",
           "heading": "Darul lui Dumnezeu nu se cumpără",
           "text": "În cetate se afla de mai înainte un bărbat numit Simon, care practica magia și uimea poporul Samariei, spunând despre sine că este cineva mare. pe care toți îl ascultau, de la cel mai mic până la cel mai mare, zicând: Omul acesta este puterea cea mare a lui Dumnezeu. Luau aminte la el pentru că, vreme îndelungată, îi uimise cu magiile lui. Dar când l-au crezut pe Filip predicând vestea bună despre Regatul lui Dumnezeu și numele lui Isus Hristos, ei au fost botezați, atât bărbați cât și femei. Chiar și Simon a crezut și, după ce a fost botezat, stăruia alături de Filip. Văzând semnele și marile lucrări de putere care se înfăptuiau, era uimit. Când apostolii din Ierusalim au auzit că Samaria primise Cuvântul lui Dumnezeu, i-au trimis la ei pe Petru și pe Ioan. Aceștia au coborât și s-au rugat pentru ei ca să primească Duhul Sfânt, căci El nu Se coborâse încă peste niciunul dintre ei; fuseseră doar botezați în Numele Domnului Isus. Apoi și-au pus mâinile pe ei, și au primit Duhul Sfânt. Când Simon a văzut că Duhul Sfânt a fost dat prin punerea mâinilor apostolilor, le-a dat bani, și a zis: Dați-mi și mie această autoritate, pentru ca oricine peste care îmi voi pune mâinile să primească Duhul Sfânt. Dar Petru i-a spus: Banii tăi să piară împreună cu tine, pentru că ai crezut că darul lui Dumnezeu poate fi dobândit cu bani! Tu nu ai nici parte, nici moștenire în lucrul acesta, căci inima ta nu este dreaptă înaintea lui Dumnezeu. Pocăiește-te deci de răutatea aceasta a ta și roagă-te Domnului, doar-doar îți va fi iertat gândul inimii tale, căci văd că ești în fierea amărăciunii și în legătura nedreptății. Simon a răspuns: Rugați-vă voi pentru mine Domnului, ca să nu vină asupra mea nimic din cele ce ați spus. După ce au depus mărturie și au vestit Cuvântul Domnului, ei se întorceau la Ierusalim și vesteau Evanghelia în multe sate ale samaritenilor.",
-          "teaching": "Simon este atras de puterea văzută și oferă bani ca să primească autoritate spirituală. Petru îi arată că inima lui nu este dreaptă înaintea lui Dumnezeu. Lucrarea Duhului nu este o tehnică, o poziție sau un produs care poate fi cumpărat.\n\nExplicația avertizează asupra ambiției religioase care dorește putere pentru prestigiu. Pocăința adevărată nu caută să controleze darurile lui Dumnezeu, ci cere eliberare de iubirea banilor, de faimă și de dorința de a impresiona.",
+          "teaching": "Simon vede că Duhul Sfânt este dat prin punerea mâinilor apostolilor și oferă bani ca să primească aceeași autoritate. Petru nu îi protejează sentimentele: îi spune că banii lui să piară împreună cu el, fiindcă a crezut că darul lui Dumnezeu se poate cumpăra.\n\nSimon nu are parte în această lucrare deoarece inima lui nu este dreaptă înaintea lui Dumnezeu. Este chemat să se pocăiască de răutatea lui și să se roage pentru iertare, fiindcă se află în fierea amărăciunii și în legăturile nedreptății. Lucrarea spirituală nu este marfă, poziție sau tehnică de control.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -559,7 +559,7 @@ export const NT_BOOK_05: BibleBook = {
         }
       ],
       "prayer": "Doamne, fă-mă credincios când planurile mele sunt răsturnate. Curăță-mă de dorința de putere și bani și învață-mă să ascult glasul Duhului chiar pentru un singur om. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "fapte-9",
@@ -590,7 +590,7 @@ export const NT_BOOK_05: BibleBook = {
           "ref": "Fapte 9:10-19",
           "heading": "Anania merge la omul de care se temea",
           "text": "În Damasc era un ucenic numit Anania. Domnul i-a spus într-o vedenie: Anania! El a răspuns: Iată-mă, Doamne! Domnul i-a zis:„ Scoală-te și du-te pe ulița numită Dreptă, și întreabă în casa lui Iuda pe unul numit Saul, un om din Tars. Căci iată că se roagă, și a văzut într-o vedenie un bărbat numit Anania, care a intrat și și-a pus mâinile peste el ca să-și recapete vederea. Dar Anania a răspuns: Doamne, am auzit de la mulți despre omul acesta, cât rău le-a făcut sfinților Tăi în Ierusalim. Și aici are autoritate de la conducătorii preoților să-i lege pe toți cei care cheamă Numele Tău. Domnul i-a spus: Du-te, pentru că acesta este un vas ales pentru Mine, ca să poarte Numele Meu înaintea neamurilor, a regilor și a fiilor lui Israel. Căci Eu îi voi arăta cât trebuie să sufere pentru Numele Meu. Anania a plecat, a intrat în casă și, punându-și mâinile peste el, a zis: Frate Saule, Domnul m-a trimis — Isus, Cel care ți S-a arătat pe drumul pe care veneai — ca să-ți recapeți vederea și să fii umplut de Duhul Sfânt. Îndată au căzut de pe ochii lui un fel de solzi și și-a recăpătat vederea. Apoi s-a ridicat și a fost botezat, El a luat de mâncare și s-a întărit. Saul a stat câteva zile cu discipolii care erau la Damasc.",
-          "teaching": "Anania spune deschis Domnului ce a auzit despre Saul, dar nu transformă frica într-un refuz definitiv. Când Dumnezeu îi confirmă chemarea, el merge și îi spune persecutorului «frate Saul».\n\nExplicația observă că Dumnezeu îl folosește pe un ucenic aproape necunoscut pentru a-l ajuta pe viitorul apostol. Nimeni nu este prea mic pentru a fi canalul prin care alt om primește vedere, încurajare și umplerea Duhului.",
+          "teaching": "Anania nu este un apostol cunoscut, ci un ucenic obișnuit pe care Domnul îl cheamă pe nume. El spune sincer ce știe despre răul făcut de Saul, dar, după ce Domnul îi descoperă planul Său, merge și îl numește „frate Saul”.\n\nDumnezeu îl alege pe Saul ca să poarte Numele lui Isus înaintea neamurilor, împăraților și fiilor lui Israel și îi arată că va suferi pentru acest Nume. Anania ascultă, Saul își recapătă vederea, este umplut de Duhul Sfânt și se botează. Dumnezeu Își poate face lucrarea printr-un ucenic fără renume care Îi ascultă glasul.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -620,7 +620,7 @@ export const NT_BOOK_05: BibleBook = {
           "ref": "Fapte 9:32-43",
           "heading": "Ridică-te — Isus Hristos te vindecă",
           "text": "Pe când străbătea toate ținuturile, Petru a coborât și la sfinții care locuiau în Lida. Acolo a găsit un anume om pe nume Aeneas, care fusese țintuit la pat timp de opt ani pentru că era paralizat. Petru i-a spus: Enea, Isus Hristos te vindecă! Ridică-te și așterne-ți singur patul! Și îndată s-a ridicat. Toți cei ce locuiau la Lydda și la Sharon l-au văzut, și s-au întors la Domnul. În Iope era o ucenică numită Tabita, al cărei nume, tradus, este Dorca. Ea era plină de fapte bune și de milostenii pe care le făcea. În zilele acelea s-a îmbolnăvit și a murit. După ce au spălat-o, au așezat-o într-o cameră de sus. Fiindcă Lida era aproape de Iope, ucenicii au auzit că Petru se afla acolo și au trimis la el doi bărbați, rugându-l: Nu întârzia să vii până la noi! Petru s-a ridicat și a mers cu ei. Când a sosit, l-au dus în camera de sus. Toate văduvele au venit lângă el, plângând și arătându-i tunicile și hainele pe care le făcea Dorca atunci când era cu ele. Petru i-a scos pe toți afară, a îngenuncheat și s-a rugat. Apoi s-a întors spre trup și a spus: Tabita, ridică-te! Ea și-a deschis ochii și, văzându-l pe Petru, s-a ridicat în șezut. El i-a dat mâna și a ridicat-o. Apoi i-a chemat pe sfinți și pe văduve și le-a înfățișat-o vie. Lucrul acesta a devenit cunoscut în toată Iope și mulți au crezut în Domnul. Petru a rămas multe zile în Iope, la un oarecare Simon, tăbăcar.”",
-          "teaching": "Petru nu își atribuie puterea: îi spune lui Enea că Isus Hristos îl vindecă. La Iope, el îi scoate pe ceilalți din cameră, îngenunchează și se roagă înainte de a vorbi. Puterea este a Domnului, iar slujitorul rămâne dependent. Aceste minuni istorice mărturisesc despre autoritatea lui Isus, dar nu ne dau dreptul să promitem fiecărui bolnav o vindecare imediată sau să punem vina pe credința lui.",
+          "teaching": "La Lida, Petru îi spune lui Enea: „Isus Hristos te vindecă”, iar omul se ridică. Petru nu își atribuie puterea. La Iope, înainte să-i vorbească Tabitei, îi scoate pe toți afară, îngenunchează și se roagă; apoi îi poruncește să se ridice.\n\nAmbele semne îi conduc pe oameni spre Domnul: locuitorii din Lida și Saron se întorc la El, iar mulți din Iope cred. Darul nu îl pune pe slujitor în centru. Isus este Cel care vindecă și învie, iar slujitorul depinde de El în rugăciune.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -632,7 +632,7 @@ export const NT_BOOK_05: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, oprește-mă când merg împotriva Ta și fă-mă gata să întreb ce vrei să fac. Dă-mi curajul lui Anania, inima lui Barnaba și smerenia lui Petru. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "fapte-10",
@@ -693,7 +693,7 @@ export const NT_BOOK_05: BibleBook = {
           "ref": "Fapte 10:34-48",
           "heading": "Duhul Sfânt cade peste neamuri",
           "text": "Atunci Petru și-a deschis gura și a spus: Într-adevăr, înțeleg că Dumnezeu nu este părtinitor, ci, în orice neam, omul care se teme de El și face ce este drept Îi este primit. Cât despre Cuvântul pe care L-a trimis fiilor lui Israel, vestind pacea prin Isus Hristos — El este Domnul tuturor —, Știți voi înșivă ce s-a întâmplat, care a fost proclamat în toată Iudeea, începând din Galileea, după botezul pe care l-a predicat Ioan; cum Dumnezeu L-a uns cu Duhul Sfânt și cu putere pe Isus din Nazaret, care a umblat făcând bine și vindecându-i pe toți cei asupriți de diavolul, pentru că Dumnezeu era cu El. Noi suntem martori ai tuturor lucrurilor pe care le-a făcut în ținutul iudeilor și în Ierusalim. Ei L-au și omorât, atârnându-L pe lemn. Pe Acesta Dumnezeu L-a înviat a treia zi și I-a dat să Se arate, nu întregului popor, ci martorilor aleși mai dinainte de Dumnezeu, nouă, celor care am mâncat și am băut împreună cu El după ce a înviat dintre cei morți. El ne-a poruncit să predicăm poporului și să depunem mărturie că El este Cel rânduit de Dumnezeu ca Judecător al celor vii și al celor morți. Despre El mărturisesc toți profeții că oricine crede în El primește, prin Numele Lui, iertarea păcatelor. În timp ce Petru rostea încă aceste cuvinte, Duhul Sfânt S-a coborât peste toți cei care ascultau Cuvântul. Credincioșii circumciși care veniseră cu Petru au rămas uimiți că darul Duhului Sfânt fusese turnat și peste neamuri, căci îi auzeau vorbind în limbi și mărindu-L pe Dumnezeu. Atunci Petru a răspuns: Poate oare cineva să oprească apa, ca să nu fie botezați aceștia care au primit Duhul Sfânt la fel ca noi? Și a poruncit să fie botezați în Numele lui Isus Hristos. Atunci l-au rugat să mai rămână câteva zile.",
-          "teaching": "Petru mărturisește că Dumnezeu nu este părtinitor și Îl prezintă pe Isus: viața Lui plină de Duhul, crucea, învierea și iertarea oferită celui care crede. În timp ce vorbește, Duhul Sfânt vine peste ascultători.\n\nCredincioșii iudei sunt uimiți fiindcă Dumnezeu le dă neamurilor același dar. Petru nu mai poate păstra bariera pe care Dumnezeu a înlăturat-o. Botezul urmează ca mărturie a credinței, nu ca o metodă de a cumpăra darul Duhului.",
+          "teaching": "Petru înțelege că Dumnezeu nu caută la fața omului. El vestește pacea prin Isus Hristos, Domnul tuturor: Isus a fost uns cu Duhul Sfânt și cu putere, a umblat făcând bine și eliberând pe cei apăsați de diavol, a fost omorât pe lemn, iar Dumnezeu L-a înviat a treia zi.\n\nIsus este Judecătorul celor vii și al celor morți, iar toți profeții mărturisesc că oricine crede în El primește iertarea păcatelor prin Numele Lui. În timp ce oamenii ascultă Cuvântul, Duhul Sfânt Se revarsă peste ei, iar credincioșii iudei îi aud vorbind în limbi și mărindu-L pe Dumnezeu. Petru poruncește apoi ca ei să fie botezați în apă. Harul lui Dumnezeu nu cere omului să devină mai întâi membrul culturii altcuiva.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -705,7 +705,7 @@ export const NT_BOOK_05: BibleBook = {
         }
       ],
       "prayer": "Tată, curăță-mă de părtinire și mândrie. Dă-mi o inimă gata să ascult, să-i primesc pe cei pe care Tu îi primești și să-L vestesc pe Isus fără să caut gloria oamenilor. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "fapte-11",
@@ -763,7 +763,7 @@ export const NT_BOOK_05: BibleBook = {
         }
       ],
       "prayer": "Doamne, ajută-mă să nu Te împiedic prin tradițiile mele. Dă-mi ochii lui Barnaba pentru a vedea harul, o inimă care ridică alți lucrători și mâini gata să ajute în nevoie. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "fapte-12",
@@ -821,7 +821,7 @@ export const NT_BOOK_05: BibleBook = {
         }
       ],
       "prayer": "Doamne, păzește-mă de frica și aplauzele oamenilor. Învață-mă să mă rog stăruitor, să mă încred în Tine când rezultatele diferă și să-Ți dau toată gloria. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "fapte-13",
@@ -894,7 +894,7 @@ export const NT_BOOK_05: BibleBook = {
         }
       ],
       "prayer": "Doamne, învață-mă să-Ți slujesc în închinare și să aud chemarea Duhului. Păzește-mă de ambiție și invidie și fă-mă credincios în vestirea harului lui Isus. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "fapte-14",
@@ -952,7 +952,7 @@ export const NT_BOOK_05: BibleBook = {
         }
       ],
       "prayer": "Doamne, dă-mi îndrăzneală fără imprudență, smerenie când oamenii mă laudă și statornicie când mă resping. Folosește-mă să întăresc ucenici, nu doar să atrag atenție. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "fapte-15",
@@ -983,7 +983,7 @@ export const NT_BOOK_05: BibleBook = {
           "ref": "Fapte 15:12-21",
           "heading": "Dumnezeu Își ia un popor dintre neamuri",
           "text": "Atunci toată mulțimea a tăcut și îi asculta pe Barnaba și pe Pavel istorisind câte semne și minuni făcuse Dumnezeu prin ei printre neamuri. După ce au tăcut ei, Iacov a luat cuvântul și a spus: Fraților, ascultați-mă! Simeon a istorisit cum, pentru întâia oară, Dumnezeu a cercetat neamurile ca să ia dintre ele un popor pentru Numele Său. Cu aceasta se potrivesc cuvintele profeților, după cum este scris: După aceea Mă voi întoarce și voi rezidi cortul căzut al lui David; îi voi rezidi ruinele și îl voi ridica din nou, pentru ca rămășița oamenilor să-L caute pe Domnul, împreună cu toate neamurile peste care este chemat Numele Meu, spune Domnul, care face acestea Toate lucrările lui Dumnezeu îi sunt cunoscute din eternitate. De aceea, eu socotesc să nu-i tulburăm pe cei dintre neamuri care se întorc la Dumnezeu, ci să le scriem să se ferească de întinările idolilor, de imoralitate sexuală, de ceea ce este sugrumat și de sânge. Căci, din generațiile de demult, Moise are în fiecare cetate oameni care îl proclamă, fiind citit în sinagogi în fiecare Sabat.",
-          "teaching": "Adunarea ascultă ce a făcut Dumnezeu prin Barnaba și Pavel, iar Iacov arată că primirea neamurilor este în acord cu profeții. Experiența este evaluată prin Scriptură, iar Scriptura este recunoscută în lucrarea reală a harului.\n\nHotărârea nu le cere neamurilor să devină iudei, dar îi cheamă să rupă legăturile cu idolatria și imoralitatea și să țină seama de părtășia cu frații. Libertatea creștină nu înseamnă egoism, ci o viață curată și plină de dragoste.",
+          "teaching": "Pavel și Barnaba povestesc semnele și minunile făcute de Dumnezeu între neamuri, iar Iacov arată că primirea lor se potrivește cu mărturia profeților. Experiența nu înlocuiește Scriptura, iar Scriptura nu este folosită ca pretext pentru a nega ceea ce Dumnezeu a făcut limpede.\n\nNeamurile nu trebuie împovărate cu circumcizia și Legea lui Moise ca mijloc de mântuire. Li se cere totuși să se ferească de întinarea idolilor, de imoralitate sexuală, de animale sugrumate și de sânge. Harul nu este câștigat prin Lege, dar nici nu lasă omul în idolatrie și necurăție.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -1025,7 +1025,7 @@ export const NT_BOOK_05: BibleBook = {
         }
       ],
       "prayer": "Doamne, păstrează-mă în harul lui Hristos și ferește-mă să pun poveri pe alții. Dă-mi discernământ, dragoste pentru adevăr și smerenie în conflicte. Fă loc restaurării acolo unde oamenii au căzut. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "fapte-16",
@@ -1041,7 +1041,7 @@ export const NT_BOOK_05: BibleBook = {
           "ref": "Fapte 16:1-10",
           "heading": "Călăuzire, echipă și uși închise",
           "text": "A ajuns apoi și la Derbe și la Listra. Și iată că acolo era un ucenic pe nume Timotei, fiul unei femei iudee credincioase, dar al unui tată grec. Frații care au fost la Listra și Iconium au depus o mărturie bună despre el. Pavel a vrut ca el să plece împreună cu el; l-a luat și l-a circumcis din cauza iudeilor care erau în locurile acelea, căci toți știau că tatăl lui era grec. În timp ce treceau prin cetăți, le încredințau hotărârile luate de apostolii și prezbiterii din Ierusalim, ca să le păzească. Astfel, bisericile erau întărite în credință și creșteau la număr în fiecare zi. Au străbătut Frigia și ținutul Galatiei, fiind opriți de Duhul Sfânt să rostească Cuvântul în Asia. Când au ajuns în dreptul Misiei, au încercat să meargă în Bitinia, dar Duhul lui Isus nu le-a îngăduit. Au trecut atunci pe lângă Misia și au coborât la Troa. O viziune i-a apărut lui Pavel în noapte. Era un om din Macedonia în picioare, implorându-l și spunând: Vino în Macedonia și ajută-ne. După ce a văzut viziunea, am căutat imediat să ieșim în Macedonia, concluzionând că Domnul ne-a chemat să le predicăm vestea bună.",
-          "teaching": "Pavel îl ia pe Timotei, un lucrător mai tânăr, și bisericile sunt întărite. Explicația subliniază nevoia unor colaboratori care ne completează și ne echilibrează; trupul lui Hristos nu este zidit de independență.\n\nDuhul le închide anumite direcții și apoi le arată Macedonia. O ușă închisă nu este neapărat o mustrare și o boală sau întârziere nu dovedește lipsa credinței. Călăuzirea se clarifică pe măsură ce oamenii merg în ascultare și rămân disponibili.",
+          "teaching": "Pavel îl alege pe Timotei pentru lucrare, dar îl circumcide din cauza iudeilor din acele locuri, deși hotărârea apostolilor tocmai declarase că circumcizia nu este cerută neamurilor. Această acomodare pentru a-i mulțumi pe oameni este o greșeală, nu un model de urmat. Scriptura nu ascunde slăbiciunile slujitorilor folosiți de Dumnezeu.\n\nTotuși, Dumnezeu continuă să călăuzească echipa. Duhul Sfânt le interzice să vestească în Asia, nu le îngăduie să între în Bitinia, iar prin vedenia macedoneanului îi conduce spre o altă regiune. O ușă închisă, o întârziere sau chiar slăbiciunea omenească nu anulează planul lui Dumnezeu; slujitorul trebuie să rămână ascultător și corectabil.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -1071,7 +1071,7 @@ export const NT_BOOK_05: BibleBook = {
           "ref": "Fapte 16:16-24",
           "heading": "Când adevărul lovește profitul",
           "text": "În timp ce mergeam la rugăciune, o anumită fată care avea un spirit de ghicire ne-a întâlnit, care și-a adus stăpânii mult câștig prin prezicerea norocului. Ea se ținea după Pavel și după noi și striga: „Oamenii aceștia sunt robi ai Dumnezeului Preaînalt și vă vestesc o cale de mântuire!” A făcut lucrul acesta multe zile. Pavel, tulburat, s-a întors și i-a spus duhului: „Îți poruncesc, în Numele lui Isus Hristos, să ieși din ea!” Și a ieșit chiar în ceasul acela. Când stăpânii ei au văzut că li se dusese speranța câștigului, i-au prins pe Pavel și pe Sila și i-au târât în piață, înaintea conducătorilor. I-au adus înaintea magistraților și au spus: „Oamenii aceștia ne tulbură cetatea; sunt iudei și vestesc obiceiuri pe care nouă, fiind romani, nu ne este îngăduit nici să le primim, nici să le practicăm.” Mulțimea s-a ridicat împreună împotriva lor, iar magistrații le-au smuls hainele și au poruncit să fie bătuți cu nuiele. După ce le-au dat multe lovituri, i-au aruncat în închisoare și i-au poruncit temnicerului să-i păzească în siguranță. După ce a primit o astfel de poruncă, el i-a aruncat în închisoarea interioară și le-a asigurat picioarele în stocuri.",
-          "teaching": "O roabă exploatată aducea câștig stăpânilor prin ghicire. Pavel nu acceptă o mărturie venită dintr-o sursă demonică și o eliberează în Numele lui Isus. Când venitul stăpânilor dispare, ei mobilizează prejudecata și violența.\n\nEliberarea persoanei vulnerabile valorează mai mult decât profitul.",
+          "teaching": "Roaba avea un duh de ghicire, iar stăpânii ei obțineau un mare câștig din robia ei. Chiar dacă strigătul ei părea să confirme mesajul apostolilor, Pavel nu primește mărturia unui duh rău. După multe zile, poruncește duhului în Numele lui Isus Hristos să iasă, iar el iese chiar atunci.\n\nCând dispare sursa profitului, stăpânii îi târăsc pe Pavel și Sila înaintea autorităților, îi acuză fals și provoacă bătaia și întemnițarea lor. Evanghelia demască răul și pune eliberarea omului mai presus de câștigul obținut din robia lui.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -1079,14 +1079,14 @@ export const NT_BOOK_05: BibleBook = {
             "1 Timotei 6:9-10",
             "Proverbe 31:8-9"
           ],
-          "forYourHeart": "Privește persoana, nu folosul pe care alții îl obțin din ea. Apără demnitatea celui exploatat și refuză câștigul construit pe captivitatea altuia."
+          "forYourHeart": "Întreabă-te dacă beneficiezi de o situație care ține pe altcineva în robie. Nu numi bine ceea ce Dumnezeu numește rău și nu apăra profitul obținut din păcat."
         },
         {
           "id": "fapte-16-25-40",
           "ref": "Fapte 16:25-40",
           "heading": "Cântări în noapte și o casă mântuită",
           "text": "Pe la miezul nopții, Pavel și Sila se rugau și Îi cântau imnuri lui Dumnezeu, iar prizonierii îi ascultau. Deodată s-a produs un cutremur atât de mare, încât s-au zguduit temeliile închisorii. Toate ușile s-au deschis pe loc și legăturile tuturor s-au desfăcut. Temnicerul s-a trezit și, când a văzut ușile închisorii deschise, și-a scos sabia și era gata să se omoare, crezând că prizonierii fugiseră. Dar Pavel a strigat cu glas tare: „Să nu-ți faci niciun rău, căci toți suntem aici!” Temnicerul a cerut lumini, a sărit înăuntru și, tremurând, a căzut înaintea lui Pavel și a lui Sila. le-a scos, și a spus, d-lor, ce trebuie să fac pentru a fi salvat? Ei i-au răspuns: „Crede în Domnul Isus și vei fi mântuit, tu și casa ta.” Și i-au vestit cuvântul Domnului, lui și tuturor celor din casa lui. El i-a luat chiar în ceasul acela al nopții și le-a spălat rănile, iar apoi a fost botezat îndată, el și toți ai lui. I-a dus în casa lui, le-a pus masa și s-a bucurat cu toată casa lui că ajunsese să creadă în Dumnezeu. Când s-a făcut ziuă, magistrații i-au trimis pe purtătorii de vergi să spună: „Dă-le drumul oamenilor acelora!” Temnicerul i-a transmis aceste cuvinte lui Pavel: „Magistrații au trimis poruncă să fiți eliberați. Ieșiți acum și mergeți în pace!” Dar Pavel le-a spus: „Ne-au bătut în public, fără să fim condamnați, deși suntem cetățeni romani, și ne-au aruncat în închisoare, iar acum ne scot pe ascuns? Nicidecum! Să vină ei înșiși și să ne scoată!” Sergentii au raportat aceste cuvinte magistraților, și s-au temut când au auzit că sunt romani, Au venit și i-au rugat, apoi i-au scos afară și le-au cerut să plece din cetate. După ce au ieșit din închisoare, au intrat în casa Lidiei. I-au văzut pe frați, i-au încurajat și apoi au plecat.",
-          "teaching": "Pavel și Sila, bătuți și legați, se roagă și cântă. Cutremurul deschide ușile, dar ei nu fug lăsând temnicerul să se omoare. Strigătul lui Pavel îi salvează viața, iar apoi îi vestește pe Isus.\n\nCredința nu înlocuiește intervenția de criză. Temnicerul crede, îngrijește rănile lor și se bucură cu casa lui.\n\nÎn ziua următoare, Pavel își invocă cetățenia romană.",
+          "teaching": "Bătuți și închiși în butuci, Pavel și Sila se roagă și cântă laudă lui Dumnezeu la miezul nopții. Cutremurul deschide ușile, dar ei nu fug. Când temnicerul vrea să se omoare, Pavel strigă: „Să nu-ți faci niciun rău, căci toți suntem aici.”\n\nLa întrebarea Ce trebuie să fac ca să fiu mântuit?, răspunsul este: „Crede în Domnul Isus.” Cuvântul este vestit tuturor celor din casă; ei cred, temnicerul spală rănile apostolilor, iar cei care au primit Cuvântul sunt botezați chiar în noaptea aceea. A doua zi, Pavel invocă cetățenia romană și cere ca magistrații care i-au bătut public fără judecată să vină personal. Credința nu este pasivitate în fața nedreptății.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -1098,7 +1098,7 @@ export const NT_BOOK_05: BibleBook = {
         }
       ],
       "prayer": "Doamne, călăuzește-mă prin Duhul Tău și dă-mi răbdare când trebuie să aștept. Deschide inimi, eliberează pe cei exploatați și fă-mă atent la omul aflat în pericol. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "fapte-17",
@@ -1144,7 +1144,7 @@ export const NT_BOOK_05: BibleBook = {
           "ref": "Fapte 17:16-34",
           "heading": "Dumnezeul necunoscut este Creatorul tuturor",
           "text": "În timp ce îi aștepta în Atena, duhul lui Pavel se întărâta în el când vedea că cetatea era plină de idoli. Discuta deci în sinagogă cu iudeii și cu închinătorii lui Dumnezeu, iar în piață, în fiecare zi, cu cei pe care îi întâlnea. Câțiva dintre filosofii epicurieni și stoici au început și ei să vorbească cu el. Unii ziceau: „Ce vrea să spună acest culegător de vorbe?”, iar alții: „Pare să fie un vestitor al unor zeități străine”, fiindcă el vestea Evanghelia despre Isus și despre înviere. L-au luat și l-au dus în Areopag, spunând: „Putem afla care este această învățătură nouă pe care o rostești? Căci aduci la urechile noastre niște lucruri neobișnuite. Vrem deci să aflăm ce înseamnă acestea.” Toți atenienii și străinii care locuiau acolo nu-și petreceau timpul cu nimic altceva decât să spună sau să audă ceva mai nou. Pavel a stat în mijlocul Areopagului și a spus: „Bărbați atenieni, văd că, în toate privințele, sunteți deosebit de religioși. Căci, trecând și privind cu atenție obiectele voastre de închinare, am găsit și un altar pe care era scris: «UNUI DUMNEZEU NECUNOSCUT». Ei bine, ceea ce voi cinstiți fără să cunoașteți, aceea vă vestesc eu. Dumnezeul care a făcut lumea și toate lucrurile din ea, fiind Domn al cerului și al pământului, nu locuiește în temple făcute de mâini și nici nu este slujit de mâini omenești, ca și cum ar avea nevoie de ceva, El, care le dă tuturor viață, suflare și toate lucrurile. Dintr-unul singur a făcut orice neam de oameni, ca ei să locuiască pe toată fața pământului, hotărându-le vremurile rânduite și hotarele locuirii lor, pentru ca ei să-L caute pe Dumnezeu și, poate, să-L dibuiască și să-L găsească, deși El nu este departe de niciunul dintre noi. Căci «în El trăim, ne mișcăm și existăm», după cum au spus și unii dintre poeții voștri: «Căci și noi suntem urmașii Lui.» Fiind deci urmași ai lui Dumnezeu, nu trebuie să credem că dumnezeirea este asemenea aurului, argintului sau pietrei, unei lucrări cioplite prin meșteșugul și închipuirea omului. Așadar, Dumnezeu a trecut cu vederea vremurile de neștiință, dar acum le poruncește tuturor oamenilor, de pretutindeni, să se pocăiască, pentru că a hotărât o zi în care urmează să judece lumea locuită cu dreptate, printr-un Om pe care L-a rânduit, dându-le tuturor o dovadă prin faptul că L-a înviat dintre cei morți.” Când au auzit despre învierea morților, unii își băteau joc, dar alții au spus: „Te vom asculta despre aceasta și altă dată.” Astfel, Pavel a ieșit din mijlocul lor. Totuși, câțiva bărbați i s-au alăturat și au crezut. Între ei erau Dionisie Areopagitul, o femeie pe nume Damaris și alții împreună cu ei.",
-          "teaching": "În Atena, duhul lui Pavel este tulburat de idolatrie, dar el vorbește respectuos și pornește de la altarul pe care oamenii îl cunosc. El nu aprobă religia lor, ci folosește punctul de contact pentru a le arăta cine este Dumnezeu cu adevărat.\n\nDumnezeu nu locuiește în temple și nu are nevoie de serviciile omului; El dă tuturor viața și a făcut toate neamurile dintr-un singur om. Aceasta răstoarnă mândria rasială și religioasă. Oamenii sunt chemați să-L caute, să se pocăiască și să privească la Isus cel înviat, pe care Dumnezeu L-a rânduit Judecător.\n\nUnii batjocoresc, unii amână, iar alții cred. Curiozitatea despre idei noi nu este aceeași cu pocăința. Mesajul Evangheliei cere un răspuns personal.",
+          "teaching": "Pavel este provocat în duh când vede cetatea plină de idoli. La Areopag nu lingușește religiozitatea atenienilor, ci pornește de la altarul „unui dumnezeu necunoscut” pentru a-L vesti pe Creatorul cerului și al pământului, care nu locuiește în temple făcute de mâini și nu depinde de slujirea omenească.\n\nDumnezeu a făcut toate neamurile și le cheamă să-L caute. Fiind odrasla Lui, omul nu trebuie să reducă Dumnezeirea la aur, argint sau piatră. Dumnezeu poruncește acum tuturor oamenilor de pretutindeni să se pocăiască, deoarece a hotărât o zi în care va judeca lumea cu dreptate prin Isus, pe care L-a înviat dintre morți.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -1156,7 +1156,7 @@ export const NT_BOOK_05: BibleBook = {
         }
       ],
       "prayer": "Doamne, dă-mi dragoste pentru Scriptură și curaj să verific totul în lumina ei. Tulbură-mă de ceea ce Te dezonorează, dar învață-mă să vorbesc oamenilor cu respect și adevăr. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "fapte-18",
@@ -1214,7 +1214,7 @@ export const NT_BOOK_05: BibleBook = {
         }
       ],
       "prayer": "Doamne, învață-mă să muncesc cinstit, să vestesc Cuvântul fără iubire de bani și să primesc curaj din prezența Ta. Fă-mă smerit când sunt corectat și blând când îi ajut pe alții. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "fapte-19",
@@ -1245,7 +1245,7 @@ export const NT_BOOK_05: BibleBook = {
           "ref": "Fapte 19:11-20",
           "heading": "Numele lui Isus nu este o formulă",
           "text": "Dumnezeu a făcut miracole speciale prin mâinile lui Pavel, Astfel, chiar și batiste sau șorțuri au fost duse de la corpul său la bolnav, și bolile au plecat de la ei, și spiritele rele au ieșit afară. Atunci și unii dintre exorciștii iudei care umblau din loc în loc au încercat să cheme peste cei ce aveau duhuri rele Numele Domnului Isus, spunând: Vă conjur pe Isus, pe care Îl proclamă Pavel! Cei care făceau aceasta erau șapte fii ai unui anume Sceva, un mare-preot iudeu. Dar duhul cel rău le-a răspuns: Pe Isus Îl cunosc și despre Pavel știu, dar voi cine sunteți? Și omul în care era duhul cel rău a sărit asupra lor, a pus stăpânire pe amândoi și i-a biruit, așa că au fugit goi și răniți din casa aceea. Acest lucru a ajuns cunoscut tuturor iudeilor și grecilor care locuiau în Efes. Pe toți i-a cuprins frica, iar Numele Domnului Isus era preamărit. Mulți dintre cei care credeau au venit, mărturisind și declarându-și faptele. Destui dintre cei care practicaseră magia și-au adus cărțile și le-au ars înaintea tuturor. Le-au socotit prețul și au găsit că era de cincizeci de mii de piese de argint. Astfel, prin puterea Domnului, Cuvântul creștea și se întărea.",
-          "teaching": "Dumnezeu face minuni neobișnuite prin Pavel, dar fiii lui Sceva încearcă să folosească Numele lui Isus ca pe o tehnică. Ei descoperă că autoritatea spirituală nu vine din repetarea unor cuvinte, ci din relația reală cu Domnul și ascultarea de El. Frica sfântă îi conduce pe mulți la mărturisire și la arderea cărților de magie. Pocăința are uneori un cost economic și rupe cu sursele vechi de control.",
+          "teaching": "Dumnezeu face minuni neobișnuite prin Pavel, dar Numele lui Isus nu este o formulă magică. Fiii lui Sceva încearcă să-l folosească fără să-I aparțină lui Hristos; duhul rău Îl recunoaște pe Isus și știe cine este Pavel, dar îi biruie pe impostori.\n\nFrica de Domnul îi conduce pe mulți să-și mărturisească public faptele. Cei care practicau magia își aduc cărțile și le ard înaintea tuturor. Nu le vând altora ca să-și recupereze banii, fiindcă pocăința adevărată nu transferă răul pentru profit. Renunțarea îi costă mult, iar Cuvântul Domnului crește cu putere.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -1253,14 +1253,14 @@ export const NT_BOOK_05: BibleBook = {
             "Coloseni 2:13-15",
             "Deuteronom 18:10-12"
           ],
-          "forYourHeart": "Nu folosi Numele lui Isus ca pe un instrument pentru putere. Predă-I viața și rupe concret cu practicile care te țin legat."
+          "forYourHeart": "Numește practica ocultă, superstiția sau obiectul de care încă te ții. Mărturisește-l și rupe legătura cu el fără să-l dai mai departe altcuiva pentru câștig."
         },
         {
           "id": "fapte-19-21-41",
           "ref": "Fapte 19:21-41",
           "heading": "Când Evanghelia amenință piața idolilor",
           "text": "După ce s-au împlinit aceste lucruri, Pavel a hotărât în duhul să străbată Macedonia și Ahaia și să meargă la Ierusalim. El spunea: După ce voi ajunge acolo, trebuie să văd și Roma. I-a trimis în Macedonia pe doi dintre cei care îi slujeau, Timotei și Erast, iar el a mai rămas o vreme în Asia. Cam în acea perioadă nu a apărut nici o mică tulburare cu privire la Cale. Pentru un anumit om numit Demetrius, un argintar care a făcut altare de argint din Artemis, nu a adus nimic de făcut meșterilor, I-a adunat pe aceștia și pe lucrătorii din meserii asemănătoare și le-a spus: Bărbaților, știți că bunăstarea noastră vine din această îndeletnicire. Vedeți și auziți că nu numai în Efes, ci în aproape toată Asia, acest Pavel a convins și a abătut o mulțime mare, spunând că cei făcuți de mâini nu sunt dumnezei. Există primejdia nu numai ca îndeletnicirea noastră să ajungă de disprețuit, ci și ca templul marii zeițe Artemis să fie socotit o nimica și ca ea să fie lipsită de măreția ei, ea, căreia i se închină toată Asia și lumea locuită. Când au auzit, s-au umplut de mânie și au început să strige: Mare este Artemis a efesenilor! Cetatea s-a umplut de confuzie și au năvălit într-un singur gând în teatru, târându-i cu ei pe Gaius și pe Aristarh, macedoneni și tovarăși de călătorie ai lui Pavel. Când Pavel a vrut să intre în popor, discipolii nu i-au permis. Chiar și unii dintre conducătorii Asiei, care îi erau prieteni, au trimis la el și îl rugau să nu se ducă în teatru. Unii strigau una, alții alta, căci adunarea era în confuzie și cei mai mulți nici nu știau pentru ce se adunaseră. Din mulțime l-au făcut pe Alexandru să înțeleagă situația, după ce iudeii îl împinseseră în față. Alexandru a făcut semn cu mâna și voia să se apere înaintea poporului. Dar, când au recunoscut că era iudeu, au strigat toți într-un singur glas, cam două ore: Mare este Artemis a efesenilor! După ce a liniștit mulțimea, secretarul cetății a spus: Bărbați efeseni, cine dintre oameni nu știe că cetatea efesenilor este păzitoarea templului marii Artemis și a chipului căzut din cer? Văzând atunci că aceste lucruri nu pot fi negate, ar trebui să fie liniște și să nu facă nimic pripit. Căci i-ați adus aici pe oamenii aceștia, care nu sunt nici jefuitori de temple, nici blasfemiatori ai zeiței noastre. Așadar, dacă Dimitrie și meșteșugarii care sunt cu el au vreo plângere împotriva cuiva, tribunalele sunt deschise și există proconsuli; să se acuze unii pe alții. Dar dacă căutați ceva despre alte chestiuni, acesta va fi stabilit în adunarea regulată. Căci suntem în primejdie să fim acuzați de răscoală pentru ziua de astăzi, neexistând niciun motiv prin care să putem da socoteală pentru această îmbulzeală. După ce a vorbit astfel, el a dat drumul adunării.",
-          "teaching": "Demetriu mobilizează meșteșugarii fiindcă mesajul lui Pavel reduce profitul din templele de argint. El îmbracă interesul economic în limbajul devotamentului religios și al mândriei orașului.\n\nMulțimea devine confuză și mulți nici nu știu de ce s-au adunat. Explicația evidențiază cât de ușor pot fi oamenii manipulați când banii, religia și identitatea colectivă se amestecă. Ucenicii îl împiedică pe Pavel să între în teatru; curajul acceptă și sfatul protector al comunității.",
+          "teaching": "Demetrie vede că mesajul lui Pavel amenință atât câștigul meșteșugarilor, cât și prestigiul zeiței Artemis. Interesul financiar se îmbracă în zel religios, iar cetatea se umple de confuzie. Cei mai mulți din mulțime nici nu știu pentru ce s-au adunat.\n\nPavel vrea să între în teatru, dar ucenicii și câțiva oficiali prietenoși îl opresc de la o expunere inutilă. Secretarul cetății recunoaște că însoțitorii lui Pavel nu au jefuit temple și nu au hulit-o pe zeiță; dacă există acuzații, sunt tribunale și proconsuli. Dumnezeu folosește chiar și autoritatea civilă ca să oprească revolta. Evanghelia lovește idolatria și profitul ei, dar nu are nevoie de minciună sau violență.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -1272,7 +1272,7 @@ export const NT_BOOK_05: BibleBook = {
         }
       ],
       "prayer": "Doamne, umple-mă cu Duhul Tău și fă din comunitatea mea un loc din care Cuvântul ajunge departe. Curăță-mă de magie, iubirea banilor și manipularea mulțimilor. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "fapte-20",
@@ -1288,7 +1288,7 @@ export const NT_BOOK_05: BibleBook = {
           "ref": "Fapte 20:1-12",
           "heading": "Evanghelizare și zidirea ucenicilor",
           "text": "După ce a încetat tulburarea, Pavel i-a chemat pe ucenici, i-a încurajat, și-a luat rămas-bun și a plecat spre Macedonia. A străbătut ținuturile acelea, i-a încurajat prin multe cuvinte și a venit în Grecia. A petrecut acolo trei luni. Când iudeii au uneltit împotriva lui pe când era gata să plece pe mare spre Siria, a hotărât să se întoarcă prin Macedonia. Aceștia l-au însoțit până în Asia: Sopater din Bereea, Aristarh și Secundus din Tesaloniceni, Gaius din Derbe, Timotei, Tihicus și Trofimus din Asia. Dar acestea mergeau înainte și ne așteptau la Troas. Noi am plecat pe mare din Filipi după zilele Azimelor și, în cinci zile, am venit la ei în Troa, unde am rămas șapte zile. În prima zi a săptămânii, când eram adunați să frângem pâinea, Pavel discuta cu ei. Fiindcă urma să plece a doua zi, și-a prelungit vorbirea până la miezul nopții. În camera de sus unde eram adunați erau multe lămpi. Un tânăr pe nume Eutih stătea pe pervaz și era copleșit de un somn adânc. Pentru că Pavel vorbea mult, tânărul a fost răpus de somn, a căzut de la etajul al treilea și a fost ridicat mort. Pavel a coborât, s-a aplecat peste el, l-a cuprins în brațe și a spus: „Nu vă tulburați, căci viața lui este în el!” A urcat din nou, a frânt pâinea și a mâncat. A mai vorbit multă vreme, până în zori, și apoi a plecat. Ei l-au adus pe băiat viu și au fost nespus de încurajați.",
-          "teaching": "După tulburarea din Efes, Pavel trece prin regiunile unde fuseseră întemeiate biserici și le dă multă încurajare. El nu este preocupat doar de a ajunge la oameni noi, ci și de a-i conduce pe cei convertiți spre ucenicie și maturitate.\n\nLa Troa, Eutih adoarme, cade și este readus la viață. Relatarea arată compasiunea și puterea lui Dumnezeu, nu oferă o scuză pentru neglijența siguranței în adunări și nici promisiunea că orice accident va fi reparat miraculos.",
+          "teaching": "Pavel nu trece doar prin regiuni ca să adune convertiți, ci îi vizitează și îi încurajează mult pe ucenici. În Troa, credincioșii sunt adunați în prima zi a săptămânii pentru frângerea pâinii, iar Pavel le vorbește până la miezul nopții. Relatarea descrie practica lor; nu întemeiază aici o nouă lege a zilei de închinare.\n\nEutih adoarme, cade de la etajul al treilea și este ridicat mort. Pavel coboară, îl cuprinde și spune că viața lui este în el; Dumnezeu îl readuce la viață. Credincioșii frâng pâinea, continuă părtășia și sunt mult mângâiați. Minunea Îl arată pe Dumnezeu care lucrează în mijlocul slăbiciunii omenești.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -1303,7 +1303,7 @@ export const NT_BOOK_05: BibleBook = {
           "ref": "Fapte 20:13-24",
           "heading": "Slujind cu smerenie, lacrimi și curaj",
           "text": "Noi am mers înainte la corabie și am plecat pe mare spre Assos, de unde urma să-l luăm la bord pe Pavel. Așa rânduise el, fiindcă voia să meargă pe jos. Când ne-a întâlnit la Assos, l-am luat la bord și am venit la Mitilene. De acolo am plecat pe mare și, în ziua următoare, am ajuns în dreptul insulei Chios. În cealaltă zi am acostat la Samos, iar în ziua care a urmat am venit la Milet. Pavel hotărâse să treacă pe mare pe lângă Efes, ca să nu întârzie în Asia, căci se grăbea ca, dacă i-ar fi fost cu putință, să fie la Ierusalim în ziua Cincizecimii. Din Milet a trimis la Efes și i-a chemat la el pe prezbiterii bisericii. Când au venit la el, le-a spus: „Voi știți cum am fost cu voi tot timpul, din prima zi în care am pus piciorul în Asia, slujindu-L pe Domnul cu toată umilința, cu multe lacrimi cu încercări care mi s-au întâmplat prin comploturile iudeilor; Nu m-am dat înapoi de la nimic din ce vă era de folos, ca să nu vă vestesc și să nu vă învăț atât în public, cât și din casă în casă. Le-am mărturisit solemn atât iudeilor, cât și grecilor pocăința față de Dumnezeu și credința în Domnul nostru Isus. Și acum, iată, legat în duhul, mă duc la Ierusalim, fără să știu ce mi se va întâmpla acolo, decât că Duhul Sfânt îmi mărturisește solemn, din cetate în cetate, că mă așteaptă lanțuri și necazuri. Dar aceste lucruri nu conteaza; nici nu-mi tin viata draga mie, ca sa-mi termin cursa cu bucurie, si slujba pe care am primit-o de la Domnul Isus, ca sa depun marturie deplina la Vestea Buna a harului lui Dumnezeu.",
-          "teaching": "Pavel le amintește prezbiterilor cum a trăit între ei: cu smerenie, lacrimi și încercări, fără să ascundă nimic folositor. Autoritatea lui nu se bazează doar pe predici, ci pe o viață observabilă.\n\nEl vestește pocăința față de Dumnezeu și credința în Isus și nu își consideră viața mai scumpă decât împlinirea chemării. Aceasta nu glorifică autodistrugerea și nu cere ignorarea sănătății sau a pericolului; exprimă o inimă eliberată de iubirea confortului și a reputației.",
+          "teaching": "Pavel le amintește prezbiterilor cum a trăit între ei: cu smerenie, lacrimi și încercări, fără să ascundă nimic folositor. A învățat public și din casă în casă și a mărturisit iudeilor și grecilor pocăința față de Dumnezeu și credința în Domnul Isus.\n\nAcum merge la Ierusalim constrâns de Duhul, deși Duhul Sfânt îi arată că îl așteaptă lanțuri și necazuri. Pavel nu își socotește viața scumpă pentru sine; vrea să-și sfârșească alergarea și slujba primită de la Domnul Isus: mărturisirea Evangheliei harului lui Dumnezeu. Chemarea lui Dumnezeu valorează mai mult decât confortul și conservarea de sine.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -1311,7 +1311,7 @@ export const NT_BOOK_05: BibleBook = {
             "Filipeni 2:17",
             "2 Timotei 4:7"
           ],
-          "forYourHeart": "Caută o slujire în care caracterul, lacrimile și adevărul susțin cuvintele. Predă-I lui Dumnezeu dreptul de a-ți conduce viața."
+          "forYourHeart": "Nu folosi grija pentru confort ca să eviți ascultarea. Pocăiește-te de lucrul pe care îl ascunzi și fă pasul pe care ți l-a poruncit Dumnezeu, chiar dacă are un preț."
         },
         {
           "id": "fapte-20-25-38",
@@ -1330,7 +1330,7 @@ export const NT_BOOK_05: BibleBook = {
         }
       ],
       "prayer": "Doamne, dă-mi o viață smerită și transparentă. Ajută-mă să vestesc întregul Tău adevăr, să păzesc pe cei vulnerabili și să slujesc fără lăcomie sau dorința de adepți personali. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "fapte-21",
@@ -1361,7 +1361,7 @@ export const NT_BOOK_05: BibleBook = {
           "ref": "Fapte 21:17-26",
           "heading": "O încercare de a păstra pacea",
           "text": "Când am ajuns la Ierusalim, frații ne-au primit cu bucurie. A doua zi, Pavel a intrat împreună cu noi la Iacov și au venit acolo toți prezbiterii. După ce i-a salutat, le-a istorisit, unul câte unul, lucrurile pe care le făcuse Dumnezeu între neamuri prin slujirea lui. Când au auzit, L-au glorificat pe Dumnezeu și i-au spus: Vezi, frate, câte zeci de mii sunt printre iudeii care au crezut și toți sunt zeloși pentru Lege. Dar ei au fost informați despre tine că îi înveți pe toți iudeii care trăiesc printre neamuri să se lepede de Moise, spunându-le să nu-și circumcidă copiii și să nu umble potrivit obiceiurilor. Adunarea trebuie să se întâlnească, căci ei vor auzi că ați venit. Fă, așadar, ceea ce îți spunem. Avem aici patru bărbați care au asupra lor un jurământ. Ia-i cu tine, curăță-te împreună cu ei și plătește-le cheltuielile ca să-și radă capul. Atunci toți vor ști că nu este nimic adevărat în cele despre care au fost informați cu privire la tine, ci că și tu umbli păzind Legea. Dar cu privire la Neamurile care cred, am scris decizia noastră ca ei să nu observe astfel de lucruri, cu excepția faptului că trebuie să se ferească de hrana oferită idolilor, de sânge, de lucrurile strangulate și de imoralitatea sexuală. Atunci Pavel i-a luat pe bărbații aceia și, în ziua următoare, s-a curățit împreună cu ei. A intrat în templu și a anunțat împlinirea zilelor de curățire, până când avea să fie adusă jertfa pentru fiecare dintre ei.",
-          "teaching": "La Ierusalim, Iacov și prezbiterii se bucură de lucrarea dintre neamuri, dar se tem de zvonurile răspândite printre iudeii credincioși. Ei îi propun lui Pavel un gest public de purificare pentru a demonstra că nu disprețuiește Legea.\n\nPavel acceptă, probabil din dorința de a nu pune o piedică inutilă. Relatarea nu prezintă conducătorii ca infailibili. Pacea este prețioasă, dar strategiile omenești nu pot vindeca întotdeauna prejudecata și uneori pot produce o situație mai complicată.",
+          "teaching": "Iacov și bătrânii se bucură de lucrarea lui Dumnezeu între neamuri, dar sunt încă apăsați de mulțimea iudeilor zeloși pentru Lege. Ca să liniștească zvonurile, îi cer lui Pavel să participe la un ritual de curățire și să plătească cheltuielile unor oameni cu jurământ. Pavel acceptă.\n\nAceasta nu este o strategie de urmat, ci o acomodare greșită față de un sistem pe care Noul Legământ îl împlinise. Sinceritatea, experiența și poziția spirituală nu fac un compromis corect. Planul nu produce pace, iar Pavel ajunge atacat. Dumnezeu nu îl abandonează din cauza greșelii, ci îl protejează și continuă să-Și împlinească planul prin el.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -1369,14 +1369,14 @@ export const NT_BOOK_05: BibleBook = {
             "1 Corinteni 9:19-23",
             "Galateni 2:11-14"
           ],
-          "forYourHeart": "Caută pacea fără să pretinzi că orice compromis strategic este călăuzire perfectă. Rămâi smerit și gata să înveți din rezultate."
+          "forYourHeart": "Nu numi „înțelepciune” compromisul făcut ca să păstrezi aprobarea religioasă. Dacă Dumnezeu îți arată că ai cedat presiunii oamenilor, recunoaște greșeala și întoarce-te la adevărul Noului Legământ."
         },
         {
           "id": "fapte-21-27-40",
           "ref": "Fapte 21:27-40",
           "heading": "Salvat din mâinile unei mulțimi",
           "text": "Când cele șapte zile erau pe sfârșite, iudeii din Asia l-au văzut în templu, au stârnit toată mulțimea și au pus mâna pe el, strigând: Bărbați israeliți, ajutați-ne! Acesta este omul care îi învață pe toți, pretutindeni, împotriva poporului, a Legii și a acestui loc. Mai mult, a adus și greci în templu și a întinat acest loc sfânt! Căci îl văzuseră mai înainte în cetate împreună cu Trofim efeseanul și presupuneau că Pavel îl adusese în templu. Toată cetatea s-a pus în mișcare și poporul a alergat laolaltă. L-au prins pe Pavel și l-au târât afară din templu, iar ușile au fost închise îndată. În timp ce ei căutau să-l omoare, la comandantul cohortei a ajuns vestea că tot Ierusalimul era în tulburare. El a luat imediat soldați și centurioni și a coborât în fugă la ei. Când l-au văzut pe comandant și pe soldați, au încetat să-l mai lovească pe Pavel. Atunci comandantul s-a apropiat, l-a prins și a poruncit să fie legat cu două lanțuri. Apoi a întrebat cine era și ce făcuse. Unii din mulțime strigau una, alții alta. Fiindcă nu putea afla adevărul din cauza zarvei, a poruncit să fie dus în cazarmă. Când a ajuns pe scări, a fost dus de soldați din pricina violenței mulțimii; căci mulțimea poporului venea după ei și striga: La moarte cu el! Când era gata să fie dus în cazarmă, Pavel i-a spus comandantului: Îmi este îngăduit să-ți spun ceva? El a răspuns: Știi grecește? Atunci nu ești tu egipteanul care, cu puțin timp în urmă, a stârnit o răscoală și i-a dus în pustiu pe cei patru mii de sicari? Pavel a spus: Eu sunt iudeu, din Tarsul Ciliciei, cetățean al unei cetăți deloc neînsemnate. Te rog, îngăduie-mi să vorbesc poporului. După ce i-a dat voie, Pavel a stat pe trepte și a făcut semn poporului cu mâna. Când s-a făcut o mare tăcere, li s-a adresat în limba ebraică, spunând:",
-          "teaching": "Iudeii din Asia lansează acuzații bazate pe presupuneri și mulțimea încearcă să-l omoare pe Pavel. Comandantul roman intervine, îl scoate din violență și încearcă să afle adevărul.\n\nDumnezeu îl protejează pe Pavel prin autoritatea civilă. Credința nu obligă victima să rămână într-o mulțime, casă sau relație în care viața îi este amenințată.\n\nChiar legat, Pavel caută ocazia de a mărturisi. Protecția și mărturia nu se exclud: omul poate folosi căile legale și, în același timp, poate răspunde fără ură.",
+          "teaching": "Iudeii din Asia îl acuză pe Pavel că învață împotriva poporului, Legii și Templului și presupun că l-a introdus pe Trofim în zona interzisă. Nu au văzut fapta; au tras o concluzie din faptul că îl văzuseră pe Trofim cu Pavel în cetate. Presupunerea aprinde mulțimea și aproape duce la moarte.\n\nComandantul roman intervine la timp și îl scoate pe Pavel din mâinile lor. Mulțimea strigă acuzații contradictorii, astfel că adevărul nu poate fi aflat în vacarm. Pavel rămâne lucid, vorbește în greacă cu comandantul, își clarifică identitatea și cere permisiunea să se adreseze poporului. Dumnezeu transformă protecția civilă într-o ocazie de mărturie.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -1384,11 +1384,11 @@ export const NT_BOOK_05: BibleBook = {
             "Fapte 9:23-25",
             "1 Petru 3:15-16"
           ],
-          "forYourHeart": "După ce ești protejat, cere-I lui Dumnezeu harul de a spune adevărul fără răzbunare."
+          "forYourHeart": "Nu condamna un om pe baza unei presupuneri repetate de mulțime. Verifică faptele, spune adevărul fără panică și folosește ocazia primită ca să mărturisești despre Hristos."
         }
       ],
       "prayer": "Doamne, dă-mi discernământ în călăuzire, smerenie în fața sfatului și libertate față de controlul religios. Protejează-i pe cei aflați în pericol și fă-mă un martor fără ură. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "fapte-22",
@@ -1446,7 +1446,7 @@ export const NT_BOOK_05: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, fă-mă gata să întreb ce vrei să fac și să urmez chemarea Ta, nu logica mândriei mele. Păzește-mă de prejudecată și dă-mi înțelepciune să folosesc dreptatea fără răzbunare. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "fapte-23",
@@ -1504,7 +1504,7 @@ export const NT_BOOK_05: BibleBook = {
         }
       ],
       "prayer": "Doamne, dă-mi o conștiință sensibilă și smerenie să-mi corectez greșelile. Ajută-mă să recunosc providența Ta în oameni și instituții și să îndrăznesc fiindcă Tu nu mi-ai abandonat chemarea. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "fapte-24",
@@ -1520,7 +1520,7 @@ export const NT_BOOK_05: BibleBook = {
           "ref": "Fapte 24:1-9",
           "heading": "Lingușire și acuzații fără dovadă",
           "text": "După cinci zile, marele preot Anania a coborât împreună cu câțiva bătrâni și cu un oarecare orator Tertulus; aceștia și-au prezentat guvernatorului acuzațiile împotriva lui Pavel. Când a fost chemat, Tertullus a început să-l acuze, spunând, Văzând că prin tine ne bucurăm de multă pace, și că prosperitatea vine la această națiune prin previziunea ta, pe acestea le primim în orice fel și pretutindeni, preaalesule Felix, cu toată recunoștința. Dar, ca să nu te rețin mai mult, te rog ca, în bunăvoința ta, să ne asculți pe scurt. Căci am aflat că omul acesta este o plagă, un instigator al insurecțiilor printre toți iudeii din întreaga lume, și un conducător al sectei Nazarinenilor. El a încercat să profaneze chiar și Templul, iar noi l-am prins. Chiar de la el vei putea afla, dacă îl cercetezi, toate aceste lucruri pentru care îl acuzăm. Iudeii s-au alăturat și ei acuzației, afirmând că lucrurile stăteau așa.",
-          "teaching": "Tertul își începe pledoaria cu laude exagerate pentru Felix și îl numește pe Pavel un agitator periculos. Religia poate folosi limbaj respectuos pentru a ascunde minciuna, interesul și dorința de a elimina un martor incomod.\n\nExplicația contrastează această vorbire cu simplitatea lui Pavel. Un creștin nu trebuie să obțină favoruri prin lingușire și nici să răspundă acuzațiilor false prin alte minciuni.",
+          "teaching": "Tertul începe prin lingușirea lui Felix și îl prezintă pe Pavel drept o ciumă, un instigator la răscoală și conducător al sectei nazarinenilor. Acuzația este construită ca să obțină condamnarea, nu ca să stabilească adevărul, iar iudeii se alătură afirmând că lucrurile sunt așa.\n\nRetorica sigură pe sine, titlurile și consensul acuzatorilor nu transformă minciuna în fapt. Credinciosul nu trebuie să răspundă prin aceeași manipulare, ci să distingă între acuzație și dovadă și să rămână curat înaintea lui Dumnezeu.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -1550,7 +1550,7 @@ export const NT_BOOK_05: BibleBook = {
           "ref": "Fapte 24:22-27",
           "heading": "Felix se teme, amână și iubește banii",
           "text": "Felix, care cunoștea mai exact cele privitoare la Cale, le-a amânat cauza, zicând: Când va coborî comandantul Lisias, voi hotărî cazul vostru. El a ordonat centurionului ca Pavel să fie ținut în custodie și să aibă unele privilegii, și să nu interzică niciunuia dintre prietenii săi să-i slujească sau să-l viziteze. După câteva zile, Felix a venit cu Drusila, soția lui, care era iudeică; l-a chemat pe Pavel și l-a ascultat despre credința în Hristos Isus. Dar pe când acesta vorbea despre dreptate, înfrânare și judecata care vine, Felix s-a înspăimântat și a răspuns: Deocamdată du-te; când voi găsi un prilej, te voi chema. Între timp, el a sperat, de asemenea, că banii îi vor fi dați de Pavel, ca să-l elibereze. De aceea, el a trimis după el mai des și a vorbit cu el. După împlinirea a doi ani, Porcius Festus i-a urmat lui Felix; iar Felix, vrând să câștige bunăvoința iudeilor, l-a lăsat pe Pavel legat.",
-          "teaching": "Pavel nu îi oferă lui Felix un mesaj care să-i mângâie corupția. Vorbește despre dreptate, înfrânare și judecata viitoare, iar guvernatorul se înspăimântă. Totuși, în loc să se pocăiască, spune: «Deocamdată du-te; când voi găsi un prilej, te voi chema.»\n\nAmânarea repetată poate împietri inima. Felix îl cheamă des și speră la mită, apoi îl lasă legat pentru a câștiga bunăvoința oamenilor. Teama religioasă fără ruperea de bani, păcat și aprobarea oamenilor nu este pocăință.",
+          "teaching": "Felix cunoaște destul de bine Calea, dar amână verdictul. Când Pavel vorbește despre dreptate, stăpânire de sine și judecata viitoare, Felix se înspăimântă, însă îl trimite deoparte pentru un moment „mai potrivit”. Convingerea fără pocăință nu mântuiește.\n\nÎn același timp, Felix speră să primească bani de la Pavel și îl cheamă des la discuție. După doi ani îl lasă legat ca să le facă pe plac iudeilor. Interesul spiritual, frica și conversațiile repetate nu înlocuiesc ascultarea. Amânarea adevărului este ea însăși o alegere.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -1558,11 +1558,11 @@ export const NT_BOOK_05: BibleBook = {
             "Evrei 3:15",
             "1 Timotei 6:10"
           ],
-          "forYourHeart": "Nu amâna răspunsul la adevărul care te cercetează. Pocăința de mâine este adesea modul inimii de a spune «nu» astăzi."
+          "forYourHeart": "Nu aștepta o clipă mai comodă ca să te pocăiești. Numește păcatul pe care îl aperi și ascultă astăzi de adevărul pe care Dumnezeu ți l-a făcut clar."
         }
       ],
       "prayer": "Doamne, păzește-mă de lingușire, corupție și amânare. Ajută-mă să trăiesc cu o conștiință curată, cu înfrânare și în lumina judecății Tale drepte. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "fapte-25",
@@ -1620,7 +1620,7 @@ export const NT_BOOK_05: BibleBook = {
         }
       ],
       "prayer": "Doamne, dă-mi înțelepciune să folosesc drepturile fără răzbunare și curaj să mărturisesc că Isus este viu. Păzește-mă de presiunea mulțimii și de fascinația pentru puterea omenească. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "fapte-26",
@@ -1651,7 +1651,7 @@ export const NT_BOOK_05: BibleBook = {
           "ref": "Fapte 26:12-23",
           "heading": "Trimis să deschidă ochii",
           "text": "După care am călătorit la Damasc cu autoritatea și misiunea de la preoții principali, La amiază, pe drum, am văzut, rege, o lumină din cer, mai strălucitoare decât soarele, luminând împrejurul meu și al celor ce mergeau cu mine. După ce am căzut cu toții la pământ, am auzit un glas care-mi zicea în limba ebraică: Saul, Saul, de ce Mă persecuți? Îți este greu să dai cu piciorul în țepușe. I-am spus: Cine ești tu, Doamne? Și el a spus: Eu sunt Isus, pe care îl persecuți. Dar ridică-te și stai în picioare, căci M-am arătat ție pentru aceasta: ca să te rânduiesc slujitor și martor atât al celor în care M-ai văzut, cât și al celor în care Mă voi arăta ție. Te voi izbăvi de popor și de neamurile la care Eu te trimit, ca să le deschizi ochii, pentru ca ele să se întoarcă de la întuneric la lumină și de sub autoritatea lui Satan la Dumnezeu, ca să primească iertarea păcatelor și o parte între cei sfințiți prin credința în Mine. De aceea, rege Agripa, n-am fost neascultător față de viziunea cerească, ci le-am vestit mai întâi celor din Damasc și din Ierusalim, apoi în toată regiunea Iudeei și neamurilor, să se pocăiască și să se întoarcă la Dumnezeu, făcând fapte vrednice de pocăință. Din cauza acestora, iudeii m-au prins în Templu și încercau să mă omoare. Dar, primind ajutorul care vine de la Dumnezeu, stau până în ziua aceasta, depunând mărturie înaintea celui mic și celui mare, fără să spun nimic în afară de cele despre care Profeții și Moise au spus că urmează să se întâmple: că Hristosul avea să sufere și că, primul prin învierea dintre cei morți, avea să vestească lumină atât poporului, cât și neamurilor.",
-          "teaching": "Isus îl oprește pe Pavel și îl trimite să deschidă ochii oamenilor, ca ei să se întoarcă de la întuneric la lumină și de sub puterea Satanei la Dumnezeu, primind iertare și moștenire prin credință.\n\nPavel spune că nu a fost neascultător viziunii, ci a vestit pocăința și fapte vrednice de pocăință. Harul iartă gratuit, dar schimbarea direcției produce roade vizibile. El nu predică o emoție fără ascultare.\n\nMesajul lui nu este o invenție nouă: Moise și profeții au mărturisit suferința și învierea lui Hristos și lumina dusă poporului și neamurilor.",
+          "teaching": "Pavel povestește cum Isus cel înviat l-a oprit pe drumul Damascului și l-a ridicat ca slujitor și martor. Este trimis să deschidă ochii oamenilor, ca ei să se întoarcă de la întuneric la lumină și de sub puterea lui Satan la Dumnezeu, să primească iertarea păcatelor și moștenirea între cei sfințiți prin credința în Hristos.\n\nPavel nu a fost neascultător vedeniei cerești. A vestit pretutindeni ca oamenii să se pocăiască, să se întoarcă la Dumnezeu și să facă fapte vrednice de pocăință. Mesajul lui nu adaugă o noutate profeților și lui Moise: Hristos trebuia să sufere și, prin înviere, să vestească lumină poporului și neamurilor.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -1666,7 +1666,7 @@ export const NT_BOOK_05: BibleBook = {
           "ref": "Fapte 26:24-32",
           "heading": "Aproape convins nu înseamnă predat",
           "text": "În timp ce el a făcut astfel apărarea lui, Festus a spus cu o voce tare, Paul, ești nebun! Marea ta învățare este de conducere te nebun! Dar Pavel a zis: Nu sunt nebun, preaalesule Festus, ci rostesc cuvinte de adevăr și chibzuință. Căci regele știe despre acestea, iar eu îi vorbesc și cu îndrăzneală; sunt convins că nimic din acestea nu-i este ascuns, pentru că aceasta nu s-a petrecut într-un colț. Crezi în Profeți, rege Agripa? Știu că crezi. Agripa i-a zis lui Pavel: Cu puțin mă convingi să devin creștin. Pavel a răspuns: M-aș ruga lui Dumnezeu ca, fie cu puțin, fie cu mult, nu numai tu, ci și toți cei care mă ascultă astăzi să devină așa cum sunt eu, în afară de lanțurile acestea. Împăratul s-a sculat cu guvernatorul și cu Bernice, și cu cei ce ședeau cu ei. După ce s-au retras, vorbeau unii cu alții, zicând: Omul acesta nu face nimic vrednic de moarte sau de lanțuri. Agripa i-a zis lui Festus: Omul acesta putea fi eliberat dacă n-ar fi făcut apel la Cezar.",
-          "teaching": "Festus îl numește nebun, dar Pavel răspunde calm că spune cuvinte adevărate și chibzuite. El nu se lasă provocat de insultă și nu își diluează mărturia pentru a părea acceptabil.\n\nApoi îl întreabă direct pe Agripa dacă îi crede pe profeți. Pavel nu caută doar achitarea, ci mântuirea celor care îl judecă: dorește ca toți să devină ca el în Hristos, dar fără lanțuri.\n\nAgripa recunoaște forța mărturiei, însă textul nu arată o predare. Apropierea intelectuală de credință nu înlocuiește pocăința personală.",
+          "teaching": "Festus îl întrerupe și îl numește nebun, dar Pavel răspunde cu respect că rostește cuvinte adevărate și cumpătate. Apoi îl confruntă personal pe Agripa: regele cunoaște aceste lucruri și crede profeții. Pavel nu își diluează mărturia ca să câștige aprobarea celor puternici.\n\nCând Agripa întreabă dacă vrea să-l facă atât de repede creștin, Pavel spune că se roagă ca nu numai el, ci toți cei care îl aud să devină ca el, afară de lanțuri. Conducătorii recunosc că Pavel nu făcuse nimic vrednic de moarte sau închisoare. Apelul la Cezar îl ține totuși pe drumul pe care Dumnezeu îl va folosi pentru mărturia la Roma.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -1678,7 +1678,7 @@ export const NT_BOOK_05: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, fă-mă ascultător chemării Tale și dă-mi o mărturie adevărată, chibzuită și plină de dragoste. Deschide ochii mei și ai celor cărora le vorbesc. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "fapte-27",
@@ -1694,7 +1694,7 @@ export const NT_BOOK_05: BibleBook = {
           "ref": "Fapte 27:1-12",
           "heading": "Un avertisment ignorat",
           "text": "Când s-a stabilit că trebuie să navigăm spre Italia, ei i-au dat pe Pavel și pe alți deținuți unui centurion pe nume Julius, din formația Augustan. Urcând într-o navă de Adramytium, care era pe cale să navigheze spre locuri de pe coasta Asiei, am pus în mare, Aristarhus, un macedonean din Tesalonic fiind cu noi. A doua zi ne-am atins de Sidon. Julius l-a tratat cu amabilitate pe Pavel și i-a dat permisiunea să meargă la prietenii săi și să se împrospăteze. Pe mare de acolo, am navigat sub apa Ciprului, pentru că vânturile erau contrare. După ce am navigat peste mare, care este de pe Cilicia și Pamphylia, am venit la Myra, un oraș Lycia. Acolo centurionul a găsit o navă din Alexandria navigând spre Italia, și ne-a pus la bord. După ce am navigat încet mai multe zile, și am ajuns cu dificultate în fața lui Cnidus, vântul nepermițându-ne să mergem mai departe, am navigat sub apele Cretei, în fața lui Salmone. Cu dificultate de navigatie de-a lungul ei am ajuns la un anumit loc numit Fair Havens, în apropiere de orașul Lasea. Când a trecut mult timp și călătoria era acum periculoasă pentru că postul trecuse deja, Pavel i-a avertizat le-a zis: Domnilor, îmi dau seama că această călătorie va fi cu multă pagubă pierdere, nu numai a încărcăturii a navei, ci a noastre.„ Dar centurionul a dat mai multă atenție stăpânului și stăpânului corăbiei decât celor spuse de Pavel. Deoarece limanul nu era potrivit pentru iarnă, majoritatea sfătuiau să meargă pe mare de acolo, dacă prin orice mijloace ar putea ajunge la Phoenix și iarna acolo, care este un port al Cretei, privind spre sud-vest și nord-vest.",
-          "teaching": "Pavel observă pericolul și avertizează că plecarea va aduce pagubă, dar centurionul ascultă mai mult de cârmaci și de proprietarul corăbiei. Majoritatea preferă un port mai confortabil și vântul ușor pare să le confirme planul.\n\nNu orice opinie majoritară sau început favorabil dovedește că decizia este bună. Discernământul cere să luăm în serios avertismentele, competența reală și riscurile, fără a spiritualiza neglijența.",
+          "teaching": "Pavel avertizează că plecarea va aduce pagubă încărcăturii, corabiei și vieților. Sutașul ascultă însă mai mult de pilot și de proprietarul corabiei decât de cuvintele lui Pavel, iar majoritatea hotărăște să încerce să ajungă la un port mai potrivit pentru iernat.\n\nExperiența profesională și votul majorității nu sunt infailibile. Când începe să sufle un vânt ușor din sud, oamenii cred că planul lor a reușit; curând izbucnește furtuna violentă. Un început favorabil nu dovedește că nesocotirea avertismentului lui Dumnezeu a fost corectă. Neascultarea are consecințe chiar când pare susținută de experți și împrejurări.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -1724,7 +1724,7 @@ export const NT_BOOK_05: BibleBook = {
           "ref": "Fapte 27:27-44",
           "heading": "Rămâneți în corabie și mâncați",
           "text": "Dar când a venit noaptea a paisprezecea, când am fost duși înainte și înapoi în Marea Adriatică, pe la miezul nopții marinarii au bănuit că se apropiau de o țară. Ei au luat sunete și au găsit douăzeci de stînzi. După puțin timp, au luat din nou sunete, și au găsit cincisprezece stînzi. Temându-se că vom eșua pe pământ stâncos, au dat drumul la patru ancore de la pupa, și și-au dorit lumina zilei. În timp ce marinarii încercau să fugă din navă și coborâseră barca în mare, pretinzând că vor întinde ancore din arc, Pavel a spus centurionului și soldaților: Dacă aceștia nu rămân în corabie, voi nu puteți fi salvați. Apoi soldații au tăiat frânghiile bărcii și au lăsat-o să cadă. În timp ce ziua se apropia, Pavel i-a rugat pe să ia ceva de mâncare, spunând: Astăzi este a paisprezecea zi în care așteptați și continua să post, neluând nimic. De aceea vă rog să luați ceva de mâncare, căci aceasta este pentru siguranța voastră; căci niciun fir de păr nu va pieri din capul vostru. După ce a spus aceasta și a luat pâine, a mulțumit lui Dumnezeu în prezența tuturor; apoi a rupt-o și a început să mănânce. Apoi s-au înveselit cu toții și au luat și ei mâncare. În total, am fost două sute șaptezeci și șase de suflete pe navă. După ce au mâncat destul, au luminat corabia, aruncând grâul în mare. Când s-a făcut ziuă, nu au recunoscut pământul, dar au observat un anumit golf cu o plajă și au decis să încerce să conducă nava pe el. Alungând ancorele, le-au lăsat în mare, dezlegând în același timp frânghiile cârmei. înălțând premergătorul la vânt, s-au îndreptat spre plajă. Dar venind într-un loc în care s-au întâlnit două mări, au dat jos vasul. Arcul a lovit și a rămas imobil, dar pupa a început să se rupă de violența valurilor. Sfatul soldaților era să-i omoare pe prizonieri, astfel încât nici unul dintre ei să nu înoate și să scape. Dar centurionul, dorind să-l salveze pe Pavel, i-a oprit de la scopul lor, și a poruncit ca cei ce puteau să înoate să se arunce mai întâi peste bord, ca să meargă spre țară. iar restul ar trebui să urmeze, unii pe scânduri și alții pe alte lucruri de pe navă, așa că toți au scăpat în siguranță pe uscat.”",
-          "teaching": "Marinarii încearcă să fugă, dar Pavel spune că ceilalți nu pot fi salvați fără ei. Promisiunea lui Dumnezeu nu anulează responsabilitatea. Soldații taie frânghiile bărcii, oamenii rămân împreună și urmează pașii necesari.\n\nPavel îi îndeamnă să mănânce și le dă exemplu, mulțumind lui Dumnezeu înaintea tuturor. Spiritualitatea lui include hrană, ordine și sănătatea trupului. După aceea, marfa este aruncată și corabia se pierde, dar toate cele două sute șaptezeci și șase de vieți ajung la uscat.\n\nCând soldații vor să-i omoare pe prizonieri, centurionul îi oprește pentru a-l salva pe Pavel. Dumnezeu își împlinește făgăduința prin mai multe decizii concrete, nu prin pasivitate.",
+          "teaching": "Când marinarii încearcă să fugă din corabie sub pretextul coborârii ancorelor, Pavel îi spune sutașului că, dacă acești oameni nu rămân la bord, ceilalți nu pot fi salvați. Soldații taie funiile bărcii. Promisiunea lui Dumnezeu nu îi face pasivi; ea cere ascultare de îndrumarea dată.\n\nDupă paisprezece zile fără hrană, Pavel îi îndeamnă să mănânce, Îi mulțumește lui Dumnezeu înaintea tuturor și îi încurajează. Sunt două sute șaptezeci și șase de oameni. Când corabia se sfărâmă, soldații vor să-i omoare pe prizonieri, dar sutașul îl cruță pe Pavel și oprește planul. Toți ajung la uscat, unii înotând, alții pe scânduri, exact cum spusese Dumnezeu.",
           "explanationKind": "exposition",
           "explanationSource": "poonen-source-derived-primary+editorial-research",
           "crossRefs": [
@@ -1732,11 +1732,11 @@ export const NT_BOOK_05: BibleBook = {
             "1 Timotei 4:4-5",
             "Psalmul 107:23-30"
           ],
-          "forYourHeart": "Fă partea responsabilă pe care o cere criza: rămâi cu oamenii, ascultă competența, hrănește trupul și protejează viața."
+          "forYourHeart": "Nu despărți credința de ascultare. Ține-te de cuvântul lui Dumnezeu și fă pasul concret pe care îl cere, chiar dacă furtuna nu s-a oprit încă."
         }
       ],
       "prayer": "Doamne, dă-mi discernământ să aud avertismentele și credință când furtuna distruge planurile. Fă-mă o prezență care aduce speranță, ordine și protecție pentru cei din jur. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "fapte-28",
@@ -1794,7 +1794,7 @@ export const NT_BOOK_05: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, fă-mă smerit în slujire, recunoscător pentru frați și statornic atunci când oamenii răspund diferit. Continuă prin mine lucrarea Ta și lasă Cuvântul Tău să înainteze fără piedică. Amin.",
-      "status": "in_review"
+      "status": "published"
     }
   ]
 }

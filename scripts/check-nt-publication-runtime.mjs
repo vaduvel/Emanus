@@ -9,6 +9,7 @@ const ROOT = process.cwd()
 const distModule = path.join(ROOT, "packages", "shared", "dist", "bible", "ntPublicationBible.js")
 const beDir = path.join(ROOT, "docs", "data", "biblia-emanus")
 const bindingPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-canonical-binding.json")
+const finalManifestPath = path.join(ROOT, "docs", "data", "biblia-explicata", "nt-final-source-first-manifest.json")
 const EXPECTED = { books: 27, chapters: 260, verseEntries: 7941 }
 
 const FORBIDDEN = [
@@ -58,13 +59,17 @@ function expectedPassage(be, from, to) {
 
 if (!fs.existsSync(distModule)) fail("shared runtime not built; run materializer and shared build first")
 if (!fs.existsSync(bindingPath)) fail("canonical binding missing")
+if (!fs.existsSync(finalManifestPath)) fail("final source-first manifest missing")
 const binding = JSON.parse(fs.readFileSync(bindingPath, "utf8"))
+const finalManifest = JSON.parse(fs.readFileSync(finalManifestPath, "utf8"))
+if (!["in_review", "published"].includes(finalManifest.status) || typeof finalManifest.publicationReady !== "boolean") fail("invalid final source-first publication state")
+const expectedRuntimeStatus = finalManifest.status === "published" && finalManifest.publicationReady === true ? "published" : "in_review"
 const bindingByChapter = new Map((binding.chapters ?? []).map((entry) => [`${entry.bookId}.${entry.chapter}`, entry]))
 const runtime = await import(pathToFileURL(distModule).href + `?t=${Date.now()}`)
 const books = runtime.NT_EXPLAINED_BOOKS
 if (!Array.isArray(books) || books.length !== EXPECTED.books) fail(`books ${books?.length ?? 0}/${EXPECTED.books}`)
 if (runtime.NT_EXPLAINED_TRANSLATION !== "Biblia Emanus") fail("runtime translation is not Biblia Emanus")
-if (runtime.NT_EXPLAINED_STATUS !== "in_review") fail("runtime must remain in_review until final release review")
+if (runtime.NT_EXPLAINED_STATUS !== expectedRuntimeStatus) fail(`runtime status ${runtime.NT_EXPLAINED_STATUS} does not match manifest ${expectedRuntimeStatus}`)
 if (runtime.NT_EXPLAINED_CANONICAL_VERSION !== binding.canonicalTextVersion) fail("runtime canonical version mismatch")
 if (runtime.NT_EXPLAINED_CANONICAL_STATE !== binding.releaseState) fail("runtime canonical state mismatch")
 if (runtime.NT_EXPLAINED_CANONICAL_SHA256 !== binding.corpusSha256) fail("runtime canonical corpus hash mismatch")
@@ -78,7 +83,7 @@ for (const book of books) {
   const seenBookChapter = new Set()
   for (const chapter of book.chapters) {
     chapters += 1
-    if (chapter.status !== "in_review") fail(`${book.id} ${chapter.number}: runtime prematurely published`)
+    if (chapter.status !== expectedRuntimeStatus) fail(`${book.id} ${chapter.number}: runtime status does not match manifest`)
     if (seenBookChapter.has(chapter.number)) fail(`${book.id}: duplicate chapter ${chapter.number}`)
     seenBookChapter.add(chapter.number)
     const beBookId = {
@@ -111,4 +116,4 @@ for (const book of books) {
 if (chapters !== EXPECTED.chapters || verseEntries !== EXPECTED.verseEntries) fail(`totals ${chapters}/${EXPECTED.chapters} chapters, ${verseEntries}/${EXPECTED.verseEntries} BE entries`)
 console.log(`NT publication runtime gate OK: ${books.length} books / ${chapters} chapters / ${verseEntries} bound Biblia Emanus verse entries.`)
 console.log(`Canonical text: ${binding.canonicalTextVersion} / ${binding.releaseState} / sha256:${binding.corpusSha256}.`)
-console.log("Runtime remains in_review; canonical release state is independently enforced by the publication-readiness gate.")
+console.log(`Runtime publication status: ${expectedRuntimeStatus}.`)

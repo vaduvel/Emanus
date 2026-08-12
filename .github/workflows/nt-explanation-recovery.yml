@@ -196,6 +196,7 @@ jobs:
           node scripts/fix-nt-embedded-bible-quotes.mjs
           node scripts/apply-nt-reviewed-be-quote-fixes.mjs
           node scripts/normalize-nt-final-reader-diacritics.mjs
+          node scripts/normalize-nt-final-reader-contextual.mjs
 
       - name: Verify final NT corpus structure and optional UI
         run: |
@@ -227,8 +228,9 @@ jobs:
         run: |
           set -euo pipefail
           node scripts/materialize-nt-canonical-binding.mjs
-          node scripts/check-nt-publication-readiness.mjs
           node scripts/augment-nt-publication-blockers-semantic.mjs
+          node scripts/promote-nt-final-publication.mjs
+          node scripts/check-nt-publication-readiness.mjs
 
       - name: Materialize and verify Biblia Emanus NT runtime
         run: |
@@ -247,6 +249,17 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add scripts/review-nt-poonen-fidelity-marcu-14-16.mjs
           git add scripts/materialize_nt_manual_semantic_matei_direct.py
+          git add scripts/nt-final-romanian-wave.mjs
+          git add scripts/normalize-nt-final-reader-diacritics.mjs
+          git add scripts/normalize-nt-final-reader-contextual.mjs
+          git add scripts/promote-nt-final-publication.mjs
+          git add scripts/audit-nt-final-romanian-wave.mjs
+          git add scripts/rebind-nt-semantic-final-reader-snapshot.mjs
+          git add scripts/check-nt-final-source-first.mjs
+          git add scripts/audit-nt-final-publication-waves.mjs
+          git add scripts/materialize-nt-publication-runtime.mjs
+          git add scripts/check-nt-publication-runtime.mjs
+          git add package.json
           git add docs/data/biblia-explicata docs/biblia-explicata packages/shared/src/bible/generated/ntExplained packages/shared/src/bible/generated/ntExplained.ts packages/shared/src/bible/generated/ntExplainedBinding.ts packages/shared/src/bible/ntPublicationBible.ts
           if git diff --cached --quiet; then
             echo "NT snapshots and review sources already current."

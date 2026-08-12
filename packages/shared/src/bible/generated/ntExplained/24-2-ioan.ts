@@ -54,7 +54,7 @@ export const NT_BOOK_24: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     }
   ]
 }

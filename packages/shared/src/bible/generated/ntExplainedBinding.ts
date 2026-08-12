@@ -1,7 +1,7 @@
-export const NT_EXPLAINED_CANONICAL_VERSION = "BE-NT-PROVISIONAL-2026-08-09" as const
-export const NT_EXPLAINED_CANONICAL_STATE = "provisional" as const
+export const NT_EXPLAINED_CANONICAL_VERSION = "BE-NT-FINAL-2026-08-11" as const
+export const NT_EXPLAINED_CANONICAL_STATE = "final" as const
 export const NT_EXPLAINED_CANONICAL_SHA256 = "c65e31515638ec7082836d5d7cd3fa675827cd868eba61b2946fd4240687f412" as const
-export const NT_EXPLAINED_CANONICAL_PUBLICATION_READY = false as const
+export const NT_EXPLAINED_CANONICAL_PUBLICATION_READY = true as const
 export const NT_EXPLAINED_CANONICAL_CHAPTERS = [
   {
     "bookId": "MAT",

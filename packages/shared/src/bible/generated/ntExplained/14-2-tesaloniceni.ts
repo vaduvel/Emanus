@@ -45,7 +45,7 @@ export const NT_BOOK_14: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "2-tesaloniceni-2",
@@ -94,7 +94,7 @@ export const NT_BOOK_14: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "2-tesaloniceni-3",
@@ -143,7 +143,7 @@ export const NT_BOOK_14: BibleBook = {
         }
       ],
       "prayer": "",
-      "status": "in_review"
+      "status": "published"
     }
   ]
 }

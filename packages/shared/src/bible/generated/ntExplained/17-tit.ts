@@ -78,7 +78,7 @@ export const NT_BOOK_17: BibleBook = {
         }
       ],
       "prayer": "Doamne, fă ca adevărul Tău să producă evlavie în mine. Curăță-mi caracterul, păzește-mă de dorința de câștig și învață-mă să slujesc ca un econom care știe că biserica Îți aparține. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "tit-2",
@@ -160,7 +160,7 @@ export const NT_BOOK_17: BibleBook = {
         }
       ],
       "prayer": "Doamne Isuse, Îți mulțumesc pentru harul care mântuiește și mă învață. Fă-mă cumpătat, drept și evlavios și pune în mine râvnă pentru faptele bune care Îți fac cinste. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "tit-3",
@@ -242,7 +242,7 @@ export const NT_BOOK_17: BibleBook = {
         }
       ],
       "prayer": "Dumnezeule, Îți mulțumesc că m-ai mântuit prin îndurarea Ta, nu prin meritele mele. Păstrează-mă blând, ferește-mă de certuri neroditoare și învață-mă să fiu primul în fapte bune. Amin.",
-      "status": "in_review"
+      "status": "published"
     }
   ]
 }

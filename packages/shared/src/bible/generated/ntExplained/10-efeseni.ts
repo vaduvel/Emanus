@@ -87,7 +87,7 @@ export const NT_BOOK_10: BibleBook = {
         }
       ],
       "prayer": "Tată, deschide ochii inimii mele să văd bogăția harului Tău în Hristos. Fă-mă sfânt, formează în mine caracterul Fiului și învață-mă să trăiesc prin puterea Duhului Sfânt. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "efeseni-2",
@@ -169,7 +169,7 @@ export const NT_BOOK_10: BibleBook = {
         }
       ],
       "prayer": "Dumnezeule bogat în milă, mulțumesc că m-ai făcut viu împreună cu Hristos. Păzește-mă de laudă, călăuzește-mă în faptele pregătite de Tine și fă-mă un om al păcii și o piatră vie în casa Ta. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "efeseni-3",
@@ -226,7 +226,7 @@ export const NT_BOOK_10: BibleBook = {
         }
       ],
       "prayer": "Tată, întărește-mă prin Duhul Tău în omul lăuntric. Fă ca Hristos să locuiască deplin în inima mea, înrădăcinează-mă în dragostea Lui și folosește viața mea în planul Tău pentru Biserică. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "efeseni-4",
@@ -299,7 +299,7 @@ export const NT_BOOK_10: BibleBook = {
         }
       ],
       "prayer": "Doamne, fă-mă smerit și credincios chemării Tale. Ajută-mă să păstrez unitatea Duhului, să-mi folosesc darul pentru zidirea altora și să lepăd omul vechi în fiecare domeniu al vieții mele. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "efeseni-5",
@@ -371,7 +371,7 @@ export const NT_BOOK_10: BibleBook = {
         }
       ],
       "prayer": "Tată, învață-mă să umblu în dragoste, lumină și înțelepciune. Umple-mă cu Duhul Sfânt, curăță-mi dorințele și cuvintele și fă ca relațiile mele să reflecte iubirea sigură și jertfitoare a lui Hristos. Amin.",
-      "status": "in_review"
+      "status": "published"
     },
     {
       "id": "efeseni-6",
@@ -443,7 +443,7 @@ export const NT_BOOK_10: BibleBook = {
         }
       ],
       "prayer": "Doamne, fă-mă drept și blând în relațiile în care am autoritate. Îmbracă-mă cu armura Ta, păzește-mă să nu lupt împotriva oamenilor și învață-mă să stau ferm în adevăr, credință, pace, Cuvânt și rugăciune. Amin.",
-      "status": "in_review"
+      "status": "published"
     }
   ]
 }

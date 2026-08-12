@@ -39,6 +39,36 @@ const guards = [
     fixLine: '  { bookId: "filimon", canonicalBookId: "PHM", chapter: 1, field: "units[3].teaching", before: "Primește-l ca pe mine însumi", after: "primește-l așa cum m-ai primi pe mine" }',
   },
   {
+    label: "Fapte 24",
+    kind: "exact",
+    bookFile: "05-fapte.json",
+    chapter: 24,
+    unitIndex: 2,
+    unitId: "fapte-24-22-27",
+    obsoleteBefore: "Acum pleacă; te voi chema când voi avea timp.",
+    fixLine: '  { bookId: "fapte", canonicalBookId: "ACT", chapter: 24, field: "units[2].teaching", before: "Acum pleacă; te voi chema când voi avea timp.", after: "Deocamdată du-te; când voi găsi un prilej, te voi chema." }',
+  },
+  {
+    label: "Filipeni 2",
+    kind: "exact",
+    bookFile: "11-filipeni.json",
+    chapter: 2,
+    unitIndex: 2,
+    unitId: "filipeni-2-12-18",
+    obsoleteBefore: "Duceți până la capăt mântuirea",
+    fixLine: '  { bookId: "filipeni", canonicalBookId: "PHP", chapter: 2, field: "units[2].teaching", before: "Duceți până la capăt mântuirea", after: "duceți până la capăt propria voastră mântuire" }',
+  },
+  {
+    label: "Coloseni 2",
+    kind: "exact",
+    bookFile: "12-coloseni.json",
+    chapter: 2,
+    unitIndex: 4,
+    unitId: "coloseni-2-20-23",
+    obsoleteBefore: "nu lua, nu gusta, nu atinge",
+    fixLine: '  { bookId: "coloseni", canonicalBookId: "COL", chapter: 2, field: "units[4].teaching", before: "nu lua, nu gusta, nu atinge", after: "Nu atinge, nu gusta, nu pipăi" }',
+  },
+  {
     label: "Matei 11:1-15 paraphrase wrapper",
     kind: "unquote",
     bookFile: "01-matei.json",
@@ -114,7 +144,13 @@ for (const guard of guards) {
     }
   }
   if (!removed) {
-    throw new Error(`${guard.label} legacy wave-3 quote fix changed unexpectedly; refusing to bypass it`)
+    // A previous successful run may already have removed this legacy operation.
+    // Keep the guard idempotent, but only when the current unit still proves the
+    // same transcript-reviewed semantic replacement.
+    if (!semanticSupersedesLegacyFix) {
+      throw new Error(`${guard.label} legacy wave-3 quote fix changed unexpectedly; refusing to bypass it`)
+    }
+    console.log(`NT reviewed BE quote fixes wave 3: ${guard.label} legacy quote operation already superseded.`)
   }
   superseded.push(guard.label)
   console.log(`NT reviewed BE quote fixes wave 3: ${guard.label} legacy quote operation superseded by approved hash-bound transcript-semantic reader copy.`)
