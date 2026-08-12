@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react"
+import { createPortal } from "react-dom"
 import { BookOpen, HandHeart, HelpCircle, LifeBuoy, Sunrise } from "lucide-react"
 import { hasSeenWelcome, hasStarted } from "./journey"
 import { navigate, useHashRoute } from "./router"
@@ -26,7 +27,7 @@ const Mesaj = lazy(() => import("./screens/Mesaj"))
 const Legamant = lazy(() => import("./screens/Legamant"))
 
 function Tabs({ active }: { active: "today" | "bible" | "ask" | "prayers" }) {
-  return <nav className="tabs2" aria-label="Navigare"><button type="button" className={active === "today" ? "active" : ""} onClick={() => navigate("/")}><Sunrise size={20} strokeWidth={1.8} aria-hidden /><span>Azi</span></button><button type="button" className={active === "bible" ? "active" : ""} onClick={() => navigate("/biblia")}><BookOpen size={20} strokeWidth={1.8} aria-hidden /><span>Biblia</span></button><button type="button" className={active === "ask" ? "active" : ""} onClick={() => navigate("/intreaba")}><HelpCircle size={20} strokeWidth={1.8} aria-hidden /><span>Întreabă</span></button><button type="button" className={active === "prayers" ? "active" : ""} onClick={() => navigate("/rugaciuni")}><HandHeart size={20} strokeWidth={1.8} aria-hidden /><span>Rugăciuni</span></button></nav>
+  return createPortal(<nav className="tabs2" aria-label="Navigare"><button type="button" className={active === "today" ? "active" : ""} onClick={() => navigate("/")}><Sunrise size={20} strokeWidth={1.8} aria-hidden /><span>Azi</span></button><button type="button" className={active === "bible" ? "active" : ""} onClick={() => navigate("/biblia")}><BookOpen size={20} strokeWidth={1.8} aria-hidden /><span>Biblia</span></button><button type="button" className={active === "ask" ? "active" : ""} onClick={() => navigate("/intreaba")}><HelpCircle size={20} strokeWidth={1.8} aria-hidden /><span>Întreabă</span></button><button type="button" className={active === "prayers" ? "active" : ""} onClick={() => navigate("/rugaciuni")}><HandHeart size={20} strokeWidth={1.8} aria-hidden /><span>Rugăciuni</span></button></nav>, document.body)
 }
 
 function HelpButton() {

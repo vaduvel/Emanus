@@ -57,6 +57,34 @@ test("Scriptura și Înțelege rămân două moduri ale aceluiași capitol", asy
   await expect(page.getByText("Practică de azi")).toHaveCount(0)
 })
 
+test("bara contextuală marchează și salvează mai multe versete", async ({ page }) => {
+  await page.goto("/#/biblia/geneza/1")
+
+  const verseOne = page.getByRole("button", { name: /^Versetul 1 /u })
+  const verseTwo = page.getByRole("button", { name: /^Versetul 2 /u })
+  await verseOne.click()
+  await verseTwo.click()
+
+  const toolbar = page.getByRole("toolbar", { name: "Acțiuni pentru 2 versete" })
+  await expect(toolbar).toBeVisible()
+  await toolbar.getByRole("button", { name: "Marchează cu auriu" }).click()
+  await expect(verseOne).toHaveAttribute("data-highlight", "gold")
+  await expect(verseTwo).toHaveAttribute("data-highlight", "gold")
+
+  await toolbar.getByRole("button", { name: "Favorit" }).click()
+  await expect(toolbar.getByRole("button", { name: "Salvat" })).toHaveAttribute("aria-pressed", "true")
+  await page.reload()
+
+  await expect(page.getByRole("button", { name: /^Versetul 1 /u })).toHaveAttribute("data-highlight", "gold")
+  await expect(page.getByRole("button", { name: /^Versetul 2 /u })).toHaveAttribute("data-highlight", "gold")
+  await page.getByRole("button", { name: "Înapoi la biblioteca Bibliei" }).click()
+  await page.getByRole("button", { name: "Capitole și versete salvate" }).click()
+  const savedDialog = page.getByRole("dialog", { name: "Salvate" })
+  await expect(savedDialog.getByRole("heading", { name: "Versete favorite" })).toBeVisible()
+  await expect(savedDialog.getByRole("button", { name: /Geneza 1:1/u })).toBeVisible()
+  await expect(savedDialog.getByRole("button", { name: /Geneza 1:2/u })).toBeVisible()
+})
+
 test("intrarea după nevoie deschide pasajul complet, nu un verset izolat", async ({ page }) => {
   const loadedBooks: string[] = []
   page.on("response", (response) => {
@@ -100,8 +128,8 @@ test("salvarea și reluarea lecturii persistă local", async ({ page }) => {
 
   await page.getByRole("button", { name: "Înapoi la biblioteca Bibliei" }).click()
   await expect(page.getByRole("button", { name: /Continuă lectura.*Ioan 3/s })).toBeVisible()
-  await page.getByRole("button", { name: "Capitole salvate" }).click()
-  await expect(page.getByRole("dialog", { name: "Capitole salvate" }).getByRole("button", { name: /Ioan 3/u })).toBeVisible()
+  await page.getByRole("button", { name: "Capitole și versete salvate" }).click()
+  await expect(page.getByRole("dialog", { name: "Salvate" }).getByRole("button", { name: /Ioan 3/u })).toBeVisible()
 })
 
 test("NT final este citit separat de stratul explicativ", async ({ page }) => {
