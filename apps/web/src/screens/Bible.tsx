@@ -17,6 +17,8 @@ import {
   Languages,
   Link2,
   List,
+  MapPin,
+  PenLine,
   Quote,
   Search,
   Share2,
@@ -47,9 +49,12 @@ const SHOW_EDITORIAL = import.meta.env.DEV
 
 type ReaderMode = "scripture" | "understand"
 type HighlightColor = "gold" | "sage" | "sky" | "rose"
+type SearchFilter = "all" | "verses" | "explanations" | "books"
+type SavedTab = "favorites" | "highlights" | "continue"
 type Overlay = "search" | "saved" | "needs" | "all-vt" | "all-nt" | "book" | null
 type LastRead = { bookId: string; bookName?: string; chapter: number; title: string }
 type SearchHit = {
+  kind: "verse" | "explanation"
   bookId: string
   bookName: string
   chapter: number
@@ -129,11 +134,12 @@ function IconButton({ label, onClick, active = false, children }: {
   >{children}</button>
 }
 
-function BibleDialog({ open, title, onClose, children }: {
+function BibleDialog({ open, title, onClose, children, immersive = false }: {
   open: boolean
   title: string
   onClose: () => void
   children: ReactNode
+  immersive?: boolean
 }) {
   const ref = useRef<HTMLDialogElement>(null)
   const titleId = useId()
@@ -147,8 +153,9 @@ function BibleDialog({ open, title, onClose, children }: {
 
   return <dialog
     ref={ref}
-    className="bible-sheet"
-    aria-labelledby={titleId}
+    className={immersive ? "bible-sheet bible-sheet--immersive" : "bible-sheet"}
+    aria-label={title === "Biblia mea" ? "Salvate" : undefined}
+    aria-labelledby={title === "Biblia mea" ? undefined : titleId}
     onCancel={(event) => {
       event.preventDefault()
       onClose()
@@ -192,17 +199,19 @@ function BookRail({ title, books, onAll, onBook }: {
   </section>
 }
 
-function SearchExperience({ catalog, onOpen }: {
+function SearchExperience({ catalog, onOpen, onBook }: {
   catalog: BibleBookSummary[]
   onOpen: (bookId: string, chapter: number) => void
+  onBook: (book: BibleBookSummary) => void
 }) {
   const [query, setQuery] = useState("")
+  const [filter, setFilter] = useState<SearchFilter>("all")
   const [books, setBooks] = useState<BibleBook[] | null>(null)
   const [loading, setLoading] = useState(false)
   const [failed, setFailed] = useState(false)
 
   useEffect(() => {
-    if (query.trim().length < 2 || books) return
+    if (query.trim().length < 2 || books || filter === "books") return
     let active = true
     const timer = window.setTimeout(() => {
       setLoading(true)
@@ -215,7 +224,7 @@ function SearchExperience({ catalog, onOpen }: {
       active = false
       window.clearTimeout(timer)
     }
-  }, [books, catalog, query])
+  }, [books, catalog, filter, query])
 
   const hits = useMemo<SearchHit[]>(() => {
     const needle = plain(query.trim())
@@ -225,21 +234,25 @@ function SearchExperience({ catalog, onOpen }: {
       for (const chapter of visibleChapters(book.chapters)) {
         const verse = chapter.verses?.find((candidate) => plain(candidate.text).includes(needle))
         const unit = chapter.units.find((candidate) => plain(`${candidate.heading} ${candidate.teaching}`).includes(needle))
-        const chapterMatch = plain(`${book.name} ${chapter.number} ${chapter.title} ${chapter.summary}`).includes(needle)
-        if (!verse && !unit && !chapterMatch) continue
-        results.push({
-          bookId: book.id,
-          bookName: book.name,
-          chapter: chapter.number,
-          title: chapter.title,
-          excerpt: verse?.text ?? unit?.teaching ?? chapter.summary,
-          verse: verse?.number ?? unit?.verseStart,
+        if (verse && (filter === "all" || filter === "verses")) results.push({
+          kind: "verse", bookId: book.id, bookName: book.name, chapter: chapter.number,
+          title: chapter.title, excerpt: verse.text, verse: verse.number,
+        })
+        if (unit && (filter === "all" || filter === "explanations")) results.push({
+          kind: "explanation", bookId: book.id, bookName: book.name, chapter: chapter.number,
+          title: unit.heading, excerpt: unit.teaching, verse: unit.verseStart,
         })
         if (results.length >= 40) return results
       }
     }
     return results
-  }, [books, query])
+  }, [books, filter, query])
+
+  const bookHits = useMemo(() => {
+    const needle = plain(query.trim())
+    if (needle.length < 2 || (filter !== "all" && filter !== "books")) return []
+    return catalog.filter((book) => plain(`${book.name} ${book.blurb}`).includes(needle)).slice(0, 12)
+  }, [catalog, filter, query])
 
   return <div className="bible-search-experience">
     <label className="bible-search-field">
@@ -253,18 +266,33 @@ function SearchExperience({ catalog, onOpen }: {
         aria-label="Caută în Biblia Emanus"
       />
     </label>
+    <div className="bible-filter-bar" aria-label="Filtrează căutarea">
+      {([[
+        "all", "Toate"], ["verses", "Versete"], ["explanations", "Explicații"], ["books", "Cărți"],
+      ] as Array<[SearchFilter, string]>).map(([value, label]) => <button
+        key={value}
+        type="button"
+        className={filter === value ? "is-active" : ""}
+        aria-pressed={filter === value}
+        onClick={() => setFilter(value)}
+      >{label}</button>)}
+    </div>
     {query.trim().length < 2 && <p className="bible-sheet__hint">Scrie cel puțin două litere. Căutarea verifică textul complet și explicațiile disponibile.</p>}
     {loading && <p className="bible-sheet__hint">Se deschide corpusul complet…</p>}
     {failed && <p className="bible-sheet__hint">Căutarea nu s-a putut încărca. Încearcă din nou.</p>}
-    {!loading && books && query.trim().length >= 2 && hits.length === 0 && <p className="bible-sheet__hint">Nu am găsit acest cuvânt.</p>}
+    {!loading && query.trim().length >= 2 && hits.length === 0 && bookHits.length === 0 && (books || filter === "books") && <p className="bible-sheet__hint">Nu am găsit acest cuvânt.</p>}
     <div className="bible-result-list">
+      {bookHits.map((book) => <button key={book.id} type="button" className="bible-result bible-result--book" onClick={() => onBook(book)}>
+        <span className="bible-result__ref">{book.testament === "vt" ? "Vechiul Testament" : "Noul Testament"}</span>
+        <strong>{book.name}</strong><span>{book.blurb}</span><ChevronRight size={18} aria-hidden />
+      </button>)}
       {hits.map((hit) => <button
-        key={`${hit.bookId}-${hit.chapter}-${hit.verse ?? 0}`}
+        key={`${hit.kind}-${hit.bookId}-${hit.chapter}-${hit.verse ?? 0}`}
         type="button"
         className="bible-result"
         onClick={() => onOpen(hit.bookId, hit.chapter)}
       >
-        <span className="bible-result__ref">{hit.bookName} {hit.chapter}{hit.verse ? `:${hit.verse}` : ""}</span>
+        <span className="bible-result__ref">{hit.kind === "verse" ? "Text biblic" : "Explicație"} · {hit.bookName} {hit.chapter}{hit.verse ? `:${hit.verse}` : ""}</span>
         <strong>{hit.title}</strong>
         <span>{hit.excerpt}</span>
         <ChevronRight size={18} aria-hidden />
@@ -291,6 +319,10 @@ function NeedsExperience({ onOpen }: { onOpen: (bookId: string, chapter: number)
   const results = selected && index ? (index[selected.id] ?? []) : []
 
   return <div className="bible-needs-experience">
+    <div className="bible-needs-hero">
+      <img src="/bible-pain-light.svg" alt="O persoană privind spre lumina care se deschide peste drum" />
+      <div><span>Scriptura în locul în care ești</span><strong>Nu primești o frază izolată, ci un pasaj întreg.</strong></div>
+    </div>
     <p className="bible-sheet__lead">Alege ce porți acum. Deschidem pasaje întregi, nu versete scoase din context.</p>
     <div className="bible-need-grid">
       {needs.map((need) => <button
@@ -321,6 +353,60 @@ function NeedsExperience({ onOpen }: { onOpen: (bookId: string, chapter: number)
   </div>
 }
 
+function SavedExperience({ favorites, chapters, highlights, last, onOpen }: {
+  favorites: Array<{ book: BibleBookSummary; chapter: BibleBookSummary["chapters"][number]; verse: number }>
+  chapters: Array<{ book: BibleBookSummary; chapter: BibleBookSummary["chapters"][number] }>
+  highlights: Array<{ book: BibleBookSummary; chapter: BibleBookSummary["chapters"][number]; verse: number; color: HighlightColor }>
+  last: LastRead | null
+  onOpen: (bookId: string, chapter: number) => void
+}) {
+  const [tab, setTab] = useState<SavedTab>("favorites")
+  const items = tab === "favorites" ? favorites : highlights
+  return <div className="bible-mine">
+    <div className="bible-filter-bar bible-filter-bar--wide" aria-label="Biblia mea">
+      <button type="button" className={tab === "favorites" ? "is-active" : ""} onClick={() => setTab("favorites")}>Salvate</button>
+      <button type="button" className={tab === "highlights" ? "is-active" : ""} onClick={() => setTab("highlights")}>Marcaje</button>
+      <button type="button" className={tab === "continue" ? "is-active" : ""} onClick={() => setTab("continue")}>Continui</button>
+    </div>
+    {tab !== "continue" && <section className="bible-saved-section">
+      <h3>{tab === "favorites" ? <><Star size={18} aria-hidden /> Versete favorite</> : <><PenLine size={18} aria-hidden /> Versete marcate</>}</h3>
+      {items.length === 0 && <p className="bible-sheet__empty"><Bookmark size={24} aria-hidden /> Nu ai încă nimic aici.</p>}
+      <div className="bible-result-list">{items.map(({ book, chapter, verse, ...item }) => <button
+        key={`${book.id}-${chapter.number}-${verse}`}
+        type="button"
+        className="bible-result"
+        onClick={() => onOpen(book.id, chapter.number)}
+      >
+        <span className="bible-result__ref">{book.name} {chapter.number}:{verse}</span>
+        <strong>{chapter.title}</strong>
+        <span>{"color" in item ? `Marcaj ${item.color}` : "Deschide versetul în context"}</span>
+        <ChevronRight size={18} aria-hidden />
+      </button>)}</div>
+      {tab === "favorites" && chapters.length > 0 && <>
+        <h3><Bookmark size={18} aria-hidden /> Capitole salvate</h3>
+        <div className="bible-result-list">{chapters.map(({ book, chapter }) => <button
+          key={`${book.id}-${chapter.number}`}
+          type="button"
+          className="bible-result"
+          onClick={() => onOpen(book.id, chapter.number)}
+        >
+          <span className="bible-result__ref">{book.name} {chapter.number}</span>
+          <strong>{chapter.title}</strong>
+          <span>{chapter.summary}</span>
+          <ChevronRight size={18} aria-hidden />
+        </button>)}</div>
+      </>}
+    </section>}
+    {tab === "continue" && <section className="bible-saved-section">
+      <h3><MapPin size={18} aria-hidden /> Unde ai rămas</h3>
+      {last ? <button type="button" className="bible-resume-card" onClick={() => onOpen(last.bookId, last.chapter)}>
+        <img src="/bible-road-hero.svg" alt="Drumul spre Emaus" />
+        <span><strong>{last.bookName} {last.chapter}</strong><span>{last.title}</span><span>Continuă lectura <ArrowRight size={16} aria-hidden /></span></span>
+      </button> : <p className="bible-sheet__empty">Începe un capitol și îl vom păstra aici.</p>}
+    </section>}
+  </div>
+}
+
 export function Bible() {
   const [catalog, setCatalog] = useState<BibleBookSummary[] | null>(null)
   const [loadError, setLoadError] = useState(false)
@@ -329,6 +415,7 @@ export function Bible() {
   const last = readLast()
   const saved = readSavedChapters()
   const favoriteVerseKeys = readJson<string[]>(FAVORITE_VERSES_KEY, [])
+  const highlightMap = readJson<Record<string, HighlightColor>>(VERSE_HIGHLIGHTS_KEY, {})
 
   useEffect(() => {
     let active = true
@@ -370,6 +457,14 @@ export function Bible() {
     const verse = Number(rawVerse)
     return book && chapter && Number.isInteger(verse) ? { book, chapter, verse } : null
   }).filter((entry): entry is { book: BibleBookSummary; chapter: BibleBookSummary["chapters"][number]; verse: number } => Boolean(entry))
+
+  const highlightEntries = Object.entries(highlightMap).map(([key, color]) => {
+    const [bookId, rawChapter, rawVerse] = key.split(":")
+    const book = catalog?.find((candidate) => candidate.id === bookId)
+    const chapter = book?.chapters.find((candidate) => candidate.number === Number(rawChapter))
+    const verse = Number(rawVerse)
+    return book && chapter && Number.isInteger(verse) ? { book, chapter, verse, color } : null
+  }).filter((entry): entry is { book: BibleBookSummary; chapter: BibleBookSummary["chapters"][number]; verse: number; color: HighlightColor } => Boolean(entry))
 
   return <section className="bible-home">
     <header className="bible-home__topbar">
@@ -422,47 +517,20 @@ export function Bible() {
 
     <p className="bible-home__edition">{BIBLIA_EMANUS_TRANSLATION}</p>
 
-    <BibleDialog open={overlay === "search"} title="Căutare în Biblie" onClose={() => setOverlay(null)}>
-      {catalog && <SearchExperience catalog={catalog} onOpen={openChapter} />}
+    <BibleDialog immersive open={overlay === "search"} title="Căutare în Biblie" onClose={() => setOverlay(null)}>
+      {catalog && <SearchExperience catalog={catalog} onOpen={openChapter} onBook={openBook} />}
     </BibleDialog>
 
-    <BibleDialog open={overlay === "saved"} title="Salvate" onClose={() => setOverlay(null)}>
-      {savedEntries.length === 0 && favoriteEntries.length === 0 && <p className="bible-sheet__empty"><Bookmark size={24} aria-hidden /> Nu ai salvat încă niciun capitol sau verset.</p>}
-      {favoriteEntries.length > 0 && <section className="bible-saved-section">
-        <h3><Star size={18} aria-hidden /> Versete favorite</h3>
-        <div className="bible-result-list">{favoriteEntries.map(({ book, chapter, verse }) => <button
-          key={`${book.id}-${chapter.number}-${verse}`}
-          type="button"
-          className="bible-result"
-          onClick={() => openChapter(book.id, chapter.number)}
-        >
-          <span className="bible-result__ref">{book.name} {chapter.number}:{verse}</span>
-          <strong>{chapter.title}</strong>
-          <span>Deschide versetul în contextul capitolului</span>
-          <ChevronRight size={18} aria-hidden />
-        </button>)}</div>
-      </section>}
-      {savedEntries.length > 0 && <section className="bible-saved-section">
-        <h3><Bookmark size={18} aria-hidden /> Capitole</h3>
-        <div className="bible-result-list">{savedEntries.map(({ book, chapter }) => <button
-            key={`${book.id}-${chapter.number}`}
-            type="button"
-            className="bible-result"
-            onClick={() => openChapter(book.id, chapter.number)}
-          >
-            <span className="bible-result__ref">{book.name} {chapter.number}</span>
-            <strong>{chapter.title}</strong>
-            <span>{chapter.summary}</span>
-            <ChevronRight size={18} aria-hidden />
-          </button>)}</div>
-      </section>}
+    <BibleDialog immersive open={overlay === "saved"} title="Biblia mea" onClose={() => setOverlay(null)}>
+      <SavedExperience favorites={favoriteEntries} chapters={savedEntries} highlights={highlightEntries} last={last} onOpen={openChapter} />
     </BibleDialog>
 
-    <BibleDialog open={overlay === "needs"} title="Când te doare, citește" onClose={() => setOverlay(null)}>
+    <BibleDialog immersive open={overlay === "needs"} title="Când te doare, citește" onClose={() => setOverlay(null)}>
       <NeedsExperience onOpen={openChapter} />
     </BibleDialog>
 
     <BibleDialog
+      immersive
       open={overlay === "all-vt" || overlay === "all-nt"}
       title={overlay === "all-vt" ? "Vechiul Testament" : "Noul Testament"}
       onClose={() => setOverlay(null)}
@@ -472,9 +540,9 @@ export function Bible() {
       </div>
     </BibleDialog>
 
-    <BibleDialog open={overlay === "book" && Boolean(selectedBook)} title={selectedBook?.name ?? "Alege capitolul"} onClose={() => setOverlay(null)}>
+    <BibleDialog immersive open={overlay === "book" && Boolean(selectedBook)} title={selectedBook?.name ?? "Alege capitolul"} onClose={() => setOverlay(null)}>
       {selectedBook && <>
-        <p className="bible-sheet__lead">{selectedBook.blurb}</p>
+        <div className="bible-book-lead"><span className="bible-book-lead__sigil">{selectedBook.order}</span><span><small>{selectedBook.testament === "vt" ? "Vechiul Testament" : "Noul Testament"}</small><strong>{selectedBook.name}</strong><span>{selectedBook.blurb}</span></span></div>
         <p className="bible-sheet__hint">Alege capitolul</p>
         <div className="bible-chapter-grid">
           {visibleChapters(selectedBook.chapters).map((chapter) => <button

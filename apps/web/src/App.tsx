@@ -4,6 +4,7 @@ import { BookOpen, HandHeart, HelpCircle, LifeBuoy, Sunrise } from "lucide-react
 import { hasSeenWelcome, hasStarted } from "./journey"
 import { navigate, useHashRoute } from "./router"
 import "./journey.css"
+import "./experience.css"
 
 const Crisis = lazy(() => import("./Crisis").then((m) => ({ default: m.Crisis })))
 const LessonView = lazy(() => import("./LessonView").then((m) => ({ default: m.LessonView })))

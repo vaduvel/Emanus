@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react"
-import { ArrowRight, Search } from "lucide-react"
+import { ArrowLeft, ArrowRight, Compass, Search, ShieldCheck, Sparkles } from "lucide-react"
 import {
   COMMON_DOORS,
   EXPLORE_DOORS,
@@ -32,43 +32,91 @@ export function Doors() {
   }, [fromLink])
 
   if (askLink) {
-    return (
-      <FromCreator
-        doorId={askLink}
-        onYes={(id) => {
-          setAskLink(null)
-          setPicked(id)
-        }}
-        onNo={() => setAskLink(null)}
-      />
-    )
+    return <FromCreator doorId={askLink} onYes={(id) => { setAskLink(null); setPicked(id) }} onNo={() => setAskLink(null)} />
   }
   if (picked) return <Confirm doorId={picked} onBack={() => setPicked(null)} />
 
   const term = q.trim().toLowerCase()
   const rest = term
-    ? [...COMMON_DOORS, ...MORE_DOORS].filter((d) => d.label.toLowerCase().includes(term))
+    ? [...COMMON_DOORS, ...MORE_DOORS].filter((door) => door.label.toLowerCase().includes(term))
     : MORE_DOORS
 
   return (
-    <section className="doors">
-      <p className="doors__mark">Emanus</p>
-      <h1 className="doors__title">Ce te-a adus aici?</h1>
-      <p className="doors__sub">Alege propoziția care seamănă cel mai mult cu ce trăiești.</p>
-      {!term && <ul className="doors__list">{COMMON_DOORS.map((d) => <li key={d.id}><button type="button" className="door" onClick={() => setPicked(d.id)}><span>{d.label}</span><ArrowRight size={18} aria-hidden /></button></li>)}</ul>}
-      {!showAll && !term && <button type="button" className="doors__more" onClick={() => setShowAll(true)}>Arată-mi toate opțiunile</button>}
-      {showAll && <><label className="doors__search"><Search size={16} aria-hidden /><input type="text" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Caută în cuvintele tale" aria-label="Caută în cuvintele tale" /></label><ul className="doors__list">{rest.map((d) => <li key={d.id}><button type="button" className="door" onClick={() => setPicked(d.id)}><span>{d.label}</span><ArrowRight size={18} aria-hidden /></button></li>)}</ul>{term && rest.length === 0 && <p className="doors__sub">Nu găsim propoziția asta. Nu înseamnă că nu e loc pentru tine — alege de mai jos.</p>}</>}
-      <ul className="doors__list doors__list--quiet">{EXPLORE_DOORS.map((d) => <li key={d.id}><button type="button" className="door door--quiet" onClick={() => setPicked(d.id)}><span>{d.label}</span><ArrowRight size={16} aria-hidden /></button></li>)}</ul>
-      <p className="doors__note">Nu îți cerem bani, nu îți cerem date și nu îți dăm note. Poți schimba drumul oricând.</p>
-      <p className="doors__note">Emanus nu înlocuiește medicul, psihologul, poliția sau 112.</p>
+    <section className="doors experience-shell" aria-labelledby="doors-title">
+      <header className="experience-header">
+        <button type="button" className="experience-back" onClick={() => navigate("/")} aria-label="Înapoi"><ArrowLeft aria-hidden /></button>
+        <div className="experience-brand"><img src="/emanus-mark.svg" alt="" aria-hidden /><span>Emanus</span></div>
+        <span className="experience-header__space" />
+      </header>
+
+      <div className="doors__intro">
+        <p className="experience-eyebrow">Poarta de intrare</p>
+        <h1 id="doors-title" className="doors__title">Ce te-a adus aici?</h1>
+        <p className="doors__sub">Nu trebuie să știi cum se numește. Alege propoziția care seamănă cel mai mult cu ce trăiești.</p>
+      </div>
+
+      <div className="doors__visual" aria-hidden="true">
+        <img src="/bible-pain-light.svg" alt="" />
+        <span><Compass size={22} /> Începem din locul real</span>
+      </div>
+
+      {showAll || term ? (
+        <label className="doors__search">
+          <Search size={19} aria-hidden />
+          <input type="search" value={q} onChange={(event) => setQ(event.target.value)} placeholder="Caută o situație sau un cuvânt" aria-label="Caută o situație sau un cuvânt" autoFocus />
+        </label>
+      ) : null}
+
+      {!term ? (
+        <ul className="doors__list">
+          {COMMON_DOORS.map((door) => <DoorButton key={door.id} label={door.label} onClick={() => setPicked(door.id)} />)}
+        </ul>
+      ) : null}
+
+      {!showAll && !term ? (
+        <button type="button" className="doors__more" onClick={() => setShowAll(true)}><Search size={17} aria-hidden /> Arată-mi toate opțiunile</button>
+      ) : null}
+
+      {showAll ? (
+        <>
+          <p className="doors__section-title">Mai multe situații</p>
+          <ul className="doors__list">
+            {rest.map((door) => <DoorButton key={door.id} label={door.label} onClick={() => setPicked(door.id)} />)}
+          </ul>
+          {term && rest.length === 0 ? <p className="doors__empty">Nu găsim exact expresia aceasta. Alege propoziția cea mai apropiată sau începe cu una dintre opțiunile de mai jos.</p> : null}
+        </>
+      ) : null}
+
+      <ul className="doors__list doors__list--quiet">
+        {EXPLORE_DOORS.map((door) => <DoorButton key={door.id} label={door.label} quiet onClick={() => setPicked(door.id)} />)}
+      </ul>
+
+      <aside className="doors__safety">
+        <ShieldCheck size={21} aria-hidden />
+        <p><strong>Tu păstrezi controlul.</strong> Poți schimba drumul oricând. Emanus nu înlocuiește medicul, psihologul, poliția sau 112.</p>
+      </aside>
     </section>
   )
+}
+
+function DoorButton({ label, quiet = false, onClick }: { label: string; quiet?: boolean; onClick: () => void }) {
+  return <li><button type="button" className={`door${quiet ? " door--quiet" : ""}`} onClick={onClick}><Sparkles size={15} aria-hidden /><span>{label}</span><ArrowRight size={18} aria-hidden /></button></li>
 }
 
 function FromCreator({ doorId, onYes, onNo }: { doorId: string; onYes: (doorId: string) => void; onNo: () => void }) {
   const door = getDoor(doorId)
   if (!door) { onNo(); return null }
-  return <section className="confirm"><p className="doors__mark">Emanus</p><p className="confirm__lead">Ai ajuns aici dintr-un material despre:</p><p className="confirm__echo">„{door.label}”</p><p className="confirm__note">E și ce ai nevoie tu acum?</p><button type="button" className="confirm__cta" onClick={() => onYes(door.id)}>Da, începe <ArrowRight size={18} aria-hidden /></button><button type="button" className="today__back" onClick={onNo}>Nu, vreau să aleg eu</button></section>
+  return (
+    <section className="confirm experience-shell">
+      <div className="experience-brand"><img src="/emanus-mark.svg" alt="" aria-hidden /><span>Emanus</span></div>
+      <div className="confirm__visual"><img src="/bible-pain-light.svg" alt="O cale luminată înainte" /></div>
+      <p className="experience-eyebrow">Ai ajuns aici dintr-un material despre</p>
+      <h1 className="confirm__echo">„{door.label}”</h1>
+      <p className="confirm__note">Este și locul din care ai nevoie să începi acum?</p>
+      <button type="button" className="experience-cta" onClick={() => onYes(door.id)}>Da, începe aici <ArrowRight size={18} aria-hidden /></button>
+      <button type="button" className="experience-link" onClick={onNo}>Nu, vreau să aleg eu</button>
+    </section>
+  )
 }
 
 function Confirm({ doorId, onBack }: { doorId: string; onBack: () => void }) {
@@ -80,5 +128,29 @@ function Confirm({ doorId, onBack }: { doorId: string; onBack: () => void }) {
   const explore = door.roomId === null
   const minutes = path.lessons[0]?.estMinutes ?? 10
   function start() { chooseDoor(pathId); navigate("/") }
-  return <section className="confirm"><p className="confirm__echo">„{door.label}”</p>{own && !explore && <p className="confirm__lead">Bine că ai spus-o. Mergem de aici.</p>}{!own && <p className="confirm__lead">Bine că ai spus-o. Drumul scris exact pentru asta nu e gata încă — nu îți dau ceva pe jumătate. Dar începem cu ce e dedesubt oricum, la toată lumea.</p>}{own && explore && <p className="confirm__lead">Nu toată lumea vine cu o rană anume, și nu e nimic în neregulă cu asta.</p>}<div className="confirm__card"><h2 className="confirm__title">{path.title}</h2><p className="confirm__promise">{path.promise}</p><p className="confirm__meta">{path.lessons.length} lecții &middot; câte una la două zile &middot; {minutes} minute prima</p></div><p className="confirm__note">Nu îți cerem bani și nu îți dăm note. Poți schimba drumul oricând, fără să pierzi ce ai scris.</p><button type="button" className="confirm__cta" onClick={start}>Începe <ArrowRight size={18} aria-hidden /></button><button type="button" className="today__back" onClick={onBack}>Nu asta e a mea</button></section>
+
+  return (
+    <section className="confirm experience-shell">
+      <header className="experience-header">
+        <button type="button" className="experience-back" onClick={onBack} aria-label="Înapoi la porți"><ArrowLeft aria-hidden /></button>
+        <div className="experience-brand"><img src="/emanus-mark.svg" alt="" aria-hidden /><span>Emanus</span></div>
+        <span className="experience-header__space" />
+      </header>
+      <div className="confirm__visual"><img src="/bible-road-hero.svg" alt="Un drum luminat care se deschide înainte" /></div>
+      <p className="experience-eyebrow">Ai ales</p>
+      <h1 className="confirm__echo">„{door.label}”</h1>
+      {own && !explore ? <p className="confirm__lead">Bine că ai spus-o. Nu o micșorăm și nu te grăbim. Mergem de aici.</p> : null}
+      {!own ? <p className="confirm__lead">Drumul scris exact pentru această situație nu este gata încă. Nu îți oferim ceva pe jumătate; începem cu adevărul de la rădăcină.</p> : null}
+      {own && explore ? <p className="confirm__lead">Nu toată lumea vine cu o rană anume. Poți începe prin a-L cunoaște mai bine pe Dumnezeu.</p> : null}
+      <div className="confirm__card">
+        <p className="experience-eyebrow">Traseul tău</p>
+        <h2 className="confirm__title">{path.title}</h2>
+        <p className="confirm__promise">{path.promise}</p>
+        <p className="confirm__meta">{path.lessons.length} lecții · în ritmul tău · {minutes} minute primul pas</p>
+      </div>
+      <p className="confirm__note">Nu primești note și nu pierzi progresul dacă lipsești. Poți schimba drumul oricând.</p>
+      <button type="button" className="experience-cta" onClick={start}>Începe drumul <ArrowRight size={18} aria-hidden /></button>
+      <button type="button" className="experience-link" onClick={onBack}>Nu acesta este drumul meu</button>
+    </section>
+  )
 }

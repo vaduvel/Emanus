@@ -1,20 +1,7 @@
-// Devotionalul de un an (docs/27 §2).
-//
-// Regula manei (Exod 16, docs/27 §4.5): ziua ta, nu ziua din calendar. Cine a
-// lipsit nu are zile restante si nu poate citi inainte. De aceea aici NU apare
-// niciodata „ziua 12 din 365”, nici procent, nici serie (docs/20 §1).
-//
-// UN SINGUR TEXT, PENTRU TOTI (decizie de produs, 2 aug): devotionalul,
-// mesajul zilei si pergamentul se citesc la fel de oricine. Impartirea pe
-// varste ramane acolo unde chiar conteaza — cursurile si traseele de lectii.
-// De aceea nu exista aici comutator „pentru mine / cu copilul”.
 import { useMemo, useState } from "react"
+import { ArrowLeft, ArrowRight, Check, Footprints, Heart, ScrollText } from "lucide-react"
 import { ScriptureReveal } from "../components/ScriptureReveal"
-import {
-  devotionalToday,
-  devotionalWelcomeBack,
-  markDevotionalRead,
-} from "../dailyGifts"
+import { devotionalToday, devotionalWelcomeBack, markDevotionalRead } from "../dailyGifts"
 import { navigate } from "../router"
 
 export default function Devotional() {
@@ -24,11 +11,9 @@ export default function Devotional() {
 
   if (!day) {
     return (
-      <section className="today">
-        <button className="today__back ghost" onClick={() => navigate("/")}>
-          ← Azi
-        </button>
-        <p>Devotionalul se scrie. Revenim cu urmatoarele zile.</p>
+      <section className="daily-gift experience-shell">
+        <DailyHeader label="Devoțional" />
+        <div className="daily-gift__empty"><ScrollText size={28} aria-hidden /><p>Următoarele zile ale devoționalului sunt în lucru.</p></div>
       </section>
     )
   }
@@ -39,48 +24,60 @@ export default function Devotional() {
   }
 
   return (
-    <section className="today">
-      <button className="today__back ghost" onClick={() => navigate("/")}>
-        ← Azi
-      </button>
+    <section className="daily-gift daily-gift--devotional experience-shell" aria-labelledby="devotional-title">
+      <DailyHeader label="Devoționalul zilei" />
 
-      <p className="today__kicker">{day.theme}</p>
+      <div className="daily-gift__intro">
+        <p className="experience-eyebrow">Un singur lucru pentru azi</p>
+        <h1 id="devotional-title">{day.theme}</h1>
+        <p>Primește Scriptura, las-o să te cerceteze și răspunde printr-un pas concret.</p>
+      </div>
 
-      {/* Mesajul de revenire nu numara ce s-a pierdut, pentru ca nu s-a pierdut. */}
-      {welcomeBack ? <p className="today__yesterday muted">{welcomeBack}</p> : null}
+      {welcomeBack ? <p className="daily-gift__welcome">{welcomeBack}</p> : null}
 
       <ScriptureReveal variant="scroll" verseText={day.verseText} verseRef={day.verseRef} />
 
-      <div className="today__main">
-        <p>{day.meditation}</p>
-
-        <h2>Intrebarea de azi</h2>
-        <p>{day.question}</p>
-
-        <h2>Rugaciune</h2>
-        <p className="scripture">{day.prayer}</p>
-
-        <h2>Pasul</h2>
-        <p>{day.step}</p>
+      <div className="daily-gift__story">
+        <article className="daily-gift__card daily-gift__card--lead">
+          <span className="experience-icon"><ScrollText size={21} aria-hidden /></span>
+          <div><p className="experience-eyebrow">Meditație</p><p>{day.meditation}</p></div>
+        </article>
+        <article className="daily-gift__card">
+          <span className="experience-icon"><Heart size={21} aria-hidden /></span>
+          <div><h2>Întrebarea de azi</h2><p>{day.question}</p></div>
+        </article>
+        <article className="daily-gift__card">
+          <span className="experience-icon"><Heart size={21} aria-hidden /></span>
+          <div><h2>Roagă-te astfel</h2><p className="scripture">{day.prayer}</p></div>
+        </article>
+        <article className="daily-gift__card">
+          <span className="experience-icon"><Footprints size={21} aria-hidden /></span>
+          <div><h2>Pasul pentru azi</h2><p>{day.step}</p></div>
+        </article>
       </div>
 
       {done ? (
-        <div className="today__extra">
-          <p className="today__memorial">
-            Ajunge pentru azi. Mana de maine se strange maine.
-          </p>
-          <button className="ghost" onClick={() => navigate("/candela")}>
-            Aprinde candela seara
-          </button>
-          <button className="ghost" onClick={() => navigate("/legamant")}>
-            Legamantul familiei
-          </button>
+        <div className="daily-gift__complete">
+          <Check size={22} aria-hidden />
+          <div><strong>Ajunge pentru azi.</strong><p>Mana de mâine se strânge mâine. Nu ai nimic restant.</p></div>
+          <div className="daily-gift__complete-actions">
+            <button type="button" onClick={() => navigate("/candela")}>Aprinde candela seara <ArrowRight size={17} /></button>
+            <button type="button" className="is-secondary" onClick={() => navigate("/legamant")}>Deschide Legământul familiei</button>
+          </div>
         </div>
       ) : (
-        <button className="today__cta" onClick={finish}>
-          Am citit
-        </button>
+        <button type="button" className="experience-cta" onClick={finish}>Am citit și răspund <ArrowRight size={19} aria-hidden /></button>
       )}
     </section>
+  )
+}
+
+function DailyHeader({ label }: { label: string }) {
+  return (
+    <header className="experience-header daily-gift__header">
+      <button type="button" className="experience-back" onClick={() => navigate("/")} aria-label="Înapoi la Azi"><ArrowLeft aria-hidden /></button>
+      <div className="experience-brand"><img src="/emanus-mark.svg" alt="" aria-hidden /><span>{label}</span></div>
+      <span className="experience-header__space" />
+    </header>
   )
 }
