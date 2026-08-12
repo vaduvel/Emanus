@@ -1,0 +1,69 @@
+name: NT Final Structure Diagnostic
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - agent/biblia-explicata-nt-integration-clean
+    paths:
+      - .github/workflows/nt-final-structure-diagnostic.yml
+      - scripts/review-nt-poonen-fidelity-marcu-13.mjs
+      - scripts/review-nt-poonen-fidelity-marcu-14-16.mjs
+      - scripts/check-nt-final-source-first.mjs
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 1
+
+      - name: Repair Mark 14-16 source in diagnostic workspace
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          path = Path("scripts/review-nt-poonen-fidelity-marcu-14-16.mjs")
+          source = path.read_text(encoding="utf-8")
+          source = source.replace("`textualStatus: double-bracketed`", "«textualStatus: double-bracketed»")
+          source = source.replace("`double-bracketed`", "«double-bracketed»")
+          path.write_text(source, encoding="utf-8")
+          PY
+
+      - name: Reapply Mark 13-16 reviews
+        run: |
+          set -euo pipefail
+          node scripts/review-nt-poonen-fidelity-marcu-13.mjs
+          node scripts/review-nt-poonen-fidelity-marcu-14-16.mjs
+
+      - name: Rebuild final corpus
+        run: |
+          set -euo pipefail
+          node scripts/materialize-nt-final-source-first.mjs
+          node scripts/fix-nt-embedded-bible-quotes.mjs
+          node scripts/apply-nt-reviewed-be-quote-fixes.mjs
+
+      - name: Capture structural gate output
+        id: structure
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          node scripts/check-nt-final-source-first.mjs 2>&1 | tee /tmp/nt-final-structure.log
+
+      - name: Upload structural diagnostic
+        if: steps.structure.outcome == 'failure'
+        uses: actions/upload-artifact@v4
+        with:
+          name: nt-final-structure-diagnostic
+          path: /tmp/nt-final-structure.log
+          if-no-files-found: error
+
+      - name: Fail when structural gate fails
+        if: steps.structure.outcome == 'failure'
+        run: exit 1

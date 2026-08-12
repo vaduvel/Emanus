@@ -1,0 +1,116 @@
+name: Export Hebrews Transcripts
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-nt-integration-clean
+  pull_request:
+    branches:
+      - main
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  export:
+    if: >-
+      github.event_name != 'pull_request' ||
+      github.event.pull_request.head.ref == 'agent/biblia-explicata-nt-integration-clean'
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 1
+
+      - name: Export exact semantic transcript representations
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/evrei-transcripts
+          python3 - <<'PY'
+          import importlib.util
+          import json
+          from pathlib import Path
+
+          root = Path('.').resolve()
+          worker_path = root / 'scripts/nt_semantic_copilot_worker.py'
+          spec = importlib.util.spec_from_file_location('emanus_semantic_export', worker_path)
+          if spec is None or spec.loader is None:
+              raise SystemExit('Cannot load semantic worker extractor')
+          worker = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(worker)
+
+          sources = [
+              ('01-hebrews-1-1-to-3-8.txt', 'https://sermonindex.net/speakers/zac-poonen/hebrews-ch11-38/'),
+              ('02-hebrews-3-7-to-4-11.txt', 'https://sermonindex.net/speakers/zac-poonen/hebrews-ch37-411/'),
+              ('03-hebrews-4-11-to-5-6.txt', 'https://sermonindex.net/speakers/zac-poonen/hebrews-ch411-56/'),
+              ('04-hebrews-5-7-to-6-15.txt', 'https://sermonindex.net/speakers/zac-poonen/hebrews-ch57-615/'),
+              ('05-hebrews-6-16-to-8-9.txt', 'https://sermonindex.net/speakers/zac-poonen/hebrews-ch616-89/'),
+              ('06-hebrews-8-10-to-10-18.txt', 'https://sermonindex.net/speakers/zac-poonen/hebrews-ch810-1018/'),
+              ('07-hebrews-10-19-to-10-39.txt', 'https://sermonindex.net/speakers/zac-poonen/hebrews-ch1019-39/'),
+              ('08-hebrews-11-1-to-11-22.txt', 'https://sermonindex.net/speakers/zac-poonen/hebrews-ch111-22/'),
+              ('09-hebrews-11-23-to-12-4.txt', 'https://sermonindex.net/speakers/zac-poonen/hebrews-ch1123-124/'),
+              ('10-hebrews-12-5-to-13-25.txt', 'https://sermonindex.net/speakers/zac-poonen/hebrews-ch125-1325/'),
+          ]
+          out = Path('/tmp/evrei-transcripts')
+          meta = []
+          for name, url in sources:
+              text = worker.extract_transcript(url)
+              sha = worker.sha256(text)
+              (out / name).write_text(text + '\n', encoding='utf-8')
+              meta.append({'file': name, 'url': url, 'sha256': sha, 'words': len(text.split())})
+              print(name, sha, len(text.split()))
+          (out / 'manifest.json').write_text(json.dumps(meta, indent=2) + '\n', encoding='utf-8')
+          PY
+          cp docs/data/biblia-explicata/nt-final-source-first/19-evrei.json /tmp/evrei-transcripts/19-evrei.json
+          cp docs/data/biblia-explicata/nt-direct-transcript-coverage.json /tmp/evrei-transcripts/nt-direct-transcript-coverage.json
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: evrei-full-transcripts
+          path: /tmp/evrei-transcripts
+          if-no-files-found: error
+          retention-days: 1
+
+  bulk_addressable_export:
+    if: >-
+      github.actor != 'github-actions[bot]' &&
+      (github.event_name != 'pull_request' || github.event.pull_request.head.ref == 'agent/biblia-explicata-nt-integration-clean')
+    runs-on: ubuntu-22.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Extract exact Matei and Revelation transcript representations
+        run: |
+          set -euo pipefail
+          python3 scripts/export_nt_addressable_wave2.py
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: nt-semantic-bulk-addressable-wave2
+          path: /tmp/nt-semantic-bulk
+          if-no-files-found: error
+          retention-days: 1
+
+      - name: Persist exact transcript representations
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/biblia-explicata/nt-semantic-transcript-representations
+          if git diff --cached --quiet; then
+            echo "Matei/Revelation semantic transcript representations already current."
+            exit 0
+          fi
+          git commit -m "Persist Matei and Revelation semantic transcript representations"
+          git fetch origin agent/biblia-explicata-nt-integration-clean
+          git rebase FETCH_HEAD
+          git push origin HEAD:agent/biblia-explicata-nt-integration-clean

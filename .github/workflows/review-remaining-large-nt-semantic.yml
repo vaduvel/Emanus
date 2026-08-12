@@ -1,0 +1,191 @@
+name: NT Semantic Fidelity — Remaining Large Books
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-nt-integration-clean
+    paths:
+      - .github/semantic-triggers/large-official-audio-review.txt
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  models: read
+
+concurrency:
+  group: nt-semantic-remaining-large-books
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-22.04
+    outputs:
+      matrix: ${{ steps.manifest.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 1
+      - id: manifest
+        run: |
+          set -euo pipefail
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          from pathlib import Path
+          d = json.loads(Path('.github/semantic-source-manifests/remaining-large-books.json').read_text(encoding='utf-8'))
+          if d.get('schema') != 'emanus-nt-official-audio-semantic-source-manifest-v1':
+              raise SystemExit('Unexpected large-book source manifest schema')
+          include = []
+          for book_id, book in d['books'].items():
+              for episode in book['episodes']:
+                  include.append({'book': book_id, 'source_id': episode['id']})
+          if len(include) != 54:
+              raise SystemExit(f'Expected 54 shards, got {len(include)}')
+          print('matrix=' + json.dumps(include, separators=(',', ':')))
+          PY
+
+  review:
+    needs: prepare
+    name: Review ${{ matrix.book }} / ${{ matrix.source_id }}
+    runs-on: ubuntu-22.04
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 8
+      matrix:
+        include: ${{ fromJson(needs.prepare.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 1
+      - name: Review assigned units twice against complete exact transcript set
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NT_SEMANTIC_GITHUB_MODEL: openai/gpt-4.1
+          NT_SEMANTIC_BATCH_SIZE: '3'
+          NT_SEMANTIC_TIMEOUT: '300'
+        run: |
+          set -euo pipefail
+          python3 scripts/nt_official_audio_large_semantic_worker.py \
+            --book '${{ matrix.book }}' \
+            --primary-source-id '${{ matrix.source_id }}' \
+            --reviewed-on "$(date -u +%F)" \
+            --output '/tmp/${{ matrix.book }}-${{ matrix.source_id }}.json'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: semantic-fragment-${{ matrix.source_id }}
+          path: /tmp/${{ matrix.book }}-${{ matrix.source_id }}.json
+          if-no-files-found: error
+          retention-days: 2
+
+  persist:
+    name: Persist complete Luke John Acts semantic decisions
+    needs: review
+    runs-on: ubuntu-22.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: semantic-fragment-*
+          path: /tmp/large-semantic
+          merge-multiple: true
+      - name: Merge fragments fail-closed by book
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, re
+          from pathlib import Path
+
+          expected = {'luca':112, 'ioan':65, 'fapte':95}
+          source_manifest = json.loads(Path('.github/semantic-source-manifests/remaining-large-books.json').read_text(encoding='utf-8'))
+          expected_sources = {
+              book_id: {episode['id'] for episode in book['episodes']}
+              for book_id, book in source_manifest['books'].items()
+          }
+          fragments = list(Path('/tmp/large-semantic').glob('*.json'))
+          if len(fragments) != 54:
+              raise SystemExit(f'Expected 54 semantic fragments, found {len(fragments)}')
+          grouped = {book: [] for book in expected}
+          seen_sources = {book: set() for book in expected}
+          for path in fragments:
+              data = json.loads(path.read_text(encoding='utf-8'))
+              if data.get('schema') != 'emanus-nt-semantic-review-fragment-v1':
+                  raise SystemExit(f'Bad fragment schema: {path}')
+              book = data.get('bookId')
+              if book not in expected:
+                  raise SystemExit(f'Unexpected book fragment: {book}')
+              source_id = data.get('primarySourceId')
+              if source_id not in expected_sources[book]:
+                  raise SystemExit(f'{book}: unexpected primary source {source_id}')
+              if source_id in seen_sources[book]:
+                  raise SystemExit(f'{book}: duplicate source fragment {source_id}')
+              seen_sources[book].add(source_id)
+              if int(data.get('assignedUnits', -1)) != len(data.get('decisions', [])):
+                  raise SystemExit(f'{book}/{source_id}: assigned/decision count mismatch')
+              grouped[book].extend(data.get('decisions', []))
+          outdir = Path('docs/data/biblia-explicata/nt-semantic-review-manual')
+          outdir.mkdir(parents=True, exist_ok=True)
+          for book, count in expected.items():
+              if seen_sources[book] != expected_sources[book]:
+                  raise SystemExit(f'{book}: source fragment set incomplete')
+              decisions = grouped[book]
+              if len(decisions) != count:
+                  raise SystemExit(f'{book}: expected {count} decisions, got {len(decisions)}')
+              keys = set()
+              for d in decisions:
+                  if d.get('bookId') != book or d.get('status') != 'approved-against-transcript':
+                      raise SystemExit(f'{book}: malformed decision identity/status')
+                  if d.get('action') not in ('keep','rewrite'):
+                      raise SystemExit(f"{d.get('unitId')}: invalid action")
+                  if not re.fullmatch(r'sha256:[0-9a-f]{64}', str(d.get('reviewedPreEditSnapshotSha256') or '')):
+                      raise SystemExit(f"{d.get('unitId')}: missing preedit hash")
+                  if not re.fullmatch(r'sha256:[0-9a-f]{64}', str(d.get('reviewedTeachingSha256') or '')):
+                      raise SystemExit(f"{d.get('unitId')}: missing final hash")
+                  if not d.get('transcriptEvidence') or not d.get('rationale','').strip():
+                      raise SystemExit(f"{d.get('unitId')}: evidence/rationale missing")
+                  key = (int(d['chapter']), str(d['unitId']))
+                  if key in keys:
+                      raise SystemExit(f'{book}: duplicate decision {key}')
+                  keys.add(key)
+              rewrite = sum(d['action'] == 'rewrite' for d in decisions)
+              keep = sum(d['action'] == 'keep' for d in decisions)
+              artifact = {
+                  'schema': 'emanus-nt-semantic-review-book-v1',
+                  'bookId': book,
+                  'reviewMode': 'two-pass-sharded-exact-persisted-official-audio-transcripts',
+                  'coverage': {
+                      'bookUnits': count,
+                      'approvedUnits': count,
+                      'rewrite': rewrite,
+                      'keep': keep,
+                      'sourceShards': len(expected_sources[book]),
+                  },
+                  'decisions': sorted(decisions, key=lambda d: (int(d['chapter']), str(d['unitId']))),
+              }
+              target = outdir / f'official-audio-{book}.json'
+              target.write_text(json.dumps(artifact, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+              print(f'{book}: {count}/{count} ({rewrite} rewrite / {keep} keep).')
+          PY
+          git diff --check
+      - name: Commit complete book artifacts
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/biblia-explicata/nt-semantic-review-manual/official-audio-luca.json \
+                  docs/data/biblia-explicata/nt-semantic-review-manual/official-audio-ioan.json \
+                  docs/data/biblia-explicata/nt-semantic-review-manual/official-audio-fapte.json
+          git commit -m "Review Luke John and Acts against official transcripts"
+          for attempt in 1 2 3 4 5 6; do
+            git fetch origin agent/biblia-explicata-nt-integration-clean
+            if git rebase FETCH_HEAD && git push origin HEAD:agent/biblia-explicata-nt-integration-clean; then exit 0; fi
+            git rebase --abort || true
+            sleep "$attempt"
+          done
+          exit 1

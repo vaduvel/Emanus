@@ -1,0 +1,146 @@
+name: Transcribe 1 Timotei VBV Parallel
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-nt-integration-clean
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  preflight:
+    runs-on: ubuntu-22.04
+    outputs:
+      enabled: ${{ steps.sources.outputs.enabled }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 1
+
+      - name: Check that the four sources are configured
+        id: sources
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          expected = {
+              '1-timotei-vbv-01',
+              '1-timotei-vbv-02',
+              '1-timotei-vbv-03',
+              '1-timotei-vbv-04',
+          }
+          status = json.loads(Path('docs/data/biblia-explicata/nt-semantic-manual-review-status.json').read_text(encoding='utf-8'))
+          configured = {
+              str(source.get('id'))
+              for source in status.get('officialAudioSources', [])
+              if isinstance(source, dict)
+          }
+          enabled = expected <= configured
+          print(f'Configured 1 Timotei sources: {sorted(configured & expected)}')
+          print(f'Transcription enabled: {enabled}')
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as output:
+              output.write(f"enabled={'true' if enabled else 'false'}\n")
+          PY
+
+  transcribe:
+    needs: preflight
+    if: github.actor != 'github-actions[bot]' && needs.preflight.outputs.enabled == 'true'
+    strategy:
+      fail-fast: false
+      matrix:
+        source_id:
+          - 1-timotei-vbv-01
+          - 1-timotei-vbv-02
+          - 1-timotei-vbv-03
+          - 1-timotei-vbv-04
+    runs-on: ubuntu-22.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 1
+
+      - name: Transcribe one official CFC VBV episode
+        env:
+          NT_TRANSCRIPTION_SOURCE_ID: ${{ matrix.source_id }}
+        run: |
+          set -euo pipefail
+          python3 scripts/transcribe_nt_current_official_audio.py
+          test -s "docs/data/biblia-explicata/nt-official-transcripts/${NT_TRANSCRIPTION_SOURCE_ID}.json"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: transcript-${{ matrix.source_id }}
+          path: docs/data/biblia-explicata/nt-official-transcripts/${{ matrix.source_id }}.json
+          if-no-files-found: error
+          retention-days: 1
+
+  persist:
+    needs: [preflight, transcribe]
+    if: github.actor != 'github-actions[bot]' && needs.preflight.outputs.enabled == 'true' && needs.transcribe.result == 'success'
+    runs-on: ubuntu-22.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 0
+          persist-credentials: true
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: transcript-1-timotei-vbv-*
+          path: /tmp/1-timotei-transcripts
+          merge-multiple: true
+
+      - name: Persist exact four-part transcript set
+        run: |
+          set -euo pipefail
+          target="docs/data/biblia-explicata/nt-official-transcripts"
+          mkdir -p "$target"
+          for id in 01 02 03 04; do
+            src="/tmp/1-timotei-transcripts/1-timotei-vbv-${id}.json"
+            test -s "$src"
+            cp "$src" "$target/1-timotei-vbv-${id}.json"
+          done
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          root = Path('docs/data/biblia-explicata/nt-official-transcripts')
+          expected = {
+              '1-timotei-vbv-01': '1 Timothy 1:1-2:9',
+              '1-timotei-vbv-02': '1 Timothy 2:8-4:2',
+              '1-timotei-vbv-03': '1 Timothy 4:3-5:13',
+              '1-timotei-vbv-04': '1 Timothy 5:11-6:21',
+          }
+          for source_id, source_range in expected.items():
+              p = root / f'{source_id}.json'
+              d = json.loads(p.read_text(encoding='utf-8'))
+              assert d['schema'] == 'emanus-nt-official-audio-transcript-v1'
+              assert d['bookId'] == '1-timotei'
+              assert d['sourceId'] == source_id
+              assert d['sourceRange'] == source_range
+              assert d['transcriptionModel'] == 'faster-whisper small.en / CTranslate2 int8 CPU'
+              assert d['wordCount'] >= 1500
+              assert len(d['segments']) == d['segmentCount']
+              assert d['transcriptSha256'].startswith('sha256:')
+              assert d['officialAudioSha256'].startswith('sha256:')
+              print(source_id, d['wordCount'], d['transcriptSha256'], d['officialAudioSha256'])
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/biblia-explicata/nt-official-transcripts/1-timotei-vbv-*.json
+          if git diff --cached --quiet; then
+            echo "1 Timotei transcript set already persisted."
+            exit 0
+          fi
+          git commit -m "Persist 1 Timotei official VBV transcripts"
+          git push origin HEAD:agent/biblia-explicata-nt-integration-clean

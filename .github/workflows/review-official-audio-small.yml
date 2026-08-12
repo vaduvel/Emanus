@@ -1,0 +1,128 @@
+name: NT Semantic Fidelity — Official Audio Small Books
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-nt-integration-clean
+    paths:
+      - .github/semantic-triggers/official-audio-review-book.txt
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  models: read
+
+concurrency:
+  group: nt-official-audio-small-review
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-22.04
+    outputs:
+      book: ${{ steps.target.outputs.book }}
+      expected: ${{ steps.target.outputs.expected }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 1
+      - id: target
+        run: |
+          set -euo pipefail
+          book="$(tr -d '[:space:]' < .github/semantic-triggers/official-audio-review-book.txt)"
+          case "$book" in
+            filipeni) expected=19 ;;
+            coloseni) expected=22 ;;
+            1-tesaloniceni) expected=23 ;;
+            *) echo "Unsupported target: $book" >&2; exit 1 ;;
+          esac
+          echo "book=$book" >> "$GITHUB_OUTPUT"
+          echo "expected=$expected" >> "$GITHUB_OUTPUT"
+
+  review:
+    needs: prepare
+    runs-on: ubuntu-22.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 1
+      - name: Two-pass semantic review against exact contiguous official transcript sets
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NT_SEMANTIC_GITHUB_MODEL: openai/gpt-4.1
+          NT_SEMANTIC_BATCH_SIZE: '3'
+          NT_SEMANTIC_TIMEOUT: '300'
+          BOOK: ${{ needs.prepare.outputs.book }}
+        run: |
+          set -euo pipefail
+          python3 scripts/nt_official_audio_small_semantic_worker_v2.py \
+            --book "$BOOK" \
+            --reviewed-on "$(date -u +%F)" \
+            --output "/tmp/${BOOK}.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: official-audio-semantic-${{ needs.prepare.outputs.book }}
+          path: /tmp/${{ needs.prepare.outputs.book }}.json
+          if-no-files-found: error
+          retention-days: 2
+
+  persist:
+    needs: [prepare, review]
+    runs-on: ubuntu-22.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/download-artifact@v4
+        with:
+          name: official-audio-semantic-${{ needs.prepare.outputs.book }}
+          path: /tmp/semantic
+      - name: Validate and persist hash-bound book artifact
+        env:
+          BOOK: ${{ needs.prepare.outputs.book }}
+          EXPECTED: ${{ needs.prepare.outputs.expected }}
+        run: |
+          set -euo pipefail
+          python3 - "$BOOK" "$EXPECTED" <<'PY'
+          import json, re, sys
+          from pathlib import Path
+          book, expected = sys.argv[1], int(sys.argv[2])
+          source = Path('/tmp/semantic') / f'{book}.json'
+          data = json.loads(source.read_text(encoding='utf-8'))
+          assert data['schema'] == 'emanus-nt-semantic-review-book-v1'
+          assert data['bookId'] == book
+          assert len(data['decisions']) == expected
+          keys = set()
+          for d in data['decisions']:
+              assert d['bookId'] == book
+              assert d['status'] == 'approved-against-transcript'
+              assert d['action'] in ('keep', 'rewrite')
+              assert re.fullmatch(r'sha256:[0-9a-f]{64}', d['reviewedPreEditSnapshotSha256'])
+              assert re.fullmatch(r'sha256:[0-9a-f]{64}', d['reviewedTeachingSha256'])
+              assert d['transcriptEvidence']
+              assert d['rationale'].strip()
+              key = (d['chapter'], d['unitId'])
+              assert key not in keys
+              keys.add(key)
+          target = Path('docs/data/biblia-explicata/nt-semantic-review-manual') / f'official-audio-{book}.json'
+          target.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print(f'{book}: persisted {len(keys)} exact official-audio semantic decisions.')
+          PY
+          git diff --check
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "docs/data/biblia-explicata/nt-semantic-review-manual/official-audio-${BOOK}.json"
+          git commit -m "Review ${BOOK} against official audio transcripts"
+          for attempt in 1 2 3 4; do
+            git fetch origin agent/biblia-explicata-nt-integration-clean
+            if git rebase FETCH_HEAD && git push origin HEAD:agent/biblia-explicata-nt-integration-clean; then exit 0; fi
+            git rebase --abort || true
+            sleep "$attempt"
+          done
+          exit 1

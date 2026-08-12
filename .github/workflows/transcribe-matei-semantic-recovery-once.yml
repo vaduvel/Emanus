@@ -1,0 +1,113 @@
+name: Transcribe Matthew Semantic Recovery Once
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-nt-integration-clean
+    paths:
+      - .github/workflows/transcribe-matei-semantic-recovery-once.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  transcribe:
+    name: Transcribe and persist ${{ matrix.source_id }}
+    runs-on: ubuntu-22.04
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        source_id:
+          - matei-vbv-09
+          - matei-vbv-10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 0
+          persist-credentials: true
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Transcribe exact official CFC audio
+        env:
+          NT_TRANSCRIPTION_SOURCE_ID: ${{ matrix.source_id }}
+          NT_TRANSCRIPTION_MODEL: small.en
+        run: |
+          set -euo pipefail
+          python3 scripts/transcribe_nt_current_official_audio.py
+          test -s "docs/data/biblia-explicata/nt-official-transcripts/${{ matrix.source_id }}.json"
+
+      - name: Validate and persist this exact transcript
+        env:
+          SOURCE_ID: ${{ matrix.source_id }}
+        run: |
+          set -euo pipefail
+          python3 - "$SOURCE_ID" <<'PY'
+          import json, re, sys
+          from pathlib import Path
+          source_id = sys.argv[1]
+          p = Path('docs/data/biblia-explicata/nt-official-transcripts') / f'{source_id}.json'
+          d = json.loads(p.read_text(encoding='utf-8'))
+          assert d['schema'] == 'emanus-nt-official-audio-transcript-v1'
+          assert d['bookId'] == 'matei'
+          assert d['sourceId'] == source_id
+          assert re.fullmatch(r'sha256:[0-9a-f]{64}', d['officialAudioSha256'])
+          assert re.fullmatch(r'sha256:[0-9a-f]{64}', d['transcriptSha256'])
+          assert d['wordCount'] >= 1500
+          assert d['segmentCount'] == len(d['segments']) > 0
+          print(source_id, d['wordCount'], d['transcriptSha256'], d['officialAudioSha256'])
+          PY
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "docs/data/biblia-explicata/nt-official-transcripts/${SOURCE_ID}.json"
+          if git diff --cached --quiet; then
+            echo "$SOURCE_ID already persisted."
+            exit 0
+          fi
+          git commit -m "Persist official Matthew transcript ${SOURCE_ID}"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin agent/biblia-explicata-nt-integration-clean
+            if git rebase FETCH_HEAD && git push origin HEAD:agent/biblia-explicata-nt-integration-clean; then
+              exit 0
+            fi
+            git rebase --abort || true
+            echo "${SOURCE_ID} persistence raced with branch update; retrying ($attempt/5)."
+            sleep "$attempt"
+          done
+          exit 1
+
+  cleanup:
+    name: Remove Matthew one-shot workflow
+    needs: transcribe
+    runs-on: ubuntu-22.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Self-remove after both transcripts are durable
+        run: |
+          set -euo pipefail
+          git fetch origin agent/biblia-explicata-nt-integration-clean
+          git reset --hard origin/agent/biblia-explicata-nt-integration-clean
+          test -s docs/data/biblia-explicata/nt-official-transcripts/matei-vbv-09.json
+          test -s docs/data/biblia-explicata/nt-official-transcripts/matei-vbv-10.json
+          git rm .github/workflows/transcribe-matei-semantic-recovery-once.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Remove completed Matthew transcript workflow"
+          for attempt in 1 2 3 4; do
+            git fetch origin agent/biblia-explicata-nt-integration-clean
+            if git rebase FETCH_HEAD && git push origin HEAD:agent/biblia-explicata-nt-integration-clean; then exit 0; fi
+            git rebase --abort || true
+            sleep "$attempt"
+          done
+          exit 1

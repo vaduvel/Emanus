@@ -1,0 +1,48 @@
+{
+  "schema": "emanus-nt-lexicon-source-evidence-unmatched-v4",
+  "policy": "Entries with no verified pinned lexical candidate after diacritic-preserving TBESG lookup, passage-bounded MorphGNT 6.12 lemmatization, explicit-lemma resolution, and the pinned TFLSJ fallback. These remain unapprovable and block the frozen lexical ledger.",
+  "primaryLexicalSource": {
+    "id": "stepbible-tbesg",
+    "repository": "STEPBible/STEPBible-Data",
+    "commitSha": "b86d26cdb1f51729e73b5b4eb7f7ccadc5dfba39",
+    "path": "Lexicons/TBESG - Translators Brief lexicon of Extended Strongs for Greek - STEPBible.org CC BY.txt",
+    "blobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+    "verifiedBlobSha": "efe271a1dbb73fa01f8fa6e0f164c6687757a9ae",
+    "license": "CC BY 4.0"
+  },
+  "fallbackLexicalSource": {
+    "id": "stepbible-tflsj",
+    "repository": "STEPBible/STEPBible-Data",
+    "commitSha": "b86d26cdb1f51729e73b5b4eb7f7ccadc5dfba39",
+    "path": "Lexicons/TFLSJ  0-5624 - Translators Formatted full LSJ Bible lexicon - STEPBible.org CC BY.txt",
+    "blobSha": "db44789a0b3523ad00ba2c93c6fe78ad3db1b4bb",
+    "verifiedBlobSha": "db44789a0b3523ad00ba2c93c6fe78ad3db1b4bb",
+    "license": "CC BY 4.0"
+  },
+  "morphologySource": {
+    "id": "morphgnt-sblgnt-6.12",
+    "repository": "morphgnt/sblgnt",
+    "ref": "6.12",
+    "license": "CC-BY-SA",
+    "citation": "Tauber, J. K., ed. (2017) MorphGNT: SBLGNT Edition, Version 6.12",
+    "files": [
+      {
+        "bookId": "matei",
+        "file": "61-Mt-morphgnt.txt",
+        "blobSha": "29ea6e30851e0fc220a9f329fda51e33de5ad621"
+      },
+      {
+        "bookId": "marcu",
+        "file": "62-Mk-morphgnt.txt",
+        "blobSha": "6bd9ce1627e12bd45434b0d18f875c89581d855f"
+      },
+      {
+        "bookId": "ioan",
+        "file": "64-Jn-morphgnt.txt",
+        "blobSha": "7ebe3b3ebae7ddb5d8dac24e1471e8c1caef86e9"
+      }
+    ]
+  },
+  "count": 0,
+  "entries": []
+}

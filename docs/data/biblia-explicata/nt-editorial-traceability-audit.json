@@ -1,0 +1,1319 @@
+{
+  "schema": "emanus-nt-editorial-traceability-audit-v1",
+  "status": "clean",
+  "policy": "Removed modern-editorial copy is not required to have a preservation source. Every retained or rewritten reviewed sentence must have reproducible source context in the final chapter/unit. Source-context anchoring is not represented as semantic proof or as a byte hash of third-party material.",
+  "counts": {
+    "decisions": 95,
+    "removedNotApplicable": 59,
+    "contextAnchored": 36,
+    "pending": 0
+  },
+  "findings": [
+    {
+      "bookId": "matei",
+      "chapter": 1,
+      "field": "historicalContext",
+      "sentence": "Logodna iudaică era un legământ juridic serios, iar o sarcină înainte de viața împreună o expunea pe Maria rușinii și primejdiei.",
+      "action": "keep-reviewed",
+      "rationale": "direct-historical-context",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-matthew",
+          "locator": "Episode 1: Matei 1:1-1:10",
+          "evidenceId": "ev-recovered-matei-episode-001",
+          "evidenceSha256": "sha256:4c66e8a5758461b58602d30124a7238f6bce4dab094a83269a715baece20ef91",
+          "verificationLevel": "official-episode-range-registry"
+        },
+        {
+          "sourceId": "legacy-poonen-matthew",
+          "locator": "Episode 2: Matei 1:11-1:18",
+          "evidenceId": "ev-recovered-matei-episode-002",
+          "evidenceSha256": "sha256:4ebf1f0294890ef2ce2297eb6655a709edb864f9d41ea2de917d30d4af3bfa1a",
+          "verificationLevel": "official-episode-range-registry"
+        },
+        {
+          "sourceId": "legacy-poonen-matthew",
+          "locator": "Episode 3: Matei 1:18-1:25",
+          "evidenceId": "ev-recovered-matei-episode-003",
+          "evidenceSha256": "sha256:121f0330bb96fe522a1ca1ead8e2d4eb53df170952faa770e583c6dda556dd06",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "matei",
+      "chapter": 5,
+      "field": "units[6].teaching",
+      "sentence": "Porunca taie răzbunarea și ura personală; nu desființează adevărul, limitele, autoritățile ori datoria de a ocroti pe cel vulnerabil.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "matei",
+      "chapter": 6,
+      "field": "units[3].teaching",
+      "sentence": "Poți ierta și totuși să spui adevărul, să ceri reparare, să păstrezi limite și să lași autoritățile să-și facă datoria.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "matei",
+      "chapter": 10,
+      "field": "units[1].teaching",
+      "sentence": "Aceasta nu disprețuiește pregătirea obișnuită, ci îi asigură pe ucenicii trași pe neașteptate înaintea autorităților că nu sunt singuri.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "matei",
+      "chapter": 13,
+      "field": "units[1].teaching",
+      "sentence": "Pilda nu interzice disciplina bisericii, pe care Matei 18 o va porunci, și nu cere autorităților să ignore răul.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "matei",
+      "chapter": 13,
+      "field": "units[2].teaching",
+      "sentence": "Creșterea Împărăției nu justifică triumfalismul instituțiilor.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "matei",
+      "chapter": 15,
+      "field": "units[1].teaching",
+      "sentence": "Povestirea nu justifică umilirea oamenilor care cer ajutor și nici testele fabricate de slujitori.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "matei",
+      "chapter": 21,
+      "field": "units[4].teaching",
+      "sentence": "Textul nu autorizează ura împotriva evreilor și nu face Biserica incapabilă de aceeași infidelitate.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "matei",
+      "chapter": 22,
+      "field": "units[0].teaching",
+      "sentence": "Totuși, omul fără haină de nuntă arată că intrarea neașteptată nu justifică disprețuirea Regelui.",
+      "action": "keep-reviewed",
+      "rationale": "direct-parable-logic",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-matthew",
+          "locator": "Episode 102: Matei 21:33-22:14",
+          "evidenceId": "ev-recovered-matei-episode-102",
+          "evidenceSha256": "sha256:2b482fa253848fda31ea73c6867c4d1f742fffe36ff800388560abd56a625fb8",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "matei",
+      "chapter": 26,
+      "field": "units[0].teaching",
+      "sentence": "Isus nu anulează ajutorarea și nu permite luxului religios să ignore foamea.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "matei",
+      "chapter": 27,
+      "field": "units[0].teaching",
+      "sentence": "Textul nu ne autorizează să stabilim automat destinul veșnic al fiecărei persoane care moare prin sinucidere și nici să transformăm o moarte complexă într-o singură explicație spirituală.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "matei",
+      "chapter": 27,
+      "field": "units[1].teaching",
+      "sentence": "Spălarea mâinilor nu șterge verdictul pe care îl autorizează.",
+      "action": "keep-reviewed",
+      "rationale": "direct-pilate-account",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-matthew",
+          "locator": "Episode 123: Matei 27:11-27:31",
+          "evidenceId": "ev-recovered-matei-episode-123",
+          "evidenceSha256": "sha256:a2a03136b9a6fdd0cd41ca13fb3a3e0e092edeaa8c212a78b8edb5d330cda7ae",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "marcu",
+      "chapter": 1,
+      "field": "units[1].teaching",
+      "sentence": "Deși era rudă cu Isus, nu își permite nicio familiaritate: «nu sunt vrednic să mă plec să-I dezleg curelele încălțămintei».",
+      "action": "keep-reviewed",
+      "rationale": "source-consistent-john-ministry",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-mark",
+          "locator": "Episode 1: Marcu 1:1-1:11",
+          "evidenceId": "ev-recovered-marcu-episode-001",
+          "evidenceSha256": "sha256:4cdbd498b8ce6488bccb659cb2deefc23d2a79bb9fcb8e018e6f52ebbee31437",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "marcu",
+      "chapter": 11,
+      "field": "literaryContext",
+      "sentence": "Conflictul cu autoritățile intră în etapa finală.",
+      "action": "keep-reviewed",
+      "rationale": "direct-literary-context",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-mark",
+          "locator": "Episode 32: Marcu 10:46-11:10",
+          "evidenceId": "ev-recovered-marcu-episode-032",
+          "evidenceSha256": "sha256:0ee48d5ba4bc447eb1cdb5b2355283ae78d4794c07be22ffc01614cbae24211a",
+          "verificationLevel": "official-episode-range-registry"
+        },
+        {
+          "sourceId": "legacy-poonen-mark",
+          "locator": "Episode 33: Marcu 11:11-11:17",
+          "evidenceId": "ev-recovered-marcu-episode-033",
+          "evidenceSha256": "sha256:8a11be6db77b2b7a2a3cfd0add982c65ec756c4ea1f6268526f4927f091b0411",
+          "verificationLevel": "official-episode-range-registry"
+        },
+        {
+          "sourceId": "legacy-poonen-mark",
+          "locator": "Episode 34: Marcu 11:18-11:26",
+          "evidenceId": "ev-recovered-marcu-episode-034",
+          "evidenceSha256": "sha256:46699d9735f1adb26e76ed5711730acd36bf5fd949ae61d29c934d2a1d14712a",
+          "verificationLevel": "official-episode-range-registry"
+        },
+        {
+          "sourceId": "legacy-poonen-mark",
+          "locator": "Episode 35: Marcu 11:27-12:12",
+          "evidenceId": "ev-recovered-marcu-episode-035",
+          "evidenceSha256": "sha256:e64a2971bedd854c37ad8e24fa1090ea0fb127a1a92d235ff2b90292eee5fedf",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "marcu",
+      "chapter": 13,
+      "field": "units[0].teaching",
+      "sentence": "Semnele timpurii — hristoși mincinoși, războaie, cutremure și foamete — sunt începutul durerilor, nu un calendar care permite calcule.",
+      "action": "keep-reviewed",
+      "rationale": "source-consistent-eschatology",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-mark",
+          "locator": "Episode 38: Marcu 12:35-13:6",
+          "evidenceId": "ev-recovered-marcu-episode-038",
+          "evidenceSha256": "sha256:b85a7448f47815c7ee2b49ec2e5233d8a940f809ce64121f547f1edb59668ae0",
+          "verificationLevel": "official-episode-range-registry"
+        },
+        {
+          "sourceId": "legacy-poonen-mark",
+          "locator": "Episode 39: Marcu 13:7-13:18",
+          "evidenceId": "ev-recovered-marcu-episode-039",
+          "evidenceSha256": "sha256:517f573e33d1cc3c5812c1a14fe475a4f49790e4586e64f7718eb5cd276ef0e1",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "marcu",
+      "chapter": 16,
+      "field": "units[2].teaching",
+      "sentence": "Referirea la șerpi și otravă nu autorizează testarea lui Dumnezeu sau ritualuri primejdioase.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "luca",
+      "chapter": 4,
+      "field": "units[0].teaching",
+      "sentence": "Mesajul rămâne actual: o lucrare mai largă nu justifică tăcerea asupra adevărului.",
+      "action": "keep-reviewed",
+      "rationale": "source-consistent-ministry-application",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-luke",
+          "locator": "Episode 4: Luca 3:21-4:19",
+          "evidenceId": "ev-recovered-luca-episode-004",
+          "evidenceSha256": "sha256:ceb34c6477596fd45d4504d05974478cc6e90388cae8aee9128915551d826591",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "luca",
+      "chapter": 4,
+      "field": "units[3].teaching",
+      "sentence": "Relatarea afirmă realitatea lucrării spirituale, dar nu ne autorizează să diagnosticăm de la distanță orice boală, teamă sau comportament drept posedare.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "luca",
+      "chapter": 5,
+      "field": "units[2].teaching",
+      "sentence": "Totuși, textul nu spune că paralizia fusese cauzată de un păcat personal și nu ne permite să diagnosticăm astfel suferința altuia.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "luca",
+      "chapter": 7,
+      "field": "units[0].teaching",
+      "sentence": "Ea nu devine o promisiune că fiecare cerere medicală va primi imediat același răspuns și nu justifică oprirea tratamentului.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "luca",
+      "chapter": 8,
+      "field": "units[3].teaching",
+      "sentence": "Relatarea nu promite că orice boală va fi vindecată imediat și nu justifică oprirea tratamentului.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "luca",
+      "chapter": 9,
+      "field": "units[0].teaching",
+      "sentence": "Minunea nu justifică promisiuni de prosperitate, ci cheamă la generozitate și încredere.",
+      "action": "keep-reviewed",
+      "rationale": "source-consistent-anti-prosperity",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-luke",
+          "locator": "Episode 9: Luca 8:49-9:36",
+          "evidenceId": "ev-recovered-luca-episode-009",
+          "evidenceSha256": "sha256:c25de2efe16a8b322ae0a96beedd92275a5ba77c26311599bd011dfd458ce432",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "luca",
+      "chapter": 9,
+      "field": "units[4].teaching",
+      "sentence": "Respingerea nu ne autorizează să dorim judecata imediată asupra oamenilor; misiunea prezentă este vestirea harului, iar judecata rămâne în mâna lui Dumnezeu.",
+      "action": "keep-reviewed",
+      "rationale": "direct-jesus-rebuke",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-luke",
+          "locator": "Episode 10: Luca 9:37-10:16",
+          "evidenceId": "ev-recovered-luca-episode-010",
+          "evidenceSha256": "sha256:ddcecf82b25a67d2714e3b9efb44ee72c6460ca9f58072bafa4f45455cdf899b",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "luca",
+      "chapter": 10,
+      "field": "units[0].teaching",
+      "sentence": "Nevoia mare nu justifică independența, graba sau metodele prin care omul își construiește propriul nume.",
+      "action": "keep-reviewed",
+      "rationale": "source-consistent-ministry-principle",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-luke",
+          "locator": "Episode 10: Luca 9:37-10:16",
+          "evidenceId": "ev-recovered-luca-episode-010",
+          "evidenceSha256": "sha256:ddcecf82b25a67d2714e3b9efb44ee72c6460ca9f58072bafa4f45455cdf899b",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "luca",
+      "chapter": 11,
+      "field": "units[2].teaching",
+      "sentence": "Totuși, textul nu ne autorizează să etichetăm orice boală, traumă sau comportament drept lucrare demonică.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "luca",
+      "chapter": 12,
+      "field": "units[1].teaching",
+      "sentence": "Promisiunea cuvintelor date de Duhul se referă la ucenicii aduși pe neașteptate înaintea autorităților, nu la refuzul pregătirii responsabile pentru orice învățătură.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "luca",
+      "chapter": 12,
+      "field": "units[5].teaching",
+      "sentence": "Aceasta nu justifică provocarea conflictului sau lipsa de respect.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "luca",
+      "chapter": 13,
+      "field": "units[1].teaching",
+      "sentence": "Textul spune că Satan o ținuse legată, dar nu ne autorizează să atribuim automat bolile fizice sau dizabilitățile unei cauze demonice.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "luca",
+      "chapter": 15,
+      "field": "historicalContext",
+      "sentence": "Un fiu care cerea partea înainte de moarte își umilea tatăl, iar munca la porci reprezenta degradare profundă pentru un iudeu.",
+      "action": "keep-reviewed",
+      "rationale": "direct-cultural-context",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-luke",
+          "locator": "Episode 16: Luca 14:25-15:17",
+          "evidenceId": "ev-recovered-luca-episode-016",
+          "evidenceSha256": "sha256:5fd6c8e21bab3926465c6ea47c1f5783e5e10fdae294ff9b55e3ebebf9c8423c",
+          "verificationLevel": "official-episode-range-registry"
+        },
+        {
+          "sourceId": "legacy-poonen-luke",
+          "locator": "Episode 17: Luca 15:11-16:18",
+          "evidenceId": "ev-recovered-luca-episode-017",
+          "evidenceSha256": "sha256:47770eb0ba66f351978ec064a1f73f61489a38141be562b01d3bbf2199cf5f34",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "luca",
+      "chapter": 16,
+      "field": "units[1].teaching",
+      "sentence": "Separarea pentru siguranță și ajutorul legal ori pastoral pot fi necesare; orice decizie trebuie tratată cu adevăr, responsabilitate și grijă pentru cel vulnerabil.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "luca",
+      "chapter": 17,
+      "field": "units[0].teaching",
+      "sentence": "Autoritatea pastorală, parentală sau educațională nu poate fi folosită pentru manipulare, sexualizare, rușinare ori control spiritual.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "luca",
+      "chapter": 17,
+      "field": "units[1].teaching",
+      "sentence": "Relatarea nu garantează vindecarea imediată fiecărui bolnav și nu justifică oprirea tratamentului.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "luca",
+      "chapter": 18,
+      "field": "units[0].teaching",
+      "sentence": "Rugăciunea poate și trebuie să fie însoțită de raportare, protecție, ajutor legal și sprijin competent.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "luca",
+      "chapter": 18,
+      "field": "units[1].teaching",
+      "sentence": "Smerenia nu înseamnă negarea lucrării lui Dumnezeu în noi sau acceptarea umilirii abuzive.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "luca",
+      "chapter": 18,
+      "field": "units[4].teaching",
+      "sentence": "Relatarea nu promite vindecare imediată tuturor și nu justifică oprirea tratamentului.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "luca",
+      "chapter": 20,
+      "field": "literaryContext",
+      "sentence": "După curățirea templului, autoritățile cer legitimația lui Isus.",
+      "action": "keep-reviewed",
+      "rationale": "direct-literary-context",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-luke",
+          "locator": "Episode 21: Luca 20:1-21:19",
+          "evidenceId": "ev-recovered-luca-episode-021",
+          "evidenceSha256": "sha256:b0c874d693e4d4de9fa5f54ca716b40b9b6637a1a373bfa5ce27a8831e0d0d99",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "luca",
+      "chapter": 20,
+      "field": "units[2].teaching",
+      "sentence": "Textul nu justifică evaziunea, corupția sau folosirea credinței ca scuză pentru avantaj financiar.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "luca",
+      "chapter": 21,
+      "field": "units[0].teaching",
+      "sentence": "Textul nu autorizează liderii să preseze oamenii săraci să dea ultimii bani și nu justifică promisiuni că Dumnezeu îi va îmbogăți.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "luca",
+      "chapter": 21,
+      "field": "units[1].teaching",
+      "sentence": "Isus promite cuvinte și înțelepciune când ucenicii sunt trași pe neașteptate înaintea autorităților.",
+      "action": "keep-reviewed",
+      "rationale": "direct-passage-teaching",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-luke",
+          "locator": "Episode 21: Luca 20:1-21:19",
+          "evidenceId": "ev-recovered-luca-episode-021",
+          "evidenceSha256": "sha256:b0c874d693e4d4de9fa5f54ca716b40b9b6637a1a373bfa5ce27a8831e0d0d99",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "luca",
+      "chapter": 22,
+      "field": "units[4].teaching",
+      "sentence": "Chiar în ceasul puterii întunericului, El nu își abandonează caracterul și nu permite ucenicilor să-I apere Împărăția prin forță.",
+      "action": "keep-reviewed",
+      "rationale": "direct-kingdom-contrast",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-luke",
+          "locator": "Episode 23: Luca 22:47-23:46",
+          "evidenceId": "ev-recovered-luca-episode-023",
+          "evidenceSha256": "sha256:2b128ec324e278ebee4a7af11cc5b3863ecd02246e9cf07e3918144742e1e3c0",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "luca",
+      "chapter": 23,
+      "field": "literaryContext",
+      "sentence": "Procesul religios din capitolul anterior este dus înaintea autorităților romane.",
+      "action": "keep-reviewed",
+      "rationale": "direct-literary-context",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-luke",
+          "locator": "Episode 23: Luca 22:47-23:46",
+          "evidenceId": "ev-recovered-luca-episode-023",
+          "evidenceSha256": "sha256:2b128ec324e278ebee4a7af11cc5b3863ecd02246e9cf07e3918144742e1e3c0",
+          "verificationLevel": "official-episode-range-registry"
+        },
+        {
+          "sourceId": "legacy-poonen-luke",
+          "locator": "Episode 24: Luca 23:47-24:53",
+          "evidenceId": "ev-recovered-luca-episode-024",
+          "evidenceSha256": "sha256:31ad434b734c35381b7688f6bc7f6d0e2e24b4e061e23c5932526ef958d813cd",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "luca",
+      "chapter": 23,
+      "field": "historicalContext",
+      "sentence": "Numai Roma putea aplica în mod legal răstignirea.",
+      "action": "keep-reviewed",
+      "rationale": "direct-historical-context",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-luke",
+          "locator": "Episode 23: Luca 22:47-23:46",
+          "evidenceId": "ev-recovered-luca-episode-023",
+          "evidenceSha256": "sha256:2b128ec324e278ebee4a7af11cc5b3863ecd02246e9cf07e3918144742e1e3c0",
+          "verificationLevel": "official-episode-range-registry"
+        },
+        {
+          "sourceId": "legacy-poonen-luke",
+          "locator": "Episode 24: Luca 23:47-24:53",
+          "evidenceId": "ev-recovered-luca-episode-024",
+          "evidenceSha256": "sha256:31ad434b734c35381b7688f6bc7f6d0e2e24b4e061e23c5932526ef958d813cd",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "luca",
+      "chapter": 24,
+      "field": "units[0].teaching",
+      "sentence": "Îndoiala nu este vindecată prin rușinare, ci prin apropiere de dovezi, amintirea Cuvântului și întâlnirea cu Domnul.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "fapte",
+      "chapter": 2,
+      "field": "units[3].teaching",
+      "sentence": "Dărnicia este liberă, nu confiscare religioasă; capitolul nu autorizează liderii să constrângă oamenii să renunțe la proprietate.",
+      "action": "keep-reviewed",
+      "rationale": "source-consistent-voluntary-giving",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-acts",
+          "locator": "Episode 2: Fapte 2:22-3:16",
+          "evidenceId": "ev-recovered-fapte-episode-002",
+          "evidenceSha256": "sha256:a472553d6d0f1208162683cf3ae9905ec11d63c022c74b97170536a9766d79a2",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "fapte",
+      "chapter": 4,
+      "field": "summary",
+      "sentence": "Petru și Ioan mărturisesc cu îndrăzneală înaintea autorităților, Biserica se roagă pentru curaj, iar unitatea credincioșilor se exprimă prin grijă concretă unii pentru alții.",
+      "action": "keep-reviewed",
+      "rationale": "direct-summary",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-acts",
+          "locator": "Episode 3: Fapte 3:17-5:11",
+          "evidenceId": "ev-recovered-fapte-episode-003",
+          "evidenceSha256": "sha256:369590d52f966d771c7f205c060ba7bc607061b8e779c09cfd9fbaf9bf7ad80f",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "fapte",
+      "chapter": 4,
+      "field": "units[1].teaching",
+      "sentence": "Aceasta nu justifică disprețul general față de autorități; este ascultarea de Dumnezeu atunci când o poruncă omenească cere negarea adevărului.",
+      "action": "keep-reviewed",
+      "rationale": "direct-apostolic-principle",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-acts",
+          "locator": "Episode 3: Fapte 3:17-5:11",
+          "evidenceId": "ev-recovered-fapte-episode-003",
+          "evidenceSha256": "sha256:369590d52f966d771c7f205c060ba7bc607061b8e779c09cfd9fbaf9bf7ad80f",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "fapte",
+      "chapter": 4,
+      "field": "units[3].teaching",
+      "sentence": "Nu permite manipularea financiară, presiunea asupra vulnerabililor sau îmbogățirea liderilor religioși.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "fapte",
+      "chapter": 5,
+      "field": "units[1].teaching",
+      "sentence": "Aceste vindecări nu autorizează promisiunea că fiecare bolnav va fi vindecat imediat.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "fapte",
+      "chapter": 9,
+      "field": "units[3].teaching",
+      "sentence": "Rugăciunea nu justifică oprirea tratamentului; ne rugăm cu credință și lăsăm rezultatul în mâna lui Dumnezeu.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "fapte",
+      "chapter": 10,
+      "field": "units[1].forYourHeart",
+      "sentence": "Evanghelia nu îți permite să păstrezi superioritatea de rasă, clasă sau tradiție.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "fapte",
+      "chapter": 11,
+      "field": "units[2].teaching",
+      "sentence": "Dărnicia este voluntară și proporțională; textul nu autorizează presiunea financiară sau promisiunea că darul va cumpăra protecția lui Dumnezeu.",
+      "action": "rewrite-reviewed",
+      "rationale": "preserve-core-remove-modern-financial-guard",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-acts",
+          "locator": "Episode 6: Fapte 9:26-11:30",
+          "evidenceId": "ev-recovered-fapte-episode-006",
+          "evidenceSha256": "sha256:79c02221b738e17ea1b953cec7ffc6b3f06e906546ec0d9eadaf1f7e98d5c5da",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "fapte",
+      "chapter": 19,
+      "field": "units[1].teaching",
+      "sentence": "Totuși, textul nu ne autorizează să etichetăm bolile mintale sau neurologice drept demoni și nici să înlocuim evaluarea medicală prin ritualuri.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "fapte",
+      "chapter": 22,
+      "field": "units[2].teaching",
+      "sentence": "Când comandantul poruncește biciuirea, Pavel întreabă dacă este legal să fie bătut un cetățean roman necondamnat.",
+      "action": "keep-reviewed",
+      "rationale": "direct-paul-citizenship",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-acts",
+          "locator": "Episode 13: Fapte 21:27-24:27",
+          "evidenceId": "ev-recovered-fapte-episode-013",
+          "evidenceSha256": "sha256:7a70d32b690b0c90f3d718aee5676161c7f8e1fdf0ab01c5a93abfcb7c47a2c3",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "fapte",
+      "chapter": 23,
+      "field": "summary",
+      "sentence": "Pavel este lovit în fața Sinedriului, își corectează cuvintele, folosește disputa despre înviere, primește încurajarea Domnului și este salvat de un complot prin nepotul său și autoritățile romane.",
+      "action": "keep-reviewed",
+      "rationale": "direct-summary",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-acts",
+          "locator": "Episode 13: Fapte 21:27-24:27",
+          "evidenceId": "ev-recovered-fapte-episode-013",
+          "evidenceSha256": "sha256:7a70d32b690b0c90f3d718aee5676161c7f8e1fdf0ab01c5a93abfcb7c47a2c3",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "fapte",
+      "chapter": 25,
+      "field": "units[0].teaching",
+      "sentence": "El nu confundă smerenia cu renunțarea la procesul legal și nu se oferă voluntar complotului.",
+      "action": "keep-reviewed",
+      "rationale": "direct-paul-appeal",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-acts",
+          "locator": "Episode 14: Fapte 25:1-28:31",
+          "evidenceId": "ev-recovered-fapte-episode-014",
+          "evidenceSha256": "sha256:35a14fdbbab29f9141d8b2f36bf1fa584e738b87076f8e0b9f4ca3758803d4f7",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "fapte",
+      "chapter": 25,
+      "field": "units[1].teaching",
+      "sentence": "Autoritățile pot considera mesajul o problemă religioasă ciudată, dar pentru Pavel realitatea că Isus trăiește schimbă totul și merită orice cost.",
+      "action": "keep-reviewed",
+      "rationale": "direct-passage-context",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-acts",
+          "locator": "Episode 14: Fapte 25:1-28:31",
+          "evidenceId": "ev-recovered-fapte-episode-014",
+          "evidenceSha256": "sha256:35a14fdbbab29f9141d8b2f36bf1fa584e738b87076f8e0b9f4ca3758803d4f7",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "fapte",
+      "chapter": 28,
+      "field": "units[0].teaching",
+      "sentence": "Aceste vindecări mărturisesc despre mila lui Dumnezeu, dar nu garantează vindecarea imediată a fiecărui om, nu justifică oprirea tratamentului și nu permit învinovățirea bolnavului.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "romani",
+      "chapter": 13,
+      "field": "summary",
+      "sentence": "Credinciosul respectă autoritățile și își împlinește obligațiile, fără a face din stat o autoritate absolută.",
+      "action": "keep-reviewed",
+      "rationale": "source-consistent-authority-under-god",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-romans",
+          "locator": "Episode 12: Romani 12:9-13:10",
+          "evidenceId": "ev-recovered-romani-episode-012",
+          "evidenceSha256": "sha256:3f4239065104f1ee05c95411e2f0e567ffb5e86320451b5ba5fc186fb115dce5",
+          "verificationLevel": "official-episode-range-registry"
+        },
+        {
+          "sourceId": "legacy-poonen-romans",
+          "locator": "Episode 13: Romani 13:11-15:2",
+          "evidenceId": "ev-recovered-romani-episode-013",
+          "evidenceSha256": "sha256:aabcc001959a9bfeaf174f5e7b5d023ef142cb0500be7657fef8136c08dd5399",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "romani",
+      "chapter": 13,
+      "field": "prayer",
+      "sentence": "Doamne, dă-mi o conștiință curată în relația cu autoritățile și curaj să Te ascult mai presus de orice om.",
+      "action": "keep-reviewed",
+      "rationale": "source-consistent-authority-under-god",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-romans",
+          "locator": "Episode 12: Romani 12:9-13:10",
+          "evidenceId": "ev-recovered-romani-episode-012",
+          "evidenceSha256": "sha256:3f4239065104f1ee05c95411e2f0e567ffb5e86320451b5ba5fc186fb115dce5",
+          "verificationLevel": "official-episode-range-registry"
+        },
+        {
+          "sourceId": "legacy-poonen-romans",
+          "locator": "Episode 13: Romani 13:11-15:2",
+          "evidenceId": "ev-recovered-romani-episode-013",
+          "evidenceSha256": "sha256:aabcc001959a9bfeaf174f5e7b5d023ef142cb0500be7657fef8136c08dd5399",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "1-corinteni",
+      "chapter": 5,
+      "field": "units[1].teaching",
+      "sentence": "Această responsabilitate nu autorizează vânătoarea de greșeli, zvonurile sau controlul vieții private.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "1-corinteni",
+      "chapter": 6,
+      "field": "historicalContext",
+      "sentence": "Procesele publice din lumea romană erau adesea instrumente de statut și rușinare.",
+      "action": "keep-reviewed",
+      "rationale": "direct-historical-context",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-1cor",
+          "locator": "Episode 5: 1 Corinteni 4:15-6:6",
+          "evidenceId": "ev-recovered-1-corinteni-episode-005",
+          "evidenceSha256": "sha256:5c904c626242641aa381ac1de29c426ac8f896e9dd02266c8f8de0dde6fdd1a5",
+          "verificationLevel": "official-episode-range-registry"
+        },
+        {
+          "sourceId": "legacy-poonen-1cor",
+          "locator": "Episode 6: 1 Corinteni 6:7-6:20",
+          "evidenceId": "ev-recovered-1-corinteni-episode-006",
+          "evidenceSha256": "sha256:0d7bf8f49aa31aeb57441c576436458af2933d67ed0fd069ba17c1d83fb3e964",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "1-corinteni",
+      "chapter": 6,
+      "field": "units[0].teaching",
+      "sentence": "Explicația arată că putem fi corecți juridic într-un fapt și totuși greșiți spiritual prin ură, răzbunare și lupta pentru reputație.",
+      "action": "keep-reviewed",
+      "rationale": "source-consistent-cross-principle",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-1cor",
+          "locator": "Episode 5: 1 Corinteni 4:15-6:6",
+          "evidenceId": "ev-recovered-1-corinteni-episode-005",
+          "evidenceSha256": "sha256:5c904c626242641aa381ac1de29c426ac8f896e9dd02266c8f8de0dde6fdd1a5",
+          "verificationLevel": "official-episode-range-registry"
+        },
+        {
+          "sourceId": "legacy-poonen-1cor",
+          "locator": "Episode 6: 1 Corinteni 6:7-6:20",
+          "evidenceId": "ev-recovered-1-corinteni-episode-006",
+          "evidenceSha256": "sha256:0d7bf8f49aa31aeb57441c576436458af2933d67ed0fd069ba17c1d83fb3e964",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "1-corinteni",
+      "chapter": 7,
+      "field": "units[0].teaching",
+      "sentence": "Reciprocitatea nu justifică niciodată constrângerea sexuală.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "1-corinteni",
+      "chapter": 9,
+      "field": "units[3].teaching",
+      "sentence": "Disciplinarea trupului nu este ură față de corp și nu justifică practici dăunătoare.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "1-corinteni",
+      "chapter": 16,
+      "field": "units[1].teaching",
+      "sentence": "Timotei trebuia primit fără intimidare, iar Apolo nu putea fi comandat de Pavel.",
+      "action": "keep-reviewed",
+      "rationale": "source-consistent-apostolic-conduct",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-1cor",
+          "locator": "Episode 16: 1 Corinteni 15:20-16:24",
+          "evidenceId": "ev-recovered-1-corinteni-episode-016",
+          "evidenceSha256": "sha256:571b038761388a3dd0928c6a5e624bd74a6f4bfb9df06880acdd166d23547ed0",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "2-corinteni",
+      "chapter": 1,
+      "field": "units[2].teaching",
+      "sentence": "Duhul Sfânt este pecetea și arvuna lucrării viitoare, nu un instrument prin care liderul își legitimează orice decizie.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "2-corinteni",
+      "chapter": 1,
+      "field": "units[3].teaching",
+      "sentence": "Niciun conducător creștin nu primește dreptul de a controla conștiința, banii, relațiile sau deciziile personale ale altuia.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "2-corinteni",
+      "chapter": 4,
+      "field": "units[2].forYourHeart",
+      "sentence": "Recunoaște durerea prezentă, dar nu-i permite să definească finalul istoriei tale.",
+      "action": "keep-reviewed",
+      "rationale": "direct-hope-application",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-2cor",
+          "locator": "Episode 5: 2 Corinteni 4:12-5:9",
+          "evidenceId": "ev-recovered-2-corinteni-episode-005",
+          "evidenceSha256": "sha256:eff9b426451c6d038ca817f06855d4ab7f079fd1ca1adb22e2d685fdcec083f5",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "2-corinteni",
+      "chapter": 10,
+      "field": "units[0].teaching",
+      "sentence": "Pavel refuză să lupte prin intimidare, bârfă, manipulare sau forță, deoarece armele slujirii sunt adevărul, rugăciunea și ascultarea de Hristos.",
+      "action": "keep-reviewed",
+      "rationale": "source-consistent-spiritual-weapons",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-2cor",
+          "locator": "Episode 10: 2 Corinteni 10:1-11:3",
+          "evidenceId": "ev-recovered-2-corinteni-episode-010",
+          "evidenceSha256": "sha256:fc6d4169bf62304aa42c7f24e8e16a38f2e7db8d814918326b03d81f7037a5e6",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "2-corinteni",
+      "chapter": 10,
+      "field": "units[0].teaching",
+      "sentence": "Textul nu autorizează etichetarea oamenilor ca dușmani spirituali ori folosirea violenței împotriva lor.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "2-corinteni",
+      "chapter": 12,
+      "field": "literaryContext",
+      "sentence": "După lauda paradoxală cu suferințele, Pavel ajunge la revelații și arată de ce Dumnezeu nu îi permite să-și construiască identitatea din experiențe extraordinare.",
+      "action": "keep-reviewed",
+      "rationale": "source-consistent-thorn-context",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-2cor",
+          "locator": "Episode 12: 2 Corinteni 12:1-13:14",
+          "evidenceId": "ev-recovered-2-corinteni-episode-012",
+          "evidenceSha256": "sha256:b0668803f90d1278ee35030d3f2b2305fec2cc382037fa4859481578e7af82b4",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "galateni",
+      "chapter": 2,
+      "field": "units[1].teaching",
+      "sentence": "Aceasta nu autorizează umilirea publică, controlul sau atacul personal; corectarea biblică urmărește adevărul și restaurarea, nu dominația.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "galateni",
+      "chapter": 4,
+      "field": "units[1].teaching",
+      "sentence": "Autoritatea spirituală sănătoasă nu produce dependență de lider, nu izolează și nu controlează, ci lucrează până când caracterul lui Hristos se formează în om.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "galateni",
+      "chapter": 4,
+      "field": "units[2].teaching",
+      "sentence": "Această imagine nu autorizează alungarea, disprețuirea sau dezumanizarea oamenilor; conflictul este cu sistemul încrederii în fire, nu cu persoane considerate inferioare.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "galateni",
+      "chapter": 5,
+      "field": "units[2].teaching",
+      "sentence": "Niciun limbaj despre război spiritual nu justifică atacarea oamenilor, refuzarea îngrijirii medicale sau atribuirea automată a unei boli ori suferințe demonizării.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "efeseni",
+      "chapter": 2,
+      "field": "units[2].teaching",
+      "sentence": "Pacea biblică nu înseamnă ascunderea nedreptății sau reducerea la tăcere a celui rănit.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "efeseni",
+      "chapter": 4,
+      "field": "units[0].teaching",
+      "sentence": "Această unitate nu justifică uniformitatea forțată, mușamalizarea păcatului sau cererea de loialitate necondiționată față de un lider.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "efeseni",
+      "chapter": 6,
+      "field": "units[0].forYourHeart",
+      "sentence": "Ca părinte sau mentor, corectează fără umilire și fă din casa ta un loc în care adevărul poate fi spus în siguranță.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "filipeni",
+      "chapter": 1,
+      "field": "units[4].heading",
+      "sentence": "O singură inimă, fără intimidare",
+      "action": "rewrite-reviewed",
+      "rationale": "remove-modern-heading-guard",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-philippians",
+          "locator": "Episode 1: Filipeni 1:1-2:7",
+          "evidenceId": "ev-recovered-filipeni-episode-001",
+          "evidenceSha256": "sha256:68f993923d6497a0089634ee943e4d6db9a9b7a41b0e8383334d7973d4da5a85",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "filipeni",
+      "chapter": 2,
+      "field": "units[2].teaching",
+      "sentence": "Frica și tremurul descriu respectul profund față de Dumnezeu, nu frica indusă de lideri religioși prin amenințări sau rușinare.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "filipeni",
+      "chapter": 2,
+      "field": "units[3].teaching",
+      "sentence": "Relația spirituală dintre Pavel și Timotei nu anulează discernământul personal și nu autorizează obediența față de păcat; autoritatea creștină trebuie evaluată după caracterul lui Hristos și după Scriptură.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "filipeni",
+      "chapter": 3,
+      "field": "units[0].teaching",
+      "sentence": "Expresiile aspre ale textului îi vizează pe învățătorii care înlocuiau harul cu încrederea religioasă exterioară; ele nu justifică ura etnică, antisemitismul sau disprețul față de o comunitate.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "filipeni",
+      "chapter": 3,
+      "field": "units[3].teaching",
+      "sentence": "Trupul nu este rău și nu trebuie disprețuit; autocontrolul creștin nu justifică tulburările alimentare, rușinarea corporală sau neglijarea medicală.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "coloseni",
+      "chapter": 2,
+      "field": "units[2].teaching",
+      "sentence": "Biruința aceasta nu autorizează confruntări violente, practici oculte sau tratarea oamenilor ca dușmani; lupta credinciosului rămâne sub adevăr, dragoste, rugăciune și ascultare de Hristos.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "coloseni",
+      "chapter": 2,
+      "field": "units[3].teaching",
+      "sentence": "Critica legalismului nu justifică antisemitismul, disprețul față de evrei ori batjocorirea practicilor culturale ale altora.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "coloseni",
+      "chapter": 2,
+      "field": "units[4].teaching",
+      "sentence": "Postul și disciplina pot fi practicate cu libertate și înțelepciune, dar textul nu justifică înfometarea, tulburările alimentare, autoflagelarea, refuzul tratamentului sau ignorarea recomandărilor medicale.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "coloseni",
+      "chapter": 3,
+      "field": "units[6].forYourHeart",
+      "sentence": "Creează astăzi un spațiu în care un copil să poată vorbi fără frică, iar tu să asculți fără rușinare, amenințări sau pedeapsă pentru adevăr.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "coloseni",
+      "chapter": 4,
+      "field": "units[2].teaching",
+      "sentence": "Evanghelia îi restituie demnitatea de persoană și frate, nu îl reduce la trecutul sau statutul său juridic.",
+      "action": "keep-reviewed",
+      "rationale": "direct-onesimus-context",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-colossians",
+          "locator": "Episode 4: Coloseni 3:14-4:18",
+          "evidenceId": "ev-recovered-coloseni-episode-004",
+          "evidenceSha256": "sha256:b1b895edd6706af4b46ff225a92643c1caabb5d9255fdf8d6309b2d1f407c9a8",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "1-tesaloniceni",
+      "chapter": 1,
+      "field": "units[1].teaching",
+      "sentence": "Nicio pretinsă ungere nu autorizează manipularea, intimidarea, minciuna sau controlul conștiinței; caracterul și adevărul trebuie să însoțească lucrarea Duhului.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "1-tesaloniceni",
+      "chapter": 2,
+      "field": "units[1].teaching",
+      "sentence": "Această imagine exprimă tandrețe și sacrificiu; nu autorizează liderii să controleze conștiința, banii, relațiile sau trupul oamenilor care le sunt încredințați.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "1-tesaloniceni",
+      "chapter": 2,
+      "field": "units[3].teaching",
+      "sentence": "Textul judecă acțiuni concrete și nu justifică antisemitismul, ura etnică sau vina colectivă împotriva poporului evreu; Pavel însuși era evreu și iubea profund poporul său.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "1-tesaloniceni",
+      "chapter": 4,
+      "field": "units[1].teaching",
+      "sentence": "Duhul nu produce rușinare, posesivitate sau control asupra trupului altuia, ci curăție, autocontrol, adevăr și respect.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "1-tesaloniceni",
+      "chapter": 4,
+      "field": "units[2].forYourHeart",
+      "sentence": "Lucrează cinstit în responsabilitatea de azi și observă cine are nevoie de ajutor fără rușinare.",
+      "action": "remove-modern-editorial",
+      "traceabilityState": "not-applicable-removed",
+      "rationale": "The sentence is removed from public copy; no source anchor is required to justify preserving it."
+    },
+    {
+      "bookId": "1-tesaloniceni",
+      "chapter": 4,
+      "field": "units[3].teaching",
+      "sentence": "Textul nu permite stabilirea datelor, alimentarea panicii sau neglijarea vieții prezente.",
+      "action": "keep-reviewed",
+      "rationale": "source-consistent-eschatology",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-1thess",
+          "locator": "Episode 2: 1 Tesaloniceni 3:12-5:28",
+          "evidenceId": "ev-recovered-1-tesaloniceni-episode-002",
+          "evidenceSha256": "sha256:346b3b10defe49d16cb50e7617cdf9127bad14f1385459234ba91e37217ee653",
+          "verificationLevel": "official-episode-range-registry"
+        }
+      ]
+    },
+    {
+      "bookId": "filimon",
+      "chapter": 1,
+      "field": "units[0].teaching",
+      "sentence": "Harul și pacea cu care începe scrisoarea pregătesc felul în care va trata conflictul: nu cu amenințare, presiune sau rușinare publică, ci cu duhul Domnului Isus.",
+      "action": "keep-reviewed",
+      "rationale": "direct-paul-appeal-style",
+      "traceabilityState": "source-context-anchored",
+      "note": "This verifies a reproducible source context for the retained/re-written copy; it does not claim a byte-level hash of third-party source content.",
+      "contextAnchors": [
+        {
+          "sourceId": "legacy-poonen-philemon",
+          "locator": "Full supporting transcript: Filimon 1:1-25",
+          "evidenceId": "ev-recovered-filimon-supporting-transcript",
+          "evidenceSha256": "sha256:078a4281c849748284c6f5399c0ed94b5560cf382355a84b34392ae1cd6359cc",
+          "verificationLevel": "supporting-full-transcript-with-official-series-confirmation"
+        }
+      ]
+    }
+  ]
+}

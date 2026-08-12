@@ -1,0 +1,278 @@
+name: NT Explanation Recovery
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-nt-integration-clean
+  pull_request:
+    branches:
+      - main
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nt-explanation-recovery-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  recover:
+    if: >-
+      github.actor != 'github-actions[bot]' &&
+      (github.event_name != 'pull_request' || github.event.pull_request.head.ref == 'agent/biblia-explicata-nt-integration-clean')
+    runs-on: ubuntu-22.04
+    timeout-minutes: 120
+    env:
+      LEGACY_NT_SOURCE_SHA: 3d305d2b894257a702acf00e2c6d41a7ab83ffde
+    steps:
+      - name: Checkout clean integration branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.7.0
+          run_install: false
+
+      - name: Fetch pinned legacy explanation source
+        run: |
+          set -euo pipefail
+          git fetch origin "$LEGACY_NT_SOURCE_SHA"
+          rm -rf ../nt-legacy
+          git worktree add --detach ../nt-legacy "$LEGACY_NT_SOURCE_SHA"
+          test "$(git -C ../nt-legacy rev-parse HEAD)" = "$LEGACY_NT_SOURCE_SHA"
+          echo "Pinned legacy explanation source: $LEGACY_NT_SOURCE_SHA"
+
+      - name: Compile legacy shared catalog only
+        working-directory: ../nt-legacy
+        run: |
+          set -euo pipefail
+          pnpm install --frozen-lockfile
+          pnpm --filter @emanus/shared build
+
+      - name: Materialize explanation-only NT recovery
+        run: |
+          set -euo pipefail
+          node scripts/materialize-nt-explanations-from-legacy.mjs --legacy-root ../nt-legacy
+          node scripts/check-nt-explanation-recovery.mjs
+          mkdir -p docs/data/biblia-explicata/nt-source-registry
+          cp docs/data/biblia-explicata/source-registry-protected/source-first-12.json docs/data/biblia-explicata/nt-source-registry/source-first-12.json
+          cp docs/data/biblia-explicata/source-registry-protected/source-first-15.json docs/data/biblia-explicata/nt-source-registry/source-first-15.json
+
+      - name: Rebuild quarantined books source-first
+        run: |
+          set -euo pipefail
+          node scripts/materialize-nt-source-evidence.mjs
+          node scripts/materialize-nt-source-first.mjs
+          node scripts/check-nt-source-first.mjs
+          node scripts/review-nt-source-first-fidelity.mjs
+
+      - name: Audit, clean, refine and classify recovered source-first books
+        run: |
+          set -euo pipefail
+          node scripts/audit-nt-recovered-source-first.mjs
+          node scripts/materialize-nt-audited-recovered.mjs
+          node scripts/check-nt-audited-recovered.mjs
+          node scripts/refine-nt-audited-recovered.mjs
+          node scripts/check-nt-refined-recovered.mjs
+          node scripts/fix-nt-lexicon-known-errors.mjs
+          node scripts/fix-nt-romanian-unambiguous.mjs
+          node scripts/audit-nt-subtle-editorial.mjs
+          node scripts/resolve-nt-subtle-editorial-v2.mjs
+          node scripts/normalize-nt-reviewed-romanian-contextual.mjs
+          node scripts/normalize-nt-reviewed-romanian-residual.mjs
+          node scripts/expand-nt-reviewed-thin-units.mjs
+          node scripts/review-nt-poonen-fidelity.mjs
+          node scripts/review-nt-poonen-fidelity-marcu-3-4.mjs
+          node scripts/review-nt-poonen-fidelity-marcu-5.mjs
+          node scripts/review-nt-poonen-fidelity-marcu-6.mjs
+          node scripts/review-nt-poonen-fidelity-marcu-7.mjs
+          node scripts/review-nt-poonen-fidelity-marcu-8.mjs
+          node scripts/review-nt-poonen-fidelity-marcu-9.mjs
+          node scripts/review-nt-poonen-fidelity-marcu-10.mjs
+          node scripts/review-nt-poonen-fidelity-marcu-11.mjs
+          node scripts/review-nt-poonen-fidelity-marcu-12.mjs
+
+      - name: Review Mark 13 against raw transcript
+        run: |
+          set -euo pipefail
+          node scripts/review-nt-poonen-fidelity-marcu-13.mjs
+
+      - name: Repair Mark 14-16 review source syntax
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          path = Path("scripts/review-nt-poonen-fidelity-marcu-14-16.mjs")
+          source = path.read_text(encoding="utf-8")
+          replacements = {
+              "`textualStatus: double-bracketed`": "«textualStatus: double-bracketed»",
+              "`double-bracketed`": "«double-bracketed»",
+          }
+          changed = 0
+          for before, after in replacements.items():
+              count = source.count(before)
+              if count:
+                  source = source.replace(before, after)
+                  changed += count
+          if changed not in (0, 2):
+              raise SystemExit(f"Expected zero or exactly 2 unsafe embedded backticks, repaired {changed}")
+          path.write_text(source, encoding="utf-8")
+          print(f"Mark 14-16 review source syntax repair count: {changed}.")
+          PY
+
+      - name: Review Mark 14-16 against raw transcripts
+        run: |
+          set -euo pipefail
+          node scripts/review-nt-poonen-fidelity-marcu-14-16.mjs
+
+      - name: Normalize Romanian introduced by fidelity review
+        run: |
+          set -euo pipefail
+          node scripts/normalize-nt-fidelity-romanian.mjs
+
+      - name: Apply tiered Poonen fidelity to recovered books
+        run: |
+          set -euo pipefail
+          node scripts/review-nt-source-derived-fidelity.mjs
+
+      - name: Apply complete lexical editorial review
+        run: |
+          set -euo pipefail
+          node scripts/review-nt-lexicon-editorial-fixes.mjs
+
+      - name: Apply final Romanian reader-copy review
+        run: |
+          set -euo pipefail
+          node scripts/normalize-nt-final-romanian-wave.mjs
+          node scripts/normalize-nt-final-romanian-contextual.mjs
+
+      - name: Transcribe configured official source audio for current semantic book
+        env:
+          NT_TRANSCRIPTION_MODEL: small.en
+        run: |
+          set -euo pipefail
+          python3 scripts/transcribe_nt_current_official_audio.py
+
+      - name: Materialize and merge frozen manual semantic reviews
+        run: |
+          set -euo pipefail
+          node scripts/materialize-nt-final-source-first.mjs
+          python3 scripts/materialize_nt_manual_semantic_matei_recovery.py
+          node scripts/materialize-nt-manual-semantic-galateni.mjs
+          node scripts/materialize-nt-manual-semantic-efeseni.mjs
+          node scripts/materialize-nt-manual-semantic-evrei.mjs
+          node scripts/materialize-nt-manual-semantic-2-timotei.mjs
+          node scripts/materialize-nt-manual-semantic-2-3-ioan-iuda.mjs
+          node scripts/materialize-nt-manual-semantic-1-ioan.mjs
+          node scripts/materialize-nt-manual-semantic-2-petru.mjs
+          node scripts/materialize-nt-manual-semantic-1-petru.mjs
+          node scripts/fix-nt-manual-semantic-1-petru-quote.mjs
+          python3 scripts/merge_nt_semantic_review_artifacts.py \
+            --input docs/data/biblia-explicata/nt-semantic-review-manual \
+            --ledger docs/data/biblia-explicata/nt-semantic-review-ledger.json
+
+      - name: Apply frozen semantic transcript review ledger
+        run: |
+          set -euo pipefail
+          node scripts/fix-nt-semantic-ledger-embedded-quotes.mjs
+          node scripts/apply-nt-semantic-review-ledger.mjs
+
+      - name: Materialize final NT corpus and reviewed quote fixes
+        run: |
+          set -euo pipefail
+          node scripts/materialize-nt-final-source-first.mjs
+          node scripts/fix-nt-embedded-bible-quotes.mjs
+          node scripts/apply-nt-reviewed-be-quote-fixes.mjs
+          node scripts/normalize-nt-final-reader-diacritics.mjs
+          node scripts/normalize-nt-final-reader-contextual.mjs
+
+      - name: Verify final NT corpus structure and optional UI
+        run: |
+          set -euo pipefail
+          node scripts/check-nt-final-source-first.mjs
+          node scripts/check-nt-ui-optional-sections.mjs
+
+      - name: Verify Poonen doctrine fidelity
+        run: |
+          set -euo pipefail
+          node scripts/check-nt-poonen-doctrine.mjs
+
+      - name: Run NT editorial audits and freeze lexical review
+        run: |
+          set -euo pipefail
+          node scripts/audit-nt-thin-units.mjs
+          node scripts/audit-nt-editorial-traceability.mjs
+          node scripts/analyze-nt-embedded-quote-candidates.mjs
+          node scripts/summarize-nt-embedded-quote-candidates.mjs
+          node scripts/audit-nt-embedded-bible-quotes.mjs
+          node scripts/audit-nt-romanian-language.mjs
+          node scripts/audit-nt-semantic-source-fidelity.mjs
+          node scripts/materialize-nt-direct-transcript-coverage.mjs
+          node scripts/materialize-nt-lexicon-source-evidence.mjs
+          node scripts/summarize-nt-lexicon-source-evidence.mjs
+          node scripts/audit-nt-lexicon.mjs
+
+      - name: Bind canonical Biblia Emanus NT text
+        run: |
+          set -euo pipefail
+          node scripts/materialize-nt-canonical-binding.mjs
+          node scripts/augment-nt-publication-blockers-semantic.mjs
+          node scripts/promote-nt-final-publication.mjs
+          node scripts/check-nt-publication-readiness.mjs
+
+      - name: Materialize and verify Biblia Emanus NT runtime
+        run: |
+          set -euo pipefail
+          pnpm install --frozen-lockfile
+          node scripts/materialize-nt-publication-runtime.mjs
+          pnpm --filter @emanus/shared typecheck
+          pnpm --filter @emanus/shared build
+          node scripts/check-nt-publication-runtime.mjs
+          git diff --check
+
+      - name: Commit deterministic NT editorial and runtime snapshots
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/review-nt-poonen-fidelity-marcu-14-16.mjs
+          git add scripts/materialize_nt_manual_semantic_matei_direct.py
+          git add scripts/nt-final-romanian-wave.mjs
+          git add scripts/normalize-nt-final-reader-diacritics.mjs
+          git add scripts/normalize-nt-final-reader-contextual.mjs
+          git add scripts/promote-nt-final-publication.mjs
+          git add scripts/audit-nt-final-romanian-wave.mjs
+          git add scripts/rebind-nt-semantic-final-reader-snapshot.mjs
+          git add scripts/check-nt-final-source-first.mjs
+          git add scripts/audit-nt-final-publication-waves.mjs
+          git add scripts/materialize-nt-publication-runtime.mjs
+          git add scripts/check-nt-publication-runtime.mjs
+          git add package.json
+          git add docs/data/biblia-explicata docs/biblia-explicata packages/shared/src/bible/generated/ntExplained packages/shared/src/bible/generated/ntExplained.ts packages/shared/src/bible/generated/ntExplainedBinding.ts packages/shared/src/bible/ntPublicationBible.ts
+          if git diff --cached --quiet; then
+            echo "NT snapshots and review sources already current."
+            exit 0
+          fi
+          git commit -m "Materialize blocked NT review snapshots with canonical binding"
+          for attempt in 1 2 3; do
+            git fetch origin agent/biblia-explicata-nt-integration-clean
+            git rebase FETCH_HEAD
+            if git push origin HEAD:agent/biblia-explicata-nt-integration-clean; then
+              exit 0
+            fi
+            echo "Snapshot push raced with another branch update; retrying ($attempt/3)."
+          done
+          echo "Could not publish deterministic NT snapshots after 3 attempts."
+          exit 1

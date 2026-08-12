@@ -1,0 +1,234 @@
+{
+  "schema": "emanus-nt-reviewed-recovered-manifest-v2",
+  "status": "in_review",
+  "publicationReady": false,
+  "sourceTraceabilityComplete": false,
+  "counts": {
+    "books": 15,
+    "chapters": 191,
+    "units": 762,
+    "rawFindings": 96,
+    "uniqueCandidateSentences": 95,
+    "keep-reviewed": 34,
+    "remove-modern-editorial": 59,
+    "rewrite-reviewed": 2,
+    "romanianContextualFixes": 196,
+    "romanianResidualFixes": 30,
+    "passageBoundThinUnitExpansions": 14,
+    "poonenRawTranscriptReviewedUnits": 73,
+    "poonenSourceDerivedReviewedUnits": 689,
+    "poonenFidelityReviewedUnits": 762
+  },
+  "books": [
+    {
+      "id": "matei",
+      "bookId": "MAT",
+      "name": "Matei",
+      "chapters": 28,
+      "units": 129,
+      "sha256": "afddb7aa30a600595f120d192f8131c6733b8f32509ac26969bac126b67c957f"
+    },
+    {
+      "id": "marcu",
+      "bookId": "MRK",
+      "name": "Marcu",
+      "chapters": 16,
+      "units": 73,
+      "sha256": "35d22039391747a81163f7fabd5c8f15b83285c90dd9b0a57ad61a1f8e1350a5"
+    },
+    {
+      "id": "luca",
+      "bookId": "LUK",
+      "name": "Luca",
+      "chapters": 24,
+      "units": 112,
+      "sha256": "2454dc2d663090d2d52c1baff686af3e4f45031698a20c37abac03ad4a86dd62"
+    },
+    {
+      "id": "ioan",
+      "bookId": "JHN",
+      "name": "Ioan",
+      "chapters": 21,
+      "units": 65,
+      "sha256": "01d331a243520ff1d746fe9507f85f96d2158689a9fa713e5513ae0f314c8d07"
+    },
+    {
+      "id": "fapte",
+      "bookId": "ACT",
+      "name": "Faptele Apostolilor",
+      "chapters": 28,
+      "units": 95,
+      "sha256": "7648361f6ead0297fcb267f92a1aa3f5e70cacda4aba7cb99d8397b49dd769f5"
+    },
+    {
+      "id": "romani",
+      "bookId": "ROM",
+      "name": "Romani",
+      "chapters": 16,
+      "units": 68,
+      "sha256": "f9da6a32402265dde37816cc2b22fc1210b399d1e25100f0ab5a04836b330b48"
+    },
+    {
+      "id": "1-corinteni",
+      "bookId": "1CO",
+      "name": "1 Corinteni",
+      "chapters": 16,
+      "units": 54,
+      "sha256": "bebed8677c14323cd090eb15c2a4b9a4f9a9d75bcb2e85676902c6b6f0d81f95"
+    },
+    {
+      "id": "2-corinteni",
+      "bookId": "2CO",
+      "name": "2 Corinteni",
+      "chapters": 13,
+      "units": 41,
+      "sha256": "909e5f3309c7c983775335f01d10bc243bad1509b7a11ed7721ac54434168af2"
+    },
+    {
+      "id": "galateni",
+      "bookId": "GAL",
+      "name": "Galateni",
+      "chapters": 6,
+      "units": 21,
+      "sha256": "cd8bfaec55cda7d77547b89c5503212c5a083e87d679275648cf3cab915ae9a1"
+    },
+    {
+      "id": "efeseni",
+      "bookId": "EPH",
+      "name": "Efeseni",
+      "chapters": 6,
+      "units": 23,
+      "sha256": "65225cfb1588e4035896e16800760d21aad431a0143907500ae406cb65ade398"
+    },
+    {
+      "id": "filipeni",
+      "bookId": "PHP",
+      "name": "Filipeni",
+      "chapters": 4,
+      "units": 19,
+      "sha256": "9b2cf8b5befc392284d8744979e249d17b45890e9c6933a9a61b8a4b46d9b8d0"
+    },
+    {
+      "id": "coloseni",
+      "bookId": "COL",
+      "name": "Coloseni",
+      "chapters": 4,
+      "units": 22,
+      "sha256": "fa387cdc344ee8e7c37c484717c4be79fdec5cc7df1f0dc62f3f973c99a22f86"
+    },
+    {
+      "id": "1-tesaloniceni",
+      "bookId": "1TH",
+      "name": "1 Tesaloniceni",
+      "chapters": 5,
+      "units": 23,
+      "sha256": "8f841215cf3dac239427f5dde9ceb0991cfa6a7b528319f632a484af21821774"
+    },
+    {
+      "id": "tit",
+      "bookId": "TIT",
+      "name": "Tit",
+      "chapters": 3,
+      "units": 12,
+      "sha256": "b93aa8882b4cc11caaca6cccb01dbaf18d9e588d8d6a6a6491c238ac045bfc11"
+    },
+    {
+      "id": "filimon",
+      "bookId": "PHM",
+      "name": "Filimon",
+      "chapters": 1,
+      "units": 5,
+      "sha256": "4b98ac4a8e02bc3e88ef9efc0e2eb98656ba25a1ad2ce0a291ed262cf1446f9a"
+    }
+  ],
+  "sourceFidelity": {
+    "status": "covered-with-tiered-evidence",
+    "pinnedLegacyCommit": "3d305d2b894257a702acf00e2c6d41a7ab83ffde",
+    "rawTranscriptReviewedUnits": 73,
+    "sourceDerivedReviewedUnits": 689,
+    "totalUnits": 762,
+    "policy": "raw-transcript-reviewed is stronger than source-derived-legacy. The latter must never be presented as raw transcript verification.",
+    "books": [
+      {
+        "id": "matei",
+        "rawTranscriptReviewedUnits": 0,
+        "sourceDerivedReviewedUnits": 129
+      },
+      {
+        "id": "marcu",
+        "rawTranscriptReviewedUnits": 73,
+        "sourceDerivedReviewedUnits": 0
+      },
+      {
+        "id": "luca",
+        "rawTranscriptReviewedUnits": 0,
+        "sourceDerivedReviewedUnits": 112
+      },
+      {
+        "id": "ioan",
+        "rawTranscriptReviewedUnits": 0,
+        "sourceDerivedReviewedUnits": 65
+      },
+      {
+        "id": "fapte",
+        "rawTranscriptReviewedUnits": 0,
+        "sourceDerivedReviewedUnits": 95
+      },
+      {
+        "id": "romani",
+        "rawTranscriptReviewedUnits": 0,
+        "sourceDerivedReviewedUnits": 68
+      },
+      {
+        "id": "1-corinteni",
+        "rawTranscriptReviewedUnits": 0,
+        "sourceDerivedReviewedUnits": 54
+      },
+      {
+        "id": "2-corinteni",
+        "rawTranscriptReviewedUnits": 0,
+        "sourceDerivedReviewedUnits": 41
+      },
+      {
+        "id": "galateni",
+        "rawTranscriptReviewedUnits": 0,
+        "sourceDerivedReviewedUnits": 21
+      },
+      {
+        "id": "efeseni",
+        "rawTranscriptReviewedUnits": 0,
+        "sourceDerivedReviewedUnits": 23
+      },
+      {
+        "id": "filipeni",
+        "rawTranscriptReviewedUnits": 0,
+        "sourceDerivedReviewedUnits": 19
+      },
+      {
+        "id": "coloseni",
+        "rawTranscriptReviewedUnits": 0,
+        "sourceDerivedReviewedUnits": 22
+      },
+      {
+        "id": "1-tesaloniceni",
+        "rawTranscriptReviewedUnits": 0,
+        "sourceDerivedReviewedUnits": 23
+      },
+      {
+        "id": "tit",
+        "rawTranscriptReviewedUnits": 0,
+        "sourceDerivedReviewedUnits": 12
+      },
+      {
+        "id": "filimon",
+        "rawTranscriptReviewedUnits": 0,
+        "sourceDerivedReviewedUnits": 5
+      }
+    ]
+  },
+  "semanticReview": {
+    "status": "partial-or-complete",
+    "appliedDecisions": 897,
+    "ledgerSchema": "emanus-nt-semantic-review-ledger-v1"
+  }
+}

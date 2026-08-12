@@ -10,6 +10,14 @@ export type BibleStatus = "draft" | "in_review" | "published"
 
 export type OriginalLanguage = "ebraica" | "aramaica" | "greaca"
 
+/**
+ * `exposition` = expunere bazata pe sursa doctrinara principala a proiectului.
+ * `canonical-exegesis` = completare de cercetare sustinuta de text/canon, fara
+ * a fi atribuita sursei principale cand aceasta nu dezvolta punctul.
+ * `textual-overview` = rezumat strict al pasajului, fara doctrina adaugata.
+ */
+export type BibleExplanationKind = "exposition" | "canonical-exegesis" | "textual-overview"
+
 /** Un cuvant din limba originala, explicat pe intelesul cititorului. */
 export interface WordStudy {
   original: string
@@ -24,11 +32,17 @@ export interface BibleUnit {
   /** Referinta exacta, de exemplu Geneza 1:1 sau Geneza 1:3-5. */
   ref: string
   heading: string
-  /** Textul biblic, nemodificat. Cornilescu 1924, editia originala. */
+  /** Textul biblic, nemodificat. */
   text: string
   /** Invatatura Emanus. Markdown. */
   teaching: string
+  /** Provenienta editoriala interna; nu trebuie afisata ca prefix cititorului. */
+  explanationKind?: BibleExplanationKind
+  /** Eticheta interna compacta a stratului de sursa/cercetare. */
+  explanationSource?: string
   words?: WordStudy[]
+  /** Sursa interna pentru studiile de limba originala, separata de predica. */
+  wordSource?: string
   crossRefs?: string[]
   /** Aplicatia pastorala, adresata direct cititorului. */
   forYourHeart?: string
@@ -56,7 +70,7 @@ export interface BibleBook {
   chapters: BibleChapter[]
 }
 
-/** Traducerea afisata. Editia originala 1924 este in domeniul public. */
+/** Traducerea afisata in runtime este stabilita de materializatorul corpusului. */
 export const BIBLE_TRANSLATION = "Cornilescu 1924, editia originala"
 
 /** Un capitol se deschide cititorului doar dupa revizie umana. */

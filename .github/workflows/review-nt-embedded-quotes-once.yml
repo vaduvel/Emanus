@@ -1,0 +1,101 @@
+# Explicitly retriggered after the final reader-copy normalization fixes on 2026-08-11.
+name: Review NT Embedded Quotes Once
+
+on:
+  push:
+    branches:
+      - agent/biblia-explicata-nt-integration-clean
+    paths:
+      - .github/workflows/review-nt-embedded-quotes-once.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  models: read
+
+jobs:
+  review:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/biblia-explicata-nt-integration-clean
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Recompute exact current quote audit
+        run: |
+          set -euo pipefail
+          node scripts/audit-nt-embedded-bible-quotes.mjs
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('docs/data/biblia-explicata/nt-embedded-quote-audit.json')
+          d = json.loads(p.read_text(encoding='utf-8'))
+          assert d['schema'] == 'emanus-nt-embedded-quote-audit-v2'
+          assert d['reviewLedgerProblems'] == 0
+          assert d['count'] == 55, f"Expected the validated 55 unresolved quotes, found {d['count']}"
+          assert len(d['findings']) == 55
+          print('Validated unresolved embedded-quote set:', d['count'])
+          PY
+
+      - name: Two-pass classify exact BE cross-references and conservative unquotes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NT_QUOTE_REVIEW_MODEL: openai/gpt-4.1
+          NT_QUOTE_REVIEW_BATCH: '4'
+          NT_QUOTE_REVIEW_TIMEOUT: '300'
+        run: |
+          set -euo pipefail
+          python3 scripts/nt_embedded_quote_final_review_worker.py
+          git diff --check
+
+      - name: Validate review artifact and updated ledger
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, re
+          from pathlib import Path
+          review = json.loads(Path('docs/data/biblia-explicata/nt-embedded-quote-final-review.json').read_text(encoding='utf-8'))
+          ledger = json.loads(Path('docs/data/biblia-explicata/nt-embedded-quote-review-ledger.json').read_text(encoding='utf-8'))
+          assert review['schema'] == 'emanus-nt-embedded-quote-final-review-v1'
+          assert review['sourceAuditCount'] == 55
+          assert review['classificationsAdded'] + review['unquoteCount'] == 55
+          assert len(review['unquotes']) == review['unquoteCount']
+          ids = set()
+          for op in review['unquotes']:
+              assert re.fullmatch(r'[0-9a-f]{64}', op['reviewId'])
+              assert re.fullmatch(r'sha256:[0-9a-f]{64}', op['quoteSha256'])
+              assert op['action'] == 'unquote-biblical-paraphrase-without-wording-change'
+              assert op['reviewId'] not in ids
+              ids.add(op['reviewId'])
+          assert ledger['schema'] == 'emanus-nt-embedded-quote-review-ledger-v1'
+          ledger_ids = [d['reviewId'] for d in ledger['decisions']]
+          assert len(ledger_ids) == len(set(ledger_ids))
+          print('Quote final review:', review['classificationsAdded'], 'ledger classifications +', review['unquoteCount'], 'unquotes')
+          PY
+
+      - name: Commit durable quote review and self-remove
+        run: |
+          set -euo pipefail
+          git rm .github/workflows/review-nt-embedded-quotes-once.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/biblia-explicata/nt-embedded-quote-audit.json \
+                  docs/data/biblia-explicata/nt-embedded-quote-review-ledger.json \
+                  docs/data/biblia-explicata/nt-embedded-quote-final-review.json
+          git commit -m "Complete final NT embedded quote review"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin agent/biblia-explicata-nt-integration-clean
+            if git rebase FETCH_HEAD && git push origin HEAD:agent/biblia-explicata-nt-integration-clean; then exit 0; fi
+            git rebase --abort || true
+            sleep "$attempt"
+          done
+          exit 1

@@ -1,0 +1,32 @@
+{
+  "schema": "emanus-mark-raw-transcript-review-status-v1",
+  "status": "blocked",
+  "book": "Marcu",
+  "chapters": 16,
+  "units": 73,
+  "rawTranscriptReviewedUnits": 73,
+  "sourceCommit": "fe97a4dee2849aaf4573a1046397b5194a171b4e",
+  "badProvenance": 0,
+  "forbiddenReaderSourceAttributions": 1,
+  "validation": {
+    "finalStructure": "failure",
+    "doctrine": "skipped",
+    "auditsAndReadiness": "skipped"
+  },
+  "publication": {
+    "status": "blocked",
+    "blockerClasses": 4,
+    "embeddedQuoteFindings": 61,
+    "romanianLanguageFindings": 3,
+    "lexiconFindings": 219,
+    "canonicalTextBlocker": true
+  },
+  "diagnostics": {
+    "structure": [
+      "[NT final source-first gate] marcu 16: forbidden public pattern /\\b(?:Zac\\s+Poonen|Poonen|CFC|Christian Fellowship|SermonIndex|Allen Nolan|Nolan|Robert Breaker|Breaker|Mohler)\\b/i"
+    ],
+    "doctrine": [],
+    "audits": []
+  },
+  "markSha256": "05bfa303cff35b92e270f908f12c58506b9820fa595ff245c42439643ce8729d"
+}

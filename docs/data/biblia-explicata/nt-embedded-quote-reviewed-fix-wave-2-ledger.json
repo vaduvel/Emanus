@@ -1,0 +1,178 @@
+{
+  "schema": "emanus-nt-embedded-quote-reviewed-fix-wave-2-ledger-v1",
+  "policy": "Every direct replacement is fail-closed against exact normalized wording present in the same current provisional Biblia Emanus chapter. A legacy target may be skipped only when the exact unit is already bound to transcript review; all such reader-copy quotations are still rechecked by the downstream embedded-quote audit and again when the final canonical text is frozen.",
+  "count": 15,
+  "fixes": [
+    {
+      "bookId": "matei",
+      "canonicalBookId": "MAT",
+      "chapter": 2,
+      "field": "units[2].teaching",
+      "before": "El va fi chemat Nazarinean",
+      "after": "Va fi numit Nazarinean",
+      "beforeSha256": "sha256:f408da2b58e6838f3e1b02d19a2171ab87a5ba427b7f88bc0d5961b1aab4a74d",
+      "afterSha256": "sha256:1f423541e44b5951b271530c9d0658715cdc74bf0394748145e076bb4a9690ee",
+      "verification": "reviewed-exact-same-chapter-biblia-emanus"
+    },
+    {
+      "bookId": "matei",
+      "canonicalBookId": "MAT",
+      "chapter": 7,
+      "field": "units[3].teaching",
+      "before": "nu v-am mai cunoscut",
+      "after": "Niciodată nu v-am cunoscut",
+      "beforeSha256": "sha256:874b1d61a32d4bbb66982450c59c5100f22af8968ee7efd7f6e33a1d264aa278",
+      "afterSha256": "sha256:8352ddf914959737682651985052c69ac2dc4e07fbe1dd2d43ef2b6eaf2ee807",
+      "verification": "superseded-by-hash-bound-semantic-transcript-review",
+      "reviewedTeachingSha256": "sha256:0c886c2257134cedbc22331e5207b74194927a4ec8e6d3988a0c00b6a753b4d2",
+      "note": "The legacy quote target no longer exists in the exact transcript-reviewed unit. No replacement is applied; the downstream embedded-quote audit validates the reviewed copy independently."
+    },
+    {
+      "bookId": "matei",
+      "canonicalBookId": "MAT",
+      "chapter": 19,
+      "field": "units[2].teaching",
+      "before": "Cine poate atunci să fie mântuit?",
+      "after": "Atunci cine poate fi mântuit?",
+      "beforeSha256": "sha256:73ebcc8493ca89c09abb40fb43e419bb486e7931ed2193b913e462a557cb9239",
+      "afterSha256": "sha256:6c14d56b831c5686946d6ec97b0fdc0d73cb3bfc238a16c3d4b07acf85a2e049",
+      "verification": "reviewed-exact-same-chapter-biblia-emanus"
+    },
+    {
+      "bookId": "matei",
+      "canonicalBookId": "MAT",
+      "chapter": 23,
+      "field": "units[0].teaching",
+      "before": "faceți, dar nu faceți după faptele lor",
+      "after": "faceți, dar nu faceți faptele lor",
+      "beforeSha256": "sha256:2b86cf8d2f52e9f8e7000c38660209c339a78218aeae5b3ff55bc4a12868538d",
+      "afterSha256": "sha256:40c092e2add9409507badaa39d33e7b110df481f5e86a336eb137f31add79543",
+      "verification": "superseded-by-hash-bound-semantic-transcript-review",
+      "reviewedTeachingSha256": "sha256:1d51f3951b8f351d6d474c0cecc44131adcaa851116cdb04a65e83fe3b024730",
+      "note": "The legacy quote target no longer exists in the exact transcript-reviewed unit. No replacement is applied; the downstream embedded-quote audit validates the reviewed copy independently."
+    },
+    {
+      "bookId": "matei",
+      "canonicalBookId": "MAT",
+      "chapter": 24,
+      "field": "units[0].teaching",
+      "before": "Băgați de seamă să nu vă înșele cineva.",
+      "after": "Vedeți să nu vă rătăcească cineva",
+      "beforeSha256": "sha256:bf08a91ce155907cb41387c7482f0ef19860099abb9469f5ac1ac1f0c2ea2486",
+      "afterSha256": "sha256:764ef003c3b0068048a4c7b6739ddc086a4e96c31429d361421408db0eba5679",
+      "verification": "superseded-by-hash-bound-semantic-transcript-review",
+      "reviewedTeachingSha256": "sha256:a4b1739c08594ef9c71926c1d17af3d5ab102c2c21e0f703b52be7c90e6d5366",
+      "note": "The legacy quote target no longer exists in the exact transcript-reviewed unit. No replacement is applied; the downstream embedded-quote audit validates the reviewed copy independently."
+    },
+    {
+      "bookId": "matei",
+      "canonicalBookId": "MAT",
+      "chapter": 28,
+      "field": "units[0].teaching",
+      "before": "cu frică și cu mare bucurie",
+      "after": "cu frică și bucurie mare",
+      "beforeSha256": "sha256:31f4d9bbf1b0cda9564e16a9cba211341bcc51b9d2b303272284d46794eb4bae",
+      "afterSha256": "sha256:fd12156394f1d857eda372c863df7ce4e81fc12eaaace434abfcfe45adbe5ce8",
+      "verification": "reviewed-exact-same-chapter-biblia-emanus"
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 5,
+      "field": "units[2].teaching",
+      "before": "Nu te teme; crede numai.",
+      "after": "Nu te teme, ci doar crede",
+      "beforeSha256": "sha256:b838d4601c91fa5c943f022986d00b79a3f0a6deac88d8a4cb4e6e9a032f545d",
+      "afterSha256": "sha256:047d429fefa6bfbb4d4e5dbb7e537dc0ae1bdf855371d52060daac35169ac643",
+      "verification": "reviewed-exact-same-chapter-biblia-emanus"
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 6,
+      "field": "prayer",
+      "before": "Îndrăzniți, Eu sunt, nu vă temeți!",
+      "after": "Prindeți curaj! Eu sunt. Nu vă temeți!",
+      "beforeSha256": "sha256:05a3bf7fec490a9a500924d63894771f1bea2d68be3cb2c9aef1c1f929a60235",
+      "afterSha256": "sha256:7f99a3231eae6185e74b87bca37080c8eeb0f1c1d12ce1fadf28e0789b1a3dca",
+      "verification": "reviewed-exact-same-chapter-biblia-emanus"
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 6,
+      "field": "units[4].teaching",
+      "before": "Îndrăzniți! Eu sunt. Nu vă temeți!",
+      "after": "Prindeți curaj! Eu sunt. Nu vă temeți!",
+      "beforeSha256": "sha256:b56fa650410bb31cc5685f6458224250962c713f3c0c6f04c8d1af40a7978293",
+      "afterSha256": "sha256:7f99a3231eae6185e74b87bca37080c8eeb0f1c1d12ce1fadf28e0789b1a3dca",
+      "verification": "reviewed-exact-same-chapter-biblia-emanus"
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 8,
+      "field": "units[0].teaching",
+      "before": "Mi-e milă de mulțime.",
+      "after": "Am compasiune față de mulțime",
+      "beforeSha256": "sha256:eea1c13cfa26bce19e777d37dd64d2c3b747c1d735f4748e95ed485cf0384b10",
+      "afterSha256": "sha256:8fe66636be777bb031df84242869af40f3131297697be97c5e53b42c9a1befa4",
+      "verification": "reviewed-exact-same-chapter-biblia-emanus"
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 9,
+      "field": "units[0].teaching",
+      "before": "Acesta este Fiul Meu preaiubit; pe El să-L ascultați.",
+      "after": "Acesta este Fiul Meu preaiubit; ascultați de El!",
+      "beforeSha256": "sha256:77cc89d813aeaccc2015e600b234961003fbcaa8ff6052492c988408ddf48a99",
+      "afterSha256": "sha256:0063749b3abd31e969e294a47c27731e34e85a4e306dc02be0fa1df2910517f0",
+      "verification": "reviewed-exact-same-chapter-biblia-emanus"
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 12,
+      "field": "units[1].teaching",
+      "before": "Dați cezarului ce este al cezarului și lui Dumnezeu ce este al lui Dumnezeu.",
+      "after": "Dați înapoi Cezarului ce este al Cezarului, iar lui Dumnezeu ce este al lui Dumnezeu!",
+      "beforeSha256": "sha256:60de6cd89cecfc187dfa8340442c865f5a39185ac04c0c39b6cbc8e3ea546dc6",
+      "afterSha256": "sha256:c5e1f25f2a3bb5405d6498d1d8d720944f171726fab585e4273cc045ef4c58d6",
+      "verification": "reviewed-exact-same-chapter-biblia-emanus"
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 12,
+      "field": "units[1].teaching",
+      "before": "Eu sunt Dumnezeul lui Avraam, Isaac și Iacov",
+      "after": "Eu sunt Dumnezeul lui Avraam, Dumnezeul lui Isaac și Dumnezeul lui Iacov",
+      "beforeSha256": "sha256:aa967a60f54e2737fa846c268d5073b3de9542160a05ee98c9c02b1934d86838",
+      "afterSha256": "sha256:0f7a676e5caeccd70a6b84ad389fbc7a67127a11f05ff0cbfd65c4839b648812",
+      "verification": "reviewed-exact-same-chapter-biblia-emanus"
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 13,
+      "field": "units[0].teaching",
+      "before": "Cine va răbda până la sfârșit va fi mântuit.",
+      "after": "cel care va răbda până la sfârșit va fi mântuit",
+      "beforeSha256": "sha256:05028c0de86b5ac4ddea5611e9fd794fe8860e4454ec595fd4bd5b5ce3f2b36d",
+      "afterSha256": "sha256:8c5d5c537109e3f47383403bf621f3d24062c090591832710c6ad0ec16426979",
+      "verification": "reviewed-exact-same-chapter-biblia-emanus"
+    },
+    {
+      "bookId": "marcu",
+      "canonicalBookId": "MRK",
+      "chapter": 16,
+      "field": "units[0].teaching",
+      "before": "spuneți ucenicilor Lui și lui Petru",
+      "after": "spuneți-le ucenicilor Lui și lui Petru",
+      "beforeSha256": "sha256:48b496aa258d63a277c433f7d46b189d53d485b5718b8cda88f24a77d47ab226",
+      "afterSha256": "sha256:a4274e9ea48bb0f6a02607088791c6c15990b9ffb2ae8a0b9b68075fd2303fc7",
+      "verification": "reviewed-exact-same-chapter-biblia-emanus"
+    }
+  ]
+}
