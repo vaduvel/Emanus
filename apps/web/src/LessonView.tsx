@@ -23,7 +23,22 @@ export function LessonView({ lessonId }: { lessonId?: string }) {
   if (done) {
     const next = plan()
     const finished = next?.kind === "path_complete"
-    return <section className="player player--done"><div className="tile"><h2>Gata pe azi</h2><p>Nu îți dau niciun punct și nicio insignă. Ai auzit ceva adevărat — asta rămâne oricum.</p><p className="muted">{finished ? "Ai terminat drumul. Hai să-ți arăt ceva." : "Mâine e ziua de pus în practică. Lecția următoare vine poimâine."}</p><button type="button" onClick={() => navigate(finished ? "/final" : "/")}>{finished ? "Vezi" : "Înapoi la Azi"}</button></div></section>
+    return (
+      <section className="player player--done">
+        <div className="tile">
+          <h2>{finished ? "Ai încheiat acest parcurs" : "Ai încheiat lecția de astăzi"}</h2>
+          <p>Nu lăsa adevărul doar la nivel de informație. Întoarce-te la el și pune-l în practică.</p>
+          <p className="muted">
+            {finished
+              ? "Urmează pasul care te conduce mai departe."
+              : "Următorul pas te așteaptă în ecranul Azi."}
+          </p>
+          <button type="button" onClick={() => navigate(finished ? "/final" : "/")}>
+            {finished ? "Continuă drumul" : "Înapoi la Azi"}
+          </button>
+        </div>
+      </section>
+    )
   }
   return <LessonPlayer lesson={lesson} onComplete={onComplete} />
 }
