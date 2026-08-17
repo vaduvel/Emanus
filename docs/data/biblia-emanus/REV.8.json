@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -74,20 +77,15 @@
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 13,
       "reviewed": 13,
@@ -129,71 +127,66 @@
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 285,
-        "secondary": 119,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5435114731748284,
-      "minimumScore": 0.5419631978011472
-    },
-    "textDigest": "sha256:6eb16c63d1a01f8ef755e8b5f1d26d9ba602fe84a9a0625b767164f453ee7d5b",
-    "contentDigest": "sha256:82e84753e832692f46fc09a264ea4ff8fcfdf98ebf1e3c7d81703335fa9b1b64"
+    "textDigest": "sha256:19617c8a643d3578712345978c9d7188b58e44f9f272b386b444e8ab4a8b69ce",
+    "contentDigest": "sha256:617c4cfe70b05a6b7a3c3395ece1d9304025d9837efccaddc4e4929b39c86100",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Când a deschis pecetea a șaptea, a fost liniște în cer aproximativ o jumătate de oră."
+      "text": "Când a deschis pecetea a șaptea, s-a făcut liniște în cer cam o jumătate de oră."
     },
     {
       "number": 2,
-      "text": "Am văzut pe cei șapte îngeri care stăteau înaintea lui Dumnezeu, și li s-au dat șapte trîmbițe."
+      "text": "Am văzut pe cei șapte îngeri care stau înaintea lui Dumnezeu și li s-au dat șapte trâmbițe."
     },
     {
       "number": 3,
-      "text": "Un alt înger a venit și s-a așezat peste altar, cu un cenzor de aur. I s-a dat multă tămîie, ca s-o adauge la rugăciunile tuturor sfinților pe altarul de aur, care era înaintea scaunului de domnie."
+      "text": "Un alt înger a venit și a stat la altar, având o cădelniță de aur. I s-a dat multă tămâie ca să o aducă împreună cu rugăciunile tuturor sfinților pe altarul de aur dinaintea tronului."
     },
     {
       "number": 4,
-      "text": "Fumul tămâierii, împreună cu rugăciunile sfinților, s-a ridicat înaintea lui Dumnezeu din mâna îngerului."
+      "text": "Fumul tămâiei, împreună cu rugăciunile sfinților, s-a ridicat înaintea lui Dumnezeu din mâna îngerului."
     },
     {
       "number": 5,
-      "text": "Îngerul a luat cădelnița și a umplut-o cu focul altarului, apoi a aruncat-o pe pământ. Au urmat tunete, sunete, fulgere și un cutremur."
+      "text": "Îngerul a luat cădelnița, a umplut-o cu foc de pe altar și a aruncat-o pe pământ. Atunci s-au făcut tunete, glasuri, fulgere și cutremur."
     },
     {
       "number": 6,
-      "text": "Cei șapte îngeri care aveau cele șapte trompete se pregăteau să sune."
+      "text": "Cei șapte îngeri care aveau cele șapte trâmbițe s-au pregătit să sune din ele."
     },
     {
       "number": 7,
-      "text": "Și primul înger a trâmbițat și au urmat grindină și foc amestecat cu sânge și au fost aruncate peste pământ; și a treia parte a copacilor a fost arsă și toată iarba verde a fost arsă."
+      "text": "Primul a sunat din trâmbiță și s-au făcut grindină și foc amestecate cu sânge; au fost aruncate pe pământ, a treia parte a pământului a ars, a treia parte a copacilor a ars și orice iarbă verde a ars."
     },
     {
       "number": 8,
-      "text": "Al doilea înger a sunat, și ceva ca un munte mare și arzător a fost aruncat în mare. O treime din mare a devenit sânge,"
+      "text": "Al doilea înger a sunat din trâmbiță și ceva ca un munte mare arzând în foc a fost aruncat în mare; a treia parte a mării s-a făcut sânge,"
     },
     {
       "number": 9,
-      "text": "și o treime din făpturile vii din mare au murit; o treime din corăbii au fost nimicite."
+      "text": "a murit a treia parte dintre făpturile din mare care aveau viață și a treia parte dintre corăbii au fost nimicite."
     },
     {
       "number": 10,
-      "text": "Al treilea înger a sunat, și o stea mare a căzut din cer, arzând ca o torță, și a căzut pe o treime din râuri și pe izvoarele de apă."
+      "text": "Al treilea înger a sunat din trâmbiță și o stea mare, arzând ca o torță, a căzut din cer peste a treia parte a râurilor și peste izvoarele apelor."
     },
     {
       "number": 11,
-      "text": "Numele stelei esteWormwood„. O treime din ape au devenit pelin. Mulți oameni au murit din cauza apelor, pentru că au fost făcute amare."
+      "text": "Numele stelei este Pelin. A treia parte a apelor s-a făcut pelin, iar mulți oameni au murit din pricina apelor, fiindcă deveniseră amare."
     },
     {
       "number": 12,
-      "text": "Al patrulea înger a sunat, și o treime din soare a fost lovit, și o treime din lună și o treime din stele, astfel încât o treime din ele să se întunece; și ziua să nu strălucească pentru o treime din ea, și noaptea în același fel."
+      "text": "Al patrulea înger a sunat din trâmbiță și a fost lovită a treia parte a soarelui, a lunii și a stelelor, ca să se întunece a treia parte din ele, iar ziua să nu strălucească o treime din ea, și noaptea la fel."
     },
     {
       "number": 13,
-      "text": "Am văzut am auzit un vultur zburând în mijlocul cerului, spunând cu glas tare: Vai! vai! vai de cei ce locuiesc pe pământ, din cauza celorlalte sunete ale trâmbițelor celor trei îngeri, care încă nu au sunat!”"
+      "text": "Am văzut și am auzit un vultur zburând prin mijlocul cerului, spunând cu glas mare: „Vai, vai, vai de cei care locuiesc pe pământ, din pricina celorlalte sunete de trâmbiță ale celor trei îngeri care urmează să sune!”"
     }
   ],
   "editorialNotes": [],

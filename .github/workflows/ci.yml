@@ -39,6 +39,9 @@ jobs:
           pnpm check:bible-publication
           "$PYTHON_BIN" scripts/check-biblia-emanus-romanian-quality.py
           pnpm check:biblia-emanus
+          pnpm check:biblia-emanus-nt-editorial
+          pnpm check:biblia-emanus-nt-materialized
+          pnpm check:biblia-emanus-nt-runtime
           "$PYTHON_BIN" scripts/check-biblia-emanus-ot-semantic-screening.py
           "$PYTHON_BIN" scripts/check-biblia-emanus-ot-publication-gate.py
           pnpm test:biblia-emanus

@@ -26,16 +26,29 @@ export default defineConfig({
       workbox: {
         globPatterns: ["**/*.{js,css,html,svg,png,woff2}"],
         importScripts: ["push-sw.js"],
-        runtimeCaching: [{
-          urlPattern: ({ url }) => url.pathname.startsWith("/api"),
-          handler: "NetworkFirst",
-          options: { cacheName: "emanus-api", networkTimeoutSeconds: 3 },
-        }],
+        runtimeCaching: [
+          {
+            urlPattern: ({ url }) => url.pathname.startsWith("/biblia-emanus/"),
+            handler: "NetworkFirst",
+            options: { cacheName: "emanus-bible-books", networkTimeoutSeconds: 3 },
+          },
+          {
+            urlPattern: ({ url }) => url.pathname.startsWith("/api"),
+            handler: "NetworkFirst",
+            options: { cacheName: "emanus-api", networkTimeoutSeconds: 3 },
+          },
+        ],
       },
     }),
   ],
   build: {
     rollupOptions: {
+      onwarn(warning, warn) {
+        if (warning.message.includes("Circular chunk")) {
+          throw new Error(`Build circular dependency: ${warning.message}`)
+        }
+        warn(warning)
+      },
       output: {
         manualChunks(id) {
           if (id.includes("node_modules/react") || id.includes("node_modules/lucide-react")) return "vendor-react"

@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparat; Textus Receptus a fost consultat numai ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 45,
       "reviewed": 45,
@@ -98,14 +96,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 45 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 45 de versete din MRK.1 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost reparate formulările corupte, punctuația și referenții care ascundeau sensul textului grec.",
+        "Sunt păstrate numai alegerile românești care redau natural persoana, numărul și aspectul verbal din textul principal SBLGNT.",
+        "Lectura SBLGNT din MRK.1.1 nu introduce sintagma «Fiul lui Dumnezeu», iar lectura din MRK.1.41 redă mânia, nu lectura alternativă «compasiune»."
       ]
     },
     "theologicalContext": {
@@ -123,29 +121,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 515,
-        "primary": 119,
-        "secondary": 43,
-        "fixed": 1
-      },
-      "minimumSemantic": 0.39728811051665835,
-      "minimumScore": 0.5313914534272478
-    },
-    "textDigest": "sha256:bda4098c38b05b21cda712918393df9648862a909da85d1b45ea340d78004150",
-    "contentDigest": "sha256:116b2ec365c2c59b95aed395a280ea89c78a3f0e89179926aa66d0dccbf80c3c"
+    "textDigest": "sha256:f7e368da80bbfe43dfe9b54ea225bc693116bae1ec098ddfee6fb63f28796338",
+    "contentDigest": "sha256:e01047a98ebcbf181dce5f57a5aab5069d832142b6a46ce14814afd5c952c8fb",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Începutul veștii bune despre Isus Hristos, Fiul lui Dumnezeu."
+      "text": "Începutul Evangheliei lui Isus Hristos."
     },
     {
       "number": 2,
@@ -161,7 +154,7 @@
     },
     {
       "number": 5,
-      "text": "Toată țara Iudeei și toți cei din Ierusalim au ieșit la El, și au fost botezați de el în rîul Iordan, mărturisindu-și păcatele."
+      "text": "Toată țara Iudeei și toți locuitorii Ierusalimului ieșeau la el și erau botezați de el în râul Iordan, mărturisindu-și păcatele."
     },
     {
       "number": 6,
@@ -169,7 +162,7 @@
     },
     {
       "number": 7,
-      "text": "El proclama: „După mine vine Cel mai puternic decât mine; eu nu sunt vrednic să mă aplec și să-I dezleg cureaua sandalelor."
+      "text": "El proclama: „În urma mea vine Acela care mă întrece în putere; eu nu sunt vrednic nici să mă aplec pentru a-I desface cureaua sandalelor."
     },
     {
       "number": 8,
@@ -189,7 +182,7 @@
     },
     {
       "number": 12,
-      "text": "Imediat, Duhul L-a izgonit în pustie."
+      "text": "Îndată, Duhul L-a împins în pustie."
     },
     {
       "number": 13,
@@ -249,7 +242,7 @@
     },
     {
       "number": 27,
-      "text": "Toți au rămas înmărmuriți și discutau între ei: „Ce este aceasta? O învățătură nouă, cu autoritate! El le poruncește chiar și duhurilor necurate, iar ele Îl ascultă!”"
+      "text": "Toți au rămas înmărmuriți și discutau între ei: „Ce este aceasta? O învățătură nouă! Cu autoritate, El le poruncește chiar și duhurilor necurate, iar ele Îl ascultă!”"
     },
     {
       "number": 28,
@@ -285,7 +278,7 @@
     },
     {
       "number": 36,
-      "text": "Simon și cei care erau cu el au pornit în căutarea Lui."
+      "text": "Simon și cei care erau cu el au pornit după El."
     },
     {
       "number": 37,
@@ -305,7 +298,7 @@
     },
     {
       "number": 41,
-      "text": "Mișcat de compasiune, Isus Și-a întins mâna, l-a atins și i-a spus: „Vreau. Fii curățit!”"
+      "text": "Mâniat, Isus Și-a întins mâna, l-a atins și i-a spus: „Vreau. Fii curățit!”"
     },
     {
       "number": 42,
@@ -313,7 +306,7 @@
     },
     {
       "number": 43,
-      "text": "El l-a avertizat cu strictețe imediat l-a trimis afară."
+      "text": "Avertizându-l cu strictețe, îndată l-a trimis afară"
     },
     {
       "number": 44,
@@ -329,10 +322,46 @@
       "verse": 1,
       "term": "υἱοῦ τοῦ Θεοῦ",
       "decision": "Textul principal urmează SBLGNT 1.2 și redă «Începutul Evangheliei lui Isus Hristos.»; expresia TR «Fiul lui Dumnezeu» nu este introdusă în verset.",
-      "reason": "În workbook, lectura principală SBLGNT se încheie la χριστοῦ, în timp ce Textus Receptus păstrează υἱοῦ τοῦ Θεοῦ. Varianta schimbă titulatura, de aceea lectura de bază rămâne în text, iar alternativa este documentată fără combinarea martorilor.",
+      "reason": "Lectura principală SBLGNT se încheie la χριστοῦ, în timp ce Textus Receptus păstrează υἱοῦ τοῦ θεοῦ. Varianta schimbă titulatura, de aceea lectura de bază rămâne în text, iar alternativa este documentată fără combinarea martorilor.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "Unitatea grecească, martorii și efectul semantic au fost verificate; formularea românească urmează lectura SBLGNT, iar lectura TR este identificată explicit."
+    },
+    {
+      "verse": 41,
+      "term": "ὀργισθείς",
+      "decision": "Textul redă «Mâniat», urmând lectura principală SBLGNT.",
+      "reason": "Aparatul consemnează lectura alternativă σπλαγχνισθείς («mișcat de compasiune»); ea nu este introdusă în textul principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Varianta și efectul ei semantic au fost verificate direct în aparatul SBLGNT."
+    },
+    {
+      "verse": 7,
+      "term": "revizie finală: ὁ ἰσχυρότερός μου",
+      "decision": "El proclama: „În urma mea vine Acela care mă întrece în putere; eu nu sunt vrednic nici să mă aplec pentru a-I desface cureaua sandalelor.”",
+      "reason": "Construcția „Cel mai puternic decât mine” amestecă superlativul relativ cu un complement comparativ și este negramaticală în română. Comparativul ὁ ἰσχυρότερός μου nu este redat corect de Cel mai puternic decât mine, fiind necesară în română o construcție comparativă coerentă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 27,
+      "term": "revizie finală: κατʼ ἐξουσίαν καὶ τοῖς πνεύμασι τοῖς ἀκαθάρτοις ἐπιτάσσει",
+      "decision": "Toți au rămas înmărmuriți și discutau între ei: „Ce este aceasta? O învățătură nouă! Cu autoritate, El le poruncește chiar și duhurilor necurate, iar ele Îl ascultă!”",
+      "reason": "Sintagma „cu autoritate” este atașată în română substantivului „învățătură”, deși în textul grec κατʼ ἐξουσίαν determină verbul ἐπιτάσσει și caracterizează felul în care Isus poruncește duhurilor. Raportul din κατʼ ἐξουσίαν καὶ τοῖς πνεύμασι τοῖς ἀκαθάρτοις ἐπιτάσσει nu este păstrat precis de O învățătură nouă, cu autoritate!, deoarece circumstanțialul este reatașat sintactic.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 7,
+      "term": "revizie finală: delimitarea discursului direct",
+      "decision": "El proclama: „În urma mea vine Acela care mă întrece în putere; eu nu sunt vrednic nici să mă aplec pentru a-I desface cureaua sandalelor.",
+      "reason": "Corectarea afectează numai ghilimelele și păstrează integral conținutul lexical al versetului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Limita citatului a fost corectată în contextul discursului continuu."
     }
   ],
   "referenceNotes": [],

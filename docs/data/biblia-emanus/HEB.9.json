@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "theologicalNeutrality": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Toate cele 28 de versete au fost revizuite semantic direct față de snapshotul fixat SBLGNT 1.2 și aparatul lui; rezultatul automat „0 probleme” nu a fost folosit drept verdict semantic.",
+      "TR a fost folosit numai ca martor textual. WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată; textul românesc a fost redactat independent."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 28,
       "reviewed": 28,
@@ -98,22 +96,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 28 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 28 de versete au fost confruntate direct cu SBLGNT/aparat; TR numai martor, iar WEBP/BTF/Cornilescu 1924/Biblia Liberă auxiliare."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost reparate frazele corupte, acordurile și calcurile din descrierea cultică și din argumentul despre jertfă.",
+        "Schimbarea contextuală a lui διαθήκη în 9:16-17 a fost redată prin „testament”, iar în restul capitolului prin „legământ”.",
+        "Termenii sanctuarului au fost redați consecvent fără a importa detalii absente din textul principal."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "La 9:11 este urmată lectura SBLGNT γενομένων, „bunurilor care au venit”, nu lectura tradițională μελλόντων „viitoare”.",
+        "La 9:14 este urmat pronumele ἡμῶν, „conștiința noastră”, nu ὑμῶν din TR/RP.",
+        "La 9:19 textul principal nu importă adaosul despre sângele țapilor absent din linia SBLGNT selectată."
       ]
     },
     "omissionAddition": {
@@ -123,140 +121,260 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT/aparat și verificări auxiliare fixate; fără copierea unei traduceri românești"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 316,
-        "secondary": 95,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5922586297890594,
-      "minimumScore": 0.5759312754780807
-    },
-    "textDigest": "sha256:768d244dd5e4ac013041d567d96f95e28941f17ff304e9402038e9e827d8421a",
-    "contentDigest": "sha256:6f808036c110d96d4a337eae67593da84d9179cf7692580afea7d6a79ebc1c72"
+    "textDigest": "sha256:480e856e289995b3968be7f8d652c7be3fe0e5bb847d949632fc5acec0829b60",
+    "contentDigest": "sha256:52cdf1a5ea62ec065da26413fd237b66bfe1d641deb98deb3ddad36218b7aa66",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Acum, chiar și primul legământ avea ordonanțe de serviciu divin și un sanctuar pământesc."
+      "text": "Așadar, și primul legământ avea rânduieli pentru închinare și un sanctuar pământesc."
     },
     {
       "number": 2,
-      "text": "Căci era pregătit un tabernacol. În prima parte erau sfenicul, masa pînea de spectacol, care se Locul Sfînt."
+      "text": "Căci a fost pregătit un cort: în prima încăpere erau sfeșnicul, masa și pâinile punerii înainte; aceasta este numită Locul Sfânt."
     },
     {
       "number": 3,
-      "text": "După al doilea văl a fost tabernacolul care este numit Sfânta Sfintelor,"
+      "text": "Iar după a doua perdea era încăperea cortului numită Sfânta Sfintelor,"
     },
     {
       "number": 4,
-      "text": "având un altar de aur cu tămîie și chivotul legămîntului acoperit cu aur pe toate părțile, în care era o oală de aur care ținea mana, toiagul lui Aaron și tablele legămîntului;"
+      "text": "având un vas de aur pentru tămâie și chivotul legământului, acoperit peste tot cu aur, în care erau vasul de aur cu mana, toiagul lui Aaron care înmugurise și tablele legământului."
     },
     {
       "number": 5,
-      "text": "deasupra ei heruvimi ai gloriei umbrind capacul îndurării, despre care nu putem vorbi acum în detaliu."
+      "text": "Deasupra lui erau heruvimii slavei, umbrind capacul ispășirii; despre acestea nu este acum vremea să vorbim în amănunt."
     },
     {
       "number": 6,
-      "text": "După ce au fost astfel, preoții intră fără încetare în primul tabernacol, îndeplinind slujbele,"
+      "text": "După ce acestea au fost astfel pregătite, preoții intră mereu în prima încăpere a cortului, împlinind slujbele."
     },
     {
       "number": 7,
-      "text": "Dar numai în al doilea mare preot, o dată pe an, nu fără sânge, pe care îl oferă pentru sine și pentru greșelile poporului."
+      "text": "Dar în a doua intră numai marele preot, o dată pe an, și nu fără sânge, pe care îl aduce pentru sine și pentru păcatele din neștiință ale poporului."
     },
     {
       "number": 8,
-      "text": "Duhul Sfânt indică acest lucru, că drumul spre Locul Sfânt nu a fost încă revelat în timp ce primul tabernacol era încă în picioare."
+      "text": "Prin aceasta Duhul Sfânt arată că drumul spre Locul Preasfânt nu fusese încă descoperit cât timp primul cort încă stătea în picioare."
     },
     {
       "number": 9,
-      "text": "Acesta este un simbol al epocii actuale, unde se oferă daruri și sacrificii care sunt incapabile, în ceea ce privește conștiința, de a-l face pe închinător perfect,"
+      "text": "Acesta este o pildă pentru timpul de acum: potrivit ei se aduc daruri și jertfe care nu pot să-l desăvârșească, în ce privește conștiința, pe cel care se închină,"
     },
     {
       "number": 10,
-      "text": "fiind doar (cu alimente și băuturi și diverse spălătorii) ordonanțe carnale, impuse până la un timp de reformare."
+      "text": "fiind vorba numai despre mâncăruri, băuturi, felurite spălări și rânduieli privitoare la trup, impuse până la vremea îndreptării."
     },
     {
       "number": 11,
-      "text": "Dar Hristos, venind ca Mare Preot al lucrurilor bune viitoare, prin cortul cel mai mare mai desăvârșit, nefăcut de mâini, adică nu din această creație,"
+      "text": "Dar Hristos, venind ca Mare Preot al bunurilor care au venit, prin cortul mai mare și mai desăvârșit, nefăcut de mâini, adică nu din această creație,"
     },
     {
       "number": 12,
-      "text": "nici prin sângele caprelor al vilor, ci prin propriul său sânge, a intrat o dată pentru totdeauna în Locul Sfânt, după ce a răscumpărarea veșnică."
+      "text": "a intrat o dată pentru totdeauna în Locul Preasfânt, nu prin sânge de țapi și viței, ci prin propriul Său sânge, dobândind o răscumpărare veșnică."
     },
     {
       "number": 13,
-      "text": "Căci dacă sângele taurilor și țapilor și cenușa unei vițele stropind pe cei întinați sfințește spre curățirea cărnii,"
+      "text": "Căci, dacă sângele țapilor și al taurilor și cenușa unei vițele, stropită peste cei întinați, sfințesc pentru curățirea trupului,"
     },
     {
       "number": 14,
-      "text": "Cu cât mai mult sângele lui Hristos, care prin Duhul Etern s-a oferit fără defect lui Dumnezeu, îți va curăța conștiința de lucrările moarte pentru a-l sluji pe Dumnezeul cel viu?"
+      "text": "cu cât mai mult sângele lui Hristos, care prin Duhul veșnic S-a adus pe Sine fără cusur lui Dumnezeu, va curăți conștiința noastră de fapte moarte, ca să slujim Dumnezeului celui viu!"
     },
     {
       "number": 15,
-      "text": "Din acest motiv el este mediatorul unui nou legământ, deoarece a avut loc o moarte pentru răscumpărarea fărădelegilor care au fost sub primul legământ, pentru ca cei care au fost chemați să poată primi promisiunea moștenirii eterne."
+      "text": "De aceea El este Mijlocitorul unui legământ nou, pentru ca, prin moartea care a avut loc pentru răscumpărarea încălcărilor de sub primul legământ, cei chemați să primească promisiunea moștenirii veșnice."
     },
     {
       "number": 16,
-      "text": "Căci acolo unde este o ultimă voință un testament, trebuie neapărat să fie moartea celui care l-a făcut."
+      "text": "Căci acolo unde este un testament trebuie dovedită moartea celui care l-a întocmit."
     },
     {
       "number": 17,
-      "text": "Căci o voință este în vigoare acolo unde a fost moarte, căci ea nu este niciodată în vigoare în timp ce cel ce a făcut-o trăiește."
+      "text": "Un testament este valabil după moarte, deoarece nu are putere cât timp trăiește cel care l-a întocmit."
     },
     {
       "number": 18,
-      "text": "Prin urmare, nici măcar primul legământ nu a fost dedicat fără sânge."
+      "text": "De aceea nici primul legământ nu a fost inaugurat fără sânge."
     },
     {
       "number": 19,
-      "text": "Căci după ce a spus Moise tuturor oamenilor toate poruncile, după Lege, a luat sângele vilor al caprelor, cu apă, cu lână cărămizie cu isop, a stropit cartea tot poporul,"
+      "text": "Căci, după ce fiecare poruncă a Legii fusese rostită de Moise întregului popor, el a luat sângele vițeilor, împreună cu apă, lână stacojie și isop, și a stropit atât cartea însăși, cât și tot poporul,"
     },
     {
       "number": 20,
-      "text": "El a spus: Acesta este sângele legământului pe care Dumnezeu vi l-a poruncit.„"
+      "text": "spunând: „Acesta este sângele legământului pe care Dumnezeu vi l-a poruncit.”"
     },
     {
       "number": 21,
-      "text": "El a stropit tabernacolul toate vasele slujirii în fel cu sângele."
+      "text": "În același fel a stropit cu sânge și cortul, și toate vasele slujirii."
     },
     {
       "number": 22,
-      "text": "Potrivit legii, aproape totul este curățat cu sânge, și în afară de vărsarea de sânge nu există nici o remisie."
+      "text": "Și, potrivit Legii, aproape toate sunt curățite cu sânge, iar fără vărsare de sânge nu are loc iertare."
     },
     {
       "number": 23,
-      "text": "Prin urmare, era necesar ca copiile lucrurilor din ceruri să fie curățate cu acestea, dar lucrurile cerești însele cu sacrificii mai bune decât acestea."
+      "text": "Era deci necesar ca reprezentările lucrurilor din ceruri să fie curățite prin acestea, dar lucrurile cerești înseși prin jertfe mai bune decât acestea."
     },
     {
       "number": 24,
-      "text": "Căci Hristos nu a intrat în locurile sfinte făcute de mâini, care sunt prefigurările celor adevărate, ci chiar în cer, pentru a se arăta acum în prezența lui Dumnezeu pentru noi;"
+      "text": "Căci Hristos nu a intrat într-un loc sfânt făcut de mâini, o reprezentare a celui adevărat, ci chiar în cer, ca să Se înfățișeze acum înaintea lui Dumnezeu pentru noi."
     },
     {
       "number": 25,
-      "text": "și totuși, ca să se aducă des, cum intră marele preot în locul sfânt an de an, fără sângele lui,"
+      "text": "Și nu ca să Se aducă pe Sine de multe ori, așa cum marele preot intră în Locul Preasfânt în fiecare an cu sânge care nu este al lui;"
     },
     {
       "number": 26,
-      "text": "sau altfel el trebuie să fi suferit de multe ori de la întemeierea lumii. Dar acum, o dată la sfârșitul veacurilor, el a fost revelat pentru a pune deoparte păcatul prin sacrificiul lui însuși."
+      "text": "altfel ar fi trebuit să sufere de multe ori de la întemeierea lumii. Dar acum S-a arătat o singură dată, la împlinirea veacurilor, pentru înlăturarea păcatului prin jertfa Sa."
     },
     {
       "number": 27,
-      "text": "În măsura în care este rânduit ca oamenii să moară o singură dată, după aceasta, judecata,"
+      "text": "Și, după cum oamenilor le este rânduit să moară o singură dată, iar după aceea vine judecata,"
     },
     {
       "number": 28,
-      "text": "Tot așa Hristos, după ce S-a oferit o dată să poarte păcatele multora, Se va arăta a doua oară, nu pentru a face păcatului, ci pentru a-i mântui pe cei care Îl așteaptă cu nerăbdare.”"
+      "text": "tot astfel și Hristos, după ce a fost adus o singură dată ca să poarte păcatele multora, Se va arăta a doua oară, fără legătură cu păcatul, celor care Îl așteaptă, spre mântuire."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 4,
+      "term": "θυμιατήριον",
+      "decision": "„vas de aur pentru tămâie”",
+      "alternatives": [
+        "„altar de aur pentru tămâie”",
+        "„cădelniță de aur”"
+      ],
+      "reason": "Substantivul poate desemna un obiect pentru tămâie; formularea neutră evită să rezolve prin traducere disputa de identificare cultică.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Substantivul poate desemna un obiect pentru tămâie; formularea neutră evită să rezolve prin traducere disputa de identificare cultică."
+    },
+    {
+      "verse": 11,
+      "term": "γενομένων ἀγαθῶν",
+      "decision": "„bunurilor care au venit”",
+      "alternatives": [
+        "Treg/RP: μελλόντων „bunurilor viitoare”"
+      ],
+      "reason": "Textul principal SBLGNT/WH/NA28 are γενομένων și este urmat fără armonizare cu lectura tradițională.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul principal SBLGNT/WH/NA28 are γενομένων și este urmat fără armonizare cu lectura tradițională."
+    },
+    {
+      "verse": 14,
+      "term": "τὴν συνείδησιν ἡμῶν",
+      "decision": "„conștiința noastră”",
+      "alternatives": [
+        "Treg/RP: „conștiința voastră”"
+      ],
+      "reason": "Pronumele SBLGNT este persoana I plural și este păstrat în textul principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Pronumele SBLGNT este persoana I plural și este păstrat în textul principal."
+    },
+    {
+      "verse": 16,
+      "term": "διαθήκη",
+      "decision": "„testament”",
+      "alternatives": [
+        "„legământ”"
+      ],
+      "reason": "În 9:16-17 contextul folosește moartea celui care dispune și validitatea după moarte; sensul juridic „testament” face inteligibil jocul semantic, fără a schimba termenul grec.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "În 9:16-17 contextul folosește moartea celui care dispune și validitatea după moarte; sensul juridic „testament” face inteligibil jocul semantic, fără a schimba termenul grec."
+    },
+    {
+      "verse": 19,
+      "term": "τὸ αἷμα τῶν μόσχων",
+      "decision": "„sângele vițeilor”",
+      "alternatives": [
+        "WH/Treg/NA28/TR: adaos „și al țapilor”"
+      ],
+      "reason": "Linia SBLGNT selectată în snapshot nu include adaosul după μόσχων; textul românesc nu îl importă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Linia SBLGNT selectată în snapshot nu include adaosul după μόσχων; textul românesc nu îl importă."
+    },
+    {
+      "verse": 22,
+      "term": "σχεδὸν … χωρὶς αἱματεκχυσίας",
+      "decision": "„aproape toate … fără vărsare de sânge nu are loc iertare”",
+      "alternatives": [
+        "generalizare fără „aproape”"
+      ],
+      "reason": "Adverbul σχεδόν este păstrat pentru a nu transforma afirmația calificată a autorului într-o regulă absolutizată dincolo de text.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Adverbul σχεδόν este păstrat pentru a nu transforma afirmația calificată a autorului într-o regulă absolutizată dincolo de text."
+    },
+    {
+      "verse": 26,
+      "term": "ἅπαξ … εἰς ἀθέτησιν ἁμαρτίας",
+      "decision": "„o singură dată … pentru înlăturarea păcatului”",
+      "alternatives": [
+        "„desființarea păcatului”"
+      ],
+      "reason": "ἀθέτησις indică anulare/înlăturare; formularea păstrează rezultatul jertfei fără dezvoltare doctrinară suplimentară.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "ἀθέτησις indică anulare/înlăturare; formularea păstrează rezultatul jertfei fără dezvoltare doctrinară suplimentară."
+    },
+    {
+      "verse": 28,
+      "term": "χωρὶς ἁμαρτίας",
+      "decision": "„fără legătură cu păcatul”",
+      "alternatives": [
+        "„fără păcat”"
+      ],
+      "reason": "Contextul contrastează prima arătare pentru purtarea păcatelor cu a doua arătare spre mântuire; formularea evită ambiguitatea că ar fi vorba despre caracterul moral al lui Hristos.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Contextul contrastează prima arătare pentru purtarea păcatelor cu a doua arătare spre mântuire; formularea evită ambiguitatea că ar fi vorba despre caracterul moral al lui Hristos."
+    },
+    {
+      "verse": 8,
+      "term": "revizie finală: τὴν τῶν ἁγίων ὁδὸν",
+      "decision": "Prin aceasta Duhul Sfânt arată că drumul spre Locul Preasfânt nu fusese încă descoperit cât timp primul cort încă stătea în picioare.",
+      "reason": "Denumirea „Locul Sfânt” a fost folosită în versetul 2 pentru prima încăpere, dar aici contextul accesului încă nerevelat și contrastul cu primul cort indică sanctuarul interior, adică Locul Preasfânt. Redarea lui τὴν τῶν ἁγίων ὁδὸν prin drumul spre Locul Sfânt estompează referirea contextuală la sanctuarul interior, distinct de prima încăpere.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 12,
+      "term": "revizie finală: εἰσῆλθεν ἐφάπαξ εἰς τὰ ἅγια",
+      "decision": "a intrat o dată pentru totdeauna în Locul Preasfânt, nu prin sânge de țapi și viței, ci prin propriul Său sânge, dobândind o răscumpărare veșnică.",
+      "reason": "„Locul Sfânt” denumește în versetul 2 prima încăpere, pe când intrarea ispășitoare descrisă aici corespunde accesului în sanctuarul interior; terminologia creează astfel o identificare spațială greșită. În a intrat o dată pentru totdeauna în Locul Sfânt, adverbul din εἰσῆλθεν ἐφάπαξ εἰς τὰ ἅγια este corect redat, însă referentul sanctuarului interior devine neclar.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 25,
+      "term": "revizie finală: εἰσέρχεται εἰς τὰ ἅγια κατʼ ἐνιαυτὸν",
+      "decision": "Și nu ca să Se aducă pe Sine de multe ori, așa cum marele preot intră în Locul Preasfânt în fiecare an cu sânge care nu este al lui;",
+      "reason": "Marele preot intra anual în încăperea interioară, nu în „Locul Sfânt” care desemnează prima încăpere în versetul 2; aici este necesară denumirea „Locul Preasfânt”. Periodicitatea din εἰσέρχεται εἰς τὰ ἅγια κατʼ ἐνιαυτὸν apare în intră în Locul Sfânt în fiecare an, însă destinația rituală este identificată greșit.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

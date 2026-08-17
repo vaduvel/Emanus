@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,22 @@
       "romanianNaturalness": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "SBLGNT 1.2 și aparatul au fost confruntate direct; TR a fost folosit numai ca martor de variante.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au servit drept comparații auxiliare; NTR nu a fost consultată.",
+      "Textul românesc a fost redactat independent, fără stocarea sau copierea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 20,
       "reviewed": 20,
@@ -98,14 +97,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 20 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 20 de versete din REV.1 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost corectate toate frazele corupte, calchiate sau cu diacritice eronate din capitol.",
+        "Referenții, succesiunea discursului și imaginile din viziune au fost păstrate pentru fiecare verset.",
+        "Lectura SBLGNT din 1:5, «ne-a eliberat», este păstrată, fără înlocuirea cu lectura tradițională «ne-a spălat»."
       ]
     },
     "theologicalContext": {
@@ -123,116 +122,147 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 285,
-        "secondary": 119,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5435114731748284,
-      "minimumScore": 0.5419631978011472
-    },
-    "textDigest": "sha256:2ecd726ecd71ca91d6ddc1bd6faf64fb4e2a316a757309001fe6f0b5e8600cba",
-    "contentDigest": "sha256:2de9784459a25362c56c76bdfe7a87aa3a7fe2d12d09d9b292c0075952d92a2b"
+    "textDigest": "sha256:1701513c79af6f2ddc1a0139901c3c3dbe0ab460e07024582eb4abd981b1932d",
+    "contentDigest": "sha256:ee721686d8778f3da37d7afc76d7ea4dc83573319ed771ec74e3593e0d73f4cb",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Aceasta este Revel lui Isus Hristos, pe care Dumnezeu i-a dat-o ca să arate slujitorilor Săi lucrurile care trebuie să se întâmple în curând, pe care El le-a trimis le-a făcut cunoscute prin îngerul Său slujitorului Său, Ioan,"
+      "text": "Apocalipsa lui Isus Hristos, pe care Dumnezeu I-a dat-o ca să le arate slujitorilor Săi lucrurile care trebuie să se întâmple curând. El a făcut-o cunoscută, trimițând-o prin îngerul Său slujitorului Său Ioan,"
     },
     {
       "number": 2,
-      "text": "care a mărturisit Cuvântul lui Dumnezeu și mărturia lui Isus Hristos, despre tot ce a văzut."
+      "text": "care a mărturisit Cuvântul lui Dumnezeu și mărturia lui Isus Hristos, tot ce a văzut."
     },
     {
       "number": 3,
-      "text": "Binecuvîntat este cel ce citește și cei ce aud cuvintele proorociei, și păzesc lucrurile scrise în ea, căci vremea este aproape."
+      "text": "Cel care citește este fericit, la fel și cei care aud cuvintele profeției și păzesc cele scrise în ea, căci vremea este aproape."
     },
     {
       "number": 4,
-      "text": "Ioan, celor șapte adunări din Asia: Har vouă și pace de la Dumnezeu, cine este, cine este și cine va veni, și de la cele șapte duhuri care sunt înaintea scaunului său de domnie;"
+      "text": "Ioan, către cele șapte biserici care sunt în Asia: har vouă și pace de la Cel care este, care era și care vine, și de la cele șapte duhuri care sunt înaintea tronului Său,"
     },
     {
       "number": 5,
-      "text": "Și de la Isus Hristos, martorul credincios și întâiul născut dintre morți și prințul împăraților pământului. A lui, care ne-a iubit și ne-a spălat de păcatele noastre în propriul lui sânge,"
+      "text": "și de la Isus Hristos, martorul credincios, întâiul născut dintre morți și conducătorul împăraților pământului. A Celui care ne iubește și ne-a eliberat de păcatele noastre prin sângele Său —"
     },
     {
       "number": 6,
-      "text": "El ne-a făcut să fim Împărăție, preoți ai Dumnezeului său și ai Tatălui său pentru el să fie slava și stăpânirea veșnică. Amin."
+      "text": "și ne-a făcut o împărăție, preoți pentru Dumnezeul și Tatăl Său — Lui să-I fie slava și puterea în vecii vecilor! Amin."
     },
     {
       "number": 7,
-      "text": "Iată, El vine cu norii, orice ochi Îl va vedea, chiar cei ce L-au străpuns. Toate semin pământului Îl vor plînge. Amin."
+      "text": "Iată, El vine cu norii și orice ochi Îl va vedea, chiar și cei care L-au străpuns; toate triburile pământului se vor tângui din pricina Lui. Da, amin."
     },
     {
       "number": 8,
-      "text": "Eu sunt Alfa Omega, zice Domnul Dumnezeu, Cel ce este, Cel ce era Cel ce vine, Cel Atotputernic.„"
+      "text": "„Eu sunt Alfa și Omega”, spune Domnul Dumnezeu, Cel care este, care era și care vine, Cel Atotputernic."
     },
     {
       "number": 9,
-      "text": "Eu, Ioan, fratele tău și partenerul tău în opresiunea, Regatul și perseverența în Hristos Isus, eram pe insula numită Patmos din cauza Cuvântului lui Dumnezeu și a mărturiei lui Isus Hristos."
+      "text": "Eu, Ioan, fratele vostru și părtaș cu voi la necaz, la împărăție și la răbdarea statornică în Isus, am fost pe insula numită Patmos din pricina Cuvântului lui Dumnezeu și a mărturiei despre Isus."
     },
     {
       "number": 10,
-      "text": "Am fost în Duhul în ziua Domnului, și am auzit în spatele meu o voce tare, ca o trâmbiță"
+      "text": "Eram în Duhul în ziua Domnului și am auzit în spatele meu un glas puternic, ca o trâmbiță,"
     },
     {
       "number": 11,
-      "text": "spunând, ا Ceea ce vedeți, scrieți într-o carte și trimiteți la cele șapte adunări: la Efes, Smyrna, Pergam, Tiatira, Sardis, Philadelphia, și la Laodiceea."
+      "text": "care spunea: „Ce vezi, scrie într-o carte și trimite celor șapte biserici: la Efes, la Smirna, la Pergam, la Tiatira, la Sardes, la Filadelfia și la Laodiceea.”"
     },
     {
       "number": 12,
-      "text": "M-am întors să văd glasul care vorbea cu mine, și când m-am întors, am văzut șapte candele de aur."
+      "text": "M-am întors să văd glasul care vorbea cu mine și, întorcându-mă, am văzut șapte sfeșnice de aur."
     },
     {
       "number": 13,
-      "text": "Printre sfeșnice era unul ca un fiu de om, îmbrăcat cu o haină care se întindea până la picioare, și cu o eșarfă de aur în jurul pieptului."
+      "text": "Iar în mijlocul sfeșnicelor era Cineva asemenea unui fiu al omului, îmbrăcat cu o haină până la picioare și încins la piept cu un brâu de aur."
     },
     {
       "number": 14,
-      "text": "Capul și părul lui erau albe ca lîna albă, ca zăpada; ochii lui erau ca o flacără de foc."
+      "text": "Capul și părul Lui erau albe ca lâna albă, ca zăpada; ochii Lui erau ca o flacără de foc."
     },
     {
       "number": 15,
-      "text": "Picioarele lui erau ca alama arsă, ca și cum ar fi fost rafinată într-un cuptor. Vocea lui era ca vocea multor ape."
+      "text": "Picioarele Lui erau asemenea aramei lustruite, ca încinsă într-un cuptor; glasul Lui era ca vuietul unor ape multe."
     },
     {
       "number": 16,
-      "text": "Avea șapte stele în dreapta lui; din gură a scos o sabie ascuțită cu două tăișuri; fața lui era ca soarele care strălucea la cea mai strălucitoare."
+      "text": "În mâna Sa dreaptă ținea șapte stele; din gura Lui ieșea o sabie ascuțită cu două tăișuri, iar înfățișarea Lui era ca soarele care strălucește în puterea lui."
     },
     {
       "number": 17,
-      "text": "Când l-am văzut, am căzut la picioarele lui ca un mort. El-a pus mâna dreaptă peste mine, spunând: Nu te teme. Eu sunt cel dintâi cel de pe urmă,"
+      "text": "Când L-am văzut, am căzut la picioarele Lui ca mort. El Și-a pus mâna dreaptă peste mine și a zis: „Nu te teme! Eu sunt Cel dintâi și Cel de pe urmă,"
     },
     {
       "number": 18,
-      "text": "și cel viu. Am fost mort, și iată, eu sunt în viață pentru totdeauna și pentru totdeauna. Amin. Am cheile morții și ale Hadesului."
+      "text": "și Cel viu. Am fost mort și, iată, sunt viu în vecii vecilor; am cheile morții și ale Locuinței morților.”"
     },
     {
       "number": 19,
-      "text": "Scrie deci lucrurile pe care le-ai văzut, și lucrurile care sunt, și lucrurile care se vor întâmpla în continuare."
+      "text": "Scrie deci cele pe care le-ai văzut, cele care sunt și cele care urmează să se întâmple după acestea."
     },
     {
       "number": 20,
-      "text": "Misterul celor șapte stele pe care le-ai văzut în mâna mea dreaptă, și cele șapte sfeșnice de aur este acesta: Cele șapte stele sunt îngerii celor șapte adunări. Cele șapte sfeșnice sunt șapte adunări.”"
+      "text": "Taina celor șapte stele pe care le-ai văzut în mâna Mea dreaptă și a celor șapte sfeșnice de aur este aceasta: cele șapte stele sunt îngerii celor șapte biserici, iar cele șapte sfeșnice sunt cele șapte biserici."
     }
   ],
   "editorialNotes": [
     {
-      "verse": 8,
-      "term": "variantă textuală sau lexicală verificată",
-      "decision": "Textul principal păstrează lectura SBLGNT 1.2 și formularea românească validată prin sursele fixate.",
-      "reason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal.",
+      "verse": 5,
+      "term": "λύσαντι / λούσαντι",
+      "decision": "Textul redă lectura SBLGNT «ne-a eliberat de păcatele noastre prin sângele Său».",
+      "alternatives": [
+        "«ne-a spălat de păcatele noastre» (lectura RP λούσαντι)"
+      ],
+      "reason": "Aparatul pune lectura SBLGNT λύσαντι împotriva lecturii RP λούσαντι; sensul principal urmează textul critic fixat.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
+      "resolutionReason": "Varianta a fost verificată direct în aparatul SBLGNT și rezolvată în favoarea lecturii principale."
+    },
+    {
+      "verse": 8,
+      "term": "τὸ Ἄλφα καὶ τὸ Ὦ",
+      "decision": "Sunt păstrate titlurile Alfa și Omega și formula despre Cel care este, era și vine.",
+      "alternatives": [
+        "formulări tradiționale cu adaosuri interpretative"
+      ],
+      "reason": "Formularea românească urmărește textul SBLGNT, fără extinderea corpului versetului cu expresii neprezente în lectura fixată.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Ancora SBLGNT a fost verificată și redată direct."
+    },
+    {
+      "verse": 11,
+      "term": "Ὃ βλέπεις γράψον",
+      "decision": "Versetul începe direct cu porunca de a scrie ceea ce Ioan vede.",
+      "alternatives": [
+        "adaosul tradițional despre Alfa și Omega"
+      ],
+      "reason": "Textul SBLGNT nu conține adaosul tradițional; traducerea nu îl importă din martorul secundar.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul critic fixat a fost urmat fără adaos."
+    },
+    {
+      "verse": 3,
+      "term": "revizie finală: μακάριος ὁ ἀναγινώσκων καὶ οἱ ἀκούοντες",
+      "decision": "Cel care citește este fericit, la fel și cei care aud cuvintele profeției și păzesc cele scrise în ea, căci vremea este aproape.",
+      "reason": "Predicatul nominal singular „Fericit este” este legat direct și de subiectul plural „cei care aud”, producând un acord defectuos și o lectură românească nenaturală. Deși μακάριος ὁ ἀναγινώσκων καὶ οἱ ἀκούοντες îi include în binecuvântare pe cititor și pe ascultători, Fericit este cel care citește și cei care aud nu exprimă natural această extindere în română.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
     }
   ],
   "referenceNotes": [],

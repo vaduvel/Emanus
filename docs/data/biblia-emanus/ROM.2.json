@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,79 +71,9 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
-  },
-  "audit": {
-    "schemaVersion": 2,
-    "completedOn": "2026-08-05",
-    "engineVersion": "3.0.0",
-    "reviewLevel": "ai-complete",
-    "reviewAgent": {
-      "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
-      "method": "verse-by-verse-source-and-benchmark"
-    },
-    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
-    "verseCoverage": {
-      "expected": 29,
-      "reviewed": 29,
-      "continuous": true,
-      "verseNumbersSha256": "sha256:31b8946a092fbe0dc4f0d37b82ff1a47922c7986940811c08f1a8f720943399e"
-    },
-    "sourceLanguage": {
-      "language": "greacă koine",
-      "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
-      "result": "approved",
-      "scope": "Au fost confruntate toate cele 29 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
-    },
-    "romanianLanguage": {
-      "result": "approved",
-      "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
-      ]
-    },
-    "theologicalContext": {
-      "result": "approved",
-      "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
-      ]
-    },
-    "omissionAddition": {
-      "result": "approved",
-      "omissions": 0,
-      "additions": 0
-    },
-    "copyrightDistance": {
-      "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
-    },
-    "criticalIssues": {
-      "result": "approved",
-      "open": 0
-    },
-    "modelEvidence": {
-      "selected": {
-        "existing": 709,
-        "primary": 137,
-        "secondary": 24,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.41000612643816675,
-      "minimumScore": 0.5818865265537531
-    },
-    "textDigest": "sha256:624c819ba8e8352f1ef01c29db9666087b4a633a1f394ef444112e56a6ee8c6d",
-    "contentDigest": "sha256:e47c4bbef137684ef5d12e3b217f8a7c2162eee06412f9d62ac0a04a76bc53ec"
   },
   "verses": [
     {
@@ -173,15 +106,15 @@
     },
     {
       "number": 8,
-      "text": "dar pentru cei care urmăresc folosul propriu, nu ascultă de adevăr, ci ascultă de nedreptate, vor fi mânie și furie,"
+      "text": "dar celor stăpâniți de ambiție egoistă, care nu dau ascultare adevărului, ci se supun nedreptății, le va da mânie și furie,"
     },
     {
       "number": 9,
-      "text": "necaz și strâmtorare peste orice suflet omenesc care săvârșește răul: mai întâi peste iudeu, apoi și peste grec;"
+      "text": "necaz și strâmtorare peste orice suflet omenesc care face răul — peste iudeu mai întâi și peste grec;"
     },
     {
       "number": 10,
-      "text": "dar glorie, onoare și pace pentru oricine săvârșește binele: mai întâi pentru iudeu, apoi și pentru grec."
+      "text": "dar glorie, onoare și pace pentru oricine face binele: pentru iudeu mai întâi și, de asemenea, pentru grec."
     },
     {
       "number": 11,
@@ -193,7 +126,7 @@
     },
     {
       "number": 13,
-      "text": "Căci nu ascultătorii Legii sunt drepți înaintea lui Dumnezeu, ci împlinitorii Legii vor fi îndreptățiți."
+      "text": "Căci înaintea lui Dumnezeu nu sunt drepți cei ce aud Legea, ci aceia care o împlinesc vor fi îndreptățiți."
     },
     {
       "number": 14,
@@ -201,7 +134,7 @@
     },
     {
       "number": 15,
-      "text": "Ele arată că lucrarea Legii este scrisă în inimile lor, conștiința lor depunând mărturie împreună cu ele, iar gândurile lor acuzându-se sau chiar apărându-se între ele,"
+      "text": "Ele arată că lucrarea Legii este scrisă în inimile lor, conștiința lor dând mărturie, iar gândurile lor acuzându-se sau chiar apărându-se între ele,"
     },
     {
       "number": 16,
@@ -209,7 +142,7 @@
     },
     {
       "number": 17,
-      "text": "Dar dacă tu porți numele de iudeu, te bizui pe Lege și te lauzi cu Dumnezeu,"
+      "text": "Dar dacă tu te numești iudeu, te bizui pe Lege și te lauzi cu Dumnezeu,"
     },
     {
       "number": 18,
@@ -221,7 +154,7 @@
     },
     {
       "number": 20,
-      "text": "îndrumător al celor fără minte, învățător al copiilor, având în Lege întruchiparea cunoașterii și a adevărului—"
+      "text": "îndrumător al celor fără minte, învățător al copiilor, având în Lege forma cunoașterii și a adevărului—"
     },
     {
       "number": 21,
@@ -237,7 +170,7 @@
     },
     {
       "number": 24,
-      "text": "Căci, după cum este scris, „Numele lui Dumnezeu este blasfemiat între neamuri din cauza voastră.”"
+      "text": "Căci, după cum este scris, „Numele lui Dumnezeu este hulit între neamuri din cauza voastră.”"
     },
     {
       "number": 25,
@@ -245,22 +178,46 @@
     },
     {
       "number": 26,
-      "text": "Așadar, dacă cel necircumcis păzește hotărârile drepte ale Legii, oare necircumcizia lui nu va fi socotită drept circumcizie?"
+      "text": "Așadar, dacă necircumcizia păzește cerințele Legii, oare necircumcizia lui nu va fi socotită drept circumcizie?"
     },
     {
       "number": 27,
-      "text": "Iar cel necircumcis din fire, care împlinește Legea, te va judeca pe tine, care, deși ai litera și circumcizia, ești un călcător al Legii."
+      "text": "Iar cel necircumcis din fire, care împlinește Legea, te va judeca pe tine, care, cu litera și circumcizia, ești un călcător al Legii."
     },
     {
       "number": 28,
-      "text": "Căci iudeu nu este cel care este astfel pe dinafară și circumcizie nu este cea văzută în carne,"
+      "text": "Căci iudeu nu este cel care este iudeu doar pe dinafară, iar circumcizie nu este cea care se vede în carne,"
     },
     {
       "number": 29,
-      "text": "Dar el este un Iudeu care este unul din interior, și circumcizia este aceea a inimii, în duh, nu în scrisoare; a cărui laudă nu este de la oameni, ci de la Dumnezeu."
+      "text": "ci iudeu este cel care este iudeu înăuntru, iar circumcizia este cea a inimii, în duh, nu în literă; lauda lui nu vine de la oameni, ci de la Dumnezeu."
     }
   ],
   "editorialNotes": [
+    {
+      "verse": 5,
+      "term": "ἀποκαλύψεως δικαιοκρισίας τοῦ θεοῦ",
+      "decision": "a descoperirii dreptei judecăți a lui Dumnezeu",
+      "reason": "SBLGNT leagă direct «descoperirea» de «dreapta judecată»; adaosul καὶ din tradiția RP/TR nu este introdus în textul principal.",
+      "alternatives": [
+        "a descoperirii și a dreptei judecăți a lui Dumnezeu"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul principal urmează lectura SBLGNT, iar varianta tradițională este consemnată fără a fi importată."
+    },
+    {
+      "verse": 8,
+      "term": "ἐξ ἐριθείας … ὀργὴ καὶ θυμός",
+      "decision": "din ambiție egoistă … mânie și furie",
+      "reason": "ἐριθεία descrie interesul partizan/egoist, iar SBLGNT păstrează ordinea ὀργὴ καὶ θυμός, diferită de RP.",
+      "alternatives": [
+        "din spirit de ceartă … mânie și indignare"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Formularea redă contrastul cu ascultarea adevărului și urmează ordinea textului critic."
+    },
     {
       "verse": 13,
       "term": "δικαιωθήσονται",
@@ -274,10 +231,82 @@
       "resolutionReason": "Consecvența lexicală cu Romani 3—5 permite cititorului să urmărească argumentul lui Pavel."
     },
     {
+      "verse": 15,
+      "term": "συμμαρτυρούσης αὐτῶν τῆς συνειδήσεως",
+      "decision": "conștiința lor dând mărturie",
+      "reason": "Participiul descrie mărturia conștiinței lor; formularea elimină pronumele ambiguu «împreună cu ele».",
+      "alternatives": [
+        "conștiința lor mărturisind împreună"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sensul este păstrat, iar referentul românesc devine clar."
+    },
+    {
+      "verse": 16,
+      "term": "κρίνει … διὰ Χριστοῦ Ἰησοῦ",
+      "decision": "Dumnezeu va judeca, prin Hristos Isus",
+      "reason": "SBLGNT are κρίνει și ordinea Χριστοῦ Ἰησοῦ; formularea românească redă natural referința viitoare din context.",
+      "alternatives": [
+        "Dumnezeu judecă, prin Hristos Isus"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Se păstrează sensul temporal al construcției și ordinea numelui din textul critic."
+    },
+    {
+      "verse": 17,
+      "term": "Εἰ δὲ σὺ Ἰουδαῖος ἐπονομάζῃ",
+      "decision": "Dar dacă tu te numești iudeu",
+      "reason": "SBLGNT citește Εἰ δὲ («dar dacă»), spre deosebire de lectura tradițională Ἴδε («iată»).",
+      "alternatives": [
+        "Iată, tu te numești iudeu"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul principal urmează SBLGNT și nu introduce lectura RP/TR."
+    },
+    {
+      "verse": 24,
+      "term": "βλασφημεῖται",
+      "decision": "este hulit",
+      "reason": "«A huli» este o redare românească firească și exactă pentru βλασφημέω în acest citat, evitând calc-ul «este blasfemiat».",
+      "alternatives": [
+        "este blasfemiat"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Schimbarea este stilistică și lexicală, fără modificarea sensului."
+    },
+    {
+      "verse": 27,
+      "term": "διὰ γράμματος καὶ περιτομῆς",
+      "decision": "cu litera și circumcizia",
+      "reason": "Construcția indică posesia/mediul literei și circumciziei; «deși ai» introducea o relație concesivă mai explicită decât greaca.",
+      "alternatives": [
+        "prin literă și circumcizie"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "«Cu» păstrează relația fără a adăuga o concesie semantică."
+    },
+    {
+      "verse": 28,
+      "term": "ὁ ἐν τῷ φανερῷ Ἰουδαῖος … ἡ ἐν τῷ φανερῷ ἐν σαρκὶ περιτομή",
+      "decision": "iudeu doar pe dinafară … circumcizia care se vede în carne",
+      "reason": "Se redă contrastul φανερός/κρυπτός în română idiomatică, evitând formularea rigidă «astfel în exterior».",
+      "alternatives": [
+        "iudeul din afară … circumcizia din afară, în carne"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Formularea face transparent contrastul cu versetul 29 fără adaos doctrinar."
+    },
+    {
       "verse": 29,
       "term": "ἐν πνεύματι οὐ γράμματι",
       "decision": "în duh, nu în literă",
-      "reason": "πνεῦμα poate indica duhul lăuntric sau lucrarea Duhului Sfânt; textul principal păstrează forma neutră, iar nota consemnează ambele lecturi.",
+      "reason": "πνεῦμα poate indica duhul lăuntric sau lucrarea Duhului Sfânt; textul principal păstrează forma neutră, iar nota consemnează ambiguitatea.",
       "alternatives": [
         "prin Duhul, nu prin literă",
         "în spirit, nu în literă"
@@ -285,8 +314,104 @@
       "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "Lipsa articolului nu decide singură referentul; redarea neutră evită impunerea unei singure interpretări."
+    },
+    {
+      "verse": 8,
+      "term": "revizie finală: ἐξ ἐριθείας",
+      "decision": "dar celor stăpâniți de ambiție egoistă, care nu dau ascultare adevărului, ci se supun nedreptății, le va da mânie și furie,",
+      "reason": "Construcția „celor din ambiție egoistă” este sintactic nefirească și nu arată clar că ambiția egoistă constituie motivația persoanelor descrise. Deși ἐξ ἐριθείας desemnează originea egoistă a conduitei, celor din ambiție egoistă nu exprimă natural această relație semantică.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 9,
+      "term": "revizie finală: ἐπὶ πᾶσαν ψυχὴν ἀνθρώπου",
+      "decision": "necaz și strâmtorare peste orice suflet omenesc care face răul — peste iudeu mai întâi și peste grec;",
+      "reason": "Genitivele „al iudeului” și „al grecului” nu se coordonează natural cu „peste orice suflet omenesc”, făcând raportul sintactic inutil de ambiguu. În timp ce ἐπὶ πᾶσαν ψυχὴν ἀνθρώπου cere continuarea limpede a sferei vizate, al iudeului mai întâi și al grecului introduce o coordonare sintactic ambiguă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 10,
+      "term": "revizie finală: παντὶ τῷ ἐργαζομένῳ τὸ ἀγαθόν, Ἰουδαίῳ τε πρῶτον καὶ Ἕλληνι",
+      "decision": "dar glorie, onoare și pace pentru oricine face binele: pentru iudeu mai întâi și, de asemenea, pentru grec.",
+      "reason": "Genitivele „al iudeului” și „al grecului” sunt incompatibile sintactic cu „pentru oricine” și obscurizează faptul că iudeul și grecul sunt destinatarii gloriei, onoarei și păcii. Dativele din παντὶ τῷ ἐργαζομένῳ τὸ ἀγαθόν, Ἰουδαίῳ τε πρῶτον καὶ Ἕλληνι cer destinatari paraleli, pe când al iudeului mai întâi și al grecului schimbă nejustificat raportul sintactic.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 13,
+      "term": "revizie finală: οἱ ἀκροαταὶ",
+      "decision": "Căci înaintea lui Dumnezeu nu sunt drepți cei ce aud Legea, ci aceia care o împlinesc vor fi îndreptățiți.",
+      "reason": "„Ascultătorii Legii” este ambiguu lexical și poate desemna oamenii care se supun Legii, anulând contrastul dintre simpla auzire și împlinire. Termenul οἱ ἀκροαταὶ cere sensul de auditori, dar ascultătorii Legii poate sugera tocmai ascultarea practică opusă aici auzirii.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
     }
   ],
   "referenceNotes": [],
-  "alternateEndings": []
+  "alternateEndings": [],
+  "audit": {
+    "schemaVersion": 2,
+    "completedOn": "2026-08-11",
+    "engineVersion": "3.0.0",
+    "reviewLevel": "ai-complete",
+    "reviewAgent": {
+      "type": "ai",
+      "engine": "Codex / GPT-5.6 Sol",
+      "method": "verse-by-verse-source-and-benchmark"
+    },
+    "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    },
+    "verseCoverage": {
+      "expected": 29,
+      "reviewed": 29,
+      "continuous": true,
+      "verseNumbersSha256": "sha256:31b8946a092fbe0dc4f0d37b82ff1a47922c7986940811c08f1a8f720943399e"
+    },
+    "sourceLanguage": {
+      "language": "greacă koine",
+      "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
+      "result": "approved",
+      "scope": "Toate cele 29 de versete din ROM.2 au fost reverificate direct cu SBLGNT 1.2 și aparatul critic; Textus Receptus a fost folosit numai ca martor textual, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă ca repere auxiliare."
+    },
+    "romanianLanguage": {
+      "result": "approved",
+      "changesApplied": [
+        "ROM.2.15 a fost clarificat pentru a elimina referentul ambiguu al conștiinței.",
+        "ROM.2.24 a fost netezit lexical la «hulit», iar ROM.2.27 a eliminat o concesie care nu era explicită în greacă.",
+        "ROM.2.28–29 au fost rescrise minim pentru a reda natural contrastul exterior/interior, păstrând ambiguitatea «în duh, nu în literă» documentată editorial."
+      ]
+    },
+    "theologicalContext": {
+      "result": "approved",
+      "principles": [
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri sau lecturi din Textus Receptus.",
+        "Termenii teologici sunt redați lexical, fără impunerea unei interpretări confesionale acolo unde greaca permite ambiguitate.",
+        "Etaloanele românești au fost folosite numai pentru verificare comparativă."
+      ]
+    },
+    "omissionAddition": {
+      "result": "approved",
+      "omissions": 0,
+      "additions": 0
+    },
+    "copyrightDistance": {
+      "result": "approved",
+      "method": "redactare editorială independentă din SBLGNT, verificată comparativ cu sursele auxiliare declarate; fără copiere de text românesc protejat"
+    },
+    "criticalIssues": {
+      "result": "approved",
+      "open": 0
+    },
+    "textDigest": "sha256:aeb7a7b0cbc3b0fd441774f48713be7f34b718cbb7539a2bc03146edc38ea445",
+    "contentDigest": "sha256:c76218883f0a46152c12636ace88757942319dddee3a4544345872692e50676b"
+  }
 }

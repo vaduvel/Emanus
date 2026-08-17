@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset-cu-verset din SBLGNT 1.2 și aparat, cu Textus Receptus numai ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost repere auxiliare de sens și limbă; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 21,
       "reviewed": 21,
@@ -98,22 +96,21 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 21 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 21 de versete din EPH.3 au fost confruntate direct cu SBLGNT 1.2 și cu aparatul fixat; TR a fost folosit numai ca martor de variante."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost eliminate calcurile, acordurile greșite, fragmentele corupte și formulările nenaturale.",
+        "Persoana, numărul, relațiile sintactice și termenii teologici au fost reașezați după textul grec.",
+        "Lecturile TR/RP absente din textul principal SBLGNT nu au fost importate automat."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Textul principal urmează SBLGNT la variantele consemnate în aparat.",
+        "Ambiguitățile lexicale sunt redate cât mai direct, fără glosare confesională în corpul versetului."
       ]
     },
     "omissionAddition": {
@@ -123,112 +120,270 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost numai verificări auxiliare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 327,
-        "primary": 189,
-        "secondary": 45,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.33174470430626646,
-      "minimumScore": 0.5090738739653641
-    },
-    "textDigest": "sha256:40b2c056854464fe0c803703a2eeb9e3c52f624f54879c7a53591b82c14b7373",
-    "contentDigest": "sha256:ecc503db6a10b61bd17502cd42c5999a2e7c4a22527895d5f144606544b78296"
+    "textDigest": "sha256:a19785ed94ce346f43fc7839c68ac11ac68462ad5fe7af86ff94a96a9e8ee9b2",
+    "contentDigest": "sha256:e44efee52192a21c399b1475051b27712608e3fe66afdb169d3facec8ac35759",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "De aceea eu, Pavel, sunt prizonierul lui Hristos Isus pentru voi, Neamurile,"
+      "text": "Din pricina aceasta, eu, Pavel, întemnițatul lui Hristos Isus pentru voi, neamurile —"
     },
     {
       "number": 2,
-      "text": "dacă ați auzit vorbindu-se despre administrarea harului lui Dumnezeu care mi-a fost dat de voi,"
+      "text": "dacă, într-adevăr, ați auzit de administrarea harului lui Dumnezeu care mi-a fost dat pentru voi:"
     },
     {
       "number": 3,
-      "text": "cum prin revelație mi-a fost făcut cunoscut misterul, așa cum am scris mai înainte în câteva cuvinte,"
+      "text": "prin descoperire mi-a fost făcută cunoscută taina, după cum am scris mai înainte pe scurt."
     },
     {
       "number": 4,
-      "text": "prin care, atunci când citiți, puteți percepe înțelegerea mea în misterul lui Hristos,"
+      "text": "Citind aceasta, puteți înțelege priceperea mea în taina lui Hristos,"
     },
     {
       "number": 5,
-      "text": "care în alte generații nu a fost făcută cunoscută copiilor oamenilor, așa cum a fost descoperită acum sfinților săi apostoli și profeți în Duh,"
+      "text": "care în alte generații nu le-a fost făcută cunoscută fiilor oamenilor așa cum a fost descoperită acum sfinților Săi apostoli și profeți prin Duhul:"
     },
     {
       "number": 6,
-      "text": "că Neamurile sunt împreunăi împreună mădulare ale trupului părtași ai făgăduinței Lui în Hristos Isus prin Vestea Bună,"
+      "text": "că neamurile sunt împreună-moștenitoare, membre ale aceluiași trup și împreună-părtașe la promisiune în Hristos Isus, prin Evanghelie,"
     },
     {
       "number": 7,
-      "text": "al cărui slujitor am fost făcut, după darul harului lui Dumnezeu, care mi-a fost dat, după lucrarea puterii Lui."
+      "text": "al cărei slujitor am devenit potrivit darului harului lui Dumnezeu care mi-a fost dat după lucrarea puterii Sale."
     },
     {
       "number": 8,
-      "text": "Pentru mine, cel mai mic dintre toți sfinții, a fost acest har dat, pentru a propovădui Neamurilor bogățiile nepătrunse ale lui Hristos,"
+      "text": "Mie, celui mai neînsemnat dintre toți sfinții, mi-a fost dat harul acesta: să vestesc neamurilor bogăția de nepătruns a lui Hristos"
     },
     {
       "number": 9,
-      "text": "și ca să facă pe toți oamenii să vadă care este administrarea misterului care a fost ascuns de veacuri în Dumnezeu, care a creat toate lucrurile prin Isus Hristos,"
+      "text": "și să-i luminez pe toți cu privire la administrarea tainei ascunse de veacuri în Dumnezeu, Cel care a creat toate lucrurile,"
     },
     {
       "number": 10,
-      "text": "cu intenția ca acum, prin adunare, înțelepciunea felurită a lui Dumnezeu să fie făcută cunoscută principatelor și puterilor din locurile cerești,"
+      "text": "pentru ca acum, prin Biserică, înțelepciunea felurită a lui Dumnezeu să le fie făcută cunoscută domniilor și autorităților aflate în tărâmurile cerești,"
     },
     {
       "number": 11,
-      "text": "conform scopului etern pe care l-a realizat în Hristos Isus, Domnul nostru."
+      "text": "potrivit planului veșnic pe care l-a împlinit în Hristos Isus, Domnul nostru,"
     },
     {
       "number": 12,
-      "text": "În el avem îndrăzneală și acces la încredere prin credința noastră în el."
+      "text": "în care avem îndrăzneală și acces cu încredere, prin credința în El."
     },
     {
       "number": 13,
-      "text": "De aceea vă cer să nu vă pierdeți inima în necazurile mele pentru voi, care sunt slava voastră."
+      "text": "De aceea vă rog să nu vă descurajați din cauza necazurilor mele pentru voi; ele sunt slava voastră."
     },
     {
       "number": 14,
-      "text": "Din această cauză, îmi plec genunchii înaintea Tatălui Domnului nostru Isus Hristos,"
+      "text": "Din pricina aceasta îmi plec genunchii înaintea Tatălui,"
     },
     {
       "number": 15,
-      "text": "de la care fiecare familie din cer de pe pământ este numită,"
+      "text": "de la care își primește numele orice familie din cer și de pe pământ,"
     },
     {
       "number": 16,
-      "text": "ca să vă dea, după bogățiile slavei Lui, ca să fiți întăriți cu putere prin Duhul Lui, în persoana lăuntrică,"
+      "text": "ca, potrivit bogăției slavei Sale, să vă dea să fiți întăriți cu putere prin Duhul Său în omul lăuntric,"
     },
     {
       "number": 17,
-      "text": "pentru ca Hristos să locuiască în inimile voastre prin credință, pentru ca voi, fiind înrădăcinați întemei în iubire,"
+      "text": "astfel încât Hristos să locuiască prin credință în inimile voastre, iar voi, fiind înrădăcinați și întemeiați în dragoste,"
     },
     {
       "number": 18,
-      "text": "poate fi întărit pentru a înțelege cu toți sfinții care este lățimea și lungimea și înălțimea și adâncimea,"
+      "text": "să puteți înțelege împreună cu toți sfinții care sunt lățimea și lungimea, înălțimea și adâncimea,"
     },
     {
       "number": 19,
-      "text": "să cunoașteți dragostea lui Hristos, care întrece orice, ca să fiți plini de toată plinătatea lui Dumnezeu."
+      "text": "și să cunoașteți dragostea lui Hristos care întrece cunoașterea, ca să fiți umpluți până la toată plinătatea lui Dumnezeu."
     },
     {
       "number": 20,
-      "text": "Celui ce este în stare să facă din belșug mai presus de tot ce cerem sau gândim, după puterea care lucrează în noi,"
+      "text": "Iar Celui care poate să facă nespus mai mult decât tot ce cerem sau gândim, potrivit puterii care lucrează în noi,"
     },
     {
       "number": 21,
-      "text": "pentru El să fie slava în adunare și în Hristos Isus pentru toate generațiile, pentru totdeauna și pentru totdeauna. Amin."
+      "text": "a Lui să fie slava în Biserică și în Hristos Isus, în toate generațiile, în vecii vecilor. Amin."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 3,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "prin descoperire mi-a fost făcută cunoscută taina, după cum am scris mai înainte pe scurt.",
+      "alternatives": [
+        "3:3 κατὰ Holmes WHmarg  ] ὅτι κατὰ WH Treg NA28 RP / • ἐγνωρίσθη WH Treg NA28 ] ἐγνώρισέν RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 6,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "că neamurile sunt împreună-moștenitoare, membre ale aceluiași trup și împreună-părtașe la promisiune în Hristos Isus, prin Evanghelie,",
+      "alternatives": [
+        "6 ἐν Χριστῷ Ἰησοῦ WH Treg NA28 ] αὐτοῦ ἐν τῷ Χριστῷ RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 7,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "al cărei slujitor am devenit potrivit darului harului lui Dumnezeu care mi-a fost dat după lucrarea puterii Sale.",
+      "alternatives": [
+        "7 ἐγενήθην WH Treg NA28 ] ἐγενόμην RP / • τῆς δοθείσης WH Treg NA28 ] τὴν δοθεῖσάν RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 8,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "Mie, celui mai neînsemnat dintre toți sfinții, mi-a fost dat harul acesta: să vestesc neamurilor bogăția de nepătruns a lui Hristos",
+      "alternatives": [
+        "8 τοῖς WH Treg NA28 ] ἐν τοῖς RP / • τὸ ἀνεξιχνίαστον πλοῦτος WH Treg NA28 ] τὸν ἀνεξιχνίαστον πλοῦτον RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 9,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "și să-i luminez pe toți cu privire la administrarea tainei ascunse din veacuri în Dumnezeu, Cel care a creat toate lucrurile,",
+      "alternatives": [
+        "9 πάντας Treg NA28 RP ] – WH / • κτίσαντι WH Treg NA28 ] + διὰ Ἰησοῦ Χριστοῦ RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 11,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "potrivit planului veșnic pe care l-a împlinit în Hristos Isus, Domnul nostru,",
+      "alternatives": [
+        "11 τῷ WH Treg NA28 ] – RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 12,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "în care avem îndrăzneală și acces cu încredere, prin credința în El.",
+      "alternatives": [
+        "12 καὶ WH Treg NA28 ] + τὴν RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 13,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "De aceea vă rog să nu vă descurajați din cauza necazurilor mele pentru voi; ele sunt slava voastră.",
+      "alternatives": [
+        "13 ἐγκακεῖν WH Treg NA28 ] ἐκκακεῖν RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 14,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "Din pricina aceasta îmi plec genunchii înaintea Tatălui,",
+      "alternatives": [
+        "14 πατέρα WH Treg NA28 ] + τοῦ κυρίου ἡμῶν Ἰησοῦ Χριστοῦ RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 16,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "ca, potrivit bogăției slavei Sale, să vă dea să fiți întăriți cu putere prin Duhul Său în omul lăuntric,",
+      "alternatives": [
+        "16 δῷ WH Treg NA28 ] δῴη RP / • τὸ πλοῦτος WH Treg NA28 ] τὸν πλοῦτον RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 18,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "să puteți înțelege împreună cu toți sfinții care sunt lățimea și lungimea, înălțimea și adâncimea,",
+      "alternatives": [
+        "18 ὕψος καὶ βάθος WH Treg NA28 ] βάθος καὶ ὕψος RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 21,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "a Lui să fie slava în Biserică și în Hristos Isus, în toate generațiile, în vecii vecilor. Amin.",
+      "alternatives": [
+        "21 καὶ WH Treg NA28 ] – RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 9,
+      "term": "revizie finală: τοῦ ἀποκεκρυμμένου ἀπὸ τῶν αἰώνων",
+      "decision": "și să-i luminez pe toți cu privire la administrarea tainei ascunse de veacuri în Dumnezeu, Cel care a creat toate lucrurile,",
+      "reason": "Deși τοῦ ἀποκεκρυμμένου ἀπὸ τῶν αἰώνων exprimă o taină rămasă ascunsă de-a lungul veacurilor, tainei ascunse din veacuri estompează acest raport temporal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 10,
+      "term": "revizie finală: ἐν τοῖς ἐπουρανίοις",
+      "decision": "pentru ca acum, prin Biserică, înțelepciunea felurită a lui Dumnezeu să le fie făcută cunoscută domniilor și autorităților aflate în tărâmurile cerești,",
+      "reason": "Locativul ἐν τοῖς ἐπουρανίοις cere situarea autorităților în tărâmul ceresc, pe când din cele cerești introduce impropriu o relație de proveniență.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

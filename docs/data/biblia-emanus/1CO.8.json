@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparatul local; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 13,
       "reviewed": 13,
@@ -98,14 +96,13 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 13 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 13 versete din 1CO.8 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost corectate redarea lui παραστήσει din v. 8, construcțiile despre conștiință și formulele românești nefirești.",
+        "Ordinea și contrastele SBLGNT din v. 8 și v. 11 au fost păstrate fără a urma automat Textus Receptus."
       ]
     },
     "theologicalContext": {
@@ -123,29 +120,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 709,
-        "primary": 137,
-        "secondary": 24,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.41000612643816675,
-      "minimumScore": 0.5818865265537531
-    },
-    "textDigest": "sha256:47854b0f0f3fca27128be011ea3de21cdf750a01ca0ec87a6f95e51156318d09",
-    "contentDigest": "sha256:4e35272c5d038e6c10f19a4b6c4c419585090b04afc4e7bdbab043db92f1ff69"
+    "textDigest": "sha256:8fecf3fe42f66166f812e16044d3e7259ed71c389dde5118e9c5807210a5d97d",
+    "contentDigest": "sha256:4a002581d47c45ec097a306f36a8d0189bbf768f7b056c77c11e1c1e7b064b89",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Cu privire la cele jertfite idolilor, știm că toți avem cunoaștere. Cunoașterea umflă de mândrie, dar dragostea zidește."
+      "text": "Cu privire la cele jertfite idolilor, știm că toți avem cunoaștere. Cunoașterea îngâmfă, dar dragostea zidește."
     },
     {
       "number": 2,
@@ -157,7 +149,7 @@
     },
     {
       "number": 4,
-      "text": "Așadar, cu privire la mâncarea celor jertfite idolilor, știm că un idol nu este nimic în lume și că nu este niciun Dumnezeu decât unul singur."
+      "text": "Așadar, cu privire la mâncarea celor jertfite idolilor, știm că un idol nu este nimic în lume și că nu este niciun Dumnezeu decât Unul singur."
     },
     {
       "number": 5,
@@ -169,23 +161,23 @@
     },
     {
       "number": 7,
-      "text": "Totuși, nu în toți este această cunoaștere; unii, din obișnuința lor de până acum cu idolul, mănâncă din ea ca jertfită idolului, iar conștiința lor, fiind slabă, se întinează."
+      "text": "Totuși, nu toți au această cunoaștere; unii, din obișnuința lor de până acum cu idolul, mănâncă asemenea hrană ca fiind jertfită idolului, iar conștiința lor, fiind slabă, se întinează."
     },
     {
       "number": 8,
-      "text": "Dar hrana nu ne va lăuda lui Dumnezeu, căci nici dacă nu mâncăm nu suntem mai răi, nici dacă mâncăm nu suntem mai buni."
+      "text": "Dar hrana nu ne va apropia de Dumnezeu; căci nici dacă nu mâncăm nu ducem lipsă, nici dacă mâncăm nu avem un câștig."
     },
     {
       "number": 9,
-      "text": "Dar vedeți ca nu cumva această libertate a voastră să devină piatră de poticnire pentru cei slabi."
+      "text": "Dar aveți grijă ca nu cumva acest drept al vostru să devină o piatră de poticnire pentru cei slabi."
     },
     {
       "number": 10,
-      "text": "Căci dacă te vede cineva, pe tine care ai cunoaștere, stând la masă într-un templu de idoli, nu va fi încurajată conștiința lui, fiind slabă, să mănânce cele jertfite idolilor?"
+      "text": "Căci, dacă cineva te vede pe tine, care ai cunoaștere, așezat la masă într-un templu al idolilor, oare conștiința lui, dacă el este slab, nu va fi încurajată să mănânce din cele jertfite idolilor?"
     },
     {
       "number": 11,
-      "text": "Și fratele cel slab, pentru care a murit Hristos, piere prin cunoașterea ta."
+      "text": "Căci prin cunoașterea ta piere cel slab, fratele pentru care a murit Hristos."
     },
     {
       "number": 12,
@@ -193,10 +185,62 @@
     },
     {
       "number": 13,
-      "text": "De aceea, dacă mâncarea îl face pe fratele meu să se poticnească, nu voi mânca în veac carne, ca să nu-l fac pe fratele meu să se poticnească."
+      "text": "De aceea, dacă mâncarea îl face pe fratele meu să se poticnească, nu voi mânca niciodată carne, ca să nu-l fac pe fratele meu să se poticnească."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 7,
+      "term": "συνηθείᾳ ... τοῦ εἰδώλου",
+      "decision": "«din vechea lor obișnuință cu idolul»",
+      "reason": "SBLGNT are συνηθείᾳ («obișnuință»), nu συνειδήσει («conștiință») din RP; conștiința apare mai târziu în verset.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Distincția dintre obiceiul anterior și conștiința slabă este păstrată.",
+      "alternatives": [
+        "«prin conștiința lor de până acum cu privire la idol»"
+      ]
+    },
+    {
+      "verse": 8,
+      "term": "βρῶμα ... παραστήσει τῷ θεῷ",
+      "decision": "«hrana nu ne va apropia de Dumnezeu»",
+      "reason": "Verbul exprimă prezentarea/apropierea înaintea lui Dumnezeu; contrastele despre lipsă și câștig urmează ordinea SBLGNT.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Se păstrează sensul relațional fără a introduce o evaluare morală a hranei.",
+      "alternatives": [
+        "«hrana nu ne va înfățișa înaintea lui Dumnezeu»"
+      ]
+    },
+    {
+      "verse": 7,
+      "term": "revizie finală: ἕως ἄρτι τοῦ εἰδώλου",
+      "decision": "Totuși, nu toți au această cunoaștere; unii, din obișnuința lor de până acum cu idolul, mănâncă asemenea hrană ca fiind jertfită idolului, iar conștiința lor, fiind slabă, se întinează.",
+      "reason": "Adjectivul „vechea” nu redă complet reperul ἕως ἄρτι, care precizează că obișnuința față de idol a continuat până în momentul prezent. Prin din vechea lor obișnuință cu idolul se păstrează ideea deprinderii din ἕως ἄρτι τοῦ εἰδώλου, însă se pierde continuitatea temporală explicită.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 10,
+      "term": "revizie finală: οἰκοδομηθήσεται εἰς τὸ τὰ εἰδωλόθυτα ἐσθίειν",
+      "decision": "Căci, dacă cineva te vede pe tine, care ai cunoaștere, așezat la masă într-un templu al idolilor, oare conștiința lui, fiind slabă, nu va fi încurajată să mănânce din cele jertfite idolilor?",
+      "reason": "Redarea literală „conștiința… zidită să mănânce” este nefirească în română și nu comunică suficient sensul contextual al lui οἰκοδομηθήσεται: conștiința slabă capătă imbold sau curaj să mănânce. Metafora contextuală οἰκοδομηθήσεται εἰς τὸ τὰ εἰδωλόθυτα ἐσθίειν cere ideea de încurajare, pe care zidită să mănânce cele jertfite idolilor o obscurizează.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 10,
+      "term": "revizie finală: αὐτοῦ ἀσθενοῦς ὄντος",
+      "decision": "Căci, dacă cineva te vede pe tine, care ai cunoaștere, așezat la masă într-un templu al idolilor, oare conștiința lui, dacă el este slab, nu va fi încurajată să mănânce din cele jertfite idolilor?",
+      "reason": "Acordul feminin din „fiind slabă” leagă slăbiciunea de „conștiința”, deși genitivul masculin αὐτοῦ ἀσθενοῦς ὄντος îl caracterizează pe omul căruia îi aparține conștiința. În αὐτοῦ ἀσθενοῦς ὄντος slăbiciunea îi aparține omului, pe când conștiința lui, fiind slabă schimbă referentul sintactic și o atribuie conștiinței.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

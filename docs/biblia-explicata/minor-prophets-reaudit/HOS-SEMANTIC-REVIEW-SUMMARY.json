@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "bookId": "HOS",
+  "bookName": "Osea",
+  "status": "fresh-semantic-review-complete",
+  "sourcePacket": "docs/biblia-explicata/minor-prophets-reaudit/HOS-FRESH-SOURCE-REAUDIT.json",
+  "versificationApproval": "docs/biblia-explicata/minor-prophets-reaudit/HOS-VERSIFICATION-APPROVAL.json",
+  "reviewDirectory": "docs/biblia-explicata/minor-prophets-reaudit/HOS/reviews",
+  "totals": {
+    "chapters": 14,
+    "verses": 197,
+    "approvedAsIs": 81,
+    "correctedVerses": 116,
+    "severity": {
+      "critical": 15,
+      "material": 60,
+      "minor": 41
+    }
+  },
+  "reviewMaterialization": {
+    "module": "packages/shared/src/bible/generated/vtCanonicalText/oseaReviewedText.ts",
+    "symbol": "OSEA_REVIEWED_TEXT",
+    "materializedFromFreshReview": true,
+    "purpose": "audit evidence; runtime source of truth is the canonical Biblia Emanus corpus"
+  },
+  "canonicalPublication": {
+    "chapterPattern": "docs/data/biblia-emanus/HOS.{1..14}.json",
+    "snapshot": "docs/data/biblia-emanus/sources/ot-hosea-2026-08-08-usfm.zip",
+    "snapshotSha256": "71112c63c27319b2d6fdb3399ce26cc4ec82f471447db8972775a60786cf9647",
+    "textStage": "biblia-emanus",
+    "translationLabel": "Biblia Emanus",
+    "published": true,
+    "public": true,
+    "canonicalGate": "passed",
+    "fullCorpusGate": "passed",
+    "readerIntegrationGate": "passed"
+  },
+  "promotion": {
+    "candidateReady": true,
+    "promotionEligible": true,
+    "promotionStatus": "promoted-to-biblia-emanus",
+    "reason": "Fresh-source semantic review, canonical source/benchmark snapshot, HOS publication gate, full Biblia Emanus corpus gate and VT reader integration gate all passed."
+  },
+  "blockingCriticalRefsResolved": [
+    "2:12",
+    "6:5",
+    "8:10",
+    "9:8",
+    "9:12",
+    "9:13",
+    "10:12",
+    "10:13",
+    "12:6",
+    "12:11",
+    "13:1",
+    "13:14",
+    "14:2",
+    "14:3",
+    "14:8"
+  ]
+}

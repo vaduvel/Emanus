@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,18 +71,18 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparatul local; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -98,7 +101,7 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 21 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 21 de versete din 1CO.4 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
@@ -123,37 +126,27 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 709,
-        "primary": 137,
-        "secondary": 24,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.41000612643816675,
-      "minimumScore": 0.5818865265537531
-    },
-    "textDigest": "sha256:bdfbed5b2e95c9b58bba7c753e5a6f8f209e4b6fd18d55b847a1bbfdf86761bb",
-    "contentDigest": "sha256:6968f93e9e6c27ebff446e3ba868c84fb5353c69fbca87a92549c8cd1875950e"
+    "textDigest": "sha256:5be49a927d5b31577953275a33d7a350f4d6eb9053c79c689eed1465a57f1c9a",
+    "contentDigest": "sha256:b089892bd4abbd4325254eb0e0f43514f9629c80405c2834d1336491cf1007e1"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Așa să ne socotească omul: ca slujitori ai lui Hristos și administratori ai tainelor lui Dumnezeu."
+      "text": "Așa să ne socotească oricine: slujitori ai lui Hristos și administratori ai tainelor lui Dumnezeu."
     },
     {
       "number": 2,
-      "text": "În cazul acesta, ceea ce se cere de la administratori este ca fiecare să fie găsit credincios."
+      "text": "Aici, de altfel, ceea ce se cere de la administratori este ca fiecare să fie găsit credincios."
     },
     {
       "number": 3,
-      "text": "Dar cu mine este un lucru foarte mic că ar trebui să fiu judecat de tine, sau de un tribunal uman. Da, eu nu mă judec chiar și pe mine."
+      "text": "Dar pentru mine este un lucru foarte mic să fiu judecat de voi sau de un tribunal omenesc; ba chiar nici eu nu mă judec pe mine însumi."
     },
     {
       "number": 4,
@@ -165,27 +158,27 @@
     },
     {
       "number": 6,
-      "text": "Aceste lucruri, fraților, le-am aplicat la mine și la Apolos, pentru voi, ca prin noi să învățați să nu treceți peste ce este scris, ca să nu vă umflați de mândrie, favorizând unul împotriva altuia."
+      "text": "Aceste lucruri, fraților, le-am aplicat în chip figurat la mine și la Apolos, de dragul vostru, ca să învățați prin noi să nu treceți dincolo de ceea ce este scris, iar niciunul dintre voi să nu se îngâmfe susținându-l pe unul împotriva celuilalt."
     },
     {
       "number": 7,
-      "text": "Căci cine te face deosebit? Și ce ai pe care să nu-l fi primit? Iar dacă l-ai primit, de ce te lauzi ca și cum nu l-ai fi primit?"
+      "text": "Căci cine te deosebește? Ce lucru ai fără să-l fi primit? Iar dacă l-ai primit, de ce te lauzi de parcă nu l-ai fi primit?"
     },
     {
       "number": 8,
-      "text": "Deja sunteți sătui! Deja v-ați îmbogățit! Ați ajuns să domniți fără noi! Și măcar de ați domni cu adevărat, ca și noi să domnim împreună cu voi!"
+      "text": "Deja sunteți sătui! Deja v-ați îmbogățit! Ați ajuns să domniți fără noi! Și măcar de ați domni cu adevărat, ca să domnim și noi împreună cu voi!"
     },
     {
       "number": 9,
-      "text": "Căci socotesc că Dumnezeu ne-a arătat pe noi, apostolii, cei din urmă, ca pe niște oameni hotărâți la moarte, fiindcă am ajuns un spectacol pentru lume, și pentru îngeri, și pentru oameni."
+      "text": "Căci socotesc că Dumnezeu ne-a arătat pe noi, apostolii, cei din urmă, ca pe niște condamnați la moarte, fiindcă am ajuns un spectacol pentru lume, pentru îngeri și pentru oameni."
     },
     {
       "number": 10,
-      "text": "Noi suntem nebuni pentru Hristos, dar voi sunteți înțelepți în Hristos; noi suntem slabi, dar voi sunteți tari; voi sunteți onorați, dar noi suntem disprețuiți."
+      "text": "Noi suntem nebuni din pricina lui Hristos, dar voi sunteți înțelepți în Hristos; noi suntem slabi, dar voi sunteți tari; voi sunteți onorați, dar noi suntem disprețuiți."
     },
     {
       "number": 11,
-      "text": "Până chiar în ceasul acesta flămânzim și însetăm, suntem îmbrăcați prost, suntem loviți cu pumnii și rătăcim fără locuință,"
+      "text": "Până în ceasul acesta flămânzim și însetăm, suntem lipsiți de haine, suntem bătuți și rătăcim fără locuință,"
     },
     {
       "number": 12,
@@ -193,15 +186,15 @@
     },
     {
       "number": 13,
-      "text": "când suntem defăimați, răspundem blând. Am ajuns ca gunoiul lumii, ca lepădătura tuturor, până acum."
+      "text": "când suntem defăimați, implorăm. Am ajuns ca gunoiul lumii, ca lepădătura tuturor, până acum."
     },
     {
       "number": 14,
-      "text": "Nu vă scriu acestea ca să vă fac de rușine, ci ca să vă avertizez, ca pe copiii mei iubiți."
+      "text": "Nu vă scriu acestea ca să vă fac de rușine, ci ca să vă sfătuiesc, ca pe copiii mei iubiți."
     },
     {
       "number": 15,
-      "text": "Căci, chiar dacă ați avea zece mii de pedagogi în Hristos, totuși n-aveți mulți părinți; fiindcă eu v-am născut în Hristos Isus prin Evanghelie."
+      "text": "Căci, chiar dacă ați avea zece mii de îndrumători în Hristos, totuși n-aveți mulți părinți; fiindcă eu v-am născut în Hristos Isus prin Evanghelie."
     },
     {
       "number": 16,
@@ -209,7 +202,7 @@
     },
     {
       "number": 17,
-      "text": "De aceea l-am trimis la voi pe Timotei, care este copilul meu iubit și credincios în Domnul, și el vă va aminti căile mele în Hristos, așa cum învăț pretutindeni, în fiecare biserică."
+      "text": "De aceea l-am trimis la voi pe Timotei, care este copilul meu iubit și credincios în Domnul; el vă va aminti căile mele în Hristos Isus, așa cum dau învățătură pretutindeni, în fiecare biserică."
     },
     {
       "number": 18,
@@ -221,14 +214,120 @@
     },
     {
       "number": 20,
-      "text": "Căci Regatul lui Dumnezeu nu este în cuvânt, ci în putere."
+      "text": "Căci Împărăția lui Dumnezeu nu este în cuvânt, ci în putere."
     },
     {
       "number": 21,
       "text": "Ce voiți? Să vin la voi cu nuiaua sau cu dragoste și cu un duh de blândețe?"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 2,
+      "term": "ὧδε",
+      "decision": "Aici, de altfel",
+      "reason": "SBLGNT/WH/Treg/NA28 citesc ὧδε; formularea RP Ὃ δὲ nu este urmată.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Adverbul este redat natural în română.",
+      "alternatives": [
+        "În plus"
+      ]
+    },
+    {
+      "verse": 6,
+      "term": "ἃ γέγραπται",
+      "decision": "ce este scris",
+      "reason": "SBLGNT are pluralul ἃ și nu adaugă verbul φρονεῖν din RP.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Nu se extinde porunca dincolo de textul critic.",
+      "alternatives": [
+        "să gândiți ceea ce este scris"
+      ]
+    },
+    {
+      "verse": 13,
+      "term": "δυσφημούμενοι",
+      "decision": "fiind defăimați, implorăm",
+      "reason": "SBLGNT/NA28 au δυσφημούμενοι; lectura βλασφημούμενοι din Treg/RP este variantă secundară. Verbul παρακαλοῦμεν înseamnă „implorăm/îndemnăm”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sensul de defăimare și răspuns implorator este păstrat.",
+      "alternatives": [
+        "fiind huliți, răspundem blând"
+      ]
+    },
+    {
+      "verse": 14,
+      "term": "νουθετῶν",
+      "decision": "să vă sfătuiesc",
+      "reason": "Forma participială WH/NA28 nu este redusă la imperativul νουθετῶ din Treg/RP.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Funcția de îndrumare părintească este redată fără ton de rușinare.",
+      "alternatives": [
+        "să vă îndemn"
+      ]
+    },
+    {
+      "verse": 17,
+      "term": "μου τέκνον ... Ἰησοῦ",
+      "decision": "copilul meu ... în Hristos Isus",
+      "reason": "SBLGNT păstrează ordinea μου τέκνον și mențiunea Ἰησοῦ; adaosul/omisiunea variantelor nu modifică relația părintească.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul principal este redat complet.",
+      "alternatives": [
+        "copilul meu în Hristos"
+      ]
+    },
+    {
+      "verse": 1,
+      "term": "revizie finală: λογιζέσθω ἄνθρωπος",
+      "decision": "Așa să ne socotească oricine: slujitori ai lui Hristos și administratori ai tainelor lui Dumnezeu.",
+      "reason": "Singularul articulat „omul” redă nefiresc subiectul generic ἄνθρωπος și poate fi înțeles ca referire la o persoană determinată. Deși λογιζέσθω ἄνθρωπος cere ca apostolii să fie considerați astfel de oricine, Așa să ne considere omul nu exprimă natural valoarea generică.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 6,
+      "term": "revizie finală: ἵνα μὴ εἷς ὑπὲρ τοῦ ἑνὸς φυσιοῦσθε κατὰ τοῦ ἑτέρου",
+      "decision": "Aceste lucruri, fraților, le-am aplicat în chip figurat la mine și la Apolos, de dragul vostru, ca să învățați prin noi să nu treceți dincolo de ceea ce este scris, iar niciunul dintre voi să nu se îngâmfe susținându-l pe unul împotriva celuilalt.",
+      "reason": "Construcția „favorizând unul împotriva altuia” este nefirească și nu identifică limpede persoana susținută în opoziție cu cealaltă. Relația partizană exprimată de ἵνα μὴ εἷς ὑπὲρ τοῦ ἑνὸς φυσιοῦσθε κατὰ τοῦ ἑτέρου devine neclară în favorizând unul împotriva altuia.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 7,
+      "term": "revizie finală: τί δὲ ἔχεις ὃ οὐκ ἔλαβες",
+      "decision": "Căci cine te deosebește? Ce lucru ai fără să-l fi primit? Iar dacă l-ai primit, de ce te lauzi de parcă nu l-ai fi primit?",
+      "reason": "Îmbinarea „ce ai pe care” este sintactic stângace, iar cliticul masculin „-l” nu are un antecedent nominal exprimat clar. Sensul lui τί δὲ ἔχεις ὃ οὐκ ἔλαβες se recunoaște în ce ai pe care să nu-l fi primit, însă raportul pronominal românesc este formulat defectuos.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 8,
+      "term": "revizie finală: καὶ ὄφελόν γε ἐβασιλεύσατε",
+      "decision": "Deja sunteți sătui! Deja v-ați îmbogățit! Ați ajuns să domniți fără noi! Și măcar de ați domni cu adevărat, ca să domnim și noi împreună cu voi!",
+      "reason": "Lipsește particula „de” cerută de construcția românească „măcar de ați…”, astfel încât dorința exprimată de ὄφελον este formulată defectuos. Valoarea de dorință din καὶ ὄφελόν γε ἐβασιλεύσατε nu este marcată gramatical complet în Și măcar ați domni cu adevărat.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 17,
+      "term": "revizie finală: Ἰησοῦ",
+      "decision": "De aceea l-am trimis la voi pe Timotei, care este copilul meu iubit și credincios în Domnul; el vă va aminti căile mele în Hristos Isus, așa cum dau învățătură pretutindeni, în fiecare biserică.",
+      "reason": "Numele Ἰησοῦ este omis după „Hristos”, iar verbul „învăț” folosit fără obiect poate fi înțeles în româna actuală ca „îmi însușesc cunoștințe”, nu ca „dau învățătură”. Deși căile mele în Hristos transmite ideea principală, absența corespondentului pentru Ἰησοῦ face redarea textual incompletă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

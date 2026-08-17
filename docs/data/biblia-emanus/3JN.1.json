@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -69,25 +72,21 @@
     },
     "observations": [
       "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate.",
+      "Câmpurile consultedInBatch disting etaloanele efectiv confruntate în acest lot de cele configurate în schema corpusului; NTR nu a fost consultată."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 14,
       "reviewed": 14,
@@ -98,7 +97,7 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 14 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar sursele auxiliare declarate în jurnalul lotului au fost consultate pentru sens și română. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
@@ -139,76 +138,126 @@
       "minimumSemantic": 0.5467158590753175,
       "minimumScore": 0.5694259949565413
     },
-    "textDigest": "sha256:e67c053bb843d648035bba8a23de6127a9279d611c303c544a99d884b5d8fe79",
-    "contentDigest": "sha256:4de1a770e1659defbe304a6ab3a8cf56b2121e41dc65a27b11f5c10e25bd4e69"
+    "textDigest": "sha256:2a2322e659320ef6923e99b5cb0b40bf3ebf504260955a58a8571d65c98f8435",
+    "contentDigest": "sha256:ea13e42ed3cda6df036a47997ee1423a767edde81f241a33e1c5e323d7e85d19",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Bătrânul către Gaius cel iubit, pe care-l iubesc în adevăr."
+      "text": "Bătrânul, către preaiubitul Gaius, pe care îl iubesc în adevăr."
     },
     {
       "number": 2,
-      "text": "Iubito, mă rog ca tu să prosperi în toate lucrurile și să fii sănătos, așa cum sufletul tău prosperă."
+      "text": "Preaiubitule, mă rog ca în toate să-ți meargă bine și să fii sănătos, așa cum îi merge bine sufletului tău."
     },
     {
       "number": 3,
-      "text": "Căci m-am bucurat foarte mult când au venit frații și au mărturisit despre adevărul vostru, cum umblați voi în adevăr."
+      "text": "Căci m-am bucurat foarte mult când au venit frați și au mărturisit despre adevărul tău, așa cum tu umbli în adevăr."
     },
     {
       "number": 4,
-      "text": "Nu am o bucurie mai mare decât aceasta: să aud despre copiii mei umblînd în adevăr."
+      "text": "Nu am bucurie mai mare decât aceasta: să aud că ai mei copii umblă în adevăr."
     },
     {
       "number": 5,
-      "text": "Iubito, faci o lucrare fidelă în tot ceea ce faci pentru cei care sunt frați și străini."
+      "text": "Preaiubitule, faci cu credincioșie tot ceea ce lucrezi pentru frați, chiar dacă sunt străini."
     },
     {
       "number": 6,
-      "text": "Ei au mărturisit despre dragostea voastră înaintea adunării, și veți face bine să-i trimiteți în călătorie pe un drum vrednic de Dumnezeu."
+      "text": "Ei au dat mărturie înaintea adunării despre dragostea ta. Vei face bine să-i trimiți mai departe pe drumul lor într-un mod vrednic de Dumnezeu,"
     },
     {
       "number": 7,
-      "text": "pentru că din pricina Numelui au ieșit, neluând nimic de la neamuri."
+      "text": "căci au plecat pentru Nume, fără să primească nimic de la neamuri."
     },
     {
       "number": 8,
-      "text": "Prin urmare, ar trebui să primim astfel de oameni, ca să putem fi împreună lucrători pentru adevăr."
+      "text": "Noi, așadar, suntem datori să primim astfel de oameni, ca să devenim împreună-lucrători pentru adevăr."
     },
     {
       "number": 9,
-      "text": "Am scris adunării, dar Diotref, căruia îi place să fie primul printre ei, nu acceptă ceea ce spunem."
+      "text": "Am scris ceva adunării, dar Diotref, căruia îi place să fie cel dintâi între ei, nu ne primește."
     },
     {
       "number": 10,
-      "text": "De aceea, dacă voi veni, voi atrage atenția asupra faptelor lui pe care le face, acuzându-ne pe nedrept cu cuvinte rele. Nu mulțumit cu aceasta, el nu primește pe frații însuși, și pe cei care ar vrea, el interzice și aruncă afară din adunare."
+      "text": "De aceea, dacă voi veni, voi aduce în atenție faptele pe care le face, bârfindu-ne cu vorbe rele. Și, nemulțumit cu acestea, nici el însuși nu-i primește pe frați, îi împiedică pe cei care vor să-i primească și îi dă afară din adunare."
     },
     {
       "number": 11,
-      "text": "Preaiubiților, nu imitați ceea ce este rău, ci ceea ce este bun. Cel ce face binele este de la Dumnezeu. Cel ce face răul nu l-a văzut pe Dumnezeu."
+      "text": "Preaiubitule, nu imita răul, ci binele. Cel care face binele este din Dumnezeu; cel care face răul nu L-a văzut pe Dumnezeu."
     },
     {
       "number": 12,
-      "text": "Demetrius are mărturia tuturor și a adevărului însuși; da, și noi mărturisim, și știți că mărturia noastră este adevărată."
+      "text": "Dimitrie are mărturie din partea tuturor și din partea adevărului însuși. Iar noi, de asemenea, mărturisim; și știi că mărturia noastră este adevărată."
     },
     {
       "number": 13,
-      "text": "Am avut multe lucruri să vă scriu, dar nu sunt dispus să vă scriu cu cerneală și stilou;"
+      "text": "Aveam multe să-ți scriu, dar nu vreau să-ți scriu cu cerneală și condei;"
     },
     {
       "number": 14,
-      "text": "Dar sper să te văd în curând, apoi vom vorbi față în față, pacea fie cu tine, prietenii te salută, salută prietenii după nume."
+      "text": "dar sper să te văd curând și vom vorbi unul cu altul, față în față. Pace ție! Prietenii te salută. Salută-i pe prieteni, pe fiecare pe nume."
     }
   ],
   "editorialNotes": [
     {
       "verse": 14,
-      "term": "variantă textuală sau lexicală verificată",
-      "decision": "Textul principal păstrează lectura SBLGNT 1.2 și formularea românească validată prin sursele fixate.",
-      "reason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal.",
+      "term": "versificație combinată",
+      "decision": "Versetul BE 3 Ioan 1:14 redă împreună 3 Ioan 1:14–15 din SBLGNT, conform regulii de versificație fixate SBL-3JN-1-14.",
+      "reason": "Textul românesc păstrează atât speranța de a vorbi față către față, cât și salutul final din versetul următor al sursei SBLGNT.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
+      "resolutionReason": "Maparea 1:14–15 → BE 1:14 este declarată în source-lock; niciun segment din cele două versete SBLGNT nu este omis."
+    },
+    {
+      "verse": 7,
+      "term": "variantă textuală SBLGNT/TR: ὀνόματος / ὀνόματος αὐτοῦ",
+      "decision": "„au plecat pentru Nume”",
+      "alternatives": [
+        "TR-3JN din snapshot adaugă αὐτοῦ: „pentru Numele Lui”."
+      ],
+      "reason": "SBLGNT este lectura principală fixată; româna păstrează formularea fără pronumele adăugat de TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-3JN și TR-3JN au fost confruntate direct; textul principal urmează SBLGNT."
+    },
+    {
+      "verse": 9,
+      "term": "variantă textuală SBLGNT/TR: ἔγραψά τι / ἔγραψα",
+      "decision": "„Am scris ceva adunării”",
+      "alternatives": [
+        "TR-3JN din snapshot nu are τι: „Am scris adunării”."
+      ],
+      "reason": "Particula indefinită τι din SBLGNT este redată explicit, fără completare interpretativă despre conținutul scrisorii.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-3JN și TR-3JN au fost confruntate direct; textul principal păstrează lectura SBLGNT."
+    },
+    {
+      "verse": 12,
+      "term": "variantă textuală SBLGNT/TR: οἶδας / οἴδατε",
+      "decision": "„știi că mărturia noastră este adevărată”",
+      "alternatives": [
+        "TR-3JN din snapshot are pluralul: „știți”."
+      ],
+      "reason": "SBLGNT se adresează aici singularului Gaius; româna păstrează persoana a doua singular.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-3JN și TR-3JN au fost confruntate direct; textul principal urmează singularul SBLGNT."
+    },
+    {
+      "verse": 14,
+      "term": "revizie finală: στόμα πρὸς στόμα λαλήσομεν ... ἀσπάζου τοὺς φίλους κατʼ ὄνομα",
+      "decision": "dar sper să te văd curând și vom vorbi unul cu altul, față în față. Pace ție! Prietenii te salută. Salută-i pe prieteni, pe fiecare pe nume.",
+      "reason": "Româna redă conversația directă și valoarea distributivă a salutului, fără calcul neidiomatic «față către față».",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
     }
   ],
   "referenceNotes": [],

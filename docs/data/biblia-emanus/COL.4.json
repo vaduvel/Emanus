@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,22 @@
       "meaning": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele consultate în lot.",
+      "Textul a fost redactat prin revizie directă din SBLGNT; WEBP și etaloanele românești au fost consultate auxiliar, fără stocarea unei traduceri românești protejate.",
+      "Câmpurile consultedInBatch disting etaloanele efectiv confruntate în acest lot de cele configurate în schema corpusului; NTR nu a fost consultată."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 18,
       "reviewed": 18,
@@ -98,7 +97,7 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 18 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
@@ -123,24 +122,19 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare prin revizie directă din SBLGNT, cu WEBP și etaloanele românești numai ca verificare auxiliară; fără copierea unei traduceri românești protejate"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 162,
-        "primary": 138,
-        "secondary": 35,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.4993764885473809,
-      "minimumScore": 0.5987788757926972
-    },
-    "textDigest": "sha256:749a6eab9ee18d46b49b85f7529e3ea54ede7723ccaab4b7645f0414e73a946e",
-    "contentDigest": "sha256:1560059d4397f6b527701f8ce2769d3a62432a011e5d1ffd96bb3204d814d84a"
+    "textDigest": "sha256:09bf5dae2986db50e77b048d32f209f19c08b23dd33ea803b1e7938f360dc28d",
+    "contentDigest": "sha256:d525bbb9aa428508d8b513cae3abf47446442ed56d631dee53643e4d30cf7784",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
@@ -149,109 +143,154 @@
     },
     {
       "number": 2,
-      "text": "Continuați cu stăruință în rugăciune, privind-o cu mulțumire,"
+      "text": "Stăruiți în rugăciune, veghind în ea cu mulțumire,"
     },
     {
       "number": 3,
-      "text": "rugându-vă în același timp și pentru noi, ca Dumnezeu să ne deschidă o ușă pentru cuvânt, ca să vorbim misterul lui Hristos, pentru care sunt și legat,"
+      "text": "rugându-vă totodată și pentru noi, ca Dumnezeu să ne deschidă o ușă pentru cuvânt, ca să vestim taina lui Hristos, pentru care sunt și în lanțuri,"
     },
     {
       "number": 4,
-      "text": "ca s-o pot dezvălui așa cum ar trebui să vorbesc."
+      "text": "ca să o fac cunoscută așa cum trebuie să vorbesc despre ea."
     },
     {
       "number": 5,
-      "text": "Umblați în înțelepciune față de cei de afară, răscumpărând timpul."
+      "text": "Purtați-vă cu înțelepciune față de cei din afară, valorificând timpul."
     },
     {
       "number": 6,
-      "text": "Vorbirea voastră să fie întotdeauna cu har, dreasă cu sare, ca să știți cum trebuie să răspundeți fiecăruia."
+      "text": "Vorbirea voastră să fie întotdeauna plină de har, asezonată cu sare, ca să știți cum trebuie să răspundeți fiecăruia."
     },
     {
       "number": 7,
-      "text": "Toate cele privitoare la mine vi le va face cunoscute Tihic, iubitul frate, slujitorul credincios și împreună-rob în Domnul,"
+      "text": "Tot ce ține de mine vă va face cunoscut Tihic, fratele iubit, slujitorul credincios și rob împreună cu mine în Domnul,"
     },
     {
       "number": 8,
-      "text": "Îl trimit la voi pentru acest scop, ca să vă cunoască circumstanțele și să vă mângâie inimile,"
+      "text": "L-am trimis la voi tocmai pentru aceasta, ca să aflați ce se petrece cu noi și ca el să vă încurajeze inimile,"
     },
     {
       "number": 9,
-      "text": "împreună cu Onesim, fratele credincios și iubit, care este dintre ai voștri. Ei vă vor face cunoscut tot ce este aici."
+      "text": "împreună cu Onesim, fratele credincios și iubit, care este dintre voi. Ei vă vor face cunoscut tot ce se întâmplă aici."
     },
     {
       "number": 10,
-      "text": "Vă salută Aristarh, împreună-prizonierul meu, și Marcu, vărul lui Barnaba, cu privire la care ați primit porunci: dacă vine la voi, primiți-l,"
+      "text": "Vă salută Aristarh, tovarășul meu de închisoare, precum și Marcu, vărul lui Barnaba (despre care ați primit instrucțiuni: dacă vine la voi, primiți-l),"
     },
     {
       "number": 11,
-      "text": "și Isus, cel numit Iustus. Aceștia sunt singurii dintre cei tăiați împrejur care sunt împreună-lucrători pentru împărăția lui Dumnezeu; ei mi-au fost o mângâiere."
+      "text": "și Isus, numit Iustus. Aceștia sunt singurii dintre cei circumciși care sunt colaboratori pentru Împărăția lui Dumnezeu; ei mi-au fost o mângâiere."
     },
     {
       "number": 12,
-      "text": "Vă salută Epafra, care este dintre ai voștri, rob al lui Hristos, luptându-se totdeauna pentru voi în rugăciuni, ca să stați desăvârșiți și pe deplin încredințați în toată voia lui Dumnezeu."
+      "text": "Vă salută Epafra, unul dintre voi, rob al lui Hristos, care luptă mereu pentru voi în rugăciuni, ca să stați desăvârșiți și pe deplin încredințați în toată voia lui Dumnezeu."
     },
     {
       "number": 13,
-      "text": "Căci îi dau mărturie că are multă osteneală pentru voi, pentru cei din Laodiceea și pentru cei din Ierapole."
+      "text": "Căci depun mărturie despre el că se ostenește mult pentru voi, pentru cei din Laodiceea și pentru cei din Ierapole."
     },
     {
       "number": 14,
-      "text": "Vă salută Luca, doctorul iubit, și Dima."
+      "text": "Vă salută Luca, medicul iubit, și Dima."
     },
     {
       "number": 15,
-      "text": "Salutați-i pe frații care se află în Laodiceea, împreună cu nimfa și adunarea din casa lui."
+      "text": "Salutați-i pe frații din Laodiceea, pe Nimfa și adunarea din casa ei."
     },
     {
       "number": 16,
-      "text": "Și când epistola aceasta va fi citită între voi, faceți să fie citită și în biserica laodiceenilor, iar voi să citiți și epistola din Laodiceea."
+      "text": "După ce scrisoarea aceasta va fi citită la voi, faceți să fie citită și în adunarea laodiceenilor; iar voi să citiți și scrisoarea din Laodiceea."
     },
     {
       "number": 17,
-      "text": "Și spuneți-i lui Arhip: „Vezi slujirea pe care ai primit-o în Domnul, ca s-o împlinești.”"
+      "text": "Spuneți-i lui Arhip: „Ia seama la slujirea pe care ai primit-o în Domnul, ca s-o împlinești.”"
     },
     {
       "number": 18,
-      "text": "Salutarea este cu mâna mea, a lui Pavel. Amintiți-vă de lanțurile mele. Harul să fie cu voi."
+      "text": "Eu, Pavel, scriu această salutare cu mâna mea. Amintiți-vă de lanțurile mele. Harul să fie cu voi."
     }
   ],
   "editorialNotes": [
     {
-      "verse": 8,
-      "term": "γνῶτε τὰ περὶ ἡμῶν / γνῷ τὰ περὶ ὑμῶν",
-      "decision": "Textul principal urmează lectura SBL: „ca să aflați cele despre noi”.",
-      "reason": "SBL face din destinatari cei care află veștile despre Pavel și colaboratorii lui, în timp ce TR spune că Tihic află veștile despre coloseni.",
+      "verse": 1,
+      "term": "variantă textuală SBLGNT/TR: οὐρανῷ / οὐρανοῖς",
+      "decision": "„în cer”",
+      "alternatives": [
+        "TR-COL din snapshot are pluralul „în ceruri”."
+      ],
+      "reason": "SBLGNT are singularul οὐρανῷ; româna păstrează singularul fără schimbarea afirmației.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Direcția informației a fost păstrată conform lecturii SBL."
+      "resolutionReason": "SBLGNT-COL, aparatul și TR-COL au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 8,
+      "term": "variantă textuală SBLGNT/TR: γνῶτε τὰ περὶ ἡμῶν / γνῷ τὰ περὶ ὑμῶν",
+      "decision": "„ca să aflați ce se petrece cu noi”",
+      "alternatives": [
+        "TR-COL din snapshot îl face pe Tihic să afle situația colosenilor."
+      ],
+      "reason": "SBLGNT face din destinatari cei care află veștile despre Pavel și colaboratorii lui; direcția informației nu este inversată.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-COL, aparatul și TR-COL au fost confruntate direct; textul principal urmează lectura SBLGNT."
     },
     {
       "verse": 12,
-      "term": "πεπληροφορημένοι / πεπληρωμένοι",
-      "decision": "Finalul versetului este redat „pe deplin încredințați”.",
-      "reason": "SBL cere ideea de convingere deplină, nu doar pe cea de completitudine; diferența a fost păstrată față de lectura TR.",
+      "term": "variante textuale: Χριστοῦ / Χριστοῦ Ἰησοῦ; σταθῆτε / στῆτε; πεπληροφορημένοι / πεπληρωμένοι",
+      "decision": "„rob al lui Hristos” și „pe deplin încredințați”",
+      "alternatives": [
+        "Aparatul consemnează martori care adaugă „Isus” după „Hristos” și lectura TR πεπληρωμένοι, cu accent pe a fi deplin împliniți."
+      ],
+      "reason": "SBLGNT are Χριστοῦ și πεπληροφορημένοι; româna nu adaugă numele absent și redă ideea de convingere deplină în voia lui Dumnezeu.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Nu a fost armonizată lectura SBL cu formula mai familiară din TR."
+      "resolutionReason": "SBLGNT-COL, aparatul și TR-COL au fost confruntate direct; textul principal urmează lectura SBLGNT."
     },
     {
       "verse": 13,
-      "term": "πολὺν πόνον / ζῆλον πολὺν",
-      "decision": "Versetul spune „are multă osteneală pentru voi”.",
-      "reason": "SBL accentuează efortul și povara purtată de Epafra, nu doar zelul lui; această nuanță a fost menținută în textul principal.",
+      "term": "variantă textuală SBLGNT/TR: πολὺν πόνον / ζῆλον πολὺν",
+      "decision": "„se ostenește mult”",
+      "alternatives": [
+        "TR-COL din snapshot are „mare zel”."
+      ],
+      "reason": "SBLGNT accentuează efortul și povara purtată de Epafra, nu doar zelul lui.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Lexemul SBL a fost redat direct, fără a fi înlocuit cu termenul tradițional „zel”."
+      "resolutionReason": "SBLGNT-COL, aparatul și TR-COL au fost confruntate direct; textul principal urmează lectura SBLGNT."
     },
     {
       "verse": 15,
-      "term": "Νύμφαν... αὐτῆς / Νυμφᾶν... αὐτοῦ",
-      "decision": "Textul principal urmează lectura SBL: „Nimfa... biserica din casa ei”.",
-      "reason": "Diferența schimbă atât genul numelui, cât și posesivul casei-biserici; lectura feminină SBL a fost păstrată explicit.",
+      "term": "variantă textuală SBLGNT/TR: Νύμφαν … αὐτῆς / Νυμφᾶν … αὐτοῦ",
+      "decision": "„Nimfa … adunarea din casa ei”",
+      "alternatives": [
+        "TR-COL din snapshot are Nymphas, nume masculin, și posesivul „casa lui”; alți martori au posesivul plural."
+      ],
+      "reason": "SBLGNT are Nympha, nume feminin, și αὐτῆς; genul persoanei și posesivul nu sunt masculinizate în română.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Onomastica și posesivul au fost păstrate conform lecturii SBL, fără masculinizarе tradițională."
+      "resolutionReason": "SBLGNT-COL, aparatul și TR-COL au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 18,
+      "term": "variantă textuală SBLGNT/TR: ἡ χάρις μεθʼ ὑμῶν / ἡ χάρις μεθʼ ὑμῶν· Ἀμήν",
+      "decision": "Salutarea proprie a lui Pavel este redată explicit, iar finalul se oprește la „Harul să fie cu voi”.",
+      "alternatives": [
+        "TR-COL din snapshot adaugă „Amin”."
+      ],
+      "reason": "SBLGNT păstrează salutarea scrisă de Pavel și nu include „Amin”; româna nu introduce adaosul final din TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-COL, aparatul și TR-COL au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 7,
+      "term": "revizie finală: πιστὸς διάκονος καὶ σύνδουλος",
+      "decision": "Tot ce ține de mine vă va face cunoscut Tihic, fratele iubit, slujitorul credincios și rob împreună cu mine în Domnul,",
+      "reason": "Redarea πιστὸς διάκονος καὶ σύνδουλος prin slujitorul credincios și împreună-slujitor pierde contrastul dintre slujitor și împreună-rob.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
     }
   ],
   "referenceNotes": [],

@@ -1,0 +1,58 @@
+/*
+ * Textul biblic al c\u0103r\u021bii Exod, capitolul 29.
+ *
+ * Sursa: Biblia Emanus (BE), docs/data/biblia-emanus/EXO.29.json.
+ * Capitol cu status "published", auditat verset cu verset din WLC-OSHB,
+ * cu WEBU ca baz\u0103 public-domain. 46 de versete.
+ */
+
+export const EXOD_TEXT_29: Record<number, readonly string[]> = {
+  29: [
+    "\u201eIat\u0103 ce s\u0103 faci pentru a-i sfin\u021bi ca s\u0103-Mi slujeasc\u0103 \u00een preo\u021bie: ia un taur t\u00e2n\u0103r \u0219i doi berbeci f\u0103r\u0103 cusur,",
+    "p\u00e2ine nedospit\u0103, turte nedospite fr\u0103m\u00e2ntate cu ulei \u0219i lipii nedospite unse cu ulei. S\u0103 le faci din f\u0103in\u0103 fin\u0103 de gr\u00e2u.",
+    "S\u0103 le pui \u00eentr-un co\u0219 \u0219i s\u0103 le aduci \u00een co\u0219 \u00eempreun\u0103 cu taurul \u0219i cei doi berbeci.",
+    "S\u0103-i aduci pe Aaron \u0219i pe fiii lui la intrarea Cortului \u00cent\u00e2lnirii \u0219i s\u0103-i speli cu ap\u0103.",
+    "S\u0103 iei ve\u0219mintele \u0219i s\u0103-l \u00eembraci pe Aaron cu tunica, mantia efodului, efodul \u0219i pieptarul \u0219i s\u0103-l \u00eencingi cu br\u00e2ul \u021besut al efodului.",
+    "S\u0103-i pui turbanul pe cap \u0219i s\u0103 fixezi pe turban coroana sf\u00e2nt\u0103.",
+    "Apoi s\u0103 iei untdelemnul ungerii, s\u0103-l torni pe capul lui \u0219i s\u0103-l ungi.",
+    "S\u0103-i aduci pe fiii lui \u0219i s\u0103-i \u00eembraci cu tunicile.",
+    "S\u0103-i \u00eencingi cu br\u00e2iele, pe Aaron \u0219i pe fiii lui, \u0219i s\u0103 le legi bonetele. Preo\u021bia va fi a lor printr-o r\u00e2nduial\u0103 ve\u0219nic\u0103. Astfel s\u0103-i \u00eenveste\u0219ti pe Aaron \u0219i pe fiii lui.",
+    "S\u0103 aduci taurul \u00eenaintea Cortului \u00cent\u00e2lnirii, iar Aaron \u0219i fiii lui s\u0103-\u0219i pun\u0103 m\u00e2inile pe capul taurului.",
+    "S\u0103 \u00eenjunghii taurul \u00eenaintea DOMNULUI, la intrarea Cortului \u00cent\u00e2lnirii.",
+    "S\u0103 iei din s\u00e2ngele taurului \u0219i s\u0103 pui cu degetul pe coarnele altarului, iar tot s\u00e2ngele r\u0103mas s\u0103-l ver\u0219i la baza altarului.",
+    "S\u0103 iei toat\u0103 gr\u0103simea care acoper\u0103 m\u0103runtaiele, lobul ficatului, cei doi rinichi \u0219i gr\u0103simea de pe ei \u0219i s\u0103 le arzi pe altar.",
+    "Dar carnea taurului, pielea \u0219i b\u0103legarul lui s\u0103 le arzi \u00een foc \u00een afara taberei. Este o jertf\u0103 pentru p\u0103cat.",
+    "S\u0103 iei unul dintre berbeci, iar Aaron \u0219i fiii lui s\u0103-\u0219i pun\u0103 m\u00e2inile pe capul berbecului.",
+    "S\u0103 \u00eenjunghii berbecul, s\u0103-i iei s\u00e2ngele \u0219i s\u0103-l strope\u0219ti de jur \u00eemprejur pe altar.",
+    "S\u0103 tai berbecul \u00een buc\u0103\u021bi, s\u0103-i speli m\u0103runtaiele \u0219i picioarele \u0219i s\u0103 le pui l\u00e2ng\u0103 buc\u0103\u021bi \u0219i l\u00e2ng\u0103 cap.",
+    "S\u0103 arzi \u00eentregul berbec pe altar. Este o ardere-de-tot pentru DOMNUL, o mireasm\u0103 pl\u0103cut\u0103, o jertf\u0103 mistuit\u0103 de foc pentru DOMNUL.",
+    "S\u0103 iei cel\u0103lalt berbec, iar Aaron \u0219i fiii lui s\u0103-\u0219i pun\u0103 m\u00e2inile pe capul berbecului.",
+    "S\u0103 \u00eenjunghii berbecul \u0219i s\u0103 pui din s\u00e2ngele lui pe lobul urechii drepte a lui Aaron \u0219i pe lobul urechii drepte a fiilor lui, pe degetul mare al m\u00e2inii lor drepte \u0219i pe degetul mare al piciorului lor drept. S\u0103 strope\u0219ti s\u00e2ngele de jur \u00eemprejur pe altar.",
+    "S\u0103 iei din s\u00e2ngele de pe altar \u0219i din untdelemnul ungerii \u0219i s\u0103 strope\u0219ti pe Aaron \u0219i ve\u0219mintele lui, pe fiii lui \u0219i ve\u0219mintele fiilor lui. Astfel vor fi sfin\u021bi\u021bi el, ve\u0219mintele lui, fiii lui \u0219i ve\u0219mintele fiilor lui.",
+    "S\u0103 iei din gr\u0103simea berbecului: coada gras\u0103, gr\u0103simea care acoper\u0103 m\u0103runtaiele, lobul ficatului, cei doi rinichi cu gr\u0103simea de pe ei \u0219i pulpa dreapt\u0103, c\u0103ci este berbecul \u00eenvestirii.",
+    "S\u0103 iei \u0219i o p\u00e2ine, o turt\u0103 f\u0103cut\u0103 cu ulei \u0219i o lipie din co\u0219ul cu azime care este \u00eenaintea DOMNULUI.",
+    "S\u0103 le pui pe toate \u00een m\u00e2inile lui Aaron \u0219i \u00een m\u00e2inile fiilor lui \u0219i s\u0103 le legeni ca dar leg\u0103nat \u00eenaintea DOMNULUI.",
+    "Apoi s\u0103 le iei din m\u00e2inile lor \u0219i s\u0103 le arzi pe altar, deasupra arderii-de-tot, ca mireasm\u0103 pl\u0103cut\u0103 \u00eenaintea DOMNULUI. Este o jertf\u0103 mistuit\u0103 de foc pentru DOMNUL.",
+    "S\u0103 iei pieptul berbecului \u00eenvestirii lui Aaron \u0219i s\u0103-l legeni ca dar leg\u0103nat \u00eenaintea DOMNULUI. Aceasta va fi partea ta.",
+    "S\u0103 sfin\u021be\u0219ti pieptul darului leg\u0103nat \u0219i pulpa contribu\u021biei, care au fost leg\u0103nate \u0219i ridicate din berbecul \u00eenvestirii, din ceea ce este pentru Aaron \u0219i fiii lui.",
+    "Ele vor fi partea lui Aaron \u0219i a fiilor lui din partea fiilor lui Israel, printr-o r\u00e2nduial\u0103 ve\u0219nic\u0103, fiindc\u0103 sunt o contribu\u021bie. Ele vor fi contribu\u021bia fiilor lui Israel din jertfele lor de pace, contribu\u021bia lor pentru DOMNUL.",
+    "Ve\u0219mintele sfinte ale lui Aaron vor fi ale fiilor lui dup\u0103 el, ca s\u0103 fie un\u0219i \u0219i \u00eenvesti\u021bi \u00een ele.",
+    "Fiul care \u00eei va urma ca preot s\u0103 le poarte \u0219apte zile c\u00e2nd va intra \u00een Cortul \u00cent\u00e2lnirii ca s\u0103 slujeasc\u0103 \u00een Locul Sf\u00e2nt.",
+    "S\u0103 iei berbecul \u00eenvestirii \u0219i s\u0103-i fierbi carnea \u00eentr-un loc sf\u00e2nt.",
+    "Aaron \u0219i fiii lui s\u0103 m\u0103n\u00e2nce carnea berbecului \u0219i p\u00e2inea din co\u0219 la intrarea Cortului \u00cent\u00e2lnirii.",
+    "S\u0103 m\u0103n\u00e2nce lucrurile prin care s-a f\u0103cut isp\u0103\u0219ire pentru \u00eenvestirea \u0219i sfin\u021birea lor. Niciun str\u0103in s\u0103 nu m\u0103n\u00e2nce din ele, fiindc\u0103 sunt sfinte.",
+    "Dac\u0103 r\u0103m\u00e2ne p\u00e2n\u0103 diminea\u021b\u0103 ceva din carnea \u00eenvestirii sau din p\u00e2ine, s\u0103 arzi ce a r\u0103mas \u00een foc. S\u0103 nu fie m\u00e2ncat, fiindc\u0103 este sf\u00e2nt.",
+    "S\u0103 faci pentru Aaron \u0219i fiii lui tot ce \u021bi-am poruncit. Timp de \u0219apte zile s\u0103-i \u00eenveste\u0219ti.",
+    "\u00cen fiecare zi s\u0103 aduci un taur ca jertf\u0103 pentru p\u0103cat, pentru isp\u0103\u0219ire. S\u0103 cure\u021bi altarul f\u0103c\u00e2nd isp\u0103\u0219ire pentru el \u0219i s\u0103-l ungi ca s\u0103-l sfin\u021be\u0219ti.",
+    "Timp de \u0219apte zile s\u0103 faci isp\u0103\u0219ire pentru altar \u0219i s\u0103-l sfin\u021be\u0219ti. Altarul va fi preasf\u00e2nt; orice lucru care atinge altarul va deveni sf\u00e2nt.",
+    "Iat\u0103 ce s\u0103 aduci permanent pe altar: doi miei de un an, \u00een fiecare zi.",
+    "Un miel s\u0103-l aduci diminea\u021ba, iar pe cel\u0103lalt miel spre sear\u0103.",
+    "\u00cempreun\u0103 cu primul miel s\u0103 aduci a zecea parte dintr-o ef\u0103 de f\u0103in\u0103 fin\u0103, amestecat\u0103 cu un sfert de hin de ulei din m\u0103sline zdrobite, \u0219i un sfert de hin de vin ca dar de b\u0103utur\u0103.",
+    "Pe al doilea miel s\u0103-l aduci spre sear\u0103, \u00eempreun\u0103 cu un dar de m\u00e2ncare \u0219i un dar de b\u0103utur\u0103 ca diminea\u021ba, ca mireasm\u0103 pl\u0103cut\u0103, o jertf\u0103 mistuit\u0103 de foc pentru DOMNUL.",
+    "Aceasta s\u0103 fie o ardere-de-tot permanent\u0103 din genera\u021bie \u00een genera\u021bie, la intrarea Cortului \u00cent\u00e2lnirii, \u00eenaintea DOMNULUI, unde M\u0103 voi \u00eent\u00e2lni cu voi ca s\u0103-\u021bi vorbesc.",
+    "Acolo M\u0103 voi \u00eent\u00e2lni cu fiii lui Israel, iar locul va fi sfin\u021bit prin gloria Mea.",
+    "Voi sfin\u021bi Cortul \u00cent\u00e2lnirii \u0219i altarul; \u00eei voi sfin\u021bi \u0219i pe Aaron \u0219i pe fiii lui ca s\u0103-Mi slujeasc\u0103 \u00een preo\u021bie.",
+    "Voi locui \u00een mijlocul fiilor lui Israel \u0219i voi fi Dumnezeul lor.",
+    "Ei vor \u0219ti c\u0103 Eu sunt DOMNUL, Dumnezeul lor, Care i-am scos din \u021bara Egiptului ca s\u0103 locuiesc \u00een mijlocul lor. Eu sunt DOMNUL, Dumnezeul lor.\u201d",
+  ],
+}

@@ -4,7 +4,6 @@ export * from "./seed.js"
 export * from "./lessonMohler.js"
 export * from "./paths/index.js"
 export * from "./library/index.js"
-export * from "./bible/index.js"
 export * from "./daily.js"
 // Devoțional: conținutul stă în fișiere pe lună, iar `devotionalDay()` și
 // `devotionalDaysAvailable()` vin din catalog, ca să vadă toate lunile scrise.

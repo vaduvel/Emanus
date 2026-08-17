@@ -1,0 +1,21 @@
+export const IOSUA_TEXT_3: Record<number, readonly string[]> = {
+  3: [
+    "Iosua s-a sculat dis-de-dimineață. El și toți fiii lui Israel au pornit din Șitim și au ajuns la Iordan. Au rămas acolo înainte să treacă.",
+    "După trei zile, conducătorii au trecut prin tabără",
+    "și au poruncit poporului: „Când veți vedea chivotul legământului DOMNULUI, Dumnezeul vostru, purtat de preoții leviți, să plecați din locul vostru și să mergeți după el.",
+    "Dar între voi și el să fie o distanță de aproape două mii de coți. Să nu vă apropiați de el, ca să cunoașteți drumul pe care trebuie să mergeți, fiindcă nu ați mai trecut pe drumul acesta.”",
+    "Iosua a spus poporului: „Sfințiți-vă, căci mâine DOMNUL va face lucruri minunate în mijlocul vostru.”",
+    "Apoi Iosua le-a spus preoților: „Ridicați chivotul legământului și treceți înaintea poporului.” Ei au ridicat chivotul legământului și au mers înaintea poporului.",
+    "DOMNUL i-a spus lui Iosua: „Astăzi voi începe să te înalț în ochii întregului Israel, ca să știe că, așa cum am fost cu Moise, voi fi și cu tine.",
+    "Poruncește-le preoților care poartă chivotul legământului: «Când veți ajunge la marginea apelor Iordanului, opriți-vă în Iordan.»”",
+    "Iosua le-a spus fiilor lui Israel: „Apropiați-vă și ascultați cuvintele DOMNULUI, Dumnezeul vostru.”",
+    "Iosua a spus: „Prin aceasta veți ști că Dumnezeul cel viu este în mijlocul vostru și că îi va alunga cu siguranță dinaintea voastră pe canaaniți, hitiți, hiviți, periziți, ghirgașiți, amoriți și iebusiți.",
+    "Iată, chivotul legământului Stăpânului întregului pământ trece înaintea voastră prin Iordan.",
+    "Luați acum doisprezece bărbați din semințiile lui Israel, câte unul din fiecare seminție.",
+    "Când tălpile picioarelor preoților care poartă chivotul DOMNULUI, Stăpânul întregului pământ, se vor opri în apele Iordanului, apele care coboară din amonte vor fi oprite și se vor ridica într-o singură grămadă.”",
+    "Când poporul a plecat din corturi ca să treacă Iordanul, preoții care purtau chivotul legământului mergeau înaintea poporului.",
+    "Când purtătorii chivotului au ajuns la Iordan și picioarele preoților care purtau chivotul s-au afundat în marginea apei — Iordanul se revărsa peste toate malurile lui în tot timpul secerișului —",
+    "apele care coborau din amonte s-au oprit și s-au ridicat într-o singură grămadă, foarte departe, la Adam, cetatea de lângă Țaretan. Iar apele care coborau spre marea Arabei, Marea Sărată, au fost oprite în întregime. Poporul a trecut în dreptul Ierihonului.",
+    "Preoții care purtau chivotul legământului DOMNULUI au stat neclintiți pe uscat, în mijlocul Iordanului, iar tot Israelul a trecut pe uscat, până când întregul popor a terminat de trecut Iordanul.",
+  ],
+}

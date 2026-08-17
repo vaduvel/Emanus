@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "bookId": "ZEC",
+  "bookName": "Zaharia",
+  "reviewType": "versification-only",
+  "status": "approved",
+  "approvedOn": "2026-08-08",
+  "productVersification": "WEBU",
+  "wlcAlignment": "absolute-verse-ordinal-across-book",
+  "sourcePacket": "docs/biblia-explicata/minor-prophets-reaudit/ZEC-FRESH-SOURCE-REAUDIT.json",
+  "sourceLock": "docs/data/biblia-emanus/minor-prophets-source-lock.json",
+  "evidenceFiles": [],
+  "approvedRanges": [
+    {
+      "product": "1:18-1:21",
+      "WLC": "2:1-2:4",
+      "identityBeforeThrough": "1:17"
+    },
+    {
+      "product": "2:1-2:13",
+      "WLC": "2:5-2:17",
+      "identityResumesAt": "3:1"
+    }
+  ],
+  "checks": {
+    "candidateVerseTotal": 211,
+    "WEBUVerseTotal": 211,
+    "WLCVerseTotal": 211,
+    "WEBUMatchesProductChapterCounts": true,
+    "boundaryStartsSemanticallyMatch": true,
+    "boundaryEndsSemanticallyMatch": true,
+    "noVerseLossOrDuplication": true
+  },
+  "scopeWarning": "Această aprobare certifică numai maparea referințelor WEBU ↔ WLC pentru Zaharia 1:18–2:13 ↔ WLC 2:1–17. Nu certifică fidelitatea sau calitatea textului românesc și nu schimbă candidateStage=temporary-editorial."
+}

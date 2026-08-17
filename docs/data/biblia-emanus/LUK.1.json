@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "copyrightSimilarity": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparat; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 80,
       "reviewed": 80,
@@ -98,14 +96,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 80 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 80 de versete din LUK.1 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost reparate formulările calchiate, acordurile și relațiile sintactice care mascau sensul textului grec.",
+        "Sunt păstrate persoana, numărul, negările, timpul verbal și referenții din textul principal SBLGNT într-o română firească.",
+        "LUK.1.28 urmează lectura scurtă SBLGNT, fără adaosul tradițional «Binecuvântată ești tu între femei»."
       ]
     },
     "theologicalContext": {
@@ -123,29 +121,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 246,
-        "primary": 575,
-        "secondary": 329,
-        "fixed": 1
-      },
-      "minimumSemantic": 0.4739268246110474,
-      "minimumScore": 0.4668938388149379
-    },
-    "textDigest": "sha256:82f9e54322e38506c6d820814ad65305af82ea70e07a9768b97c95c875b93e70",
-    "contentDigest": "sha256:2243ebb92963ad5352a9029f5fadb531b25e329358d94eaa2399fabd7382a34c"
+    "textDigest": "sha256:afe29053ff2fd1a36e5654860c8aba7f2cc48fbb2341d94d185a5407aa5a134b",
+    "contentDigest": "sha256:07dff415187ddbce6e68ee82a720bc92ae132cf319a8440a5d88629d40032bf2",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Din moment ce mulți s-au angajat să stabilească în ordine o narativă cu privire la acele probleme care au fost îndeplinite printre noi,"
+      "text": "Fiindcă mulți au încercat să alcătuiască în ordine o relatare despre faptele împlinite printre noi,"
     },
     {
       "number": 2,
@@ -153,11 +146,11 @@
     },
     {
       "number": 3,
-      "text": "Mi s-a părut bine și mie, după ce am urmărit cursul tuturor lucrurilor cu exactitate de la început, să vă scriu în ordine, cel mai excelent Teofil;"
+      "text": "mi s-a părut bine și mie, după ce am cercetat cu grijă toate lucrurile de la început, să ți le scriu în ordine, preaalesule Teofil,"
     },
     {
       "number": 4,
-      "text": "ca să cunoști temeinicia cuvintelor în care ai fost instruit."
+      "text": "ca să cunoști temeinicia cuvintelor despre care ai fost instruit."
     },
     {
       "number": 5,
@@ -189,7 +182,7 @@
     },
     {
       "number": 12,
-      "text": "Când l-a văzut, Zaharia s-a tulburat și a căzut frica peste el."
+      "text": "Când l-a văzut, Zaharia s-a tulburat și l-a cuprins frica."
     },
     {
       "number": 13,
@@ -201,7 +194,7 @@
     },
     {
       "number": 15,
-      "text": "Căci va fi mare înaintea Domnului; nu va bea nici vin, nici băutură tare și se va umple de Duh Sfânt încă din pântecele mamei lui."
+      "text": "Căci va fi mare înaintea Domnului; nu va bea deloc nici vin, nici băutură tare și va fi umplut de Duhul Sfânt încă din pântecele mamei lui."
     },
     {
       "number": 16,
@@ -209,7 +202,7 @@
     },
     {
       "number": 17,
-      "text": "El va merge înaintea Lui în duhul și puterea lui Ilie, ca să întoarcă inimile părinților spre copii și pe cei neascultători la înțelepciunea celor drepți, ca să pregătească pentru Domnul un popor pregătit."
+      "text": "El va merge înaintea Lui, în duhul și puterea lui Ilie, ca să întoarcă inimile părinților spre copii și pe cei neascultători la înțelepciunea celor drepți, ca să pregătească pentru Domnul un popor pregătit."
     },
     {
       "number": 18,
@@ -225,7 +218,7 @@
     },
     {
       "number": 21,
-      "text": "Poporul îl aștepta pe Zaharia, și ei se mirau că el întârzia în templu."
+      "text": "Poporul îl aștepta pe Zaharia și se mira că el întârzia în templu."
     },
     {
       "number": 22,
@@ -245,7 +238,7 @@
     },
     {
       "number": 26,
-      "text": "În luna a șasea, îngerul Gabriel a fost trimis de la Dumnezeu într'o cetate din Galileea, numită Nazaret,"
+      "text": "În luna a șasea, îngerul Gabriel a fost trimis de la Dumnezeu într-o cetate din Galileea, numită Nazaret,"
     },
     {
       "number": 27,
@@ -253,11 +246,11 @@
     },
     {
       "number": 28,
-      "text": "După ce a intrat, îngerul i-a zis: Bucură-te, preaiubitule! Domnul este cu tine. Binecuvântată ești tu între femei!"
+      "text": "După ce a intrat la ea, i-a spus: Bucură-te, tu care ai primit har! Domnul este cu tine."
     },
     {
       "number": 29,
-      "text": "Dar când l-a văzut, a fost foarte tulburată de vorbă, și a văzut ce fel de salut ar putea fi acesta."
+      "text": "Ea s-a tulburat de cuvântul acesta și se întreba ce fel de salut ar putea fi."
     },
     {
       "number": 30,
@@ -269,7 +262,7 @@
     },
     {
       "number": 32,
-      "text": "Acesta va fi mare și va fi numit Fiul Celui Preaînalt; iar Domnul Dumnezeu Îi va da tronul lui David, părintele Lui."
+      "text": "Acesta va fi mare și va fi numit Fiul Celui Preaînalt; iar Domnul Dumnezeu Îi va da tronul lui David, înaintașul Său."
     },
     {
       "number": 33,
@@ -289,7 +282,7 @@
     },
     {
       "number": 37,
-      "text": "Căci niciun cuvânt de la Dumnezeu nu va fi imposibil."
+      "text": "Căci nimic din ceea ce spune Dumnezeu nu se va dovedi imposibil."
     },
     {
       "number": 38,
@@ -313,7 +306,7 @@
     },
     {
       "number": 43,
-      "text": "Și de unde îmi este aceasta, ca să vină la mine mama Domnului meu?"
+      "text": "Și cum se face că vine la mine mama Domnului meu?"
     },
     {
       "number": 44,
@@ -333,7 +326,7 @@
     },
     {
       "number": 48,
-      "text": "Căci el a privit starea umilă a robului Său; căci iată, de acum înainte, toate neamurile mă vor numi binecuvântat."
+      "text": "căci a privit la starea smerită a roabei Sale. Iată, de acum înainte toate generațiile mă vor numi fericită,"
     },
     {
       "number": 49,
@@ -345,7 +338,7 @@
     },
     {
       "number": 51,
-      "text": "A făcut putere cu brațul Lui; i-a risipit pe cei mândri în cugetul inimii lor."
+      "text": "Și-a dovedit puterea prin brațul Său; i-a împrăștiat pe cei mândri în cugetul inimii lor."
     },
     {
       "number": 52,
@@ -353,15 +346,15 @@
     },
     {
       "number": 53,
-      "text": "El i-a umplut pe cei flămânzi cu lucruri bune și i-a trimis pe cei bogați în pustietate."
+      "text": "I-a umplut pe cei flămânzi cu bunătăți și i-a trimis pe cei bogați cu mâinile goale."
     },
     {
       "number": 54,
-      "text": "L-a ajutat pe Israel, slujitorul Său, ca să-Și aducă aminte de milă,"
+      "text": "A venit în ajutorul lui Israel, slujitorul Său, aducându-Și aminte de milă,"
     },
     {
       "number": 55,
-      "text": "El le-a vorbit părinților noștri, lui Avraam și urmașilor săi pentru totdeauna."
+      "text": "după cum a vorbit părinților noștri, lui Avraam și seminței lui, pentru totdeauna."
     },
     {
       "number": 56,
@@ -389,7 +382,7 @@
     },
     {
       "number": 62,
-      "text": "Atunci îi făceau semne tatălui lui, ca să afle cum ar vrea să fie numit."
+      "text": "Atunci i-au făcut semne tatălui lui, ca să afle ce nume ar vrea să-i dea copilului."
     },
     {
       "number": 63,
@@ -397,11 +390,11 @@
     },
     {
       "number": 64,
-      "text": "Gura i s-a deschis imediat și limba i-a fost eliberată, iar el a vorbit, binecuvântându-L pe Dumnezeu."
+      "text": "Îndată i s-a deschis gura și i s-a dezlegat limba; a început să vorbească, binecuvântându-L pe Dumnezeu."
     },
     {
       "number": 65,
-      "text": "Și frica a venit peste toți cei care locuiau împrejurul lor, iar în tot ținutul muntos al Iudeii se vorbea despre toate aceste cuvinte."
+      "text": "Frica i-a cuprins pe toți cei care locuiau în jurul lor, iar în întreaga regiune muntoasă a Iudeei se vorbea despre toate aceste întâmplări."
     },
     {
       "number": 66,
@@ -413,11 +406,11 @@
     },
     {
       "number": 68,
-      "text": "Binecuvântat este Domnul, Dumnezeul lui Israel, pentru că a cercetat și a făcut răscumpărare pentru poporul Său"
+      "text": "Binecuvântat este Domnul, Dumnezeul lui Israel, căci Și-a cercetat poporul și i-a adus izbăvire"
     },
     {
       "number": 69,
-      "text": "și ne-a ridicat un corn de mântuire în casa lui David, slujitorul Său,"
+      "text": "și a ridicat pentru noi un corn de mântuire în casa lui David, slujitorul Său,"
     },
     {
       "number": 70,
@@ -433,11 +426,11 @@
     },
     {
       "number": 73,
-      "text": "jurământul pe care i l-a jurat tatălui nostru Avraam,"
+      "text": "jurământul pe care i l-a făcut lui Avraam, părintele nostru, că ne va îngădui"
     },
     {
       "number": 74,
-      "text": "ca să ne dea nouă că noi, fiind eliberați din mâna dușmanilor noștri, să-I slujim fără teamă,"
+      "text": "ca, odată izbăviți din mâna vrăjmașilor, să-I slujim fără teamă,"
     },
     {
       "number": 75,
@@ -453,7 +446,7 @@
     },
     {
       "number": 78,
-      "text": "datorită îndurărilor adânci de milă ale Dumnezeului nostru, prin care ne va cerceta Răsăritul din înălțime,"
+      "text": "datorită milei adânci a Dumnezeului nostru, prin care Răsăritul de sus ne va cerceta,"
     },
     {
       "number": 79,
@@ -461,14 +454,14 @@
     },
     {
       "number": 80,
-      "text": "Iar copilul creștea și se întărea în duh și era în locuri pustii până în ziua arătării lui către Israel."
+      "text": "Iar copilul creștea și se întărea în duh și locuia în ținuturi pustii până în ziua în care a fost făcut cunoscut Israelului."
     }
   ],
   "editorialNotes": [
     {
       "verse": 28,
       "term": "κεχαριτωμένη",
-      "decision": "Redat prin «cea favorizată», cu omisiunea adaosului TR «εὐλογημένη σὺ ἐν γυναιξίν» din textul principal.",
+      "decision": "Redat prin «tu căreia ți s-a arătat har», cu omisiunea adaosului TR «εὐλογημένη σὺ ἐν γυναιξίν» din textul principal.",
       "reason": "Participiul perfect pasiv de la `χαριτόω` exprimă harul/favoarea primită; formula consacrată «plină de har» sau introducerea adaosului recept nu sunt cerute de lectura principală SBLGNT în Luca 1:28.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
@@ -477,7 +470,7 @@
     {
       "verse": 37,
       "term": "οὐκ ἀδυνατήσει παρὰ τοῦ θεοῦ πᾶν ῥῆμα",
-      "decision": "Redat prin «niciun cuvânt de la Dumnezeu nu va fi imposibil».",
+      "decision": "Redat prin «niciun cuvânt nu va fi imposibil pentru Dumnezeu».",
       "reason": "Subiectul explicit este `πᾶν ῥῆμα` («orice cuvânt»), iar construcția cu `παρὰ τοῦ θεοῦ` cere păstrarea raportării la cuvântul rostit de Dumnezeu, nu înlocuirea cu parafraza mai largă «nimic nu este imposibil la Dumnezeu».",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
@@ -486,11 +479,155 @@
     {
       "verse": 78,
       "term": "ἐπισκέψεται ἡμᾶς ἀνατολὴ ἐξ ὕψους",
-      "decision": "Redat prin «ne va cerceta Răsăritul din înălțime».",
+      "decision": "Redat prin «Răsăritul de sus ne va cerceta».",
       "reason": "SBLGNT are viitorul `ἐπισκέψεται`, în timp ce TR citește aoristul `ἐπεσκέψατο`; metafora `ἀνατολὴ ἐξ ὕψους` a fost păstrată fără reducere la «soare» sau la o explicație doctrinară introdusă în verset.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "Am urmat lectura principală SBLGNT și am păstrat metafora mesianică la nivelul textului, fără armonizare cu TR sau cu formule tradiționale românești."
+    },
+    {
+      "verse": 4,
+      "term": "revizie finală: περὶ ὧν κατηχήθης λόγων",
+      "decision": "ca să cunoști temeinicia cuvintelor despre care ai fost instruit.",
+      "reason": "Prepoziția „în” creează un raport sintactic nefiresc și sugerează că acele cuvinte sunt mediul instruirii, deși greaca indică subiectul despre care Teofil fusese instruit. Relația exprimată de „περὶ ὧν κατηχήθης λόγων” este deplasată în „cuvintelor în care ai fost instruit” prin alegerea nepotrivită a prepoziției.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 15,
+      "term": "revizie finală: οἶνον καὶ σίκερα οὐ μὴ πίῃ",
+      "decision": "Căci va fi mare înaintea Domnului; nu va bea deloc nici vin, nici băutură tare și va fi umplut de Duhul Sfânt încă din pântecele mamei lui.",
+      "reason": "Construcția grecească οὐ μή exprimă o negație viitoare categorică, iar simplul „nu va bea” nu păstrează explicit această intensitate. Conținutul lui „οἶνον καὶ σίκερα οὐ μὴ πίῃ” apare în „nu va bea nici vin, nici băutură tare”, însă intensificarea negativă nu este marcată deplin.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 17,
+      "term": "revizie finală: ἑτοιμάσαι κυρίῳ λαὸν κατεσκευασμένον",
+      "decision": "El va merge înaintea Lui, în duhul și puterea lui Ilie, ca să întoarcă inimile părinților spre copii și pe cei neascultători la înțelepciunea celor drepți, ca să pregătească pentru Domnul un popor pregătit.",
+      "reason": "Sintagma „gata pregătit” este un pleonasm lexical nenatural în română și afectează claritatea finalului de verset. Ideea de disponibilitate din „ἑτοιμάσαι κυρίῳ λαὸν κατεσκευασμένον” este prezentă în „să pregătească pentru Domnul un popor gata pregătit”, dar formularea românească este defectuoasă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 21,
+      "term": "revizie finală: ἐθαύμαζον ἐν τῷ χρονίζειν",
+      "decision": "Poporul îl aștepta pe Zaharia și se mira că el întârzia în templu.",
+      "reason": "Trecerea de la subiectul colectiv singular „Poporul” la pronumele plural „ei” este nefirească și creează un raport gramatical defectuos în română. Pluralul semantic din „ἐθαύμαζον ἐν τῷ χρονίζειν” explică intenția lui „Poporul îl aștepta pe Zaharia, și ei se mirau”, dar nu justifică dezacordul românesc.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 28,
+      "term": "revizie finală: κεχαριτωμένη",
+      "decision": "După ce a intrat la ea, i-a spus: Bucură-te, tu care ai primit har! Domnul este cu tine.",
+      "reason": "Construcția „ți s-a arătat har” deplasează sensul de la acordarea sau primirea harului la simpla lui manifestare și este totodată nefirească în româna actuală. Valoarea pasivă rezultativă din κεχαριτωμένη nu este redată precis de tu căreia ți s-a arătat har, deoarece verbul românesc schimbă natura acțiunii.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 32,
+      "term": "revizie finală: Δαυὶδ τοῦ πατρὸς αὐτοῦ",
+      "decision": "Acesta va fi mare și va fi numit Fiul Celui Preaînalt; iar Domnul Dumnezeu Îi va da tronul lui David, înaintașul Său.",
+      "reason": "„Părintele Lui” poate afirma în româna actuală că David este tatăl direct al lui Isus, în timp ce contextul genealogic al grecescului indică un strămoș. Relația ancestrală exprimată de Δαυὶδ τοῦ πατρὸς αὐτοῦ rămâne ambiguă în David, părintele Lui, unde substantivul românesc sugerează ușor filiația imediată.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 37,
+      "term": "revizie finală: πᾶν ῥῆμα",
+      "decision": "Căci niciun cuvânt venit de la Dumnezeu nu va rămâne neîmplinit.",
+      "reason": "Traducerea mută relația exprimată de construcția greacă de la proveniența și eficacitatea cuvântului lui Dumnezeu la ideea că un „cuvânt” ar putea fi imposibil pentru Dumnezeu. Construcția πᾶν ῥῆμα privește eficacitatea fiecărui cuvânt divin, pe când niciun cuvânt nu va fi imposibil pentru Dumnezeu schimbă raportul semantic în capacitatea lui Dumnezeu.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 43,
+      "term": "revizie finală: πόθεν μοι τοῦτο",
+      "decision": "Și cum se face că vine la mine mama Domnului meu?",
+      "reason": "„De unde îmi este aceasta” este un calc sintactic opac și nu exprimă firesc uimirea Elisabetei că i se acordă privilegiul acestei vizite. Întrebarea idiomatică πόθεν μοι τοῦτο cere exprimarea surprizei față de o onoare, sens pe care de unde îmi este aceasta nu îl comunică natural.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 51,
+      "term": "revizie finală: Ἐποίησεν κράτος ἐν βραχίονι αὐτοῦ",
+      "decision": "Și-a dovedit puterea prin brațul Său; i-a împrăștiat pe cei mândri în cugetul inimii lor.",
+      "reason": "Locuțiunea „a făcut putere” este nefirească în română și nu exprimă limpede manifestarea puterii indicată de ἐποίησεν κράτος. Deși A făcut putere cu brațul Lui urmărește componentele din Ἐποίησεν κράτος ἐν βραχίονι αὐτοῦ, îmbinarea verbală românească nu redă natural acțiunea energică.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 65,
+      "term": "revizie finală: διελαλεῖτο πάντα τὰ ῥήματα ταῦτα",
+      "decision": "Frica i-a cuprins pe toți cei care locuiau în jurul lor, iar în întreaga regiune muntoasă a Iudeei se vorbea despre toate aceste întâmplări.",
+      "reason": "Substantivul „cuvinte” este nepotrivit contextual și produce o construcție românească nefirească, deoarece relatarea privește toate întâmplările precedente. Redarea se vorbea despre toate aceste cuvinte restrânge impropriu sensul contextual al expresiei διελαλεῖτο πάντα τὰ ῥήματα ταῦτα, care vizează evenimentele relatate.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 69,
+      "term": "revizie finală: ἤγειρεν κέρας σωτηρίας ἡμῖν",
+      "decision": "și a ridicat pentru noi un corn de mântuire în casa lui David, slujitorul Său,",
+      "reason": "Metafora „cornului mântuirii” este eliminată, iar sintagma „a înălțat o putere” este nefirească în română și estompează imaginea sursei. Redarea ne-a înălțat o putere de mântuire explicitează parțial κέρας, dar pierde metafora centrală și creează o combinație verbală stranie pentru ἤγειρεν κέρας σωτηρίας ἡμῖν.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 73,
+      "term": "revizie finală: τοῦ δοῦναι ἡμῖν",
+      "decision": "jurământul pe care i l-a făcut lui Avraam, părintele nostru, că ne va îngădui",
+      "reason": "Finalul grecesc τοῦ δοῦναι ἡμῖν, care introduce acordarea unei posibilități comunității, este omis din acest verset și mutat impropriu în versetul următor. După jurământul pe care l-a făcut lui Avraam lipsește echivalentul pentru τοῦ δοῦναι ἡμῖν, astfel încât versetul românesc omite începutul conținutului jurat.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 74,
+      "term": "revizie finală: ῥυσθέντας λατρεύειν αὐτῷ",
+      "decision": "ca, odată izbăviți din mâna vrăjmașilor, să-I slujim fără teamă,",
+      "reason": "Începutul „ca să ne dea” transferă în acest verset conținutul grecesc de la finalul versetului 73 și produce construcția românească defectuoasă „ca să ne dea ca”. Formularea ca să ne dea ca introduce aici material absent din verset, în timp ce ῥυσθέντας λατρεύειν αὐτῷ cere concentrarea asupra celor izbăviți care Îi slujesc.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 78,
+      "term": "revizie finală: διὰ σπλάγχνα ἐλέους θεοῦ ἡμῶν",
+      "decision": "datorită milei adânci a Dumnezeului nostru, prin care Răsăritul de sus ne va cerceta,",
+      "reason": "Sintagma „îndurării pline de milă” este pleonastică și nu redă distinct nuanța de compasiune profundă exprimată de σπλάγχνα. Deși διὰ σπλάγχνα ἐλέους θεοῦ ἡμῶν indică mila profundă a lui Dumnezeu, datorită îndurării pline de milă a Dumnezeului nostru o redă printr-o formulare circulară și estompează nuanța afectivă a lui σπλάγχνα.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 80,
+      "term": "revizie finală: ἀναδείξεως αὐτοῦ πρὸς τὸν Ἰσραήλ",
+      "decision": "Iar copilul creștea și se întărea în duh și locuia în ținuturi pustii până în ziua în care a fost făcut cunoscut Israelului.",
+      "reason": "Construcția „arătării lui către Israel” este nefirească sintactic și redă printr-un calc relația exprimată de πρὸς, în loc să indice limpede că el a fost făcut cunoscut Israelului. Sensul public al expresiei ἀναδείξεως αὐτοῦ πρὸς τὸν Ἰσραήλ rămâne recognoscibil în arătării lui către Israel, dar legătura cu destinatarul este formulată neidiomatic în română.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 37,
+      "term": "revizie finală: οὐκ ἀδυνατήσει",
+      "decision": "Căci nimic din ceea ce spune Dumnezeu nu se va dovedi imposibil.",
+      "reason": "Sensul lexical al lui ἀδυνατέω este schimbat: greaca afirmă că niciun cuvânt sau lucru venit de la Dumnezeu nu va fi imposibil, nu doar că nu va rămâne neîmplinit. Între οὐκ ἀδυνατήσει și nu va rămâne neîmplinit există o deplasare materială de la imposibilitate și putere la simpla împlinire temporală.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
     }
   ],
   "referenceNotes": [],

@@ -1,0 +1,57 @@
+/*
+ * Textul biblic al cărții Numeri, capitolul 14.
+ *
+ * Sursa: Biblia Emanus (BE), docs/data/biblia-emanus/NUM.14.json.
+ * Capitol cu status "published", auditat verset cu verset din WLC-OSHB,
+ * cu WEBU ca bază public-domain. 45 de versete.
+ */
+
+export const NUMERI_TEXT_14: Record<number, readonly string[]> = {
+  14: [
+    "Toată adunarea a ridicat glasul și a strigat; și poporul a plâns în noaptea aceea.",
+    "Toți fiii lui Israel au cârtit împotriva lui Moise și a lui Aaron; și toată adunarea le-a zis: „O, de am fi murit în țara Egiptului sau de am fi murit în pustia aceasta!",
+    "De ce ne duce DOMNUL în țara aceasta ca să cădem uciși de sabie, iar soțiile și copiii noștri să ajungă o pradă? Nu ar fi oare mai bine pentru noi să ne întoarcem în Egipt?”",
+    "Și-și ziceau unii altora: „Să ne alegem o căpetenie și să ne întoarcem în Egipt!”",
+    "Moise și Aaron au căzut cu fața la pământ înaintea întregii adunări a fiilor lui Israel.",
+    "Și Iosua, fiul lui Nun, și Caleb, fiul lui Iefune, dintre cei ce iscodiseră țara, și-au sfâșiat hainele",
+    "și au vorbit întregii adunări a fiilor lui Israel, zicând: „Țara pe care am străbătut-o ca să o iscodim este o țară foarte, foarte bună.",
+    "Dacă DOMNUL Își găsește plăcerea în noi, ne va duce în țara aceasta și ne-o va da — o țară în care curge lapte și miere.",
+    "Numai nu vă răzvrătiți împotriva DOMNULUI și nu vă temeți de poporul țării aceleia, căci îi vom mânca ca pe o pâine! Ocrotirea lor s-a depărtat de la ei, iar DOMNUL este cu noi; nu vă temeți de ei!”",
+    "Dar toată adunarea vorbea să-i ucidă cu pietre, când slava DOMNULUI S-a arătat peste Cortul Întâlnirii înaintea tuturor fiilor lui Israel.",
+    "DOMNUL i-a spus lui Moise: „Până când Mă va disprețui poporul acesta și până când nu va crede în Mine, cu toate semnele pe care le-am făcut în mijlocul lui?",
+    "Îl voi lovi cu ciuma și-l voi nimici; dar pe tine te voi face un neam mai mare și mai puternic decât el!”",
+    "Moise I-a zis DOMNULUI: „Egiptenii vor auzi de aceasta, căci Tu ai scos prin puterea Ta pe poporul acesta din mijlocul lor;",
+    "și le vor spune locuitorilor țării acesteia. Ei au auzit că Tu, DOMNULE, ești în mijlocul acestui popor, că Te arăți față în față, că norul Tău stă peste ei și că Tu mergi înaintea lor într-un stâlp de nor ziua și într-un stâlp de foc noaptea.",
+    "Dacă vei ucide pe poporul acesta ca pe un singur om, neamurile care au auzit de faima Ta vor zice:",
+    "«Pentru că DOMNUL nu a putut să ducă pe poporul acesta în țara pe care jurase că le-o va da, de aceea i-a măcelărit în pustie!»",
+    "Acum, Te rog, să se arate puterea Stăpânului conform cuvântului pe care l-ai spus, zicând:",
+    "«DOMNUL este încet la mânie și bogat în îndurare, iartă nelegiuirea și fărădelegea, dar nu lasă pe cel vinovat nepedepsit, pedepsind nelegiuirea părinților în fii până la al treilea și al patrulea neam.»",
+    "Iartă, Te rog, nelegiuirea acestui popor, după mărimea îndurării Tale, așa cum ai iertat pe poporul acesta din Egipt și până aici!”",
+    "DOMNUL a zis: „Iert, după cuvântul tău.",
+    "Dar, precum este adevărat că Eu trăiesc și că tot pământul se va umple de slava DOMNULUI,",
+    "toți bărbații care au văzut slava Mea și semnele pe care le-am făcut în Egipt și în pustie, și care M-au ispitit deja de zece ori și nu au ascultat de glasul Meu,",
+    "nu vor vedea țara pe care am jurat că o voi da părinților lor! Niciunul din cei ce M-au disprețuit nu o va vedea.",
+    "Dar pentru că robul Meu Caleb a fost stăpânit de un alt duh și Mi-a urmat cu credincioșie, pe el îl voi duce în țara în care s-a dus, și urmașii lui o vor moșteni.",
+    "Amaleciții și canaaniții locuiesc în vale: mâine întoarceți-vă și porniți spre pustie, pe drumul Mării Roșii.”",
+    "DOMNUL le-a vorbit lui Moise și lui Aaron, spunând:",
+    "„Până când voi răbda această adunare rea care cârtește împotriva Mea? Am auzit cârtirile fiilor lui Israel, pe care le rostesc împotriva Mea.",
+    "Spune-le: «Precum este adevărat că Eu trăiesc, zice DOMNUL, vă voi face întocmai cum ați vorbit la urechile Mele:",
+    "trupurile voastre moarte vor cădea în pustia aceasta! Toți cei numărați dintre voi, de la vârsta de douăzeci de ani în sus, care ați cârtit împotriva Mea,",
+    "nu veți intra în țara în care am jurat că vă voi așeza să locuiți, afară de Caleb, fiul lui Iefune, și Iosua, fiul lui Nun.",
+    "Iar pe copiii voștri, despre care ați zis că vor fi de pradă, pe ei îi voi duce în ea și ei vor cunoaște țara pe care voi ați disprețuit-o.",
+    "Dar cât despre voi, trupurile voastre moarte vor cădea în pustia aceasta.",
+    "Și copiii voștri vor rătăci în pustie patruzeci de ani și vor purta pedeapsa infidelității voastre, până ce trupurile voastre moarte vor fi mistuite în pustie.",
+    "După numărul celor patruzeci de zile în care ați iscodit țara, socotind un an de fiecare zi, patruzeci de ani veți purta pedeapsa nelegiuirilor voastre și veți cunoaște ce înseamnă împotrivirea Mea!»",
+    "Eu, DOMNUL, am vorbit; așa voi face întregii acestei adunări rele care s-a strâns împotriva Mea: în pustia aceasta vor fi mistuite și în ea vor muri!”",
+    "Bărbații pe care îi trimisese Moise să iscodească țara și care, întorcându-se, făcuseră toată adunarea să cârtească împotriva lui, scoțând un zvon rău despre țară,",
+    "oamenii aceia care scoteau zvonuri rele despre țară au murit loviți de o urgie înaintea DOMNULUI.",
+    "Dar Iosua, fiul lui Nun, și Caleb, fiul lui Iefune, au rămas vii dintre bărbații care merseseră să iscodească țara.",
+    "Moise le-a spus aceste cuvinte tuturor fiilor lui Israel; și poporul s-a întristat foarte mult.",
+    "S-au sculat dis-de-dimineață și s-au suit spre vârful muntelui, zicând: „Iată-ne, suntem gata să ne suim la locul despre care a vorbit DOMNUL, căci am păcătuit.”",
+    "Moise a zis: „De ce călcați porunca DOMNULUI? Lucrul acesta nu va izbândi!",
+    "Nu vă suiți, căci DOMNUL nu este în mijlocul vostru; să nu fiți înfrânți de vrăjmașii voștri.",
+    "Căci amaleciții și canaaniții sunt acolo înaintea voastră și veți cădea uciși de sabie; pentru că v-ați întors de la DOMNUL, DOMNUL nu va fi cu voi.”",
+    "Cu toate acestea, s-au încăpățânat să se suie spre vârful muntelui; dar chivotul legământului DOMNULUI și Moise nu au părăsit mijlocul taberei.",
+    "Atunci amaleciții și canaaniții care locuiau pe muntele acela s-au coborât, i-au lovit și i-au zdrobit până la Horma.",
+  ],
+}

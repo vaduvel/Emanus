@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,18 +71,18 @@
       "additions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Toate cele 29 de versete au fost reverificate față de SBLGNT 1.2 și aparatul critic; Textus Receptus a fost folosit numai ca martor textual.",
+      "WEBP, BTF și Cornilescu 1924 au fost consultate ca repere auxiliare. Biblia Liberă a fost consultată suplimentar ca reper extern, dar nu este un benchmark formal din source-lock pentru Matei. NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -98,22 +101,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 29 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 29 de versete din MAT.7 au fost reverificate direct față de SBLGNT 1.2 și cele 20 de intrări ale aparatului critic; Textus Receptus a fost folosit numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "MAT.7.3 a fost reparat lexical și gramatical: κάρφος este «pai», iar predicatul a fost readus la persoana corectă.",
+        "MAT.7.24 a fost corectat din lectura receptă la pasivul SBLGNT; MAT.7.25-27 au fost netezite în română păstrând imaginile ploii, șuvoaielor, vânturilor și temeliei.",
+        "MAT.7.29 a fost simplificat la structura greacă «și nu ca cărturarii lor», fără repetarea artificială a verbului."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Textul principal urmează SBLGNT, iar Textus Receptus este folosit numai pentru documentarea variantelor.",
+        "MAT.7.13-14 păstrează metafora porții și căii fără a adăuga o interpretare soteriologică în corpul versetului.",
+        "MAT.7.21-23 păstrează opoziția dintre mărturisirea verbală și facerea voii Tatălui, fără glosă confesională."
       ]
     },
     "omissionAddition": {
@@ -123,24 +126,14 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare independentă din SBLGNT și WEBP, verificată comparativ cu BTF, Cornilescu 1924 și Biblia Liberă; fără copiere a unui etalon românesc"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 741,
-        "primary": 228,
-        "secondary": 102,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.4037089233135842,
-      "minimumScore": 0.5165308313030281
-    },
-    "textDigest": "sha256:fc4a94a36082b3a4e79f2bd6c1dda0a8cda9830a473e37c290975aaaba1aa140",
-    "contentDigest": "sha256:e8058c0c25fb23e24ff7e6f2e470208d3c3fdd5206972cd601601408ed58e642"
+    "textDigest": "sha256:52be8f80d8a4bb15477cb462f47af10766877199eade517c0c39e5dff539be79",
+    "contentDigest": "sha256:a5e1ac81f7799cd9315963009ff38388f3eef5a9be57a6b2e578a2563a56db52"
   },
   "verses": [
     {
@@ -153,11 +146,11 @@
     },
     {
       "number": 3,
-      "text": "De ce vezi pată care este în ochiul fratelui tău, dar nu ia în considerare grinda care este în propriul ochi?"
+      "text": "De ce vezi paiul din ochiul fratelui tău, dar nu iei în seamă bârna din propriul tău ochi?"
     },
     {
       "number": 4,
-      "text": "Sau cum îi vei spune fratelui tău: «Lasă-mă să scot paiul din ochiul tău», când iată că în ochiul tău este o bârnă?"
+      "text": "Sau cum îi vei spune fratelui tău: „Lasă-mă să scot paiul din ochiul tău”, când iată că bârna este în ochiul tău?"
     },
     {
       "number": 5,
@@ -165,7 +158,7 @@
     },
     {
       "number": 6,
-      "text": "Nu dați câinilor ce este sfânt și nu vă aruncați perlele înaintea porcilor, ca nu cumva să le calce în picioare, iar apoi să se întoarcă și să vă sfâșie."
+      "text": "Nu dați câinilor ce este sfânt și nu vă aruncați perlele înaintea porcilor, ca nu cumva să le calce în picioare, apoi să se întoarcă și să vă sfâșie."
     },
     {
       "number": 7,
@@ -177,23 +170,23 @@
     },
     {
       "number": 9,
-      "text": "Sau cine este omul dintre voi care, dacă fiul lui îi va cere pâine, îi va da o piatră?"
+      "text": "Sau cine dintre voi, dacă fiul lui îi cere pâine, îi va da o piatră?"
     },
     {
       "number": 10,
-      "text": "Sau, dacă îi va cere un pește, îi va da un șarpe?"
+      "text": "Sau, dacă îi cere un pește, îi va da un șarpe?"
     },
     {
       "number": 11,
-      "text": "Deci, dacă voi, care sunteți răi, știți să le dați daruri bune copiilor voștri, cu cât mai mult Tatăl vostru care este în ceruri le va da lucruri bune celor care I le cer!"
+      "text": "Așadar, dacă voi, care sunteți răi, știți să le dați daruri bune copiilor voștri, cu cât mai mult Tatăl vostru care este în ceruri le va da lucruri bune celor care I le cer!"
     },
     {
       "number": 12,
-      "text": "Așadar, tot ce vreți să vă facă vouă oamenii, faceți-le și voi la fel; căci aceasta este Legea și Profeții."
+      "text": "Așadar, tot ce vreți ca oamenii să vă facă vouă, faceți-le și voi lor; căci aceasta este Legea și Profeții."
     },
     {
       "number": 13,
-      "text": "Intrați pe poarta cea strâmtă, căci largă este poarta și încăpătoare este calea care duce la pieire, și mulți sunt cei care intră pe ea."
+      "text": "Intrați pe poarta cea strâmtă, căci largă este poarta și lată este calea care duce la pieire, și mulți sunt cei care intră pe ea."
     },
     {
       "number": 14,
@@ -201,7 +194,7 @@
     },
     {
       "number": 15,
-      "text": "Păziți-vă de profeții falși, care vin la voi îmbrăcați în piei de oi, dar pe dinăuntru sunt lupi răpitori."
+      "text": "Păziți-vă de profeții falși, care vin la voi în haine de oi, dar pe dinăuntru sunt lupi răpitori."
     },
     {
       "number": 16,
@@ -209,11 +202,11 @@
     },
     {
       "number": 17,
-      "text": "Tot așa, orice pom bun face roade bune, dar pomul stricat face roade rele."
+      "text": "Tot așa, orice pom bun face roade bune, iar pomul stricat face roade rele."
     },
     {
       "number": 18,
-      "text": "Un pom bun nu poate face roade rele, nici un pom stricat nu poate face roade bune."
+      "text": "Un pom bun nu poate face roade rele și niciun pom stricat nu poate face roade bune."
     },
     {
       "number": 19,
@@ -225,27 +218,27 @@
     },
     {
       "number": 21,
-      "text": "Nu oricine Îmi spune: «Doamne, Doamne!» va intra în Împărăția cerurilor, ci acela care face voia Tatălui Meu care este în ceruri."
+      "text": "Nu oricine Îmi spune: „Doamne, Doamne!” va intra în Împărăția cerurilor, ci acela care face voia Tatălui Meu care este în ceruri."
     },
     {
       "number": 22,
-      "text": "Mulți Îmi vor spune în ziua aceea: «Doamne, Doamne, oare n-am profețit în numele Tău, n-am scos demoni în numele Tău și n-am făcut multe lucrări puternice în numele Tău?»"
+      "text": "Mulți Îmi vor spune în ziua aceea: „Doamne, Doamne, oare n-am profețit în Numele Tău, n-am scos demoni în Numele Tău și n-am săvârșit multe lucrări de putere în Numele Tău?”"
     },
     {
       "number": 23,
-      "text": "Atunci le voi mărturisi: «Niciodată nu v-am cunoscut! Plecați de la Mine, voi care săvârșiți fărădelegea!»"
+      "text": "Atunci le voi declara: „Niciodată nu v-am cunoscut! Plecați de la Mine, voi care practicați fărădelegea!”"
     },
     {
       "number": 24,
-      "text": "De aceea, oricine aude aceste cuvinte ale mele și le face, îl voi asemăna cu un om înțelept care și-a construit casa pe stâncă."
+      "text": "Așadar, oricine aude aceste cuvinte ale Mele și le împlinește va fi asemenea unui om înțelept care și-a construit casa pe stâncă."
     },
     {
       "number": 25,
-      "text": "Ploaia a venit, inundațiile au venit, și vânturile au suflat și bătut în acea casă; și nu a căzut, pentru că a fost fondată pe stâncă."
+      "text": "A căzut ploaia, au venit șuvoaiele, au suflat vânturile și au izbit în casa aceea; dar ea nu a căzut, pentru că își avea temelia pe stâncă."
     },
     {
       "number": 26,
-      "text": "Oricine aude aceste cuvinte ale mele și nu le face va fi ca un om prost care și-a construit casa pe nisip."
+      "text": "Și oricine aude aceste cuvinte ale Mele și nu le împlinește va fi asemenea unui om nesăbuit care și-a construit casa pe nisip."
     },
     {
       "number": 27,
@@ -253,14 +246,216 @@
     },
     {
       "number": 28,
-      "text": "După ce Isus a terminat de spus aceste lucruri, mulțimile s-au uimit de învățătura Lui,"
+      "text": "După ce Isus a terminat de spus aceste cuvinte, mulțimile erau uimite de învățătura Lui,"
     },
     {
       "number": 29,
-      "text": "căci El îi învăța ca Unul care avea autoritate, nu cum îi învățau cărturarii lor."
+      "text": "căci îi învăța ca unul care avea autoritate, și nu ca cărturarii lor."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 3,
+      "term": "τὸ κάρφος … τὴν δοκόν",
+      "decision": "„paiul … bârna”",
+      "reason": "κάρφος este un firicel/pai, nu «pată»; δοκός este o bârnă.",
+      "alternatives": [
+        "firicelul … bârna"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectată eroarea lexicală din ciorna anterioară și păstrat contrastul hiperbolic."
+    },
+    {
+      "verse": 4,
+      "term": "ἐκ / ἀπό",
+      "decision": "„să scot paiul din ochiul tău”",
+      "reason": "SBLGNT are ἐκ, RP ἀπό; diferența nu schimbă sensul în română.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Varianta este documentată fără supratraducere."
+    },
+    {
+      "verse": 5,
+      "term": "ἐκ τοῦ ὀφθαλμοῦ σοῦ τὴν δοκόν",
+      "decision": "„scoate … bârna din ochiul tău”",
+      "reason": "RP schimbă ordinea cuvintelor, fără schimbare semantică.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Româna folosește ordinea naturală."
+    },
+    {
+      "verse": 6,
+      "term": "καταπατήσουσιν / καταπατήσωσιν",
+      "decision": "„ca nu cumva să le calce în picioare”",
+      "reason": "Aparatul are indicativ/subjunctiv; valoarea de avertizare rămâne aceeași.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Redarea păstrează relația de scop/temere din μήποτε."
+    },
+    {
+      "verse": 8,
+      "term": "ἀνοιγήσεται / ἀνοίγεται",
+      "decision": "„i se va deschide”",
+      "reason": "SBLGNT are viitorul, Treg prezentul.",
+      "alternatives": [
+        "i se deschide"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Timpul verbal urmează SBLGNT."
+    },
+    {
+      "verse": 9,
+      "term": "ἐστιν … αἰτήσει",
+      "decision": "„cine dintre voi, dacă fiul lui îi cere pâine”",
+      "reason": "Aparatul notează omiterea lui ἐστιν și forma condițională ἐὰν αἰτήσῃ în NIV/RP; sensul interogației rămâne stabil.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Româna redă natural construcția interogativă a textului principal."
+    },
+    {
+      "verse": 10,
+      "term": "ἢ καὶ ἰχθὺν αἰτήσει",
+      "decision": "„Sau, dacă îi cere un pește”",
+      "reason": "RP omite ἤ și folosește construcția ἐὰν … αἰτήσῃ.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Legătura alternativă și sensul întrebării urmează SBLGNT."
+    },
+    {
+      "verse": 12,
+      "term": "ὅσα ἐὰν θέλητε",
+      "decision": "„tot ce vreți ca oamenii să vă facă”",
+      "reason": "Treg/RP au ἄν în loc de ἐάν; sensul condițional-general rămâne același.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Redarea românească păstrează regula generală."
+    },
+    {
+      "verse": 13,
+      "term": "πλατεῖα ἡ πύλη",
+      "decision": "„largă este poarta”",
+      "reason": "Aparatul consemnează omiterea lui ἡ πύλη în WH; SBLGNT păstrează substantivul.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul principal urmează SBLGNT."
+    },
+    {
+      "verse": 14,
+      "term": "ὅτι / τί",
+      "decision": "„Căci strâmtă este poarta”",
+      "reason": "WH are ὅτι, Treg/RP/NA τί; variația afectează introducerea propoziției, nu imaginea porții și căii.",
+      "alternatives": [
+        "Cât de strâmtă este poarta"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Redarea urmează lectura ὅτι a SBLGNT."
+    },
+    {
+      "verse": 15,
+      "term": "Προσέχετε",
+      "decision": "„Păziți-vă”",
+      "reason": "Treg/RP adaugă δέ; SBLGNT nu îl are.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Nu se adaugă o conjuncție absentă din textul principal."
+    },
+    {
+      "verse": 16,
+      "term": "σταφυλὰς / σταφυλήν",
+      "decision": "„struguri”",
+      "reason": "RP are singularul, SBLGNT pluralul.",
+      "alternatives": [
+        "un strugure"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Numărul urmează SBLGNT."
+    },
+    {
+      "verse": 18,
+      "term": "ποιεῖν / ἐνεγκεῖν",
+      "decision": "„nu poate face roade rele”",
+      "reason": "SBLGNT urmează ποιεῖν; WH are ἐνεγκεῖν («a aduce/purta»).",
+      "alternatives": [
+        "nu poate aduce roade rele"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Verbul din textul principal este păstrat."
+    },
+    {
+      "verse": 21,
+      "term": "ἐν τοῖς οὐρανοῖς",
+      "decision": "„care este în ceruri”",
+      "reason": "RP omite articolul τοῖς; sensul nu se schimbă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Varianta minoră este documentată fără efect semantic artificial."
+    },
+    {
+      "verse": 24,
+      "term": "ὁμοιωθήσεται / ὁμοιώσω αὐτόν",
+      "decision": "„va fi asemenea unui om înțelept”",
+      "reason": "SBLGNT are pasivul ὁμοιωθήσεται; RP are persoana I «îl voi asemăna».",
+      "alternatives": [
+        "îl voi asemăna cu un om înțelept"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectată ciorna veche care urma lectura receptă; textul principal urmează SBLGNT."
+    },
+    {
+      "verse": 26,
+      "term": "αὐτοῦ τὴν οἰκίαν",
+      "decision": "„și-a construit casa pe nisip”",
+      "reason": "RP schimbă numai ordinea pronumelui posesiv.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Ordinea naturală românească păstrează sensul."
+    },
+    {
+      "verse": 28,
+      "term": "ἐτέλεσεν / συνετέλεσεν",
+      "decision": "„Isus a terminat de spus aceste cuvinte”",
+      "reason": "RP are verbul compus συνετέλεσεν; SBLGNT ἐτέλεσεν.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul urmează verbul principal fără intensificare."
+    },
+    {
+      "verse": 29,
+      "term": "οἱ γραμματεῖς αὐτῶν",
+      "decision": "„și nu ca cărturarii lor”",
+      "reason": "RP omite αὐτῶν; SBLGNT îl păstrează.",
+      "alternatives": [
+        "și nu ca niște cărturari"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Pronumele posesiv urmează SBLGNT."
+    },
+    {
+      "verse": 18,
+      "term": "revizie finală: οὐδὲ δένδρον σαπρὸν καρποὺς καλοὺς ποιεῖν",
+      "decision": "Un pom bun nu poate face roade rele și niciun pom stricat nu poate face roade bune.",
+      "reason": "Determinantul negativ din construcția „nici un pom” trebuie scris „niciun”; grafia separată constituie aici o eroare ortografică, nu o opoziție între numerale. Ideea din οὐδὲ δένδρον σαπρὸν καρποὺς καλοὺς ποιεῖν se regăsește în nici un pom stricat nu poate face roade bune, însă forma românească necesită grafia „niciun”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 22,
+      "term": "revizie finală: τῷ σῷ ὀνόματι δυνάμεις πολλὰς ἐποιήσαμεν",
+      "decision": "Mulți Îmi vor spune în ziua aceea: „Doamne, Doamne, oare n-am profețit în Numele Tău, n-am scos demoni în Numele Tău și n-am săvârșit multe lucrări de putere în Numele Tău?”",
+      "reason": "Sintagma „fapte puternice” este nenaturală și poate sugera doar acțiuni energice, pe când δυνάμεις denumește aici manifestări sau lucrări supranaturale de putere. Sensul supranatural al expresiei τῷ σῷ ὀνόματι δυνάμεις πολλὰς ἐποιήσαμεν nu este exprimat suficient de precis prin n-am făcut multe fapte puternice în Numele Tău.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

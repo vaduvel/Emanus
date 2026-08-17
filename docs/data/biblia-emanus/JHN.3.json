@@ -40,24 +40,28 @@
     "translationsConsulted": [
       {
         "id": "BTF",
+        "consultedInBatch": true,
         "family": "fidela",
         "mode": "comparison-only",
         "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
       },
       {
         "id": "BIBLIA-LIBERA",
+        "consultedInBatch": true,
         "family": "libera",
         "mode": "comparison-only",
         "referenceUrl": "https://ebible.org/ronbl/"
       },
       {
         "id": "CORNILESCU-1924",
+        "consultedInBatch": true,
         "family": "cornilescu",
         "mode": "comparison-only",
         "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
       },
       {
         "id": "NTR",
+        "consultedInBatch": false,
         "family": "biblica",
         "mode": "comparison-only",
         "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
@@ -74,26 +78,22 @@
       "additions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "SBLGNT 1.2 și aparatul au fost sursa principală; TR a fost martor de variante.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost comparate auxiliar; NTR nu a fost consultată.",
+      "Textul românesc a fost redactat independent, fără stocarea sau copierea unui text românesc protejat."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 2,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 36,
       "reviewed": 36,
@@ -104,14 +104,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 36 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 36 de versete au fost confruntate direct cu SBLGNT 1.2 și aparatul său; TR a fost verificat numai ca martor textual, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă ca repere auxiliare."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Textul a fost revizuit verset cu verset pentru sens, sintaxă și română firească.",
+        "Au fost eliminate adaosurile TR din 3:13 și 3:15 și reparată formularea din 3:30.",
+        "Ambiguitățile din ἄνωθεν și πνεῦμα sunt menținute prin note editoriale, nu glosate în exces."
       ]
     },
     "theologicalContext": {
@@ -129,29 +129,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și WEBP; BTF, Cornilescu 1924 și Biblia Liberă au fost consultate numai pentru comparație, fără copiere."
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 223,
-        "primary": 345,
-        "secondary": 311,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5828511837833763,
-      "minimumScore": 0.5708264730944187
-    },
-    "textDigest": "sha256:7632efb67b74527e724f9965a62d3f7fd262df1232be365ad24d8559937c61db",
-    "contentDigest": "sha256:1fa513415911cc409c086963a2495474e1f953e2ed3ac6b79f798502f9619f72"
+    "textDigest": "sha256:903cfc8745a23786396af1a3d55023b8c839192f6ebd15c911f8146acda3b88e",
+    "contentDigest": "sha256:ec160aefd2a32ad0c9f622acc6fe2537b4df1c8c647cd9dbf4f6cddc17f8d7cb",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 2,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Și era un om dintre farisei, numele lui Nicodim, un conducător al iudeilor."
+      "text": "Printre farisei era un om pe care îl chema Nicodim, un conducător al iudeilor."
     },
     {
       "number": 2,
@@ -171,11 +166,11 @@
     },
     {
       "number": 6,
-      "text": "Ceea ce este născut din carne este carne. Ceea ce este născut din Duh este spirit."
+      "text": "Ce este născut din carne este carne, iar ce este născut din Duh este duh."
     },
     {
       "number": 7,
-      "text": "Nu vă mirați că v-am spus: Trebuie să vă nașteți cu toții din nou."
+      "text": "Nu te mira că ți-am spus: Trebuie să vă nașteți de sus."
     },
     {
       "number": 8,
@@ -183,11 +178,11 @@
     },
     {
       "number": 9,
-      "text": "Nicodim a răspuns și i-a spus: Cum pot fi acestea?"
+      "text": "Nicodim a răspuns și i-a spus: Cum se pot întâmpla aceste lucruri?"
     },
     {
       "number": 10,
-      "text": "Isus i-a răspuns:„ Ești învățătorul lui Israel, și nu înțelegi aceste lucruri?"
+      "text": "Isus i-a răspuns: „Ești învățătorul lui Israel și nu înțelegi aceste lucruri?”"
     },
     {
       "number": 11,
@@ -199,7 +194,7 @@
     },
     {
       "number": 13,
-      "text": "Nimeni nu s-a suit în cer decât cel care a coborât din cer, Fiul Omului, care este în ceruri."
+      "text": "Nimeni nu s-a suit în cer decât Cel care a coborât din cer: Fiul Omului."
     },
     {
       "number": 14,
@@ -207,7 +202,7 @@
     },
     {
       "number": 15,
-      "text": "ca oricine crede în El să nu piară, ci să aibă viața veșnică."
+      "text": "ca oricine crede în El să aibă viață veșnică."
     },
     {
       "number": 16,
@@ -219,7 +214,7 @@
     },
     {
       "number": 18,
-      "text": "Cel care crede în El nu este judecat. Cel care nu crede a fost deja judecat, pentru că nu a crezut în numele singurului Fiu născut al lui Dumnezeu."
+      "text": "Cel care crede în El nu este judecat. Cel care nu crede a fost deja judecat, pentru că nu a crezut în numele Fiului unic al lui Dumnezeu."
     },
     {
       "number": 19,
@@ -247,7 +242,7 @@
     },
     {
       "number": 25,
-      "text": "De aceea s-a ridicat o dispută din partea discipolilor lui Ioan cu unii iudei cu privire la purificare."
+      "text": "Atunci s-a ivit o dispută între unii dintre discipolii lui Ioan și un iudeu cu privire la purificare."
     },
     {
       "number": 26,
@@ -267,7 +262,7 @@
     },
     {
       "number": 30,
-      "text": "El trebuie să crească, dar eu trebuie să scadă."
+      "text": "El trebuie să crească, iar eu trebuie să scad."
     },
     {
       "number": 31,
@@ -279,11 +274,11 @@
     },
     {
       "number": 33,
-      "text": "Cel care a primit mărturia lui a pecetluit că Dumnezeu este adevărat."
+      "text": "Cel care a primit mărturia lui a certificat astfel că Dumnezeu este adevărat."
     },
     {
       "number": 34,
-      "text": "Căci cel pe care l-a trimis Dumnezeu vorbește cuvintele lui Dumnezeu, căci Dumnezeu dă Duhul fără măsură."
+      "text": "Căci Cel pe care L-a trimis Dumnezeu vorbește cuvintele lui Dumnezeu, fiindcă Dumnezeu dă Duhul fără măsură."
     },
     {
       "number": 35,
@@ -291,7 +286,7 @@
     },
     {
       "number": 36,
-      "text": "Cine crede în Fiul are viață veșnică; dar cine nu ascultă de Fiul nu va vedea viața, ci mânia lui Dumnezeu rămâne peste el.”"
+      "text": "Cine crede în Fiul are viață veșnică; dar cine nu ascultă de Fiul nu va vedea viața, ci mânia lui Dumnezeu rămâne peste el."
     }
   ],
   "editorialNotes": [
@@ -348,6 +343,60 @@
       "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "Formularea românească rămâne fidelă lecturii SBLGNT și evită introducerea explicită a subiectului din TR în textul principal."
+    },
+    {
+      "verse": 1,
+      "term": "revizie finală: Νικόδημος ὄνομα αὐτῷ",
+      "decision": "Printre farisei era un om pe care îl chema Nicodim, un conducător al iudeilor.",
+      "reason": "Construcția „numele lui Nicodim” este eliptică într-un mod nefiresc în română și nu formează o identificare nominală completă. Deși Νικόδημος ὄνομα αὐτῷ identifică numele personajului, formularea numele lui Nicodim nu redă natural această predicație nominală.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 9,
+      "term": "revizie finală: Πῶς δύναται ταῦτα γενέσθαι",
+      "decision": "Nicodim a răspuns și i-a spus: Cum se pot întâmpla aceste lucruri?",
+      "reason": "Verbul „fi” neutralizează sensul dinamic al lui γενέσθαι, care întreabă cum se pot produce sau întâmpla aceste lucruri, iar întrebarea rezultată este nefiresc de eliptică. Formularea Cum pot fi acestea nu exprimă suficient valoarea dinamică a lui γενέσθαι din Πῶς δύναται ταῦτα γενέσθαι.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 18,
+      "term": "revizie finală: τοῦ μονογενοῦς υἱοῦ τοῦ θεοῦ",
+      "decision": "Cel care crede în El nu este judecat. Cel care nu crede a fost deja judecat, pentru că nu a crezut în numele Fiului unic al lui Dumnezeu.",
+      "reason": "Redarea lui μονογενοῦς prin „singurului Fiu născut” este ambiguă și nefiresc construită, ascunzând ideea că Fiul este unic. Sensul de unicitate din τοῦ μονογενοῦς υἱοῦ τοῦ θεοῦ nu este redat limpede de singurului Fiu născut al lui Dumnezeu.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 25,
+      "term": "revizie finală: ἐκ τῶν μαθητῶν Ἰωάννου",
+      "decision": "Atunci s-a ivit o dispută între unii dintre discipolii lui Ioan și un iudeu cu privire la purificare.",
+      "reason": "Ținta omite valoarea partitivă a prepoziției ἐκ și poate atribui disputa întregului grup al discipolilor lui Ioan. Valoarea partitivă a lui ἐκ τῶν μαθητῶν Ἰωάννου nu este exprimată complet prin între discipolii lui Ioan, care nu precizează că erau numai unii dintre ei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 33,
+      "term": "revizie finală: ἐσφράγισεν ὅτι ὁ θεὸς ἀληθής ἐστιν",
+      "decision": "Cel care a primit mărturia lui a certificat astfel că Dumnezeu este adevărat.",
+      "reason": "Verbul „a pecetlui” este legat nefiresc direct de o propoziție introdusă prin „că”; sensul figurat al lui ἐσφράγισεν este acela de a certifica sau confirma solemn adevărul mărturiei. Deși a pecetluit că Dumnezeu este adevărat încearcă să urmeze metafora din ἐσφράγισεν ὅτι ὁ θεὸς ἀληθής ἐστιν, legarea directă a verbului de propoziția completivă compromite naturalețea enunțului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 34,
+      "term": "revizie finală: οὐ γὰρ ἐκ μέτρου δίδωσιν τὸ πνεῦμα",
+      "decision": "Căci Cel pe care L-a trimis Dumnezeu vorbește cuvintele lui Dumnezeu, fiindcă Dumnezeu dă Duhul fără măsură.",
+      "reason": "Subiectul neexprimat al verbului „dă” este preluat natural în română de la „Cel pe care L-a trimis Dumnezeu”, ceea ce poate face ca trimisul, nu Dumnezeu, să pară dăruitorul Duhului. În timp ce οὐ γὰρ ἐκ μέτρου δίδωσιν τὸ πνεῦμα Îl presupune contextual pe Dumnezeu ca dăruitor, formularea nu dă Duhul cu măsură poate atribui acțiunea Celui trimis.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
     }
   ],
   "referenceNotes": [],

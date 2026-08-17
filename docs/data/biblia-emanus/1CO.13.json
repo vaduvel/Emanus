@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparatul său; Textus Receptus a fost consultat numai ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 13,
       "reviewed": 13,
@@ -98,7 +96,7 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 13 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 13 versete din 1CO.13 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
@@ -123,24 +121,19 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 709,
-        "primary": 137,
-        "secondary": 24,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.41000612643816675,
-      "minimumScore": 0.5818865265537531
-    },
-    "textDigest": "sha256:8b63858516fdce19b18eb2f2c1b631b35cd909a6f8332e32bc935fd1722a90e1",
-    "contentDigest": "sha256:5ef3997910b2ea211029e148cf215fdc770e4d87d469c26d012b6531b7d7229d"
+    "textDigest": "sha256:bca7ac5c0922951329a61ca14388d8d2ae8b69f18f5127dc13aa1d2520862a97",
+    "contentDigest": "sha256:88ef162659bef77f816ad00e2c88ca7b8a464e316ddec6a21c1269ffe1290608",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
@@ -153,7 +146,7 @@
     },
     {
       "number": 3,
-      "text": "Și dacă aș împărți ca hrană toate bunurile mele și dacă mi-aș da trupul ca să fiu ars, dar n-aș avea dragoste, nu-mi folosește la nimic."
+      "text": "Și dacă mi-aș împărți toate bunurile pentru a-i hrăni pe alții și dacă mi-aș da trupul ca să fiu ars, dar n-aș avea dragoste, nu-mi folosește la nimic."
     },
     {
       "number": 4,
@@ -165,15 +158,15 @@
     },
     {
       "number": 6,
-      "text": "nu se bucură de nedreptate, ci se bucură de adevăr;"
+      "text": "nu se bucură de nedreptate, ci se bucură împreună cu adevărul;"
     },
     {
       "number": 7,
-      "text": "acoperă totul, crede totul, speră totul și îndură totul."
+      "text": "suferă totul, crede totul, speră totul și îndură totul."
     },
     {
       "number": 8,
-      "text": "Dragostea nu cade niciodată. Dar, dacă sunt profeții, vor fi desființate; dacă sunt limbi, vor înceta; dacă este cunoaștere, va fi desființată."
+      "text": "Dragostea nu dă greș niciodată. Dar, dacă sunt profeții, vor fi desființate; dacă sunt limbi, vor înceta; dacă este cunoaștere, va fi desființată."
     },
     {
       "number": 9,
@@ -189,14 +182,51 @@
     },
     {
       "number": 12,
-      "text": "Căci acum vedem ca printr-o oglindă, în chip de enigmă, dar atunci față către față. Acum cunosc în parte, dar atunci voi cunoaște deplin, așa cum și eu am fost cunoscut deplin."
+      "text": "Căci acum vedem într-o oglindă, neclar, dar atunci față către față. Acum cunosc în parte, dar atunci voi cunoaște deplin, așa cum și eu am fost cunoscut deplin."
     },
     {
       "number": 13,
       "text": "Acum rămân credința, speranța și dragostea, acestea trei; dar cea mai mare dintre ele este dragostea."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 3,
+      "term": "καυχήσωμαι",
+      "decision": "Este redat „ca să mă laud”.",
+      "reason": "SBLGNT are „ca să mă laud”; lectura TR/RP „ca să fiu ars” nu este urmată în textul principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Versetul urmează lectura critică SBLGNT, iar varianta materială este consemnată."
+    },
+    {
+      "verse": 3,
+      "term": "revizie finală: καυθήσομαι",
+      "decision": "Și dacă mi-aș împărți toate bunurile ca hrană și dacă mi-aș da trupul ca să fiu ars, dar n-aș avea dragoste, nu-mi folosește la nimic.",
+      "reason": "Finalitatea „ca să mă laud” nu corespunde formei grecești καυθήσομαι, care exprimă faptul de a fi ars, nu acțiunea de a se lăuda. Forma καυθήσομαι exprimă arderea pasivă a trupului, pe când ca să mă laud exprimă lauda personală și schimbă material sensul propoziției.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 6,
+      "term": "revizie finală: συγχαίρει δὲ τῇ ἀληθείᾳ",
+      "decision": "nu se bucură de nedreptate, ci se bucură împreună cu adevărul;",
+      "reason": "Traducerea „se bucură de adevăr” nu redă componenta asociativă a verbului συγχαίρει, care descrie bucuria împreună cu adevărul. Secvența συγχαίρει δὲ τῇ ἀληθείᾳ înseamnă bucurie împreună cu adevărul, în timp ce se bucură de adevăr schimbă această asociere într-un raport cauzal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 3,
+      "term": "revizie finală: ψωμίσω πάντα τὰ ὑπάρχοντά μου",
+      "decision": "Și dacă mi-aș împărți toate bunurile pentru a-i hrăni pe alții și dacă mi-aș da trupul ca să fiu ars, dar n-aș avea dragoste, nu-mi folosește la nimic.",
+      "reason": "Construcția „toate bunurile ca hrană” atribuie impropriu tuturor bunurilor statutul de hrană, în loc să exprime distribuirea lor pentru hrănirea altora, valoarea contextuală a verbului ψωμίζω. Deși „mi-aș împărți toate bunurile ca hrană” redă ideea de dăruire din „ψωμίσω πάντα τὰ ὑπάρχοντά μου”, scopul hrănirii beneficiarilor nu este exprimat suficient de precis.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

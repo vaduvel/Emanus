@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparat; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 26,
       "reviewed": 26,
@@ -98,14 +96,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 26 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 26 de versete din ACT.3 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost corectate versetul corupt despre Poarta Frumoasă, persoanele verbelor și formulările discursului lui Petru.",
+        "Au fost păstrate argumentul prin Numele lui Isus, îndemnul la întoarcere și succesiunea trimiterii lui Isus.",
+        "Termenii profetici și de restaurare sunt redați lexical, fără explicare doctrinară în text."
       ]
     },
     "theologicalContext": {
@@ -123,29 +121,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 720,
-        "primary": 239,
-        "secondary": 48,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5075266817973916,
-      "minimumScore": 0.6309563052154472
-    },
-    "textDigest": "sha256:c74b9df579c766fbd8cadba1447827558c790dc3f62c66f5f8e25851b3f9c9cb",
-    "contentDigest": "sha256:2e75c0cc54a63e0c3236b40552a2600941e0a0aba7244cc485efdfc5987c7c7f"
+    "textDigest": "sha256:463bc2574e46de040cf4ed2a667ad4a3e90ec39f5a8090c785b8db84ffacf311",
+    "contentDigest": "sha256:d4a172fcab491a50ae7bc835768add90bbeec73cf9b8a4f58efcea126ea1ad92",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Petru și Ioan urcau la Templu pentru ceasul rugăciunii, ceasul al nouălea."
+      "text": "Petru și Ioan urcau la Templu la ceasul rugăciunii, ceasul al nouălea."
     },
     {
       "number": 2,
@@ -153,7 +146,7 @@
     },
     {
       "number": 3,
-      "text": "Când i-a văzut pe Petru și pe Ioan gata să intre în Templu, le-a cerut să primească milostenie."
+      "text": "Când i-a văzut pe Petru și pe Ioan gata să intre în Templu, le-a cerut milostenie."
     },
     {
       "number": 4,
@@ -161,15 +154,15 @@
     },
     {
       "number": 5,
-      "text": "El i-a ascultat, așteptându-se să primească ceva de la ei."
+      "text": "El îi privea cu atenție, așteptând să primească ceva de la ei."
     },
     {
       "number": 6,
-      "text": "Dar Petru i-a zis: Argint și aur nu am, însă ceea ce am îți dau: în Numele lui Isus Hristos Nazarineanul, umblă!"
+      "text": "Dar Petru i-a spus: Argint și aur nu am, însă ce am îți dau: în Numele lui Isus Hristos Nazarineanul, umblă!"
     },
     {
       "number": 7,
-      "text": "L-a apucat de mâna dreaptă și l-a ridicat. Îndată i s-au întărit tălpile și gleznele;"
+      "text": "L-a apucat de mâna dreaptă și l-a ridicat. Îndată i s-au întărit tălpile și gleznele,"
     },
     {
       "number": 8,
@@ -181,7 +174,7 @@
     },
     {
       "number": 10,
-      "text": "Ei l-au recunoscut, că el a fost cel care a folosit pentru a sta cerșit pentru daruri pentru nevoiași la Poarta Frumoasa a templului. Ei au fost umpluti de mirare și uimire la ceea ce sa întâmplat cu el."
+      "text": "L-au recunoscut ca fiind cel care ședea la Poarta Frumoasă a Templului ca să ceară milostenie; au fost cuprinși de uimire și uluire din cauza a ceea ce i se întâmplase."
     },
     {
       "number": 11,
@@ -193,23 +186,23 @@
     },
     {
       "number": 13,
-      "text": "Dumnezeul lui Avraam, al lui Isaac și al lui Iacov, Dumnezeul părinților noștri, L-a glorificat pe Slujitorul Său Isus, pe care voi L-ați dat pe mâna altora și L-ați renegat înaintea lui Pilat, deși el hotărâse să-L elibereze."
+      "text": "Dumnezeul lui Avraam, al lui Isaac și al lui Iacov, Dumnezeul părinților noștri, L-a glorificat pe Slujitorul Său Isus, pe care voi L-ați predat și L-ați renegat în fața lui Pilat, deși acesta hotărâse să-L elibereze."
     },
     {
       "number": 14,
-      "text": "Voi L-ați renegat pe Cel Sfânt și Drept și ați cerut să vă fie dăruit un ucigaș,"
+      "text": "Voi L-ați renegat pe Cel Sfânt și Drept și ați cerut să fie pus în libertate pentru voi un ucigaș,"
     },
     {
       "number": 15,
-      "text": "și a ucis pe prințul vieții, pe care Dumnezeu l-a înviat din morți, la care suntem martori."
+      "text": "iar pe Autorul vieții L-ați omorât; Dumnezeu L-a înviat dintre morți, iar noi suntem martori ai acestui fapt."
     },
     {
       "number": 16,
-      "text": "Pe baza credinței în Numele Lui, Numele Lui l-a întărit pe omul acesta, pe care îl vedeți și îl cunoașteți; iar credința care vine prin El i-a dat această deplină sănătate înaintea voastră, a tuturor."
+      "text": "Prin credința în Numele Lui, Numele Lui l-a întărit pe omul acesta pe care îl vedeți și îl cunoașteți; iar credința prin El i-a dat această deplină sănătate înaintea voastră, a tuturor."
     },
     {
       "number": 17,
-      "text": "Acum, fraților, știu că ați făcut acest lucru din ignoranță, așa cum au făcut și conducătorii voștri."
+      "text": "Acum, fraților, știu că ați făcut aceasta din neștiință, la fel ca și conducătorii voștri."
     },
     {
       "number": 18,
@@ -217,27 +210,27 @@
     },
     {
       "number": 19,
-      "text": "Pocăiți-vă deci, și întoarceți-vă iarăși, ca păcatele voastre să fie șterse, ca să vină timpuri de înviorare din prezența Domnului,"
+      "text": "Pocăiți-vă, așadar, și întoarceți-vă, ca păcatele voastre să fie șterse,"
     },
     {
       "number": 20,
-      "text": "ca să trimită pe Isus Hristos, care a fost rânduit pentru voi mai înainte,"
+      "text": "pentru ca de la fața Domnului să vină timpuri de înviorare, iar El să-L trimită pe Hristosul rânduit pentru voi, pe Isus,"
     },
     {
       "number": 21,
-      "text": "Cerul trebuie să-L primească până la vremurile restaurării tuturor lucrurilor despre care Dumnezeu a vorbit prin gura sfinților Săi profeți din vechime."
+      "text": "pe care cerul trebuie să-L primească până la vremurile restaurării tuturor lucrurilor despre care Dumnezeu a vorbit prin gura sfinților Săi profeți din vechime."
     },
     {
       "number": 22,
-      "text": "Moise a spus: Domnul Dumnezeul vostru vă va ridica dintre frații voștri un Profet ca mine. De El să ascultați în toate câte vă va spune."
+      "text": "Moise a spus: Domnul Dumnezeul vostru vă va ridica dintre frații voștri un profet ca mine. De El să ascultați în toate câte vă va spune."
     },
     {
       "number": 23,
-      "text": "Fiecare suflet care nu va asculta de profetul acela va fi nimicit în întregime din mijlocul poporului."
+      "text": "Fiecare suflet care nu va asculta de profetul acela va fi nimicit din mijlocul poporului."
     },
     {
       "number": 24,
-      "text": "Și toți profeții, de la Samuel și cei care au urmat, oricâți au vorbit, au vestit și ei zilele acestea."
+      "text": "Și toți profeții, începând cu Samuel și continuând cu cei de după el, toți câți au vorbit, au vestit și ei aceste zile."
     },
     {
       "number": 25,
@@ -245,7 +238,7 @@
     },
     {
       "number": 26,
-      "text": "Pentru voi mai întâi, ridicându-L pe Slujitorul Său, Dumnezeu L-a trimis să vă binecuvânteze, întorcându-l pe fiecare dintre voi de la faptele lui rele."
+      "text": "Vouă, mai întâi, Dumnezeu, după ce L-a ridicat pe Slujitorul Său, vi L-a trimis ca să vă binecuvânteze, întorcându-vă pe fiecare de la răutățile voastre."
     }
   ],
   "editorialNotes": [
@@ -299,6 +292,69 @@
       "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "«Ridicându-L» păstrează polisemia greacă și continuitatea discursului."
+    },
+    {
+      "verse": 10,
+      "term": "revizie finală: ἐπεγίνωσκον",
+      "decision": "L-au recunoscut ca fiind cel care ședea la Poarta Frumoasă a Templului ca să ceară milostenie; au fost cuprinși de uimire și uluire din cauza celor ce i se întâmplaseră.",
+      "reason": "Construcția „L-au recunoscut că era” încalcă regimul firesc al verbului „a recunoaște”; identificarea trebuie exprimată prin „ca fiind”, „drept” sau printr-o propoziție separată. Deși ἐπεγίνωσκον indică identificarea corectă, L-au recunoscut că era cel care ședea exprimă această relație printr-o construcție românească defectuoasă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 13,
+      "term": "revizie finală: παρεδώκατε",
+      "decision": "Dumnezeul lui Avraam, al lui Isaac și al lui Iacov, Dumnezeul părinților noștri, L-a glorificat pe Slujitorul Său Isus, pe care voi L-ați predat și L-ați renegat în fața lui Pilat, deși acesta hotărâse să-L elibereze.",
+      "reason": "Adaosul „pe mâna altora” nu are corespondent în textul grec și face inutil de vag actul predării, înainte ca Pilat să fie numit explicit. În timp ce παρεδώκατε afirmă actul predării, L-ați dat pe mâna altora adaugă explicit un destinatar nedeterminat care lipsește din construcția greacă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 14,
+      "term": "revizie finală: ἄνδρα φονέα χαρισθῆναι ὑμῖν",
+      "decision": "Voi L-ați renegat pe Cel Sfânt și Drept și ați cerut să fie pus în libertate pentru voi un ucigaș,",
+      "reason": "Verbul „dăruit” produce sensul impropriu al oferirii ucigașului ca dar, în timp ce contextul verbului grec privește punerea lui în libertate la cererea mulțimii. Valoarea contextuală de eliberare din ἄνδρα φονέα χαρισθῆναι ὑμῖν nu este transmisă precis de un ucigaș să vă fie dăruit.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 20,
+      "term": "revizie finală: καὶ ἀποστείλῃ τὸν προκεχειρισμένον",
+      "decision": "pentru ca de la fața Domnului să vină timpuri de înviorare, iar El să-L trimită pe Hristosul rânduit pentru voi, pe Isus,",
+      "reason": "Coordonarea schimbă subiectul fără să-l exprime: după „să vină timpuri”, verbul „să-L trimită” pare să aibă tot „timpuri” drept subiect, deși greaca are un verb singular cu subiect divin implicit. Subiectul divin implicit cerut de καὶ ἀποστείλῃ τὸν προκεχειρισμένον nu rămâne sintactic clar în și să-L trimită pe Hristosul rânduit.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 24,
+      "term": "revizie finală: ἀπὸ Σαμουὴλ καὶ τῶν καθεξῆς",
+      "decision": "Și toți profeții, începând cu Samuel și continuând cu cei de după el, toți câți au vorbit, au vestit și ei aceste zile.",
+      "reason": "Expresia „de la Samuel și cei care au urmat” coordonează necorespunzător un complement prepozițional cu un grup nominal neprepozițional, făcând seria profeților sintactic nefirească. Seria coerentă din ἀπὸ Σαμουὴλ καὶ τῶν καθεξῆς este transmisă semantic de de la Samuel și cei care au urmat, dar nu printr-o sintaxă românească bine formată.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 26,
+      "term": "revizie finală: ὑμῖν πρῶτον",
+      "decision": "Vouă, mai întâi, Dumnezeu, după ce L-a ridicat pe Slujitorul Său, vi L-a trimis ca să vă binecuvânteze, întorcându-vă pe fiecare de la răutățile voastre.",
+      "reason": "Prepoziția „pentru” schimbă raportul sintactic al dativului ὑμῖν din destinatar al trimiterii în beneficiar, iar coordonarea „L-a ridicat ... și L-a trimis” estompează raportul circumstanțial exprimat de participiul ἀναστήσας. Dativul din ὑμῖν πρῶτον cere sensul „vouă” sau „la voi”, pe care Pentru voi mai întâi nu îl redă suficient de precis.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 10,
+      "term": "revizie finală: τῷ συμβεβηκότι αὐτῷ",
+      "decision": "L-au recunoscut ca fiind cel care ședea la Poarta Frumoasă a Templului ca să ceară milostenie; au fost cuprinși de uimire și uluire din cauza a ceea ce i se întâmplase.",
+      "reason": "Formularea „celor ce i se întâmplaseră” este defectuoasă gramatical și transformă referirea grecească singulară la ceea ce se întâmplase într-o construcție plurală nefirească. Singularul τῷ συμβεβηκότι αὐτῷ nu este redat precis prin pluralul celor ce i se întâmplaseră, care schimbă numărul evenimentului și afectează corectitudinea frazei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
     }
   ],
   "referenceNotes": [],

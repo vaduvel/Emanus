@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "additions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparat; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 23,
       "reviewed": 23,
@@ -98,22 +96,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 23 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 23 de versete din MAT.2 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost clarificate sensurile de drum, căutare și ucidere, precum și relațiile sintactice ale narațiunii.",
+        "Citatele și numele proprii au fost confruntate cu textul principal și aparatul SBLGNT.",
+        "Sunt păstrate numai alegerile românești care redau natural persoana, numărul, aspectul verbal și referentul din textul principal SBLGNT."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
         "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Termenii teologici și ambiguitățile sintactice sunt redați lexical, fără glosare confesionale în corpul versetului.",
+        "Etaloanele românești au fost consultate numai pentru verificare, după confruntarea directă cu sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -123,29 +121,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 741,
-        "primary": 228,
-        "secondary": 102,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.4037089233135842,
-      "minimumScore": 0.5165308313030281
-    },
-    "textDigest": "sha256:a741584c80294cbbeaff3133626bcf1e8e0d6552f44dd44f53d1b0274f724dd4",
-    "contentDigest": "sha256:17bb893fe5ee4c393b7d5b2369bc31447fe387f4172f880725cc6ea9c8c83b12"
+    "textDigest": "sha256:f82cee6f27aba623780ef10c8f0255ddf8d16a313357cd8cb30164594821f400",
+    "contentDigest": "sha256:00abc7ed09c9d4d8756279af9c752aeb468132f6af682ec85f2e3e2401a4a781",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "După ce S-a născut Isus în Betleemul Iudeei, în zilele regelui Irod, iată că niște magi de la răsărit au venit la Ierusalim"
+      "text": "După ce Isus S-a născut în Betleemul Iudeei, în zilele regelui Irod, iată că niște magi de la răsărit au sosit la Ierusalim"
     },
     {
       "number": 2,
@@ -165,7 +158,7 @@
     },
     {
       "number": 6,
-      "text": "«Și tu, Betleeme, ținut al lui Iuda, nicidecum nu ești cel mai neînsemnat dintre conducătorii lui Iuda, căci din tine va ieși un Conducător care va păstori poporul Meu, Israel.»”"
+      "text": "«Și tu, Betleeme, pământ al lui Iuda, nicidecum nu ești cel mai neînsemnat dintre căpeteniile lui Iuda, căci din tine va ieși un Conducător care va păstori poporul Meu, Israel.»”"
     },
     {
       "number": 7,
@@ -181,23 +174,23 @@
     },
     {
       "number": 10,
-      "text": "Când au văzut steaua, s-au bucurat nespus, cu o bucurie foarte mare."
+      "text": "Când au văzut steaua, s-au bucurat peste măsură."
     },
     {
       "number": 11,
-      "text": "Au intrat în casă și au văzut Copilul împreună cu Maria, mama Lui. Au căzut la pământ și s-au închinat înaintea Lui; apoi și-au deschis cuferele și I-au adus daruri: aur, tămâie și smirnă."
+      "text": "Au intrat în casă și au văzut Copilul împreună cu Maria, mama Lui. Au căzut la pământ și I s-au închinat; apoi și-au deschis lăzile cu lucruri de preț și I-au oferit daruri: aur, tămâie și smirnă."
     },
     {
       "number": 12,
-      "text": "Fiind avertizați într-un vis de a nu se mai întoarce la Irod, ei s-au întors în țara lor într-un alt mod."
+      "text": "Fiind avertizați într-un vis să nu se mai întoarcă la Irod, ei s-au întors în țara lor pe alt drum."
     },
     {
       "number": 13,
-      "text": "După plecarea lor, iată că un înger al Domnului i s-a arătat în vis lui Iosif și i-a spus: „Ridică-te, ia Copilul și pe mama Lui, fugi în Egipt și rămâi acolo până îți voi spune eu, căci Irod urmează să caute Copilul ca să-L omoare.”"
+      "text": "După plecarea lor, iată că un înger al Domnului i s-a arătat în vis lui Iosif și i-a spus: „Ridică-te, ia Copilul și pe mama Lui, fugi în Egipt și rămâi acolo până îți voi spune eu, căci Irod este pe cale să caute Copilul ca să-L nimicească.”"
     },
     {
       "number": 14,
-      "text": "S-a sculat, a luat pe copil și pe mama lui noaptea, și a plecat în Egipt."
+      "text": "S-a ridicat, a luat noaptea Copilul și pe mama Lui și a plecat în Egipt."
     },
     {
       "number": 15,
@@ -205,7 +198,7 @@
     },
     {
       "number": 16,
-      "text": "Atunci Irod, văzând că fusese înșelat de magi, s-a înfuriat foarte tare. A trimis să fie omorâți toți băieții de doi ani și mai mici din Betleem și din toate împrejurimile lui, potrivit timpului pe care îl aflase precis de la magi."
+      "text": "Atunci Irod, văzând că fusese înșelat de magi, s-a înfuriat foarte tare. A trimis oameni să-i ucidă pe toți băieții de doi ani și mai mici din Betleem și din toate împrejurimile lui, potrivit timpului pe care îl aflase precis de la magi."
     },
     {
       "number": 17,
@@ -229,14 +222,66 @@
     },
     {
       "number": 22,
-      "text": "Dar, auzind că Arhelau domnea în Iudeea în locul tatălui său, Irod, s-a temut să meargă acolo. Fiind înștiințat în vis, s-a retras în părțile Galileei"
+      "text": "Dar, auzind că Arhelau domnea în Iudeea în locul tatălui său, Irod, s-a temut să meargă acolo. Fiind înștiințat într-un vis, s-a retras în părțile Galileei"
     },
     {
       "number": 23,
       "text": "și a venit să locuiască într-o cetate numită Nazaret, ca să se împlinească ce fusese spus prin profeți: „Va fi numit Nazarinean.”"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 12,
+      "term": "διʼ ἄλλης ὁδοῦ",
+      "decision": "„pe alt drum”",
+      "alternatives": [
+        "„într-un alt mod”"
+      ],
+      "reason": "Expresia desemnează calea de întoarcere, nu un mod abstract de acțiune.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Formularea românească păstrează referința spațială explicită din SBLGNT."
+    },
+    {
+      "verse": 18,
+      "term": "ἠκούσθη",
+      "decision": "„s-a auzit”",
+      "alternatives": [
+        "lectura RP cu adaosul „jelire și”"
+      ],
+      "reason": "SBLGNT nu include adaosul din RP după „s-a auzit”; traducerea păstrează lectura principală.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Aparatul a fost verificat, iar textul principal nu importă adaosul RP."
+    },
+    {
+      "verse": 10,
+      "term": "revizie finală: ἐχάρησαν χαρὰν μεγάλην σφόδρα",
+      "decision": "Când au văzut steaua, s-au bucurat peste măsură.",
+      "reason": "Redarea cumulează „nespus” cu „foarte mare”, producând o redundanță supărătoare care afectează naturalețea propoziției românești. Deși s-au bucurat nespus, cu o bucurie foarte mare transmite intensitatea din ἐχάρησαν χαρὰν μεγάλην σφόδρα, acumularea românească este redundantă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 11,
+      "term": "revizie finală: ἀνοίξαντες τοὺς θησαυροὺς αὐτῶν",
+      "decision": "Au intrat în casă și au văzut Copilul împreună cu Maria, mama Lui. Au căzut la pământ și I s-au închinat; apoi și-au deschis lăzile cu lucruri de preț și I-au oferit daruri: aur, tămâie și smirnă.",
+      "reason": "Substantivul „comorile” nu funcționează natural ca obiect concret al verbului „a deschide”; contextul cere recipiente sau lăzi cu lucruri de preț. Imaginea concretă din ἀνοίξαντες τοὺς θησαυροὺς αὐτῶν devine neclară în și-au deschis comorile, unde obiectul deschiderii pare a fi valoarea însăși.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 16,
+      "term": "revizie finală: καὶ ἀποστείλας ἀνεῖλεν πάντας τοὺς παῖδας",
+      "decision": "Atunci Irod, văzând că fusese înșelat de magi, s-a înfuriat foarte tare. A trimis oameni să-i ucidă pe toți băieții de doi ani și mai mici din Betleem și din toate împrejurimile lui, potrivit timpului pe care îl aflase precis de la magi.",
+      "reason": "Verbul „a trimis” este folosit fără precizarea persoanelor trimise sau a scopului, iar coordonarea poate sugera că Irod i-a ucis personal pe băieți. Acțiunea delegată din καὶ ἀποστείλας ἀνεῖλεν πάντας τοὺς παῖδας nu este exprimată limpede prin A trimis și i-a ucis pe toți băieții.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

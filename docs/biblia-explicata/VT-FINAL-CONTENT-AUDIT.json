@@ -1,0 +1,117 @@
+{
+  "generatedOn": "2026-08-08",
+  "verdict": "EXPLANATION_LAYER_REVIEWED_929_OF_929_SOURCE_FIRST_CI_PENDING",
+  "reviewType": "final-ai-editorial-source-fidelity-review",
+  "scope": {
+    "includes": "Old Testament explanation layer",
+    "excludes": [
+      "Biblia Emanus translation completion",
+      "canonical text promotion",
+      "WLC/source-lock reconciliation for translation pipeline"
+    ]
+  },
+  "sourcePriority": {
+    "poonenWhereDeveloped": "authoritative editorial source for this project",
+    "mayCanonicalExegesisOverridePoonen": false,
+    "canonicalExegesisAllowedOnlyForSourceGaps": true,
+    "textualOverviewAllowedOnlyForCoverageGaps": true,
+    "namedModernAttributionPublic": false,
+    "provenanceInternal": true
+  },
+  "explanation": {
+    "canonicalOtBooksReviewed": 39,
+    "canonicalOtBooksExpected": 39,
+    "canonicalOtChaptersReviewed": 929,
+    "canonicalOtChaptersExpected": 929,
+    "coverageComplete": true,
+    "editorialReviewComplete": true,
+    "technicalReleaseApproved": false,
+    "legacyFullBooks": 10,
+    "legacyFullChapters": 292,
+    "fullOverlayBooks": 29,
+    "fullOverlayChapters": 637,
+    "overlayExplanationStatus": "published"
+  },
+  "chapterByChapterGate": {
+    "script": "scripts/check-vt-chapter-by-chapter-review.mjs",
+    "packageCommand": "pnpm check:vt-chapter-review",
+    "checksEveryFinalChapter": true,
+    "checks": [
+      "canonical chapter continuity",
+      "non-empty title and summary",
+      "at least one explanation unit",
+      "non-empty teaching",
+      "valid explanationKind",
+      "valid internal provenance",
+      "continuous overlay verse ranges",
+      "textual-overview truth guards",
+      "canonical-exegesis source presence",
+      "WLC-OSHB lexical provenance",
+      "exact totals: 10/292 legacy + 29/637 overlay = 39/929"
+    ]
+  },
+  "poonenFidelityGate": {
+    "script": "scripts/check-vt-poonen-fidelity.mjs",
+    "packageCommand": "pnpm check:vt-poonen-fidelity",
+    "runsOnFinalMaterialAfterEditorialReviews": true,
+    "requiresPoonenProvenance": true,
+    "requiresDistinctiveSourceTeachingToSurvive": true,
+    "criticalOverlayChaptersProtected": 46,
+    "criticalLegacyUnitsProtected": 4
+  },
+  "revertedIncorrectOverrides": [
+    "Exod 21 canonical override removed",
+    "Levitic 25 canonical override removed",
+    "Iosua 6/7/10/11 canonical override removed"
+  ],
+  "sourceFidelityRestorations": [
+    "Judecatori 4",
+    "Estera 1, 2, 8",
+    "Iov 29, 31, 42",
+    "Psalmii 32, 51, 69, 73, 74, 103, 105",
+    "Proverbe 3, 22, 23, 31",
+    "Cantarea Cantarilor 1, 2, 4, 5, 8",
+    "Isaia 7, 10, 11, 14",
+    "Ieremia 23, 29, 31",
+    "Ezechiel 14, 16, 28, 36, 43, 47, 48",
+    "Daniel 2, 3, 4, 6, 7, 9, 10, 12",
+    "1 Samuel 16, 28",
+    "2 Samuel 24"
+  ],
+  "verifiedGeneralExegesisGaps": [
+    "1 Imparati 22 lying-spirit mechanics not materially developed by source",
+    "Numeri 31 captive details not materially developed by source",
+    "Deuteronom 22 legal/sexual cases not materially developed by source transcript",
+    "Isaia 45:7 ra lexical point not materially developed by source"
+  ],
+  "textSeparation": {
+    "translationIsExplanationBlocker": false,
+    "temporaryBibleTextMayOpenPublicly": false,
+    "temporaryTextReaderStatus": "in_review",
+    "bibliaEmanusTextMayPropagateExplanationStatus": true,
+    "explanationReviewMustBeRepeatedOnlyBecauseTranslationChanges": false
+  },
+  "publicCopyPolicy": {
+    "namedModernAttributionAllowed": false,
+    "explanationSourceExposed": false,
+    "researchTranscriptLanguageAllowed": false,
+    "provenanceRetainedInternally": true,
+    "sanitizerMayChangeDoctrine": false
+  },
+  "releaseRequirements": [
+    "Run check:vt-explained",
+    "Run check:vt-legacy-provenance",
+    "Run check:vt-poonen-fidelity",
+    "Run check:vt-chapter-review",
+    "Run check:vt-publication",
+    "Run @emanus/shared typecheck",
+    "Run @emanus/shared build",
+    "Run git diff --check",
+    "Resolve PR #85 integration conflicts and normal merge gates"
+  ],
+  "ciEvidence": {
+    "latestWorkflowRunObserved": false,
+    "combinedStatusChecksObserved": 0,
+    "ciDeclaredGreen": false
+  }
+}

@@ -1,0 +1,113 @@
+name: VT Explanation Review
+
+on:
+  push:
+    branches: [agent/biblia-explicata-vt-integration-clean]
+    paths:
+      - "packages/shared/src/bible/**"
+      - "packages/shared/package.json"
+      - "apps/web/src/screens/Bible.tsx"
+      - "apps/web/src/bibleReader.ts"
+      - "apps/web/src/data/bible-needs.json"
+      - "apps/web/tests/bible-reader.spec.ts"
+      - "apps/web/playwright.config.ts"
+      - "apps/web/package.json"
+      - "apps/web/vite.config.ts"
+      - "scripts/materialize-bible-reader.mjs"
+      - "scripts/check-vt-*.mjs"
+      - "scripts/check-vt-*.py"
+      - "scripts/materialize-published-emanus-ot-runtime.py"
+      - "package.json"
+      - "pnpm-lock.yaml"
+      - ".github/workflows/vt-explanation-review.yml"
+  pull_request:
+    branches: [main, agent/biblia-explicata-vt-integration-clean]
+    paths:
+      - "packages/shared/src/bible/**"
+      - "packages/shared/package.json"
+      - "apps/web/src/screens/Bible.tsx"
+      - "apps/web/src/bibleReader.ts"
+      - "apps/web/src/data/bible-needs.json"
+      - "apps/web/tests/bible-reader.spec.ts"
+      - "apps/web/playwright.config.ts"
+      - "apps/web/package.json"
+      - "apps/web/vite.config.ts"
+      - "scripts/materialize-bible-reader.mjs"
+      - "scripts/check-vt-*.mjs"
+      - "scripts/check-vt-*.py"
+      - "scripts/materialize-published-emanus-ot-runtime.py"
+      - "package.json"
+      - "pnpm-lock.yaml"
+      - ".github/workflows/vt-explanation-review.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: vt-explanation-review-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install dependencies
+        run: |
+          set -euo pipefail
+          corepack enable
+          corepack prepare pnpm@9.7.0 --activate
+          pnpm install --frozen-lockfile
+
+      - name: Verify published Biblia Emanus VT source
+        run: |
+          set -euo pipefail
+          test ! -e docs/data/biblia-emanus/ot-source-evidence.jsonl
+          test -e docs/data/biblia-emanus/ot-source-evidence.jsonl.gz
+          python3 scripts/check-biblia-emanus-ot-publication-gate.py
+          python3 scripts/materialize-published-emanus-ot-runtime.py --check
+
+      - name: Verify 39-book explained VT and source fidelity
+        run: |
+          set -euo pipefail
+          pnpm check:vt-explained
+          pnpm check:vt-legacy-provenance
+          pnpm check:vt-poonen-fidelity
+          pnpm check:vt-chapter-review
+          pnpm check:vt-textual-overview-purity
+          pnpm check:vt-ultra-final
+          pnpm check:vt-publication
+
+      - name: Typecheck and production-build final reader
+        run: |
+          set -euo pipefail
+          pnpm --filter @emanus/shared typecheck
+          pnpm --filter @emanus/shared build
+          pnpm --filter @emanus/web typecheck
+          pnpm --filter @emanus/web build
+
+      - name: Smoke-test production Bible reader
+        run: |
+          set -euo pipefail
+          pnpm --filter @emanus/web exec playwright install --with-deps chromium
+          pnpm --filter @emanus/web test:smoke:bible
+
+      - name: Verify clean diff and main mergeability
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          PR_BASE_REF: ${{ github.event.pull_request.base.ref }}
+        run: |
+          set -euo pipefail
+          git diff --check
+          if [ "${EVENT_NAME}" = "pull_request" ] && [ "${PR_BASE_REF}" != "main" ]; then
+            echo "Stacked PR verificat față de ${PR_BASE_REF}; mergeability cu main rămâne pe PR-ul final."
+            exit 0
+          fi
+          git fetch origin main:refs/remotes/origin/main
+          git diff --check origin/main...HEAD
+          git merge-tree --write-tree HEAD origin/main >/dev/null

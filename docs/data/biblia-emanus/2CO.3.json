@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparat; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 18,
       "reviewed": 18,
@@ -98,22 +96,21 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 18 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 18 versete din 2CO.3 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost reparate calcurile, acordurile și relațiile sintactice care mascau sensul textului grec.",
+        "Lectura principală SBLGNT este urmată fără importarea automată a adaosurilor din martorul TR."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Textul principal urmează SBLGNT.",
+        "Termenii teologici sunt redați lexical, fără glosarea confesională a ambiguităților.",
+        "Etaloanele românești au fost folosite numai pentru verificare."
       ]
     },
     "omissionAddition": {
@@ -123,29 +120,24 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 327,
-        "primary": 189,
-        "secondary": 45,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.33174470430626646,
-      "minimumScore": 0.5090738739653641
-    },
-    "textDigest": "sha256:35ad747d3f6af8edcdaf8ba748c1e8421a822b08a8e075c55e3adc333484ec08",
-    "contentDigest": "sha256:a6832bbb46f7d7d6179deb15762d265965d3386762e6ea2eb60f81f21488c6dc"
+    "textDigest": "sha256:757f6fdd4d0dff818f05234ff588e6f03cd1de156746095a8ce2cef16f33b1fc",
+    "contentDigest": "sha256:f0abad39e69fd0cf28744f32bbb40f640a697af2626c19a0f27620461b66bbe1",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Începem din nou să ne lăudăm pe noi înșine? Sau avem nevoie, ca unii, de scrisori de laudă către voi sau de la voi?"
+      "text": "Începem din nou să ne recomandăm pe noi înșine? Sau, ca unii, avem nevoie de scrisori de recomandare către voi ori de la voi?"
     },
     {
       "number": 2,
@@ -153,59 +145,59 @@
     },
     {
       "number": 3,
-      "text": "Este limpede că voi sunteți o scrisoare a lui Hristos, slujită de noi, scrisă nu cu cerneală, ci cu Duhul Dumnezeului celui viu; nu pe table de piatră, ci pe table care sunt inimi de carne."
+      "text": "Este limpede că sunteți o scrisoare a lui Hristos, slujită de noi, scrisă nu cu cerneală, ci cu Duhul Dumnezeului celui viu; nu pe table de piatră, ci pe table care sunt inimi de carne."
     },
     {
       "number": 4,
-      "text": "O astfel de încredere avem prin Hristos față de Dumnezeu."
+      "text": "O astfel de încredere avem prin Hristos înaintea lui Dumnezeu."
     },
     {
       "number": 5,
-      "text": "Nu că, de la noi înșine, suntem în stare să socotim ceva ca venind de la noi înșine, ci destoinicia noastră este de la Dumnezeu,"
+      "text": "Nu că suntem în stare, prin noi înșine, să socotim ceva ca venind de la noi înșine, ci destoinicia noastră este de la Dumnezeu,"
     },
     {
       "number": 6,
-      "text": "care ne-a și făcut destoinici să fim slujitori ai unui nou legământ, nu ai literei, ci ai Duhului; pentru că litera ucide, dar Duhul dă viață."
+      "text": "care ne-a făcut destoinici să fim slujitori ai unui legământ nou, nu ai literei, ci ai Duhului; căci litera ucide, dar Duhul dă viață."
     },
     {
       "number": 7,
-      "text": "Iar dacă slujirea morții, săpată în litere pe pietre, a venit cu slavă, așa încât fiii lui Israel nu puteau să-și țină privirea la fața lui Moise din cauza slavei feței lui, deși era trecătoare,"
+      "text": "Dar dacă slujirea morții, întipărită în litere pe pietre, a venit cu slavă, astfel încât fiii lui Israel nu puteau să-și ațintească privirea asupra feței lui Moise din cauza slavei feței lui, deși aceasta trecea,"
     },
     {
       "number": 8,
-      "text": "cum să nu fie cu atât mai multă slavă slujirea Duhului?"
+      "text": "cum să nu fie cu atât mai mult în slavă slujirea Duhului?"
     },
     {
       "number": 9,
-      "text": "Căci dacă serviciul de condamnare are glorie, serviciul dreptății depășește mult mai mult în glorie."
+      "text": "Căci, dacă slujirea condamnării a avut slavă, cu atât mai mult prisosește în slavă slujirea dreptății."
     },
     {
       "number": 10,
-      "text": "Căci, cu siguranță, ceea ce a fost făcut glorios nu a fost făcut glorios în această privință, din cauza gloriei care depășește."
+      "text": "Căci nici ceea ce a fost glorificat nu a fost glorificat în această privință, din cauza slavei care îl întrece."
     },
     {
       "number": 11,
-      "text": "Căci, dacă ceea ce era trecător a venit cu slavă, cu atât mai mult ceea ce rămâne este în slavă."
+      "text": "Căci, dacă ceea ce trecea a fost însoțit de slavă, cu atât mai mult ceea ce rămâne este în slavă."
     },
     {
       "number": 12,
-      "text": "De aceea, având o astfel de speranță, folosim o mare îndrăzneală a vorbirii,"
+      "text": "Având deci o astfel de speranță, vorbim cu multă îndrăzneală,"
     },
     {
       "number": 13,
-      "text": "și nu ca Moise, care punea un văl peste fața lui ca fiii lui Israel să nu-și ațintească privirea spre sfârșitul a ceea ce se stingea."
+      "text": "și nu ca Moise, care își punea un văl peste față, pentru ca fiii lui Israel să nu-și ațintească privirea asupra sfârșitului a ceea ce trecea."
     },
     {
       "number": 14,
-      "text": "Dar mințile lor au fost împietrite. Căci până în ziua de astăzi, la citirea vechiului legământ, același văl rămâne, neridicat, pentru că numai în Hristos este înlăturat."
+      "text": "Dar mințile lor au fost împietrite. Căci până în ziua de astăzi, la citirea vechiului legământ, același văl rămâne neridicat, pentru că în Hristos este înlăturat."
     },
     {
       "number": 15,
-      "text": "Dar până astăzi, ori de câte ori este citit Moise, un văl stă peste inima lor."
+      "text": "Dar până astăzi, ori de câte ori se citește Moise, un văl stă peste inima lor."
     },
     {
       "number": 16,
-      "text": "Însă ori de câte ori cineva se întoarce la Domnul, vălul este luat."
+      "text": "Însă ori de câte ori se întoarce la Domnul, vălul este îndepărtat."
     },
     {
       "number": 17,
@@ -213,10 +205,47 @@
     },
     {
       "number": 18,
-      "text": "Dar noi toți, privind ca într-o oglindă, cu fața descoperită, slava Domnului, suntem transformați în același chip, din slavă în slavă, ca de la Domnul, Duhul."
+      "text": "Iar noi toți, cu fața descoperită, oglindind slava Domnului, suntem transformați în același chip, din slavă în slavă, întocmai ca prin lucrarea Domnului, care este Duhul."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 10,
+      "term": "revizie finală: οὐ δεδόξασται τὸ δεδοξασμένον ἐν τούτῳ τῷ μέρει",
+      "decision": "Căci nici ceea ce a fost glorificat nu a fost glorificat în această privință, din cauza slavei care îl întrece.",
+      "reason": "Adverbul „mai” transformă negarea comparativă și contextuală din greacă într-o afirmație temporală potrivit căreia glorificarea a încetat ulterior. Secvența οὐ δεδόξασται τὸ δεδοξασμένον ἐν τούτῳ τῷ μέρει nu este redată exact de ceea ce fusese glorificat nu mai este glorificat în această privință, deoarece greaca exprimă eclipsarea comparativă, nu simpla succesiune temporală.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 11,
+      "term": "revizie finală: τὸ καταργούμενον διὰ δόξης",
+      "decision": "Căci, dacă ceea ce trecea a fost însoțit de slavă, cu atât mai mult ceea ce rămâne este în slavă.",
+      "reason": "Construcția „a fost prin slavă” este nefirească și nu comunică limpede faptul că realitatea trecătoare a fost însoțită de slavă. Deși ceea ce trecea a fost prin slavă urmărește elementele din τὸ καταργούμενον διὰ δόξης, relația dintre ele rămâne neclară în română.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 18,
+      "term": "revizie finală: καθάπερ ἀπὸ κυρίου πνεύματος",
+      "decision": "Iar noi toți, cu fața descoperită, reflectând ca într-o oglindă slava Domnului, suntem transformați în același chip, din slavă în slavă, iar această transformare vine de la Domnul, adică de la Duhul.",
+      "reason": "Încheierea „ca de la Domnul, Duhul” este nefirească și lasă neclar dacă „Duhul” este apoziție la „Domnul” și dacă transformarea provine de la acesta. Relația de proveniență din καθάπερ ἀπὸ κυρίου πνεύματος este doar parțial inteligibilă în ca de la Domnul, Duhul, deoarece apoziția nu explicitează legătura termenilor.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 18,
+      "term": "revizie finală: καθάπερ ἀπὸ κυρίου πνεύματος",
+      "decision": "Iar noi toți, cu fața descoperită, oglindind slava Domnului, suntem transformați în același chip, din slavă în slavă, întocmai ca prin lucrarea Domnului, care este Duhul.",
+      "reason": "Finalul înlocuiește valoarea comparativă a lui καθάπερ („întocmai/după cum”) cu o propoziție coordonată prin „iar”, modificând raportul sintactic, iar „adică” impune o explicitare mai categorică decât construcția grecească. Deși καθάπερ ἀπὸ κυρίου πνεύματος indică sursa transformării, iar această transformare vine de la Domnul, adică de la Duhul omite valoarea comparativă a lui καθάπερ și explicitează prea categoric raportul sintactic.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "theologicalNeutrality": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Toate cele 16 versete au fost revizuite semantic direct față de snapshotul fixat SBLGNT 1.2 și aparatul lui; un rezultat automat „0 probleme” nu a fost folosit drept verdict semantic.",
+      "TR a fost folosit numai ca martor textual. WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată; textul românesc a fost redactat independent."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 16,
       "reviewed": 16,
@@ -98,22 +96,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 16 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 16 versete au fost confruntate direct cu SBLGNT/aparat din snapshotul fixat; TR a fost citit exclusiv ca martor, iar WEBP/BTF/Cornilescu 1924/Biblia Liberă ca auxiliare."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost eliminate calcurile și fragmentul englezesc din 4:12, precum și dublarea din 4:14.",
+        "Frazele complexe despre odihnă au fost reconstruite în română fără inversarea relațiilor logice.",
+        "Citatele din Psalmul 95 și Geneza 2 au fost punctuate coerent, fără a le extinde din martori auxiliari."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Promisiunea din 4:1 este păstrată ca fiind încă disponibilă, nu transformată într-o promisiune „neîmplinită” de cititor.",
+        "σαββατισμός din 4:9 este redat lexical „odihnă de Sabat”, fără concluzii confesionale adăugate.",
+        "λόγος τοῦ θεοῦ din 4:12 este redat literal și funcțional, fără a identifica în corpul versetului referentul printr-o glosă teologică externă."
       ]
     },
     "omissionAddition": {
@@ -123,92 +121,170 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT/aparat și verificări auxiliare fixate; fără copierea unei traduceri românești"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 316,
-        "secondary": 95,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5922586297890594,
-      "minimumScore": 0.5759312754780807
-    },
-    "textDigest": "sha256:24c9c268dada597343bda66554a580802ba6e4aa7acdcc0e6954c14a71cd98bd",
-    "contentDigest": "sha256:73c411a0c85d5729f028a2a642486d40ef677c25547186d118959e595048cf91"
+    "textDigest": "sha256:3c58d2e5104ad211cb4344268b4d63a345a3053f1e59cc4db5c7b8a698bba693",
+    "contentDigest": "sha256:694fc7e8e1d162aea28e9e671646b29efe46d6df1e66b2c4b99b10d515d321ed",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Să se teamă deci, ca nu cumva cineva dintre voi să pară că nu și-a făcut o promisiune de a intra în odihna lui."
+      "text": "Să ne temem, așadar, ca nu cumva, cât timp rămâne promisiunea de a intra în odihna Lui, vreunul dintre voi să pară că a rămas în urmă."
     },
     {
       "number": 2,
-      "text": "Căci într'adevăr ni s-a propovăduit și nouă o veste bună, cum au făcut și ei, dar cuvântul pe care l-au auzit nu le-a fost de folos, pentru că n-a fost amestecat cu credința celor ce l-au auzit."
+      "text": "Căci și nouă ni s-a vestit Evanghelia, ca și lor; dar cuvântul auzit nu le-a fost de folos, fiindcă ei nu s-au unit prin credință cu cei care au ascultat."
     },
     {
       "number": 3,
-      "text": "Căci noi, care am crezut, intrăm în această odihnă, după cum a spus: După cum am jurat în mânia Mea, ei nu vor intra în odihna Mea„; deși lucrările au fost terminate de la întemeierea lumii."
+      "text": "Noi, cei care am crezut, intrăm în odihnă, după cum a spus: „Așa am jurat în mânia Mea: «Nu vor intra în odihna Mea»”, deși lucrările Lui erau încheiate de la întemeierea lumii."
     },
     {
       "number": 4,
-      "text": "Căci el a spus aceasta undeva despre ziua a șaptea, Dumnezeu s-a odihnit în ziua a șaptea de toate lucrările lui;"
+      "text": "Căci despre ziua a șaptea a spus undeva astfel: „Și Dumnezeu S-a odihnit în ziua a șaptea de toate lucrările Sale.”"
     },
     {
       "number": 5,
-      "text": "și în acest loc din nou, ei nu vor intra în odihna mea."
+      "text": "Iar în locul acesta spune din nou: „Nu vor intra în odihna Mea.”"
     },
     {
       "number": 6,
-      "text": "Căci rămâne deci ca unii să intre în ea, iar cei cărora le-a fost predicată mai înainte vestea bună nu au intrat din cauza neascultării,"
+      "text": "Așadar, fiindcă rămâne ca unii să intre în ea, iar cei cărora li s-a vestit mai înainte Evanghelia nu au intrat din cauza neascultării,"
     },
     {
       "number": 7,
-      "text": "el definește din nou o anumită zi, până astăzi, spunând prin David atât de mult timp după aceea (așa cum s-a spus), Astăzi, dacă veți auzi vocea lui, nu vă împietriți inimile."
+      "text": "El hotărăște din nou o anumită zi, „Astăzi”, spunând prin David, după atât de mult timp, așa cum s-a spus mai înainte: „Astăzi, dacă auziți glasul Lui, nu vă împietriți inimile.”"
     },
     {
       "number": 8,
-      "text": "Căci dacă Iosua le-ar fi dat odihnă, nu ar mai fi vorbit după aceea despre o altă zi."
+      "text": "Căci dacă Iosua le-ar fi dat odihnă, Dumnezeu nu ar mai fi vorbit după aceea despre o altă zi."
     },
     {
       "number": 9,
-      "text": "Rămâne deci o odihnă de Sabat pentru poporul lui Dumnezeu."
+      "text": "Prin urmare, rămâne o odihnă de Sabat pentru poporul lui Dumnezeu."
     },
     {
       "number": 10,
-      "text": "Căci cine a intrat în odihna Lui s-a odihnit și el de lucrările Lui, cum a făcut Dumnezeu de la lucrările Lui."
+      "text": "Căci cel care a intrat în odihna Lui s-a odihnit și el de lucrările sale, așa cum Dumnezeu S-a odihnit de ale Sale."
     },
     {
       "number": 11,
-      "text": "Să dăm deci dovadă de sârguință pentru a intra în această odihnă, ca nu cumva cineva să cadă după același exemplu de neascultare."
+      "text": "Să ne străduim, așadar, să intrăm în acea odihnă, pentru ca nimeni să nu cadă urmând același exemplu de neascultare."
     },
     {
       "number": 12,
-      "text": "Căci cuvântul lui Dumnezeu este viu și activ, și mai ascuțit decât orice sabie cu două tăișuri, piercing chiar până la împărțirea sufletului și a spiritului, atât a articulațiilor cât și a măduvei, și este capabil să discearnă gândurile și intențiile inimii."
+      "text": "Căci Cuvântul lui Dumnezeu este viu și lucrător, mai ascuțit decât orice sabie cu două tăișuri, pătrunzând până la despărțirea sufletului și a duhului, a încheieturilor și a măduvei, și este în stare să judece gândurile și intențiile inimii."
     },
     {
       "number": 13,
-      "text": "Nu este nici o făptură ascunsă de ochii lui, ci toate lucrurile sunt goale și deschise înaintea ochilor celui căruia trebuie să-i dăm socoteală."
+      "text": "Nicio făptură nu este ascunsă înaintea Lui, ci toate sunt goale și descoperite înaintea ochilor Celui căruia trebuie să-I dăm socoteală."
     },
     {
       "number": 14,
-      "text": "Având atunci un mare mare preot care a trecut prin ceruri, Isus, Fiul lui Dumnezeu, să ne ținem strâns de mărturisirea noastră."
+      "text": "Așadar, fiindcă avem un Mare-Preot măreț, care a străbătut cerurile, pe Isus, Fiul lui Dumnezeu, să ținem cu tărie mărturisirea noastră."
     },
     {
       "number": 15,
-      "text": "Căci noi nu avem un mare preot care nu poate fi atins de sentimentul infirmităților noastre, ci unul care a fost în toate punctele tentat ca noi, dar fără păcat."
+      "text": "Căci nu avem un Mare-Preot care să nu poată avea compasiune pentru slăbiciunile noastre, ci unul care a fost ispitit în toate, în același fel ca noi, dar fără păcat."
     },
     {
       "number": 16,
-      "text": "Să ne apropiem deci cu îndrăzneală de scaunul de domnie al harului, ca să primim îndurare și să găsim har pentru ajutor în timp de nevoie.”"
+      "text": "Să ne apropiem, așadar, cu îndrăzneală de tronul harului, ca să primim îndurare și să găsim har pentru ajutor la vreme potrivită."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "καταλειπομένης ἐπαγγελίας",
+      "decision": "„cât timp rămâne promisiunea”",
+      "alternatives": [
+        "„fiind lăsată o promisiune”"
+      ],
+      "reason": "Participiul prezent exprimă existența/rămânerea promisiunii; formularea anterioară schimba sensul în ideea că cititorul nu și-ar fi făcut o promisiune.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Participiul prezent exprimă existența/rămânerea promisiunii; formularea anterioară schimba sensul în ideea că cititorul nu și-ar fi făcut o promisiune."
+    },
+    {
+      "verse": 2,
+      "term": "μὴ συγκεκερασμένους τῇ πίστει τοῖς ἀκούσασιν",
+      "decision": "„cei care l-au auzit nu au fost uniți cu el prin credință”",
+      "alternatives": [
+        "lecturi ale aparatului care leagă acordul diferit de „cuvânt” sau de „cei ce au auzit”"
+      ],
+      "reason": "Aparatul a fost verificat; textul principal urmează forma SBLGNT și păstrează ideea lipsei unirii prin credință, fără a importa automat lectura TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Aparatul a fost verificat; textul principal urmează forma SBLGNT și păstrează ideea lipsei unirii prin credință, fără a importa automat lectura TR."
+    },
+    {
+      "verse": 9,
+      "term": "σαββατισμός",
+      "decision": "„odihnă de Sabat”",
+      "alternatives": [
+        "„sabatizare”",
+        "„odihnă sabatică”"
+      ],
+      "reason": "Termenul este distinct de κατάπαυσις și păstrează aluzia la Sabat; formularea aleasă este naturală și nu adaugă o prescripție confesională.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Termenul este distinct de κατάπαυσις și păstrează aluzia la Sabat; formularea aleasă este naturală și nu adaugă o prescripție confesională."
+    },
+    {
+      "verse": 12,
+      "term": "μερισμοῦ ψυχῆς καὶ πνεύματος … κριτικὸς ἐνθυμήσεων καὶ ἐννοιῶν καρδίας",
+      "decision": "„până la despărțirea sufletului și a duhului … judecă gândurile și intențiile inimii”",
+      "alternatives": [
+        "„separarea sufletului de duh”"
+      ],
+      "reason": "Genitivele sunt păstrate fără a transforma imaginea retorică într-o definiție antropologică; κριτικός este redat prin funcția de evaluare/judecare.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Genitivele sunt păstrate fără a transforma imaginea retorică într-o definiție antropologică; κριτικός este redat prin funcția de evaluare/judecare."
+    },
+    {
+      "verse": 13,
+      "term": "πρὸς ὃν ἡμῖν ὁ λόγος",
+      "decision": "„Celui căruia trebuie să-I dăm socoteală”",
+      "alternatives": [
+        "„Cel despre care vorbim”"
+      ],
+      "reason": "Idiomul privește răspunderea înaintea lui Dumnezeu în context; formularea românească evită literalismul ambiguu.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Idiomul privește răspunderea înaintea lui Dumnezeu în context; formularea românească evită literalismul ambiguu."
+    },
+    {
+      "verse": 15,
+      "term": "πεπειρασμένον … χωρὶς ἁμαρτίας",
+      "decision": "„ispitit în toate … dar fără păcat”",
+      "alternatives": [
+        "„încercat în toate”"
+      ],
+      "reason": "πειράζω poate indica încercare/ispitire; contextul solidarității Marelui-Preot și precizarea „fără păcat” susțin formularea aleasă, fără a afirma că El a păcătuit.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "πειράζω poate indica încercare/ispitire; contextul solidarității Marelui-Preot și precizarea „fără păcat” susțin formularea aleasă, fără a afirma că El a păcătuit."
+    },
+    {
+      "verse": 2,
+      "term": "revizie finală: συγκεκερασμένους τῇ πίστει τοῖς ἀκούσασιν",
+      "decision": "Căci și nouă ni s-a vestit Evanghelia, ca și lor; dar cuvântul auzit nu le-a fost de folos, fiindcă ei nu s-au unit prin credință cu cei care au ascultat.",
+      "reason": "Raportul sintactic este inversat: cei cărora cuvântul nu le-a folosit sunt subiectul participiului, iar τοῖς ἀκούσασιν reprezintă persoanele cu care ei nu s-au unit prin credință, nu mesajul cu care s-ar fi unit. Construcția συγκεκερασμένους τῇ πίστει τοῖς ἀκούσασιν cere unirea prin credință cu ascultătorii, pe când cei care l-au auzit nu au fost uniți cu el prin credință introduce nejustificat unirea cu mesajul.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

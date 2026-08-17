@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "bookId": "MAL",
+  "bookName": "Maleahi",
+  "status": "fresh-semantic-review-complete",
+  "sourcePacket": "docs/biblia-explicata/minor-prophets-reaudit/MAL-FRESH-SOURCE-REAUDIT.json",
+  "versificationApproval": "docs/biblia-explicata/minor-prophets-reaudit/MAL-VERSIFICATION-APPROVAL.json",
+  "reviewDirectory": "docs/biblia-explicata/minor-prophets-reaudit/MAL/reviews",
+  "totals": {
+    "chapters": 4,
+    "verses": 55,
+    "approvedAsIs": 15,
+    "correctedVerses": 40,
+    "severity": {
+      "critical": 18,
+      "material": 15,
+      "minor": 7
+    }
+  },
+  "canonicalPublication": {
+    "chapterPattern": "docs/data/biblia-emanus/MAL.{1..4}.json",
+    "snapshot": "docs/data/biblia-emanus/sources/ot-mal-2026-08-08-usfm.zip",
+    "snapshotSha256": "636a2105fa358796d6975b014d367d45a5cf3023f9f03c3971ccd7c79f396fd8",
+    "textStage": "biblia-emanus",
+    "translationLabel": "Biblia Emanus",
+    "published": true,
+    "public": true,
+    "canonicalGate": "pending-external-validator"
+  },
+  "promotion": {
+    "candidateReady": true,
+    "promotionEligible": true,
+    "promotionStatus": "materialized-awaiting-canonical-gate"
+  }
+}

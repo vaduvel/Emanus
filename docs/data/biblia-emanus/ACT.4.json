@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparat; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 37,
       "reviewed": 37,
@@ -98,14 +96,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 37 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 37 de versete din ACT.4 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost corectate întrebarea sinedriului, citatul despre piatră, rugăciunea comunității și numele lui Barnaba.",
+        "Au fost păstrate diatezele, relațiile sintactice și referenții din predica lui Petru și rugăciunea comunității.",
+        "Nu a fost introdus un adaos din martorii secundari în textul principal SBLGNT."
       ]
     },
     "theologicalContext": {
@@ -123,24 +121,19 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 720,
-        "primary": 239,
-        "secondary": 48,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5075266817973916,
-      "minimumScore": 0.6309563052154472
-    },
-    "textDigest": "sha256:7021213aa0a4660bb4fb5693bae0b3e70d7048f75fad168e28af0c4818b25f75",
-    "contentDigest": "sha256:d6b9c4a7ccbc951f4276152790d69ad8fd56b1cd2de1f0fed07f906a2fb321c7"
+    "textDigest": "sha256:5173a06fc928bee2e3b568623bbc05f2b4dbf5b3e5c203b2e722f63ef5574f21",
+    "contentDigest": "sha256:a678df305955a6dbbd851fce11a8404526b9ffdaf60eb236974a710a7c1d8f40",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
@@ -169,31 +162,31 @@
     },
     {
       "number": 7,
-      "text": "După ce au stat în picioare Petru și Ioan în mijlocul lor, ei au întrebat, Prin ce putere, sau în ce nume, ați făcut acest lucru?"
+      "text": "După ce i-au pus pe Petru și pe Ioan în mijlocul lor, i-au întrebat: Prin ce putere sau în ce nume ați făcut voi aceasta?"
     },
     {
       "number": 8,
-      "text": "Atunci Petru, umplut de Duhul Sfânt, le-a zis: „Conducători ai poporului și bătrâni,"
+      "text": "Atunci Petru, umplut de Duhul Sfânt, le-a spus: Conducători ai poporului și bătrâni,"
     },
     {
       "number": 9,
-      "text": "Dacă suntem examinați astăzi cu privire la o faptă bună făcută unui om infirm, prin ce mijloace a fost vindecat acest om,"
+      "text": "dacă suntem cercetați astăzi cu privire la o faptă bună făcută unui om infirm, prin ce mijloc a fost acesta vindecat,"
     },
     {
       "number": 10,
-      "text": "să vă fie cunoscut vouă tuturor și întregului popor al lui Israel că, în Numele lui Isus Hristos Nazarineanul, pe care voi L-ați răstignit și pe care Dumnezeu L-a înviat dintre cei morți, prin El stă omul acesta sănătos înaintea voastră."
+      "text": "să vă fie cunoscut vouă tuturor și întregului popor al lui Israel că, în Numele lui Isus Hristos Nazarineanul, pe care voi L-ați răstignit și pe care Dumnezeu L-a înviat dintre morți, prin Acesta stă omul acesta sănătos înaintea voastră."
     },
     {
       "number": 11,
-      "text": "El este piatra care a fost privit ca lipsit de valoare de tine, constructorii, care a devenit capul colțului."
+      "text": "El este piatra pe care voi, ziditorii, ați disprețuit-o și care a devenit piatra din capul unghiului."
     },
     {
       "number": 12,
-      "text": "Și în nimeni altul nu este salvarea, căci nu este sub cer niciun alt Nume dat între oameni în care trebuie să fim salvați.”"
+      "text": "Și în nimeni altul nu este mântuirea, căci nu este sub cer niciun alt Nume dat între oameni prin care trebuie să fim mântuiți."
     },
     {
       "number": 13,
-      "text": "Când au văzut îndrăzneala lui Petru și a lui Ioan și au înțeles că erau oameni neșcoliți și de rând, se mirau și îi recunoșteau că fuseseră cu Isus."
+      "text": "Când au văzut îndrăzneala lui Petru și a lui Ioan și au înțeles că erau oameni neînvățați și de rând, se mirau și își dădeau seama că aceștia fuseseră cu Isus."
     },
     {
       "number": 14,
@@ -201,15 +194,15 @@
     },
     {
       "number": 15,
-      "text": "După ce le-au poruncit să iasă din consiliu, s-au dat la o parte,"
+      "text": "După ce le-au poruncit să iasă din consiliu, au discutat între ei,"
     },
     {
       "number": 16,
-      "text": "zicând: „Ce să facem cu oamenii aceștia? Căci este limpede pentru toți locuitorii Ierusalimului că prin ei s-a făcut un semn cunoscut și nu putem nega."
+      "text": "spunând: Ce să facem cu oamenii aceștia? Căci este limpede pentru toți locuitorii Ierusalimului că prin ei s-a făcut un semn cunoscut și nu putem nega."
     },
     {
       "number": 17,
-      "text": "Dar, ca să nu se răspândească și mai mult în popor, să-i amenințăm să nu mai vorbească niciunui om în Numele acesta.”"
+      "text": "Dar, ca să nu se răspândească și mai mult în popor, să-i amenințăm să nu mai vorbească niciunui om în Numele acesta."
     },
     {
       "number": 18,
@@ -217,11 +210,11 @@
     },
     {
       "number": 19,
-      "text": "Dar Petru și Ioan le-au răspuns: „Judecați voi dacă este drept înaintea lui Dumnezeu să ascultăm de voi mai mult decât de Dumnezeu!"
+      "text": "Dar Petru și Ioan le-au răspuns: Judecați voi dacă este drept înaintea lui Dumnezeu să ascultăm de voi mai mult decât de Dumnezeu."
     },
     {
       "number": 20,
-      "text": "Cât despre noi, nu putem să nu vorbim despre ceea ce am văzut și am auzit.”"
+      "text": "Căci noi nu putem să nu vorbim despre ceea ce am văzut și am auzit."
     },
     {
       "number": 21,
@@ -253,11 +246,11 @@
     },
     {
       "number": 28,
-      "text": "să faci tot ceea ce mâna ta sfatul tău au hotărât să se întâmple."
+      "text": "ca să facă tot ceea ce mâna Ta și planul Tău hotărâseră mai dinainte să se întâmple."
     },
     {
       "number": 29,
-      "text": "Acum, Doamne, uită-te la amenințările lor, și dă robilor Tăi să vorbească cuvântul Tău cu toată îndrăzneala,"
+      "text": "Acum, Doamne, uită-Te la amenințările lor și dă robilor Tăi să vorbească cuvântul Tău cu toată îndrăzneala,"
     },
     {
       "number": 30,
@@ -277,7 +270,7 @@
     },
     {
       "number": 34,
-      "text": "De altfel, nu era printre ei niciun om nevoiaș, căci toți cei care aveau ogoare sau case le vindeau, aduceau prețul celor vândute"
+      "text": "Căci nimeni dintre ei nu ducea lipsă, deoarece toți cei care dețineau terenuri ori case le vindeau și aduceau sumele obținute din vânzări,"
     },
     {
       "number": 35,
@@ -285,7 +278,7 @@
     },
     {
       "number": 36,
-      "text": "Jose, care, prin apostoli, a fost numit Barnaba (care este, fiind interpretat, Fiul Încurajării), un levit, un om din Cipru de rasă,"
+      "text": "Iosif, numit de apostoli Barnaba — care, tradus, înseamnă «Fiul încurajării» —, un levit de neam din Cipru,"
     },
     {
       "number": 37,
@@ -342,6 +335,42 @@
       "reviewRequired": true,
       "resolutionStatus": "resolved",
       "resolutionReason": "«Încurajare» păstrează funcția pozitivă a explicației fără a o limita la consolare."
+    },
+    {
+      "verse": 13,
+      "term": "revizie finală: ἐπεγίνωσκόν τε αὐτοὺς ὅτι σὺν τῷ Ἰησοῦ ἦσαν",
+      "decision": "Când au văzut îndrăzneala lui Petru și a lui Ioan și au înțeles că erau oameni neînvățați și de rând, se mirau și își dădeau seama că aceștia fuseseră cu Isus.",
+      "reason": "Construcția „îi recunoșteau că” este sintactic nefirească în română și nu exprimă corect faptul că autoritățile și-au dat seama de asocierea lor anterioară cu Isus. Deși îi recunoșteau că fuseseră cu Isus urmărește sensul lui ἐπεγίνωσκόν τε αὐτοὺς ὅτι σὺν τῷ Ἰησοῦ ἦσαν, raportul sintactic românesc este defectuos.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 20,
+      "term": "revizie finală: οὐ δυνάμεθα γὰρ ἡμεῖς",
+      "decision": "Căci noi nu putem să nu vorbim despre ceea ce am văzut și am auzit.",
+      "reason": "Locuțiunea „Cât despre noi” înlocuiește particula cauzală γὰρ cu o tematizare, eliminând motivarea explicită a răspunsului din versetul precedent. Cât despre noi, nu putem păstrează neputința din οὐ δυνάμεθα γὰρ ἡμεῖς, dar nu redă valoarea explicativ-cauzală a lui γὰρ.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 34,
+      "term": "revizie finală: οὐδὲ γὰρ ἐνδεής τις",
+      "decision": "Într-adevăr, nimeni dintre ei nu ducea lipsă, deoarece toți cei care dețineau terenuri ori case le vindeau și aduceau sumele obținute din vânzări,",
+      "reason": "Locuțiunea „De altfel” schimbă raportul discursiv al particulei γάρ dintr-o explicație justificativă într-un adaos și nu leagă suficient versetul de afirmația precedentă. Deși οὐδὲ γὰρ ἐνδεής τις și De altfel, nu era printre ei niciun om nevoiaș exprimă aceeași absență a nevoiașilor, valoarea explicativă a lui γάρ este slăbită în română.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 34,
+      "term": "revizie finală: οὐδὲ γὰρ ἐνδεής τις ἦν ἐν αὐτοῖς",
+      "decision": "Căci nimeni dintre ei nu ducea lipsă, deoarece toți cei care dețineau terenuri ori case le vindeau și aduceau sumele obținute din vânzări,",
+      "reason": "Conectorul „Într-adevăr” transformă relația cauzal-explicativă marcată de γὰρ într-o simplă confirmare emfatică, slăbind legătura versetului cu afirmația precedentă. Deși Într-adevăr, nimeni dintre ei nu ducea lipsă redă starea descrisă de οὐδὲ γὰρ ἐνδεής τις ἦν ἐν αὐτοῖς, schimbă valoarea cauzal-explicativă a lui γὰρ într-una emfatică.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
     }
   ],
   "referenceNotes": [],

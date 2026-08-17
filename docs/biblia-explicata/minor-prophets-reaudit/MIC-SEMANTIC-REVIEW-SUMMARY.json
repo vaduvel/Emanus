@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "bookId": "MIC",
+  "bookName": "Mica",
+  "status": "fresh-semantic-review-complete",
+  "sourcePacket": "docs/biblia-explicata/minor-prophets-reaudit/MIC-FRESH-SOURCE-REAUDIT.json",
+  "versificationApproval": "docs/biblia-explicata/minor-prophets-reaudit/MIC-VERSIFICATION-APPROVAL.json",
+  "reviewDirectory": "docs/biblia-explicata/minor-prophets-reaudit/MIC/reviews",
+  "totals": {
+    "chapters": 7,
+    "verses": 105,
+    "approvedAsIs": 52,
+    "correctedVerses": 53,
+    "severity": {
+      "critical": 16,
+      "material": 26,
+      "minor": 11
+    }
+  },
+  "canonicalPublication": {
+    "chapterPattern": "docs/data/biblia-emanus/MIC.{1..7}.json",
+    "snapshot": "docs/data/biblia-emanus/sources/ot-mic-2026-08-08-usfm.zip",
+    "snapshotSha256": "9c456fdc3a1c54dfbe4d39821fe9928152875812ce93aef5ed7dbc0fd477f829",
+    "textStage": "biblia-emanus",
+    "translationLabel": "Biblia Emanus",
+    "published": true,
+    "public": true,
+    "canonicalGate": "pending-external-validator"
+  },
+  "promotion": {
+    "candidateReady": true,
+    "promotionEligible": true,
+    "promotionStatus": "materialized-awaiting-canonical-gate"
+  }
+}

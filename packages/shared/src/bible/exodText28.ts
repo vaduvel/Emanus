@@ -1,0 +1,55 @@
+/*
+ * Textul biblic al c\u0103r\u021bii Exod, capitolul 28.
+ *
+ * Sursa: Biblia Emanus (BE), docs/data/biblia-emanus/EXO.28.json.
+ * Capitol cu status "published", auditat verset cu verset din WLC-OSHB,
+ * cu WEBU ca baz\u0103 public-domain. 43 de versete.
+ */
+
+export const EXOD_TEXT_28: Record<number, readonly string[]> = {
+  28: [
+    "\u201eAdu-i l\u00e2ng\u0103 tine, dintre fiii lui Israel, pe Aaron, fratele t\u0103u, \u0219i pe fiii lui \u2014 Nadab, Abihu, Eleazar \u0219i Itamar \u2014 ca Aaron s\u0103-Mi slujeasc\u0103 \u00een preo\u021bie.",
+    "S\u0103 faci pentru Aaron, fratele t\u0103u, ve\u0219minte sfinte, pentru onoare \u0219i frumuse\u021be.",
+    "S\u0103 vorbe\u0219ti tuturor celor pricepu\u021bi la inim\u0103, pe care i-am umplut cu duh de \u00een\u021belepciune, ca s\u0103 fac\u0103 ve\u0219mintele lui Aaron, pentru a-l sfin\u021bi ca s\u0103-Mi slujeasc\u0103 \u00een preo\u021bie.",
+    "Acestea sunt ve\u0219mintele pe care s\u0103 le fac\u0103: un pieptar, un efod, o mantie, o tunic\u0103 \u021bes\u0103ut\u0103, un turban \u0219i un br\u00e2u. S\u0103 fac\u0103 ve\u0219minte sfinte pentru Aaron, fratele t\u0103u, \u0219i pentru fiii lui, ca s\u0103-Mi slujeasc\u0103 \u00een preo\u021bie.",
+    "S\u0103 foloseasc\u0103 aur, fir albastru, purpuriu \u0219i stacojiu \u0219i in fin.",
+    "S\u0103 fac\u0103 efodul din aur, din fir albastru, purpuriu \u0219i stacojiu \u0219i din in fin r\u0103sucit, lucrat artistic.",
+    "S\u0103 aib\u0103 dou\u0103 bretele unite la cele dou\u0103 capete ale lui, ca s\u0103 fie legat.",
+    "Br\u00e2ul \u021besut al efodului s\u0103 fie lucrat la fel \u0219i dintr-o singur\u0103 bucat\u0103 cu el, din aur, fir albastru, purpuriu \u0219i stacojiu \u0219i in fin r\u0103sucit.",
+    "S\u0103 iei dou\u0103 pietre de onix \u0219i s\u0103 gravezi pe ele numele fiilor lui Israel:",
+    "\u0219ase nume pe prima piatr\u0103 \u0219i celelalte \u0219ase nume pe a doua piatr\u0103, \u00een ordinea na\u0219terii lor.",
+    "S\u0103 gravezi pe cele dou\u0103 pietre numele fiilor lui Israel, prin lucrarea unui gravor \u00een piatr\u0103, asemenea gravurii unui sigiliu, \u0219i s\u0103 le montezi \u00een monturi de aur.",
+    "S\u0103 pui cele dou\u0103 pietre pe bretelele efodului, ca pietre de aducere-aminte pentru fiii lui Israel. Aaron s\u0103 poarte numele lor pe cei doi umeri ai s\u0103i \u00eenaintea DOMNULUI, ca aducere-aminte.",
+    "S\u0103 faci monturi de aur",
+    "\u0219i dou\u0103 l\u0103n\u021bi\u0219oare din aur curat, lucrate ca ni\u0219te \u0219nururi \u00eempletite, \u0219i s\u0103 prinzi l\u0103n\u021bi\u0219oarele \u00eempletite de monturi.",
+    "S\u0103 faci pieptarul judec\u0103\u021bii, lucrat artistic. S\u0103-l faci la fel ca efodul, din aur, fir albastru, purpuriu \u0219i stacojiu \u0219i din in fin r\u0103sucit.",
+    "S\u0103 fie p\u0103trat \u0219i \u00eendoit \u00een dou\u0103, lung de o palm\u0103 \u0219i lat de o palm\u0103.",
+    "S\u0103 montezi \u00een el patru r\u00e2nduri de pietre. \u00cen primul r\u00e2nd: un rubin, un topaz \u0219i un smarald;",
+    "\u00een al doilea r\u00e2nd: un turcoaz, un safir \u0219i un diamant;",
+    "\u00een al treilea r\u00e2nd: un opal, un agat \u0219i un ametist;",
+    "iar \u00een al patrulea r\u00e2nd: un crisolit, un onix \u0219i un jasp. Pietrele s\u0103 fie fixate \u00een monturi de aur.",
+    "Pietrele s\u0103 fie dou\u0103sprezece, dup\u0103 numele fiilor lui Israel, c\u00e2te una pentru fiecare nume. Fiecare s\u0103 fie gravat\u0103 asemenea unui sigiliu, cu numele uneia dintre cele dou\u0103sprezece semin\u021bii.",
+    "S\u0103 faci pentru pieptar l\u0103n\u021bi\u0219oare din aur curat, ca ni\u0219te \u0219nururi \u00eempletite.",
+    "S\u0103 faci pentru pieptar dou\u0103 verigi de aur \u0219i s\u0103 pui cele dou\u0103 verigi la cele dou\u0103 capete ale pieptarului.",
+    "S\u0103 introduci cele dou\u0103 l\u0103n\u021bi\u0219oare \u00eempletite din aur \u00een cele dou\u0103 verigi de la capetele pieptarului.",
+    "Celelalte dou\u0103 capete ale l\u0103n\u021bi\u0219oarelor s\u0103 le prinzi de cele dou\u0103 monturi \u0219i s\u0103 le fixezi pe bretelele efodului, \u00een partea din fa\u021b\u0103.",
+    "S\u0103 faci dou\u0103 verigi de aur \u0219i s\u0103 le pui la celelalte dou\u0103 capete ale pieptarului, pe marginea lui dinspre partea interioar\u0103 a efodului.",
+    "S\u0103 mai faci dou\u0103 verigi de aur \u0219i s\u0103 le pui pe cele dou\u0103 bretele ale efodului, \u00een partea de jos \u0219i din fa\u021b\u0103, aproape de locul unde se unesc, deasupra br\u00e2ului \u021besut al efodului.",
+    "Pieptarul s\u0103 fie legat prin verigile lui de verigile efodului cu un \u0219nur albastru, ca s\u0103 r\u0103m\u00e2n\u0103 deasupra br\u00e2ului \u021besut al efodului \u0219i s\u0103 nu se desprind\u0103 de efod.",
+    "C\u00e2nd va intra \u00een Locul Sf\u00e2nt, Aaron va purta pe inima sa numele fiilor lui Israel \u00een pieptarul judec\u0103\u021bii, ca aducere-aminte permanent\u0103 \u00eenaintea DOMNULUI.",
+    "S\u0103 pui \u00een pieptarul judec\u0103\u021bii Urim \u0219i Tumim. Ele s\u0103 fie pe inima lui Aaron c\u00e2nd intr\u0103 \u00eenaintea DOMNULUI. Aaron va purta permanent pe inima sa judecata fiilor lui Israel \u00eenaintea DOMNULUI.",
+    "S\u0103 faci mantia efodului \u00een \u00eentregime din fir albastru.",
+    "S\u0103 aib\u0103 \u00een mijloc o deschiz\u0103tur\u0103 pentru cap, iar \u00een jurul deschiz\u0103turii s\u0103 aib\u0103 o margine \u021besut\u0103, asemenea deschiz\u0103turii unei plato\u0219e, ca s\u0103 nu se rup\u0103.",
+    "Pe tivul ei s\u0103 faci rodii din fir albastru, purpuriu \u0219i stacojiu, de jur \u00eemprejurul tivului, iar \u00eentre ele clopo\u021bei de aur:",
+    "un clopo\u021bel de aur \u0219i o rodie, un clopo\u021bel de aur \u0219i o rodie, de jur \u00eemprejurul tivului mantiei.",
+    "Aaron s\u0103 o poarte c\u00e2nd sluje\u0219te. Sunetul ei s\u0103 se aud\u0103 c\u00e2nd intr\u0103 \u00een Locul Sf\u00e2nt \u00eenaintea DOMNULUI \u0219i c\u00e2nd iese, ca s\u0103 nu moar\u0103.",
+    "S\u0103 faci o pl\u0103cu\u021b\u0103 din aur curat \u0219i s\u0103 gravezi pe ea, asemenea gravurii unui sigiliu: \u00abSF\u00c2NT PENTRU DOMNUL\u00bb.",
+    "S\u0103 o prinzi cu un \u0219nur albastru pe turban; s\u0103 fie \u00een partea din fa\u021b\u0103 a turbanului.",
+    "Ea s\u0103 fie pe fruntea lui Aaron. Aaron va purta vina legat\u0103 de lucrurile sfinte pe care fiii lui Israel le vor sfin\u021bi prin toate darurile lor sfinte. Ea s\u0103 fie permanent pe fruntea lui, pentru ca ei s\u0103 fie primi\u021bi \u00eenaintea DOMNULUI.",
+    "S\u0103 \u021bese\u021bi tunica din in fin, s\u0103 faci turbanul din in fin \u0219i s\u0103 faci br\u00e2ul lucrat prin broderie.",
+    "Pentru fiii lui Aaron s\u0103 faci tunici, br\u00e2ie \u0219i bonete, pentru onoare \u0219i frumuse\u021be.",
+    "S\u0103-i \u00eembraci cu ele pe Aaron, fratele t\u0103u, \u0219i pe fiii lui \u00eempreun\u0103 cu el. S\u0103-i ungi, s\u0103-i \u00eenveste\u0219ti, s\u0103-i sfin\u021be\u0219ti, iar ei \u00cemi vor sluji \u00een preo\u021bie.",
+    "S\u0103 le faci pantaloni de in care s\u0103 le acopere trupul gol, de la talie p\u00e2n\u0103 la coapse.",
+    "Aaron \u0219i fiii lui s\u0103-i poarte c\u00e2nd intr\u0103 \u00een Cortul \u00cent\u00e2lnirii sau c\u00e2nd se apropie de altar ca s\u0103 slujeasc\u0103 \u00een Locul Sf\u00e2nt, ca s\u0103 nu poarte vin\u0103 \u0219i s\u0103 moar\u0103. Aceasta s\u0103 fie o r\u00e2nduial\u0103 ve\u0219nic\u0103 pentru el \u0219i pentru urma\u0219ii lui.\u201d",
+  ],
+}

@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "theologicalNeutrality": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost redactat prin revizie directă din SBLGNT; WEBP, Cornilescu 1924, BTF și Biblia Liberă au fost consultate auxiliar pentru sens și română, fără stocarea unei traduceri românești protejate.",
+      "Câmpurile consultedInBatch disting etaloanele efectiv confruntate în acest lot de cele configurate în schema corpusului; NTR nu a fost consultată."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 29,
       "reviewed": 29,
@@ -98,14 +96,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 29 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 29 de versete din 1JN.2 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual. WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost confruntate auxiliar; NTR nu a fost consultată."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Reverificarea independentă a confirmat sensul tuturor celor 29 de versete, inclusiv negațiile, persoanele, timpul verbal și conexiunile sintactice.",
+        "Formulările românești păstrează îndemnul din 2:27 și 2:28, fără a transforma imperativele și conjunctivele SBLGNT în afirmații ale martorului TR.",
+        "Locurile cu variante textuale urmează SBLGNT și nu folosesc automat etalonul tradițional drept text principal."
       ]
     },
     "theologicalContext": {
@@ -113,7 +111,7 @@
       "principles": [
         "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
         "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Etaloanele românești au fost consultate numai pentru verificare, după confruntarea directă cu sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -123,144 +121,242 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 257,
-        "secondary": 66,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5467158590753175,
-      "minimumScore": 0.5694259949565413
-    },
-    "textDigest": "sha256:7c7b27ae85a88d7bcf6520b692de84632526a9b7955a2b624e8f1d949bce56a8",
-    "contentDigest": "sha256:5f85e23574e3712fb8c3aacbbcad8b77d5c23dd841a8f3913bd5ed095dce7421"
+    "textDigest": "sha256:e1eaa72ca9a3baaad5f9f4395c0d59568136f58e23d1b2e3cf74938be25636d7",
+    "contentDigest": "sha256:970fd5d7327215b38d05fe8a4a417935fa28f5ad8b70f5a5e421b4639e1c604a",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Copililor, vă scriu aceste lucruri ca să nu păcătuiți. Dacă păcătuiește cineva, avem un Sfătuitor la Tatăl, pe Isus Hristos, cel drept."
+      "text": "Copilașii mei, vă scriu aceste lucruri ca să nu păcătuiți. Dar dacă cineva păcătuiește, avem la Tatăl un Apărător: Isus Hristos, Cel drept."
     },
     {
       "number": 2,
-      "text": "El este jertfa de ispășire pentru păcatele noastre, și nu numai pentru ale noastre, ci și pentru întreaga lume."
+      "text": "El este mijlocul de ispășire pentru păcatele noastre, și nu numai pentru ale noastre, ci și pentru cele ale lumii întregi."
     },
     {
       "number": 3,
-      "text": "Iată cum știm că-L cunoaștem: dacă păzim poruncile Lui."
+      "text": "Prin aceasta știm că L-am cunoscut: dacă păzim poruncile Lui."
     },
     {
       "number": 4,
-      "text": "Cel care spune: «Îl cunosc», dar nu păzește poruncile Lui este mincinos, iar adevărul nu este în el."
+      "text": "Cel care spune: „L-am cunoscut”, dar nu-I păzește poruncile este mincinos și adevărul nu este în el."
     },
     {
       "number": 5,
-      "text": "Dar dragostea lui Dumnezeu a fost desăvârșită în cel ce își ține cuvântul. Iată cum știm că suntem în El."
+      "text": "Dar în cel care păzește cuvântul Lui, dragostea lui Dumnezeu a ajuns cu adevărat la desăvârșire. Prin aceasta știm că suntem în El."
     },
     {
       "number": 6,
-      "text": "Cel care spune că rămâne în el ar trebui să meargă și el așa cum a mers."
+      "text": "Cel care spune că rămâne în El este dator să umble și el așa cum a umblat El."
     },
     {
       "number": 7,
-      "text": "Fraților, nu vă scriu o poruncă nouă, ci o poruncă veche pe care ați primit-o de la început. Vechea poruncă este cuvântul pe care l-ați auzit de la început."
+      "text": "Preaiubiților, nu vă scriu o poruncă nouă, ci o poruncă veche, pe care o aveați de la început. Porunca veche este cuvântul pe care l-ați auzit."
     },
     {
       "number": 8,
-      "text": "Din nou, vă scriu o poruncă nouă, care este adevărată în El și în voi, pentru că întunericul trece și lumina adevărată strălucește deja."
+      "text": "Vă scriu din nou o poruncă nouă, care este adevărată în El și în voi, căci întunericul se duce, iar lumina adevărată strălucește deja."
     },
     {
       "number": 9,
-      "text": "Cel care spune că este în lumină și urăște pe fratele său este în întuneric chiar și până acum."
+      "text": "Cel care spune că este în lumină și își urăște fratele este încă în întuneric."
     },
     {
       "number": 10,
-      "text": "Cel ce își iubește fratele rămâne în lumină și nu există nici o ocazie de poticnire în el."
+      "text": "Cel care își iubește fratele rămâne în lumină și în el nu este prilej de poticnire."
     },
     {
       "number": 11,
-      "text": "Dar cel ce urăște pe fratele său este în întuneric umblă în întuneric nu știe încotro se duce, pentru că întunericul i-a orbit ochii."
+      "text": "Dar cel care își urăște fratele este în întuneric, umblă în întuneric și nu știe încotro merge, fiindcă întunericul i-a orbit ochii."
     },
     {
       "number": 12,
-      "text": "Vă scriu, copilașilor, pentru că păcatele voastre vă sunt iertate pentru numele Lui."
+      "text": "Vă scriu, copilașilor, fiindcă păcatele v-au fost iertate datorită Numelui Lui."
     },
     {
       "number": 13,
-      "text": "Vă scriu vouă„ pentru că Îl cunoașteți pe Cel ce este de la început. Vă scriu vouă, tinerilor, pentru că ați biruit pe cel rău. Vă scriu vouă, copililor, pentru că Îl cunoașteți pe Tatăl."
+      "text": "Vă scriu, taților, fiindcă L-ați cunoscut pe Cel care este de la început. Vă scriu, tinerilor, fiindcă l-ați biruit pe cel rău."
     },
     {
       "number": 14,
-      "text": "V-am scris, taților, pentru că l-ați cunoscut pe cel care este de la început. V-am scris, tinerilor, pentru că sunteți tari și cuvântul lui Dumnezeu rămâne în voi și l-ați învins pe cel rău."
+      "text": "V-am scris, copiilor, fiindcă L-ați cunoscut pe Tatăl. V-am scris, taților, fiindcă L-ați cunoscut pe Cel care este de la început. V-am scris, tinerilor, fiindcă sunteți tari, cuvântul lui Dumnezeu rămâne în voi și l-ați biruit pe cel rău."
     },
     {
       "number": 15,
-      "text": "Nu iubi lumea sau lucrurile care sunt în lume. Dacă cineva iubește lumea, dragostea Tatălui nu este în el."
+      "text": "Nu iubiți lumea, nici lucrurile din lume. Dacă cineva iubește lumea, dragostea Tatălui nu este în el."
     },
     {
       "number": 16,
-      "text": "Căci tot ce este în lume, pofta cărnii, pofta ochilor și mândria vieții este Tatăl, dar este lumea."
+      "text": "Căci tot ce este în lume — pofta cărnii, pofta ochilor și trufia vieții — nu este de la Tatăl, ci este din lume."
     },
     {
       "number": 17,
-      "text": "Lumea trece cu poftele ei, dar cel care face pe Dumnezeu va rămâne pentru totdeauna."
+      "text": "Iar lumea trece, și pofta ei la fel; dar cel care face voia lui Dumnezeu rămâne pentru totdeauna."
     },
     {
       "number": 18,
-      "text": "Copii, acestea sunt vremurile de sfârșit, și după cum ați auzit că Antihristul vine, chiar și acum au apărut mulți anticriști. Prin aceasta știm că este ora finală."
+      "text": "Copii, este ceasul de pe urmă. Și, așa cum ați auzit că vine un antihrist, acum au apărut mulți antihriști; prin aceasta știm că este ceasul de pe urmă."
     },
     {
       "number": 19,
-      "text": "Au ieșit de la noi, dar nu ne aparțineau nouă, căci, dacă ar fi fost ai noștri, ar fi rămas cu noi, dar au plecat, ca să ni se arate că niciunul dintre ei nu ne aparține."
+      "text": "Au ieșit dintre noi, dar nu erau dintre noi; căci, dacă ar fi fost dintre noi, ar fi rămas cu noi. Dar au ieșit ca să se arate că nu toți sunt dintre noi."
     },
     {
       "number": 20,
-      "text": "Aveți o ungere de la Cel Sfânt, și toți aveți cunoștință."
+      "text": "Dar voi aveți o ungere de la Cel Sfânt și voi toți știți."
     },
     {
       "number": 21,
-      "text": "Nu v-am scris pentru că nu știți adevărul, ci pentru că îl știți pentru că nici o minciună nu este din adevăr."
+      "text": "Nu v-am scris fiindcă nu cunoașteți adevărul, ci fiindcă îl cunoașteți și fiindcă nicio minciună nu vine din adevăr."
     },
     {
       "number": 22,
-      "text": "Cine este mincinosul, dacă nu cel ce tăgăduiește că Isus este Hristosul? Acesta este Antihristul, cel ce tăgăduiește pe Tatăl pe Fiul."
+      "text": "Cine este mincinosul, dacă nu cel care neagă că Isus este Hristosul? Acesta este antihristul: cel care Îi neagă pe Tatăl și pe Fiul."
     },
     {
       "number": 23,
-      "text": "Cine neagă pe Fiul nu are pe Tatăl. Cine mărturisește pe Fiul are și pe Tatăl."
+      "text": "Oricine Îl neagă pe Fiul nu-L are nici pe Tatăl; cel care Îl mărturisește pe Fiul Îl are și pe Tatăl."
     },
     {
       "number": 24,
-      "text": "De aceea, ca pentru voi, să rămână în voi, pe care ați auzit-o de la început. Dacă ceea ce ați auzit de la început rămâne în voi, veți rămâne și voi în Fiul și în Tatăl."
+      "text": "Cât despre voi, ceea ce ați auzit de la început să rămână în voi. Dacă rămâne în voi ceea ce ați auzit de la început, veți rămâne și voi în Fiul și în Tatăl."
     },
     {
       "number": 25,
-      "text": "Aceasta este promisiunea pe care El ne-a promis-o, viața veșnică."
+      "text": "Și aceasta este promisiunea pe care El ne-a făcut-o: viața veșnică."
     },
     {
       "number": 26,
-      "text": "V-am scris aceste lucruri despre cei care vă vor rătăci."
+      "text": "V-am scris acestea despre cei care vă rătăcesc."
     },
     {
       "number": 27,
-      "text": "Cât despre voi, ungerea pe care ați primit-o de la El rămâne în voi, și nu aveți nevoie ca cineva să vă învețe. Dar, după cum vă învață ungerea Lui despre toate lucrurile, și este adevărată, și nu este o minciună, și după cum v-a învățat ea, veți rămâne în El."
+      "text": "Cât despre voi, ungerea pe care ați primit-o de la El rămâne în voi și nu aveți nevoie ca cineva să vă învețe. Însă ungerea Lui vă învață despre toate; ea este adevărată, nu mincinoasă. Rămâneți în El, așa cum v-a învățat ea."
     },
     {
       "number": 28,
-      "text": "Acum, copilașilor, rămîneți în El, ca, când se va arăta, să avem curaj și să nu ne fie rușine înaintea Lui la venirea Lui."
+      "text": "Iar acum, copilașilor, rămâneți în El, pentru ca, atunci când Se va arăta, să avem îndrăzneală și să nu ne rușinăm înaintea Lui la venirea Lui."
     },
     {
       "number": 29,
-      "text": "Dacă știți că el este drept, știți că oricine practică dreptatea s-a născut din el.”"
+      "text": "Dacă știți că El este drept, știți că oricine face dreptatea s-a născut din El."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 4,
+      "term": "variantă textuală SBLGNT/TR: ὅτι / omis",
+      "decision": "„Cel care spune: «L-am cunoscut»”",
+      "alternatives": [
+        "TR-1JN din snapshot omite ὅτι înaintea afirmației directe."
+      ],
+      "reason": "SBLGNT păstrează conjuncția introductivă; româna o redă firesc prin construcția cu două puncte și citat direct.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1JN, aparatul și TR-1JN au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 7,
+      "term": "variante textuale SBLGNT/TR: Ἀγαπητοί / Ἀδελφοί; ἠκούσατε / ἠκούσατε ἀπʼ ἀρχῆς",
+      "decision": "„Preaiubiților” și „cuvântul pe care l-ați auzit”",
+      "alternatives": [
+        "TR-1JN din snapshot are „Fraților” și repetă „de la început” după „ați auzit”."
+      ],
+      "reason": "SBLGNT are Ἀγαπητοί și nu repetă expresia ἀπʼ ἀρχῆς în finalul versetului; ambele diferențe sunt păstrate în română.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1JN, aparatul și TR-1JN au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 14,
+      "term": "variantă textuală SBLGNT/TR: ἔγραψα / γράφω",
+      "decision": "„V-am scris” în toate cele trei adresări",
+      "alternatives": [
+        "TR-1JN din snapshot are prezentul „vă scriu”."
+      ],
+      "reason": "SBLGNT are aoristul ἔγραψα; româna păstrează timpul trecut fără a-l uniformiza cu versetul 13.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1JN, aparatul și TR-1JN au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 20,
+      "term": "variante textuale SBLGNT/TR: πάντες / πάντα",
+      "decision": "„voi toți știți”",
+      "alternatives": [
+        "TR-1JN din snapshot are πάντα, care ar permite lectura „știți toate lucrurile”."
+      ],
+      "reason": "SBLGNT are πάντες, adjectiv masculin plural care se referă la destinatari; româna exprimă explicit „voi toți”, nu „toate lucrurile”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1JN, aparatul și TR-1JN au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 23,
+      "term": "variantă textuală SBLGNT/TR: ὁ ὁμολογῶν τὸν υἱὸν καὶ τὸν πατέρα ἔχει / omis",
+      "decision": "Este păstrată propoziția „cel care Îl mărturisește pe Fiul Îl are și pe Tatăl”.",
+      "alternatives": [
+        "TR-1JN din snapshot omite a doua propoziție a versetului."
+      ],
+      "reason": "SBLGNT include propoziția despre mărturisirea Fiului și relația cu Tatăl; ea este redată integral în textul principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1JN, aparatul și TR-1JN au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 27,
+      "term": "variantă textuală SBLGNT/TR: μένετε / μενεῖτε",
+      "decision": "„rămâneți în El”",
+      "alternatives": [
+        "TR-1JN din snapshot are viitorul „veți rămâne în El”."
+      ],
+      "reason": "SBLGNT are imperativul μένετε; româna păstrează îndemnul, nu îl transformă într-o predicție la viitor.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1JN, aparatul și TR-1JN au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 28,
+      "term": "variante textuale SBLGNT/TR: ἐὰν / ὅταν; σχῶμεν / ἔχωμεν",
+      "decision": "„atunci când Se va arăta, să avem îndrăzneală”",
+      "alternatives": [
+        "TR-1JN din snapshot are ὅταν și ἔχωμεν."
+      ],
+      "reason": "SBLGNT folosește ἐὰν cu aorist conjunctiv și σχῶμεν; româna păstrează orientarea spre arătarea lui Hristos și rezultatul dorit al îndrăznelii, fără a introduce lectura TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1JN, aparatul și TR-1JN au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 18,
+      "term": "revizie finală: ἀντίχριστοι πολλοὶ γεγόνασιν",
+      "decision": "Copii, este ceasul de pe urmă. Și, așa cum ați auzit că vine un antihrist, acum au apărut mulți antihriști; prin aceasta știm că este ceasul de pe urmă.",
+      "reason": "Sensul din ἀντίχριστοι πολλοὶ γεγόνασιν este prezent în acum au apărut mulți anticriști, dar forma pluralului trebuie armonizată cu „antihrist”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 22,
+      "term": "revizie finală: ὁ ἀρνούμενος τὸν πατέρα καὶ τὸν υἱόν",
+      "decision": "Cine este mincinosul, dacă nu cel care neagă că Isus este Hristosul? Acesta este antihristul: cel care Îi neagă pe Tatăl și pe Fiul.",
+      "reason": "Coordonarea simetrică din ὁ ἀρνούμενος τὸν πατέρα καὶ τὸν υἱόν nu este redată natural de cel care neagă Tatăl și pe Fiul.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

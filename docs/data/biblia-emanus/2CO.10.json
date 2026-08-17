@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,22 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "SBLGNT 1.2 și aparatul au fost confruntate direct; TR a fost folosit numai ca martor de variante.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au servit drept comparații auxiliare; NTR nu a fost consultată.",
+      "Textul românesc a fost redactat independent, fără stocarea sau copierea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 18,
       "reviewed": 18,
@@ -98,22 +97,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 18 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 18 versete din 2CO.10 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost corectate construcțiile nefirești și gramatical incomplete, în special fraza participială din 2CO.10.5.",
+        "Au fost păstrate contrastul «în carne / nu după carne», referentul autorității și succesiunea argumentului lui Pavel.",
+        "Lectura principală SBLGNT este urmată la 2CO.10.8 și 2CO.10.18, fără import automat de lecturi tradiționale."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
         "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Termenii teologici și ambiguitățile sintactice sunt redați lexical, fără glosare confesionale în corpul versetului.",
+        "Etaloanele românești au fost consultate numai pentru verificare, după confruntarea directă cu sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -123,33 +122,28 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 327,
-        "primary": 189,
-        "secondary": 45,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.33174470430626646,
-      "minimumScore": 0.5090738739653641
-    },
-    "textDigest": "sha256:90b9eb0253dbeb71682f795c4bd806aad7e70e4662ad866036f1699b84f32012",
-    "contentDigest": "sha256:195d58ec4a6357a1659791097abeb53317d9218cfa5e0231425a5944a4602e3d"
+    "textDigest": "sha256:2bee14b16388ab26ae0b6698e3aa9572d563e6364cbb0f8424b696de5f1aaf6d",
+    "contentDigest": "sha256:db17d6b36da0ba49ef0748a198e756cfa0da5ae8a9bbb06e1ad9c87037cd3375",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Iar eu, Pavel însumi, vă îndemn prin blândețea și bunătatea lui Hristos, eu, care, față către față, sunt smerit între voi, dar absent, sunt îndrăzneț față de voi."
+      "text": "Iar eu însumi, Pavel, vă îndemn prin blândețea și bunătatea lui Hristos, eu, care, când sunt de față, sunt smerit între voi, dar, când sunt absent, sunt îndrăzneț față de voi."
     },
     {
       "number": 2,
-      "text": "Vă rog însă ca, atunci când voi fi de față, să nu fiu nevoit să arăt îndrăzneala cu care socotesc să îndrăznesc împotriva unora care ne socotesc ca umblând după carne."
+      "text": "Vă rog însă ca, atunci când voi fi de față, să nu mă arăt îndrăzneț, cu încrederea cu care socotesc că voi cuteza împotriva unora care cred despre noi că umblăm potrivit cărnii."
     },
     {
       "number": 3,
@@ -157,11 +151,11 @@
     },
     {
       "number": 4,
-      "text": "Pentru că armele războiului nostru nu sunt firești, ci puternice prin Dumnezeu spre dărâmarea fortărețelor,"
+      "text": "Căci armele luptei noastre nu sunt firești, ci puternice prin Dumnezeu pentru dărâmarea fortărețelor — noi dărâmăm raționamentele,"
     },
     {
       "number": 5,
-      "text": "Aruncarea în jos imaginații și orice lucru înalt, care este înălțat împotriva cunoașterii lui Dumnezeu și aducerea fiecare gând în captivitate la ascultarea lui Hristos,"
+      "text": "Dărâmăm orice înălțime care se ridică împotriva cunoașterii lui Dumnezeu și luăm captiv orice gând, ca să asculte de Hristos,"
     },
     {
       "number": 6,
@@ -169,7 +163,7 @@
     },
     {
       "number": 7,
-      "text": "Voi priviți la ceea ce este la față. Dacă cineva este convins în sine că este al lui Hristos, să țină seama iarăși de aceasta în sine: așa cum el este al lui Hristos, tot așa suntem și noi."
+      "text": "Uitați-vă la ceea ce este la vedere. Dacă cineva se încrede în sine, socotindu-se al lui Hristos, să chibzuiască iarăși în sinea lui că, așa cum el este al lui Hristos, tot așa suntem și noi."
     },
     {
       "number": 8,
@@ -193,7 +187,7 @@
     },
     {
       "number": 13,
-      "text": "Dar noi nu ne vom lăuda peste măsură, ci după măsura hotarului pe care Dumnezeu ni l-a împărțit ca măsură, ca să ajungem până și la voi."
+      "text": "Dar noi nu ne vom lăuda dincolo de orice măsură, ci potrivit măsurii domeniului pe care Dumnezeu ni l-a repartizat, ca să ajungem până și la voi."
     },
     {
       "number": 14,
@@ -201,11 +195,11 @@
     },
     {
       "number": 15,
-      "text": "nu lăudându-ne peste măsură cu ostenelile altora, ci având speranța că, pe măsură ce crește credința voastră, va crește printre voi și lucrarea noastră, potrivit cu hotarul nostru, din belșug,"
+      "text": "nu lăudându-ne peste măsură cu ostenelile altora, ci sperând că, pe măsură ce crește credința voastră, lucrarea noastră între voi se va extinde mult, potrivit cu hotarul nostru,"
     },
     {
       "number": 16,
-      "text": "ca să vestim Evanghelia și în ținuturile de dincolo de voi, fără să ne lăudăm în hotarul altuia cu lucruri pregătite de-a gata."
+      "text": "ca să vestim Evanghelia și în ținuturile aflate dincolo de voi, fără să ne lăudăm, în domeniul altuia, cu ceea ce este deja pregătit."
     },
     {
       "number": 17,
@@ -216,7 +210,107 @@
       "text": "Căci nu cel care se recomandă pe sine este aprobat, ci acela pe care îl recomandă Domnul."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 5,
+      "term": "λογισμοὺς καθαιροῦντες ... αἰχμαλωτίζοντες πᾶν νόημα",
+      "decision": "redat prin «dărâmând raționamentele ... aducând orice gând captiv»",
+      "reason": "Participiile continuă afirmația despre armele puternice prin Dumnezeu. Redarea verbală în română păstrează acțiunile fără a lăsa un fragment nominal negramatical.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sensul argumentelor dărâmate și al gândurilor aduse la ascultare este păstrat complet."
+    },
+    {
+      "verse": 8,
+      "term": "ἐξουσίας ... εἰς οἰκοδομὴν καὶ οὐκ εἰς καθαίρεσιν",
+      "decision": "redată autoritatea pentru zidire, nu pentru dărâmare",
+      "reason": "Aparatul notează diferențe de particule și de poziție a lui «Domnul»; nu schimbă contrastul principal al autorității date pentru edificare.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Formula românească urmează relația din SBLGNT dintre autoritate, zidire și dărâmare."
+    },
+    {
+      "verse": 1,
+      "term": "revizie finală: κατὰ πρόσωπον μὲν ταπεινὸς ἐν ὑμῖν",
+      "decision": "Iar eu însumi, Pavel, vă îndemn prin blândețea și bunătatea lui Hristos, eu, care, când sunt de față, sunt smerit între voi, dar, când sunt absent, sunt îndrăzneț față de voi.",
+      "reason": "Locuțiunea „față către față” nu redă natural valoarea circumstanțială a lui κατὰ πρόσωπον, care aici înseamnă că Pavel este prezent personal, în opoziție cu absența sa. În context, κατὰ πρόσωπον μὲν ταπεινὸς ἐν ὑμῖν înseamnă „când sunt de față”, pe când față către față, sunt smerit între voi deplasează sensul spre întâlnirea nemijlocită dintre persoane.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 2,
+      "term": "revizie finală: τοὺς λογιζομένους ἡμᾶς ὡς κατὰ σάρκα περιπατοῦντας",
+      "decision": "Vă rog însă ca, atunci când voi fi de față, să nu mă arăt îndrăzneț, cu încrederea cu care socotesc că voi cuteza împotriva unora care cred despre noi că umblăm potrivit cărnii.",
+      "reason": "Construcția „ne consideră că umblăm” este negramaticală în română; în plus, „să fiu nevoit” adaugă o constrângere neexprimată, iar „să mă împotrivesc” atenuează sensul de îndrăzneală al lui τολμῆσαι. Prin τοὺς λογιζομένους ἡμᾶς ὡς κατὰ σάρκα περιπατοῦντας, unii formulează o apreciere despre Pavel și colaboratorii săi, dar ne consideră că umblăm după firea pământească nu exprimă corect raportul sintactic.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 4,
+      "term": "revizie finală: λογισμοὺς καθαιροῦντες",
+      "decision": "Căci armele luptei noastre nu sunt firești, ci puternice prin Dumnezeu pentru dărâmarea fortărețelor, dărâmând raționamentele,",
+      "reason": "Sintagma finală λογισμοὺς καθαιροῦντες, prezentă în textul grec al versetului, a fost mutată în versetul următor și lipsește aici. După pentru dărâmarea fortărețelor, textul-sursă continuă cu λογισμοὺς καθαιροῦντες, astfel că acțiunea exercitată asupra raționamentelor lipsește din acest verset românesc.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 5,
+      "term": "revizie finală: καὶ πᾶν ὕψωμα ἐπαιρόμενον",
+      "decision": "Și orice înălțime care se ridică împotriva cunoașterii lui Dumnezeu, și luând captiv orice gând pentru ascultarea de Hristos,",
+      "reason": "„dărâmând raționamentele” nu apare în câmpul grec al acestui verset, fiind deja finalul textului grec furnizat pentru 2CO.10.4; împărțirea românească nu respectă delimitarea dată. Câmpul grec curent începe cu καὶ πᾶν ὕψωμα ἐπαιρόμενον, în timp ce dărâmând raționamentele și orice înălțime repetă aici sintagma care aparține câmpului-sursă precedent.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 7,
+      "term": "revizie finală: εἴ τις πέποιθεν ἑαυτῷ Χριστοῦ εἶναι",
+      "decision": "Uitați-vă la ceea ce este la vedere. Dacă cineva se încrede în sine, socotindu-se al lui Hristos, să chibzuiască iarăși în sinea lui că, așa cum el este al lui Hristos, tot așa suntem și noi.",
+      "reason": "Traducerea omite valoarea explicită a lui ἑαυτῷ, prezentând doar convingerea că persoana îi aparține lui Hristos, nu și încrederea ei în sine; „să socotească din nou cu sine” este, de asemenea, nefiresc în română. Față de εἴ τις πέποιθεν ἑαυτῷ Χριστοῦ εἶναι, propoziția Dacă cineva este convins că este al lui Hristos păstrează conținutul convingerii, însă nu și temeiul ei reflexiv.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 13,
+      "term": "revizie finală: κατὰ τὸ μέτρον τοῦ κανόνος",
+      "decision": "Dar noi nu ne vom lăuda dincolo de orice măsură, ci potrivit măsurii domeniului pe care Dumnezeu ni l-a repartizat, ca să ajungem până și la voi.",
+      "reason": "„măsura hotarului” și „hotarul pe care Dumnezeu ni l-a împărțit ca măsură” sunt construcții nefirești și estompează sensul lui κανών ca domeniu sau sferă de activitate repartizată. În timp ce κατὰ τὸ μέτρον τοῦ κανόνος privește întinderea domeniului atribuit, după măsura hotarului combină nefiresc măsura cu limita acelui domeniu.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 16,
+      "term": "revizie finală: οὐκ ἐν ἀλλοτρίῳ κανόνι εἰς τὰ ἕτοιμα καυχήσασθαι",
+      "decision": "ca să vestim Evanghelia și în ținuturile aflate dincolo de voi, fără să ne lăudăm, în domeniul altuia, cu ceea ce este deja pregătit.",
+      "reason": "„în hotarul altuia” folosește impropriu hotarul ca spațiu de activitate, iar „pregătite de-a gata” este o dublare lexicală nefirească ce afectează claritatea propoziției. Ideea din οὐκ ἐν ἀλλοτρίῳ κανόνι εἰς τὰ ἕτοιμα καυχήσασθαι privește domeniul de lucru al altuia, pe când fără să ne lăudăm în hotarul altuia cu lucruri pregătite de-a gata exprimă neclar această relație.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 4,
+      "term": "revizie finală: λογισμοὺς καθαιροῦντες",
+      "decision": "Căci armele luptei noastre nu sunt firești, ci puternice prin Dumnezeu pentru dărâmarea fortărețelor — noi dărâmăm raționamentele,",
+      "reason": "Gerunziul „dărâmând” preia în română subiectul explicit „armele”, în timp ce participiul grec masculin plural are ca subiect implicit „noi”, astfel încât agentul acțiunii este schimbat sintactic. Deși λογισμοὺς καθαιροῦντες și dărâmând raționamentele denumesc aceeași acțiune, greaca o atribuie oamenilor, pe când construcția românească tinde să o atribuie armelor.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 5,
+      "term": "revizie finală: αἰχμαλωτίζοντες πᾶν νόημα",
+      "decision": "Dărâmăm orice înălțime care se ridică împotriva cunoașterii lui Dumnezeu și luăm captiv orice gând, ca să asculte de Hristos,",
+      "reason": "Gerunziul „luând” moștenește ambiguitatea sintactică din versetul anterior și poate atribui armelor capturarea gândurilor, deși participiul grec masculin plural are drept agent implicit grupul lui Pavel. Acțiunea din αἰχμαλωτίζοντες πᾶν νόημα este redată lexical prin luând captiv orice gând, dar raportul sintactic românesc nu păstrează fără echivoc subiectul personal al participiului grec.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

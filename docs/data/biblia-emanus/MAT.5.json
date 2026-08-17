@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,18 +71,18 @@
       "additions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Toate cele 48 de versete au fost reverificate față de SBLGNT 1.2 și aparatul critic; Textus Receptus a fost folosit numai ca martor textual.",
+      "WEBP, BTF și Cornilescu 1924 au fost folosite numai ca repere auxiliare. NTR nu a fost consultată editorial și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -98,22 +101,23 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 48 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 48 de versete din MAT.5 au fost reverificate față de textul SBLGNT 1.2 și cele 24 de intrări de aparat ale capitolului; Textus Receptus a fost folosit numai ca martor de variantă."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost reparate erori de persoană, sintaxă și calcuri, inclusiv MAT.5.28, 40, 44, 47 și 48.",
+        "Formulările Fericirilor și ale antitezelor au fost armonizate în română fără a uniformiza variante textuale reale.",
+        "Extensiile tradiției recepte din MAT.5.44 nu au fost importate în textul principal."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Textul principal urmează SBLGNT; TR rămâne numai martor textual.",
+        "MAT.5.22 nu importă εἰκῇ («fără motiv») din Treg/RP.",
+        "MAT.5.37 păstrează ambiguitatea lui ἐκ τοῦ πονηροῦ prin redarea «din rău».",
+        "MAT.5.44 și 5.47 urmează explicit textul critic, nu extensiile și substantivele RP/TR."
       ]
     },
     "omissionAddition": {
@@ -123,65 +127,55 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare independentă din SBLGNT și WEBP, verificată cu BTF și Cornilescu 1924; fără copiere a unui etalon românesc"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 741,
-        "primary": 228,
-        "secondary": 102,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.4037089233135842,
-      "minimumScore": 0.5165308313030281
-    },
-    "textDigest": "sha256:211bb80880cd0bd611d6e7673c49f23c5fc1bb9c0413ab71d92192ef4e9213b3",
-    "contentDigest": "sha256:424ef1a9a337f9e5f5445671d1bd56c40d014d83cda9b86a98b2076838304776"
+    "textDigest": "sha256:02425d3809d229b2ebc154105da671e230e67ee3d25106fce696bcf5a3a074dd",
+    "contentDigest": "sha256:7e42b2bb708d628229ba810a41ecf840166c99e4071d1f4bb37d75b25439cb59"
   },
   "verses": [
     {
       "number": 1,
-      "text": "Când a văzut mulțimile, Isus S-a urcat pe munte. După ce S-a așezat, ucenicii Lui s-au apropiat de El."
+      "text": "Văzând mulțimile, S-a urcat pe munte; după ce S-a așezat, ucenicii Lui s-au apropiat de El."
     },
     {
       "number": 2,
-      "text": "Și-a deschis gura și i-a învățat, zicând:"
+      "text": "Și, deschizându-Și gura, îi învăța, spunând:"
     },
     {
       "number": 3,
-      "text": "„Fericiți sunt cei săraci în duh, căci a lor este Împărăția cerurilor!"
+      "text": "„Fericiți cei săraci în duh, căci a lor este Împărăția cerurilor!"
     },
     {
       "number": 4,
-      "text": "Ferice de cei care jelesc, căci ei vor fi mângâiați."
+      "text": "Fericiți cei ce plâng, căci ei vor fi mângâiați!"
     },
     {
       "number": 5,
-      "text": "Fericiți sunt cei blânzi, căci ei vor moșteni pământul!"
+      "text": "Fericiți cei blânzi, căci ei vor moșteni pământul!"
     },
     {
       "number": 6,
-      "text": "Fericiți sunt cei flămânzi și însetați după dreptate, căci ei vor fi săturați!"
+      "text": "Fericiți cei flămânzi și însetați după dreptate, căci ei vor fi săturați!"
     },
     {
       "number": 7,
-      "text": "Fericiți sunt cei milostivi, căci ei vor avea parte de milă!"
+      "text": "Fericiți cei milostivi, căci ei vor primi milă!"
     },
     {
       "number": 8,
-      "text": "Fericiți sunt cei cu inima curată, căci ei Îl vor vedea pe Dumnezeu!"
+      "text": "Fericiți cei cu inima curată, căci ei Îl vor vedea pe Dumnezeu!"
     },
     {
       "number": 9,
-      "text": "Fericiți sunt făcătorii de pace, căci ei vor fi numiți fii ai lui Dumnezeu!"
+      "text": "Fericiți făcătorii de pace, căci ei vor fi numiți fii ai lui Dumnezeu!"
     },
     {
       "number": 10,
-      "text": "Fericiți sunt cei persecutați din cauza dreptății, căci a lor este Împărăția cerurilor!"
+      "text": "Fericiți cei persecutați din cauza dreptății, căci a lor este Împărăția cerurilor!"
     },
     {
       "number": 11,
@@ -189,11 +183,11 @@
     },
     {
       "number": 12,
-      "text": "Bucurați-vă și veseliți-vă, pentru că răsplata voastră este mare în ceruri; căci tot așa i-au persecutat pe profeții dinaintea voastră."
+      "text": "Bucurați-vă și veseliți-vă, fiindcă răsplata voastră este mare în ceruri; căci tot așa i-au persecutat pe profeții dinaintea voastră."
     },
     {
       "number": 13,
-      "text": "Voi sunteți sarea pământului. Dar, dacă sarea își pierde gustul, cu ce va fi sărată? Nu mai este bună la nimic decât să fie aruncată afară și călcată în picioare de oameni."
+      "text": "Voi sunteți sarea pământului. Dar, dacă sarea își pierde gustul, cu ce va mai fi sărată? Nu mai este bună la nimic, decât să fie aruncată afară și călcată în picioare de oameni."
     },
     {
       "number": 14,
@@ -201,11 +195,11 @@
     },
     {
       "number": 15,
-      "text": "Nici nu se aprinde o candelă ca să fie pusă sub obroc, ci pe suport, și astfel luminează pentru toți cei din casă."
+      "text": "Nici nu aprinde cineva o candelă și o pune sub obroc, ci pe sfeșnic, și ea luminează pentru toți cei din casă."
     },
     {
       "number": 16,
-      "text": "Tot așa să lumineze lumina voastră înaintea oamenilor, pentru ca ei să vadă faptele voastre bune și să-L glorifice pe Tatăl vostru care este în ceruri."
+      "text": "Tot așa să lumineze lumina voastră înaintea oamenilor, ca ei să vadă faptele voastre bune și să-L glorifice pe Tatăl vostru care este în ceruri."
     },
     {
       "number": 17,
@@ -213,23 +207,23 @@
     },
     {
       "number": 18,
-      "text": "Căci adevărat vă spun: până vor trece cerul și pământul, nicidecum nu va trece din Lege nici măcar o iotă sau o singură liniuță, până când toate se vor împlini."
+      "text": "Căci adevărat vă spun: până vor trece cerul și pământul, nu va trece din Lege nici măcar o iotă sau o liniuță, până când toate se vor împlini."
     },
     {
       "number": 19,
-      "text": "Așadar, oricine va desființa una dintre cele mai mici dintre aceste porunci și îi va învăța astfel pe oameni va fi numit cel mai mic în Împărăția cerurilor; dar oricine le va împlini și îi va învăța pe alții va fi numit mare în Împărăția cerurilor."
+      "text": "Așadar, oricine va încălca una dintre cele mai mici dintre aceste porunci și îi va învăța astfel pe oameni va fi numit cel mai mic în Împărăția cerurilor; dar oricine le va împlini și îi va învăța pe alții va fi numit mare în Împărăția cerurilor."
     },
     {
       "number": 20,
-      "text": "Căci vă spun că, dacă dreptatea voastră nu o va întrece cu mult pe cea a cărturarilor și a fariseilor, nicidecum nu veți intra în Împărăția cerurilor."
+      "text": "Căci vă spun că, dacă dreptatea voastră nu o va întrece pe cea a cărturarilor și a fariseilor, nicidecum nu veți intra în Împărăția cerurilor."
     },
     {
       "number": 21,
-      "text": "Ați auzit că li s-a spus celor din vechime: «Să nu ucizi», iar «cine ucide va fi vinovat înaintea judecății»."
+      "text": "Ați auzit că li s-a spus celor din vechime: „Să nu ucizi”; iar cel care ucide va fi răspunzător înaintea judecății."
     },
     {
       "number": 22,
-      "text": "Dar Eu vă spun că oricine se mânie pe fratele său va fi vinovat înaintea judecății; cine îi spune fratelui său: «Raca!» va fi vinovat înaintea Sinedriului, iar cine îi spune: «Nebunule!» va fi vinovat și vrednic de focul Gheenei."
+      "text": "Dar Eu vă spun că oricine se mânie pe fratele său va fi răspunzător înaintea judecății; cine îi spune fratelui său: „Raca!” va fi răspunzător înaintea Sinedriului, iar cine îi spune: „Nebunule!” va fi vrednic de Gheena focului."
     },
     {
       "number": 23,
@@ -241,7 +235,7 @@
     },
     {
       "number": 25,
-      "text": "Înțelege-te repede cu adversarul tău cât timp ești cu el pe drum, ca nu cumva adversarul să te dea pe mâna judecătorului, judecătorul să te dea pe mâna gardianului, iar tu să fii aruncat în închisoare."
+      "text": "Înțelege-te repede cu adversarul tău cât timp ești cu el pe drum, ca nu cumva adversarul să te dea judecătorului, judecătorul slujbașului, iar tu să fii aruncat în închisoare."
     },
     {
       "number": 26,
@@ -249,11 +243,11 @@
     },
     {
       "number": 27,
-      "text": "Ați auzit că s-a spus: «Să nu comiți adulter.»"
+      "text": "Ați auzit că s-a spus: „Să nu comiți adulter.”"
     },
     {
       "number": 28,
-      "text": "Dar eu vă spun că oricine se uită la o femeie să poftească după ea a comis adulter cu ea deja în inima lui."
+      "text": "Dar Eu vă spun că oricine se uită la o femeie ca s-o poftească a comis deja adulter cu ea în inima lui."
     },
     {
       "number": 29,
@@ -265,7 +259,7 @@
     },
     {
       "number": 31,
-      "text": "S-a mai spus: «Oricine divorțează de soția lui să-i dea un act de divorț.»"
+      "text": "S-a mai spus: „Oricine divorțează de soția lui să-i dea un act de divorț.”"
     },
     {
       "number": 32,
@@ -273,7 +267,7 @@
     },
     {
       "number": 33,
-      "text": "Ați mai auzit că li s-a spus celor din vechime: «Să nu juri strâmb, ci să-ți împlinești jurămintele față de Domnul.»"
+      "text": "Ați mai auzit că li s-a spus celor din vechime: „Să nu juri strâmb, ci să-ți împlinești jurămintele față de Domnul.”"
     },
     {
       "number": 34,
@@ -289,11 +283,11 @@
     },
     {
       "number": 37,
-      "text": "Cuvântul vostru să fie: «Da, da» sau «Nu, nu»; ce trece dincolo de acestea vine de la cel rău."
+      "text": "Cuvântul vostru să fie: „Da, da; nu, nu”; ceea ce este în plus față de acestea vine din rău."
     },
     {
       "number": 38,
-      "text": "Ați auzit că s-a spus: «Ochi pentru ochi și dinte pentru dinte.»"
+      "text": "Ați auzit că s-a spus: „Ochi pentru ochi și dinte pentru dinte.”"
     },
     {
       "number": 39,
@@ -301,7 +295,7 @@
     },
     {
       "number": 40,
-      "text": "Dacă cineva te dă în judecată să-ți iei haina, lasă-l să-ți ia și mantia."
+      "text": "Iar celui care vrea să te dea în judecată și să-ți ia cămașa, lasă-i și mantia."
     },
     {
       "number": 41,
@@ -313,11 +307,11 @@
     },
     {
       "number": 43,
-      "text": "Ați auzit că s-a spus: «Să-l iubești pe semenul tău și să-l urăști pe dușmanul tău.»"
+      "text": "Ați auzit că s-a spus: „Să-l iubești pe aproapele tău și să-l urăști pe dușmanul tău.”"
     },
     {
       "number": 44,
-      "text": "Dar îți spun, iubește-ți dușmanii, binecuvântează-i pe cei care te blestemă, fă bine celor care te urăsc, și roagă-te pentru cei care te maltratează și te persecută,"
+      "text": "Dar Eu vă spun: iubiți-vă dușmanii și rugați-vă pentru cei care vă persecută,"
     },
     {
       "number": 45,
@@ -325,26 +319,134 @@
     },
     {
       "number": 46,
-      "text": "Căci, dacă îi iubiți pe cei ce vă iubesc, ce răsplată aveți? Oare nu fac același lucru și colectorii de taxe?"
+      "text": "Căci, dacă îi iubiți pe cei care vă iubesc, ce răsplată aveți? Oare nu fac același lucru și vameșii?"
     },
     {
       "number": 47,
-      "text": "Dacă doar salut prietenii tăi, ce mai faci decât alții? Nu chiar colectorii de taxe fac la fel?"
+      "text": "Și, dacă îi salutați numai pe frații voștri, ce faceți în plus? Oare nu fac același lucru și cei dintre neamuri?"
     },
     {
       "number": 48,
-      "text": "De aceea vei fi perfect, așa cum Tatăl tău din ceruri este perfect.”"
+      "text": "Așadar, fiți desăvârșiți, după cum Tatăl vostru ceresc este desăvârșit.”"
     }
   ],
   "editorialNotes": [
     {
       "verse": 22,
-      "term": "variantă textuală sau lexicală verificată",
-      "decision": "Textul principal păstrează lectura SBLGNT 1.2 și formularea românească validată prin sursele fixate.",
-      "reason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal.",
+      "term": "ὀργιζόμενος τῷ ἀδελφῷ αὐτοῦ",
+      "decision": "Fără adaosul «fără motiv».",
+      "reason": "SBLGNT nu include εἰκῇ; Treg/RP îl adaugă.",
+      "alternatives": [
+        "oricine se mânie fără motiv pe fratele său"
+      ],
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
+      "resolutionReason": "Textul principal urmează lectura critică SBLGNT."
+    },
+    {
+      "verse": 27,
+      "term": "Ἠκούσατε ὅτι ἐρρέθη",
+      "decision": "„Ați auzit că s-a spus”",
+      "reason": "TR adaugă referirea «celor din vechime», absentă din textul principal la acest verset.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Adaosul tradiției recepte nu este importat."
+    },
+    {
+      "verse": 30,
+      "term": "εἰς γέενναν ἀπέλθῃ",
+      "decision": "„să ajungă … în Gheena”",
+      "reason": "SBLGNT are ἀπέλθῃ; RP are βληθῇ («să fie aruncat»).",
+      "alternatives": [
+        "să fie aruncat în Gheena"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Verbul textului principal este păstrat."
+    },
+    {
+      "verse": 32,
+      "term": "πᾶς ὁ ἀπολύων … μοιχευθῆναι",
+      "decision": "Păstrată structura despre divorț și adulter fără extindere doctrinară.",
+      "reason": "RP are forme verbale diferite, fără schimbarea cadrului semantic principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul românesc rămâne ancorat în SBLGNT și nu adaugă explicații confesionale."
+    },
+    {
+      "verse": 37,
+      "term": "ἐκ τοῦ πονηροῦ",
+      "decision": "„vine din rău”",
+      "reason": "Genitivul poate fi citit ca «din rău» sau «de la cel rău»; corpul textului nu forțează identificarea personală.",
+      "alternatives": [
+        "vine de la cel rău"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Redarea păstrează ambiguitatea lexicală și neutralitatea teologică."
+    },
+    {
+      "verse": 39,
+      "term": "μὴ ἀντιστῆναι τῷ πονηρῷ",
+      "decision": "„să nu vă împotriviți celui rău”",
+      "reason": "Construcția este urmată imediat de exemple interpersonale; variantele aparatului privesc detalii de formă și poziție.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Redarea păstrează substantivarea adjectivului și contextul imediat."
+    },
+    {
+      "verse": 44,
+      "term": "ἀγαπᾶτε τοὺς ἐχθροὺς ὑμῶν καὶ προσεύχεσθε",
+      "decision": "„iubiți-vă dușmanii și rugați-vă pentru cei care vă persecută”",
+      "reason": "RP/TR adaugă «binecuvântați pe cei ce vă blestemă, faceți bine celor ce vă urăsc» și o extensie înainte de «cei care vă persecută»; acestea lipsesc din SBLGNT.",
+      "alternatives": [
+        "binecuvântați-i pe cei ce vă blestemă; faceți-le bine celor ce vă urăsc"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Extensiile tradiției recepte sunt eliminate din textul principal și rămân documentate ca variantă."
+    },
+    {
+      "verse": 47,
+      "term": "ἀδελφοὺς … ἐθνικοὶ",
+      "decision": "„frații voștri … cei dintre neamuri”",
+      "reason": "RP are φίλους («prieteni») și τελῶναι («vameși»); SBLGNT are ἀδελφούς și ἐθνικοί.",
+      "alternatives": [
+        "prietenii voștri … vameșii"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Ambele substantive urmează textul principal."
+    },
+    {
+      "verse": 48,
+      "term": "Ἔσεσθε … τέλειοι … ὁ πατὴρ ὑμῶν ὁ οὐράνιος",
+      "decision": "„fiți desăvârșiți … Tatăl vostru ceresc”",
+      "reason": "Viitorul grecesc are aici valoare exhortativă; RP are variante minore ὥσπερ și «în ceruri».",
+      "alternatives": [
+        "veți fi desăvârșiți"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Imperativul românesc redă natural forța exhortativă a contextului, păstrând sensul lui τέλειοι."
+    },
+    {
+      "verse": 12,
+      "term": "revizie finală: οὕτως γὰρ ἐδίωξαν",
+      "decision": "Bucurați-vă și veseliți-vă, fiindcă răsplata voastră este mare în ceruri; căci tot așa i-au persecutat pe profeții dinaintea voastră.",
+      "reason": "Conectorul γὰρ este omis după punct și virgulă, astfel încât relația explicativ-cauzală dintre îndemnul la bucurie și precedentul profeților este slăbită. Formularea tot așa i-au persecutat transmite adverbul οὕτως din οὕτως γὰρ ἐδίωξαν, însă nu exprimă în mod explicit valoarea lui γὰρ.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 15,
+      "term": "revizie finală: καίουσιν λύχνον καὶ τιθέασιν αὐτὸν",
+      "decision": "Nici nu aprinde cineva o candelă și o pune sub obroc, ci pe sfeșnic, și ea luminează pentru toți cei din casă.",
+      "reason": "Conjuncția καὶ coordonează acțiunile de a aprinde și a pune, dar „ca să fie pusă” introduce un raport de scop și schimbă nejustificat construcția activă într-una pasivă. Față de coordonarea activă din καίουσιν λύχνον καὶ τιθέασιν αὐτὸν, formularea se aprinde o candelă ca să fie pusă sugerează greșit că așezarea este scopul aprinderii.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
     }
   ],
   "referenceNotes": [],

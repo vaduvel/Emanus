@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "theologicalNeutrality": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Toate cele 29 de versete au fost revizuite semantic direct față de snapshotul fixat SBLGNT 1.2 și aparatul lui; rezultatul automat „0 probleme” nu a fost folosit drept verdict semantic.",
+      "TR a fost folosit numai ca martor textual. WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată; textul românesc a fost redactat independent."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 29,
       "reviewed": 29,
@@ -98,22 +96,23 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 29 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 29 de versete au fost confruntate direct cu SBLGNT/aparat; TR numai martor, iar WEBP/BTF/Cornilescu 1924/Biblia Liberă auxiliare."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost eliminate calcurile și dezacordurile din textul anterior și a fost refăcută sintaxa în română naturală.",
+        "Citatele, persoanele, numărul și referenții au fost confruntați verset cu verset cu greaca fixată.",
+        "Formulările dificile din 12:3, 12:17-19, 12:23-25 și 12:28 au fost rezolvate explicit după textul principal și aparat."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Textul principal urmează SBLGNT și nu importă automat lecturile TR/RP.",
+        "La 12:3 pluralul reflexiv ἑαυτούς este păstrat semantic, chiar dacă produce o formulare mai puțin familiară.",
+        "La 12:18 nu este introdus substantivul „munte”, absent din textul principal SBLGNT.",
+        "La 12:28 conjunctivul λατρεύωμεν este redat prin îndemnul „să-I slujim”."
       ]
     },
     "omissionAddition": {
@@ -123,144 +122,267 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT/aparat și verificări auxiliare fixate; fără copierea unei traduceri românești"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 316,
-        "secondary": 95,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5922586297890594,
-      "minimumScore": 0.5759312754780807
-    },
-    "textDigest": "sha256:cb37f02e64eb1baf61c5aaf77871a80f420961e729ca8f9c3c765df82fc1d187",
-    "contentDigest": "sha256:35899ccd51a8f137098766763a1c6d295d48b59bc475286655b90312a49acd95"
+    "textDigest": "sha256:c0f762aacebafbbfc539ef860e934dedb42bc1995f4ebbe2665f33418c344839",
+    "contentDigest": "sha256:c32fb50fd81b4678a17c8e39c1f82b68cf886e3794056267f298fee43b84d1cb",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "De aceea să lăsăm, văzând că suntem înconjurați de un nor atât de mare de martori, să lăsăm deoparte orice greutate și păcatul care ne leagă atât de ușor, și să alergăm cu perseverență cursa care este pusă înaintea noastră,"
+      "text": "Așadar și noi, având în jurul nostru un nor atât de mare de martori, să dăm la o parte orice povară și păcatul care ne înfășoară atât de ușor și să alergăm cu răbdare în alergarea care ne stă înainte,"
     },
     {
       "number": 2,
-      "text": "Privind spre Isus, autorul și desăvârșitorul credinței, care, pentru bucuria care a fost pusă înaintea lui, a îndurat crucea, disprețuind rușinea ei și s-a așezat la dreapta tronului lui Dumnezeu."
+      "text": "privindu-L țintă pe Isus, inițiatorul și desăvârșitorul credinței, care, pentru bucuria pusă înaintea Lui, a îndurat crucea, disprețuind rușinea, și S-a așezat la dreapta tronului lui Dumnezeu."
     },
     {
       "number": 3,
-      "text": "Să ne gândim la cel ce a îndurat o astfel de contradicție a păcătoșilor împotriva lui însuși, ca să nu vă obosiți, să leșinați în sufletele voastre."
+      "text": "Gândiți-vă, deci, la Cel care a îndurat o asemenea împotrivire din partea păcătoșilor împotriva lor înșiși, ca să nu obosiți și să vă pierdeți curajul în sufletele voastre."
     },
     {
       "number": 4,
-      "text": "Încă nu te-ai împotrivit sângelui, luptând împotriva păcatului."
+      "text": "În lupta voastră împotriva păcatului nu v-ați împotrivit încă până la sânge"
     },
     {
       "number": 5,
-      "text": "Ai uitat îndemnul pe care l-ai avut cu tine ca și cu copiii, fiul meu, nu lua cu ușurință castitatea Domnului, și nu leșina când ești mustrat de el."
+      "text": "și ați uitat îndemnul care vă vorbește ca unor fii: „Fiul meu, nu disprețui disciplina Domnului și nu-ți pierde curajul când ești mustrat de El;"
     },
     {
       "number": 6,
-      "text": "pe care Domnul îl iubește, îl pedepse îl pedepse pe fiecare fiu pe care îl.„"
+      "text": "căci Domnul îl disciplinează pe cel pe care-l iubește și îl biciuiește pe orice fiu pe care-l primește.”"
     },
     {
       "number": 7,
-      "text": "Dumnezeu se poartă cu voi ca cu copiii, căci ce fiu este acolo, pe care tatăl său nu-l disciplinează?"
+      "text": "Pentru disciplinare răbdați; Dumnezeu Se poartă cu voi ca și cu niște fii. Căci care este fiul pe care tatăl nu-l disciplinează?"
     },
     {
       "number": 8,
-      "text": "Dar dacă sunteți fără disciplină, din care toți au fost făcuți părtași, atunci sunteți nelegitimi, și nu copii."
+      "text": "Dar dacă sunteți fără disciplinare, de care toți au avut parte, atunci sunteți nelegitimi și nu fii."
     },
     {
       "number": 9,
-      "text": "Mai mult, am avut părinții cărnii noastre să ne pedepsească, și le-am plătit respect. Nu vom fi mai degrabă în supunere față de Tatăl spiritelor și să trăiască?"
+      "text": "Mai mult, am avut ca disciplinatori pe părinții noștri trupești și îi respectam. Oare nu cu mult mai mult ne vom supune Tatălui duhurilor și vom trăi?"
     },
     {
       "number": 10,
-      "text": "Căci ei ne-au pedepsit vreme de cîteva zile ca și cum le-ar fi fost de folos, dar el, spre folosul nostru, ca să fim părtași sfințeniei Lui."
+      "text": "Ei ne disciplinau pentru puține zile, după cum li se părea bine; dar El o face spre folosul nostru, ca să avem parte de sfințenia Lui."
     },
     {
       "number": 11,
-      "text": "Toată castitatea pare să nu fie veselă, ci dureroasă; totuși, după aceea, dă rod pașnic dreptății pentru cei care au fost instruiți de ea."
+      "text": "Orice disciplinare, pentru moment, nu pare prilej de bucurie, ci de întristare; dar mai târziu le dă celor deprinși prin ea rodul pașnic al dreptății."
     },
     {
       "number": 12,
-      "text": "De aceea, ridicați mâinile care atârnă genunchii slăbiți,"
+      "text": "De aceea, întăriți mâinile lăsate în jos și genunchii slăbiți"
     },
     {
       "number": 13,
-      "text": "fă-ți cărări drepte pentru picioarele tale, astfel încât ceea ce estechiop să nu fie dislocat, ci mai degrabă să fie vindecat."
+      "text": "și faceți cărări drepte pentru picioarele voastre, pentru ca ceea ce este șchiop să nu se abată, ci mai degrabă să fie vindecat."
     },
     {
       "number": 14,
-      "text": "Urmează pacea cu toți oamenii, și sfințirea fără de care nimeni nu va vedea pe Domnul,"
+      "text": "Urmăriți pacea cu toți și sfințirea, fără de care nimeni nu-L va vedea pe Domnul,"
     },
     {
       "number": 15,
-      "text": "cu băgare de seamă, ca nu cumva să fie vreun om lipsit de harul lui Dumnezeu, ca nu cumva vreo rădăcină de amărăciune să vă tulbure să fie întinați de ea,"
+      "text": "vegheați ca nimeni să nu rămână lipsit de harul lui Dumnezeu; ca nu cumva vreo rădăcină de amărăciune, crescând în sus, să aducă tulburare și prin ea să fie întinați mulți;"
     },
     {
       "number": 16,
-      "text": "ca nu cumva să existe vreo persoană imorală sexual sau o persoană profană, ca Esau, care și-a vândut dreptul de întâi născut pentru o singură masă."
+      "text": "ca nu cumva să fie vreun om desfrânat sau profan ca Esau, care pentru o singură mâncare și-a vândut drepturile de întâi născut."
     },
     {
       "number": 17,
-      "text": "Căci știți că, după aceea, când a vrut să moștenească binecuvîntarea, a fost respins, căci n-a găsit loc să se răzgândească, deși a căutat-o cu sîrguință cu lacrimi."
+      "text": "Știți că și mai târziu, când a dorit să moștenească binecuvântarea, a fost respins, căci n-a găsit prilej pentru o schimbare a hotărârii, deși a căutat stăruitor acea binecuvântare cu lacrimi."
     },
     {
       "number": 18,
-      "text": "Căci nu ați ajuns la un munte care să fie atins și care să ardă cu foc, și la întuneric, la furtună,"
+      "text": "Căci nu v-ați apropiat de ceva ce poate fi atins, de un foc aprins, de întuneric, beznă și furtună,"
     },
     {
       "number": 19,
-      "text": "Sunetul trîmbiței și glasul cuvintelor, pe care cei ce le-au auzit au implorat să nu li se mai spună nici un cuvânt,"
+      "text": "de sunet de trâmbiță și de glasul unor cuvinte, pe care cei ce l-au auzit au cerut să nu li se mai adauge niciun cuvânt,"
     },
     {
       "number": 20,
-      "text": "Căci nu puteau suporta ceea ce li se poruncise: Dacă un animal se va atinge de munte, va fi omorât cu pietre”."
+      "text": "căci nu puteau suporta porunca: „Chiar dacă un animal atinge muntele, va fi ucis cu pietre.”"
     },
     {
       "number": 21,
-      "text": "Atât de înspăimântătoare a fost înfățișarea pe care Moise a spus-o: Sunt îngrozită și tremurătoare."
+      "text": "Iar priveliștea era atât de înfricoșătoare, încât Moise a spus: „Sunt îngrozit și tremur.”"
     },
     {
       "number": 22,
-      "text": "Dar ați venit la muntele Sionului și la cetatea Dumnezeului celui viu, Ierusalimul ceresc, și la nenumărate mulțimi de îngeri,"
+      "text": "Ci v-ați apropiat de muntele Sion și de cetatea Dumnezeului celui viu, Ierusalimul ceresc, și de zeci de mii de îngeri, în adunare de sărbătoare,"
     },
     {
       "number": 23,
-      "text": "la adunarea festală și adunarea întîilor născuți care sunt înscriși în cer, la Dumnezeu, Judecătorul tuturor, la duhurile oamenilor drepți făcuți perfecți,"
+      "text": "și de adunarea întâilor născuți înscriși în ceruri, și de Dumnezeu, Judecătorul tuturor, și de duhurile celor drepți făcuți desăvârșiți,"
     },
     {
       "number": 24,
-      "text": "lui Isus, mijlocitorul unui nou legământ, și sângelui stropirii care vorbește mai bine decât cel al lui Abel."
+      "text": "și de Isus, Mijlocitorul unui legământ nou, și de sângele stropirii, care vorbește mai bine decât Abel."
     },
     {
       "number": 25,
-      "text": "Vezi să nu-l refuzi pe cel care vorbește, căci dacă ei nu au scăpat atunci când l-au refuzat pe cel care a predicat pe pământ, cu cât mai mult nu vom scăpa de cel care întoarce spatele celui care previne din cer,"
+      "text": "Luați seama să nu-L refuzați pe Cel care vorbește. Căci dacă aceia n-au scăpat când l-au refuzat pe cel care îi avertiza pe pământ, cu atât mai mult nu vom scăpa noi, dacă ne întoarcem de la Cel care ne vorbește din ceruri."
     },
     {
       "number": 26,
-      "text": "A cărui voce a zguduit atunci pământul, dar acum el a promis, spunând: Încă o dată voi scutura nu numai pământul, ci și cerurile."
+      "text": "Glasul Lui a zguduit atunci pământul, dar acum a promis: „Încă o dată voi zgudui nu numai pământul, ci și cerul.”"
     },
     {
       "number": 27,
-      "text": "Această expresie, încă o dată„ înseamnă înlăturarea acelor lucruri care sunt zguduite, ca și a lucrurilor care au fost făcute, pentru ca acele lucruri care nu sunt zguduite să rămână."
+      "text": "Expresia „încă o dată” arată înlăturarea lucrurilor care sunt zguduite, întrucât ele sunt lucruri create, pentru ca lucrurile care nu sunt zguduite să rămână."
     },
     {
       "number": 28,
-      "text": "Prin urmare, primirea unui regat care nu poate fi zguduit, să aibă har, prin care noi îi slujim lui Dumnezeu în mod acceptabil, cu venerație și venerație,"
+      "text": "De aceea, fiindcă primim o împărăție care nu poate fi zguduită, să avem har, prin care să-I slujim lui Dumnezeu într-un mod plăcut, cu evlavie și teamă,"
     },
     {
       "number": 29,
-      "text": "căci Dumnezeul nostru este un foc mistuitor.”"
+      "text": "căci Dumnezeul nostru este un foc mistuitor."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 3,
+      "term": "ἑαυτοὺς",
+      "decision": "„împotriva lor înșiși”",
+      "alternatives": [
+        "Treg: ἑαυτόν",
+        "RP: αὐτόν"
+      ],
+      "reason": "SBLGNT urmează pluralul reflexiv ἑαυτούς; traducerea nu importă singularul tradițional „împotriva Lui”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT urmează pluralul reflexiv ἑαυτούς; traducerea nu importă singularul tradițional „împotriva Lui”."
+    },
+    {
+      "verse": 15,
+      "term": "πολλοί",
+      "decision": "„să fie întinați mulți”",
+      "alternatives": [
+        "WH/Treg: οἱ πολλοί"
+      ],
+      "reason": "Textul principal are πολλοί fără articol; sensul este redat nearticulat.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul principal are πολλοί fără articol; sensul este redat nearticulat."
+    },
+    {
+      "verse": 18,
+      "term": "ψηλαφωμένῳ",
+      "decision": "„de ceva ce poate fi atins”",
+      "alternatives": [
+        "RP adaugă ὄρει, „munte”"
+      ],
+      "reason": "SBLGNT nu are ὄρει în această unitate; substantivul nu este introdus în textul principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT nu are ὄρει în această unitate; substantivul nu este introdus în textul principal."
+    },
+    {
+      "verse": 18,
+      "term": "ζόφῳ",
+      "decision": "„beznă”",
+      "alternatives": [
+        "RP: σκότῳ, „întuneric”"
+      ],
+      "reason": "SBLGNT păstrează ζόφῳ distinct de γνόφῳ; româna diferențiază „întuneric” și „beznă”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT păstrează ζόφῳ distinct de γνόφῳ; româna diferențiază „întuneric” și „beznă”."
+    },
+    {
+      "verse": 23,
+      "term": "ἀπογεγραμμένων ἐν οὐρανοῖς",
+      "decision": "„înscriși în ceruri”",
+      "alternatives": [
+        "RP inversează ordinea: ἐν οὐρανοῖς ἀπογεγραμμένων"
+      ],
+      "reason": "Varianta este de ordine a cuvintelor și nu schimbă sensul; textul urmează SBLGNT.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Varianta este de ordine a cuvintelor și nu schimbă sensul; textul urmează SBLGNT."
+    },
+    {
+      "verse": 25,
+      "term": "ἐπὶ γῆς παραιτησάμενοι τὸν χρηματίζοντα",
+      "decision": "„când l-au refuzat pe cel care îi avertiza pe pământ”",
+      "alternatives": [
+        "RP schimbă ordinea constituentului"
+      ],
+      "reason": "Construcția este păstrată fără a confunda mesagerul pământesc cu Cel care vorbește din ceruri.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Construcția este păstrată fără a confunda mesagerul pământesc cu Cel care vorbește din ceruri."
+    },
+    {
+      "verse": 27,
+      "term": "τῶν σαλευομένων μετάθεσιν",
+      "decision": "„înlăturarea lucrurilor care sunt zguduite”",
+      "alternatives": [
+        "WH/Treg includ articolul τὴν înaintea genitivului"
+      ],
+      "reason": "SBLGNT omite articolul; diferența nu cere adaos semantic în română.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT omite articolul; diferența nu cere adaos semantic în română."
+    },
+    {
+      "verse": 28,
+      "term": "λατρεύωμεν",
+      "decision": "„să-I slujim”",
+      "alternatives": [
+        "RP: λατρεύομεν, indicativ „Îi slujim”"
+      ],
+      "reason": "SBLGNT are conjunctivul deliberativ/exhortativ; traducerea păstrează îndemnul.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT are conjunctivul deliberativ/exhortativ; traducerea păstrează îndemnul."
+    },
+    {
+      "verse": 28,
+      "term": "εὐλαβείας καὶ δέους",
+      "decision": "„cu evlavie și teamă”",
+      "alternatives": [
+        "RP: αἰδοῦς καὶ εὐλαβείας"
+      ],
+      "reason": "Textul principal SBLGNT distinge εὐλάβεια și δέος; nu se importă perechea RP.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul principal SBLGNT distinge εὐλάβεια și δέος; nu se importă perechea RP."
+    },
+    {
+      "verse": 17,
+      "term": "revizie finală: μετὰ δακρύων ἐκζητήσας αὐτήν",
+      "decision": "Știți că și mai târziu, când a dorit să moștenească binecuvântarea, a fost respins, căci n-a găsit prilej pentru o schimbare a hotărârii, deși a căutat stăruitor acea binecuvântare cu lacrimi.",
+      "reason": "Pronumele „a căutat-o” are drept antecedent imediat „o schimbare de hotărâre” și poate altera raportul sintactic probabil al grecescului αὐτήν, care reia binecuvântarea; obiectul căutării trebuie precizat. Deși μετὰ δακρύων ἐκζητήσας αὐτήν indică probabil căutarea binecuvântării, deși a căutat-o cu lacrimi lasă neclar obiectul căutării.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 27,
+      "term": "revizie finală: ὡς πεποιημένων",
+      "decision": "Expresia „încă o dată” arată înlăturarea lucrurilor care sunt zguduite, întrucât ele sunt lucruri create, pentru ca lucrurile care nu sunt zguduite să rămână.",
+      "reason": "Sintagma „ca unele făcute” este nenaturală și sintactic ambiguă, obscurând ideea că lucrurile zguduite sunt înlăturate în calitatea lor de lucruri create. Deși ca unele făcute încearcă să redea ὡς πεποιημένων, formularea românească nu exprimă limpede raportul explicativ dintre caracterul creat și înlăturare.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

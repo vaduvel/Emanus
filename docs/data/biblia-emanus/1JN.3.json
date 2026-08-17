@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "theologicalNeutrality": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost redactat prin revizie directă din SBLGNT; WEBP, Cornilescu 1924, BTF și Biblia Liberă au fost consultate auxiliar pentru sens și română, fără stocarea unei traduceri românești protejate.",
+      "Câmpurile consultedInBatch disting etaloanele efectiv confruntate în acest lot de cele configurate în schema corpusului; NTR nu a fost consultată."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 24,
       "reviewed": 24,
@@ -98,14 +96,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 24 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 24 de versete din 1JN.3 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual. WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost confruntate auxiliar; NTR nu a fost consultată."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Reverificarea independentă a confirmat sensul tuturor celor 24 de versete, inclusiv negațiile, perfectele și relațiile de rămânere din textul grec.",
+        "Formulările despre numirea ca copii ai lui Dumnezeu, curățire, păcat, dragoste și rămânere păstrează sintaxa SBLGNT în română firească.",
+        "În 3:14, 3:18, 3:19 și 3:23, textul urmează explicit lectura SBLGNT, fără adaosuri din TR."
       ]
     },
     "theologicalContext": {
@@ -113,7 +111,7 @@
       "principles": [
         "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
         "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Etaloanele românești au fost consultate numai pentru verificare, după confruntarea directă cu sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -123,124 +121,213 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 257,
-        "secondary": 66,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5467158590753175,
-      "minimumScore": 0.5694259949565413
-    },
-    "textDigest": "sha256:691113f9138880bd3f151892d92f84947023b62d1e2eca28a9c257eea0801100",
-    "contentDigest": "sha256:3605af6cc3bafc8714d28dcc347f5dd89063eb464b0d957e0b0065af3e24e4d7"
+    "textDigest": "sha256:b2717ba596bf08e0514d8e94d757aab5eca395ae6b0ffd8be3da78555802c2b3",
+    "contentDigest": "sha256:6205c91fb7146979d150ab143f7f9cfab0a918af7e1c4330608149bb094f08f2",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Vezi ce mare dragoste ne-a dat Tatăl, ca să fim copii ai lui Dumnezeu! Pentru aceasta lumea nu ne cunoaște, pentru că nu L-a cunoscut pe El."
+      "text": "Vedeți ce fel de dragoste ne-a dăruit Tatăl: să fim numiți copii ai lui Dumnezeu — și suntem! De aceea lumea nu ne cunoaște, fiindcă nu l-a cunoscut pe el."
     },
     {
       "number": 2,
-      "text": "Preaiubiților, acum suntem copiii lui Dumnezeu. Încă nu s-a descoperit ce vom fi; dar știm că, când va fi descoperit, vom fi ca El, căci-L vom vedea așa cum este El."
+      "text": "Preaiubiților, acum suntem copii ai lui Dumnezeu și încă nu s-a arătat ce vom fi. Știm că, atunci când se va arăta, vom fi asemenea lui, fiindcă îl vom vedea așa cum este."
     },
     {
       "number": 3,
-      "text": "Oricine are această speranță pusă asupra lui, se purifică, așa cum este el curat."
+      "text": "Oricine are această speranță în el se curățește pe sine, așa cum el este curat."
     },
     {
       "number": 4,
-      "text": "Oricine păcătuiește, de asemenea, comite nelegiuirea; păcatul este nelegiuirea."
+      "text": "Oricine păcătuiește săvârșește și fărădelegea; păcatul este fărădelegea."
     },
     {
       "number": 5,
-      "text": "Știi că el a fost revelat pentru a lua păcatele noastre, și nici un păcat este în el."
+      "text": "Știți că el s-a arătat ca să îndepărteze păcatele și că în el nu este păcat."
     },
     {
       "number": 6,
-      "text": "Oricine rămâne în el nu păcătuiește. Oricine păcătuiește nu l-a văzut și nu-l cunoaște."
+      "text": "Oricine rămâne în el nu păcătuiește; oricine păcătuiește nu l-a văzut și nu l-a cunoscut."
     },
     {
       "number": 7,
-      "text": "Copilașilor, să nu vă rătăcească nimeni, căci cel ce face dreptate este drept, așa cum este el drept."
+      "text": "Copilașilor, nimeni să nu vă înșele. Cel care face ce este drept este drept, așa cum el este drept."
     },
     {
       "number": 8,
-      "text": "Cel ce păcătuiește este din diavol, căci diavolul păcătuiește de la început. În acest scop a fost descoperit Fiul lui Dumnezeu, ca să nimicească lucrările diavolului."
+      "text": "Cel care păcătuiește este de la diavol, fiindcă diavolul păcătuiește de la început. Pentru aceasta s-a arătat Fiul lui Dumnezeu: ca să nimicească lucrările diavolului."
     },
     {
       "number": 9,
-      "text": "Oricine este născut din Dumnezeu nu comite păcat, pentru că sămânța lui rămâne în el, și el poate să păcătuiască, pentru că el este născut din Dumnezeu."
+      "text": "Oricine este născut din Dumnezeu nu trăiește în păcat, pentru că sămânța Lui rămâne în el; nu poate continua să păcătuiască, fiindcă este născut din Dumnezeu."
     },
     {
       "number": 10,
-      "text": "În aceasta copiii lui Dumnezeu sunt revelați și copiii diavolului. Oricine nu face dreptate nu este de la Dumnezeu, nici cel care nu iubește pe fratele său."
+      "text": "Prin aceasta se recunosc copiii lui Dumnezeu și copiii diavolului: oricine nu face ce este drept nu este din Dumnezeu, nici cel care nu își iubește fratele."
     },
     {
       "number": 11,
-      "text": "Căci acesta este mesajul pe care l-ați auzit de la început, ca să ne iubim unii pe alții."
+      "text": "Căci acesta este mesajul pe care l-ați auzit de la început: să ne iubim unii pe alții."
     },
     {
       "number": 12,
-      "text": "Să nu fim precum Cain, care era de la cel rău și l-a ucis pe fratele său. Și de ce l-a ucis? Pentru că faptele lui erau rele, iar ale fratelui său erau drepte."
+      "text": "Să nu fim ca Cain, care era de la cel rău și și-a ucis fratele. Și pentru ce l-a ucis? Fiindcă faptele lui erau rele, iar ale fratelui său, drepte."
     },
     {
       "number": 13,
-      "text": "Nu fiți surprin, frații mei, dacă lumea vă urăște."
+      "text": "Nu vă mirați, fraților, dacă lumea vă urăște."
     },
     {
       "number": 14,
-      "text": "Știm că am trecut din moarte în viață, pentru că îi iubim pe frați. Cine nu iubește pe fratele său rămâne în moarte."
+      "text": "Știm că am trecut din moarte în viață, fiindcă îi iubim pe frați. Cel care nu iubește rămâne în moarte."
     },
     {
       "number": 15,
-      "text": "Cine urăște pe fratele său este un ucigaș, voi știți că nici un ucigaș nu are veșnică în el."
+      "text": "Oricine își urăște fratele este un ucigaș și știți că niciun ucigaș nu are viața veșnică care rămâne în el."
     },
     {
       "number": 16,
-      "text": "Prin aceasta cunoaștem dragostea, pentru că și-a dat viața pentru noi și ar trebui să ne dăm viața pentru frați."
+      "text": "Prin aceasta am cunoscut dragostea: el și-a dat viața pentru noi; iar noi suntem datori să ne dăm viețile pentru frați."
     },
     {
       "number": 17,
-      "text": "Dar cine are bunuri din lume și vede pe fratele său în nevoie, atunci închide inima lui de compasiune împotriva lui, cum rămâne dragostea lui Dumnezeu în el?"
+      "text": "Dar dacă cineva are bunurile lumii, îl vede pe fratele său în nevoie și își închide inima față de el, cum rămâne dragostea lui Dumnezeu în el?"
     },
     {
       "number": 18,
-      "text": "Copililor, să nu iubim numai cu vorba, sau numai cu limba, ci cu fapta cu adevărul."
+      "text": "Copilașilor, să nu iubim cu vorba, nici cu limba, ci prin faptă și adevăr."
     },
     {
       "number": 19,
-      "text": "Și prin aceasta știm că suntem de adevăr și ne convingem inimile înaintea lui,"
+      "text": "Prin aceasta vom ști că suntem din adevăr și ne vom liniști inima înaintea lui,"
     },
     {
       "number": 20,
-      "text": "Căci dacă inima ne osîndește, Dumnezeu este mai mare decât inima noastră, și cunoaște toate lucrurile."
+      "text": "căci, dacă inima noastră ne condamnă, Dumnezeu este mai mare decât inima noastră și cunoaște totul."
     },
     {
       "number": 21,
-      "text": "Iubito, dacă inimile noastre nu ne condamnă, avem îndrăzneală față de Dumnezeu;"
+      "text": "Preaiubiților, dacă inima nu ne condamnă, avem îndrăzneală înaintea lui Dumnezeu;"
     },
     {
       "number": 22,
-      "text": "Tot ce cerem, primim de la El, pentru că păzim poruncile Lui facem ce este plăcut înaintea Lui."
+      "text": "și orice cerem primim de la el, fiindcă păzim poruncile lui și facem ce este plăcut înaintea lui."
     },
     {
       "number": 23,
-      "text": "Aceasta este porunca Lui, ca să credem în Numele Fiului Său, Isus Hristos, și să ne iubim unii pe alții, așa cum a poruncit El."
+      "text": "Iar aceasta este porunca lui: să credem în numele Fiului său, Isus Hristos, și să ne iubim unii pe alții, așa cum ne-a poruncit."
     },
     {
       "number": 24,
-      "text": "Cine păzește poruncile Lui rămâne în El, și cine este în El. Prin aceasta știm că rămâne în noi, prin Duhul, pe care ni l-a dat."
+      "text": "Cel care păzește poruncile lui rămâne în el, iar el rămâne în cel care le păzește. Prin aceasta știm că el rămâne în noi: prin Duhul pe care ni l-a dat."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "variantă textuală SBLGNT/TR: καὶ ἐσμέν, ἡμᾶς / omisiune, ὑμᾶς",
+      "decision": "„să fim numiți copii ai lui Dumnezeu — și suntem! … lumea nu ne cunoaște”",
+      "alternatives": [
+        "TR-1JN din snapshot omite καὶ ἐσμέν și citește ὑμᾶς: „ca să fim numiți copii ai lui Dumnezeu … lumea nu vă cunoaște”."
+      ],
+      "reason": "SBLGNT afirmă explicit „și suntem” și are pronumele de persoana întâi plural; româna păstrează ambele elemente fără a urma lectura TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1JN, aparatul și TR-1JN au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 5,
+      "term": "variantă textuală SBLGNT/TR: τὰς ἁμαρτίας / τὰς ἁμαρτίας ἡμῶν",
+      "decision": "„ca să îndepărteze păcatele”",
+      "alternatives": [
+        "TR-1JN din snapshot adaugă ἡμῶν: „ca să îndepărteze păcatele noastre”."
+      ],
+      "reason": "SBLGNT nu include pronumele „noastre”; textul principal păstrează obiectul neprecizat de lectura sa.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1JN, aparatul și TR-1JN au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 13,
+      "term": "variantă textuală SBLGNT/TR: ἀδελφοί / ἀδελφοί μου",
+      "decision": "„Nu vă mirați, fraților”",
+      "alternatives": [
+        "TR-1JN din snapshot adaugă μου: „frații mei”."
+      ],
+      "reason": "SBLGNT are numai adresarea „fraților”; româna nu introduce posesivul din TR.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1JN, aparatul și TR-1JN au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 14,
+      "term": "variantă textuală SBLGNT/TR: ὁ μὴ ἀγαπῶν / ὁ μὴ ἀγαπῶν τὸν ἀδελφόν",
+      "decision": "„Cel care nu iubește rămâne în moarte”",
+      "alternatives": [
+        "TR-1JN din snapshot adaugă obiectul „pe fratele [său]”."
+      ],
+      "reason": "SBLGNT lasă participiul fără obiect exprimat; româna păstrează formula generală din lectura principală.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1JN, aparatul și TR-1JN au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 18,
+      "term": "variantă textuală SBLGNT/TR: Τεκνία / Τεκνία μου",
+      "decision": "„Copilașilor”",
+      "alternatives": [
+        "TR-1JN din snapshot adaugă μου: „Copilașii mei”."
+      ],
+      "reason": "SBLGNT nu conține posesivul; el nu este introdus în adresarea românească.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1JN, aparatul și TR-1JN au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 19,
+      "term": "variantă textuală SBLGNT/TR: ἐν τούτῳ γνωσόμεθα τὴν καρδίαν / καὶ ἐν τούτῳ γινώσκομεν τὰς καρδίας",
+      "decision": "„Prin aceasta vom ști … ne vom liniști inima”",
+      "alternatives": [
+        "TR-1JN din snapshot are conjuncția καὶ, prezentul γινώσκομεν și pluralul „inimile”."
+      ],
+      "reason": "SBLGNT începe fără conjuncție, are viitorul „vom ști” și singularul „inima”; πείσομεν este redat idiomatic prin „ne vom liniști inima”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1JN, aparatul și TR-1JN au fost confruntate direct; timpul verbal și numărul lecturii principale sunt păstrate în română."
+    },
+    {
+      "verse": 23,
+      "term": "variantă textuală SBLGNT/TR: ἔδωκεν ἐντολὴν ἡμῖν / ἔδωκεν ἐντολήν",
+      "decision": "„așa cum ne-a poruncit”",
+      "alternatives": [
+        "TR-1JN din snapshot omite ἡμῖν și lasă destinatarul neexprimat."
+      ],
+      "reason": "SBLGNT include pronumele de persoana întâi plural; româna îl redă prin „ne-a”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1JN, aparatul și TR-1JN au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 9,
+      "term": "revizie finală: καὶ οὐ δύναται ἁμαρτάνειν",
+      "decision": "Oricine este născut din Dumnezeu nu trăiește în păcat, pentru că sămânța Lui rămâne în el; nu poate continua să păcătuiască, fiindcă este născut din Dumnezeu.",
+      "reason": "Redarea lui καὶ οὐ δύναται ἁμαρτάνειν prin nu poate păcătui păstrează modalitatea, însă nu face perceptibilă valoarea imperfectivă relevantă contextual.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

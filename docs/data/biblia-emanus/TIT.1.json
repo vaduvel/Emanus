@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -69,25 +72,21 @@
     },
     "observations": [
       "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate.",
+      "Câmpurile consultedInBatch disting etaloanele efectiv confruntate în acest lot de cele configurate în schema corpusului; NTR nu a fost consultată."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 16,
       "reviewed": 16,
@@ -98,7 +97,7 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 16 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar sursele auxiliare declarate în jurnalul lotului au fost consultate pentru sens și română. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
@@ -139,76 +138,112 @@
       "minimumSemantic": 0.588175458584589,
       "minimumScore": 0.553468476771151
     },
-    "textDigest": "sha256:9354a57def21f30e4f928936203fa9346bd3bbebc6bba1b2ea9f5d733b0f2b3c",
-    "contentDigest": "sha256:0cfc61e52b8d359b07ce355feb766ff19f4468ec469c999b4981a988986fc380"
+    "textDigest": "sha256:cdbe87f0b5561d3a73869139e6b8fe0c833a3512b9453151603f01957b987e77",
+    "contentDigest": "sha256:6258d22ff5362887a32f735aaf83450f9516f87f0dbc75ea6e705196ad33f36a",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Pavel, rob al lui Dumnezeu și apostol al lui Isus Hristos, după credința lui Dumnezeu, aleșii și cunoașterea adevărului care este potrivit evlaviei,"
+      "text": "Pavel, rob al lui Dumnezeu și apostol al lui Isus Hristos, pentru credința aleșilor lui Dumnezeu și pentru cunoașterea adevărului care este potrivit cu evlavia,"
     },
     {
       "number": 2,
-      "text": "în speranța vieții veșnice, pe care Dumnezeu, care nu poate să mintă, a promis-o înainte ca timpul să înceapă;"
+      "text": "în speranța vieții veșnice, pe care Dumnezeu, care nu minte, a promis-o mai înainte de veacuri;"
     },
     {
       "number": 3,
-      "text": "Dar, în timpul său, și-a revelat cuvântul în mesajul cu care am fost încredințat conform poruncii lui Dumnezeu Mântuitorul nostru,"
+      "text": "iar, la timpul potrivit, Și-a făcut cunoscut cuvântul prin proclamarea care mi-a fost încredințată, potrivit poruncii lui Dumnezeu, Mântuitorul nostru,"
     },
     {
       "number": 4,
-      "text": "către Tit, adevăratul meu copil conform unei credințe comune: Har, îndurare și pace de la Dumnezeu Tatăl și Domnul Isus Hristos Mântuitorul nostru."
+      "text": "către Tit, adevăratul meu copil potrivit unei credințe comune: Har și pace de la Dumnezeu Tatăl și de la Hristos Isus, Mântuitorul nostru."
     },
     {
       "number": 5,
-      "text": "Te-am lăsat în Creta din acest motiv, ca să pui în ordine lucrurile care lipseau și să numești bătrâni în fiecare oraș, așa cum ți-am poruncit."
+      "text": "Din acest motiv te-am lăsat în Creta, ca să pui în rânduială cele rămase și să așezi prezbiteri în fiecare cetate, așa cum ți-am poruncit:"
     },
     {
       "number": 6,
-      "text": "Dacă cineva este nevinovat, soțul unei singure soții, având copii care cred, care nu sunt acuzați de comportament liber sau indisciplinat."
+      "text": "dacă este cineva fără vină, soț al unei singure soții, având copii credincioși, care nu sunt acuzați de destrăbălare și nici nu sunt nesupuși."
     },
     {
       "number": 7,
-      "text": "Căci supraveghetorul trebuie să fie ireproșabil, așa cum Dumnezeu este administrator, nu se bucură de sine, nu se mânie cu ușurință, nu este dat vinului, nu violent, nu lacom pentru câștig necinstit;"
+      "text": "Căci supraveghetorul trebuie să fie fără vină, ca administrator al lui Dumnezeu: nu încăpățânat, nu iute la mânie, nu dedat vinului, nu bătăuș, nu lacom de câștig rușinos;"
     },
     {
       "number": 8,
-      "text": "dar dăruit ospitalității, unui iubitor de bine, sobru, drept, sfânt, autocontrolat,"
+      "text": "ci primitor de oaspeți, iubitor de bine, cumpătat, drept, sfânt, stăpân pe sine,"
     },
     {
       "number": 9,
-      "text": "ținînd cont de cuvântul credincios care este potrivit învățăturii, ca să poată îndemna în învățătura sănătoasă și să-i osîndească pe cei ce-L contrazic."
+      "text": "ținându-se de cuvântul vrednic de încredere, potrivit cu învățătura, ca să fie în stare să îndemne prin învățătura sănătoasă și să-i convingă de greșeală pe cei care se împotrivesc."
     },
     {
       "number": 10,
-      "text": "Căci sunt și mulți oameni neascultători, vorbești deșarte și înșelători, mai ales cei tăiați împrejur,"
+      "text": "Căci sunt mulți nesupuși, vorbitori de deșertăciuni și înșelători, mai ales dintre cei ai circumciziei,"
     },
     {
       "number": 11,
-      "text": "ale căror guri trebuie să fie oprite: oameni care răstoarnă case întregi, învățând lucruri pe care nu ar trebui să le, de dragulului necinstit."
+      "text": "Trebuie să li se închidă gura, pentru că răstoarnă familii întregi, învățând ce nu trebuie de dragul unui câștig rușinos."
     },
     {
       "number": 12,
-      "text": "Unul dintre ei, un profet de-al lor, a zis: „Cretanii sunt întotdeauna mincinoși, fiare rele și lacomi leneși.”"
+      "text": "Unul dintre ei, un profet de-al lor, a spus: „Cretanii sunt întotdeauna mincinoși, fiare rele, pântece leneșe.”"
     },
     {
       "number": 13,
-      "text": "Această mărturie este adevărată: pentru această cauză, mustră-i aspru, pentru ca ei să fie sănătoși în credință,"
+      "text": "Mărturia aceasta este adevărată. Din acest motiv, mustră-i aspru, ca să fie sănătoși în credință,"
     },
     {
       "number": 14,
-      "text": "să nu acorde atenție fabulelor evreiești și poruncilor oamenilor care se întorc de la adevăr."
+      "text": "fără să ia seama la mituri iudaice și la porunci ale oamenilor care se abat de la adevăr."
     },
     {
       "number": 15,
-      "text": "Pentru cei puri, toate lucrurile sunt curate, dar pentru cei ce sunt pângăriți și necredincioși, nimic nu este curat; dar mintea și conștiința lor sunt pângărite."
+      "text": "Toate sunt curate pentru cei curați; dar pentru cei întinați și necredincioși nimic nu este curat, ci mintea și conștiința lor sunt întinate."
     },
     {
       "number": 16,
-      "text": "Ei pretind că îl cunosc pe Dumnezeu, însă prin faptele lor îl tăgăduiesc, fiind abominabili, neascultători și inapti pentru orice lucrare bună."
+      "text": "Ei mărturisesc că Îl cunosc pe Dumnezeu, dar prin fapte Îl tăgăduiesc; sunt abominabili, neascultători și nepotriviți pentru orice faptă bună."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 4,
+      "term": "variantă textuală SBLGNT/TR",
+      "decision": "Textul principal urmează SBLGNT 1.2: „Har și pace” de la Dumnezeu Tatăl și Hristos Isus, Mântuitorul nostru.",
+      "alternatives": [
+        "Textus Receptus din snapshot include și „îndurare” și formulează „Domnul Isus Hristos”."
+      ],
+      "reason": "SBLGNT 1.2 este textul critic fixat pentru redactarea principală; lectura TR rămâne consemnată, fără a fi introdusă în tăcere în text.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT, WEBP și martorul TR au fost confruntate direct; textul românesc păstrează lectura SBLGNT."
+    },
+    {
+      "verse": 6,
+      "term": "revizie finală: μὴ ἐν κατηγορίᾳ ἀσωτίας ἢ ἀνυπότακτα",
+      "decision": "dacă este cineva fără vină, soț al unei singure soții, având copii credincioși, care nu sunt acuzați de destrăbălare și nici nu sunt nesupuși.",
+      "reason": "Greaca distinge acuzația de destrăbălare de starea de nesupunere; formularea veche le transforma pe ambele în acuzații.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 11,
+      "term": "revizie finală: ὅλους οἴκους ἀνατρέπουσιν ... αἰσχροῦ κέρδους χάριν",
+      "decision": "Trebuie să li se închidă gura, pentru că răstoarnă familii întregi, învățând ce nu trebuie de dragul unui câștig rușinos.",
+      "reason": "οἴκους desemnează gospodării sau familii, nu clădiri, iar χάριν exprimă motivul urmărit.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

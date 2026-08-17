@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "meaning": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Revizie verset-cu-verset din SBLGNT și aparat, cu TR ca martor; WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost verificări auxiliare.",
+      "NTR nu a fost consultată; nicio traducere românească nu a fost copiată."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 23,
       "reviewed": 23,
@@ -98,22 +96,21 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 23 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 23 de versete au fost confruntate direct cu SBLGNT/aparat; TR a fost martor de variante, iar WEBP și etaloanele fixate au fost auxiliare."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost naturalizate calcurile și acordurile, inclusiv singularul greșit din 4:17.",
+        "În 4:13 a fost eliminat numele „Hristos”, prezent în TR/RP, dar absent din textul principal SBLGNT.",
+        "În 4:23 finalul TR „cu voi toți. Amin” a fost înlocuit cu lectura SBLGNT „cu duhul vostru”, fără adaosul „Amin”."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Textul principal urmează SBLGNT la variantele materiale din 4:13 și 4:23, fără armonizare automată cu tradiția TR.",
+        "ἐπιεικές din 4:5 este redat lexical ca „îngăduință”, fără a transforma termenul într-o virtute confesională mai îngustă."
       ]
     },
     "omissionAddition": {
@@ -123,77 +120,72 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din sursele fixate, cu etaloane românești numai pentru verificare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 162,
-        "primary": 138,
-        "secondary": 35,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.4993764885473809,
-      "minimumScore": 0.5987788757926972
-    },
-    "textDigest": "sha256:75dafb4761978afea518b8f38d33e6ad3f528046dbdfbe6f35178822002ad97a",
-    "contentDigest": "sha256:3b95e95669f6b52b219933ebba89a1c57a9732a83a6a777e53699434f6acb51e"
+    "textDigest": "sha256:23a4f3849e0f3c220961bd0bd823ff300071d1479a65279f7c6b594ed40a9895",
+    "contentDigest": "sha256:7ea0f3c092376352fb6a0853e08245579a1b6517cf8b9936383a33aaab4729b1",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "De aceea, frații mei iubiți și doriți, bucuria și cununa mea, astfel stați tari în Domnul, iubiților."
+      "text": "De aceea, frații mei iubiți și mult doriți, bucuria și cununa mea, stați astfel tari în Domnul, iubiților."
     },
     {
       "number": 2,
-      "text": "O îndemn pe Euodia și o îndemn pe Sintihe să gândească același lucru în Domnul."
+      "text": "O îndemn pe Euodia și o îndemn pe Sintihia să aibă același gând în Domnul."
     },
     {
       "number": 3,
-      "text": "Da, te rog și pe tine, adevărat tovarăș de jug, ajută-le pe aceste femei, care au luptat împreună cu mine pentru Evanghelie, împreună cu Clement și cu ceilalți împreună-lucrători ai mei, ale căror nume sunt în cartea vieții."
+      "text": "Da, te rog și pe tine, adevărat tovarăș de jug, ajută-le pe aceste femei, care au luptat împreună cu mine pentru Evanghelie, alături de Clement și de ceilalți colaboratori ai mei, ale căror nume sunt în cartea vieții."
     },
     {
       "number": 4,
-      "text": "Bucurați-vă în Domnul întotdeauna; iarăși voi spune: Bucurați-vă."
+      "text": "Bucurați-vă întotdeauna în Domnul! Voi spune din nou: bucurați-vă!"
     },
     {
       "number": 5,
-      "text": "Blândețea voastră să fie cunoscută tuturor oamenilor. Domnul este aproape."
+      "text": "Îngăduința voastră să fie cunoscută de toți oamenii. Domnul este aproape."
     },
     {
       "number": 6,
-      "text": "Nu vă îngrijorați de nimic, ci, în toate, prin rugăciune și cerere, cu mulțumire, să fie făcute cunoscute lui Dumnezeu cererile voastre,"
+      "text": "Nu vă îngrijorați de nimic, ci, în orice lucru, prin rugăciune și cerere, cu mulțumire, faceți cunoscute lui Dumnezeu cererile voastre;"
     },
     {
       "number": 7,
-      "text": "și pacea lui Dumnezeu, care întrece orice minte, vă va păzi inimile și gândurile în Hristos Isus."
+      "text": "iar pacea lui Dumnezeu, care întrece orice înțelegere, vă va păzi inimile și gândurile în Hristos Isus."
     },
     {
       "number": 8,
-      "text": "Încolo, fraților, tot ce este adevărat, tot ce este vrednic de cinste, tot ce este drept, tot ce este curat, tot ce este vrednic de iubit, tot ce este de bun nume, dacă este vreo virtute și dacă este vreo laudă, la acestea gândiți-vă."
+      "text": "În sfârșit, fraților, câte sunt adevărate, câte sunt demne de cinste, câte sunt drepte, câte sunt curate, câte sunt vrednice de iubire, câte sunt de bună reputație, dacă este vreo virtute și dacă este vreo laudă, la acestea să vă gândiți."
     },
     {
       "number": 9,
-      "text": "Cele pe care le-ați și învățat, și primit, și auzit, și văzut în mine, pe acestea faceți-le; și Dumnezeul păcii va fi cu voi."
+      "text": "Puneți în practică lucrurile pe care le-ați învățat, le-ați primit, le-ați auzit și le-ați văzut în mine; iar Dumnezeul păcii va fi cu voi."
     },
     {
       "number": 10,
-      "text": "M-am bucurat însă foarte mult în Domnul că, în sfârșit, a înflorit din nou grija voastră pentru mine; la aceasta vă gândeați și înainte, dar vă lipsea prilejul."
+      "text": "M-am bucurat mult în Domnul că, în sfârșit, a înflorit din nou grija voastră pentru mine; vă gândeați la mine și înainte, dar nu aveați prilej."
     },
     {
       "number": 11,
-      "text": "Nu spun aceasta din lipsă, căci eu am învățat să fiu mulțumit în starea în care sunt."
+      "text": "Nu spun aceasta din pricina lipsei, căci am învățat să fiu mulțumit în împrejurările în care mă aflu."
     },
     {
       "number": 12,
-      "text": "Știu și să fiu smerit, știu și să am din belșug; în orice împrejurare și în toate am învățat taina și a sațului, și a foamei, și a belșugului, și a lipsei."
+      "text": "Știu să trăiesc și în condiții modeste, știu și să am din belșug; în orice situație și în toate împrejurările am deprins taina: și să fiu sătul, și să flămânzesc, și să am din belșug, și să duc lipsă."
     },
     {
       "number": 13,
-      "text": "Eu pot totul în Hristos, care mă întărește."
+      "text": "Pot face față tuturor lucrurilor prin Cel care mă întărește."
     },
     {
       "number": 14,
@@ -201,27 +193,27 @@
     },
     {
       "number": 15,
-      "text": "Știți și voi, filipenilor, că la începutul Evangheliei, când am ieșit din Macedonia, nicio biserică n-a avut părtășie cu mine în ce privește darea și primirea, în afară de voi singuri,"
+      "text": "Știți și voi, filipenilor, că, la începutul Evangheliei, când am plecat din Macedonia, nicio biserică nu a avut părtășie cu mine în privința dării și primirii, decât voi singuri;"
     },
     {
       "number": 16,
-      "text": "căci chiar și în Tesalonic mi-ați trimis o dată și încă o dată pentru nevoia mea."
+      "text": "căci chiar și în Tesalonic mi-ați trimis, o dată și încă o dată, pentru nevoia mea."
     },
     {
       "number": 17,
-      "text": "Nu că aș căuta darul, dar caut fructul care crește în contul tău."
+      "text": "Nu că urmăresc darul, ci urmăresc rodul care sporește în contul vostru."
     },
     {
       "number": 18,
-      "text": "Dar le am pe toate și prisosesc; sunt plin, după ce am primit de la Epafrodit cele trimise de voi, o mireasmă plăcută, o jertfă primită, bine-plăcută lui Dumnezeu."
+      "text": "Am primit totul și am din belșug; sunt pe deplin îndestulat, după ce am primit prin Epafrodit cele trimise de voi, o mireasmă plăcută, o jertfă primită și plăcută lui Dumnezeu."
     },
     {
       "number": 19,
-      "text": "Iar Dumnezeul meu va împlini orice nevoie a voastră, potrivit bogăției lui în slavă, în Hristos Isus."
+      "text": "Iar Dumnezeul meu va împlini orice nevoie a voastră, potrivit bogăției Sale, în slavă, în Hristos Isus."
     },
     {
       "number": 20,
-      "text": "Iar lui Dumnezeu și Tatăl nostru să-i fie slava în vecii vecilor. Amin."
+      "text": "Iar Dumnezeului și Tatălui nostru să-I fie slava în vecii vecilor. Amin."
     },
     {
       "number": 21,
@@ -233,22 +225,80 @@
     },
     {
       "number": 23,
-      "text": "Harul Domnului Isus Hristos să fie cu voi toți. Amin."
+      "text": "Harul Domnului Isus Hristos să fie cu duhul vostru."
     }
   ],
   "editorialNotes": [
     {
       "verse": 3,
       "term": "γνήσιε σύζυγε",
-      "decision": "adevărat tovarăș de jug",
+      "decision": "„adevărat tovarăș de jug”",
       "alternatives": [
-        "Sizig ca nume propriu",
-        "partener adevărat"
+        "„partener adevărat”",
+        "Sizig ca nume propriu"
       ],
-      "reason": "Vocativul poate fi înțeles ca apelativ comun sau ca nume propriu; contextul imediat favorizează apelativul fără a stabili identitatea persoanei.",
+      "reason": "Vocativul poate fi tratat ca apelativ comun; contextul nu impune transformarea lui într-un nume propriu.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Textul principal păstrează sensul apelativ al expresiei și nu introduce ca cert un nume propriu neconfirmat de context."
+      "resolutionReason": "Decizia a fost verificată direct în SBLGNT-PHP și aparat, cu TR-PHP ca martor auxiliar."
+    },
+    {
+      "verse": 5,
+      "term": "τὸ ἐπιεικές",
+      "decision": "„îngăduința”",
+      "alternatives": [
+        "„blândețea”",
+        "„bunăvoința”"
+      ],
+      "reason": "Termenul are câmpul semantic al moderației, clemenței și îngăduinței; formularea aleasă rămâne suficient de largă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Decizia a fost verificată direct în SBLGNT-PHP și aparat, cu TR-PHP ca martor auxiliar."
+    },
+    {
+      "verse": 13,
+      "term": "πάντα ἰσχύω ἐν τῷ ἐνδυναμοῦντί με",
+      "decision": "„Pot face față tuturor lucrurilor prin Cel care mă întărește.”",
+      "alternatives": [
+        "TR/RP: „… în Hristos, care mă întărește”"
+      ],
+      "reason": "SBLGNT, WH, Treg și NA28 nu au Χριστῷ în acest verset; numele nu este importat din martorul TR/RP în textul principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Decizia a fost verificată direct în SBLGNT-PHP și aparat, cu TR-PHP ca martor auxiliar."
+    },
+    {
+      "verse": 17,
+      "term": "εἰς λόγον ὑμῶν",
+      "decision": "„în contul vostru”",
+      "alternatives": [
+        "„în folosul vostru”"
+      ],
+      "reason": "Genitivul este plural; formularea veche „contul tău” schimba nejustificat numărul adresării.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Decizia a fost verificată direct în SBLGNT-PHP și aparat, cu TR-PHP ca martor auxiliar."
+    },
+    {
+      "verse": 23,
+      "term": "μετὰ τοῦ πνεύματος ὑμῶν",
+      "decision": "„cu duhul vostru”",
+      "alternatives": [
+        "TR/RP: „cu voi toți. Amin.”"
+      ],
+      "reason": "SBLGNT păstrează τοῦ πνεύματος ὑμῶν și nu are adaosul final Ἀμήν; textul principal urmează această lectură.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Decizia a fost verificată direct în SBLGNT-PHP și aparat, cu TR-PHP ca martor auxiliar."
+    },
+    {
+      "verse": 12,
+      "term": "revizie finală: οἶδα καὶ ταπεινοῦσθαι",
+      "decision": "Știu să trăiesc și în condiții modeste, știu și să am din belșug; în orice situație și în toate împrejurările am deprins taina: și să fiu sătul, și să flămânzesc, și să am din belșug, și să duc lipsă.",
+      "reason": "Echivalarea lui οἶδα καὶ ταπεινοῦσθαι cu Știu și să fiu în lipsuri pierde distincția față de verbul grec ulterior care înseamnă explicit a duce lipsă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
     }
   ],
   "referenceNotes": [],

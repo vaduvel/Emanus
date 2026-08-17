@@ -4,9 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "node ../../scripts/materialize-bible-reader.mjs && vite",
+    "build": "node ../../scripts/materialize-bible-reader.mjs && vite build",
     "preview": "vite preview",
+    "test:smoke:bible": "playwright test tests/bible-reader.spec.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -17,6 +18,7 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.62.1",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",

@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "additions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparat; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-10",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 25,
       "reviewed": 25,
@@ -98,22 +96,23 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 25 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 25 de versete din MAT.1 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Genealogia urmează formele onomastice ale textului principal SBLGNT, inclusiv Asaf și Amos, nu formele RP Asa și Amon.",
+        "Au fost clarificate relațiile familiale, formularea despărțirii lui Iosif și expresiile care pot sugera adaosuri din TR.",
+        "Sunt păstrate numai alegerile românești care redau natural persoana, numărul și referentul textului principal SBLGNT.",
+        "MAT.1.6 redă proveniența maternă din ἐκ prin «născut din soția lui Urie», nu prin instrumentalul ambiguu «prin»."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
         "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Termenii teologici și ambiguitățile sintactice sunt redați lexical, fără glosare confesionale în corpul versetului.",
+        "Etaloanele românești au fost consultate numai pentru verificare, după confruntarea directă cu sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -123,24 +122,19 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 741,
-        "primary": 228,
-        "secondary": 102,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.4037089233135842,
-      "minimumScore": 0.5165308313030281
-    },
-    "textDigest": "sha256:989b086091382f5636b83871abf8b6626d3490425889b96035a3b9610eaff56e",
-    "contentDigest": "sha256:2fd4b627bb131fcca89ab5f8241a2862ffa2f3206fac8df8e14629b774766507"
+    "textDigest": "sha256:342ece67469738bb5363997b3a3d8d321e639c4225ae52bd635dda484bab9c13",
+    "contentDigest": "sha256:d65879ba50ceed88838c2d36cfda407f7c7855d76abce29f6890eca97a3057e8",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
@@ -153,7 +147,7 @@
     },
     {
       "number": 3,
-      "text": "Iuda a născut pe Perez și Zerah pe Tamar. Perez a născut pe Hețron. Hețron a născut pe Ram."
+      "text": "Iuda a fost tatăl lui Perez și Zerah, de la Tamar; Perez a fost tatăl lui Hețron; iar Hețron, tatăl lui Ram."
     },
     {
       "number": 4,
@@ -161,19 +155,19 @@
     },
     {
       "number": 5,
-      "text": "Salmon a fost tatăl lui Boaz, prin Rahav; Boaz a fost tatăl lui Obed, prin Rut; iar Obed a fost tatăl lui Isai."
+      "text": "Salmon a fost tatăl lui Boes, de la Rahav; Boes a fost tatăl lui Iobed, de la Rut; iar Iobed, tatăl lui Isai."
     },
     {
       "number": 6,
-      "text": "Isai a fost tatăl regelui David. David a fost tatăl lui Solomon, prin soția lui Urie."
+      "text": "Isai a fost tatăl regelui David. David a fost tatăl lui Solomon, născut din soția lui Urie."
     },
     {
       "number": 7,
-      "text": "Solomon a născut pe Roboam. Roboam a născut pe Abia. Abia a născut pe Asa."
+      "text": "Solomon a fost tatăl lui Roboam; Roboam, tatăl lui Abia; iar Abia, tatăl lui Asaf."
     },
     {
       "number": 8,
-      "text": "Asa a născut pe Iosafat. Iosafat a născut pe Ioram. Ioram a născut pe Ozia."
+      "text": "Asaf a fost tatăl lui Iosafat; Iosafat, tatăl lui Ioram; iar Ioram, tatăl lui Ozia."
     },
     {
       "number": 9,
@@ -181,7 +175,7 @@
     },
     {
       "number": 10,
-      "text": "Ezechia a născut pe Manase. Manase a născut pe Amon. Amon a născut pe Iosia."
+      "text": "Ezechia a fost tatăl lui Manase; Manase, tatăl lui Amos; iar Amos, tatăl lui Iosia."
     },
     {
       "number": 11,
@@ -201,7 +195,7 @@
     },
     {
       "number": 15,
-      "text": "Eliud a născut pe Eleazar. Eleazar a născut pe Mattan. Mattan a născut pe Iacov."
+      "text": "Eliud a fost tatăl lui Eleazar; Eleazar, tatăl lui Mattan; iar Mattan, tatăl lui Iacov."
     },
     {
       "number": 16,
@@ -213,11 +207,11 @@
     },
     {
       "number": 18,
-      "text": "Iar nașterea lui Isus Hristos a fost astfel: Maria, mama Lui, fiind logodită cu Iosif, înainte ca ei să fie împreună, s-a aflat că era însărcinată de la Duhul Sfânt."
+      "text": "Iar nașterea lui Isus Hristos a fost astfel: Maria, mama Lui, fiind logodită cu Iosif, înainte să se unească ei, s-a aflat că era însărcinată de la Duhul Sfânt."
     },
     {
       "number": 19,
-      "text": "Iosif, soțul ei, fiind un om drept și nevrând s-o facă de rușine, a hotărât s-o despartă de el pe ascuns."
+      "text": "Iosif, soțul ei, fiind un om drept și nevrând să o facă de rușine, a hotărât să o lase pe ascuns."
     },
     {
       "number": 20,
@@ -225,7 +219,7 @@
     },
     {
       "number": 21,
-      "text": "Ea va naște un fiu și Îi vei pune numele Isus, pentru că El Își va salva poporul de păcatele lui.”"
+      "text": "Ea va naște un fiu și Îi vei pune numele Isus, pentru că El Își va mântui poporul de păcatele lui.”"
     },
     {
       "number": 22,
@@ -237,22 +231,49 @@
     },
     {
       "number": 24,
-      "text": "Când s-a trezit din somn, Iosif a făcut cum îi poruncise îngerul Domnului și a luat-o la el pe soția sa."
+      "text": "Când s-a trezit din somn, Iosif a făcut cum îi poruncise îngerul Domnului și și-a luat soția la el."
     },
     {
       "number": 25,
-      "text": "Dar n-a cunoscut-o până când ea a născut un fiu; și el I-a pus numele Isus."
+      "text": "Dar n-a avut relații cu ea până când ea a născut un fiu; și el I-a pus numele Isus."
     }
   ],
   "editorialNotes": [
     {
-      "verse": 25,
-      "term": "variantă textuală sau lexicală verificată",
-      "decision": "Textul principal păstrează lectura SBLGNT 1.2 și formularea românească validată prin sursele fixate.",
-      "reason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal.",
+      "verse": 7,
+      "term": "Ἀσάφ / Ἀσὰφ",
+      "decision": "„Asaf”",
+      "alternatives": [
+        "„Asa” (lectura RP)"
+      ],
+      "reason": "SBLGNT citește formele Asaf în MAT.1.7–8, în timp ce RP are Asa.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
+      "resolutionReason": "A fost urmat textul principal SBLGNT, fără armonizare automată cu martorul RP."
+    },
+    {
+      "verse": 10,
+      "term": "Ἀμώς / Ἀμὼς",
+      "decision": "„Amos”",
+      "alternatives": [
+        "„Amon” (lectura RP)"
+      ],
+      "reason": "SBLGNT citește Amos în MAT.1.10, față de Amon în RP.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "A fost urmată lectura SBLGNT consemnată de aparat."
+    },
+    {
+      "verse": 25,
+      "term": "υἱόν",
+      "decision": "„un fiu”",
+      "alternatives": [
+        "„fiul ei întâi născut” (lectura RP)"
+      ],
+      "reason": "SBLGNT are numai „un fiu”; sintagma extinsă din RP nu este importată în textul principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul românesc păstrează lectura critică fără adaosul tradițional."
     }
   ],
   "referenceNotes": [],

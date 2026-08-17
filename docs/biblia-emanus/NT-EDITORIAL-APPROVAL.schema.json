@@ -1,0 +1,176 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://emanus.example/schemas/nt-editorial-approval-v1.json",
+  "title": "Biblia Emanus — registru de aprobare editorială NT",
+  "description": "Registru obligatoriu, cu o intrare individuală pentru fiecare verset NT cu text principal. Nu este o certificare teologică infailibilă; este urma verificabilă a unei revizii editoriale legate de sursele fixate.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "status",
+    "approvedOn",
+    "corpusDigest",
+    "approval",
+    "verses"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "status": { "const": "approved" },
+    "approvedOn": { "type": "string", "format": "date" },
+    "corpusDigest": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
+    "approval": { "$ref": "#/$defs/approval" },
+    "verses": {
+      "type": "array",
+      "minItems": 7941,
+      "items": { "$ref": "#/$defs/verseEvidence" }
+    }
+  },
+  "$defs": {
+    "approval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reviewerId", "reviewerType", "reviewerRole", "method", "declaration"],
+      "properties": {
+        "reviewerId": { "type": "string", "minLength": 1 },
+        "reviewerType": { "enum": ["human", "ai"] },
+        "reviewerRole": { "const": "editorial-reviewer" },
+        "reviewerSystem": { "type": "string", "minLength": 1 },
+        "reviewerRunId": { "type": "string", "minLength": 1 },
+        "method": { "const": "verse-by-verse-source-and-romanian-benchmark" },
+        "declaration": { "type": "string", "minLength": 40 }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "reviewerType": { "const": "ai" } } },
+          "then": { "required": ["reviewerSystem", "reviewerRunId"] }
+        }
+      ]
+    },
+    "lockedSource": {
+      "description": "O sursă fixată disponibilă sau lacuna declarată a unui etalon fixat eligibil. Validatorul stabilește din source-lock care variantă este permisă pentru fiecare lockId.",
+      "oneOf": [
+        { "$ref": "#/$defs/availableLockedSource" },
+        { "$ref": "#/$defs/missingLockedSource" }
+      ]
+    },
+    "availableLockedSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["lockId", "references", "textDigest"],
+      "properties": {
+        "lockId": { "type": "string", "minLength": 1 },
+        "references": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "pattern": "^[1-9][0-9]*:[1-9][0-9]*$" }
+        },
+        "textDigest": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" }
+      }
+    },
+    "missingLockedSource": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["lockId", "references", "availability", "missingReferences"],
+      "properties": {
+        "lockId": { "type": "string", "minLength": 1 },
+        "references": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "pattern": "^[1-9][0-9]*:[1-9][0-9]*$" }
+        },
+        "availability": { "const": "missing-in-pinned-source" },
+        "missingReferences": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "pattern": "^[1-9][0-9]*:[1-9][0-9]*$" }
+        }
+      }
+    },
+    "externalBenchmark": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["references", "mode", "referenceUrl", "consultedOn"],
+      "properties": {
+        "references": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "pattern": "^[1-9][0-9]*:[1-9][0-9]*$" }
+        },
+        "mode": { "const": "external-comparison-only" },
+        "referenceUrl": { "type": "string", "format": "uri", "pattern": "^https://" },
+        "consultedOn": { "type": "string", "format": "date" }
+      }
+    },
+    "sourceDecision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sourceAnchor", "rationale"],
+      "properties": {
+        "sourceAnchor": { "type": "string", "minLength": 1 },
+        "rationale": { "type": "string", "minLength": 32 }
+      }
+    },
+    "romanianDecision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["targetAnchor", "rationale"],
+      "properties": {
+        "targetAnchor": { "type": "string", "minLength": 2 },
+        "rationale": { "type": "string", "minLength": 32 }
+      }
+    },
+    "semanticDecision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sourceAnchor", "targetAnchor", "rationale"],
+      "properties": {
+        "sourceAnchor": { "type": "string", "minLength": 1 },
+        "targetAnchor": { "type": "string", "minLength": 2 },
+        "rationale": { "type": "string", "minLength": 32 }
+      }
+    },
+    "verseEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reference", "textDigest", "sources", "decisions"],
+      "properties": {
+        "reference": { "type": "string", "pattern": "^[1-3]?[A-Z]{2,3}\\.[1-9][0-9]*\\.[1-9][0-9]*$" },
+        "textDigest": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
+        "sources": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["sblgnt", "webu", "benchmarks"],
+          "properties": {
+            "sblgnt": { "$ref": "#/$defs/availableLockedSource" },
+            "webu": { "$ref": "#/$defs/availableLockedSource" },
+            "benchmarks": {
+              "type": "object",
+              "minProperties": 2,
+              "required": ["BTF"],
+              "properties": {
+                "BTF": { "$ref": "#/$defs/availableLockedSource" }
+              },
+              "additionalProperties": {
+                "oneOf": [
+                  { "$ref": "#/$defs/lockedSource" },
+                  { "$ref": "#/$defs/externalBenchmark" }
+                ]
+              },
+              "description": "Cheile sunt stabilite dinamic de benchmarkLockIds și externalBenchmarkIds din source-lock; validatorul cere setul exact pentru cartea curentă."
+            }
+          }
+        },
+        "decisions": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["sourceLanguage", "romanian", "semantic"],
+          "properties": {
+            "sourceLanguage": { "$ref": "#/$defs/sourceDecision" },
+            "romanian": { "$ref": "#/$defs/romanianDecision" },
+            "semantic": { "$ref": "#/$defs/semanticDecision" }
+          }
+        }
+      }
+    }
+  }
+}

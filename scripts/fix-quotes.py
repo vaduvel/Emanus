@@ -18,7 +18,10 @@ Plase de siguranta:
   - daca pe restul liniei nu mai exista nicio ghilimea ASCII, ghilimeaua curenta
     este tratata ca delimitator real (caz de deschidere fara inchidere);
   - comentariile (// si /* */) sunt sarite, ca textele din ele sa nu deregleze
-    scanarea.
+    scanarea;
+  - modulele TypeScript generate din corpusul Biblia Emanus sunt ignorate: ele
+    reproduc byte-for-byte textul canonic publicat si nu sunt sursa editoriala
+    pe care acest fixer are voie s-o rescrie.
 
 Utilizare:
   python3 scripts/fix-quotes.py                 # repara tot packages/ si apps/
@@ -31,6 +34,12 @@ import sys
 
 OPEN_Q = "\u201e"
 CLOSE_Q = "\u201d"
+GENERATED_EMANUS_RUNTIME = "/packages/shared/src/bible/generated/publishedEmanusOtText/"
+
+
+def is_generated_emanus_runtime(path: str) -> bool:
+    normalized = "/" + os.path.abspath(path).replace("\\", "/").lstrip("/")
+    return GENERATED_EMANUS_RUNTIME in normalized
 
 
 def fix_source(src: str):
@@ -130,13 +139,17 @@ def fix_source(src: str):
 def walk(targets):
     for t in targets:
         if os.path.isfile(t):
-            yield t
+            if not is_generated_emanus_runtime(t):
+                yield t
             continue
         for root, dirs, files in os.walk(t):
             dirs[:] = [d for d in dirs if d not in ("node_modules", "dist", ".git")]
             for f in files:
                 if f.endswith((".ts", ".tsx")):
-                    yield os.path.join(root, f)
+                    path = os.path.join(root, f)
+                    if is_generated_emanus_runtime(path):
+                        continue
+                    yield path
 
 
 def main(argv):

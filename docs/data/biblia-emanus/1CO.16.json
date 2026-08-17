@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -74,20 +77,15 @@
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 24,
       "reviewed": 24,
@@ -98,7 +96,7 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 24 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 24 de versete din 1CO.16 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
@@ -129,27 +127,22 @@
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 709,
-        "primary": 137,
-        "secondary": 24,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.41000612643816675,
-      "minimumScore": 0.5818865265537531
-    },
-    "textDigest": "sha256:e8013e5a30d245e26db4193075567833557ff4c3a430d0a6f2e16972fdb1a9d7",
-    "contentDigest": "sha256:7e41ab934761fe8849c90bd2cda0e09f92f57376a377df5d1844d10addb8ea10"
+    "textDigest": "sha256:6802b70ec8e16740e83252b79d20537c1dbba14f810e814303dc608bb8467320",
+    "contentDigest": "sha256:f39f038222f7a0395d01d66a2b8f290a5ebda1908f2447ba2fb364a3f0ee6d40",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Cu privire la strângerea pentru sfinți, așa cum am rânduit bisericilor Galatiei, așa să faceți și voi."
+      "text": "Cu privire la colecta pentru sfinți, așa cum am rânduit bisericilor Galatiei, așa să faceți și voi."
     },
     {
       "number": 2,
-      "text": "În prima zi a fiecărei săptămâni, fiecare dintre voi să salveze cum va prospera, că nu se fac colecții când voi veni."
+      "text": "În prima zi a fiecărei săptămâni, fiecare dintre voi să pună deoparte acasă, după cum a prosperat, ca să nu se facă strângeri când voi veni."
     },
     {
       "number": 3,
@@ -161,7 +154,7 @@
     },
     {
       "number": 5,
-      "text": "Voi veni la voi când voi trece prin Macedonia, căci prin Macedonia trec."
+      "text": "Voi veni la voi după ce voi trece prin Macedonia, căci prin Macedonia voi trece."
     },
     {
       "number": 6,
@@ -177,19 +170,19 @@
     },
     {
       "number": 9,
-      "text": "fiindcă mi s-a deschis o ușă mare și lucrătoare, și sunt mulți potrivnici."
+      "text": "fiindcă mi s-a deschis o ușă largă pentru o lucrare cu mult spor, și sunt mulți potrivnici."
     },
     {
       "number": 10,
-      "text": "Dacă vine Timotei, să vedeți că este cu voi fără teamă, căci El face lucrarea Domnului, cum fac și eu."
+      "text": "Dacă vine Timotei, aveți grijă să fie cu voi fără teamă, căci el face lucrarea Domnului, cum fac și eu."
     },
     {
       "number": 11,
-      "text": "Așadar, nimeni să nu-l disprețuiască. Însoțiți-l în pace, ca să vină la mine, fiindcă îl aștept cu frații."
+      "text": "Așadar, nimeni să nu-l disprețuiască. Ajutați-l să pornească în pace, ca să ajungă la mine, fiindcă îl aștept să vină împreună cu frații."
     },
     {
       "number": 12,
-      "text": "Cât despre fratele Apolos, l-am rugat mult să vină la voi cu frații, dar nicidecum n-a fost voia lui să vină acum; va veni însă când va avea prilej."
+      "text": "Cât despre fratele Apolo, l-am rugat mult să vină la voi cu frații, dar nu a vrut nicidecum să vină acum; va veni însă când va avea prilej."
     },
     {
       "number": 13,
@@ -197,11 +190,11 @@
     },
     {
       "number": 14,
-      "text": "Lasă tot ce faci să fie făcut în dragoste."
+      "text": "Tot ce faceți să fie făcut în dragoste."
     },
     {
       "number": 15,
-      "text": "Vă îndemn, fraților: cunoașteți casa lui Stefana, că ea este pârga Ahaiei și că s-au rânduit pe ei înșiși pentru slujirea sfinților."
+      "text": "Vă îndemn, fraților — știți despre casa lui Ștefana că este pârga Ahaiei și că membrii ei s-au dedicat slujirii sfinților —"
     },
     {
       "number": 16,
@@ -209,15 +202,15 @@
     },
     {
       "number": 17,
-      "text": "Mă bucur de venirea lui Stefana, a lui Fortunat și a lui Ahaic, fiindcă ei au împlinit lipsa voastră,"
+      "text": "Mă bucur de venirea lui Stefana, a lui Fortunat și a lui Ahaic, fiindcă ei au compensat absența voastră,"
     },
     {
       "number": 18,
-      "text": "căci au odihnit duhul meu și pe al vostru. Așadar, recunoașteți-i pe unii ca aceștia."
+      "text": "căci au înviorat duhul meu și pe al vostru. Așadar, recunoașteți-i pe unii ca aceștia."
     },
     {
       "number": 19,
-      "text": "Vă salută bisericile Asiei. Acuila și Prisca vă salută mult în Domnul, împreună cu biserica din casa lor."
+      "text": "Vă salută bisericile Asiei. Acuila și Prisca vă salută cu multă căldură în Domnul, împreună cu biserica din casa lor."
     },
     {
       "number": 20,
@@ -225,22 +218,95 @@
     },
     {
       "number": 21,
-      "text": "Salutarea este cu mâna mea, a lui Pavel."
+      "text": "Salutarea o scriu cu propria mea mână — eu, Pavel."
     },
     {
       "number": 22,
-      "text": "Dacă cineva nu iubește pe Domnul Isus Hristos, să fie blestemat."
+      "text": "Dacă cineva nu îl iubește pe Domnul, să fie anatema. Marana tha!"
     },
     {
       "number": 23,
-      "text": "Harul Domnului Isus Hristos să fie cu voi."
+      "text": "Harul Domnului Isus să fie cu voi."
     },
     {
       "number": 24,
       "text": "Dragostea mea să fie cu voi toți în Hristos Isus."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 9,
+      "term": "revizie finală: θύρα γάρ μοι ἀνέῳγεν μεγάλη καὶ ἐνεργής",
+      "decision": "fiindcă mi s-a deschis o ușă largă pentru o lucrare cu mult spor, și sunt mulți potrivnici.",
+      "reason": "Adjectivul ἐνεργής descrie ușa metaforică drept eficientă, activă sau promițătoare, pe când „pentru lucrare” transformă această calitate într-o simplă indicație de scop. Între θύρα γάρ μοι ἀνέῳγεν μεγάλη καὶ ἐνεργής și o ușă largă pentru lucrare se pierde valoarea calitativă a adjectivului ἐνεργής.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 11,
+      "term": "revizie finală: ἐκδέχομαι γὰρ αὐτὸν μετὰ τῶν ἀδελφῶν",
+      "decision": "Așadar, nimeni să nu-l disprețuiască. Ajutați-l să pornească în pace, ca să ajungă la mine, fiindcă îl aștept să vină împreună cu frații.",
+      "reason": "Construcția românească poate spune că Pavel și frații îl așteaptă pe Timotei, în timp ce greaca indică mai natural că Pavel îl așteaptă pe Timotei împreună cu frații care îl vor însoți. Prin raportare la ἐκδέχομαι γὰρ αὐτὸν μετὰ τῶν ἀδελφῶν, formularea îl aștept cu frații poate inversa asocierea sintactică a fraților.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 15,
+      "term": "revizie finală: οἴδατε τὴν οἰκίαν Στεφανᾶ",
+      "decision": "Vă îndemn, fraților — știți despre casa lui Ștefana că este pârga Ahaiei și că membrii ei s-au dedicat slujirii sfinților —",
+      "reason": "Punctuația și ordinea românească fac din „cunoașteți” obiectul îndemnului, deși οἴδατε este o afirmație parentetică despre un fapt deja cunoscut, iar îndemnul propriu-zis continuă în versetul următor. Raportul dintre οἴδατε τὴν οἰκίαν Στεφανᾶ și cunoașteți casa lui Ștefana este tulburat de punctuația care schimbă funcția pragmatică a verbului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 17,
+      "term": "revizie finală: ὑμέτερον ὑστέρημα οὗτοι ἀνεπλήρωσαν",
+      "decision": "Mă bucur de venirea lui Stefana, a lui Fortunat și a lui Ahaic, fiindcă ei au compensat absența voastră,",
+      "reason": "„Lipsa voastră” poate fi înțeleasă ca o nevoie a corintenilor, deși contextul și construcția greacă indică ceea ce absența sau contribuția lor insuficientă lăsase neacoperit pentru Pavel. Față de ὑμέτερον ὑστέρημα οὗτοι ἀνεπλήρωσαν, formularea au împlinit lipsa voastră nu precizează corect direcția suplinirii.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 19,
+      "term": "revizie finală: ἐν κυρίῳ πολλὰ Ἀκύλας καὶ",
+      "decision": "Vă salută bisericile Asiei. Acuila și Prisca vă salută cu multă căldură în Domnul, împreună cu biserica din casa lor.",
+      "reason": "Adverbul „mult” este atașat neidiomatic verbului „a saluta” și nu redă firesc intensitatea afectuoasă exprimată de πολλὰ. Valoarea afectuoasă din ἐν κυρίῳ πολλὰ Ἀκύλας καὶ nu este comunicată natural de vă salută mult în Domnul.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 21,
+      "term": "revizie finală: Ὁ ἀσπασμὸς τῇ ἐμῇ χειρὶ Παύλου",
+      "decision": "Salutarea o scriu cu propria mea mână — eu, Pavel.",
+      "reason": "Construcția „mâna mea, a lui Pavel” este incoerentă deictic și nefirească în română, deoarece Pavel vorbește la persoana întâi, iar numele său funcționează ca semnătură sau apoziție. Deși Ὁ ἀσπασμὸς τῇ ἐμῇ χειρὶ Παύλου indică un autograf, Salutarea este cu mâna mea, a lui Pavel produce o relație posesivă românească defectuoasă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 22,
+      "term": "revizie finală: Μαράνα θά",
+      "decision": "Dacă cineva nu îl iubește pe Domnul, să fie anatema. Marana tha!",
+      "reason": "Formula aramaică Μαράνα θά este omisă integral, deși face parte din textul grec furnizat și constituie încheierea distinctă a versetului. După să fie anatema, sursa continuă explicit cu Μαράνα θά, astfel încât legătura semantică a versetului este incompletă în traducere.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 23,
+      "term": "revizie finală: Ἰησοῦ μεθʼ ὑμῶν",
+      "decision": "Harul Domnului Isus să fie cu voi.",
+      "reason": "Titlul „Hristos” este un adaos față de textul grec SBLGNT furnizat, care are aici numai „Domnului Isus”. În timp ce Ἰησοῦ μεθʼ ὑμῶν conține numai numele Isus, Domnului Isus Hristos adaugă nejustificat elementul „Hristos”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

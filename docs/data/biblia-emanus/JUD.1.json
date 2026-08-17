@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -69,25 +72,21 @@
     },
     "observations": [
       "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate.",
+      "Câmpurile consultedInBatch disting etaloanele efectiv confruntate în acest lot de cele configurate în schema corpusului; NTR nu a fost consultată."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 25,
       "reviewed": 25,
@@ -98,7 +97,7 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 25 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar sursele auxiliare declarate în jurnalul lotului au fost consultate pentru sens și română. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
@@ -139,120 +138,194 @@
       "minimumSemantic": 0.5467158590753175,
       "minimumScore": 0.5694259949565413
     },
-    "textDigest": "sha256:a582d35a50ef6b30c96f4217662295046842ae9b2e657d513c6eca57e8a1fe15",
-    "contentDigest": "sha256:b924ec91fb9e682a4c0315980992cd4a1bbed17d217af1251e417f02ad013188"
+    "textDigest": "sha256:a15f954b28bed25d1fce3ab75cb716983fb280f79c8756bcc5760f8d20a0e521",
+    "contentDigest": "sha256:9ffafe19afad5f33ac5b3afb9e7fe3a173ceedd49e7ca44cf2b8487996559037",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Iuda, slujitor al lui Isus Hristos, și frate al lui Iacov, pentru cei chemați, sfințiți de Dumnezeu Tatăl, și păziți pentru Isus Hristos;"
+      "text": "Iuda, slujitor al lui Isus Hristos și frate al lui Iacov, către cei chemați, iubiți de Dumnezeu Tatăl și păstrați pentru Isus Hristos:"
     },
     {
       "number": 2,
-      "text": "Fie ca mila, pacea dragostea să vă fie înmulțite."
+      "text": "Fie ca mila, pacea și dragostea să vă fie înmulțite."
     },
     {
       "number": 3,
-      "text": "Iubito, în timp ce eram foarte dornic să vă scriu despre mântuirea noastră comună, am fost constrâns să vă scriu îndemnându-vă să luptați cu sinceritate pentru credința care a fost dată pentru totdeauna sfinților."
+      "text": "Preaiubiților, deși mă străduiam din răsputeri să vă scriu despre mântuirea noastră comună, am socotit necesar să vă scriu, îndemnându-vă să luptați cu stăruință pentru credința încredințată sfinților o dată pentru totdeauna."
     },
     {
       "number": 4,
-      "text": "Căci există anumiți oameni care s-au strecurat în secret, chiar cei despre care s-a scris cu mult timp în urmă pentru această condamnare: oameni neevlavioși, care transformă harul Dumnezeului nostru în indec care tăgăduiesc pe singurul nostru Stăpân, Dumnezeu Domn, Isus Hristos."
+      "text": "Fiindcă s-au strecurat pe ascuns unii oameni despre care fusese scris dinainte că vor primi această judecată: oameni neevlavioși, care prefac harul Dumnezeului nostru în desfrâu și Îl tăgăduiesc pe singurul nostru Stăpân și Domn, Isus Hristos."
     },
     {
       "number": 5,
-      "text": "Acum doresc să vă reamintesc, deși știți deja acest lucru, că Domnul a salvat un popor din țara Egiptului, după aceea i-a nimicit pe cei care nu credeau."
+      "text": "Vreau însă să vă reamintesc, deși cunoașteți deja toate acestea, că Isus, după ce a izbăvit un popor din țara Egiptului, i-a nimicit apoi pe cei care nu au crezut."
     },
     {
       "number": 6,
-      "text": "Îngerii care nu și-au păstrat primul domeniu, dar și-au părăsit propriul loc de locuit, el a ținut în lanțuri veșnice sub întuneric pentru judecata zilei celei mari."
+      "text": "Iar pe îngerii care nu și-au păstrat propria poziție, ci și-au părăsit locuința, i-a ținut în lanțuri veșnice, sub întunericul adânc, pentru judecata zilei celei mari."
     },
     {
       "number": 7,
-      "text": "Așa cum Sodoma, Gomora și orașele din jurul lor, având în același mod ca aceștia s-au dat pe ei înșiși imoralității sexuale și au plecat după carne străină, sunt arătate ca un exemplu, suferind pedeapsa focului etern."
+      "text": "Tot așa, Sodoma și Gomora, împreună cu cetățile din jurul lor, care s-au dedat, asemenea acestora, la imoralitate sexuală și au umblat după trup străin, stau ca pildă, purtând pedeapsa focului veșnic."
     },
     {
       "number": 8,
-      "text": "Totuși, în același mod, ei, de asemenea, în visarea lor, spurcă carnea, disprețuiesc autoritatea și calomniază ființele cerești."
+      "text": "Totuși, în același fel, și acești visători își pângăresc trupul, resping autoritatea și defăimează ființele glorioase."
     },
     {
       "number": 9,
-      "text": "Dar Mihail, arhanghelul, când se certa cu diavolul și se certa despre trupul lui Moise, nu a îndrăznit să aducă împotriva lui o condamnare abuzivă, ci a spus: Fie ca Domnul să vă mustre!"
+      "text": "Dar Mihail, arhanghelul, când se afla în dispută cu diavolul cu privire la trupul lui Moise, nu a îndrăznit să rostească împotriva lui o judecată defăimătoare, ci a spus: „Domnul să te mustre!”"
     },
     {
       "number": 10,
-      "text": "Dar aceștia vorbesc de rău despre lucrurile pe care nu le cunosc. Ei sunt distruși în aceste lucruri pe care le înțeleg în mod natural, ca creaturile fără motiv."
+      "text": "Aceștia însă defăimează tot ce nu cunosc; iar în cele pe care le pricep instinctiv, asemenea animalelor lipsite de rațiune, tocmai în acestea se pierd."
     },
     {
       "number": 11,
-      "text": "Vai de ei! Căci ei s-au dus pe calea lui Cain, și s-au răsculat în greșeala lui Balaam ca să fie plătiți, și au pierit în răzvrătirea lui."
+      "text": "Vai de ei! Au umblat pe calea lui Cain, s-au lăsat pradă rătăcirii lui Balaam pentru câștig și au pierit în răzvrătirea lui Core."
     },
     {
       "number": 12,
-      "text": "Acestea sunt recife stâncoase ascunse în sărbătorile voastre de dragoste când se ospătează cu voi, păstori care fără teamă se hrănesc singuri; nori fără apă, purtați de vânt; copaci de toamnă fără fructe, de două ori morți, smulși de rădăcini;"
+      "text": "Aceștia sunt recife ascunse la ospețele voastre de dragoste: se ospătează cu voi fără teamă și se îngrijesc numai de ei înșiși; nori fără apă, purtați de vânturi; pomi de toamnă fără rod, morți de două ori, smulși din rădăcini;"
     },
     {
       "number": 13,
-      "text": "valurile sălbatice ale mării, spumeind propria lor rușine; stele rătăcitoare, pentru care întunericul a fost rezervat pentru totdeauna."
+      "text": "valuri sălbatice ale mării, care își spumegă propria rușine; stele rătăcitoare, cărora le este păstrată pentru veșnicie negura întunericului."
     },
     {
       "number": 14,
-      "text": "Despre aceștia a proorocit Enoh, al șaptelea de la Adam, și a zis: Iată, Domnul a venit cu zece mii de sfinți ai Lui,"
+      "text": "Despre aceștia a profețit și Enoh, al șaptelea de la Adam, spunând: „Iată, Domnul a venit în mijlocul zecilor de mii de sfinți ai Săi,"
     },
     {
       "number": 15,
-      "text": "să execute judecată asupra tuturor și să condamne pe toți cei lipsiți de pietate din toate faptele lor de necredință pe care le-au făcut într-un mod nelegiuit și din toate lucrurile grele pe care păcătoșii lipsiți de pietate le-au spus împotriva lui."
+      "text": "ca să judece pe toți și să-i dovedească vinovați pe toți cei neevlavioși pentru toate faptele lor de neevlavie, pe care le-au săvârșit în neevlavie, și pentru toate cuvintele aspre pe care păcătoșii neevlavioși le-au rostit împotriva Lui.”"
     },
     {
       "number": 16,
-      "text": "Aceștia sunt murmurători și nemulțumitori, umblând după poftele lor și gura lor vorbește lucruri mândre care arată respect față de persoane pentru a obține avantaje."
+      "text": "Aceștia sunt cârtitori, nemulțumiți de soarta lor, umblând după poftele lor; gura lor rostește vorbe semețe, iar pentru câștig îi lingușesc pe oameni."
     },
     {
       "number": 17,
-      "text": "Dar voi, preaiubiților, amintiți-vă cuvintele pe care le-au rostit apostolii Domnului nostru Isus Hristos."
+      "text": "Dar voi, preaiubiților, aduceți-vă aminte de cuvintele rostite dinainte de apostolii Domnului nostru Isus Hristos."
     },
     {
       "number": 18,
-      "text": "Ei ți-au spus: În vremurile din urmă vor fi batjocoritori care vor umbla după poftele lor nelegiuite."
+      "text": "Ei vă spuneau: „În vremea de pe urmă vor fi batjocoritori care vor umbla după propriile lor pofte neevlavioase.”"
     },
     {
       "number": 19,
-      "text": "Aceștia sunt cei care fac dezbinări și sunt senzuali, care nu au Duhul."
+      "text": "Aceștia sunt cei care provoacă rupturi, oameni stăpâniți de firea lor și lipsiți de Duhul."
     },
     {
       "number": 20,
-      "text": "Dar voi, preaiubiților, continuați să vă zidiți pe credința voastră cea mai sfântă, rugându-vă în Duhul Sfânt."
+      "text": "Dar voi, preaiubiților, zidindu-vă pe credința voastră preasfântă și rugându-vă în Duhul Sfânt,"
     },
     {
       "number": 21,
-      "text": "Păstrați-vă în dragostea lui Dumnezeu, căutând mila Domnului nostru Isus Hristos pentru viața veșnică."
+      "text": "Păstrați-vă în dragostea lui Dumnezeu, așteptând mila Domnului nostru Isus Hristos pentru viața veșnică."
     },
     {
       "number": 22,
-      "text": "Pe unii au compasiune, făcând o distincție,"
+      "text": "De unii aveți milă când se îndoiesc;"
     },
     {
       "number": 23,
-      "text": "și unii scapă, smulgîndu-i din foc cu frică, urînd chiar și hainele pătate de carne."
+      "text": "pe alții salvați-i, smulgându-i din foc; iar de alții aveți milă cu teamă, urând până și haina întinată de carne."
     },
     {
       "number": 24,
-      "text": "Celui ce este în stare să-i ferească de poticnire, și să vă înfățișeze fără prihană înaintea slavei Lui, cu mare bucurie,"
+      "text": "Iar Celui care poate să vă păzească de poticnire și să vă înfățișeze fără vină înaintea slavei Sale, cu mare bucurie,"
     },
     {
       "number": 25,
-      "text": "Pentru Dumnezeu, Mântuitorul nostru, care singur este înțelept, să fie slavă și măreție, stăpânire și putere, atât acum cât și pentru totdeauna. Amin."
+      "text": "singurului Dumnezeu, Mântuitorului nostru, prin Isus Hristos, Domnul nostru, Îi aparțin slava, măreția, puterea și autoritatea, mai înainte de toate veacurile, acum și în toate veacurile. Amin."
     }
   ],
   "editorialNotes": [
     {
-      "verse": 5,
-      "term": "variantă textuală sau lexicală verificată",
-      "decision": "Textul principal păstrează lectura SBLGNT 1.2 și formularea românească validată prin sursele fixate.",
-      "reason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal.",
+      "verse": 1,
+      "term": "variantă textuală SBLGNT/TR: ἠγαπημένοις / ἡγιασμένοις",
+      "decision": "„iubiți de Dumnezeu Tatăl”",
+      "alternatives": [
+        "TR-JUD din snapshot citește „sfințiți de Dumnezeu Tatăl”."
+      ],
+      "reason": "SBLGNT este lectura principală fixată; textul românesc păstrează „iubiți”, nu introduce lectura TR „sfințiți”.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
+      "resolutionReason": "SBLGNT-JUD și TR-JUD au fost confruntate direct; textul principal urmează SBLGNT."
+    },
+    {
+      "verse": 4,
+      "term": "variantă textuală SBLGNT/TR: δεσπότην / δεσπότην θεόν",
+      "decision": "„singurul nostru Stăpân și Domn, Isus Hristos”",
+      "alternatives": [
+        "TR-JUD din snapshot adaugă θεόν după δεσπότην."
+      ],
+      "reason": "SBLGNT nu conține adaosul θεόν; redarea nu îl introduce tacit în textul principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-JUD și TR-JUD au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 5,
+      "term": "variantă textuală SBLGNT/TR: Ἰησοῦς / ὁ Κύριος",
+      "decision": "„Isus, după ce a izbăvit un popor din țara Egiptului”",
+      "alternatives": [
+        "TR-JUD din snapshot citește „Domnul”."
+      ],
+      "reason": "Lectura SBLGNT este „Isus”; numele este păstrat explicit, fără înlocuirea cu lectura tradițională.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-JUD și TR-JUD au fost confruntate direct; textul principal urmează SBLGNT."
+    },
+    {
+      "verse": 22,
+      "term": "structura SBLGNT a grupurilor din 1:22–23",
+      "decision": "Mila pentru cei care se îndoiesc; salvarea celor smulși din foc; mila cu teamă pentru al treilea grup.",
+      "alternatives": [
+        "TR-JUD grupează diferit poruncile din 1:22–23."
+      ],
+      "reason": "SBLGNT distinge trei grupuri pe parcursul versetelor 22–23; traducerea păstrează succesiunea fără a o comprima.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-JUD și TR-JUD au fost confruntate direct; structura în trei grupe este păstrată în textul principal."
+    },
+    {
+      "verse": 25,
+      "term": "variantă textuală SBLGNT/TR: διὰ Ἰησοῦ Χριστοῦ … πρὸ παντὸς τοῦ αἰῶνος / σοφῷ",
+      "decision": "Doxologia include „prin Isus Hristos, Domnul nostru” și „mai înainte de toate veacurile”, fără „înțelept”.",
+      "alternatives": [
+        "TR-JUD din snapshot adaugă σοφῷ („înțelept”) și are o formulare mai scurtă a doxologiei."
+      ],
+      "reason": "SBLGNT este lectura principală fixată; toate segmentele lui sunt păstrate, iar adaosul TR nu este introdus tacit.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-JUD și TR-JUD au fost confruntate direct; textul principal urmează SBLGNT."
+    },
+    {
+      "verse": 8,
+      "term": "revizie finală: Ὁμοίως μέντοι καὶ οὗτοι ἐνυπνιαζόμενοι",
+      "decision": "Totuși, în același fel, și acești visători își pângăresc trupul, resping autoritatea și defăimează ființele glorioase.",
+      "reason": "Participiul îi numește visători; «călăuziți de vise» adăuga o relație de îndrumare absentă din text.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 20,
+      "term": "revizie finală: ἐποικοδομοῦντες ἑαυτοὺς ... προσευχόμενοι",
+      "decision": "Dar voi, preaiubiților, zidindu-vă pe credința voastră preasfântă și rugându-vă în Duhul Sfânt,",
+      "reason": "Cele două participii arată cum se împlinește porunca principală «păstrați-vă» din versetul următor; punctul și imperativul rupeau relația sintactică.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
     }
   ],
   "referenceNotes": [],

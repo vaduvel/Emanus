@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset-cu-verset din SBLGNT 1.2 și aparat, cu Textus Receptus numai ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost repere auxiliare de sens și limbă; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 22,
       "reviewed": 22,
@@ -98,22 +96,21 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 22 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 22 de versete din EPH.2 au fost confruntate direct cu SBLGNT 1.2 și cu aparatul fixat; TR a fost folosit numai ca martor de variante."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost eliminate calcurile, acordurile greșite, fragmentele corupte și formulările nenaturale.",
+        "Persoana, numărul, relațiile sintactice și termenii teologici au fost reașezați după textul grec.",
+        "Lecturile TR/RP absente din textul principal SBLGNT nu au fost importate automat."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Textul principal urmează SBLGNT la variantele consemnate în aparat.",
+        "Ambiguitățile lexicale sunt redate cât mai direct, fără glosare confesională în corpul versetului."
       ]
     },
     "omissionAddition": {
@@ -123,116 +120,292 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost numai verificări auxiliare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 327,
-        "primary": 189,
-        "secondary": 45,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.33174470430626646,
-      "minimumScore": 0.5090738739653641
-    },
-    "textDigest": "sha256:01894a2884923d68b65f9bdbefe9dd5449afe5777f643626d792f0a3fd7d0a3e",
-    "contentDigest": "sha256:eeb68594da6bca563d478aaf1f42ec173067fa2db2ece6eca7b7b1379be66b0b"
+    "textDigest": "sha256:f6414c77289754700055b36a017bfc2a4856d5c840d0062390173eddacc2ecc9",
+    "contentDigest": "sha256:b03c12579a187a76ca341e54adf1e0ce35fe90edcbbf7ba0d0c0bc5fbd802e99",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Ai fost făcut viu când ai fost mort în fărădelegi și păcate,"
+      "text": "Și voi erați morți în greșelile și păcatele voastre,"
     },
     {
       "number": 2,
-      "text": "în care ați umblat odinioară după mersul lumii acesteia, după prințul puterii văzduhului, duhul care lucrează acum în copiii neascultării."
+      "text": "în care ați umblat odinioară, potrivit mersului lumii acesteia, potrivit conducătorului puterii văzduhului, adică al duhului care lucrează acum în fiii neascultării."
     },
     {
       "number": 3,
-      "text": "Toți am trăit odată printre ei în poftele cărnii noastre, împlinind dorințele cărnii și ale minții, și eram, prin natura lor, copii ai mâniei, ca și ceilalți."
+      "text": "Între aceștia am trăit și noi toți odinioară, în poftele firii noastre pământești, făcând voile firii și ale gândurilor, și eram prin fire copii ai mâniei, ca și ceilalți."
     },
     {
       "number": 4,
-      "text": "Dar Dumnezeu, fiind bogat în îndurare, pentru marea sa dragoste cu care ne-a iubit,"
+      "text": "Dar Dumnezeu, fiind bogat în îndurare, datorită marii iubiri cu care ne-a iubit,"
     },
     {
       "number": 5,
-      "text": "chiar atunci când eram morți prinle noastre, făcându-ne vii împreună cu Hristos — prin har ați fost mântuiți —"
+      "text": "chiar când eram morți prin greșelile noastre, ne-a făcut vii împreună cu Hristos — prin har sunteți mântuiți —"
     },
     {
       "number": 6,
-      "text": "și ne-a sculat împreună cu El, și ne-a pus să stăm cu El în locurile cerești, în Hristos Isus,"
+      "text": "și ne-a înviat împreună și ne-a așezat împreună în cele cerești, în Hristos Isus,"
     },
     {
       "number": 7,
-      "text": "pentruca, Ón veacurile viitoare, să arate bogățiile prea mari ale harului Său Ón bunătate față de noi, Ón Hristos Isus;"
+      "text": "ca, în veacurile viitoare, să arate bogăția covârșitoare a harului Său, prin bunătatea Sa față de noi în Hristos Isus."
     },
     {
       "number": 8,
-      "text": "Căci prin har ați fost mântuiți prin credință, și nu prin voi înșivă; este darul lui Dumnezeu,"
+      "text": "Căci prin har sunteți mântuiți, prin credință; iar faptul că sunteți mântuiți nu vine de la voi, ci este darul lui Dumnezeu;"
     },
     {
       "number": 9,
-      "text": "nu de lucrări, ca nimeni să nu se laude."
+      "text": "nu din fapte, ca să nu se laude nimeni."
     },
     {
       "number": 10,
-      "text": "Căci noi suntem lucrarea Lui, creați în Hristos Isus pentru fapte bune, pe care Dumnezeu le-a pregătit înainte ca noi să umblăm în ele."
+      "text": "Căci noi suntem lucrarea Lui, creați în Hristos Isus pentru fapte bune, pe care Dumnezeu le-a pregătit mai dinainte ca să umblăm în ele."
     },
     {
       "number": 11,
-      "text": "De aceea,-vă că, odată ce voi, Neamurile în trup, care numitenecircumcizie„ prin ceea ce secircumcizie” (în trup, făcute de mâini),"
+      "text": "De aceea, aduceți-vă aminte că odinioară voi, care după trup aparțineți neamurilor, erați numiți „necircumcizie” de cei ce poartă numele de „circumcizie”, făcută în trup de mâini omenești,"
     },
     {
       "number": 12,
-      "text": "Că în vremea aceea erați despărțiți de Hristos, înstrăin de oba lui Israel străini de legămintele făgăduinței, neavând nici o nădejde fără Dumnezeu în lume."
+      "text": "că în vremea aceea erați fără Hristos, înstrăinați de cetățenia lui Israel și străini de legămintele promisiunii, fără nădejde și fără Dumnezeu în lume."
     },
     {
       "number": 13,
-      "text": "Dar acum, în Hristos Isus, voi, care odinioară erați departe, făcuți aproape în sângele lui Hristos."
+      "text": "Dar acum, în Hristos Isus, voi, care odinioară erați departe, ați fost aduși aproape prin sângele lui Hristos."
     },
     {
       "number": 14,
-      "text": "Căci El este pacea noastră, care a făcut pe unul și a dărâmat zidul de mijloc al despărțirii,"
+      "text": "Căci El este pacea noastră: El i-a făcut pe cei doi una și a dărâmat zidul despărțitor, dușmănia, în trupul Său,"
     },
     {
       "number": 15,
-      "text": "după ce a desființat în trupul său ostilitatea, legea poruncilor cuprinsă în rânduieli, ca să poată crea în sine un om nou dintre cei doi, făcând pace,"
+      "text": "desființând legea poruncilor în rânduieli, ca să-i creeze în Sine pe cei doi într-un singur om nou, făcând pace,"
     },
     {
       "number": 16,
-      "text": "și le-ar putea împăca pe amândouă într-un singur trup cu Dumnezeu prin cruce, după ce ar fi ucis ostilitatea prin ea."
+      "text": "și să-i împace pe amândoi cu Dumnezeu într-un singur trup, prin cruce, omorând prin ea dușmănia."
     },
     {
       "number": 17,
-      "text": "El a venit și v-a propovăduit pacea, care era departe și celor apropiați."
+      "text": "El a venit și a vestit pace vouă, celor de departe, și pace celor de aproape;"
     },
     {
       "number": 18,
-      "text": "Căci prin El avem amândoi acces într-un singur Duh la Tatăl."
+      "text": "căci prin El avem amândoi acces, într-un singur Duh, la Tatăl."
     },
     {
       "number": 19,
-      "text": "Deci, atunci nu mai sunteți străini și străini, ci sunteți concetățeni cu sfinții și cu casa lui Dumnezeu,"
+      "text": "Așadar, nu mai sunteți străini și locuitori vremelnici, ci sunteți împreună-cetățeni cu sfinții și membri ai casei lui Dumnezeu,"
     },
     {
       "number": 20,
-      "text": "fiind zidit pe temelia apostolilor și a proorocilor, Hristos Isus însuși fiind piatra de temelie principală;"
+      "text": "fiind zidiți pe temelia apostolilor și a profeților, Hristos Isus Însuși fiind piatra din capul unghiului."
     },
     {
       "number": 21,
-      "text": "în care toată clădirea, asamblată împreună, crește într-un templu sfânt în Domnul;"
+      "text": "În El, întreaga clădire, bine închegată, crește spre a deveni un templu sfânt în Domnul."
     },
     {
       "number": 22,
-      "text": "în care și voi sunteți zidiți împreună pentru o locuință a lui Dumnezeu în Duhul."
+      "text": "În El și voi sunteți zidiți împreună, ca să fiți o locuință a lui Dumnezeu prin Duhul."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "Și voi erați morți în greșelile și păcatele voastre,",
+      "alternatives": [
+        "2:1 ὑμῶν WH Treg NA28 ] – RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 3,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "Între aceștia am trăit și noi toți odinioară, în poftele firii noastre pământești, făcând voile firii și ale gândurilor, și eram prin fire copii ai mâniei, ca și ceilalți.",
+      "alternatives": [
+        "3 ἤμεθα WH Treg NA28 ] ἦμεν RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 7,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "ca, în veacurile viitoare, să arate bogăția covârșitoare a harului Său, prin bunătatea Sa față de noi în Hristos Isus.",
+      "alternatives": [
+        "7 τὸ ὑπερβάλλον πλοῦτος WH Treg NA28 ] τὸν ὑπερβάλλοντα πλοῦτον RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 8,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "Căci prin har sunteți mântuiți, prin credință; și aceasta nu vine de la voi, ci este darul lui Dumnezeu;",
+      "alternatives": [
+        "8 διὰ WH Treg NA28 ] + τῆς RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 11,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "De aceea, aduceți-vă aminte că odinioară voi, neamurile în trup, erați numiți „necircumcizie” de către cei numiți „circumcizie”, făcută în trup de mâini,",
+      "alternatives": [
+        "11 ποτὲ ὑμεῖς WH Treg NA28 ] ὑμεῖς ποτὲ RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 12,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "că în vremea aceea erați fără Hristos, înstrăinați de cetățenia lui Israel și străini de legămintele promisiunii, fără nădejde și fără Dumnezeu în lume.",
+      "alternatives": [
+        "12 ἦτε WH Treg NA28 ] + ἐν RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 13,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "Dar acum, în Hristos Isus, voi, care odinioară erați departe, ați fost aduși aproape prin sângele lui Hristos.",
+      "alternatives": [
+        "13 ἐγενήθητε ἐγγὺς WH Treg NA28 ] ἐγγὺς ἐγενήθητε RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 15,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "desființând legea poruncilor în rânduieli, ca să-i creeze în Sine pe cei doi într-un singur om nou, făcând pace,",
+      "alternatives": [
+        "15 αὑτῷ WH ] αὐτῷ Treg NA28; ἑαυτῷ NIV RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 17,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "El a venit și a vestit pace vouă, celor de departe, și pace celor de aproape;",
+      "alternatives": [
+        "17 εἰρήνην WH Treg NA28 ] – RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 19,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "Așadar, nu mai sunteți străini și locuitori vremelnici, ci sunteți împreună-cetățeni cu sfinții și membri ai casei lui Dumnezeu,",
+      "alternatives": [
+        "19 ἐστὲ WH Treg NA28 ] – RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 20,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "fiind zidiți pe temelia apostolilor și a profeților, Hristos Isus Însuși fiind piatra din capul unghiului.",
+      "alternatives": [
+        "20 Χριστοῦ Ἰησοῦ WH Treg NA28 ] Ἰησοῦ Χριστοῦ RP"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 21,
+      "term": "variantă textuală consemnată în aparat",
+      "decision": "În El, întreaga clădire, bine închegată, crește ca un templu sfânt în Domnul.",
+      "alternatives": [
+        "21 πᾶσα WH Treg RP NA28 ] + ἡ NIV"
+      ],
+      "reason": "Textul românesc urmează lectura principală SBLGNT; aparatul și martorul TR au fost verificați înaintea deciziei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Lectura principală SBLGNT a fost păstrată, fără importarea automată a lecturii RP/TR."
+    },
+    {
+      "verse": 2,
+      "term": "revizie finală: τοῦ πνεύματος τοῦ νῦν ἐνεργοῦντος",
+      "decision": "în care ați umblat odinioară, potrivit mersului lumii acesteia, potrivit conducătorului puterii văzduhului, adică al duhului care lucrează acum în fiii neascultării.",
+      "reason": "Deși τοῦ πνεύματος τοῦ νῦν ἐνεργοῦντος descrie duhul aflat în activitate, duhul care lucrează acum îl prezintă impropriu ca apoziție nominativă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 8,
+      "term": "revizie finală: καὶ τοῦτο οὐκ ἐξ ὑμῶν",
+      "decision": "Căci prin har sunteți mântuiți, prin credință; iar faptul că sunteți mântuiți nu vine de la voi, ci este darul lui Dumnezeu;",
+      "reason": "Față de reluarea globală realizată prin καὶ τοῦτο οὐκ ἐξ ὑμῶν, secvența și aceasta nu vine de la voi creează o referință românească ambiguă către „credință”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 11,
+      "term": "revizie finală: τὰ ἔθνη ἐν σαρκί",
+      "decision": "De aceea, aduceți-vă aminte că odinioară voi, care după trup aparțineți neamurilor, erați numiți „necircumcizie” de cei ce poartă numele de „circumcizie”, făcută în trup de mâini omenești,",
+      "reason": "Sensul personal și circumstanțial din τὰ ἔθνη ἐν σαρκί nu este comunicat natural de voi, neamurile în trup, care poate sugera popoare aflate fizic într-un trup.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 21,
+      "term": "revizie finală: αὔξει εἰς ναὸν ἅγιον",
+      "decision": "În El, întreaga clădire, bine închegată, crește spre a deveni un templu sfânt în Domnul.",
+      "reason": "Ținta transformatoare din αὔξει εἰς ναὸν ἅγιον nu este redată fără echivoc de crește ca un templu sfânt, deoarece „ca” poate introduce asemănarea.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

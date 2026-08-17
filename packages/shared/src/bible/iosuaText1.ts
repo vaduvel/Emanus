@@ -1,0 +1,22 @@
+export const IOSUA_TEXT_1: Record<number, readonly string[]> = {
+  1: [
+    "După moartea lui Moise, slujitorul DOMNULUI, DOMNUL i-a vorbit lui Iosua, fiul lui Nun, slujitorul lui Moise, spunând:",
+    "„Moise, slujitorul Meu, a murit. Acum ridică-te, treci Iordanul acesta, tu și tot poporul acesta, spre țara pe care le-o dau fiilor lui Israel.",
+    "V-am dat orice loc pe care-l va călca talpa piciorului vostru, așa cum i-am spus lui Moise.",
+    "Hotarul vostru va fi de la pustie și Libanul acesta până la râul cel mare, râul Eufrat, cuprinzând toată țara hitiților, și până la Marea cea Mare, spre apus.",
+    "Nimeni nu va putea să stea înaintea ta în toate zilele vieții tale. Cum am fost cu Moise, așa voi fi și cu tine. Nu te voi lăsa și nu te voi părăsi.",
+    "Fii tare și curajos, căci tu vei da acestui popor ca moștenire țara pe care am jurat părinților lor că le-o voi da.",
+    "Numai fii tare și foarte curajos, având grijă să împlinești toată Legea pe care ți-a poruncit-o Moise, slujitorul Meu. Nu te abate de la ea nici la dreapta, nici la stânga, ca să lucrezi cu înțelepciune oriunde vei merge.",
+    "Cartea aceasta a Legii să nu se depărteze de gura ta. Cugetă la ea zi și noapte, ca să ai grijă să împlinești tot ce este scris în ea; atunci îți vei duce calea la bun sfârșit și vei lucra cu înțelepciune.",
+    "Nu ți-am poruncit Eu? Fii tare și curajos! Nu te înspăimânta și nu te descuraja, căci DOMNUL, Dumnezeul tău, este cu tine oriunde vei merge.”",
+    "Iosua le-a poruncit conducătorilor poporului:",
+    "„Treceți prin tabără și porunciți poporului: «Pregătiți-vă provizii, căci peste trei zile veți trece Iordanul acesta, ca să intrați și să luați în stăpânire țara pe care DOMNUL, Dumnezeul vostru, v-o dă s-o stăpâniți.»”",
+    "Iar rubeniților, gadiților și jumătății seminției lui Manase, Iosua le-a spus:",
+    "„Aduceți-vă aminte de cuvântul pe care vi l-a poruncit Moise, slujitorul DOMNULUI: «DOMNUL, Dumnezeul vostru, vă dă odihnă și vă dă țara aceasta.",
+    "Soțiile, copiii și turmele voastre să rămână în țara pe care v-a dat-o Moise dincolo de Iordan. Dar voi, toți războinicii viteji, să treceți înarmați înaintea fraților voștri și să-i ajutați,",
+    "până când DOMNUL le va da odihnă fraților voștri, ca și vouă, și vor lua și ei în stăpânire țara pe care DOMNUL, Dumnezeul vostru, le-o dă. Apoi vă veți întoarce în țara moștenirii voastre și o veți stăpâni, țara pe care v-a dat-o Moise, slujitorul DOMNULUI, dincolo de Iordan, spre răsărit.»”",
+    "Ei i-au răspuns lui Iosua: „Vom face tot ce ne-ai poruncit și vom merge oriunde ne vei trimite.",
+    "Te vom asculta în toate, așa cum l-am ascultat pe Moise. Numai DOMNUL, Dumnezeul tău, să fie cu tine, așa cum a fost cu Moise.",
+    "Oricine se va răzvrăti împotriva poruncii tale și nu va asculta cuvintele tale în tot ce-i vei porunci va fi omorât. Numai fii tare și curajos!”",
+  ],
+}

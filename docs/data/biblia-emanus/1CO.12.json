@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparatul său; Textus Receptus a fost consultat numai ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 31,
       "reviewed": 31,
@@ -98,14 +96,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 31 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 31 de versete din 1CO.12 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost reparate formulările calchiate, acordurile și termenii anatomici care slăbeau unitatea metaforei trupului.",
+        "Sunt păstrate distribuirea darurilor, persoanele, numărul și echilibrul dintre unitatea trupului și diversitatea mădularelor.",
+        "Lectura principală SBLGNT este urmată fără importarea automată a lecturilor Textus Receptus."
       ]
     },
     "theologicalContext": {
@@ -123,33 +121,28 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 709,
-        "primary": 137,
-        "secondary": 24,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.41000612643816675,
-      "minimumScore": 0.5818865265537531
-    },
-    "textDigest": "sha256:de805010bb7103fcac79a8fd9abb2d8d17d6eefa058f20a519c1679a575118f9",
-    "contentDigest": "sha256:67340b51a9c70b1a55c30191a9284c1009ebfa15a684e60732be5d301a82601d"
+    "textDigest": "sha256:ba543ee76b717c281cf59dbcf20f4b56d6527f22bdb61965e566c55996aa439c",
+    "contentDigest": "sha256:ec919ede2f30b93927d1517b02932c3efc5524b704f84646222365db43e6d642",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Cu privire la cele spirituale, fraților, nu vreau să fiți în necunoștință."
+      "text": "Cu privire la cele spirituale, fraților, nu vreau să rămâneți neștiutori."
     },
     {
       "number": 2,
-      "text": "Știți că, atunci când erați dintre neamuri, erați duși la idolii muți, așa cum erați conduși."
+      "text": "Știți că, atunci când erați păgâni, erați atrași spre idolii muți, așa cum erați conduși."
     },
     {
       "number": 3,
@@ -161,7 +154,7 @@
     },
     {
       "number": 5,
-      "text": "Există diferite feluri de serviciu, și același Domn."
+      "text": "Sunt felurite slujiri, dar același Domn."
     },
     {
       "number": 6,
@@ -169,7 +162,7 @@
     },
     {
       "number": 7,
-      "text": "Dar fiecăruia i se dă manifestarea Duhului pentru binele tuturor."
+      "text": "Dar fiecăruia i se dă manifestarea Duhului pentru folosul comun."
     },
     {
       "number": 8,
@@ -177,11 +170,11 @@
     },
     {
       "number": 9,
-      "text": "altuia credință, în același Duh; iar altuia daruri de vindecări, în singurul Duh,"
+      "text": "altuia credință, în același Duh, iar altuia daruri de vindecări, într-un singur Duh,"
     },
     {
       "number": 10,
-      "text": "altuia lucrări de puteri, altuia profeție, altuia deosebirea duhurilor, altuia felurite limbi, iar altuia interpretarea limbilor."
+      "text": "altuia înfăptuiri de minuni, altuia profeție, altuia discernerea duhurilor, altuia feluri de limbi, iar altuia interpretarea limbilor."
     },
     {
       "number": 11,
@@ -193,15 +186,15 @@
     },
     {
       "number": 13,
-      "text": "Fiindcă toți am fost botezați într-un singur Duh într-un singur trup, fie iudei, fie greci, fie robi, fie liberi, și tuturor ni s-a dat să bem dintr-un singur Duh."
+      "text": "Căci, printr-un singur Duh, noi toți am fost botezați într-un singur trup, fie iudei, fie greci, fie robi, fie liberi; și tuturor ni s-a dat să bem dintr-un singur Duh."
     },
     {
       "number": 14,
-      "text": "Căci trupul nu este un singur membru, ci mai multe."
+      "text": "Căci trupul nu este un singur mădular, ci mai multe."
     },
     {
       "number": 15,
-      "text": "Dacă piciorul ar zice: „Fiindcă nu sunt mână, nu sunt din trup”, nu de aceea nu este din trup."
+      "text": "Dacă piciorul ar zice: „Fiindcă nu sunt mână, nu sunt din trup”, oare din această cauză nu mai face el parte din trup?"
     },
     {
       "number": 16,
@@ -221,7 +214,7 @@
     },
     {
       "number": 20,
-      "text": "Dar acum sunt mai multe membre, dar un singur corp."
+      "text": "Dar acum sunt multe mădulare, dar un singur trup."
     },
     {
       "number": 21,
@@ -237,7 +230,7 @@
     },
     {
       "number": 24,
-      "text": "Pe când părțile noastre cuviincioase n-au nevoie. Dar Dumnezeu a întocmit trupul, dând mai multă onoare părții lipssite de ea,"
+      "text": "Dar părțile noastre cuviincioase nu au nevoie de aceasta. Însă Dumnezeu a alcătuit trupul, dând mai multă onoare părții lipsite de ea,"
     },
     {
       "number": 25,
@@ -245,7 +238,7 @@
     },
     {
       "number": 26,
-      "text": "Când un membru suferă, toți membrii suferă împreună cu el. Când un membru este onorat, toți membrii se bucură împreună cu el."
+      "text": "Dacă un mădular suferă, toate mădularele suferă împreună cu el; dacă un mădular este onorat, toate mădularele se bucură împreună cu el."
     },
     {
       "number": 27,
@@ -253,11 +246,11 @@
     },
     {
       "number": 28,
-      "text": "Și Dumnezeu a pus în biserică mai întâi apostoli, al doilea profeți, al treilea învățători, apoi puteri, apoi daruri de vindecări, ajutorări, cârmuiri, felurite limbi."
+      "text": "Și Dumnezeu i-a așezat pe unii în biserică: mai întâi apostoli, în al doilea rând profeți, în al treilea rând învățători, apoi lucrări miraculoase, apoi daruri de vindecare, ajutorări, conduceri și feluri de limbi."
     },
     {
       "number": 29,
-      "text": "Oare toți sunt apostoli? Oare toți sunt profeți? Oare toți sunt învățători? Oare toți fac puteri?"
+      "text": "Oare toți sunt apostoli? Oare toți sunt profeți? Oare toți sunt învățători? Oare toți săvârșesc lucrări miraculoase?"
     },
     {
       "number": 30,
@@ -265,10 +258,110 @@
     },
     {
       "number": 31,
-      "text": "Dar doresc cu sinceritate cele mai bune daruri. Mai mult decât atât, vă arăt o cale excelentă pentru tine."
+      "text": "Dar râvniți la darurile mai mari. Și vă mai arăt o cale cu totul neasemuită."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "τῶν πνευματικῶν",
+      "decision": "Este redat „cele spirituale”.",
+      "reason": "Termenul plural poate desemna lucruri sau daruri spirituale; traducerea nu restrânge înainte de context sensul expresiei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Contextul versetelor următoare explică diversitatea darurilor fără a modifica formularea inițială."
+    },
+    {
+      "verse": 13,
+      "term": "ἐν ἑνὶ πνεύματι",
+      "decision": "Este redat „printr-un singur Duh”.",
+      "reason": "Construcția instrumentală exprimă mijlocul botezului în același trup; expresia finală despre băut păstrează „dintr-un singur Duh”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sunt păstrate distinct ambele ocurențe ale Duhului și rolurile lor sintactice."
+    },
+    {
+      "verse": 31,
+      "term": "ζηλοῦτε ... μείζονα",
+      "decision": "Este redat ca îndemn: „doriți cu râvnă darurile mai mari”.",
+      "reason": "Forma poate fi citită indicativ sau imperativ; contextul exhortativ și continuarea cu „vă arăt” justifică redarea imperativă fără certitudini suplimentare.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Ambiguitatea de mod este consemnată, iar traducerea rămâne naturală în română."
+    },
+    {
+      "verse": 9,
+      "term": "revizie finală: ἑνὶ πνεύματι",
+      "decision": "altuia credință, în același Duh, iar altuia daruri de vindecări, într-un singur Duh,",
+      "reason": "Redarea numeralului εἷς prin „singurul” schimbă accentul de la unitatea aceluiași Duh la afirmația că acesta este singurul Duh existent. Sintagma ἑνὶ πνεύματι cere ideea de unitate, pe când în singurul Duh deplasează accentul spre unicitate exclusivă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 10,
+      "term": "revizie finală: ἐνεργήματα δυνάμεων",
+      "decision": "altuia înfăptuiri de minuni, altuia profeție, altuia discernerea duhurilor, altuia feluri de limbi, iar altuia interpretarea limbilor.",
+      "reason": "„Lucrări de puteri” este neidiomatic și nu transmite clar sensul contextual al unor manifestări sau înfăptuiri miraculoase. Conținutul lui ἐνεργήματα δυνάμεων rămâne obscur în lucrări de puteri, deoarece formularea românească nu identifică natural manifestările puternice vizate.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 15,
+      "term": "revizie finală: οὐ παρὰ τοῦτο οὐκ ἔστιν ἐκ τοῦ σώματος",
+      "decision": "Dacă piciorul ar zice: „Fiindcă nu sunt mână, nu sunt din trup”, oare din cauza aceasta nu este el din trup?",
+      "reason": "Punctul final transformă întrebarea retorică marcată în textul grec într-o afirmație, modificând forma argumentului paulin. Deși οὐ παρὰ τοῦτο οὐκ ἔστιν ἐκ τοῦ σώματος și nu de aceea nu este din trup. au un conținut propozițional apropiat, ținta schimbă întrebarea retorică într-o declarație.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 28,
+      "term": "revizie finală: ἔπειτα δυνάμεις",
+      "decision": "Și Dumnezeu a așezat în biserică mai întâi apostoli, în al doilea rând profeți, în al treilea rând învățători, apoi lucrări miraculoase, apoi daruri de vindecare, ajutorări, conduceri și feluri de limbi.",
+      "reason": "„Puteri” redă prea generic și nefiresc substantivul δυνάμεις, care în această enumerare se referă la manifestări sau lucrări miraculoase. Redarea lui ἔπειτα δυνάμεις prin apoi puteri slăbește sensul contextual, deoarece substantivul românesc poate sugera capacități sau autorități nedeterminate.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 29,
+      "term": "revizie finală: μὴ πάντες δυνάμεις",
+      "decision": "Oare toți sunt apostoli? Oare toți sunt profeți? Oare toți sunt învățători? Oare toți săvârșesc lucrări miraculoase?",
+      "reason": "Sintagma „fac puteri” este românește improprie și nu transmite limpede sensul contextual al lui δυνάμεις, anume săvârșirea unor lucrări miraculoase. Construcția μὴ πάντες δυνάμεις nu este comunicată limpede prin Oare toți fac puteri?, deoarece sensul contextual privește săvârșirea de lucrări miraculoase.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 31,
+      "term": "revizie finală: καθʼ ὑπερβολὴν ὁδὸν",
+      "decision": "Dar râvniți la darurile mai mari. Și vă mai arăt o cale cu totul neasemuită.",
+      "reason": "Pronumele „le” și expresia „pe toate” adaugă o comparație explicită între cale și daruri, în timp ce greaca descrie calea însăși ca neasemuită sau extraordinară. Redarea lui καθʼ ὑπερβολὴν ὁδὸν prin o cale care le întrece pe toate schimbă calificarea intensă a căii într-o comparație sintactică absentă din greacă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 15,
+      "term": "revizie finală: οὐ παρὰ τοῦτο οὐκ ἔστιν",
+      "decision": "Dacă piciorul ar zice: „Fiindcă nu sunt mână, nu sunt din trup”, oare din această cauză nu mai face el parte din trup?",
+      "reason": "Construcția românească reduce dubla negație argumentativă la o întrebare negativă ambiguă și poate sugera că piciorul tocmai din această cauză aparține trupului, în loc să respingă excluderea lui. Raportul dintre οὐ παρὰ τοῦτο οὐκ ἔστιν și oare din cauza aceasta nu este el devine ambiguu, deoarece româna nu mai exprimă limpede negarea concluziei negative.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 28,
+      "term": "revizie finală: οὓς μὲν ἔθετο ὁ θεὸς",
+      "decision": "Și Dumnezeu i-a așezat pe unii în biserică: mai întâi apostoli, în al doilea rând profeți, în al treilea rând învățători, apoi lucrări miraculoase, apoi daruri de vindecare, ajutorări, conduceri și feluri de limbi.",
+      "reason": "A fost omis pronumele οὓς împreună cu valoarea distributivă dată de μὲν, astfel încât textul nu mai spune explicit că Dumnezeu i-a așezat pe unii în biserică. Față de οὓς μὲν ἔθετο ὁ θεὸς, expresia Dumnezeu a așezat în biserică pierde referirea explicită la persoanele selectate pentru rolurile enumerate.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

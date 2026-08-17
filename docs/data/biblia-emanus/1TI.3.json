@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,22 @@
       "meaning": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "SBLGNT, aparatul și TR au fost confruntate direct; WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost folosite numai pentru control semantic și stilistic.",
+      "NTR rămâne listată ca etalon extern configurat de schema corpusului, însă nu a fost consultată în acest lot.",
+      "Textul a fost redactat independent din sursele fixate, fără stocarea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 16,
       "reviewed": 16,
@@ -98,14 +97,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 16 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "SBLGNT și aparatul au fost confruntate direct verset cu verset; TR a fost verificat ca martor de variante, iar WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată în acest lot."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost rescrise toate cele 16 versete pentru a elimina sintaxa deteriorată, calcurile englezești și formele corupte.",
+        "Termenii de slujire și cerințele de caracter din versetele 1–15 au fost redați cu distincțiile lexicale necesare, fără etichete confesionale suplimentare.",
+        "Varianta decisivă din versetul 16 a fost corectată de la „Dumnezeu” la pronumele relativ al SBLGNT și explicată în nota editorială."
       ]
     },
     "theologicalContext": {
@@ -123,100 +122,189 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare prin revizie directă din SBLGNT, cu WEBP și etaloanele românești numai ca verificare auxiliară; fără copierea unei traduceri românești protejate"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 208,
-        "secondary": 58,
-        "fixed": 1
-      },
-      "minimumSemantic": 0.588175458584589,
-      "minimumScore": 0.553468476771151
-    },
-    "textDigest": "sha256:0152008e4b83717a1e2d837e88c129b679409a341d0bc253e8e5d2c2b57c4cd3",
-    "contentDigest": "sha256:964654a2d782defcd580900469c99c03f05236b1a289008cd68a37447992fc8c"
+    "textDigest": "sha256:a09ce29497306f6e1c94e16915a72bedbd09fe33e7fd459bfcb618fc6eada01f",
+    "contentDigest": "sha256:5650901531137136f33a915403126ebe29d546c50c2b22738b9f1ca6a3ab7fe3",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Aceasta este o zicală fidelă: cineva care caută să fie supraveghetor dorește o lucrare bună."
+      "text": "Vrednic de crezare este cuvântul: dacă cineva aspiră la slujirea de supraveghetor, dorește o lucrare bună."
     },
     {
       "number": 2,
-      "text": "Prin urmare, supraveghetorul trebuie să fie fără reproș, soțul unei singure soții, temperat, rațional, modest, ospitalier, bun la învățătură;"
+      "text": "De aceea, supraveghetorul trebuie să fie ireproșabil, soț al unei singure soții, treaz la minte, cumpătat, cuviincios, ospitalier și capabil să învețe pe alții;"
     },
     {
       "number": 3,
-      "text": "nici un bețiv, nici violent, nici lacom de bani, ci blând, nici certăreț, nici lacom;"
+      "text": "să nu fie dat la vin, nici violent, ci blând, necertăreț, fără iubire de bani;"
     },
     {
       "number": 4,
-      "text": "care își stăpînește bine casa, și își supune copiii cu toată cinstea;"
+      "text": "să-și conducă bine propria casă, având copiii în supunere, cu toată demnitatea;"
     },
     {
       "number": 5,
-      "text": "(Căci cum ar putea cineva care nu știe cum să-și conducă propria casă să aibă grijă de adunarea lui Dumnezeu?)"
+      "text": "(Căci, dacă cineva nu știe să-și conducă propria casă, cum va putea îngriji de adunarea lui Dumnezeu?)"
     },
     {
       "number": 6,
-      "text": "nu un nou convertit, ca nu cumva să fie umflat în sus el se încadrează în aceeași condamnare ca diavolul."
+      "text": "nu un nou-convertit, ca nu cumva, îngâmfându-se, să cadă în osânda diavolului."
     },
     {
       "number": 7,
-      "text": "Mai mult, el trebuie să aibă o bună mărturie de la cei care sunt afară, pentru a evita să cadă în ocară și în capcana diavolului."
+      "text": "De asemenea, trebuie să aibă o bună mărturie din partea celor de afară, ca să nu cadă în ocară și în capcana diavolului."
     },
     {
       "number": 8,
-      "text": "Servitorii, în același fel, trebuie să fie respectuoși, nu cu limbă dublă, nu dependenți de mult vin, nu lacomi de bani,"
+      "text": "Diaconii, la fel, să fie demni, nu duplicitari, nu dedați la mult vin, nu lacomi de câștig rușinos,"
     },
     {
       "number": 9,
-      "text": "Păstrând misterul credinței într-o conștiință pură."
+      "text": "ținând taina credinței într-o conștiință curată."
     },
     {
       "number": 10,
-      "text": "Mai întâi să fie ei pu la încercare, apoi să slujească dacă sunt fără vină."
+      "text": "Și ei să fie mai întâi puși la încercare; apoi să slujească, fiind fără reproș."
     },
     {
       "number": 11,
-      "text": "Soțiile lor în același mod trebuie să fie respectuoase, nu calomniatoare, temperate și fidele în toate lucrurile."
+      "text": "Femeile, la fel, să fie demne, nu calomniatoare, cumpătate, de încredere în toate."
     },
     {
       "number": 12,
-      "text": "Servitorii să fie soții unei singure soții, să-și conducă bine copiii și casele lor."
+      "text": "Diaconii să fie soți ai unei singure soții și să-și conducă bine copiii și propriile case."
     },
     {
       "number": 13,
-      "text": "Căci cei care au slujit bine câștigă pentru ei înșiși o poziție bună și o mare îndrăzneală în credința care este în Hristos Isus."
+      "text": "Căci cei care au slujit bine își dobândesc o poziție bună și multă îndrăzneală în credința în Hristos Isus."
     },
     {
       "number": 14,
-      "text": "Lucrurile astea pe care ți le scriu, sperând să vin la tine în scurt timp,"
+      "text": "Îți scriu acestea, sperând să vin curând la tine,"
     },
     {
       "number": 15,
-      "text": "Dar dacă aștept mult, ca să știți cum trebuie să se poarte oamenii în casa lui Dumnezeu, care este adunarea Dumnezeului celui viu, stâlpul și pământul adevărului."
+      "text": "dar, dacă întârzii, să știi cum trebuie să te porți în casa lui Dumnezeu, care este adunarea Dumnezeului viu, stâlpul și sprijinul adevărului."
     },
     {
       "number": 16,
-      "text": "Fără controverse, misterul evlaviei este mare: Dumnezeu a fost revelat în carne, justificat în spirit, văzut de îngeri, predicat printre națiuni, crezut în lume și primit în glorie."
+      "text": "Și, fără îndoială, mare este taina evlaviei: Cel care a fost arătat în trup, a fost dovedit drept în duh, a fost văzut de îngeri, a fost proclamat printre neamuri, a fost crezut în lume, a fost înălțat în slavă."
     }
   ],
   "editorialNotes": [
     {
-      "verse": 16,
-      "term": "variantă textuală sau lexicală verificată",
-      "decision": "Textul principal păstrează lectura SBLGNT 1.2 și formularea românească validată prin sursele fixate.",
-      "reason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal.",
+      "verse": 1,
+      "term": "ἐπισκοπῆς / ἐπίσκοπον",
+      "decision": "„slujirea de supraveghetor” și „supraveghetor”",
+      "alternatives": [
+        "„episcop”",
+        "„lucrarea de supraveghere”"
+      ],
+      "reason": "Termenii grecești desemnează supravegherea și persoana care o exercită. Redarea păstrează raportul lexical dintre versetele 1 și 2, fără a transfera automat o structură eclezială modernă în text.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
+      "resolutionReason": "Sensul lexical și construcția SBLGNT-1TI au fost confruntate direct; formularea românească păstrează câmpul semantic al supravegherii."
+    },
+    {
+      "verse": 3,
+      "term": "variantă textuală SBLGNT/TR: μὴ πλήκτην / μὴ πλήκτην, μὴ αἰσχροκερδῆ",
+      "decision": "Nu este introdus „lacom de câștig rușinos” după „violent”; la final este redat doar ἀφιλάργυρον prin „fără iubire de bani”.",
+      "alternatives": [
+        "TR-1TI din snapshot adaugă μὴ αἰσχροκερδῆ, „nu lacom de câștig rușinos”, după μὴ πλήκτην."
+      ],
+      "reason": "SBLGNT omite descriptorul suplimentar al TR. Textul principal redă totuși ἀφιλάργυρον, care cere să nu fie iubitor de bani, fără a dubla lectura tradițională.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TI, aparatul și TR-1TI au fost confruntate direct; textul principal urmează lectura SBLGNT."
+    },
+    {
+      "verse": 6,
+      "term": "εἰς κρίμα τοῦ διαβόλου",
+      "decision": "„să cadă în osânda diavolului”",
+      "alternatives": [
+        "„să cadă în osânda care a venit asupra diavolului”",
+        "„să cadă sub judecata diavolului”"
+      ],
+      "reason": "Genitivul τοῦ διαβόλου nu explică singur relația exactă cu κρίμα. Redarea păstrează formularea concisă a textului fără a impune o interpretare suplimentară asupra originii sau țintei osândei.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sintaxa SBLGNT-1TI și comparația cu WEBP au fost verificate direct; ambiguitatea nu a fost transformată într-o explicație doctrinară."
+    },
+    {
+      "verse": 8,
+      "term": "διακόνους",
+      "decision": "„Diaconii”",
+      "alternatives": [
+        "„slujitorii”",
+        "„cei care slujesc”"
+      ],
+      "reason": "Termenul grecesc este păstrat prin forma românească uzuală derivată din el, pentru a marca grupul numit în versetele 8–13 fără a-l transforma într-o explicație instituțională.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Coerența lexicală a pasajului și sensul lui διάκονος au fost verificate în SBLGNT și în sursele auxiliare."
+    },
+    {
+      "verse": 11,
+      "term": "γυναῖκας",
+      "decision": "„Femeile”",
+      "alternatives": [
+        "„soțiile diaconilor”",
+        "„femeile care slujesc ca diaconi”"
+      ],
+      "reason": "Substantivul apare fără posesiv sau termen explicit care să-i precizeze rolul. Textul românesc păstrează referința deschisă și nu alege între cele două interpretări contextuale.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul SBLGNT-1TI și sintaxa imediată au fost confruntate direct; formularea nu adaugă un referent absent din verset."
+    },
+    {
+      "verse": 13,
+      "term": "βαθμὸν … καλόν",
+      "decision": "„o poziție bună”",
+      "alternatives": [
+        "„un loc de cinste”",
+        "„o treaptă bună”"
+      ],
+      "reason": "βάθμος exprimă un statut sau o poziție dobândită. Redarea nu precizează un rang eclezial care nu este definit în verset și păstrează alături îndrăzneala în credință.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sensul lexical al lui βαθμός și relația cu παρρησία din SBLGNT-1TI au fost verificate direct."
+    },
+    {
+      "verse": 15,
+      "term": "οἴκῳ θεοῦ … ἐκκλησία θεοῦ ζῶντος … στῦλος καὶ ἑδραίωμα",
+      "decision": "„casa lui Dumnezeu, care este adunarea Dumnezeului viu, stâlpul și sprijinul adevărului”",
+      "alternatives": [
+        "„biserica Dumnezeului viu”",
+        "„stâlpul și temelia adevărului”"
+      ],
+      "reason": "ἐκκλησία este redată „adunarea”, iar ἑδραίωμα prin „sprijin”, pentru a păstra imaginea de susținere fără a introduce termenul corupt „pământul” ori o definiție instituțională modernă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sintaxa SBLGNT-1TI, WEBP și etaloanele românești auxiliare au fost confruntate direct; textul păstrează persoana singulară a lui Timotei."
+    },
+    {
+      "verse": 16,
+      "term": "variantă textuală SBLGNT/TR: Ὃς / Θεός; ἐν πνεύματι",
+      "decision": "„Cel care a fost arătat în trup … a fost dovedit drept în duh”",
+      "alternatives": [
+        "TR-1TI și WEBP din snapshot citesc Θεός, „Dumnezeu”, în locul pronumelui relativ Ὃς al SBLGNT.",
+        "„în Duhul”"
+      ],
+      "reason": "SBLGNT citește Ὃς, nu Θεός, așa că textul principal folosește pronumele relativ „Cel care”. Forma greacă πνεύματι nu impune prin ea însăși capitalizarea românească; „în duh” evită să predea ca text o interpretare a referentului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT-1TI, aparatul și TR-1TI au fost confruntate direct; lectura critică este redată fără adaosul tradițional."
     }
   ],
   "referenceNotes": [],

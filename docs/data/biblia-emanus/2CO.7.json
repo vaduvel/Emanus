@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,22 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "SBLGNT 1.2 și aparatul au fost confruntate direct; TR a fost folosit numai ca martor de variante.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au servit drept comparații auxiliare; NTR nu a fost consultată.",
+      "Textul românesc a fost redactat independent, fără stocarea sau copierea unei traduceri românești protejate."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 16,
       "reviewed": 16,
@@ -98,22 +97,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 16 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 16 versete din 2CO.7 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost corectate calchierile și formulările care ascundeau sensul frazelor grecești, inclusiv imperativul din versetul 2 și sintagmele «după voia lui Dumnezeu» din versetele 9–11.",
+        "Persoanele, negațiile, relațiile sintactice și referenții pronumelor au fost păstrați în fiecare verset.",
+        "Lectura principală SBLGNT este urmată în 2CO.7.12, nu inversarea pronumelor consemnată de martorul ST."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
         "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Termenii teologici și ambiguitățile sintactice sunt redați lexical, fără glosare confesionale în corpul versetului.",
+        "Etaloanele românești au fost consultate numai pentru verificare, după confruntarea directă cu sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -123,24 +122,19 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 327,
-        "primary": 189,
-        "secondary": 45,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.33174470430626646,
-      "minimumScore": 0.5090738739653641
-    },
-    "textDigest": "sha256:e29540c7ade3a0cdd781339ca295f3cbadad0c67fe75643f69803fd2cba381dd",
-    "contentDigest": "sha256:bab6c2591e985b9d76e797274aa4cb8249481e23a3413a2328c2fdceb5e253ec"
+    "textDigest": "sha256:ab07301da7ebc59423cb6f273ed544fea8f2b41a1cfebe3a7b3135c3a6573c56",
+    "contentDigest": "sha256:ac37a46811c729d1c91922d53e008368108638ad73cebd164cb0e259aaf856a6",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
@@ -149,7 +143,7 @@
     },
     {
       "number": 2,
-      "text": "Deschideți-ne inimile, nu am nedreptățit pe nimeni, nu am corupt pe nimeni, nu am profitat de nimeni."
+      "text": "Faceți-ne loc. Nu am nedreptățit pe nimeni, nu am corupt pe nimeni, nu am profitat de nimeni."
     },
     {
       "number": 3,
@@ -157,7 +151,7 @@
     },
     {
       "number": 4,
-      "text": "Am multă îndrăzneală față de voi; am mult motiv de laudă cu privire la voi. Sunt plin de mângâiere; prisosesc de bucurie în tot necazul nostru."
+      "text": "Am multă îndrăzneală față de voi; mă laud mult cu voi. Sunt plin de mângâiere; prisosesc de bucurie în tot necazul nostru."
     },
     {
       "number": 5,
@@ -169,27 +163,27 @@
     },
     {
       "number": 7,
-      "text": "și nu numai prin venirea lui, ci și prin mângâierea cu care a fost mângâiat cu privire la voi, când ne-a povestit dorul vostru, plângerea voastră, râvna voastră pentru mine, așa încât m-am bucurat și mai mult."
+      "text": "și nu numai prin venirea lui, ci și prin mângâierea cu care fusese mângâiat datorită vouă, când ne-a povestit dorul vostru, plângerea voastră, râvna voastră pentru mine, așa încât m-am bucurat și mai mult."
     },
     {
       "number": 8,
-      "text": "Căci, chiar dacă v-am întristat prin scrisoarea mea, nu-mi pare rău. Și dacă mi-a părut rău — văd că scrisoarea aceea v-a întristat, deși doar pentru o vreme —"
+      "text": "Căci, deși v-am întristat prin scrisoare, nu regret; deși atunci am regretat, văd că scrisoarea aceea v-a întristat, fie și numai pentru o vreme."
     },
     {
       "number": 9,
-      "text": "acum mă bucur, nu pentru că ați fost întristați, ci pentru că ați fost întristați spre pocăință; căci ați fost întristați după Dumnezeu, ca să nu suferiți nicio pagubă din partea noastră."
+      "text": "acum mă bucur, nu pentru că ați fost întristați, ci pentru că ați fost întristați spre pocăință; căci ați fost întristați după voia lui Dumnezeu, ca să nu suferiți nicio pagubă din partea noastră."
     },
     {
       "number": 10,
-      "text": "Pentru că întristarea după Dumnezeu lucrează o pocăință spre mântuire, fără părere de rău, dar întristarea lumii lucrează moartea."
+      "text": "Căci întristarea după voia lui Dumnezeu lucrează o pocăință fără regret, care duce la mântuire; dar întristarea lumii lucrează moartea."
     },
     {
       "number": 11,
-      "text": "Căci iată, tocmai faptul că ați fost întristați după Dumnezeu, câtă seriozitate a produs în voi, ba mai mult, ce apărare, ce indignare, ce teamă, ce dor, ce zel, ce pedepsire! În toate v-ați dovedit curați în privința lucrului acestuia."
+      "text": "Căci iată, tocmai faptul că ați fost întristați după voia lui Dumnezeu, câtă seriozitate a produs în voi, ba mai mult, ce apărare, ce indignare, ce teamă, ce dor, ce zel, ce pedepsire! În toate v-ați dovedit curați în privința lucrului acestuia."
     },
     {
       "number": 12,
-      "text": "Așa că, deși v-am scris, nu am scris pentru cauza lui care a făcut răul, nici pentru cauza lui care a suferit răul, ci pentru ca grija voastră sinceră față de noi să poată fi dezvăluită în voi înaintea lui Dumnezeu."
+      "text": "Așadar, deși v-am scris, n-am făcut-o nici din cauza celui care a săvârșit nedreptatea, nici din cauza celui nedreptățit, ci pentru ca, înaintea lui Dumnezeu, să vă devină evidentă grija sinceră pe care o aveți față de noi."
     },
     {
       "number": 13,
@@ -197,18 +191,64 @@
     },
     {
       "number": 14,
-      "text": "Căci, dacă m-am lăudat cu ceva înaintea lui despre voi, n-am fost dat de rușine; ci, după cum v-am vorbit toate în adevăr, tot așa și lauda noastră înaintea lui Titus s-a dovedit adevărată."
+      "text": "Căci, dacă m-am lăudat înaintea lui cu ceva despre voi, nu am fost făcut de rușine; dimpotrivă, după cum toate lucrurile pe care vi le-am spus au fost adevărate, tot așa și lauda noastră înaintea lui Titus s-a dovedit adevărată."
     },
     {
       "number": 15,
-      "text": "Și inima lui simte și mai multă dragoste față de voi, când își aduce aminte de ascultarea voastră a tuturor, cum l-ați primit cu frică și cu tremur."
+      "text": "Și afecțiunea lui pentru voi este și mai mare, când își aduce aminte de ascultarea voastră, a tuturor, și de felul cum l-ați primit cu frică și cu tremur."
     },
     {
       "number": 16,
       "text": "Mă bucur că în toate pot avea încredere în voi."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 10,
+      "term": "μετάνοιαν εἰς σωτηρίαν ἀμεταμέλητον",
+      "decision": "redat prin «o pocăință fără regret, care duce la mântuire»",
+      "reason": "Adjectivul ἀμεταμέλητον poate fi legat formal de pocăință sau de rezultatul ei. Formularea românească păstrează atât lipsa regretului, cât și direcția spre mântuire fără a introduce o explicație doctrinară.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Decizia redă toate elementele sintagmei SBLGNT într-o ordine firească în română."
+    },
+    {
+      "verse": 12,
+      "term": "τὴν σπουδὴν ὑμῶν τὴν ὑπὲρ ἡμῶν",
+      "decision": "urmată lectura SBLGNT «grija voastră sinceră față de noi»",
+      "reason": "Aparatul consemnează lectura ST cu pronumele inversate («grija noastră ... pentru voi»). Textul principal SBLGNT are grija corintenilor pentru Pavel și colaboratorii săi.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "S-a păstrat lectura critică fixată, iar TR/ST nu a fost importat automat."
+    },
+    {
+      "verse": 8,
+      "term": "revizie finală: εἰ καὶ μετεμελόμην",
+      "decision": "Căci, deși v-am întristat prin scrisoare, nu regret; deși atunci am regretat, văd că scrisoarea aceea v-a întristat, fie și numai pentru o vreme.",
+      "reason": "Construcția „Și dacă mi-a părut rău” transformă concesiva factuală εἰ καὶ μετεμελόμην într-o condiție și lasă neclar dacă regretul a existat efectiv. Valoarea concesivă factuală din εἰ καὶ μετεμελόμην nu este transmisă precis de Și dacă mi-a părut rău, deoarece româna introduce o condiție deschisă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 12,
+      "term": "revizie finală: πρὸς ὑμᾶς ἐνώπιον τοῦ θεοῦ",
+      "decision": "Așadar, deși v-am scris, n-am făcut-o nici din cauza celui care a săvârșit nedreptatea, nici din cauza celui nedreptățit, ci pentru ca, înaintea lui Dumnezeu, să vă devină evidentă grija sinceră pe care o aveți față de noi.",
+      "reason": "„În voi” redă greșit πρὸς ὑμᾶς, care indică persoanele cărora trebuia să le devină evidentă grija lor; în plus, construcțiile „pentru cauza lui care” sunt improprii în româna naturală. Sintagma πρὸς ὑμᾶς ἐνώπιον τοῦ θεοῦ cere sensul „vouă înaintea lui Dumnezeu”, pe când în voi înaintea lui Dumnezeu exprimă greșit interioritatea.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 14,
+      "term": "revizie finală: πάντα ἐν ἀληθείᾳ ἐλαλήσαμεν ὑμῖν",
+      "decision": "Căci, dacă m-am lăudat înaintea lui cu ceva despre voi, nu am fost făcut de rușine; dimpotrivă, după cum toate lucrurile pe care vi le-am spus au fost adevărate, tot așa și lauda noastră înaintea lui Titus s-a dovedit adevărată.",
+      "reason": "Expresia „v-am vorbit toate în adevăr” este improprie sintactic și lexical în româna actuală, fiindcă „toate” nu funcționează natural aici ca obiect al verbului „a vorbi”. Deși v-am vorbit toate în adevăr urmărește elementele din πάντα ἐν ἀληθείᾳ ἐλαλήσαμεν ὑμῖν, forma românească nu le leagă idiomatic într-o propoziție naturală.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

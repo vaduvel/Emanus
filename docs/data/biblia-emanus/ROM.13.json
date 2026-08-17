@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparat; Textus Receptus a fost numai martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost auxiliare; NTR nu a fost consultată și nu s-a copiat text românesc."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 14,
       "reviewed": 14,
@@ -98,14 +96,13 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 14 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 14 versete din ROM.13 au fost confruntate direct cu SBLGNT 1.2 și aparatul; TR a fost numai martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost reparate referentul autorității, persoana verbală și imperativele pluralului.",
+        "ROM.13.12 păstrează verbele SBLGNT «să lepădăm» și «să ne îmbrăcăm»."
       ]
     },
     "theologicalContext": {
@@ -129,27 +126,22 @@
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 709,
-        "primary": 137,
-        "secondary": 24,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.41000612643816675,
-      "minimumScore": 0.5818865265537531
-    },
-    "textDigest": "sha256:f6faa18ce15b5349acac8e2e7e4f08c30dd4023d71eaa9bcc4700d8ecc1d6766",
-    "contentDigest": "sha256:2df68070b504393465b63f1d95efd504aaa12077988c7794dc761c73a1923907"
+    "textDigest": "sha256:beb3ded673f324e2d11d7c9e081cb4133c4fa7653689a1145bea327a4574cf8c",
+    "contentDigest": "sha256:c4f19902bcc59c1d036274014f535db33beacec31ef9dd33be72e7910c3b9bb4",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Orice suflet să se supună autorităților superioare, căci nu există autoritate decât de la Dumnezeu, iar cele care există sunt rânduite de Dumnezeu."
+      "text": "Fiecare persoană să se supună autorităților mai înalte, deoarece orice autoritate își are originea în Dumnezeu, iar autoritățile existente sunt rânduite de Dumnezeu."
     },
     {
       "number": 2,
-      "text": "De aceea, cel ce se împotrivește autorității se opune rânduielii lui Dumnezeu, iar cei ce se opun își vor primi judecata."
+      "text": "De aceea, cel care se împotrivește autorității se opune rânduielii lui Dumnezeu, iar cei care se opun își vor atrage judecata."
     },
     {
       "number": 3,
@@ -157,7 +149,7 @@
     },
     {
       "number": 4,
-      "text": "Căci El este un rob al lui Dumnezeu pentru bine pentru voi. Dar dacă faceți ce este rău, temeți-vă, căci El nu poartă sabia în zadar, căci El este un rob al lui Dumnezeu, un răzbunător pentru mânia celui ce face rău."
+      "text": "Căci ea este slujitoarea lui Dumnezeu pentru binele tău. Dar, dacă faci răul, teme-te, căci nu poartă sabia în zadar; ea este slujitoarea lui Dumnezeu, o răzbunătoare care aduce mânia asupra celui ce face răul."
     },
     {
       "number": 5,
@@ -169,7 +161,7 @@
     },
     {
       "number": 7,
-      "text": "Dați-le tuturor ce le datorați: celui cu impozitul, impozitul; celui cu vama, vama; celui cu respectul, respectul; celui cu cinstea, cinstea."
+      "text": "Acordați tuturor cele datorate: impozit cui i se datorează impozit, vamă cui i se datorează vamă, respect cui i se datorează respect și cinste cui i se datorează cinste."
     },
     {
       "number": 8,
@@ -185,11 +177,11 @@
     },
     {
       "number": 11,
-      "text": "Faceți acest lucru, știind timpul, că este deja timpul pentru voi să vă treziți din somn, căci mântuirea este acum mai aproape de noi decât atunci când am crezut prima dată."
+      "text": "Faceți și aceasta, fiind conștienți de vreme: a sosit deja ceasul să vă treziți din somn, fiindcă mântuirea este acum mai aproape de noi decât era când am ajuns la credință."
     },
     {
       "number": 12,
-      "text": "Noaptea s-a dus de departe, și ziua este aproape. Să nimicească, așadar, faptele întunericului, și să se îmbrace cu armura luminii."
+      "text": "Noaptea a înaintat mult, iar ziua este aproape. Să lepădăm, așadar, faptele întunericului și să ne îmbrăcăm cu armura luminii."
     },
     {
       "number": 13,
@@ -197,10 +189,74 @@
     },
     {
       "number": 14,
-      "text": "ci îmbrăcați-vă cu Domnul Isus Hristos și nu vă îngrijiți de carne în vederea poftelor ei."
+      "text": "Ci îmbrăcați-vă cu Domnul Isus Hristos și nu-i asigurați firii păcătoase cele necesare pentru a-și satisface poftele."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 1,
+      "term": "revizie finală: Πᾶσα ψυχὴ",
+      "decision": "Fiecare persoană să se supună autorităților mai înalte, deoarece orice autoritate își are originea în Dumnezeu, iar autoritățile existente sunt rânduite de Dumnezeu.",
+      "reason": "Sintagma „Orice suflet” este un calc lexical nefiresc în româna actuală și poate sugera sufletul ca entitate, deși expresia grecească desemnează fiecare persoană. Deși Πᾶσα ψυχὴ este recognoscibil în Orice suflet, echivalarea literală nu redă natural referința grecească la totalitatea persoanelor.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 2,
+      "term": "revizie finală: ἑαυτοῖς κρίμα λήμψονται",
+      "decision": "De aceea, cel care se împotrivește autorității se opune rânduielii lui Dumnezeu, iar cei care se opun vor lua asupra lor o sentință de condamnare.",
+      "reason": "Substantivul „judecata” este ambiguu și poate denumi actul judecării, în timp ce κρίμα desemnează aici sentința adversă atrasă de cei care se împotrivesc. Sintagma ἑαυτοῖς κρίμα λήμψονται cere un rezultat judiciar mai precis decât exprimă echivocul își vor primi judecata.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 4,
+      "term": "revizie finală: θεοῦ γὰρ διάκονός ἐστιν",
+      "decision": "Căci ea este slujitoarea lui Dumnezeu pentru binele tău. Dar, dacă faci răul, teme-te, căci nu poartă sabia în zadar; ea este slujitoarea lui Dumnezeu, o răzbunătoare care aduce mânia asupra celui ce face răul.",
+      "reason": "Apoziția masculină „un răzbunător” nu se acordă cu referentul feminin „ea”, adică autoritatea, și face construcția românească discordantă. Rolul exprimat de θεοῦ γὰρ διάκονός ἐστιν este transmis de ea este slujitoare a lui Dumnezeu, un răzbunător, dar acordul intern al redării românești este defectuos.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 7,
+      "term": "revizie finală: ἀπόδοτε πᾶσι τὰς ὀφειλάς",
+      "decision": "Acordați tuturor cele datorate: impozit cui i se datorează impozit, vamă cui i se datorează vamă, respect cui i se datorează respect și cinste cui i se datorează cinste.",
+      "reason": "Seria eliptică „celui cu impozitul, impozitul” și construcțiile paralele sunt neidiomatice și lasă neclar raportul dintre obligație și beneficiarul ei. Porunca limpede ἀπόδοτε πᾶσι τὰς ὀφειλάς este obscurizată de formula celui cu impozitul, impozitul, care nu exprimă clar cui i se datorează plata.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 11,
+      "term": "revizie finală: ὅτι ὥρα ἤδη ὑμᾶς",
+      "decision": "Faceți și aceasta, fiind conștienți de vreme: a sosit deja ceasul să vă treziți din somn, fiindcă mântuirea este acum mai aproape de noi decât era când am ajuns la credință.",
+      "reason": "Construcția „știind timpul, că este deja timpul” este sintactic greoaie și repetitivă, fără să marcheze limpede că propoziția următoare explică semnificația momentului cunoscut. Conținutul temporal din ὅτι ὥρα ἤδη ὑμᾶς rămâne recognoscibil în știind timpul, că este deja timpul pentru voi, dar sintaxa românească este neidiomatică.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 14,
+      "term": "revizie finală: τῆς σαρκὸς πρόνοιαν μὴ ποιεῖσθε",
+      "decision": "Ci îmbrăcați-vă cu Domnul Isus Hristos și nu-i asigurați firii păcătoase cele necesare pentru a-și satisface poftele.",
+      "reason": "Expresia „planuri pentru carne” este un calc neidiomatic și produce o ambiguitate lexicală materială, deoarece „carne” poate desemna alimentul, nu firea orientată spre pofte. Sensul moral al expresiei τῆς σαρκὸς πρόνοιαν μὴ ποιεῖσθε nu este comunicat suficient de clar prin nu faceți planuri pentru carne în româna actuală.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 2,
+      "term": "revizie finală: οἱ δὲ ἀνθεστηκότες ἑαυτοῖς κρίμα λήμψονται",
+      "decision": "De aceea, cel care se împotrivește autorității se opune rânduielii lui Dumnezeu, iar cei care se opun își vor atrage judecata.",
+      "reason": "Construcția „vor lua asupra lor o sentință de condamnare” este nefirească în română și redă mecanic dativul reflexiv ἑαυτοῖς; sensul este că împotrivitorii își atrag judecata. Deși οἱ δὲ ἀνθεστηκότες ἑαυτοῖς κρίμα λήμψονται susține ideea din cei care se opun vor lua asupra lor o sentință de condamnare, raportul reflexiv este redat printr-o sintagmă românească nenaturală.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

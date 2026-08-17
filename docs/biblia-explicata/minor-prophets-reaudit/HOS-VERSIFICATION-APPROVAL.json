@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "bookId": "HOS",
+  "bookName": "Osea",
+  "reviewType": "versification-only",
+  "status": "approved",
+  "approvedOn": "2026-08-07",
+  "productVersification": "WEBU",
+  "wlcAlignment": "absolute-verse-ordinal-across-book",
+  "sourcePacket": "docs/biblia-explicata/minor-prophets-reaudit/HOS-FRESH-SOURCE-REAUDIT.json",
+  "sourceLock": "docs/data/biblia-emanus/minor-prophets-source-lock.json",
+  "evidenceFiles": [
+    "docs/biblia-explicata/minor-prophets-reaudit/HOS-VERSIFICATION-1-2.json",
+    "docs/biblia-explicata/minor-prophets-reaudit/HOS-VERSIFICATION-11-12.json",
+    "docs/biblia-explicata/minor-prophets-reaudit/HOS-VERSIFICATION-13-14.json"
+  ],
+  "approvedRanges": [
+    {
+      "product": "1:10-1:11",
+      "WLC": "2:1-2:2",
+      "nextRangeProduct": "2:1-2:23",
+      "nextRangeWLC": "2:3-2:25",
+      "identityResumesAt": "3:1"
+    },
+    {
+      "product": "11:12",
+      "WLC": "12:1",
+      "nextRangeProduct": "12:1-12:14",
+      "nextRangeWLC": "12:2-12:15",
+      "identityResumesAt": "13:1"
+    },
+    {
+      "product": "13:16",
+      "WLC": "14:1",
+      "nextRangeProduct": "14:1-14:9",
+      "nextRangeWLC": "14:2-14:10",
+      "identityResumesAt": null
+    }
+  ],
+  "checks": {
+    "candidateVerseTotal": 197,
+    "WEBUVerseTotal": 197,
+    "WLCVerseTotal": 197,
+    "WEBUMatchesProductChapterCounts": true,
+    "boundaryStartsSemanticallyMatch": true,
+    "boundaryEndsSemanticallyMatch": true,
+    "noVerseLossOrDuplication": true
+  },
+  "scopeWarning": "Această aprobare certifică numai maparea referințelor WEBU ↔ WLC. Nu certifică fidelitatea sau calitatea textului românesc și nu schimbă candidateStage=temporary-editorial."
+}

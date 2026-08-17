@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,18 +71,18 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost reverificat verset cu verset față de SBLGNT 1.2 și aparatul critic; Textus Receptus 1894 a fost folosit numai ca martor textual.",
+      "WEBP și BTF au fost consultate ca repere auxiliare pe întreg capitolul; Cornilescu 1924 a fost folosit ca verificare auxiliară disponibilă în lot. Biblia Liberă și NTR nu au fost consultate în această rulare și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
@@ -98,22 +101,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 39 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 39 de versete din ROM.8 au fost reverificate semantic față de SBLGNT 1.2 și aparatul critic; TR1894 a fost folosit numai ca martor textual. WEBP și BTF au fost repere auxiliare pe întreg capitolul, iar Cornilescu 1924 a fost folosit ca verificare auxiliară disponibilă; Biblia Liberă și NTR nu au fost folosite în această rulare."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "ROM.8.18–19: au fost eliminate calcuri și redundanțe din descrierea gloriei viitoare și a așteptării creației.",
+        "ROM.8.26: τί a fost redat explicit prin «ce să cerem în rugăciune», iar adaosul tradițional ὑπὲρ ἡμῶν nu a fost importat.",
+        "ROM.8.28, ROM.8.36–39: au fost corectate capitalizarea/referenții și formulări românești nefirești, păstrând ordinea și lectura SBLGNT."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri ori variante din Textus Receptus.",
+        "Termenii teologici sunt redați lexical; diferențele textuale materiale sunt documentate în editorialNotes.",
+        "Reperele auxiliare sunt folosite pentru control comparativ, nu ca text de copiat."
       ]
     },
     "omissionAddition": {
@@ -123,24 +126,14 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare editorială independentă din SBLGNT, verificată comparativ cu WEBP și reperele românești declarate; fără copiere de text românesc protejat"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 709,
-        "primary": 137,
-        "secondary": 24,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.41000612643816675,
-      "minimumScore": 0.5818865265537531
-    },
-    "textDigest": "sha256:cc994aeca4b6984d954bb6a506873e21ded071ab7fe34f21d0b16dfd4afbb2d5",
-    "contentDigest": "sha256:7947531385b1389ddfc99a56756df310c4a337b00d0cafeefe2bd269b58e1a31"
+    "textDigest": "sha256:6adfefa719e7bec3ac7ab4f5f889c3e6e7079020b28e0dfa11fa820a32548fc2",
+    "contentDigest": "sha256:f2252a6ee3aa46bd9a09ff2e008d30992aedc5222fb356909e7db6ed34d06eb4"
   },
   "verses": [
     {
@@ -153,7 +146,7 @@
     },
     {
       "number": 3,
-      "text": "Căci Dumnezeu a făcut ceea ce Legea nu putea face, fiind slăbită prin carne: trimițându-Și propriul Fiu într-o asemănare a cărnii păcatului și pentru păcat, a condamnat păcatul în carne,"
+      "text": "Căci Dumnezeu a făcut ceea ce Legea nu putea face, fiind slăbită prin carne: trimițându-Și propriul Fiu în asemănarea cărnii păcătoase și pentru păcat, a condamnat păcatul în carne,"
     },
     {
       "number": 4,
@@ -161,7 +154,7 @@
     },
     {
       "number": 5,
-      "text": "Căci cei care sunt potrivit cărnii cugetă la lucrurile cărnii, dar cei care sunt potrivit Duhului, la lucrurile Duhului."
+      "text": "Căci cei care își duc viața după carne își îndreaptă mintea spre lucrurile cărnii, iar cei care își duc viața după Duh, spre lucrurile Duhului."
     },
     {
       "number": 6,
@@ -169,7 +162,7 @@
     },
     {
       "number": 7,
-      "text": "pentru că mintea cărnii este ostilă față de Dumnezeu, pentru că ea nu este supusă legii lui Dumnezeu și nici nu poate fi."
+      "text": "pentru că gândirea cărnii este ostilă față de Dumnezeu; ea nu se supune Legii lui Dumnezeu și nici nu poate."
     },
     {
       "number": 8,
@@ -197,11 +190,11 @@
     },
     {
       "number": 14,
-      "text": "Căci toți cei care sunt conduși de Duhul lui Dumnezeu, aceștia sunt copiii lui Dumnezeu."
+      "text": "Căci toți cei care sunt conduși de Duhul lui Dumnezeu, aceștia sunt fii ai lui Dumnezeu."
     },
     {
       "number": 15,
-      "text": "Fiindcă n-ați primit un duh de robie ca să vă fie din nou frică, ci ați primit Duhul înfierii, prin care strigăm: „Abba, Tată!”"
+      "text": "Fiindcă n-ați primit un duh de robie ca să vă fie din nou frică, ci ați primit un duh de înfiere, prin care strigăm: „Abba, Tată!”"
     },
     {
       "number": 16,
@@ -213,11 +206,11 @@
     },
     {
       "number": 18,
-      "text": "Căci eu consider că suferințele din acest timp nu sunt demne să fie comparate cu gloria care va fi revelată față de noi."
+      "text": "Căci socotesc că suferințele vremii de acum nu sunt vrednice să fie puse alături de gloria ce urmează să ne fie revelată."
     },
     {
       "number": 19,
-      "text": "Fiindcă așteptarea arzătoare a creației tânjește după descoperirea fiilor lui Dumnezeu."
+      "text": "Căci creația așteaptă cu dor descoperirea fiilor lui Dumnezeu."
     },
     {
       "number": 20,
@@ -233,7 +226,7 @@
     },
     {
       "number": 23,
-      "text": "Nu numai așa, ci și noi înșine, care avem primele roade ale Duhului, chiar și noi gemem în noi înșine, așteptând adopția, răscumpărarea trupului nostru."
+      "text": "Nu numai ea, ci și noi înșine, care avem primele roade ale Duhului, gemem în noi înșine, așteptând înfierea, răscumpărarea trupului nostru."
     },
     {
       "number": 24,
@@ -245,15 +238,15 @@
     },
     {
       "number": 26,
-      "text": "În fel, Duhul ajută slăbiciunile noastre, pentru că nu știm cum să ne rugăm așa cum ar trebui. Dar Duhul Însuși mijlocește pentru noi cu gemete care nu pot fi rostite."
+      "text": "Tot astfel, Duhul ne vine în ajutor în slăbiciunea noastră, căci nu știm ce să cerem în rugăciune așa cum se cuvine. Dar Duhul Însuși mijlocește cu gemete de nerostit."
     },
     {
       "number": 27,
-      "text": "Iar Cel care cercetează inimile știe care este gândirea Duhului, fiindcă El mijlocește pentru sfinți potrivit lui Dumnezeu."
+      "text": "Iar Cel care cercetează inimile știe care este gândirea Duhului, fiindcă Duhul mijlocește pentru sfinți așa cum voiește Dumnezeu."
     },
     {
       "number": 28,
-      "text": "Știm că toate lucrurile lucrează împreună spre bine pentru cei ce îl iubesc pe Dumnezeu, pentru cei chemați conform scopului său."
+      "text": "Știm că toate lucrurile lucrează împreună spre bine pentru cei ce Îl iubesc pe Dumnezeu, pentru cei chemați conform scopului Său."
     },
     {
       "number": 29,
@@ -285,11 +278,11 @@
     },
     {
       "number": 36,
-      "text": "După cum este scris: „Din cauza Ta suntem omorâți toată ziua; suntem socotiți ca niște oi pentru înjunghiere.”"
+      "text": "După cum este scris: „Din cauza Ta suntem omorâți toată ziua; suntem socotiți ca niște oi destinate înjunghierii.”"
     },
     {
       "number": 37,
-      "text": "Nu, în toate aceste lucruri suntem mai mult decât cuceritori prin cel care ne-a iubit."
+      "text": "Dimpotrivă, în toate aceste lucruri suntem mai mult decât biruitori prin Cel care ne-a iubit."
     },
     {
       "number": 38,
@@ -297,51 +290,180 @@
     },
     {
       "number": 39,
-      "text": "nici înălțimea, nici adâncul, nici vreo altă creație nu vor putea să ne despartă de dragostea lui Dumnezeu care este în Hristos Isus, Domnul nostru."
+      "text": "nici înălțimea, nici adâncul, nici vreun alt lucru creat nu va putea să ne despartă de dragostea lui Dumnezeu care este în Hristos Isus, Domnul nostru."
     }
   ],
   "editorialNotes": [
     {
       "verse": 1,
-      "term": "μὴ κατὰ σάρκα περιπατοῦσιν, ἀλλὰ κατὰ πνεῦμα",
-      "decision": "Propoziția TR nu este introdusă în textul principal al versetului 1; acesta se încheie după ἐν Χριστῷ Ἰησοῦ.",
-      "reason": "Unitatea lipsește din textul principal SBLGNT la 8:1 și apare integral în SBLGNT la 8:4. Repetarea ei din TR este o lectură tradițională materială, nu o bază pentru extinderea automată a textului critic.",
+      "term": "Ἰησοῦ",
+      "decision": "Versetul se încheie după „Hristos Isus”.",
+      "reason": "SBLGNT nu include aici extensia RP/TR „μὴ κατὰ σάρκα περιπατοῦσιν ἀλλὰ κατὰ πνεῦμα”; aceeași formulare aparține textului principal la 8:4.",
+      "alternatives": [
+        "care nu umblă potrivit cărnii, ci potrivit Duhului"
+      ],
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Textul critic rămâne neextins, iar lectura TR este tradusă și etichetată în referenceNotes."
+      "resolutionReason": "Textul principal rămâne neextins; varianta tradițională este documentată fără a fi importată."
     },
     {
       "verse": 2,
-      "term": "variantă textuală SBLGNT / Textus Receptus",
-      "decision": "Textul principal urmează SBLGNT; lectura sau segmentarea tradițională rămâne documentată editorial.",
-      "reason": "SBLGNT are pronumele σε, persoana a doua singular, iar Textus Receptus are με, persoana întâi singular.",
+      "term": "ἠλευθέρωσέν σε",
+      "decision": "„te-a eliberat”",
+      "reason": "SBLGNT are persoana a doua singular σε; TR1894 are με, persoana întâi singular.",
+      "alternatives": [
+        "m-a eliberat"
+      ],
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "alternatives": [
-        "Căci legea Duhului vieții în Hristos Isus m-a eliberat de legea păcatului și a morții."
-      ],
-      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
+      "resolutionReason": "Pronumele urmează textul principal SBLGNT."
     },
     {
       "verse": 11,
       "term": "διὰ τὸ ἐνοικοῦν αὐτοῦ πνεῦμα",
-      "decision": "Construcția cu διά și acuzativ este redată «datorită Duhului Său care locuiește în voi».",
-      "reason": "Acuzativul τὸ... πνεῦμα din SBLGNT exprimă aici temeiul; TR are διά cu genitivul τοῦ... πνεύματος, care produce lectura instrumentală «prin Duhul Său». Diferența de caz are efect traductologic direct.",
+      "decision": "„datorită Duhului Său care locuiește în voi”",
+      "reason": "Construcția afișată de SBLGNT folosește διά cu acuzativul τὸ … πνεῦμα; lectura instrumentală cu genitivul este o variantă documentată în aparat.",
+      "alternatives": [
+        "prin Duhul Său care locuiește în voi"
+      ],
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Textul principal reflectă cazul SBLGNT, iar alternativa instrumentală TR este păstrată în notă."
+      "resolutionReason": "Redarea principală urmărește cazul textului critic folosit."
+    },
+    {
+      "verse": 18,
+      "term": "πρὸς τὴν μέλλουσαν δόξαν ἀποκαλυφθῆναι εἰς ἡμᾶς",
+      "decision": "„nu se pot compara cu gloria care urmează să fie descoperită pentru noi”",
+      "reason": "Construcția exprimă disproporția dintre suferințele prezente și gloria viitoare; „față de noi” era un calc românesc nefireasc.",
+      "alternatives": [
+        "gloria care urmează să fie descoperită în noi"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Formularea păstrează raportul semantic fără a fixa inutil o nuanță locativă."
+    },
+    {
+      "verse": 19,
+      "term": "ἡ ἀποκαραδοκία τῆς κτίσεως … ἀπεκδέχεται",
+      "decision": "„creația așteaptă cu dor”",
+      "reason": "Textul grec exprimă o așteptare intensă; formularea veche „așteptarea arzătoare … tânjește” dubla artificial aceeași idee.",
+      "alternatives": [
+        "așteptarea intensă a creației așteaptă"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Româna este naturală și păstrează intensitatea verbului."
     },
     {
       "verse": 26,
-      "term": "variantă textuală SBLGNT / Textus Receptus",
-      "decision": "Textul principal urmează SBLGNT; lectura sau segmentarea tradițională rămâne documentată editorial.",
-      "reason": "Textus Receptus are pluralul ταῖς ἀσθενείαις și adaugă ὑπὲρ ἡμῶν după ὑπερεντυγχάνει; SBLGNT are singularul τῇ ἀσθενείᾳ și nu conține adaosul.",
+      "term": "τὸ γὰρ τί προσευξώμεθα καθὸ δεῖ οὐκ οἴδαμεν",
+      "decision": "„nu știm ce să cerem în rugăciune așa cum se cuvine”",
+      "reason": "τί are aici valoarea „ce”, nu „pentru ce”; SBLGNT are singularul τῇ ἀσθενείᾳ și nu include adaosul RP ὑπὲρ ἡμῶν după ὑπερεντυγχάνει.",
+      "alternatives": [
+        "nu știm pentru ce să ne rugăm cum se cuvine"
+      ],
       "reviewRequired": true,
       "resolutionStatus": "resolved",
+      "resolutionReason": "Textul românesc redă întrebarea obiectului rugăciunii și nu importă adaosul tradițional."
+    },
+    {
+      "verse": 28,
+      "term": "πάντα συνεργεῖ εἰς ἀγαθόν",
+      "decision": "„toate lucrurile lucrează împreună spre bine”",
+      "reason": "Textul principal afișat nu introduce explicit ὁ θεός ca subiect; varianta cu subiect explicit este documentată în aparat.",
       "alternatives": [
-        "Duhul vine în ajutorul slăbiciunilor noastre și mijlocește pentru noi cu suspine negrăite."
+        "Dumnezeu face ca toate lucrurile să lucreze împreună spre bine"
       ],
-      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Redarea nu adaugă un subiect absent din textul principal și păstrează sensul construcției."
+    },
+    {
+      "verse": 34,
+      "term": "Χριστὸς ὁ ἀποθανών, μᾶλλον δὲ ἐγερθείς",
+      "decision": "„Hristos este Cel care a murit, dar, mai mult, a fost înviat”",
+      "reason": "Textul principal păstrează Χριστός fără a cere adaosul Ἰησοῦς și redă contrastul μᾶλλον δέ; celelalte diferențe sunt consemnate în aparat.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul românesc nu importă extinderi din alte tradiții textuale."
+    },
+    {
+      "verse": 37,
+      "term": "ἀλλ’ … ὑπερνικῶμεν",
+      "decision": "„Dimpotrivă … suntem mai mult decât biruitori”",
+      "reason": "ἀλλά introduce contrastul, iar ὑπερνικάω exprimă o biruință covârșitoare; „Nu,” era dependent de un etalon englez și mai puțin direct din greacă.",
+      "alternatives": [
+        "Dar în toate acestea biruim din plin"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Formularea păstrează atât contrastul, cât și intensificarea verbului."
+    },
+    {
+      "verse": 38,
+      "term": "ἐνεστῶτα οὔτε μέλλοντα οὔτε δυνάμεις",
+      "decision": "Ordinea este „cele prezente, cele viitoare, puterile”.",
+      "reason": "SBLGNT păstrează această ordine; RP mută δυνάμεις înaintea celor prezente și viitoare.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Enumerarea românească urmează ordinea textului critic."
+    },
+    {
+      "verse": 39,
+      "term": "οὔτε τις κτίσις ἑτέρα",
+      "decision": "„nici vreun alt lucru creat”",
+      "reason": "κτίσις ἑτέρα desemnează aici orice altă realitate creată; „vreo altă creație” putea suna ca o a doua creație în ansamblu.",
+      "alternatives": [
+        "nici vreo altă făptură"
+      ],
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Redarea elimină ambiguitatea românească fără a restrânge referentul."
+    },
+    {
+      "verse": 3,
+      "term": "revizie finală: ἐν ὁμοιώματι σαρκὸς ἁμαρτίας",
+      "decision": "Căci Dumnezeu a făcut ceea ce Legea nu putea face, fiind slăbită prin carne: trimițându-Și propriul Fiu într-o formă trupească asemănătoare cărnii marcate de păcat și pentru păcat, a condamnat păcatul în carne,",
+      "reason": "Sintagma „într-o asemănare a cărnii păcatului” este neidiomatică și poate sugera că asemănarea aparține „cărnii păcatului”, în loc să exprime venirea Fiului într-o formă trupească asemănătoare cărnii omenești marcate de păcat. Deși într-o asemănare a cărnii păcatului urmărește structura ἐν ὁμοιώματι σαρκὸς ἁμαρτίας, relația semantică dintre asemănare, carne și păcat rămâne neclară în română.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 5,
+      "term": "revizie finală: οἱ γὰρ κατὰ σάρκα ὄντες",
+      "decision": "Căci cei care își duc viața după carne își îndreaptă mintea spre lucrurile cărnii, iar cei care își duc viața după Duh, spre lucrurile Duhului.",
+      "reason": "Construcția „cei care sunt potrivit cărnii” este material nefirească în română și nu exprimă clar că este vorba despre orientarea sau modul lor de viață. Sensul existențial al structurii οἱ γὰρ κατὰ σάρκα ὄντες nu este comunicat natural prin cei care sunt potrivit cărnii, deși opoziția carne–Duh rămâne recognoscibilă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 18,
+      "term": "revizie finală: ἀποκαλυφθῆναι εἰς ἡμᾶς",
+      "decision": "Căci socotesc că suferințele vremii de acum nu sunt vrednice să fie puse alături de gloria ce urmează să ne fie revelată.",
+      "reason": "„Pentru noi” schimbă raportul sintactic: greaca prezintă gloria ca fiind revelată către sau în raport cu noi, nu doar ca o revelație făcută în beneficiul nostru. Prepoziția din ἀποκαλυφθῆναι εἰς ἡμᾶς nu este redată suficient de precis prin să fie descoperită pentru noi, deoarece raportul de destinație devine unul de beneficiu.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 27,
+      "term": "revizie finală: κατὰ θεὸν ἐντυγχάνει ὑπὲρ ἁγίων",
+      "decision": "Iar Cel care cercetează inimile știe care este gândirea Duhului, fiindcă Duhul mijlocește pentru sfinți așa cum voiește Dumnezeu.",
+      "reason": "Expresia „potrivit lui Dumnezeu” este neidiomatică și nu exprimă suficient că mijlocirea Duhului se desfășoară potrivit voii lui Dumnezeu. Deși κατὰ θεὸν ἐντυγχάνει ὑπὲρ ἁγίων indică mijlocirea conformă voii divine, mijlocește pentru sfinți potrivit lui Dumnezeu lasă raportul semantic incomplet în română.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 3,
+      "term": "revizie finală: ἐν ὁμοιώματι σαρκὸς ἁμαρτίας",
+      "decision": "Căci Dumnezeu a făcut ceea ce Legea nu putea face, fiind slăbită prin carne: trimițându-Și propriul Fiu în asemănarea cărnii păcătoase și pentru păcat, a condamnat păcatul în carne,",
+      "reason": "Construcția „o formă trupească asemănătoare cărnii” deplasează complementul asemănării și poate sugera că Fiul a avut numai o formă care semăna cu trupul, pe când greaca afirmă venirea Sa în asemănarea cărnii păcătoase. Relația dintre ἐν ὁμοιώματι σαρκὸς ἁμαρτίας și într-o formă trupească asemănătoare cărnii marcate de păcat este imprecisă, deoarece asemănarea privește carnea păcătoasă, nu o formă asemănătoare cărnii.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
     }
   ],
   "referenceNotes": [],

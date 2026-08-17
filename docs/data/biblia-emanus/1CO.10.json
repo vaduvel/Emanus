@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparatul său; Textus Receptus a fost consultat numai ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 33,
       "reviewed": 33,
@@ -98,14 +96,14 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 33 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 33 de versete din 1CO.10 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost reparate negațiile, acordurile, citatele și formulările care mascau sensul relațiilor dintre propoziții.",
+        "Sunt păstrate persoanele, numărul, întrebările retorice și contrastul dintre părtășia cu Domnul și cu demonii.",
+        "Lectura principală SBLGNT este urmată fără importarea automată a lecturilor Textus Receptus."
       ]
     },
     "theologicalContext": {
@@ -123,33 +121,28 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 709,
-        "primary": 137,
-        "secondary": 24,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.41000612643816675,
-      "minimumScore": 0.5818865265537531
-    },
-    "textDigest": "sha256:8d291bb328d988385e95a51f19298f9555a1380721b86c20aad5b1357d817d40",
-    "contentDigest": "sha256:e84e42b25d9ac4b6bb922adfc6f8872e7620252819f905000c3e6a02f7e8f648"
+    "textDigest": "sha256:9e5c0d5fc3dc8556231b4e05bd45573dc360f792813700416a6799d663e14981",
+    "contentDigest": "sha256:b8189370d58d5b02d53a8e78d3dee77613d24cb10c442ae8bc929ff04bad0f49",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Căci nu vreau să nu știți, fraților, că părinții noștri au fost toți sub nor și toți au trecut prin mare,"
+      "text": "Căci nu vreau, fraților, să nu știți că toți părinții noștri au fost sub nor și toți au trecut prin mare,"
     },
     {
       "number": 2,
-      "text": "și toți au fost botezați pentru Moise în nor și în mare,"
+      "text": "și toți au fost botezați în Moise, în nor și în mare,"
     },
     {
       "number": 3,
@@ -157,15 +150,15 @@
     },
     {
       "number": 4,
-      "text": "și toți au băut aceeași băutură spirituală; fiindcă beau din stânca spirituală care îi urma, iar stânca era Hristos."
+      "text": "și toți au băut aceeași băutură spirituală, căci beau din stânca spirituală care îi însoțea; iar stânca era Hristos."
     },
     {
       "number": 5,
-      "text": "Totuși, Dumnezeu n-a fost mulțumit de cei mai mulți dintre ei, de aceea au fost culcați la pământ în pustie."
+      "text": "Totuși, Dumnezeu nu Și-a găsit plăcerea în cei mai mulți dintre ei, căci au fost răpuși în pustie."
     },
     {
       "number": 6,
-      "text": "Aceste lucruri s-au făcut exemple pentru noi, ca să nu poftim după lucruri rele, cum au poftit și ei."
+      "text": "Aceste lucruri au devenit exemple pentru noi, ca să nu dorim lucruri rele, cum au dorit și ei."
     },
     {
       "number": 7,
@@ -173,19 +166,19 @@
     },
     {
       "number": 8,
-      "text": "Nici să nu ne dedăm la imoralitate sexuală, cum s-au dedat unii dintre ei, și într-o singură zi au căzut douăzeci și trei de mii."
+      "text": "Nici să nu ne dedăm la desfrânare, cum s-au dedat unii dintre ei, și într-o singură zi au căzut douăzeci și trei de mii."
     },
     {
       "number": 9,
-      "text": "Nici să nu-L punem la încercare pe Hristos, cum L-au pus la încercare unii dintre ei, și au pierit de la șerpi."
+      "text": "Nici să nu-L punem la încercare pe Hristos, cum L-au pus la încercare unii dintre ei, și au pierit din pricina șerpilor."
     },
     {
       "number": 10,
-      "text": "Nici să nu murmurați, cum au murmurat unii dintre ei, și au pierit de nimicitorul."
+      "text": "Nici să nu murmurați, cum au murmurat unii dintre ei, și au fost nimiciți de Nimicitor."
     },
     {
       "number": 11,
-      "text": "Aceste lucruri li se întâmplau ca exemple, iar pentru avertizarea noastră au fost scrise, peste care au ajuns sfârșiturile veacurilor."
+      "text": "Aceste lucruri li se întâmplau ca exemple și au fost scrise pentru a ne avertiza pe noi, cei la care au ajuns sfârșiturile veacurilor."
     },
     {
       "number": 12,
@@ -193,7 +186,7 @@
     },
     {
       "number": 13,
-      "text": "Nu v-a ajuns nicio ispită decât omenească. Dar credincios este Dumnezeu, care nu va îngădui să fiți ispitiți peste ce puteți, ci împreună cu ispita va face și ieșirea, ca să o puteți îndura."
+      "text": "Nu v-a cuprins nicio ispită care să nu fie omenească. Dar Dumnezeu este credincios și nu va îngădui să fiți ispitiți peste puterile voastre, ci, împreună cu ispita, va pregăti și ieșirea, ca să o puteți îndura."
     },
     {
       "number": 14,
@@ -213,15 +206,15 @@
     },
     {
       "number": 18,
-      "text": "Uitați-vă la Israel după carne: cei care mănâncă jertfele nu sunt ei părtași ai altarului?"
+      "text": "Priviți la Israelul după trup: cei care mănâncă jertfele nu sunt ei părtași ai altarului?"
     },
     {
       "number": 19,
-      "text": "Ce spun atunci? Că un lucru sacrificat idolilor este ceva, sau că un idol este ceva?"
+      "text": "Ce spun deci? Că un lucru jertfit idolilor este ceva, sau că un idol este ceva?"
     },
     {
       "number": 20,
-      "text": "Dar eu spun că lucrurile pe care le sacrifică Neamurile, ei sacrifică demonilor și nu lui Dumnezeu, și nu doresc ca tu să ai părtășie cu demoni."
+      "text": "Dimpotrivă, spun că lucrurile pe care le jertfesc, le jertfesc demonilor și nu lui Dumnezeu; iar eu nu vreau să aveți părtășie cu demonii."
     },
     {
       "number": 21,
@@ -237,7 +230,7 @@
     },
     {
       "number": 24,
-      "text": "Nimeni să nu-l caute pe al lui, ci fiecare pe aproapele lui."
+      "text": "Nimeni să nu caute folosul său, ci folosul celuilalt."
     },
     {
       "number": 25,
@@ -253,11 +246,11 @@
     },
     {
       "number": 28,
-      "text": "Dar dacă vă va zice cineva: Acesta a fost jertfit idolilor„, să nu-l mâncați din pricina celui ce v-a spus și din pricina cugetului. Al Domnului este pământul, cu toată plinătatea lui.”"
+      "text": "Dar dacă cineva vă spune: „Acesta este jertfit idolilor”, să nu mâncați, din pricina celui care v-a înștiințat și a conștiinței."
     },
     {
       "number": 29,
-      "text": "Nu mă refer la conștiința ta, ci la a celuilalt. Căci de ce să fie judecată libertatea mea de conștiința altuia?"
+      "text": "Mă refer la conștiință, nu la a ta, ci la a celuilalt. Căci de ce să fie judecată libertatea mea de conștiința altuia?"
     },
     {
       "number": 30,
@@ -265,18 +258,82 @@
     },
     {
       "number": 31,
-      "text": "Așadar, fie că mâncați, fie că beți, fie că faceți altceva, faceți toate spre gloria lui Dumnezeu."
+      "text": "Așadar, fie că mâncați, fie că beți, fie că faceți orice altceva, faceți toate spre slava lui Dumnezeu."
     },
     {
       "number": 32,
-      "text": "Nu dați prilej de poticnire nici iudeilor, nici grecilor, nici bisericii lui Dumnezeu,"
+      "text": "Nu fiți o pricină de poticnire nici pentru iudei, nici pentru greci, nici pentru biserica lui Dumnezeu,"
     },
     {
       "number": 33,
       "text": "așa cum și eu caut în toate să plac tuturor, necăutând folosul meu, ci pe al celor mulți, ca să fie mântuiți."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 9,
+      "term": "τὸν Χριστόν",
+      "decision": "Este redat „Hristos”.",
+      "reason": "Aparatul consemnează lectura „Domnul” în WH/Treg/NIV, în timp ce SBLGNT și NA28 au „Hristos”; textul principal urmează lectura SBLGNT.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Nu s-a importat automat lectura alternativă."
+    },
+    {
+      "verse": 28,
+      "term": "ἱερόθυτόν ἐστιν",
+      "decision": "Versetul se încheie după motivul conștiinței celui care a înștiințat.",
+      "reason": "SBLGNT nu include la acest verset repetarea citatului despre pământul Domnului, prezentă în tradiția TR/RP.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Textul urmează conținutul lecturii critice."
+    },
+    {
+      "verse": 5,
+      "term": "revizie finală: κατεστρώθησαν γὰρ ἐν τῇ ἐρήμῳ",
+      "decision": "Totuși, Dumnezeu nu Și-a găsit plăcerea în cei mai mulți dintre ei, căci au fost răpuși în pustie.",
+      "reason": "Verbul „au căzut” slăbește material sensul lui κατεστρώθησαν, care indică faptul că oamenii au fost răpuși și au rămas întinși în pustie. Redarea κατεστρώθησαν γὰρ ἐν τῇ ἐρήμῳ prin au căzut în pustie. pierde valoarea pasivă și forța funebră a verbului grec.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 9,
+      "term": "revizie finală: ὑπὸ τῶν ὄφεων",
+      "decision": "Nici să nu-L punem la încercare pe Hristos, cum L-au pus la încercare unii dintre ei, și au pierit din pricina șerpilor.",
+      "reason": "Locuțiunea „au pierit de la șerpi” folosește impropriu prepoziția „de la” pentru agentul morții și produce o formulare românească nenaturală. Relația cauzală din ὑπὸ τῶν ὄφεων nu este transmisă natural de au pierit de la șerpi, deși identitatea șerpilor este păstrată.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 10,
+      "term": "revizie finală: ἀπώλοντο ὑπὸ τοῦ ὀλοθρευτοῦ",
+      "decision": "Nici să nu murmurați, cum au murmurat unii dintre ei, și au fost nimiciți de Nimicitor.",
+      "reason": "Construcția „au pierit de nimicitorul” este nefirească în română și nu exprimă corect raportul de agent marcat în greacă prin ὑπό cu genitivul. Agentul exprimat de ἀπώλοντο ὑπὸ τοῦ ὀλοθρευτοῦ este recognoscibil în au pierit de nimicitorul, dar raportul sintactic nu este redat natural.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 11,
+      "term": "revizie finală: εἰς οὓς τὰ τέλη τῶν αἰώνων",
+      "decision": "Aceste lucruri li se întâmplau ca exemple și au fost scrise pentru a ne avertiza pe noi, cei la care au ajuns sfârșiturile veacurilor.",
+      "reason": "Construcția relativă „peste care” se atașează aparent substantivului „avertizarea”, deși pronumele grec îi desemnează pe oamenii pentru care au fost scrise aceste lucruri. Referentul uman din εἰς οὓς τὰ τέλη τῶν αἰώνων nu este identificat clar de peste care au ajuns sfârșiturile veacurilor din cauza atașării relative.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 20,
+      "term": "revizie finală: θύουσιν, δαιμονίοις",
+      "decision": "Dimpotrivă, spun că lucrurile pe care le jertfesc, le jertfesc demonilor și nu lui Dumnezeu; iar eu nu vreau să aveți părtășie cu demonii.",
+      "reason": "Subiectul „Neamurile” este adăugat explicit, deși textul grec furnizat conține numai verbul cu subiect subînțeles și nu numește aici Neamurile. Secvența θύουσιν, δαιμονίοις vorbește despre ceea ce „ei” jertfesc demonilor, pe când lucrurile pe care Neamurile le jertfesc restrânge interpretativ subiectul.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "theologicalNeutrality": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Toate cele 18 versete au fost revizuite direct față de snapshotul fixat SBLGNT 1.2 și aparatul lui; TR a fost folosit numai ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 18,
       "reviewed": 18,
@@ -98,22 +96,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 18 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 18 versete au fost confruntate direct cu SBLGNT/aparat din snapshotul fixat; TR a fost citit exclusiv ca martor, iar WEBP/BTF/Cornilescu 1924/Biblia Liberă ca auxiliare."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost eliminate calcurile, acordurile defecte și punctuația coruptă din textul anterior.",
+        "Citatele din Psalmul 8, Psalmul 22 și Isaia 8 au fost delimitate coerent.",
+        "La 2:9 textul românesc a fost realiniat la lectura efectivă SBLGNT, fără armonizare cu lectura majoritară."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Textul principal urmează snapshotul SBLGNT chiar când lectura lui este minoritară, ca în 2:9 χωρὶς θεοῦ.",
+        "TR și etaloanele auxiliare nu sunt folosite pentru a înlocui automat lectura textului principal.",
+        "Ambiguitățile lexicale sunt documentate fără glosare confesională în corpul versetului."
       ]
     },
     "omissionAddition": {
@@ -123,108 +121,189 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT/aparat și verificări auxiliare fixate; fără copierea unei traduceri românești"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 316,
-        "secondary": 95,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5922586297890594,
-      "minimumScore": 0.5759312754780807
-    },
-    "textDigest": "sha256:6f4ab74572d3160940b79c6e9ef03043e1665c14fd3cd4853da1407381f32db5",
-    "contentDigest": "sha256:ada285acd9fbae63c27dca062deb765430f550f78744ebbe6883fbfc9e9d84d5"
+    "textDigest": "sha256:5153814be95f585c4972b579828329f36cb1169f3ba5143f86b281290cd095eb",
+    "contentDigest": "sha256:c3030edbc71bdca1ffb4545605a1a205dcf1c1123b322328e7ddd465ad3a1ddb",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "De aceea, ar trebui să acordăm mai multă atenție lucrurilor auzite, ca nu cumva să ne îndepărtăm."
+      "text": "De aceea trebuie să fim cu atât mai atenți la cele auzite, ca nu cumva să ne abatem de la ele."
     },
     {
       "number": 2,
-      "text": "Căci dacă cuvântul rostit prin îngeri s-a dovedit statornic, și orice fărădelege și neascultare a primit o pedeapsă dreaptă,"
+      "text": "Căci, dacă mesajul rostit prin îngeri s-a dovedit sigur și orice încălcare și neascultare a primit răsplătirea dreaptă,"
     },
     {
       "number": 3,
-      "text": "Cum vom scăpa dacă neglijăm o mântuire atât de mare care, la început, a fost vorbită prin Domnul, ne-a fost confirmată de cei care au auzit,"
+      "text": "cum vom scăpa noi dacă neglijăm o mântuire atât de mare? Ea, după ce a început să fie vestită prin Domnul, ne-a fost confirmată de cei care L-au auzit,"
     },
     {
       "number": 4,
-      "text": "Dumnezeu mărturisind cu ei, atât prin semne, cât și prin minuni, prin diferite lucrări de putere și prin daruri ale Duhului Sfînt, după voia Lui?"
+      "text": "în timp ce Dumnezeu mărturisea împreună cu ei prin semne, minuni, felurite lucrări de putere și împărțiri ale Duhului Sfânt, potrivit voii Sale."
     },
     {
       "number": 5,
-      "text": "Căci el nu a supus lumea viitoare, despre care vorbim, îngerilor."
+      "text": "Căci nu îngerilor le-a supus El lumea viitoare despre care vorbim."
     },
     {
       "number": 6,
-      "text": "Dar cineva a mărturisit undeva: «Ce este omul, ca să-Ți amintești de el, sau fiul omului, ca să-l cercetezi?"
+      "text": "Dar cineva a mărturisit undeva, spunând: „Ce este omul, ca să-Ți amintești de el, sau fiul omului, ca să-l cercetezi?"
     },
     {
       "number": 7,
-      "text": "L-ai făcut puțin mai jos decât îngerii, l-ai încoronat cu glorie și onoare."
+      "text": "L-ai făcut pentru puțin timp mai prejos decât îngerii; l-ai încununat cu slavă și cinste."
     },
     {
       "number": 8,
-      "text": "Tu ai supus toate lucrurile sub picioarele Lui, căci El i-a supus toate lucrurile, și n-a lăsat nimic care să nu-I fie supus. Dar acum încă nu vedem toate lucrurile supuse lui."
+      "text": "Ai supus toate lucrurile sub picioarele lui.” Căci, supunându-i toate lucrurile, nu a lăsat nimic care să nu-i fie supus. Totuși, acum încă nu vedem toate lucrurile supuse lui."
     },
     {
       "number": 9,
-      "text": "Dar noi îl vedem pe cel care a fost făcut puțin mai jos decât îngerii, Isus, din cauza suferinței morții încoronate cu glorie și onoare, pentru ca prin harul lui Dumnezeu să guste moartea pentru toți."
+      "text": "Dar Îl vedem pe Isus, făcut pentru puțin timp mai prejos decât îngerii, încununat cu slavă și cinste din pricina suferinței morții, pentru ca, fără Dumnezeu, să guste moartea pentru fiecare."
     },
     {
       "number": 10,
-      "text": "Căci El a devenit, pentru cine sunt toate lucrurile și prin cine sunt toate lucrurile, pentru a aduce pe mulți copii la slavă, ca să facă pe autorul mântuirii lor desăvârșit prin suferințe."
+      "text": "Căci se cuvenea ca Acela pentru care sunt toate și prin care sunt toate, aducând mulți fii la slavă, să-L desăvârșească prin suferințe pe Inițiatorul mântuirii lor."
     },
     {
       "number": 11,
-      "text": "Căci atât cel care sfințește, cât cei care sunt sfințiți sunt toți dintr-unul, motiv pentru care Lui nu-I este rușine să-i numească,"
+      "text": "Căci Cel care sfințește și cei care sunt sfințiți sunt toți dintr-Unul; de aceea nu Se rușinează să-i numească frați,"
     },
     {
       "number": 12,
-      "text": "zicând: Voi vesti numele tău fraților mei; voi cânta laudele tale în mijlocul adunării„."
+      "text": "spunând: „Voi vesti Numele Tău fraților Mei; în mijlocul adunării Îți voi cânta laudă.”"
     },
     {
       "number": 13,
-      "text": "Iară: Îmi voi pune încrederea în El.” Iară: Iată, sunt cu copiii pe care mi i-a dat Dumnezeu„."
+      "text": "Și din nou: „Eu Îmi voi pune încrederea în El.” Și din nou: „Iată, Eu și copiii pe care Mi i-a dat Dumnezeu.”"
     },
     {
       "number": 14,
-      "text": "Fiindcă, după cum copiii sunt părtași cărnii și sângelui, în același fel și el s-a împărtășit din aceleași, pentru ca prin moarte să nimicească pe cel ce avea puterea morții, care este diavolul,"
+      "text": "Așadar, deoarece copiii au parte de sânge și carne, și El a luat parte în mod asemănător la aceleași lucruri, pentru ca prin moarte să-l facă neputincios pe cel care are puterea morții, adică pe diavolul,"
     },
     {
       "number": 15,
-      "text": "i-ar putea elibera pe toți cei care, prin frica de moarte, au fost supuși robiei toată viața lor."
+      "text": "și să-i elibereze pe toți cei care, prin frica de moarte, erau ținuți în robie toată viața."
     },
     {
       "number": 16,
-      "text": "Cu siguranță, el nu dă ajutor îngerilor, ci îi ajută pe urmașii lui Avraam."
+      "text": "Căci, desigur, nu pe îngeri îi sprijină, ci pe urmașii lui Avraam."
     },
     {
       "number": 17,
-      "text": "De aceea, el a fost obligat în toate lucrurile să fie făcut ca frații săi, ca să devină un mare preot îndurător și credincios în lucrurile privitoare la Dumnezeu, să facă ispășire pentru păcatele poporului."
+      "text": "De aceea trebuia să fie făcut asemenea fraților Săi în toate, ca să devină un Mare-Preot milos și credincios în cele privitoare la Dumnezeu, pentru a face ispășire pentru păcatele poporului."
     },
     {
       "number": 18,
-      "text": "Căci prin faptul că el însuși a suferit fiind ispitit, el este în stare să-i ajute pe cei ispitiți.”»"
+      "text": "Căci, fiindcă El Însuși a suferit când a fost încercat, poate să-i ajute pe cei care sunt încercați."
     }
   ],
   "editorialNotes": [
     {
-      "verse": 9,
-      "term": "variantă textuală sau lexicală verificată",
-      "decision": "Textul principal păstrează lectura SBLGNT 1.2 și formularea românească validată prin sursele fixate.",
-      "reason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal.",
+      "verse": 7,
+      "term": "αὐτόν",
+      "decision": "„l-ai încununat cu slavă și cinste”",
+      "alternatives": [
+        "TR/WH/Treg: continuare „și l-ai pus peste lucrările mâinilor Tale”"
+      ],
+      "reason": "SBLGNT nu include continuarea după αὐτόν; aparatul o consemnează în WH/Treg, iar textul principal nu o importă.",
       "reviewRequired": true,
       "resolutionStatus": "resolved",
-      "resolutionReason": "Nota a fost confruntată cu snapshoturile SBLGNT și Textus Receptus și a fost rezolvată în favoarea textului critic principal."
+      "resolutionReason": "SBLGNT nu include continuarea după αὐτόν; aparatul o consemnează în WH/Treg, iar textul principal nu o importă."
+    },
+    {
+      "verse": 8,
+      "term": "ὑποτάξαι",
+      "decision": "„supunându-i toate lucrurile”",
+      "alternatives": [
+        "WH/Treg/RP: ὑποτάξαι αὐτῷ"
+      ],
+      "reason": "SBLGNT Holmes omite pronumele αὐτῷ după infinitiv; referentul rămâne recuperabil din context și nu este prezentat ca adaos al textului grec.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT Holmes omite pronumele αὐτῷ după infinitiv; referentul rămâne recuperabil din context și nu este prezentat ca adaos al textului grec."
+    },
+    {
+      "verse": 9,
+      "term": "χωρὶς θεοῦ",
+      "decision": "„fără Dumnezeu”",
+      "alternatives": [
+        "χάριτι θεοῦ — „prin harul lui Dumnezeu”"
+      ],
+      "reason": "Snapshotul SBLGNT tipărește lectura Holmes χωρὶς θεοῦ, în timp ce aparatul consemnează χάριτι în WH/Treg/NIV/RP. Conform runbook-ului, corpul textului urmează lectura principală fixată, iar alternativa este documentată aici.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Snapshotul SBLGNT tipărește lectura Holmes χωρὶς θεοῦ, în timp ce aparatul consemnează χάριτι în WH/Treg/NIV/RP. Conform runbook-ului, corpul textului urmează lectura principală fixată, iar alternativa este documentată aici."
+    },
+    {
+      "verse": 14,
+      "term": "αἵματος καὶ σαρκός",
+      "decision": "„sânge și carne”",
+      "alternatives": [
+        "TR/RP: „carne și sânge”"
+      ],
+      "reason": "SBLGNT/WH/Treg păstrează ordinea αἵματος καὶ σαρκός; ordinea TR/RP nu este importată.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT/WH/Treg păstrează ordinea αἵματος καὶ σαρκός; ordinea TR/RP nu este importată."
+    },
+    {
+      "verse": 16,
+      "term": "ἐπιλαμβάνεται",
+      "decision": "„Se îngrijește de”",
+      "alternatives": [
+        "„ia în ajutor”",
+        "„Se prinde de”"
+      ],
+      "reason": "Verbul are literal sensul de a apuca/a lua de cineva și, contextual, de a veni în ajutor; formularea aleasă păstrează sensul relațional fără a introduce o afirmație ontologică absentă din verb.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Verbul are literal sensul de a apuca/a lua de cineva și, contextual, de a veni în ajutor; formularea aleasă păstrează sensul relațional fără a introduce o afirmație ontologică absentă din verb."
+    },
+    {
+      "verse": 17,
+      "term": "ἱλάσκεσθαι",
+      "decision": "„a face ispășire”",
+      "alternatives": [
+        "„a face propitiere”",
+        "„a îndepărta vina păcatelor”"
+      ],
+      "reason": "Verbul cultic este redat prin formularea românească larg inteligibilă „a face ispășire”, fără a impune în verset o teorie confesională a mecanismului ispășirii.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Verbul cultic este redat prin formularea românească larg inteligibilă „a face ispășire”, fără a impune în verset o teorie confesională a mecanismului ispășirii."
+    },
+    {
+      "verse": 18,
+      "term": "πειρασθείς / πειραζομένοις",
+      "decision": "„când a fost încercat / cei care sunt încercați”",
+      "alternatives": [
+        "„ispitit / ispitiți”"
+      ],
+      "reason": "πειράζω poate desemna ispitire sau punere la încercare; contextul suferinței din propoziție susține termenul mai larg „încercat”.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "πειράζω poate desemna ispitire sau punere la încercare; contextul suferinței din propoziție susține termenul mai larg „încercat”."
+    },
+    {
+      "verse": 16,
+      "term": "revizie finală: ἀγγέλων ἐπιλαμβάνεται",
+      "decision": "Căci, desigur, nu pe îngeri îi sprijină, ci pe urmașii lui Avraam.",
+      "reason": "Verbul ἐπιλαμβάνεται are aici sensul contextual de a sprijini sau a veni în ajutor, iar „Se îngrijește” exprimă doar preocupare ori grijă și slăbește material acțiunea afirmată. Expresia ἀγγέλων ἐπιλαμβάνεται cere sensul de ajutor activ, pe când nu de îngeri Se îngrijește îl atenuează la simpla purtare de grijă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
     }
   ],
   "referenceNotes": [],

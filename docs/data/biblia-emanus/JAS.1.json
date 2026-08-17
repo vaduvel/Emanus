@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "theologicalNeutrality": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Redactarea românească a fost refăcută verset-cu-verset din snapshotul fixat SBLGNT 1.2 și confruntată cu aparatul; TR a fost numai martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost folosite auxiliar. NTR nu a fost consultată în acest lot."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-11",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 27,
       "reviewed": 27,
@@ -98,22 +96,20 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 27 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 27 de versete din Iacov 1 au fost confruntate direct cu textul SBLGNT din snapshotul fixat și cu aparatul; TR a fost folosit numai ca martor."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost înlăturate calcurile englezești, acordurile greșite și fragmentele corupte din textul anterior.",
+        "Pronumele, numărul și raporturile sintactice au fost refăcute după greacă, nu după formularea existentă."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "πειρασμός este redat contextual ca „încercare” în 1:2,12 și ca „ispitire” în 1:13-14, fără uniformizare artificială.",
+        "θρησκεία din 1:26-27 este redat descriptiv ca „religie”, fără glosă confesională în corpul versetului."
       ]
     },
     "omissionAddition": {
@@ -123,136 +119,240 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT, cu sursele auxiliare doar pentru confruntare"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 316,
-        "secondary": 95,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5922586297890594,
-      "minimumScore": 0.5759312754780807
-    },
-    "textDigest": "sha256:918692a8f21ef7acc5539eb9eecdc318cd891b117f329b086b0c91d28ba5299c",
-    "contentDigest": "sha256:e297485881081855aedecb746e9e8f8cd0a44646c81ee2d4fd42aa1d81b8beea"
+    "textDigest": "sha256:de6abe31f29bec0607f3918724002780291c2f1844c4133f0a3c493d71d4e92b",
+    "contentDigest": "sha256:4b739a114992d2c74e7e5d54aecaefee1e50297ff94577253978c3de04dfb472",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Iacov, rob al lui Dumnezeu al Domnului Isus Hristos, către cele douăsprezece semi care sunt în Împără: Salutări!"
+      "text": "Iacov, rob al lui Dumnezeu și al Domnului Isus Hristos, către cele douăsprezece seminții care sunt în diaspora: salutare!"
     },
     {
       "number": 2,
-      "text": "Luați în considerare toate bucuriile, frații mei, când cădeți în diferite ispite,"
+      "text": "Socotiți drept bucurie deplină, frații mei, când treceți prin felurite încercări,"
     },
     {
       "number": 3,
-      "text": "știind că încercarea credinței tale produce perseverență."
+      "text": "știind că încercarea credinței voastre produce răbdare statornică."
     },
     {
       "number": 4,
-      "text": "Perseverența să aibă lucrarea ei perfectă, ca să fii desăvârșit și desăvârșit, lipsit de nimic."
+      "text": "Iar răbdarea statornică să-și ducă lucrarea până la capăt, ca să fiți maturi și întregi, fără să vă lipsească nimic."
     },
     {
       "number": 5,
-      "text": "Dar dacă vreunuia dintre voi îi lipsește înțelepciunea, să ceară de la Dumnezeu, care dă tuturor cu mărinimie și fără ocară, și i se va da."
+      "text": "Dacă vreunuia dintre voi îi lipsește înțelepciunea, să o ceară de la Dumnezeu, care dă tuturor cu generozitate și fără reproș, și îi va fi dată."
     },
     {
       "number": 6,
-      "text": "Dar să ceară cu credință, fără nici o îndoială, pentru că cel care se îndoiește este ca un val de mare, condus de vânt și aruncat."
+      "text": "Dar să ceară cu credință, fără să se îndoiască deloc; căci cel ce se îndoiește seamănă cu valul mării, purtat și împins de vânt."
     },
     {
       "number": 7,
-      "text": "Omul acela să nu creadă că va primi ceva de la Domnul."
+      "text": "Un astfel de om să nu creadă că va primi ceva de la Domnul,"
     },
     {
       "number": 8,
-      "text": "El este un om dublu-minded, instabil în toate căile sale."
+      "text": "fiind un om cu inima împărțită, nestatornic în toate căile lui."
     },
     {
       "number": 9,
-      "text": "Să se laude fratele în împrejurări umile în înalta sa poziție;"
+      "text": "Fratele aflat într-o stare smerită să se laude cu înălțarea lui,"
     },
     {
       "number": 10,
-      "text": "și bogatul, prin faptul că este smerit, pentru că ca floarea din iarbă, va trece."
+      "text": "iar cel bogat, cu smerirea lui, pentru că va trece ca floarea ierbii."
     },
     {
       "number": 11,
-      "text": "Căci soarele răsare cu vîntul arzător și usucă iarba; și floarea din ea cade, și frumusețea aspectului ei piere. Astfel, omul bogat va dispărea și el în urmărirea lui."
+      "text": "Căci soarele răsare cu arșița și usucă iarba; floarea ei cade, iar frumusețea înfățișării ei piere. Tot așa se va veșteji și bogatul în umbletele lui."
     },
     {
       "number": 12,
-      "text": "Binecuvântată este o persoană care suportă tentația, pentru că atunci când va fi aprobat, va primi coroana vieții pe care Domnul a promis-o celor care îl iubesc."
+      "text": "Fericit este omul care rabdă încercarea, fiindcă, după ce va fi dovedit vrednic, va primi cununa vieții, pe care El a promis-o celor ce-L iubesc."
     },
     {
       "number": 13,
-      "text": "Nimeni să nu spună când este ispitit, sunt ispitit de Dumnezeu, căci Dumnezeu nu poate fi ispitit de rău și el însuși nu ispitește pe nimeni."
+      "text": "Nimeni, când este ispitit, să nu spună: „Sunt ispitit de Dumnezeu”, fiindcă Dumnezeu nu poate fi ispitit de rău și El însuși nu ispitește pe nimeni."
     },
     {
       "number": 14,
-      "text": "Dar fiecare este ispitit când este atras de propria sa dorință și ademenit."
+      "text": "Ci fiecare este ispitit când este atras și momit de propria lui poftă."
     },
     {
       "number": 15,
-      "text": "Apoi pofta, când a zămislit, poartă păcat. Păcatul, când este deplin crescut, produce moarte."
+      "text": "Apoi pofta, după ce a zămislit, naște păcatul, iar păcatul, odată ajuns la maturitate, aduce moartea."
     },
     {
       "number": 16,
-      "text": "Nu vă lăsați înșelați, dragii mei frați."
+      "text": "Nu vă înșelați, frații mei iubiți!"
     },
     {
       "number": 17,
-      "text": "Fiecare dar bun și fiecare dar perfect este de sus, coborând de la Tatăl luminilor, cu care nu poate fi nici variație, nici umbră de cotitură."
+      "text": "Orice dar bun și orice dar desăvârșit este de sus, coborând de la Tatăl luminilor, la care nu există schimbare sau umbră produsă de întoarcere."
     },
     {
       "number": 18,
-      "text": "El ne-a născut din voia Lui, prin cuvântul adevărului, ca să fim un fel de prime roade ale făpturilor Lui."
+      "text": "După voia Lui ne-a născut prin cuvântul adevărului, ca să fim un fel de prim rod al făpturilor Lui."
     },
     {
       "number": 19,
-      "text": "Așadar, preaiubiții mei frați, fiecare să fie grabnic la ascultare, încet la vorbire și încet la mânie;"
+      "text": "Știți aceasta, frații mei iubiți: fiecare om să fie grabnic la ascultare, încet la vorbire și încet la mânie,"
     },
     {
       "number": 20,
-      "text": "Căci mânia omului nu produce dreptatea lui Dumnezeu."
+      "text": "căci mânia omului nu lucrează dreptatea lui Dumnezeu."
     },
     {
       "number": 21,
-      "text": "De aceea, lepădând toată murdăria și revărsarea răutății, primiți cu umilință cuvântul implantat, care este capabil să vă salveze sufletele."
+      "text": "De aceea, lepădând orice murdărie și orice revărsare de răutate, primiți cu blândețe cuvântul sădit în voi, care poate să vă mântuiască sufletele."
     },
     {
       "number": 22,
-      "text": "Dar fiți împlinitori ai Cuvântului, și nu numai ascultători, amăgindu-vă pe voi înșivă."
+      "text": "Fiți însă împlinitori ai cuvântului, nu doar ascultători, înșelându-vă singuri."
     },
     {
       "number": 23,
-      "text": "Căci dacă cineva ascultă Cuvântul și nu face, este ca un om care se uită la fața lui naturală în oglindă;"
+      "text": "Căci, dacă cineva este ascultător al cuvântului, dar nu și împlinitor, seamănă cu un om care își privește fața firească într-o oglindă;"
     },
     {
       "number": 24,
-      "text": "Căci el se vede pe sine pleacă uită îndată ce fel de om era."
+      "text": "se privește, pleacă și uită îndată cum era."
     },
     {
       "number": 25,
-      "text": "Dar cel care privește în legea perfectă a libertății și continuă, nu fiind un ascultător care uită, ci un înfăptuitor al lucrării, acest om va fi binecuvântat în ceea ce face."
+      "text": "Dar cel care privește cu atenție în legea desăvârșită, legea libertății, și stăruie în ea, nefiind un ascultător uituc, ci un împlinitor al lucrării, acela va fi fericit în ceea ce face."
     },
     {
       "number": 26,
-      "text": "Dacă cineva dintre voi crede că este religios în timp ce nu-și ține limba în frâu, dar își înșeală inima, religia acestui om este lipsită de valoare."
+      "text": "Dacă cineva se socotește religios, dar nu-și ține limba în frâu, ci își înșală inima, religia lui este zadarnică."
     },
     {
       "number": 27,
-      "text": "Religia pură și nepătată înaintea Dumnezeului și Tatălui nostru este aceasta: să vizităm orfanii și văduvele în necazul lor și să ne păstrăm nepătați de lume."
+      "text": "Religia curată și neîntinată înaintea lui Dumnezeu și Tatăl este aceasta: să-i îngrijești pe orfani și pe văduve în necazul lor și să te păstrezi neîntinat de lume."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 2,
+      "term": "πειρασμοῖς",
+      "decision": "„încercări”",
+      "alternatives": [
+        "„ispite”"
+      ],
+      "reason": "Contextul 1:2-4 descrie testarea credinței și producerea statorniciei; 1:13-14 tratează separat ispitirea spre rău.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Decizia a fost verificată direct în snapshotul SBLGNT 1.2 și aparatul fixat."
+    },
+    {
+      "verse": 8,
+      "term": "δίψυχος",
+      "decision": "„cu inima împărțită”",
+      "alternatives": [
+        "„cu suflet dublu”"
+      ],
+      "reason": "Redarea păstrează ideea de loialitate/interioritate divizată fără calc lexical nefiresc.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Decizia a fost verificată direct în snapshotul SBLGNT 1.2 și aparatul fixat."
+    },
+    {
+      "verse": 12,
+      "term": "ὃν ἐπηγγείλατο",
+      "decision": "„pe care El a promis-o”",
+      "alternatives": [
+        "„pe care Domnul a promis-o”"
+      ],
+      "reason": "Textul principal nu introduce explicit κύριος în această propoziție; subiectul rămâne implicit în română.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Decizia a fost verificată direct în snapshotul SBLGNT 1.2 și aparatul fixat."
+    },
+    {
+      "verse": 17,
+      "term": "παραλλαγὴ ἢ τροπῆς ἀποσκίασμα",
+      "decision": "„schimbare sau umbră produsă de întoarcere”",
+      "alternatives": [
+        "„variație sau umbră de mutare”"
+      ],
+      "reason": "Metafora astronomică este păstrată fără calcuri obscure.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Decizia a fost verificată direct în snapshotul SBLGNT 1.2 și aparatul fixat."
+    },
+    {
+      "verse": 21,
+      "term": "ἔμφυτον λόγον",
+      "decision": "„cuvântul sădit în voi”",
+      "alternatives": [
+        "„cuvântul înnăscut”"
+      ],
+      "reason": "ἔμφυτος indică aici cuvântul implantat/sădit și primit, conform imperativului δέξασθε.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Decizia a fost verificată direct în snapshotul SBLGNT 1.2 și aparatul fixat."
+    },
+    {
+      "verse": 25,
+      "term": "νόμον τέλειον τὸν τῆς ἐλευθερίας",
+      "decision": "„legea desăvârșită, legea libertății”",
+      "alternatives": [
+        "„legea perfectă a libertății”"
+      ],
+      "reason": "Apoziția greacă este redată explicit pentru claritate sintactică.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Decizia a fost verificată direct în snapshotul SBLGNT 1.2 și aparatul fixat."
+    },
+    {
+      "verse": 2,
+      "term": "revizie finală: Πᾶσαν χαρὰν ἡγήσασθε",
+      "decision": "Socotiți drept bucurie deplină, frații mei, când treceți prin felurite încercări,",
+      "reason": "Prin Πᾶσαν χαρὰν ἡγήσασθε se cere evaluarea încercărilor drept bucurie deplină, pe când Socotiți ca o mare bucurie slăbește această totalitate semantică.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 12,
+      "term": "revizie finală: δόκιμος γενόμενος",
+      "decision": "Fericit este omul care rabdă încercarea, fiindcă, după ce va fi dovedit vrednic, va primi cununa vieții, pe care El a promis-o celor ce-L iubesc.",
+      "reason": "Sensul aprobator al lui δόκιμος γενόμενος nu este transmis precis de după ce va fi găsit încercat, deoarece rezultatul favorabil al probei rămâne neexprimat.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 27,
+      "term": "revizie finală: ἄσπιλον ἑαυτὸν τηρεῖν ἀπὸ τοῦ κόσμου",
+      "decision": "Religia curată și neîntinată înaintea lui Dumnezeu Tatăl este aceasta: să-i îngrijești pe orfani și pe văduve în necazul lor și să te păstrezi neîntinat de lume.",
+      "reason": "Deși ἄσπιλον ἑαυτὸν τηρεῖν ἀπὸ τοῦ κόσμου și să ne păstrăm neîntinați de lume transmit aceeași exigență morală, ținta modifică nejustificat numărul și persoana reflexivului.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    },
+    {
+      "verse": 27,
+      "term": "revizie finală: τῷ θεῷ καὶ πατρὶ",
+      "decision": "Religia curată și neîntinată înaintea lui Dumnezeu și Tatăl este aceasta: să-i îngrijești pe orfani și pe văduve în necazul lor și să te păstrezi neîntinat de lume.",
+      "reason": "Construcția τῷ θεῷ καὶ πατρὶ înseamnă „Dumnezeu și Tată”, pe când înaintea lui Dumnezeu Tatăl elimină raportul explicit exprimat prin καὶ.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Corectat și retrimis porții finale verset-cu-verset."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

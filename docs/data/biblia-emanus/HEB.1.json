@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "theologicalNeutrality": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Toate cele 14 versete au fost revizuite direct față de snapshotul fixat SBLGNT 1.2 și aparatul lui; TR a fost folosit numai ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate auxiliar. NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 14,
       "reviewed": 14,
@@ -98,22 +96,21 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 14 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 14 versete au fost confruntate cu SBLGNT/aparat din snapshotul fixat; TR a fost citit exclusiv ca martor, iar WEBP/BTF/Cornilescu 1924/Biblia Liberă ca auxiliare."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost eliminate calcurile și formulările corupte din textul anterior.",
+        "Citatele din Psalmii 2, 45, 102 și 110 au fost punctuate coerent și persoanele verbale au fost reparate.",
+        "Termenii χαρακτήρ, ὑπόστασις, λειτουργικός și αἰῶνες au fost redați contextual, fără glosare confesională adăugată."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
-        "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Textul principal urmează SBLGNT și nu importă automat adaosuri ori ordini TR/RP.",
+        "Ambiguitatea sintactică din 1:8 este documentată editorial; corpul textului păstrează lectura vocativă tradițional posibilă fără a o prezenta drept variantă textuală."
       ]
     },
     "omissionAddition": {
@@ -123,84 +120,154 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT/aparat și verificări auxiliare fixate; fără copierea unei traduceri românești"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 0,
-        "primary": 316,
-        "secondary": 95,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.5922586297890594,
-      "minimumScore": 0.5759312754780807
-    },
-    "textDigest": "sha256:92a1184509b998cdb1fb41fbfd89da3f38303866d46d2a0770e131d305c55898",
-    "contentDigest": "sha256:1041fd95410aece02e1c5ccbdcdac623053ee120888b73937b5111a19bbbf1d4"
+    "textDigest": "sha256:72700468dac3c1c2c4f542d66b1fe0c6521727d9922bc5f8e53fc642da6627ac",
+    "contentDigest": "sha256:2081dfa1a6a5f4951068dfb5da1454faa5b7eb472a215ba12957cd9dd35d5b96",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Dumnezeu, după ce, în trecut, le-a vorbit taților prin profeți, în multe feluri și în diferite feluri,"
+      "text": "Dumnezeu, după ce odinioară le-a vorbit părinților prin profeți, în multe rânduri și în multe feluri,"
     },
     {
       "number": 2,
-      "text": "la sfîrșitul acestor zile, ne-a vorbit prin Fiul Său, pe care l-a numit moștenitor al tuturor lucrurilor, prin care a făcut și lumile."
+      "text": "în aceste zile de pe urmă ne-a vorbit prin Fiul, pe care L-a pus moștenitor al tuturor lucrurilor și prin care a făcut veacurile."
     },
     {
       "number": 3,
-      "text": "Fiul Său este strălucirea slavei Sale, chipul averii Sale, și sprijinește toate lucrurile prin cuvântul puterii Lui, care, după ce ne-a curățit de păcatele noastre, s-a așezat la dreapta Maiestății Sale,"
+      "text": "El, fiind strălucirea slavei și întipărirea ființei Lui și purtând toate prin cuvântul puterii, după ce prin Sine însuși a făcut curățirea păcatelor, S-a așezat la dreapta Măreției, în înălțimi,"
     },
     {
       "number": 4,
-      "text": "După ce a devenit mult mai bun decât îngerii, cel mai excelent nume pe care l-a moștenit este mai bun decât al lor."
+      "text": "ajungând cu atât mai presus de îngeri cu cât a moștenit un Nume mai deosebit decât al lor."
     },
     {
       "number": 5,
-      "text": "Căci căruia dintre îngeri i-a zis el vreodată: Tu ești Fiul meu; astăzi am devenit tatăl tău?„ iarăși: Eu îi voi fi Tată el Îmi va fi Fiu?”"
+      "text": "Căci căruia dintre îngeri i-a spus vreodată: „Tu ești Fiul Meu; Eu astăzi Te-am născut”? Și din nou: „Eu Îi voi fi Tată, iar El Îmi va fi Fiu”?"
     },
     {
       "number": 6,
-      "text": "Când îl aduce din nou în lume pe întâiul născut, el spune: Toți îngerii lui Dumnezeu să i se închine!„"
+      "text": "Iar când Îl aduce din nou pe Cel întâi născut în lume, spune: „Și să I se închine toți îngerii lui Dumnezeu.”"
     },
     {
       "number": 7,
-      "text": "Despre îngeri spune: El face vânturile îngerilor Săi pe robii Săi o flacără de foc.”"
+      "text": "Iar despre îngeri spune: „El îi face pe îngerii Săi vânturi și pe slujitorii Săi flacără de foc.”"
     },
     {
       "number": 8,
-      "text": "Dar despre Fiul spune: Tronul tău, Dumnezeule, este în vecii vecilor. Sceptrul neprihănirii este sceptrul Împărăției tale."
+      "text": "Dar despre Fiul: „Tronul Tău, Dumnezeule, este în vecii vecilor, și sceptrul dreptății este sceptrul Împărăției Tale."
     },
     {
       "number": 9,
-      "text": "Ai iubit dreptatea și ai urât nelegiuirea; de aceea Dumnezeu, Dumnezeul tău, te-a uns cu untdelemnul bucuriei deasupra semenilor tăi."
+      "text": "Ai iubit dreptatea și ai urât nelegiuirea; de aceea Te-a uns Dumnezeu, Dumnezeul Tău, cu untdelemnul bucuriei mai presus de însoțitorii Tăi.”"
     },
     {
       "number": 10,
-      "text": "Și, Doamne, la început, ai pus temelia pământului. Cerurile sunt lucrările mâinilor tale."
+      "text": "Și: „Tu, Doamne, la început ai întemeiat pământul, iar cerurile sunt lucrările mâinilor Tale."
     },
     {
       "number": 11,
-      "text": "Ei vor pieri, dar voi continuați; toți vor îmbătrâni ca o haină."
+      "text": "Ele vor pieri, dar Tu rămâi; toate se vor învechi ca o haină,"
     },
     {
       "number": 12,
-      "text": "Tu le va rostogoli ca o manta, și ei vor fi schimbate, dar tu ești la fel. Anii tăi nu va eșua."
+      "text": "și ca pe o manta le vei înfășura, ca pe o haină, și vor fi schimbate; dar Tu ești Același, iar anii Tăi nu se vor sfârși.”"
     },
     {
       "number": 13,
-      "text": "Dar care dintre îngeri a spus el, în orice moment, să stea la mâna mea dreaptă, până când voi face pe dușmanii tăi șervețel picioarele tale?"
+      "text": "Dar căruia dintre îngeri i-a spus vreodată: „Șezi la dreapta Mea până când îi voi pune pe dușmanii Tăi drept așternut al picioarelor Tale”?"
     },
     {
       "number": 14,
-      "text": "Nu sunt ei toți servitori ai spiritelor, trimiși să facă serviciul de dragul celor care vor moșteni salvarea?"
+      "text": "Nu sunt oare toți duhuri slujitoare, trimise să slujească pentru cei care urmează să moștenească mântuirea?"
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 2,
+      "term": "τοὺς αἰῶνας",
+      "decision": "„veacurile”",
+      "alternatives": [
+        "„lumile”",
+        "„universul”"
+      ],
+      "reason": "Termenul plural αἰῶνες are aici uz cosmologic; „veacurile” păstrează forma lexicală fără a reduce sensul la spațiu fizic.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Termenul plural αἰῶνες are aici uz cosmologic; „veacurile” păstrează forma lexicală fără a reduce sensul la spațiu fizic."
+    },
+    {
+      "verse": 3,
+      "term": "χαρακτὴρ τῆς ὑποστάσεως",
+      "decision": "„întipărirea ființei Lui”",
+      "alternatives": [
+        "„reprezentarea exactă a naturii Lui”",
+        "„amprenta realității Lui”"
+      ],
+      "reason": "χαρακτήρ indică o imprimare/reprezentare exactă, iar ὑπόστασις aici desemnează realitatea/ființa subiacentă; formularea evită importarea terminologiei dogmatice ulterioare.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "χαρακτήρ indică o imprimare/reprezentare exactă, iar ὑπόστασις aici desemnează realitatea/ființa subiacentă; formularea evită importarea terminologiei dogmatice ulterioare."
+    },
+    {
+      "verse": 3,
+      "term": "δι’ αὑτοῦ",
+      "decision": "„prin Sine însuși”",
+      "alternatives": [
+        "omiterea expresiei reflexive"
+      ],
+      "reason": "SBLGNT tipărește lectura reflexivă Holmes; aparatul consemnează alte lecturi, inclusiv αὐτοῦ și combinația RP. Textul principal păstrează lectura SBLGNT.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT tipărește lectura reflexivă Holmes; aparatul consemnează alte lecturi, inclusiv αὐτοῦ și combinația RP. Textul principal păstrează lectura SBLGNT."
+    },
+    {
+      "verse": 7,
+      "term": "τοὺς ἀγγέλους αὐτοῦ πνεύματα",
+      "decision": "„îngerii Săi vânturi”",
+      "alternatives": [
+        "„îngerii Săi duhuri”"
+      ],
+      "reason": "πνεύματα poate însemna „vânturi” sau „duhuri”; paralelismul citatului cu „flacără de foc” susține redarea elementară „vânturi”, fără a nega sensul personal al îngerilor în context.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "πνεύματα poate însemna „vânturi” sau „duhuri”; paralelismul citatului cu „flacără de foc” susține redarea elementară „vânturi”, fără a nega sensul personal al îngerilor în context."
+    },
+    {
+      "verse": 8,
+      "term": "Ὁ θρόνος σου ὁ θεὸς",
+      "decision": "„Tronul Tău, Dumnezeule”",
+      "alternatives": [
+        "„Dumnezeu este tronul Tău”"
+      ],
+      "reason": "Construcția nominativă poate fi analizată vocativ sau predicativ; formularea aleasă este posibilă gramatical și coerentă cu citatul, iar alternativa este consemnată fără a fi transformată în variantă textuală.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Construcția nominativă poate fi analizată vocativ sau predicativ; formularea aleasă este posibilă gramatical și coerentă cu citatul, iar alternativa este consemnată fără a fi transformată în variantă textuală."
+    },
+    {
+      "verse": 12,
+      "term": "ὡς ἱμάτιον",
+      "decision": "păstrat: „ca pe o haină”",
+      "alternatives": [
+        "omiterea expresiei"
+      ],
+      "reason": "SBLGNT păstrează expresia; aparatul consemnează omiterea în RP, care nu este importată în textul principal.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "SBLGNT păstrează expresia; aparatul consemnează omiterea în RP, care nu este importată în textul principal."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

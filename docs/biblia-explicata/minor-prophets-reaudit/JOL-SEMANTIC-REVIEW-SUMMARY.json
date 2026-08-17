@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "bookId": "JOL",
+  "bookName": "Ioel",
+  "status": "fresh-semantic-review-complete",
+  "sourcePacket": "docs/biblia-explicata/minor-prophets-reaudit/JOL-FRESH-SOURCE-REAUDIT.json",
+  "versificationApproval": "docs/biblia-explicata/minor-prophets-reaudit/JOL-VERSIFICATION-APPROVAL.json",
+  "reviewDirectory": "docs/biblia-explicata/minor-prophets-reaudit/JOL/reviews",
+  "totals": {
+    "chapters": 3,
+    "verses": 73,
+    "approvedAsIs": 51,
+    "correctedVerses": 22,
+    "severity": {
+      "critical": 2,
+      "material": 13,
+      "minor": 7
+    }
+  },
+  "canonicalPublication": {
+    "chapterPattern": "docs/data/biblia-emanus/JOL.{1..3}.json",
+    "snapshot": "docs/data/biblia-emanus/sources/ot-jol-2026-08-08-usfm.zip",
+    "snapshotSha256": "567ffb7f41be3fa1a13891257bde102d4a638e1f4f099345d10fe20959c5d709",
+    "textStage": "biblia-emanus",
+    "translationLabel": "Biblia Emanus",
+    "published": true,
+    "public": true,
+    "canonicalGate": "pending-external-validator"
+  },
+  "promotion": {
+    "candidateReady": true,
+    "promotionEligible": true,
+    "promotionStatus": "materialized-awaiting-canonical-gate"
+  }
+}

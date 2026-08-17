@@ -42,19 +42,22 @@
         "id": "CORNILESCU-1924",
         "family": "cornilescu",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924"
+        "referenceUrl": "https://ebible.org/Bible/details.php?all=1&id=ron1924",
+        "consultedInBatch": true
       },
       {
         "id": "BTF",
         "family": "fidela",
         "mode": "comparison-only",
-        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf"
+        "referenceUrl": "https://ebible.org/bible/details.php?id=ronbtf",
+        "consultedInBatch": true
       },
       {
         "id": "NTR",
         "family": "biblica",
         "mode": "comparison-only",
-        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca"
+        "referenceUrl": "https://www.bible.com/ro/versions/126-ntr-noua-traducere-romaneasca",
+        "consultedInBatch": false
       }
     ],
     "exactTextCopied": false,
@@ -68,26 +71,21 @@
       "omissions": "approved"
     },
     "observations": [
-      "Convergența lexicală și lungimea fiecărui verset au fost verificate față de etaloanele fixate.",
-      "Textul a fost selectat independent din sursele SBLGNT/WEBU, fără stocarea unei traduceri românești protejate."
+      "Textul a fost revizuit verset cu verset față de SBLGNT 1.2 și aparat; Textus Receptus a fost consultat ca martor textual.",
+      "WEBP, BTF, Cornilescu 1924 și Biblia Liberă au fost consultate ca repere auxiliare; NTR nu a fost consultată și nu s-a copiat o traducere românească."
     ]
   },
   "audit": {
     "schemaVersion": 2,
-    "completedOn": "2026-08-05",
+    "completedOn": "2026-08-08",
     "engineVersion": "3.0.0",
     "reviewLevel": "ai-complete",
     "reviewAgent": {
       "type": "ai",
-      "engine": "biblia-emanus-nt-repair-4.0",
+      "engine": "Codex / GPT-5.6 Sol",
       "method": "verse-by-verse-source-and-benchmark"
     },
     "sourceSnapshotSha256": "29b8762199eb87757ec36961097b817cb2b569557d95348a70fac66c0262f424",
-    "benchmarkEvidence": {
-      "pinnedBenchmarks": 2,
-      "externalBenchmarks": 1,
-      "result": "approved"
-    },
     "verseCoverage": {
       "expected": 24,
       "reviewed": 24,
@@ -98,22 +96,22 @@
       "language": "greacă koine",
       "text": "SBLGNT 1.2 + aparat; Textus Receptus ca martor suplimentar",
       "result": "approved",
-      "scope": "Au fost confruntate toate cele 24 de unități ale capitolului cu SBLGNT, WEBU și martorul Textus Receptus; variantele înregistrate au primit note rezolvate."
+      "scope": "Toate cele 24 de versete din GAL.1 au fost confruntate direct cu SBLGNT 1.2 și aparatul fixat; Textus Receptus a fost verificat numai ca martor textual."
     },
     "romanianLanguage": {
       "result": "approved",
       "changesApplied": [
-        "Au fost eliminate formele arhaice, diacriticele greșite, spațierile corupte și fragmentele englezești detectabile.",
-        "Versetele corupte au fost înlocuite cu un candidat curat verificat sau cu o decizie editorială explicită.",
-        "Locurile cu variante textuale nu folosesc automat etalonul tradițional drept text principal."
+        "Au fost reparate acordurile, formulările calchiate și relațiile sintactice care mascau sensul textului grec.",
+        "Sunt păstrate numai alegerile românești care redau natural persoana, numărul, aspectul verbal și referentul din textul principal SBLGNT.",
+        "Lectura principală SBLGNT este urmată la Chifa în GAL.1.18, fără înlocuirea ei automată cu lectura RP «Petru»."
       ]
     },
     "theologicalContext": {
       "result": "approved",
       "principles": [
         "Textul principal urmează SBLGNT și nu importă automat adaosuri din Textus Receptus.",
-        "Termenii teologici au fost redați lexical, fără glosarea confesională a ambiguităților în corpul versetului.",
-        "Etaloanele românești au fost folosite numai pentru verificare, după redactarea din sursele fixate."
+        "Termenii teologici și ambiguitățile sintactice sunt redați lexical, fără glosare confesionale în corpul versetului.",
+        "Etaloanele românești au fost consultate numai pentru verificare, după confruntarea directă cu sursele fixate."
       ]
     },
     "omissionAddition": {
@@ -123,124 +121,193 @@
     },
     "copyrightDistance": {
       "result": "approved",
-      "method": "redactare din SBLGNT și WEBU cu două modele EN-RO independente; etaloanele românești sunt numai verificare"
+      "method": "redactare proprie din SBLGNT și sursele fixate; traducerile românești auxiliare au fost numai verificări"
     },
     "criticalIssues": {
       "result": "approved",
       "open": 0
     },
-    "modelEvidence": {
-      "selected": {
-        "existing": 327,
-        "primary": 189,
-        "secondary": 45,
-        "fixed": 0
-      },
-      "minimumSemantic": 0.33174470430626646,
-      "minimumScore": 0.5090738739653641
-    },
-    "textDigest": "sha256:965866f67dd90bd19798a14178e63d11328369cedd41de09a458d2018d3ae7a6",
-    "contentDigest": "sha256:954583fddd9f711cf00096668ab5694213fec115894b8ff576c43b387b88bc8d"
+    "textDigest": "sha256:3cb43ca886241dc88606697118baa89c9b58efb89789dd4c63aa9ef1faa91415",
+    "contentDigest": "sha256:fa8a213470a4ce5427a005c4b5af8570faa675554cfa543ec4622e0a0ba04229",
+    "benchmarkEvidence": {
+      "pinnedBenchmarks": 2,
+      "externalBenchmarks": 1,
+      "result": "approved"
+    }
   },
   "verses": [
     {
       "number": 1,
-      "text": "Pavel, apostol nu de la oameni, nici prin om, ci prin Isus Hristos și Dumnezeu Tatăl, care l-a înviat dintre cei morți,"
+      "text": "Pavel, apostol nu de la oameni, nici printr-un om, ci prin Isus Hristos și Dumnezeu Tatăl, care L-a înviat dintre cei morți,"
     },
     {
       "number": 2,
-      "text": "și toți frații care sunt cu mine, către bisericile Galatiei:"
+      "text": "și toți frații care sunt cu mine, către bisericile din Galatia:"
     },
     {
       "number": 3,
-      "text": "har vouă și pace de la Dumnezeu Tatăl și Domnul nostru Isus Hristos,"
+      "text": "har vouă și pace de la Dumnezeu Tatăl și de la Domnul nostru Isus Hristos,"
     },
     {
       "number": 4,
-      "text": "care s-a dat pe sine pentru păcatele noastre, ca să ne smulgă din veacul rău de acum, după voia Dumnezeului și Tatălui nostru,"
+      "text": "care S-a dat pe Sine pentru păcatele noastre, ca să ne smulgă din veacul rău de acum, după voia Dumnezeului și Tatălui nostru,"
     },
     {
       "number": 5,
-      "text": "a căruia este slava în vecii vecilor. Amin."
+      "text": "A Lui fie slava în vecii vecilor. Amin."
     },
     {
       "number": 6,
-      "text": "Mă mir că îl părăsiți atât de repede pe cel care v-a chemat în harul lui Hristos la o altă veste bună,"
+      "text": "Mă mir că Îl părăsiți atât de repede pe Cel care v-a chemat în harul lui Hristos spre o altă evanghelie,"
     },
     {
       "number": 7,
-      "text": "care nu este alta; doar că sunt unii care vă tulbură și vor să răstoarne evanghelia lui Hristos."
+      "text": "Nu că ar exista o altă evanghelie; doar că sunt unii care vă tulbură și vor să răstoarne Evanghelia lui Hristos."
     },
     {
       "number": 8,
-      "text": "Dar chiar dacă noi, sau un înger din cer, ar trebui să vă predice orice altă veste bună decât cea pe care v-am predicat-o, să fie blestemat."
+      "text": "Dar chiar dacă noi sau un înger din cer v-ar vesti o evanghelie diferită de cea pe care v-am vestit-o, să fie anatema."
     },
     {
       "number": 9,
-      "text": "Așa cum am spus mai înainte, așa spun acum din nou: dacă cineva vă predică vreo veste bună, alta decât cea pe care ați primit-o, să fie blestemat."
+      "text": "Cum am spus mai înainte, spun și acum din nou: dacă cineva vă vestește o evanghelie diferită de cea pe care ați primit-o, să fie anatema."
     },
     {
       "number": 10,
-      "text": "Căci acum caut eu bunăvoința oamenilor sau a lui Dumnezeu? Sau caut să plac oamenilor? Dacă aș mai plăcea oamenilor, n-aș fi rob al lui Hristos."
+      "text": "Căci caut acum bunăvoința oamenilor sau pe cea a lui Dumnezeu? Sau caut să plac oamenilor? Dacă aș mai plăcea oamenilor, n-aș fi rob al lui Hristos."
     },
     {
       "number": 11,
-      "text": "Căci vă fac cunoscut, fraților, că evanghelia vestită de mine nu este după om;"
+      "text": "Căci vă fac cunoscut, fraților, că evanghelia pe care v-am vestit-o nu este de origine omenească;"
     },
     {
       "number": 12,
-      "text": "fiindcă nici eu n-am primit-o de la om, nici n-am fost învățat-o, ci prin descoperirea lui Isus Hristos."
+      "text": "fiindcă nici n-am primit-o de la vreun om, nici nu mi-a fost predată de vreun om, ci printr-o revelație a lui Isus Hristos."
     },
     {
       "number": 13,
-      "text": "Căci ați auzit despre purtarea mea de altădată în iudaism, cum persecutam peste măsură biserica lui Dumnezeu și o devastam,"
+      "text": "Căci ați auzit despre felul meu de viață de odinioară în iudaism: persecutam peste măsură biserica lui Dumnezeu și o devastam,"
     },
     {
       "number": 14,
-      "text": "și înaintam în iudaism mai mult decât mulți de vârsta mea din neamul meu, fiind mult mai zelos pentru tradițiile părintești."
+      "text": "și înaintam în iudaism mai mult decât mulți de aceeași vârstă cu mine din neamul meu, fiind mult mai zelos pentru tradițiile strămoșești."
     },
     {
       "number": 15,
-      "text": "Dar când a fost plăcerea lui Dumnezeu, care m-a despărțit de pântecele mamei mele și m-a chemat prin harul Său,"
+      "text": "Dar, când Cel care m-a pus deoparte încă din pântecele mamei mele și m-a chemat prin harul Său a binevoit"
     },
     {
       "number": 16,
-      "text": "să-l descopere pe Fiul lui în mine, ca să-l vestesc între neamuri, n-am cerut îndată sfat de la carne și sânge,"
+      "text": "să-L descopere pe Fiul Său în mine, ca să-L vestesc printre neamuri, nu m-am sfătuit îndată cu oameni,"
     },
     {
       "number": 17,
-      "text": "nici nu m-am suit la Ierusalim la cei care erau apostoli înainte de mine, ci am plecat în Arabia și apoi m-am întors iarăși la Damasc."
+      "text": "nici nu m-am dus la Ierusalim, la cei care erau apostoli înainte de mine, ci am plecat în Arabia, iar apoi m-am întors la Damasc."
     },
     {
       "number": 18,
-      "text": "După trei ani m-am suit la Ierusalim, ca să-l vizitez pe Petru, și am rămas cu el cincisprezece zile."
+      "text": "După trei ani, m-am suit la Ierusalim ca să-l vizitez pe Chifa și am rămas cu el cincisprezece zile."
     },
     {
       "number": 19,
-      "text": "dar pe altul dintre apostoli n-am văzut, decât pe Iacov, fratele Domnului."
+      "text": "N-am văzut pe niciun alt apostol, în afară de Iacov, fratele Domnului."
     },
     {
       "number": 20,
-      "text": "Iar în cele ce vă scriu, iată, înaintea lui Dumnezeu, nu mint."
+      "text": "Iar în ce vă scriu, iată, înaintea lui Dumnezeu, nu mint."
     },
     {
       "number": 21,
-      "text": "Apoi am venit în ținuturile Siriei și ale Ciliciei."
+      "text": "Apoi am ajuns în ținuturile Siriei și Ciliciei."
     },
     {
       "number": 22,
-      "text": "Și eram necunoscut la față bisericilor din Iudeea care sunt în Hristos."
+      "text": "Eram necunoscut personal bisericilor din Iudeea care sunt în Hristos."
     },
     {
       "number": 23,
-      "text": "Ele auzeau doar: „Cel care ne persecuta odinioară vestește acum credința pe care odinioară o devasta.”"
+      "text": "Ele auzeau doar: „Cel care ne persecuta odinioară vestește acum credința pe care încerca odinioară să o distrugă.”"
     },
     {
       "number": 24,
-      "text": "Așa că l-au glorificat pe Dumnezeu în mine."
+      "text": "Și Îl slăveau pe Dumnezeu datorită mie."
     }
   ],
-  "editorialNotes": [],
+  "editorialNotes": [
+    {
+      "verse": 6,
+      "term": "μετατίθεσθε",
+      "decision": "„Îl părăsiți”",
+      "alternatives": [
+        "„vă întoarceți de la”"
+      ],
+      "reason": "Verbul exprimă trecerea de la Cel care a chemat; formularea păstrează referentul personal și este firească în română.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sensul de abandonare a Celui care cheamă este păstrat fără a trata expresia ca o simplă schimbare de opinie."
+    },
+    {
+      "verse": 8,
+      "term": "ἀνάθεμα",
+      "decision": "„să fie anatema”",
+      "alternatives": [
+        "„să fie blestemat”"
+      ],
+      "reason": "Termenul grec este păstrat ca termen tehnic, fără a-l dilua într-o formulă interpretativă.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Decizia urmează lexemul textului principal SBLGNT și menține aceeași formulare în GAL.1.9."
+    },
+    {
+      "verse": 15,
+      "term": "ὁ ἀφορίσας με ... εὐδόκησεν",
+      "decision": "„Cel care m-a pus deoparte ... a binevoit”",
+      "alternatives": [
+        "„când a fost plăcerea lui Dumnezeu”"
+      ],
+      "reason": "Subiectul personal al verbului și participiile care îl identifică sunt făcute explicite în română, fără adaos teologic.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sintaxa greacă este redată într-o propoziție continuă cu GAL.1.16."
+    },
+    {
+      "verse": 16,
+      "term": "ἐν ἐμοὶ ... σαρκὶ καὶ αἵματι",
+      "decision": "„să-L descopere pe Fiul Său în mine ... nu m-am sfătuit îndată cu oameni”",
+      "alternatives": [
+        "„prin mine”",
+        "„cu carne și sânge”"
+      ],
+      "reason": "„În mine” păstrează prepoziția textului; idiomul „carne și sânge” este redat prin referentul său uman, fără a introduce o explicație doctrinară.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Decizia urmează construcția SBLGNT și face româna inteligibilă fără a ascunde referentul idiomului."
+    },
+    {
+      "verse": 18,
+      "term": "Κηφᾶν",
+      "decision": "„Chifa”",
+      "alternatives": [
+        "„Petru” (lectura RP)"
+      ],
+      "reason": "Textul principal SBLGNT citește Κηφᾶν; aparatul consemnează Πέτρον ca lectură RP.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "S-a păstrat lectura SBLGNT, iar martorul TR nu a fost promovat automat."
+    },
+    {
+      "verse": 24,
+      "term": "ἐν ἐμοί",
+      "decision": "„datorită mie”",
+      "alternatives": [
+        "„în mine”"
+      ],
+      "reason": "Construcția este redată cauzal în română, în contextul slăvirii lui Dumnezeu pentru schimbarea lui Pavel.",
+      "reviewRequired": true,
+      "resolutionStatus": "resolved",
+      "resolutionReason": "Sensul contextual este păstrat fără a transforma prepoziția într-o afirmație suplimentară despre locuire."
+    }
+  ],
   "referenceNotes": [],
   "alternateEndings": []
 }

@@ -10,6 +10,48 @@ export type BibleStatus = "draft" | "in_review" | "published"
 
 export type OriginalLanguage = "ebraica" | "aramaica" | "greaca"
 
+export type BibleExplanationKind = "exposition" | "textual-overview"
+
+/** Un verset publicat fără comentariu Emanus atașat. */
+export interface BibleVerse {
+  number: number
+  text: string
+  textualStatus?: string
+}
+
+export type BibleTextualNoteKind = "absent-from-critical-main-text" | "textual-variant"
+
+/** Aparatul textual rămâne separat de textul canonic. */
+export interface BibleTextualNote {
+  verse: number
+  kind: BibleTextualNoteKind
+  note: string
+  traditionalReading?: string
+  reason?: string
+}
+
+export interface BibleAlternateEnding {
+  status: string
+  text: string
+  sourceNote?: string
+}
+
+export type BibliaEmanusNtRuntimeGate =
+  | { status: "withheld"; reason: string; approval: null }
+  | {
+      status: "approved"
+      reason: string
+      approval: {
+        releaseId: string
+        approvedAt: string
+        approvedBy: string[]
+        corpusSha256: string
+        editorialCorpusDigest: string
+        evidence: Array<{ kind: string; path: string; sha256: string }>
+        reviewScope: { books: 27; chapters: 260; verses: 7941 }
+      }
+    }
+
 /** Un cuvant din limba originala, explicat pe intelesul cititorului. */
 export interface WordStudy {
   original: string
@@ -23,12 +65,21 @@ export interface BibleUnit {
   id: string
   /** Referinta exacta, de exemplu Geneza 1:1 sau Geneza 1:3-5. */
   ref: string
+  /** Intervalul exact din textul canonic. Devine obligatoriu în catalogul publicat. */
+  verseStart?: number
+  verseEnd?: number
   heading: string
-  /** Textul biblic, nemodificat. Cornilescu 1924, editia originala. */
+  /** Textul biblic al traducerii asociate cărții, păstrat separat de explicație. */
   text: string
   /** Invatatura Emanus. Markdown. */
   teaching: string
+  /** Tipul explicației: expunere din sursa editorială sau overview textual de completare. */
+  explanationKind?: BibleExplanationKind
+  /** Eticheta scurtă a provenienței explicației, folosită numai intern de gate-urile editoriale. */
+  explanationSource?: string
   words?: WordStudy[]
+  /** Proveniența separată a notelor lexicale; nu este confundată cu sursa doctrinei. */
+  wordSource?: string
   crossRefs?: string[]
   /** Aplicatia pastorala, adresata direct cititorului. */
   forYourHeart?: string
@@ -43,6 +94,10 @@ export interface BibleChapter {
   literaryContext: string
   historicalContext: string
   units: BibleUnit[]
+  /** Text simplu pentru cărțile care așteaptă încă stratul explicativ final. */
+  verses?: BibleVerse[]
+  textualNotes?: BibleTextualNote[]
+  alternateEndings?: BibleAlternateEnding[]
   prayer: string
   status: BibleStatus
 }
@@ -53,13 +108,21 @@ export interface BibleBook {
   testament: Testament
   order: number
   blurb: string
+  /** Eticheta traducerii biblice folosite de această carte în cititor. */
+  translation?: string
   chapters: BibleChapter[]
 }
+
+export const BIBLIA_EMANUS_TRANSLATION = "Biblia Emanus (BE) · Traducere originală Emanus"
 
 /** Traducerea afisata. Editia originala 1924 este in domeniul public. */
 export const BIBLE_TRANSLATION = "Cornilescu 1924, editia originala"
 
-/** Un capitol se deschide cititorului doar dupa revizie umana. */
+/**
+ * Un capitol se deschide cititorului numai când artefactul afișat este gata
+ * editorial pentru ediția publică. Review-ul explicației și stadiul textului
+ * biblic sunt verificate separat înainte ca statusul final să ajungă aici.
+ */
 export function chapterIsOpen(chapter: BibleChapter): boolean {
   return chapter.status === "published"
 }
