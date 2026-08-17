@@ -184,17 +184,19 @@ export function completeLesson(lessonId: string, journalText: string): JourneySt
     return save({ ...s, doctrineDone: s.doctrineDone + 1, journal })
   }
 
+  const lessonIndex = indexOfLesson(lessonId)
+  const advancesPath = lessonIndex >= s.lessonsDone
   return save({
     ...s,
-    lessonsDone: Math.max(s.lessonsDone, indexOfLesson(lessonId) + 1),
-    lastLessonDate: today(),
+    lessonsDone: lessonIndex >= 0 ? Math.max(s.lessonsDone, lessonIndex + 1) : s.lessonsDone,
+    lastLessonDate: advancesPath ? today() : s.lastLessonDate,
     journal,
   })
 }
 
 function indexOfLesson(lessonId: string): number {
   const path = currentPath()
-  if (!path) return 0
+  if (!path) return -1
   return path.lessons.findIndex((l) => l.id === lessonId)
 }
 

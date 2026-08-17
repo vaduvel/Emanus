@@ -43,7 +43,7 @@ const GRELE: string[] = [
   "Daca m-am rugat pentru cineva si a murit?",
 ]
 
-export function Ask({ despre }: { despre?: string }) {
+export function Ask({ despre, returnTo }: { despre?: string; returnTo?: string }) {
   const [text, setText] = useState("")
   const [trimise, setTrimise] = useState<Trimisa[]>([])
   const [tocmai, setTocmai] = useState(false)
@@ -64,8 +64,8 @@ export function Ask({ despre }: { despre?: string }) {
   }
 
   return <section className="ask">
-    <button type="button" className="ghost ask__back" onClick={() => navigate(despre ? "/biblia" : "/")}>
-      <ArrowLeft size={16} aria-hidden /> {despre ? "Biblia" : "Azi"}
+    <button type="button" className="ghost ask__back" onClick={() => navigate(returnTo ?? (despre ? "/biblia" : "/"))}>
+      <ArrowLeft size={16} aria-hidden /> {returnTo ? "Curs" : despre ? "Biblia" : "Azi"}
     </button>
 
     <header className="ask__head">

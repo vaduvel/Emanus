@@ -13,6 +13,7 @@ import {
 } from "../journey"
 import { declineReminder, enableReminder, shouldOfferReminder } from "../reminder"
 import { navigate } from "../router"
+import { learningLessonUrl, pathProgramId } from "../learningPrograms"
 import { cloudEnabled } from "../cloud"
 
 /*
@@ -132,7 +133,7 @@ export function Today() {
           <button
             type="button"
             className="today__cta"
-            onClick={() => navigate(`/lesson/${dayPlan.lesson?.id ?? ""}`)}
+            onClick={() => navigate(learningLessonUrl(pathProgramId(path.id), dayPlan.lesson?.id ?? ""))}
           >
             {away ? "Reia" : "Începe"} <ArrowRight size={18} aria-hidden />
           </button>

@@ -52,6 +52,7 @@ for (const book of vtBooks) {
     assertReaderText(chapter.literaryContext, `${book.name} ${chapter.number} context literar`)
     assertReaderText(chapter.historicalContext, `${book.name} ${chapter.number} context istoric`)
     assertReaderText(chapter.prayer, `${book.name} ${chapter.number} rugăciune`)
+    const owners = new Map(canonicalVerses.map((_, index) => [index + 1, []]))
 
     for (const unit of chapter.units) {
       units += 1
@@ -62,6 +63,7 @@ for (const book of vtBooks) {
       need(unit.verseEnd <= canonicalVerses.length, `${unit.ref}: interval depășește capitolul`)
       const expectedText = canonicalVerses.slice(unit.verseStart - 1, unit.verseEnd).join(" ")
       need(unit.text === expectedText, `${unit.ref}: unit.text nu este textul publicat Biblia Emanus`)
+      need(typeof unit.teaching === "string" && unit.teaching.trim(), `${unit.ref}: teaching gol`)
       need(!unit.explanationSource, `${unit.ref}: explanationSource nu trebuie expus cititorului`)
       assertReaderText(unit.heading, `${unit.ref} heading`)
       assertReaderText(unit.teaching, `${unit.ref} teaching`)
@@ -69,6 +71,16 @@ for (const book of vtBooks) {
       for (const word of unit.words ?? []) {
         assertReaderText(word.meaning, `${unit.ref} explicație lexicală ${word.transliteration}`)
       }
+      for (let verse = unit.verseStart; verse <= unit.verseEnd; verse += 1) {
+        owners.get(verse).push(unit.id)
+      }
+    }
+
+    for (const [verse, matches] of owners) {
+      need(
+        matches.length === 1,
+        `${book.name} ${chapter.number}:${verse} are ${matches.length} explicații (${matches.join(", ") || "niciuna"})`,
+      )
     }
   }
 }

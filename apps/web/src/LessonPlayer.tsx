@@ -9,8 +9,23 @@ import type { ChoiceOption, Lesson, LessonStep } from "@emanus/shared"
 import { ScriptureReveal } from "./components/ScriptureReveal"
 
 export interface LessonResult { choicesMade: Record<string, string>; journal: string }
+export interface LessonPlayerState {
+  mainStepId: string
+  mainStepIndex: number
+  revealedStepIds: string[]
+  choices: Record<string, string>
+  quizAnswers: Record<string, number>
+  checkIns: Record<string, string>
+  journal: string
+}
+
+interface RestoredLessonState extends LessonPlayerState {
+  revealed: LessonStep[]
+}
+
 const GUIDE_NAME = "Emanus"
-const INTERACTION_TYPES = new Set<LessonStep["type"]>(["choice", "check_in", "journal", "prayer", "step"])
+const INTERACTION_TYPES = new Set<LessonStep["type"]>(["choice", "check_in", "journal", "memory_verse", "prayer", "step"])
+const MOOD_IDS = new Set(["great", "good", "meh", "down", "hard"])
 function stepIcon(type: LessonStep["type"]): LucideIcon {
   switch (type) {
     case "scripture": return BookOpen
@@ -29,8 +44,92 @@ function stepText(step: LessonStep) {
   return (step.bubbles ?? []).map((b) => b.text).join(" ")
 }
 
-export function LessonPlayer({ lesson, onComplete, submitting = false }: {
-  lesson: Lesson; onComplete: (result: LessonResult) => void; submitting?: boolean
+function stringRecord(value: unknown): Record<string, string> {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return {}
+  return Object.fromEntries(
+    Object.entries(value).filter((entry): entry is [string, string] => typeof entry[1] === "string"),
+  )
+}
+
+function numberRecord(value: unknown): Record<string, number> {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return {}
+  return Object.fromEntries(
+    Object.entries(value).filter((entry): entry is [string, number] => (
+      typeof entry[1] === "number" && Number.isInteger(entry[1]) && entry[1] >= 0
+    )),
+  )
+}
+
+function restoreLessonState(
+  initialState: LessonPlayerState | undefined,
+  mainSteps: LessonStep[],
+  stepById: Map<string, LessonStep>,
+): RestoredLessonState {
+  const fallback = mainSteps[0]
+  if (!initialState || !fallback) return {
+    mainStepId: fallback?.id ?? "",
+    mainStepIndex: 0,
+    revealedStepIds: fallback ? [fallback.id] : [],
+    revealed: fallback ? [fallback] : [],
+    choices: {},
+    quizAnswers: {},
+    checkIns: {},
+    journal: "",
+  }
+
+  const idIndex = mainSteps.findIndex((step) => step.id === initialState.mainStepId)
+  // ID-ul este ancora editorială stabilă. Dacă a dispărut după o revizie a
+  // lecției, reluăm sigur de la început în loc să avem încredere într-un index
+  // care ar putea indica acum un pas cu totul diferit.
+  const index = idIndex >= 0 ? idIndex : 0
+  const current = mainSteps[index] ?? fallback
+  const choices = Object.fromEntries(
+    Object.entries(stringRecord(initialState.choices)).filter(([stepId, optionId]) => (
+      stepById.get(stepId)?.type === "choice"
+      && stepById.get(stepId)?.choice?.options.some((option) => option.id === optionId)
+    )),
+  )
+  const checkIns = Object.fromEntries(
+    Object.entries(stringRecord(initialState.checkIns)).filter(([stepId, optionId]) => {
+      const step = stepById.get(stepId)
+      if (step?.type !== "check_in") return false
+      const options = step.choice?.options
+      return options?.length ? options.some((option) => option.id === optionId) : MOOD_IDS.has(optionId)
+    }),
+  )
+  const quizAnswers = Object.fromEntries(
+    Object.entries(numberRecord(initialState.quizAnswers)).filter(([stepId, optionIndex]) => {
+      const step = stepById.get(stepId)
+      return step?.type === "quiz" && optionIndex < (step.quiz?.options.length ?? 0)
+    }),
+  )
+  const revealed: LessonStep[] = []
+  for (const mainStep of mainSteps.slice(0, index + 1)) {
+    revealed.push(mainStep)
+    const option = mainStep.choice?.options.find((candidate) => candidate.id === choices[mainStep.id])
+    const branch = option?.branchStepId ? stepById.get(option.branchStepId) : undefined
+    if (branch) revealed.push(branch)
+  }
+
+  return {
+    mainStepId: current.id,
+    mainStepIndex: index,
+    revealedStepIds: revealed.map((step) => step.id),
+    revealed,
+    choices,
+    quizAnswers,
+    checkIns,
+    journal: typeof initialState.journal === "string" ? initialState.journal : "",
+  }
+}
+
+export function LessonPlayer({ lesson, onComplete, submitting = false, initialState, onProgress, onChoice }: {
+  lesson: Lesson
+  onComplete: (result: LessonResult) => void
+  submitting?: boolean
+  initialState?: LessonPlayerState
+  onProgress?: (state: LessonPlayerState) => void
+  onChoice?: (step: LessonStep, option: ChoiceOption) => boolean | void
 }) {
   const { mainSteps, stepById } = useMemo(() => {
     const branchTargetIds = new Set<string>()
@@ -40,18 +139,33 @@ export function LessonPlayer({ lesson, onComplete, submitting = false }: {
       stepById: new Map(lesson.steps.map((s) => [s.id, s] as const)),
     }
   }, [lesson])
-  const [revealed, setRevealed] = useState<LessonStep[]>(() => mainSteps.length ? [mainSteps[0]] : [])
-  const [mainIdx, setMainIdx] = useState(0)
-  const [choices, setChoices] = useState<Record<string, string>>({})
-  const [quizAnswers, setQuizAnswers] = useState<Record<string, number>>({})
-  const [checkIns, setCheckIns] = useState<Record<string, string>>({})
+  const restored = useMemo(
+    () => restoreLessonState(initialState, mainSteps, stepById),
+    [initialState, mainSteps, stepById],
+  )
+  const [revealed, setRevealed] = useState<LessonStep[]>(() => restored.revealed)
+  const [mainIdx, setMainIdx] = useState(restored.mainStepIndex)
+  const [choices, setChoices] = useState<Record<string, string>>(() => restored.choices)
+  const [quizAnswers, setQuizAnswers] = useState<Record<string, number>>(() => restored.quizAnswers)
+  const [checkIns, setCheckIns] = useState<Record<string, string>>(() => restored.checkIns)
   const [bubbleCounts, setBubbleCounts] = useState<Record<string, number>>({})
-  const [journal, setJournal] = useState("")
+  const [journal, setJournal] = useState(restored.journal)
   const [autoPaused, setAutoPaused] = useState(false)
   const scrollRef = useRef<HTMLDivElement>(null)
-  useEffect(() => { scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" }) }, [revealed.length, bubbleCounts, quizAnswers, checkIns])
-
+  const currentTurnRef = useRef<HTMLDivElement>(null)
+  const focusNextStep = useRef(false)
   const current = revealed[revealed.length - 1]
+  useEffect(() => { scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" }) }, [revealed.length, bubbleCounts, quizAnswers, checkIns])
+  useEffect(() => {
+    if (!focusNextStep.current) return
+    if (!current || (!INTERACTION_TYPES.has(current.type) && current.type !== "quiz")) return
+    const frame = window.requestAnimationFrame(() => {
+      currentTurnRef.current?.focus({ preventScroll: true })
+      focusNextStep.current = false
+    })
+    return () => window.cancelAnimationFrame(frame)
+  }, [current, mainIdx, revealed.length])
+
   const inBranch = current ? !mainSteps.includes(current) : false
   const atLastMain = mainIdx >= mainSteps.length - 1
   function toNextMain(nextChoices = choices, nextJournal = journal) {
@@ -65,6 +179,8 @@ export function LessonPlayer({ lesson, onComplete, submitting = false }: {
   function advance() { toNextMain() }
   function pickChoice(step: LessonStep, opt: ChoiceOption) {
     if (choices[step.id]) return
+    if (onChoice?.(step, opt) === false) return
+    focusNextStep.current = true
     const next = { ...choices, [step.id]: opt.id }
     setChoices(next)
     const branchStepId = opt.branchStepId
@@ -73,9 +189,38 @@ export function LessonPlayer({ lesson, onComplete, submitting = false }: {
     toNextMain(next)
   }
   function pickMood(step: LessonStep, mood: string) {
-    if (!checkIns[step.id]) setCheckIns((s) => ({ ...s, [step.id]: mood }))
+    if (!checkIns[step.id]) {
+      focusNextStep.current = true
+      setCheckIns((s) => ({ ...s, [step.id]: mood }))
+    }
   }
-  function finishJournal(skip = false) { if (skip) setJournal(""); toNextMain(choices, skip ? "" : journal) }
+  function finishJournal(skip = false) {
+    focusNextStep.current = true
+    if (skip) setJournal("")
+    toNextMain(choices, skip ? "" : journal)
+  }
+  function finishExercise() {
+    focusNextStep.current = true
+    advance()
+  }
+  function answerQuiz(index: number) {
+    focusNextStep.current = true
+    setQuizAnswers((answers) => ({ ...answers, [current.id]: index }))
+  }
+
+  useEffect(() => {
+    const mainStep = mainSteps[mainIdx]
+    if (!mainStep) return
+    onProgress?.({
+      mainStepId: mainStep.id,
+      mainStepIndex: mainIdx,
+      revealedStepIds: revealed.map((step) => step.id),
+      choices,
+      quizAnswers,
+      checkIns,
+      journal,
+    })
+  }, [mainIdx, revealed, choices, quizAnswers, checkIns, journal, mainSteps, onProgress])
 
   useEffect(() => {
     if (!current || autoPaused || submitting) return
@@ -96,10 +241,15 @@ export function LessonPlayer({ lesson, onComplete, submitting = false }: {
       const timer = window.setTimeout(advance, 650)
       return () => window.clearTimeout(timer)
     }
+    if (current.type === "choice") {
+      if (!choices[current.id]) return
+      const timer = window.setTimeout(advance, 0)
+      return () => window.clearTimeout(timer)
+    }
     if (INTERACTION_TYPES.has(current.type)) return
     const timer = window.setTimeout(advance, readingDelay(stepText(current)))
     return () => window.clearTimeout(timer)
-  }, [current, autoPaused, submitting, bubbleCounts, quizAnswers, checkIns])
+  }, [current, autoPaused, submitting, bubbleCounts, quizAnswers, checkIns, choices])
 
   if (!current) return <section className="player"><p className="muted">Lecția nu are pași încă.</p></section>
   const total = Math.max(1, mainSteps.length)
@@ -108,15 +258,20 @@ export function LessonPlayer({ lesson, onComplete, submitting = false }: {
   const visibleBubbleCount = bubbleCounts[current.id] ?? Math.min(1, current.bubbles?.length ?? 0)
   const interactionReady = visibleBubbleCount >= (current.bubbles?.length ?? 0)
   return <section className="player">
-    <header className="player__head"><h1>{lesson.title}</h1><p className="muted">{lesson.memoryVerseRef} · ~{lesson.estMinutes} min</p><div className="progress" aria-hidden="true"><span style={progressStyle} /></div></header>
+    <header className="player__head"><h1>{lesson.title}</h1><p className="muted">{lesson.memoryVerseRef} · ~{lesson.estMinutes} min</p><div className="progress" role="progressbar" aria-label="Progresul sesiunii" aria-valuemin={1} aria-valuemax={total} aria-valuenow={stepNo}><span style={progressStyle} /></div></header>
     <div className="chat" ref={scrollRef} aria-live="polite">
-      {revealed.map((s, i) => <Turn key={`${s.id}@${i}`} step={s} lesson={lesson} isCurrent={i === revealed.length - 1}
-        visibleBubbleCount={s.id === current.id ? visibleBubbleCount : (s.bubbles?.length ?? 0)} interactionReady={i !== revealed.length - 1 || interactionReady}
-        pickedOptionId={choices[s.id]} pickedMoodId={checkIns[s.id]} quizAnswerIdx={quizAnswers[s.id]} journal={journal} onJournal={setJournal}
-        onJournalDone={finishJournal} onExerciseDone={advance} onQuiz={(idx) => setQuizAnswers((q) => ({ ...q, [s.id]: idx }))}
-        onMood={(m) => pickMood(s, m)} onPick={(o) => pickChoice(s, o)} />)}
+      {revealed.map((s, i) => {
+        const isCurrent = i === revealed.length - 1
+        return <div key={`${s.id}@${i}`} ref={isCurrent ? currentTurnRef : undefined} className="lesson-turn" tabIndex={isCurrent ? -1 : undefined}>
+          <Turn step={s} lesson={lesson} isCurrent={isCurrent}
+            visibleBubbleCount={s.id === current.id ? visibleBubbleCount : (s.bubbles?.length ?? 0)} interactionReady={!isCurrent || interactionReady}
+            pickedOptionId={choices[s.id]} pickedMoodId={checkIns[s.id]} quizAnswerIdx={quizAnswers[s.id]} journal={journal} onJournal={setJournal}
+            onJournalDone={finishJournal} onExerciseDone={finishExercise} onQuiz={answerQuiz}
+            onMood={(m) => pickMood(s, m)} onPick={(o) => pickChoice(s, o)} />
+        </div>
+      })}
     </div>
-    <footer className="player__foot"><span className="muted">{inBranch ? "↪ răspuns pentru alegerea ta" : `Pas ${stepNo}/${total}`}</span><button type="button" className="ghost" onClick={() => setAutoPaused((p) => !p)}>{autoPaused ? "Continuă conversația" : "Pauză"}</button></footer>
+    <footer className="player__foot"><span className="muted">{inBranch ? "↪ răspuns pentru alegerea ta" : `Pas ${stepNo}/${total}`}</span><button type="button" className="ghost" aria-pressed={autoPaused} onClick={() => setAutoPaused((p) => !p)}>{autoPaused ? "Continuă conversația" : "Pauză"}</button></footer>
   </section>
 }
 
@@ -135,22 +290,26 @@ function Turn({ step, lesson, isCurrent, visibleBubbleCount, interactionReady, p
    * dar fără scenă: în lecție versetul stă într-o conversație, nu pe un altar.
    * Versetul de memorat rămâne citație simplă: acolo omul îl recitește, nu îl primește.
    */
-  if (step.type === "scripture" || step.type === "memory_verse") return <><div className="msg msg--guide"><div className="msg__avatar">{step.type === "memory_verse" ? <Brain size={18} aria-hidden /> : <BookOpen size={18} aria-hidden />}</div>{step.type === "scripture" && step.scripture ? <ScriptureReveal variant="lesson" verseText={step.scripture.text} verseRef={step.scripture.ref} /> : <blockquote className="scripture">{step.scripture ? `„${step.scripture.text}”` : `„${lesson.memoryVerseRef}”`}<cite>{step.scripture?.ref ?? lesson.memoryVerseRef}</cite></blockquote>}</div>{bubbles.map((b, k) => <GuideMsg key={k} icon={MessageCircle} text={b.text} />)}</>
-  if (step.type === "prayer") return <>{bubbles.map((b, k) => <GuideMsg key={k} icon={HandHeart} text={b.text} />)}{isCurrent && interactionReady && <div className="choice__opts"><button onClick={onExerciseDone}>Am terminat rugăciunea</button></div>}</>
-  if (step.type === "step") return <>{bubbles.map((b, k) => <GuideMsg key={k} icon={Footprints} text={b.text} />)}{isCurrent && interactionReady && <div className="choice__opts"><button onClick={onExerciseDone}>Am făcut pasul</button><button className="ghost" onClick={onExerciseDone}>Sar peste acum</button></div>}</>
-  if (step.type === "check_in") return <>{bubbles.map((b, k) => <GuideMsg key={k} icon={MessageCircle} text={b.text} />)}{isCurrent && interactionReady && <MoodChips picked={pickedMoodId} onPick={onMood} />}</>
+  if (step.type === "scripture" || step.type === "memory_verse") return <><div className="msg msg--guide"><div className="msg__avatar">{step.type === "memory_verse" ? <Brain size={18} aria-hidden /> : <BookOpen size={18} aria-hidden />}</div>{step.type === "scripture" && step.scripture ? <ScriptureReveal variant="lesson" verseText={step.scripture.text} verseRef={step.scripture.ref} /> : <blockquote className="scripture">{step.scripture ? `„${step.scripture.text}”` : `„${lesson.memoryVerseRef}”`}<cite>{step.scripture?.ref ?? lesson.memoryVerseRef}</cite></blockquote>}</div>{bubbles.map((b, k) => <GuideMsg key={k} icon={MessageCircle} text={b.text} />)}{step.type === "memory_verse" && isCurrent && interactionReady ? <div className="choice__opts"><button type="button" onClick={onExerciseDone}>Încheie sesiunea</button></div> : null}</>
+  if (step.type === "prayer") return <>{bubbles.map((b, k) => <GuideMsg key={k} icon={HandHeart} text={b.text} />)}{isCurrent && interactionReady && <div className="choice__opts"><button type="button" onClick={onExerciseDone}>Am terminat rugăciunea</button></div>}</>
+  if (step.type === "step") return <>{bubbles.map((b, k) => <GuideMsg key={k} icon={Footprints} text={b.text} />)}{isCurrent && interactionReady && <div className="choice__opts"><button type="button" onClick={onExerciseDone}>Am făcut pasul</button><button type="button" className="ghost" onClick={onExerciseDone}>Sar peste acum</button></div>}</>
+  if (step.type === "check_in") {
+    const options = step.choice?.options
+    const picked = options?.find((option) => option.id === pickedMoodId)
+    return <>{step.choice?.prompt ? <GuideMsg icon={MessageSquare} text={step.choice.prompt} /> : null}{bubbles.map((b, k) => <GuideMsg key={k} icon={MessageCircle} text={b.text} />)}{picked ? <div className="msg msg--me"><div className="bubble bubble--me">{picked.label}</div></div> : isCurrent && interactionReady ? (options?.length ? <div className="choice__opts">{options.map((option) => <button key={option.id} type="button" className="ghost" onClick={() => onMood(option.id)}>{option.label}</button>)}</div> : <MoodChips picked={pickedMoodId} onPick={onMood} />) : null}</>
+  }
   if (step.type === "choice") {
     const picked = step.choice?.options.find((o) => o.id === pickedOptionId)
-    return <>{step.choice?.prompt && <GuideMsg icon={MessageSquare} text={step.choice.prompt} />}{picked ? <div className="msg msg--me"><div className="bubble bubble--me">{picked.label}</div></div> : isCurrent ? <div className="choice__opts">{step.choice?.options.map((o) => <button key={o.id} className="ghost" onClick={() => onPick(o)}>{o.label}</button>)}</div> : null}</>
+    return <>{step.choice?.prompt && <GuideMsg icon={MessageSquare} text={step.choice.prompt} />}{picked ? <div className="msg msg--me"><div className="bubble bubble--me">{picked.label}</div></div> : isCurrent ? <div className="choice__opts">{step.choice?.options.map((o) => <button key={o.id} type="button" className="ghost" onClick={() => onPick(o)}>{o.label}</button>)}</div> : null}</>
   }
   if (step.type === "quiz") {
     const answered = quizAnswerIdx !== undefined
     return <><GuideMsg icon={MessageCircle} text={step.quiz?.question ?? ""} /><div className="quiz">{step.quiz?.options.map((o, k) => {
       let cls = ""; if (answered) { if (o.correct) cls = " correct"; else if (quizAnswerIdx === k) cls = " wrong" }
-      return <button key={k} className={`ghost${cls}`} disabled={answered} onClick={() => onQuiz(k)}>{o.text}</button>
+      return <button key={k} type="button" className={`ghost${cls}`} disabled={answered} onClick={() => onQuiz(k)}>{o.text}</button>
     })}</div>{answered && step.quiz?.explanation && <GuideMsg icon={Lightbulb} text={step.quiz.explanation} />}</>
   }
-  if (step.type === "journal") return <><GuideMsg icon={NotebookPen} text={step.journalPrompt ?? ""} />{isCurrent ? <div className="journal"><textarea value={journal} onChange={(e) => onJournal(e.target.value)} placeholder="Scrie aici… (privat, doar pentru tine)" rows={4} /><div className="choice__opts"><button onClick={() => onJournalDone(false)}>Am terminat</button><button className="ghost" onClick={() => onJournalDone(true)}>Sar peste</button></div></div> : journal ? <div className="msg msg--me"><div className="bubble bubble--me">{journal}</div></div> : null}</>
+  if (step.type === "journal") return <><GuideMsg icon={NotebookPen} text={step.journalPrompt ?? ""} />{isCurrent ? <div className="journal"><textarea value={journal} onChange={(e) => onJournal(e.target.value)} placeholder="Scrie aici… (privat, doar pentru tine)" rows={4} /><div className="choice__opts"><button type="button" onClick={() => onJournalDone(false)}>Am terminat</button><button type="button" className="ghost" onClick={() => onJournalDone(true)}>Sar peste</button></div></div> : journal ? <div className="msg msg--me"><div className="bubble bubble--me">{journal}</div></div> : null}</>
   if (step.type === "reward") return <GuideMsg icon={Sunrise} text={bubbles.map((b) => b.text).join(" ") || "Atât pentru azi. Revino când ești pregătit."} />
   return <>{bubbles.map((b, k) => <GuideMsg key={k} icon={stepIcon(step.type)} text={b.text} />)}</>
 }

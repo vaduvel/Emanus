@@ -75,6 +75,18 @@ export const GENEZA_9: BibleChapter = {
         "Omul din fata ta poarta chipul lui Dumnezeu, oricat de stricat ar fi acel chip si oricat de putin ti-ar placea de el. Nu poti dispretui pe cineva fara sa atingi ceva ce nu este al lui, ci al Celui ce l-a facut."
     },
     {
+      id: "geneza-9-7",
+      ref: "Geneza 9:7",
+      heading: "Binecuvantarea este rostita din nou",
+      text:
+        "Iar voi, cresteţi si inmulţiţi-va; raspindiţi-va pe pamint, si inmulţiţi-va pe el!",
+      teaching:
+        "Ia aminte ca Dumnezeu rosteste din nou porunca de la inceputul capitolului: cresteti si inmultiti-va. Dupa cuvintele grele despre sange si despre judecata, El intoarce privirea omului spre viata, crestere si umplerea pamantului. Apele nu au spalat binecuvantarea, iar pacatul omului nu a facut ca Dumnezeu sa-Si lepede planul pentru faptura Sa.",
+      crossRefs: ["Geneza 1:28", "Geneza 9:1", "Psalmul 127:3-5"],
+      forYourHeart:
+        "Dumnezeu nu rosteste binecuvantarea numai o data si apoi o uita. Chiar dupa ce pune hotare pacatului, El cheama iarasi omul la viata si rodire."
+    },
+    {
       id: "geneza-9-8-11",
       ref: "Geneza 9:8-11",
       heading: "Un legamant care nu atarna de om",
