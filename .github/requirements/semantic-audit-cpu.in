@@ -1,0 +1,9 @@
+# Direct dependencies for the CI-only Old Testament semantic audit.
+# The compiled lock is resolved for GitHub's Linux x86_64 Python 3.11 runner.
+numpy==1.26.4
+sentence-transformers==3.0.1
+# This local version is available only from PyTorch's CPU wheel index.
+torch==2.4.1+cpu
+# Keep the sentence-transformers 3.x integration on the tested Transformers 4.x API.
+transformers==4.44.2
+huggingface-hub==0.24.6
