@@ -1,13 +1,15 @@
 import { useEffect, useMemo, useState } from "react"
-import { ArrowLeft, ArrowRight, Compass, Search, ShieldCheck, Sparkles } from "lucide-react"
+import { ArrowLeft, ArrowRight, Compass, LifeBuoy, Search, ShieldCheck, Sparkles } from "lucide-react"
 import {
   COMMON_DOORS,
   EXPLORE_DOORS,
   MORE_DOORS,
   doorHasOwnRoom,
   getDoor,
-  getPath,
-  resolveDoorPath,
+  getPathForDoor,
+  hasSafetySignal,
+  isPathReviewed,
+  searchDoors,
 } from "@emanus/shared/paths"
 import { chooseDoor } from "../journey"
 import { learningProgramUrl, pathProgramId } from "../learningPrograms"
@@ -27,19 +29,23 @@ export function Doors() {
   const [showAll, setShowAll] = useState(false)
   const [q, setQ] = useState("")
   const [askLink, setAskLink] = useState<string | null>(fromLink)
+  const [safetyChecked, setSafetyChecked] = useState(false)
 
   useEffect(() => {
     if (fromLink) setAskLink(fromLink)
   }, [fromLink])
+
+  if (!safetyChecked) return <SafetyCheck onContinue={() => setSafetyChecked(true)} />
 
   if (askLink) {
     return <FromCreator doorId={askLink} onYes={(id) => { setAskLink(null); setPicked(id) }} onNo={() => setAskLink(null)} />
   }
   if (picked) return <Confirm doorId={picked} onBack={() => setPicked(null)} />
 
-  const term = q.trim().toLowerCase()
+  const term = q.trim()
+  const danger = hasSafetySignal(term)
   const rest = term
-    ? [...COMMON_DOORS, ...MORE_DOORS].filter((door) => door.label.toLowerCase().includes(term))
+    ? searchDoors(term)
     : MORE_DOORS
 
   return (
@@ -68,29 +74,28 @@ export function Doors() {
         </label>
       ) : null}
 
-      {!term ? (
-        <ul className="doors__list">
-          {COMMON_DOORS.map((door) => <DoorButton key={door.id} label={door.label} onClick={() => setPicked(door.id)} />)}
-        </ul>
+      {!term ? <ul className="doors__list">{COMMON_DOORS.map((door) => <DoorButton key={door.id} label={door.label} onClick={() => setPicked(door.id)} />)}</ul> : null}
+
+      {!showAll && !term ? <button type="button" className="doors__more" onClick={() => setShowAll(true)}><Search size={17} aria-hidden /> Arată-mi toate opțiunile</button> : null}
+
+      {showAll && danger ? (
+        <div className="confirm__card doors__danger" role="alert">
+          <LifeBuoy size={22} aria-hidden />
+          <h2 className="confirm__title">Siguranța vine înaintea unei lecții</h2>
+          <p className="confirm__promise">Dacă ești în pericol acum sau te gândești să îți faci rău, oprește alegerea unui drum și deschide Ajutor.</p>
+          <button type="button" onClick={() => navigate("/criza")}>Am nevoie de ajutor acum</button>
+        </div>
       ) : null}
 
-      {!showAll && !term ? (
-        <button type="button" className="doors__more" onClick={() => setShowAll(true)}><Search size={17} aria-hidden /> Arată-mi toate opțiunile</button>
-      ) : null}
-
-      {showAll ? (
+      {showAll && !danger ? (
         <>
           <p className="doors__section-title">Mai multe situații</p>
-          <ul className="doors__list">
-            {rest.map((door) => <DoorButton key={door.id} label={door.label} onClick={() => setPicked(door.id)} />)}
-          </ul>
+          <ul className="doors__list">{rest.map((door) => <DoorButton key={door.id} label={door.label} onClick={() => setPicked(door.id)} />)}</ul>
           {term && rest.length === 0 ? <p className="doors__empty">Nu găsim exact expresia aceasta. Alege propoziția cea mai apropiată sau începe cu una dintre opțiunile de mai jos.</p> : null}
         </>
       ) : null}
 
-      <ul className="doors__list doors__list--quiet">
-        {EXPLORE_DOORS.map((door) => <DoorButton key={door.id} label={door.label} quiet onClick={() => setPicked(door.id)} />)}
-      </ul>
+      {!danger ? <ul className="doors__list doors__list--quiet">{EXPLORE_DOORS.map((door) => <DoorButton key={door.id} label={door.label} quiet onClick={() => setPicked(door.id)} />)}</ul> : null}
 
       <aside className="doors__safety">
         <ShieldCheck size={21} aria-hidden />
@@ -102,6 +107,10 @@ export function Doors() {
 
 function DoorButton({ label, quiet = false, onClick }: { label: string; quiet?: boolean; onClick: () => void }) {
   return <li><button type="button" className={`door${quiet ? " door--quiet" : ""}`} onClick={onClick}><Sparkles size={15} aria-hidden /><span>{label}</span><ArrowRight size={18} aria-hidden /></button></li>
+}
+
+function SafetyCheck({ onContinue }: { onContinue: () => void }) {
+  return <section className="confirm experience-shell"><div className="experience-brand"><img src="/emanus-mark.svg" alt="" aria-hidden /><span>Emanus</span></div><LifeBuoy size={28} aria-hidden /><p className="experience-eyebrow">Întâi, siguranța</p><h1 className="doors__title">Ești în pericol acum?</h1><p className="confirm__lead">Te gândești să îți faci rău, ai făcut pregătiri, ești lovit sau amenințat ori îți este frică să rămâi unde ești?</p><div className="confirm__card"><p className="confirm__promise">Răspunsul tău nu este salvat local, în jurnal sau în cloud.</p></div><button type="button" className="experience-cta" onClick={() => navigate("/criza")}>Da, am nevoie de ajutor acum</button><button type="button" className="experience-link" onClick={onContinue}>Nu, pot continua spre uși</button></section>
 }
 
 function FromCreator({ doorId, onYes, onNo }: { doorId: string; onYes: (doorId: string) => void; onNo: () => void }) {
@@ -122,16 +131,32 @@ function FromCreator({ doorId, onYes, onNo }: { doorId: string; onYes: (doorId: 
 
 function Confirm({ doorId, onBack }: { doorId: string; onBack: () => void }) {
   const door = getDoor(doorId)
-  const pathId = resolveDoorPath(doorId)
-  const path = getPath(pathId)
+  const path = getPathForDoor(doorId)
   if (!door || !path) { onBack(); return null }
   const own = doorHasOwnRoom(doorId)
   const explore = door.roomId === null
   const minutes = path.lessons[0]?.estMinutes ?? 10
+  const pathId = path.id
   function start() {
-    chooseDoor(pathId)
+    chooseDoor(doorId)
     navigate(learningProgramUrl(pathProgramId(pathId)))
   }
+
+  if (!isPathReviewed(path)) return (
+    <section className="confirm experience-shell">
+      <header className="experience-header">
+        <button type="button" className="experience-back" onClick={onBack} aria-label="Înapoi la porți"><ArrowLeft aria-hidden /></button>
+        <div className="experience-brand"><img src="/emanus-mark.svg" alt="" aria-hidden /><span>Emanus</span></div>
+        <span className="experience-header__space" />
+      </header>
+      <p className="experience-eyebrow">Ai ales</p>
+      <h1 className="confirm__echo">„{door.label}”</h1>
+      <p className="confirm__lead">Conținutul este scris, dar revizia cerută pentru această situație nu este încă închisă. Nu îți oferim o lecție sensibilă doar pentru că există în cod.</p>
+      <div className="confirm__card"><h2 className="confirm__title">Poți continua în siguranță din celelalte zone</h2><p className="confirm__promise">Ajutor, Biblia, Rugăciuni și ecranul Azi rămân disponibile.</p></div>
+      <button type="button" className="experience-cta" onClick={() => navigate("/criza")}>Am nevoie de ajutor acum</button>
+      <button type="button" className="experience-link" onClick={onBack}>Alege altă ușă</button>
+    </section>
+  )
 
   return (
     <section className="confirm experience-shell">

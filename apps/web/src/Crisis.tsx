@@ -12,16 +12,22 @@ const HOTLINES: Hotline[] = [
     note: "Non-stop și gratuit. Sună dacă viața ta sau a cuiva este în pericol imediat.",
   },
   {
+    dial: "116123",
+    display: "116 123",
+    label: "Sprijin emoțional",
+    note: "Linie gratuită pentru criză psihologică, singurătate sau gânduri de suicid.",
+  },
+  {
     dial: "116111",
     display: "116 111",
     label: "Telefonul Copilului",
-    note: "Consiliere gratuită și confidențială pentru copii și adolescenți.",
+    note: "Pentru copii și adolescenți. Gratuit, de luni până vineri, între 08:00 și 20:00.",
   },
   {
     dial: "0800801200",
     display: "0800 801 200",
-    label: "Linie de sprijin Antisuicid",
-    note: "Sprijin emoțional în momente de criză. Cineva te ascultă.",
+    label: "TelVerde Antisuicid",
+    note: "Gratuit, cu program limitat. Dacă nu răspunde și este urgent, sună la 112.",
   },
 ]
 

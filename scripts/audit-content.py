@@ -7,20 +7,22 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 LIB = ROOT / "packages" / "shared" / "src" / "library"
+PATHS = ROOT / "packages" / "shared" / "src" / "paths"
 IMPORT_RE = re.compile(r'(?:from\s+|export\s+\*\s+from\s+)["\'](\.[^"\']+)["\']')
 
 def runtime_files() -> list[Path]:
-    pending = [LIB / "current.ts"]
+    runtime_roots = (LIB, PATHS)
+    pending = [LIB / "current.ts", PATHS / "index.ts"]
     seen: set[Path] = set()
     while pending:
         path = pending.pop()
-        if path in seen or not path.exists() or LIB not in path.parents:
+        if path in seen or not path.exists() or not any(root in path.parents or path == root for root in runtime_roots):
             continue
         seen.add(path)
         text = path.read_text(encoding="utf-8")
         for rel in IMPORT_RE.findall(text):
             candidate = (path.parent / rel.replace(".js", ".ts")).resolve()
-            if candidate.exists() and LIB in candidate.parents:
+            if candidate.exists() and any(root in candidate.parents for root in runtime_roots):
                 pending.append(candidate)
     return sorted(seen)
 
@@ -36,8 +38,8 @@ for path, text in texts.items():
 for lesson_id, refs in sorted(locations.items()):
     if len(refs) > 1:
         errors.append(f"ID de lecție duplicat {lesson_id}: {', '.join(refs)}")
-if len(locations) < 233:
-    errors.append(f"Au fost găsite doar {len(locations)} ID-uri cu formatul standard; pragul runtime este 233.")
+if len(locations) < 330:
+    errors.append(f"Au fost găsite doar {len(locations)} ID-uri cu formatul standard; pragul runtime este 330.")
 
 prohibited = {
     r"\bai un demon\b": "diagnostic spiritual cert prin ecran",

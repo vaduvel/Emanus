@@ -518,7 +518,7 @@ export const impreunaL3: Lesson = {
         {
           from: "guide",
           text:
-            "Iar textul continua cu «impreuna cu prigoniri». Nu ți se promite ca se termina opoziția — ți se promite ca nu rami fara familie.",
+            "Iar textul continua cu «impreuna cu prigoniri». Iisus arata ca ucenicia ne aseaza intr-un popor si intr-o casa mai larga, dar nu folosim versetul ca sa promitem fiecarui om ca singuratatea se va sfarsi repede sau in forma pe care o asteapta.",
         },
       ],
     },
@@ -1092,7 +1092,7 @@ export const impreunaL6: Lesson = {
         {
           from: "guide",
           text:
-            "2. Vei fi dezamagit. Oamenii din biserica sunt oameni. Nu inseamna că ai ales greșit — inseamna ca nu ai gasit inca oamenii tai.",
+            "2. Este posibil sa fii dezamagit. Oamenii din biserica sunt oameni. O dezamagire nu dovedeste automat ca ai ales gresit, dar nici nu trebuie ignorate minciuna, abuzul sau lipsa de pocainta.",
         },
       ],
     },

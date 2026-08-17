@@ -19,13 +19,29 @@ create table if not exists public.journey (
   user_id uuid primary key references auth.users (id) on delete cascade,
   seen_welcome boolean not null default false,
   path_id text,
+  door_id text,
   lessons_done integer not null default 0,
   doctrine_done integer not null default 0,
+  completed_doctrine_lesson_ids jsonb not null default '[]'::jsonb,
+  completed_lesson_ids jsonb not null default '[]'::jsonb,
+  emmaus_max_station integer not null default 1,
+  emmaus_station_seen_at jsonb not null default '{}'::jsonb,
+  cross_visited_at date,
+  schema_version integer not null default 2,
   last_lesson_date date,
   prayer_invite_seen boolean not null default false,
   path_completed_seen boolean not null default false,
   updated_at timestamptz not null default now()
 );
+
+-- Upgrade idempotent pentru proiectele care aveau deja tabela journey.
+alter table public.journey add column if not exists door_id text;
+alter table public.journey add column if not exists completed_doctrine_lesson_ids jsonb not null default '[]'::jsonb;
+alter table public.journey add column if not exists completed_lesson_ids jsonb not null default '[]'::jsonb;
+alter table public.journey add column if not exists emmaus_max_station integer not null default 1;
+alter table public.journey add column if not exists emmaus_station_seen_at jsonb not null default '{}'::jsonb;
+alter table public.journey add column if not exists cross_visited_at date;
+alter table public.journey add column if not exists schema_version integer not null default 2;
 
 -- 2. Jurnalul: ce a scris în lecții. O intrare per lecție.
 create table if not exists public.journal (

@@ -33,6 +33,7 @@
   align-items: center;
   gap: 8px;
   width: 100%;
+  max-width: 520px;
   padding: 8px 14px;
   margin: 0 0 14px;
   border: none;
@@ -127,6 +128,8 @@
 
 /* --- Intrarea: 10 uși întâi, restul la "Arată-mi tot" (docs/21 §4) --- */
 .doors {
+  width: 100%;
+  max-width: 520px;
   padding: 8px 18px 32px;
 }
 .doors__mark {
@@ -263,6 +266,7 @@
  * Prima propoziție de pe ecran e propoziția LUI, nu a noastră.
  */
 .confirm {
+  width: 100%;
   max-width: 520px;
   margin: 0 auto;
   padding: 28px 18px 32px;
@@ -326,11 +330,27 @@
 .confirm__cta:hover {
   background: var(--accent-hover, #12807b);
 }
+.confirm__secondary {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px 18px;
+  border: 1px solid var(--border, #dbe8e6);
+  background: transparent;
+  color: var(--text-body, #33534f);
+  box-shadow: none;
+}
+.confirm__secondary:hover {
+  border-color: var(--accent, #0f6b68);
+  color: var(--accent, #0f6b68);
+}
 
 /* --- Azi --- */
 .today,
 .prayers,
 .pathend {
+  width: 100%;
+  max-width: 520px;
   padding: 4px 18px 24px;
 }
 .today__head {

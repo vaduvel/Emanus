@@ -176,7 +176,7 @@ export const neiertareO1: Lesson = {
       bubbles: [
         {
           from: "guide",
-          text: "Un lucru înainte de pasul de azi, și îl spun o dată, clar: dacă acum ești în pericol, sau te gândești să-ți faci rău, nu rămâi singur cu asta. Sună 112. Sau 116 123, gratuit, oricând. Aplicația asta nu înlocuiește medicul, psihologul sau poliția. Te aștept aici după.",
+          text: "Un lucru înainte de pasul de azi, și îl spun o dată, clar: dacă acum ești în pericol sau te gândești să-ți faci rău, nu rămâi singur cu asta. Pentru pericol imediat sună la 112. Pentru sprijin emoțional poți încerca 116 123 și poți merge la camera de gardă. Aplicația asta nu înlocuiește medicul, psihologul sau poliția. Te aștept aici după ce ești în siguranță.",
         },
         {
           from: "guide",
