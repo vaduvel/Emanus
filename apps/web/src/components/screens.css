@@ -46,6 +46,18 @@
   gap: 14px;
   padding: 16px 2px 20px;
 }
+.lesson-turn {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+.lesson-turn:focus { outline: none; }
+.lesson-turn:focus-visible {
+  border-radius: var(--radius-sm);
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
 .msg { display: flex; gap: 8px; align-items: flex-end; }
 .msg--guide { justify-content: flex-start; }
 .msg--me { justify-content: flex-end; }

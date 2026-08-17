@@ -13,10 +13,10 @@ import {
   Copy,
   Eraser,
   Heart,
+  HandHeart,
   Info,
   Languages,
   Link2,
-  List,
   MapPin,
   PenLine,
   Quote,
@@ -29,6 +29,11 @@ import {
 import type { BibleBook, BibleChapter, BibleStatus, BibleUnit, BibleVerse } from "@emanus/shared/bible-types"
 import { BIBLIA_EMANUS_TRANSLATION } from "@emanus/shared/bible-types"
 import needs from "../data/bible-needs.json"
+import {
+  explanationRanges,
+  resolveVerseExplanation,
+  resolveVerseExplanationSelection,
+} from "../bible/explanationMapping"
 import {
   loadAllBibleBooks,
   loadBibleBook,
@@ -51,8 +56,8 @@ type ReaderMode = "scripture" | "understand"
 type HighlightColor = "gold" | "sage" | "sky" | "rose"
 type SearchFilter = "all" | "verses" | "explanations" | "books"
 type SavedTab = "favorites" | "highlights" | "continue"
-type Overlay = "search" | "saved" | "needs" | "all-vt" | "all-nt" | "book" | null
-type LastRead = { bookId: string; bookName?: string; chapter: number; title: string }
+type Overlay = "search" | "saved" | "needs" | null
+type LastRead = { bookId: string; bookName?: string; chapter: number; title: string; verse?: number; mode?: ReaderMode }
 type SearchHit = {
   kind: "verse" | "explanation"
   bookId: string
@@ -63,6 +68,8 @@ type SearchHit = {
   verse?: number
 }
 
+type ChapterTarget = { bookId: string; chapter: number; verse?: number; mode?: ReaderMode }
+
 function readJson<T>(key: string, fallback: T): T {
   try {
     const raw = window.localStorage.getItem(key)
@@ -70,6 +77,18 @@ function readJson<T>(key: string, fallback: T): T {
   } catch {
     return fallback
   }
+}
+
+function readArray(key: string): string[] {
+  const value = readJson<unknown>(key, [])
+  return Array.isArray(value) ? value.filter((item): item is string => typeof item === "string") : []
+}
+
+function readHighlights(): Record<string, HighlightColor> {
+  const value = readJson<unknown>(VERSE_HIGHLIGHTS_KEY, {})
+  if (!value || typeof value !== "object" || Array.isArray(value)) return {}
+  return Object.fromEntries(Object.entries(value).filter((entry): entry is [string, HighlightColor] =>
+    typeof entry[0] === "string" && ["gold", "sage", "sky", "rose"].includes(String(entry[1]))))
 }
 
 function writeJson(key: string, value: unknown): void {
@@ -81,11 +100,27 @@ function writeJson(key: string, value: unknown): void {
 }
 
 function readLast(): LastRead | null {
-  return readJson<LastRead | null>(LAST_KEY, null)
+  const value = readJson<unknown>(LAST_KEY, null)
+  if (!value || typeof value !== "object" || Array.isArray(value)) return null
+  const candidate = value as Partial<LastRead>
+  if (typeof candidate.bookId !== "string" || candidate.bookId.trim().length === 0) return null
+  if (!Number.isInteger(candidate.chapter) || (candidate.chapter ?? 0) < 1) return null
+  if (typeof candidate.title !== "string" || candidate.title.trim().length === 0) return null
+  if (candidate.bookName !== undefined && typeof candidate.bookName !== "string") return null
+  if (candidate.verse !== undefined && (!Number.isInteger(candidate.verse) || candidate.verse < 1)) return null
+  if (candidate.mode !== undefined && candidate.mode !== "scripture" && candidate.mode !== "understand") return null
+  return {
+    bookId: candidate.bookId,
+    bookName: candidate.bookName,
+    chapter: candidate.chapter as number,
+    title: candidate.title,
+    verse: candidate.verse,
+    mode: candidate.mode,
+  }
 }
 
 function readSavedChapters(): string[] {
-  return readJson<string[]>(SAVED_CHAPTERS_KEY, [])
+  return readArray(SAVED_CHAPTERS_KEY)
 }
 
 function chapterKey(bookId: string, chapter: number): string {
@@ -96,12 +131,32 @@ function verseKey(bookId: string, chapter: number, verse: number): string {
   return `${bookId}:${chapter}:${verse}`
 }
 
+function chooserUrl(testament?: "vt" | "nt", bookId?: string): string {
+  const params = new URLSearchParams()
+  if (testament) params.set("testament", testament)
+  if (bookId) params.set("carte", bookId)
+  const query = params.toString()
+  return `/biblia/alege${query ? `?${query}` : ""}`
+}
+
+function chapterUrl({ bookId, chapter, verse }: ChapterTarget): string {
+  return `/biblia/${bookId}/${chapter}${verse ? `?verset=${verse}` : ""}`
+}
+
 function paragraphs(text: string): string[] {
   return text.split("\n\n").map((part) => part.trim()).filter(Boolean)
 }
 
 function plain(text: string): string {
   return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
+}
+
+function concise(text: string, limit = 150): string {
+  const normalized = paragraphs(text)[0]?.replace(/\s+/gu, " ").trim() ?? ""
+  if (normalized.length <= limit) return normalized
+  const excerpt = normalized.slice(0, limit)
+  const lastSpace = excerpt.lastIndexOf(" ")
+  return `${excerpt.slice(0, lastSpace > limit * 0.7 ? lastSpace : limit).trim()}…`
 }
 
 function chapterIsOpen(chapter: { status: BibleStatus }): boolean {
@@ -182,15 +237,16 @@ function BookTile({ book, onClick }: { book: BibleBookSummary; onClick: () => vo
   </button>
 }
 
-function BookRail({ title, books, onAll, onBook }: {
+function BookRail({ id, title, books, onAll, onBook }: {
+  id: string
   title: string
   books: BibleBookSummary[]
   onAll: () => void
   onBook: (book: BibleBookSummary) => void
 }) {
-  return <section className="bible-shelf" aria-labelledby={`shelf-${title}`}>
+  return <section className="bible-shelf" aria-labelledby={id}>
     <header className="bible-shelf__head">
-      <h2 id={`shelf-${title}`}><BookMarked size={21} aria-hidden /> {title}</h2>
+      <h2 id={id}><BookMarked size={21} aria-hidden /> {title}</h2>
       <button type="button" className="bible-link" onClick={onAll}>Vezi toate <ArrowRight size={16} aria-hidden /></button>
     </header>
     <div className="bible-shelf__rail">
@@ -201,7 +257,7 @@ function BookRail({ title, books, onAll, onBook }: {
 
 function SearchExperience({ catalog, onOpen, onBook }: {
   catalog: BibleBookSummary[]
-  onOpen: (bookId: string, chapter: number) => void
+  onOpen: (target: ChapterTarget) => void
   onBook: (book: BibleBookSummary) => void
 }) {
   const [query, setQuery] = useState("")
@@ -290,7 +346,7 @@ function SearchExperience({ catalog, onOpen, onBook }: {
         key={`${hit.kind}-${hit.bookId}-${hit.chapter}-${hit.verse ?? 0}`}
         type="button"
         className="bible-result"
-        onClick={() => onOpen(hit.bookId, hit.chapter)}
+        onClick={() => onOpen({ bookId: hit.bookId, chapter: hit.chapter, verse: hit.verse, mode: hit.kind === "explanation" ? "understand" : "scripture" })}
       >
         <span className="bible-result__ref">{hit.kind === "verse" ? "Text biblic" : "Explicație"} · {hit.bookName} {hit.chapter}{hit.verse ? `:${hit.verse}` : ""}</span>
         <strong>{hit.title}</strong>
@@ -303,7 +359,7 @@ function SearchExperience({ catalog, onOpen, onBook }: {
 
 type Need = (typeof needs)[number]
 
-function NeedsExperience({ onOpen }: { onOpen: (bookId: string, chapter: number) => void }) {
+function NeedsExperience({ onOpen }: { onOpen: (target: ChapterTarget) => void }) {
   const [selected, setSelected] = useState<Need | null>(null)
   const [index, setIndex] = useState<Record<string, BibleNeedResult[]> | null>(null)
   const [failed, setFailed] = useState(false)
@@ -342,7 +398,7 @@ function NeedsExperience({ onOpen }: { onOpen: (bookId: string, chapter: number)
         key={`${result.bookId}-${result.chapter}-${result.ref}`}
         type="button"
         className="bible-result"
-        onClick={() => onOpen(result.bookId, result.chapter)}
+        onClick={() => onOpen({ bookId: result.bookId, chapter: result.chapter })}
       >
         <span className="bible-result__ref">{result.ref}</span>
         <strong>{result.heading}</strong>
@@ -358,15 +414,15 @@ function SavedExperience({ favorites, chapters, highlights, last, onOpen }: {
   chapters: Array<{ book: BibleBookSummary; chapter: BibleBookSummary["chapters"][number] }>
   highlights: Array<{ book: BibleBookSummary; chapter: BibleBookSummary["chapters"][number]; verse: number; color: HighlightColor }>
   last: LastRead | null
-  onOpen: (bookId: string, chapter: number) => void
+  onOpen: (target: ChapterTarget) => void
 }) {
   const [tab, setTab] = useState<SavedTab>("favorites")
   const items = tab === "favorites" ? favorites : highlights
   return <div className="bible-mine">
     <div className="bible-filter-bar bible-filter-bar--wide" aria-label="Biblia mea">
-      <button type="button" className={tab === "favorites" ? "is-active" : ""} onClick={() => setTab("favorites")}>Salvate</button>
-      <button type="button" className={tab === "highlights" ? "is-active" : ""} onClick={() => setTab("highlights")}>Marcaje</button>
-      <button type="button" className={tab === "continue" ? "is-active" : ""} onClick={() => setTab("continue")}>Continui</button>
+      <button type="button" className={tab === "favorites" ? "is-active" : ""} aria-pressed={tab === "favorites"} onClick={() => setTab("favorites")}>Salvate</button>
+      <button type="button" className={tab === "highlights" ? "is-active" : ""} aria-pressed={tab === "highlights"} onClick={() => setTab("highlights")}>Marcaje</button>
+      <button type="button" className={tab === "continue" ? "is-active" : ""} aria-pressed={tab === "continue"} onClick={() => setTab("continue")}>Continui</button>
     </div>
     {tab !== "continue" && <section className="bible-saved-section">
       <h3>{tab === "favorites" ? <><Star size={18} aria-hidden /> Versete favorite</> : <><PenLine size={18} aria-hidden /> Versete marcate</>}</h3>
@@ -375,7 +431,7 @@ function SavedExperience({ favorites, chapters, highlights, last, onOpen }: {
         key={`${book.id}-${chapter.number}-${verse}`}
         type="button"
         className="bible-result"
-        onClick={() => onOpen(book.id, chapter.number)}
+        onClick={() => onOpen({ bookId: book.id, chapter: chapter.number, verse, mode: "scripture" })}
       >
         <span className="bible-result__ref">{book.name} {chapter.number}:{verse}</span>
         <strong>{chapter.title}</strong>
@@ -388,7 +444,7 @@ function SavedExperience({ favorites, chapters, highlights, last, onOpen }: {
           key={`${book.id}-${chapter.number}`}
           type="button"
           className="bible-result"
-          onClick={() => onOpen(book.id, chapter.number)}
+          onClick={() => onOpen({ bookId: book.id, chapter: chapter.number })}
         >
           <span className="bible-result__ref">{book.name} {chapter.number}</span>
           <strong>{chapter.title}</strong>
@@ -399,7 +455,7 @@ function SavedExperience({ favorites, chapters, highlights, last, onOpen }: {
     </section>}
     {tab === "continue" && <section className="bible-saved-section">
       <h3><MapPin size={18} aria-hidden /> Unde ai rămas</h3>
-      {last ? <button type="button" className="bible-resume-card" onClick={() => onOpen(last.bookId, last.chapter)}>
+      {last ? <button type="button" className="bible-resume-card" onClick={() => onOpen({ bookId: last.bookId, chapter: last.chapter, verse: last.verse, mode: last.mode })}>
         <img src="/bible-road-hero.svg" alt="Drumul spre Emaus" />
         <span><strong>{last.bookName} {last.chapter}</strong><span>{last.title}</span><span>Continuă lectura <ArrowRight size={16} aria-hidden /></span></span>
       </button> : <p className="bible-sheet__empty">Începe un capitol și îl vom păstra aici.</p>}
@@ -411,11 +467,10 @@ export function Bible() {
   const [catalog, setCatalog] = useState<BibleBookSummary[] | null>(null)
   const [loadError, setLoadError] = useState(false)
   const [overlay, setOverlay] = useState<Overlay>(null)
-  const [selectedBook, setSelectedBook] = useState<BibleBookSummary | null>(null)
   const last = readLast()
   const saved = readSavedChapters()
-  const favoriteVerseKeys = readJson<string[]>(FAVORITE_VERSES_KEY, [])
-  const highlightMap = readJson<Record<string, HighlightColor>>(VERSE_HIGHLIGHTS_KEY, {})
+  const favoriteVerseKeys = readArray(FAVORITE_VERSES_KEY)
+  const highlightMap = readHighlights()
 
   useEffect(() => {
     let active = true
@@ -427,20 +482,21 @@ export function Bible() {
 
   const oldTestament = catalog?.filter((book) => book.testament === "vt") ?? []
   const newTestament = catalog?.filter((book) => book.testament === "nt") ?? []
-  const fallback = catalog?.find((book) => book.id === "luca") ?? newTestament[0] ?? oldTestament[0]
-  const resumeBook = catalog?.find((book) => book.id === last?.bookId) ?? fallback
-  const resumeChapter = resumeBook?.chapters.find((chapter) => chapter.number === last?.chapter)
-    ?? resumeBook?.chapters.find(chapterIsOpen)
-  const resumeTitle = last?.title ?? resumeChapter?.title ?? "Deschide Scriptura"
+  const resumeBook = last ? catalog?.find((book) => book.id === last.bookId) : undefined
+  const resumeChapter = resumeBook?.chapters.find((chapter) => chapter.number === last?.chapter && chapterIsOpen(chapter))
+  const resumeTitle = resumeChapter?.title ?? last?.title
+  const validLast = last && resumeBook && resumeChapter
+    ? { ...last, bookName: resumeBook.name, title: resumeChapter.title }
+    : null
 
   function openBook(book: BibleBookSummary): void {
-    setSelectedBook(book)
-    setOverlay("book")
+    navigate(chooserUrl(book.testament, book.id))
   }
 
-  function openChapter(bookId: string, chapter: number): void {
+  function openChapter(target: ChapterTarget): void {
     setOverlay(null)
-    navigate(`/biblia/${bookId}/${chapter}`)
+    if (target.mode) writeJson(MODE_KEY, target.mode)
+    navigate(chapterUrl(target))
   }
 
   const savedEntries = saved.map((key) => {
@@ -471,7 +527,7 @@ export function Bible() {
       <BrandMark />
       <div className="bible-home__actions">
         <IconButton label="Caută în Biblie" onClick={() => setOverlay("search")}><Search size={22} aria-hidden /></IconButton>
-        <IconButton label="Capitole și versete salvate" onClick={() => setOverlay("saved")} active={saved.length > 0 || favoriteVerseKeys.length > 0}><Bookmark size={22} aria-hidden /></IconButton>
+        <IconButton label="Capitole și versete salvate" onClick={() => setOverlay("saved")} active={saved.length > 0 || favoriteVerseKeys.length > 0 || Object.keys(highlightMap).length > 0}><Bookmark size={22} aria-hidden /></IconButton>
       </div>
     </header>
 
@@ -484,7 +540,7 @@ export function Bible() {
     {resumeBook && resumeChapter && <button
       type="button"
       className="bible-continue"
-      onClick={() => openChapter(resumeBook.id, resumeChapter.number)}
+      onClick={() => openChapter({ bookId: resumeBook.id, chapter: resumeChapter.number, verse: last?.verse, mode: last?.mode })}
     >
       <img src="/bible-road-hero.svg" alt="Un drum luminat care străbate valea spre cetate" />
       <span className="bible-continue__shade" aria-hidden />
@@ -501,8 +557,8 @@ export function Bible() {
     {loadError && <p className="bible-loading">Biblioteca nu s-a putut încărca. Verifică legătura și încearcă din nou.</p>}
 
     {catalog && <>
-      <BookRail title="Vechiul Testament" books={oldTestament} onAll={() => setOverlay("all-vt")} onBook={openBook} />
-      <BookRail title="Noul Testament" books={newTestament} onAll={() => setOverlay("all-nt")} onBook={openBook} />
+      <BookRail id="bible-shelf-vt" title="Vechiul Testament" books={oldTestament} onAll={() => navigate(chooserUrl("vt"))} onBook={openBook} />
+      <BookRail id="bible-shelf-nt" title="Noul Testament" books={newTestament} onAll={() => navigate(chooserUrl("nt"))} onBook={openBook} />
     </>}
 
     <button type="button" className="bible-pain-card" onClick={() => setOverlay("needs")}>
@@ -522,38 +578,167 @@ export function Bible() {
     </BibleDialog>
 
     <BibleDialog immersive open={overlay === "saved"} title="Biblia mea" onClose={() => setOverlay(null)}>
-      <SavedExperience favorites={favoriteEntries} chapters={savedEntries} highlights={highlightEntries} last={last} onOpen={openChapter} />
+      <SavedExperience favorites={favoriteEntries} chapters={savedEntries} highlights={highlightEntries} last={validLast} onOpen={openChapter} />
     </BibleDialog>
 
     <BibleDialog immersive open={overlay === "needs"} title="Când te doare, citește" onClose={() => setOverlay(null)}>
       <NeedsExperience onOpen={openChapter} />
     </BibleDialog>
 
-    <BibleDialog
-      immersive
-      open={overlay === "all-vt" || overlay === "all-nt"}
-      title={overlay === "all-vt" ? "Vechiul Testament" : "Noul Testament"}
-      onClose={() => setOverlay(null)}
-    >
-      <div className="bible-book-grid">
-        {(overlay === "all-vt" ? oldTestament : newTestament).map((book) => <BookTile key={book.id} book={book} onClick={() => openBook(book)} />)}
-      </div>
-    </BibleDialog>
+  </section>
+}
 
-    <BibleDialog immersive open={overlay === "book" && Boolean(selectedBook)} title={selectedBook?.name ?? "Alege capitolul"} onClose={() => setOverlay(null)}>
-      {selectedBook && <>
-        <div className="bible-book-lead"><span className="bible-book-lead__sigil">{selectedBook.order}</span><span><small>{selectedBook.testament === "vt" ? "Vechiul Testament" : "Noul Testament"}</small><strong>{selectedBook.name}</strong><span>{selectedBook.blurb}</span></span></div>
-        <p className="bible-sheet__hint">Alege capitolul</p>
-        <div className="bible-chapter-grid">
-          {visibleChapters(selectedBook.chapters).map((chapter) => <button
-            key={chapter.id}
+export function BibleChooser({ testament: initialTestament, bookId: initialBookId }: {
+  testament?: "vt" | "nt"
+  bookId?: string
+}) {
+  const [catalog, setCatalog] = useState<BibleBookSummary[] | null>(null)
+  const [loadError, setLoadError] = useState(false)
+  const [query, setQuery] = useState("")
+  const [testament, setTestament] = useState<"vt" | "nt">(initialTestament ?? "vt")
+  const [selectedBookId, setSelectedBookId] = useState(initialBookId ?? "")
+  const [selectedChapter, setSelectedChapter] = useState<number | null>(null)
+  const last = readLast()
+
+  useEffect(() => {
+    let active = true
+    void loadBibleCatalog()
+      .then((value) => { if (active) setCatalog(value.books) })
+      .catch(() => { if (active) setLoadError(true) })
+    return () => { active = false }
+  }, [])
+
+  useEffect(() => {
+    if (!catalog) return
+    const requested = initialBookId ? catalog.find((book) => book.id === initialBookId) : undefined
+    if (requested) {
+      setTestament(requested.testament)
+      setSelectedBookId(requested.id)
+      const available = visibleChapters(requested.chapters)
+      const remembered = last?.bookId === requested.id
+        ? available.find((chapter) => chapter.number === last.chapter)
+        : undefined
+      setSelectedChapter(remembered?.number ?? available[0]?.number ?? null)
+      return
+    }
+    const nextTestament = initialTestament ?? "vt"
+    setTestament(nextTestament)
+    const books = catalog.filter((book) => book.testament === nextTestament)
+    setSelectedBookId(books[0]?.id ?? "")
+    setSelectedChapter(null)
+  }, [catalog, initialBookId, initialTestament])
+
+  const testamentBooks = catalog?.filter((book) => book.testament === testament) ?? []
+  const filteredBooks = testamentBooks.filter((book) => plain(book.name).includes(plain(query.trim())))
+  const selectedBook = testamentBooks.find((book) => book.id === selectedBookId) ?? testamentBooks[0]
+  const chapters = selectedBook ? visibleChapters(selectedBook.chapters) : []
+  const selectedChapterData = chapters.find((chapter) => chapter.number === selectedChapter) ?? chapters[0]
+
+  function chooseTestament(next: "vt" | "nt"): void {
+    setTestament(next)
+    setQuery("")
+    const first = catalog?.find((book) => book.testament === next)
+    setSelectedBookId(first?.id ?? "")
+    setSelectedChapter(null)
+  }
+
+  function chooseBook(book: BibleBookSummary): void {
+    setSelectedBookId(book.id)
+    const available = visibleChapters(book.chapters)
+    const remembered = last?.bookId === book.id
+      ? available.find((chapter) => chapter.number === last.chapter)
+      : undefined
+    setSelectedChapter(remembered?.number ?? available[0]?.number ?? null)
+  }
+
+  return <section className="bible-chooser" aria-labelledby="bible-chooser-title">
+    <header className="bible-chooser__header">
+      <IconButton label="Înapoi la pagina Biblia" onClick={() => navigate("/biblia")}><ArrowLeft size={23} aria-hidden /></IconButton>
+      <div>
+        <h1 id="bible-chooser-title">Alege cartea și capitolul</h1>
+        <p>Biblia Emanus</p>
+      </div>
+      <span className="bible-chooser__header-space" aria-hidden />
+    </header>
+
+    <label className="bible-search-field bible-chooser__search">
+      <Search size={20} aria-hidden />
+      <input
+        type="search"
+        value={query}
+        onChange={(event) => setQuery(event.currentTarget.value)}
+        placeholder="Caută o carte a Bibliei"
+        aria-label="Caută o carte a Bibliei"
+      />
+    </label>
+
+    <div className="bible-chooser__testaments" aria-label="Alege testamentul">
+      <button type="button" className={testament === "vt" ? "is-selected" : ""} aria-pressed={testament === "vt"} onClick={() => chooseTestament("vt")}>Vechiul Testament</button>
+      <button type="button" className={testament === "nt" ? "is-selected" : ""} aria-pressed={testament === "nt"} onClick={() => chooseTestament("nt")}>Noul Testament</button>
+    </div>
+
+    {!catalog && !loadError && <p className="bible-loading">Se deschide biblioteca…</p>}
+    {loadError && <p className="bible-loading">Biblioteca nu s-a putut încărca. Întoarce-te și încearcă din nou.</p>}
+
+    {catalog && <>
+      <div className="bible-chooser__layout">
+        <nav className="bible-chooser__books" aria-label={`Cărțile din ${testament === "vt" ? "Vechiul Testament" : "Noul Testament"}`}>
+          {filteredBooks.map((book) => <button
+            key={book.id}
             type="button"
-            aria-label={`${selectedBook.name} ${chapter.number}: ${chapter.title}`}
-            onClick={() => openChapter(selectedBook.id, chapter.number)}
-          >{chapter.number}</button>)}
-        </div>
-      </>}
-    </BibleDialog>
+            className={selectedBook?.id === book.id ? "is-selected" : ""}
+            aria-current={selectedBook?.id === book.id ? "true" : undefined}
+            onClick={() => chooseBook(book)}
+          >{book.name}</button>)}
+          {filteredBooks.length === 0 && <p>Nu am găsit această carte.</p>}
+        </nav>
+
+        {selectedBook && <div className="bible-chooser__selection">
+          <div className="bible-book-lead">
+            <span className="bible-book-lead__sigil" aria-hidden><BookOpen size={22} /></span>
+            <span>
+              <small>{selectedBook.testament === "vt" ? "Vechiul Testament" : "Noul Testament"}</small>
+              <strong>{selectedBook.name}</strong>
+              <span>{concise(selectedBook.blurb)}</span>
+            </span>
+          </div>
+
+          <div className="bible-chooser__chapter-heading">
+            <h2>Capitole</h2>
+            <span>{chapters.length} {chapters.length === 1 ? "capitol" : "capitole"}</span>
+          </div>
+          <div className="bible-chapter-grid" aria-label={`Capitole din ${selectedBook.name}`}>
+            {chapters.map((chapter) => <button
+              key={chapter.id}
+              type="button"
+              className={selectedChapterData?.number === chapter.number ? "is-selected" : ""}
+              aria-pressed={selectedChapterData?.number === chapter.number}
+              aria-label={`${selectedBook.name} ${chapter.number}: ${chapter.title}`}
+              onClick={() => setSelectedChapter(chapter.number)}
+            >{chapter.number}</button>)}
+          </div>
+
+          {selectedChapterData && <div className="bible-chooser__chapter-card" aria-live="polite">
+            <Quote size={24} aria-hidden />
+            <div className="bible-chooser__chapter-copy">
+              <span>Capitol selectat</span>
+              <strong>{selectedBook.name} {selectedChapterData.number}</strong>
+              <p>{selectedChapterData.title === `${selectedBook.name} ${selectedChapterData.number}`
+                ? selectedChapterData.summary
+                : selectedChapterData.title}</p>
+            </div>
+          </div>}
+        </div>}
+      </div>
+
+      {selectedBook && selectedChapterData && <button
+        type="button"
+        className="bible-primary-button bible-chooser__open"
+        onClick={() => navigate(`/biblia/${selectedBook.id}/${selectedChapterData.number}`)}
+      >
+        Deschide {selectedBook.name} {selectedChapterData.number} <ArrowRight size={18} aria-hidden />
+      </button>}
+    </>}
   </section>
 }
 
@@ -564,24 +749,37 @@ const HIGHLIGHT_COLORS: Array<{ color: HighlightColor; label: string }> = [
   { color: "rose", label: "roz" },
 ]
 
-function VerseActions({ book, chapter, verses, highlights, favorites, onHighlight, onFavorite, onUnderstand, onDone }: {
+function VerseActions({ book, chapter, verses, highlights, favorites, autoFocus, onHighlight, onFavorite, onUnderstand, onDone }: {
   book: BibleBook
   chapter: BibleChapter
   verses: BibleVerse[]
   highlights: Record<string, HighlightColor>
   favorites: string[]
+  autoFocus: boolean
   onHighlight: (color: HighlightColor | null) => void
   onFavorite: () => void
   onUnderstand: () => void
   onDone: () => void
 }) {
   const [copied, setCopied] = useState(false)
-  const references = verses.length === 1
-    ? `${book.name} ${chapter.number}:${verses[0].number}`
-    : `${book.name} ${chapter.number}:${verses[0].number}–${verses.at(-1)?.number}`
-  const payload = `${verses.map((verse) => `${verse.number} ${verse.text}`).join("\n")}\n${references} · Biblia Emanus`
+  const toolbarRef = useRef<HTMLDivElement>(null)
+  const sortedNumbers = verses.map((verse) => verse.number).sort((a, b) => a - b)
+  const groups = sortedNumbers.reduce<number[][]>((result, number) => {
+    const current = result.at(-1)
+    if (current && current.at(-1) === number - 1) current.push(number)
+    else result.push([number])
+    return result
+  }, [])
+  const verseReference = groups.map((group) => group.length === 1 ? `${group[0]}` : `${group[0]}–${group.at(-1)}`).join(", ")
+  const references = `${book.name} ${chapter.number}:${verseReference}`
+  const sortedVerses = [...verses].sort((a, b) => a.number - b.number)
+  const payload = `${sortedVerses.map((verse) => `${verse.number} ${verse.text}`).join("\n")}\n${references} · Biblia Emanus`
   const keys = verses.map((verse) => verseKey(book.id, chapter.number, verse.number))
   const allFavorite = keys.every((key) => favorites.includes(key))
+
+  useEffect(() => {
+    if (autoFocus) toolbarRef.current?.querySelector<HTMLButtonElement>("button")?.focus()
+  }, [autoFocus])
 
   function copy(): void {
     void window.navigator.clipboard?.writeText(payload).then(() => {
@@ -600,6 +798,7 @@ function VerseActions({ book, chapter, verses, highlights, favorites, onHighligh
   }
 
   return <div
+    ref={toolbarRef}
     className="bible-verse-actions"
     role="toolbar"
     aria-label={`Acțiuni pentru ${verses.length} ${verses.length === 1 ? "verset" : "versete"}`}
@@ -632,16 +831,36 @@ function VerseActions({ book, chapter, verses, highlights, favorites, onHighligh
   </div>
 }
 
-function ScriptureView({ book, chapter, onUnderstand }: { book: BibleBook; chapter: BibleChapter; onUnderstand: (verse: number) => void }) {
+function ScriptureView({ book, chapter, targetVerse, onUnderstand }: {
+  book: BibleBook
+  chapter: BibleChapter
+  targetVerse?: number
+  onUnderstand: (verses: number[]) => void
+}) {
   const [selectedVerses, setSelectedVerses] = useState<number[]>([])
-  const [highlights, setHighlights] = useState<Record<string, HighlightColor>>(() => readJson<Record<string, HighlightColor>>(VERSE_HIGHLIGHTS_KEY, {}))
-  const [favorites, setFavorites] = useState<string[]>(() => readJson<string[]>(FAVORITE_VERSES_KEY, []))
+  const [highlights, setHighlights] = useState<Record<string, HighlightColor>>(readHighlights)
+  const [favorites, setFavorites] = useState<string[]>(() => readArray(FAVORITE_VERSES_KEY))
+  const selectionByKeyboard = useRef(false)
+  const selectedVersesRef = useRef<number[]>([])
   const verses = chapter.verses ?? []
   const selected = verses.filter((verse) => selectedVerses.includes(verse.number))
 
   useEffect(() => {
+    selectedVersesRef.current = selectedVerses
+  }, [selectedVerses])
+
+  function closeActionsAndRestoreFocus(): void {
+    const verse = selectedVersesRef.current[0]
+    setSelectedVerses([])
+    if (!verse) return
+    window.requestAnimationFrame(() => {
+      document.querySelector<HTMLElement>(`[data-reader-anchor="${verse}"] button`)?.focus()
+    })
+  }
+
+  useEffect(() => {
     function closeActions(event: KeyboardEvent): void {
-      if (event.key === "Escape") setSelectedVerses([])
+      if (event.key === "Escape" && selectedVersesRef.current.length > 0) closeActionsAndRestoreFocus()
     }
     window.addEventListener("keydown", closeActions)
     return () => window.removeEventListener("keydown", closeActions)
@@ -673,10 +892,15 @@ function ScriptureView({ book, chapter, onUnderstand }: { book: BibleBook; chapt
   }
 
   return <section className={selected.length > 0 ? "bible-scripture has-verse-actions" : "bible-scripture"} aria-label="Text biblic">
-    <div className="bible-scripture__edition">
-      <BookOpen size={20} aria-hidden />
-      <span><strong>Text biblic</strong><small>{BIBLIA_EMANUS_TRANSLATION}</small></span>
+    <div className="bible-reader__intro">
+      <span className="bible-reader__intro-icon"><BookOpen size={21} aria-hidden /></span>
+      <span>
+        <small>Scriptura · {verses.length} {verses.length === 1 ? "verset" : "versete"}</small>
+        <strong>{chapter.title}</strong>
+        {chapter.summary && <span>{chapter.summary}</span>}
+      </span>
     </div>
+    <p className="bible-scripture__hint">Atinge un verset pentru marcaje, salvare sau explicație.</p>
     <div className="bible-scripture__verses">
       {verses.map((verse) => {
         const key = verseKey(book.id, chapter.number, verse.number)
@@ -684,15 +908,21 @@ function ScriptureView({ book, chapter, onUnderstand }: { book: BibleBook; chapt
         return <div key={verse.number} data-reader-anchor={verse.number}>
         <button
           type="button"
-          className={selected ? "bible-reader__verse is-selected" : "bible-reader__verse"}
+          className={`${selected ? "bible-reader__verse is-selected" : "bible-reader__verse"}${targetVerse === verse.number ? " is-targeted" : ""}`}
           aria-pressed={selected}
           data-highlight={highlights[key]}
+          data-textual-status={verse.textualStatus}
+          onPointerDown={() => { selectionByKeyboard.current = false }}
+          onKeyDown={(event) => {
+            if (event.key === "Enter" || event.key === " ") selectionByKeyboard.current = true
+          }}
           onClick={() => setSelectedVerses((current) => current.includes(verse.number)
             ? current.filter((number) => number !== verse.number)
             : [...current, verse.number].sort((a, b) => a - b))}
         >
           <span aria-label={`Versetul ${verse.number}`}>{verse.number}</span>
           <span>{verse.text}</span>
+          {verse.textualStatus && <small className="bible-reader__textual-marker">Text cu tradiție manuscrisă discutată · vezi notele</small>}
         </button>
       </div>})}
     </div>
@@ -702,10 +932,11 @@ function ScriptureView({ book, chapter, onUnderstand }: { book: BibleBook; chapt
       verses={selected}
       highlights={highlights}
       favorites={favorites}
+      autoFocus={selectionByKeyboard.current}
       onHighlight={applyHighlight}
       onFavorite={toggleFavorite}
-      onUnderstand={() => onUnderstand(selected[0].number)}
-      onDone={() => setSelectedVerses([])}
+      onUnderstand={() => onUnderstand(selected.map((verse) => verse.number))}
+      onDone={closeActionsAndRestoreFocus}
     />, document.body)}
   </section>
 }
@@ -722,10 +953,28 @@ function WordStudy({ unit }: { unit: BibleUnit }) {
   </div>
 }
 
-function ExplanationUnit({ unit }: { unit: BibleUnit }) {
-  const start = unit.verseStart ?? Number(unit.ref.match(/:(\d+)/u)?.[1] ?? 1)
-  return <article className="bible-explanation" data-reader-anchor={start}>
-    <p className="bible-explanation__ref">{unit.ref}</p>
+function ExplanationUnit({ unit, targeted, onReadScripture }: {
+  unit: BibleUnit
+  targeted?: boolean
+  onReadScripture: (fallbackVerse: number) => void
+}) {
+  const range = explanationRanges([unit]).ranges[0]
+  const start = range?.start ?? 1
+  const end = range?.end ?? start
+  return <article
+    className={targeted ? "bible-explanation is-targeted" : "bible-explanation"}
+    data-reader-anchor={start}
+    data-reader-anchor-end={end}
+    tabIndex={-1}
+    aria-label={`Explicație pentru ${unit.ref}`}
+  >
+    <header className="bible-explanation__passage">
+      <span><BookOpen size={18} aria-hidden /> Pasaj explicat</span>
+      <strong>{unit.ref}</strong>
+      <blockquote>{unit.text}</blockquote>
+      <button type="button" onClick={() => onReadScripture(start)}>Vezi în Scriptură <ArrowRight size={15} aria-hidden /></button>
+    </header>
+    <p className="bible-explanation__ref">Explicație · {unit.ref}</p>
     <h2>{unit.heading}</h2>
     <div className="bible-explanation__teaching">{paragraphs(unit.teaching).map((part, index) => <p key={index}>{part}</p>)}</div>
     <WordStudy unit={unit} />
@@ -740,7 +989,11 @@ function ExplanationUnit({ unit }: { unit: BibleUnit }) {
   </article>
 }
 
-function UnderstandView({ chapter }: { chapter: BibleChapter }) {
+function UnderstandView({ chapter, targetVerse, onReadScripture }: {
+  chapter: BibleChapter
+  targetVerse?: number
+  onReadScripture: (verse: number) => void
+}) {
   if (chapter.units.length === 0) {
     return <div className="bible-reader__empty">
       <BookMarked size={28} aria-hidden />
@@ -749,65 +1002,77 @@ function UnderstandView({ chapter }: { chapter: BibleChapter }) {
     </div>
   }
 
+  const target = targetVerse
+    ? resolveVerseExplanation(chapter.units, targetVerse, { allowReferenceRange: true })
+    : null
+
   return <section className="bible-understand" aria-label="Explicația capitolului">
-    {(chapter.literaryContext || chapter.historicalContext) && <div className="bible-context">
-      <p className="bible-context__kicker"><Info size={18} aria-hidden /> Înainte să citești explicația</p>
-      {chapter.literaryContext && <div><strong>Locul în carte</strong><p>{chapter.literaryContext}</p></div>}
-      {chapter.historicalContext && <div><strong>Contextul istoric</strong><p>{chapter.historicalContext}</p></div>}
-    </div>}
-    {chapter.units.map((unit) => <ExplanationUnit key={unit.id} unit={unit} />)}
+    <div className="bible-reader__intro bible-reader__intro--understand">
+      <span className="bible-reader__intro-icon"><Sparkles size={21} aria-hidden /></span>
+      <span>
+        <small>Înțelege · {chapter.units.length} {chapter.units.length === 1 ? "pasaj" : "pasaje"}</small>
+        <strong>{chapter.title}</strong>
+        {chapter.summary && <span>{chapter.summary}</span>}
+      </span>
+    </div>
+    {(chapter.literaryContext || chapter.historicalContext) && <details className="bible-context">
+      <summary className="bible-context__kicker"><Info size={18} aria-hidden /> Contextul capitolului <ChevronRight size={17} aria-hidden /></summary>
+      <div className="bible-context__grid">
+        {chapter.literaryContext && <div><strong>Locul în carte</strong><p>{chapter.literaryContext}</p></div>}
+        {chapter.historicalContext && <div><strong>Contextul istoric</strong><p>{chapter.historicalContext}</p></div>}
+      </div>
+    </details>}
+    {chapter.units.map((unit) => <ExplanationUnit
+      key={unit.id}
+      unit={unit}
+      targeted={target?.unit?.id === unit.id}
+      onReadScripture={(fallbackVerse) => {
+        const exactVerseExists = targetVerse ? chapter.verses?.some((verse) => verse.number === targetVerse) : false
+        onReadScripture(target?.unit?.id === unit.id && targetVerse && exactVerseExists ? targetVerse : fallbackVerse)
+      }}
+    />)}
   </section>
 }
 
-function ReaderNavigator({ open, currentBookId, onClose, onOpen }: {
-  open: boolean
-  currentBookId: string
-  onClose: () => void
-  onOpen: (bookId: string, chapter: number) => void
+function SelectionNotice({ chapter, verses, onSelect }: {
+  chapter: BibleChapter
+  verses: number[]
+  onSelect: (verse: number) => void
 }) {
-  const [catalog, setCatalog] = useState<BibleBookSummary[] | null>(null)
-  const [query, setQuery] = useState("")
-  const [bookId, setBookId] = useState(currentBookId)
-
-  useEffect(() => {
-    let active = true
-    void loadBibleCatalog().then((value) => { if (active) setCatalog(value.books) }).catch(() => undefined)
-    return () => { active = false }
-  }, [])
-
-  useEffect(() => setBookId(currentBookId), [currentBookId, open])
-
-  const filtered = catalog?.filter((book) => plain(book.name).includes(plain(query))) ?? []
-  const selected = catalog?.find((book) => book.id === bookId)
-
-  return <BibleDialog open={open} title="Alege cartea și capitolul" onClose={onClose}>
-    <label className="bible-search-field bible-search-field--compact">
-      <Search size={19} aria-hidden />
-      <input type="search" value={query} onChange={(event) => setQuery(event.currentTarget.value)} placeholder="Caută o carte" aria-label="Caută o carte a Bibliei" />
-    </label>
-    <div className="bible-navigator">
-      <div className="bible-navigator__books" aria-label="Cărți">
-        {filtered.map((book) => <button key={book.id} type="button" className={bookId === book.id ? "is-selected" : ""} onClick={() => setBookId(book.id)}>{book.name}</button>)}
-      </div>
-      {selected && <div className="bible-chapter-grid" aria-label={`Capitole din ${selected.name}`}>
-        {visibleChapters(selected.chapters).map((chapter) => <button key={chapter.id} type="button" aria-label={`${selected.name} ${chapter.number}`} onClick={() => onOpen(selected.id, chapter.number)}>{chapter.number}</button>)}
-      </div>}
+  const selection = resolveVerseExplanationSelection(chapter.units, verses, { allowReferenceRange: true })
+  if (selection.matchedUnits.length < 2) return null
+  return <aside className="bible-selection-notice" aria-label="Explicațiile selecției">
+    <Sparkles size={18} aria-hidden />
+    <div>
+      <strong>Selecția atinge {selection.matchedUnits.length} pasaje explicate</strong>
+      <p>Am deschis primul pasaj. Poți continua direct cu celelalte explicații:</p>
+      <div>{selection.matchedUnits.map((unit) => selection.results.find((result) => result.unit === unit)).map((result) => result?.range && <button
+        key={result.unit?.id ?? result.verse}
+        type="button"
+        onClick={() => onSelect(result.verse)}
+      >v. {result.verse} · {result.unit?.heading}</button>)}</div>
     </div>
-  </BibleDialog>
+  </aside>
 }
 
-export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapter: number }) {
+export function BibleChapterScreen({ bookId, chapter, verse }: { bookId: string; chapter: number; verse?: number }) {
   const [book, setBook] = useState<BibleBook | null>(null)
   const [failed, setFailed] = useState(false)
-  const [mode, setMode] = useState<ReaderMode>(() => readJson<ReaderMode>(MODE_KEY, "scripture"))
+  const [mode, setMode] = useState<ReaderMode>(() => readJson<unknown>(MODE_KEY, "scripture") === "understand" ? "understand" : "scripture")
   const [saved, setSaved] = useState(() => readSavedChapters().includes(chapterKey(bookId, chapter)))
-  const [navigatorOpen, setNavigatorOpen] = useState(false)
+  const [activeAnchor, setActiveAnchor] = useState<number | undefined>(verse)
+  const [explanationSelection, setExplanationSelection] = useState<number[]>([])
   const pendingAnchor = useRef<number | null>(null)
   const found = book?.chapters.find((candidate) => candidate.number === chapter)
   const canRead = Boolean(found && (SHOW_EDITORIAL || chapterIsOpen(found)))
+  const requestedVerseMissing = Boolean(verse && found && !found.verses?.some((candidate) => candidate.number === verse))
+  const requestedVerseHasNote = Boolean(requestedVerseMissing && found?.textualNotes?.some((note) => note.verse === verse))
 
   useEffect(() => {
     let active = true
+    window.scrollTo({ top: 0, behavior: "auto" })
+    setActiveAnchor(verse)
+    setExplanationSelection([])
     setBook(null)
     setFailed(false)
     setSaved(readSavedChapters().includes(chapterKey(bookId, chapter)))
@@ -815,12 +1080,48 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
       .then((value) => { if (active) setBook(value) })
       .catch(() => { if (active) setFailed(true) })
     return () => { active = false }
-  }, [bookId, chapter])
+  }, [bookId, chapter, verse])
 
   useEffect(() => {
     if (!book || !found || !canRead) return
-    writeJson(LAST_KEY, { bookId, bookName: book.name, chapter, title: found.title } satisfies LastRead)
-  }, [book, bookId, canRead, chapter, found])
+    writeJson(LAST_KEY, { bookId, bookName: book.name, chapter, title: found.title, verse: activeAnchor, mode } satisfies LastRead)
+  }, [activeAnchor, book, bookId, canRead, chapter, found, mode])
+
+  useEffect(() => {
+    if (requestedVerseMissing) setActiveAnchor(undefined)
+  }, [requestedVerseMissing])
+
+  useEffect(() => {
+    if (!found || !activeAnchor) return
+    let cancelled = false
+    let frame = 0
+    const scrollToVerse = () => {
+      if (cancelled) return
+      const resolution = mode === "understand"
+        ? resolveVerseExplanation(found.units, activeAnchor, { allowReferenceRange: true })
+        : null
+      const anchor = resolution?.range?.start ?? activeAnchor
+      const nodes = [...document.querySelectorAll<HTMLElement>("[data-reader-anchor]")]
+      const target = nodes.find((node) => {
+        const start = Number(node.dataset.readerAnchor)
+        const end = Number(node.dataset.readerAnchorEnd ?? start)
+        return start <= anchor && anchor <= end
+      })
+      target?.scrollIntoView({ block: mode === "understand" ? "start" : "center" })
+      if (target && mode === "understand") window.scrollBy({ top: -142 })
+      const focusTarget = target?.matches("[tabindex]") ? target : target?.querySelector<HTMLElement>("button, [tabindex]")
+      focusTarget?.focus({ preventScroll: true })
+    }
+    frame = window.requestAnimationFrame(scrollToVerse)
+    void document.fonts?.ready.then(() => {
+      frame = window.requestAnimationFrame(scrollToVerse)
+      window.setTimeout(scrollToVerse, 120)
+    })
+    return () => {
+      cancelled = true
+      window.cancelAnimationFrame(frame)
+    }
+  }, [activeAnchor, found, mode])
 
   useEffect(() => {
     const anchor = pendingAnchor.current
@@ -828,9 +1129,20 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
     pendingAnchor.current = null
     window.requestAnimationFrame(() => {
       const nodes = [...document.querySelectorAll<HTMLElement>("[data-reader-anchor]")]
-      const target = nodes.find((node) => Number(node.dataset.readerAnchor) >= anchor) ?? nodes.at(-1)
+      const resolution = mode === "understand" && found
+        ? resolveVerseExplanation(found.units, anchor, { allowReferenceRange: true })
+        : null
+      if (mode === "understand" && !resolution?.range) return
+      const resolvedAnchor = resolution?.range?.start ?? anchor
+      const target = nodes.find((node) => {
+        const start = Number(node.dataset.readerAnchor)
+        const end = Number(node.dataset.readerAnchorEnd ?? start)
+        return start <= resolvedAnchor && resolvedAnchor <= end
+      })
       target?.scrollIntoView({ block: "start" })
       if (target) window.scrollBy({ top: -174 })
+      const focusTarget = target?.matches("[tabindex]") ? target : target?.querySelector<HTMLElement>("button, [tabindex]")
+      focusTarget?.focus({ preventScroll: true })
     })
   }, [mode])
 
@@ -840,9 +1152,44 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
     const nearest = nodes
       .filter((node) => node.getBoundingClientRect().top <= 220)
       .at(-1) ?? nodes[0]
-    pendingAnchor.current = Number(nearest?.dataset.readerAnchor ?? 1)
+    const activeNode = activeAnchor === undefined ? undefined : nodes.find((node) => {
+      const start = Number(node.dataset.readerAnchor)
+      const end = Number(node.dataset.readerAnchorEnd ?? start)
+      return start <= activeAnchor && activeAnchor <= end
+    })
+    const activeRect = activeNode?.getBoundingClientRect()
+    const activeStillRelevant = Boolean(activeRect && activeRect.bottom >= 142 && activeRect.top <= window.innerHeight)
+    pendingAnchor.current = activeStillRelevant ? activeAnchor ?? 1 : Number(nearest?.dataset.readerAnchor ?? activeAnchor ?? 1)
+    setActiveAnchor(pendingAnchor.current)
     setMode(nextMode)
     writeJson(MODE_KEY, nextMode)
+  }
+
+  function focusReaderAnchor(anchor: number, nextMode: ReaderMode): void {
+    setActiveAnchor(anchor)
+    pendingAnchor.current = anchor
+    if (nextMode !== mode) {
+      setMode(nextMode)
+      writeJson(MODE_KEY, nextMode)
+      return
+    }
+    window.requestAnimationFrame(() => {
+      const nodes = [...document.querySelectorAll<HTMLElement>("[data-reader-anchor]")]
+      const resolution = nextMode === "understand" && found
+        ? resolveVerseExplanation(found.units, anchor, { allowReferenceRange: true })
+        : null
+      const resolvedAnchor = resolution?.range?.start ?? anchor
+      const target = nodes.find((node) => {
+        const start = Number(node.dataset.readerAnchor)
+        const end = Number(node.dataset.readerAnchorEnd ?? start)
+        return start <= resolvedAnchor && resolvedAnchor <= end
+      })
+      target?.scrollIntoView({ block: nextMode === "understand" ? "start" : "center", behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" })
+      if (target && nextMode === "understand") window.scrollBy({ top: -142 })
+      const focusTarget = target?.matches("[tabindex]") ? target : target?.querySelector<HTMLElement>("button, [tabindex]")
+      focusTarget?.focus({ preventScroll: true })
+      pendingAnchor.current = null
+    })
   }
 
   function toggleSaved(): void {
@@ -870,44 +1217,87 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
   const index = numbers.indexOf(chapter)
   const previous = index > 0 ? numbers[index - 1] : undefined
   const next = index >= 0 && index < numbers.length - 1 ? numbers[index + 1] : undefined
+  const onlyOneDirection = previous === undefined || next === undefined
 
   return <section className="bible-reader">
     <header className="bible-reader__header">
-      <IconButton label="Înapoi la biblioteca Bibliei" onClick={() => navigate("/biblia")}><ArrowLeft size={23} aria-hidden /></IconButton>
-      <button type="button" className="bible-reader__title" onClick={() => setNavigatorOpen(true)} aria-label="Alege altă carte sau alt capitol">
+      <IconButton label="Înapoi la alegerea capitolului" onClick={() => navigate(chooserUrl(book.testament, book.id))}><ArrowLeft size={23} aria-hidden /></IconButton>
+      <button type="button" className="bible-reader__title" onClick={() => navigate(chooserUrl(book.testament, book.id))} aria-label="Alege altă carte sau alt capitol">
         <strong>{book.name} {found.number}</strong>
         <span>{found.title}</span>
       </button>
       <div className="bible-reader__actions">
-        <IconButton label="Alege cartea și capitolul" onClick={() => setNavigatorOpen(true)}><Search size={22} aria-hidden /></IconButton>
+        <IconButton label="Alege cartea și capitolul" onClick={() => navigate(chooserUrl(book.testament, book.id))}><Search size={22} aria-hidden /></IconButton>
         <IconButton label={saved ? "Elimină capitolul din salvate" : "Salvează capitolul"} onClick={toggleSaved} active={saved}>
           {saved ? <BookmarkCheck size={22} aria-hidden /> : <Bookmark size={22} aria-hidden />}
         </IconButton>
       </div>
     </header>
 
-    <div className="bible-reader__switch" role="tablist" aria-label="Modul de citire">
-      <button type="button" role="tab" aria-selected={mode === "scripture"} className={mode === "scripture" ? "is-selected" : ""} onClick={() => switchMode("scripture")}><BookOpen size={18} aria-hidden /> Scriptura</button>
-      <button type="button" role="tab" aria-selected={mode === "understand"} className={mode === "understand" ? "is-selected" : ""} onClick={() => switchMode("understand")}><Sparkles size={18} aria-hidden /> Înțelege</button>
+    <div className="bible-reader__switch" role="group" aria-label="Modul de citire">
+      <button type="button" aria-pressed={mode === "scripture"} className={mode === "scripture" ? "is-selected" : ""} onClick={() => switchMode("scripture")}><BookOpen size={18} aria-hidden /> Scriptura</button>
+      <button type="button" aria-pressed={mode === "understand"} className={mode === "understand" ? "is-selected" : ""} onClick={() => switchMode("understand")}><Sparkles size={18} aria-hidden /> Înțelege</button>
     </div>
 
-    <main className="bible-reader__content">
+    <div className="bible-reader__content">
+      <h1 className="bible-reader__sr-title">{book.name} {found.number}: {found.title}</h1>
+      {requestedVerseMissing && <aside className="bible-reader__target-notice" role="status">
+        <Info size={18} aria-hidden />
+        <span>{requestedVerseHasNote
+          ? `Versetul ${verse} nu apare în textul critic principal. Nota despre el este păstrată mai jos.`
+          : `Versetul ${verse} nu există în acest capitol. Capitolul a fost deschis de la început.`}</span>
+      </aside>}
       {mode === "scripture" ? <ScriptureView
         book={book}
         chapter={found}
-        onUnderstand={(verse) => {
-          pendingAnchor.current = verse
-          setMode("understand")
-          writeJson(MODE_KEY, "understand")
+        targetVerse={activeAnchor}
+        onUnderstand={(verses) => {
+          setExplanationSelection(verses)
+          focusReaderAnchor(verses[0] ?? 1, "understand")
         }}
-      /> : <UnderstandView chapter={found} />}
+      /> : <>
+        <SelectionNotice
+          chapter={found}
+          verses={explanationSelection}
+          onSelect={(target) => focusReaderAnchor(target, "understand")}
+        />
+        <UnderstandView
+        chapter={found}
+        targetVerse={activeAnchor ?? pendingAnchor.current ?? undefined}
+        onReadScripture={(target) => {
+          setExplanationSelection([])
+          focusReaderAnchor(target, "scripture")
+        }}
+      /></>}
 
       {found.textualNotes?.length ? <details className="bible-textual-notes">
-        <summary><Quote size={18} aria-hidden /> Note textuale</summary>
-        {found.textualNotes.map((note, noteIndex) => <p key={`${note.verse}-${noteIndex}`}><strong>v. {note.verse}:</strong> {note.note}</p>)}
+        <summary><Quote size={18} aria-hidden /> Note despre text și traducere ({found.textualNotes.length})</summary>
+        {found.textualNotes.map((note, noteIndex) => {
+          const verseExists = found.verses?.some((candidate) => candidate.number === note.verse) ?? false
+          return <div className="bible-textual-note" key={`${note.verse}-${noteIndex}`}>
+          {verseExists
+            ? <button type="button" onClick={() => focusReaderAnchor(note.verse, "scripture")}>v. {note.verse}</button>
+            : <span className="bible-textual-note__verse">v. {note.verse} · absent din textul critic</span>}
+          <p>{note.note}</p>
+          {note.traditionalReading && <p><strong>Lectura tradițională:</strong> {note.traditionalReading}</p>}
+          {note.reason && <details><summary>De ce?</summary><p>{note.reason}</p></details>}
+        </div>})}
       </details> : null}
 
-      <nav className="bible-reader__chapter-nav" aria-label="Navigare între capitole">
+      {found.alternateEndings?.length ? <details className="bible-textual-notes bible-alternate-endings">
+        <summary><BookMarked size={18} aria-hidden /> Finaluri alternative păstrate ({found.alternateEndings.length})</summary>
+        {found.alternateEndings.map((ending, endingIndex) => <div className="bible-textual-note" key={`${ending.status}-${endingIndex}`}>
+          <p className="bible-alternate-endings__text">{ending.text}</p>
+          {ending.sourceNote && <p>{ending.sourceNote}</p>}
+        </div>)}
+      </details> : null}
+
+      {mode === "understand" && found.prayer.trim() && <section className="bible-chapter-prayer" aria-labelledby="bible-chapter-prayer-title">
+        <HandHeart size={21} aria-hidden />
+        <div><h2 id="bible-chapter-prayer-title">Rugăciune la finalul capitolului</h2>{paragraphs(found.prayer).map((part, partIndex) => <p key={partIndex}>{part}</p>)}</div>
+      </section>}
+
+      <nav className={`bible-reader__chapter-nav${onlyOneDirection ? " has-one-direction" : ""}`} aria-label="Navigare între capitole">
         {previous !== undefined
           ? <button type="button" onClick={() => navigate(`/biblia/${book.id}/${previous}`)}><ArrowLeft size={18} aria-hidden /><span>Anterior<small>{book.name} {previous}</small></span></button>
           : <span />}
@@ -916,16 +1306,7 @@ export function BibleChapterScreen({ bookId, chapter }: { bookId: string; chapte
           : <span />}
       </nav>
       <p className="bible-reader__edition">{book.translation ?? BIBLIA_EMANUS_TRANSLATION}</p>
-    </main>
+    </div>
 
-    <ReaderNavigator
-      open={navigatorOpen}
-      currentBookId={book.id}
-      onClose={() => setNavigatorOpen(false)}
-      onOpen={(nextBookId, nextChapter) => {
-        setNavigatorOpen(false)
-        navigate(`/biblia/${nextBookId}/${nextChapter}`)
-      }}
-    />
   </section>
 }

@@ -4,10 +4,27 @@
  */
 
 .app {
-  padding-bottom: 24px;
+  padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px));
 }
 .app--tabbed {
-  padding-bottom: 84px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: calc(92px + env(safe-area-inset-bottom, 0px));
+  scroll-padding-bottom: calc(92px + env(safe-area-inset-bottom, 0px));
+}
+
+.app--tabbed:not(.app--bible):not(.app--library) > :not(.helpbar) {
+  width: min(100%, 540px);
+}
+
+.app--tabbed:not(.app--bible):not(.app--library) > .helpbar {
+  width: min(100%, 540px);
+}
+
+.app--library > .library,
+.app--library > .helpbar {
+  width: min(100%, 1040px);
 }
 
 /* --- Bara de ajutor, permanentă --- */
@@ -621,9 +638,12 @@
   right: 0;
   bottom: 0;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 0;
-  padding: 8px 12px calc(8px + env(safe-area-inset-bottom, 0px));
+  padding:
+    6px max(8px, env(safe-area-inset-right, 0px))
+    calc(6px + env(safe-area-inset-bottom, 0px))
+    max(8px, env(safe-area-inset-left, 0px));
   background: var(--surface, #fff);
   border-top: 1px solid var(--border, #dbe8e6);
   z-index: 20;
@@ -632,17 +652,34 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 3px;
-  padding: 6px;
+  min-width: 0;
+  min-height: 52px;
+  padding: 5px 2px;
   border: none;
+  border-radius: 10px;
   background: none;
   color: var(--text-muted, #6c8b88);
   font-size: 0.72rem;
+  line-height: 1.1;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+.tabs2 button span {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .tabs2 button.active {
   color: var(--accent, #0f6b68);
   font-weight: 600;
+}
+.tabs2 button:focus-visible {
+  outline: 2px solid var(--accent, #0f6b68);
+  outline-offset: -2px;
 }
 
 /* --- Finalul lecției --- */

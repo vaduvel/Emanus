@@ -32,7 +32,7 @@ test("onboardingul conduce spre poarta fără să creeze progres fals", async ({
   expect(stored.pathId).toBeNull()
 })
 
-test("poarta păstrează alegerea și deschide traseul potrivit", async ({ page }) => {
+test("poarta păstrează alegerea și deschide programul traseului potrivit", async ({ page }) => {
   await page.goto("/#/intrare")
   await page.evaluate(() => window.localStorage.clear())
   await page.reload()
@@ -45,7 +45,9 @@ test("poarta păstrează alegerea și deschide traseul potrivit", async ({ page 
   await expect(page.getByText("Traseul tău", { exact: true })).toBeVisible()
   await page.getByRole("button", { name: /Începe drumul/u }).click()
 
-  await expect(page).toHaveURL(/\/#\/$/u)
+  await expect(page).toHaveURL(/#\/program\/path%3Apath_acasa$/u)
+  await expect(page.getByRole("heading", { name: "Sesiuni" })).toBeVisible()
+  await expect(page.getByText("Ritm ghidat · între sesiuni există timp de aplicare", { exact: true })).toBeVisible()
   const stored = await page.evaluate(() => JSON.parse(window.localStorage.getItem("emanus_journey_v1") ?? "{}"))
   expect(stored.seenWelcome).toBe(true)
   expect(stored.pathId).toEqual(expect.any(String))

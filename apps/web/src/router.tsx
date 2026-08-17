@@ -30,30 +30,77 @@ export type Route =
   | { name: "prayers" }
   | { name: "library" }
   | { name: "bible" }
-  | { name: "bibleChapter"; bookId: string; chapter: number }
-  | { name: "ask"; despre?: string }
+  | { name: "bibleChooser"; testament?: "vt" | "nt"; bookId?: string }
+  | { name: "bibleChapter"; bookId: string; chapter: number; verse?: number }
+  | { name: "ask"; despre?: string; returnTo?: string }
   | { name: "pathend" }
   | { name: "crisis" }
   | { name: "ds" }
   | { name: "lesson"; id?: string }
+  | { name: "program"; programId: string; showCompletion?: boolean }
+  | { name: "programLesson"; programId: string; lessonId: string }
   | { name: "devotional" }
   | { name: "scroll" }
   | { name: "lamp" }
   | { name: "message"; id?: string }
   | { name: "covenant" }
 
+function positiveInteger(value: string | null | undefined): number | undefined {
+  if (!value || !/^[1-9]\d*$/u.test(value)) return undefined
+  const parsed = Number(value)
+  return Number.isSafeInteger(parsed) ? parsed : undefined
+}
+
+function decodePathPart(value: string | undefined): string {
+  if (!value) return ""
+  try {
+    return decodeURIComponent(value)
+  } catch {
+    return ""
+  }
+}
+
 export function parseRoute(): Route {
   const h = window.location.hash.replace(/^#/, "")
+  if (h.startsWith("/program/")) {
+    const semn = h.indexOf("?")
+    const path = semn === -1 ? h : h.slice(0, semn)
+    const cauta = new URLSearchParams(semn === -1 ? "" : h.slice(semn + 1))
+    const parts = path.slice("/program/".length).split("/")
+    const programId = decodePathPart(parts[0])
+    const lessonId = decodePathPart(parts[2])
+    if (programId && parts.length === 3 && parts[1] === "lesson" && lessonId) {
+      return { name: "programLesson", programId, lessonId }
+    }
+    if (programId && parts.length === 1) {
+      return { name: "program", programId, showCompletion: cauta.get("incheiere") === "1" }
+    }
+  }
   if (h.startsWith("/lesson/"))
-    return { name: "lesson", id: decodeURIComponent(h.slice("/lesson/".length)) }
+    return { name: "lesson", id: decodePathPart(h.slice("/lesson/".length)) }
   if (h.startsWith("/mesaj/"))
-    return { name: "message", id: decodeURIComponent(h.slice("/mesaj/".length)) }
+    return { name: "message", id: decodePathPart(h.slice("/mesaj/".length)) }
+  if (h === "/biblia/alege" || h.startsWith("/biblia/alege?")) {
+    const semn = h.indexOf("?")
+    const cauta = new URLSearchParams(semn === -1 ? "" : h.slice(semn + 1))
+    const testament = cauta.get("testament")
+    const bookId = cauta.get("carte")
+    return {
+      name: "bibleChooser",
+      testament: testament === "vt" || testament === "nt" ? testament : undefined,
+      bookId: bookId && bookId.length > 0 ? bookId : undefined,
+    }
+  }
   if (h.startsWith("/biblia/")) {
-    const parts = h.slice("/biblia/".length).split("/")
-    const bookId = decodeURIComponent(parts[0] ?? "")
-    const chapter = Number.parseInt(parts[1] ?? "", 10)
-    if (bookId.length > 0 && Number.isFinite(chapter))
-      return { name: "bibleChapter", bookId, chapter }
+    const semn = h.indexOf("?")
+    const path = semn === -1 ? h : h.slice(0, semn)
+    const cauta = new URLSearchParams(semn === -1 ? "" : h.slice(semn + 1))
+    const parts = path.slice("/biblia/".length).split("/")
+    const bookId = decodePathPart(parts[0])
+    const chapter = positiveInteger(parts[1])
+    const verse = positiveInteger(cauta.get("verset"))
+    if (bookId.length > 0 && chapter !== undefined)
+      return { name: "bibleChapter", bookId, chapter, verse }
     return { name: "bible" }
   }
   if (h === "/biblia") return { name: "bible" }
@@ -62,7 +109,13 @@ export function parseRoute(): Route {
     if (semn === -1) return { name: "ask" }
     const cauta = new URLSearchParams(h.slice(semn + 1))
     const despre = cauta.get("despre")
-    return despre && despre.length > 0 ? { name: "ask", despre } : { name: "ask" }
+    const requestedReturn = cauta.get("intoarcere")
+    const returnTo = requestedReturn?.startsWith("/program/") ? requestedReturn : undefined
+    return {
+      name: "ask",
+      despre: despre && despre.length > 0 ? despre : undefined,
+      returnTo,
+    }
   }
   if (h === "/intrare") return { name: "doors" }
   if (h === "/rugaciuni") return { name: "prayers" }

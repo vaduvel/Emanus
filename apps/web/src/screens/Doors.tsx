@@ -10,6 +10,7 @@ import {
   resolveDoorPath,
 } from "@emanus/shared/paths"
 import { chooseDoor } from "../journey"
+import { learningProgramUrl, pathProgramId } from "../learningPrograms"
 import { navigate } from "../router"
 
 function doorFromLink(): string | null {
@@ -127,7 +128,10 @@ function Confirm({ doorId, onBack }: { doorId: string; onBack: () => void }) {
   const own = doorHasOwnRoom(doorId)
   const explore = door.roomId === null
   const minutes = path.lessons[0]?.estMinutes ?? 10
-  function start() { chooseDoor(pathId); navigate("/") }
+  function start() {
+    chooseDoor(pathId)
+    navigate(learningProgramUrl(pathProgramId(pathId)))
+  }
 
   return (
     <section className="confirm experience-shell">
@@ -146,9 +150,9 @@ function Confirm({ doorId, onBack }: { doorId: string; onBack: () => void }) {
         <p className="experience-eyebrow">Traseul tău</p>
         <h2 className="confirm__title">{path.title}</h2>
         <p className="confirm__promise">{path.promise}</p>
-        <p className="confirm__meta">{path.lessons.length} lecții · în ritmul tău · {minutes} minute primul pas</p>
+        <p className="confirm__meta">{path.lessons.length} sesiuni · ritm ghidat · {minutes} minute primul pas</p>
       </div>
-      <p className="confirm__note">Nu primești note și nu pierzi progresul dacă lipsești. Poți schimba drumul oricând.</p>
+      <p className="confirm__note">Progresul rămâne aici când faci o pauză. Poți schimba drumul oricând.</p>
       <button type="button" className="experience-cta" onClick={start}>Începe drumul <ArrowRight size={18} aria-hidden /></button>
       <button type="button" className="experience-link" onClick={onBack}>Nu acesta este drumul meu</button>
     </section>
