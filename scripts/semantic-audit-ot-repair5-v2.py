@@ -19,6 +19,7 @@ DATA = ROOT / "docs" / "data" / "biblia-emanus-candidates"
 SOURCE = DATA / "sources" / "engwebp_usfm.zip"
 OUT = ROOT / "docs" / "biblia-emanus"
 MODEL_NAME = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+MODEL_REVISION = "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
 CANONICAL = {
     "JDG","RUT","1SA","2SA","1KI","2KI","1CH","2CH","EZR","NEH","EST","JOB",
     "PSA","PRO","ECC","SNG","ISA","JER","LAM","EZK","DAN","HOS","JOL","AMO",
@@ -60,7 +61,7 @@ def main() -> int:
     if not pairs:
         raise SystemExit("No aligned canonical pairs")
 
-    model = SentenceTransformer(MODEL_NAME)
+    model = SentenceTransformer(MODEL_NAME, revision=MODEL_REVISION)
     ro = model.encode([p["romanian"] for p in pairs], batch_size=args.batch_size, normalize_embeddings=True, show_progress_bar=True)
     en = model.encode([p["english"] for p in pairs], batch_size=args.batch_size, normalize_embeddings=True, show_progress_bar=True)
     scores = np.sum(ro * en, axis=1)
@@ -82,6 +83,7 @@ def main() -> int:
         "schemaVersion": 3,
         "scope": "33 remaining canonical Old Testament books",
         "model": MODEL_NAME,
+        "modelRevision": MODEL_REVISION,
         "screeningOnly": True,
         "sourceId": "engwebp",
         "sourceSha256": hashlib.sha256(SOURCE.read_bytes()).hexdigest(),

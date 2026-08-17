@@ -79,7 +79,6 @@ jobs:
             --only-binary=:all: \
             --require-hashes \
             --no-deps \
-            --extra-index-url https://download.pytorch.org/whl/cpu \
             --requirement .github/requirements/semantic-audit-cpu.txt
           "$AUDIT_PYTHON" -m pip check
           "$AUDIT_PYTHON" - <<'PY'
@@ -93,8 +92,8 @@ jobs:
           assert importlib.util.find_spec("nvidia") is None
           print(f"Semantic audit runtime: torch {torch.__version__} (CPU only)")
           PY
-          # Pin the embedding model revision as well as its Python runtime.
-          "$AUDIT_PYTHON" scripts/run-with-pinned-hf.py scripts/semantic-audit-ot-repair5-v2.py --batch-size 128
+          # The audit script pins the embedding model revision natively.
+          "$AUDIT_PYTHON" scripts/semantic-audit-ot-repair5-v2.py --batch-size 128
           "$PYTHON_BIN" scripts/enforce-ot-repair5-semantic.py
       - name: Typecheck and build
         run: |
