@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react"
-import { ArrowRight, BellRing, BookOpen, Flame, HandHeart, Library as LibraryIcon, ScrollText, Sunrise } from "lucide-react"
+import { ArrowRight, BellRing, BookOpen, Flame, HandHeart, Library as LibraryIcon, ScrollText, ShieldCheck, Sunrise } from "lucide-react"
 import type { Lesson } from "@emanus/shared"
 import {
   addPrayer,
@@ -7,14 +7,15 @@ import {
   daysAgo,
   dismissPrayerInvite,
   doctrineAvailable,
+  load,
   oldestUnanswered,
   plan,
   shouldInviteFirstPrayer,
 } from "../journey"
 import { declineReminder, enableReminder, shouldOfferReminder } from "../reminder"
 import { navigate } from "../router"
-import { learningLessonUrl, pathProgramId } from "../learningPrograms"
-import { cloudEnabled } from "../cloud"
+import { activeGateProgramId, learningLessonUrl } from "../learningPrograms"
+import { cloudBackupEnabled } from "../cloud"
 
 /*
  * "Azi" — singurul ecran principal. (docs/20 §8)
@@ -35,13 +36,14 @@ function memoryVerse(lesson: Lesson): { text: string; ref: string } | null {
 
 /** Ce scrie sub câmpul de rugăciune. Adevărul, nu ce sună mai liniștitor. */
 function privacyLine(): string {
-  return cloudEnabled()
+  return cloudBackupEnabled()
     ? "Nu o citește nimeni. Se salvează pe telefonul tău și într-un spațiu de backup legat doar de tine, ca să n-o pierzi dacă schimbi telefonul."
     : "Nu o citește nimeni și nu pleacă nicăieri de pe telefonul tău."
 }
 
 export function Today() {
   const path = currentPath()
+  const journey = useMemo(() => load(), [])
   const dayPlan = useMemo(() => plan(), [])
   const memorial = useMemo(() => oldestUnanswered(), [])
   const doctrine = useMemo(() => doctrineAvailable(), [])
@@ -133,7 +135,7 @@ export function Today() {
           <button
             type="button"
             className="today__cta"
-            onClick={() => navigate(learningLessonUrl(pathProgramId(path.id), dayPlan.lesson?.id ?? ""))}
+            onClick={() => navigate(learningLessonUrl(activeGateProgramId(path.id, journey.doorId), dayPlan.lesson?.id ?? ""))}
           >
             {away ? "Reia" : "Începe"} <ArrowRight size={18} aria-hidden />
           </button>
@@ -352,6 +354,9 @@ export function Today() {
       */}
       <button type="button" className="today__switch" onClick={() => navigate("/intrare")}>
         Nu mă mai regăsesc aici. Vreau alt drum.
+      </button>
+      <button type="button" className="today__switch" onClick={() => navigate("/eu")}>
+        <ShieldCheck size={15} aria-hidden /> Datele și backup-ul meu
       </button>
     </section>
   )

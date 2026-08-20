@@ -14,6 +14,8 @@ export interface LessonProgressDraft {
   mainStepIndex: number
   revealedStepIds: string[]
   choices: Record<string, string>
+  multiChoices: Record<string, string[]>
+  textResponses: Record<string, string>
   quizAnswers: Record<string, number>
   checkIns: Record<string, string>
   journal: string
@@ -56,6 +58,16 @@ function numberRecord(value: unknown): Record<string, number> {
   )
 }
 
+function stringArrayRecord(value: unknown): Record<string, string[]> {
+  if (!isRecord(value)) return {}
+  const result: Record<string, string[]> = {}
+  for (const [key, candidate] of Object.entries(value)) {
+    if (!Array.isArray(candidate)) continue
+    result[key] = [...new Set(candidate.filter((item): item is string => typeof item === "string"))]
+  }
+  return result
+}
+
 function lessonDraft(value: unknown): LessonProgressDraft | undefined {
   if (!isRecord(value)) return undefined
   const mainStepId = typeof value.mainStepId === "string" ? value.mainStepId : ""
@@ -71,6 +83,8 @@ function lessonDraft(value: unknown): LessonProgressDraft | undefined {
     mainStepIndex,
     revealedStepIds: revealedStepIds.length ? revealedStepIds : [mainStepId],
     choices: stringRecord(value.choices),
+    multiChoices: stringArrayRecord(value.multiChoices),
+    textResponses: stringRecord(value.textResponses),
     quizAnswers: numberRecord(value.quizAnswers),
     checkIns: stringRecord(value.checkIns),
     journal: typeof value.journal === "string" ? value.journal : "",
@@ -142,7 +156,15 @@ export function getLearningProgressSnapshot(): Record<string, ProgramLearningPro
     ...progress,
     completedLessonIds: [...progress.completedLessonIds],
     journals: { ...progress.journals },
-    drafts: { ...progress.drafts },
+    drafts: Object.fromEntries(Object.entries(progress.drafts ?? {}).map(([lessonId, draft]) => [lessonId, {
+      ...draft,
+      revealedStepIds: [...draft.revealedStepIds],
+      choices: { ...draft.choices },
+      multiChoices: Object.fromEntries(Object.entries(draft.multiChoices).map(([stepId, values]) => [stepId, [...values]])),
+      textResponses: { ...draft.textResponses },
+      quizAnswers: { ...draft.quizAnswers },
+      checkIns: { ...draft.checkIns },
+    }])),
   }]))
 }
 
@@ -152,6 +174,8 @@ export function getLessonDraft(programId: string, lessonId: string): LessonProgr
     ...draft,
     revealedStepIds: [...draft.revealedStepIds],
     choices: { ...draft.choices },
+    multiChoices: Object.fromEntries(Object.entries(draft.multiChoices).map(([stepId, values]) => [stepId, [...values]])),
+    textResponses: { ...draft.textResponses },
     quizAnswers: { ...draft.quizAnswers },
     checkIns: { ...draft.checkIns },
   } : undefined
@@ -209,4 +233,18 @@ export function completeProgramLesson(programId: string, lessonId: string, journ
   store.programs[programId] = next
   saveStore(store)
   return next
+}
+
+/**
+ * Șterge progresul Bibliotecii și copia volatilă folosită când localStorage nu
+ * poate scrie. Este chemat numai după ce ștergerea remote a fost confirmată.
+ */
+export function clearLearningProgress(): boolean {
+  volatileStore = null
+  try {
+    localStorage.removeItem(STORAGE_KEY)
+    return localStorage.getItem(STORAGE_KEY) === null
+  } catch {
+    return false
+  }
 }

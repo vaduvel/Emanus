@@ -27,7 +27,10 @@
 }
 
 /* ---- Tranziție de rută (aplicată pe shell-ul .app la schimbarea rutei) ---- */
-.route-anim { animation: ema-rise var(--dur-3) var(--ease-emphasized) both; }
+/* `both` păstra un transform după animație și transforma shell-ul în containing
+ * block pentru navigarea fixed. `backwards` aplică starea inițială fără să lase
+ * transform rezidual după intrare. */
+.route-anim { animation: ema-rise var(--dur-3) var(--ease-emphasized) backwards; }
 
 /* ---- Utilitare opt-in ---- */
 .ema-rise { animation: ema-rise var(--dur-3) var(--ease-emphasized) both; }

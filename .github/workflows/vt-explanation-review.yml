@@ -5,40 +5,26 @@ on:
     branches: [agent/biblia-explicata-vt-integration-clean]
     paths:
       - "packages/shared/src/bible/**"
-      - "packages/shared/package.json"
       - "apps/web/src/screens/Bible.tsx"
       - "apps/web/src/bibleReader.ts"
       - "apps/web/src/data/bible-needs.json"
       - "apps/web/tests/bible-reader.spec.ts"
-      - "apps/web/playwright.config.ts"
-      - "apps/web/package.json"
-      - "apps/web/vite.config.ts"
       - "scripts/materialize-bible-reader.mjs"
       - "scripts/check-vt-*.mjs"
       - "scripts/check-vt-*.py"
       - "scripts/materialize-published-emanus-ot-runtime.py"
-      - "package.json"
-      - "pnpm-lock.yaml"
-      - ".github/workflows/vt-explanation-review.yml"
   pull_request:
     branches: [main, agent/biblia-explicata-vt-integration-clean]
     paths:
       - "packages/shared/src/bible/**"
-      - "packages/shared/package.json"
       - "apps/web/src/screens/Bible.tsx"
       - "apps/web/src/bibleReader.ts"
       - "apps/web/src/data/bible-needs.json"
       - "apps/web/tests/bible-reader.spec.ts"
-      - "apps/web/playwright.config.ts"
-      - "apps/web/package.json"
-      - "apps/web/vite.config.ts"
       - "scripts/materialize-bible-reader.mjs"
       - "scripts/check-vt-*.mjs"
       - "scripts/check-vt-*.py"
       - "scripts/materialize-published-emanus-ot-runtime.py"
-      - "package.json"
-      - "pnpm-lock.yaml"
-      - ".github/workflows/vt-explanation-review.yml"
   workflow_dispatch:
 
 permissions:

@@ -15,6 +15,37 @@
 .ask__send[disabled] { opacity: 0.45; cursor: default; }
 .ask__gata { margin: 0; line-height: 1.6; opacity: 0.9; }
 
+.ask__safety {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 10px 12px;
+  padding: 14px;
+  border: 1px solid color-mix(in srgb, var(--crisis-ink, #8c3f3a) 32%, transparent);
+  border-radius: 16px;
+  background: var(--crisis-soft, #fbeceb);
+  color: var(--crisis-ink, #8c3f3a);
+}
+.ask__safety h2 { margin: 0 0 4px; font-size: 1rem; }
+.ask__safety p { margin: 0; line-height: 1.5; }
+.ask__safety-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.ask__safety-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 44px;
+  padding: 9px 13px;
+  border-radius: 12px;
+  background: var(--crisis-ink, #8c3f3a);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
 .ask__grele h2, .ask__mele h2 { margin: 18px 0 8px; font-size: 1.02rem; }
 .ask__lista { display: flex; flex-direction: column; gap: 8px; }
 .ask__grea {

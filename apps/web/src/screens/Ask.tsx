@@ -1,13 +1,15 @@
-import { useEffect, useState } from "react"
-import { ArrowLeft, HelpCircle, Send } from "lucide-react"
+import { useEffect, useMemo, useState } from "react"
+import { ArrowLeft, HelpCircle, Phone, Send, ShieldAlert } from "lucide-react"
+import { crisisPath, detectCrisisIntents } from "../crisisResources"
 import { navigate } from "../router"
 import "../ask.css"
 
 /*
  * Intreaba. Locul intrebarilor grele, cele pe care omul nu le pune cu glas tare
  * in biserica. Astazi ecranul nu da raspuns pe loc: primeste intrebarea, o
- * tine langa el si spune limpede ca o va citi un om. Nu ne prefacem ca avem un
- * raspuns automat cand nu il avem.
+ * ține numai pe dispozitiv. Nu pretindem că a fost trimisă unui om când nu
+ * există încă un serviciu de răspuns. Formulările de pericol deschid ajutorul
+ * potrivit înaintea oricărui conținut spiritual.
  */
 
 const KEY = "emanus.ask.trimise"
@@ -47,6 +49,7 @@ export function Ask({ despre, returnTo }: { despre?: string; returnTo?: string }
   const [text, setText] = useState("")
   const [trimise, setTrimise] = useState<Trimisa[]>([])
   const [tocmai, setTocmai] = useState(false)
+  const crisisIntents = useMemo(() => detectCrisisIntents(text), [text])
 
   useEffect(() => {
     setTrimise(citeste())
@@ -85,11 +88,22 @@ export function Ask({ despre, returnTo }: { despre?: string; returnTo?: string }
         onChange={(e) => setText(e.currentTarget.value)}
       />
     </label>
+    {crisisIntents.length > 0 && <div className="ask__safety" role="alert">
+      <ShieldAlert size={22} aria-hidden />
+      <div>
+        <h2>Înaintea oricărui răspuns, caută ajutor direct</h2>
+        <p>Textul tău poate descrie un pericol real. Emanus nu pune un diagnostic și nu înlocuiește intervenția de urgență.</p>
+      </div>
+      <div className="ask__safety-actions">
+        <a href="tel:112"><Phone size={17} aria-hidden /> Sună 112</a>
+        <button type="button" className="ghost" onClick={() => navigate(crisisPath(crisisIntents))}>Vezi ajutorul potrivit situației</button>
+      </div>
+    </div>}
     <button type="button" className="tile ask__send" onClick={() => trimite(text)} disabled={text.trim().length === 0}>
-      <Send size={16} aria-hidden /> Trimite întrebarea
+      <Send size={16} aria-hidden /> Păstrează întrebarea
     </button>
 
-    {tocmai && <p className="ask__gata">Am primit-o. Nu-ţi răspunde o maşină pe loc: o citeşte un om. Până atunci, întrebarea rămâne aici, la tine.</p>}
+    {tocmai && <p className="ask__gata">Întrebarea a rămas numai pe acest dispozitiv. Nu a fost trimisă unui om și nu este folosită pentru a genera automat un răspuns spiritual.</p>}
 
     <section className="ask__grele">
       <h2>Întrebări pe care le pun mulţi</h2>

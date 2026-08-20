@@ -10,6 +10,8 @@ import {
   isCardAnchored,
   messageCardById,
   pickMessageCard,
+  SCROLL_SECTIONS,
+  scrollVerseById,
   type MessageCard,
 } from "@emanus/shared"
 import { lastMood, recentCardIds, rememberCard } from "../dailyGifts"
@@ -94,14 +96,17 @@ function drawCard(canvas: HTMLCanvasElement, card: MessageCard, format: Format):
   ctx.fillStyle = "rgba(47,38,23,0.8)"
   ctx.fillText(card.verseRef, w / 2, y + 40)
 
-  // versetul intreg, ca sa se poata verifica
-  ctx.font = "400 32px Georgia, serif"
-  ctx.fillStyle = "rgba(47,38,23,0.65)"
-  const verseLines = wrap(ctx, card.verseText, w - 300)
-  let vy = y + 110
-  for (const line of verseLines) {
-    ctx.fillText(line, w / 2, vy)
-    vy += 42
+  // Versetul întreg se adaugă separat doar când mesajul este o parafrază.
+  // Pentru un Pergament, corpul este deja chiar textul Scripturii.
+  if (card.body !== card.verseText) {
+    ctx.font = "400 32px Georgia, serif"
+    ctx.fillStyle = "rgba(47,38,23,0.65)"
+    const verseLines = wrap(ctx, card.verseText, w - 300)
+    let vy = y + 110
+    for (const line of verseLines) {
+      ctx.fillText(line, w / 2, vy)
+      vy += 42
+    }
   }
 
   ctx.font = "400 30px Georgia, serif"
@@ -109,17 +114,31 @@ function drawCard(canvas: HTMLCanvasElement, card: MessageCard, format: Format):
   ctx.fillText("emanus.app", w / 2, h - 90)
 }
 
-export default function Mesaj({ cardId }: { cardId?: string }) {
+export default function Mesaj({ cardId, verseId }: { cardId?: string; verseId?: string }) {
   const [format, setFormat] = useState<Format>("post")
   const canvasRef = useRef<HTMLCanvasElement | null>(null)
 
   const card = useMemo(() => {
+    const scrollVerse = scrollVerseById(verseId)
+    if (scrollVerse) {
+      const need = SCROLL_SECTIONS.find((section) => section.id === scrollVerse.section)?.mood
+      return {
+        id: `scroll_${scrollVerse.id}`,
+        title: "Astăzi, din Scriptură, pentru tine:" as const,
+        body: scrollVerse.text,
+        verseRef: scrollVerse.ref,
+        verseText: scrollVerse.text,
+        axis: scrollVerse.axis,
+        needs: need ? [need] : [],
+        background: "pergament" as const,
+      }
+    }
     const direct = cardId ? messageCardById(cardId) : null
     const chosen =
       direct ?? pickMessageCard({ mood: lastMood() ?? undefined, recentIds: recentCardIds() })
     if (!direct) rememberCard(chosen.id)
     return chosen
-  }, [cardId])
+  }, [cardId, verseId])
 
   // Plasa de siguranta: un card fara verset nu se afiseaza si nu se distribuie.
   if (!isCardAnchored(card)) {
@@ -162,14 +181,14 @@ export default function Mesaj({ cardId }: { cardId?: string }) {
 
   return (
     <section className="today">
-      <button className="today__back ghost" onClick={() => navigate("/")}>
-        ← Azi
+      <button className="today__back ghost" onClick={() => navigate(verseId ? "/pergament" : "/")}>
+        ← {verseId ? "Pergament" : "Azi"}
       </button>
 
       <p className="today__kicker">{card.title}</p>
       <h1 className="scripture">„{card.body}”</h1>
       <p className="today__verse">{card.verseRef}</p>
-      <p className="muted">{card.verseText}</p>
+      {card.body !== card.verseText ? <p className="muted">{card.verseText}</p> : null}
 
       <div className="today__chips">
         {(Object.keys(SIZES) as Format[]).map((f) => (

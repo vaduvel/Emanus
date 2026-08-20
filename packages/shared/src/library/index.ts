@@ -20,10 +20,13 @@ export * from "./pildeVesnicia.js"
 export * from "./pildeVesnicia2.js"
 
 export type CourseState = "live" | "partial" | "planned"
+export type CourseReviewKind = "doctrinal" | "pastoral" | "clinical" | "safeguarding"
 export type LibraryCourse = {
   id: string; title: string; forWhom: string; plannedLessons: number
   lessonIds: string[]; state: CourseState; source?: string
   ageHint?: "0-5" | "6-11" | "12-18" | "adult" | "bunici"
+  requiredReviews?: CourseReviewKind[]
+  approvedReviews?: CourseReviewKind[]
 }
 export type LibraryShelf = { id: string; title: string; blurb: string; courses: LibraryCourse[]; gated?: boolean }
 
@@ -32,7 +35,7 @@ const shelf = (id: string, title: string, blurb: string, courses: LibraryCourse[
 
 const shelfTemelie = shelf("lib_temelie", "Temelia", "De la zero: cine e Dumnezeu, ce a făcut Iisus și ce înseamnă asta pentru tine.", [
   c("lib_fundamentul", "Fundamentul", "Nu știi de unde să începi, sau vrei să reașezi ce ai auzit pe apucate.", 7, { lessonIds: ["doctrina_l1", "doctrina_l2", "doctrina_l3"], state: "partial", source: "docs/06-curs-fundamentul.md" }),
-  c("lib_intoarcerea", "Întoarcerea", "Ai înțeles că ceva nu e în ordine și vrei să știi ce faci mai departe.", 5, { source: "docs/17-modul-intoarcerea.md" }),
+  c("lib_intoarcerea", "Pocăință, mărturisire și reparare", "Ai înțeles că ceva nu e în ordine și vrei să numești păcatul, să-l oprești și să repari ce se poate.", 6, { source: "docs/17-modul-intoarcerea.md; Luca 3:8; Luca 19:8" }),
 ])
 
 const shelfIntrebari = shelf("lib_intrebari", "Întrebări mari", "Lucrurile care te opresc să crezi, luate pe rând și cinstit — inclusiv unde nu avem răspuns.", [
@@ -54,7 +57,7 @@ const shelfCuvantul = shelf("lib_cuvantul", "Cuvântul", "Cum se citește, de un
 
 const shelfRugaciune = shelf("lib_rugaciune", "Rugăciunea", "Cum se vorbește cu El, mai ales când nu ai cuvinte și când nu primești răspuns.", [
   c("lib_rug_inceput", "Doamne, învață-mă să mă rog", "Vrei să înțelegi «Tatăl nostru» ca tipar viu, nu ca poezie repetată.", 9, { source: "docs/Emanus — Ritmul zilnic & Rugăciunea" }),
-  c("lib_rug_psalmi", "Psalmii ca școală de rugăciune", "Vrei să te rogi cinstit, inclusiv când ești supărat pe El.", 5),
+  c("lib_rug_psalmi", "Psalmii ca școală de rugăciune", "Vrei să te rogi cinstit, inclusiv când ești supărat pe El.", 6),
   c("lib_rug_mijlocire", "Postul și mijlocirea", "Te rogi pentru cineva de mult și nu se schimbă nimic.", 4),
 ])
 
@@ -90,7 +93,13 @@ export function visibleShelves(): LibraryShelf[] { return SHELVES.filter((s) => 
 export function getShelf(id: string): LibraryShelf | undefined { return SHELVES.find((s) => s.id === id) }
 export const ALL_LIBRARY_COURSES: LibraryCourse[] = SHELVES.flatMap((s) => s.courses)
 export function getLibraryCourse(id: string): LibraryCourse | undefined { return ALL_LIBRARY_COURSES.find((x) => x.id === id) }
-export function courseIsOpen(course: LibraryCourse): boolean { return course.lessonIds.length > 0 }
+export function missingCourseReviews(course: LibraryCourse): CourseReviewKind[] {
+  const approved = new Set(course.approvedReviews ?? [])
+  return (course.requiredReviews ?? []).filter((review) => !approved.has(review))
+}
+export function courseIsOpen(course: LibraryCourse): boolean {
+  return course.state === "live" && course.lessonIds.length > 0 && missingCourseReviews(course).length === 0
+}
 export function nextCourseLesson(course: LibraryCourse, lessonsDone: string[]): string | null { return course.lessonIds.find((id) => !lessonsDone.includes(id)) ?? null }
 
 export const LIBRARY_LESSONS: Lesson[] = [

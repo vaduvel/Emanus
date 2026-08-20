@@ -1,6 +1,6 @@
 import type { Lesson } from "@emanus/shared/domain"
-import { ALL_LIBRARY_COURSES, LIBRARY_LESSONS } from "@emanus/shared/library"
-import { PATHS } from "@emanus/shared/paths"
+import { ALL_LIBRARY_COURSES, LIBRARY_LESSONS, courseIsOpen } from "@emanus/shared/library"
+import { ALL_DOORS, PATHS, getPathForDoor, isPathReviewed } from "@emanus/shared/paths"
 
 export type LearningProgramKind = "gate_path" | "course" | "discipleship"
 export type LearningCadence = "guided" | "self_paced" | "daily" | "weekly"
@@ -23,6 +23,10 @@ interface CourseExperienceCopy {
 export interface LearningProgram {
   id: string
   sourceId: string
+  /** Ușa exactă, când programul folosește o secvență contextuală a aceluiași drum. */
+  doorId?: string
+  /** Parcurs retras din alegere, păstrat numai pentru oamenii care îl aveau deja început. */
+  legacyOnly?: boolean
   kind: LearningProgramKind
   cadence: LearningCadence
   unlockPolicy: "sequential" | "open"
@@ -61,21 +65,43 @@ const courseExperienceCopy: Record<string, CourseExperienceCopy> = {
 
 const libraryLessonById = new Map(LIBRARY_LESSONS.map((lesson) => [lesson.id, lesson] as const))
 
-const gatePrograms: LearningProgram[] = PATHS.map((path) => ({
-  id: pathProgramId(path.id),
-  sourceId: path.id,
-  kind: "gate_path",
-  cadence: "guided",
-  unlockPolicy: "sequential",
-  title: path.title,
-  promise: path.promise,
-  lessons: path.lessons,
-  plannedSessions: path.lessons.length,
-  sourceLabel: "Traseu Emanus",
-  practices: path.practices,
-}))
+const gatePrograms: LearningProgram[] = PATHS
+  .filter((path) => isPathReviewed(path))
+  .map((path) => ({
+    id: pathProgramId(path.id),
+    sourceId: path.id,
+    kind: "gate_path",
+    cadence: "guided",
+    unlockPolicy: "sequential",
+    title: path.title,
+    promise: path.promise,
+    lessons: path.lessons,
+    plannedSessions: path.lessons.length,
+    sourceLabel: "Traseu Emanus",
+    practices: path.practices,
+    ...(!path.offerAtPathEnd ? { legacyOnly: true } : {}),
+  }))
 
-const coursePrograms: LearningProgram[] = ALL_LIBRARY_COURSES.map((course) => {
+const doorPrograms: LearningProgram[] = ALL_DOORS.flatMap((door) => {
+  const path = getPathForDoor(door.id)
+  if (!path || !isPathReviewed(path)) return []
+  return [{
+    id: doorProgramId(door.id),
+    sourceId: path.id,
+    doorId: door.id,
+    kind: "gate_path" as const,
+    cadence: "guided" as const,
+    unlockPolicy: "sequential" as const,
+    title: path.title,
+    promise: path.promise,
+    lessons: path.lessons,
+    plannedSessions: path.lessons.length,
+    sourceLabel: "Traseu Emanus",
+    practices: path.practices,
+  }]
+})
+
+const coursePrograms: LearningProgram[] = ALL_LIBRARY_COURSES.filter(courseIsOpen).map((course) => {
   const experience = courseExperienceCopy[course.id]
   return {
     id: courseProgramId(course.id),
@@ -95,11 +121,15 @@ const coursePrograms: LearningProgram[] = ALL_LIBRARY_COURSES.map((course) => {
   }
 })
 
-export const LEARNING_PROGRAMS: LearningProgram[] = [...gatePrograms, ...coursePrograms]
+export const LEARNING_PROGRAMS: LearningProgram[] = [...gatePrograms, ...doorPrograms, ...coursePrograms]
 const programById = new Map(LEARNING_PROGRAMS.map((program) => [program.id, program] as const))
 
 export function pathProgramId(pathId: string): string {
   return `path:${pathId}`
+}
+
+export function doorProgramId(doorId: string): string {
+  return `door:${doorId}`
 }
 
 export function courseProgramId(courseId: string): string {
@@ -109,6 +139,11 @@ export function courseProgramId(courseId: string): string {
 export function getLearningProgram(programId: string | null | undefined): LearningProgram | undefined {
   if (!programId) return undefined
   return programById.get(programId)
+}
+
+export function activeGateProgramId(pathId: string, doorId?: string | null): string {
+  const contextualId = doorId ? doorProgramId(doorId) : null
+  return contextualId && programById.has(contextualId) ? contextualId : pathProgramId(pathId)
 }
 
 export function findProgramForLesson(lessonId: string | null | undefined): LearningProgram | undefined {

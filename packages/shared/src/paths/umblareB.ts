@@ -431,7 +431,7 @@ export const umblareL6: Lesson = {
         },
         {
           from: "guide",
-          text: "Asta se numeste depresie si are nevoie de un medic, exact ca o pneumonie. Nu e lipsa de credinta si nu se rezolva postind mai mult. Ceri ajutor - si Dumnezeu nu Se supara, El vindeca si prin oameni.",
+          text: "Aceste simptome pot aparea in depresie sau in alte probleme medicale si trebuie evaluate de un medic ori de un psiholog. Nu le numim automat lipsa de credinta si nu le tratam doar postind mai mult. Ceri ajutor - si Dumnezeu nu Se supara; El lucreaza si prin oameni.",
         },
       ],
     },
@@ -443,11 +443,11 @@ export const umblareL6: Lesson = {
         question: "Ce e o perioada in care nu simti nimic?",
         options: [
           { text: "Semn ca Dumnezeu S-a depărtat", correct: false },
-          { text: "Poate fi neascultare, epuizare sau o tacere care creste - se verifica in ordinea asta", correct: true },
+          { text: "Nu presupun cauza: numesc pacatul cunoscut, verific sanatatea si raman inaintea lui Dumnezeu", correct: true },
           { text: "Semn ca n-am fost niciodata credincios", correct: false },
         ],
         explanation:
-          "Nu una din trei la nimereala. Se verifica in ordine: ceva stiut si amanat, apoi trupul si oboseala, apoi tacerea prin care El te muta de la senzatie la Persoana.",
+          "Daca exista un pacat cunoscut, il numesti, il marturisesti si repari ce se poate repara. Dar nu inventezi un pacat ca explicatie pentru simptome: lipsa somnului, pierderea poftei de mancare, lipsa placerii si gandurile de autovatamare cer evaluare medicala. In acelasi timp ramai in Scriptura, rugaciune si comunitate, chiar cand nu simti nimic.",
       },
     },
     {

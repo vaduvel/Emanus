@@ -339,6 +339,11 @@ export function scrollVersesInSection(section: ScrollSectionId): ScrollVerse[] {
   return SCROLL_VERSES.filter((v) => v.section === section)
 }
 
+export function scrollVerseById(id: string | null | undefined): ScrollVerse | undefined {
+  if (!id) return undefined
+  return SCROLL_VERSES.find((verse) => verse.id === id)
+}
+
 export function sectionForMood(mood: MessageMood): ScrollSectionId {
   return SCROLL_SECTIONS.find((s) => s.mood === mood)?.id ?? "cand_nu_stii_incotro"
 }

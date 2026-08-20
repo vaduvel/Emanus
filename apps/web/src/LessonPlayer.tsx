@@ -3,17 +3,26 @@ import type { CSSProperties } from "react"
 import type { LucideIcon } from "lucide-react"
 import {
   BookOpen, Brain, Footprints, Frown, HandHeart, HeartCrack, Laugh,
-  Lightbulb, Meh, MessageCircle, MessageSquare, NotebookPen, Smile, Sunrise,
+  LifeBuoy, Lightbulb, Meh, MessageCircle, MessageSquare, NotebookPen, Smile, Sunrise,
 } from "lucide-react"
 import type { ChoiceOption, Lesson, LessonStep } from "@emanus/shared"
+import { safetyPolicyForLesson } from "@emanus/shared/lesson-safety"
 import { ScriptureReveal } from "./components/ScriptureReveal"
+import { navigate } from "./router"
 
-export interface LessonResult { choicesMade: Record<string, string>; journal: string }
+export interface LessonResult {
+  choicesMade: Record<string, string>
+  multiChoicesMade: Record<string, string[]>
+  textResponses: Record<string, string>
+  journal: string
+}
 export interface LessonPlayerState {
   mainStepId: string
   mainStepIndex: number
   revealedStepIds: string[]
   choices: Record<string, string>
+  multiChoices: Record<string, string[]>
+  textResponses: Record<string, string>
   quizAnswers: Record<string, number>
   checkIns: Record<string, string>
   journal: string
@@ -24,7 +33,10 @@ interface RestoredLessonState extends LessonPlayerState {
 }
 
 const GUIDE_NAME = "Emanus"
-const INTERACTION_TYPES = new Set<LessonStep["type"]>(["choice", "check_in", "journal", "memory_verse", "prayer", "step"])
+const INTERACTION_TYPES = new Set<LessonStep["type"]>([
+  "choice", "multi_choice", "check_in", "reflection", "declaration",
+  "name_struggle", "journal", "memory_verse", "prayer", "step",
+])
 const MOOD_IDS = new Set(["great", "good", "meh", "down", "hard"])
 function stepIcon(type: LessonStep["type"]): LucideIcon {
   switch (type) {
@@ -60,18 +72,37 @@ function numberRecord(value: unknown): Record<string, number> {
   )
 }
 
+function stringArrayRecord(value: unknown): Record<string, string[]> {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return {}
+  const result: Record<string, string[]> = {}
+  for (const [key, candidate] of Object.entries(value)) {
+    if (!Array.isArray(candidate)) continue
+    result[key] = [...new Set(candidate.filter((item): item is string => typeof item === "string"))]
+  }
+  return result
+}
+
 function restoreLessonState(
   initialState: LessonPlayerState | undefined,
+  initialChoices: Record<string, string> | undefined,
   mainSteps: LessonStep[],
   stepById: Map<string, LessonStep>,
 ): RestoredLessonState {
   const fallback = mainSteps[0]
+  const seededChoices = Object.fromEntries(
+    Object.entries(stringRecord(initialChoices)).filter(([stepId, optionId]) => (
+      stepById.get(stepId)?.type === "choice"
+      && stepById.get(stepId)?.choice?.options.some((option) => option.id === optionId)
+    )),
+  )
   if (!initialState || !fallback) return {
     mainStepId: fallback?.id ?? "",
     mainStepIndex: 0,
     revealedStepIds: fallback ? [fallback.id] : [],
     revealed: fallback ? [fallback] : [],
-    choices: {},
+    choices: seededChoices,
+    multiChoices: {},
+    textResponses: {},
     quizAnswers: {},
     checkIns: {},
     journal: "",
@@ -84,7 +115,7 @@ function restoreLessonState(
   const index = idIndex >= 0 ? idIndex : 0
   const current = mainSteps[index] ?? fallback
   const choices = Object.fromEntries(
-    Object.entries(stringRecord(initialState.choices)).filter(([stepId, optionId]) => (
+    Object.entries({ ...seededChoices, ...stringRecord(initialState.choices) }).filter(([stepId, optionId]) => (
       stepById.get(stepId)?.type === "choice"
       && stepById.get(stepId)?.choice?.options.some((option) => option.id === optionId)
     )),
@@ -95,6 +126,22 @@ function restoreLessonState(
       if (step?.type !== "check_in") return false
       const options = step.choice?.options
       return options?.length ? options.some((option) => option.id === optionId) : MOOD_IDS.has(optionId)
+    }),
+  )
+  const multiChoices = Object.fromEntries(
+    Object.entries(stringArrayRecord(initialState.multiChoices)).flatMap(([stepId, optionIds]) => {
+      const step = stepById.get(stepId)
+      if (step?.type !== "multi_choice") return []
+      const allowed = new Set(step.multiChoice?.options.map((option) => option.id) ?? [])
+      const valid = optionIds.filter((optionId) => allowed.has(optionId))
+      const max = step.multiChoice?.maxSelections
+      return [[stepId, max === undefined ? valid : valid.slice(0, max)] as const]
+    }),
+  )
+  const textResponses = Object.fromEntries(
+    Object.entries(stringRecord(initialState.textResponses)).filter(([stepId]) => {
+      const type = stepById.get(stepId)?.type
+      return type === "reflection" || type === "declaration" || type === "name_struggle"
     }),
   )
   const quizAnswers = Object.fromEntries(
@@ -117,20 +164,24 @@ function restoreLessonState(
     revealedStepIds: revealed.map((step) => step.id),
     revealed,
     choices,
+    multiChoices,
+    textResponses,
     quizAnswers,
     checkIns,
     journal: typeof initialState.journal === "string" ? initialState.journal : "",
   }
 }
 
-export function LessonPlayer({ lesson, onComplete, submitting = false, initialState, onProgress, onChoice }: {
+export function LessonPlayer({ lesson, onComplete, submitting = false, initialState, initialChoices, onProgress, onChoice }: {
   lesson: Lesson
   onComplete: (result: LessonResult) => void
   submitting?: boolean
   initialState?: LessonPlayerState
+  initialChoices?: Record<string, string>
   onProgress?: (state: LessonPlayerState) => void
   onChoice?: (step: LessonStep, option: ChoiceOption) => boolean | void
 }) {
+  const safety = lesson.safety ?? safetyPolicyForLesson(lesson.id)
   const { mainSteps, stepById } = useMemo(() => {
     const branchTargetIds = new Set<string>()
     for (const s of lesson.steps) for (const o of s.choice?.options ?? []) if (o.branchStepId) branchTargetIds.add(o.branchStepId)
@@ -140,17 +191,20 @@ export function LessonPlayer({ lesson, onComplete, submitting = false, initialSt
     }
   }, [lesson])
   const restored = useMemo(
-    () => restoreLessonState(initialState, mainSteps, stepById),
-    [initialState, mainSteps, stepById],
+    () => restoreLessonState(initialState, initialChoices, mainSteps, stepById),
+    [initialChoices, initialState, mainSteps, stepById],
   )
   const [revealed, setRevealed] = useState<LessonStep[]>(() => restored.revealed)
   const [mainIdx, setMainIdx] = useState(restored.mainStepIndex)
   const [choices, setChoices] = useState<Record<string, string>>(() => restored.choices)
+  const [multiChoices, setMultiChoices] = useState<Record<string, string[]>>(() => restored.multiChoices)
+  const [textResponses, setTextResponses] = useState<Record<string, string>>(() => restored.textResponses)
   const [quizAnswers, setQuizAnswers] = useState<Record<string, number>>(() => restored.quizAnswers)
   const [checkIns, setCheckIns] = useState<Record<string, string>>(() => restored.checkIns)
   const [bubbleCounts, setBubbleCounts] = useState<Record<string, number>>({})
   const [journal, setJournal] = useState(restored.journal)
   const [autoPaused, setAutoPaused] = useState(false)
+  const [safetyCleared, setSafetyCleared] = useState(() => !safety)
   const scrollRef = useRef<HTMLDivElement>(null)
   const currentTurnRef = useRef<HTMLDivElement>(null)
   const focusNextStep = useRef(false)
@@ -168,11 +222,16 @@ export function LessonPlayer({ lesson, onComplete, submitting = false, initialSt
 
   const inBranch = current ? !mainSteps.includes(current) : false
   const atLastMain = mainIdx >= mainSteps.length - 1
-  function toNextMain(nextChoices = choices, nextJournal = journal) {
-    if (atLastMain) { onComplete({ choicesMade: nextChoices, journal: nextJournal }); return }
+  function toNextMain(
+    nextChoices = choices,
+    nextJournal = journal,
+    nextMultiChoices = multiChoices,
+    nextTextResponses = textResponses,
+  ) {
+    if (atLastMain) { onComplete({ choicesMade: nextChoices, multiChoicesMade: nextMultiChoices, textResponses: nextTextResponses, journal: nextJournal }); return }
     const ni = mainIdx + 1
     const nextStep = mainSteps[ni]
-    if (!nextStep) { onComplete({ choicesMade: nextChoices, journal: nextJournal }); return }
+    if (!nextStep) { onComplete({ choicesMade: nextChoices, multiChoicesMade: nextMultiChoices, textResponses: nextTextResponses, journal: nextJournal }); return }
     setMainIdx(ni)
     setRevealed((r) => [...r, nextStep])
   }
@@ -208,6 +267,28 @@ export function LessonPlayer({ lesson, onComplete, submitting = false, initialSt
     setQuizAnswers((answers) => ({ ...answers, [current.id]: index }))
   }
 
+  function toggleMulti(step: LessonStep, optionId: string) {
+    const currentValues = multiChoices[step.id] ?? []
+    const selected = currentValues.includes(optionId)
+    const max = step.multiChoice?.maxSelections ?? Number.POSITIVE_INFINITY
+    const next = selected
+      ? currentValues.filter((id) => id !== optionId)
+      : currentValues.length < max ? [...currentValues, optionId] : currentValues
+    setMultiChoices((values) => ({ ...values, [step.id]: next }))
+  }
+
+  function finishMulti() {
+    focusNextStep.current = true
+    advance()
+  }
+
+  function finishText(step: LessonStep, skip = false) {
+    focusNextStep.current = true
+    const nextTextResponses = skip ? { ...textResponses, [step.id]: "" } : textResponses
+    if (skip) setTextResponses(nextTextResponses)
+    toNextMain(choices, journal, multiChoices, nextTextResponses)
+  }
+
   useEffect(() => {
     const mainStep = mainSteps[mainIdx]
     if (!mainStep) return
@@ -216,11 +297,13 @@ export function LessonPlayer({ lesson, onComplete, submitting = false, initialSt
       mainStepIndex: mainIdx,
       revealedStepIds: revealed.map((step) => step.id),
       choices,
+      multiChoices,
+      textResponses,
       quizAnswers,
       checkIns,
       journal,
     })
-  }, [mainIdx, revealed, choices, quizAnswers, checkIns, journal, mainSteps, onProgress])
+  }, [mainIdx, revealed, choices, multiChoices, textResponses, quizAnswers, checkIns, journal, mainSteps, onProgress])
 
   useEffect(() => {
     if (!current || autoPaused || submitting) return
@@ -243,14 +326,24 @@ export function LessonPlayer({ lesson, onComplete, submitting = false, initialSt
     }
     if (current.type === "choice") {
       if (!choices[current.id]) return
+      const option = current.choice?.options.find((candidate) => candidate.id === choices[current.id])
+      const branchStep = option?.branchStepId ? stepById.get(option.branchStepId) : undefined
+      if (branchStep) {
+        if (!revealed.some((step) => step.id === branchStep.id)) {
+          const timer = window.setTimeout(() => setRevealed((steps) => [...steps, branchStep]), 0)
+          return () => window.clearTimeout(timer)
+        }
+        return
+      }
       const timer = window.setTimeout(advance, 0)
       return () => window.clearTimeout(timer)
     }
     if (INTERACTION_TYPES.has(current.type)) return
     const timer = window.setTimeout(advance, readingDelay(stepText(current)))
     return () => window.clearTimeout(timer)
-  }, [current, autoPaused, submitting, bubbleCounts, quizAnswers, checkIns, choices])
+  }, [current, autoPaused, submitting, bubbleCounts, quizAnswers, checkIns, choices, revealed, stepById])
 
+  if (safety && !safetyCleared) return <section className="player"><div className="tile"><LifeBuoy size={26} aria-hidden /><p className="today__kicker">Înainte de lecție</p><h1>Siguranța vine prima</h1><p>{safety.notice}</p><p className="muted">Alegerea de aici este efemeră: nu intră în progres, jurnal sau cloud.</p><button type="button" onClick={() => navigate("/criza")}>Am nevoie de ajutor acum</button><button type="button" className="ghost" onClick={() => setSafetyCleared(true)}>Sunt în siguranță acum și continui</button></div></section>
   if (!current) return <section className="player"><p className="muted">Lecția nu are pași încă.</p></section>
   const total = Math.max(1, mainSteps.length)
   const stepNo = Math.min(mainIdx + 1, total)
@@ -267,6 +360,8 @@ export function LessonPlayer({ lesson, onComplete, submitting = false, initialSt
             visibleBubbleCount={s.id === current.id ? visibleBubbleCount : (s.bubbles?.length ?? 0)} interactionReady={!isCurrent || interactionReady}
             pickedOptionId={choices[s.id]} pickedMoodId={checkIns[s.id]} quizAnswerIdx={quizAnswers[s.id]} journal={journal} onJournal={setJournal}
             onJournalDone={finishJournal} onExerciseDone={finishExercise} onQuiz={answerQuiz}
+            selectedMulti={multiChoices[s.id] ?? []} onToggleMulti={(id) => toggleMulti(s, id)} onMultiDone={finishMulti}
+            textResponse={textResponses[s.id] ?? ""} onTextResponse={(value) => setTextResponses((values) => ({ ...values, [s.id]: value }))} onTextDone={(skip) => finishText(s, skip)}
             onMood={(m) => pickMood(s, m)} onPick={(o) => pickChoice(s, o)} />
         </div>
       })}
@@ -279,9 +374,11 @@ function GuideMsg({ icon: Glyph, text }: { icon: LucideIcon; text: string }) {
   return <div className="msg msg--guide"><div className="msg__avatar"><Glyph size={18} strokeWidth={1.8} aria-hidden /></div><div className="msg__body"><span className="msg__name">{GUIDE_NAME}</span><div className="bubble">{text}</div></div></div>
 }
 
-function Turn({ step, lesson, isCurrent, visibleBubbleCount, interactionReady, pickedOptionId, pickedMoodId, quizAnswerIdx, onQuiz, journal, onJournal, onJournalDone, onExerciseDone, onMood, onPick }: {
+function Turn({ step, lesson, isCurrent, visibleBubbleCount, interactionReady, pickedOptionId, pickedMoodId, quizAnswerIdx, onQuiz, journal, onJournal, onJournalDone, onExerciseDone, selectedMulti, onToggleMulti, onMultiDone, textResponse, onTextResponse, onTextDone, onMood, onPick }: {
   step: LessonStep; lesson: Lesson; isCurrent: boolean; visibleBubbleCount: number; interactionReady: boolean; pickedOptionId?: string; pickedMoodId?: string; quizAnswerIdx?: number;
   onQuiz: (idx: number) => void; journal: string; onJournal: (v: string) => void; onJournalDone: (skip?: boolean) => void; onExerciseDone: () => void; onMood: (mood: string) => void; onPick: (opt: ChoiceOption) => void
+  selectedMulti: string[]; onToggleMulti: (optionId: string) => void; onMultiDone: () => void
+  textResponse: string; onTextResponse: (value: string) => void; onTextDone: (skip?: boolean) => void
 }) {
   const bubbles = (step.bubbles ?? []).slice(0, visibleBubbleCount)
   /*
@@ -300,7 +397,11 @@ function Turn({ step, lesson, isCurrent, visibleBubbleCount, interactionReady, p
   }
   if (step.type === "choice") {
     const picked = step.choice?.options.find((o) => o.id === pickedOptionId)
-    return <>{step.choice?.prompt && <GuideMsg icon={MessageSquare} text={step.choice.prompt} />}{picked ? <div className="msg msg--me"><div className="bubble bubble--me">{picked.label}</div></div> : isCurrent ? <div className="choice__opts">{step.choice?.options.map((o) => <button key={o.id} type="button" className="ghost" onClick={() => onPick(o)}>{o.label}</button>)}</div> : null}</>
+    return <>{step.choice?.prompt && <GuideMsg icon={MessageSquare} text={step.choice.prompt} />}{picked ? <><div className="msg msg--me"><div className="bubble bubble--me">{picked.label}</div></div>{picked.feedback && <GuideMsg icon={MessageCircle} text={picked.feedback} />}</> : isCurrent ? <div className="choice__opts">{step.choice?.options.map((o) => <button key={o.id} type="button" className="ghost" onClick={() => onPick(o)}>{o.label}</button>)}</div> : null}</>
+  }
+  if (step.type === "multi_choice") {
+    const min = step.multiChoice?.minSelections ?? 1
+    return <>{step.multiChoice?.prompt && <GuideMsg icon={MessageSquare} text={step.multiChoice.prompt} />}<div className="choice__opts">{step.multiChoice?.options.map((option) => <button key={option.id} type="button" className={selectedMulti.includes(option.id) ? "" : "ghost"} onClick={() => onToggleMulti(option.id)} disabled={!isCurrent}>{option.label}</button>)}</div>{isCurrent && <button type="button" disabled={selectedMulti.length < min} onClick={onMultiDone}>Continuă</button>}</>
   }
   if (step.type === "quiz") {
     const answered = quizAnswerIdx !== undefined
@@ -310,6 +411,11 @@ function Turn({ step, lesson, isCurrent, visibleBubbleCount, interactionReady, p
     })}</div>{answered && step.quiz?.explanation && <GuideMsg icon={Lightbulb} text={step.quiz.explanation} />}</>
   }
   if (step.type === "journal") return <><GuideMsg icon={NotebookPen} text={step.journalPrompt ?? ""} />{isCurrent ? <div className="journal"><textarea value={journal} onChange={(e) => onJournal(e.target.value)} placeholder="Scrie aici… (privat, doar pentru tine)" rows={4} /><div className="choice__opts"><button type="button" onClick={() => onJournalDone(false)}>Am terminat</button><button type="button" className="ghost" onClick={() => onJournalDone(true)}>Sar peste</button></div></div> : journal ? <div className="msg msg--me"><div className="bubble bubble--me">{journal}</div></div> : null}</>
+  if (["reflection", "declaration", "name_struggle"].includes(step.type)) {
+    const prompt = step.response?.prompt ?? (step.bubbles ?? []).map((bubble) => bubble.text).join(" ")
+    const requiredLength = step.response?.required ? (step.response.minLength ?? 1) : 0
+    return <>{bubbles.map((bubble, index) => <GuideMsg key={index} icon={stepIcon(step.type)} text={bubble.text} />)}{isCurrent && interactionReady && <div className="journal">{step.response && <><label htmlFor={`response-${step.id}`}>{prompt}</label><textarea id={`response-${step.id}`} value={textResponse} onChange={(event) => onTextResponse(event.target.value)} placeholder={step.response.placeholder ?? "Scrie pentru tine…"} rows={3} /></>}<div className="choice__opts"><button type="button" disabled={textResponse.trim().length < requiredLength} onClick={() => onTextDone(false)}>{step.response ? "Am terminat" : "Am răspuns pentru mine"}</button>{!step.response?.required && <button type="button" className="ghost" onClick={() => onTextDone(true)}>Sar peste</button>}</div></div>}</>
+  }
   if (step.type === "reward") return <GuideMsg icon={Sunrise} text={bubbles.map((b) => b.text).join(" ") || "Atât pentru azi. Revino când ești pregătit."} />
   return <>{bubbles.map((b, k) => <GuideMsg key={k} icon={stepIcon(step.type)} text={b.text} />)}</>
 }

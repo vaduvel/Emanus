@@ -1,19 +1,26 @@
 import { useMemo, useState } from "react"
 import { ArrowLeft, ArrowRight, Check, Footprints, Heart, ScrollText } from "lucide-react"
 import { ScriptureReveal } from "../components/ScriptureReveal"
-import { devotionalToday, devotionalWelcomeBack, markDevotionalRead } from "../dailyGifts"
+import {
+  devotionalIsComplete,
+  devotionalReadToday,
+  devotionalToday,
+  devotionalWelcomeBack,
+  markDevotionalRead,
+} from "../dailyGifts"
 import { navigate } from "../router"
 
 export default function Devotional() {
   const day = useMemo(() => devotionalToday(), [])
   const welcomeBack = useMemo(() => devotionalWelcomeBack(), [])
-  const [done, setDone] = useState(false)
+  const [done, setDone] = useState(() => devotionalReadToday())
+  const complete = devotionalIsComplete()
 
   if (!day) {
     return (
       <section className="daily-gift experience-shell">
         <DailyHeader label="Devoțional" />
-        <div className="daily-gift__empty"><ScrollText size={28} aria-hidden /><p>Următoarele zile ale devoționalului sunt în lucru.</p></div>
+        <div className="daily-gift__empty"><ScrollText size={28} aria-hidden />{complete ? <><h1>Ai ajuns la capătul acestui drum zilnic</h1><p>Poți reveni la oricare adevăr parcurs. Nu începe automat o numărătoare nouă.</p></> : <p>Următoarele zile ale devoționalului sunt în lucru.</p>}</div>
       </section>
     )
   }
@@ -59,7 +66,7 @@ export default function Devotional() {
       {done ? (
         <div className="daily-gift__complete">
           <Check size={22} aria-hidden />
-          <div><strong>Ajunge pentru azi.</strong><p>Mana de mâine se strânge mâine. Nu ai nimic restant.</p></div>
+          <div><strong>{complete ? "Ai parcurs întregul devoțional." : "Ajunge pentru azi."}</strong><p>{complete ? "Rămâne deschis pentru recitire, fără serie nouă și fără datorii." : "Mana de mâine se strânge mâine. Nu ai nimic restant."}</p></div>
           <div className="daily-gift__complete-actions">
             <button type="button" onClick={() => navigate("/candela")}>Aprinde candela seara <ArrowRight size={17} /></button>
             <button type="button" className="is-secondary" onClick={() => navigate("/legamant")}>Deschide Legământul familiei</button>

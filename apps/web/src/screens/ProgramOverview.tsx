@@ -15,8 +15,10 @@ import {
   Share2,
 } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
+import { safetyPolicyForLesson } from "@emanus/shared/lesson-safety"
 import type { LearningProgram } from "../learningPrograms"
 import {
+  activeGateProgramId,
   getLearningProgram,
   learningLessonUrl,
   learningProgramUrl,
@@ -60,7 +62,9 @@ function viewState(program: LearningProgram): ProgramViewState {
   }
 
   const journey = load()
-  const selectedGatePath = journey.pathId === program.sourceId
+  const selectedGatePath = journey.pathId === program.sourceId && (
+    program.doorId ? journey.doorId === program.doorId : journey.doorId === null
+  )
   const completedCount = selectedGatePath
     ? Math.min(Math.max(journey.lessonsDone, 0), program.lessons.length)
     : 0
@@ -96,16 +100,27 @@ function sessionStatus(program: LearningProgram, state: ProgramViewState, index:
 
 function activateGateProgram(program: LearningProgram): void {
   const journey = load()
-  if (journey.pathId === program.sourceId) return
-  if (journey.pathId) switchPath(program.sourceId)
-  else chooseDoor(program.sourceId)
+  if (program.doorId) {
+    if (journey.pathId === program.sourceId && journey.doorId === program.doorId) return
+    chooseDoor(program.doorId)
+    return
+  }
+  if (journey.pathId === program.sourceId && journey.doorId === null) return
+  switchPath(program.sourceId)
 }
 
 export function ProgramOverview({ programId, showCompletion = false }: { programId: string; showCompletion?: boolean }) {
   const [shareStatus, setShareStatus] = useState("")
   const completionSectionRef = useRef<HTMLElement>(null)
   const completionTitleRef = useRef<HTMLHeadingElement>(null)
-  const program = getLearningProgram(programId)
+  const requestedProgram = getLearningProgram(programId)
+  const journey = load()
+  const program = requestedProgram?.kind === "gate_path"
+    && !requestedProgram.doorId
+    && journey.pathId === requestedProgram.sourceId
+    && journey.doorId
+    ? getLearningProgram(activeGateProgramId(journey.pathId, journey.doorId)) ?? requestedProgram
+    : requestedProgram
   const resolvedState = program?.lessons.length ? viewState(program) : undefined
   const isGate = program?.kind === "gate_path"
   const completion = program && resolvedState?.complete && !isGate
@@ -132,7 +147,7 @@ export function ProgramOverview({ programId, showCompletion = false }: { program
     return () => window.cancelAnimationFrame(frame)
   }, [completionAvailable, programId, showCompletion])
 
-  if (!program || !resolvedState) {
+  if (!program || !resolvedState || (program.legacyOnly && !resolvedState.selectedGatePath)) {
     return (
       <section className="program-empty experience-shell">
         <h1>Programul nu este disponibil încă</h1>
@@ -154,7 +169,24 @@ export function ProgramOverview({ programId, showCompletion = false }: { program
       ? "Ritm personal · ordinea te ajută, dar poți deschide orice sesiune"
       : "Ritm personal · poți continua imediat"
   const activeProgram = program
-  const showSafetyHelp = program.kind === "course" && program.sourceId === "comun_c5_siguranta"
+  const showSafetyHelp = program.lessons.some((lesson) => (
+    Boolean(lesson.safety ?? safetyPolicyForLesson(lesson.id))
+  ))
+  const gateEntryUrl = program.doorId
+    ? `/intrare?u=${encodeURIComponent(program.doorId)}`
+    : "/intrare"
+
+  if (isGate && !state.selectedGatePath) {
+    return (
+      <section className="program-empty experience-shell">
+        <p className="experience-eyebrow">Poarta de intrare</p>
+        <h1>Începe prin locul tău real</h1>
+        <p>Înainte să deschidem un drum ghidat, trecem prin întrebarea de siguranță și confirmăm împreună punctul de plecare.</p>
+        <button type="button" className="experience-cta" onClick={() => navigate(gateEntryUrl)}>Continuă spre Poarta de intrare</button>
+        <button type="button" className="experience-link" onClick={() => navigate("/criza")}><LifeBuoy size={17} aria-hidden /> Am nevoie de ajutor acum</button>
+      </section>
+    )
+  }
 
   function openSession(index: number) {
     const lesson = activeProgram.lessons[index]
