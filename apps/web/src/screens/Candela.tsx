@@ -1,8 +1,8 @@
 import { useMemo, useState } from "react"
 import { ArrowLeft, ArrowRight, Check, Flame, PenLine } from "lucide-react"
-import { drawScrollVerse, sectionForMood } from "@emanus/shared"
+import { sectionForMood } from "@emanus/shared"
 import { ScriptureReveal } from "../components/ScriptureReveal"
-import { eveningNoteSavedToday, lastMood, recentVerseIds, rememberVerse, saveEveningNote, walkedDays } from "../dailyGifts"
+import { dailyVerse, eveningNoteSavedToday, lastMood, saveEveningNote, walkedDays } from "../dailyGifts"
 import { navigate } from "../router"
 
 export default function Candela() {
@@ -10,9 +10,7 @@ export default function Candela() {
   const [saved, setSaved] = useState(() => eveningNoteSavedToday())
   const verse = useMemo(() => {
     const mood = lastMood()
-    const drawn = drawScrollVerse({ section: mood ? sectionForMood(mood) : undefined, recentIds: recentVerseIds() })
-    rememberVerse(drawn.id)
-    return drawn
+    return dailyVerse({ slot: "lamp", section: mood ? sectionForMood(mood) : undefined })
   }, [])
   const behind = useMemo(() => walkedDays(), [])
 

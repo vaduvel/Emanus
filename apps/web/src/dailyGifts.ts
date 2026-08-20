@@ -12,11 +12,15 @@ import {
   devotionalDaysAvailable,
   manaMessage,
   FAMILY_COVENANT_EMPTY_DRAFT,
+  SCROLL_VERSES,
+  drawScrollVerse,
   type DevotionalAgeMode,
   type DevotionalDay,
   type DevotionalProgress,
   type FamilyCovenantDraft,
   type MessageMood,
+  type ScrollSectionId,
+  type ScrollVerse,
 } from "@emanus/shared"
 
 const KEY = "emanus.daruri.v1"
@@ -35,6 +39,14 @@ interface SavedCovenant {
   at: string
 }
 
+export type DailyVerseSlot = "scroll" | "lamp"
+
+interface DailyVerseSelection {
+  id: string
+  at: string
+  section?: ScrollSectionId
+}
+
 interface GiftsState {
   devotional: DevotionalProgress
   seenCards: Seen[]
@@ -43,6 +55,7 @@ interface GiftsState {
   lastMood: MessageMood | null
   ageMode: DevotionalAgeMode
   covenant: SavedCovenant | null
+  dailyVerses: Partial<Record<DailyVerseSlot, DailyVerseSelection>>
 }
 
 const EMPTY: GiftsState = {
@@ -53,6 +66,7 @@ const EMPTY: GiftsState = {
   lastMood: null,
   ageMode: "adult",
   covenant: null,
+  dailyVerses: {},
 }
 
 function read(): GiftsState {
@@ -68,6 +82,7 @@ function read(): GiftsState {
       lastMood: parsed.lastMood ?? null,
       ageMode: parsed.ageMode ?? "adult",
       covenant: parsed.covenant ?? null,
+      dailyVerses: parsed.dailyVerses ?? {},
     }
   } catch {
     return { ...EMPTY }
@@ -120,8 +135,30 @@ function isToday(iso: string | null): boolean {
 export function devotionalToday(): DevotionalDay | null {
   const s = read()
   const total = devotionalDaysAvailable()
-  const index = Math.min(Math.max(1, s.devotional.dayIndex), total)
+  let index = Math.min(Math.max(1, s.devotional.dayIndex), total)
+  const opened = new Set(s.devotional.openedDays)
+
+  // Migrare pentru versiunea veche, care muta indexul imediat după apăsare.
+  if (isToday(s.devotional.lastOpenedAt) && !opened.has(index) && opened.has(index - 1)) {
+    index -= 1
+  } else if (!isToday(s.devotional.lastOpenedAt) && opened.has(index)) {
+    if (index >= total) return null
+    index += 1
+    write({ ...s, devotional: { ...s.devotional, dayIndex: index } })
+  }
   return devotionalDay(index)
+}
+
+export function devotionalReadToday(): boolean {
+  const s = read()
+  if (!isToday(s.devotional.lastOpenedAt)) return false
+  const current = Math.min(Math.max(1, s.devotional.dayIndex), devotionalDaysAvailable())
+  return s.devotional.openedDays.includes(current) || s.devotional.openedDays.includes(current - 1)
+}
+
+export function devotionalIsComplete(): boolean {
+  const total = devotionalDaysAvailable()
+  return total > 0 && read().devotional.openedDays.includes(total)
 }
 
 /** Mesajul de revenire după o pauză. Niciodată numărătoare de zile pierdute. */
@@ -132,7 +169,7 @@ export function devotionalWelcomeBack(): string | null {
   return manaMessage(away)
 }
 
-/** Marchează ziua ca deschisă și avansează, o singură dată pe zi calendaristică. */
+/** Marchează ziua ca deschisă. Următoarea se deschide abia într-o nouă zi calendaristică. */
 export function markDevotionalRead(): void {
   const s = read()
   if (isToday(s.devotional.lastOpenedAt)) return
@@ -141,7 +178,8 @@ export function markDevotionalRead(): void {
   write({
     ...s,
     devotional: {
-      dayIndex: Math.min(current + 1, total),
+      // `dayIndex` rămâne darul zilei curente. devotionalToday îl avansează mâine.
+      dayIndex: current,
       openedDays: s.devotional.openedDays.includes(current)
         ? s.devotional.openedDays
         : [...s.devotional.openedDays, current],
@@ -213,6 +251,41 @@ export function recentVerseIds(): string[] {
 export function rememberVerse(id: string): void {
   const s = read()
   write({ ...s, seenVerses: remember(s.seenVerses, id) })
+}
+
+export function savedVerseToday(slot: DailyVerseSlot): ScrollVerse | null {
+  const selected = read().dailyVerses[slot]
+  if (!selected || !isToday(selected.at)) return null
+  return SCROLL_VERSES.find((verse) => verse.id === selected.id) ?? null
+}
+
+/** Un singur verset per suprafață și zi; redeschiderea nu mai retrage altul. */
+export function dailyVerse(input: {
+  slot: DailyVerseSlot
+  section?: ScrollSectionId
+  mood?: MessageMood
+}): ScrollVerse {
+  const cached = savedVerseToday(input.slot)
+  if (cached) return cached
+  const s = read()
+  const drawn = drawScrollVerse({
+    section: input.section,
+    mood: input.mood,
+    recentIds: fresh(s.seenVerses),
+  })
+  write({
+    ...s,
+    seenVerses: remember(s.seenVerses, drawn.id),
+    dailyVerses: {
+      ...s.dailyVerses,
+      [input.slot]: {
+        id: drawn.id,
+        at: new Date().toISOString(),
+        ...(input.section ? { section: input.section } : {}),
+      },
+    },
+  })
+  return drawn
 }
 
 export function lastMood(): MessageMood | null {

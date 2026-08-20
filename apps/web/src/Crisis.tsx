@@ -1,99 +1,89 @@
-import type { CSSProperties } from "react"
-import { ArrowLeft, LifeBuoy, Phone, ShieldAlert } from "lucide-react"
+import { ArrowLeft, ExternalLink, LifeBuoy, Mail, Phone, ShieldAlert } from "lucide-react"
+import { crisisResourcesFor, type CrisisIntent } from "./crisisResources"
+import "./crisis.css"
 
-type Hotline = { dial: string; display: string; label: string; note: string }
-
-// Linii de urgență din România (verificate). Conținut canonic, independent de backend.
-const HOTLINES: Hotline[] = [
-  {
-    dial: "112",
-    display: "112",
-    label: "Urgențe · Ambulanță și Poliție",
-    note: "Non-stop și gratuit. Sună dacă viața ta sau a cuiva este în pericol imediat.",
-  },
-  {
-    dial: "116123",
-    display: "116 123",
-    label: "Sprijin emoțional",
-    note: "Linie gratuită pentru criză psihologică, singurătate sau gânduri de suicid.",
-  },
-  {
-    dial: "116111",
-    display: "116 111",
-    label: "Telefonul Copilului",
-    note: "Pentru copii și adolescenți. Gratuit, de luni până vineri, între 08:00 și 20:00.",
-  },
-  {
-    dial: "0800801200",
-    display: "0800 801 200",
-    label: "TelVerde Antisuicid",
-    note: "Gratuit, cu program limitat. Dacă nu răspunde și este urgent, sună la 112.",
-  },
-]
-
-const headIconStyle: CSSProperties = { color: "var(--bad)" }
-const disclaimerStyle: CSSProperties = { display: "flex", gap: 8, alignItems: "flex-start", lineHeight: 1.45 }
-const disclaimerIconStyle: CSSProperties = { flex: "0 0 auto", marginTop: 2, color: "var(--bad)" }
-const numStyle: CSSProperties = { fontFamily: "var(--font-serif)", fontSize: "1.2rem", fontWeight: 700 }
-const labelStyle: CSSProperties = { fontWeight: 600 }
-const callBtnStyle: CSSProperties = {
-  display: "inline-flex",
-  alignItems: "center",
-  gap: 6,
-  flex: "0 0 auto",
-  background: "var(--accent)",
-  color: "var(--on-accent)",
-  borderRadius: "var(--radius-pill)",
-  padding: "10px 16px",
-  fontWeight: 700,
-  textDecoration: "none",
-  whiteSpace: "nowrap",
+function situationCopy(intents: CrisisIntent[]): string {
+  if (intents.includes("suicide")) {
+    return "Dacă te gândești să îți faci rău, nu rămâne singur și îndepărtează-te de orice mijloc cu care te-ai putea răni. Sună acum o persoană de încredere și una dintre liniile de mai jos."
+  }
+  if (intents.includes("child")) {
+    return "Dacă un copil este abuzat, neglijat sau în pericol, nu păstra situația secretă. Cere intervenția unui adult sigur și folosește liniile de mai jos."
+  }
+  if (intents.includes("violence")) {
+    return "Dacă ești amenințat sau agresat, mergi într-un loc sigur dacă poți face asta fără să te expui unui pericol mai mare și cere ajutor direct."
+  }
+  if (intents.includes("drugs")) {
+    return "O posibilă supradoză este o urgență medicală. Sună la 112 acum; nu aștepta să vezi dacă simptomele trec și nu încerca să gestionezi singur situația."
+  }
+  if (intents.includes("gambling")) {
+    return "Dacă jocurile de noroc te-au adus la gânduri de suicid sau la pericol imediat, sună la 112. Pentru oprire și consiliere folosește resursa specializată de mai jos."
+  }
+  return "Alege resursa potrivită situației. Dacă există un pericol imediat, sună mai întâi la 112."
 }
-const footStyle: CSSProperties = { lineHeight: 1.5 }
 
-export function Crisis({ onBack }: { onBack: () => void }) {
+export function Crisis({ intents, onBack }: { intents: CrisisIntent[]; onBack: () => void }) {
+  const resources = crisisResourcesFor(intents)
+
   return (
-    <section className="prayer">
-      <div className="prayer__head">
-        <div>
-          <h1 className="title-icon">
-            <LifeBuoy size={22} strokeWidth={1.8} style={headIconStyle} aria-hidden />
-            Ai nevoie de ajutor acum?
-          </h1>
-          <span className="muted">Nu ești singur. Iată la cine poți apela imediat.</span>
+    <main className="app route-anim">
+      <section className="crisis-screen">
+        <div className="prayer__head">
+          <div>
+            <h1 className="title-icon">
+              <LifeBuoy size={22} strokeWidth={1.8} aria-hidden />
+              Ai nevoie de ajutor acum?
+            </h1>
+            <span className="muted">Nu aștepta ca un curs să rezolve o urgență.</span>
+          </div>
+          <button type="button" className="ghost" onClick={onBack} aria-label="Înapoi">
+            <ArrowLeft size={20} aria-hidden />
+          </button>
         </div>
-        <button type="button" className="ghost" onClick={onBack} aria-label="Înapoi">
-          <ArrowLeft size={20} aria-hidden />
-        </button>
-      </div>
 
-      <div className="notice notice--warn" style={disclaimerStyle}>
-        <ShieldAlert size={18} aria-hidden style={disclaimerIconStyle} />
-        <span>
-          Emanus nu înlocuiește ajutorul profesionist. Dacă ești în pericol, contactează imediat
-          serviciile de urgență.
-        </span>
-      </div>
+        <div className="crisis-screen__notice" role="alert">
+          <ShieldAlert size={20} aria-hidden />
+          <p>{situationCopy(intents)}</p>
+        </div>
 
-      <ul className="eb-list">
-        {HOTLINES.map((h) => (
-          <li className="eb-item" key={h.dial}>
-            <div className="eb-item__body">
-              <p style={numStyle}>{h.display}</p>
-              <p style={labelStyle}>{h.label}</p>
-              <p className="muted">{h.note}</p>
-            </div>
-            <a href={`tel:${h.dial}`} style={callBtnStyle}>
-              <Phone size={16} aria-hidden />
-              Sună
-            </a>
-          </li>
-        ))}
-      </ul>
+        <ul className="crisis-screen__list">
+          {resources.map((resource) => (
+            <li
+              className={"crisis-resource" + (resource.id === "112" ? " crisis-resource--urgent" : "")}
+              key={resource.id}
+            >
+              <div className="crisis-resource__body">
+                <p className="crisis-resource__number">{resource.phone}</p>
+                <h2>{resource.label}</h2>
+                <p className="crisis-resource__availability">{resource.availability}</p>
+                <p className="muted">{resource.note}</p>
+                {resource.email ? (
+                  <a className="crisis-resource__meta" href={"mailto:" + resource.email}>
+                    <Mail size={14} aria-hidden />
+                    {resource.email}
+                  </a>
+                ) : null}
+                <a
+                  className="crisis-resource__meta"
+                  href={resource.sourceUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <ExternalLink size={14} aria-hidden />
+                  Sursă: {resource.sourceLabel}
+                </a>
+              </div>
+              <a className="crisis-resource__call" href={"tel:" + resource.dial}>
+                <Phone size={16} aria-hidden />
+                Sună
+              </a>
+            </li>
+          ))}
+        </ul>
 
-      <p className="muted" style={footStyle}>
-        Poți reveni oricând la aplicație. Suntem alături de tine, pas cu pas.
-      </p>
-    </section>
+        <p className="crisis-screen__foot">
+          Programele liniilor se pot schimba. Verifică sursa afișată; la pericol imediat folosește 112.
+        </p>
+      </section>
+    </main>
   )
 }

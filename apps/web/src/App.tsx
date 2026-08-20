@@ -20,6 +20,7 @@ const Ask = lazy(() => import("./screens/Ask").then((m) => ({ default: m.Ask }))
 const PathEnd = lazy(() => import("./screens/PathEnd").then((m) => ({ default: m.PathEnd })))
 const EmmausMap = lazy(() => import("./screens/EmmausMap").then((m) => ({ default: m.EmmausMap })))
 const Prayers = lazy(() => import("./screens/Prayers").then((m) => ({ default: m.Prayers })))
+const Profile = lazy(() => import("./screens/Profile").then((m) => ({ default: m.Profile })))
 const Today = lazy(() => import("./screens/Today").then((m) => ({ default: m.Today })))
 const Welcome = lazy(() => import("./screens/Welcome").then((m) => ({ default: m.Welcome })))
 // Cele trei daruri de zi (docs/27): fiecare in chunk propriu, ca sa nu incarce
@@ -54,13 +55,19 @@ export default function App() {
   const route = useHashRoute()
   let screen
   if (route.name === "ds") screen = <Gallery />
-  else if (route.name === "crisis") screen = <Crisis onBack={() => navigate("/")} />
+  else if (route.name === "crisis") screen = <Crisis intents={route.intents} onBack={() => navigate("/")} />
+  // Datele și ștergerea lor rămân accesibile chiar înaintea alegerii unei Porți.
+  else if (route.name === "profile") screen = <main className="app route-anim"><Profile /></main>
   // Cardul primit de la cineva se deschide si fara cont: ajungi la verset, nu la un zid.
   // Randul asta sta dinadins INAINTEA portii de bun venit.
-  else if (route.name === "message") screen = <main key={route.id ?? "mesaj"} className="app route-anim"><HelpButton /><Mesaj cardId={route.id} /></main>
+  else if (route.name === "message") screen = <main key={route.id ?? route.verseId ?? "mesaj"} className="app route-anim"><HelpButton /><Mesaj cardId={route.id} verseId={route.verseId} /></main>
   else if (route.name === "program") screen = <main key={`${route.programId}:${route.showCompletion ? "final" : "overview"}`} className="app app--program route-anim"><ProgramOverview programId={route.programId} showCompletion={route.showCompletion} /></main>
   else if (route.name === "programLesson") screen = <main key={`${route.programId}:${route.lessonId}`} className="app app--lesson route-anim"><LessonView programId={route.programId} lessonId={route.lessonId} /></main>
   else if (route.name === "lesson") screen = <main key={route.id ?? "lesson"} className="app app--lesson route-anim"><LessonView lessonId={route.id} /></main>
+  // Crucea din Drumul Emaus rămâne deschisă inclusiv înaintea alegerii unei Porți.
+  else if (route.name === "emmaus") screen = <main className="app route-anim app--tabbed"><HelpButton /><EmmausMap /><Tabs active="today" /></main>
+  // Rugăciunea deschisă din Cruce trebuie să rămână accesibilă în același moment.
+  else if (route.name === "prayers") screen = <main className="app route-anim app--tabbed"><HelpButton /><Prayers /><Tabs active="prayers" /></main>
   else if (!hasStarted() && !hasSeenWelcome() && route.name !== "doors") screen = <main className="app route-anim"><Welcome /></main>
   else if (route.name === "doors" || !hasStarted()) screen = <main className="app route-anim"><HelpButton /><Doors /></main>
   else if (route.name === "library") screen = <main className="app route-anim app--tabbed app--library"><HelpButton /><Library /><Tabs active="library" /></main>
@@ -69,14 +76,12 @@ export default function App() {
   else if (route.name === "bibleChapter") screen = <main key={`${route.bookId}-${route.chapter}-${route.verse ?? "chapter"}`} className="app route-anim app--bible"><BibleChapterScreen bookId={route.bookId} chapter={route.chapter} verse={route.verse} /></main>
   else if (route.name === "ask") screen = <main key={`${route.despre ?? "ask"}:${route.returnTo ?? "default"}`} className="app route-anim app--tabbed"><HelpButton /><Ask despre={route.despre} returnTo={route.returnTo} /><Tabs active="ask" /></main>
   else if (route.name === "pathend") screen = <main className="app route-anim"><HelpButton /><PathEnd /></main>
-  else if (route.name === "emmaus") screen = <main className="app route-anim app--tabbed"><HelpButton /><EmmausMap /><Tabs active="today" /></main>
   else if (route.name === "devotional") screen = <main className="app route-anim"><HelpButton /><Devotional /></main>
   else if (route.name === "scroll") screen = <main className="app route-anim"><HelpButton /><Pergament /></main>
   else if (route.name === "lamp") screen = <main className="app route-anim"><HelpButton /><Candela /></main>
   else if (route.name === "covenant") screen = <main className="app route-anim"><HelpButton /><Legamant /></main>
   else {
-    const isPrayers = route.name === "prayers"
-    screen = <main key={route.name} className="app route-anim app--tabbed"><HelpButton />{isPrayers ? <Prayers /> : <Today />}<Tabs active={isPrayers ? "prayers" : "today"} /></main>
+    screen = <main key={route.name} className="app route-anim app--tabbed"><HelpButton /><Today /><Tabs active="today" /></main>
   }
   return <Suspense fallback={<Loading />}>{screen}</Suspense>
 }

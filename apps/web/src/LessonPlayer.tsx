@@ -6,6 +6,7 @@ import {
   LifeBuoy, Lightbulb, Meh, MessageCircle, MessageSquare, NotebookPen, Smile, Sunrise,
 } from "lucide-react"
 import type { ChoiceOption, Lesson, LessonStep } from "@emanus/shared"
+import { safetyPolicyForLesson } from "@emanus/shared/lesson-safety"
 import { ScriptureReveal } from "./components/ScriptureReveal"
 import { navigate } from "./router"
 
@@ -83,16 +84,23 @@ function stringArrayRecord(value: unknown): Record<string, string[]> {
 
 function restoreLessonState(
   initialState: LessonPlayerState | undefined,
+  initialChoices: Record<string, string> | undefined,
   mainSteps: LessonStep[],
   stepById: Map<string, LessonStep>,
 ): RestoredLessonState {
   const fallback = mainSteps[0]
+  const seededChoices = Object.fromEntries(
+    Object.entries(stringRecord(initialChoices)).filter(([stepId, optionId]) => (
+      stepById.get(stepId)?.type === "choice"
+      && stepById.get(stepId)?.choice?.options.some((option) => option.id === optionId)
+    )),
+  )
   if (!initialState || !fallback) return {
     mainStepId: fallback?.id ?? "",
     mainStepIndex: 0,
     revealedStepIds: fallback ? [fallback.id] : [],
     revealed: fallback ? [fallback] : [],
-    choices: {},
+    choices: seededChoices,
     multiChoices: {},
     textResponses: {},
     quizAnswers: {},
@@ -107,7 +115,7 @@ function restoreLessonState(
   const index = idIndex >= 0 ? idIndex : 0
   const current = mainSteps[index] ?? fallback
   const choices = Object.fromEntries(
-    Object.entries(stringRecord(initialState.choices)).filter(([stepId, optionId]) => (
+    Object.entries({ ...seededChoices, ...stringRecord(initialState.choices) }).filter(([stepId, optionId]) => (
       stepById.get(stepId)?.type === "choice"
       && stepById.get(stepId)?.choice?.options.some((option) => option.id === optionId)
     )),
@@ -164,14 +172,16 @@ function restoreLessonState(
   }
 }
 
-export function LessonPlayer({ lesson, onComplete, submitting = false, initialState, onProgress, onChoice }: {
+export function LessonPlayer({ lesson, onComplete, submitting = false, initialState, initialChoices, onProgress, onChoice }: {
   lesson: Lesson
   onComplete: (result: LessonResult) => void
   submitting?: boolean
   initialState?: LessonPlayerState
+  initialChoices?: Record<string, string>
   onProgress?: (state: LessonPlayerState) => void
   onChoice?: (step: LessonStep, option: ChoiceOption) => boolean | void
 }) {
+  const safety = lesson.safety ?? safetyPolicyForLesson(lesson.id)
   const { mainSteps, stepById } = useMemo(() => {
     const branchTargetIds = new Set<string>()
     for (const s of lesson.steps) for (const o of s.choice?.options ?? []) if (o.branchStepId) branchTargetIds.add(o.branchStepId)
@@ -181,8 +191,8 @@ export function LessonPlayer({ lesson, onComplete, submitting = false, initialSt
     }
   }, [lesson])
   const restored = useMemo(
-    () => restoreLessonState(initialState, mainSteps, stepById),
-    [initialState, mainSteps, stepById],
+    () => restoreLessonState(initialState, initialChoices, mainSteps, stepById),
+    [initialChoices, initialState, mainSteps, stepById],
   )
   const [revealed, setRevealed] = useState<LessonStep[]>(() => restored.revealed)
   const [mainIdx, setMainIdx] = useState(restored.mainStepIndex)
@@ -194,7 +204,7 @@ export function LessonPlayer({ lesson, onComplete, submitting = false, initialSt
   const [bubbleCounts, setBubbleCounts] = useState<Record<string, number>>({})
   const [journal, setJournal] = useState(restored.journal)
   const [autoPaused, setAutoPaused] = useState(false)
-  const [safetyCleared, setSafetyCleared] = useState(() => !lesson.safety)
+  const [safetyCleared, setSafetyCleared] = useState(() => !safety)
   const scrollRef = useRef<HTMLDivElement>(null)
   const currentTurnRef = useRef<HTMLDivElement>(null)
   const focusNextStep = useRef(false)
@@ -316,15 +326,24 @@ export function LessonPlayer({ lesson, onComplete, submitting = false, initialSt
     }
     if (current.type === "choice") {
       if (!choices[current.id]) return
+      const option = current.choice?.options.find((candidate) => candidate.id === choices[current.id])
+      const branchStep = option?.branchStepId ? stepById.get(option.branchStepId) : undefined
+      if (branchStep) {
+        if (!revealed.some((step) => step.id === branchStep.id)) {
+          const timer = window.setTimeout(() => setRevealed((steps) => [...steps, branchStep]), 0)
+          return () => window.clearTimeout(timer)
+        }
+        return
+      }
       const timer = window.setTimeout(advance, 0)
       return () => window.clearTimeout(timer)
     }
     if (INTERACTION_TYPES.has(current.type)) return
     const timer = window.setTimeout(advance, readingDelay(stepText(current)))
     return () => window.clearTimeout(timer)
-  }, [current, autoPaused, submitting, bubbleCounts, quizAnswers, checkIns, choices])
+  }, [current, autoPaused, submitting, bubbleCounts, quizAnswers, checkIns, choices, revealed, stepById])
 
-  if (lesson.safety && !safetyCleared) return <section className="player"><div className="tile"><LifeBuoy size={26} aria-hidden /><p className="today__kicker">Înainte de lecție</p><h1>Siguranța vine prima</h1><p>{lesson.safety.notice}</p><p className="muted">Alegerea de aici este efemeră: nu intră în progres, jurnal sau cloud.</p><button type="button" onClick={() => navigate("/criza")}>Am nevoie de ajutor acum</button><button type="button" className="ghost" onClick={() => setSafetyCleared(true)}>Sunt în siguranță acum și continui</button></div></section>
+  if (safety && !safetyCleared) return <section className="player"><div className="tile"><LifeBuoy size={26} aria-hidden /><p className="today__kicker">Înainte de lecție</p><h1>Siguranța vine prima</h1><p>{safety.notice}</p><p className="muted">Alegerea de aici este efemeră: nu intră în progres, jurnal sau cloud.</p><button type="button" onClick={() => navigate("/criza")}>Am nevoie de ajutor acum</button><button type="button" className="ghost" onClick={() => setSafetyCleared(true)}>Sunt în siguranță acum și continui</button></div></section>
   if (!current) return <section className="player"><p className="muted">Lecția nu are pași încă.</p></section>
   const total = Math.max(1, mainSteps.length)
   const stepNo = Math.min(mainIdx + 1, total)

@@ -12,7 +12,7 @@ import {
   searchDoors,
 } from "@emanus/shared/paths"
 import { chooseDoor } from "../journey"
-import { learningProgramUrl, pathProgramId } from "../learningPrograms"
+import { doorProgramId, learningProgramUrl } from "../learningPrograms"
 import { navigate } from "../router"
 
 function doorFromLink(): string | null {
@@ -136,10 +136,9 @@ function Confirm({ doorId, onBack }: { doorId: string; onBack: () => void }) {
   const own = doorHasOwnRoom(doorId)
   const explore = door.roomId === null
   const minutes = path.lessons[0]?.estMinutes ?? 10
-  const pathId = path.id
   function start() {
     chooseDoor(doorId)
-    navigate(learningProgramUrl(pathProgramId(pathId)))
+    navigate(learningProgramUrl(doorProgramId(doorId)))
   }
 
   if (!isPathReviewed(path)) return (

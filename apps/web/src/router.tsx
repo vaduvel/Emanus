@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { parseCrisisIntents, type CrisisIntent } from "./crisisResources"
 
 /*
  * Rutele aplicației, după reducere. (docs/20 §8)
@@ -33,6 +34,7 @@ export type Route =
   | { name: "today" }
   | { name: "doors" }
   | { name: "prayers" }
+  | { name: "profile" }
   | { name: "library" }
   | { name: "bible" }
   | { name: "bibleChooser"; testament?: "vt" | "nt"; bookId?: string }
@@ -40,7 +42,7 @@ export type Route =
   | { name: "ask"; despre?: string; returnTo?: string }
   | { name: "pathend" }
   | { name: "emmaus" }
-  | { name: "crisis" }
+  | { name: "crisis"; intents: CrisisIntent[] }
   | { name: "ds" }
   | { name: "lesson"; id?: string }
   | { name: "program"; programId: string; showCompletion?: boolean }
@@ -48,7 +50,7 @@ export type Route =
   | { name: "devotional" }
   | { name: "scroll" }
   | { name: "lamp" }
-  | { name: "message"; id?: string }
+  | { name: "message"; id?: string; verseId?: string }
   | { name: "covenant" }
 
 function positiveInteger(value: string | null | undefined): number | undefined {
@@ -86,6 +88,12 @@ export function parseRoute(): Route {
     return { name: "lesson", id: decodePathPart(h.slice("/lesson/".length)) }
   if (h.startsWith("/mesaj/"))
     return { name: "message", id: decodePathPart(h.slice("/mesaj/".length)) }
+  if (h === "/mesaj" || h.startsWith("/mesaj?")) {
+    const semn = h.indexOf("?")
+    const cauta = new URLSearchParams(semn === -1 ? "" : h.slice(semn + 1))
+    const verseId = cauta.get("verset")
+    return { name: "message", verseId: verseId && verseId.length > 0 ? verseId : undefined }
+  }
   if (h === "/biblia/alege" || h.startsWith("/biblia/alege?")) {
     const semn = h.indexOf("?")
     const cauta = new URLSearchParams(semn === -1 ? "" : h.slice(semn + 1))
@@ -123,17 +131,21 @@ export function parseRoute(): Route {
       returnTo,
     }
   }
-  if (h === "/intrare") return { name: "doors" }
+  if (h === "/intrare" || h.startsWith("/intrare?")) return { name: "doors" }
   if (h === "/rugaciuni") return { name: "prayers" }
+  if (h === "/eu") return { name: "profile" }
   if (h === "/biblioteca") return { name: "library" }
   if (h === "/final") return { name: "pathend" }
   if (h === "/drum") return { name: "emmaus" }
-  if (h === "/criza" || h === "/crisis") return { name: "crisis" }
+  if (h === "/criza" || h.startsWith("/criza?") || h === "/crisis" || h.startsWith("/crisis?")) {
+    const semn = h.indexOf("?")
+    const cauta = new URLSearchParams(semn === -1 ? "" : h.slice(semn + 1))
+    return { name: "crisis", intents: parseCrisisIntents(cauta.get("motiv")) }
+  }
   if (h === "/devotional") return { name: "devotional" }
   if (h === "/pergament") return { name: "scroll" }
   if (h === "/candela") return { name: "lamp" }
   if (h === "/legamant") return { name: "covenant" }
-  if (h === "/mesaj") return { name: "message" }
   if (h === "/ds") return { name: "ds" }
   return { name: "today" }
 }

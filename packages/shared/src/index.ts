@@ -41,6 +41,8 @@ export {
 export type { Need, NeedKind } from "./needs.js"
 export * from "./messageCards.js"
 export * from "./scroll.js"
+export * from "./interactionEnrichment.js"
+export * from "./lessonSafety.js"
 export * from "./gamification.js"
 // Drumul Emaus (docs/43): cele opt stații și scorul de parcurs. Toate numele
 // exportate de aici încep cu Emmaus sau EMMAUS, dinadins: `export *` pune

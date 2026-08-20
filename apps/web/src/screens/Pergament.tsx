@@ -1,19 +1,18 @@
-import { useMemo, useState } from "react"
+import { useState } from "react"
 import { ArrowLeft, ArrowRight, BookOpen, Send, Sparkles } from "lucide-react"
-import { SCROLL_SECTIONS, drawScrollVerse, type ScrollSectionId, type ScrollVerse } from "@emanus/shared"
+import { SCROLL_SECTIONS, type ScrollSectionId, type ScrollVerse } from "@emanus/shared"
 import { ScriptureReveal } from "../components/ScriptureReveal"
-import { recentVerseIds, rememberVerse, setLastMood } from "../dailyGifts"
+import { dailyVerse, savedVerseToday, setLastMood } from "../dailyGifts"
+import { scriptureUrlForReference } from "../scriptureReference"
 import { navigate } from "../router"
 
 export default function Pergament() {
-  const [verse, setVerse] = useState<ScrollVerse | null>(null)
-  const recent = useMemo(() => recentVerseIds(), [])
+  const [verse, setVerse] = useState<ScrollVerse | null>(() => savedVerseToday("scroll"))
 
   function open(id: ScrollSectionId) {
-    const drawn = drawScrollVerse({ section: id, recentIds: recent })
+    const drawn = dailyVerse({ slot: "scroll", section: id })
     const mood = SCROLL_SECTIONS.find((section) => section.id === id)?.mood ?? null
     setLastMood(mood)
-    rememberVerse(drawn.id)
     setVerse(drawn)
   }
 
@@ -28,8 +27,8 @@ export default function Pergament() {
         </div>
         <ScriptureReveal variant="scroll" verseText={verse.text} verseRef={verse.ref} />
         <div className="daily-gift__actions">
-          <button type="button" onClick={() => navigate("/biblia")}><BookOpen size={19} aria-hidden /><span><strong>Citește în context</strong><small>Deschide capitolul în Biblia Emanus</small></span><ArrowRight size={17} /></button>
-          <button type="button" onClick={() => navigate("/mesaj")}><Send size={19} aria-hidden /><span><strong>Trimite cuiva</strong><small>Dă mai departe cuvântul primit</small></span><ArrowRight size={17} /></button>
+          <button type="button" onClick={() => navigate(scriptureUrlForReference(verse.ref) ?? "/biblia")}><BookOpen size={19} aria-hidden /><span><strong>Citește în context</strong><small>Deschide capitolul în Biblia Emanus</small></span><ArrowRight size={17} /></button>
+          <button type="button" onClick={() => navigate(`/mesaj?verset=${encodeURIComponent(verse.id)}`)}><Send size={19} aria-hidden /><span><strong>Trimite cuiva</strong><small>Dă mai departe cuvântul primit</small></span><ArrowRight size={17} /></button>
         </div>
         <p className="daily-gift__quiet">Sulul se strânge acum. Mâine dimineață îl desfacem din nou.</p>
       </section>

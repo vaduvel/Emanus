@@ -1,5 +1,11 @@
 import { expect, test } from "@playwright/test"
-import { ALL_LIBRARY_COURSES, LIBRARY_LESSONS } from "@emanus/shared/library"
+import {
+  PATHS,
+  computeEmmausJourney,
+  emmausUnitsFromLibraryShelves,
+  emmausUnitsFromPaths,
+} from "@emanus/shared"
+import { ALL_LIBRARY_COURSES, LIBRARY_LESSONS, SHELVES, courseIsOpen } from "@emanus/shared/library"
 
 const FUNDAMENTUL_PROGRAM_ID = "course:lib_fundamentul"
 const FUNDAMENTUL_PROGRAM_URL = "/#/program/course%3Alib_fundamentul"
@@ -28,8 +34,18 @@ async function accelerateLesson(page: import("@playwright/test").Page) {
 async function finishVisibleLesson(page: import("@playwright/test").Page) {
   for (let attempt = 0; attempt < 140; attempt += 1) {
     if (await page.locator(".player--done").count()) return
+    const safetyContinue = page.getByRole("button", { name: "Sunt în siguranță acum și continui" })
+    if (await safetyContinue.count()) {
+      await safetyContinue.click()
+      continue
+    }
     const textarea = page.locator(".chat textarea:visible").first()
     if (await textarea.count()) await textarea.fill("Adevărul pe care vreau să îl păstrez.")
+    const continueAction = page.locator(".chat button:visible:not(:disabled)").filter({ hasText: /^Continuă$/u }).last()
+    if (await continueAction.count()) {
+      await continueAction.click()
+      continue
+    }
     const action = page.locator(".chat button:visible:not(:disabled)").first()
     if (await action.count()) await action.click()
     else await page.waitForTimeout(30)
@@ -81,8 +97,17 @@ test("catalogul Bibliotecii leagă fiecare curs live de lecțiile lui", () => {
 
   expect(new Set(courseIds).size).toBe(courseIds.length)
   expect(lessonById.size).toBe(LIBRARY_LESSONS.length)
-  expect(liveCourses).toHaveLength(44)
-  expect(LIBRARY_LESSONS).toHaveLength(259)
+  expect(liveCourses).toHaveLength(53)
+  expect(LIBRARY_LESSONS).toHaveLength(318)
+
+  const liveLessonIds = new Set(liveCourses.flatMap((course) => course.lessonIds))
+  const liveLessons = LIBRARY_LESSONS.filter((lesson) => liveLessonIds.has(lesson.id))
+  expect(liveLessons.filter((lesson) => lesson.safety)).toHaveLength(46)
+  expect(liveCourses.every((course) => course.lessonIds.some((lessonId) =>
+    lessonById.get(lessonId)?.steps.some((step) => step.type === "multi_choice"),
+  ))).toBe(true)
+  expect(liveLessons.flatMap((lesson) => lesson.steps).flatMap((step) => step.choice?.options ?? [])
+    .every((option) => Boolean(option.feedback || option.branchStepId))).toBe(true)
 
   for (const course of liveCourses) {
     expect(course.lessonIds).toHaveLength(course.plannedLessons)
@@ -96,6 +121,69 @@ test("catalogul Bibliotecii leagă fiecare curs live de lecțiile lui", () => {
   }
 })
 
+test("Drumul Emanus include cursurile publice și poate ajunge la stația opt", () => {
+  const publicShelves = SHELVES.map((shelf) => ({
+    id: shelf.id,
+    courses: shelf.courses.filter(courseIsOpen),
+  }))
+  const pathUnits = emmausUnitsFromPaths(PATHS)
+  const courseUnits = emmausUnitsFromLibraryShelves(publicShelves)
+  const units = [...pathUnits, ...courseUnits]
+
+  expect(pathUnits.some((unit) => unit.id === "path_greutate")).toBe(false)
+  expect(pathUnits.some((unit) => unit.id === "path_paine")).toBe(true)
+  expect(courseUnits).toHaveLength(53)
+
+  const retiredPath = PATHS.find((path) => path.id === "path_greutate")
+  const legacyUnits = emmausUnitsFromPaths(PATHS, {
+    completedLessonIds: retiredPath?.lessons.slice(0, 1).map((lesson) => lesson.id) ?? [],
+  })
+  expect(legacyUnits.some((unit) => unit.id === "path_greutate")).toBe(true)
+
+  const completedLessonIds = [...new Set(units.flatMap((unit) => unit.lessonIds))]
+  const result = computeEmmausJourney({ units, completedLessonIds })
+  expect(result.currentStation.id).toBe(8)
+  expect(result.axesTouched).toBe(6)
+})
+
+test("harta Drumul Emanus citește progresul păstrat în cursurile Bibliotecii", async ({ page }) => {
+  const openCourses = ALL_LIBRARY_COURSES.filter(courseIsOpen)
+  const programs = Object.fromEntries(openCourses.map((course) => [`course:${course.id}`, {
+    completedLessonIds: course.lessonIds,
+    lastLessonId: course.lessonIds.at(-1) ?? null,
+    journals: {},
+    updatedAt: "2026-08-20T08:00:00.000Z",
+  }]))
+  await page.evaluate(({ learning, journeyState }) => {
+    window.localStorage.setItem("emanus_learning_progress_v1", JSON.stringify({ version: 1, programs: learning }))
+    window.localStorage.setItem("emanus_journey_v1", JSON.stringify({
+      ...journeyState,
+      schemaVersion: 2,
+      doorId: null,
+      completedLessonIds: [],
+      emmausMaxStation: 1,
+      emmausStationSeenAt: {},
+      crossVisitedAt: null,
+    }))
+  }, { learning: programs, journeyState: journey })
+
+  const units = [
+    ...emmausUnitsFromPaths(PATHS),
+    ...emmausUnitsFromLibraryShelves(SHELVES.map((shelf) => ({
+      id: shelf.id,
+      courses: shelf.courses.filter(courseIsOpen),
+    }))),
+  ]
+  const expected = computeEmmausJourney({
+    units,
+    completedLessonIds: openCourses.flatMap((course) => course.lessonIds),
+  })
+  expect(expected.currentStation.id).toBeGreaterThan(1)
+
+  await page.goto("/#/drum")
+  await expect(page.getByRole("heading", { name: expected.currentStation.labelRo })).toBeVisible()
+})
+
 test("traseul din Poartă are o singură sesiune activă și viitorul blocat", async ({ page }) => {
   await page.goto("/#/program/path%3Apath_acasa")
 
@@ -106,6 +194,8 @@ test("traseul din Poartă are o singură sesiune activă și viitorul blocat", a
 
   await page.locator(".program-session--current button").click()
   await expect(page).toHaveURL(/#\/program\/path%3Apath_acasa\/lesson\/rusine_l1$/u)
+  await expect(page.getByRole("heading", { name: "Siguranța vine prima" })).toBeVisible()
+  await page.getByRole("button", { name: "Sunt în siguranță acum și continui" }).click()
   await expect(page.getByRole("heading", { name: "El S-a miscat primul" })).toBeVisible()
   await expect(page.getByText("Sesiunea 1 din 7", { exact: true })).toBeVisible()
 })
@@ -149,9 +239,9 @@ test("Biblioteca caută fără diacritice și separă cursurile în pregătire",
   await expect(page.getByRole("button", { name: "Vezi cursul Căsnicia" })).toBeVisible()
   await expect(page.getByText("1 curs găsit", { exact: true })).toBeVisible()
 
-  await search.fill("intoarcerea")
+  await search.fill("energii")
   await expect(page.getByRole("heading", { name: "În pregătire" })).toBeVisible()
-  await expect(page.locator(".library-planned__course")).toContainText("Întoarcerea")
+  await expect(page.locator(".library-planned__course")).toContainText("Energii, horoscop, karma")
   await expect(page.locator(".library-planned__course")).toContainText("Se scrie")
 
   await page.getByRole("button", { name: "Șterge căutarea" }).click()
@@ -291,7 +381,7 @@ test("o lecție începută revine la același pas după refresh", async ({ page 
 
   await expect(page.getByText("Poți avea un program plin și totuși să te întrebi dacă prezența ta schimbă ceva.", { exact: true })).toBeVisible()
   await page.getByRole("button", { name: "Pauză" }).click()
-  await expect(page.getByText("Pas 2/12", { exact: true })).toBeVisible()
+  await expect(page.getByText("Pas 2/13", { exact: true })).toBeVisible()
 
   const beforeRefresh = await readFundamentulProgress(page)
   expect(beforeRefresh.lastLessonId).toBe("fund_l1")
@@ -299,7 +389,7 @@ test("o lecție începută revine la același pas după refresh", async ({ page 
   expect(beforeRefresh.drafts.fund_l1.checkIns.fl1_check).toBe("fl1ci_b")
 
   await page.reload()
-  await expect(page.getByText("Pas 2/12", { exact: true })).toBeVisible()
+  await expect(page.getByText("Pas 2/13", { exact: true })).toBeVisible()
   await expect(page.getByText("Poți avea un program plin și totuși să te întrebi dacă prezența ta schimbă ceva.", { exact: true })).toBeVisible()
 })
 
@@ -423,7 +513,7 @@ test("playerul expune progresul și starea butonului de pauză", async ({ page }
 
   const progress = page.getByRole("progressbar", { name: "Progresul sesiunii" })
   await expect(progress).toHaveAttribute("aria-valuemin", "1")
-  await expect(progress).toHaveAttribute("aria-valuemax", "12")
+  await expect(progress).toHaveAttribute("aria-valuemax", "13")
   await expect(progress).toHaveAttribute("aria-valuenow", "1")
 
   const pause = page.getByRole("button", { name: "Pauză" })
@@ -479,6 +569,9 @@ test("versetul de memorat așteaptă confirmarea înainte de final", async ({ pa
 test("cursul de siguranță oferă ieșire imediată spre ajutor", async ({ page }) => {
   await page.goto("/#/program/course%3Acomun_c5_siguranta/lesson/siguranta_l1")
 
+  await expect(page.getByRole("heading", { name: "Siguranța vine prima" })).toBeVisible()
+  await page.getByRole("button", { name: "Sunt în siguranță acum și continui" }).click()
+  await expect(page.getByRole("heading", { name: "Numește abuzul fără eufemisme" })).toBeVisible()
   const help = page.getByRole("button", { name: "Ajutor acum" })
   await expect(help).toBeVisible()
   await help.click()
@@ -503,6 +596,8 @@ test("cursul de siguranță oferă ieșire imediată spre ajutor", async ({ page
     }))
   })
   await page.reload()
+  await expect(page.getByRole("heading", { name: "Siguranța vine prima" })).toBeVisible()
+  await page.getByRole("button", { name: "Sunt în siguranță acum și continui" }).click()
   await expect(page.getByRole("heading", { name: "Pocăința agresorului are rod" })).toBeVisible()
   await accelerateLesson(page)
   await finishVisibleLesson(page)
@@ -742,6 +837,8 @@ test("playerul folosește un singur viewport exterior pe mobil și desktop", asy
     await page.evaluate(() => window.localStorage.removeItem("emanus_learning_progress_v1"))
     await page.reload()
     await page.goto("/#/program/course%3Acomun_c5_siguranta/lesson/siguranta_l1")
+    await expect(page.getByRole("heading", { name: "Siguranța vine prima" })).toBeVisible()
+    await page.getByRole("button", { name: "Sunt în siguranță acum și continui" }).click()
     await expect(page.getByRole("heading", { name: "Numește abuzul fără eufemisme" })).toBeVisible()
     const dimensions = await page.evaluate(() => {
       const player = document.querySelector(".player")?.getBoundingClientRect()

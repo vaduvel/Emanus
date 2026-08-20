@@ -234,3 +234,17 @@ export function completeProgramLesson(programId: string, lessonId: string, journ
   saveStore(store)
   return next
 }
+
+/**
+ * Șterge progresul Bibliotecii și copia volatilă folosită când localStorage nu
+ * poate scrie. Este chemat numai după ce ștergerea remote a fost confirmată.
+ */
+export function clearLearningProgress(): boolean {
+  volatileStore = null
+  try {
+    localStorage.removeItem(STORAGE_KEY)
+    return localStorage.getItem(STORAGE_KEY) === null
+  } catch {
+    return false
+  }
+}

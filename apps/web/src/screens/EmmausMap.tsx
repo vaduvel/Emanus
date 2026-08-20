@@ -4,10 +4,13 @@ import {
   GROWTH_AXIS_LABELS_RO,
   PATHS,
   computeEmmausJourney,
+  emmausUnitsFromLibraryShelves,
   emmausUnitsFromPaths,
 } from "@emanus/shared"
 import type { EmmausStation, EmmausStationId } from "@emanus/shared"
+import { SHELVES, courseIsOpen } from "@emanus/shared/library"
 import { load, markCrossVisited, recordEmmausStation } from "../journey"
+import { getLearningProgressSnapshot } from "../learningProgress"
 import { navigate } from "../router"
 
 /*
@@ -61,16 +64,30 @@ function prefersCalm(): boolean {
 
 export function EmmausMap() {
   const state = useMemo(() => load(), [])
+  const libraryProgress = useMemo(() => getLearningProgressSnapshot(), [])
   const calm = useMemo(() => prefersCalm(), [])
+
+  const completedLessonIds = useMemo(() => [...new Set([
+    ...state.completedLessonIds,
+    ...Object.values(libraryProgress).flatMap((progress) => progress.completedLessonIds),
+  ])], [libraryProgress, state.completedLessonIds])
+
+  const units = useMemo(() => [
+    ...emmausUnitsFromPaths(PATHS, { completedLessonIds }),
+    ...emmausUnitsFromLibraryShelves(SHELVES.map((shelf) => ({
+      id: shelf.id,
+      courses: shelf.courses.filter(courseIsOpen),
+    }))),
+  ], [completedLessonIds])
 
   const journey = useMemo(
     () =>
       computeEmmausJourney({
-        units: emmausUnitsFromPaths(PATHS),
-        completedLessonIds: state.completedLessonIds,
+        units,
+        completedLessonIds,
         maxStationReached: asStationId(state.emmausMaxStation),
       }),
-    [state.completedLessonIds, state.emmausMaxStation],
+    [completedLessonIds, state.emmausMaxStation, units],
   )
 
   const [selected, setSelected] = useState<EmmausStation | null>(null)

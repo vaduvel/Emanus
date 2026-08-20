@@ -139,13 +139,15 @@ export const EMMAUS_STATIONS: EmmausStation[] = [
 export const EMMAUS_CROSS_IS_ALWAYS_OPEN = true
 
 /** O unitate de continut care contribuie la scor: un modul din library sau un drum din Porti. */
-export type EmmausUnitKind = "module" | "path"
+export type EmmausUnitKind = "module" | "course" | "path"
 
 export interface EmmausUnit {
   id: string
   axis: GrowthAxisId
   kind: EmmausUnitKind
   lessonIds: string[]
+  /** Secvențe echivalente ale aceleiași unități, alese contextual prin Porți. */
+  lessonAlternatives?: string[][]
 }
 
 // Axa fiecarui drum din Porti. Modulele din library isi poarta axa in date; drumurile nu, pentru ca
@@ -165,25 +167,103 @@ export const EMMAUS_PATH_AXES: Record<string, GrowthAxisId> = {
   // Retras din alegere, dar pastrat: cine il are salvat isi vede in continuare progresul pe harta.
   path_greutate: "emotional_peace",
   path_har: "identity",
+  path_legatura: "relationships",
+  path_paine: "character",
   path_umblare: "character",
 }
 
-/** Transforma drumurile din PATHS in unitati de scor. Tip structural, ca sa nu importam PATHS aici. */
+type ReviewShape = { required: ReadonlyArray<string>; approved: ReadonlyArray<string> }
+type EmmausPathShape = {
+  id: string
+  lessons: ReadonlyArray<{ id: string }>
+  offerAtPathEnd?: boolean
+  review?: ReviewShape
+  doorVariants?: Record<string, {
+    lessons: ReadonlyArray<{ id: string }>
+    review?: ReviewShape
+  }>
+}
+
+function reviewIsClosed(review?: ReviewShape): boolean {
+  if (!review) return true
+  const approved = new Set(review.approved)
+  return review.required.every((kind) => approved.has(kind))
+}
+
+/** Transforma doar drumurile publice din PATHS in unitati de scor. */
 export function emmausUnitsFromPaths(
-  paths: ReadonlyArray<{ id: string; lessons: ReadonlyArray<{ id: string }> }>,
+  paths: ReadonlyArray<EmmausPathShape>,
+  options: { completedLessonIds?: ReadonlyArray<string> } = {},
 ): EmmausUnit[] {
   const units: EmmausUnit[] = []
+  const completed = new Set(options.completedLessonIds ?? [])
   for (const path of paths) {
     const axis = EMMAUS_PATH_AXES[path.id]
-    if (!axis) continue
+    if (!axis || !reviewIsClosed(path.review)) continue
+    const baseLessonIds = path.lessons.map((lesson) => lesson.id)
+    // Un drum retras nu intră în numitorul unui utilizator nou, dar rămâne pe
+    // hartă dacă omul are deja progres real în el.
+    if (path.offerAtPathEnd === false && !baseLessonIds.some((id) => completed.has(id))) continue
+    const alternatives = Object.values(path.doorVariants ?? {})
+      .filter((variant) => reviewIsClosed(variant.review ?? path.review))
+      .map((variant) => variant.lessons.map((lesson) => lesson.id))
+      .filter((lessonIds) => lessonIds.length > 0)
     units.push({
       id: path.id,
       axis,
       kind: "path",
-      lessonIds: path.lessons.map((lesson) => lesson.id),
+      lessonIds: baseLessonIds,
+      ...(alternatives.length ? { lessonAlternatives: alternatives } : {}),
     })
   }
   return units
+}
+
+export const EMMAUS_LIBRARY_SHELF_AXES: Record<string, GrowthAxisId> = {
+  lib_temelie: "identity",
+  lib_intrebari: "living_faith",
+  lib_cuvantul: "living_faith",
+  lib_rugaciune: "living_faith",
+  lib_casa: "relationships",
+  lib_viata: "character",
+  lib_cei_mici: "identity",
+  lib_creatori: "character",
+  lib_identitate_vocatie: "identity",
+  lib_barbati: "character",
+  lib_femei: "character",
+  lib_relatii_comune: "relationships",
+  lib_dependente: "freedom",
+  lib_doliu_traumatic: "emotional_peace",
+  lib_spiritual: "freedom",
+}
+
+/** Cursuri a căror temă principală diferă de axa generală a raftului. */
+export const EMMAUS_LIBRARY_COURSE_AXES: Record<string, GrowthAxisId> = {
+  lib_copii_emotii: "emotional_peace",
+  barbati_c2_lupta: "emotional_peace",
+  femei_c2_lupta: "emotional_peace",
+  comun_c1_singuratate: "emotional_peace",
+}
+
+/** Leagă fiecare curs publicat de axa raftului său, fără a dubla lecțiile în UI. */
+export function emmausUnitsFromLibraryShelves(
+  shelves: ReadonlyArray<{
+    id: string
+    courses: ReadonlyArray<{ id: string; lessonIds: ReadonlyArray<string> }>
+  }>,
+): EmmausUnit[] {
+  return shelves.flatMap((shelf) => {
+    const axis = EMMAUS_LIBRARY_SHELF_AXES[shelf.id]
+    if (!axis) return []
+    return shelf.courses
+      .filter((course) => course.lessonIds.length > 0)
+      .map((course) => ({
+        id: course.id,
+        axis: EMMAUS_LIBRARY_COURSE_AXES[course.id] ?? axis,
+        kind: "course" as const,
+        lessonIds: [...course.lessonIds],
+      }))
+  })
 }
 
 /** Transforma modulele din library in unitati de scor. */
@@ -276,9 +356,20 @@ export function computeEmmausJourney(input: ComputeEmmausInput): EmmausJourney {
   for (const unit of input.units) {
     const bucket = axisProgress[unit.axis]
     if (!bucket) continue
-    if (unit.lessonIds.length === 0) continue
+    const candidates = [unit.lessonIds, ...(unit.lessonAlternatives ?? [])]
+      .filter((lessonIds) => lessonIds.length > 0)
+    if (candidates.length === 0) continue
+    const lessonIds = candidates.reduce((best, candidate) => {
+      const bestDone = best.filter((lessonId) => done.has(lessonId)).length
+      const candidateDone = candidate.filter((lessonId) => done.has(lessonId)).length
+      const bestRatio = bestDone / best.length
+      const candidateRatio = candidateDone / candidate.length
+      if (candidateRatio > bestRatio) return candidate
+      if (candidateRatio === bestRatio && candidateDone > bestDone) return candidate
+      return best
+    })
 
-    for (const lessonId of unit.lessonIds) {
+    for (const lessonId of lessonIds) {
       if (counted.has(lessonId)) continue
       counted.add(lessonId)
       bucket.lessonsTotal += 1
@@ -290,10 +381,10 @@ export function computeEmmausJourney(input: ComputeEmmausInput): EmmausJourney {
     }
 
     // Completarea unitatii se judeca pe toate lectiile ei, inclusiv pe cele numarate in alta parte.
-    const unitDone = unit.lessonIds.filter((lessonId) => done.has(lessonId)).length
+    const unitDone = lessonIds.filter((lessonId) => done.has(lessonId)).length
     bucket.unitsTotal += 1
     unitsTotal += 1
-    if (unitDone === unit.lessonIds.length) {
+    if (unitDone === lessonIds.length) {
       bucket.unitsComplete += 1
       unitsComplete += 1
     }

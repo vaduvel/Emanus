@@ -16,6 +16,7 @@ import {
   resolveDoorPath,
   searchDoors,
 } from "../packages/shared/dist/paths/index.js"
+import { SAFETY_RESOURCES } from "../packages/shared/dist/safetyResources.js"
 
 const requiredDoorIds = [
   "rusine", "neiertare", "indoiala", "perete", "dependenta", "anxietate",
@@ -92,7 +93,10 @@ assert.ok(pathEndSource.includes("bridgeForPath"), "PathEnd nu folosește puntea
 const doorsSource = readFileSync(new URL("../apps/web/src/screens/Doors.tsx", import.meta.url), "utf8")
 assert.ok(doorsSource.includes("chooseDoor(doorId)"), "identitatea ușii se pierde înainte de salvare")
 assert.ok(doorsSource.includes("Răspunsul tău nu este salvat"), "lipsește contractul vizibil de nepersistență")
-assert.ok(doorsSource.includes("!danger && <ul className=\"doors__list doors__list--quiet\""), "ușile generale rămân accesibile în timpul unei crize")
+assert.ok(
+  doorsSource.includes('{!danger ? <ul className="doors__list doors__list--quiet">'),
+  "intervenția de siguranță are prioritate față de ușile generale",
+)
 
 const playerSource = readFileSync(new URL("../apps/web/src/LessonPlayer.tsx", import.meta.url), "utf8")
 assert.ok(playerSource.includes("lesson.safety"), "playerul ignoră metadatele de siguranță")
@@ -100,11 +104,13 @@ assert.ok(playerSource.includes('step.type === "multi_choice"'), "playerul ignor
 
 const journeyCss = readFileSync(new URL("../apps/web/src/journey.css", import.meta.url), "utf8")
 assert.ok(journeyCss.includes("flex-direction: column"), "shell-ul pune Ajutor lângă conținut pe mobil")
-assert.ok(journeyCss.includes("repeat(4, minmax(0, 1fr))"), "bara principală nu are patru coloane")
+assert.ok(journeyCss.includes("repeat(5, minmax(0, 1fr))"), "bara principală nu păstrează cele cinci destinații actuale")
 const motionCss = readFileSync(new URL("../apps/web/src/components/motion.css", import.meta.url), "utf8")
 assert.ok(motionCss.includes("ema-rise var(--dur-3) var(--ease-emphasized) backwards"), "animația rupe poziționarea fixed a taburilor")
-const crisisSource = readFileSync(new URL("../apps/web/src/Crisis.tsx", import.meta.url), "utf8")
-assert.ok(crisisSource.includes('dial: "116123"'), "ecranul de criză nu oferă linia 116 123")
+assert.ok(
+  SAFETY_RESOURCES.some((resource) => resource.id === "116123" && resource.dial === "116123"),
+  "registrul canonic de criză nu oferă linia 116 123",
+)
 assert.ok(!readFileSync(new URL("../packages/shared/src/paths/schimbareB.ts", import.meta.url), "utf8").includes("TelVerde antidrog"), "linia antisuicid este prezentată greșit drept antidrog")
 
 console.log(`Porți runtime OK: ${DOORS.length} uși, ${PATHS.length} parcursuri, rutare și siguranță validate.`)

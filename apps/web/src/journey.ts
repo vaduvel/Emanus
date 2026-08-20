@@ -9,14 +9,23 @@ import {
   planToday,
   resolveDoorPath,
 } from "@emanus/shared/paths"
-import { cloudEnabled, pullState, pushState } from "./cloud"
+import {
+  cloudBackupEnabled,
+  cloudEnabled,
+  cloudReady,
+  deleteCloudData,
+  pullState,
+  pushState,
+  setCloudBackupConsent,
+} from "./cloud"
+import { clearLearningProgress } from "./learningProgress"
 
 /*
  * Starea drumului.
  *
  * Sursa de adevăr pentru ecrane e localStorage — aplicația merge întreagă fără
- * internet și fără cont. Supabase e copia de siguranță: după fiecare salvare se
- * urcă tăcut în fundal, iar pe un telefon nou se aduce înapoi.
+ * internet și fără cont. Backup-ul Supabase pornește numai după acordul explicit
+ * al omului și poate fi oprit sau șters din Profil.
  *
  * NU se salvează, nicăieri: scoruri, serii de zile, nivele, profil. (docs/20 §1)
  */
@@ -204,8 +213,7 @@ function writeLocal(s: JourneyState): JourneyState {
 
 function save(s: JourneyState): JourneyState {
   writeLocal(s)
-  // Copia în nor pleacă în fundal. Dacă nu merge, nimeni nu află și nimic nu se blochează.
-  if (cloudEnabled()) void pushState(s)
+  if (cloudBackupEnabled()) void pushState(s)
   return s
 }
 
@@ -219,7 +227,8 @@ function isEmpty(s: JourneyState): boolean {
  * Returnează true dacă s-a adus ceva din nor (ecranele trebuie redesenate).
  */
 export async function hydrateFromCloud(): Promise<boolean> {
-  if (!cloudEnabled()) return false
+  if (!cloudBackupEnabled()) return false
+  const cloudWasReady = cloudReady()
   const local = load()
   const remote = await pullState()
   if (remote && isEmpty(local) && !isEmpty(remote)) {
@@ -227,7 +236,42 @@ export async function hydrateFromCloud(): Promise<boolean> {
     return true
   }
   if (!isEmpty(local)) void pushState(local)
-  return false
+  return cloudReady() !== cloudWasReady
+}
+
+/** Activează sau oprește sincronizarea. Oprirea nu șterge copia remote. */
+export async function setBackupEnabled(enabled: boolean): Promise<boolean> {
+  if (enabled && !cloudEnabled()) return false
+  if (!setCloudBackupConsent(enabled)) return false
+  if (!enabled) return true
+  return pushState(load())
+}
+
+function removeAllEmanusLocalKeys(): boolean {
+  try {
+    const keys: string[] = []
+    for (let index = 0; index < localStorage.length; index += 1) {
+      const key = localStorage.key(index)
+      if (key?.toLocaleLowerCase().startsWith("emanus")) keys.push(key)
+    }
+    for (const key of keys) localStorage.removeItem(key)
+    return keys.every((key) => localStorage.getItem(key) === null)
+  } catch {
+    return false
+  }
+}
+
+/**
+ * Ștergerea este remote-first: dacă RPC-ul nu confirmă, datele locale rămân
+ * intacte pentru ca omul să poată reîncerca. După confirmare sunt eliminate
+ * toate cheile Emanus, inclusiv darurile zilnice, Biblia și progresul Library.
+ */
+export async function eraseAllEmanusData(): Promise<boolean> {
+  const removedFromCloud = await deleteCloudData()
+  if (!removedFromCloud) return false
+  const learningProgressRemoved = clearLearningProgress()
+  const emanusKeysRemoved = removeAllEmanusLocalKeys()
+  return learningProgressRemoved && emanusKeysRemoved
 }
 
 // --- Primul contact ---
@@ -339,6 +383,8 @@ export function markPathSeen(): void {
 /** Trece pe alt drum, păstrând tot ce a scris (jurnal și rugăciuni) și tot ce a terminat. */
 export function switchPath(pathId: string): JourneyState {
   const s = load()
+  const path = getPath(pathId)
+  if (!path || !path.offerAtPathEnd || !isPathReviewed(path)) return s
   return save({
     ...s,
     pathId,
