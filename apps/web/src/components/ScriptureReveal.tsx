@@ -9,7 +9,7 @@
 // fara transformari 3D. Textul este text real, selectabil, nu imagine.
 // A11y (docs/27 §4.8): prefers-reduced-motion sare direct la final, tap oriunde
 // scurteaza animatia, versetul e anuntat cu aria-live.
-import { useEffect, useRef, useState } from "react"
+import { type ReactNode, useEffect, useRef, useState } from "react"
 import "./scripture-reveal.css"
 
 export type ScriptureRevealVariant = "scroll" | "lamp" | "lesson"
@@ -90,6 +90,29 @@ export function ScriptureReveal({
   }
 
   const revealed = phase === "revealing" || phase === "done"
+  const revealText = (insideScroll = false) => (
+    <div className={`reveal__text${insideScroll ? " reveal__text--scroll" : ""}`} aria-live="polite">
+      <p className="reveal__verse scripture">
+        {lines.map((line, i) => (
+          <span
+            key={i}
+            className={`reveal__line ${revealed ? "is-in" : ""}`}
+            style={{ animationDelay: `${i * LINE_STAGGER_MS}ms` }}
+          >
+            {line}{" "}
+          </span>
+        ))}
+      </p>
+      <p className={`reveal__ref ${revealed ? "is-in" : ""}`}>{verseRef}</p>
+
+      {variant === "lamp" && stepText ? (
+        <p className={`reveal__step ${phase === "done" ? "is-in" : ""}`}>
+          <span className="reveal__step-label">Pasul de azi</span>
+          {stepText}
+        </p>
+      ) : null}
+    </div>
+  )
 
   return (
     <div
@@ -102,30 +125,9 @@ export function ScriptureReveal({
       }}
       aria-label={phase === "done" ? undefined : "Arată versetul acum"}
     >
-      {variant === "scroll" && <ScrollStage phase={phase} />}
+      {variant === "scroll" && <ScrollStage phase={phase}>{revealText(true)}</ScrollStage>}
       {variant === "lamp" && <LampStage phase={phase} walkedDays={walkedDays} />}
-
-      <div className="reveal__text" aria-live="polite">
-        <p className="reveal__verse scripture">
-          {lines.map((line, i) => (
-            <span
-              key={i}
-              className={`reveal__line ${revealed ? "is-in" : ""}`}
-              style={{ animationDelay: `${i * LINE_STAGGER_MS}ms` }}
-            >
-              {line}{" "}
-            </span>
-          ))}
-        </p>
-        <p className={`reveal__ref ${revealed ? "is-in" : ""}`}>{verseRef}</p>
-
-        {variant === "lamp" && stepText ? (
-          <p className={`reveal__step ${phase === "done" ? "is-in" : ""}`}>
-            <span className="reveal__step-label">Pasul de azi</span>
-            {stepText}
-          </p>
-        ) : null}
-      </div>
+      {variant !== "scroll" ? revealText() : null}
 
       {phase !== "done" ? <span className="reveal__hint muted">atinge ecranul</span> : null}
     </div>
@@ -133,10 +135,10 @@ export function ScriptureReveal({
 }
 
 /** Sulul: snurul cade, sulul se desfasoara, lumina calda urca peste text. */
-function ScrollStage({ phase }: { phase: Phase }) {
+function ScrollStage({ phase, children }: { phase: Phase; children: ReactNode }) {
   return (
-    <div className="reveal__stage" aria-hidden="true">
-      <svg className="reveal__scroll" viewBox="0 0 320 200" role="presentation">
+    <div className="reveal__stage reveal__stage--scroll">
+      <svg className="reveal__scroll" viewBox="0 0 320 200" aria-hidden="true">
         <defs>
           <radialGradient id="revealGlow" cx="50%" cy="45%" r="55%">
             <stop offset="0%" stopColor="#ffe9c2" stopOpacity="0.9" />
@@ -179,7 +181,8 @@ function ScrollStage({ phase }: { phase: Phase }) {
           />
         ))}
       </svg>
-      <span className={`reveal__shadow reveal__shadow--${phase}`} />
+      {children}
+      <span className={`reveal__shadow reveal__shadow--${phase}`} aria-hidden="true" />
     </div>
   )
 }

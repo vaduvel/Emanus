@@ -30,6 +30,41 @@
   display: block;
 }
 
+.reveal__stage--scroll {
+  isolation: isolate;
+}
+
+.reveal__text--scroll {
+  position: absolute;
+  z-index: 1;
+  inset: 18% 17% 16%;
+  display: flex;
+  max-width: none;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  color: #173b3d;
+  pointer-events: none;
+}
+
+.reveal__text--scroll .reveal__verse.scripture {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font-size: clamp(0.82rem, 3.8vw, 1.03rem);
+  line-height: 1.38;
+}
+
+.reveal__text--scroll .reveal__ref {
+  margin-top: 0.35rem;
+  color: #456365;
+  font-size: clamp(0.68rem, 2.7vw, 0.8rem);
+}
+
 /* —— sulul ———————————————————————————————————————————— */
 
 .reveal__sheet {

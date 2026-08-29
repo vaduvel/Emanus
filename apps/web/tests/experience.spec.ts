@@ -223,6 +223,22 @@ test.describe("darurile zilnice", () => {
     await expect(page.getByRole("heading", { name: "Pergamentul s-a deschis" })).toBeVisible()
     await page.getByRole("button", { name: "Arată versetul acum" }).click()
     const reference = await page.locator(".reveal__ref").innerText()
+    const parchmentCopy = page.locator(".reveal__stage--scroll > .reveal__text--scroll")
+    await expect(parchmentCopy).toBeVisible()
+    await expect(page.locator(".reveal--scroll > .reveal__text")).toHaveCount(0)
+    const parchmentLayout = await parchmentCopy.evaluate((copy) => {
+      const stage = copy.parentElement?.getBoundingClientRect()
+      const text = copy.getBoundingClientRect()
+      return stage ? {
+        stageTop: stage.top,
+        stageBottom: stage.bottom,
+        textTop: text.top,
+        textBottom: text.bottom,
+      } : null
+    })
+    expect(parchmentLayout).not.toBeNull()
+    expect(parchmentLayout?.textTop ?? 0).toBeGreaterThan(parchmentLayout?.stageTop ?? 0)
+    expect(parchmentLayout?.textBottom ?? 0).toBeLessThan(parchmentLayout?.stageBottom ?? 0)
     await expect(page.getByRole("button", { name: /Citește în context/u })).toBeVisible()
     await expect(page.getByText("Sulul se strânge acum.", { exact: false })).toBeVisible()
 
