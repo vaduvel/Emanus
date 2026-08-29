@@ -167,7 +167,7 @@ export const rusineL1: Lesson = {
       type: "quiz",
       order: 8,
       quiz: {
-        question: "Ce a asteptat tatal din pilda inainte sa alerge la fiul lui?",
+        question: "Ce a așteptat tatăl din pildă înainte să alerge la fiul lui?",
         options: [
           { text: "Sa se spele si sa se imbrace curat", correct: false },
           { text: "Sa isi termine scuzele si sa promita ca nu mai face", correct: false },

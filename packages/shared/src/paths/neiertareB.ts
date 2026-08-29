@@ -9,7 +9,7 @@ import type { Lesson } from "../domain.js"
 export const neiertareL4: Lesson = {
   id: "neiertare_l4",
   courseId: "path_neiertare",
-  order: 4,
+  order: 6,
   title: "Nu știau ce fac",
   estMinutes: 11,
   anchorRefs: ["Luca 23:34", "Efeseni 6:12", "Ioan 8:44"],
@@ -173,7 +173,7 @@ export const neiertareL4: Lesson = {
 export const neiertareL5: Lesson = {
   id: "neiertare_l5",
   courseId: "path_neiertare",
-  order: 5,
+  order: 7,
   title: "Datoria pe care n-o mai poți plăti",
   estMinutes: 12,
   anchorRefs: ["Matei 18:21-35", "Coloseni 2:14", "Romani 5:8"],

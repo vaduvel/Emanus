@@ -65,6 +65,16 @@ const courseExperienceCopy: Record<string, CourseExperienceCopy> = {
 
 const libraryLessonById = new Map(LIBRARY_LESSONS.map((lesson) => [lesson.id, lesson] as const))
 
+export function promiseForLessonCount(promise: string, lessonCount: number): string {
+  return promise
+    .replace(/^Șapte lecții/u, `${lessonCount} sesiuni`)
+    .replace(/^Șapte sesiuni/u, `${lessonCount} sesiuni`)
+    .replace(
+      /nu îți promitem că fabricăm oameni în șapte lecții/iu,
+      "nu îți promitem că oamenii se schimbă după un număr fix de sesiuni",
+    )
+}
+
 const gatePrograms: LearningProgram[] = PATHS
   .filter((path) => isPathReviewed(path))
   .map((path) => ({
@@ -74,7 +84,7 @@ const gatePrograms: LearningProgram[] = PATHS
     cadence: "guided",
     unlockPolicy: "sequential",
     title: path.title,
-    promise: path.promise,
+    promise: promiseForLessonCount(path.promise, path.lessons.length),
     lessons: path.lessons,
     plannedSessions: path.lessons.length,
     sourceLabel: "Traseu Emanus",
@@ -93,7 +103,7 @@ const doorPrograms: LearningProgram[] = ALL_DOORS.flatMap((door) => {
     cadence: "guided" as const,
     unlockPolicy: "sequential" as const,
     title: path.title,
-    promise: path.promise,
+    promise: promiseForLessonCount(path.promise, path.lessons.length),
     lessons: path.lessons,
     plannedSessions: path.lessons.length,
     sourceLabel: "Traseu Emanus",

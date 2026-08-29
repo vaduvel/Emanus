@@ -102,12 +102,12 @@ test("catalogul Bibliotecii leagă fiecare curs live de lecțiile lui", () => {
 
   const liveLessonIds = new Set(liveCourses.flatMap((course) => course.lessonIds))
   const liveLessons = LIBRARY_LESSONS.filter((lesson) => liveLessonIds.has(lesson.id))
-  expect(liveLessons.filter((lesson) => lesson.safety)).toHaveLength(46)
-  expect(liveCourses.every((course) => course.lessonIds.some((lessonId) =>
-    lessonById.get(lessonId)?.steps.some((step) => step.type === "multi_choice"),
-  ))).toBe(true)
-  expect(liveLessons.flatMap((lesson) => lesson.steps).flatMap((step) => step.choice?.options ?? [])
-    .every((option) => Boolean(option.feedback || option.branchStepId))).toBe(true)
+  const liveSteps = liveLessons.flatMap((lesson) => lesson.steps)
+  expect(liveLessons.filter((lesson) => lesson.safety)).toHaveLength(47)
+  expect(liveLessons.every((lesson) => lesson.steps.length > 0)).toBe(true)
+  expect(liveSteps.some((step) => step.id.endsWith("__course_focus"))).toBe(false)
+  expect(liveSteps.flatMap((step) => step.choice?.options ?? [])
+    .some((option) => option.feedback?.includes("Răspunsul acesta este un punct de plecare"))).toBe(false)
 
   for (const course of liveCourses) {
     expect(course.lessonIds).toHaveLength(course.plannedLessons)
@@ -381,7 +381,7 @@ test("o lecție începută revine la același pas după refresh", async ({ page 
 
   await expect(page.getByText("Poți avea un program plin și totuși să te întrebi dacă prezența ta schimbă ceva.", { exact: true })).toBeVisible()
   await page.getByRole("button", { name: "Pauză" }).click()
-  await expect(page.getByText("Pas 2/13", { exact: true })).toBeVisible()
+  await expect(page.getByText("Pas 2/12", { exact: true })).toBeVisible()
 
   const beforeRefresh = await readFundamentulProgress(page)
   expect(beforeRefresh.lastLessonId).toBe("fund_l1")
@@ -389,7 +389,7 @@ test("o lecție începută revine la același pas după refresh", async ({ page 
   expect(beforeRefresh.drafts.fund_l1.checkIns.fl1_check).toBe("fl1ci_b")
 
   await page.reload()
-  await expect(page.getByText("Pas 2/13", { exact: true })).toBeVisible()
+  await expect(page.getByText("Pas 2/12", { exact: true })).toBeVisible()
   await expect(page.getByText("Poți avea un program plin și totuși să te întrebi dacă prezența ta schimbă ceva.", { exact: true })).toBeVisible()
 })
 
@@ -513,7 +513,7 @@ test("playerul expune progresul și starea butonului de pauză", async ({ page }
 
   const progress = page.getByRole("progressbar", { name: "Progresul sesiunii" })
   await expect(progress).toHaveAttribute("aria-valuemin", "1")
-  await expect(progress).toHaveAttribute("aria-valuemax", "13")
+  await expect(progress).toHaveAttribute("aria-valuemax", "12")
   await expect(progress).toHaveAttribute("aria-valuenow", "1")
 
   const pause = page.getByRole("button", { name: "Pauză" })
@@ -527,7 +527,7 @@ test("focusul ajunge la următoarea interacțiune după pașii automați", async
   await accelerateLesson(page)
   await page.getByRole("button", { name: "Siguranță." }).click()
 
-  await expect(page.getByText("Care este direcția biblică a acestei lecții?", { exact: true })).toBeVisible()
+  await expect(page.getByText("Ce loc sănătos pot avea banii?", { exact: true })).toBeVisible()
   await expect(page.locator(".lesson-turn").last()).toBeFocused()
 })
 
@@ -855,8 +855,9 @@ test("playerul folosește un singur viewport exterior pe mobil și desktop", asy
     expect(dimensions.playerBottom).toBeLessThanOrEqual(viewport.height)
     expect(Math.abs(dimensions.playerWidth - dimensions.navWidth)).toBeLessThanOrEqual(1)
 
-    await page.getByRole("button", { name: "Să numesc adevărul." }).click()
-    await expect(page.getByRole("progressbar", { name: "Progresul sesiunii" })).toHaveAttribute("aria-valuenow", "4")
+    await expect(page.getByText("Ce trebuie făcut cu un tipar de abuz?", { exact: true })).toBeVisible()
+    await page.getByRole("button", { name: "Dați la lumină lucrările întunericului.", exact: true }).click()
+    await expect(page.getByRole("progressbar", { name: "Progresul sesiunii" })).toHaveAttribute("aria-valuenow", "5")
     const grownTranscript = await page.evaluate(() => {
       const nav = document.querySelector(".lesson-shell__nav")?.getBoundingClientRect()
       const position = document.querySelector(".lesson-shell__position")?.getBoundingClientRect()

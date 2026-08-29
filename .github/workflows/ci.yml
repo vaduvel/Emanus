@@ -58,6 +58,7 @@ jobs:
           pnpm check:quotes
           pnpm check:typos
           pnpm check:content
+          pnpm check:course-repetition
           pnpm check:porti
       - name: Verify Biblia Emanus
         if: steps.changes.outputs.biblia == 'true'
@@ -97,3 +98,9 @@ jobs:
           pnpm typecheck
           pnpm build
           git diff --check
+      - name: Install browser for course regression
+        run: pnpm --filter @emanus/web exec playwright install --with-deps chromium
+      - name: Verify course experience
+        env:
+          CI: "1"
+        run: pnpm --filter @emanus/web test:course-repetition

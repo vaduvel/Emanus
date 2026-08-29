@@ -176,7 +176,7 @@ export const pildaTalantii: Lesson = {
       type: "scripture",
       order: 3,
       scripture: {
-        text: "Doamne, am știut că ești om greu, care mesteci de unde n-ai semănat și strângi de unde n-ai voră; mi-a fost teamă și m-am dus și ți-am ascuns talantul în pământ.",
+        text: "Doamne, am știut că ești om greu, care seceri de unde n-ai semănat și strângi de unde n-ai vânturat; mi-a fost teamă și m-am dus și ți-am ascuns talantul în pământ.",
         ref: "Matei 25:24-25",
       },
       bubbles: [

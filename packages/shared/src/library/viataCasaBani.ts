@@ -9,14 +9,33 @@ type PracticalInput = {
   help: string[]; step: string; prayer: string; journal: string; memoryText: string
 }
 const bubbles=(...text:string[])=>text.map(line=>({from:"guide" as const,text:line}))
+const QUIZ_QUESTIONS:Record<string,string>={
+ casnicie_l1:"Ce ține legământul sub domnia lui Hristos?",
+ casnicie_l2:"Ce urmărești înainte să-ți aperi poziția?",
+ casnicie_l3:"Cum începe repararea după conflict?",
+ casnicie_l4:"Ce trebuie să caracterizeze intimitatea sigură?",
+ casnicie_l5:"Cum se poartă responsabilitatea financiară în familie?",
+ casnicie_l6:"Ce faci când problema depășește puterea cuplului?",
+ bani_l1:"Ce loc sănătos pot avea banii?",
+ bani_l2:"La ce folosește un buget sincer?",
+ bani_l3:"Care este primul drum realist din datorie?",
+ bani_l4:"Cum arată generozitatea fără spectacol?",
+ bani_l5:"Cum trăiești responsabil în nesiguranță financiară?",
+}
 function makePractical(i:PracticalInput):Lesson{
  const p=i.id.replace(/[^a-z0-9]/g,"")
+ const question=QUIZ_QUESTIONS[i.id]
+ if(!question)throw new Error(`Lipsește întrebarea pentru ${i.id}`)
+ const correct={text:i.correct,correct:true}
+ const wrongA={text:i.wrongA,correct:false}
+ const wrongB={text:i.wrongB,correct:false}
+ const quizOptions=i.order%3===1?[correct,wrongA,wrongB]:i.order%3===2?[wrongA,correct,wrongB]:[wrongA,wrongB,correct]
  const steps:LessonStep[]=[
   {id:`${p}_h`,type:"hook",order:1,bubbles:bubbles(...i.hook)},
   {id:`${p}_c`,type:"choice",order:2,choice:{prompt:i.prompt,options:i.options.map((label,n)=>({id:`${p}c${n+1}`,label}))}},
   {id:`${p}_s`,type:"scripture",order:3,scripture:{text:i.scriptureText,ref:i.scriptureRef}},
   {id:`${p}_t`,type:"truth_simple",order:4,bubbles:bubbles(...i.truth)},
-  {id:`${p}_q`,type:"quiz",order:5,quiz:{question:"Care este direcția biblică a acestei lecții?",options:[{text:i.wrongA,correct:false},{text:i.correct,correct:true},{text:i.wrongB,correct:false}],explanation:i.explanation}},
+  {id:`${p}_q`,type:"quiz",order:5,quiz:{question,options:quizOptions,explanation:i.explanation}},
   {id:`${p}_a`,type:"how_god_helps",order:6,bubbles:bubbles(...i.help)},
   {id:`${p}_p`,type:"step",order:7,bubbles:bubbles(i.step)},
   {id:`${p}_r`,type:"prayer",order:8,bubbles:bubbles(i.prayer)},

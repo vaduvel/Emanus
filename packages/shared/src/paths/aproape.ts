@@ -103,12 +103,12 @@ export const aproapeL1: Lesson = {
       bubbles: [
         {
           from: "guide",
-          text: "Deci prezența Lui e o promisiune, nu o senzatie.",
+          text: "Deci prezența Lui e o promisiune, nu o senzație.",
         },
         {
           from: "guide",
           text:
-            "Diferenta e uriasa in practica: o senzatie se schimba cu somnul, cu glicemia, cu o cearta de acasa. O promisiune nu se schimba cu nimic din astea.",
+            "Diferența e uriașă în practică: o senzație se schimbă cu somnul, cu glicemia, cu o ceartă de acasă. O promisiune nu se schimbă cu nimic din astea.",
         },
         {
           from: "guide",
@@ -1219,7 +1219,7 @@ export const aproapeL7: Lesson = {
           from: "guide",
           text: "Ce rămâne cu tine din drumul asta, in patru rânduri:",
         },
-        { from: "guide", text: "Prezența Lui e o promisiune, nu o senzatie." },
+        { from: "guide", text: "Prezența Lui e o promisiune, nu o senzație." },
         { from: "guide", text: "Cand tace, te plangi — Lui, nu despre El — si rami." },
         { from: "guide", text: "Verifici o data, cu El, si nu te mai cauti la infinit." },
         { from: "guide", text: "Faci faptele de la inceput inainte sa simti ce simteai la inceput." },

@@ -137,7 +137,7 @@ export const schimbareL5: Lesson = {
           { text: "Ca pierzi ce ai invatat", correct: false },
         ],
         explanation:
-          "Iisus S-a rugat pentru Petru ca sa nu se piarda credința lui — nu ca sa nu cada. Petru a fost restabilit si i s-a dat o misiune. Iuda a facut ceva mai mic si nu s-a intors. Diferenta nu a fost gravitatea faptei, a fost intoarcerea.",
+          "Iisus S-a rugat pentru Petru ca să nu se piardă credința lui — nu ca să nu cadă. Petru a fost restabilit și i s-a dat o misiune. Amândoi au căzut grav; Petru s-a întors, Iuda nu. Diferența urmărită aici este întoarcerea, nu o comparație a gravității faptelor.",
       },
     },
     {
@@ -309,7 +309,7 @@ export const schimbareL6: Lesson = {
         },
         {
           from: "guide",
-          text: "Daca Dumnezeu a tratat corpul inainte de suflet, nu e nespîritual sa faci la fel.",
+          text: "Dacă Dumnezeu a tratat corpul înainte de suflet, nu e nespiritual să faci la fel.",
         },
       ],
     },

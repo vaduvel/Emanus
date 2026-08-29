@@ -174,7 +174,7 @@ export const PROVIDENTA_SUFERINTA_LESSONS: Lesson[] = [
     ],
     scriptureRef: "1 Corinteni 11:31-32", scriptureText: "Când suntem judecați, suntem disciplinați de Domnul ca să nu fim condamnați odată cu lumea.",
     truth: ["Disciplina este părintească și urmărește sfințirea, nu plata condamnării purtate de Hristos.", "Când legătura păcat-consecință este cunoscută, adevărul cere pocăință și reparare; când nu este cunoscută, nu o fabricăm."],
-    quiz: { question: "Care este răspunsul biblic?", correct: "Numesc legătura cunoscută și refuz să inventez una necunoscută.", wrong: ["Orice boală este disciplină pentru un păcat precis.", "Nicio suferință nu poate avea legătură cu neascultarea."], explanation: "Ioan 9 și 1 Corinteni 11 exclud ambele extreme." },
+    quiz: { question: "Ce distincție păstrează un răspuns biblic?", correct: "Numesc legătura cunoscută și refuz să inventez una necunoscută.", wrong: ["Orice boală este disciplină pentru un păcat precis.", "Nicio suferință nu poate avea legătură cu neascultarea."], explanation: "Ioan 9 și 1 Corinteni 11 exclud ambele extreme." },
     action: "Scrie două rânduri: «Legătura pe care o cunosc din fapte» și «Legătura pe care doar o presupun». Acționează numai pe adevărul cunoscut.",
     journal: "Există o consecință pe care ai numit-o atac spiritual ca să eviți pocăința ori răspunderea?",
     prayer: "Tată, cercetează-mă și disciplinează-mă fără să mă lași în minciună. Păzește-mă și de acuzații pe care Tu nu le-ai rostit.",

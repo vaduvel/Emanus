@@ -442,7 +442,7 @@ export const umblareL3: Lesson = {
         },
         {
           from: "guide",
-          text: "De aici vine si uscaciunea despre care se plang oamenii maturi. De multe ori nu e o taceere a Lui. E un lucru mic, stiut, amanat de luni de zile.",
+          text: "De aici vine și uscăciunea despre care se plâng oamenii maturi. De multe ori nu e o tăcere a Lui. E un lucru mic, știut, amânat de luni de zile.",
         },
       ],
     },
@@ -488,7 +488,7 @@ export const umblareL3: Lesson = {
         question: "Cand nu simt nimic in relatia cu Dumnezeu, primul lucru de verificat e:",
         options: [
           { text: "Daca m-am rugat destul de mult", correct: false },
-          { text: "Daca e un lucru stiut, mic, pe care il amaan", correct: true },
+          { text: "Dacă e un lucru știut, mic, pe care îl amân", correct: true },
           { text: "Daca am pacatuit prea grav ca sa mai ma primeasca", correct: false },
         ],
         explanation:

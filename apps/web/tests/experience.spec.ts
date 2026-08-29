@@ -112,6 +112,38 @@ test("un program de Poartă deschis direct nu poate sări peste întrebarea de s
   await expect(page.getByRole("heading", { name: "Ești în pericol acum?" })).toBeVisible()
 })
 
+test("parametrul unei Porți este consumat o singură dată și scos din URL", async ({ page }) => {
+  await page.goto("/#/intrare?u=rusine")
+  await page.evaluate(() => window.localStorage.clear())
+  await page.reload()
+  await page.getByRole("button", { name: "Nu, pot continua spre uși" }).click()
+
+  await expect(page.getByRole("heading", { name: "„Am făcut lucruri de care mi-e rușine”" })).toBeVisible()
+  await page.getByRole("button", { name: "Nu, vreau să aleg eu" }).click()
+  await expect(page).toHaveURL(/#\/intrare$/u)
+  await expect(page.getByRole("heading", { name: "Ce te-a adus aici?" })).toBeVisible()
+
+  await page.reload()
+  await page.getByRole("button", { name: "Nu, pot continua spre uși" }).click()
+  await expect(page.getByRole("heading", { name: "Ce te-a adus aici?" })).toBeVisible()
+  await expect(page.getByRole("heading", { name: "„Am făcut lucruri de care mi-e rușine”" })).toHaveCount(0)
+
+  await page.goto("/#/intrare?u=rusine")
+  await page.reload()
+  await page.getByRole("button", { name: "Nu, pot continua spre uși" }).click()
+  await page.getByRole("button", { name: /Da, începe aici/u }).click()
+  await expect(page).toHaveURL(/#\/intrare$/u)
+  await page.getByRole("button", { name: /Începe drumul/u }).click()
+  await expect(page).toHaveURL(/#\/program\/door%3Arusine$/u)
+
+  await page.goBack()
+  await expect(page).toHaveURL(/#\/intrare$/u)
+  await page.reload()
+  await page.getByRole("button", { name: "Nu, pot continua spre uși" }).click()
+  await expect(page.getByRole("heading", { name: "Ce te-a adus aici?" })).toBeVisible()
+  await expect(page.getByRole("heading", { name: "„Am făcut lucruri de care mi-e rușine”" })).toHaveCount(0)
+})
+
 test("un drum retras poate fi continuat doar de utilizatorul care îl avea deja", async ({ page }) => {
   await page.goto("/")
   await page.evaluate((state) => {

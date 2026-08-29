@@ -15,6 +15,7 @@
     "check:quotes": "python3 scripts/fix-quotes.py --check",
     "check:typos": "python3 scripts/fix-known-typos.py --check",
     "check:content": "python3 scripts/audit-content.py",
+    "check:course-repetition": "pnpm build:shared && node scripts/check-course-repetition.mjs",
     "check:porti": "pnpm build:shared && node scripts/check-porti-runtime.mjs",
     "check:bible-publication": "python3 scripts/publica-geneza.py --check",
     "check:biblia-emanus": "python3 scripts/check-biblia-emanus.py",

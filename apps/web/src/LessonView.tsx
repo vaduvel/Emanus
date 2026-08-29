@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { ArrowLeft, ArrowRight, Check, Footprints, HandHeart, LifeBuoy } from "lucide-react"
+import { quizOptionRotation } from "@emanus/shared"
 import type { ChoiceOption, Lesson, LessonStep } from "@emanus/shared/domain"
 import { safetyPolicyForLesson } from "@emanus/shared/lesson-safety"
 import { DOCTRINE_LESSONS, getDoorEntry } from "@emanus/shared/paths"
@@ -176,6 +177,28 @@ export function LessonView({ lessonId, programId }: { lessonId?: string; program
 
   const index = program ? programSessionIndex(program, lesson.id) : -1
   const position = program && index >= 0 ? `Sesiunea ${index + 1} din ${program.lessons.length}` : null
+  const quizRotationKey = program?.id ?? lesson.courseId
+  let quizSequenceIndex = program && index >= 0 ? 0 : Math.max(0, lesson.order - 1)
+  let quizPreviousCorrectPosition = -1
+  if (program && index >= 0) {
+    for (const candidate of program.lessons.slice(0, index)) {
+      for (const step of [...candidate.steps].sort((left, right) => left.order - right.order)) {
+        if (!step.quiz || step.quiz.options.length === 0) continue
+        const correctOptionIndex = step.quiz.options.findIndex((option) => option.correct)
+        const rotation = quizOptionRotation(
+          quizRotationKey,
+          quizSequenceIndex,
+          correctOptionIndex,
+          step.quiz.options.length,
+          quizPreviousCorrectPosition,
+        )
+        quizPreviousCorrectPosition = (
+          correctOptionIndex - rotation + step.quiz.options.length
+        ) % step.quiz.options.length
+        quizSequenceIndex += 1
+      }
+    }
+  }
 
   if (!sessionCanOpen(program, lesson.id)) {
     return (
@@ -211,6 +234,9 @@ export function LessonView({ lessonId, programId }: { lessonId?: string; program
         onComplete={onComplete}
         initialState={initialDraft.current}
         initialChoices={initialChoices}
+        quizRotationKey={quizRotationKey}
+        quizSequenceIndex={quizSequenceIndex}
+        quizPreviousCorrectPosition={quizPreviousCorrectPosition}
         onProgress={program?.kind === "course" && !replaying.current ? saveDraft : undefined}
         onChoice={handleChoice}
       />

@@ -26,10 +26,107 @@ type DailyPrayerInput = {
   memoryText: string
 }
 
+type PrayerQuiz = { question: string; correct: string; wrongA: string; wrongB: string }
+
+const DAILY_PRAYER_QUIZZES: Record<string, PrayerQuiz> = {
+  rug_context_l1: {
+    question: "Ce schimbă mulțumirea la începutul zilei?",
+    correct: "Recunoaște mila și darurile concrete înainte ca ziua să devină doar o listă de cereri.",
+    wrongA: "Garantează că ziua va fi ușoară și lipsită de întreruperi.",
+    wrongB: "Înlocuiește nevoia de a-I spune lui Dumnezeu ce mă apasă.",
+  },
+  rug_context_l2: {
+    question: "Cum îi încredințezi lui Dumnezeu planurile?",
+    correct: "Ceri direcție și lași loc voii Lui, inclusiv unei uși închise.",
+    wrongA: "Declari că planul tău trebuie confirmat exact așa cum l-ai făcut.",
+    wrongB: "Renunți la orice planificare ca să nu mai porți responsabilitate.",
+  },
+  rug_context_l3: {
+    question: "Ce urmărește rugăciunea pentru munca ta?",
+    correct: "Cere pricepere și caracter, fără să transforme rezultatele în identitate.",
+    wrongA: "Cere doar promovare, indiferent de binele făcut oamenilor.",
+    wrongB: "Numește exploatarea și lipsa odihnei sacrificii obligatorii.",
+  },
+  rug_context_l4: {
+    question: "Ce exprimă mulțumirea înaintea mesei?",
+    correct: "Primește hrana ca dar și își amintește de munca altora și de masa aproapelui.",
+    wrongA: "Transformă o frază rostită corect într-o garanție magică.",
+    wrongB: "Se ocupă doar de farfuria mea și lasă nevoia altora în afara rugăciunii.",
+  },
+  rug_context_l5: {
+    question: "Cum îți aduci familia înaintea lui Dumnezeu?",
+    correct: "Te rogi pe nume, îți asumi partea ta și cauți protecție reală când există pericol.",
+    wrongA: "Folosești rugăciunea ca să controlezi alegerile fiecărei persoane.",
+    wrongB: "Acoperi abuzul pentru a păstra imaginea unei familii unite.",
+  },
+  rug_context_l6: {
+    question: "Cum însoțește responsabilitatea rugăciunea pentru călătorie?",
+    correct: "Ceri pază și discernământ, apoi conduci atent și respecți măsurile de siguranță.",
+    wrongA: "Consideri rugăciunea o garanție că nu se poate întâmpla nimic rău.",
+    wrongB: "Te rogi pentru protecție, dar păstrezi graba și neatenția la volan.",
+  },
+  rug_context_l7: {
+    question: "Cum aduci o nevoie concretă înaintea lui Dumnezeu?",
+    correct: "O numești sincer, ceri ajutor și cauți cu înțelepciune partea pe care o poți face.",
+    wrongA: "Păstrezi cererea vagă ca să nu fie nevoie de niciun pas concret.",
+    wrongB: "Îi dictezi lui Dumnezeu singura formă acceptabilă a răspunsului.",
+  },
+  rug_context_l8: {
+    question: "Cum se roagă omul pentru vindecare fără promisiuni false?",
+    correct: "Cere vindecare și har, folosind și medicul, tratamentul și sprijinul potrivit.",
+    wrongA: "Promite un rezultat sigur pe care Dumnezeu nu l-a promis.",
+    wrongB: "Înlocuiește evaluarea și tratamentul cu presiunea de a demonstra credință.",
+  },
+  rug_context_l9: {
+    question: "Cum arată protecția spirituală fără panică sau superstiție?",
+    correct: "Te supui lui Dumnezeu, renunți la rău și cauți ajutor matur fără autodiagnostic.",
+    wrongA: "Cauți o explicație demonică în spatele fiecărui simptom sau necaz.",
+    wrongB: "Folosești formule și obiecte ca înlocuitor pentru ascultare și adevăr.",
+  },
+  rug_context_l10: {
+    question: "Ce păstrează mijlocirea pentru altcineva curată?",
+    correct: "Cere binele persoanei și lasă voința și drumul ei în mâna lui Dumnezeu.",
+    wrongA: "Transformă rugăciunea într-o cale de a controla deciziile persoanei.",
+    wrongB: "Spune mai departe detaliile ei sensibile sub pretextul unei cereri de rugăciune.",
+  },
+  rug_context_l11: {
+    question: "Cum poate fi încheiată ziua înaintea lui Dumnezeu?",
+    correct: "Cu mulțumire, mărturisire, încredințarea grijilor și primirea odihnei.",
+    wrongA: "Prin reluarea fiecărei greșeli până când vinovăția ține loc de pocăință.",
+    wrongB: "Prin ignorarea zilei, ca să nu mai fie nevoie de adevăr sau reparare.",
+  },
+}
+
+const PRAYER_MODEL_INTROS: Record<string, string> = {
+  rug_context_l1: "Exemplu pentru începutul zilei — spune-l în cuvintele tale:",
+  rug_context_l2: "Exemplu pentru încredințarea planurilor — adaptează-l:",
+  rug_context_l3: "Exemplu înainte de muncă — personalizează-l:",
+  rug_context_l4: "Exemplu de mulțumire la masă — rostește-l firesc:",
+  rug_context_l5: "Exemplu de rugăciune pentru familie — adaptează-l:",
+  rug_context_l6: "Exemplu înainte de călătorie — spune-l în ritmul tău:",
+  rug_context_l7: "Exemplu pentru o nevoie concretă — completează-l sincer:",
+  rug_context_l8: "Exemplu pentru vindecare și întărire — personalizează-l:",
+  rug_context_l9: "Exemplu pentru protecție spirituală — rostește-l fără grabă:",
+  rug_context_l10: "Exemplu de mijlocire — adaugă numele persoanei:",
+  rug_context_l11: "Exemplu pentru încheierea zilei — adaptează-l:",
+}
+
 const bubbles = (...text: string[]) => text.map((line) => ({ from: "guide" as const, text: line }))
 
 function makeDailyPrayer(input: DailyPrayerInput): Lesson {
   const p = input.id.replace("rug_context_", "rc")
+  const quiz = DAILY_PRAYER_QUIZZES[input.id]
+  if (!quiz) throw new Error(`Lipsește quizul pentru ${input.id}`)
+  const modelIntro = PRAYER_MODEL_INTROS[input.id]
+  if (!modelIntro) throw new Error(`Lipsește introducerea rugăciunii pentru ${input.id}`)
+  const correct = { text: quiz.correct, correct: true }
+  const wrongA = { text: quiz.wrongA, correct: false }
+  const wrongB = { text: quiz.wrongB, correct: false }
+  const quizOptions = input.order % 3 === 1
+    ? [correct, wrongA, wrongB]
+    : input.order % 3 === 2
+      ? [wrongA, correct, wrongB]
+      : [wrongA, wrongB, correct]
   const steps: LessonStep[] = [
     { id: `${p}_hook`, type: "hook", order: 1, bubbles: bubbles(...input.opening) },
     {
@@ -47,16 +144,12 @@ function makeDailyPrayer(input: DailyPrayerInput): Lesson {
     {
       id: `${p}_quiz`, type: "quiz", order: 5,
       quiz: {
-        question: "Ce urmărește această rugăciune?",
-        options: [
-          { text: "Să-L oblig pe Dumnezeu să facă ce am planificat.", correct: false },
-          { text: "Să aduc momentul real înaintea Lui și să mă așez sub voia Lui.", correct: true },
-          { text: "Să spun o formulă fără să-mi implic inima.", correct: false },
-        ],
-        explanation: "Rugăciunea creștină nu controlează realitatea prin cuvinte; ea vorbește cu Tatăl, cere, mulțumește, ascultă și se supune.",
+        question: quiz.question,
+        options: quizOptions,
+        explanation: input.teaching.join(" "),
       },
     },
-    { id: `${p}_model`, type: "prayer", order: 6, bubbles: bubbles("Exemplu — schimbă-l în cuvintele tale:", input.model) },
+    { id: `${p}_model`, type: "prayer", order: 6, bubbles: bubbles(modelIntro, input.model) },
     { id: `${p}_practice`, type: "step", order: 7, bubbles: bubbles(input.practice) },
     { id: `${p}_journal`, type: "journal", order: 8, journalPrompt: input.journal },
     {

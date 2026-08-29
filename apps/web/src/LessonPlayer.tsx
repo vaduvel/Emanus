@@ -6,6 +6,7 @@ import {
   LifeBuoy, Lightbulb, Meh, MessageCircle, MessageSquare, NotebookPen, Smile, Sunrise,
 } from "lucide-react"
 import type { ChoiceOption, Lesson, LessonStep } from "@emanus/shared"
+import { quizOptionRotation } from "@emanus/shared"
 import { safetyPolicyForLesson } from "@emanus/shared/lesson-safety"
 import { ScriptureReveal } from "./components/ScriptureReveal"
 import { navigate } from "./router"
@@ -172,12 +173,15 @@ function restoreLessonState(
   }
 }
 
-export function LessonPlayer({ lesson, onComplete, submitting = false, initialState, initialChoices, onProgress, onChoice }: {
+export function LessonPlayer({ lesson, onComplete, submitting = false, initialState, initialChoices, quizRotationKey = lesson.courseId, quizSequenceIndex = Math.max(0, lesson.order - 1), quizPreviousCorrectPosition = -1, onProgress, onChoice }: {
   lesson: Lesson
   onComplete: (result: LessonResult) => void
   submitting?: boolean
   initialState?: LessonPlayerState
   initialChoices?: Record<string, string>
+  quizRotationKey?: string
+  quizSequenceIndex?: number
+  quizPreviousCorrectPosition?: number
   onProgress?: (state: LessonPlayerState) => void
   onChoice?: (step: LessonStep, option: ChoiceOption) => boolean | void
 }) {
@@ -190,6 +194,29 @@ export function LessonPlayer({ lesson, onComplete, submitting = false, initialSt
       stepById: new Map(lesson.steps.map((s) => [s.id, s] as const)),
     }
   }, [lesson])
+  const quizContexts = useMemo(() => {
+    const contexts = new Map<string, { sequenceIndex: number; previousCorrectPosition: number }>()
+    let sequenceIndex = quizSequenceIndex
+    let previousCorrectPosition = quizPreviousCorrectPosition
+    for (const step of [...lesson.steps].sort((left, right) => left.order - right.order)) {
+      if (!step.quiz) continue
+      contexts.set(step.id, { sequenceIndex, previousCorrectPosition })
+      if (step.quiz.options.length === 0) continue
+      const correctOptionIndex = step.quiz.options.findIndex((option) => option.correct)
+      const rotation = quizOptionRotation(
+        quizRotationKey,
+        sequenceIndex,
+        correctOptionIndex,
+        step.quiz.options.length,
+        previousCorrectPosition,
+      )
+      previousCorrectPosition = (
+        correctOptionIndex - rotation + step.quiz.options.length
+      ) % step.quiz.options.length
+      sequenceIndex += 1
+    }
+    return contexts
+  }, [lesson.steps, quizPreviousCorrectPosition, quizRotationKey, quizSequenceIndex])
   const restored = useMemo(
     () => restoreLessonState(initialState, initialChoices, mainSteps, stepById),
     [initialChoices, initialState, mainSteps, stepById],
@@ -355,8 +382,9 @@ export function LessonPlayer({ lesson, onComplete, submitting = false, initialSt
     <div className="chat" ref={scrollRef} aria-live="polite">
       {revealed.map((s, i) => {
         const isCurrent = i === revealed.length - 1
+        const quizContext = quizContexts.get(s.id)
         return <div key={`${s.id}@${i}`} ref={isCurrent ? currentTurnRef : undefined} className="lesson-turn" tabIndex={isCurrent ? -1 : undefined}>
-          <Turn step={s} lesson={lesson} isCurrent={isCurrent}
+          <Turn step={s} lesson={lesson} quizRotationKey={quizRotationKey} quizSequenceIndex={quizContext?.sequenceIndex ?? quizSequenceIndex} quizPreviousCorrectPosition={quizContext?.previousCorrectPosition ?? quizPreviousCorrectPosition} isCurrent={isCurrent}
             visibleBubbleCount={s.id === current.id ? visibleBubbleCount : (s.bubbles?.length ?? 0)} interactionReady={!isCurrent || interactionReady}
             pickedOptionId={choices[s.id]} pickedMoodId={checkIns[s.id]} quizAnswerIdx={quizAnswers[s.id]} journal={journal} onJournal={setJournal}
             onJournalDone={finishJournal} onExerciseDone={finishExercise} onQuiz={answerQuiz}
@@ -374,8 +402,8 @@ function GuideMsg({ icon: Glyph, text }: { icon: LucideIcon; text: string }) {
   return <div className="msg msg--guide"><div className="msg__avatar"><Glyph size={18} strokeWidth={1.8} aria-hidden /></div><div className="msg__body"><span className="msg__name">{GUIDE_NAME}</span><div className="bubble">{text}</div></div></div>
 }
 
-function Turn({ step, lesson, isCurrent, visibleBubbleCount, interactionReady, pickedOptionId, pickedMoodId, quizAnswerIdx, onQuiz, journal, onJournal, onJournalDone, onExerciseDone, selectedMulti, onToggleMulti, onMultiDone, textResponse, onTextResponse, onTextDone, onMood, onPick }: {
-  step: LessonStep; lesson: Lesson; isCurrent: boolean; visibleBubbleCount: number; interactionReady: boolean; pickedOptionId?: string; pickedMoodId?: string; quizAnswerIdx?: number;
+function Turn({ step, lesson, quizRotationKey, quizSequenceIndex, quizPreviousCorrectPosition, isCurrent, visibleBubbleCount, interactionReady, pickedOptionId, pickedMoodId, quizAnswerIdx, onQuiz, journal, onJournal, onJournalDone, onExerciseDone, selectedMulti, onToggleMulti, onMultiDone, textResponse, onTextResponse, onTextDone, onMood, onPick }: {
+  step: LessonStep; lesson: Lesson; quizRotationKey: string; quizSequenceIndex: number; quizPreviousCorrectPosition: number; isCurrent: boolean; visibleBubbleCount: number; interactionReady: boolean; pickedOptionId?: string; pickedMoodId?: string; quizAnswerIdx?: number;
   onQuiz: (idx: number) => void; journal: string; onJournal: (v: string) => void; onJournalDone: (skip?: boolean) => void; onExerciseDone: () => void; onMood: (mood: string) => void; onPick: (opt: ChoiceOption) => void
   selectedMulti: string[]; onToggleMulti: (optionId: string) => void; onMultiDone: () => void
   textResponse: string; onTextResponse: (value: string) => void; onTextDone: (skip?: boolean) => void
@@ -401,16 +429,27 @@ function Turn({ step, lesson, isCurrent, visibleBubbleCount, interactionReady, p
   }
   if (step.type === "multi_choice") {
     const min = step.multiChoice?.minSelections ?? 1
-    return <>{step.multiChoice?.prompt && <GuideMsg icon={MessageSquare} text={step.multiChoice.prompt} />}<div className="choice__opts">{step.multiChoice?.options.map((option) => <button key={option.id} type="button" className={selectedMulti.includes(option.id) ? "" : "ghost"} onClick={() => onToggleMulti(option.id)} disabled={!isCurrent}>{option.label}</button>)}</div>{isCurrent && <button type="button" disabled={selectedMulti.length < min} onClick={onMultiDone}>Continuă</button>}</>
+    return <>{bubbles.map((bubble, index) => <GuideMsg key={index} icon={MessageCircle} text={bubble.text} />)}{interactionReady ? <>{step.multiChoice?.prompt && <GuideMsg icon={MessageSquare} text={step.multiChoice.prompt} />}<div className="choice__opts">{step.multiChoice?.options.map((option) => <button key={option.id} type="button" className={selectedMulti.includes(option.id) ? "" : "ghost"} onClick={() => onToggleMulti(option.id)} disabled={!isCurrent}>{option.label}</button>)}</div>{isCurrent && <button type="button" disabled={selectedMulti.length < min} onClick={onMultiDone}>Continuă</button>}</> : null}</>
   }
   if (step.type === "quiz") {
     const answered = quizAnswerIdx !== undefined
-    return <><GuideMsg icon={MessageCircle} text={step.quiz?.question ?? ""} /><div className="quiz">{step.quiz?.options.map((o, k) => {
-      let cls = ""; if (answered) { if (o.correct) cls = " correct"; else if (quizAnswerIdx === k) cls = " wrong" }
-      return <button key={k} type="button" className={`ghost${cls}`} disabled={answered} onClick={() => onQuiz(k)}>{o.text}</button>
+    const sourceOptions = step.quiz?.options ?? []
+    const correctOptionIndex = sourceOptions.findIndex((option) => option.correct)
+    const rotation = quizOptionRotation(
+      quizRotationKey,
+      quizSequenceIndex,
+      correctOptionIndex,
+      sourceOptions.length,
+      quizPreviousCorrectPosition,
+    )
+    const indexedOptions = sourceOptions.map((option, sourceIndex) => ({ option, sourceIndex }))
+    const displayedOptions = indexedOptions.slice(rotation).concat(indexedOptions.slice(0, rotation))
+    return <><GuideMsg icon={MessageCircle} text={step.quiz?.question ?? ""} /><div className="quiz">{displayedOptions.map(({ option: o, sourceIndex }) => {
+      let cls = ""; if (answered) { if (o.correct) cls = " correct"; else if (quizAnswerIdx === sourceIndex) cls = " wrong" }
+      return <button key={sourceIndex} type="button" className={`ghost${cls}`} disabled={answered} onClick={() => onQuiz(sourceIndex)}>{o.text}</button>
     })}</div>{answered && step.quiz?.explanation && <GuideMsg icon={Lightbulb} text={step.quiz.explanation} />}</>
   }
-  if (step.type === "journal") return <><GuideMsg icon={NotebookPen} text={step.journalPrompt ?? ""} />{isCurrent ? <div className="journal"><textarea value={journal} onChange={(e) => onJournal(e.target.value)} placeholder="Scrie aici… (privat, doar pentru tine)" rows={4} /><div className="choice__opts"><button type="button" onClick={() => onJournalDone(false)}>Am terminat</button><button type="button" className="ghost" onClick={() => onJournalDone(true)}>Sar peste</button></div></div> : journal ? <div className="msg msg--me"><div className="bubble bubble--me">{journal}</div></div> : null}</>
+  if (step.type === "journal") return <>{bubbles.map((bubble, index) => <GuideMsg key={index} icon={MessageCircle} text={bubble.text} />)}{interactionReady ? <><GuideMsg icon={NotebookPen} text={step.journalPrompt ?? ""} />{isCurrent ? <div className="journal"><textarea value={journal} onChange={(e) => onJournal(e.target.value)} placeholder="Scrie aici… (privat, doar pentru tine)" rows={4} /><div className="choice__opts"><button type="button" onClick={() => onJournalDone(false)}>Am terminat</button><button type="button" className="ghost" onClick={() => onJournalDone(true)}>Sar peste</button></div></div> : journal ? <div className="msg msg--me"><div className="bubble bubble--me">{journal}</div></div> : null}</> : null}</>
   if (["reflection", "declaration", "name_struggle"].includes(step.type)) {
     const prompt = step.response?.prompt ?? (step.bubbles ?? []).map((bubble) => bubble.text).join(" ")
     const requiredLength = step.response?.required ? (step.response.minLength ?? 1) : 0

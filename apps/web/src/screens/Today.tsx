@@ -14,7 +14,7 @@ import {
 } from "../journey"
 import { declineReminder, enableReminder, shouldOfferReminder } from "../reminder"
 import { navigate } from "../router"
-import { activeGateProgramId, learningLessonUrl } from "../learningPrograms"
+import { activeGateProgramId, learningLessonUrl, promiseForLessonCount } from "../learningPrograms"
 import { cloudBackupEnabled } from "../cloud"
 
 /*
@@ -139,7 +139,7 @@ export function Today() {
           >
             {away ? "Reia" : "Începe"} <ArrowRight size={18} aria-hidden />
           </button>
-          {isFirstEver && <p className="muted today__promise">{path.promise}</p>}
+          {isFirstEver && <p className="muted today__promise">{promiseForLessonCount(path.promise, path.lessons.length)}</p>}
         </div>
       )}
 

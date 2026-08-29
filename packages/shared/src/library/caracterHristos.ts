@@ -1,18 +1,27 @@
 import type { Lesson, LessonStep } from "../domain.js"
 
 type I={id:string;order:number;title:string;refs:string[];ref:string;hook:string;word:string;truth:string[];step:string;prayer:string;journal:string;memory:string}
+type QuizCopy={question:string;correct:string;wrongA:string;wrongB:string;explanation:string}
+
+const QUIZZES:Record<string,QuizCopy>={
+caracter_hristos_l1:{question:"Cum folosește un ucenic puterea care i-a fost încredințată?",correct:"Slujește și face viața celorlalți mai sigură, fără să-i constrângă.",wrongA:"Cere supunere pentru a-și confirma poziția.",wrongB:"Evită orice responsabilitate ca să nu pară dominant.",explanation:"Modelul lui Iisus transformă puterea în responsabilitate și slujire, nu în drept de control."},
+caracter_hristos_l2:{question:"Ce deosebește blândețea de pasivitate?",correct:"Blândețea spune adevărul și pune limite fără cruzime.",wrongA:"Blândețea lasă răul neatins pentru a păstra liniștea.",wrongB:"Blândețea răspunde agresiv ca să nu fie confundată cu slăbiciunea.",explanation:"Blândețea este putere sub stăpânire; ea poate confrunta răul fără să-l reproducă."},
+caracter_hristos_l3:{question:"Care reacție arată curaj biblic într-o situație costisitoare?",correct:"Spun adevărul cu dragoste și minte limpede, chiar dacă îmi este frică.",wrongA:"Îl fac pe celălalt să se teamă înainte să mă poată răni.",wrongB:"Aștept să dispară complet frica înainte să acționez.",explanation:"Curajul dat de Dumnezeu păstrează împreună puterea, dragostea și chibzuința."},
+caracter_hristos_l4:{question:"Cum corectezi o faptă fără să rușinezi persoana?",correct:"Numesc concret răul, păstrez demnitatea omului și cer repararea necesară.",wrongA:"Folosesc etichete despre caracter ca greșeala să nu se mai repete.",wrongB:"Evit să numesc răul, fiindcă orice consecință contrazice harul.",explanation:"Adevărul deschide pocăința, iar harul refuză să transforme greșeala într-un verdict asupra întregii persoane."},
+caracter_hristos_l5:{question:"Cum ajuți cu compasiune fără să preiei responsabilitatea altuia?",correct:"Spun clar ce pot oferi, ce nu pot oferi și ce ajutor competent este necesar.",wrongA:"Îl feresc mereu de consecințele alegerilor lui ca să nu sufere.",wrongB:"Mă retrag din orice nevoie, fiindcă fiecare trebuie să se descurce singur.",explanation:"Dragostea poartă poveri reale, dar nu finanțează dependența, nu ascunde violența și nu anulează răspunderea personală."},
+caracter_hristos_l6:{question:"Cum arată smerenia sănătoasă față de propriile daruri?",correct:"Le recunosc fără superioritate și le folosesc pentru a sluji.",wrongA:"Le neg ca să nu risc să par mândru.",wrongB:"Le prezint ca dovadă că merit mai mult decât ceilalți.",explanation:"Smerenia spune adevărul despre daruri și valoare: nici deasupra, nici dedesubtul celorlalți."},
+caracter_hristos_l7:{question:"Cum crește stăpânirea de sine în viața unui ucenic?",correct:"Prin lucrarea Duhului unită cu alegeri, limite și adevăr spus în comunitate.",wrongA:"Prin voință izolată, fără har sau ajutor din partea altora.",wrongB:"Prin așteptarea unei schimbări spirituale care nu cere practică.",explanation:"Stăpânirea de sine este rod al Duhului care se vede în practici concrete, reparare și ajustarea planului după cădere."},
+}
 const b=(...text:string[])=>text.map(line=>({from:"guide" as const,text:line}))
-function make(i:I):Lesson{const p=i.id.replace(/_/g,"");const steps:LessonStep[]=[
+function make(i:I):Lesson{const p=i.id.replace(/_/g,"");const quiz=QUIZZES[i.id];if(!quiz)throw new Error(`Lipsește quizul editorial pentru ${i.id}`);const steps:LessonStep[]=[
 {id:`${p}h`,type:"hook",order:1,bubbles:b(i.hook)},
-{id:`${p}c`,type:"choice",order:2,choice:{prompt:"Unde simți tensiunea acestei lecții?",options:[{id:`${p}c1`,label:"În mine."},{id:`${p}c2`,label:"În familie."},{id:`${p}c3`,label:"În muncă sau biserică."}]}},
-{id:`${p}s`,type:"scripture",order:3,scripture:{text:i.word,ref:i.ref}},
-{id:`${p}t`,type:"truth_simple",order:4,bubbles:b(...i.truth)},
-{id:`${p}q`,type:"quiz",order:5,quiz:{question:"Cum se formează caracterul creștin?",options:[{text:"Prin imagine și statut.",correct:false},{text:i.memory,correct:true},{text:"Prin controlarea celorlalți.",correct:false}],explanation:"Caracterul lui Hristos se formează prin har, adevăr, ascultare și lucrarea Duhului Sfânt, nu prin stereotipuri."}},
-{id:`${p}a`,type:"how_god_helps",order:6,bubbles:b("Duhul Sfânt produce rod, convinge, mângâie și ne dă putere să ascultăm.","Practica nu cumpără iubirea lui Dumnezeu; răspunde la harul primit.")},
-{id:`${p}p`,type:"step",order:7,bubbles:b(i.step)},
-{id:`${p}r`,type:"prayer",order:8,bubbles:b(i.prayer)},
-{id:`${p}j`,type:"journal",order:9,journalPrompt:i.journal},
-{id:`${p}m`,type:"memory_verse",order:10,scripture:{text:i.memory,ref:i.ref}},
+{id:`${p}s`,type:"scripture",order:2,scripture:{text:i.word,ref:i.ref}},
+{id:`${p}t`,type:"truth_simple",order:3,bubbles:b(...i.truth)},
+{id:`${p}q`,type:"quiz",order:4,quiz:{question:quiz.question,options:[{text:quiz.wrongA,correct:false},{text:quiz.correct,correct:true},{text:quiz.wrongB,correct:false}],explanation:quiz.explanation}},
+{id:`${p}p`,type:"step",order:5,bubbles:b(i.step)},
+{id:`${p}r`,type:"prayer",order:6,bubbles:b(i.prayer)},
+{id:`${p}j`,type:"journal",order:7,journalPrompt:i.journal},
+{id:`${p}m`,type:"memory_verse",order:8,scripture:{text:i.memory,ref:i.ref}},
 ];return{id:i.id,courseId:"identitate_c2_caracter",order:i.order,title:i.title,estMinutes:8,anchorRefs:i.refs,memoryVerseRef:i.ref,steps}}
 export const CARACTER_HRISTOS_LESSONS:Lesson[]=[
 make({id:"caracter_hristos_l1",order:1,title:"Putere fără dominație",refs:["Marcu 10:42-45","Filipeni 2:5-8"],ref:"Marcu 10:45",hook:"Lumea numește putere capacitatea de a-i face pe ceilalți să se supună. Iisus o folosește pentru a sluji și a Se dărui.",word:"Fiul omului n-a venit să I se slujească, ci El să slujească.",truth:["Puterea este încredințare și responsabilitate, nu drept de control.","În familie, biserică sau muncă, intimidarea, constrângerea și abuzul nu devin sfinte prin limbaj religios."],step:"Identifică o putere pe care o ai și folosește-o astăzi pentru siguranța sau binele altuia.",prayer:"Iisuse, curăță-mi puterea de ego și învață-mă s-o folosesc pentru slujire.",journal:"Cine are mai multă libertate și siguranță datorită felului în care îți folosești puterea?",memory:"Fiul omului a venit să slujească."}),

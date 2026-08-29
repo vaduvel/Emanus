@@ -31,6 +31,32 @@ async function seedJourney(
   }, { base: BASE_JOURNEY, override: state })
 }
 
+async function accelerateLesson(page: import("@playwright/test").Page) {
+  await page.addInitScript(() => {
+    const nativeSetTimeout = window.setTimeout.bind(window)
+    window.setTimeout = ((handler: TimerHandler, timeout?: number, ...args: unknown[]) =>
+      nativeSetTimeout(handler, Math.min(timeout ?? 0, 20), ...args)) as typeof window.setTimeout
+  })
+}
+
+async function advanceUntilText(
+  page: import("@playwright/test").Page,
+  expected: string,
+) {
+  const target = page.getByText(expected, { exact: true })
+  for (let attempt = 0; attempt < 120; attempt += 1) {
+    if (await target.isVisible().catch(() => false)) return
+
+    const textarea = page.locator(".chat textarea:visible").first()
+    if (await textarea.count()) await textarea.fill("Prefer să păstrez aici doar un răspuns sigur.")
+
+    const action = page.locator(".chat button:visible:not(:disabled)").first()
+    if (await action.count()) await action.click()
+    else await page.waitForTimeout(25)
+  }
+  throw new Error(`Textul așteptat nu a devenit vizibil: ${expected}`)
+}
+
 const DOOR_ENTRY_CASES = [
   {
     doorId: "doliu",
@@ -62,6 +88,37 @@ for (const entry of DOOR_ENTRY_CASES) {
     await expect(page.getByText(entry.branchCopy, { exact: false })).toBeVisible()
   })
 }
+
+test("jurnalul afișează avertismentul local înaintea câmpului de răspuns", async ({ page }) => {
+  await seedJourney(page, { pathId: "path_temelie", doorId: null })
+  await accelerateLesson(page)
+  await page.goto("/#/program/path%3Apath_temelie/lesson/temelie_l1")
+
+  const privacyNotice = "Răspunsul este opțional. Nu scrie nimic ce nu vrei să rămână salvat pe dispozitivul tău."
+  await advanceUntilText(page, privacyNotice)
+
+  await expect(page.getByText(privacyNotice, { exact: true })).toBeVisible()
+  await expect(page.locator(".journal textarea")).toBeVisible()
+})
+
+test("multi-selectul afișează explicația editorială înaintea opțiunilor", async ({ page }) => {
+  await seedJourney(page, {
+    pathId: "path_suferinta",
+    doorId: null,
+    lessonsDone: 2,
+    completedLessonIds: ["suferinta_l1", "suferinta_l2"],
+    lastLessonDate: "2026-08-01",
+  })
+  await accelerateLesson(page)
+  await page.goto("/#/program/path%3Apath_suferinta/lesson/suferinta_l3")
+
+  const explanation = "Durerea nu stă într-un singur loc. Poți recunoaște mai multe fără să le rezolvi acum."
+  await advanceUntilText(page, explanation)
+
+  await expect(page.getByText(explanation, { exact: true })).toBeVisible()
+  await expect(page.getByText("Unde se simte pierderea cel mai mult?", { exact: true })).toBeVisible()
+  await expect(page.getByRole("button", { name: "În absența de zi cu zi" })).toBeVisible()
+})
 
 const GENERIC_CRISIS_RESOURCES = [
   "Urgențe: ambulanță și poliție",

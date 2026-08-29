@@ -21,9 +21,8 @@ import type { Lesson } from "../domain.js"
  *  - vocea nu se prezintă cu nume de om (vezi GUIDE_NAME în LessonPlayer.tsx).
  *    Motivul: dacă pare o persoană reală, omul crede că cineva îi citește jurnalul.
  *
- * NOTĂ: câmpul `order` de aici e 1 și 2; lecțiile vechi din C2 își păstrează
- * numerotarea 1-7 până la o renumerotare separată. Ordinea reală a drumului e
- * array-ul `pathNeiertare.lessons`, nu `order`.
+ * Câmpul `order` urmează ordinea reală din `pathNeiertare.lessons`: aceste
+ * deschideri sunt sesiunile 1 și 2, iar lecțiile istorice continuă de la 3.
  */
 
 export const neiertareO1: Lesson = {

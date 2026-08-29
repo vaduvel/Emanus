@@ -1,13 +1,29 @@
 import type { Lesson, LessonStep } from "../domain.js"
 
 type Input={id:string;courseId:string;order:number;title:string;refs:string[];ref:string;hook:string;prompt:string;choices:string[];word:string;truth:string[];step:string;prayer:string;journal:string;memory:string}
+type QuizCopy={question:string;wrongA:string;wrongB:string}
 const b=(...text:string[])=>text.map(line=>({from:"guide" as const,text:line}))
-function make(i:Input):Lesson{const p=i.id.replace(/_/g,"");const steps:LessonStep[]=[
+const QUIZ_COPY:Record<string,QuizCopy>={
+munca_l1:{question:"Ce rămâne adevărat despre valoarea ta dacă locul de muncă dispare?",wrongA:"Funcția pierdută decide cât valorez înaintea lui Dumnezeu.",wrongB:"Îmi pot recâștiga identitatea numai printr-un job mai bun."},
+munca_l2:{question:"Cum capătă demnitate lucrul obișnuit?",wrongA:"Contează numai munca prestigioasă și observată de ceilalți.",wrongB:"Merită făcută bine doar sarcina care aduce o recompensă imediată."},
+munca_l3:{question:"Pentru ce este primit un dar?",wrongA:"Darul îmi dovedește superioritatea față de oamenii care nu îl au.",wrongB:"Nu îl folosesc până nu primesc o confirmare perfectă despre întregul traseu."},
+munca_l4:{question:"Ce adevăr îl susține pe omul care a pierdut un loc de muncă?",wrongA:"Șomajul dovedește că nu am avut destulă credință.",wrongB:"Trebuie să mă izolez până când am din nou rezultate de arătat."},
+munca_l5:{question:"Ce limită protejează omul de idolul muncii?",wrongA:"Odihna este permisă numai după ce toate sarcinile au dispărut.",wrongB:"Exploatarea trebuie acceptată în tăcere dacă este numită sacrificiu."},
+integritate_l1:{question:"Ce arată credincioșia în lucrurile pe care nu le vede nimeni?",wrongA:"Lucrurile mici nu afectează caracterul dacă imaginea publică rămâne bună.",wrongB:"Este suficient să fiu cinstit numai când există riscul de a fi descoperit."},
+integritate_l2:{question:"Care este răspunsul integru când adevărul costă?",wrongA:"Ascund faptele până când nu mai există nicio consecință pentru mine.",wrongB:"Folosesc adevărul ca armă, fără grijă pentru persoana care îl aude."},
+integritate_l3:{question:"Ce cere pocăința când furtul mic a devenit obiceiul grupului?",wrongA:"Păstrez practica fiindcă valoarea este mică și toată echipa o acceptă.",wrongB:"Schimb doar numele faptei, ca să nu mai fie nevoie de restituire."},
+integritate_l4:{question:"Ce promisiune susține mărturisirea și drumul restaurării?",wrongA:"Iertarea înseamnă că orice consecință și reparare dispar imediat.",wrongB:"Păstrez fapta ascunsă ca să protejez poziția și reputația celorlalți."},
+timp_l1:{question:"Ce rugăciune reașază felul în care îți folosești zilele?",wrongA:"Trebuie să optimizez fiecare oră ca să nu pierd niciun minut cu odihna.",wrongB:"Timpul se va așeza singur când vor înceta toate urgențele din jur."},
+timp_l2:{question:"Ce adevăr pune o limită stăpânirii telefonului asupra atenției?",wrongA:"Orice aplicație permisă merită acces nelimitat la timpul meu.",wrongB:"Intenția de a folosi mai puțin telefonul este suficientă fără limite concrete."},
+timp_l3:{question:"Ce invitație primește omul obosit?",wrongA:"Oboseala trebuie ignorată până când produce rezultate spirituale mai bune.",wrongB:"Orice simptom persistent se rezolvă doar printr-o noapte liberă."},
+timp_l4:{question:"Cum sună o limită sinceră într-un program aglomerat?",wrongA:"Spun da tuturor cererilor ca nimeni să nu fie dezamăgit de mine.",wrongB:"Evit orice angajament ca să nu mai fiu nevoit să aleg priorități."},
+}
+function make(i:Input):Lesson{const p=i.id.replace(/_/g,"");const quiz=QUIZ_COPY[i.id];if(!quiz)throw new Error(`Lipsește quizul pentru ${i.id}`);const correct={text:i.memory,correct:true};const wrongA={text:quiz.wrongA,correct:false};const wrongB={text:quiz.wrongB,correct:false};const options=i.order%3===1?[correct,wrongA,wrongB]:i.order%3===2?[wrongA,correct,wrongB]:[wrongA,wrongB,correct];const steps:LessonStep[]=[
 {id:`${p}h`,type:"hook",order:1,bubbles:b(i.hook)},
 {id:`${p}c`,type:"choice",order:2,choice:{prompt:i.prompt,options:i.choices.map((label,n)=>({id:`${p}c${n}`,label}))}},
 {id:`${p}s`,type:"scripture",order:3,scripture:{text:i.word,ref:i.ref}},
 {id:`${p}t`,type:"truth_simple",order:4,bubbles:b(...i.truth)},
-{id:`${p}q`,type:"quiz",order:5,quiz:{question:"Care este răspunsul biblic?",options:[{text:"Să-mi construiesc valoarea din performanță.",correct:false},{text:"Să trăiesc cu credincioșie înaintea lui Dumnezeu în lucrul concret.",correct:true},{text:"Să evit responsabilitatea și să aștept o schimbare.",correct:false}],explanation:"Harul nu înlocuiește responsabilitatea; o așază pe temelia identității primite, nu a valorii câștigate."}},
+{id:`${p}q`,type:"quiz",order:5,quiz:{question:quiz.question,options,explanation:i.truth.join(" ")}},
 {id:`${p}a`,type:"step",order:6,bubbles:b(i.step)},
 {id:`${p}r`,type:"prayer",order:7,bubbles:b(i.prayer)},
 {id:`${p}j`,type:"journal",order:8,journalPrompt:i.journal},

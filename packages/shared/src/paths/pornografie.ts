@@ -1,7 +1,7 @@
 import type { Lesson } from "../domain.js"
 
 /*
- * Ușa „pornografie" — două lecții suplimentare în camera 1 (path_acasa).
+ * Ușa „pornografie" — două lecții contextuale în path_schimbare.
  *
  * Cui îi scriem
  * ------------
@@ -46,7 +46,7 @@ import type { Lesson } from "../domain.js"
 
 export const pornografieL1: Lesson = {
   id: "pornografie_l1",
-  courseId: "path_acasa",
+  courseId: "path_schimbare",
   order: 41,
   title: "Ușa pe care intri singur",
   estMinutes: 9,
@@ -210,7 +210,7 @@ export const pornografieL1: Lesson = {
 
 export const pornografieL2: Lesson = {
   id: "pornografie_l2",
-  courseId: "path_acasa",
+  courseId: "path_schimbare",
   order: 42,
   title: "Ce rupe cercul",
   estMinutes: 11,

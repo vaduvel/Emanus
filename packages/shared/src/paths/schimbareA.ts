@@ -472,7 +472,7 @@ export const schimbareL3: Lesson = {
         {
           from: "guide",
           text:
-            "Aproape toti se lupta la veriga a treia, cand deja e in curs. Lupta se caștiga la prima, unde nu e nici dramatic, nici spiritual: cu telefonul in mana, la unsprezece noaptea.",
+            "Aproape toți se luptă la veriga a treia, când deja e în curs. Lupta se câștigă la prima, unde nu e nici dramatic, nici spiritual: cu telefonul în mână, la unsprezece noaptea.",
         },
       ],
     },
@@ -523,12 +523,12 @@ export const schimbareL3: Lesson = {
       type: "quiz",
       order: 6,
       quiz: {
-        question: "Unde se caștiga, practic, lupta?",
+        question: "Unde se câștigă, practic, lupta?",
         options: [
           { text: "In momentul ispitei, cu voința", correct: false },
           { text: "La prima veriga: ce hranesti si ce tai inainte sa apara impulsul", correct: true },
           { text: "Dupa cadere, prin regret puternic", correct: false },
-          { text: "Nu se caștiga; doar te obisnuiesti sa pierzi mai rar", correct: false },
+          { text: "Nu se câștigă; doar te obișnuiești să pierzi mai rar", correct: false },
         ],
         explanation:
           "Iacov descrie un proces cu verigi. Cand ai ajuns la «zamislit», decizia e aproape luata. De aia oamenii care se schimba real nu sunt mai puternici — si-au schimbat mediul, orele si accesul.",

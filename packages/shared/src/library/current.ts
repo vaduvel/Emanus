@@ -66,7 +66,38 @@ const live:Record<string,string[]>={
  doctrine_c1_biblia:ids("biblia_l",6),doctrine_c3_biserica:ids("biserica_l",5),lib_rug_inceput:ids("rug_inceput_l",9),spiritual_c1_lumea_nevazuta:ids("spirit_lumea_l",6),spiritual_c2_discernamant:ids("spirit_discern_l",6),spiritual_c3_blessings:ids("spirit_blestem_l",6),spiritual_c4_libertate:ids("spirit_libertate_l",7),
 }
 const open=(c:LibraryCourse):LibraryCourse=>live[c.id]?{...c,lessonIds:live[c.id],plannedLessons:live[c.id].length,state:"live"}:c
-const course=(id:string,title:string,n:number,state:"live"|"planned"="planned",forWhom="Vrei formare biblică practică în această etapă.",extra:Partial<LibraryCourse>={}):LibraryCourse=>({id,title,forWhom,plannedLessons:n,lessonIds:state==="live"?live[id]:[],state,source:"Scriptura; Carta doctrinară; programa Emanus",...extra})
+const LIVE_COURSE_FOR_WHOM:Record<string,string>={
+ identitate_c1_chip:"Te definești prin roluri, performanță sau părerea altora și vrei să-ți reașezi identitatea în lumina Scripturii.",
+ identitate_c2_caracter:"Vrei să observi ce trăsături ale caracterului tău cer practică și formare după modelul lui Hristos.",
+ barbati_c1_formare:"Simți presiunea stereotipurilor despre bărbăție și vrei repere biblice pentru o viață matură și responsabilă.",
+ barbati_c2_lupta:"Te confrunți cu rușine, furie, izolare sau ispite și vrei să răspunzi cu adevăr și responsabilitate.",
+ barbati_c3_relatii:"Vrei să comunici mai limpede, să respecți limitele și să fii prezent în relațiile importante.",
+ barbati_c4_sot:"Ești soț sau te pregătești pentru căsătorie și vrei să practici iubirea jertfitoare, ascultarea și repararea relației.",
+ barbati_c5_tata:"Ești tată și vrei să fii mai prezent, consecvent și atent la nevoile reale ale copilului tău.",
+ femei_c1_formare:"Simți presiunea imaginii, a comparației sau a rolurilor și vrei repere biblice pentru formarea ta.",
+ femei_c2_lupta:"Te lupți cu rușinea, comparația, frica sau resentimentul și vrei să le aduci în adevăr.",
+ femei_c3_relatii:"Vrei să recunoști dinamici sănătoase, să pui limite și să comunici fără să te pierzi pe tine.",
+ femei_c4_sotie:"Ești soție sau te pregătești pentru căsătorie și vrei să cultivi parteneriatul, respectul și dialogul sincer.",
+ femei_c5_mama:"Te simți absorbită de rolul de mamă și vrei să păstrezi identitatea, limitele și relațiile importante.",
+ comun_c1_singuratate:"Te simți singur chiar și între oameni și vrei să construiești apartenență prin pași mici și sinceri.",
+ comun_c2_intalniri:"Ești la începutul unei relații sau cauți una și vrei criterii clare pentru alegeri, ritm și limite.",
+ comun_c3_sexualitate:"Vrei să privești trupul, sexualitatea, pornografia și curăția fără rușine ascunsă sau răspunsuri simpliste.",
+ comun_c4_limite:"Îți este greu să spui nu, să ceri acordul sau să respecți limitele și vrei să exersezi relații responsabile.",
+ comun_c5_siguranta:"Ai trăit control, intimidare sau abuz și ai nevoie să recunoști pericolul și să cauți sprijin sigur.",
+ comun_c6_partener:"Credința nu este împărtășită în cuplul tău și vrei să rămâi fidel fără presiune, dispreț sau izolare.",
+ comun_c7_copil:"Relația cu copilul tău s-a răcit sau s-a rupt și vrei să păstrezi adevărul, răbdarea și o ușă deschisă.",
+ spiritual_c1_lumea_nevazuta:"Ai întrebări despre îngeri, demoni și lupta spirituală și vrei să separi Scriptura de folclor și panică.",
+ spiritual_c2_discernamant:"Vrei să deosebești ispita, suferința, responsabilitatea personală și limbajul biblic despre lupta spirituală.",
+ spiritual_c3_blessings:"Te temi de blesteme, legături sau «uși deschise» și vrei să verifici aceste idei în context biblic.",
+ spiritual_c4_libertate:"Cauți libertate și autoritate în Hristos și vrei repere biblice pentru rugăciune, rezistență și responsabilitate.",
+}
+const defaultForWhom=(id:string,title:string,state:"live"|"planned"):string=>{
+ if(state==="planned")return `Cursul „${title}” este în pregătire; descrierea va fi publicată după revizia editorială.`
+ const description=LIVE_COURSE_FOR_WHOM[id]
+ if(!description)throw new Error(`Lipsește descrierea publicului pentru cursul live ${id}.`)
+ return description
+}
+const course=(id:string,title:string,n:number,state:"live"|"planned"="planned",forWhom=defaultForWhom(id,title,state),extra:Partial<LibraryCourse>={}):LibraryCourse=>({id,title,forWhom,plannedLessons:n,lessonIds:state==="live"?live[id]:[],state,source:"Scriptura; Carta doctrinară; programa Emanus",...extra})
 const shelf=(id:string,title:string,blurb:string,courses:LibraryCourse[]):LibraryShelf=>({id,title,blurb,courses})
 const contextual=course("lib_rug_context","Rugăciuni pentru ritmul zilei",11,"live","Vrei rugăciuni pentru dimineață, muncă, masă, familie, călătorie, nevoi și seară.")
 const providence=course("doctrine_c5_providenta","Providență, boală, disciplină și suferință",6,"live","Vrei adevăr despre suferință fără vină inventată și fără negarea disciplinei biblice.")

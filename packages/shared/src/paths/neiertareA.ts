@@ -13,7 +13,7 @@ import type { Lesson } from "../domain.js"
 export const neiertareL1: Lesson = {
   id: "neiertare_l1",
   courseId: "path_neiertare",
-  order: 1,
+  order: 3,
   title: "Ce ti s-a facut a fost real",
   estMinutes: 9,
   anchorRefs: ["Psalm 34:18", "Psalm 56:8"],
@@ -168,7 +168,7 @@ export const neiertareL1: Lesson = {
 export const neiertareL2: Lesson = {
   id: "neiertare_l2",
   courseId: "path_neiertare",
-  order: 2,
+  order: 4,
   title: "Dumnezeu n-a fost de partea lui",
   estMinutes: 10,
   anchorRefs: ["Geneza 3:1-5", "Ioan 10:10", "Romani 12:19"],
@@ -326,7 +326,7 @@ export const neiertareL2: Lesson = {
       id: "n2_13",
       type: "journal",
       order: 13,
-      journalPrompt: "Ce ai crezut până azi despre Dumnezeu, în legătură cu ce ți s-a întâmplat?",
+      journalPrompt: "Când te gândești la ce ți s-a întâmplat, unde Îl așezi pe Dumnezeu în poveste? Ce lumină aduce Ioan 10:10, chiar dacă întrebările nu dispar?",
       reward: { xp: 0 },
     },
   ],
@@ -335,7 +335,7 @@ export const neiertareL2: Lesson = {
 export const neiertareL3: Lesson = {
   id: "neiertare_l3",
   courseId: "path_neiertare",
-  order: 3,
+  order: 5,
   title: "De ce te tine si acum",
   estMinutes: 10,
   anchorRefs: ["Evrei 12:15", "Efeseni 4:26-27"],

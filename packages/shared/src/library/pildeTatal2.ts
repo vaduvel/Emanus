@@ -221,7 +221,7 @@ export const pildaRobulDatornic: Lesson = {
       quiz: {
         question: "Care e punctul principal al pildei?",
         options: [
-          { text: "Că iertarea altora e condiția ca Dumnezeu să te ierte", correct: false },
+          { text: "Că poți cumpăra iertarea lui Dumnezeu iertând suficienți oameni", correct: false },
           { text: "Proporția: ai fost iertat de o datorie imposibil de plătit", correct: true },
           { text: "Că datoriile trebuie plătite oricum", correct: false },
         ],

@@ -68,6 +68,8 @@ jobs:
             pnpm check:typos
             echo '=== check:content ==='
             pnpm check:content
+            echo '=== check:course-repetition ==='
+            pnpm check:course-repetition
             echo '=== git diff --check ==='
             git diff --check
           } 2>&1 | tee /tmp/verify.log

@@ -12,7 +12,7 @@ import {
   searchDoors,
 } from "@emanus/shared/paths"
 import { chooseDoor } from "../journey"
-import { doorProgramId, learningProgramUrl } from "../learningPrograms"
+import { doorProgramId, learningProgramUrl, promiseForLessonCount } from "../learningPrograms"
 import { navigate } from "../router"
 
 function doorFromLink(): string | null {
@@ -21,6 +21,18 @@ function doorFromLink(): string | null {
   if (q === -1) return null
   const id = new URLSearchParams(hash.slice(q + 1)).get("u")
   return id && getDoor(id) ? id : null
+}
+
+function clearDoorFromLink(): void {
+  const hash = window.location.hash
+  const q = hash.indexOf("?")
+  if (q === -1) return
+  const params = new URLSearchParams(hash.slice(q + 1))
+  if (!params.has("u")) return
+  params.delete("u")
+  const query = params.toString()
+  const cleanHash = `${hash.slice(0, q)}${query ? `?${query}` : ""}`
+  window.history.replaceState(window.history.state, "", `${window.location.pathname}${window.location.search}${cleanHash}`)
 }
 
 export function Doors() {
@@ -38,7 +50,7 @@ export function Doors() {
   if (!safetyChecked) return <SafetyCheck onContinue={() => setSafetyChecked(true)} />
 
   if (askLink) {
-    return <FromCreator doorId={askLink} onYes={(id) => { setAskLink(null); setPicked(id) }} onNo={() => setAskLink(null)} />
+    return <FromCreator doorId={askLink} onYes={(id) => { clearDoorFromLink(); setAskLink(null); setPicked(id) }} onNo={() => { clearDoorFromLink(); setAskLink(null) }} />
   }
   if (picked) return <Confirm doorId={picked} onBack={() => setPicked(null)} />
 
@@ -173,7 +185,7 @@ function Confirm({ doorId, onBack }: { doorId: string; onBack: () => void }) {
       <div className="confirm__card">
         <p className="experience-eyebrow">Traseul tău</p>
         <h2 className="confirm__title">{path.title}</h2>
-        <p className="confirm__promise">{path.promise}</p>
+        <p className="confirm__promise">{promiseForLessonCount(path.promise, path.lessons.length)}</p>
         <p className="confirm__meta">{path.lessons.length} sesiuni · ritm ghidat · {minutes} minute primul pas</p>
       </div>
       <p className="confirm__note">Progresul rămâne aici când faci o pauză. Poți schimba drumul oricând.</p>

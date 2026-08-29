@@ -7,6 +7,7 @@
     "dev": "node ../../scripts/materialize-bible-reader.mjs && vite",
     "build": "node ../../scripts/materialize-bible-reader.mjs && vite build",
     "preview": "vite preview",
+    "test:course-repetition": "playwright test tests/course-repetition.spec.ts --workers=1 --retries=0",
     "test:smoke:bible": "playwright test tests/bible-reader.spec.ts",
     "typecheck": "tsc --noEmit"
   },

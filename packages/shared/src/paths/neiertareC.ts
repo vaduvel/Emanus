@@ -12,7 +12,7 @@ import type { Lesson } from "../domain.js"
 export const neiertareL6: Lesson = {
   id: "neiertare_l6",
   courseId: "path_neiertare",
-  order: 6,
+  order: 8,
   title: "Iertarea nu e un sentiment",
   estMinutes: 11,
   anchorRefs: ["Efeseni 4:31-32", "Marcu 11:25"],
@@ -170,7 +170,7 @@ export const neiertareL6: Lesson = {
 export const neiertareL7: Lesson = {
   id: "neiertare_l7",
   courseId: "path_neiertare",
-  order: 7,
+  order: 9,
   title: "Ce fac când revine",
   estMinutes: 10,
   anchorRefs: ["Matei 6:12", "Luca 6:28", "Filipeni 1:6"],
@@ -304,7 +304,7 @@ export const neiertareL7: Lesson = {
       id: "n7_12",
       type: "journal",
       order: 12,
-      journalPrompt: "Ce e altfel azi față de ziua întâi?",
+      journalPrompt: "Ce este diferit astăzi în felul în care porți rana și ce mai cere timp?",
       reward: { xp: 0 },
     },
   ],

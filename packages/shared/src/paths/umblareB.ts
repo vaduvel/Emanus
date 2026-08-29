@@ -386,7 +386,7 @@ export const umblareL6: Lesson = {
         },
         {
           from: "guide",
-          text: "Trei: dacă nu e niciuna, atunci e ceea ce oamenii vechi numeau tacerea care creste. El Se retrage un pas ca sa nu mai umbli dupa senzatie, ci dupa El.",
+          text: "Trei: dacă nu e niciuna, atunci e ceea ce oamenii vechi numeau tăcerea care crește. El Se retrage un pas ca să nu mai umbli după senzație, ci după El.",
         },
       ],
     },

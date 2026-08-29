@@ -525,10 +525,8 @@ export const pathAcasa: PathDef = {
  * ierta cât timp Îl bănuiește pe Dumnezeu că a fost de partea celui care l-a
  * rănit. Aceeași lumină, alt geam.
  *
- * DE FĂCUT: lecțiile 3-9 (fostele 1-7) își păstrează `order` 1-7 din vechea
- * numerotare, iar `neiertare_l1` mai conține prezentarea "Sunt Daniel", care
- * acum se face în `neiertare_o1`. De curățat la o trecere separată; ordinea
- * reală a drumului e array-ul `lessons`, nu `order`.
+ * Lecțiile istorice au fost renumerotate 3-9, după cele două deschideri, astfel
+ * încât metadata și ordinea reală din array-ul `lessons` spun același lucru.
  *
  * REZOLVAT (docs/23 §3, defectul D2): patru uși cădeau aici și primeau un drum
  * despre iertare, deși nu aveau pe cine ierta. `divort` a primit `path_divort`,

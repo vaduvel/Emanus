@@ -307,7 +307,7 @@ export const harL2: Lesson = {
         question: "Ce nu știa fiul cel mare?",
         options: [
           { text: "Ca tatal e bogat", correct: false },
-          { text: "Ca tot ce e al tatalui era deja al lui — nu avea de caștigat nimic", correct: true },
+          { text: "Că tot ce e al tatălui era deja al lui — nu avea de câștigat nimic", correct: true },
           { text: "Ca fratele lui se va intoarce", correct: false },
           { text: "Ca trebuia sa munceasca mai mult", correct: false },
         ],
@@ -610,7 +610,7 @@ export const harL4: Lesson = {
         {
           from: "guide",
           text:
-            "Daca trei lectii la rand ți-am spus ca nu se caștiga nimic, e normal sa apara intrebarea: atunci de ce sa mai fac ceva?",
+            "Dacă trei lecții la rând ți-am spus că nu se câștigă nimic, e normal să apară întrebarea: atunci de ce să mai fac ceva?",
         },
         { from: "guide", text: "Intrebarea e corecta si Biblia ii raspunde direct." },
       ],
@@ -1142,7 +1142,7 @@ export const harL7: Lesson = {
         {
           from: "guide",
           text:
-            "In dreptul roman, diferenta dintre rob si fiu nu era cat de bine muncea. Robul putea fi mai harnic. Diferenta era statutul, si el nu se caștiga prin muncă.",
+            "În dreptul roman, diferența dintre rob și fiu nu era cât de bine muncea. Robul putea fi mai harnic. Diferența era statutul, și el nu se câștiga prin muncă.",
         },
         {
           from: "guide",

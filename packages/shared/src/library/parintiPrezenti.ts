@@ -2,17 +2,44 @@ import type { Lesson, LessonStep } from "../domain.js"
 
 type I={id:string;courseId:string;order:number;title:string;refs:string[];ref:string;hook:string;word:string;truth:string[];step:string;prayer:string;journal:string;memory:string}
 const b=(...text:string[])=>text.map(line=>({from:"guide" as const,text:line}))
-function make(i:I):Lesson{const p=i.id.replace(/_/g,"");const steps:LessonStep[]=[
+const QUIZ_DISTRACTORS:Record<string,[string,string]>={
+tata_prezent_l1:["Să reduc rolul tatălui la bani și reguli.","Să las relația și adevărul doar pentru momente solemne."],
+tata_prezent_l2:["Să ofer corectare frecventă și afecțiune doar după performanță.","Să laud doar rezultatul și conformarea copilului."],
+tata_prezent_l3:["Să folosesc frica și umilirea pentru conformare rapidă.","Să numesc amenințarea sau lovirea disciplină sigură."],
+tata_prezent_l4:["Să cer copilului o imagine spirituală fără întrebări.","Să vorbesc despre Dumnezeu fără să-mi recunosc greșelile."],
+tata_prezent_l5:["Să-mi apăr autoritatea evitând să-mi recunosc greșeala.","Să cer copilului să mă consoleze după scuze."],
+tata_prezent_l6:["Să păstrez controlul potrivit copilăriei și asupra adultului.","Să folosesc banii ori aprobarea pentru a-i conduce alegerile."],
+mama_fara_pierdere_l1:["Să-mi măsor valoarea numai prin rolul de mamă.","Să numesc egoism orice odihnă sau ajutor primit."],
+mama_fara_pierdere_l2:["Să urmez fiecare standard al mamei perfecte din social media.","Să tratez orice greșeală drept condamnarea întregii mele identități."],
+mama_fara_pierdere_l3:["Să spiritualizez simptomele și să amân ajutorul medical.","Să cer ajutor doar generic, fără un pas concret pentru refacere."],
+mama_fara_pierdere_l4:["Să descarc epuizarea asupra copilului prin rușinare.","Să folosesc frica de Dumnezeu pentru conformare."],
+mama_fara_pierdere_l5:["Să fac din copil terapeutul și aliatul meu în probleme adulte.","Să-i cer copilului să poarte singurătatea sau căsnicia mea."],
+mama_fara_pierdere_l6:["Să tratez diferențele copilului ca pe un eșec personal.","Să controlez viața adultă prin vinovăție și invadare."],
+}
+const QUIZ_QUESTIONS:Record<string,string>={
+tata_prezent_l1:"Unde se formează prezența spirituală a tatălui?",
+tata_prezent_l2:"Ce fel de cuvinte și afecțiune construiesc siguranța copilului?",
+tata_prezent_l3:"Ce trebuie să evite disciplina care vrea să formeze, nu să umilească?",
+tata_prezent_l4:"Unde trebuie să înceapă credința pe care tatăl o transmite?",
+tata_prezent_l5:"Ce face autoritatea credibilă după o greșeală?",
+tata_prezent_l6:"Cum rămâne tatăl aproape fără să controleze copilul care crește?",
+mama_fara_pierdere_l1:"Ce identitate rămâne înainte și dincolo de rolul de mamă?",
+mama_fara_pierdere_l2:"Ce adevăr răspunde condamnării mamei imperfecte?",
+mama_fara_pierdere_l3:"Ce răspuns concret respectă limitele trupului și minții?",
+mama_fara_pierdere_l4:"Ce protejează nădejdea copilului în disciplină?",
+mama_fara_pierdere_l5:"Cine trebuie să poarte poverile adulte ale mamei?",
+mama_fara_pierdere_l6:"Cum poate mama iubi copilul adult fără control?",
+}
+const quizOptions=(order:number,correctText:string,[wrongAText,wrongBText]:[string,string])=>{const correct={text:correctText,correct:true};const wrongA={text:wrongAText,correct:false};const wrongB={text:wrongBText,correct:false};return order%3===1?[correct,wrongA,wrongB]:order%3===2?[wrongA,correct,wrongB]:[wrongA,wrongB,correct]}
+function make(i:I):Lesson{const p=i.id.replace(/_/g,"");const distractors=QUIZ_DISTRACTORS[i.id];const question=QUIZ_QUESTIONS[i.id];if(!distractors)throw new Error(`Lipsesc distractorii pentru ${i.id}`);if(!question)throw new Error(`Lipsește întrebarea pentru ${i.id}`);const steps:LessonStep[]=[
 {id:`${p}h`,type:"hook",order:1,bubbles:b(i.hook)},
-{id:`${p}c`,type:"choice",order:2,choice:{prompt:"Unde este provocarea cea mai mare?",options:[{id:`${p}1`,label:"În prezență și timp."},{id:`${p}2`,label:"În emoții și disciplină."},{id:`${p}3`,label:"În vinovăție și oboseală."}]}},
-{id:`${p}s`,type:"scripture",order:3,scripture:{text:i.word,ref:i.ref}},
-{id:`${p}t`,type:"truth_simple",order:4,bubbles:b(...i.truth)},
-{id:`${p}q`,type:"quiz",order:5,quiz:{question:"Care este direcția sănătoasă?",options:[{text:"Control prin frică și rușine.",correct:false},{text:i.memory,correct:true},{text:"Părintele trebuie să fie perfect.",correct:false}],explanation:"Părintele matur oferă prezență, adevăr, limite sigure, reparare și ajutor potrivit, fără să ceară copilului să poarte viața adultului."}},
-{id:`${p}a`,type:"how_god_helps",order:6,bubbles:b("Dumnezeu lucrează și prin părinți imperfecți care se pocăiesc, repară și caută ajutor.","Copilul nu primește responsabilitatea spirituală de a vindeca familia, iar abuzul nu este disciplină biblică.")},
-{id:`${p}p`,type:"step",order:7,bubbles:b(i.step)},
-{id:`${p}r`,type:"prayer",order:8,bubbles:b(i.prayer)},
-{id:`${p}j`,type:"journal",order:9,journalPrompt:i.journal},
-{id:`${p}m`,type:"memory_verse",order:10,scripture:{text:i.memory,ref:i.ref}},
+{id:`${p}s`,type:"scripture",order:2,scripture:{text:i.word,ref:i.ref}},
+{id:`${p}t`,type:"truth_simple",order:3,bubbles:b(...i.truth)},
+{id:`${p}q`,type:"quiz",order:4,quiz:{question,options:quizOptions(i.order,i.memory,distractors),explanation:i.truth.join(" ")}},
+{id:`${p}p`,type:"step",order:5,bubbles:b(i.step)},
+{id:`${p}r`,type:"prayer",order:6,bubbles:b(i.prayer)},
+{id:`${p}j`,type:"journal",order:7,journalPrompt:i.journal},
+{id:`${p}m`,type:"memory_verse",order:8,scripture:{text:i.memory,ref:i.ref}},
 ];return{id:i.id,courseId:i.courseId,order:i.order,title:i.title,estMinutes:10,anchorRefs:i.refs,memoryVerseRef:i.ref,steps}}
 
 export const TATA_PREZENT_LESSONS:Lesson[]=[
