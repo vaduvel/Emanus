@@ -53,6 +53,10 @@
   min-width: 0;
 }
 .lesson-turn:focus { outline: none; }
+.chat__restore-space {
+  flex: 0 0 calc(100% - 24px);
+  pointer-events: none;
+}
 .lesson-turn:focus-visible {
   border-radius: var(--radius-sm);
   outline: 2px solid var(--accent);

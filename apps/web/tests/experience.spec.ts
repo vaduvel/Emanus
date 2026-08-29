@@ -183,7 +183,7 @@ test.describe("darurile zilnice", () => {
     await page.goto("/#/devotional")
     await expect(page.getByText("Un singur lucru pentru azi", { exact: true })).toBeVisible()
     const theme = await page.getByRole("heading", { level: 1 }).innerText()
-    await page.getByRole("button", { name: "Arata versetul acum" }).click()
+    await page.getByRole("button", { name: "Arată versetul acum" }).click()
     await page.getByRole("button", { name: /Am citit și răspund/u }).click()
 
     await expect(page.getByText("Ajunge pentru azi.", { exact: true })).toBeVisible()
@@ -221,10 +221,17 @@ test.describe("darurile zilnice", () => {
     await page.locator(".scroll-choices button").first().click()
 
     await expect(page.getByRole("heading", { name: "Pergamentul s-a deschis" })).toBeVisible()
-    await page.getByRole("button", { name: "Arata versetul acum" }).click()
+    await page.getByRole("button", { name: "Arată versetul acum" }).click()
     const reference = await page.locator(".reveal__ref").innerText()
     await expect(page.getByRole("button", { name: /Citește în context/u })).toBeVisible()
     await expect(page.getByText("Sulul se strânge acum.", { exact: false })).toBeVisible()
+
+    await page.setViewportSize({ width: 390, height: 844 })
+    const helpBox = await page.locator(".helpbar").boundingBox()
+    const contextBox = await page.getByRole("button", { name: /Citește în context/u }).boundingBox()
+    expect(helpBox).not.toBeNull()
+    expect(contextBox).not.toBeNull()
+    expect((helpBox?.y ?? 0) + (helpBox?.height ?? 0)).toBeLessThanOrEqual(contextBox?.y ?? 0)
 
     await page.reload()
     await expect(page.getByRole("heading", { name: "Pergamentul s-a deschis" })).toBeVisible()
@@ -241,10 +248,11 @@ test.describe("darurile zilnice", () => {
   test("candela salvează reflecția de seară", async ({ page }) => {
     await page.goto("/#/candela")
     await expect(page.getByRole("heading", { name: "Lumina pentru următorul pas" })).toBeVisible()
-    await page.getByRole("button", { name: "Arata versetul acum" }).click()
+    await page.getByRole("button", { name: "Arată versetul acum" }).click()
     const reference = await page.locator(".reveal__ref").innerText()
+    await expect(page.locator(".reveal--lamp .reveal__step")).toHaveCSS("color", "rgb(255, 248, 232)")
     await page.reload()
-    await page.getByRole("button", { name: "Arata versetul acum" }).click()
+    await page.getByRole("button", { name: "Arată versetul acum" }).click()
     await expect(page.locator(".reveal__ref")).toHaveText(reference)
     await page.getByRole("textbox", { name: "Unde a fost Dumnezeu azi? Două rânduri sunt suficiente." }).fill("Am văzut ajutorul lui Dumnezeu într-o conversație.")
     await page.getByRole("button", { name: /Pun deoparte/u }).click()

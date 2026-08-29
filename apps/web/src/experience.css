@@ -809,19 +809,28 @@
   box-shadow: 0 0 0 3px rgba(214, 155, 41, 0.12);
 }
 
-/* Ajutorul rămâne permanent, dar nu rupe compoziția ecranelor imersive. */
+/* Ajutorul rămâne permanent fără să acopere conținutul ecranelor imersive. */
+.app:has(.experience-shell) {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .app:has(.experience-shell) > .helpbar {
-  position: fixed;
+  position: sticky;
   z-index: 35;
-  right: 12px;
-  bottom: calc(78px + env(safe-area-inset-bottom, 0px));
-  width: auto;
-  margin: 0;
-  padding: 9px 11px;
+  top: max(0px, env(safe-area-inset-top, 0px));
+  right: auto;
+  bottom: auto;
+  justify-content: center;
+  width: min(100%, 540px);
+  max-width: 540px;
+  margin: 0 auto 12px;
+  padding: 8px 14px;
   border: 1px solid rgba(140, 63, 58, 0.2);
-  border-radius: 999px;
-  box-shadow: 0 8px 24px rgba(67, 35, 32, 0.13);
-  font-size: 0.75rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(67, 35, 32, 0.1);
+  font-size: 0.8rem;
 }
 
 @keyframes experience-rise {

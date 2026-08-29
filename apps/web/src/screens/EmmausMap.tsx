@@ -145,6 +145,7 @@ export function EmmausMap() {
             <button
               key={s.id}
               type="button"
+              className="emmaus-map__station"
               disabled={!reachable}
               onClick={() => reachable && setSelected(s)}
               aria-label={reachable ? s.labelRo : "Încă în ceață"}
@@ -152,19 +153,33 @@ export function EmmausMap() {
                 position: "absolute",
                 bottom: `${s.mapPosition * 100}%`,
                 left: i % 2 === 0 ? "22%" : "62%",
-                width: size,
-                height: size,
+                display: "grid",
+                placeItems: "center",
+                width: 44,
+                height: 44,
                 padding: 0,
+                transform: "translate(-50%, 50%)",
                 borderRadius: "50%",
-                border: st === "current" ? `2px solid ${AMBER}` : "none",
-                background:
-                  st === "passed" ? AMBER : st === "current" ? "#FFF7EA" : MIST,
-                boxShadow: st === "current" ? `0 0 14px ${AMBER}` : "none",
+                border: "none",
+                background: "transparent",
                 cursor: reachable ? "pointer" : "default",
-                transition: calm ? "none" : "background 600ms ease, box-shadow 600ms ease",
                 zIndex: 3,
               }}
-            />
+            >
+              <span
+                aria-hidden
+                style={{
+                  display: "block",
+                  width: size,
+                  height: size,
+                  borderRadius: "50%",
+                  border: st === "current" ? `2px solid ${AMBER}` : "none",
+                  background: st === "passed" ? AMBER : st === "current" ? "#FFF7EA" : MIST,
+                  boxShadow: st === "current" ? `0 0 14px ${AMBER}` : "none",
+                  transition: calm ? "none" : "background 600ms ease, box-shadow 600ms ease",
+                }}
+              />
+            </button>
           )
         })}
 

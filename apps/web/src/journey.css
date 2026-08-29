@@ -48,6 +48,12 @@
   filter: brightness(0.98);
 }
 
+.emmaus-map__station:focus-visible {
+  outline: 3px solid #fff7ea;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--gold, #d69b29);
+}
+
 /* --- Primul contact --- */
 .welcome {
   padding: 32px 22px 40px;

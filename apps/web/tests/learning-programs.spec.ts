@@ -146,6 +146,16 @@ test("Drumul Emanus include cursurile publice și poate ajunge la stația opt", 
   expect(result.axesTouched).toBe(6)
 })
 
+test("stațiile de pe Drumul Emanus au ținte tactile complete", async ({ page }) => {
+  await page.goto("/#/drum")
+  const station = page.getByRole("button", { name: "Plecarea din Ierusalim" })
+  await expect(station).toBeVisible()
+  const box = await station.boundingBox()
+  expect(box).not.toBeNull()
+  expect(box?.width ?? 0).toBeGreaterThanOrEqual(44)
+  expect(box?.height ?? 0).toBeGreaterThanOrEqual(44)
+})
+
 test("harta Drumul Emanus citește progresul păstrat în cursurile Bibliotecii", async ({ page }) => {
   const openCourses = ALL_LIBRARY_COURSES.filter(courseIsOpen)
   const programs = Object.fromEntries(openCourses.map((course) => [`course:${course.id}`, {
@@ -196,7 +206,7 @@ test("traseul din Poartă are o singură sesiune activă și viitorul blocat", a
   await expect(page).toHaveURL(/#\/program\/path%3Apath_acasa\/lesson\/rusine_l1$/u)
   await expect(page.getByRole("heading", { name: "Siguranța vine prima" })).toBeVisible()
   await page.getByRole("button", { name: "Sunt în siguranță acum și continui" }).click()
-  await expect(page.getByRole("heading", { name: "El S-a miscat primul" })).toBeVisible()
+  await expect(page.getByRole("heading", { name: "El S-a mișcat primul" })).toBeVisible()
   await expect(page.getByText("Sesiunea 1 din 7", { exact: true })).toBeVisible()
 })
 
@@ -390,7 +400,16 @@ test("o lecție începută revine la același pas după refresh", async ({ page 
 
   await page.reload()
   await expect(page.getByText("Pas 2/12", { exact: true })).toBeVisible()
-  await expect(page.getByText("Poți avea un program plin și totuși să te întrebi dacă prezența ta schimbă ceva.", { exact: true })).toBeVisible()
+  const currentTurn = page.locator(".lesson-turn").last()
+  await expect(currentTurn).toContainText("Poți avea un program plin și totuși să te întrebi dacă prezența ta schimbă ceva.")
+  const alignment = await page.locator(".chat").evaluate((chat, turn) => {
+    const chatRect = chat.getBoundingClientRect()
+    const turnRect = (turn as HTMLElement).getBoundingClientRect()
+    return { chatTop: chatRect.top, chatBottom: chatRect.bottom, turnTop: turnRect.top, turnBottom: turnRect.bottom }
+  }, await currentTurn.elementHandle())
+  expect(alignment.turnTop).toBeGreaterThanOrEqual(alignment.chatTop)
+  expect(alignment.turnTop).toBeLessThan(alignment.chatTop + 32)
+  expect(alignment.turnBottom).toBeLessThanOrEqual(alignment.chatBottom)
 })
 
 test("un răspuns deja salvat nu blochează reluarea pe ecranul alegerii", async ({ page }) => {

@@ -236,7 +236,7 @@ test("deep link-ul legacy păstrează programul ușii active", async ({ page }) 
 
   await expect(page.getByRole("heading", { name: "Siguranța vine prima" })).toBeVisible()
   await page.getByRole("button", { name: "Sunt în siguranță acum și continui" }).click()
-  await expect(page.getByRole("heading", { name: "El S-a miscat primul" })).toBeVisible()
+  await expect(page.getByRole("heading", { name: "El S-a mișcat primul" })).toBeVisible()
   await expect(page.getByText("Sesiunea 1 din 7", { exact: true })).toBeVisible()
 
   await page.getByRole("button", { name: "Program", exact: true }).click()
@@ -262,7 +262,7 @@ test("URL-ul vechi explicit al lecției deschide sesiunea ușii active", async (
   await expect(page.getByText("Sesiune blocată", { exact: true })).toHaveCount(0)
   await expect(page.getByRole("heading", { name: "Siguranța vine prima" })).toBeVisible()
   await page.getByRole("button", { name: "Sunt în siguranță acum și continui" }).click()
-  await expect(page.getByRole("heading", { name: "El S-a miscat primul" })).toBeVisible()
+  await expect(page.getByRole("heading", { name: "El S-a mișcat primul" })).toBeVisible()
   await expect(page.getByText("Sesiunea 1 din 7", { exact: true })).toBeVisible()
 })
 

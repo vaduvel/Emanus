@@ -235,8 +235,26 @@ export function LessonPlayer({ lesson, onComplete, submitting = false, initialSt
   const scrollRef = useRef<HTMLDivElement>(null)
   const currentTurnRef = useRef<HTMLDivElement>(null)
   const focusNextStep = useRef(false)
+  const [restoredAnchorId, setRestoredAnchorId] = useState<string | null>(
+    restored.revealed.length > 1 ? restored.revealed.at(-1)?.id ?? null : null,
+  )
   const current = revealed[revealed.length - 1]
-  useEffect(() => { scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" }) }, [revealed.length, bubbleCounts, quizAnswers, checkIns])
+  useEffect(() => {
+    const chat = scrollRef.current
+    if (!chat) return
+    if (restoredAnchorId === current?.id && currentTurnRef.current) {
+      const frame = window.requestAnimationFrame(() => {
+        const turn = currentTurnRef.current
+        if (!turn) return
+        const chatRect = chat.getBoundingClientRect()
+        const turnRect = turn.getBoundingClientRect()
+        chat.scrollTo({ top: Math.max(0, chat.scrollTop + turnRect.top - chatRect.top - 8), behavior: "auto" })
+      })
+      return () => window.cancelAnimationFrame(frame)
+    }
+    if (restoredAnchorId) setRestoredAnchorId(null)
+    chat.scrollTo({ top: chat.scrollHeight, behavior: "smooth" })
+  }, [current?.id, restoredAnchorId, revealed.length, bubbleCounts, quizAnswers, checkIns])
   useEffect(() => {
     if (!focusNextStep.current) return
     if (!current || (!INTERACTION_TYPES.has(current.type) && current.type !== "quiz")) return
@@ -393,6 +411,7 @@ export function LessonPlayer({ lesson, onComplete, submitting = false, initialSt
             onMood={(m) => pickMood(s, m)} onPick={(o) => pickChoice(s, o)} />
         </div>
       })}
+      {restoredAnchorId === current.id ? <div className="chat__restore-space" aria-hidden /> : null}
     </div>
     <footer className="player__foot"><span className="muted">{inBranch ? "↪ răspuns pentru alegerea ta" : `Pas ${stepNo}/${total}`}</span><button type="button" className="ghost" aria-pressed={autoPaused} onClick={() => setAutoPaused((p) => !p)}>{autoPaused ? "Continuă conversația" : "Pauză"}</button></footer>
   </section>

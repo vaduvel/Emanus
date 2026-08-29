@@ -100,7 +100,7 @@ export function ScriptureReveal({
       onKeyDown={(e) => {
         if (phase !== "done" && (e.key === "Enter" || e.key === " ")) skip()
       }}
-      aria-label={phase === "done" ? undefined : "Arata versetul acum"}
+      aria-label={phase === "done" ? undefined : "Arată versetul acum"}
     >
       {variant === "scroll" && <ScrollStage phase={phase} />}
       {variant === "lamp" && <LampStage phase={phase} walkedDays={walkedDays} />}

@@ -7,7 +7,7 @@ import type { Lesson } from "../domain.js"
  * Usi care duc aici: rusine, avort, infidelitate, pornografie, prea_departe.
  *
  * ORDINEA (docs/21 §2): camera NU incepe cu pacatul omului. Incepe cu cine e
- * Dumnezeu, spus prin rana asta: El S-a miscat primul, cand omul era inca murdar.
+ * Dumnezeu, spus prin rana asta: El S-a mișcat primul, când omul era încă murdar.
  * Cine crede ca trebuie sa se curete inainte de a veni nu va veni niciodata.
  *
  * VOCEA (docs/22 §10): ghidul e Emanus. Fara nume de om, fara "eu am trecut prin
@@ -27,7 +27,7 @@ export const rusineL1: Lesson = {
   id: "rusine_l1",
   courseId: "path_acasa",
   order: 1,
-  title: "El S-a miscat primul",
+  title: "El S-a mișcat primul",
   estMinutes: 10,
   anchorRefs: ["Luca 15:20", "Romani 5:8", "Luca 19:10"],
   memoryVerseRef: "Romani 5:8",
@@ -233,7 +233,7 @@ export const rusineL1: Lesson = {
       id: "r1_12",
       type: "memory_verse",
       order: 12,
-      scripture: { text: "Pe cand eram noi inca pacatosi, Hristos a murit pentru noi.", ref: "Romani 5:8" },
+      scripture: { text: "Pe când eram noi încă păcătoși, Hristos a murit pentru noi.", ref: "Romani 5:8" },
       bubbles: [
         { from: "guide", text: "Atat pentru azi. Un singur lucru pe zi e de ajuns." },
         {
@@ -249,7 +249,7 @@ export const rusineL2: Lesson = {
   id: "rusine_l2",
   courseId: "path_acasa",
   order: 2,
-  title: "Rusinea nu e de la El",
+  title: "Rușinea nu e de la El",
   estMinutes: 11,
   anchorRefs: ["Geneza 3:7-10", "Geneza 3:21", "Ioan 3:17"],
   memoryVerseRef: "Ioan 3:17",
@@ -467,7 +467,7 @@ export const rusineL3: Lesson = {
   id: "rusine_l3",
   courseId: "path_acasa",
   order: 3,
-  title: "S-a ispravit",
+  title: "S-a isprăvit",
   estMinutes: 11,
   anchorRefs: ["Isaia 53:5-6", "Ioan 19:30", "Coloseni 2:13-14"],
   memoryVerseRef: "Coloseni 2:14",
@@ -659,7 +659,7 @@ export const rusineL4: Lesson = {
   id: "rusine_l4",
   courseId: "path_acasa",
   order: 4,
-  title: "Nu esti ce ai facut",
+  title: "Nu ești ce ai făcut",
   estMinutes: 11,
   anchorRefs: ["Ioan 8:3-11", "2 Corinteni 5:17", "Ioan 4:16-19"],
   memoryVerseRef: "2 Corinteni 5:17",
