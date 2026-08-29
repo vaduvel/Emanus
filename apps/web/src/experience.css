@@ -809,30 +809,6 @@
   box-shadow: 0 0 0 3px rgba(214, 155, 41, 0.12);
 }
 
-/* Ajutorul rămâne permanent fără să acopere conținutul ecranelor imersive. */
-.app:has(.experience-shell) {
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.app:has(.experience-shell) > .helpbar {
-  position: sticky;
-  z-index: 35;
-  top: max(0px, env(safe-area-inset-top, 0px));
-  right: auto;
-  bottom: auto;
-  justify-content: center;
-  width: min(100%, 540px);
-  max-width: 540px;
-  margin: 0 auto 12px;
-  padding: 8px 14px;
-  border: 1px solid rgba(140, 63, 58, 0.2);
-  border-radius: 12px;
-  box-shadow: 0 5px 18px rgba(67, 35, 32, 0.1);
-  font-size: 0.8rem;
-}
-
 @keyframes experience-rise {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }

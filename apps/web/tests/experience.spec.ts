@@ -243,11 +243,7 @@ test.describe("darurile zilnice", () => {
     await expect(page.getByText("Sulul se strânge acum.", { exact: false })).toBeVisible()
 
     await page.setViewportSize({ width: 390, height: 844 })
-    const helpBox = await page.locator(".helpbar").boundingBox()
-    const contextBox = await page.getByRole("button", { name: /Citește în context/u }).boundingBox()
-    expect(helpBox).not.toBeNull()
-    expect(contextBox).not.toBeNull()
-    expect((helpBox?.y ?? 0) + (helpBox?.height ?? 0)).toBeLessThanOrEqual(contextBox?.y ?? 0)
+    await expect(page.getByRole("button", { name: "Am nevoie de ajutor acum" })).toHaveCount(0)
 
     await page.reload()
     await expect(page.getByRole("heading", { name: "Pergamentul s-a deschis" })).toBeVisible()

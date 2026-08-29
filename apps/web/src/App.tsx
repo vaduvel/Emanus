@@ -1,6 +1,6 @@
 import { lazy, Suspense } from "react"
 import { createPortal } from "react-dom"
-import { BookOpen, HandHeart, HelpCircle, Library as LibraryIcon, LifeBuoy, Sunrise } from "lucide-react"
+import { BookOpen, HandHeart, HelpCircle, Library as LibraryIcon, Sunrise } from "lucide-react"
 import { hasSeenWelcome, hasStarted } from "./journey"
 import { navigate, useHashRoute } from "./router"
 import "./journey.css"
@@ -45,10 +45,6 @@ function Tabs({ active }: { active: MainDestination }) {
   </nav>, document.body)
 }
 
-function HelpButton() {
-  return <button type="button" className="helpbar" onClick={() => navigate("/criza")} aria-label="Am nevoie de ajutor acum"><LifeBuoy size={16} strokeWidth={1.9} aria-hidden /><span>Am nevoie de ajutor acum</span></button>
-}
-
 function Loading() { return <div className="app"><p className="muted">Se deschide…</p></div> }
 
 export default function App() {
@@ -60,28 +56,28 @@ export default function App() {
   else if (route.name === "profile") screen = <main className="app route-anim"><Profile /></main>
   // Cardul primit de la cineva se deschide si fara cont: ajungi la verset, nu la un zid.
   // Randul asta sta dinadins INAINTEA portii de bun venit.
-  else if (route.name === "message") screen = <main key={route.id ?? route.verseId ?? "mesaj"} className="app route-anim"><HelpButton /><Mesaj cardId={route.id} verseId={route.verseId} /></main>
+  else if (route.name === "message") screen = <main key={route.id ?? route.verseId ?? "mesaj"} className="app route-anim"><Mesaj cardId={route.id} verseId={route.verseId} /></main>
   else if (route.name === "program") screen = <main key={`${route.programId}:${route.showCompletion ? "final" : "overview"}`} className="app app--program route-anim"><ProgramOverview programId={route.programId} showCompletion={route.showCompletion} /></main>
   else if (route.name === "programLesson") screen = <main key={`${route.programId}:${route.lessonId}`} className="app app--lesson route-anim"><LessonView programId={route.programId} lessonId={route.lessonId} /></main>
   else if (route.name === "lesson") screen = <main key={route.id ?? "lesson"} className="app app--lesson route-anim"><LessonView lessonId={route.id} /></main>
   // Crucea din Drumul Emaus rămâne deschisă inclusiv înaintea alegerii unei Porți.
-  else if (route.name === "emmaus") screen = <main className="app route-anim app--tabbed"><HelpButton /><EmmausMap /><Tabs active="today" /></main>
+  else if (route.name === "emmaus") screen = <main className="app route-anim app--tabbed"><EmmausMap /><Tabs active="today" /></main>
   // Rugăciunea deschisă din Cruce trebuie să rămână accesibilă în același moment.
-  else if (route.name === "prayers") screen = <main className="app route-anim app--tabbed"><HelpButton /><Prayers /><Tabs active="prayers" /></main>
+  else if (route.name === "prayers") screen = <main className="app route-anim app--tabbed"><Prayers /><Tabs active="prayers" /></main>
   else if (!hasStarted() && !hasSeenWelcome() && route.name !== "doors") screen = <main className="app route-anim"><Welcome /></main>
-  else if (route.name === "doors" || !hasStarted()) screen = <main className="app route-anim"><HelpButton /><Doors /></main>
-  else if (route.name === "library") screen = <main className="app route-anim app--tabbed app--library"><HelpButton /><Library /><Tabs active="library" /></main>
+  else if (route.name === "doors" || !hasStarted()) screen = <main className="app route-anim"><Doors /></main>
+  else if (route.name === "library") screen = <main className="app route-anim app--tabbed app--library"><Library /><Tabs active="library" /></main>
   else if (route.name === "bible") screen = <main className="app route-anim app--tabbed app--bible"><Bible /><Tabs active="bible" /></main>
   else if (route.name === "bibleChooser") screen = <main className="app route-anim app--tabbed app--bible"><BibleChooser testament={route.testament} bookId={route.bookId} /><Tabs active="bible" /></main>
   else if (route.name === "bibleChapter") screen = <main key={`${route.bookId}-${route.chapter}-${route.verse ?? "chapter"}`} className="app route-anim app--bible"><BibleChapterScreen bookId={route.bookId} chapter={route.chapter} verse={route.verse} /></main>
-  else if (route.name === "ask") screen = <main key={`${route.despre ?? "ask"}:${route.returnTo ?? "default"}`} className="app route-anim app--tabbed"><HelpButton /><Ask despre={route.despre} returnTo={route.returnTo} /><Tabs active="ask" /></main>
-  else if (route.name === "pathend") screen = <main className="app route-anim"><HelpButton /><PathEnd /></main>
-  else if (route.name === "devotional") screen = <main className="app route-anim"><HelpButton /><Devotional /></main>
-  else if (route.name === "scroll") screen = <main className="app route-anim"><HelpButton /><Pergament /></main>
-  else if (route.name === "lamp") screen = <main className="app route-anim"><HelpButton /><Candela /></main>
-  else if (route.name === "covenant") screen = <main className="app route-anim"><HelpButton /><Legamant /></main>
+  else if (route.name === "ask") screen = <main key={`${route.despre ?? "ask"}:${route.returnTo ?? "default"}`} className="app route-anim app--tabbed"><Ask despre={route.despre} returnTo={route.returnTo} /><Tabs active="ask" /></main>
+  else if (route.name === "pathend") screen = <main className="app route-anim"><PathEnd /></main>
+  else if (route.name === "devotional") screen = <main className="app route-anim"><Devotional /></main>
+  else if (route.name === "scroll") screen = <main className="app route-anim"><Pergament /></main>
+  else if (route.name === "lamp") screen = <main className="app route-anim"><Candela /></main>
+  else if (route.name === "covenant") screen = <main className="app route-anim"><Legamant /></main>
   else {
-    screen = <main key={route.name} className="app route-anim app--tabbed"><HelpButton /><Today /><Tabs active="today" /></main>
+    screen = <main key={route.name} className="app route-anim app--tabbed"><Today /><Tabs active="today" /></main>
   }
   return <Suspense fallback={<Loading />}>{screen}</Suspense>
 }

@@ -14,38 +14,12 @@
   scroll-padding-bottom: calc(92px + env(safe-area-inset-bottom, 0px));
 }
 
-.app--tabbed:not(.app--bible):not(.app--library) > :not(.helpbar) {
+.app--tabbed:not(.app--bible):not(.app--library) > * {
   width: min(100%, 540px);
 }
 
-.app--tabbed:not(.app--bible):not(.app--library) > .helpbar {
-  width: min(100%, 540px);
-}
-
-.app--library > .library,
-.app--library > .helpbar {
+.app--library > .library {
   width: min(100%, 1040px);
-}
-
-/* --- Bara de ajutor, permanentă --- */
-.helpbar {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  width: 100%;
-  max-width: 520px;
-  padding: 8px 14px;
-  margin: 0 0 14px;
-  border: none;
-  border-radius: 0;
-  background: var(--crisis-soft, #fbeceb);
-  color: var(--crisis-ink, #8c3f3a);
-  font-size: 0.85rem;
-  font-weight: 500;
-  cursor: pointer;
-}
-.helpbar:hover {
-  filter: brightness(0.98);
 }
 
 .emmaus-map__station:focus-visible {
